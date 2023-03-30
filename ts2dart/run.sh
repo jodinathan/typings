@@ -1,0 +1,1 @@
+dart run --enable-experiment=inline-class --enable-asserts

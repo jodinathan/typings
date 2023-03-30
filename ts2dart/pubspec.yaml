@@ -1,0 +1,35 @@
+name: ts2dart
+description: A sample command-line application.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: '>=3.0.0-277.0.dev <4.0.0'
+
+# Add regular dependencies here.
+dependencies: 
+  built_collection: ^5.1.1
+  code_builder: ^4.4.0
+  collection: ^1.17.1
+  console: ^4.1.0
+  dart_style: ^2.2.5
+  logging: ^1.1.1
+  meta: ^1.9.0
+  recase: ^4.1.0
+  # path: ^1.8.0
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0
+  build_runner: ^2.4.1
+  build_web_compilers: ^4.0.0
+  #build_daemon: ^4.0.0
+  js: any
+
+dependency_overrides:
+  code_builder:
+   path: ../../code_builder
+  dart_style:
+   git: https://github.com/dart-lang/dart_style
+  build_runner:
+   path: ../../build/build_runner

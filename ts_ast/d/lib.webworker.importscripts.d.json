@@ -1,0 +1,27 @@
+{
+  "typedefs": {},
+  "structs": {},
+  "funcs": {
+    "importScripts": {
+      "type": {
+        "core": "void",
+        "isFuture": false
+      },
+      "generics": [],
+      "params": [
+        {
+          "name": "urls",
+          "type": {
+            "array": {
+              "core": "string",
+              "isFuture": false
+            },
+            "isFuture": false
+          }
+        }
+      ]
+    }
+  },
+  "vars": {},
+  "modules": {}
+}

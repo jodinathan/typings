@@ -1,0 +1,26 @@
+{
+  "name": "ts_ast",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start-prod": "node ./bin/index.js",
+    "_start": "ts-node ./src/index.ts d/lib.dom.d.ts d/lib.es5.d.ts d/lib.webworker.importscripts.d.ts d/lib.scripthost.d.ts",
+    "startes5": "ts-node ./src/index.ts d/ts/dom.generated.d.ts d/ts/es5.d.ts d/ts/webworker.importscripts.d.ts d/ts/scripthost.d.ts",
+    "start2015": "ts-node ./src/index.ts d/ts/es5.d.ts d/ts/es2015.core.d.ts d/ts/es2015.collection.d.ts d/ts/es2015.iterable.d.ts d/ts/es2015.generator.d.ts d/ts/es2015.promise.d.ts d/ts/es2015.proxy.d.ts d/ts/es2015.reflect.d.ts d/ts/es2015.symbol.d.ts d/ts/es2015.symbol.wellknown.d.ts d/ts/dom.generated.d.ts d/ts/webworker.importscripts.d.ts d/ts/scripthost.d.ts",
+    "start": "ts-node ./src/index.ts d/ts/es5.d.ts d/ts/es2015.core.d.ts d/ts/es2015.collection.d.ts d/ts/es2015.iterable.d.ts d/ts/es2015.generator.d.ts d/ts/es2015.promise.d.ts d/ts/es2015.proxy.d.ts d/ts/es2015.reflect.d.ts d/ts/es2015.symbol.d.ts d/ts/es2015.symbol.wellknown.d.ts es2016.array.include.d.ts es2017.object.d.ts es2017.sharedmemory.d.ts es2017.string.d.ts es2017.intl.d.ts es2017.typedarrays.d.ts es2018.asynciterable.d.ts es2018.asyncgenerator.d.ts es2018.promise.d.ts es2018.regexp.d.ts es2018.intl.d.ts es2019.array.d.ts es2019.object.d.ts es2019.string.d.ts es2019.symbol.d.ts es2019.intl.d.ts es2020.bigint.d.ts es2020.date.d.ts es2020.number.d.ts es2020.promise.d.ts es2020.sharedmemory.d.ts es2020.string.d.ts es2020.symbol.wellknown.d.ts es2020.intl.d.ts d/ts/dom.generated.d.ts d/ts/webworker.importscripts.d.ts d/ts/scripthost.d.ts",
+    "start-go": "ts-node ./src/index.ts d/go.d.ts"
+  },
+  "dependencies": {
+    "@types/node": "^18.14.2",
+    "flatted": "^3.2.7",
+    "ts-morph": "^17.0.1",
+    "typedoc": "^0.23.26",
+    "typescript": "^4.9.5",
+    "zone.js": "^0.13.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}

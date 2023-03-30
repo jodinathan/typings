@@ -1,0 +1,505 @@
+{
+  "typedefs": {},
+  "classes": {
+    "FooshoDah": {
+      "indexes": [],
+      "props": {
+        "yay": {
+          "_": 8,
+          "isMethod": false,
+          "isNullable": false,
+          "type": {
+            "core": "boolean",
+            "isFuture": false
+          },
+          "isStatic": false
+        },
+        "fuck": {
+          "_": 9,
+          "isMethod": false,
+          "isNullable": false,
+          "type": {
+            "ref": "Fuck",
+            "generics": [],
+            "isFuture": false
+          },
+          "isStatic": false
+        }
+      },
+      "generics": []
+    },
+    "Bar": {
+      "indexes": [],
+      "props": {},
+      "generics": []
+    },
+    "Size": {
+      "indexes": [
+        {
+          "key": {
+            "core": "string",
+            "isFuture": false
+          },
+          "value": {
+            "core": "any",
+            "isFuture": false
+          }
+        },
+        {
+          "key": {
+            "core": "string",
+            "isFuture": false
+          },
+          "value": {
+            "core": "any",
+            "isFuture": false
+          }
+        }
+      ],
+      "props": {
+        "setTo": {
+          "_": 30,
+          "isMethod": true,
+          "isNullable": true,
+          "type": {
+            "ref": "Size",
+            "generics": [],
+            "isFuture": false
+          }
+        },
+        "set": {
+          "_": 36,
+          "isMethod": true,
+          "isNullable": true,
+          "type": {
+            "ref": "Size",
+            "generics": [],
+            "isFuture": false
+          }
+        },
+        "copy": {
+          "_": 42,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "ref": "Size",
+            "generics": [],
+            "isFuture": false
+          }
+        },
+        "fuck": {
+          "_": 44,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "string",
+            "isFuture": false
+          },
+          "isStatic": true
+        },
+        "parse": {
+          "_": 52,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "ref": "Size",
+            "generics": [],
+            "isFuture": false
+          },
+          "isStatic": true
+        },
+        "stringify": {
+          "_": 60,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "string",
+            "isFuture": false
+          },
+          "isStatic": true
+        },
+        "equals": {
+          "_": 68,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "boolean",
+            "isFuture": false
+          }
+        },
+        "equalTo": {
+          "_": 77,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "boolean",
+            "isFuture": false
+          }
+        },
+        "equalsApprox": {
+          "_": 85,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "boolean",
+            "isFuture": false
+          }
+        },
+        "inflate": {
+          "_": 93,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "unknown": "Size?",
+            "isFuture": false
+          }
+        },
+        "width": {
+          "_": 99,
+          "isMethod": true,
+          "isNullable": false,
+          "isStatic": false
+        },
+        "height": {
+          "_": 105,
+          "isMethod": true,
+          "isNullable": false,
+          "isStatic": false
+        },
+        "isReal": {
+          "_": 110,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "boolean",
+            "isFuture": false
+          }
+        },
+        "alloc": {
+          "_": 114,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "ref": "Size",
+            "generics": [],
+            "isFuture": false
+          },
+          "isStatic": true
+        },
+        "free": {
+          "_": 118,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "void",
+            "isFuture": false
+          },
+          "isStatic": true
+        }
+      },
+      "generics": []
+    },
+    "EnumValue": {
+      "indexes": [],
+      "props": {
+        "classType": {
+          "_": 144,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "ref": "Function",
+            "generics": [],
+            "isFuture": false
+          }
+        },
+        "name": {
+          "_": 147,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "string",
+            "isFuture": false
+          }
+        }
+      },
+      "generics": []
+    }
+  },
+  "interfaces": {
+    "InterBar": {
+      "indexes": [],
+      "props": {},
+      "generics": []
+    },
+    "ObjectData": {
+      "indexes": [
+        {
+          "key": {
+            "core": "string",
+            "isFuture": false
+          },
+          "value": {
+            "core": "any",
+            "isFuture": false
+          }
+        }
+      ],
+      "props": {},
+      "generics": []
+    },
+    "Iterable": {
+      "indexes": [],
+      "props": {
+        "iterator": {
+          "_": 163,
+          "isMethod": false,
+          "isNullable": false,
+          "type": {
+            "ref": "Iterator",
+            "generics": [
+              {
+                "ref": "T",
+                "generics": [],
+                "isFuture": false
+              }
+            ],
+            "isFuture": false
+          }
+        },
+        "nulla": {
+          "_": 164,
+          "isMethod": false,
+          "isNullable": true,
+          "type": {
+            "core": "number",
+            "isFuture": false
+          }
+        },
+        "first": {
+          "_": 169,
+          "isMethod": true,
+          "isNullable": true,
+          "type": {
+            "ref": "T",
+            "generics": [],
+            "isFuture": false
+          }
+        },
+        "count": {
+          "_": 173,
+          "isMethod": false,
+          "isNullable": true,
+          "type": {
+            "core": "any",
+            "isFuture": false
+          }
+        },
+        "foos": {
+          "_": 175,
+          "isMethod": false,
+          "isNullable": false,
+          "type": {
+            "isFuture": false,
+            "array": {
+              "core": "number",
+              "isFuture": false
+            }
+          }
+        },
+        "dt": {
+          "_": 177,
+          "isMethod": false,
+          "isNullable": true,
+          "type": {
+            "ref": "Date",
+            "generics": [],
+            "isFuture": false
+          }
+        }
+      },
+      "generics": [
+        "T"
+      ]
+    },
+    "Iterator": {
+      "indexes": [],
+      "props": {
+        "iterator": {
+          "_": 211,
+          "isMethod": false,
+          "isNullable": false,
+          "type": {
+            "ref": "Iterator",
+            "generics": [
+              {
+                "ref": "T",
+                "generics": [],
+                "isFuture": false
+              }
+            ],
+            "isFuture": false
+          }
+        },
+        "next": {
+          "_": 217,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "boolean",
+            "isFuture": false
+          }
+        },
+        "hasNext": {
+          "_": 223,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "boolean",
+            "isFuture": false
+          }
+        },
+        "first": {
+          "_": 231,
+          "isMethod": true,
+          "isNullable": true,
+          "type": {
+            "ref": "T",
+            "generics": [],
+            "isFuture": false
+          }
+        },
+        "reset": {
+          "_": 235,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "void",
+            "isFuture": false
+          }
+        },
+        "any": {
+          "_": 250,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "boolean",
+            "isFuture": false
+          }
+        },
+        "all": {
+          "_": 265,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "boolean",
+            "isFuture": false
+          }
+        },
+        "each": {
+          "_": 275,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "core": "void",
+            "isFuture": false
+          }
+        },
+        "map": {
+          "_": 284,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "ref": "Iterator",
+            "generics": [
+              {
+                "ref": "S",
+                "generics": [],
+                "isFuture": false
+              }
+            ],
+            "isFuture": false
+          }
+        },
+        "filter": {
+          "_": 293,
+          "isMethod": true,
+          "isNullable": false,
+          "type": {
+            "ref": "Iterator",
+            "generics": [
+              {
+                "ref": "T",
+                "generics": [],
+                "isFuture": false
+              }
+            ],
+            "isFuture": false
+          }
+        },
+        "value": {
+          "_": 297,
+          "isMethod": false,
+          "isNullable": false,
+          "type": {
+            "ref": "T",
+            "generics": [],
+            "isFuture": false
+          }
+        },
+        "key": {
+          "_": 301,
+          "isMethod": false,
+          "isNullable": false,
+          "type": {
+            "core": "any",
+            "isFuture": false
+          }
+        },
+        "count": {
+          "_": 305,
+          "isMethod": false,
+          "isNullable": false,
+          "type": {
+            "core": "number",
+            "isFuture": false
+          }
+        }
+      },
+      "generics": [
+        "T"
+      ]
+    }
+  },
+  "funcs": {
+    "foo": {
+      "type": {
+        "isFuture": false,
+        "array": {
+          "ref": "T",
+          "generics": [],
+          "isFuture": false
+        }
+      },
+      "generics": [
+        "T"
+      ],
+      "params": [
+        {
+          "name": "ff",
+          "type": {
+            "core": "any",
+            "isFuture": false
+          }
+        }
+      ]
+    }
+  },
+  "vars": {
+    "x": {
+      "type": {
+        "core": "any",
+        "isFuture": false
+      }
+    }
+  }
+}
