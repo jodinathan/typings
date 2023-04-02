@@ -252,7 +252,7 @@ class Object {
         ],
       );
   static _i2
-          .List /*LIST InteropStaticType.list,556099622,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+          .List /*LIST InteropStaticType.list,625907796,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       getOwnPropertyNames(_i2.dynamic o) => _i4.callMethod(
             _i5.target0,
             'getOwnPropertyNames',
@@ -343,14 +343,14 @@ class Object {
         [o],
       );
   static _i2
-          .List /*LIST InteropStaticType.list,370869726,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+          .List /*LIST InteropStaticType.list,720822269,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       _keys$1(_i2.Object o) => _i4.callMethod(
             _i5.target0,
             'keys',
             [o],
           );
   static _i2
-          .List /*LIST InteropStaticType.list,371535097,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+          .List /*LIST InteropStaticType.list,1061006084,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       _keys$2(_i6.Inline8 o) => _i4.callMethod(
             _i5.target0,
             'keys',
@@ -358,10 +358,10 @@ class Object {
           );
   // HEYA keys
   static ({
-    _i2.List /*LIST InteropStaticType.list,370869726,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,720822269,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         Function(_i2.Object o) $1,
-    _i2.List /*LIST InteropStaticType.list,371535097,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1061006084,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         Function(_i6.Inline8 o) $2,
   }) get keys => (
@@ -413,7 +413,7 @@ class Object {
         $2: _assign$2,
       );
   static _i2
-          .List /*LIST InteropStaticType.list,844160743,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
+          .List /*LIST InteropStaticType.list,403641847,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
       getOwnPropertySymbols(_i2.dynamic o) => _i4.callMethod(
             _i5.target0,
             'getOwnPropertySymbols',
@@ -444,14 +444,14 @@ class Object {
         ],
       );
   static _i2
-          .List /*LIST InteropStaticType.list,308834127,[Instance of 'InteropRef<InteropType>']*/ <T>
+          .List /*LIST InteropStaticType.list,72487864,[Instance of 'InteropRef<InteropType>']*/ <T>
       _values$1<T>(_i3.Values o) => _i4.callMethod(
             _i5.target0,
             'values',
             [o],
           );
   static _i2
-          .List /*LIST InteropStaticType.list,795754674,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+          .List /*LIST InteropStaticType.list,203551467,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
       _values$2(_i7.Inline17 o) => _i4.callMethod(
             _i5.target0,
             'values',
@@ -459,17 +459,17 @@ class Object {
           );
   // HEYA values
   static ({
-    _i2.List /*LIST InteropStaticType.list,308834127,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,72487864,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>(_i3.Values o) $1,
-    _i2.List /*LIST InteropStaticType.list,795754674,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,203551467,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         Function(_i7.Inline17 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
       );
-  static _i2.List /*LIST InteropStaticType.list,738563840,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,65956510,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         T,
@@ -478,7 +478,7 @@ class Object {
         'entries',
         [o],
       );
-  static _i2.List /*LIST InteropStaticType.list,741392152,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,597322097,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         _i2.dynamic,
@@ -489,13 +489,13 @@ class Object {
       );
   // HEYA entries
   static ({
-    _i2.List /*LIST InteropStaticType.list,738563840,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,65956510,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               T,
             )>
         Function<T>(_i3.Entries o) $1,
-    _i2.List /*LIST InteropStaticType.list,741392152,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,597322097,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               _i2.dynamic,
@@ -524,7 +524,7 @@ class Object {
       );
   static _i2.dynamic _fromEntries$2(
           _i9.Iterable<
-                  _i2.List /*LIST InteropStaticType.list,334787369,[Instance of 'InteropRef<InteropType>']*/ <
+                  _i2.List /*LIST InteropStaticType.list,426727760,[Instance of 'InteropRef<InteropType>']*/ <
                       _i2.dynamic>>
               entries) =>
       _i4.callMethod(
@@ -543,7 +543,7 @@ class Object {
             entries) $1,
     _i2.dynamic Function(
         _i9.Iterable<
-                _i2.List /*LIST InteropStaticType.list,334787369,[Instance of 'InteropRef<InteropType>']*/ <
+                _i2.List /*LIST InteropStaticType.list,426727760,[Instance of 'InteropRef<InteropType>']*/ <
                     _i2.dynamic>>
             entries) $2,
   }) get fromEntries => (
@@ -640,7 +640,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           p,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,556099622,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,625907796,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       getOwnPropertyNames(_i2.dynamic o) => _i4.callMethod(
             this,
             'getOwnPropertyNames',
@@ -730,13 +730,13 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         'isExtensible',
         [o],
       );
-  _i2.List /*LIST InteropStaticType.list,370869726,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,720822269,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       _keys$1(_i2.Object o) => _i4.callMethod(
             this,
             'keys',
             [o],
           );
-  _i2.List /*LIST InteropStaticType.list,371535097,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,1061006084,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       _keys$2(_i6.Inline8 o) => _i4.callMethod(
             this,
             'keys',
@@ -744,10 +744,10 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           );
   // HEYA keys
   ({
-    _i2.List /*LIST InteropStaticType.list,370869726,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,720822269,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         Function(_i2.Object o) $1,
-    _i2.List /*LIST InteropStaticType.list,371535097,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1061006084,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         Function(_i6.Inline8 o) $2,
   }) get keys => (
@@ -798,7 +798,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         $1: _assign$1,
         $2: _assign$2,
       );
-  _i2.List /*LIST InteropStaticType.list,844160743,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
+  _i2.List /*LIST InteropStaticType.list,403641847,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
       getOwnPropertySymbols(_i2.dynamic o) => _i4.callMethod(
             this,
             'getOwnPropertySymbols',
@@ -828,13 +828,13 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           proto ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,308834127,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i2.List /*LIST InteropStaticType.list,72487864,[Instance of 'InteropRef<InteropType>']*/ <T>
       _values$1<T>(_i3.Values o) => _i4.callMethod(
             this,
             'values',
             [o],
           );
-  _i2.List /*LIST InteropStaticType.list,795754674,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+  _i2.List /*LIST InteropStaticType.list,203551467,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
       _values$2(_i7.Inline17 o) => _i4.callMethod(
             this,
             'values',
@@ -842,17 +842,17 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           );
   // HEYA values
   ({
-    _i2.List /*LIST InteropStaticType.list,308834127,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,72487864,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>(_i3.Values o) $1,
-    _i2.List /*LIST InteropStaticType.list,795754674,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,203551467,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         Function(_i7.Inline17 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
       );
-  _i2.List /*LIST InteropStaticType.list,738563840,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,65956510,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         T,
@@ -861,7 +861,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         'entries',
         [o],
       );
-  _i2.List /*LIST InteropStaticType.list,741392152,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,597322097,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         _i2.dynamic,
@@ -872,13 +872,13 @@ extension ObjectConstructor$Typings on ObjectConstructor {
       );
   // HEYA entries
   ({
-    _i2.List /*LIST InteropStaticType.list,738563840,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,65956510,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               T,
             )>
         Function<T>(_i3.Entries o) $1,
-    _i2.List /*LIST InteropStaticType.list,741392152,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,597322097,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               _i2.dynamic,
@@ -907,7 +907,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
       );
   _i2.dynamic _fromEntries$2(
           _i9.Iterable<
-                  _i2.List /*LIST InteropStaticType.list,334787369,[Instance of 'InteropRef<InteropType>']*/ <
+                  _i2.List /*LIST InteropStaticType.list,426727760,[Instance of 'InteropRef<InteropType>']*/ <
                       _i2.dynamic>>
               entries) =>
       _i4.callMethod(
@@ -926,7 +926,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
             entries) $1,
     _i2.dynamic Function(
         _i9.Iterable<
-                _i2.List /*LIST InteropStaticType.list,334787369,[Instance of 'InteropRef<InteropType>']*/ <
+                _i2.List /*LIST InteropStaticType.list,426727760,[Instance of 'InteropRef<InteropType>']*/ <
                     _i2.dynamic>>
             entries) $2,
   }) get fromEntries => (
@@ -1274,7 +1274,7 @@ extension Number$Typings on Number {
         [],
       );
   _i2.String _toLocaleString$1([
-    _i2.List /*LIST InteropStaticType.list,173739642,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,393690326,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         locales,
     _i10.NumberFormatOptions? options,
@@ -1302,7 +1302,7 @@ extension Number$Typings on Number {
   // HEYA toLocaleString
   ({
     _i2.String Function([
-      _i2.List /*LIST InteropStaticType.list,173739642,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,393690326,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.String>?
           locales,
       _i10.NumberFormatOptions? options,
@@ -1486,7 +1486,7 @@ class TemplateStringsArray implements _i3.ReadonlyArray<_i2.String> {
   });
 
   factory TemplateStringsArray({
-    required _i2.List /*LIST InteropStaticType.list,260887547,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,265756404,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         raw,
     required _i2.num length,
@@ -1501,7 +1501,7 @@ extension TemplateStringsArray$Typings on TemplateStringsArray {
   /* #609
   source: 
     readonly raw: readonly string[]; */
-  _i2.List /*LIST InteropStaticType.list,260887547,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,265756404,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       get raw => _i4.getProperty(
             this,
             'raw',
@@ -3152,7 +3152,7 @@ extension Json$Typings on Json {
       );
   _i2.String _stringify$2(
     _i2.dynamic value, [
-    _i2.List /*LIST InteropStaticType.list,121639848,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,694263712,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.Object>?
         replacer,
     _i2.Object? space,
@@ -3178,7 +3178,7 @@ extension Json$Typings on Json {
     ]) $1,
     _i2.String Function(
       _i2.dynamic value, [
-      _i2.List /*LIST InteropStaticType.list,121639848,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,694263712,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.Object>?
           replacer,
       _i2.Object? space,
@@ -3215,7 +3215,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'toLocaleString',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,199840858,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i2.List /*LIST InteropStaticType.list,2281177,[Instance of 'InteropRef<InteropType>']*/ <T>
       concat([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
             this,
             'concat',
@@ -3226,7 +3226,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'join',
         [separator ?? _$exposed$undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,673424201,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,199082948,[Instance of 'InteropRef<InteropType>']*/ <
       T> slice([
     _i2.num? start,
     _i2.num? end,
@@ -3267,7 +3267,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,925714547,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,337301832,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3284,7 +3284,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,394980390,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,787893118,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3303,7 +3303,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,925714547,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,337301832,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3312,7 +3312,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,394980390,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,787893118,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3325,7 +3325,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,63109766,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,272147010,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3342,7 +3342,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     void Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,322690727,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,743825610,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
@@ -3357,12 +3357,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,350512036,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,435872568,[Instance of 'InteropRef<InteropType>']*/ <
       U> map<U>(
     U Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,711291144,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,493143810,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
@@ -3375,12 +3375,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,495472445,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,187725736,[Instance of 'InteropRef<InteropType>']*/ <
       S> _filter$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,774158266,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,934964913,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3393,12 +3393,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,28893942,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,1006870301,[Instance of 'InteropRef<InteropType>']*/ <
       T> _filter$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,587702183,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,55881969,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3413,24 +3413,24 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       );
   // HEYA filter
   ({
-    _i2.List /*LIST InteropStaticType.list,495472445,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,187725736,[Instance of 'InteropRef<InteropType>']*/ <
             S>
         Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,774158266,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,934964913,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i2.List /*LIST InteropStaticType.list,28893942,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1006870301,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,587702183,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,55881969,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3444,7 +3444,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,409277880,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,924160058,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -3462,7 +3462,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,1053609325,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,667328581,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -3480,7 +3480,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
             T,
             T,
             _i2.num,
-            _i2.List /*LIST InteropStaticType.list,1031844103,[Instance of 'InteropRef<InteropType>']*/ <
+            _i2.List /*LIST InteropStaticType.list,227403791,[Instance of 'InteropRef<InteropType>']*/ <
                 T>,
           ) callbackfn) =>
       _i4.callMethod(
@@ -3495,7 +3495,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,409277880,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,924160058,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       T initialValue,
@@ -3505,7 +3505,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,1053609325,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,667328581,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       U initialValue,
@@ -3515,7 +3515,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           T,
           T,
           _i2.num,
-          _i2.List /*LIST InteropStaticType.list,1031844103,[Instance of 'InteropRef<InteropType>']*/ <
+          _i2.List /*LIST InteropStaticType.list,227403791,[Instance of 'InteropRef<InteropType>']*/ <
               T>,
         ) callbackfn) $3,
   }) get reduce => (
@@ -3528,7 +3528,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,843629681,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,974732109,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -3546,7 +3546,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,1038759063,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,307228734,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -3564,7 +3564,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
             T,
             T,
             _i2.num,
-            _i2.List /*LIST InteropStaticType.list,607663837,[Instance of 'InteropRef<InteropType>']*/ <
+            _i2.List /*LIST InteropStaticType.list,213513073,[Instance of 'InteropRef<InteropType>']*/ <
                 T>,
           ) callbackfn) =>
       _i4.callMethod(
@@ -3579,7 +3579,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,843629681,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,974732109,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       T initialValue,
@@ -3589,7 +3589,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,1038759063,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,307228734,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       U initialValue,
@@ -3599,7 +3599,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           T,
           T,
           _i2.num,
-          _i2.List /*LIST InteropStaticType.list,607663837,[Instance of 'InteropRef<InteropType>']*/ <
+          _i2.List /*LIST InteropStaticType.list,213513073,[Instance of 'InteropRef<InteropType>']*/ <
               T>,
         ) callbackfn) $3,
   }) get reduceRight => (
@@ -3611,7 +3611,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,521280979,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,178407719,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3628,7 +3628,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,967320342,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1029426314,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3647,7 +3647,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,521280979,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,178407719,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3656,7 +3656,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,967320342,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,1029426314,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3669,7 +3669,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,43131032,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,705575185,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3713,12 +3713,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           fromIndex ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,1010405501,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,339789067,[Instance of 'InteropRef<InteropType>']*/ <
       U> flatMap<U, This>(
     _i2.Object Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,36690637,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,273072319,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callback, [
     This? thisArg,
@@ -3731,7 +3731,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,143461335,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,529642167,[Instance of 'InteropRef<InteropType>']*/ <
       _i12.FlatArray<A, D>> flat<A, D extends _i2.num>(
           [D? depth]) =>
       _i4.callMethod(
@@ -3763,7 +3763,7 @@ extension ConcatArray$Typings<T> on ConcatArray<T> {
         'join',
         [separator ?? _$exposed$undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,166264291,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,703483752,[Instance of 'InteropRef<InteropType>']*/ <
       T> slice([
     _i2.num? start,
     _i2.num? end,
@@ -3802,9 +3802,9 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
         [arg],
       );
   static _i2
-          .List /*LIST InteropStaticType.list,463114646,[Instance of 'InteropRef<InteropType>']*/ <U>
+          .List /*LIST InteropStaticType.list,779011367,[Instance of 'InteropRef<InteropType>']*/ <U>
       _from$1<T, U>(
-    _i2.List /*LIST InteropClass#135325793(name: List),263255691,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),456229592,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     U Function(
@@ -3823,7 +3823,7 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
             ],
           );
   static _i2
-          .List /*LIST InteropStaticType.list,201701944,[Instance of 'InteropRef<InteropType>']*/ <U>
+          .List /*LIST InteropStaticType.list,584015513,[Instance of 'InteropRef<InteropType>']*/ <U>
       _from$2<T, U>(
     _i3.FromCommon iterable,
     U Function(
@@ -3842,7 +3842,7 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
             ],
           );
   static _i2
-          .List /*LIST InteropStaticType.list,270648152,[Instance of 'InteropRef<InteropType>']*/ <T>
+          .List /*LIST InteropStaticType.list,385278030,[Instance of 'InteropRef<InteropType>']*/ <T>
       _from$3<T>(_i3.From iterable) => _i4.callMethod(
             _i5.target11,
             'from',
@@ -3850,10 +3850,10 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
           );
   // HEYA from
   static ({
-    _i2.List /*LIST InteropStaticType.list,463114646,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,779011367,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
-      _i2.List /*LIST InteropClass#135325793(name: List),263255691,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),456229592,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       U Function(
@@ -3862,7 +3862,7 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i2.List /*LIST InteropStaticType.list,201701944,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,584015513,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
       _i3.FromCommon iterable,
@@ -3872,7 +3872,7 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $2,
-    _i2.List /*LIST InteropStaticType.list,270648152,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,385278030,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>(_i3.From iterable) $3,
   }) get from => (
@@ -3881,7 +3881,7 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
         $3: _from$3,
       );
   static _i2
-          .List /*LIST InteropStaticType.list,768862467,[Instance of 'InteropRef<InteropType>']*/ <T>
+          .List /*LIST InteropStaticType.list,511795842,[Instance of 'InteropRef<InteropType>']*/ <T>
       of<T>([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
             _i5.target11,
             'of',
@@ -3942,7 +3942,7 @@ extension Array$Typings<T> on Array<T> {
         'push',
         [...?items],
       );
-  _i2.List /*LIST InteropStaticType.list,452981273,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i2.List /*LIST InteropStaticType.list,853726109,[Instance of 'InteropRef<InteropType>']*/ <T>
       concat([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
             this,
             'concat',
@@ -3953,7 +3953,7 @@ extension Array$Typings<T> on Array<T> {
         'join',
         [separator ?? _$exposed$undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,719244168,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i2.List /*LIST InteropStaticType.list,990527108,[Instance of 'InteropRef<InteropType>']*/ <T>
       reverse() => _i4.callMethod(
             this,
             'reverse',
@@ -3964,7 +3964,7 @@ extension Array$Typings<T> on Array<T> {
         'shift',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,120897650,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,209511462,[Instance of 'InteropRef<InteropType>']*/ <
       T> slice([
     _i2.num? start,
     _i2.num? end,
@@ -3987,7 +3987,7 @@ extension Array$Typings<T> on Array<T> {
         'sort',
         [compareFn == null ? _$exposed$undefined : _i4.allowInterop(compareFn)],
       );
-  _i2.List /*LIST InteropStaticType.list,290105398,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,746516845,[Instance of 'InteropRef<InteropType>']*/ <
       T> splice(
     _i2.num start,
     _i2.num deleteCount, [
@@ -4035,7 +4035,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,1065769890,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,281025486,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4052,7 +4052,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,832126782,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,19453577,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4071,7 +4071,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,1065769890,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,281025486,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4080,7 +4080,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,832126782,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,19453577,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4093,7 +4093,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,187957755,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,828436746,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4110,7 +4110,7 @@ extension Array$Typings<T> on Array<T> {
     void Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,939701775,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,320646952,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
@@ -4125,12 +4125,12 @@ extension Array$Typings<T> on Array<T> {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,945359129,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,286217441,[Instance of 'InteropRef<InteropType>']*/ <
       U> map<U>(
     U Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,489989581,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,759126000,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
@@ -4143,12 +4143,12 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,484821678,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,448876346,[Instance of 'InteropRef<InteropType>']*/ <
       S> _filter$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,1066877380,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,494209827,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4161,12 +4161,12 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,293452937,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,835343110,[Instance of 'InteropRef<InteropType>']*/ <
       T> _filter$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,378744922,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,250696593,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4181,24 +4181,24 @@ extension Array$Typings<T> on Array<T> {
       );
   // HEYA filter
   ({
-    _i2.List /*LIST InteropStaticType.list,484821678,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,448876346,[Instance of 'InteropRef<InteropType>']*/ <
             S>
         Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,1066877380,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,494209827,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i2.List /*LIST InteropStaticType.list,293452937,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,835343110,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,378744922,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,250696593,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4212,7 +4212,7 @@ extension Array$Typings<T> on Array<T> {
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,221988593,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,608690853,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -4230,7 +4230,7 @@ extension Array$Typings<T> on Array<T> {
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,141277456,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,90348394,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -4250,7 +4250,7 @@ extension Array$Typings<T> on Array<T> {
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,221988593,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,608690853,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       T initialValue,
@@ -4260,7 +4260,7 @@ extension Array$Typings<T> on Array<T> {
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,141277456,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,90348394,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       U initialValue,
@@ -4274,7 +4274,7 @@ extension Array$Typings<T> on Array<T> {
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,9693144,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,194181907,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -4292,7 +4292,7 @@ extension Array$Typings<T> on Array<T> {
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,202138740,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,382659282,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -4312,7 +4312,7 @@ extension Array$Typings<T> on Array<T> {
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,9693144,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,194181907,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       T initialValue,
@@ -4322,7 +4322,7 @@ extension Array$Typings<T> on Array<T> {
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,202138740,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,382659282,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       U initialValue,
@@ -4335,7 +4335,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,979149695,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,958311098,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4352,7 +4352,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,685858711,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,773190282,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4371,7 +4371,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,979149695,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,958311098,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4380,7 +4380,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,685858711,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,773190282,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4393,7 +4393,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,59861283,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,762245224,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4465,12 +4465,12 @@ extension Array$Typings<T> on Array<T> {
           fromIndex ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,450985485,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,350027719,[Instance of 'InteropRef<InteropType>']*/ <
       U> flatMap<U, This>(
     _i2.Object Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,761200088,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,762286893,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callback, [
     This? thisArg,
@@ -4483,7 +4483,7 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,605670426,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,120901807,[Instance of 'InteropRef<InteropType>']*/ <
       _i12.FlatArray<A, D>> flat<A, D extends _i2.num>(
           [D? depth]) =>
       _i4.callMethod(
@@ -4521,9 +4521,9 @@ extension ArrayConstructor$Typings on ArrayConstructor {
         'isArray',
         [arg],
       );
-  _i2.List /*LIST InteropStaticType.list,463114646,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,779011367,[Instance of 'InteropRef<InteropType>']*/ <
       U> _from$1<T, U>(
-    _i2.List /*LIST InteropClass#135325793(name: List),263255691,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),456229592,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     U Function(
@@ -4541,7 +4541,7 @@ extension ArrayConstructor$Typings on ArrayConstructor {
           thisArg ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,201701944,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,584015513,[Instance of 'InteropRef<InteropType>']*/ <
       U> _from$2<T, U>(
     _i3.FromCommon iterable,
     U Function(
@@ -4559,7 +4559,7 @@ extension ArrayConstructor$Typings on ArrayConstructor {
           thisArg ?? _$exposed$undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,270648152,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i2.List /*LIST InteropStaticType.list,385278030,[Instance of 'InteropRef<InteropType>']*/ <T>
       _from$3<T>(_i3.From iterable) => _i4.callMethod(
             this,
             'from',
@@ -4567,10 +4567,10 @@ extension ArrayConstructor$Typings on ArrayConstructor {
           );
   // HEYA from
   ({
-    _i2.List /*LIST InteropStaticType.list,463114646,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,779011367,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
-      _i2.List /*LIST InteropClass#135325793(name: List),263255691,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),456229592,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       U Function(
@@ -4579,7 +4579,7 @@ extension ArrayConstructor$Typings on ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i2.List /*LIST InteropStaticType.list,201701944,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,584015513,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
       _i3.FromCommon iterable,
@@ -4589,7 +4589,7 @@ extension ArrayConstructor$Typings on ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $2,
-    _i2.List /*LIST InteropStaticType.list,270648152,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,385278030,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>(_i3.From iterable) $3,
   }) get from => (
@@ -4597,19 +4597,19 @@ extension ArrayConstructor$Typings on ArrayConstructor {
         $2: _from$2,
         $3: _from$3,
       );
-  _i2.List /*LIST InteropStaticType.list,768862467,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i2.List /*LIST InteropStaticType.list,511795842,[Instance of 'InteropRef<InteropType>']*/ <T>
       of<T>([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
             this,
             'of',
             [...?items],
           );
-  _i2.List /*LIST InteropStaticType.list,878439052,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+  _i2.List /*LIST InteropStaticType.list,954597942,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
       _call$1([_i2.num? arrayLength]) => _i4.callMethod(
             this,
             '',
             [arrayLength ?? _$exposed$undefined],
           );
-  _i2.List /*LIST InteropStaticType.list,370990552,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i2.List /*LIST InteropStaticType.list,839356230,[Instance of 'InteropRef<InteropType>']*/ <T>
       _call$2<T>([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
             this,
             '',
@@ -4617,10 +4617,10 @@ extension ArrayConstructor$Typings on ArrayConstructor {
           );
   // HEYA call
   ({
-    _i2.List /*LIST InteropStaticType.list,878439052,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,954597942,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         Function([_i2.num? arrayLength]) $1,
-    _i2.List /*LIST InteropStaticType.list,370990552,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,839356230,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>([_i2.Iterable<_i2.dynamic>? items]) $2,
   }) get call => (
@@ -4747,7 +4747,7 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
   /* #1503
   source: 
     get?: () => T; */
-  // Type InteropFunction#207479218(parent: InteropGetter#372173218(name: get), library: lib_es5_d_ts)
+  // Type InteropFunction#243188520(parent: InteropGetter#521631557(name: get), library: lib_es5_d_ts)
   set get(T Function()? value) {
     _i4.setProperty(
       this,
@@ -4766,7 +4766,7 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
   /* #1504
   source: 
     set?: (value: T) => void; */
-  // Type InteropFunction#1031161715(parent: InteropGetter#291820579(name: set), library: lib_es5_d_ts)
+  // Type InteropFunction#447654596(parent: InteropGetter#233634856(name: set), library: lib_es5_d_ts)
   set set(void Function(T)? value) {
     _i4.setProperty(
       this,
@@ -4995,7 +4995,7 @@ extension ArrayBufferView$Typings on ArrayBufferView {
      * The ArrayBuffer instance referenced by the array.
      */
     buffer: ArrayBufferLike; */
-  // Type InteropTypedef#489514054(name: ArrayBufferLike)
+  // Type InteropTypedef#873218560(name: ArrayBufferLike)
   set buffer(_i3.ArrayBufferLike value) {
     _i4.setProperty(
       this,
@@ -5088,7 +5088,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
         [...?items],
       );
   _i13.Int8List _from$1<T>(
-    _i2.List /*LIST InteropClass#135325793(name: List),582310219,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),885383140,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5126,7 +5126,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
   // HEYA from
   ({
     _i13.Int8List Function<T>(
-      _i2.List /*LIST InteropClass#135325793(name: List),582310219,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),885383140,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5172,7 +5172,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
         [...?items],
       );
   _i13.Uint8List _from$1<T>(
-    _i2.List /*LIST InteropClass#135325793(name: List),413335704,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),332012423,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5210,7 +5210,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
   // HEYA from
   ({
     _i13.Uint8List Function<T>(
-      _i2.List /*LIST InteropClass#135325793(name: List),413335704,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),332012423,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5257,7 +5257,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
         [...?items],
       );
   _i13.Uint8ClampedList _from$1<T>(
-    _i2.List /*LIST InteropClass#135325793(name: List),107082850,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),876884706,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5295,7 +5295,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
   // HEYA from
   ({
     _i13.Uint8ClampedList Function<T>(
-      _i2.List /*LIST InteropClass#135325793(name: List),107082850,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),876884706,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5341,7 +5341,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
         [...?items],
       );
   _i13.Int16List _from$1<T>(
-    _i2.List /*LIST InteropClass#135325793(name: List),964299291,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),34846729,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5379,7 +5379,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
   // HEYA from
   ({
     _i13.Int16List Function<T>(
-      _i2.List /*LIST InteropClass#135325793(name: List),964299291,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),34846729,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5425,7 +5425,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
         [...?items],
       );
   _i13.Uint16List _from$1<T>(
-    _i2.List /*LIST InteropClass#135325793(name: List),807383773,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),275480014,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5463,7 +5463,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
   // HEYA from
   ({
     _i13.Uint16List Function<T>(
-      _i2.List /*LIST InteropClass#135325793(name: List),807383773,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),275480014,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5509,7 +5509,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
         [...?items],
       );
   _i13.Int32List _from$1<T>(
-    _i2.List /*LIST InteropClass#135325793(name: List),15724542,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),102878921,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5547,7 +5547,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
   // HEYA from
   ({
     _i13.Int32List Function<T>(
-      _i2.List /*LIST InteropClass#135325793(name: List),15724542,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),102878921,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5593,7 +5593,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
         [...?items],
       );
   _i13.Uint32List _from$1<T>(
-    _i2.List /*LIST InteropClass#135325793(name: List),761912737,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),512289981,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5631,7 +5631,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
   // HEYA from
   ({
     _i13.Uint32List Function<T>(
-      _i2.List /*LIST InteropClass#135325793(name: List),761912737,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),512289981,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5677,7 +5677,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
         [...?items],
       );
   _i13.Float32List _from$1<T>(
-    _i2.List /*LIST InteropClass#135325793(name: List),1059519092,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),81745736,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5715,7 +5715,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
   // HEYA from
   ({
     _i13.Float32List Function<T>(
-      _i2.List /*LIST InteropClass#135325793(name: List),1059519092,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),81745736,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5761,7 +5761,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
         [...?items],
       );
   _i13.Float64List _from$1<T>(
-    _i2.List /*LIST InteropClass#135325793(name: List),302087040,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#1008376286(name: List),271857593,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5799,7 +5799,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
   // HEYA from
   ({
     _i13.Float64List Function<T>(
-      _i2.List /*LIST InteropClass#135325793(name: List),302087040,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#1008376286(name: List),271857593,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(

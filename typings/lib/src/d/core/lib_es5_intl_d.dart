@@ -539,7 +539,7 @@ extension CollatorOptions$Typings on CollatorOptions {
   /* #4373
   source: 
         usage?: string | undefined; */
-  // Type InteropUnion#861800343(parent: InteropGetter#887329282(name: usage))
+  // Type InteropUnion#972394594(parent: InteropGetter#208771639(name: usage))
   set usage(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -558,7 +558,7 @@ extension CollatorOptions$Typings on CollatorOptions {
   /* #4374
   source: 
         localeMatcher?: string | undefined; */
-  // Type InteropUnion#904653461(parent: InteropGetter#510997114(name: localeMatcher))
+  // Type InteropUnion#337429325(parent: InteropGetter#643440936(name: localeMatcher))
   set localeMatcher(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -577,7 +577,7 @@ extension CollatorOptions$Typings on CollatorOptions {
   /* #4375
   source: 
         numeric?: boolean | undefined; */
-  // Type InteropUnion#450218668(parent: InteropGetter#224489773(name: numeric))
+  // Type InteropUnion#995577265(parent: InteropGetter#753288598(name: numeric))
   set numeric(_i2.bool? value) {
     _i3.setProperty(
       this,
@@ -596,7 +596,7 @@ extension CollatorOptions$Typings on CollatorOptions {
   /* #4376
   source: 
         caseFirst?: string | undefined; */
-  // Type InteropUnion#905247431(parent: InteropGetter#570087373(name: caseFirst))
+  // Type InteropUnion#272845823(parent: InteropGetter#421408924(name: caseFirst))
   set caseFirst(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -615,7 +615,7 @@ extension CollatorOptions$Typings on CollatorOptions {
   /* #4377
   source: 
         sensitivity?: string | undefined; */
-  // Type InteropUnion#435702150(parent: InteropGetter#505722821(name: sensitivity))
+  // Type InteropUnion#427588071(parent: InteropGetter#120583995(name: sensitivity))
   set sensitivity(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -634,7 +634,7 @@ extension CollatorOptions$Typings on CollatorOptions {
   /* #4378
   source: 
         ignorePunctuation?: boolean | undefined; */
-  // Type InteropUnion#312123378(parent: InteropGetter#922568146(name: ignorePunctuation))
+  // Type InteropUnion#871782428(parent: InteropGetter#645080929(name: ignorePunctuation))
   set ignorePunctuation(_i2.bool? value) {
     _i3.setProperty(
       this,
@@ -817,7 +817,7 @@ extension ResolvedCollatorOptions$Typings on ResolvedCollatorOptions {
 @_i1.staticInterop
 class Collator {
   factory Collator([
-    _i2.List /*LIST InteropStaticType.list,450419197,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,994025927,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         locales,
     _i4.CollatorOptions? options,
@@ -830,9 +830,9 @@ class Collator {
         ],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,821856413,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,719407187,[Instance of 'InteropRef<InteropType>']*/ <
       _i2.String> supportedLocalesOf(
-    _i2.List /*LIST InteropStaticType.list,124806552,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,748657738,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         locales, [
     _i4.CollatorOptions? options,
@@ -878,9 +878,9 @@ extension Collator$Typings on Collator {
 class Inline2 {}
 
 extension Inline2$Typings on Inline2 {
-  _i2.List /*LIST InteropStaticType.list,821856413,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,719407187,[Instance of 'InteropRef<InteropType>']*/ <
       _i2.String> supportedLocalesOf(
-    _i2.List /*LIST InteropStaticType.list,124806552,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,748657738,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         locales, [
     _i4.CollatorOptions? options,
@@ -894,7 +894,7 @@ extension Inline2$Typings on Inline2 {
         ],
       );
   _i4.Collator call([
-    _i2.List /*LIST InteropStaticType.list,751532407,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,737803013,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         locales,
     _i4.CollatorOptions? options,
@@ -983,7 +983,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #4402
   source: 
         localeMatcher?: string | undefined; */
-  // Type InteropUnion#535437139(parent: InteropGetter#64683861(name: localeMatcher))
+  // Type InteropUnion#162852495(parent: InteropGetter#1042222062(name: localeMatcher))
   set localeMatcher(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -1002,7 +1002,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #4403
   source: 
         style?: string | undefined; */
-  // Type InteropUnion#335426159(parent: InteropGetter#464487580(name: style))
+  // Type InteropUnion#934480768(parent: InteropGetter#88162838(name: style))
   set style(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -1021,7 +1021,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #4404
   source: 
         currency?: string | undefined; */
-  // Type InteropUnion#63981211(parent: InteropGetter#589245558(name: currency))
+  // Type InteropUnion#94226855(parent: InteropGetter#974900424(name: currency))
   set currency(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -1040,7 +1040,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #4405
   source: 
         currencySign?: string | undefined; */
-  // Type InteropUnion#839293634(parent: InteropGetter#480706254(name: currencySign))
+  // Type InteropUnion#700493980(parent: InteropGetter#837257049(name: currencySign))
   set currencySign(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -1059,7 +1059,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #4406
   source: 
         useGrouping?: boolean | undefined; */
-  // Type InteropUnion#58357926(parent: InteropGetter#2489007(name: useGrouping))
+  // Type InteropUnion#878944507(parent: InteropGetter#29506847(name: useGrouping))
   set useGrouping(_i2.bool? value) {
     _i3.setProperty(
       this,
@@ -1078,7 +1078,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #4407
   source: 
         minimumIntegerDigits?: number | undefined; */
-  // Type InteropUnion#782790923(parent: InteropGetter#758197716(name: minimumIntegerDigits))
+  // Type InteropUnion#166338207(parent: InteropGetter#49031756(name: minimumIntegerDigits))
   set minimumIntegerDigits(_i2.num? value) {
     _i3.setProperty(
       this,
@@ -1097,7 +1097,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #4408
   source: 
         minimumFractionDigits?: number | undefined; */
-  // Type InteropUnion#24984756(parent: InteropGetter#648179556(name: minimumFractionDigits))
+  // Type InteropUnion#387891135(parent: InteropGetter#891055574(name: minimumFractionDigits))
   set minimumFractionDigits(_i2.num? value) {
     _i3.setProperty(
       this,
@@ -1116,7 +1116,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #4409
   source: 
         maximumFractionDigits?: number | undefined; */
-  // Type InteropUnion#142640784(parent: InteropGetter#190575479(name: maximumFractionDigits))
+  // Type InteropUnion#1050056303(parent: InteropGetter#299295407(name: maximumFractionDigits))
   set maximumFractionDigits(_i2.num? value) {
     _i3.setProperty(
       this,
@@ -1135,7 +1135,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #4410
   source: 
         minimumSignificantDigits?: number | undefined; */
-  // Type InteropUnion#808716440(parent: InteropGetter#365730300(name: minimumSignificantDigits))
+  // Type InteropUnion#459044747(parent: InteropGetter#908160387(name: minimumSignificantDigits))
   set minimumSignificantDigits(_i2.num? value) {
     _i3.setProperty(
       this,
@@ -1154,7 +1154,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #4411
   source: 
         maximumSignificantDigits?: number | undefined; */
-  // Type InteropUnion#333375639(parent: InteropGetter#113004031(name: maximumSignificantDigits))
+  // Type InteropUnion#667247602(parent: InteropGetter#991320129(name: maximumSignificantDigits))
   set maximumSignificantDigits(_i2.num? value) {
     _i3.setProperty(
       this,
@@ -1176,7 +1176,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #251
   source: 
         compactDisplay?: "short" | "long" | undefined; */
-  // Type InteropUnion#765759458(parent: InteropGetter#616245612(name: compactDisplay))
+  // Type InteropUnion#975380307(parent: InteropGetter#197057541(name: compactDisplay))
   set compactDisplay(CompactDisplay? value) {
     _i3.setProperty(
       this,
@@ -1198,7 +1198,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #252
   source: 
         notation?: "standard" | "scientific" | "engineering" | "compact" | undefined; */
-  // Type InteropUnion#275325002(parent: InteropGetter#29713424(name: notation))
+  // Type InteropUnion#416001349(parent: InteropGetter#892549640(name: notation))
   set notation(Notation? value) {
     _i3.setProperty(
       this,
@@ -1220,7 +1220,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #253
   source: 
         signDisplay?: "auto" | "never" | "always" | "exceptZero" | undefined; */
-  // Type InteropUnion#794397625(parent: InteropGetter#670419991(name: signDisplay))
+  // Type InteropUnion#647453297(parent: InteropGetter#488616200(name: signDisplay))
   set signDisplay(SignDisplay? value) {
     _i3.setProperty(
       this,
@@ -1239,7 +1239,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #254
   source: 
         unit?: string | undefined; */
-  // Type InteropUnion#389045419(parent: InteropGetter#59207219(name: unit))
+  // Type InteropUnion#995241829(parent: InteropGetter#607818038(name: unit))
   set unit(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -1261,7 +1261,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #255
   source: 
         unitDisplay?: "short" | "long" | "narrow" | undefined; */
-  // Type InteropUnion#321219679(parent: InteropGetter#916415406(name: unitDisplay))
+  // Type InteropUnion#66398243(parent: InteropGetter#2716399(name: unitDisplay))
   set unitDisplay(UnitDisplay? value) {
     _i3.setProperty(
       this,
@@ -1280,7 +1280,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   /* #256
   source: 
         currencyDisplay?: string | undefined; */
-  // Type InteropUnion#482237052(parent: InteropGetter#424749523(name: currencyDisplay))
+  // Type InteropUnion#748304926(parent: InteropGetter#33096774(name: currencyDisplay))
   set currencyDisplay(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -1560,7 +1560,7 @@ extension ResolvedNumberFormatOptions$Typings on ResolvedNumberFormatOptions {
   /* #261
   source: 
         compactDisplay?: "short" | "long"; */
-  // Type InteropUnion#675924582(parent: InteropGetter#691771017(name: compactDisplay))
+  // Type InteropUnion#894587358(parent: InteropGetter#1040382179(name: compactDisplay))
   set compactDisplay(CompactDisplayOptions? value) {
     _i3.setProperty(
       this,
@@ -1582,7 +1582,7 @@ extension ResolvedNumberFormatOptions$Typings on ResolvedNumberFormatOptions {
   /* #262
   source: 
         notation?: "standard" | "scientific" | "engineering" | "compact"; */
-  // Type InteropUnion#797269036(parent: InteropGetter#521459951(name: notation))
+  // Type InteropUnion#58776739(parent: InteropGetter#823540562(name: notation))
   set notation(NotationOptions? value) {
     _i3.setProperty(
       this,
@@ -1604,7 +1604,7 @@ extension ResolvedNumberFormatOptions$Typings on ResolvedNumberFormatOptions {
   /* #263
   source: 
         signDisplay?: "auto" | "never" | "always" | "exceptZero"; */
-  // Type InteropUnion#506987608(parent: InteropGetter#27877454(name: signDisplay))
+  // Type InteropUnion#270475466(parent: InteropGetter#771988285(name: signDisplay))
   set signDisplay(SignDisplayOptions? value) {
     _i3.setProperty(
       this,
@@ -1645,7 +1645,7 @@ extension ResolvedNumberFormatOptions$Typings on ResolvedNumberFormatOptions {
   /* #265
   source: 
         unitDisplay?: "short" | "long" | "narrow"; */
-  // Type InteropUnion#454680589(parent: InteropGetter#792017605(name: unitDisplay))
+  // Type InteropUnion#913426001(parent: InteropGetter#732930140(name: unitDisplay))
   set unitDisplay(UnitDisplayOptions? value) {
     _i3.setProperty(
       this,
@@ -1697,7 +1697,7 @@ extension ResolvedNumberFormatOptions$Typings on ResolvedNumberFormatOptions {
 @_i1.staticInterop
 class NumberFormat {
   factory NumberFormat([
-    _i2.List /*LIST InteropStaticType.list,221329123,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,66887974,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         locales,
     _i4.NumberFormatOptions? options,
@@ -1710,9 +1710,9 @@ class NumberFormat {
         ],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,727311241,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,347650225,[Instance of 'InteropRef<InteropType>']*/ <
       _i2.String> supportedLocalesOf(
-    _i2.List /*LIST InteropStaticType.list,448687509,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,609191829,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         locales, [
     _i4.NumberFormatOptions? options,
@@ -1757,7 +1757,7 @@ extension NumberFormat$Typings on NumberFormat {
         'resolvedOptions',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,805776985,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,316878312,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.NumberFormatPart> formatToParts(
           [_i2.Object? number]) =>
       _i3.callMethod(
@@ -1772,9 +1772,9 @@ extension NumberFormat$Typings on NumberFormat {
 class Inline3 {}
 
 extension Inline3$Typings on Inline3 {
-  _i2.List /*LIST InteropStaticType.list,727311241,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,347650225,[Instance of 'InteropRef<InteropType>']*/ <
       _i2.String> supportedLocalesOf(
-    _i2.List /*LIST InteropStaticType.list,448687509,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,609191829,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         locales, [
     _i4.NumberFormatOptions? options,
@@ -1788,7 +1788,7 @@ extension Inline3$Typings on Inline3 {
         ],
       );
   _i4.NumberFormat call([
-    _i2.List /*LIST InteropStaticType.list,562504982,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,363894407,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         locales,
     _i4.NumberFormatOptions? options,
@@ -1887,7 +1887,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4439
   source: 
         localeMatcher?: "best fit" | "lookup" | undefined; */
-  // Type InteropUnion#837090889(parent: InteropGetter#193761538(name: localeMatcher))
+  // Type InteropUnion#93160319(parent: InteropGetter#785018943(name: localeMatcher))
   set localeMatcher(LocaleMatcher? value) {
     _i3.setProperty(
       this,
@@ -1909,7 +1909,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4440
   source: 
         weekday?: "long" | "short" | "narrow" | undefined; */
-  // Type InteropUnion#883006646(parent: InteropGetter#1065736566(name: weekday))
+  // Type InteropUnion#865639870(parent: InteropGetter#338948341(name: weekday))
   set weekday(Weekday? value) {
     _i3.setProperty(
       this,
@@ -1931,7 +1931,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4441
   source: 
         era?: "long" | "short" | "narrow" | undefined; */
-  // Type InteropUnion#672233136(parent: InteropGetter#377855848(name: era))
+  // Type InteropUnion#629308310(parent: InteropGetter#743205635(name: era))
   set era(Era? value) {
     _i3.setProperty(
       this,
@@ -1953,7 +1953,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4442
   source: 
         year?: "numeric" | "2-digit" | undefined; */
-  // Type InteropUnion#453596261(parent: InteropGetter#847742350(name: year))
+  // Type InteropUnion#378827775(parent: InteropGetter#827620896(name: year))
   set year(Year? value) {
     _i3.setProperty(
       this,
@@ -1975,7 +1975,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4443
   source: 
         month?: "numeric" | "2-digit" | "long" | "short" | "narrow" | undefined; */
-  // Type InteropUnion#579844867(parent: InteropGetter#893052996(name: month))
+  // Type InteropUnion#1021276517(parent: InteropGetter#388584430(name: month))
   set month(Month? value) {
     _i3.setProperty(
       this,
@@ -1997,7 +1997,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4444
   source: 
         day?: "numeric" | "2-digit" | undefined; */
-  // Type InteropUnion#258442107(parent: InteropGetter#770661693(name: day))
+  // Type InteropUnion#554885537(parent: InteropGetter#299027536(name: day))
   set day(Day? value) {
     _i3.setProperty(
       this,
@@ -2019,7 +2019,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4445
   source: 
         hour?: "numeric" | "2-digit" | undefined; */
-  // Type InteropUnion#792898333(parent: InteropGetter#818659907(name: hour))
+  // Type InteropUnion#396252230(parent: InteropGetter#72242232(name: hour))
   set hour(Hour? value) {
     _i3.setProperty(
       this,
@@ -2041,7 +2041,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4446
   source: 
         minute?: "numeric" | "2-digit" | undefined; */
-  // Type InteropUnion#765543463(parent: InteropGetter#180929502(name: minute))
+  // Type InteropUnion#416016901(parent: InteropGetter#617950891(name: minute))
   set minute(Minute? value) {
     _i3.setProperty(
       this,
@@ -2063,7 +2063,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4447
   source: 
         second?: "numeric" | "2-digit" | undefined; */
-  // Type InteropUnion#916483521(parent: InteropGetter#759673449(name: second))
+  // Type InteropUnion#681910364(parent: InteropGetter#144229405(name: second))
   set second(Second? value) {
     _i3.setProperty(
       this,
@@ -2085,7 +2085,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4448
   source: 
         timeZoneName?: "short" | "long" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined; */
-  // Type InteropUnion#978275659(parent: InteropGetter#1071300701(name: timeZoneName))
+  // Type InteropUnion#1030422312(parent: InteropGetter#742614219(name: timeZoneName))
   set timeZoneName(TimeZoneName? value) {
     _i3.setProperty(
       this,
@@ -2107,7 +2107,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4449
   source: 
         formatMatcher?: "best fit" | "basic" | undefined; */
-  // Type InteropUnion#866401727(parent: InteropGetter#803975051(name: formatMatcher))
+  // Type InteropUnion#33424653(parent: InteropGetter#952326711(name: formatMatcher))
   set formatMatcher(FormatMatcher? value) {
     _i3.setProperty(
       this,
@@ -2126,7 +2126,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4450
   source: 
         hour12?: boolean | undefined; */
-  // Type InteropUnion#534976467(parent: InteropGetter#258883900(name: hour12))
+  // Type InteropUnion#77531545(parent: InteropGetter#496582360(name: hour12))
   set hour12(_i2.bool? value) {
     _i3.setProperty(
       this,
@@ -2145,7 +2145,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #4451
   source: 
         timeZone?: string | undefined; */
-  // Type InteropUnion#452649696(parent: InteropGetter#181464175(name: timeZone))
+  // Type InteropUnion#1012643315(parent: InteropGetter#525794650(name: timeZone))
   set timeZone(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -2164,7 +2164,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #271
   source: 
         calendar?: string | undefined; */
-  // Type InteropUnion#822861505(parent: InteropGetter#490712057(name: calendar))
+  // Type InteropUnion#850804063(parent: InteropGetter#155716847(name: calendar))
   set calendar(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -2186,7 +2186,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #272
   source: 
         dayPeriod?: "narrow" | "short" | "long" | undefined; */
-  // Type InteropUnion#312798893(parent: InteropGetter#844125803(name: dayPeriod))
+  // Type InteropUnion#85435002(parent: InteropGetter#891184020(name: dayPeriod))
   set dayPeriod(DayPeriod? value) {
     _i3.setProperty(
       this,
@@ -2205,7 +2205,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #273
   source: 
         numberingSystem?: string | undefined; */
-  // Type InteropUnion#910280827(parent: InteropGetter#1031472033(name: numberingSystem))
+  // Type InteropUnion#584272023(parent: InteropGetter#174479046(name: numberingSystem))
   set numberingSystem(_i2.String? value) {
     _i3.setProperty(
       this,
@@ -2229,7 +2229,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   source: 
 
         dateStyle?: "full" | "long" | "medium" | "short" | undefined; */
-  // Type InteropUnion#1062484610(parent: InteropGetter#1001766306(name: dateStyle))
+  // Type InteropUnion#582533247(parent: InteropGetter#97799974(name: dateStyle))
   set dateStyle(DateStyle? value) {
     _i3.setProperty(
       this,
@@ -2251,7 +2251,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #276
   source: 
         timeStyle?: "full" | "long" | "medium" | "short" | undefined; */
-  // Type InteropUnion#621470559(parent: InteropGetter#655737307(name: timeStyle))
+  // Type InteropUnion#342557180(parent: InteropGetter#538224327(name: timeStyle))
   set timeStyle(TimeStyle? value) {
     _i3.setProperty(
       this,
@@ -2273,7 +2273,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   /* #277
   source: 
         hourCycle?: "h11" | "h12" | "h23" | "h24" | undefined; */
-  // Type InteropUnion#964869401(parent: InteropGetter#160279702(name: hourCycle))
+  // Type InteropUnion#729586939(parent: InteropGetter#452909867(name: hourCycle))
   set hourCycle(HourCycle? value) {
     _i3.setProperty(
       this,
@@ -2611,7 +2611,7 @@ extension ResolvedDateTimeFormatOptions$Typings
 @_i1.staticInterop
 class DateTimeFormat {
   factory DateTimeFormat([
-    _i2.List /*LIST InteropStaticType.list,620424533,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,539068909,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         locales,
     _i4.DateTimeFormatOptions? options,
@@ -2624,9 +2624,9 @@ class DateTimeFormat {
         ],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,792506615,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,74700514,[Instance of 'InteropRef<InteropType>']*/ <
       _i2.String> supportedLocalesOf(
-    _i2.List /*LIST InteropStaticType.list,832562273,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,554014921,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         locales, [
     _i4.DateTimeFormatOptions? options,
@@ -2658,7 +2658,7 @@ extension DateTimeFormat$Typings on DateTimeFormat {
         'resolvedOptions',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,358229110,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,520378202,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.DateTimeFormatPart> formatToParts(
           [_i2.Object? date]) =>
       _i3.callMethod(
@@ -2673,9 +2673,9 @@ extension DateTimeFormat$Typings on DateTimeFormat {
 class Inline4 {}
 
 extension Inline4$Typings on Inline4 {
-  _i2.List /*LIST InteropStaticType.list,792506615,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,74700514,[Instance of 'InteropRef<InteropType>']*/ <
       _i2.String> supportedLocalesOf(
-    _i2.List /*LIST InteropStaticType.list,832562273,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,554014921,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         locales, [
     _i4.DateTimeFormatOptions? options,
@@ -2689,7 +2689,7 @@ extension Inline4$Typings on Inline4 {
         ],
       );
   _i4.DateTimeFormat call([
-    _i2.List /*LIST InteropStaticType.list,422801544,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,289428680,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         locales,
     _i4.DateTimeFormatOptions? options,
@@ -3035,7 +3035,7 @@ extension DateTimeFormatPart$Typings on DateTimeFormatPart {
   /* #38
   source: 
         type: DateTimeFormatPartTypes; */
-  // Type InteropTypedef#247749485(name: DateTimeFormatPartTypes)
+  // Type InteropTypedef#485218501(name: DateTimeFormatPartTypes)
   set type(_i4.DateTimeFormatPartTypes value) {
     _i3.setProperty(
       this,
@@ -3114,7 +3114,7 @@ extension PluralRulesOptions$Typings on PluralRulesOptions {
   /* #26
   source: 
         localeMatcher?: "lookup" | "best fit" | undefined; */
-  // Type InteropUnion#201836265(parent: InteropGetter#909116756(name: localeMatcher))
+  // Type InteropUnion#74458133(parent: InteropGetter#638474514(name: localeMatcher))
   set localeMatcher(LocaleMatcherOptions? value) {
     _i3.setProperty(
       this,
@@ -3136,7 +3136,7 @@ extension PluralRulesOptions$Typings on PluralRulesOptions {
   /* #27
   source: 
         type?: PluralRuleType | undefined; */
-  // Type InteropUnion#862933497(parent: InteropGetter#758322870(name: type))
+  // Type InteropUnion#245832457(parent: InteropGetter#626801636(name: type))
   set type(_i4.PluralRuleType? value) {
     _i3.setProperty(
       this,
@@ -3155,7 +3155,7 @@ extension PluralRulesOptions$Typings on PluralRulesOptions {
   /* #28
   source: 
         minimumIntegerDigits?: number | undefined; */
-  // Type InteropUnion#1047255032(parent: InteropGetter#302058402(name: minimumIntegerDigits))
+  // Type InteropUnion#95810117(parent: InteropGetter#223782996(name: minimumIntegerDigits))
   set minimumIntegerDigits(_i2.num? value) {
     _i3.setProperty(
       this,
@@ -3174,7 +3174,7 @@ extension PluralRulesOptions$Typings on PluralRulesOptions {
   /* #29
   source: 
         minimumFractionDigits?: number | undefined; */
-  // Type InteropUnion#689384238(parent: InteropGetter#861901162(name: minimumFractionDigits))
+  // Type InteropUnion#915355611(parent: InteropGetter#928007409(name: minimumFractionDigits))
   set minimumFractionDigits(_i2.num? value) {
     _i3.setProperty(
       this,
@@ -3193,7 +3193,7 @@ extension PluralRulesOptions$Typings on PluralRulesOptions {
   /* #30
   source: 
         maximumFractionDigits?: number | undefined; */
-  // Type InteropUnion#817325590(parent: InteropGetter#800446460(name: maximumFractionDigits))
+  // Type InteropUnion#29193816(parent: InteropGetter#8979496(name: maximumFractionDigits))
   set maximumFractionDigits(_i2.num? value) {
     _i3.setProperty(
       this,
@@ -3212,7 +3212,7 @@ extension PluralRulesOptions$Typings on PluralRulesOptions {
   /* #31
   source: 
         minimumSignificantDigits?: number | undefined; */
-  // Type InteropUnion#110014770(parent: InteropGetter#1031367860(name: minimumSignificantDigits))
+  // Type InteropUnion#520748295(parent: InteropGetter#130205420(name: minimumSignificantDigits))
   set minimumSignificantDigits(_i2.num? value) {
     _i3.setProperty(
       this,
@@ -3231,7 +3231,7 @@ extension PluralRulesOptions$Typings on PluralRulesOptions {
   /* #32
   source: 
         maximumSignificantDigits?: number | undefined; */
-  // Type InteropUnion#191761464(parent: InteropGetter#1012635820(name: maximumSignificantDigits))
+  // Type InteropUnion#642797539(parent: InteropGetter#542456979(name: maximumSignificantDigits))
   set maximumSignificantDigits(_i2.num? value) {
     _i3.setProperty(
       this,
@@ -3258,7 +3258,7 @@ class ResolvedPluralRulesOptions {
 
   factory ResolvedPluralRulesOptions({
     required _i2.String locale,
-    required _i2.List /*LIST InteropStaticType.list,293158783,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,1067339710,[Instance of 'InteropRef<InteropType>']*/ <
             _i4.LDMLPluralRule>
         pluralCategories,
     required _i4.PluralRuleType type,
@@ -3305,7 +3305,7 @@ extension ResolvedPluralRulesOptions$Typings on ResolvedPluralRulesOptions {
   /* #37
   source: 
         pluralCategories: LDMLPluralRule[]; */
-  _i2.List /*LIST InteropStaticType.list,293158783,[Instance of 'InteropRef<InteropType>']*/ <_i4.LDMLPluralRule>
+  _i2.List /*LIST InteropStaticType.list,1067339710,[Instance of 'InteropRef<InteropType>']*/ <_i4.LDMLPluralRule>
       get pluralCategories => _i3.getProperty(
             this,
             'pluralCategories',
@@ -3315,7 +3315,7 @@ extension ResolvedPluralRulesOptions$Typings on ResolvedPluralRulesOptions {
         pluralCategories: LDMLPluralRule[]; */
   // Type InteropStaticType.list
   set pluralCategories(
-      _i2.List /*LIST InteropStaticType.list,293158783,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1067339710,[Instance of 'InteropRef<InteropType>']*/ <
               _i4.LDMLPluralRule>
           value) {
     _i3.setProperty(
@@ -3336,7 +3336,7 @@ extension ResolvedPluralRulesOptions$Typings on ResolvedPluralRulesOptions {
   /* #38
   source: 
         type: PluralRuleType; */
-  // Type InteropTypedef#467644957(name: PluralRuleType)
+  // Type InteropTypedef#997931729(name: PluralRuleType)
   set type(_i4.PluralRuleType value) {
     _i3.setProperty(
       this,
@@ -3445,7 +3445,7 @@ extension ResolvedPluralRulesOptions$Typings on ResolvedPluralRulesOptions {
 @_i1.staticInterop
 class PluralRules {
   factory PluralRules([
-    _i2.List /*LIST InteropStaticType.list,770406475,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,550221474,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         locales,
     _i4.PluralRulesOptions? options,
@@ -3458,9 +3458,9 @@ class PluralRules {
         ],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,452499740,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,275059917,[Instance of 'InteropRef<InteropType>']*/ <
       _i2.String> supportedLocalesOf(
-    _i2.List /*LIST InteropStaticType.list,477339869,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,731203933,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         locales, [
     _i4.Inline24? options,
@@ -3512,7 +3512,7 @@ extension Inline24$Typings on Inline24 {
       };
   /* #55
   source:  localeMatcher?: "lookup" | "best fit" */
-  // Type InteropUnion#223741840(parent: InteropGetter#912582067(name: localeMatcher))
+  // Type InteropUnion#7937423(parent: InteropGetter#340568832(name: localeMatcher))
   set localeMatcher(Inline24LocaleMatcherOptions? value) {
     _i3.setProperty(
       this,
@@ -3527,9 +3527,9 @@ extension Inline24$Typings on Inline24 {
 class Inline23 {}
 
 extension Inline23$Typings on Inline23 {
-  _i2.List /*LIST InteropStaticType.list,452499740,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,275059917,[Instance of 'InteropRef<InteropType>']*/ <
       _i2.String> supportedLocalesOf(
-    _i2.List /*LIST InteropStaticType.list,477339869,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,731203933,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         locales, [
     _i4.Inline24? options,
@@ -3543,7 +3543,7 @@ extension Inline23$Typings on Inline23 {
         ],
       );
   _i4.PluralRules call([
-    _i2.List /*LIST InteropStaticType.list,796418102,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,270788733,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         locales,
     _i4.PluralRulesOptions? options,
@@ -3588,7 +3588,7 @@ extension NumberFormatPart$Typings on NumberFormatPart {
   /* #64
   source: 
         type: NumberFormatPartTypes; */
-  // Type InteropTypedef#347686083(name: NumberFormatPartTypes)
+  // Type InteropTypedef#493168633(name: NumberFormatPartTypes)
   set type(_i4.NumberFormatPartTypes value) {
     _i3.setProperty(
       this,
@@ -3659,7 +3659,7 @@ extension RelativeTimeFormatOptions$Typings on RelativeTimeFormatOptions {
   source: 
         /** The locale matching algorithm to use. For information about this option, see [Intl page](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation). */
         localeMatcher?: RelativeTimeFormatLocaleMatcher; */
-  // Type InteropTypedef#158753360(name: RelativeTimeFormatLocaleMatcher)
+  // Type InteropTypedef#797508263(name: RelativeTimeFormatLocaleMatcher)
   set localeMatcher(_i4.RelativeTimeFormatLocaleMatcher? value) {
     _i3.setProperty(
       this,
@@ -3684,7 +3684,7 @@ extension RelativeTimeFormatOptions$Typings on RelativeTimeFormatOptions {
   source: 
         /** The format of output message. */
         numeric?: RelativeTimeFormatNumeric; */
-  // Type InteropTypedef#402432520(name: RelativeTimeFormatNumeric)
+  // Type InteropTypedef#166348831(name: RelativeTimeFormatNumeric)
   set numeric(_i4.RelativeTimeFormatNumeric? value) {
     _i3.setProperty(
       this,
@@ -3709,7 +3709,7 @@ extension RelativeTimeFormatOptions$Typings on RelativeTimeFormatOptions {
   source: 
         /** The length of the internationalized message. */
         style?: RelativeTimeFormatStyle; */
-  // Type InteropTypedef#539137524(name: RelativeTimeFormatStyle)
+  // Type InteropTypedef#714716522(name: RelativeTimeFormatStyle)
   set style(_i4.RelativeTimeFormatStyle? value) {
     _i3.setProperty(
       this,
@@ -3756,7 +3756,7 @@ extension ResolvedRelativeTimeFormatOptions$Typings
   /* #129
   source: 
         locale: UnicodeBCP47LocaleIdentifier; */
-  // Type InteropTypedef#584398837(name: UnicodeBCP47LocaleIdentifier)
+  // Type InteropTypedef#490356332(name: UnicodeBCP47LocaleIdentifier)
   set locale(_i4.UnicodeBCP47LocaleIdentifier value) {
     _i3.setProperty(
       this,
@@ -3776,7 +3776,7 @@ extension ResolvedRelativeTimeFormatOptions$Typings
   /* #130
   source: 
         style: RelativeTimeFormatStyle; */
-  // Type InteropTypedef#539137524(name: RelativeTimeFormatStyle)
+  // Type InteropTypedef#714716522(name: RelativeTimeFormatStyle)
   set style(_i4.RelativeTimeFormatStyle value) {
     _i3.setProperty(
       this,
@@ -3796,7 +3796,7 @@ extension ResolvedRelativeTimeFormatOptions$Typings
   /* #131
   source: 
         numeric: RelativeTimeFormatNumeric; */
-  // Type InteropTypedef#402432520(name: RelativeTimeFormatNumeric)
+  // Type InteropTypedef#166348831(name: RelativeTimeFormatNumeric)
   set numeric(_i4.RelativeTimeFormatNumeric value) {
     _i3.setProperty(
       this,
@@ -3887,7 +3887,7 @@ extension Inline28$Typings on Inline28 {
   /* #147
   source: 
               type: Exclude<NumberFormatPartTypes, "literal">; */
-  // Type InteropTypedef#698035339(name: Exclude)
+  // Type InteropTypedef#832630345(name: Exclude)
   set type(_i6.Exclude<_i4.NumberFormatPartTypes, _i2.String> value) {
     _i3.setProperty(
       this,
@@ -3926,7 +3926,7 @@ extension Inline28$Typings on Inline28 {
   /* #149
   source: 
               unit: RelativeTimeFormatUnitSingular; */
-  // Type InteropTypedef#748573760(name: RelativeTimeFormatUnitSingular)
+  // Type InteropTypedef#409420971(name: RelativeTimeFormatUnitSingular)
   set unit(_i4.RelativeTimeFormatUnitSingular value) {
     _i3.setProperty(
       this,
@@ -3951,7 +3951,7 @@ class RelativeTimeFormat {
         ],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,637655694,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,189722127,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.UnicodeBCP47LocaleIdentifier> supportedLocalesOf([
     _i2.Object? locales,
     _i4.RelativeTimeFormatOptions? options,
@@ -3985,7 +3985,7 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
           unit.name,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,32447480,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,748283194,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.RelativeTimeFormatPart> formatToParts(
     _i2.num value,
     _i4.RelativeTimeFormatUnit unit,
@@ -4010,7 +4010,7 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
 class Inline29 {}
 
 extension Inline29$Typings on Inline29 {
-  _i2.List /*LIST InteropStaticType.list,637655694,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,189722127,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.UnicodeBCP47LocaleIdentifier> supportedLocalesOf([
     _i2.Object? locales,
     _i4.RelativeTimeFormatOptions? options,
@@ -4131,7 +4131,7 @@ extension LocaleOptions$Typings on LocaleOptions {
   source: 
         /** Flag that defines whether case is taken into account for the locale's collation rules. */
         caseFirst?: LocaleCollationCaseFirst; */
-  // Type InteropTypedef#594845168(name: LocaleCollationCaseFirst)
+  // Type InteropTypedef#429400568(name: LocaleCollationCaseFirst)
   set caseFirst(_i4.LocaleCollationCaseFirst? value) {
     _i3.setProperty(
       this,
@@ -4178,7 +4178,7 @@ extension LocaleOptions$Typings on LocaleOptions {
   source: 
         /** The time keeping format convention used by the locale. */
         hourCycle?: LocaleHourCycleKey; */
-  // Type InteropTypedef#565004855(name: LocaleHourCycleKey)
+  // Type InteropTypedef#171172924(name: LocaleHourCycleKey)
   set hourCycle(_i4.LocaleHourCycleKey? value) {
     _i3.setProperty(
       this,
@@ -4432,7 +4432,7 @@ extension DisplayNamesOptions$Typings on DisplayNamesOptions {
   /* #354
   source: 
         localeMatcher?: RelativeTimeFormatLocaleMatcher; */
-  // Type InteropTypedef#158753360(name: RelativeTimeFormatLocaleMatcher)
+  // Type InteropTypedef#797508263(name: RelativeTimeFormatLocaleMatcher)
   set localeMatcher(_i4.RelativeTimeFormatLocaleMatcher? value) {
     _i3.setProperty(
       this,
@@ -4454,7 +4454,7 @@ extension DisplayNamesOptions$Typings on DisplayNamesOptions {
   /* #355
   source: 
         style?: RelativeTimeFormatStyle; */
-  // Type InteropTypedef#539137524(name: RelativeTimeFormatStyle)
+  // Type InteropTypedef#714716522(name: RelativeTimeFormatStyle)
   set style(_i4.RelativeTimeFormatStyle? value) {
     _i3.setProperty(
       this,
@@ -4474,7 +4474,7 @@ extension DisplayNamesOptions$Typings on DisplayNamesOptions {
   /* #356
   source: 
         type: DisplayNamesType; */
-  // Type InteropTypedef#756644545(name: DisplayNamesType)
+  // Type InteropTypedef#56663586(name: DisplayNamesType)
   set type(_i4.DisplayNamesType value) {
     _i3.setProperty(
       this,
@@ -4498,7 +4498,7 @@ extension DisplayNamesOptions$Typings on DisplayNamesOptions {
   /* #357
   source: 
         languageDisplay?: DisplayNamesLanguageDisplay; */
-  // Type InteropTypedef#807142958(name: DisplayNamesLanguageDisplay)
+  // Type InteropTypedef#978764190(name: DisplayNamesLanguageDisplay)
   set languageDisplay(_i4.DisplayNamesLanguageDisplay? value) {
     _i3.setProperty(
       this,
@@ -4520,7 +4520,7 @@ extension DisplayNamesOptions$Typings on DisplayNamesOptions {
   /* #358
   source: 
         fallback?: DisplayNamesFallback; */
-  // Type InteropTypedef#1053617703(name: DisplayNamesFallback)
+  // Type InteropTypedef#1031957065(name: DisplayNamesFallback)
   set fallback(_i4.DisplayNamesFallback? value) {
     _i3.setProperty(
       this,
@@ -4570,7 +4570,7 @@ extension ResolvedDisplayNamesOptions$Typings on ResolvedDisplayNamesOptions {
   /* #362
   source: 
         locale: UnicodeBCP47LocaleIdentifier; */
-  // Type InteropTypedef#584398837(name: UnicodeBCP47LocaleIdentifier)
+  // Type InteropTypedef#490356332(name: UnicodeBCP47LocaleIdentifier)
   set locale(_i4.UnicodeBCP47LocaleIdentifier value) {
     _i3.setProperty(
       this,
@@ -4590,7 +4590,7 @@ extension ResolvedDisplayNamesOptions$Typings on ResolvedDisplayNamesOptions {
   /* #363
   source: 
         style: RelativeTimeFormatStyle; */
-  // Type InteropTypedef#539137524(name: RelativeTimeFormatStyle)
+  // Type InteropTypedef#714716522(name: RelativeTimeFormatStyle)
   set style(_i4.RelativeTimeFormatStyle value) {
     _i3.setProperty(
       this,
@@ -4610,7 +4610,7 @@ extension ResolvedDisplayNamesOptions$Typings on ResolvedDisplayNamesOptions {
   /* #364
   source: 
         type: DisplayNamesType; */
-  // Type InteropTypedef#756644545(name: DisplayNamesType)
+  // Type InteropTypedef#56663586(name: DisplayNamesType)
   set type(_i4.DisplayNamesType value) {
     _i3.setProperty(
       this,
@@ -4630,7 +4630,7 @@ extension ResolvedDisplayNamesOptions$Typings on ResolvedDisplayNamesOptions {
   /* #365
   source: 
         fallback: DisplayNamesFallback; */
-  // Type InteropTypedef#1053617703(name: DisplayNamesFallback)
+  // Type InteropTypedef#1031957065(name: DisplayNamesFallback)
   set fallback(_i4.DisplayNamesFallback value) {
     _i3.setProperty(
       this,
@@ -4654,7 +4654,7 @@ extension ResolvedDisplayNamesOptions$Typings on ResolvedDisplayNamesOptions {
   /* #366
   source: 
         languageDisplay?: DisplayNamesLanguageDisplay; */
-  // Type InteropTypedef#807142958(name: DisplayNamesLanguageDisplay)
+  // Type InteropTypedef#978764190(name: DisplayNamesLanguageDisplay)
   set languageDisplay(_i4.DisplayNamesLanguageDisplay? value) {
     _i3.setProperty(
       this,
@@ -4679,7 +4679,7 @@ class DisplayNames {
         ],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,192044283,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,5736451,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.BCP47LanguageTag> supportedLocalesOf([
     _i4.LocalesArgument? locales,
     _i4.Inline32? options,
@@ -4732,7 +4732,7 @@ extension Inline32$Typings on Inline32 {
       };
   /* #428
   source:  localeMatcher?: RelativeTimeFormatLocaleMatcher */
-  // Type InteropTypedef#158753360(name: RelativeTimeFormatLocaleMatcher)
+  // Type InteropTypedef#797508263(name: RelativeTimeFormatLocaleMatcher)
   set localeMatcher(_i4.RelativeTimeFormatLocaleMatcher? value) {
     _i3.setProperty(
       this,
@@ -4747,7 +4747,7 @@ extension Inline32$Typings on Inline32 {
 class Inline31 {}
 
 extension Inline31$Typings on Inline31 {
-  _i2.List /*LIST InteropStaticType.list,192044283,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,5736451,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.BCP47LanguageTag> supportedLocalesOf([
     _i4.LocalesArgument? locales,
     _i4.Inline32? options,

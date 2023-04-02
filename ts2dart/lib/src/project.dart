@@ -82,7 +82,7 @@ class InteropProject {
     final src = Directory(srcDirFullPath(''));
 
     if (src.existsSync()) {
-      src.deleteSync();
+      src.deleteSync(recursive: true);
     }
 
     src.createSync(recursive: true);
@@ -90,7 +90,7 @@ class InteropProject {
     final exporter = Directory(expositionDirFullPath(''));
 
     if (exporter.existsSync()) {
-      exporter.deleteSync();
+      exporter.deleteSync(recursive: true);
     }
 
     exporter.createSync(recursive: true);

@@ -53,7 +53,7 @@ extension Inline9$Typings on Inline9 {
       );
   /* #556
   source:  raw: readonly string[] | ArrayLike<string> */
-  // Type InteropUnion#1034220802(parent: InteropGetter#638536269(name: raw))
+  // Type InteropUnion#500785656(parent: InteropGetter#966695487(name: raw))
   set raw(_i2.Object value) {
     _i4.setProperty(
       this,

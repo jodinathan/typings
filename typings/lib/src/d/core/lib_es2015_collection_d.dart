@@ -31,7 +31,7 @@ class Map<K, V>
                   V,
                 )>> {
   factory Map.$1(
-          [_i2.List /*LIST InteropStaticType.list,477417193,[Instance of 'InteropRef<InteropType>']*/ <
+          [_i2.List /*LIST InteropStaticType.list,159565932,[Instance of 'InteropRef<InteropType>']*/ <
                   (
                     K,
                     V,
@@ -230,7 +230,7 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
 @_i1.staticInterop
 class WeakMap<K extends _i2.Object, V> {
   factory WeakMap.$1(
-          [_i2.List /*LIST InteropStaticType.list,70805693,[Instance of 'InteropRef<InteropType>']*/ <
+          [_i2.List /*LIST InteropStaticType.list,822047722,[Instance of 'InteropRef<InteropType>']*/ <
                   (
                     K,
                     V,
@@ -306,7 +306,7 @@ class WeakMapConstructor {}
 @_i1.staticInterop
 class Set<T> implements _IterableLike$<_i9.IterableIterator<T>> {
   factory Set.$1(
-          [_i2.List /*LIST InteropStaticType.list,373845080,[Instance of 'InteropRef<InteropType>']*/ <
+          [_i2.List /*LIST InteropStaticType.list,790160353,[Instance of 'InteropRef<InteropType>']*/ <
                   T>?
               values]) =>
       _i4.callConstructor(
@@ -463,7 +463,7 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
 @_i1.staticInterop
 class WeakSet<T extends _i2.Object> {
   factory WeakSet.$1(
-          [_i2.List /*LIST InteropStaticType.list,898917750,[Instance of 'InteropRef<InteropType>']*/ <
+          [_i2.List /*LIST InteropStaticType.list,395990416,[Instance of 'InteropRef<InteropType>']*/ <
                   T>?
               values]) =>
       _i4.callConstructor(

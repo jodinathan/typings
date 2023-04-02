@@ -76,9 +76,10 @@ class InteropDynamicEnum extends InteropNamedDeclaration
   bool _isEnumMap = false;
   bool get isEnumMap => _isEnumMap;
   bool get addedTypeParam =>
-      !values.any((v) => (v as InteropConstrainedConstType)
-          .constraints
-          .any((c) => c.realType is InteropLocalType));
+      values.isNotEmpty &&
+      !values
+          .whereType<InteropConstrainedConstType>()
+          .any((v) => v.constraints.any((c) => c.realType is InteropLocalType));
   final _parsedInterfaceMembers = <String, Iterable<InteropRef>>{};
 
   @override
@@ -130,9 +131,9 @@ class InteropDynamicEnum extends InteropNamedDeclaration
       final inheritor =
           _parsedInterfaceMembers.values.flattened.commonInheritor();
 
-      if (name == 'HTMLElementTagNameMap') {
-        print('HTMLElementTagNameMap FUCK == $inheritor\n${addedTypeParam}');
-        print('=====${_parsedInterfaceMembers.length}');
+      if (name == 'Inline25') {
+        print('Inline25 FUCK == $inheritor\n${addedTypeParam}');
+        print('=====${typeParams}');
       }
 
       if (addedTypeParam) {
@@ -202,6 +203,8 @@ class InteropDynamicEnum extends InteropNamedDeclaration
     return [
       Enum((b) {
         final ref = jsType.ref();
+        final tp = typeParams
+            .firstWhereOrNull((tp) => tp.symbol == interfaceTypeParamName);
 
         buildDocs(b.docs);
         b
@@ -221,16 +224,19 @@ class InteropDynamicEnum extends InteropNamedDeclaration
                   ..toThis = true;
               }));
           }))
-          ..types.addAll(typeParams.map((t) => t.ref()))
           ..values.addAll(values.map((value) => EnumValue((b) {
                 b
                   ..name = value.makeKeyword()
                   ..arguments.add(value.literal());
 
-                if (value is InteropConstrainedConstType) {
+                if (value is InteropConstrainedConstType && tp != null) {
                   b.types.addAll(value.constraints.map((c) => c.ref()));
                 }
               })));
+
+        if (tp != null) {
+          b.types.add(tp.ref());
+        }
       })
     ];
   }

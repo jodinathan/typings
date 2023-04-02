@@ -68,8 +68,8 @@ class InteropModule {
         //final buffer = codeLib.accept(emitter).toString();
 
         saveSource(
-            path: project.srcDir(library.targetFileName), buffer: buffer);
-        mainBuffer.writeln("export '${library.targetFileName}';");
+            path: library.targetFileName, buffer: buffer);
+        mainBuffer.writeln("export '/${project.srcDir(library.targetFileName)}';");
       } catch (e) {
         print('FORMAT ERROR ${'=' * 30}');
         print(built);
