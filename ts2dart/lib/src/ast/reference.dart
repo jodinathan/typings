@@ -26,9 +26,12 @@ mixin InteropItem {
     'int',
     'double',
     'bool',
+    'false',
+    'true',
     'var',
     'switch',
     'catch',
+    'finally',
     'this',
     'return',
     'throw',
@@ -126,7 +129,7 @@ class InteropRef<T extends InteropType> {
 
   Expression fromInterop(Expression argument,
       {bool? isNullable, bool? isOptional}) {
-    if (this.type case InteropDelegateType t) {
+    if (this.type case InteropDelegateType t when t.delegatesFromInterop) {
       return t.delegate
           .fromInterop(argument, isOptional: isOptional ?? acceptsNull);
     }
@@ -147,7 +150,7 @@ class InteropRef<T extends InteropType> {
         return copyWith(t.delegate.type)
             .ref(symbolSwap: symbolSwap, forceOptional: acceptsNull);
       }
-      
+
       return t.delegate.ref(symbolSwap: symbolSwap, forceOptional: acceptsNull);
     }
 

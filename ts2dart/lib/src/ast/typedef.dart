@@ -69,6 +69,18 @@ class InteropTypedef extends InteropNamedDeclaration
 
     if (map case {'type': Map type, ...}) {
       definition = parseRef(type.cast());
+
+      if (name == 'FlatArray') {
+        print('FUCKFlatArray ${definition!.type}\n$typeParams');
+      }
+      if (definition!.type case InteropSourceType sourced
+          when typeParams.isNotEmpty) {
+        for (final tp in typeParams) {
+          if (!sourced.typeParams.any((otp) => otp.symbol == tp.symbol)) {
+            sourced.typeParams.add(tp.copyWith());
+          }
+        }
+      }
       return;
     }
 
@@ -81,8 +93,8 @@ class InteropTypedef extends InteropNamedDeclaration
           bool isNullable = false,
           bool isOptional = false,
           required List<InteropRef> typeArgs}) =>
-      definition!.toInterop(argument,
-          isNullable: isNullable, isOptional: isOptional);
+      definition!
+          .toInterop(argument, isNullable: isNullable, isOptional: isOptional);
 
   @override
   Expression fromInterop(

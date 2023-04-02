@@ -27,7 +27,7 @@ class InteropAccessor extends InteropType
   InteropRef get delegate => InteropStaticType.dyn.asRef;
 
   @override
-  Iterable<InteropTypeParam> get typeParams => [];
+  List<InteropTypeParam> get typeParams => [];
 
   @override
   String toString() => ''' 

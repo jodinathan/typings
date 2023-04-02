@@ -9,6 +9,8 @@ mixin InteropDelegateType on InteropType, InteropDiamondType {
   Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) =>
       delegate.ref(symbolSwap: symbolSwap);
 
+  bool get delegatesFromInterop => true;
+
   @override
   bool isSame(InteropType other) => realType.isSame(other);
 

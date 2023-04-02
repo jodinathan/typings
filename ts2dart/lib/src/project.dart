@@ -1,34 +1,51 @@
 import 'dart:async';
-import 'package:code_builder/code_builder.dart';
-import 'package:dart_style/dart_style.dart';
+import 'dart:io';
+import 'package:collection/collection.dart';
 import 'package:ts2dart/src/ast/library.dart';
+import 'package:ts2dart/src/module.dart';
 
+import 'ast/types/type.dart';
 import 'common.dart';
 
-class _PrefixedAllocator implements Allocator {
-  final _imports = <String, int>{};
-  var _keys = 1;
+class InteropProject {
+  InteropProject(
+      {this.targetMainFile, required this.dirName, required this.libPath});
 
-  @override
-  String allocate(Reference reference) {
-    final symbol = reference.symbol;
-    final url = reference.url;
-    if (url == null || url.isEmpty) {
-      return symbol!;
+  final List<InteropModule> modules = [];
+  late final mainModule = InteropModule(path: '', project: this);
+  final String? targetMainFile;
+  final String libPath;
+  final String dirName;
+
+  InteropType? dig(Iterable<String> path) {
+    final list = path.toList();
+    final typeName = list.removeLast();
+    final positions = [for (var x = 0; x < list.length; x++) x];
+
+    for (final module in modules) {
+      if (positions.length == module.splittedPath.length &&
+          positions.every(
+              (p) => list.elementAt(p) == module.splittedPath.elementAt(p))) {
+        for (final lib in module.libraries) {
+          final type = lib.findDeclared(typeName);
+
+          if (type != null) {
+            return type;
+          }
+        }
+
+        return null;
+      }
     }
-    return '_i${_imports.putIfAbsent(url, _nextKey)}.$symbol';
+
+    return null;
   }
 
-  int _nextKey() => _keys++;
+  String srcDir(String path) => 'src/d/${dirName}/$path';
 
-  @override
-  Iterable<Directive> get imports => _imports.keys.map(
-        (u) => Directive.import(u, as: '_i${_imports[u]}'),
-      );
-}
+  String srcDirFullPath(String path) => '${libPath}${srcDir(path)}';
 
-class InteropProject {
-  final List<InteropLibrary> libraries = [];
+  String expositionDirFullPath(String path) => '${libPath}${dirName}/$path';
 
   T withLibrary<T>(
       {required InteropLibrary library,
@@ -57,57 +74,71 @@ class InteropProject {
     }
   }
 
-  Iterable<ParsedFile> generate(Iterable<Map<String, dynamic>> mapFiles) sync* {
-    final emitter =
-        DartEmitter(allocator: _PrefixedAllocator(), useNullSafetySyntax: true);
+  void generate({required Iterable<Map<String, dynamic>> mapFiles}) {
     final parseMapping = <InteropLibrary, Map<String, dynamic>>{};
 
-    libraries.clear();
+    modules.clear();
+
+    final src = Directory(srcDirFullPath(''));
+
+    if (src.existsSync()) {
+      src.deleteSync();
+    }
+
+    src.createSync(recursive: true);
+
+    final exporter = Directory(expositionDirFullPath(''));
+
+    if (exporter.existsSync()) {
+      exporter.deleteSync();
+    }
+
+    exporter.createSync(recursive: true);
+
+    void listModules(
+        {required Map<String, dynamic> map,
+        required String fileName,
+        required InteropModule parent}) {
+      final {'items': Map items, ...} = map;
+      final {'modules': List rawModules, ...} = items;
+
+      final library = InteropLibrary(
+          fileName: fileName, module: parent, namespace: parent.path)
+        ..listTypesFromMap(items.cast());
+
+      parseMapping[library] = items.cast();
+      parent.libraries.add(library);
+
+      for (final rawModule in rawModules) {
+        final moduleMap = (rawModule as Map).cast<String, dynamic>();
+        final {'namespace': String namespace, ...} = moduleMap;
+        final fullNamespace =
+            '${parent.path.isEmpty ? '' : '${parent.path}.'}$namespace';
+        var module = modules.firstWhereOrNull((m) => m.path == fullNamespace);
+
+        if (module == null) {
+          module = InteropModule(path: fullNamespace, project: this);
+          modules.add(module);
+        }
+
+        listModules(fileName: fileName, parent: module, map: moduleMap);
+      }
+    }
+
+    modules.add(mainModule);
 
     for (final file in mapFiles) {
-      final library = InteropLibrary(
-          fileName: file.prop('name'),
-          project: this,
-          namespace: file.prop('namespace'));
+      if (file
+          case {'name': String fileName, 'namespace': String namespace, ...}) {
+        logger.info(
+            'Listing structures in file $fileName namespace "$namespace"');
 
-      withLibrary(
-          library: library,
-          action: 'Listing structures',
-          fn: () {
-            if (file
-                case {'name': String fileName, 'items': Map rawItems, ...}) {
-              logger.info('Listing structures in file $fileName');
+        listModules(map: file, fileName: fileName, parent: mainModule);
 
-              final items = rawItems.cast<String, dynamic>();
+        continue;
+      }
 
-              library.listTypesFromMap(items);
-
-              parseMapping[library] = items;
-              libraries.add(library);
-
-              final {'modules': List modules, ...} = items;
-
-              for (final rawModule in modules) {
-                final module = (rawModule as Map).cast<String, dynamic>();
-                final {'namespace': String namespace, ...} = module;
-
-                assert(namespace.isNotEmpty);
-                assert(!libraries.any((lib) => lib.namespace == namespace),
-                'Found library of namespace $namespace');
-
-                final library = InteropLibrary(
-                    fileName: fileName, project: this, namespace: namespace)
-                  ..listTypesFromMap(module);
-
-                parseMapping[library] = module;
-                libraries.add(library);
-              }
-
-              return;
-            }
-
-            throw 'Not lib map ${file.keys.join(', ')}';
-          });
+      throw 'Not lib map ${file.keys.join(', ')}';
     }
 
     for (final MapEntry(:key, :value) in parseMapping.entries) {
@@ -139,34 +170,8 @@ class InteropProject {
           });
     }
 
-    for (final library in parseMapping.keys) {
-      late String built;
-
-      try {
-        withLibrary(
-            library: library,
-            action: 'Transpile',
-            fn: () {
-              final codeLib = library.build().first;
-              built = '${codeLib.accept(emitter)}';
-            });
-      } catch (e) {
-        logger.severe(
-            '**ERROR** occurred while transpilling lib ${library.name}');
-        rethrow;
-      }
-
-      try {
-        final buffer = DartFormatter().format(built);
-        //final buffer = codeLib.accept(emitter).toString();
-
-        yield (fileName: library.targetFileName, buffer: buffer);
-      } catch (e) {
-        print('FORMAT ERROR ${'=' * 30}');
-        print(built);
-        print('\n\n${'=' * 30}');
-        rethrow;
-      }
+    for (final module in modules) {
+      module.generate();
     }
   }
 }

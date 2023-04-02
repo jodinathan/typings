@@ -1,0 +1,67 @@
+@_i1.JS()
+library lib_es2015_symbol_wellknown_d_ts; // ignore_for_file: no_leading_underscores_for_library_prefixes
+
+import 'package:js/js.dart' as _i1;
+import 'dart:core' as _i2;
+import 'lib_es5_d.dart' as _i3;
+import 'dart:js_util' as _i4;
+import 'core_comon_d.dart' as _i5;
+import 'lib_es2015_core_d.dart' as _i6;
+import 'lib_es2017_object_d.dart' as _i7;
+import 'lib_es2019_object_d.dart' as _i8;
+import 'lib_es2015_iterable_d.dart' as _i9;
+import 'lib_es5_intl_d.dart' as _i10;
+import 'lib_es2018_regexp_d.dart' as _i11;
+import 'lib_es2019_array_d.dart' as _i12;
+import 'dart:typed_data' as _i13;
+import 'lib_es2017_sharedmemory_d.dart' as _i14;
+import 'lib_es2015_collection_d.dart' as _i15;
+import 'lib_es2020_promise_d.dart' as _i16;
+import 'lib_es2015_generator_d.dart' as _i17;
+import 'lib_es2015_proxy_d.dart' as _i18;
+
+@_i1.JS('self')
+external _i2.Object _self;
+
+@_i1.JS()
+@_i1.staticInterop
+class Inline11 {}
+
+extension Inline11$Typings on Inline11 {}
+
+@_i1.JS()
+@_i1.staticInterop
+class Inline12 {}
+
+extension Inline12$Typings on Inline12 {}
+
+@_i1.JS()
+@_i1.staticInterop
+class Inline13 {}
+
+extension Inline13$Typings on Inline13 {}
+
+@_i1.JS()
+@_i1.staticInterop
+class Inline14 {}
+
+extension Inline14$Typings on Inline14 {}
+
+@_i1.JS()
+@_i1.staticInterop
+class Inline15 {}
+
+extension Inline15$Typings on Inline15 {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _IterableLike$<T> {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+abstract class _GlobalThis {}
+
+@_i1.JS('undefined')
+external _i2.dynamic _$exposed$undefined;

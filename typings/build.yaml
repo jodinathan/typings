@@ -1,0 +1,23 @@
+targets:
+  $default:
+    sources:
+      exclude: []
+    builders:
+      build_web_compilers|entrypoint:
+        options:
+          compiler: dart2js
+          dart2js_args:
+            #- --fast-startup
+            - -O1
+            - --no-minify
+            #- --trust-primitives
+            #- --omit-implicit-checks
+            #- --dump-info
+        release_options:
+          dart2js_args:
+            - --fast-startup
+            - -O4
+            - --minify
+            - --trust-primitives
+            - --omit-implicit-checks
+            #- --dump-info

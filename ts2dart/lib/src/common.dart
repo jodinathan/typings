@@ -5,8 +5,6 @@ import 'package:logging/logging.dart';
 
 final logger = Logger('Typings');
 
-typedef ParsedFile = ({String fileName, String buffer});
-
 typedef PkgJs = ({
   String package,
   Expression Function({String? name}) js,
@@ -24,7 +22,8 @@ typedef PkgJsUtils = ({
   JsCall getProperty,
   JsCall setProperty,
   JsCall allowInterop,
-  JsCall promiseToFuture
+  JsCall promiseToFuture,
+  JsCall isTruthy
 });
 
 final PkgJs pkgJs = (
@@ -60,6 +59,10 @@ final PkgJsUtils pkgJsUtils = (
   promiseToFuture: (positionalArguments,
           [namedArguments = const {}, typeArguments = const []]) =>
       refer('promiseToFuture', pkgJsUtils.package)
+          .call(positionalArguments, namedArguments, typeArguments),
+  isTruthy: (positionalArguments,
+          [namedArguments = const {}, typeArguments = const []]) =>
+      refer('isTruthy', pkgJsUtils.package)
           .call(positionalArguments, namedArguments, typeArguments)
 );
 

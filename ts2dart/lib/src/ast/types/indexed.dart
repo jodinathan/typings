@@ -15,8 +15,8 @@ class InteropIndexed extends InteropType
       required this.library,
       required this.parent,
       required this.lineNumber}) {
-        library.register(this);
-      }
+    library.register(this);
+  }
 
   InteropRef index;
   InteropRef obj;
@@ -34,15 +34,19 @@ class InteropIndexed extends InteropType
   InteropRef get delegate => _delegate!;
 
   @override
-  void configure() {   
+  void configure() {
     print('ConfigureIndexed ${obj.type}\n${obj.realType}\n${index.realType}');
-    if (index.realType case InteropLocalType local
-        when obj.realType is InteropDynamicEnum) {
-      print('ChangedConfigure! ${local.symbol}');
-      _delegate = InteropRef(InteropLocalType('${local.symbol}\$'));
-    } else {
-      _delegate = InteropStaticType.dyn.asRef;
+    final ot = obj.realType;
+    final it = index.realType;
+
+    if (it is InteropLocalType &&
+        ot is InteropDynamicEnum &&
+        ot.addedTypeParam) {
+      print('ChangedConfigure! ${it.symbol}');
+      _delegate = InteropRef(InteropLocalType('${it.symbol}\$'));
     }
+
+    _delegate ??= InteropStaticType.dyn.asRef;
 
     super.configure();
   }

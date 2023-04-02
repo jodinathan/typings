@@ -7,6 +7,7 @@ import 'package:recase/recase.dart';
 import 'package:ts2dart/src/ast/reference.dart';
 import 'package:ts2dart/src/ast/typedef.dart';
 import 'package:ts2dart/src/ast/types/local.dart';
+import 'package:ts2dart/src/module.dart';
 
 import '../common.dart';
 import '../metadata/struct.dart';
@@ -34,13 +35,20 @@ class InteropTypeException implements Exception {
 
 class InteropLibrary with InteropItem {
   InteropLibrary(
-      {required this.fileName, required this.project, required this.namespace})
+      {required this.fileName,
+      required this.module,
+      required this.namespace,
+      String? targetFileName})
       : name = (namespace.isEmpty ? fileName : namespace).snakeCase,
-        targetFileName = fileName.replaceAll('.d.ts',
-            '.${namespace.isEmpty ? '' : '${namespace.snakeCase}.'}d.dart');
+        targetFileName = targetFileName ??
+            '${fileName.replaceAll('.d.ts', '.${namespace.isEmpty ? '' : '${namespace}.'}d').toLowerCase().snakeCase}.dart';
 
   static final dartCore = InteropLibrary(
-      fileName: 'dart:core', namespace: '', project: InteropProject());
+      fileName: 'dart:core',
+      targetFileName: 'dart:core',
+      namespace: '',
+      module: InteropModule(
+          path: '', project: InteropProject(libPath: '', dirName: '')));
   static InteropLibrary get current =>
       Zone.current[#interopLibrary] as InteropLibrary;
 
@@ -53,7 +61,7 @@ class InteropLibrary with InteropItem {
   final List<InteropInterface> interfaces = [];
   final List<InteropGetter> globalAccessors = [];
   final List<InteropProperty> globalProperties = [];
-  final InteropProject project;
+  final InteropModule module;
   final String namespace;
   final String name;
   final globalName = 'globalThis';
@@ -216,25 +224,6 @@ class InteropLibrary with InteropItem {
         source: source,
       ));
     }
-  }
-
-  static int _globalVarCounter = 0;
-
-  InteropGetter makeDeclaredVar(String name) {
-    final ret = InteropGetter(
-        name: name,
-        cl: global,
-        lineNumber: -1,
-        isStatic: false,
-        library: this,
-        source: 'DeclaredVar',
-        isExternal: true)
-      ..reference = InteropStaticType.obj.asRef
-      ..usableName = '_globalVar${_globalVarCounter++}'
-      ..escopedReference = false;
-
-    globalProperties.add(ret);
-    return ret;
   }
 
   void parse(Map<String, dynamic> map) {
@@ -470,7 +459,7 @@ class InteropLibrary with InteropItem {
         }
 
         if (!cl.isEmpty()) {
-          final target = InteropRef(makeDeclaredVar(v.name));
+          final target = InteropRef(module.makeDeclaredVar(v.name));
 
           for (final item in cl.constructors) {
             final cp = item.copy()
@@ -576,12 +565,14 @@ class InteropLibrary with InteropItem {
       return declared;
     }
 
-    for (final library in project.libraries) {
-      final outter = library.findDeclared(name);
+    final type = module.findDeclared(name);
 
-      if (outter != null) {
-        return outter;
-      }
+    if (type != null) {
+      return type;
+    }
+
+    if (module != module.project.mainModule) {
+      return module.project.mainModule.findDeclared(name);
     }
 
     return null;
@@ -608,19 +599,7 @@ class InteropLibrary with InteropItem {
       }
 
       final spl = name.split('.');
-
-      if (spl.length == 2) {
-        final lib =
-            project.libraries.firstWhere((lib) => lib.namespace == spl.first);
-
-        final found = lib.findTypeByName(spl.last);
-
-        if (found != null) {
-          return found;
-        }
-      }
-
-      final found = findTypeByName(name);
+      final found = spl.length > 1 ? module.dig(spl) : findTypeByName(name);
 
       if (found != null) {
         return found;

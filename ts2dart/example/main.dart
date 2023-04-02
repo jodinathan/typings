@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:js/js.dart';
 
-import 'mainModule.d.dart' as js;
+import 'dom.generated.d.dart' as js;
 
 Future<void> _fetch() async {
   final req = js.RequestInit();

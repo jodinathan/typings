@@ -12,7 +12,6 @@ import 'typedef.dart';
 import 'types/const.dart';
 import 'types/enum.dart';
 import 'types/interface.dart';
-import 'types/local.dart';
 import 'types/named.dart';
 import 'reference.dart';
 import 'types/type.dart';
@@ -559,6 +558,12 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           addMethod(method);
         } else {
           final (getter, setter) = _parseProp(member.map);
+
+          if (getter case InteropGetter g
+              when _properties
+                  .any((p) => p.type == g.type && g.name == p.name)) {
+            continue;
+          }
 
           _properties.addAll([
             if (getter case InteropGetter g when !g.hasBadName()) getter,

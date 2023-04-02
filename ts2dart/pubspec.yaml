@@ -8,13 +8,16 @@ environment:
 
 # Add regular dependencies here.
 dependencies: 
+  archive: ^3.3.6
   built_collection: ^5.1.1
   code_builder: ^4.4.0
   collection: ^1.17.1
   console: ^4.1.0
   dart_style: ^2.2.5
+  http: ^0.13.5
   logging: ^1.1.1
   meta: ^1.9.0
+  path: ^1.8.3
   recase: ^4.1.0
   # path: ^1.8.0
 

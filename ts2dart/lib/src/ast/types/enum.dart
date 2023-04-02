@@ -1,10 +1,12 @@
 import 'package:code_builder/code_builder.dart';
+import 'package:collection/collection.dart';
 import 'package:ts2dart/src/ast/type_parameter.dart';
 import 'package:ts2dart/src/metadata/struct.dart';
 
 import '../../common.dart';
 import '../reference.dart';
 import 'interface.dart';
+import 'local.dart';
 import 'named.dart';
 import 'const.dart';
 import 'type.dart';
@@ -12,10 +14,14 @@ import 'type.dart';
 class InteropConstrainedConstType<T extends Object>
     extends InteropConstType<T> {
   InteropConstrainedConstType(
-      {required this.delegate, required this.constraint});
+      {required this.delegate, Iterable<InteropRef>? constraints}) {
+    if (constraints != null) {
+      this.constraints.addAll(constraints);
+    }
+  }
 
   final InteropConstType<T> delegate;
-  final InteropRef constraint;
+  final List<InteropRef> constraints = [];
 
   @override
   T get symbol => delegate.symbol;
@@ -69,7 +75,11 @@ class InteropDynamicEnum extends InteropNamedDeclaration
   final List<InteropConstType> values;
   bool _isEnumMap = false;
   bool get isEnumMap => _isEnumMap;
-  final _parsedInterfaceMembers = <String, InteropRef>{};
+  bool get addedTypeParam =>
+      !values.any((v) => (v as InteropConstrainedConstType)
+          .constraints
+          .any((c) => c.realType is InteropLocalType));
+  final _parsedInterfaceMembers = <String, Iterable<InteropRef>>{};
 
   @override
   Expression toInterop(
@@ -117,15 +127,18 @@ class InteropDynamicEnum extends InteropNamedDeclaration
   @override
   void configure() {
     if (isEnumMap) {
-      final inheritor = _parsedInterfaceMembers.values.commonInheritor();
+      final inheritor =
+          _parsedInterfaceMembers.values.flattened.commonInheritor();
 
       if (name == 'HTMLElementTagNameMap') {
-        print('HTMLElementTagNameMap FUCK == $inheritor');
+        print('HTMLElementTagNameMap FUCK == $inheritor\n${addedTypeParam}');
         print('=====${_parsedInterfaceMembers.length}');
       }
 
-      typeParams.add(InteropTypeParam(
-          symbol: interfaceTypeParamName, constraint: inheritor));
+      if (addedTypeParam) {
+        typeParams.add(InteropTypeParam(
+            symbol: interfaceTypeParamName, constraint: inheritor));
+      }
     }
   }
 
@@ -133,7 +146,8 @@ class InteropDynamicEnum extends InteropNamedDeclaration
     _isEnumMap = true;
 
     _parsedInterfaceMembers.addAll({
-      for (final member in struct.members) member.name: parseRef(member.rawType)
+      for (final member in struct.members)
+        member.name: [parseRef(member.rawType)]
     });
 
     for (final inh in struct.heritage) {
@@ -146,14 +160,14 @@ class InteropDynamicEnum extends InteropNamedDeclaration
       for (final value in en.values) {
         if (!_parsedInterfaceMembers.containsKey(value.symbol)) {
           _parsedInterfaceMembers[value.symbol as String] =
-              (value as InteropConstrainedConstType).constraint;
+              (value as InteropConstrainedConstType).constraints;
         }
       }
     }
 
     for (final MapEntry(:key, :value) in _parsedInterfaceMembers.entries) {
       values.add(InteropConstrainedConstType(
-          delegate: InteropConstString(key), constraint: value));
+          delegate: InteropConstString(key), constraints: value));
     }
   }
 
@@ -214,7 +228,7 @@ class InteropDynamicEnum extends InteropNamedDeclaration
                   ..arguments.add(value.literal());
 
                 if (value is InteropConstrainedConstType) {
-                  b.types.add(value.constraint.ref());
+                  b.types.addAll(value.constraints.map((c) => c.ref()));
                 }
               })));
       })

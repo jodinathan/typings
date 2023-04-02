@@ -4,11 +4,6 @@ const fs = require("fs");
 const dev = false;
 const debug = true;
 
-const isTypeNullable = (type: ts.TypeNode) =>
-  (ts.isLiteralTypeNode(type) &&
-    type.literal.kind == ts.SyntaxKind.NullKeyword) ||
-  type.kind == ts.SyntaxKind.UndefinedKeyword;
-
 const anyType = {
   core: "any",
   isNullable: true,
@@ -34,19 +29,22 @@ const coreKinds = [
 ];
 
 interface Library {
-  typedefs: any[];
-  structs: any[];
-  funcs: any[];
-  vars: any[];
-  modules: any[];
+  items: {
+    typedefs: any[];
+    structs: any[];
+    funcs: any[];
+    vars: any[];
+    modules: any[];
+  };
   namespace: string;
+  from: string;
   _: number;
 }
 
 function extract(files: string[]): void {
   let program = ts.createProgram(files, { allowJs: true });
   const checker: ts.TypeChecker = program.getTypeChecker();
-  const namedInline: string[] = [];
+  const mainModules: Library[] = [];
   let inlineCounter = 0;
   let parentNamedType: any[] = [];
   let namedListen: ((ref: string) => void) | undefined;
@@ -68,8 +66,7 @@ function extract(files: string[]): void {
   };
 
   const parseNodes = (source: ts.Node, lib: Library) => {
-    const { typedefs, structs, funcs, vars, modules } = lib;
-    let namespace = lib.namespace ?? "";
+    const { typedefs, structs, funcs, vars, modules } = lib.items;
 
     const parseType = (type?: ts.TypeNode) => {
       if (!type) {
@@ -572,7 +569,15 @@ function extract(files: string[]): void {
 
     const parseInterface = (node: ts.InterfaceDeclaration) => {
       const name = node.name.text;
-      const current = structs.find((struct) => struct.name == name);
+      const current =
+        structs.find((struct) => struct.name == name) ??
+        mainModules
+          .find(
+            (m) =>
+              m.namespace == lib.namespace &&
+              m.items.structs.find((struct) => struct.name == name)
+          )
+          ?.items.structs.find((struct) => struct.name == name);
       const parsed = {
         ...parseStruct(node, name, node.members, node.typeParameters),
         isClass: false,
@@ -648,33 +653,61 @@ function extract(files: string[]): void {
           });
         }
       } else if (ts.isTypeAliasDeclaration(node)) {
-        typedefs.push(
-          addSource(node, {
-            _: lineNumber,
-            name: node.name.text,
-            doc: parseDoc(node),
-            generics: parseTypeParameters(node.typeParameters),
-            type: parseType(node.type),
-          })
-        );
-      } else if (ts.isNamespaceExportDeclaration(node)) {
-        namespace = node.name.text;
+        const name = node.name.text;
+        const typedef: any = { name };
+
+        if (name == 'LocalesArgument') {
+          console.log('LocalesArgumentFUCK', lib);
+        }
+
+        withNamed(typedef, () => {
+          typedef.generics = parseTypeParameters(node.typeParameters);
+
+          const type = parseType(node.type);
+
+          type.parent = name;
+          typedef.type = type;
+          typedef.doc = parseDoc(node);
+
+          typedefs.push(addSource(node, typedef));
+        });
       } else if (ts.isModuleDeclaration(node)) {
         if (node.body) {
-          let module: Library = modules.find(
+          let module: Library | undefined = modules.find(
             (it) => it.namespace == node.name.text
           );
 
+          if (lib.namespace == "" && !module) {
+            module = mainModules.find((it) =>
+              it.items.modules.some((it) => it.namespace == node.name.text)
+            )?.items.modules.find((it) => it.namespace == node.name.text);
+          }
+
           if (!module) {
-            console.log("Adding module", node.name.text);
+            console.log("TSAdding module", node.name.text);
+            console.log(
+              "modules",
+              modules.map((m) => m.namespace)
+            );
+            console.log(
+              "mainModules",
+              mainModules.map((m) => {
+                return `${m.namespace}: [${m.items.modules
+                  .map((i) => i.namespace)
+                  .join(", ")}]`;
+              })
+            );
             module = {
               _: lineNumber,
               namespace: node.name.text,
-              structs: [],
-              typedefs: [],
-              modules: [],
-              funcs: [],
-              vars: [],
+              from: 'submodule ' + lib.namespace,
+              items: {
+                structs: [],
+                typedefs: [],
+                modules: [],
+                funcs: [],
+                vars: [],
+              },
             };
             modules.push(module);
           }
@@ -700,6 +733,13 @@ function extract(files: string[]): void {
       parseNode(node, node.getSourceFile());
     };
 
+    ts.forEachChild(source, (node) => {
+      if (ts.isNamespaceExportDeclaration(node)) {
+        lib.namespace = node.name.text;
+        console.log('Namespace set', lib.namespace, '\n', modules.map((m) => m.namespace));
+      }
+    });
+
     var x = 0;
     ts.forEachChild(source, (node) => {
       //if (x > 4) return;
@@ -715,41 +755,45 @@ function extract(files: string[]): void {
       }
       x++;
     });
-
-    return { structs, typedefs, funcs, vars, modules, namespace };
   };
 
   const toExport: any[] = [];
-  const mainModule = {
-    _: -1,
-    namespace: "",
-    structs: [],
-    typedefs: [],
-    modules: [],
-    funcs: [],
-    vars: [],
-  };
 
   for (const file of files) {
+    if (!fs.existsSync(file)) {
+      throw "File doesnt exist: " + file;
+    }
+
     if (debug) {
       console.log("Parsing", file);
     }
     const sourceFile = program.getSourceFile(file)!;
+    const module = {
+      _: -1,
+      namespace: "",
+      from: 'mainLoop ' + file,
+      items: {
+        structs: [],
+        typedefs: [],
+        modules: [],
+        funcs: [],
+        vars: [],
+      },
+    };
 
-    parseNodes(sourceFile, mainModule);
-  }
+    mainModules.push(module);
 
-  const namespace = mainModule.namespace;
-  (mainModule as any).namespace = "";
+    parseNodes(sourceFile, module);
 
-  if (dev) {
-    //const jsonFile = file.replace(".d.ts", ".d.json");
-    //fs.writeFileSync(jsonFile, JSON.stringify(mainModule, null, 2));
-  } else {
-    //const path = file.split("/");
-    //const name = path[path.length - 1];
+    if (dev) {
+      //const jsonFile = file.replace(".d.ts", ".d.json");
+      //fs.writeFileSync(jsonFile, JSON.stringify(mainModule, null, 2));
+    } else {
+      const path = file.split("/");
+      const name = path[path.length - 1];
 
-    toExport.push({ items: mainModule, namespace, name: 'mainModule.d.ts' });
+      toExport.push({ ...module, name });
+    }
   }
 
   if (!dev) {
@@ -758,7 +802,10 @@ function extract(files: string[]): void {
       "./toExport.json",
       JSON.stringify({ files: toExport }, null, 2)
     );
+    console.log("Written toExport.json!");
   }
+
+  console.log("Done extracting\n");
 }
 
 // Run the extract function with the script's arguments

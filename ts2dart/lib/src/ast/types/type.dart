@@ -116,7 +116,7 @@ mixin InteropDiamondType on InteropType {
 }
 
 mixin InteropSourceType on InteropType, InteropDiamondType {
-  Iterable<InteropTypeParam> get typeParams;
+  List<InteropTypeParam> get typeParams;
   int get typeParamsLength => typeParams.length;
   InteropSourceType? get parent;
 

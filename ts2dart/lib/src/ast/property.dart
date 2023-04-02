@@ -54,11 +54,7 @@ final class InteropGetter extends InteropProperty {
         b
           ..name = usableName
           ..type = reference.ref()
-          ..docs.addAll([
-            '/*',
-            'FieldExternal: $source',
-            '*/'
-          ])
+          ..docs.addAll(['/*', 'FieldExternal: $source', '*/'])
           ..annotations.addAll([
             pkgJs.js(name: name != usableName ? name : null),
           ])
@@ -181,12 +177,22 @@ abstract base class InteropProperty extends InteropNamedDeclaration
   @override
   InteropNamedDeclaration? get parent => cl;
   late InteropRef reference;
-  InteropRef? target;
   @override
   final String source;
   InteropProperty copyWith({InteropClass? cl});
 
   bool get canBeBuilt => true;
+
+  InteropRef? _target;
+  set target(InteropRef? value) {
+    if (value?.type case InteropGetter g when g.usableName == '_globalVar21') {
+      print('SETTINGFUCER ${cl.library.name}');
+      print(StackTrace.current);
+    }
+    _target = value;
+  }
+
+  InteropRef? get target => _target;
 
   @override
   Iterable<InteropType> crawlTypes() =>

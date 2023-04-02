@@ -1,3 +1,7 @@
+import 'package:code_builder/code_builder.dart';
+
+import '../../common.dart';
+import '../method.dart';
 import 'delegate.dart';
 
 import '../library.dart';
@@ -9,7 +13,7 @@ class InteropPredicate extends InteropType
   InteropPredicate(
       {required this.reference,
       required this.symbol,
-      this.parent,
+      required this.parent,
       required this.source,
       required this.library,
       required this.lineNumber}) {
@@ -17,7 +21,7 @@ class InteropPredicate extends InteropType
   }
 
   final InteropRef reference;
-  InteropSourceType? parent;
+  final InteropSourceType parent;
   @override
   final InteropLibrary library;
   @override
@@ -28,5 +32,37 @@ class InteropPredicate extends InteropType
   final int lineNumber;
 
   @override
-  InteropRef get delegate => InteropStaticType.dyn.asRef;
+  bool get delegatesFromInterop => false;
+
+  InteropRef? _delegate;
+
+  bool? _canCast;
+  bool canCast() => _canCast ??=
+      parent is InteropMethod && reference.realType != InteropStaticType.list;
+
+  @override
+  InteropRef get delegate => _delegate!;
+
+  @override
+  void configure() {
+    _delegate = canCast()
+        ? InteropRef(reference.type, nullable: true)
+        : InteropStaticType.dyn.asRef;
+  }
+
+  @override
+  Expression fromInterop(
+      {required Expression argument,
+      bool isNullable = false,
+      bool isOptional = false}) {
+    if (_canCast!) {
+      final method = parent as InteropMethod;
+      final arg = method.params.firstWhere((p) => p.name == symbol);
+
+      return pkgJsUtils.isTruthy([argument]).conditional(
+          refer(arg.usableName).asA(reference.ref()), refer('null'));
+    }
+
+    return argument;
+  }
 }

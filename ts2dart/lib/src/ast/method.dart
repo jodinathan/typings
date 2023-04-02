@@ -410,7 +410,9 @@ class InteropMethod extends InteropNamedDeclaration
           final indexSymbol = '${tp.symbol}\$';
 
           if (tp.constraint?.realType case InteropDynamicEnum dum
-              when dum.isEnumMap && usesLocalSymbol(indexSymbol)) {
+              when dum.isEnumMap &&
+                  dum.addedTypeParam &&
+                  usesLocalSymbol(indexSymbol)) {
             final toSwap = InteropRef(dum,
                 typeArgs: [InteropRef(InteropLocalType(indexSymbol))]);
 
@@ -452,12 +454,10 @@ class InteropMethod extends InteropNamedDeclaration
         ]));
 
         if (isOperator) {
-          b.requiredParameters
-              .addAll(params.map((p) => p.toCodeParam()));
+          b.requiredParameters.addAll(params.map((p) => p.toCodeParam()));
         } else {
           params.bindCodeParams(
-              optionals: b.optionalParameters,
-              requireds: b.requiredParameters);
+              optionals: b.optionalParameters, requireds: b.requiredParameters);
         }
 
         b
