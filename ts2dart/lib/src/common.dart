@@ -84,6 +84,31 @@ extension UtilsMap<K extends Object, V> on Map<K, V> {
     return ret;
   }
 
+  Map<String, dynamic> pair(K key) {
+    final ret = switch (this[key]) {
+      Map<String, dynamic> i => i,
+      Map i => i.cast<String, dynamic>(),
+      null => throw 'Null property of key $key',
+      dynamic d =>
+        throw 'Unexpected property type "${d.runtimeType}" for key "$key". Expected Map'
+    };
+
+    return ret;
+  }
+
+  Iterable<Map<String, dynamic>> pairs(K key) {
+    final ret = switch (this[key]) {
+      Iterable<Map<String, dynamic>> i => i,
+      Iterable<Map> i => i.map((i) => i.cast<String, dynamic>()),
+      Iterable l => l.map((i) => (i as Map).cast<String, dynamic>()),
+      null => throw 'Null property of key $key',
+      dynamic d =>
+        throw 'Unexpected property type "${d.runtimeType}" for key "$key". Expected List of Map'
+    };
+
+    return ret;
+  }
+
   String pretty() {
     return _encoder.convert(this);
   }

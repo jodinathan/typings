@@ -21,6 +21,12 @@ class InteropConstrainedConstType<T extends Object>
     }
   }
 
+  factory InteropConstrainedConstType.fromMap(Map<String, dynamic> map) {
+    return InteropConstrainedConstType(
+        delegate: InteropTypes.fromMap(map),
+        constraints: map.pairs('constraints').map(InteropTypes.fromMap));
+  }
+
   final InteropConstType<T> delegate;
   final List<InteropRef> constraints = [];
 
@@ -35,6 +41,12 @@ class InteropConstrainedConstType<T extends Object>
 
   @override
   Expression literal() => delegate.literal();
+
+  @override
+  Map<String, dynamic> toMap() => {
+        'const': delegate.toMap(),
+        'constraints': constraints.map((c) => c.realType.toMap())
+      };
 }
 
 class InteropDynamicEnum extends InteropNamedDeclaration
@@ -45,9 +57,10 @@ class InteropDynamicEnum extends InteropNamedDeclaration
       required super.library,
       required super.lineNumber,
       required this.source,
+      bool? isEnumMap,
       super.parent,
       super.typeParams})
-      : values = [...?values] {
+      : values = [...?values], _isEnumMap = isEnumMap ?? false {
     library.register(this);
   }
 
@@ -82,6 +95,15 @@ class InteropDynamicEnum extends InteropNamedDeclaration
           .whereType<InteropConstrainedConstType>()
           .any((v) => v.constraints.any((c) => c.realType is InteropLocalType));
   final _parsedInterfaceMembers = <String, Iterable<InteropRef>>{};
+
+  @override
+  InteropTypes get interopType => InteropTypes.enum$;
+
+  @override
+  Map<String, dynamic> toMap() => {
+        'isEnumMap': isEnumMap,
+        'values': values.map((c) => c.realType.toMap())
+      };
 
   @override
   Expression toInterop(

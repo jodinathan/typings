@@ -1,4 +1,5 @@
 import 'package:code_builder/code_builder.dart';
+import 'package:ts2dart/src/common.dart';
 
 import '../property.dart';
 import 'type.dart';
@@ -27,11 +28,21 @@ abstract class InteropConstType<T> with InteropType {
   @override
   bool isSame(InteropType other) =>
       other is InteropConstType && symbol == other.symbol;
+
+  @override
+  Map<String, dynamic> toMap() => {'symbol': symbol};
 }
 
 class InteropConstString extends InteropConstType<String> {
   InteropConstString(String symbol)
-  : symbol = symbol.replaceAll(RegExp('[\'"]'), '');
+      : symbol = symbol.replaceAll(RegExp('[\'"]'), '');
+
+  factory InteropConstString.fromMap(Map<String, dynamic> map) {
+    return InteropConstString(map.prop('symbol'));
+  }
+
+  @override
+  InteropTypes get interopType => InteropTypes.constString;
 
   @override
   final String symbol;
@@ -50,8 +61,15 @@ class InteropConstString extends InteropConstType<String> {
 class InteropConstNum extends InteropConstType<num> {
   InteropConstNum(this.symbol);
 
+  factory InteropConstNum.fromMap(Map<String, dynamic> map) {
+    return InteropConstNum(map.prop('symbol'));
+  }
+
   @override
   final num symbol;
+
+  @override
+  InteropTypes get interopType => InteropTypes.constNum;
 
   @override
   InteropStaticType get static => InteropStaticType.number;
