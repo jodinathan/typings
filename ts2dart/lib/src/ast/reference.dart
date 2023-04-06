@@ -106,8 +106,8 @@ class InteropRef<T extends InteropType> {
   Expression toInterop(Expression argument,
       {bool? isNullable, bool? isOptional}) {
     if (this.type case InteropDelegateType t) {
-      return t.delegate
-          .toInterop(argument, isOptional: isOptional ?? acceptsNull);
+      return t.delegate.toInterop(argument,
+          isOptional: (isOptional ?? isNullable ?? false) || acceptsNull);
     }
 
     final type = realType;
@@ -121,7 +121,7 @@ class InteropRef<T extends InteropType> {
         typeArgs: typeArgs);
 
     if (optional && !nullable && !type.toInteropDealsWithNull) {
-      return ret.ifNullThen(InteropStaticType.undefined.exposition.ref);
+      return ret.ifNullThen(InteropStaticType.undefinedRef);
     }
 
     return ret;
@@ -139,7 +139,8 @@ class InteropRef<T extends InteropType> {
             ? pkgJsUtils.promiseToFuture([argument])
             : argument,
         isNullable: isNullable ?? (nullable || type.nullable || type.optional),
-        isOptional: isOptional ?? acceptsNull);
+        isOptional: isOptional ?? acceptsNull,
+        typeArgs: typeArgs);
   }
 
   Reference ref({SymbolSwap? symbolSwap, bool forceOptional = false}) {

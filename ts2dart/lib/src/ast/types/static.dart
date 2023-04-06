@@ -41,26 +41,22 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
   nul(symbol: 'dynamic', mappings: {
     'null',
   }),
-  undefined(symbol: 'dynamic', exposedMapping: 'undefined', mappings: {
+  undefined(symbol: 'dynamic', mappings: {
     'undefined',
   }),
   siimbol(symbol: 'Symbol', mappings: {'symbol'}),
   voidee(symbol: 'void', mappings: {'void'}, package: ''),
   obj(symbol: 'Object', mappings: {'NaN', 'object'}),
   nullableObj(symbol: 'Object?', mappings: {'unknown'}),
-  iterable(
-      symbol: 'Iterable',
-      mappings: {},
-      typeParamsLength: 1),
-  iterator(
-      symbol: 'Iterator',
-      mappings: {},
-      typeParamsLength: 1),
+  iterable(symbol: 'Iterable', mappings: {}, typeParamsLength: 1),
+  iterator(symbol: 'Iterator', mappings: {}, typeParamsLength: 1),
   list(
       symbol: 'List',
+      //package: 'dart:js_interop',
       mappings: {'array'},
       typeParamsLength: 1,
-      makeToInterop: _toListInterop),
+      makeToInterop: _toListInterop,
+      makeFromInterop: _fromListInterop),
   function(symbol: 'Function', mappings: {'Function'}),
   globalThis(symbol: 'Never', mappings: {}),
   // Typed data
@@ -114,12 +110,12 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
       this.mappings = const {},
       this.typeParamsLength = 0,
       this.makeToInterop = _toInterop,
-      String exposedMapping = ''})
-      : _exposedMapping = exposedMapping,
-        isExposed = exposedMapping != '';
+      this.makeFromInterop = _fromInterop});
+
+  static Reference undefinedRef = refer('undefined', '/d/core.dart');
 
   static Reference nullRef(bool isNullable) =>
-      isNullable ? refer('null') : InteropStaticType.undefined.exposition.ref;
+      isNullable ? refer('null') : InteropStaticType.undefinedRef;
 
   static const basicTypes = [
     InteropStaticType.string,
@@ -143,6 +139,55 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
           bool isOptional = false,
           required List<InteropRef> typeArgs}) =>
       argument;
+
+  static Expression _fromInterop(
+          {required Expression argument,
+          bool isNullable = false,
+          bool isOptional = false,
+          required List<InteropRef> typeArgs}) =>
+      argument;
+
+  static Expression _fromListInterop(
+      {required Expression argument,
+      bool isNullable = false,
+      bool isOptional = false,
+      required List<InteropRef> typeArgs}) {
+    final ta = typeArgs.firstOrNull;
+    final itemAccessor = refer('i');
+
+    if (ta != null) {
+      final cast = argument.asA(TypeReference((b) {
+        b
+          ..symbol = 'List'
+          ..url = 'dart:core'
+          ..isNullable = isOptional;
+      }));
+      final arg =
+          (isOptional ? cast.nullSafeProperty('cast') : cast.property('cast'))
+              .call([]);
+      final taArg = ta.fromInterop(itemAccessor);
+
+      if (taArg != itemAccessor) {
+        return arg
+            .property('map')
+            .call([
+              Method((b) {
+                b
+                  ..requiredParameters.add(Parameter((b) {
+                    b.name = 'i';
+                  }))
+                  ..body = taArg.code;
+              }).closure
+            ])
+            .property('toList')
+            .call([]);
+      }
+
+      return arg;
+    }
+
+    return argument;
+  }
 
   static Expression _toListInterop(
       {required Expression argument,
@@ -181,24 +226,18 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
   final Set<String> mappings;
   @override
   final int typeParamsLength;
-  final String _exposedMapping;
-  final bool isExposed;
   final Expression Function(
       {required Expression argument,
       bool isNullable,
       bool isOptional,
       required List<InteropRef> typeArgs}) makeToInterop;
+  final Expression Function(
+      {required Expression argument,
+      bool isNullable,
+      bool isOptional,
+      required List<InteropRef> typeArgs}) makeFromInterop;
 
   InteropRef get asRef => InteropRef(this);
-
-  String get _exposedName {
-    assert(_exposedMapping.isNotEmpty, 'Cant use $this as exposed type.');
-
-    return '_\$exposed\$${_exposedMapping}';
-  }
-
-  ({String name, String mapping, Reference ref}) get exposition =>
-      (name: _exposedName, mapping: _exposedMapping, ref: refer(_exposedName));
 
   @override
   bool get isBasic => basicTypes.contains(this);
@@ -220,6 +259,18 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
           bool isOptional = false,
           required List<InteropRef> typeArgs}) =>
       makeToInterop(
+          argument: argument,
+          isNullable: isNullable,
+          isOptional: isOptional,
+          typeArgs: typeArgs);
+
+  @override
+  Expression fromInterop(
+          {required Expression argument,
+          bool isNullable = false,
+          bool isOptional = false,
+          required List<InteropRef> typeArgs}) =>
+      makeFromInterop(
           argument: argument,
           isNullable: isNullable,
           isOptional: isOptional,

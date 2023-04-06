@@ -12,19 +12,24 @@ import 'common.dart';
 import 'project.dart';
 
 class InteropModule {
-  InteropModule({required this.path, required this.project})
-      : splittedPath = path.split('.');
+  InteropModule(
+      {required this.path,
+      required this.project,
+      this.exportsDist = false,
+      this.fileName});
 
   static int _varCounter = 0;
 
-  final String path;
+  String path;
   final List<InteropLibrary> libraries = [];
   final InteropProject project;
   final List<InteropProperty> properties = [];
-  final Iterable<String> splittedPath;
-  String get fileName => path.isEmpty ? project.targetMainFile! : path;
+  Iterable<String> get splittedPath => path.split('.');
+  bool exportsDist;
+  String? fileName;
+
   late final InteropLibrary _lib = InteropLibrary(
-      fileName: '${fileName}_comon.d.ts', module: this, namespace: path);
+      fileName: '${fileName}_comon.d.ts', module: this);
 
   void saveSource({required String path, required String buffer}) =>
       File(project.srcDirFullPath(path)).writeAsStringSync(buffer, flush: true);
@@ -34,13 +39,11 @@ class InteropModule {
           .writeAsStringSync(buffer, flush: true);
 
   void generate() {
-    final emitter =
-        DartEmitter(allocator: _PrefixedAllocator(), useNullSafetySyntax: true);
     final codeLib = Library((b) {
       b.body.addAll(
           properties.whereType<InteropGetter>().map((g) => g.buildExternal()));
     });
-    final built = '${codeLib.accept(emitter)}';
+    final built = '${codeLib.accept(InteropProject.emitter())}';
     final buffer = DartFormatter().format(built);
     final mainBuffer = StringBuffer();
 
@@ -55,11 +58,11 @@ class InteropModule {
             action: 'Transpile',
             fn: () {
               final codeLib = library.build().first;
-              built = '${codeLib.accept(emitter)}';
+              built = '${codeLib.accept(InteropProject.emitter())}';
             });
       } catch (e) {
         logger.severe(
-            '**ERROR** occurred while transpilling lib ${library.name}');
+            '**ERROR** occurred while transpilling lib ${library.fileName}');
         rethrow;
       }
 
@@ -67,20 +70,26 @@ class InteropModule {
         final buffer = DartFormatter().format(built);
         //final buffer = codeLib.accept(emitter).toString();
 
-        saveSource(
-            path: library.targetFileName, buffer: buffer);
-        mainBuffer.writeln("export '/${project.srcDir(library.targetFileName)}';");
+        saveSource(path: library.targetFileName, buffer: buffer);
+        mainBuffer
+            .writeln("export '/${project.srcDir(library.targetFileName)}';");
       } catch (e) {
         print('FORMAT ERROR ${'=' * 30}');
         print(built);
         print('\n\n${'=' * 30}');
         rethrow;
       }
-
-      saveExporter(
-          path: '${fileName.snakeCase.toLowerCase()}.dart',
-          buffer: mainBuffer.toString());
     }
+
+    if (exportsDist) {
+      mainBuffer.writeln("export '/${project.srcDir('_dist.dart')}';");
+    }
+
+    final fname = fileName ?? (path.isEmpty ? project.targetMainFile! : path);
+
+    saveExporter(
+        path: '${fname.snakeCase.toLowerCase()}.dart',
+        buffer: mainBuffer.toString());
   }
 
   InteropType? dig(Iterable<String> path) {
@@ -130,26 +139,4 @@ class InteropModule {
     properties.add(ret);
     return ret;
   }
-}
-
-class _PrefixedAllocator implements Allocator {
-  final _imports = <String, int>{};
-  var _keys = 1;
-
-  @override
-  String allocate(Reference reference) {
-    final symbol = reference.symbol;
-    final url = reference.url;
-    if (url == null || url.isEmpty) {
-      return symbol!;
-    }
-    return '_i${_imports.putIfAbsent(url, _nextKey)}.$symbol';
-  }
-
-  int _nextKey() => _keys++;
-
-  @override
-  Iterable<Directive> get imports => _imports.keys.map(
-        (u) => Directive.import(u, as: '_i${_imports[u]}'),
-      );
 }

@@ -68,12 +68,17 @@ final PkgJsUtils pkgJsUtils = (
 
 final _encoder = JsonEncoder.withIndent('  ');
 
+extension UtilsString on String {
+  bool get isLiteral => startsWith('"') || startsWith("'");
+}
+
 extension UtilsMap<K extends Object, V> on Map<K, V> {
   T prop<T>(K key) {
     final ret = switch (this[key]) {
       T i => i,
       null => throw 'Null property of key $key',
-      _ => throw 'Unexpected property type'
+      dynamic d =>
+        throw 'Unexpected property type "${d.runtimeType}" for key "$key". Expected $T'
     };
 
     return ret;

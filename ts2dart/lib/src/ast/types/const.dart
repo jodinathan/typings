@@ -30,7 +30,8 @@ abstract class InteropConstType<T> with InteropType {
 }
 
 class InteropConstString extends InteropConstType<String> {
-  InteropConstString(this.symbol);
+  InteropConstString(String symbol)
+  : symbol = symbol.replaceAll(RegExp('[\'"]'), '');
 
   @override
   final String symbol;
@@ -48,7 +49,7 @@ class InteropConstString extends InteropConstType<String> {
 
 class InteropConstNum extends InteropConstType<num> {
   InteropConstNum(this.symbol);
-  
+
   @override
   final num symbol;
 

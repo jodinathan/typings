@@ -34,6 +34,3 @@ class _IterableLike$<T> {}
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-@_i1.JS('undefined')
-external _i2.dynamic _$exposed$undefined;

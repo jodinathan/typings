@@ -87,33 +87,9 @@ function extract(files: string[]): void {
         ret = anyType;
       } else if (ts.isTypeQueryNode(type)) {
         const name = type.exprName.getText();
-        let found;
-
-        if (name == "globalThis") {
-          found = {
-            core: "globalThis",
-          };
-        } else if (ts.isQualifiedName(type.exprName)) {
-          found = {
-            ref: type.exprName.right.getText(),
-          };
-        } else {
-          found = vars.find((v) => v.name == name).type;
-        }
-
-        if (!found) {
-          console.error(
-            "Couldnt find a variable with name",
-            name,
-            lineNumber,
-            "list: ",
-            vars.map((v) => v.name).join(", ")
-          );
-        }
 
         ret = {
-          name,
-          type: found,
+          accessor: name,
           _: lineNumber,
         };
         //console.log('TypeQuery', name, ret, lineNumber);
@@ -208,7 +184,7 @@ function extract(files: string[]): void {
         // }
 
         if (!name) {
-          name = `Inline${inlineCounter}`;
+          name = `IInline${inlineCounter}`;
           inlineCounter++;
         }
 
@@ -358,7 +334,9 @@ function extract(files: string[]): void {
         const prop: any = addSource(member, {
           doc,
           isMethod:
-            ts.isFunctionLike(member) && !ts.isSetAccessorDeclaration(member),
+            ts.isFunctionLike(member) &&
+            !ts.isSetAccessorDeclaration(member) &&
+            !ts.isGetAccessorDeclaration(member),
         });
 
         if (ts.isCallSignatureDeclaration(member)) {
@@ -656,8 +634,8 @@ function extract(files: string[]): void {
         const name = node.name.text;
         const typedef: any = { name };
 
-        if (name == 'LocalesArgument') {
-          console.log('LocalesArgumentFUCK', lib);
+        if (name == "LocalesArgument") {
+          console.log("LocalesArgumentFUCK", lib);
         }
 
         withNamed(typedef, () => {
@@ -678,9 +656,11 @@ function extract(files: string[]): void {
           );
 
           if (lib.namespace == "" && !module) {
-            module = mainModules.find((it) =>
-              it.items.modules.some((it) => it.namespace == node.name.text)
-            )?.items.modules.find((it) => it.namespace == node.name.text);
+            module = mainModules
+              .find((it) =>
+                it.items.modules.some((it) => it.namespace == node.name.text)
+              )
+              ?.items.modules.find((it) => it.namespace == node.name.text);
           }
 
           if (!module) {
@@ -700,7 +680,7 @@ function extract(files: string[]): void {
             module = {
               _: lineNumber,
               namespace: node.name.text,
-              from: 'submodule ' + lib.namespace,
+              from: "submodule " + lib.namespace,
               items: {
                 structs: [],
                 typedefs: [],
@@ -736,7 +716,12 @@ function extract(files: string[]): void {
     ts.forEachChild(source, (node) => {
       if (ts.isNamespaceExportDeclaration(node)) {
         lib.namespace = node.name.text;
-        console.log('Namespace set', lib.namespace, '\n', modules.map((m) => m.namespace));
+        console.log(
+          "Namespace set",
+          lib.namespace,
+          "\n",
+          modules.map((m) => m.namespace)
+        );
       }
     });
 
@@ -771,7 +756,7 @@ function extract(files: string[]): void {
     const module = {
       _: -1,
       namespace: "",
-      from: 'mainLoop ' + file,
+      from: "mainLoop " + file,
       items: {
         structs: [],
         typedefs: [],
@@ -814,7 +799,7 @@ function extract(files: string[]): void {
 //   "d/lib.dom.d.ts",
 //   "d/lib.es5.d.ts",
 //   "d/lib.webworker.importscripts.d.ts",
-//   "d/lib.scripthost.d.ts",
+//   "d/lib.scripthostimport { namespace } from '../../ts2dart/work/deno/download/0lib.deno.ns.d';
 // ]);
 //console.log(process.argv.splice(2));
 extract(process.argv.splice(2));

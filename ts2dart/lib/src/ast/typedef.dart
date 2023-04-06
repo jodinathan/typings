@@ -35,6 +35,10 @@ class InteropTypedef extends InteropNamedDeclaration
   InteropType get jsType => definition!.realType.jsType;
 
   @override
+  bool get toInteropDealsWithNull =>
+      definition!.realType.toInteropDealsWithNull;
+
+  @override
   bool get isTypedefLike => true;
 
   @override
@@ -67,17 +71,14 @@ class InteropTypedef extends InteropNamedDeclaration
   void parse(Map<String, dynamic> map) {
     super.parse(map);
 
-    if (map case {'type': Map type, ...}) {
+    if (map case {'type': Map type}) {
       definition = parseRef(type.cast());
 
-      if (name == 'FlatArray') {
-        print('FUCKFlatArray ${definition!.type}\n$typeParams');
-      }
       if (definition!.type case InteropSourceType sourced
           when typeParams.isNotEmpty) {
         for (final tp in typeParams) {
           if (!sourced.typeParams.any((otp) => otp.symbol == tp.symbol)) {
-            sourced.typeParams.add(tp.copyWith());
+            //sourced.typeParams.add(tp.copyWith());
           }
         }
       }
@@ -100,7 +101,8 @@ class InteropTypedef extends InteropNamedDeclaration
   Expression fromInterop(
           {required Expression argument,
           bool isNullable = false,
-          bool isOptional = false}) =>
+          bool isOptional = false,
+          required List<InteropRef> typeArgs}) =>
       definition!.fromInterop(argument,
           isNullable: isNullable, isOptional: isOptional);
 }

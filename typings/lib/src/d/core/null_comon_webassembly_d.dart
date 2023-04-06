@@ -5,39 +5,39 @@ FieldExternal: DeclaredVar
 */
 
 @_i1.JS('CompileError')
-external _i2.Object target615;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Global')
-external _i2.Object target616;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Instance')
-external _i2.Object target617;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('LinkError')
-external _i2.Object target618;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Memory')
 external _i2.Object target619;
 /*
 FieldExternal: DeclaredVar
 */
-@_i1.JS('Module')
+@_i1.JS('Global')
 external _i2.Object target620;
 /*
 FieldExternal: DeclaredVar
 */
-@_i1.JS('RuntimeError')
+@_i1.JS('Instance')
 external _i2.Object target621;
 /*
 FieldExternal: DeclaredVar
 */
-@_i1.JS('Table')
+@_i1.JS('LinkError')
 external _i2.Object target622;
+/*
+FieldExternal: DeclaredVar
+*/
+@_i1.JS('Memory')
+external _i2.Object target623;
+/*
+FieldExternal: DeclaredVar
+*/
+@_i1.JS('Module')
+external _i2.Object target624;
+/*
+FieldExternal: DeclaredVar
+*/
+@_i1.JS('RuntimeError')
+external _i2.Object target625;
+/*
+FieldExternal: DeclaredVar
+*/
+@_i1.JS('Table')
+external _i2.Object target626;

@@ -251,8 +251,9 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
 
   InteropDynamicEnum? _keys;
 
-  Iterable<InteropMethod> buildableCtors() =>
-      constructors.where((ctor) => canAssignToThis(ctor.returnRef.type));
+  Iterable<InteropMethod> buildableCtors() => isInterface
+      ? constructors.where((ctor) => canAssignToThis(ctor.returnRef.type))
+      : constructors;
 
   InteropClass copy() {
     final ret = InteropClass(
@@ -272,18 +273,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
     return ret;
   }
 
-  @override
-  void cache() {
-    final constructors = buildableCtors();
-
-    if (name == 'Object') {
-      print(
-          'WTFUCKER $isInline, ${constructors.length}, add: ${!isInline && (constructors.isNotEmpty || isConst && inheritance.any((i) => !i.type.isConst))}');
-    }
-
-    if (!isInline &&
-        (constructors.isNotEmpty ||
-            isConst && inheritance.any((i) => !i.type.isConst))) {
+  InteropGetter makeDeclared() {
+    if (_asVar == null) {
       _asVar = InteropGetter(
           name: name,
           cl: this,
@@ -297,6 +288,19 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
         ..escopedReference = false;
       _target = InteropRef(_asVar!);
     }
+
+    return _asVar!;
+  }
+
+  @override
+  void cache() {
+    final constructors = buildableCtors();
+
+    if (!isInline &&
+        (constructors.isNotEmpty ||
+            isConst && inheritance.any((i) => !i.type.isConst))) {
+      makeDeclared();
+    }
   }
 
   void clearProperties() {
@@ -305,7 +309,26 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
 
   @override
   Iterable<Spec> build() sync* {
-    final constructors = buildableCtors().refine();
+    final constructors = buildableCtors().refine().toList();
+
+    if (constructors.any((c) =>
+            c.params.isNotEmpty && c.params.every((p) => p.isOptional)) &&
+        !constructors.any((c) => c.params.isEmpty) &&
+        constructors.length > 1) {
+      constructors.insert(
+          0,
+          InteropMethod(
+              name: '',
+              library: library,
+              lineNumber: lineNumber,
+              source: source,
+              isExternal: false,
+              computedName: '',
+              cl: this));
+    }
+
+    constructors.sort((a, b) => a.params.length.compareTo(b.params.length));
+
     final asVar = _asVar;
     final generics = typeParams.map((t) => t.ref());
     final staticMethods =
@@ -537,6 +560,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
         if (ret.type is InteropClass) {
           return ret as InteropRef<InteropClass>;
         } else {
+          assert(ret.type is InteropInterface, 'Not interface: ${ret.type}');
           return ret.copyWith(
               (ret.type as InteropInterface).parse().type as InteropClass);
         }
@@ -680,7 +704,6 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           'doc': String doc,
           'params': List rawParams,
           'source': String source,
-          ...
         }) {
       try {
         var computedName = '';
@@ -709,7 +732,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           ..parseParams(rawParams.cast());
         return ret;
       } catch (e, st) {
-        throw ('ERROR: Parse method ${library.fileName} #$lineNumber.\n$e\n$map\n\n$st\n\n');
+        throw ('ERROR: Parse method ${library.fileName} #$lineNumber.\n$e\n\n$st\n\n');
       }
     }
 
@@ -728,7 +751,6 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           'doc': String doc,
           'isNullable': bool isNullable,
           'source': String source,
-          ...
         }) {
       InteropSetter? setter;
       final type = rawType.cast<String, dynamic>();
@@ -745,16 +767,11 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
             _ => false
           },
           doc: doc);
+
       getter.reference = getter.parseRef(type);
-      if (this.name == 'RequestInit' && name == 'headers') {
-        print('RequestInitFUCK $isNullable, ${getter.reference.optional}');
-      }
       getter.reference.optional = getter.reference.optional || isNullable;
 
-      if (!getter.nameIsNum() &&
-          !getter.nameIsConstString &&
-          !isReadonly &&
-          isInterface) {
+      if (!getter.nameIsNum() && !getter.nameIsConstString && !isReadonly) {
         setter = InteropSetter(
             name: name,
             cl: this,

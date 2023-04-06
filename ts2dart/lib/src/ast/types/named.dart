@@ -95,7 +95,7 @@ abstract class InteropNamedDeclaration extends InteropType
 
   @mustCallSuper
   void parse(Map<String, dynamic> map) {
-    if (map case {'generics': List generics, 'doc': String doc, ...}) {
+    if (map case {'generics': List generics, 'doc': String doc}) {
       _doc = doc;
 
       typeParams.clear();

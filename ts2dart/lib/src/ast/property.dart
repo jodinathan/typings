@@ -22,8 +22,8 @@ final class InteropGetter extends InteropProperty {
       required super.source,
       super.doc,
       required this.isExternal})
-      : nameIsConstString = name.startsWith('"'),
-        super(name: name.replaceAll('"', ''));
+      : nameIsConstString = name.isLiteral,
+        super(name: InteropProperty.cleanName(name));
 
   final bool isExternal;
   final bool nameIsConstString;
@@ -152,12 +152,30 @@ abstract base class InteropProperty extends InteropNamedDeclaration
             usableName: makeName(name),
             doc: doc);
 
+  static String cleanName(String name) => name.replaceAll(RegExp('[\'"]'), '');
+
   static String makeName(String rawName) {
-    final name = (rawName.startsWith('"') && rawName.endsWith('"')
-            ? rawName.substring(1, rawName.length - 1)
-            : rawName)
-        .trim()
-        .camelCase;
+    final buf =
+        (rawName.isLiteral ? rawName.substring(1, rawName.length - 1) : rawName)
+            .trim()
+            .camelCase;
+    final len = buf.length;
+    var name = '';
+
+    for (var x = 0; x < len; x++) {
+      final ch = buf[x];
+      final lowered = ch.toLowerCase();
+
+      if (x > 0 &&
+          (ch == lowered ||
+              (x + 1 < len && buf[x + 1] == buf[x + 1].toLowerCase()))) {
+        name += buf.substring(x);
+        break;
+      }
+
+      name += lowered;
+    }
+
     final ret = switch (name) {
       '0' => 'first',
       _ => InteropItem.forbiddenKeywords.contains(name) ? '$name\$' : name
@@ -183,16 +201,7 @@ abstract base class InteropProperty extends InteropNamedDeclaration
 
   bool get canBeBuilt => true;
 
-  InteropRef? _target;
-  set target(InteropRef? value) {
-    if (value?.type case InteropGetter g when g.usableName == '_globalVar21') {
-      print('SETTINGFUCER ${cl.library.name}');
-      print(StackTrace.current);
-    }
-    _target = value;
-  }
-
-  InteropRef? get target => _target;
+  InteropRef? target;
 
   @override
   Iterable<InteropType> crawlTypes() =>
@@ -206,7 +215,8 @@ abstract base class InteropProperty extends InteropNamedDeclaration
 
   InteropPropertyType get type;
 
-  Reference makeThis() => target?.ref() ?? refer('this');
+  Reference makeThis() =>
+      target?.ref() ?? (isStatic ? cl.makeDeclared().ref() : refer('this'));
 
   Method _makeProperty(
       {required MethodType type,

@@ -10,7 +10,6 @@ import '../method_param.dart';
 import 'accessor.dart';
 import 'indexed.dart';
 import '../library.dart';
-import '../method.dart';
 import 'function.dart';
 import 'intersection.dart';
 import 'local.dart';
@@ -70,7 +69,8 @@ abstract mixin class InteropType {
   Expression fromInterop(
           {required Expression argument,
           bool isNullable = false,
-          bool isOptional = false}) =>
+          bool isOptional = false,
+          required List<InteropRef> typeArgs}) =>
       argument;
 }
 
@@ -120,6 +120,18 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
   int get typeParamsLength => typeParams.length;
   InteropSourceType? get parent;
 
+  InteropSourceType? get firstParent {
+    var p = parent;
+    var current = parent;
+
+    while (p != null) {
+      current = p;
+      p = p.parent;
+    }
+
+    return current;
+  }
+
   bool usesLocalSymbol(String symbol) {
     return crawlUsedTypes().any((t) {
       final type = t.realType;
@@ -138,10 +150,10 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
 
   InteropType? parseType(Map<String, dynamic> map) {
     return switch (map) {
-      {'ref': String ref, '_': int lineNumber, ...}
+      {'ref': String ref, '_': int lineNumber}
           when typeParams.hasSymbol(ref) =>
         InteropLocalType(ref, lineNumber: lineNumber),
-      {'core': String core, ...} when core == 'this' => switch (parent) {
+      {'core': String core} when core == 'this' => switch (firstParent) {
         InteropSourceType parent => parent,
         _ => this
       },
@@ -150,7 +162,6 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
         'params': List params,
         '_': int lineNumber,
         'generics': List generics,
-        ...
       } =>
         InteropFunction(
             returnType: returns.cast(),
@@ -160,26 +171,26 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
             parent: this,
             library: library,
             source: map.prop('source')),
-      {'intersect': List types, ...} => InteropIntersection(
+      {'intersect': List types} => InteropIntersection(
           types: types.map((t) => parseRef((t as Map).cast())),
           lineNumber: lineNumber,
           parent: this,
           library: library,
           source: map.prop('source')),
-      {'tuple': List types, ...} => InteropTuple(
+      {'tuple': List types} => InteropTuple(
           types: types.map((t) => parseRef((t as Map).cast())),
           lineNumber: lineNumber,
           parent: this,
           library: library,
           source: map.prop('source')),
-      {'predicate': String name, 'type': Map type, ...} => InteropPredicate(
+      {'predicate': String name, 'type': Map type} => InteropPredicate(
           reference: parseRef(type.cast()),
           symbol: name,
           lineNumber: lineNumber,
           parent: this,
           library: library,
           source: map.prop('source')),
-      {'key': Map key, 'value': Map value, '_': int lineNumber, ...} =>
+      {'key': Map key, 'value': Map value, '_': int lineNumber} =>
         InteropMapped(
             key: key.cast(),
             value: value.cast(),
@@ -191,7 +202,6 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
         'name': String name,
         'constraint': Map constraint,
         '_': int lineNumber,
-        ...
       } =>
         InteropTypeIn(
             symbol: name,
@@ -203,7 +213,6 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
         'type': Map type,
         '_': int lineNumber,
         'source': String source,
-        ...
       } =>
         InteropOperator(
             reference: parseRef(type.cast()),
@@ -211,7 +220,7 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
             library: library,
             source: source,
             operator: InteropOperatorType.fromKind(operator)),
-      {'name': String typeof, 'type': Map _, '_': int _, ...} =>
+      {'accessor': String typeof} =>
         InteropAccessor(
             path: typeof, lineNumber: lineNumber, source: source, parent: this),
       {
@@ -219,7 +228,6 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
         'obj': Map value,
         '_': int lineNumber,
         'source': String source,
-        ...
       } =>
         InteropIndexed(
             index: parseRef(key.cast()),
@@ -232,7 +240,6 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
         'union': List union,
         '_': int lineNumber,
         'source': String source,
-        ...
       } =>
         InteropUnion(
             library: library,
@@ -244,15 +251,14 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
     };
   }
 
-  static bool fuck = false;
   InteropRef<T> parseRef<T extends InteropType>(Map<String, dynamic> map) {
     final type = parseType(map) ?? library.parseType(map);
 
-    if (map case {'isNullable': bool isNullable, ...}) {
+    if (map case {'isNullable': bool isNullable}) {
       final ret = InteropRef(type as T,
           optional: isNullable,
           typeArgs: switch (map) {
-            {'targs': List targs, ...} => targs
+            {'targs': List targs} => targs
                 .map((g) => InteropLibrary.current.withType(
                     fn: () => parseRef((g as Map).cast()),
                     action: 'Parse type argument',
@@ -260,10 +266,6 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
                 .toList(),
             _ => []
           });
-
-      if (fuck) {
-        print('IterableIteratorTT $type \n${map['targs']}\n${ret.typeArgs}');
-      }
 
       return ret;
     }
@@ -274,25 +276,24 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
   Iterable<InteropTypeParam> parseTypeParams(
       Iterable<Map<String, dynamic>> maps) sync* {
     for (final generic in maps) {
-      final {'name': String name, ...} = generic;
-      InteropRef? constraint;
-      InteropRef? def;
+      final {'name': String name} = generic;
+      final item = InteropTypeParam(symbol: name);
 
-      if (generic case {'constraint': Map map, ...}) {
-        constraint = parseRef(map.cast());
+      yield item;
+
+      if (generic case {'constraint': Map map}) {
+        item.constraint = parseRef(map.cast());
       }
 
-      if (generic case {'default': Map map, ...}) {
-        def = parseRef(map.cast());
+      if (generic case {'default': Map map}) {
+        item.def = parseRef(map.cast());
       }
-
-      yield InteropTypeParam(symbol: name, constraint: constraint, def: def);
     }
   }
 
   @override
   String toString() =>
-      '${runtimeType}#${hashCode}(parent: $parent, library: ${library.name})';
+      '${runtimeType}#${hashCode}(parent: $parent, library: ${library.fileName})';
 }
 
 mixin WithParams on InteropType, InteropSourceType {
@@ -306,7 +307,6 @@ mixin WithParams on InteropType, InteropSourceType {
             'type': Map rawType,
             'varargs': bool varargs,
             'isNullable': bool isNullable,
-            ...
           }) {
         if (name == 'this') {
           continue;

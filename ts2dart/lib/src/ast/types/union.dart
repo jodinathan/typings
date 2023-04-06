@@ -45,7 +45,7 @@ class InteropUnion extends InteropType
 
   InteropRef? _delegate;
   @override
-  InteropRef get delegate => _delegate!;
+  InteropRef get delegate => _configure();
 
   bool _isGenericOf(InteropRef holder, InteropRef item) {
     final at = holder.type;
@@ -71,6 +71,134 @@ class InteropUnion extends InteropType
           : InteropStaticType.obj)
       .asRef;
 
+  InteropRef _configure() {
+    if (_delegate == null) {
+      final filtered = types.toList();
+      final undefined = filtered
+          .firstWhereOrNull((item) => item.type == InteropStaticType.undefined);
+      final nullable = filtered
+          .firstWhereOrNull((item) => item.type == InteropStaticType.nul);
+
+      if (_hasUndefined = undefined != null) {
+        filtered.remove(undefined);
+      }
+
+      if (_hasNull = nullable != null) {
+        filtered.remove(nullable);
+      }
+
+      if (filtered.isEmpty) {
+        _delegate = InteropStaticType.dyn.asRef;
+      } else if (filtered.length == 1) {
+        _delegate = filtered.first;
+      } else if (filtered.every((t) => t.type is InteropConstType)) {
+        final symbol = switch (parent) {
+          InteropNamedDeclaration parent => parent.availableName(),
+          _ => 'UnionEnum${_cc++}'
+        };
+
+        final dyn = _declare = InteropDynamicEnum(
+            name: symbol,
+            library: library,
+            lineNumber: lineNumber,
+            source: '--From union\n$source',
+            values:
+                filtered.map((ref) => ref.type as InteropConstType).toList());
+
+        _delegate = InteropRef(dyn);
+      } else {
+        InteropRef? arrayed;
+
+        if (_chooseArrayOverItem &&
+            filtered.length == 2 &&
+            (arrayed = genericOf(filtered.first, filtered.last)) != null) {
+          _delegate = arrayed;
+        } else {
+          //filtered.removeWhere((i) => i.type.isBasic);
+
+          if (filtered.isEmpty) {
+            _delegate = defaultType;
+          } else if (filtered.length == 1) {
+            _delegate = filtered.first;
+          } else {
+            _delegate = filtered.commonInheritor();
+
+            if (lineNumber == 21) {
+              print(
+                  'MOTHERFUCKER $_delegate\n${filtered.first.type.realType}\n-----');
+            }
+
+            if (_delegate == null) {
+              final first = filtered.first.type.realType;
+
+              if (first is InteropClass) {
+                final firstProps = first.fullProperties();
+
+                if (filtered.every((it) {
+                  final other = it.type.realType;
+
+                  if (other is InteropClass) {
+                    final otherProps = other.fullProperties();
+
+                    return firstProps.length == otherProps.length &&
+                        firstProps.every(
+                            (fp) => otherProps.any((op) => op.name == fp.name));
+                  }
+
+                  return false;
+                })) {
+                  final name = switch (parent) {
+                    InteropNamedDeclaration parent =>
+                      parent.availableName(suffix: 'Common'),
+                    _ => 'UnionCommon${_cc++}'
+                  };
+                  final cl = _declare = InteropClass(
+                      name: name,
+                      library: library,
+                      lineNumber: lineNumber,
+                      source: 'ForcedCommon from $source',
+                      addAnonymousFlag: true,
+                      isInline: false);
+
+                  for (final prop in firstProps) {
+                    final copy = prop.copyWith(cl: cl);
+
+                    if (!filtered.every((it) {
+                      final other = it.type.realType as InteropClass;
+                      final otherProp = other.fullProperties().firstWhere(
+                          (p) => p.name == prop.name && p.type == prop.type);
+
+                      return otherProp.reference.isSame(prop.reference);
+                    })) {
+                      copy.reference = InteropStaticType.dyn.asRef;
+                    }
+
+                    if (copy.reference.realType case InteropLocalType local
+                        when !cl.typeParams
+                            .any((tp) => tp.symbol == local.symbol)) {
+                      final tp = first.typeParams
+                          .firstWhere((tp) => tp.symbol == local.symbol);
+
+                      cl.typeParams.add(tp.copyWith());
+                    }
+
+                    cl.addProperty(copy);
+                  }
+
+                  _delegate = InteropRef(cl);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      _delegate ??= defaultType;
+    }
+
+    return _delegate!;
+  }
+
   @override
   void configure() {
     if (configured) {
@@ -78,127 +206,7 @@ class InteropUnion extends InteropType
     }
 
     _configured = true;
-
-    final filtered = types.toList();
-    final undefined = filtered
-        .firstWhereOrNull((item) => item.type == InteropStaticType.undefined);
-    final nullable =
-        filtered.firstWhereOrNull((item) => item.type == InteropStaticType.nul);
-
-    if (_hasUndefined = undefined != null) {
-      filtered.remove(undefined);
-    }
-
-    if (_hasNull = nullable != null) {
-      filtered.remove(nullable);
-    }
-
-    if (filtered.isEmpty) {
-      _delegate = InteropStaticType.dyn.asRef;
-    } else if (filtered.length == 1) {
-      _delegate = filtered.first;
-    } else if (filtered.every((t) => t.type is InteropConstType)) {
-      final symbol = switch (parent) {
-        InteropNamedDeclaration parent => parent.availableName(),
-        _ => 'UnionEnum${_cc++}'
-      };
-
-      final dyn = _declare = InteropDynamicEnum(
-          name: symbol,
-          library: library,
-          lineNumber: lineNumber,
-          source: '--From union\n$source',
-          values: filtered.map((ref) => ref.type as InteropConstType).toList());
-
-      _delegate = InteropRef(dyn);
-    } else {
-      InteropRef? arrayed;
-
-      if (_chooseArrayOverItem &&
-          filtered.length == 2 &&
-          (arrayed = genericOf(filtered.first, filtered.last)) != null) {
-        _delegate = arrayed;
-      } else {
-        filtered.removeWhere((i) => i.type.isBasic);
-
-        if (filtered.isEmpty) {
-          _delegate = defaultType;
-        } else if (filtered.length == 1) {
-          _delegate = filtered.first;
-        } else {
-          _delegate = filtered.commonInheritor();
-
-          if (lineNumber == 21) {
-            print(
-                'MOTHERFUCKER $_delegate\n${filtered.first.type.realType}\n-----');
-          }
-
-          if (_delegate == null) {
-            final first = filtered.first.type.realType;
-
-            if (first is InteropClass) {
-              final firstProps = first.fullProperties();
-
-              if (filtered.every((it) {
-                final other = it.type.realType;
-
-                if (other is InteropClass) {
-                  final otherProps = other.fullProperties();
-
-                  return firstProps.length == otherProps.length &&
-                      firstProps.every(
-                          (fp) => otherProps.any((op) => op.name == fp.name));
-                }
-
-                return false;
-              })) {
-                final name = switch (parent) {
-                  InteropNamedDeclaration parent =>
-                    parent.availableName(suffix: 'Common'),
-                  _ => 'UnionCommon${_cc++}'
-                };
-                final cl = _declare = InteropClass(
-                    name: name,
-                    library: library,
-                    lineNumber: lineNumber,
-                    source: 'ForcedCommon from $source',
-                    addAnonymousFlag: true,
-                    isInline: false);
-
-                for (final prop in firstProps) {
-                  final copy = prop.copyWith(cl: cl);
-
-                  if (!filtered.every((it) {
-                    final other = it.type.realType as InteropClass;
-                    final otherProp = other.fullProperties().firstWhere(
-                        (p) => p.name == prop.name && p.type == prop.type);
-
-                    return otherProp.reference.isSame(prop.reference);
-                  })) {
-                    copy.reference = InteropStaticType.dyn.asRef;
-                  }
-
-                  if (copy.reference.realType case InteropLocalType local
-                      when !cl.typeParams
-                          .any((tp) => tp.symbol == local.symbol)) {
-                    final tp = first.typeParams
-                        .firstWhere((tp) => tp.symbol == local.symbol);
-
-                    cl.typeParams.add(tp.copyWith());
-                  }
-
-                  cl.addProperty(copy);
-                }
-
-                _delegate = InteropRef(cl);
-              }
-            }
-
-            _delegate ??= defaultType;
-          }
-        }
-      }
-    }
+    _configure();
 
     super.configure();
   }

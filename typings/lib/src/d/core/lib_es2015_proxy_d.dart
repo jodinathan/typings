@@ -1,24 +1,13 @@
 @_i1.JS()
-library lib_es2015_proxy_d_ts; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import 'lib_es5_d.dart' as _i3;
+import 'lib_es2015_proxy_d.dart' as _i3;
 import 'dart:js_util' as _i4;
 import 'core_comon_d.dart' as _i5;
-import 'lib_es2015_core_d.dart' as _i6;
-import 'lib_es2017_object_d.dart' as _i7;
-import 'lib_es2019_object_d.dart' as _i8;
-import 'lib_es2015_iterable_d.dart' as _i9;
-import 'lib_es5_intl_d.dart' as _i10;
-import 'lib_es2018_regexp_d.dart' as _i11;
-import 'lib_es2019_array_d.dart' as _i12;
-import 'dart:typed_data' as _i13;
-import 'lib_es2017_sharedmemory_d.dart' as _i14;
-import 'lib_es2015_collection_d.dart' as _i15;
-import 'lib_es2020_promise_d.dart' as _i16;
-import 'lib_es2015_generator_d.dart' as _i17;
-import 'lib_es2015_proxy_d.dart' as _i18;
+import 'lib_es5_d.dart' as _i6;
+import '/d/core.dart' as _i7;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -29,12 +18,12 @@ external _i2.Object _self;
 class _ProxyAccessor {}
 
 extension ProxyAccessor$Typings on _ProxyAccessor {
-  _i18.Inline10<_i2.Object> revocable<T extends _i2.Object>(
+  _i3.IInline10<_i2.Object> revocable<T extends _i2.Object>(
     T target,
-    _i18.ProxyHandler<T> handler,
+    _i3.ProxyHandler<T> handler,
   ) =>
       _i4.callMethod(
-        _i5.target24,
+        _i5.target26,
         'revocable',
         [
           target,
@@ -43,10 +32,10 @@ extension ProxyAccessor$Typings on _ProxyAccessor {
       );
   T call<T extends _i2.Object>(
     T target,
-    _i18.ProxyHandler<T> handler,
+    _i3.ProxyHandler<T> handler,
   ) =>
       _i4.callMethod(
-        _i5.target24,
+        _i5.target26,
         '',
         [
           target,
@@ -63,7 +52,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   _i2.dynamic apply(
     T target,
     _i2.dynamic thisArg,
-    _i2.List /*LIST InteropStaticType.list,757202708,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,580256976,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         argArray,
   ) =>
@@ -78,7 +67,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
       );
   _i2.Object construct(
     T target,
-    _i2.List /*LIST InteropStaticType.list,423735054,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,577305860,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         argArray,
     _i2.Function newTarget,
@@ -94,8 +83,8 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
       );
   _i2.bool defineProperty(
     T target,
-    _i2.Symbol property,
-    _i3.PropertyDescriptor attributes,
+    _i2.Object property,
+    _i6.PropertyDescriptor attributes,
   ) =>
       _i4.callMethod(
         this,
@@ -108,7 +97,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
       );
   _i2.bool deleteProperty(
     T target,
-    _i2.Symbol p,
+    _i2.Object p,
   ) =>
       _i4.callMethod(
         this,
@@ -120,7 +109,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
       );
   _i2.dynamic get(
     T target,
-    _i2.Symbol p,
+    _i2.Object p,
     _i2.dynamic receiver,
   ) =>
       _i4.callMethod(
@@ -132,9 +121,9 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
           receiver,
         ],
       );
-  _i3.PropertyDescriptor? getOwnPropertyDescriptor(
+  _i6.PropertyDescriptor? getOwnPropertyDescriptor(
     T target,
-    _i2.Symbol p,
+    _i2.Object p,
   ) =>
       _i4.callMethod(
         this,
@@ -151,7 +140,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
       );
   _i2.bool has(
     T target,
-    _i2.Symbol p,
+    _i2.Object p,
   ) =>
       _i4.callMethod(
         this,
@@ -166,7 +155,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
         'isExtensible',
         [target],
       );
-  _i2.List /*LIST InteropClass#1008376286(name: List),1057564144,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
+  _i2.List /*LIST InteropClass#291800405(name: List),382675463,[Instance of 'InteropRef<InteropType>']*/ <_i2.Object>
       ownKeys(T target) => _i4.callMethod(
             this,
             'ownKeys',
@@ -179,7 +168,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
       );
   _i2.bool set(
     T target,
-    _i2.Symbol p,
+    _i2.Object p,
     _i2.dynamic newValue,
     _i2.dynamic receiver,
   ) =>
@@ -202,7 +191,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
         'setPrototypeOf',
         [
           target,
-          v ?? _$exposed$undefined,
+          v ?? _i7.undefined,
         ],
       );
 }
@@ -210,9 +199,9 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class Inline10<T extends _i2.Object> {}
+class IInline10<T extends _i2.Object> {}
 
-extension Inline10$Typings<T extends _i2.Object> on Inline10<T> {
+extension IInline10$Typings<T extends _i2.Object> on IInline10<T> {
   /* #117
   source:  proxy: T; */
   T get proxy => _i4.getProperty(
@@ -238,7 +227,7 @@ extension Inline10$Typings<T extends _i2.Object> on Inline10<T> {
       );
   /* #117
   source:  revoke: () => void; */
-  // Type InteropFunction#538400888(parent: InteropGetter#817870317(name: revoke), library: lib_es2015_proxy_d_ts)
+  // Type InteropFunction#111853158(parent: InteropGetter#87959379(name: revoke), library: lib.es2015.proxy.d.ts)
   set revoke(void Function() value) {
     _i4.setProperty(
       this,
@@ -253,9 +242,9 @@ extension Inline10$Typings<T extends _i2.Object> on Inline10<T> {
 class ProxyConstructor {}
 
 extension ProxyConstructor$Typings on ProxyConstructor {
-  _i18.Inline10<_i2.Object> revocable<T extends _i2.Object>(
+  _i3.IInline10<_i2.Object> revocable<T extends _i2.Object>(
     T target,
-    _i18.ProxyHandler<T> handler,
+    _i3.ProxyHandler<T> handler,
   ) =>
       _i4.callMethod(
         this,
@@ -277,8 +266,6 @@ class _IterableLike$<T> {}
 @_i1.anonymous
 abstract class _GlobalThis {}
 
-@_i1.JS('undefined')
-external _i2.dynamic _$exposed$undefined;
 /* source: Exposed global accessor */
 @_i1.JS('Proxy')
 external final _ProxyAccessor proxy;

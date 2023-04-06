@@ -1,29 +1,12 @@
 @_i1.JS()
-library lib_scripthost_d_ts; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import 'lib_es5_d.dart' as _i3;
+import 'lib_scripthost_d.dart' as _i3;
 import 'dart:js_util' as _i4;
 import 'core_comon_d.dart' as _i5;
-import 'lib_es2015_core_d.dart' as _i6;
-import 'lib_es2017_object_d.dart' as _i7;
-import 'lib_es2019_object_d.dart' as _i8;
-import 'lib_es2015_iterable_d.dart' as _i9;
-import 'lib_es5_intl_d.dart' as _i10;
-import 'lib_es2018_regexp_d.dart' as _i11;
-import 'lib_es2019_array_d.dart' as _i12;
-import 'dart:typed_data' as _i13;
-import 'lib_es2017_sharedmemory_d.dart' as _i14;
-import 'lib_es2015_collection_d.dart' as _i15;
-import 'lib_es2020_promise_d.dart' as _i16;
-import 'lib_es2015_generator_d.dart' as _i17;
-import 'lib_es2015_proxy_d.dart' as _i18;
-import 'lib_es2020_bigint_d.dart' as _i19;
-import 'lib_es2018_asynciterable_d.dart' as _i20;
-import 'lib_es2018_asyncgenerator_d.dart' as _i21;
-import 'lib_dom_d.dart' as _i22;
-import 'lib_scripthost_d.dart' as _i23;
+import '/d/core.dart' as _i6;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -44,8 +27,8 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     StdErr: TextStreamWriter; */
   /// Exposes the write-only error output stream for the current script.
   ///  Can be accessed only while using CScript.exe.
-  _i23.TextStreamWriter get stdErr => _i4.getProperty(
-        _i5.target623,
+  _i3.TextStreamWriter get stdErr => _i4.getProperty(
+        _i5.target627,
         'StdErr',
       );
   /* #135
@@ -58,15 +41,15 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     StdOut: TextStreamWriter; */
   /// Exposes the write-only output stream for the current script.
   ///  Can be accessed only while using CScript.exe.
-  _i23.TextStreamWriter get stdOut => _i4.getProperty(
-        _i5.target623,
+  _i3.TextStreamWriter get stdOut => _i4.getProperty(
+        _i5.target627,
         'StdOut',
       );
   /* #136
   source: 
     Arguments: { length: number; Item(n: number): string; }; */
-  _i23.Inline607 get arguments => _i4.getProperty(
-        _i5.target623,
+  _i3.IInline615 get arguments => _i4.getProperty(
+        _i5.target627,
         'Arguments',
       );
   /* #141
@@ -78,7 +61,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     ScriptFullName: string; */
   /// The full path of the currently running script.
   _i2.String get scriptFullName => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'ScriptFullName',
       );
   /* #151
@@ -90,7 +73,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     BuildVersion: number; */
   /// The Windows Script Host build version number.
   _i2.num get buildVersion => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'BuildVersion',
       );
   /* #156
@@ -102,7 +85,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     FullName: string; */
   /// Fully qualified path of the host executable.
   _i2.String get fullName => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'FullName',
       );
   /* #161
@@ -114,7 +97,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     Interactive: boolean; */
   /// Gets/sets the script mode - interactive(true) or batch(false).
   _i2.bool get interactive => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'Interactive',
       );
   /* #166
@@ -126,7 +109,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     Name: string; */
   /// The name of the host executable (WScript.exe or CScript.exe).
   _i2.String get name => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'Name',
       );
   /* #171
@@ -138,7 +121,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     Path: string; */
   /// Path of the directory containing the host executable.
   _i2.String get path => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'Path',
       );
   /* #176
@@ -150,7 +133,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     ScriptName: string; */
   /// The filename of the currently running script.
   _i2.String get scriptName => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'ScriptName',
       );
   /* #182
@@ -163,8 +146,8 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     StdIn: TextStreamReader; */
   /// Exposes the read-only input stream for the current script.
   ///  Can be accessed only while using CScript.exe.
-  _i23.TextStreamReader get stdIn => _i4.getProperty(
-        _i5.target623,
+  _i3.TextStreamReader get stdIn => _i4.getProperty(
+        _i5.target627,
         'StdIn',
       );
   /* #187
@@ -176,28 +159,28 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     Version: string; */
   /// Windows Script Host version
   _i2.String get version => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'Version',
       );
   void echo(_i2.dynamic s) {
     _i4.callMethod(
-      _i5.target623,
+      _i5.target627,
       'Echo',
       [s],
     );
   }
 
   _i2.num quit([_i2.num? exitCode]) => _i4.callMethod(
-        _i5.target623,
+        _i5.target627,
         'Quit',
-        [exitCode ?? _$exposed$undefined],
+        [exitCode ?? _i6.undefined],
       );
   void connectObject(
     _i2.dynamic objEventSource,
     _i2.String strPrefix,
   ) {
     _i4.callMethod(
-      _i5.target623,
+      _i5.target627,
       'ConnectObject',
       [
         objEventSource,
@@ -211,16 +194,16 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     _i2.String? strPrefix,
   ]) =>
       _i4.callMethod(
-        _i5.target623,
+        _i5.target627,
         'CreateObject',
         [
           strProgID,
-          strPrefix ?? _$exposed$undefined,
+          strPrefix ?? _i6.undefined,
         ],
       );
   void disconnectObject(_i2.dynamic obj) {
     _i4.callMethod(
-      _i5.target623,
+      _i5.target627,
       'DisconnectObject',
       [obj],
     );
@@ -232,17 +215,17 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     _i2.String? strPrefix,
   ]) =>
       _i4.callMethod(
-        _i5.target623,
+        _i5.target627,
         'GetObject',
         [
           strPathname,
-          strProgID ?? _$exposed$undefined,
-          strPrefix ?? _$exposed$undefined,
+          strProgID ?? _i6.undefined,
+          strPrefix ?? _i6.undefined,
         ],
       );
   void sleep(_i2.num intTime) {
     _i4.callMethod(
-      _i5.target623,
+      _i5.target627,
       'Sleep',
       [intTime],
     );
@@ -353,7 +336,7 @@ extension TextStreamBase$Typings on TextStreamBase {
 
 @_i1.JS()
 @_i1.staticInterop
-class TextStreamWriter implements _i23.TextStreamBase {}
+class TextStreamWriter implements _i3.TextStreamBase {}
 
 extension TextStreamWriter$Typings on TextStreamWriter {
   void write(_i2.String s) {
@@ -383,7 +366,7 @@ extension TextStreamWriter$Typings on TextStreamWriter {
 
 @_i1.JS()
 @_i1.staticInterop
-class TextStreamReader implements _i23.TextStreamBase {}
+class TextStreamReader implements _i3.TextStreamBase {}
 
 extension TextStreamReader$Typings on TextStreamReader {
   /* #110
@@ -476,9 +459,9 @@ extension TextStreamReader$Typings on TextStreamReader {
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline607 {}
+class IInline615 {}
 
-extension Inline607$Typings on Inline607 {
+extension IInline615$Typings on IInline615 {
   /* #136
   source:  length: number; */
   _i2.num get length => _i4.getProperty(
@@ -505,9 +488,9 @@ extension Inline607$Typings on Inline607 {
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline606 {}
+class IInline614 {}
 
-extension Inline606$Typings on Inline606 {
+extension IInline614$Typings on IInline614 {
   /* #129
   source: 
 
@@ -518,8 +501,8 @@ extension Inline606$Typings on Inline606 {
     StdErr: TextStreamWriter; */
   /// Exposes the write-only error output stream for the current script.
   ///  Can be accessed only while using CScript.exe.
-  _i23.TextStreamWriter get stdErr => _i4.getProperty(
-        _i5.target623,
+  _i3.TextStreamWriter get stdErr => _i4.getProperty(
+        _i5.target627,
         'StdErr',
       );
   /* #129
@@ -531,7 +514,7 @@ extension Inline606$Typings on Inline606 {
      */
     StdErr: TextStreamWriter; */
   // Type Instance of 'InteropInterface'
-  set stdErr(_i23.TextStreamWriter value) {
+  set stdErr(_i3.TextStreamWriter value) {
     _i4.setProperty(
       this,
       'StdErr',
@@ -549,8 +532,8 @@ extension Inline606$Typings on Inline606 {
     StdOut: TextStreamWriter; */
   /// Exposes the write-only output stream for the current script.
   ///  Can be accessed only while using CScript.exe.
-  _i23.TextStreamWriter get stdOut => _i4.getProperty(
-        _i5.target623,
+  _i3.TextStreamWriter get stdOut => _i4.getProperty(
+        _i5.target627,
         'StdOut',
       );
   /* #135
@@ -562,7 +545,7 @@ extension Inline606$Typings on Inline606 {
      */
     StdOut: TextStreamWriter; */
   // Type Instance of 'InteropInterface'
-  set stdOut(_i23.TextStreamWriter value) {
+  set stdOut(_i3.TextStreamWriter value) {
     _i4.setProperty(
       this,
       'StdOut',
@@ -573,15 +556,15 @@ extension Inline606$Typings on Inline606 {
   /* #136
   source: 
     Arguments: { length: number; Item(n: number): string; }; */
-  _i23.Inline607 get arguments => _i4.getProperty(
-        _i5.target623,
+  _i3.IInline615 get arguments => _i4.getProperty(
+        _i5.target627,
         'Arguments',
       );
   /* #136
   source: 
     Arguments: { length: number; Item(n: number): string; }; */
   // Type Instance of 'InteropInterface'
-  set arguments(_i23.Inline607 value) {
+  set arguments(_i3.IInline615 value) {
     _i4.setProperty(
       this,
       'Arguments',
@@ -598,7 +581,7 @@ extension Inline606$Typings on Inline606 {
     ScriptFullName: string; */
   /// The full path of the currently running script.
   _i2.String get scriptFullName => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'ScriptFullName',
       );
   /* #141
@@ -626,7 +609,7 @@ extension Inline606$Typings on Inline606 {
     BuildVersion: number; */
   /// The Windows Script Host build version number.
   _i2.num get buildVersion => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'BuildVersion',
       );
   /* #151
@@ -654,7 +637,7 @@ extension Inline606$Typings on Inline606 {
     FullName: string; */
   /// Fully qualified path of the host executable.
   _i2.String get fullName => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'FullName',
       );
   /* #156
@@ -682,7 +665,7 @@ extension Inline606$Typings on Inline606 {
     Interactive: boolean; */
   /// Gets/sets the script mode - interactive(true) or batch(false).
   _i2.bool get interactive => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'Interactive',
       );
   /* #161
@@ -710,7 +693,7 @@ extension Inline606$Typings on Inline606 {
     Name: string; */
   /// The name of the host executable (WScript.exe or CScript.exe).
   _i2.String get name => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'Name',
       );
   /* #166
@@ -738,7 +721,7 @@ extension Inline606$Typings on Inline606 {
     Path: string; */
   /// Path of the directory containing the host executable.
   _i2.String get path => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'Path',
       );
   /* #171
@@ -766,7 +749,7 @@ extension Inline606$Typings on Inline606 {
     ScriptName: string; */
   /// The filename of the currently running script.
   _i2.String get scriptName => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'ScriptName',
       );
   /* #176
@@ -795,8 +778,8 @@ extension Inline606$Typings on Inline606 {
     StdIn: TextStreamReader; */
   /// Exposes the read-only input stream for the current script.
   ///  Can be accessed only while using CScript.exe.
-  _i23.TextStreamReader get stdIn => _i4.getProperty(
-        _i5.target623,
+  _i3.TextStreamReader get stdIn => _i4.getProperty(
+        _i5.target627,
         'StdIn',
       );
   /* #182
@@ -808,7 +791,7 @@ extension Inline606$Typings on Inline606 {
      */
     StdIn: TextStreamReader; */
   // Type Instance of 'InteropInterface'
-  set stdIn(_i23.TextStreamReader value) {
+  set stdIn(_i3.TextStreamReader value) {
     _i4.setProperty(
       this,
       'StdIn',
@@ -825,7 +808,7 @@ extension Inline606$Typings on Inline606 {
     Version: string; */
   /// Windows Script Host version
   _i2.String get version => _i4.getProperty(
-        _i5.target623,
+        _i5.target627,
         'Version',
       );
   /* #187
@@ -855,7 +838,7 @@ extension Inline606$Typings on Inline606 {
   _i2.num quit([_i2.num? exitCode]) => _i4.callMethod(
         this,
         'Quit',
-        [exitCode ?? _$exposed$undefined],
+        [exitCode ?? _i6.undefined],
       );
   void connectObject(
     _i2.dynamic objEventSource,
@@ -880,7 +863,7 @@ extension Inline606$Typings on Inline606 {
         'CreateObject',
         [
           strProgID,
-          strPrefix ?? _$exposed$undefined,
+          strPrefix ?? _i6.undefined,
         ],
       );
   void disconnectObject(_i2.dynamic obj) {
@@ -901,8 +884,8 @@ extension Inline606$Typings on Inline606 {
         'GetObject',
         [
           strPathname,
-          strProgID ?? _$exposed$undefined,
-          strPrefix ?? _$exposed$undefined,
+          strProgID ?? _i6.undefined,
+          strPrefix ?? _i6.undefined,
         ],
       );
   void sleep(_i2.num intTime) {
@@ -916,33 +899,60 @@ extension Inline606$Typings on Inline606 {
 
 @_i1.JS()
 @_i1.staticInterop
-class SafeArray<T> {}
+class SafeArray<T> {
+  factory SafeArray() => _i4.callConstructor(
+        _declaredSafeArray,
+        [],
+      );
+}
+
+/*
+FieldExternal: 
+*/
+@_i1.JS('SafeArray')
+external _i2.Object _declaredSafeArray;
 
 extension SafeArray$Typings<T> on SafeArray<T> {
   /* #232
   source: 
     private SafeArray_typekey: SafeArray<T>; */
-  _i23.SafeArray<T> get safeArrayTypekey => _i4.getProperty(
+  _i3.SafeArray<T> get safeArrayTypekey => _i4.getProperty(
         this,
         'SafeArray_typekey',
       );
+  /* #232
+  source: 
+    private SafeArray_typekey: SafeArray<T>; */
+  // Type Instance of 'InteropInterface'
+  set safeArrayTypekey(_i3.SafeArray<T> value) {
+    _i4.setProperty(
+      this,
+      'SafeArray_typekey',
+      value,
+    );
+  }
 }
 
 @_i1.JS()
 @_i1.staticInterop
 class Enumerator<T> {
-  factory Enumerator.$1(_i23.SafeArray<T> safearray) => _i4.callConstructor(
+  factory Enumerator.$1() => _i4.callConstructor(
+        _declaredEnumerator,
+        [],
+      );
+
+  factory Enumerator.$2(_i3.SafeArray<T> safearray) => _i4.callConstructor(
         _declaredEnumerator,
         [safearray],
       );
 
-  factory Enumerator.$2(_i23.Inline608<_i2.dynamic> collection) =>
+  factory Enumerator.$3(_i3.IInline616<_i2.dynamic> collection) =>
       _i4.callConstructor(
         _declaredEnumerator,
         [collection],
       );
 
-  factory Enumerator.$3(_i2.dynamic collection) => _i4.callConstructor(
+  factory Enumerator.$4(_i2.dynamic collection) => _i4.callConstructor(
         _declaredEnumerator,
         [collection],
       );
@@ -984,9 +994,9 @@ extension Enumerator$Typings<T> on Enumerator<T> {
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline608<T> {}
+class IInline616<T> {}
 
-extension Inline608$Typings<T> on Inline608<T> {
+extension IInline616$Typings<T> on IInline616<T> {
   T item(_i2.dynamic index) => _i4.callMethod(
         this,
         'Item',
@@ -1001,7 +1011,7 @@ class EnumeratorConstructor {}
 @_i1.JS()
 @_i1.staticInterop
 class VBArray<T> {
-  factory VBArray(_i23.SafeArray<T> safeArray) => _i4.callConstructor(
+  factory VBArray(_i3.SafeArray<T> safeArray) => _i4.callConstructor(
         _declaredVBArray,
         [safeArray],
       );
@@ -1034,19 +1044,20 @@ extension VBArray$Typings<T> on VBArray<T> {
   _i2.num lbound([_i2.num? dimension]) => _i4.callMethod(
         this,
         'lbound',
-        [dimension ?? _$exposed$undefined],
+        [dimension ?? _i6.undefined],
       );
   _i2.num ubound([_i2.num? dimension]) => _i4.callMethod(
         this,
         'ubound',
-        [dimension ?? _$exposed$undefined],
+        [dimension ?? _i6.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,84535453,[Instance of 'InteropRef<InteropType>']*/ <T>
-      toArray() => _i4.callMethod(
+  _i2.List /*LIST InteropStaticType.list,7822708,[Instance of 'InteropRef<InteropType>']*/ <T>
+      toArray() => (_i4.callMethod(
             this,
             'toArray',
             [],
-          );
+          ) as _i2.List)
+              .cast();
 }
 
 @_i1.JS()
@@ -1055,16 +1066,38 @@ class VBArrayConstructor {}
 
 @_i1.JS()
 @_i1.staticInterop
-class VarDate {}
+class VarDate {
+  factory VarDate() => _i4.callConstructor(
+        _declaredVarDate,
+        [],
+      );
+}
+
+/*
+FieldExternal: 
+*/
+@_i1.JS('VarDate')
+external _i2.Object _declaredVarDate;
 
 extension VarDate$Typings on VarDate {
   /* #316
   source: 
     private VarDate_typekey: VarDate; */
-  _i23.VarDate get varDateTypekey => _i4.getProperty(
+  _i3.VarDate get varDateTypekey => _i4.getProperty(
         this,
         'VarDate_typekey',
       );
+  /* #316
+  source: 
+    private VarDate_typekey: VarDate; */
+  // Type Instance of 'InteropInterface'
+  set varDateTypekey(_i3.VarDate value) {
+    _i4.setProperty(
+      this,
+      'VarDate_typekey',
+      value,
+    );
+  }
 }
 
 @_i1.JS()
@@ -1077,8 +1110,6 @@ class _IterableLike$<T> {}
 @_i1.anonymous
 abstract class _GlobalThis {}
 
-@_i1.JS('undefined')
-external _i2.dynamic _$exposed$undefined;
 /* source: Exposed global accessor */
 @_i1.JS('WScript')
 external final _WScriptAccessor wScript;

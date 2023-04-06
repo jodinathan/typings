@@ -3,7 +3,6 @@ import 'package:ts2dart/src/common.dart';
 import 'package:ts2dart/src/ast/type_parameter.dart';
 
 import '../library.dart';
-import '../method.dart';
 import '../method_param.dart';
 import '../reference.dart';
 import 'type.dart';

@@ -5,12 +5,13 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'lib_es5_d.dart' as _i3;
 import 'dart:js_util' as _i4;
+import '/d/core.dart' as _i5;
 
 @_i1.JS('Reflect')
 external _i2.Object _self;
 R _apply$1<
         T,
-        A extends _i2.List /*LIST InteropStaticType.list,442405974,[Instance of 'InteropRef<InteropType>']*/ <
+        A extends _i2.List /*LIST InteropStaticType.list,274597414,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>,
         R>(
   R Function(_i2.Iterable<_i2.dynamic>?) target,
@@ -29,7 +30,7 @@ R _apply$1<
 _i2.dynamic _apply$2(
   _i2.Function target,
   _i2.dynamic thisArgument,
-  _i2.List /*LIST InteropClass#1008376286(name: List),761992373,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropClass#291800405(name: List),707289272,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.dynamic>
       argumentsList,
 ) =>
@@ -45,7 +46,7 @@ _i2.dynamic _apply$2(
 ({
   R Function<
       T,
-      A extends _i2.List /*LIST InteropStaticType.list,442405974,[Instance of 'InteropRef<InteropType>']*/ <
+      A extends _i2.List /*LIST InteropStaticType.list,274597414,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.dynamic>,
       R>(
     R Function(_i2.Iterable<_i2.dynamic>?) target,
@@ -55,7 +56,7 @@ _i2.dynamic _apply$2(
   _i2.dynamic Function(
     _i2.Function target,
     _i2.dynamic thisArgument,
-    _i2.List /*LIST InteropClass#1008376286(name: List),761992373,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#291800405(name: List),707289272,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         argumentsList,
   ) $2,
@@ -64,7 +65,7 @@ _i2.dynamic _apply$2(
       $2: _apply$2,
     );
 R _construct$1<
-        A extends _i2.List /*LIST InteropStaticType.list,719222843,[Instance of 'InteropRef<InteropType>']*/ <
+        A extends _i2.List /*LIST InteropStaticType.list,189747214,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>,
         R>(
   R Function(_i2.Iterable<_i2.dynamic>?) target,
@@ -77,12 +78,12 @@ R _construct$1<
       [
         _i4.allowInterop(target),
         argumentsList,
-        newTarget == null ? _$exposed$undefined : _i4.allowInterop(newTarget),
+        newTarget == null ? _i5.undefined : _i4.allowInterop(newTarget),
       ],
     );
 _i2.dynamic _construct$2(
   _i2.Function target,
-  _i2.List /*LIST InteropClass#1008376286(name: List),635291540,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropClass#291800405(name: List),760449284,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.dynamic>
       argumentsList, [
   _i2.Function? newTarget,
@@ -93,12 +94,12 @@ _i2.dynamic _construct$2(
       [
         target,
         argumentsList,
-        newTarget ?? _$exposed$undefined,
+        newTarget ?? _i5.undefined,
       ],
     ); // HEYA construct
 ({
   R Function<
-      A extends _i2.List /*LIST InteropStaticType.list,719222843,[Instance of 'InteropRef<InteropType>']*/ <
+      A extends _i2.List /*LIST InteropStaticType.list,189747214,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.dynamic>,
       R>(
     R Function(_i2.Iterable<_i2.dynamic>?) target,
@@ -107,7 +108,7 @@ _i2.dynamic _construct$2(
   ]) $1,
   _i2.dynamic Function(
     _i2.Function target,
-    _i2.List /*LIST InteropClass#1008376286(name: List),635291540,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#291800405(name: List),760449284,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         argumentsList, [
     _i2.Function? newTarget,
@@ -153,7 +154,7 @@ _i2.dynamic get<T extends _i2.Object, P extends _i3.PropertyKey>(
       [
         target,
         propertyKey,
-        receiver ?? _$exposed$undefined,
+        receiver ?? _i5.undefined,
       ],
     );
 _i3.TypedPropertyDescriptor<_i2.dynamic>?
@@ -191,12 +192,13 @@ _i2.bool isExtensible(_i2.Object target) => _i4.callMethod(
       'isExtensible',
       [target],
     );
-_i2.List /*LIST InteropStaticType.list,407310235,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
-    ownKeys(_i2.Object target) => _i4.callMethod(
+_i2.List /*LIST InteropStaticType.list,295666865,[Instance of 'InteropRef<InteropType>']*/ <_i2.Object>
+    ownKeys(_i2.Object target) => (_i4.callMethod(
           _self,
           'ownKeys',
           [target],
-        );
+        ) as _i2.List)
+            .cast();
 _i2.bool preventExtensions(_i2.Object target) => _i4.callMethod(
       _self,
       'preventExtensions',
@@ -214,8 +216,8 @@ _i2.bool _set$1<T extends _i2.Object, P extends _i3.PropertyKey>(
       [
         target,
         propertyKey,
-        value ?? _$exposed$undefined,
-        receiver ?? _$exposed$undefined,
+        value ?? _i5.undefined,
+        receiver ?? _i5.undefined,
       ],
     );
 _i2.bool _set$2(
@@ -231,7 +233,7 @@ _i2.bool _set$2(
         target,
         propertyKey,
         value,
-        receiver ?? _$exposed$undefined,
+        receiver ?? _i5.undefined,
       ],
     ); // HEYA set
 ({
@@ -260,7 +262,7 @@ _i2.bool setPrototypeOf(
       'setPrototypeOf',
       [
         target,
-        proto ?? _$exposed$undefined,
+        proto ?? _i5.undefined,
       ],
     );
 
@@ -273,6 +275,3 @@ class _IterableLike$<T> {}
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-@_i1.JS('undefined')
-external _i2.dynamic _$exposed$undefined;

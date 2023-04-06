@@ -1,5 +1,4 @@
 import 'package:code_builder/code_builder.dart';
-import 'package:collection/collection.dart';
 import 'package:ts2dart/src/ast/class.dart';
 import 'package:ts2dart/src/ast/types/enum.dart';
 
@@ -22,7 +21,8 @@ class InteropInterface extends InteropType
       required this.source,
       required this.lineNumber,
       required this.name,
-      required this.metadata});
+      required this.metadata,
+      required this.isInline});
 
   @override
   final InteropLibrary library;
@@ -33,6 +33,7 @@ class InteropInterface extends InteropType
   @override
   final String name;
   final MetadataStruct metadata;
+  final bool isInline;
 
   @override
   bool get passthrough => true;
@@ -70,19 +71,21 @@ class InteropInterface extends InteropType
         }
       }
 
-      _delegate ??= InteropRef(isMetadataEnumMap()
-          ? InteropDynamicEnum(
-              name: name,
-              library: library,
-              lineNumber: lineNumber,
-              source: source)
-          : InteropClass(
-              name: name,
-              library: library,
-              lineNumber: lineNumber,
-              source: source,
-              isInline: metadata.isInline)
-        ..parse(metadata.map));
+      _delegate ??= metadata.simulatesAny
+          ? InteropStaticType.obj.asRef
+          : InteropRef(isMetadataEnumMap()
+              ? InteropDynamicEnum(
+                  name: name,
+                  library: library,
+                  lineNumber: lineNumber,
+                  source: source)
+              : InteropClass(
+                  name: name,
+                  library: library,
+                  lineNumber: lineNumber,
+                  source: source,
+                  isInline: metadata.isInline)
+            ..parse(metadata.map));
     }
 
     return delegate;

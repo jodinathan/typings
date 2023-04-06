@@ -1,33 +1,24 @@
 @_i1.JS()
-library lib_es5_d_ts; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'lib_es5_d.dart' as _i3;
 import 'dart:js_util' as _i4;
-import 'core_comon_d.dart' as _i5;
-import 'lib_es2015_core_d.dart' as _i6;
-import 'lib_es2017_object_d.dart' as _i7;
-import 'lib_es2019_object_d.dart' as _i8;
+import '/d/core.dart' as _i5;
+import 'core_comon_d.dart' as _i6;
+import 'lib_es2015_core_d.dart' as _i7;
+import 'lib_es2017_object_d.dart' as _i8;
 import 'lib_es2015_iterable_d.dart' as _i9;
 import 'lib_es5_intl_d.dart' as _i10;
-import 'lib_es2018_regexp_d.dart' as _i11;
-import 'lib_es2019_array_d.dart' as _i12;
-import 'dart:typed_data' as _i13;
-import 'lib_es2017_sharedmemory_d.dart' as _i14;
+import 'lib_es2022_regexp_d.dart' as _i11;
+import 'lib_es2022_error_d.dart' as _i12;
+import 'lib_es2019_array_d.dart' as _i13;
+import 'dart:typed_data' as _i14;
+import 'lib_es2017_sharedmemory_d.dart' as _i15;
 
 @_i1.JS('self')
 external _i2.Object _self;
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class Values {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class Entries {}
 
 @_i1.JS()
 @_i1.staticInterop
@@ -42,9 +33,9 @@ class FromCommon {}
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection0 implements _i3.Inline1 {}
+class _Intersection0 implements _i3.IInline1 {}
 
-typedef PropertyKey = _i2.Symbol;
+typedef PropertyKey = _i2.Object;
 typedef ThisParameterType<T> = _i2.dynamic;
 typedef OmitThisParameter<T> = _i2.dynamic;
 typedef PromiseConstructorLike = _i2.Future<T> Function<T>(
@@ -126,7 +117,7 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
     _i4.setProperty(
       this,
       'configurable',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -145,7 +136,7 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
     _i4.setProperty(
       this,
       'enumerable',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -164,7 +155,7 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
     _i4.setProperty(
       this,
       'value',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -183,7 +174,7 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
     _i4.setProperty(
       this,
       'writable',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -203,39 +194,14 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
 
 @_i1.JS()
 @_i1.staticInterop
-class PropertyDescriptorMap {}
-
-extension PropertyDescriptorMap$Typings on PropertyDescriptorMap {
-  _i3.PropertyDescriptor operator [](_i3.PropertyKey index) => _i4.callMethod(
-        this,
-        'operator []',
-        [index],
-      );
-  void operator []=(
-    _i3.PropertyKey index,
-    _i3.PropertyDescriptor value,
-  ) {
-    _i4.callMethod(
-      this,
-      'operator []=',
-      [
-        index,
-        value,
-      ],
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
 class Object {
   factory Object([_i2.dynamic value]) => _i4.callConstructor(
         _declaredObject,
-        [value ?? _$exposed$undefined],
+        [value ?? _i5.undefined],
       );
 
   static _i2.dynamic getPrototypeOf(_i2.dynamic o) => _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'getPrototypeOf',
         [o],
       );
@@ -244,7 +210,7 @@ class Object {
     _i3.PropertyKey p,
   ) =>
       _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'getOwnPropertyDescriptor',
         [
           o,
@@ -252,36 +218,37 @@ class Object {
         ],
       );
   static _i2
-          .List /*LIST InteropStaticType.list,625907796,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      getOwnPropertyNames(_i2.dynamic o) => _i4.callMethod(
-            _i5.target0,
+          .List /*LIST InteropStaticType.list,902414949,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+      getOwnPropertyNames(_i2.dynamic o) => (_i4.callMethod(
+            _i6.target0,
             'getOwnPropertyNames',
             [o],
-          );
-  static _i2.dynamic _create$1(
+          ) as _i2.List)
+              .cast();
+  static _i2.dynamic _create$1([_i2.Object? o]) => _i4.callMethod(
+        _i6.target0,
+        'create',
+        [o ?? _i5.undefined],
+      );
+  static _i2.dynamic _create$2(
     _i2.Object? o,
     _i2.Object properties,
   ) =>
       _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'create',
         [
-          o ?? _$exposed$undefined,
+          o ?? _i5.undefined,
           properties,
         ],
       );
-  static _i2.dynamic _create$2([_i2.Object? o]) => _i4.callMethod(
-        _i5.target0,
-        'create',
-        [o ?? _$exposed$undefined],
-      );
   // HEYA create
   static ({
+    _i2.dynamic Function([_i2.Object? o]) $1,
     _i2.dynamic Function(
       _i2.Object? o,
       _i2.Object properties,
-    ) $1,
-    _i2.dynamic Function([_i2.Object? o]) $2,
+    ) $2,
   }) get create => (
         $1: _create$1,
         $2: _create$2,
@@ -292,7 +259,7 @@ class Object {
     _i2.Object attributes,
   ) =>
       _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'defineProperty',
         [
           o,
@@ -305,7 +272,7 @@ class Object {
     _i2.Object properties,
   ) =>
       _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'defineProperties',
         [
           o,
@@ -313,69 +280,83 @@ class Object {
         ],
       );
   static T seal<T>(T o) => _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'seal',
         [o],
       );
   static T freeze<T extends _i2.Function>(T f) => _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'freeze',
         [f],
       );
   static T preventExtensions<T>(T o) => _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'preventExtensions',
         [o],
       );
   static _i2.bool isSealed(_i2.dynamic o) => _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'isSealed',
         [o],
       );
   static _i2.bool isFrozen(_i2.dynamic o) => _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'isFrozen',
         [o],
       );
   static _i2.bool isExtensible(_i2.dynamic o) => _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'isExtensible',
         [o],
       );
   static _i2
-          .List /*LIST InteropStaticType.list,720822269,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      _keys$1(_i2.Object o) => _i4.callMethod(
-            _i5.target0,
+          .List /*LIST InteropStaticType.list,790825717,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+      _keys$1(_i2.Object o) => (_i4.callMethod(
+            _i6.target0,
             'keys',
             [o],
-          );
+          ) as _i2.List)
+              .cast();
   static _i2
-          .List /*LIST InteropStaticType.list,1061006084,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      _keys$2(_i6.Inline8 o) => _i4.callMethod(
-            _i5.target0,
+          .List /*LIST InteropStaticType.list,859159342,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+      _keys$2(_i7.IInline8 o) => (_i4.callMethod(
+            _i6.target0,
             'keys',
             [o],
-          );
+          ) as _i2.List)
+              .cast();
   // HEYA keys
   static ({
-    _i2.List /*LIST InteropStaticType.list,720822269,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,790825717,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         Function(_i2.Object o) $1,
-    _i2.List /*LIST InteropStaticType.list,1061006084,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,859159342,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
-        Function(_i6.Inline8 o) $2,
+        Function(_i7.IInline8 o) $2,
   }) get keys => (
         $1: _keys$1,
         $2: _keys$2,
       );
-  static _i2.Object _assign$1<T extends _i6.Inline7, U, V, W>(
+  static _i2.dynamic _assign$1(
+    _i2.Object target, [
+    _i2.Iterable<_i2.dynamic>? sources,
+  ]) =>
+      _i4.callMethod(
+        _i6.target0,
+        'assign',
+        [
+          target,
+          ...?sources,
+        ],
+      );
+  static _i2.Object _assign$2<T extends _i7.IInline7, U, V, W>(
     T target,
     U source1,
     V source2,
     W source3,
   ) =>
       _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'assign',
         [
           target,
@@ -384,47 +365,36 @@ class Object {
           source3,
         ],
       );
-  static _i2.dynamic _assign$2(
-    _i2.Object target, [
-    _i2.Iterable<_i2.dynamic>? sources,
-  ]) =>
-      _i4.callMethod(
-        _i5.target0,
-        'assign',
-        [
-          target,
-          ...?sources,
-        ],
-      );
   // HEYA assign
   static ({
-    _i2.Object Function<T extends _i6.Inline7, U, V, W>(
+    _i2.dynamic Function(
+      _i2.Object target, [
+      _i2.Iterable<_i2.dynamic>? sources,
+    ]) $1,
+    _i2.Object Function<T extends _i7.IInline7, U, V, W>(
       T target,
       U source1,
       V source2,
       W source3,
-    ) $1,
-    _i2.dynamic Function(
-      _i2.Object target, [
-      _i2.Iterable<_i2.dynamic>? sources,
-    ]) $2,
+    ) $2,
   }) get assign => (
         $1: _assign$1,
         $2: _assign$2,
       );
   static _i2
-          .List /*LIST InteropStaticType.list,403641847,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
-      getOwnPropertySymbols(_i2.dynamic o) => _i4.callMethod(
-            _i5.target0,
+          .List /*LIST InteropStaticType.list,988756446,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
+      getOwnPropertySymbols(_i2.dynamic o) => (_i4.callMethod(
+            _i6.target0,
             'getOwnPropertySymbols',
             [o],
-          );
+          ) as _i2.List)
+              .cast();
   static _i2.bool is$(
     _i2.dynamic value1,
     _i2.dynamic value2,
   ) =>
       _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'is',
         [
           value1,
@@ -436,81 +406,85 @@ class Object {
     _i2.Object? proto,
   ]) =>
       _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'setPrototypeOf',
         [
           o,
-          proto ?? _$exposed$undefined,
+          proto ?? _i5.undefined,
         ],
       );
   static _i2
-          .List /*LIST InteropStaticType.list,72487864,[Instance of 'InteropRef<InteropType>']*/ <T>
-      _values$1<T>(_i3.Values o) => _i4.callMethod(
-            _i5.target0,
+          .List /*LIST InteropStaticType.list,771500813,[Instance of 'InteropRef<InteropType>']*/ <T>
+      _values$1<T>(_i2.Object o) => (_i4.callMethod(
+            _i6.target0,
             'values',
             [o],
-          );
+          ) as _i2.List)
+              .cast();
   static _i2
-          .List /*LIST InteropStaticType.list,203551467,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
-      _values$2(_i7.Inline17 o) => _i4.callMethod(
-            _i5.target0,
+          .List /*LIST InteropStaticType.list,855589450,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+      _values$2(_i8.IInline17 o) => (_i4.callMethod(
+            _i6.target0,
             'values',
             [o],
-          );
+          ) as _i2.List)
+              .cast();
   // HEYA values
   static ({
-    _i2.List /*LIST InteropStaticType.list,72487864,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,771500813,[Instance of 'InteropRef<InteropType>']*/ <
             T>
-        Function<T>(_i3.Values o) $1,
-    _i2.List /*LIST InteropStaticType.list,203551467,[Instance of 'InteropRef<InteropType>']*/ <
+        Function<T>(_i2.Object o) $1,
+    _i2.List /*LIST InteropStaticType.list,855589450,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
-        Function(_i7.Inline17 o) $2,
+        Function(_i8.IInline17 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
       );
-  static _i2.List /*LIST InteropStaticType.list,65956510,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,372459936,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         T,
-      )> _entries$1<T>(_i3.Entries o) => _i4.callMethod(
-        _i5.target0,
+      )> _entries$1<T>(_i2.Object o) => (_i4.callMethod(
+        _i6.target0,
         'entries',
         [o],
-      );
-  static _i2.List /*LIST InteropStaticType.list,597322097,[Instance of 'InteropRef<InteropType>']*/ <
+      ) as _i2.List)
+          .cast();
+  static _i2.List /*LIST InteropStaticType.list,17321687,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         _i2.dynamic,
-      )> _entries$2(_i7.Inline19 o) => _i4.callMethod(
-        _i5.target0,
+      )> _entries$2(_i8.IInline19 o) => (_i4.callMethod(
+        _i6.target0,
         'entries',
         [o],
-      );
+      ) as _i2.List)
+          .cast();
   // HEYA entries
   static ({
-    _i2.List /*LIST InteropStaticType.list,65956510,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,372459936,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               T,
             )>
-        Function<T>(_i3.Entries o) $1,
-    _i2.List /*LIST InteropStaticType.list,597322097,[Instance of 'InteropRef<InteropType>']*/ <
+        Function<T>(_i2.Object o) $1,
+    _i2.List /*LIST InteropStaticType.list,17321687,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               _i2.dynamic,
             )>
-        Function(_i7.Inline19 o) $2,
+        Function(_i8.IInline19 o) $2,
   }) get entries => (
         $1: _entries$1,
         $2: _entries$2,
       );
   static _i2.Object getOwnPropertyDescriptors<T>(T o) => _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'getOwnPropertyDescriptors',
         [o],
       );
-  static _i8.Inline26<_i2.dynamic> _fromEntries$1<T>(
+  static _i2.Object _fromEntries$1<T>(
           _i9.Iterable<
                   (
                     _i3.PropertyKey,
@@ -518,23 +492,23 @@ class Object {
                   )>
               entries) =>
       _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'fromEntries',
         [entries],
       );
   static _i2.dynamic _fromEntries$2(
           _i9.Iterable<
-                  _i2.List /*LIST InteropStaticType.list,426727760,[Instance of 'InteropRef<InteropType>']*/ <
+                  _i2.List /*LIST InteropStaticType.list,316998545,[Instance of 'InteropRef<InteropType>']*/ <
                       _i2.dynamic>>
               entries) =>
       _i4.callMethod(
-        _i5.target0,
+        _i6.target0,
         'fromEntries',
         [entries],
       );
   // HEYA fromEntries
   static ({
-    _i8.Inline26<_i2.dynamic> Function<T>(
+    _i2.Object Function<T>(
         _i9.Iterable<
                 (
                   _i3.PropertyKey,
@@ -543,12 +517,24 @@ class Object {
             entries) $1,
     _i2.dynamic Function(
         _i9.Iterable<
-                _i2.List /*LIST InteropStaticType.list,426727760,[Instance of 'InteropRef<InteropType>']*/ <
+                _i2.List /*LIST InteropStaticType.list,316998545,[Instance of 'InteropRef<InteropType>']*/ <
                     _i2.dynamic>>
             entries) $2,
   }) get fromEntries => (
         $1: _fromEntries$1,
         $2: _fromEntries$2,
+      );
+  static _i2.bool hasOwn(
+    _i2.Object o,
+    _i3.PropertyKey v,
+  ) =>
+      _i4.callMethod(
+        _i6.target0,
+        'hasOwn',
+        [
+          o,
+          v,
+        ],
       );
 }
 
@@ -615,11 +601,6 @@ extension Object$Typings on Object {
 
 @_i1.JS()
 @_i1.staticInterop
-@_i1.anonymous
-class Inline0 {}
-
-@_i1.JS()
-@_i1.staticInterop
 class ObjectConstructor {}
 
 extension ObjectConstructor$Typings on ObjectConstructor {
@@ -640,13 +621,19 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           p,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,625907796,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      getOwnPropertyNames(_i2.dynamic o) => _i4.callMethod(
+  _i2.List /*LIST InteropStaticType.list,902414949,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+      getOwnPropertyNames(_i2.dynamic o) => (_i4.callMethod(
             this,
             'getOwnPropertyNames',
             [o],
-          );
-  _i2.dynamic _create$1(
+          ) as _i2.List)
+              .cast();
+  _i2.dynamic _create$1([_i2.Object? o]) => _i4.callMethod(
+        this,
+        'create',
+        [o ?? _i5.undefined],
+      );
+  _i2.dynamic _create$2(
     _i2.Object? o,
     _i2.Object properties,
   ) =>
@@ -654,22 +641,17 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         this,
         'create',
         [
-          o ?? _$exposed$undefined,
+          o ?? _i5.undefined,
           properties,
         ],
       );
-  _i2.dynamic _create$2([_i2.Object? o]) => _i4.callMethod(
-        this,
-        'create',
-        [o ?? _$exposed$undefined],
-      );
   // HEYA create
   ({
+    _i2.dynamic Function([_i2.Object? o]) $1,
     _i2.dynamic Function(
       _i2.Object? o,
       _i2.Object properties,
-    ) $1,
-    _i2.dynamic Function([_i2.Object? o]) $2,
+    ) $2,
   }) get create => (
         $1: _create$1,
         $2: _create$2,
@@ -730,31 +712,45 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         'isExtensible',
         [o],
       );
-  _i2.List /*LIST InteropStaticType.list,720822269,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      _keys$1(_i2.Object o) => _i4.callMethod(
+  _i2.List /*LIST InteropStaticType.list,790825717,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+      _keys$1(_i2.Object o) => (_i4.callMethod(
             this,
             'keys',
             [o],
-          );
-  _i2.List /*LIST InteropStaticType.list,1061006084,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      _keys$2(_i6.Inline8 o) => _i4.callMethod(
+          ) as _i2.List)
+              .cast();
+  _i2.List /*LIST InteropStaticType.list,859159342,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+      _keys$2(_i7.IInline8 o) => (_i4.callMethod(
             this,
             'keys',
             [o],
-          );
+          ) as _i2.List)
+              .cast();
   // HEYA keys
   ({
-    _i2.List /*LIST InteropStaticType.list,720822269,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,790825717,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         Function(_i2.Object o) $1,
-    _i2.List /*LIST InteropStaticType.list,1061006084,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,859159342,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
-        Function(_i6.Inline8 o) $2,
+        Function(_i7.IInline8 o) $2,
   }) get keys => (
         $1: _keys$1,
         $2: _keys$2,
       );
-  _i2.Object _assign$1<T extends _i6.Inline7, U, V, W>(
+  _i2.dynamic _assign$1(
+    _i2.Object target, [
+    _i2.Iterable<_i2.dynamic>? sources,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'assign',
+        [
+          target,
+          ...?sources,
+        ],
+      );
+  _i2.Object _assign$2<T extends _i7.IInline7, U, V, W>(
     T target,
     U source1,
     V source2,
@@ -770,40 +766,29 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           source3,
         ],
       );
-  _i2.dynamic _assign$2(
-    _i2.Object target, [
-    _i2.Iterable<_i2.dynamic>? sources,
-  ]) =>
-      _i4.callMethod(
-        this,
-        'assign',
-        [
-          target,
-          ...?sources,
-        ],
-      );
   // HEYA assign
   ({
-    _i2.Object Function<T extends _i6.Inline7, U, V, W>(
+    _i2.dynamic Function(
+      _i2.Object target, [
+      _i2.Iterable<_i2.dynamic>? sources,
+    ]) $1,
+    _i2.Object Function<T extends _i7.IInline7, U, V, W>(
       T target,
       U source1,
       V source2,
       W source3,
-    ) $1,
-    _i2.dynamic Function(
-      _i2.Object target, [
-      _i2.Iterable<_i2.dynamic>? sources,
-    ]) $2,
+    ) $2,
   }) get assign => (
         $1: _assign$1,
         $2: _assign$2,
       );
-  _i2.List /*LIST InteropStaticType.list,403641847,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
-      getOwnPropertySymbols(_i2.dynamic o) => _i4.callMethod(
+  _i2.List /*LIST InteropStaticType.list,988756446,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
+      getOwnPropertySymbols(_i2.dynamic o) => (_i4.callMethod(
             this,
             'getOwnPropertySymbols',
             [o],
-          );
+          ) as _i2.List)
+              .cast();
   _i2.bool is$(
     _i2.dynamic value1,
     _i2.dynamic value2,
@@ -825,65 +810,69 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         'setPrototypeOf',
         [
           o,
-          proto ?? _$exposed$undefined,
+          proto ?? _i5.undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,72487864,[Instance of 'InteropRef<InteropType>']*/ <T>
-      _values$1<T>(_i3.Values o) => _i4.callMethod(
+  _i2.List /*LIST InteropStaticType.list,771500813,[Instance of 'InteropRef<InteropType>']*/ <T>
+      _values$1<T>(_i2.Object o) => (_i4.callMethod(
             this,
             'values',
             [o],
-          );
-  _i2.List /*LIST InteropStaticType.list,203551467,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
-      _values$2(_i7.Inline17 o) => _i4.callMethod(
+          ) as _i2.List)
+              .cast();
+  _i2.List /*LIST InteropStaticType.list,855589450,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+      _values$2(_i8.IInline17 o) => (_i4.callMethod(
             this,
             'values',
             [o],
-          );
+          ) as _i2.List)
+              .cast();
   // HEYA values
   ({
-    _i2.List /*LIST InteropStaticType.list,72487864,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,771500813,[Instance of 'InteropRef<InteropType>']*/ <
             T>
-        Function<T>(_i3.Values o) $1,
-    _i2.List /*LIST InteropStaticType.list,203551467,[Instance of 'InteropRef<InteropType>']*/ <
+        Function<T>(_i2.Object o) $1,
+    _i2.List /*LIST InteropStaticType.list,855589450,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
-        Function(_i7.Inline17 o) $2,
+        Function(_i8.IInline17 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
       );
-  _i2.List /*LIST InteropStaticType.list,65956510,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,372459936,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         T,
-      )> _entries$1<T>(_i3.Entries o) => _i4.callMethod(
+      )> _entries$1<T>(_i2.Object o) => (_i4.callMethod(
         this,
         'entries',
         [o],
-      );
-  _i2.List /*LIST InteropStaticType.list,597322097,[Instance of 'InteropRef<InteropType>']*/ <
+      ) as _i2.List)
+          .cast();
+  _i2.List /*LIST InteropStaticType.list,17321687,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         _i2.dynamic,
-      )> _entries$2(_i7.Inline19 o) => _i4.callMethod(
+      )> _entries$2(_i8.IInline19 o) => (_i4.callMethod(
         this,
         'entries',
         [o],
-      );
+      ) as _i2.List)
+          .cast();
   // HEYA entries
   ({
-    _i2.List /*LIST InteropStaticType.list,65956510,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,372459936,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               T,
             )>
-        Function<T>(_i3.Entries o) $1,
-    _i2.List /*LIST InteropStaticType.list,597322097,[Instance of 'InteropRef<InteropType>']*/ <
+        Function<T>(_i2.Object o) $1,
+    _i2.List /*LIST InteropStaticType.list,17321687,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               _i2.dynamic,
             )>
-        Function(_i7.Inline19 o) $2,
+        Function(_i8.IInline19 o) $2,
   }) get entries => (
         $1: _entries$1,
         $2: _entries$2,
@@ -893,7 +882,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         'getOwnPropertyDescriptors',
         [o],
       );
-  _i8.Inline26<_i2.dynamic> _fromEntries$1<T>(
+  _i2.Object _fromEntries$1<T>(
           _i9.Iterable<
                   (
                     _i3.PropertyKey,
@@ -907,7 +896,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
       );
   _i2.dynamic _fromEntries$2(
           _i9.Iterable<
-                  _i2.List /*LIST InteropStaticType.list,426727760,[Instance of 'InteropRef<InteropType>']*/ <
+                  _i2.List /*LIST InteropStaticType.list,316998545,[Instance of 'InteropRef<InteropType>']*/ <
                       _i2.dynamic>>
               entries) =>
       _i4.callMethod(
@@ -917,7 +906,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
       );
   // HEYA fromEntries
   ({
-    _i8.Inline26<_i2.dynamic> Function<T>(
+    _i2.Object Function<T>(
         _i9.Iterable<
                 (
                   _i3.PropertyKey,
@@ -926,17 +915,42 @@ extension ObjectConstructor$Typings on ObjectConstructor {
             entries) $1,
     _i2.dynamic Function(
         _i9.Iterable<
-                _i2.List /*LIST InteropStaticType.list,426727760,[Instance of 'InteropRef<InteropType>']*/ <
+                _i2.List /*LIST InteropStaticType.list,316998545,[Instance of 'InteropRef<InteropType>']*/ <
                     _i2.dynamic>>
             entries) $2,
   }) get fromEntries => (
         $1: _fromEntries$1,
         $2: _fromEntries$2,
       );
-  _i2.dynamic call(_i2.dynamic value) => _i4.callMethod(
+  _i2.bool hasOwn(
+    _i2.Object o,
+    _i3.PropertyKey v,
+  ) =>
+      _i4.callMethod(
+        this,
+        'hasOwn',
+        [
+          o,
+          v,
+        ],
+      );
+  _i2.dynamic _call$1() => _i4.callMethod(
+        this,
+        '',
+        [],
+      );
+  _i2.dynamic _call$2(_i2.dynamic value) => _i4.callMethod(
         this,
         '',
         [value],
+      );
+  // HEYA call
+  ({
+    _i2.dynamic Function() $1,
+    _i2.dynamic Function(_i2.dynamic value) $2,
+  }) get call => (
+        $1: _call$1,
+        $2: _call$2,
       );
 }
 
@@ -995,22 +1009,18 @@ extension IArguments$Typings on IArguments {
     );
   }
 
-  _i2.dynamic operator [](_i2.num index) => _i4.callMethod(
+  _i2.dynamic operator [](_i2.num index) => _i4.getProperty(
         this,
-        'operator []',
-        [index],
+        index,
       );
   void operator []=(
     _i2.num index,
     _i2.dynamic value,
   ) {
-    _i4.callMethod(
+    _i4.setProperty(
       this,
-      'operator []=',
-      [
-        index,
-        value,
-      ],
+      index,
+      value,
     );
   }
 }
@@ -1032,7 +1042,7 @@ extension StringConstructor$Typings on StringConstructor {
         [...?codePoints],
       );
   _i2.String raw(
-    _i6.Inline9 template, [
+    _i7.IInline9 template, [
     _i2.Iterable<_i2.dynamic>? substitutions,
   ]) =>
       _i4.callMethod(
@@ -1046,7 +1056,7 @@ extension StringConstructor$Typings on StringConstructor {
   _i2.String call([_i2.dynamic value]) => _i4.callMethod(
         this,
         '',
-        [value ?? _$exposed$undefined],
+        [value ?? _i5.undefined],
       );
 }
 
@@ -1055,7 +1065,7 @@ extension StringConstructor$Typings on StringConstructor {
 class Boolean {
   factory Boolean([_i2.dynamic value]) => _i4.callConstructor(
         _declaredBoolean,
-        [value ?? _$exposed$undefined],
+        [value ?? _i5.undefined],
       );
 }
 
@@ -1081,7 +1091,7 @@ extension BooleanConstructor$Typings on BooleanConstructor {
   _i2.bool call<T>([T? value]) => _i4.callMethod(
         this,
         '',
-        [value ?? _$exposed$undefined],
+        [value ?? _i5.undefined],
       );
 }
 
@@ -1090,7 +1100,7 @@ extension BooleanConstructor$Typings on BooleanConstructor {
 class Number {
   factory Number([_i2.dynamic value]) => _i4.callConstructor(
         _declaredNumber,
-        [value ?? _$exposed$undefined],
+        [value ?? _i5.undefined],
       );
 
   /* #581
@@ -1100,7 +1110,7 @@ class Number {
     readonly MAX_VALUE: number; */
   /// The largest number that can be represented in JavaScript. Equal to approximately 1.79E+308.
   static _i2.num get maxValue => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'MAX_VALUE',
       );
   /* #584
@@ -1110,7 +1120,7 @@ class Number {
     readonly MIN_VALUE: number; */
   /// The closest number to zero that can be represented in JavaScript. Equal to approximately 5.00E-324.
   static _i2.num get minValue => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'MIN_VALUE',
       );
   /* #590
@@ -1124,7 +1134,7 @@ class Number {
   /// A value that is not a number.
   /// In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
   static _i2.num get naN => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'NaN',
       );
   /* #596
@@ -1138,7 +1148,7 @@ class Number {
   /// A value that is less than the largest negative number that can be represented in JavaScript.
   /// JavaScript displays NEGATIVE_INFINITY values as -infinity.
   static _i2.num get negativeInfinity => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'NEGATIVE_INFINITY',
       );
   /* #602
@@ -1152,7 +1162,7 @@ class Number {
   /// A value greater than the largest number that can be represented in JavaScript.
   /// JavaScript displays POSITIVE_INFINITY values as infinity.
   static _i2.num get positiveInfinity => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'POSITIVE_INFINITY',
       );
   /* #217
@@ -1167,7 +1177,7 @@ class Number {
   /// that is representable as a Number value, which is approximately:
   /// 2.2204460492503130808472633361816 x 10‍−‍16.
   static _i2.num get epsilon => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'EPSILON',
       );
   /* #252
@@ -1183,7 +1193,7 @@ class Number {
   /// a Number value.
   /// The value of Number.MAX_SAFE_INTEGER is 9007199254740991 2^53 − 1.
   static _i2.num get maxSafeInteger => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'MAX_SAFE_INTEGER',
       );
   /* #259
@@ -1199,31 +1209,31 @@ class Number {
   /// a Number value.
   /// The value of Number.MIN_SAFE_INTEGER is −9007199254740991 (−(2^53 − 1)).
   static _i2.num get minSafeInteger => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'MIN_SAFE_INTEGER',
       );
   static _i2.bool isFinite(_i2.Object? number) => _i4.callMethod(
-        _i5.target2,
+        _i6.target2,
         'isFinite',
         [number],
       );
   static _i2.bool isInteger(_i2.Object? number) => _i4.callMethod(
-        _i5.target2,
+        _i6.target2,
         'isInteger',
         [number],
       );
   static _i2.bool isNaN(_i2.Object? number) => _i4.callMethod(
-        _i5.target2,
+        _i6.target2,
         'isNaN',
         [number],
       );
   static _i2.bool isSafeInteger(_i2.Object? number) => _i4.callMethod(
-        _i5.target2,
+        _i6.target2,
         'isSafeInteger',
         [number],
       );
   static _i2.num parseFloat(_i2.String string) => _i4.callMethod(
-        _i5.target2,
+        _i6.target2,
         'parseFloat',
         [string],
       );
@@ -1232,11 +1242,11 @@ class Number {
     _i2.num? radix,
   ]) =>
       _i4.callMethod(
-        _i5.target2,
+        _i6.target2,
         'parseInt',
         [
           string,
-          radix ?? _$exposed$undefined,
+          radix ?? _i5.undefined,
         ],
       );
 }
@@ -1251,22 +1261,22 @@ extension Number$Typings on Number {
   _i2.String toString$([_i2.num? radix]) => _i4.callMethod(
         this,
         'toString',
-        [radix ?? _$exposed$undefined],
+        [radix ?? _i5.undefined],
       );
   _i2.String toFixed([_i2.num? fractionDigits]) => _i4.callMethod(
         this,
         'toFixed',
-        [fractionDigits ?? _$exposed$undefined],
+        [fractionDigits ?? _i5.undefined],
       );
   _i2.String toExponential([_i2.num? fractionDigits]) => _i4.callMethod(
         this,
         'toExponential',
-        [fractionDigits ?? _$exposed$undefined],
+        [fractionDigits ?? _i5.undefined],
       );
   _i2.String toPrecision([_i2.num? precision]) => _i4.callMethod(
         this,
         'toPrecision',
-        [precision ?? _$exposed$undefined],
+        [precision ?? _i5.undefined],
       );
   _i2.num valueOf() => _i4.callMethod(
         this,
@@ -1274,17 +1284,15 @@ extension Number$Typings on Number {
         [],
       );
   _i2.String _toLocaleString$1([
-    _i2.List /*LIST InteropStaticType.list,393690326,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>?
-        locales,
+    _i2.Object? locales,
     _i10.NumberFormatOptions? options,
   ]) =>
       _i4.callMethod(
         this,
         'toLocaleString',
         [
-          locales ?? _$exposed$undefined,
-          options ?? _$exposed$undefined,
+          locales ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
   _i2.String _toLocaleString$2([
@@ -1295,16 +1303,14 @@ extension Number$Typings on Number {
         this,
         'toLocaleString',
         [
-          locales ?? _$exposed$undefined ?? _$exposed$undefined,
-          options ?? _$exposed$undefined,
+          locales ?? _i5.undefined ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
   // HEYA toLocaleString
   ({
     _i2.String Function([
-      _i2.List /*LIST InteropStaticType.list,393690326,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.String>?
-          locales,
+      _i2.Object? locales,
       _i10.NumberFormatOptions? options,
     ]) $1,
     _i2.String Function([
@@ -1327,7 +1333,7 @@ class NumberConstructor {
     readonly MAX_VALUE: number; */
   /// The largest number that can be represented in JavaScript. Equal to approximately 1.79E+308.
   static _i2.num get maxValue => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'MAX_VALUE',
       );
   /* #584
@@ -1337,7 +1343,7 @@ class NumberConstructor {
     readonly MIN_VALUE: number; */
   /// The closest number to zero that can be represented in JavaScript. Equal to approximately 5.00E-324.
   static _i2.num get minValue => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'MIN_VALUE',
       );
   /* #590
@@ -1351,7 +1357,7 @@ class NumberConstructor {
   /// A value that is not a number.
   /// In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
   static _i2.num get naN => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'NaN',
       );
   /* #596
@@ -1365,7 +1371,7 @@ class NumberConstructor {
   /// A value that is less than the largest negative number that can be represented in JavaScript.
   /// JavaScript displays NEGATIVE_INFINITY values as -infinity.
   static _i2.num get negativeInfinity => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'NEGATIVE_INFINITY',
       );
   /* #602
@@ -1379,7 +1385,7 @@ class NumberConstructor {
   /// A value greater than the largest number that can be represented in JavaScript.
   /// JavaScript displays POSITIVE_INFINITY values as infinity.
   static _i2.num get positiveInfinity => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'POSITIVE_INFINITY',
       );
   /* #217
@@ -1394,7 +1400,7 @@ class NumberConstructor {
   /// that is representable as a Number value, which is approximately:
   /// 2.2204460492503130808472633361816 x 10‍−‍16.
   static _i2.num get epsilon => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'EPSILON',
       );
   /* #252
@@ -1410,7 +1416,7 @@ class NumberConstructor {
   /// a Number value.
   /// The value of Number.MAX_SAFE_INTEGER is 9007199254740991 2^53 − 1.
   static _i2.num get maxSafeInteger => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'MAX_SAFE_INTEGER',
       );
   /* #259
@@ -1426,7 +1432,7 @@ class NumberConstructor {
   /// a Number value.
   /// The value of Number.MIN_SAFE_INTEGER is −9007199254740991 (−(2^53 − 1)).
   static _i2.num get minSafeInteger => _i4.getProperty(
-        _i5.target2,
+        _i6.target2,
         'MIN_SAFE_INTEGER',
       );
 }
@@ -1466,13 +1472,13 @@ extension NumberConstructor$Typings on NumberConstructor {
         'parseInt',
         [
           string,
-          radix ?? _$exposed$undefined,
+          radix ?? _i5.undefined,
         ],
       );
   _i2.num call([_i2.dynamic value]) => _i4.callMethod(
         this,
         '',
-        [value ?? _$exposed$undefined],
+        [value ?? _i5.undefined],
       );
 }
 
@@ -1486,7 +1492,7 @@ class TemplateStringsArray implements _i3.ReadonlyArray<_i2.String> {
   });
 
   factory TemplateStringsArray({
-    required _i2.List /*LIST InteropStaticType.list,265756404,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,844045559,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         raw,
     required _i2.num length,
@@ -1501,11 +1507,12 @@ extension TemplateStringsArray$Typings on TemplateStringsArray {
   /* #609
   source: 
     readonly raw: readonly string[]; */
-  _i2.List /*LIST InteropStaticType.list,265756404,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      get raw => _i4.getProperty(
+  _i2.List /*LIST InteropStaticType.list,844045559,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+      get raw => (_i4.getProperty(
             this,
             'raw',
-          );
+          ) as _i2.List)
+              .cast();
 }
 
 @_i1.JS()
@@ -1544,15 +1551,15 @@ extension ImportMeta$Typings on ImportMeta {
 class ImportCallOptions {
   external factory ImportCallOptions._({_i2.dynamic assert$});
 
-  factory ImportCallOptions({_i3.ImportAssertions? assert$}) =>
-      ImportCallOptions._(assert$: assert$ ?? _$exposed$undefined);
+  factory ImportCallOptions({_i2.Object? assert$}) =>
+      ImportCallOptions._(assert$: assert$ ?? _i5.undefined);
 }
 
 extension ImportCallOptions$Typings on ImportCallOptions {
   /* #628
   source: 
     assert?: ImportAssertions; */
-  _i3.ImportAssertions? get assert$ => _i4.getProperty(
+  _i2.Object? get assert$ => _i4.getProperty(
         this,
         'assert',
       );
@@ -1560,36 +1567,11 @@ extension ImportCallOptions$Typings on ImportCallOptions {
   source: 
     assert?: ImportAssertions; */
   // Type Instance of 'InteropInterface'
-  set assert$(_i3.ImportAssertions? value) {
+  set assert$(_i2.Object? value) {
     _i4.setProperty(
       this,
       'assert',
-      value ?? _$exposed$undefined,
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
-class ImportAssertions {}
-
-extension ImportAssertions$Typings on ImportAssertions {
-  _i2.String operator [](_i2.String index) => _i4.callMethod(
-        this,
-        'operator []',
-        [index],
-      );
-  void operator []=(
-    _i2.String index,
-    _i2.String value,
-  ) {
-    _i4.callMethod(
-      this,
-      'operator []=',
-      [
-        index,
-        value,
-      ],
+      value ?? _i5.undefined,
     );
   }
 }
@@ -1894,11 +1876,11 @@ extension DateConstructor$Typings on DateConstructor {
         [
           year,
           monthIndex,
-          date ?? _$exposed$undefined,
-          hours ?? _$exposed$undefined,
-          minutes ?? _$exposed$undefined,
-          seconds ?? _$exposed$undefined,
-          ms ?? _$exposed$undefined,
+          date ?? _i5.undefined,
+          hours ?? _i5.undefined,
+          minutes ?? _i5.undefined,
+          seconds ?? _i5.undefined,
+          ms ?? _i5.undefined,
         ],
       );
   _i2.num now() => _i4.callMethod(
@@ -1922,6 +1904,7 @@ class RegExpMatchArray implements _i3.Array<_i2.String> {
     _i2.dynamic input,
     _i2.dynamic first,
     _i2.dynamic groups,
+    _i2.dynamic indices,
     _i2.dynamic length,
   });
 
@@ -1929,14 +1912,16 @@ class RegExpMatchArray implements _i3.Array<_i2.String> {
     _i2.num? index,
     _i2.String? input,
     required _i2.String first,
-    _i11.Inline21? groups,
+    _i2.Object? groups,
+    _i11.RegExpIndicesArray? indices,
     required _i2.num length,
   }) =>
       RegExpMatchArray._(
-        index: index ?? _$exposed$undefined,
-        input: input ?? _$exposed$undefined,
+        index: index ?? _i5.undefined,
+        input: input ?? _i5.undefined,
         first: first,
-        groups: groups ?? _$exposed$undefined,
+        groups: groups ?? _i5.undefined,
+        indices: indices ?? _i5.undefined,
         length: length,
       );
 }
@@ -1964,7 +1949,7 @@ extension RegExpMatchArray$Typings on RegExpMatchArray {
     _i4.setProperty(
       this,
       'index',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -1990,7 +1975,7 @@ extension RegExpMatchArray$Typings on RegExpMatchArray {
     _i4.setProperty(
       this,
       'input',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -2010,7 +1995,7 @@ extension RegExpMatchArray$Typings on RegExpMatchArray {
     groups?: {
         [key: string]: string
     } */
-  _i11.Inline21? get groups => _i4.getProperty(
+  _i2.Object? get groups => _i4.getProperty(
         this,
         'groups',
       );
@@ -2020,11 +2005,30 @@ extension RegExpMatchArray$Typings on RegExpMatchArray {
         [key: string]: string
     } */
   // Type Instance of 'InteropInterface'
-  set groups(_i11.Inline21? value) {
+  set groups(_i2.Object? value) {
     _i4.setProperty(
       this,
       'groups',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
+    );
+  }
+
+  /* #20
+  source: 
+    indices?: RegExpIndicesArray; */
+  _i11.RegExpIndicesArray? get indices => _i4.getProperty(
+        this,
+        'indices',
+      );
+  /* #20
+  source: 
+    indices?: RegExpIndicesArray; */
+  // Type Instance of 'InteropInterface'
+  set indices(_i11.RegExpIndicesArray? value) {
+    _i4.setProperty(
+      this,
+      'indices',
+      value ?? _i5.undefined,
     );
   }
 }
@@ -2038,6 +2042,7 @@ class RegExpExecArray implements _i3.Array<_i2.String> {
     _i2.dynamic input,
     _i2.dynamic first,
     _i2.dynamic groups,
+    _i2.dynamic indices,
     _i2.dynamic length,
   });
 
@@ -2045,14 +2050,16 @@ class RegExpExecArray implements _i3.Array<_i2.String> {
     required _i2.num index,
     required _i2.String input,
     required _i2.String first,
-    _i11.Inline22? groups,
+    _i2.Object? groups,
+    _i11.RegExpIndicesArray? indices,
     required _i2.num length,
   }) =>
       RegExpExecArray._(
         index: index,
         input: input,
         first: first,
-        groups: groups ?? _$exposed$undefined,
+        groups: groups ?? _i5.undefined,
+        indices: indices ?? _i5.undefined,
         length: length,
       );
 }
@@ -2126,7 +2133,7 @@ extension RegExpExecArray$Typings on RegExpExecArray {
     groups?: {
         [key: string]: string
     } */
-  _i11.Inline22? get groups => _i4.getProperty(
+  _i2.Object? get groups => _i4.getProperty(
         this,
         'groups',
       );
@@ -2136,11 +2143,30 @@ extension RegExpExecArray$Typings on RegExpExecArray {
         [key: string]: string
     } */
   // Type Instance of 'InteropInterface'
-  set groups(_i11.Inline22? value) {
+  set groups(_i2.Object? value) {
     _i4.setProperty(
       this,
       'groups',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
+    );
+  }
+
+  /* #24
+  source: 
+    indices?: RegExpIndicesArray; */
+  _i11.RegExpIndicesArray? get indices => _i4.getProperty(
+        this,
+        'indices',
+      );
+  /* #24
+  source: 
+    indices?: RegExpIndicesArray; */
+  // Type Instance of 'InteropInterface'
+  set indices(_i11.RegExpIndicesArray? value) {
+    _i4.setProperty(
+      this,
+      'indices',
+      value ?? _i5.undefined,
     );
   }
 }
@@ -2148,7 +2174,17 @@ extension RegExpExecArray$Typings on RegExpExecArray {
 @_i1.JS()
 @_i1.staticInterop
 class RegExp {
-  factory RegExp.$1(
+  factory RegExp.$1() => _i4.callConstructor(
+        _declaredRegExp,
+        [],
+      );
+
+  factory RegExp.$2(_i2.Object pattern) => _i4.callConstructor(
+        _declaredRegExp,
+        [pattern],
+      );
+
+  factory RegExp.$3(
     _i2.String pattern, [
     _i2.String? flags,
   ]) =>
@@ -2156,25 +2192,20 @@ class RegExp {
         _declaredRegExp,
         [
           pattern,
-          flags ?? _$exposed$undefined,
+          flags ?? _i5.undefined,
         ],
       );
 
-  factory RegExp.$2(
-    _i3.RegExp pattern, [
+  factory RegExp.$4(
+    _i2.Object pattern, [
     _i2.String? flags,
   ]) =>
       _i4.callConstructor(
         _declaredRegExp,
         [
           pattern,
-          flags ?? _$exposed$undefined,
+          flags ?? _i5.undefined,
         ],
-      );
-
-  factory RegExp.$3(_i3.RegExp pattern) => _i4.callConstructor(
-        _declaredRegExp,
-        [pattern],
       );
 
   /* #1012
@@ -2185,7 +2216,7 @@ class RegExp {
     $1: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$1 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$1',
       );
   /* #1014
@@ -2194,7 +2225,7 @@ class RegExp {
     $2: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$2 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$2',
       );
   /* #1016
@@ -2203,7 +2234,7 @@ class RegExp {
     $3: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$3 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$3',
       );
   /* #1018
@@ -2212,7 +2243,7 @@ class RegExp {
     $4: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$4 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$4',
       );
   /* #1020
@@ -2221,7 +2252,7 @@ class RegExp {
     $5: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$5 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$5',
       );
   /* #1022
@@ -2230,7 +2261,7 @@ class RegExp {
     $6: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$6 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$6',
       );
   /* #1024
@@ -2239,7 +2270,7 @@ class RegExp {
     $7: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$7 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$7',
       );
   /* #1026
@@ -2248,7 +2279,7 @@ class RegExp {
     $8: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$8 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$8',
       );
   /* #1028
@@ -2257,7 +2288,7 @@ class RegExp {
     $9: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$9 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$9',
       );
   /* #1030
@@ -2266,7 +2297,7 @@ class RegExp {
     input: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get input => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         'input',
       );
   /* #1032
@@ -2274,8 +2305,8 @@ class RegExp {
     /** @deprecated A legacy feature for browser compatibility */
     $_: string; */
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$ => _i4.getProperty(
-        _i5.target3,
+  static _i2.String get $$$ => _i4.getProperty(
+        _i6.target3,
         '\$_',
       );
   /* #1034
@@ -2284,7 +2315,7 @@ class RegExp {
     lastMatch: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get lastMatch => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         'lastMatch',
       );
   /* #1038
@@ -2293,7 +2324,7 @@ class RegExp {
     lastParen: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get lastParen => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         'lastParen',
       );
   /* #1042
@@ -2302,7 +2333,7 @@ class RegExp {
     leftContext: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get leftContext => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         'leftContext',
       );
   /* #1046
@@ -2311,8 +2342,17 @@ class RegExp {
     rightContext: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get rightContext => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         'rightContext',
+      );
+  /* #1048
+  source: 
+    /** @deprecated A legacy feature for browser compatibility */
+    "$'": string; */
+  /// @deprecated A legacy feature for browser compatibility
+  static _i2.String get $$ => _i4.getProperty(
+        _i6.target3,
+        '\$',
       );
 }
 
@@ -2454,6 +2494,19 @@ extension RegExp$Typings on RegExp {
         this,
         'dotAll',
       );
+  /* #38
+  source: 
+    /**
+     * Returns a Boolean value indicating the state of the hasIndices flag (d) used with with a regular expression.
+     * Default is false. Read-only.
+     */
+    readonly hasIndices: boolean; */
+  /// Returns a Boolean value indicating the state of the hasIndices flag (d) used with with a regular expression.
+  /// Default is false. Read-only.
+  _i2.bool get hasIndices => _i4.getProperty(
+        this,
+        'hasIndices',
+      );
   _i3.RegExpExecArray? exec(_i2.String string) => _i4.callMethod(
         this,
         'exec',
@@ -2473,7 +2526,7 @@ extension RegExp$Typings on RegExp {
         'compile',
         [
           pattern,
-          flags ?? _$exposed$undefined,
+          flags ?? _i5.undefined,
         ],
       );
 }
@@ -2489,7 +2542,7 @@ class RegExpConstructor {
     $1: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$1 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$1',
       );
   /* #1014
@@ -2498,7 +2551,7 @@ class RegExpConstructor {
     $2: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$2 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$2',
       );
   /* #1016
@@ -2507,7 +2560,7 @@ class RegExpConstructor {
     $3: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$3 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$3',
       );
   /* #1018
@@ -2516,7 +2569,7 @@ class RegExpConstructor {
     $4: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$4 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$4',
       );
   /* #1020
@@ -2525,7 +2578,7 @@ class RegExpConstructor {
     $5: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$5 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$5',
       );
   /* #1022
@@ -2534,7 +2587,7 @@ class RegExpConstructor {
     $6: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$6 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$6',
       );
   /* #1024
@@ -2543,7 +2596,7 @@ class RegExpConstructor {
     $7: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$7 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$7',
       );
   /* #1026
@@ -2552,7 +2605,7 @@ class RegExpConstructor {
     $8: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$8 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$8',
       );
   /* #1028
@@ -2561,7 +2614,7 @@ class RegExpConstructor {
     $9: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$9 => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         '\$9',
       );
   /* #1030
@@ -2570,7 +2623,7 @@ class RegExpConstructor {
     input: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get input => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         'input',
       );
   /* #1032
@@ -2578,8 +2631,8 @@ class RegExpConstructor {
     /** @deprecated A legacy feature for browser compatibility */
     $_: string; */
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$ => _i4.getProperty(
-        _i5.target3,
+  static _i2.String get $$$ => _i4.getProperty(
+        _i6.target3,
         '\$_',
       );
   /* #1034
@@ -2588,7 +2641,7 @@ class RegExpConstructor {
     lastMatch: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get lastMatch => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         'lastMatch',
       );
   /* #1038
@@ -2597,7 +2650,7 @@ class RegExpConstructor {
     lastParen: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get lastParen => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         'lastParen',
       );
   /* #1042
@@ -2606,7 +2659,7 @@ class RegExpConstructor {
     leftContext: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get leftContext => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         'leftContext',
       );
   /* #1046
@@ -2615,8 +2668,17 @@ class RegExpConstructor {
     rightContext: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get rightContext => _i4.getProperty(
-        _i5.target3,
+        _i6.target3,
         'rightContext',
+      );
+  /* #1048
+  source: 
+    /** @deprecated A legacy feature for browser compatibility */
+    "$'": string; */
+  /// @deprecated A legacy feature for browser compatibility
+  static _i2.String get $$ => _i4.getProperty(
+        _i6.target3,
+        '\$',
       );
 }
 
@@ -2758,7 +2820,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     /** @deprecated A legacy feature for browser compatibility */
     $_: string; */
   // Type InteropStaticType.string
-  set $$(_i2.String value) {
+  set $$$1(_i2.String value) {
     _i4.setProperty(
       this,
       '\$_',
@@ -2818,7 +2880,12 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  _i3.RegExp _call$1(
+  _i3.RegExp _call$1(_i2.Object pattern) => _i4.callMethod(
+        this,
+        '',
+        [pattern],
+      );
+  _i3.RegExp _call$2(
     _i2.String pattern, [
     _i2.String? flags,
   ]) =>
@@ -2827,11 +2894,11 @@ extension RegExpConstructor$Typings on RegExpConstructor {
         '',
         [
           pattern,
-          flags ?? _$exposed$undefined,
+          flags ?? _i5.undefined,
         ],
       );
-  _i3.RegExp _call$2(
-    _i3.RegExp pattern, [
+  _i3.RegExp _call$3(
+    _i2.Object pattern, [
     _i2.String? flags,
   ]) =>
       _i4.callMethod(
@@ -2839,25 +2906,20 @@ extension RegExpConstructor$Typings on RegExpConstructor {
         '',
         [
           pattern,
-          flags ?? _$exposed$undefined,
+          flags ?? _i5.undefined,
         ],
-      );
-  _i3.RegExp _call$3(_i3.RegExp pattern) => _i4.callMethod(
-        this,
-        '',
-        [pattern],
       );
   // HEYA call
   ({
+    _i3.RegExp Function(_i2.Object pattern) $1,
     _i3.RegExp Function(
       _i2.String pattern, [
       _i2.String? flags,
-    ]) $1,
-    _i3.RegExp Function(
-      _i3.RegExp pattern, [
-      _i2.String? flags,
     ]) $2,
-    _i3.RegExp Function(_i3.RegExp pattern) $3,
+    _i3.RegExp Function(
+      _i2.Object pattern, [
+      _i2.String? flags,
+    ]) $3,
   }) get call => (
         $1: _call$1,
         $2: _call$2,
@@ -2868,9 +2930,16 @@ extension RegExpConstructor$Typings on RegExpConstructor {
 @_i1.JS()
 @_i1.staticInterop
 class Error {
-  factory Error([_i2.String? message]) => _i4.callConstructor(
+  factory Error([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callConstructor(
         _declaredError,
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
@@ -2934,7 +3003,26 @@ extension Error$Typings on Error {
     _i4.setProperty(
       this,
       'stack',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
+    );
+  }
+
+  /* #24
+  source: 
+    cause?: unknown; */
+  _i2.Object? get cause => _i4.getProperty(
+        this,
+        'cause',
+      );
+  /* #24
+  source: 
+    cause?: unknown; */
+  // Type InteropStaticType.nullableObj
+  set cause(_i2.Object? value) {
+    _i4.setProperty(
+      this,
+      'cause',
+      value ?? _i5.undefined,
     );
   }
 }
@@ -2944,19 +3032,33 @@ extension Error$Typings on Error {
 class ErrorConstructor {}
 
 extension ErrorConstructor$Typings on ErrorConstructor {
-  _i3.Error call([_i2.String? message]) => _i4.callMethod(
+  _i3.Error call([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callMethod(
         this,
         '',
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
 class EvalError implements _i3.Error {
-  factory EvalError([_i2.String? message]) => _i4.callConstructor(
+  factory EvalError([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callConstructor(
         _declaredEvalError,
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
@@ -2971,19 +3073,33 @@ external _i2.Object _declaredEvalError;
 class EvalErrorConstructor implements _i3.ErrorConstructor {}
 
 extension EvalErrorConstructor$Typings on EvalErrorConstructor {
-  _i3.EvalError call([_i2.String? message]) => _i4.callMethod(
+  _i3.EvalError call([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callMethod(
         this,
         '',
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
 class RangeError implements _i3.Error {
-  factory RangeError([_i2.String? message]) => _i4.callConstructor(
+  factory RangeError([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callConstructor(
         _declaredRangeError,
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
@@ -2998,19 +3114,33 @@ external _i2.Object _declaredRangeError;
 class RangeErrorConstructor implements _i3.ErrorConstructor {}
 
 extension RangeErrorConstructor$Typings on RangeErrorConstructor {
-  _i3.RangeError call([_i2.String? message]) => _i4.callMethod(
+  _i3.RangeError call([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callMethod(
         this,
         '',
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
 class ReferenceError implements _i3.Error {
-  factory ReferenceError([_i2.String? message]) => _i4.callConstructor(
+  factory ReferenceError([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callConstructor(
         _declaredReferenceError,
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
@@ -3025,19 +3155,33 @@ external _i2.Object _declaredReferenceError;
 class ReferenceErrorConstructor implements _i3.ErrorConstructor {}
 
 extension ReferenceErrorConstructor$Typings on ReferenceErrorConstructor {
-  _i3.ReferenceError call([_i2.String? message]) => _i4.callMethod(
+  _i3.ReferenceError call([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callMethod(
         this,
         '',
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
 class SyntaxError implements _i3.Error {
-  factory SyntaxError([_i2.String? message]) => _i4.callConstructor(
+  factory SyntaxError([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callConstructor(
         _declaredSyntaxError,
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
@@ -3052,19 +3196,33 @@ external _i2.Object _declaredSyntaxError;
 class SyntaxErrorConstructor implements _i3.ErrorConstructor {}
 
 extension SyntaxErrorConstructor$Typings on SyntaxErrorConstructor {
-  _i3.SyntaxError call([_i2.String? message]) => _i4.callMethod(
+  _i3.SyntaxError call([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callMethod(
         this,
         '',
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
 class TypeError implements _i3.Error {
-  factory TypeError([_i2.String? message]) => _i4.callConstructor(
+  factory TypeError([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callConstructor(
         _declaredTypeError,
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
@@ -3079,19 +3237,33 @@ external _i2.Object _declaredTypeError;
 class TypeErrorConstructor implements _i3.ErrorConstructor {}
 
 extension TypeErrorConstructor$Typings on TypeErrorConstructor {
-  _i3.TypeError call([_i2.String? message]) => _i4.callMethod(
+  _i3.TypeError call([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callMethod(
         this,
         '',
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
 class URIError implements _i3.Error {
-  factory URIError([_i2.String? message]) => _i4.callConstructor(
+  factory URIError([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callConstructor(
         _declaredURIError,
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
@@ -3106,10 +3278,17 @@ external _i2.Object _declaredURIError;
 class URIErrorConstructor implements _i3.ErrorConstructor {}
 
 extension URIErrorConstructor$Typings on URIErrorConstructor {
-  _i3.URIError call([_i2.String? message]) => _i4.callMethod(
+  _i3.URIError call([
+    _i2.String? message,
+    _i12.ErrorOptions? options,
+  ]) =>
+      _i4.callMethod(
         this,
         '',
-        [message ?? _$exposed$undefined],
+        [
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
+        ],
       );
 }
 
@@ -3130,7 +3309,7 @@ extension Json$Typings on Json {
         'parse',
         [
           text,
-          reviver == null ? _$exposed$undefined : _i4.allowInterop(reviver),
+          reviver == null ? _i5.undefined : _i4.allowInterop(reviver),
         ],
       );
   _i2.String _stringify$1(
@@ -3146,13 +3325,13 @@ extension Json$Typings on Json {
         'stringify',
         [
           value,
-          replacer == null ? _$exposed$undefined : _i4.allowInterop(replacer),
-          space ?? _$exposed$undefined,
+          replacer == null ? _i5.undefined : _i4.allowInterop(replacer),
+          space ?? _i5.undefined,
         ],
       );
   _i2.String _stringify$2(
     _i2.dynamic value, [
-    _i2.List /*LIST InteropStaticType.list,694263712,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,37323939,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.Object>?
         replacer,
     _i2.Object? space,
@@ -3162,8 +3341,8 @@ extension Json$Typings on Json {
         'stringify',
         [
           value,
-          replacer ?? _$exposed$undefined,
-          space ?? _$exposed$undefined,
+          replacer ?? _i5.undefined,
+          space ?? _i5.undefined,
         ],
       );
   // HEYA stringify
@@ -3178,7 +3357,7 @@ extension Json$Typings on Json {
     ]) $1,
     _i2.String Function(
       _i2.dynamic value, [
-      _i2.List /*LIST InteropStaticType.list,694263712,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,37323939,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.Object>?
           replacer,
       _i2.Object? space,
@@ -3215,30 +3394,32 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'toLocaleString',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,2281177,[Instance of 'InteropRef<InteropType>']*/ <T>
-      concat([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i2.List /*LIST InteropStaticType.list,6949150,[Instance of 'InteropRef<InteropType>']*/ <T>
+      concat([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
             this,
             'concat',
             [...?items],
-          );
+          ) as _i2.List)
+              .cast();
   _i2.String join([_i2.String? separator]) => _i4.callMethod(
         this,
         'join',
-        [separator ?? _$exposed$undefined],
+        [separator ?? _i5.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,199082948,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,755792710,[Instance of 'InteropRef<InteropType>']*/ <
       T> slice([
     _i2.num? start,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'slice',
         [
-          start ?? _$exposed$undefined,
-          end ?? _$exposed$undefined,
+          start ?? _i5.undefined,
+          end ?? _i5.undefined,
         ],
-      );
+      ) as _i2.List)
+          .cast();
   _i2.num indexOf(
     T searchElement, [
     _i2.num? fromIndex,
@@ -3248,7 +3429,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'indexOf',
         [
           searchElement,
-          fromIndex ?? _$exposed$undefined,
+          fromIndex ?? _i5.undefined,
         ],
       );
   _i2.num lastIndexOf(
@@ -3260,14 +3441,14 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'lastIndexOf',
         [
           searchElement,
-          fromIndex ?? _$exposed$undefined,
+          fromIndex ?? _i5.undefined,
         ],
       );
   _i2.dynamic _every$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,337301832,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,936921029,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3277,14 +3458,14 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'every',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   _i2.bool _every$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,787893118,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,995649612,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3294,7 +3475,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'every',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA every
@@ -3303,7 +3484,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,337301832,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,936921029,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3312,7 +3493,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,787893118,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,995649612,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3325,7 +3506,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,272147010,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,349989260,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3335,14 +3516,14 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'some',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   void forEach(
     void Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,743825610,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,724665040,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
@@ -3352,85 +3533,88 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       'forEach',
       [
         _i4.allowInterop(callbackfn),
-        thisArg ?? _$exposed$undefined,
+        thisArg ?? _i5.undefined,
       ],
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,435872568,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,1060945419,[Instance of 'InteropRef<InteropType>']*/ <
       U> map<U>(
     U Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,493143810,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,422839420,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'map',
         [
           _i4.allowInterop(callbackfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
-      );
-  _i2.List /*LIST InteropStaticType.list,187725736,[Instance of 'InteropRef<InteropType>']*/ <
+      ) as _i2.List)
+          .cast();
+  _i2.List /*LIST InteropStaticType.list,350544228,[Instance of 'InteropRef<InteropType>']*/ <
       S> _filter$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,934964913,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,184698043,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'filter',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
-      );
-  _i2.List /*LIST InteropStaticType.list,1006870301,[Instance of 'InteropRef<InteropType>']*/ <
+      ) as _i2.List)
+          .cast();
+  _i2.List /*LIST InteropStaticType.list,726784732,[Instance of 'InteropRef<InteropType>']*/ <
       T> _filter$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,55881969,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1011269426,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'filter',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
-      );
+      ) as _i2.List)
+          .cast();
   // HEYA filter
   ({
-    _i2.List /*LIST InteropStaticType.list,187725736,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,350544228,[Instance of 'InteropRef<InteropType>']*/ <
             S>
         Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,934964913,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,184698043,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i2.List /*LIST InteropStaticType.list,1006870301,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,726784732,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,55881969,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,1011269426,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3440,11 +3624,24 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         $2: _filter$2,
       );
   T _reduce$1(
+          T Function(
+            T,
+            T,
+            _i2.num,
+            _i2.List /*LIST InteropStaticType.list,1070459107,[Instance of 'InteropRef<InteropType>']*/ <
+                T>,
+          ) callbackfn) =>
+      _i4.callMethod(
+        this,
+        'reduce',
+        [_i4.allowInterop(callbackfn)],
+      );
+  T _reduce$2(
     T Function(
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,924160058,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,130375809,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -3457,12 +3654,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           initialValue,
         ],
       );
-  U _reduce$2<U>(
+  U _reduce$3<U>(
     U Function(
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,667328581,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,625225260,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -3475,60 +3672,60 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           initialValue,
         ],
       );
-  T _reduce$3(
-          T Function(
-            T,
-            T,
-            _i2.num,
-            _i2.List /*LIST InteropStaticType.list,227403791,[Instance of 'InteropRef<InteropType>']*/ <
-                T>,
-          ) callbackfn) =>
-      _i4.callMethod(
-        this,
-        'reduce',
-        [_i4.allowInterop(callbackfn)],
-      );
   // HEYA reduce
   ({
-    T Function(
-      T Function(
-        T,
-        T,
-        _i2.num,
-        _i2.List /*LIST InteropStaticType.list,924160058,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
-      ) callbackfn,
-      T initialValue,
-    ) $1,
-    U Function<U>(
-      U Function(
-        U,
-        T,
-        _i2.num,
-        _i2.List /*LIST InteropStaticType.list,667328581,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
-      ) callbackfn,
-      U initialValue,
-    ) $2,
     T Function(
         T Function(
           T,
           T,
           _i2.num,
-          _i2.List /*LIST InteropStaticType.list,227403791,[Instance of 'InteropRef<InteropType>']*/ <
+          _i2.List /*LIST InteropStaticType.list,1070459107,[Instance of 'InteropRef<InteropType>']*/ <
               T>,
-        ) callbackfn) $3,
+        ) callbackfn) $1,
+    T Function(
+      T Function(
+        T,
+        T,
+        _i2.num,
+        _i2.List /*LIST InteropStaticType.list,130375809,[Instance of 'InteropRef<InteropType>']*/ <
+            T>,
+      ) callbackfn,
+      T initialValue,
+    ) $2,
+    U Function<U>(
+      U Function(
+        U,
+        T,
+        _i2.num,
+        _i2.List /*LIST InteropStaticType.list,625225260,[Instance of 'InteropRef<InteropType>']*/ <
+            T>,
+      ) callbackfn,
+      U initialValue,
+    ) $3,
   }) get reduce => (
         $1: _reduce$1,
         $2: _reduce$2,
         $3: _reduce$3,
       );
   T _reduceRight$1(
+          T Function(
+            T,
+            T,
+            _i2.num,
+            _i2.List /*LIST InteropStaticType.list,130040634,[Instance of 'InteropRef<InteropType>']*/ <
+                T>,
+          ) callbackfn) =>
+      _i4.callMethod(
+        this,
+        'reduceRight',
+        [_i4.allowInterop(callbackfn)],
+      );
+  T _reduceRight$2(
     T Function(
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,974732109,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,186844588,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -3541,12 +3738,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           initialValue,
         ],
       );
-  U _reduceRight$2<U>(
+  U _reduceRight$3<U>(
     U Function(
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,307228734,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,221105523,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -3559,49 +3756,36 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           initialValue,
         ],
       );
-  T _reduceRight$3(
-          T Function(
-            T,
-            T,
-            _i2.num,
-            _i2.List /*LIST InteropStaticType.list,213513073,[Instance of 'InteropRef<InteropType>']*/ <
-                T>,
-          ) callbackfn) =>
-      _i4.callMethod(
-        this,
-        'reduceRight',
-        [_i4.allowInterop(callbackfn)],
-      );
   // HEYA reduceRight
   ({
-    T Function(
-      T Function(
-        T,
-        T,
-        _i2.num,
-        _i2.List /*LIST InteropStaticType.list,974732109,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
-      ) callbackfn,
-      T initialValue,
-    ) $1,
-    U Function<U>(
-      U Function(
-        U,
-        T,
-        _i2.num,
-        _i2.List /*LIST InteropStaticType.list,307228734,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
-      ) callbackfn,
-      U initialValue,
-    ) $2,
     T Function(
         T Function(
           T,
           T,
           _i2.num,
-          _i2.List /*LIST InteropStaticType.list,213513073,[Instance of 'InteropRef<InteropType>']*/ <
+          _i2.List /*LIST InteropStaticType.list,130040634,[Instance of 'InteropRef<InteropType>']*/ <
               T>,
-        ) callbackfn) $3,
+        ) callbackfn) $1,
+    T Function(
+      T Function(
+        T,
+        T,
+        _i2.num,
+        _i2.List /*LIST InteropStaticType.list,186844588,[Instance of 'InteropRef<InteropType>']*/ <
+            T>,
+      ) callbackfn,
+      T initialValue,
+    ) $2,
+    U Function<U>(
+      U Function(
+        U,
+        T,
+        _i2.num,
+        _i2.List /*LIST InteropStaticType.list,221105523,[Instance of 'InteropRef<InteropType>']*/ <
+            T>,
+      ) callbackfn,
+      U initialValue,
+    ) $3,
   }) get reduceRight => (
         $1: _reduceRight$1,
         $2: _reduceRight$2,
@@ -3611,7 +3795,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,178407719,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1023330972,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3621,14 +3805,14 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'find',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   T? _find$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,1029426314,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,396711375,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3638,7 +3822,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'find',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA find
@@ -3647,7 +3831,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,178407719,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,1023330972,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3656,7 +3840,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,1029426314,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,396711375,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3669,7 +3853,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,705575185,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,669481029,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3679,7 +3863,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'findIndex',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   _i9.IterableIterator<
@@ -3710,39 +3894,120 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'includes',
         [
           searchElement,
-          fromIndex ?? _$exposed$undefined,
+          fromIndex ?? _i5.undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,339789067,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,15801139,[Instance of 'InteropRef<InteropType>']*/ <
       U> flatMap<U, This>(
     _i2.Object Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,273072319,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,444570899,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callback, [
     This? thisArg,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'flatMap',
         [
           _i4.allowInterop(callback),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
-      );
-  _i2.List /*LIST InteropStaticType.list,529642167,[Instance of 'InteropRef<InteropType>']*/ <
-      _i12.FlatArray<A, D>> flat<A, D extends _i2.num>(
+      ) as _i2.List)
+          .cast();
+  _i2.List /*LIST InteropStaticType.list,735136793,[Instance of 'InteropRef<InteropType>']*/ <
+      _i13.FlatArray<A, D>> flat<A, D extends _i2.num>(
           [D? depth]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'flat',
-        [depth ?? _$exposed$undefined],
-      );
-  T operator [](_i2.num index) => _i4.callMethod(
+        [depth ?? _i5.undefined],
+      ) as _i2.List)
+          .cast();
+  T? at(_i2.num index) => _i4.callMethod(
         this,
-        'operator []',
+        'at',
         [index],
+      );
+  S? _findLast$1<S extends T>(
+    _i2.dynamic Function(
+      T,
+      _i2.num,
+      _i2.List /*LIST InteropStaticType.list,166927953,[Instance of 'InteropRef<InteropType>']*/ <
+          T>,
+    ) predicate, [
+    _i2.dynamic thisArg,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'findLast',
+        [
+          _i4.allowInterop(predicate),
+          thisArg ?? _i5.undefined,
+        ],
+      );
+  T? _findLast$2(
+    _i2.Object? Function(
+      T,
+      _i2.num,
+      _i2.List /*LIST InteropStaticType.list,443525514,[Instance of 'InteropRef<InteropType>']*/ <
+          T>,
+    ) predicate, [
+    _i2.dynamic thisArg,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'findLast',
+        [
+          _i4.allowInterop(predicate),
+          thisArg ?? _i5.undefined,
+        ],
+      );
+  // HEYA findLast
+  ({
+    S? Function<S extends T>(
+      _i2.dynamic Function(
+        T,
+        _i2.num,
+        _i2.List /*LIST InteropStaticType.list,166927953,[Instance of 'InteropRef<InteropType>']*/ <
+            T>,
+      ) predicate, [
+      _i2.dynamic thisArg,
+    ]) $1,
+    T? Function(
+      _i2.Object? Function(
+        T,
+        _i2.num,
+        _i2.List /*LIST InteropStaticType.list,443525514,[Instance of 'InteropRef<InteropType>']*/ <
+            T>,
+      ) predicate, [
+      _i2.dynamic thisArg,
+    ]) $2,
+  }) get findLast => (
+        $1: _findLast$1,
+        $2: _findLast$2,
+      );
+  _i2.num findLastIndex(
+    _i2.Object? Function(
+      T,
+      _i2.num,
+      _i2.List /*LIST InteropStaticType.list,991412718,[Instance of 'InteropRef<InteropType>']*/ <
+          T>,
+    ) predicate, [
+    _i2.dynamic thisArg,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'findLastIndex',
+        [
+          _i4.allowInterop(predicate),
+          thisArg ?? _i5.undefined,
+        ],
+      );
+  T operator [](_i2.num index) => _i4.getProperty(
+        this,
+        index,
       );
 }
 
@@ -3761,50 +4026,63 @@ extension ConcatArray$Typings<T> on ConcatArray<T> {
   _i2.String join([_i2.String? separator]) => _i4.callMethod(
         this,
         'join',
-        [separator ?? _$exposed$undefined],
+        [separator ?? _i5.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,703483752,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,933678294,[Instance of 'InteropRef<InteropType>']*/ <
       T> slice([
     _i2.num? start,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'slice',
         [
-          start ?? _$exposed$undefined,
-          end ?? _$exposed$undefined,
+          start ?? _i5.undefined,
+          end ?? _i5.undefined,
         ],
-      );
-  T operator [](_i2.num index) => _i4.callMethod(
+      ) as _i2.List)
+          .cast();
+  T operator [](_i2.num index) => _i4.getProperty(
         this,
-        'operator []',
-        [index],
+        index,
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
 class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
-  factory Array.$1([_i2.num? arrayLength]) => _i4.callConstructor(
+  factory Array.$1() => _i4.callConstructor(
         _declaredArray,
-        [arrayLength ?? _$exposed$undefined],
+        [],
       );
 
-  factory Array.$2([_i2.Iterable<_i2.dynamic>? items]) => _i4.callConstructor(
+  factory Array.$2([_i2.num? arrayLength]) => _i4.callConstructor(
         _declaredArray,
-        [items ?? _$exposed$undefined],
+        [arrayLength ?? _i5.undefined],
+      );
+
+  factory Array.$3([_i2.Iterable<_i2.dynamic>? items]) => _i4.callConstructor(
+        _declaredArray,
+        [items ?? _i5.undefined],
       );
 
   static _i2.dynamic isArray(_i2.dynamic arg) => _i4.callMethod(
-        _i5.target11,
+        _i6.target11,
         'isArray',
         [arg],
       );
   static _i2
-          .List /*LIST InteropStaticType.list,779011367,[Instance of 'InteropRef<InteropType>']*/ <U>
-      _from$1<T, U>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),456229592,[Instance of 'InteropRef<InteropType>']*/ <
+          .List /*LIST InteropStaticType.list,281378438,[Instance of 'InteropRef<InteropType>']*/ <T>
+      _from$1<T>(_i3.From iterable) => (_i4.callMethod(
+            _i6.target11,
+            'from',
+            [iterable],
+          ) as _i2.List)
+              .cast();
+  static _i2
+          .List /*LIST InteropStaticType.list,64819918,[Instance of 'InteropRef<InteropType>']*/ <U>
+      _from$2<T, U>(
+    _i2.List /*LIST InteropClass#291800405(name: List),412170397,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     U Function(
@@ -3813,18 +4091,19 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-          _i4.callMethod(
-            _i5.target11,
+          (_i4.callMethod(
+            _i6.target11,
             'from',
             [
               arrayLike,
               _i4.allowInterop(mapfn),
-              thisArg ?? _$exposed$undefined,
+              thisArg ?? _i5.undefined,
             ],
-          );
+          ) as _i2.List)
+              .cast();
   static _i2
-          .List /*LIST InteropStaticType.list,584015513,[Instance of 'InteropRef<InteropType>']*/ <U>
-      _from$2<T, U>(
+          .List /*LIST InteropStaticType.list,928903837,[Instance of 'InteropRef<InteropType>']*/ <U>
+      _from$3<T, U>(
     _i3.FromCommon iterable,
     U Function(
       T,
@@ -3832,28 +4111,25 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-          _i4.callMethod(
-            _i5.target11,
+          (_i4.callMethod(
+            _i6.target11,
             'from',
             [
               iterable,
               _i4.allowInterop(mapfn),
-              thisArg ?? _$exposed$undefined,
+              thisArg ?? _i5.undefined,
             ],
-          );
-  static _i2
-          .List /*LIST InteropStaticType.list,385278030,[Instance of 'InteropRef<InteropType>']*/ <T>
-      _from$3<T>(_i3.From iterable) => _i4.callMethod(
-            _i5.target11,
-            'from',
-            [iterable],
-          );
+          ) as _i2.List)
+              .cast();
   // HEYA from
   static ({
-    _i2.List /*LIST InteropStaticType.list,779011367,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,281378438,[Instance of 'InteropRef<InteropType>']*/ <
+            T>
+        Function<T>(_i3.From iterable) $1,
+    _i2.List /*LIST InteropStaticType.list,64819918,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),456229592,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#291800405(name: List),412170397,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       U Function(
@@ -3861,8 +4137,8 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
         _i2.num,
       ) mapfn, [
       _i2.dynamic thisArg,
-    ]) $1,
-    _i2.List /*LIST InteropStaticType.list,584015513,[Instance of 'InteropRef<InteropType>']*/ <
+    ]) $2,
+    _i2.List /*LIST InteropStaticType.list,928903837,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
       _i3.FromCommon iterable,
@@ -3871,22 +4147,20 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
         _i2.num,
       ) mapfn, [
       _i2.dynamic thisArg,
-    ]) $2,
-    _i2.List /*LIST InteropStaticType.list,385278030,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        Function<T>(_i3.From iterable) $3,
+    ]) $3,
   }) get from => (
         $1: _from$1,
         $2: _from$2,
         $3: _from$3,
       );
   static _i2
-          .List /*LIST InteropStaticType.list,511795842,[Instance of 'InteropRef<InteropType>']*/ <T>
-      of<T>([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
-            _i5.target11,
+          .List /*LIST InteropStaticType.list,807799988,[Instance of 'InteropRef<InteropType>']*/ <T>
+      of<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
+            _i6.target11,
             'of',
             [...?items],
-          );
+          ) as _i2.List)
+              .cast();
 }
 
 /*
@@ -3942,41 +4216,44 @@ extension Array$Typings<T> on Array<T> {
         'push',
         [...?items],
       );
-  _i2.List /*LIST InteropStaticType.list,853726109,[Instance of 'InteropRef<InteropType>']*/ <T>
-      concat([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i2.List /*LIST InteropStaticType.list,463400701,[Instance of 'InteropRef<InteropType>']*/ <T>
+      concat([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
             this,
             'concat',
             [...?items],
-          );
+          ) as _i2.List)
+              .cast();
   _i2.String join([_i2.String? separator]) => _i4.callMethod(
         this,
         'join',
-        [separator ?? _$exposed$undefined],
+        [separator ?? _i5.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,990527108,[Instance of 'InteropRef<InteropType>']*/ <T>
-      reverse() => _i4.callMethod(
+  _i2.List /*LIST InteropStaticType.list,266667390,[Instance of 'InteropRef<InteropType>']*/ <T>
+      reverse() => (_i4.callMethod(
             this,
             'reverse',
             [],
-          );
+          ) as _i2.List)
+              .cast();
   T? shift() => _i4.callMethod(
         this,
         'shift',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,209511462,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,580207172,[Instance of 'InteropRef<InteropType>']*/ <
       T> slice([
     _i2.num? start,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'slice',
         [
-          start ?? _$exposed$undefined,
-          end ?? _$exposed$undefined,
+          start ?? _i5.undefined,
+          end ?? _i5.undefined,
         ],
-      );
+      ) as _i2.List)
+          .cast();
   _i3.Array<_i2.dynamic> sort(
           [_i2.num Function(
             T,
@@ -3985,15 +4262,15 @@ extension Array$Typings<T> on Array<T> {
       _i4.callMethod(
         this,
         'sort',
-        [compareFn == null ? _$exposed$undefined : _i4.allowInterop(compareFn)],
+        [compareFn == null ? _i5.undefined : _i4.allowInterop(compareFn)],
       );
-  _i2.List /*LIST InteropStaticType.list,746516845,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,43842948,[Instance of 'InteropRef<InteropType>']*/ <
       T> splice(
     _i2.num start,
     _i2.num deleteCount, [
     _i2.Iterable<_i2.dynamic>? items,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'splice',
         [
@@ -4001,7 +4278,8 @@ extension Array$Typings<T> on Array<T> {
           deleteCount,
           ...?items,
         ],
-      );
+      ) as _i2.List)
+          .cast();
   _i2.num unshift([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'unshift',
@@ -4016,7 +4294,7 @@ extension Array$Typings<T> on Array<T> {
         'indexOf',
         [
           searchElement,
-          fromIndex ?? _$exposed$undefined,
+          fromIndex ?? _i5.undefined,
         ],
       );
   _i2.num lastIndexOf(
@@ -4028,14 +4306,14 @@ extension Array$Typings<T> on Array<T> {
         'lastIndexOf',
         [
           searchElement,
-          fromIndex ?? _$exposed$undefined,
+          fromIndex ?? _i5.undefined,
         ],
       );
   _i2.dynamic _every$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,281025486,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,309305699,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4045,14 +4323,14 @@ extension Array$Typings<T> on Array<T> {
         'every',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   _i2.bool _every$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,19453577,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,754210158,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4062,7 +4340,7 @@ extension Array$Typings<T> on Array<T> {
         'every',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA every
@@ -4071,7 +4349,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,281025486,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,309305699,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4080,7 +4358,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,19453577,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,754210158,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4093,7 +4371,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,828436746,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,374712668,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4103,14 +4381,14 @@ extension Array$Typings<T> on Array<T> {
         'some',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   void forEach(
     void Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,320646952,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,742773422,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
@@ -4120,85 +4398,88 @@ extension Array$Typings<T> on Array<T> {
       'forEach',
       [
         _i4.allowInterop(callbackfn),
-        thisArg ?? _$exposed$undefined,
+        thisArg ?? _i5.undefined,
       ],
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,286217441,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,285864679,[Instance of 'InteropRef<InteropType>']*/ <
       U> map<U>(
     U Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,759126000,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1065650634,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'map',
         [
           _i4.allowInterop(callbackfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
-      );
-  _i2.List /*LIST InteropStaticType.list,448876346,[Instance of 'InteropRef<InteropType>']*/ <
+      ) as _i2.List)
+          .cast();
+  _i2.List /*LIST InteropStaticType.list,415331139,[Instance of 'InteropRef<InteropType>']*/ <
       S> _filter$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,494209827,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,976956716,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'filter',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
-      );
-  _i2.List /*LIST InteropStaticType.list,835343110,[Instance of 'InteropRef<InteropType>']*/ <
+      ) as _i2.List)
+          .cast();
+  _i2.List /*LIST InteropStaticType.list,579261032,[Instance of 'InteropRef<InteropType>']*/ <
       T> _filter$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,250696593,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,611049216,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'filter',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
-      );
+      ) as _i2.List)
+          .cast();
   // HEYA filter
   ({
-    _i2.List /*LIST InteropStaticType.list,448876346,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,415331139,[Instance of 'InteropRef<InteropType>']*/ <
             S>
         Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,494209827,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,976956716,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i2.List /*LIST InteropStaticType.list,835343110,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,579261032,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,250696593,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,611049216,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4212,7 +4493,7 @@ extension Array$Typings<T> on Array<T> {
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,608690853,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,910561343,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -4230,7 +4511,7 @@ extension Array$Typings<T> on Array<T> {
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,90348394,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,212441908,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -4250,7 +4531,7 @@ extension Array$Typings<T> on Array<T> {
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,608690853,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,910561343,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       T initialValue,
@@ -4260,7 +4541,7 @@ extension Array$Typings<T> on Array<T> {
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,90348394,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,212441908,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       U initialValue,
@@ -4274,7 +4555,7 @@ extension Array$Typings<T> on Array<T> {
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,194181907,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,360713257,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -4292,7 +4573,7 @@ extension Array$Typings<T> on Array<T> {
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,382659282,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,811598506,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -4312,7 +4593,7 @@ extension Array$Typings<T> on Array<T> {
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,194181907,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,360713257,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       T initialValue,
@@ -4322,7 +4603,7 @@ extension Array$Typings<T> on Array<T> {
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,382659282,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,811598506,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       U initialValue,
@@ -4335,7 +4616,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,958311098,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,695979882,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4345,14 +4626,14 @@ extension Array$Typings<T> on Array<T> {
         'find',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   T? _find$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,773190282,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,125811328,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4362,7 +4643,7 @@ extension Array$Typings<T> on Array<T> {
         'find',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA find
@@ -4371,7 +4652,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,958311098,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,695979882,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4380,7 +4661,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,773190282,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,125811328,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4393,7 +4674,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,762245224,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,187848603,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4403,7 +4684,7 @@ extension Array$Typings<T> on Array<T> {
         'findIndex',
         [
           _i4.allowInterop(predicate),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
   _i3.Array<_i2.dynamic> fill(
@@ -4416,8 +4697,8 @@ extension Array$Typings<T> on Array<T> {
         'fill',
         [
           value,
-          start ?? _$exposed$undefined,
-          end ?? _$exposed$undefined,
+          start ?? _i5.undefined,
+          end ?? _i5.undefined,
         ],
       );
   _i3.Array<_i2.dynamic> copyWithin(
@@ -4431,7 +4712,7 @@ extension Array$Typings<T> on Array<T> {
         [
           target,
           start,
-          end ?? _$exposed$undefined,
+          end ?? _i5.undefined,
         ],
       );
   _i9.IterableIterator<
@@ -4462,51 +4743,129 @@ extension Array$Typings<T> on Array<T> {
         'includes',
         [
           searchElement,
-          fromIndex ?? _$exposed$undefined,
+          fromIndex ?? _i5.undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,350027719,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,635480383,[Instance of 'InteropRef<InteropType>']*/ <
       U> flatMap<U, This>(
     _i2.Object Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,762286893,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,210888993,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callback, [
     This? thisArg,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'flatMap',
         [
           _i4.allowInterop(callback),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
-      );
-  _i2.List /*LIST InteropStaticType.list,120901807,[Instance of 'InteropRef<InteropType>']*/ <
-      _i12.FlatArray<A, D>> flat<A, D extends _i2.num>(
+      ) as _i2.List)
+          .cast();
+  _i2.List /*LIST InteropStaticType.list,227711832,[Instance of 'InteropRef<InteropType>']*/ <
+      _i13.FlatArray<A, D>> flat<A, D extends _i2.num>(
           [D? depth]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'flat',
-        [depth ?? _$exposed$undefined],
-      );
-  T operator [](_i2.num index) => _i4.callMethod(
+        [depth ?? _i5.undefined],
+      ) as _i2.List)
+          .cast();
+  T? at(_i2.num index) => _i4.callMethod(
         this,
-        'operator []',
+        'at',
         [index],
+      );
+  S? _findLast$1<S extends T>(
+    _i2.dynamic Function(
+      T,
+      _i2.num,
+      _i2.List /*LIST InteropStaticType.list,123627166,[Instance of 'InteropRef<InteropType>']*/ <
+          T>,
+    ) predicate, [
+    _i2.dynamic thisArg,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'findLast',
+        [
+          _i4.allowInterop(predicate),
+          thisArg ?? _i5.undefined,
+        ],
+      );
+  T? _findLast$2(
+    _i2.Object? Function(
+      T,
+      _i2.num,
+      _i2.List /*LIST InteropStaticType.list,354151168,[Instance of 'InteropRef<InteropType>']*/ <
+          T>,
+    ) predicate, [
+    _i2.dynamic thisArg,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'findLast',
+        [
+          _i4.allowInterop(predicate),
+          thisArg ?? _i5.undefined,
+        ],
+      );
+  // HEYA findLast
+  ({
+    S? Function<S extends T>(
+      _i2.dynamic Function(
+        T,
+        _i2.num,
+        _i2.List /*LIST InteropStaticType.list,123627166,[Instance of 'InteropRef<InteropType>']*/ <
+            T>,
+      ) predicate, [
+      _i2.dynamic thisArg,
+    ]) $1,
+    T? Function(
+      _i2.Object? Function(
+        T,
+        _i2.num,
+        _i2.List /*LIST InteropStaticType.list,354151168,[Instance of 'InteropRef<InteropType>']*/ <
+            T>,
+      ) predicate, [
+      _i2.dynamic thisArg,
+    ]) $2,
+  }) get findLast => (
+        $1: _findLast$1,
+        $2: _findLast$2,
+      );
+  _i2.num findLastIndex(
+    _i2.Object? Function(
+      T,
+      _i2.num,
+      _i2.List /*LIST InteropStaticType.list,571497914,[Instance of 'InteropRef<InteropType>']*/ <
+          T>,
+    ) predicate, [
+    _i2.dynamic thisArg,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'findLastIndex',
+        [
+          _i4.allowInterop(predicate),
+          thisArg ?? _i5.undefined,
+        ],
+      );
+  T operator [](_i2.num index) => _i4.getProperty(
+        this,
+        index,
       );
   void operator []=(
     _i2.num index,
     T value,
   ) {
-    _i4.callMethod(
+    _i4.setProperty(
       this,
-      'operator []=',
-      [
-        index,
-        value,
-      ],
+      index,
+      value,
     );
   }
 }
@@ -4521,9 +4880,16 @@ extension ArrayConstructor$Typings on ArrayConstructor {
         'isArray',
         [arg],
       );
-  _i2.List /*LIST InteropStaticType.list,779011367,[Instance of 'InteropRef<InteropType>']*/ <
-      U> _from$1<T, U>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),456229592,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,281378438,[Instance of 'InteropRef<InteropType>']*/ <T>
+      _from$1<T>(_i3.From iterable) => (_i4.callMethod(
+            this,
+            'from',
+            [iterable],
+          ) as _i2.List)
+              .cast();
+  _i2.List /*LIST InteropStaticType.list,64819918,[Instance of 'InteropRef<InteropType>']*/ <
+      U> _from$2<T, U>(
+    _i2.List /*LIST InteropClass#291800405(name: List),412170397,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     U Function(
@@ -4532,17 +4898,18 @@ extension ArrayConstructor$Typings on ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'from',
         [
           arrayLike,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
-      );
-  _i2.List /*LIST InteropStaticType.list,584015513,[Instance of 'InteropRef<InteropType>']*/ <
-      U> _from$2<T, U>(
+      ) as _i2.List)
+          .cast();
+  _i2.List /*LIST InteropStaticType.list,928903837,[Instance of 'InteropRef<InteropType>']*/ <
+      U> _from$3<T, U>(
     _i3.FromCommon iterable,
     U Function(
       T,
@@ -4550,27 +4917,25 @@ extension ArrayConstructor$Typings on ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      (_i4.callMethod(
         this,
         'from',
         [
           iterable,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
-      );
-  _i2.List /*LIST InteropStaticType.list,385278030,[Instance of 'InteropRef<InteropType>']*/ <T>
-      _from$3<T>(_i3.From iterable) => _i4.callMethod(
-            this,
-            'from',
-            [iterable],
-          );
+      ) as _i2.List)
+          .cast();
   // HEYA from
   ({
-    _i2.List /*LIST InteropStaticType.list,779011367,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,281378438,[Instance of 'InteropRef<InteropType>']*/ <
+            T>
+        Function<T>(_i3.From iterable) $1,
+    _i2.List /*LIST InteropStaticType.list,64819918,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),456229592,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#291800405(name: List),412170397,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       U Function(
@@ -4578,8 +4943,8 @@ extension ArrayConstructor$Typings on ArrayConstructor {
         _i2.num,
       ) mapfn, [
       _i2.dynamic thisArg,
-    ]) $1,
-    _i2.List /*LIST InteropStaticType.list,584015513,[Instance of 'InteropRef<InteropType>']*/ <
+    ]) $2,
+    _i2.List /*LIST InteropStaticType.list,928903837,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
       _i3.FromCommon iterable,
@@ -4588,39 +4953,39 @@ extension ArrayConstructor$Typings on ArrayConstructor {
         _i2.num,
       ) mapfn, [
       _i2.dynamic thisArg,
-    ]) $2,
-    _i2.List /*LIST InteropStaticType.list,385278030,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        Function<T>(_i3.From iterable) $3,
+    ]) $3,
   }) get from => (
         $1: _from$1,
         $2: _from$2,
         $3: _from$3,
       );
-  _i2.List /*LIST InteropStaticType.list,511795842,[Instance of 'InteropRef<InteropType>']*/ <T>
-      of<T>([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i2.List /*LIST InteropStaticType.list,807799988,[Instance of 'InteropRef<InteropType>']*/ <T>
+      of<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
             this,
             'of',
             [...?items],
-          );
-  _i2.List /*LIST InteropStaticType.list,954597942,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
-      _call$1([_i2.num? arrayLength]) => _i4.callMethod(
+          ) as _i2.List)
+              .cast();
+  _i2.List /*LIST InteropStaticType.list,258330464,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+      _call$1([_i2.num? arrayLength]) => (_i4.callMethod(
             this,
             '',
-            [arrayLength ?? _$exposed$undefined],
-          );
-  _i2.List /*LIST InteropStaticType.list,839356230,[Instance of 'InteropRef<InteropType>']*/ <T>
-      _call$2<T>([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+            [arrayLength ?? _i5.undefined],
+          ) as _i2.List)
+              .cast();
+  _i2.List /*LIST InteropStaticType.list,450601648,[Instance of 'InteropRef<InteropType>']*/ <T>
+      _call$2<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
             this,
             '',
             [...?items],
-          );
+          ) as _i2.List)
+              .cast();
   // HEYA call
   ({
-    _i2.List /*LIST InteropStaticType.list,954597942,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,258330464,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         Function([_i2.num? arrayLength]) $1,
-    _i2.List /*LIST InteropStaticType.list,839356230,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,450601648,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>([_i2.Iterable<_i2.dynamic>? items]) $2,
   }) get call => (
@@ -4651,12 +5016,12 @@ class TypedPropertyDescriptor<T> {
     void Function(T)? set,
   }) =>
       TypedPropertyDescriptor._(
-        enumerable: enumerable ?? _$exposed$undefined,
-        configurable: configurable ?? _$exposed$undefined,
-        writable: writable ?? _$exposed$undefined,
-        value: value ?? _$exposed$undefined,
-        get: get == null ? _$exposed$undefined : _i4.allowInterop(get),
-        set: set == null ? _$exposed$undefined : _i4.allowInterop(set),
+        enumerable: enumerable ?? _i5.undefined,
+        configurable: configurable ?? _i5.undefined,
+        writable: writable ?? _i5.undefined,
+        value: value ?? _i5.undefined,
+        get: get == null ? _i5.undefined : _i4.allowInterop(get),
+        set: set == null ? _i5.undefined : _i4.allowInterop(set),
       );
 }
 
@@ -4676,7 +5041,7 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
     _i4.setProperty(
       this,
       'enumerable',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -4695,7 +5060,7 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
     _i4.setProperty(
       this,
       'configurable',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -4714,7 +5079,7 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
     _i4.setProperty(
       this,
       'writable',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -4733,7 +5098,7 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
     _i4.setProperty(
       this,
       'value',
-      value ?? _$exposed$undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -4747,12 +5112,12 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
   /* #1503
   source: 
     get?: () => T; */
-  // Type InteropFunction#243188520(parent: InteropGetter#521631557(name: get), library: lib_es5_d_ts)
+  // Type InteropFunction#578303381(parent: InteropGetter#309572092(name: get), library: lib.es5.d.ts)
   set get(T Function()? value) {
     _i4.setProperty(
       this,
       'get',
-      value == null ? _$exposed$undefined : _i4.allowInterop(value),
+      value == null ? _i5.undefined : _i4.allowInterop(value),
     );
   }
 
@@ -4766,12 +5131,12 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
   /* #1504
   source: 
     set?: (value: T) => void; */
-  // Type InteropFunction#447654596(parent: InteropGetter#233634856(name: set), library: lib_es5_d_ts)
+  // Type InteropFunction#870529281(parent: InteropGetter#18227878(name: set), library: lib.es5.d.ts)
   set set(void Function(T)? value) {
     _i4.setProperty(
       this,
       'set',
-      value == null ? _$exposed$undefined : _i4.allowInterop(value),
+      value == null ? _i5.undefined : _i4.allowInterop(value),
     );
   }
 }
@@ -4789,12 +5154,8 @@ extension PromiseLike$Typings<T> on PromiseLike<T> {
         this,
         'then',
         [
-          onfulfilled == null
-              ? _$exposed$undefined
-              : _i4.allowInterop(onfulfilled),
-          onrejected == null
-              ? _$exposed$undefined
-              : _i4.allowInterop(onrejected),
+          onfulfilled == null ? _i5.undefined : _i4.allowInterop(onfulfilled),
+          onrejected == null ? _i5.undefined : _i4.allowInterop(onrejected),
         ],
       ));
 }
@@ -4812,12 +5173,8 @@ extension Promise$Typings<T> on Promise<T> {
         this,
         'then',
         [
-          onfulfilled == null
-              ? _$exposed$undefined
-              : _i4.allowInterop(onfulfilled),
-          onrejected == null
-              ? _$exposed$undefined
-              : _i4.allowInterop(onrejected),
+          onfulfilled == null ? _i5.undefined : _i4.allowInterop(onfulfilled),
+          onrejected == null ? _i5.undefined : _i4.allowInterop(onrejected),
         ],
       ));
   _i2.Future<_i2.Object> catch$<TResult>(
@@ -4825,17 +5182,13 @@ extension Promise$Typings<T> on Promise<T> {
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'catch',
-        [
-          onrejected == null
-              ? _$exposed$undefined
-              : _i4.allowInterop(onrejected)
-        ],
+        [onrejected == null ? _i5.undefined : _i4.allowInterop(onrejected)],
       ));
   _i2.Future<T> finally$([void Function()? onfinally]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'finally',
-        [onfinally == null ? _$exposed$undefined : _i4.allowInterop(onfinally)],
+        [onfinally == null ? _i5.undefined : _i4.allowInterop(onfinally)],
       ));
 }
 
@@ -4851,17 +5204,16 @@ extension ArrayLike$Typings<T> on ArrayLike<T> {
         this,
         'length',
       );
-  T operator [](_i2.num index) => _i4.callMethod(
+  T operator [](_i2.num index) => _i4.getProperty(
         this,
-        'operator []',
-        [index],
+        index,
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class Inline1 {}
+class IInline1 {}
 
 @_i1.JS()
 @_i1.staticInterop
@@ -4882,8 +5234,8 @@ class ArrayBufferTypes {
   });
 
   factory ArrayBufferTypes({
-    required _i13.ByteBuffer arrayBuffer,
-    required _i14.SharedArrayBuffer sharedArrayBuffer,
+    required _i14.ByteBuffer arrayBuffer,
+    required _i15.SharedArrayBuffer sharedArrayBuffer,
   }) =>
       ArrayBufferTypes._(
         arrayBuffer: arrayBuffer,
@@ -4905,7 +5257,7 @@ extension ArrayBufferTypes$Typings on ArrayBufferTypes {
   /* #1677
   source: 
     ArrayBuffer: ArrayBuffer; */
-  _i13.ByteBuffer get arrayBuffer => _i4.getProperty(
+  _i14.ByteBuffer get arrayBuffer => _i4.getProperty(
         this,
         'ArrayBuffer',
       );
@@ -4913,7 +5265,7 @@ extension ArrayBufferTypes$Typings on ArrayBufferTypes {
   source: 
     ArrayBuffer: ArrayBuffer; */
   // Type InteropStaticType.byteBuffer
-  set arrayBuffer(_i13.ByteBuffer value) {
+  set arrayBuffer(_i14.ByteBuffer value) {
     _i4.setProperty(
       this,
       'ArrayBuffer',
@@ -4924,7 +5276,7 @@ extension ArrayBufferTypes$Typings on ArrayBufferTypes {
   /* #43
   source: 
     SharedArrayBuffer: SharedArrayBuffer; */
-  _i14.SharedArrayBuffer get sharedArrayBuffer => _i4.getProperty(
+  _i15.SharedArrayBuffer get sharedArrayBuffer => _i4.getProperty(
         this,
         'SharedArrayBuffer',
       );
@@ -4932,7 +5284,7 @@ extension ArrayBufferTypes$Typings on ArrayBufferTypes {
   source: 
     SharedArrayBuffer: SharedArrayBuffer; */
   // Type Instance of 'InteropInterface'
-  set sharedArrayBuffer(_i14.SharedArrayBuffer value) {
+  set sharedArrayBuffer(_i15.SharedArrayBuffer value) {
     _i4.setProperty(
       this,
       'SharedArrayBuffer',
@@ -4995,7 +5347,7 @@ extension ArrayBufferView$Typings on ArrayBufferView {
      * The ArrayBuffer instance referenced by the array.
      */
     buffer: ArrayBufferLike; */
-  // Type InteropTypedef#873218560(name: ArrayBufferLike)
+  // Type InteropTypedef#337744399(name: ArrayBufferLike)
   set buffer(_i3.ArrayBufferLike value) {
     _i4.setProperty(
       this,
@@ -5082,13 +5434,13 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i13.Int8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i14.Int8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
-  _i13.Int8List _from$1<T>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),885383140,[Instance of 'InteropRef<InteropType>']*/ <
+  _i14.Int8List _from$1<T>(
+    _i2.List /*LIST InteropClass#291800405(name: List),639640565,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5103,10 +5455,10 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
         [
           arrayLike,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
-  _i13.Int8List _from$2(
+  _i14.Int8List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5119,14 +5471,14 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
         'from',
         [
           arrayLike,
-          mapfn == null ? _$exposed$undefined : _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          mapfn == null ? _i5.undefined : _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA from
   ({
-    _i13.Int8List Function<T>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),885383140,[Instance of 'InteropRef<InteropType>']*/ <
+    _i14.Int8List Function<T>(
+      _i2.List /*LIST InteropClass#291800405(name: List),639640565,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5135,7 +5487,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i13.Int8List Function(
+    _i14.Int8List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5166,13 +5518,13 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i13.Uint8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i14.Uint8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
-  _i13.Uint8List _from$1<T>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),332012423,[Instance of 'InteropRef<InteropType>']*/ <
+  _i14.Uint8List _from$1<T>(
+    _i2.List /*LIST InteropClass#291800405(name: List),16299192,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5187,10 +5539,10 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
         [
           arrayLike,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
-  _i13.Uint8List _from$2(
+  _i14.Uint8List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5203,14 +5555,14 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
         'from',
         [
           arrayLike,
-          mapfn == null ? _$exposed$undefined : _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          mapfn == null ? _i5.undefined : _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA from
   ({
-    _i13.Uint8List Function<T>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),332012423,[Instance of 'InteropRef<InteropType>']*/ <
+    _i14.Uint8List Function<T>(
+      _i2.List /*LIST InteropClass#291800405(name: List),16299192,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5219,7 +5571,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i13.Uint8List Function(
+    _i14.Uint8List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5250,14 +5602,14 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i13.Uint8ClampedList of([_i2.Iterable<_i2.dynamic>? items]) =>
+  _i14.Uint8ClampedList of([_i2.Iterable<_i2.dynamic>? items]) =>
       _i4.callMethod(
         this,
         'of',
         [...?items],
       );
-  _i13.Uint8ClampedList _from$1<T>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),876884706,[Instance of 'InteropRef<InteropType>']*/ <
+  _i14.Uint8ClampedList _from$1<T>(
+    _i2.List /*LIST InteropClass#291800405(name: List),428427283,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5272,10 +5624,10 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
         [
           arrayLike,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
-  _i13.Uint8ClampedList _from$2(
+  _i14.Uint8ClampedList _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5288,14 +5640,14 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
         'from',
         [
           arrayLike,
-          mapfn == null ? _$exposed$undefined : _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          mapfn == null ? _i5.undefined : _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA from
   ({
-    _i13.Uint8ClampedList Function<T>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),876884706,[Instance of 'InteropRef<InteropType>']*/ <
+    _i14.Uint8ClampedList Function<T>(
+      _i2.List /*LIST InteropClass#291800405(name: List),428427283,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5304,7 +5656,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i13.Uint8ClampedList Function(
+    _i14.Uint8ClampedList Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5335,13 +5687,13 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i13.Int16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i14.Int16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
-  _i13.Int16List _from$1<T>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),34846729,[Instance of 'InteropRef<InteropType>']*/ <
+  _i14.Int16List _from$1<T>(
+    _i2.List /*LIST InteropClass#291800405(name: List),222961399,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5356,10 +5708,10 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
         [
           arrayLike,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
-  _i13.Int16List _from$2(
+  _i14.Int16List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5372,14 +5724,14 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
         'from',
         [
           arrayLike,
-          mapfn == null ? _$exposed$undefined : _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          mapfn == null ? _i5.undefined : _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA from
   ({
-    _i13.Int16List Function<T>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),34846729,[Instance of 'InteropRef<InteropType>']*/ <
+    _i14.Int16List Function<T>(
+      _i2.List /*LIST InteropClass#291800405(name: List),222961399,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5388,7 +5740,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i13.Int16List Function(
+    _i14.Int16List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5419,13 +5771,13 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i13.Uint16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i14.Uint16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
-  _i13.Uint16List _from$1<T>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),275480014,[Instance of 'InteropRef<InteropType>']*/ <
+  _i14.Uint16List _from$1<T>(
+    _i2.List /*LIST InteropClass#291800405(name: List),570840553,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5440,10 +5792,10 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
         [
           arrayLike,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
-  _i13.Uint16List _from$2(
+  _i14.Uint16List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5456,14 +5808,14 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
         'from',
         [
           arrayLike,
-          mapfn == null ? _$exposed$undefined : _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          mapfn == null ? _i5.undefined : _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA from
   ({
-    _i13.Uint16List Function<T>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),275480014,[Instance of 'InteropRef<InteropType>']*/ <
+    _i14.Uint16List Function<T>(
+      _i2.List /*LIST InteropClass#291800405(name: List),570840553,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5472,7 +5824,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i13.Uint16List Function(
+    _i14.Uint16List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5503,13 +5855,13 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i13.Int32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i14.Int32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
-  _i13.Int32List _from$1<T>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),102878921,[Instance of 'InteropRef<InteropType>']*/ <
+  _i14.Int32List _from$1<T>(
+    _i2.List /*LIST InteropClass#291800405(name: List),15726612,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5524,10 +5876,10 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
         [
           arrayLike,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
-  _i13.Int32List _from$2(
+  _i14.Int32List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5540,14 +5892,14 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
         'from',
         [
           arrayLike,
-          mapfn == null ? _$exposed$undefined : _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          mapfn == null ? _i5.undefined : _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA from
   ({
-    _i13.Int32List Function<T>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),102878921,[Instance of 'InteropRef<InteropType>']*/ <
+    _i14.Int32List Function<T>(
+      _i2.List /*LIST InteropClass#291800405(name: List),15726612,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5556,7 +5908,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i13.Int32List Function(
+    _i14.Int32List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5587,13 +5939,13 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i13.Uint32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i14.Uint32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
-  _i13.Uint32List _from$1<T>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),512289981,[Instance of 'InteropRef<InteropType>']*/ <
+  _i14.Uint32List _from$1<T>(
+    _i2.List /*LIST InteropClass#291800405(name: List),505429062,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5608,10 +5960,10 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
         [
           arrayLike,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
-  _i13.Uint32List _from$2(
+  _i14.Uint32List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5624,14 +5976,14 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
         'from',
         [
           arrayLike,
-          mapfn == null ? _$exposed$undefined : _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          mapfn == null ? _i5.undefined : _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA from
   ({
-    _i13.Uint32List Function<T>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),512289981,[Instance of 'InteropRef<InteropType>']*/ <
+    _i14.Uint32List Function<T>(
+      _i2.List /*LIST InteropClass#291800405(name: List),505429062,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5640,7 +5992,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i13.Uint32List Function(
+    _i14.Uint32List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5671,13 +6023,13 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i13.Float32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i14.Float32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
-  _i13.Float32List _from$1<T>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),81745736,[Instance of 'InteropRef<InteropType>']*/ <
+  _i14.Float32List _from$1<T>(
+    _i2.List /*LIST InteropClass#291800405(name: List),573855656,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5692,10 +6044,10 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
         [
           arrayLike,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
-  _i13.Float32List _from$2(
+  _i14.Float32List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5708,14 +6060,14 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
         'from',
         [
           arrayLike,
-          mapfn == null ? _$exposed$undefined : _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          mapfn == null ? _i5.undefined : _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA from
   ({
-    _i13.Float32List Function<T>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),81745736,[Instance of 'InteropRef<InteropType>']*/ <
+    _i14.Float32List Function<T>(
+      _i2.List /*LIST InteropClass#291800405(name: List),573855656,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5724,7 +6076,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i13.Float32List Function(
+    _i14.Float32List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5755,13 +6107,13 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i13.Float64List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i14.Float64List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
-  _i13.Float64List _from$1<T>(
-    _i2.List /*LIST InteropClass#1008376286(name: List),271857593,[Instance of 'InteropRef<InteropType>']*/ <
+  _i14.Float64List _from$1<T>(
+    _i2.List /*LIST InteropClass#291800405(name: List),250773121,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5776,10 +6128,10 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
         [
           arrayLike,
           _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          thisArg ?? _i5.undefined,
         ],
       );
-  _i13.Float64List _from$2(
+  _i14.Float64List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5792,14 +6144,14 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
         'from',
         [
           arrayLike,
-          mapfn == null ? _$exposed$undefined : _i4.allowInterop(mapfn),
-          thisArg ?? _$exposed$undefined,
+          mapfn == null ? _i5.undefined : _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
         ],
       );
   // HEYA from
   ({
-    _i13.Float64List Function<T>(
-      _i2.List /*LIST InteropClass#1008376286(name: List),271857593,[Instance of 'InteropRef<InteropType>']*/ <
+    _i14.Float64List Function<T>(
+      _i2.List /*LIST InteropClass#291800405(name: List),250773121,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5808,7 +6160,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i13.Float64List Function(
+    _i14.Float64List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5836,7 +6188,7 @@ _i2.num parseInt(
       'parseInt',
       [
         string,
-        radix ?? _$exposed$undefined,
+        radix ?? _i5.undefined,
       ],
     );
 _i2.num parseFloat(_i2.String string) => _i4.callMethod(
@@ -5894,6 +6246,3 @@ class _IterableLike$<T> {}
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-@_i1.JS('undefined')
-external _i2.dynamic _$exposed$undefined;

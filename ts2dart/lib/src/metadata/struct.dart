@@ -38,7 +38,6 @@ inline class MetadataStruct {
           'heritage': List _,
           'calls': List _,
           'indexes': List _,
-          ...
         } =>
           true,
         _ => false
@@ -66,9 +65,16 @@ inline class MetadataStruct {
   bool isNameInStaticTypes() => InteropStaticType.isMapped(name);
 
   bool isEnumMap() =>
-      members
-          .every((member) => !member.isMethod && member.name.startsWith('"')) &&
+      members.every((member) => !member.isMethod && member.name.isLiteral) &&
       members.isNotEmpty;
+
+  bool get simulatesAny =>
+      heritage.isEmpty &&
+      calls.isEmpty &&
+      ctors.isEmpty &&
+      !isClass &&
+      members.isEmpty &&
+      indexes.isNotEmpty;
 }
 
 inline class MetadataTypeRef {

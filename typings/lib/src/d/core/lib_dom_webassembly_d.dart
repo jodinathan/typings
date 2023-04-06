@@ -6,9 +6,10 @@ import 'dart:core' as _i2;
 import 'lib_es5_d.dart' as _i3;
 import 'lib_dom_webassembly_d.dart' as _i4;
 import 'dart:js_util' as _i5;
-import 'dart:typed_data' as _i6;
-import 'lib_dom_d.dart' as _i7;
-import 'webassembly_comon_webassembly_d.dart' as _i8;
+import '/d/core.dart' as _i6;
+import 'dart:typed_data' as _i7;
+import 'lib_dom_d.dart' as _i8;
+import 'null_comon_webassembly_d.dart' as _i9;
 
 @_i1.JS('WebAssembly')
 external _i2.Object _self;
@@ -17,7 +18,7 @@ typedef TableKind = TableKindOptions;
 typedef ValueType = ValueTypeOptions;
 typedef ExportValue = _i2.Object;
 typedef Exports = _i3.Record<_i2.String, _i4.ExportValue>;
-typedef ImportValue = _i4.ExportValue;
+typedef ImportValue = _i2.Object;
 typedef Imports = _i3.Record<_i2.String, _i4.ModuleImports>;
 typedef ModuleImports = _i3.Record<_i2.String, _i4.ImportValue>;
 
@@ -63,7 +64,7 @@ enum ValueTypeOptions {
 class CompileError implements _i3.Error {
   factory CompileError([_i2.String? message]) => _i5.callConstructor(
         _declaredCompileError,
-        [message ?? _$exposed$undefined],
+        [message ?? _i6.undefined],
       );
 }
 
@@ -75,13 +76,13 @@ external _i2.Object _declaredCompileError;
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline595 {}
+class IInline603 {}
 
-extension Inline595$Typings on Inline595 {
+extension IInline603$Typings on IInline603 {
   _i4.CompileError call([_i2.String? message]) => _i5.callMethod(
         this,
         '',
-        [message ?? _$exposed$undefined],
+        [message ?? _i6.undefined],
       );
 }
 
@@ -96,7 +97,7 @@ class Global {
         _declaredGlobal,
         [
           descriptor,
-          v ?? _$exposed$undefined,
+          v ?? _i6.undefined,
         ],
       );
 }
@@ -136,7 +137,7 @@ extension Global$Typings on Global {
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline596 {}
+class IInline604 {}
 
 @_i1.JS()
 @_i1.staticInterop
@@ -149,10 +150,7 @@ class Instance {
         _declaredInstance,
         [
           module,
-          importObject ??
-              _$exposed$undefined ??
-              _$exposed$undefined ??
-              _$exposed$undefined,
+          importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
         ],
       );
 }
@@ -175,14 +173,14 @@ extension Instance$Typings on Instance {
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline597 {}
+class IInline605 {}
 
 @_i1.JS()
 @_i1.staticInterop
 class LinkError implements _i3.Error {
   factory LinkError([_i2.String? message]) => _i5.callConstructor(
         _declaredLinkError,
-        [message ?? _$exposed$undefined],
+        [message ?? _i6.undefined],
       );
 }
 
@@ -194,13 +192,13 @@ external _i2.Object _declaredLinkError;
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline598 {}
+class IInline606 {}
 
-extension Inline598$Typings on Inline598 {
+extension IInline606$Typings on IInline606 {
   _i4.LinkError call([_i2.String? message]) => _i5.callMethod(
         this,
         '',
-        [message ?? _$exposed$undefined],
+        [message ?? _i6.undefined],
       );
 }
 
@@ -223,7 +221,7 @@ extension Memory$Typings on Memory {
   /* #17569
   source: 
         readonly buffer: ArrayBuffer; */
-  _i6.ByteBuffer get buffer => _i5.getProperty(
+  _i7.ByteBuffer get buffer => _i5.getProperty(
         this,
         'buffer',
       );
@@ -236,45 +234,48 @@ extension Memory$Typings on Memory {
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline599 {}
+class IInline607 {}
 
 @_i1.JS()
 @_i1.staticInterop
 class Module {
-  factory Module(_i7.BufferSource bytes) => _i5.callConstructor(
+  factory Module(_i8.BufferSource bytes) => _i5.callConstructor(
         _declaredModule,
         [bytes],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,880785462,[Instance of 'InteropRef<InteropType>']*/ <
-      _i6.ByteBuffer> customSections(
+  static _i2.List /*LIST InteropStaticType.list,186020950,[Instance of 'InteropRef<InteropType>']*/ <
+      _i7.ByteBuffer> customSections(
     _i4.Module moduleObject,
     _i2.String sectionName,
   ) =>
-      _i5.callMethod(
-        _i8.target620,
+      (_i5.callMethod(
+        _i9.target624,
         'customSections',
         [
           moduleObject,
           sectionName,
         ],
-      );
-  static _i2.List /*LIST InteropStaticType.list,458039212,[Instance of 'InteropRef<InteropType>']*/ <
+      ) as _i2.List)
+          .cast();
+  static _i2.List /*LIST InteropStaticType.list,890513711,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleExportDescriptor> exports(
           _i4.Module moduleObject) =>
-      _i5.callMethod(
-        _i8.target620,
+      (_i5.callMethod(
+        _i9.target624,
         'exports',
         [moduleObject],
-      );
-  static _i2.List /*LIST InteropStaticType.list,135901239,[Instance of 'InteropRef<InteropType>']*/ <
+      ) as _i2.List)
+          .cast();
+  static _i2.List /*LIST InteropStaticType.list,621576268,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleImportDescriptor> imports(
           _i4.Module moduleObject) =>
-      _i5.callMethod(
-        _i8.target620,
+      (_i5.callMethod(
+        _i9.target624,
         'imports',
         [moduleObject],
-      );
+      ) as _i2.List)
+          .cast();
 }
 
 /*
@@ -285,38 +286,41 @@ external _i2.Object _declaredModule;
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline600 {}
+class IInline608 {}
 
-extension Inline600$Typings on Inline600 {
-  _i2.List /*LIST InteropStaticType.list,880785462,[Instance of 'InteropRef<InteropType>']*/ <
-      _i6.ByteBuffer> customSections(
+extension IInline608$Typings on IInline608 {
+  _i2.List /*LIST InteropStaticType.list,186020950,[Instance of 'InteropRef<InteropType>']*/ <
+      _i7.ByteBuffer> customSections(
     _i4.Module moduleObject,
     _i2.String sectionName,
   ) =>
-      _i5.callMethod(
+      (_i5.callMethod(
         this,
         'customSections',
         [
           moduleObject,
           sectionName,
         ],
-      );
-  _i2.List /*LIST InteropStaticType.list,458039212,[Instance of 'InteropRef<InteropType>']*/ <
+      ) as _i2.List)
+          .cast();
+  _i2.List /*LIST InteropStaticType.list,890513711,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleExportDescriptor> exports(
           _i4.Module moduleObject) =>
-      _i5.callMethod(
+      (_i5.callMethod(
         this,
         'exports',
         [moduleObject],
-      );
-  _i2.List /*LIST InteropStaticType.list,135901239,[Instance of 'InteropRef<InteropType>']*/ <
+      ) as _i2.List)
+          .cast();
+  _i2.List /*LIST InteropStaticType.list,621576268,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleImportDescriptor> imports(
           _i4.Module moduleObject) =>
-      _i5.callMethod(
+      (_i5.callMethod(
         this,
         'imports',
         [moduleObject],
-      );
+      ) as _i2.List)
+          .cast();
 }
 
 @_i1.JS()
@@ -324,7 +328,7 @@ extension Inline600$Typings on Inline600 {
 class RuntimeError implements _i3.Error {
   factory RuntimeError([_i2.String? message]) => _i5.callConstructor(
         _declaredRuntimeError,
-        [message ?? _$exposed$undefined],
+        [message ?? _i6.undefined],
       );
 }
 
@@ -336,13 +340,13 @@ external _i2.Object _declaredRuntimeError;
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline601 {}
+class IInline609 {}
 
-extension Inline601$Typings on Inline601 {
+extension IInline609$Typings on IInline609 {
   _i4.RuntimeError call([_i2.String? message]) => _i5.callMethod(
         this,
         '',
-        [message ?? _$exposed$undefined],
+        [message ?? _i6.undefined],
       );
 }
 
@@ -357,7 +361,7 @@ class Table {
         _declaredTable,
         [
           descriptor,
-          value ?? _$exposed$undefined,
+          value ?? _i6.undefined,
         ],
       );
 }
@@ -390,7 +394,7 @@ extension Table$Typings on Table {
         'grow',
         [
           delta,
-          value ?? _$exposed$undefined,
+          value ?? _i6.undefined,
         ],
       );
   void set(
@@ -402,7 +406,7 @@ extension Table$Typings on Table {
       'set',
       [
         index,
-        value ?? _$exposed$undefined,
+        value ?? _i6.undefined,
       ],
     );
   }
@@ -410,7 +414,7 @@ extension Table$Typings on Table {
 
 @_i1.JS()
 @_i1.staticInterop
-class Inline602 {}
+class IInline610 {}
 
 @_i1.JS()
 @_i1.staticInterop
@@ -426,7 +430,7 @@ class GlobalDescriptor {
     required _i4.ValueType value,
   }) =>
       GlobalDescriptor._(
-        mutable: mutable ?? _$exposed$undefined,
+        mutable: mutable ?? _i6.undefined,
         value: value.name,
       );
 }
@@ -447,7 +451,7 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
     _i5.setProperty(
       this,
       'mutable',
-      value ?? _$exposed$undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -461,7 +465,7 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
   /* #17612
   source: 
         value: ValueType; */
-  // Type InteropTypedef#637667321(name: ValueType)
+  // Type InteropTypedef#563827621(name: ValueType)
   set value(_i4.ValueType value) {
     _i5.setProperty(
       this,
@@ -488,8 +492,8 @@ class MemoryDescriptor {
   }) =>
       MemoryDescriptor._(
         initial: initial,
-        maximum: maximum ?? _$exposed$undefined,
-        shared: shared ?? _$exposed$undefined,
+        maximum: maximum ?? _i6.undefined,
+        shared: shared ?? _i6.undefined,
       );
 }
 
@@ -528,7 +532,7 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
     _i5.setProperty(
       this,
       'maximum',
-      value ?? _$exposed$undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -547,7 +551,7 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
     _i5.setProperty(
       this,
       'shared',
-      value ?? _$exposed$undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -583,7 +587,7 @@ extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
   /* #17622
   source: 
         kind: ImportExportKind; */
-  // Type InteropTypedef#565158440(name: ImportExportKind)
+  // Type InteropTypedef#310160992(name: ImportExportKind)
   set kind(_i4.ImportExportKind value) {
     _i5.setProperty(
       this,
@@ -646,7 +650,7 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
   /* #17627
   source: 
         kind: ImportExportKind; */
-  // Type InteropTypedef#565158440(name: ImportExportKind)
+  // Type InteropTypedef#310160992(name: ImportExportKind)
   set kind(_i4.ImportExportKind value) {
     _i5.setProperty(
       this,
@@ -712,7 +716,7 @@ class TableDescriptor {
       TableDescriptor._(
         element: element.name,
         initial: initial,
-        maximum: maximum ?? _$exposed$undefined,
+        maximum: maximum ?? _i6.undefined,
       );
 }
 
@@ -727,7 +731,7 @@ extension TableDescriptor$Typings on TableDescriptor {
   /* #17633
   source: 
         element: TableKind; */
-  // Type InteropTypedef#394028884(name: TableKind)
+  // Type InteropTypedef#553066772(name: TableKind)
   set element(_i4.TableKind value) {
     _i5.setProperty(
       this,
@@ -770,7 +774,7 @@ extension TableDescriptor$Typings on TableDescriptor {
     _i5.setProperty(
       this,
       'maximum',
-      value ?? _$exposed$undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -835,7 +839,7 @@ extension WebAssemblyInstantiatedSource$Typings
   }
 }
 
-_i2.Future<_i4.Module> compile(_i7.BufferSource bytes) =>
+_i2.Future<_i4.Module> compile(_i8.BufferSource bytes) =>
     _i5.promiseToFuture(_i5.callMethod(
       _self,
       'compile',
@@ -848,7 +852,7 @@ _i2.Future<_i4.Module> compileStreaming(_i2.Object source) =>
       [source],
     ));
 _i2.Future<_i4.WebAssemblyInstantiatedSource> _instantiate$1(
-  _i7.BufferSource bytes, [
+  _i8.BufferSource bytes, [
   _i4.Imports? importObject,
 ]) =>
     _i5.promiseToFuture(_i5.callMethod(
@@ -856,10 +860,7 @@ _i2.Future<_i4.WebAssemblyInstantiatedSource> _instantiate$1(
       'instantiate',
       [
         bytes,
-        importObject ??
-            _$exposed$undefined ??
-            _$exposed$undefined ??
-            _$exposed$undefined,
+        importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
       ],
     ));
 _i2.Future<_i4.Instance> _instantiate$2(
@@ -871,15 +872,12 @@ _i2.Future<_i4.Instance> _instantiate$2(
       'instantiate',
       [
         moduleObject,
-        importObject ??
-            _$exposed$undefined ??
-            _$exposed$undefined ??
-            _$exposed$undefined,
+        importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
       ],
     )); // HEYA instantiate
 ({
   _i2.Future<_i4.WebAssemblyInstantiatedSource> Function(
-    _i7.BufferSource bytes, [
+    _i8.BufferSource bytes, [
     _i4.Imports? importObject,
   ]) $1,
   _i2.Future<_i4.Instance> Function(
@@ -899,13 +897,10 @@ _i2.Future<_i4.WebAssemblyInstantiatedSource> instantiateStreaming(
       'instantiateStreaming',
       [
         source,
-        importObject ??
-            _$exposed$undefined ??
-            _$exposed$undefined ??
-            _$exposed$undefined,
+        importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
       ],
     ));
-_i2.bool validate(_i7.BufferSource bytes) => _i5.callMethod(
+_i2.bool validate(_i8.BufferSource bytes) => _i5.callMethod(
       _self,
       'validate',
       [bytes],
@@ -920,6 +915,3 @@ class _IterableLike$<T> {}
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-@_i1.JS('undefined')
-external _i2.dynamic _$exposed$undefined;

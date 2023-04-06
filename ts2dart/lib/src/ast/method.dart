@@ -26,7 +26,7 @@ class InteropMethodHolder extends InteropMethod {
       required super.isExternal,
       required super.source,
       required super.computedName,
-      super.cl,
+      required super.cl,
       super.doc});
 
   final Set<InteropMethod> versions = {};
@@ -230,6 +230,8 @@ class InteropMethodHolder extends InteropMethod {
     }
 
     if (methods.isNotEmpty) {
+      methods.sort((a, b) => a.params.length.compareTo(b.params.length));
+
       final start = built.length + 1;
       final overload = methods
           .expandIndexed((x, v) => v.build(
@@ -301,7 +303,7 @@ class InteropMethod extends InteropNamedDeclaration
       this.usesFactory = false,
       required this.isExternal,
       required this.computedName,
-      this.cl,
+      required this.cl,
       JsCall? jsCall,
       this.callKey,
       this.addCallArg = true,
@@ -324,7 +326,7 @@ class InteropMethod extends InteropNamedDeclaration
   final String? callKey;
   @override
   bool isStatic;
-  InteropClass? cl;
+  InteropClass cl;
   final bool isExternal;
   bool usesFactory;
   InteropRef? target;
@@ -356,6 +358,10 @@ class InteropMethod extends InteropNamedDeclaration
       computedName: computedName,
       source: '',
       doc: doc,
+      jsCall: _jsCall,
+      addCallArg: addCallArg,
+      argsAsList: argsAsList,
+      callKey: callKey,
       typeParams: typeParams.map((tp) => tp.copyWith()))
     ..target = target
     ..params.addAll(params.map((param) => param.copyWith()))
@@ -372,7 +378,8 @@ class InteropMethod extends InteropNamedDeclaration
   @override
   bool isSame(InteropType other) => throw 'Nope';
 
-  Reference makeThis() => target?.ref() ?? refer('this');
+  Reference makeThis() =>
+      target?.ref() ?? (isStatic ? cl.makeDeclared().ref() : refer('this'));
 
   @override
   InteropNamedDeclaration? get parent => cl;
@@ -488,7 +495,8 @@ extension AdvMethods on Iterable<InteropMethod> {
       for (var y = x + 1; y < list.length; y++) {
         final other = list.elementAt(y);
 
-        if (method.params.length >= other.params.length) {
+        if (method.params.length >= other.params.length &&
+            other.params.isNotEmpty) {
           var i = 0;
 
           for (; i < method.params.length; i++) {

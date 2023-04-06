@@ -4,6 +4,7 @@ import 'package:ts2dart/src/ast/type_parameter.dart';
 import 'package:ts2dart/src/metadata/struct.dart';
 
 import '../../common.dart';
+import '../property.dart';
 import '../reference.dart';
 import 'interface.dart';
 import 'local.dart';
@@ -95,7 +96,8 @@ class InteropDynamicEnum extends InteropNamedDeclaration
   Expression fromInterop(
       {required Expression argument,
       bool isNullable = false,
-      bool isOptional = false}) {
+      bool isOptional = false,
+      required List<InteropRef> typeArgs}) {
     if (isOptional) {
       final ret = Block.of([
         const Code('switch ('),
@@ -126,8 +128,8 @@ class InteropDynamicEnum extends InteropNamedDeclaration
           other.values.any((otherValue) => otherValue.isSame(value)));
 
   @override
-  void configure() {
-    if (isEnumMap) {
+  void cache() {
+    if (isEnumMap && addedTypeParam) {
       final inheritor =
           _parsedInterfaceMembers.values.flattened.commonInheritor();
 
@@ -136,10 +138,8 @@ class InteropDynamicEnum extends InteropNamedDeclaration
         print('=====${typeParams}');
       }
 
-      if (addedTypeParam) {
-        typeParams.add(InteropTypeParam(
-            symbol: interfaceTypeParamName, constraint: inheritor));
-      }
+      typeParams.add(InteropTypeParam(
+          symbol: interfaceTypeParamName, constraint: inheritor));
     }
   }
 
@@ -148,7 +148,7 @@ class InteropDynamicEnum extends InteropNamedDeclaration
 
     _parsedInterfaceMembers.addAll({
       for (final member in struct.members)
-        member.name: [parseRef(member.rawType)]
+        InteropProperty.cleanName(member.name): [parseRef(member.rawType)]
     });
 
     for (final inh in struct.heritage) {
@@ -176,7 +176,7 @@ class InteropDynamicEnum extends InteropNamedDeclaration
   void parse(Map<String, dynamic> map) {
     super.parse(map);
 
-    if (map case {'isClass': bool _, ...}) {
+    if (map case {'isClass': bool _}) {
       _parseInterface(map as MetadataStruct);
       return;
     }

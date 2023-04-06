@@ -1,21 +1,12 @@
 @_i1.JS()
-library lib_es2015_collection_d_ts; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import 'lib_es5_d.dart' as _i3;
+import 'lib_es2015_iterable_d.dart' as _i3;
 import 'dart:js_util' as _i4;
-import 'core_comon_d.dart' as _i5;
-import 'lib_es2015_core_d.dart' as _i6;
-import 'lib_es2017_object_d.dart' as _i7;
-import 'lib_es2019_object_d.dart' as _i8;
-import 'lib_es2015_iterable_d.dart' as _i9;
-import 'lib_es5_intl_d.dart' as _i10;
-import 'lib_es2018_regexp_d.dart' as _i11;
-import 'lib_es2019_array_d.dart' as _i12;
-import 'dart:typed_data' as _i13;
-import 'lib_es2017_sharedmemory_d.dart' as _i14;
-import 'lib_es2015_collection_d.dart' as _i15;
+import '/d/core.dart' as _i5;
+import 'lib_es2015_collection_d.dart' as _i6;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -25,13 +16,23 @@ external _i2.Object _self;
 class Map<K, V>
     implements
         _IterableLike$<
-            _i9.IterableIterator<
+            _i3.IterableIterator<
                 (
                   K,
                   V,
                 )>> {
-  factory Map.$1(
-          [_i2.List /*LIST InteropStaticType.list,159565932,[Instance of 'InteropRef<InteropType>']*/ <
+  factory Map.$1() => _i4.callConstructor(
+        _declaredMap,
+        [],
+      );
+
+  factory Map.$2() => _i4.callConstructor(
+        _declaredMap,
+        [],
+      );
+
+  factory Map.$3(
+          [_i2.List /*LIST InteropStaticType.list,1071658001,[Instance of 'InteropRef<InteropType>']*/ <
                   (
                     K,
                     V,
@@ -46,12 +47,12 @@ class Map<K, V>
                         i.$2,
                       ])
                   .toList() ??
-              _$exposed$undefined
+              _i5.undefined
         ],
       );
 
-  factory Map.$2(
-          [_i9.Iterable<
+  factory Map.$4(
+          [_i3.Iterable<
                   (
                     K,
                     V,
@@ -59,7 +60,7 @@ class Map<K, V>
               iterable]) =>
       _i4.callConstructor(
         _declaredMap,
-        [iterable ?? _$exposed$undefined],
+        [iterable ?? _i5.undefined],
       );
 }
 
@@ -97,7 +98,7 @@ extension Map$Typings<K, V> on Map<K, V> {
     void Function(
       V,
       K,
-      _i15.Map<K, V>,
+      _i6.Map<K, V>,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) {
@@ -106,7 +107,7 @@ extension Map$Typings<K, V> on Map<K, V> {
       'forEach',
       [
         _i4.allowInterop(callbackfn),
-        thisArg ?? _$exposed$undefined,
+        thisArg ?? _i5.undefined,
       ],
     );
   }
@@ -121,7 +122,7 @@ extension Map$Typings<K, V> on Map<K, V> {
         'has',
         [key],
       );
-  _i15.Map<_i2.dynamic, _i2.dynamic> set(
+  _i6.Map<_i2.dynamic, _i2.dynamic> set(
     K key,
     V value,
   ) =>
@@ -133,7 +134,7 @@ extension Map$Typings<K, V> on Map<K, V> {
           value,
         ],
       );
-  _i9.IterableIterator<
+  _i3.IterableIterator<
       (
         K,
         V,
@@ -142,12 +143,12 @@ extension Map$Typings<K, V> on Map<K, V> {
         'entries',
         [],
       );
-  _i9.IterableIterator<K> keys() => _i4.callMethod(
+  _i3.IterableIterator<K> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
-  _i9.IterableIterator<V> values() => _i4.callMethod(
+  _i3.IterableIterator<V> values() => _i4.callMethod(
         this,
         'values',
         [],
@@ -163,7 +164,7 @@ class MapConstructor {}
 class ReadonlyMap<K, V>
     implements
         _IterableLike$<
-            _i9.IterableIterator<
+            _i3.IterableIterator<
                 (
                   K,
                   V,
@@ -181,7 +182,7 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
     void Function(
       V,
       K,
-      _i15.ReadonlyMap<K, V>,
+      _i6.ReadonlyMap<K, V>,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) {
@@ -190,7 +191,7 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
       'forEach',
       [
         _i4.allowInterop(callbackfn),
-        thisArg ?? _$exposed$undefined,
+        thisArg ?? _i5.undefined,
       ],
     );
   }
@@ -205,7 +206,7 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
         'has',
         [key],
       );
-  _i9.IterableIterator<
+  _i3.IterableIterator<
       (
         K,
         V,
@@ -214,12 +215,12 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
         'entries',
         [],
       );
-  _i9.IterableIterator<K> keys() => _i4.callMethod(
+  _i3.IterableIterator<K> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
-  _i9.IterableIterator<V> values() => _i4.callMethod(
+  _i3.IterableIterator<V> values() => _i4.callMethod(
         this,
         'values',
         [],
@@ -229,8 +230,13 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
 @_i1.JS()
 @_i1.staticInterop
 class WeakMap<K extends _i2.Object, V> {
-  factory WeakMap.$1(
-          [_i2.List /*LIST InteropStaticType.list,822047722,[Instance of 'InteropRef<InteropType>']*/ <
+  factory WeakMap.$1() => _i4.callConstructor(
+        _declaredWeakMap,
+        [],
+      );
+
+  factory WeakMap.$2(
+          [_i2.List /*LIST InteropStaticType.list,939989630,[Instance of 'InteropRef<InteropType>']*/ <
                   (
                     K,
                     V,
@@ -245,12 +251,12 @@ class WeakMap<K extends _i2.Object, V> {
                         i.$2,
                       ])
                   .toList() ??
-              _$exposed$undefined
+              _i5.undefined
         ],
       );
 
-  factory WeakMap.$2(
-          _i9.Iterable<
+  factory WeakMap.$3(
+          _i3.Iterable<
                   (
                     K,
                     V,
@@ -284,7 +290,7 @@ extension WeakMap$Typings<K extends _i2.Object, V> on WeakMap<K, V> {
         'has',
         [key],
       );
-  _i15.WeakMap<_i2.Object, _i2.dynamic> set(
+  _i6.WeakMap<_i2.Object, _i2.dynamic> set(
     K key,
     V value,
   ) =>
@@ -304,19 +310,24 @@ class WeakMapConstructor {}
 
 @_i1.JS()
 @_i1.staticInterop
-class Set<T> implements _IterableLike$<_i9.IterableIterator<T>> {
-  factory Set.$1(
-          [_i2.List /*LIST InteropStaticType.list,790160353,[Instance of 'InteropRef<InteropType>']*/ <
+class Set<T> implements _IterableLike$<_i3.IterableIterator<T>> {
+  factory Set.$1() => _i4.callConstructor(
+        _declaredSet,
+        [],
+      );
+
+  factory Set.$2(
+          [_i2.List /*LIST InteropStaticType.list,748847212,[Instance of 'InteropRef<InteropType>']*/ <
                   T>?
               values]) =>
       _i4.callConstructor(
         _declaredSet,
-        [values ?? _$exposed$undefined],
+        [values ?? _i5.undefined],
       );
 
-  factory Set.$2([_i9.Iterable<T>? iterable]) => _i4.callConstructor(
+  factory Set.$3([_i3.Iterable<T>? iterable]) => _i4.callConstructor(
         _declaredSet,
-        [iterable ?? _$exposed$undefined],
+        [iterable ?? _i5.undefined],
       );
 }
 
@@ -337,7 +348,7 @@ extension Set$Typings<T> on Set<T> {
         this,
         'size',
       );
-  _i15.Set<_i2.dynamic> add(T value) => _i4.callMethod(
+  _i6.Set<_i2.dynamic> add(T value) => _i4.callMethod(
         this,
         'add',
         [value],
@@ -359,7 +370,7 @@ extension Set$Typings<T> on Set<T> {
     void Function(
       T,
       T,
-      _i15.Set<T>,
+      _i6.Set<T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) {
@@ -368,7 +379,7 @@ extension Set$Typings<T> on Set<T> {
       'forEach',
       [
         _i4.allowInterop(callbackfn),
-        thisArg ?? _$exposed$undefined,
+        thisArg ?? _i5.undefined,
       ],
     );
   }
@@ -378,7 +389,7 @@ extension Set$Typings<T> on Set<T> {
         'has',
         [value],
       );
-  _i9.IterableIterator<
+  _i3.IterableIterator<
       (
         T,
         T,
@@ -387,12 +398,12 @@ extension Set$Typings<T> on Set<T> {
         'entries',
         [],
       );
-  _i9.IterableIterator<T> keys() => _i4.callMethod(
+  _i3.IterableIterator<T> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
-  _i9.IterableIterator<T> values() => _i4.callMethod(
+  _i3.IterableIterator<T> values() => _i4.callMethod(
         this,
         'values',
         [],
@@ -405,7 +416,7 @@ class SetConstructor {}
 
 @_i1.JS()
 @_i1.staticInterop
-class ReadonlySet<T> implements _IterableLike$<_i9.IterableIterator<T>> {}
+class ReadonlySet<T> implements _IterableLike$<_i3.IterableIterator<T>> {}
 
 extension ReadonlySet$Typings<T> on ReadonlySet<T> {
   /* #125
@@ -419,7 +430,7 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
     void Function(
       T,
       T,
-      _i15.ReadonlySet<T>,
+      _i6.ReadonlySet<T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) {
@@ -428,7 +439,7 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
       'forEach',
       [
         _i4.allowInterop(callbackfn),
-        thisArg ?? _$exposed$undefined,
+        thisArg ?? _i5.undefined,
       ],
     );
   }
@@ -438,7 +449,7 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
         'has',
         [value],
       );
-  _i9.IterableIterator<
+  _i3.IterableIterator<
       (
         T,
         T,
@@ -447,12 +458,12 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
         'entries',
         [],
       );
-  _i9.IterableIterator<T> keys() => _i4.callMethod(
+  _i3.IterableIterator<T> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
-  _i9.IterableIterator<T> values() => _i4.callMethod(
+  _i3.IterableIterator<T> values() => _i4.callMethod(
         this,
         'values',
         [],
@@ -462,16 +473,21 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
 @_i1.JS()
 @_i1.staticInterop
 class WeakSet<T extends _i2.Object> {
-  factory WeakSet.$1(
-          [_i2.List /*LIST InteropStaticType.list,395990416,[Instance of 'InteropRef<InteropType>']*/ <
+  factory WeakSet.$1() => _i4.callConstructor(
+        _declaredWeakSet,
+        [],
+      );
+
+  factory WeakSet.$2(
+          [_i2.List /*LIST InteropStaticType.list,42576326,[Instance of 'InteropRef<InteropType>']*/ <
                   T>?
               values]) =>
       _i4.callConstructor(
         _declaredWeakSet,
-        [values ?? _$exposed$undefined],
+        [values ?? _i5.undefined],
       );
 
-  factory WeakSet.$2(_i9.Iterable<T> iterable) => _i4.callConstructor(
+  factory WeakSet.$3(_i3.Iterable<T> iterable) => _i4.callConstructor(
         _declaredWeakSet,
         [iterable],
       );
@@ -484,7 +500,7 @@ FieldExternal:
 external _i2.Object _declaredWeakSet;
 
 extension WeakSet$Typings<T extends _i2.Object> on WeakSet<T> {
-  _i15.WeakSet<_i2.Object> add(T value) => _i4.callMethod(
+  _i6.WeakSet<_i2.Object> add(T value) => _i4.callMethod(
         this,
         'add',
         [value],
@@ -514,6 +530,3 @@ class _IterableLike$<T> {}
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-@_i1.JS('undefined')
-external _i2.dynamic _$exposed$undefined;

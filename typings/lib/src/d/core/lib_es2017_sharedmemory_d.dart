@@ -1,28 +1,99 @@
 @_i1.JS()
-library lib_es2017_sharedmemory_d_ts; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import 'lib_es5_d.dart' as _i3;
-import 'dart:js_util' as _i4;
-import 'core_comon_d.dart' as _i5;
-import 'lib_es2015_core_d.dart' as _i6;
-import 'lib_es2017_object_d.dart' as _i7;
-import 'lib_es2019_object_d.dart' as _i8;
-import 'lib_es2015_iterable_d.dart' as _i9;
-import 'lib_es5_intl_d.dart' as _i10;
-import 'lib_es2018_regexp_d.dart' as _i11;
-import 'lib_es2019_array_d.dart' as _i12;
-import 'dart:typed_data' as _i13;
-import 'lib_es2017_sharedmemory_d.dart' as _i14;
-import 'lib_es2015_collection_d.dart' as _i15;
-import 'lib_es2020_promise_d.dart' as _i16;
-import 'lib_es2015_generator_d.dart' as _i17;
-import 'lib_es2015_proxy_d.dart' as _i18;
-import 'lib_es2020_bigint_d.dart' as _i19;
+import 'dart:js_util' as _i3;
+import 'lib_es2017_sharedmemory_d.dart' as _i4;
+import '/d/core.dart' as _i5;
+import 'lib_es2015_iterable_d.dart' as _i6;
+import 'dart:typed_data' as _i7;
+import 'lib_es2020_bigint_d.dart' as _i8;
 
 @_i1.JS('self')
 external _i2.Object _self;
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class WaitAsync {}
+
+extension WaitAsync$Typings on WaitAsync {
+  /* #28
+  source:  async: false, */
+  _i2.bool get async => _i3.getProperty(
+        this,
+        'async',
+      );
+  /* #28
+  source:  async: false, */
+  // Type InteropStaticType.boolean
+  set async(_i2.bool value) {
+    _i3.setProperty(
+      this,
+      'async',
+      value,
+    );
+  }
+
+  /* #28
+  source:  value: "not-equal" | "timed-out" */
+  _i2.dynamic get value => _i3.getProperty(
+        this,
+        'value',
+      );
+  /* #28
+  source:  value: "not-equal" | "timed-out" */
+  // Type InteropStaticType.dyn
+  set value(_i2.dynamic value) {
+    _i3.setProperty(
+      this,
+      'value',
+      value,
+    );
+  }
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class WaitAsyncCommon {}
+
+extension WaitAsyncCommon$Typings on WaitAsyncCommon {
+  /* #38
+  source:  async: false, */
+  _i2.bool get async => _i3.getProperty(
+        this,
+        'async',
+      );
+  /* #38
+  source:  async: false, */
+  // Type InteropStaticType.boolean
+  set async(_i2.bool value) {
+    _i3.setProperty(
+      this,
+      'async',
+      value,
+    );
+  }
+
+  /* #38
+  source:  value: "not-equal" | "timed-out" */
+  _i2.dynamic get value => _i3.getProperty(
+        this,
+        'value',
+      );
+  /* #38
+  source:  value: "not-equal" | "timed-out" */
+  // Type InteropStaticType.dyn
+  set value(_i2.dynamic value) {
+    _i3.setProperty(
+      this,
+      'value',
+      value,
+    );
+  }
+}
 
 /* Closure: () => String from Function 'makeDoc':. */
 enum Wait {
@@ -49,7 +120,7 @@ enum WaitOptions {
 @_i1.JS()
 @_i1.staticInterop
 class SharedArrayBuffer {
-  factory SharedArrayBuffer(_i2.num byteLength) => _i4.callConstructor(
+  factory SharedArrayBuffer(_i2.num byteLength) => _i3.callConstructor(
         _declaredSharedArrayBuffer,
         [byteLength],
       );
@@ -69,20 +140,20 @@ extension SharedArrayBuffer$Typings on SharedArrayBuffer {
      */
     readonly byteLength: number; */
   /// Read-only. The length of the ArrayBuffer (in bytes).
-  _i2.num get byteLength => _i4.getProperty(
+  _i2.num get byteLength => _i3.getProperty(
         this,
         'byteLength',
       );
-  _i14.SharedArrayBuffer slice(
+  _i4.SharedArrayBuffer slice(
     _i2.num begin, [
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'slice',
         [
           begin,
-          end ?? _$exposed$undefined,
+          end ?? _i5.undefined,
         ],
       );
 }
@@ -101,7 +172,7 @@ extension Atomics$Typings on Atomics {
     _i2.num index,
     _i2.num value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'add',
         [
@@ -111,11 +182,11 @@ extension Atomics$Typings on Atomics {
         ],
       );
   _i2.int _add$2(
-    _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'add',
         [
@@ -132,7 +203,7 @@ extension Atomics$Typings on Atomics {
       _i2.num value,
     ) $1,
     _i2.int Function(
-      _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -145,7 +216,7 @@ extension Atomics$Typings on Atomics {
     _i2.num index,
     _i2.num value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'and',
         [
@@ -155,11 +226,11 @@ extension Atomics$Typings on Atomics {
         ],
       );
   _i2.int _and$2(
-    _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'and',
         [
@@ -176,7 +247,7 @@ extension Atomics$Typings on Atomics {
       _i2.num value,
     ) $1,
     _i2.int Function(
-      _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -190,7 +261,7 @@ extension Atomics$Typings on Atomics {
     _i2.num expectedValue,
     _i2.num replacementValue,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'compareExchange',
         [
@@ -201,12 +272,12 @@ extension Atomics$Typings on Atomics {
         ],
       );
   _i2.int _compareExchange$2(
-    _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int expectedValue,
     _i2.int replacementValue,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'compareExchange',
         [
@@ -225,7 +296,7 @@ extension Atomics$Typings on Atomics {
       _i2.num replacementValue,
     ) $1,
     _i2.int Function(
-      _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int expectedValue,
       _i2.int replacementValue,
@@ -239,7 +310,7 @@ extension Atomics$Typings on Atomics {
     _i2.num index,
     _i2.num value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'exchange',
         [
@@ -249,11 +320,11 @@ extension Atomics$Typings on Atomics {
         ],
       );
   _i2.int _exchange$2(
-    _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'exchange',
         [
@@ -270,7 +341,7 @@ extension Atomics$Typings on Atomics {
       _i2.num value,
     ) $1,
     _i2.int Function(
-      _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -278,7 +349,7 @@ extension Atomics$Typings on Atomics {
         $1: _exchange$1,
         $2: _exchange$2,
       );
-  _i2.bool isLockFree(_i2.num size) => _i4.callMethod(
+  _i2.bool isLockFree(_i2.num size) => _i3.callMethod(
         this,
         'isLockFree',
         [size],
@@ -287,7 +358,7 @@ extension Atomics$Typings on Atomics {
     _i2.Object typedArray,
     _i2.num index,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'load',
         [
@@ -296,10 +367,10 @@ extension Atomics$Typings on Atomics {
         ],
       );
   _i2.int _load$2(
-    _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'load',
         [
@@ -314,7 +385,7 @@ extension Atomics$Typings on Atomics {
       _i2.num index,
     ) $1,
     _i2.int Function(
-      _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
     ) $2,
   }) get load => (
@@ -326,7 +397,7 @@ extension Atomics$Typings on Atomics {
     _i2.num index,
     _i2.num value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'or',
         [
@@ -336,11 +407,11 @@ extension Atomics$Typings on Atomics {
         ],
       );
   _i2.int _or$2(
-    _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'or',
         [
@@ -357,7 +428,7 @@ extension Atomics$Typings on Atomics {
       _i2.num value,
     ) $1,
     _i2.int Function(
-      _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -370,7 +441,7 @@ extension Atomics$Typings on Atomics {
     _i2.num index,
     _i2.num value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'store',
         [
@@ -380,11 +451,11 @@ extension Atomics$Typings on Atomics {
         ],
       );
   _i2.int _store$2(
-    _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'store',
         [
@@ -401,7 +472,7 @@ extension Atomics$Typings on Atomics {
       _i2.num value,
     ) $1,
     _i2.int Function(
-      _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -414,7 +485,7 @@ extension Atomics$Typings on Atomics {
     _i2.num index,
     _i2.num value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'sub',
         [
@@ -424,11 +495,11 @@ extension Atomics$Typings on Atomics {
         ],
       );
   _i2.int _sub$2(
-    _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'sub',
         [
@@ -445,7 +516,7 @@ extension Atomics$Typings on Atomics {
       _i2.num value,
     ) $1,
     _i2.int Function(
-      _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -454,47 +525,47 @@ extension Atomics$Typings on Atomics {
         $2: _sub$2,
       );
   Wait _wait$1(
-    _i13.Int32List typedArray,
+    _i7.Int32List typedArray,
     _i2.num index,
     _i2.num value, [
     _i2.num? timeout,
   ]) =>
-      Wait.values.byName(_i4.callMethod(
+      Wait.values.byName(_i3.callMethod(
         this,
         'wait',
         [
           typedArray,
           index,
           value,
-          timeout ?? _$exposed$undefined,
+          timeout ?? _i5.undefined,
         ],
       ));
   WaitOptions _wait$2(
-    _i19.BigInt64Array typedArray,
+    _i8.BigInt64Array typedArray,
     _i2.num index,
     _i2.int value, [
     _i2.num? timeout,
   ]) =>
-      WaitOptions.values.byName(_i4.callMethod(
+      WaitOptions.values.byName(_i3.callMethod(
         this,
         'wait',
         [
           typedArray,
           index,
           value,
-          timeout ?? _$exposed$undefined,
+          timeout ?? _i5.undefined,
         ],
       ));
   // HEYA wait
   ({
     Wait Function(
-      _i13.Int32List typedArray,
+      _i7.Int32List typedArray,
       _i2.num index,
       _i2.num value, [
       _i2.num? timeout,
     ]) $1,
     WaitOptions Function(
-      _i19.BigInt64Array typedArray,
+      _i8.BigInt64Array typedArray,
       _i2.num index,
       _i2.int value, [
       _i2.num? timeout,
@@ -504,42 +575,42 @@ extension Atomics$Typings on Atomics {
         $2: _wait$2,
       );
   _i2.num _notify$1(
-    _i13.Int32List typedArray,
+    _i7.Int32List typedArray,
     _i2.num index, [
     _i2.num? count,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'notify',
         [
           typedArray,
           index,
-          count ?? _$exposed$undefined,
+          count ?? _i5.undefined,
         ],
       );
   _i2.num _notify$2(
-    _i19.BigInt64Array typedArray,
+    _i8.BigInt64Array typedArray,
     _i2.num index, [
     _i2.num? count,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'notify',
         [
           typedArray,
           index,
-          count ?? _$exposed$undefined,
+          count ?? _i5.undefined,
         ],
       );
   // HEYA notify
   ({
     _i2.num Function(
-      _i13.Int32List typedArray,
+      _i7.Int32List typedArray,
       _i2.num index, [
       _i2.num? count,
     ]) $1,
     _i2.num Function(
-      _i19.BigInt64Array typedArray,
+      _i8.BigInt64Array typedArray,
       _i2.num index, [
       _i2.num? count,
     ]) $2,
@@ -552,7 +623,7 @@ extension Atomics$Typings on Atomics {
     _i2.num index,
     _i2.num value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'xor',
         [
@@ -562,11 +633,11 @@ extension Atomics$Typings on Atomics {
         ],
       );
   _i2.int _xor$2(
-    _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'xor',
         [
@@ -583,13 +654,63 @@ extension Atomics$Typings on Atomics {
       _i2.num value,
     ) $1,
     _i2.int Function(
-      _IterableLike$<_i9.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
   }) get xor => (
         $1: _xor$1,
         $2: _xor$2,
+      );
+  _i4.WaitAsync _waitAsync$1(
+    _i7.Int32List typedArray,
+    _i2.num index,
+    _i2.num value, [
+    _i2.num? timeout,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'waitAsync',
+        [
+          typedArray,
+          index,
+          value,
+          timeout ?? _i5.undefined,
+        ],
+      );
+  _i4.WaitAsyncCommon _waitAsync$2(
+    _i8.BigInt64Array typedArray,
+    _i2.num index,
+    _i2.int value, [
+    _i2.num? timeout,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'waitAsync',
+        [
+          typedArray,
+          index,
+          value,
+          timeout ?? _i5.undefined,
+        ],
+      );
+  // HEYA waitAsync
+  ({
+    _i4.WaitAsync Function(
+      _i7.Int32List typedArray,
+      _i2.num index,
+      _i2.num value, [
+      _i2.num? timeout,
+    ]) $1,
+    _i4.WaitAsyncCommon Function(
+      _i8.BigInt64Array typedArray,
+      _i2.num index,
+      _i2.int value, [
+      _i2.num? timeout,
+    ]) $2,
+  }) get waitAsync => (
+        $1: _waitAsync$1,
+        $2: _waitAsync$2,
       );
 }
 
@@ -602,6 +723,3 @@ class _IterableLike$<T> {}
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-@_i1.JS('undefined')
-external _i2.dynamic _$exposed$undefined;

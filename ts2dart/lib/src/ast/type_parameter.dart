@@ -7,8 +7,8 @@ class InteropTypeParam {
   InteropTypeParam({required this.symbol, this.constraint, this.def});
 
   final String symbol;
-  final InteropRef? constraint;
-  final InteropRef? def;
+  InteropRef? constraint;
+  InteropRef? def;
 
   Reference ref() => TypeReference((b) {
         b

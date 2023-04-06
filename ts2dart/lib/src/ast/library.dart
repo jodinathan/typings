@@ -31,29 +31,33 @@ class InteropTypeException implements Exception {
   final String action;
   final Object original;
   final StackTrace st;
+
+  @override
+  String toString() => '''InteropTypeException(type: $type, 
+  action: $action, 
+  original: $original,
+  StackTrace: $st
+)''';
 }
 
 class InteropLibrary with InteropItem {
   InteropLibrary(
-      {required this.fileName,
-      required this.module,
-      required this.namespace,
-      String? targetFileName})
-      : name = (namespace.isEmpty ? fileName : namespace).snakeCase,
-        targetFileName = targetFileName ??
-            '${fileName.replaceAll('.d.ts', '.${namespace.isEmpty ? '' : '${namespace}.'}d').toLowerCase().snakeCase}.dart';
+      {required this.fileName, required this.module, String? targetFileName})
+      : _targetFileName = targetFileName;
 
   static final dartCore = InteropLibrary(
       fileName: 'dart:core',
       targetFileName: 'dart:core',
-      namespace: '',
       module: InteropModule(
           path: '', project: InteropProject(libPath: '', dirName: '')));
   static InteropLibrary get current =>
       Zone.current[#interopLibrary] as InteropLibrary;
 
   final String fileName;
-  final String targetFileName;
+  final String? _targetFileName;
+  String get targetFileName =>
+      _targetFileName ??
+      '${fileName.replaceAll('.d.ts', '.${namespace.isEmpty ? '' : '${namespace}.'}d').toLowerCase().snakeCase}.dart';
   final List<InteropDiamondType> _registeredTypes = [];
   final List<InteropClass> classes = [];
   final List<InteropTypedef> typedefs = [];
@@ -62,8 +66,6 @@ class InteropLibrary with InteropItem {
   final List<InteropGetter> globalAccessors = [];
   final List<InteropProperty> globalProperties = [];
   final InteropModule module;
-  final String namespace;
-  final String name;
   final globalName = 'globalThis';
   late final global = InteropClass(
       name: globalName,
@@ -82,8 +84,6 @@ class InteropLibrary with InteropItem {
         ...enums.expand((it) => it.usedTypes()),
         ...global.usedTypes()
       };
-  final Iterable<InteropStaticType> exposed =
-      InteropStaticType.values.where((t) => t.isExposed);
   late final iterableLike = InteropClass(
       name: 'Iterable',
       library: this,
@@ -96,6 +96,7 @@ class InteropLibrary with InteropItem {
     ..typeParams.add(InteropTypeParam(symbol: 'T'));
   final _selfName = '_self';
   late final self = refer(_selfName);
+  String get namespace => module.path;
 
   final buildingSpecs = <Spec>[];
 
@@ -133,7 +134,7 @@ class InteropLibrary with InteropItem {
         }
 
         b
-          ..name = name
+          ..name = namespace.snakeCase
           ..annotations
               .add(pkgJs.js(name: namespace.isEmpty ? null : namespace))
           ..body.addAll([
@@ -159,13 +160,6 @@ class InteropLibrary with InteropItem {
             ...globalProperties
                 .whereType<InteropGetter>()
                 .map((e) => e.buildExternal()),
-            ...exposed.map((type) => Field((b) {
-                  b
-                    ..name = type.exposition.name
-                    ..external = true
-                    ..type = type.ref()
-                    ..annotations.add(pkgJs.js(name: type.exposition.mapping));
-                })),
             ...globalAccessors.map((getter) => Field((b) {
                   b
                     ..name = getter.usableName
@@ -186,7 +180,7 @@ class InteropLibrary with InteropItem {
   }
 
   void listTypesFromMap(Map<String, dynamic> map) {
-    final {'structs': List rawStructs, 'typedefs': List rawTypedefs, ...} = map;
+    final {'structs': List rawStructs, 'typedefs': List rawTypedefs} = map;
     final structs = rawStructs.map((s) => s as MetadataStruct);
 
     classes.clear();
@@ -202,7 +196,8 @@ class InteropLibrary with InteropItem {
           library: this,
           lineNumber: struct.lineNumber,
           source: struct.source,
-          metadata: struct));
+          metadata: struct,
+          isInline: struct.isInline));
     }
 
     typedefs.clear();
@@ -212,7 +207,6 @@ class InteropLibrary with InteropItem {
         'name': String name,
         '_': int lineNumber,
         'source': String source,
-        ...
       } = rawTypedef as Map;
 
       assert(!typedefs.any((it) => it.name == name));
@@ -232,7 +226,6 @@ class InteropLibrary with InteropItem {
           'typedefs': List rawTypedefs,
           'vars': List rawVars,
           'funcs': List rawFuncs,
-          ...
         }) {
       for (final interface in interfaces) {
         withType(
@@ -361,7 +354,7 @@ class InteropLibrary with InteropItem {
       }
     }
 
-    logger.shout('''====== Library info *${name}* ======
+    logger.shout('''====== Library info *${fileName}* ======
     Buildable objs: ${buildable.length}
     Total types: ${used.length}
     Complex registered types: ${_registeredTypes.length}
@@ -378,8 +371,6 @@ class InteropLibrary with InteropItem {
 
     for (final v in globalVars) {
       if (v.reference.realType case InteropClass cl) {
-        global.removeProperty(v);
-
         var swap = findDeclared(v.name)?.realType;
 
         if (swap != null && swap is! InteropClass) {
@@ -565,17 +556,21 @@ class InteropLibrary with InteropItem {
       return declared;
     }
 
-    final type = module.findDeclared(name);
+    var type = module.findDeclared(name);
 
     if (type != null) {
       return type;
     }
 
     if (module != module.project.mainModule) {
-      return module.project.mainModule.findDeclared(name);
+      type = module.project.mainModule.findDeclared(name);
+
+      if (type != null) {
+        return type;
+      }
     }
 
-    return null;
+    return module.project.findExternalTypeByName(name);
   }
 
   InteropType parseType(Map<String, dynamic> map) {
@@ -588,7 +583,7 @@ class InteropLibrary with InteropItem {
     final name = map['core'] ?? map['ref'];
 
     if (name is String) {
-      if (name.startsWith('"')) {
+      if (name.isLiteral) {
         return InteropConstString(name.substring(1, name.length - 1));
       }
 

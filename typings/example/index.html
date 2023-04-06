@@ -5,7 +5,18 @@
 </head>
 
 <body>
-    <div id="foo"></div>
+    <div id="sources" style="display: none">
+        <div class="go"
+             style="width: 100%; display: flex; justify-content: space-between">
+            <div class="palette"
+                 style="width: 100px; margin-right: 2px; background-color: #282c34;"></div>
+            <div class="diagram"
+                 style="flex-grow: 1; height: 750px; background-color: #282c34;"></div>
+        </div>
+        <div class="basic"><div class="log"></div><div class="stuff"></div></div>
+    </div>
+    <div id="app"></div>
+
     <script type="text/javascript">
         var testArray = ['foo', 'bar'];
         var testArray2 = ['123', '321'];

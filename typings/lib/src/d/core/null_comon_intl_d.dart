@@ -36,3 +36,13 @@ FieldExternal: DeclaredVar
 */
 @_i1.JS('DisplayNames')
 external _i2.Object target18;
+/*
+FieldExternal: DeclaredVar
+*/
+@_i1.JS('ListFormat')
+external _i2.Object target19;
+/*
+FieldExternal: DeclaredVar
+*/
+@_i1.JS('Segmenter')
+external _i2.Object target20;
