@@ -8,7 +8,6 @@ import 'method.dart';
 import 'method_param.dart';
 import 'property.dart';
 import '../common.dart';
-import 'typedef.dart';
 import 'types/const.dart';
 import 'types/enum.dart';
 import 'types/interface.dart';
@@ -424,10 +423,6 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
             final args = <String, Expression>{};
 
             for (final prop in props) {
-              if (name == 'RequestInit' && prop.usableName == 'headers') {
-                print(
-                    'RequestInitFUCK2 ${prop.reference.type}, ${prop.reference.optional}, ${prop.reference.acceptsNull}, ${(prop.reference.realType as InteropTypedef).definition!.realType}');
-              }
               args[prop.usableName] =
                   prop.reference.toInterop(refer(prop.usableName));
             }

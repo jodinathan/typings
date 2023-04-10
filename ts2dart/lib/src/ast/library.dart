@@ -58,6 +58,9 @@ class InteropLibrary with InteropItem {
   String get targetFileName =>
       _targetFileName ??
       '${fileName.replaceAll('.d.ts', '.${namespace.isEmpty ? '' : '${namespace}.'}d').toLowerCase().snakeCase}.dart';
+  String get fullPath => module.project.isExternal
+      ? '/${module.project.srcDir(targetFileName)}'
+      : targetFileName;
   final List<InteropDiamondType> _registeredTypes = [];
   final List<InteropClass> classes = [];
   final List<InteropTypedef> typedefs = [];
@@ -179,11 +182,57 @@ class InteropLibrary with InteropItem {
     ];
   }
 
+  InteropDynamicEnum declareEnum(InteropDynamicEnum en) {
+    enums.add(en);
+    return en;
+  }
+
+  InteropClass declareClass(InteropClass cl) {
+    classes.add(cl);
+    return cl;
+  }
+
   void listTypesFromMap(Map<String, dynamic> map) {
-    final {'structs': List rawStructs, 'typedefs': List rawTypedefs} = map;
+    final {
+      'structs': List rawStructs,
+      'typedefs': List rawTypedefs,
+      'enums': List rawEnums
+    } = map;
     final structs = rawStructs.map((s) => s as MetadataStruct);
+    final enumList = rawEnums.cast<Map<String, dynamic>>();
+
+    for (final en in enumList) {
+      final name = en.prop<String>('name');
+
+      enums.add(InteropDynamicEnum(
+          name: name,
+          library: this,
+          lineNumber: en.prop('_'),
+          source: en.prop('source'),
+          values: en.pairs('members').map((m) {
+            final name = m.prop<String>('name');
+            final value = m.prop('value');
+
+            final ret = switch (value) {
+              String v when v.isEmpty => InteropConstString(name, name: name),
+              String v => () {
+                final nval = num.tryParse(v);
+
+                return (nval == null
+                    ? InteropConstString(value, name: name)
+                    : InteropConstNum(nval, name: name)) as InteropConstType;
+              }(),
+              num v => InteropConstNum(v, name: name),
+              _ => throw 'Unknown value type $value'
+            };
+
+            return ret;
+          }).toList()));
+    }
 
     classes.clear();
+
+    final interfaceNames = <String, InteropInterface>{};
 
     for (final struct in structs) {
       if (struct.isNameInStaticTypes()) {
@@ -191,13 +240,24 @@ class InteropLibrary with InteropItem {
         continue;
       }
 
-      interfaces.add(InteropInterface(
+      final inf = InteropInterface(
           name: struct.name,
           library: this,
           lineNumber: struct.lineNumber,
           source: struct.source,
           metadata: struct,
-          isInline: struct.isInline));
+          isInline: struct.isInline);
+
+      if (interfaceNames[struct.name] case InteropInterface current) {
+        if (current.metadata.isClass) {
+          continue;
+        }
+
+        interfaces.remove(current);
+      }
+
+      interfaceNames[struct.name] = inf;
+      interfaces.add(inf);
     }
 
     typedefs.clear();
@@ -272,23 +332,6 @@ class InteropLibrary with InteropItem {
   void configure() {
     void exec(InteropType type) {
       type.configure();
-
-      if (type case InteropTypeDeclare type when type.library == this) {
-        final declations = type.toDeclare;
-
-        for (final decl in declations) {
-          switch (decl) {
-            case InteropDynamicEnum union:
-              enums.add(union);
-              break;
-            case InteropClass cl:
-              classes.add(cl);
-              break;
-            default:
-              throw 'not ready for $decl';
-          }
-        }
-      }
     }
 
     for (var x = 0; x < _registeredTypes.length; x++) {
@@ -405,7 +448,6 @@ class InteropLibrary with InteropItem {
 
         if (!needsGlobal) {
           if (swap == cl) {
-            print('SkippingGlobalVar ${v.name}');
             continue;
           }
 
@@ -441,7 +483,6 @@ class InteropLibrary with InteropItem {
         }
 
         if (removeGlobalInline && cl.isInline) {
-          print('Removing global inline ${cl.name}');
           classes.remove(cl);
 
           if (v.reference.type case InteropInterface iface) {
@@ -512,12 +553,10 @@ class InteropLibrary with InteropItem {
   void removeInlineFromRefs(Iterable<InteropRef> list) {
     for (final ref in list) {
       if (ref.type case InteropClass cl when cl.isInline) {
-        print('Removing inline ${cl.name}');
         classes.remove(cl);
       } else if (ref.type case InteropInterface interface
           when interface.delegate is InteropClass &&
               (interface.delegate as InteropClass).isInline) {
-        print('Removing inline interface ${interface.name}');
         interfaces.remove(interface);
       }
     }
@@ -603,7 +642,7 @@ class InteropLibrary with InteropItem {
       throw 'Couldnt find typing from name "$name". \n\nMap $map';
     }
 
-    print('Unknown type $map');
+    logger.severe('Unknown type $map');
     return InteropStaticType.dyn;
   }
 

@@ -22,8 +22,8 @@ final class Transpiler {
   final String targetPath;
   final String dirName;
   final String? contextCheck;
-  final Set<String> uses;
-  final Iterable<String> distFiles;
+  final Iterable<String> uses;
+  final List<String> distFiles;
   final String? targetMainFile;
 
   String dir([String path = '']) =>
@@ -75,14 +75,16 @@ final class Transpiler {
   static Future<InteropProject> fromNpm(
       {required String package,
       required String version,
-      required Iterable<String> files,
       required String targetPath,
       required String dirName,
+      Iterable<String> files = const [],
+      ({bool typings, bool import}) packageJson = (typings: true, import: true),
       String? contextCheck,
       Iterable<String> distFiles = const [],
-      Set<String> uses = const {},
+      Iterable<String> uses = const {},
       String? targetMainFile,
       bool force = false}) async {
+    final mainFiles = files.toList();
     final transpiller = Transpiler(
         package: package,
         targetPath: targetPath,
@@ -90,9 +92,15 @@ final class Transpiler {
         contextCheck: contextCheck,
         uses: uses,
         targetMainFile: targetMainFile,
-        distFiles: distFiles);
+        distFiles: distFiles.toList());
     final outDir = Directory(transpiller.dir('out/package'));
     final dir = transpiller.dir;
+
+    assert(!packageJson.typings || mainFiles.isEmpty,
+        'Either use packageJson.typings=true or files($mainFiles)');
+
+    assert(!packageJson.import || distFiles.isEmpty,
+        'Either use packageJson.typings=true or distFiles($distFiles)');
 
     if (!outDir.existsSync() || force) {
       await Directory(dir()).create(recursive: true);
@@ -113,29 +121,39 @@ final class Transpiler {
 
       await response.pipe(File(tarballPath).openWrite());
 
-      print('tarballPath $tarballPath');
-
       await extractFileToDisk(tarballPath, dir('out'));
 
       assert(outDir.existsSync());
-
-      print('done extracting');
     }
 
-    final fileArgs = files.map((path) => dir('out/package/$path')).toList();
+    if (packageJson.import || packageJson.typings) {
+      final pkg = conv.json
+              .decode(File(dir('out/package/package.json')).readAsStringSync())
+          as Map<String, dynamic>;
+
+      if (packageJson.typings) {
+        mainFiles.add(pkg.prop('typings'));
+      }
+
+      if (packageJson.import) {
+        transpiller.distFiles.add(pkg.prop('main'));
+      }
+    }
+
+    final fileArgs = mainFiles.map((path) => dir('out/package/$path')).toList();
 
     return transpiller._createProject(fileArgs: fileArgs);
   }
 
-  static Future<InteropProject> fromUris(
+  static Future<InteropProject> fromUrls(
       {required String package,
       required String version,
-      required Iterable<Uri> uris,
+      required Iterable<String> urls,
       required String targetPath,
       required String dirName,
       String? contextCheck,
       Iterable<String> distFiles = const [],
-      Set<String> uses = const {},
+      List<String> uses = const [],
       String? targetMainFile,
       bool force = false}) async {
     final transpiller = Transpiler(
@@ -145,14 +163,15 @@ final class Transpiler {
         contextCheck: contextCheck,
         uses: uses,
         targetMainFile: targetMainFile,
-        distFiles: distFiles);
+        distFiles: distFiles.toList());
     final dir = transpiller.dir;
     final fileArgs = <String>[];
 
     await Directory(dir('download')).create(recursive: true);
 
-    for (var x = 0; x < uris.length; x++) {
-      final uri = uris.elementAt(x);
+    for (var x = 0; x < urls.length; x++) {
+      final url = urls.elementAt(x);
+      final uri = Uri.parse(url);
       final name = basename(uri.path);
       final filePath = dir('download/$x$name');
       final file = File(filePath);

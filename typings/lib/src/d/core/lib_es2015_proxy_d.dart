@@ -52,7 +52,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   _i2.dynamic apply(
     T target,
     _i2.dynamic thisArg,
-    _i2.List /*LIST InteropStaticType.list,580256976,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,324950307,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         argArray,
   ) =>
@@ -67,7 +67,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
       );
   _i2.Object construct(
     T target,
-    _i2.List /*LIST InteropStaticType.list,577305860,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1006507221,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         argArray,
     _i2.Function newTarget,
@@ -155,7 +155,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
         'isExtensible',
         [target],
       );
-  _i2.List /*LIST InteropClass#291800405(name: List),382675463,[Instance of 'InteropRef<InteropType>']*/ <_i2.Object>
+  _i2.List /*LIST InteropClass#884072815(name: List),395088791,[Instance of 'InteropRef<InteropType>']*/ <_i2.Object>
       ownKeys(T target) => _i4.callMethod(
             this,
             'ownKeys',
@@ -227,7 +227,7 @@ extension IInline10$Typings<T extends _i2.Object> on IInline10<T> {
       );
   /* #117
   source:  revoke: () => void; */
-  // Type InteropFunction#111853158(parent: InteropGetter#87959379(name: revoke), library: lib.es2015.proxy.d.ts)
+  // Type InteropFunction#173634052(parent: InteropGetter#1015294886(name: revoke), library: lib.es2015.proxy.d.ts)
   set revoke(void Function() value) {
     _i4.setProperty(
       this,

@@ -218,7 +218,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void table([
     _i2.dynamic tabularData,
-    _i2.List /*LIST InteropStaticType.list,168919125,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,946046787,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         properties,
   ]) {
@@ -444,7 +444,7 @@ extension ClientInformationAccessor$Typings on _ClientInformationAccessor {
         'canShare',
         [data ?? _i6.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,209320149,[Instance of 'InteropRef<InteropType>']*/ <_i3.Gamepad?>
+  _i2.List /*LIST InteropStaticType.list,998107795,[Instance of 'InteropRef<InteropType>']*/ <_i3.Gamepad?>
       getGamepads() => (_i4.callMethod(
             _i5.target595,
             'getGamepads',
@@ -459,7 +459,7 @@ extension ClientInformationAccessor$Typings on _ClientInformationAccessor {
       ));
   _i2.Future<_i3.MediaKeySystemAccess> requestMediaKeySystemAccess(
     _i2.String keySystem,
-    _i2.List /*LIST InteropStaticType.list,464651018,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,864037789,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MediaKeySystemConfiguration>
         supportedConfigurations,
   ) =>
@@ -2378,7 +2378,7 @@ extension EventAccessor$Typings on _EventAccessor {
         _i5.target598,
         'BUBBLING_PHASE',
       );
-  _i2.List /*LIST InteropStaticType.list,153636615,[Instance of 'InteropRef<InteropType>']*/ <_i3.EventTarget>
+  _i2.List /*LIST InteropStaticType.list,445408783,[Instance of 'InteropRef<InteropType>']*/ <_i3.EventTarget>
       composedPath() => (_i4.callMethod(
             _i5.target598,
             'composedPath',
@@ -2710,7 +2710,7 @@ extension FrameElementAccessor$Typings on _FrameElementAccessor {
           localName,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,397459543,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,772637835,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       getAttributeNames() => (_i4.callMethod(
             _i5.target600,
             'getAttributeNames',
@@ -3653,7 +3653,7 @@ extension NavigatorAccessor$Typings on _NavigatorAccessor {
         'canShare',
         [data ?? _i6.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,209320149,[Instance of 'InteropRef<InteropType>']*/ <_i3.Gamepad?>
+  _i2.List /*LIST InteropStaticType.list,998107795,[Instance of 'InteropRef<InteropType>']*/ <_i3.Gamepad?>
       getGamepads() => (_i4.callMethod(
             _i5.target605,
             'getGamepads',
@@ -3668,7 +3668,7 @@ extension NavigatorAccessor$Typings on _NavigatorAccessor {
       ));
   _i2.Future<_i3.MediaKeySystemAccess> requestMediaKeySystemAccess(
     _i2.String keySystem,
-    _i2.List /*LIST InteropStaticType.list,464651018,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,864037789,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MediaKeySystemConfiguration>
         supportedConfigurations,
   ) =>
@@ -3859,7 +3859,7 @@ extension SpeechSynthesisAccessor$Typings on _SpeechSynthesisAccessor {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,57799908,[Instance of 'InteropRef<InteropType>']*/ <_i3.SpeechSynthesisVoice>
+  _i2.List /*LIST InteropStaticType.list,782998061,[Instance of 'InteropRef<InteropType>']*/ <_i3.SpeechSynthesisVoice>
       getVoices() => (_i4.callMethod(
             _i5.target609,
             'getVoices',
@@ -4291,7 +4291,7 @@ extension CachesAccessor$Typings on _CachesAccessor {
         [cacheName],
       ));
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,799527754,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,701677054,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.String>> keys() => _i4.promiseToFuture(_i4.callMethod(
         _i5.target614,
         'keys',
@@ -4373,7 +4373,7 @@ extension IndexedDBAccessor$Typings on _IndexedDBAccessor {
         ],
       );
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,152282320,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,813492803,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.IDBDatabaseInfo>> databases() =>
       _i4.promiseToFuture(_i4.callMethod(
         _i5.target616,
@@ -4726,7 +4726,7 @@ typedef CSSNumberish = _i2.num;
 typedef CanvasImageSource = _i2.Object;
 typedef ClipboardItemData = _i2.Future<_i2.Object>;
 typedef ClipboardItems
-    = _i2.List /*LIST InteropStaticType.list,396758474,[Instance of 'InteropRef<InteropType>']*/ <
+    = _i2.List /*LIST InteropStaticType.list,606035395,[Instance of 'InteropRef<InteropType>']*/ <
         _i3.ClipboardItem>;
 typedef ConstrainBoolean = _i2.Object;
 typedef ConstrainDOMString = _i2.Object;
@@ -4766,7 +4766,7 @@ typedef OffscreenRenderingContext = _i2.Object;
 typedef OnBeforeUnloadEventHandler = _i3.OnBeforeUnloadEventHandlerNonNull?;
 typedef OnErrorEventHandler = _i3.OnErrorEventHandlerNonNull?;
 typedef PerformanceEntryList
-    = _i2.List /*LIST InteropStaticType.list,388833209,[Instance of 'InteropRef<InteropType>']*/ <
+    = _i2.List /*LIST InteropStaticType.list,492276369,[Instance of 'InteropRef<InteropType>']*/ <
         _i3.PerformanceEntry>;
 typedef ReadableStreamController<T> = _i2.Object;
 typedef ReadableStreamReadResult<T>
@@ -6999,7 +6999,7 @@ extension AesCbcParams$Typings on AesCbcParams {
   /* #30
   source: 
     iv: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set iv(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -7042,7 +7042,7 @@ extension AesCtrParams$Typings on AesCtrParams {
   /* #34
   source: 
     counter: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set counter(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -7147,7 +7147,7 @@ extension AesGcmParams$Typings on AesGcmParams {
   /* #43
   source: 
     additionalData?: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set additionalData(_i3.BufferSource? value) {
     _i4.setProperty(
       this,
@@ -7166,7 +7166,7 @@ extension AesGcmParams$Typings on AesGcmParams {
   /* #44
   source: 
     iv: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set iv(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -7548,7 +7548,7 @@ extension AnimationPlaybackEventInit$Typings on AnimationPlaybackEventInit {
   /* #74
   source: 
     currentTime?: CSSNumberish | null; */
-  // Type InteropUnion#755603817(parent: InteropGetter#990551474(name: currentTime))
+  // Type InteropUnion#62474750(parent: InteropGetter#93379455(name: currentTime))
   set currentTime(_i3.CSSNumberish? value) {
     _i4.setProperty(
       this,
@@ -7567,7 +7567,7 @@ extension AnimationPlaybackEventInit$Typings on AnimationPlaybackEventInit {
   /* #75
   source: 
     timelineTime?: CSSNumberish | null; */
-  // Type InteropUnion#950459861(parent: InteropGetter#760677562(name: timelineTime))
+  // Type InteropUnion#520587201(parent: InteropGetter#692359679(name: timelineTime))
   set timelineTime(_i3.CSSNumberish? value) {
     _i4.setProperty(
       this,
@@ -7731,7 +7731,7 @@ extension AudioBufferSourceOptions$Typings on AudioBufferSourceOptions {
   /* #89
   source: 
     buffer?: AudioBuffer | null; */
-  // Type InteropUnion#1005323259(parent: InteropGetter#422388212(name: buffer))
+  // Type InteropUnion#341239809(parent: InteropGetter#935476096(name: buffer))
   set buffer(_i3.AudioBuffer? value) {
     _i4.setProperty(
       this,
@@ -7991,7 +7991,7 @@ extension AudioContextOptions$Typings on AudioContextOptions {
   /* #106
   source: 
     latencyHint?: AudioContextLatencyCategory | number; */
-  // Type InteropUnion#318480545(parent: InteropGetter#816644722(name: latencyHint))
+  // Type InteropUnion#538598836(parent: InteropGetter#936829003(name: latencyHint))
   set latencyHint(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -8077,7 +8077,7 @@ extension AudioNodeOptions$Typings on AudioNodeOptions {
   /* #112
   source: 
     channelCountMode?: ChannelCountMode; */
-  // Type InteropTypedef#989503846(name: ChannelCountMode)
+  // Type InteropTypedef#85497763(name: ChannelCountMode)
   set channelCountMode(_i3.ChannelCountMode? value) {
     _i4.setProperty(
       this,
@@ -8100,7 +8100,7 @@ extension AudioNodeOptions$Typings on AudioNodeOptions {
   /* #113
   source: 
     channelInterpretation?: ChannelInterpretation; */
-  // Type InteropTypedef#226219660(name: ChannelInterpretation)
+  // Type InteropTypedef#220867209(name: ChannelInterpretation)
   set channelInterpretation(_i3.ChannelInterpretation? value) {
     _i4.setProperty(
       this,
@@ -8249,7 +8249,7 @@ extension AudioTimestamp$Typings on AudioTimestamp {
   /* #124
   source: 
     performanceTime?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set performanceTime(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -8277,7 +8277,7 @@ class AudioWorkletNodeOptions implements _i3.AudioNodeOptions {
   factory AudioWorkletNodeOptions({
     _i2.num? numberOfInputs,
     _i2.num? numberOfOutputs,
-    _i2.List /*LIST InteropStaticType.list,372018233,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,591011992,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.num>?
         outputChannelCount,
     _i7.Record<_i2.String, _i2.num>? parameterData,
@@ -8342,7 +8342,7 @@ extension AudioWorkletNodeOptions$Typings on AudioWorkletNodeOptions {
   /* #130
   source: 
     outputChannelCount?: number[]; */
-  _i2.List /*LIST InteropStaticType.list,372018233,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>?
+  _i2.List /*LIST InteropStaticType.list,591011992,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>?
       get outputChannelCount => (_i4.getProperty(
             this,
             'outputChannelCount',
@@ -8353,7 +8353,7 @@ extension AudioWorkletNodeOptions$Typings on AudioWorkletNodeOptions {
     outputChannelCount?: number[]; */
   // Type InteropStaticType.list
   set outputChannelCount(
-      _i2.List /*LIST InteropStaticType.list,372018233,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,591011992,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.num>?
           value) {
     _i4.setProperty(
@@ -8373,7 +8373,7 @@ extension AudioWorkletNodeOptions$Typings on AudioWorkletNodeOptions {
   /* #131
   source: 
     parameterData?: Record<string, number>; */
-  // Type InteropTypedef#188881979(name: Record)
+  // Type InteropTypedef#430466220(name: Record)
   set parameterData(_i7.Record<_i2.String, _i2.num>? value) {
     _i4.setProperty(
       this,
@@ -8609,7 +8609,7 @@ extension AuthenticatorSelectionCriteria$Typings
   /* #148
   source: 
     authenticatorAttachment?: AuthenticatorAttachment; */
-  // Type InteropTypedef#994707520(name: AuthenticatorAttachment)
+  // Type InteropTypedef#890319983(name: AuthenticatorAttachment)
   set authenticatorAttachment(_i3.AuthenticatorAttachment? value) {
     _i4.setProperty(
       this,
@@ -8650,7 +8650,7 @@ extension AuthenticatorSelectionCriteria$Typings
   /* #150
   source: 
     residentKey?: ResidentKeyRequirement; */
-  // Type InteropTypedef#602441738(name: ResidentKeyRequirement)
+  // Type InteropTypedef#407768947(name: ResidentKeyRequirement)
   set residentKey(_i3.ResidentKeyRequirement? value) {
     _i4.setProperty(
       this,
@@ -8674,7 +8674,7 @@ extension AuthenticatorSelectionCriteria$Typings
   /* #151
   source: 
     userVerification?: UserVerificationRequirement; */
-  // Type InteropTypedef#1046483473(name: UserVerificationRequirement)
+  // Type InteropTypedef#169270931(name: UserVerificationRequirement)
   set userVerification(_i3.UserVerificationRequirement? value) {
     _i4.setProperty(
       this,
@@ -8813,7 +8813,7 @@ extension BiquadFilterOptions$Typings on BiquadFilterOptions {
   /* #159
   source: 
     type?: BiquadFilterType; */
-  // Type InteropTypedef#78670960(name: BiquadFilterType)
+  // Type InteropTypedef#831716766(name: BiquadFilterType)
   set type(_i3.BiquadFilterType? value) {
     _i4.setProperty(
       this,
@@ -8872,7 +8872,7 @@ extension BlobEventInit$Typings on BlobEventInit {
   /* #164
   source: 
     timecode?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set timecode(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -8915,7 +8915,7 @@ extension BlobPropertyBag$Typings on BlobPropertyBag {
   /* #168
   source: 
     endings?: EndingType; */
-  // Type InteropTypedef#549551280(name: EndingType)
+  // Type InteropTypedef#795790290(name: EndingType)
   set endings(_i3.EndingType? value) {
     _i4.setProperty(
       this,
@@ -9015,7 +9015,7 @@ extension CSSStyleSheetInit$Typings on CSSStyleSheetInit {
   /* #175
   source: 
     media?: MediaList | string; */
-  // Type InteropUnion#985500333(parent: InteropGetter#896034436(name: media))
+  // Type InteropUnion#805736159(parent: InteropGetter#478222978(name: media))
   set media(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -9165,7 +9165,7 @@ extension CanvasRenderingContext2DSettings$Typings
   /* #186
   source: 
     colorSpace?: PredefinedColorSpace; */
-  // Type InteropTypedef#301469201(name: PredefinedColorSpace)
+  // Type InteropTypedef#250289665(name: PredefinedColorSpace)
   set colorSpace(_i3.PredefinedColorSpace? value) {
     _i4.setProperty(
       this,
@@ -9420,7 +9420,7 @@ extension ClientQueryOptions$Typings on ClientQueryOptions {
   /* #206
   source: 
     type?: ClientTypes; */
-  // Type InteropTypedef#940879679(name: ClientTypes)
+  // Type InteropTypedef#318911555(name: ClientTypes)
   set type(_i3.ClientTypes? value) {
     _i4.setProperty(
       this,
@@ -9466,7 +9466,7 @@ extension ClipboardEventInit$Typings on ClipboardEventInit {
   /* #210
   source: 
     clipboardData?: DataTransfer | null; */
-  // Type InteropUnion#591091898(parent: InteropGetter#40209732(name: clipboardData))
+  // Type InteropUnion#1016394165(parent: InteropGetter#730914725(name: clipboardData))
   set clipboardData(_i3.DataTransfer? value) {
     _i4.setProperty(
       this,
@@ -9502,7 +9502,7 @@ extension ClipboardItemOptions$Typings on ClipboardItemOptions {
   /* #214
   source: 
     presentationStyle?: PresentationStyle; */
-  // Type InteropTypedef#430711715(name: PresentationStyle)
+  // Type InteropTypedef#947617303(name: PresentationStyle)
   set presentationStyle(_i3.PresentationStyle? value) {
     _i4.setProperty(
       this,
@@ -9717,7 +9717,7 @@ extension ComputedEffectTiming$Typings on ComputedEffectTiming {
   /* #228
   source: 
     activeDuration?: CSSNumberish; */
-  // Type InteropTypedef#795901438(name: CSSNumberish)
+  // Type InteropTypedef#220920917(name: CSSNumberish)
   set activeDuration(_i3.CSSNumberish? value) {
     _i4.setProperty(
       this,
@@ -9736,7 +9736,7 @@ extension ComputedEffectTiming$Typings on ComputedEffectTiming {
   /* #229
   source: 
     currentIteration?: number | null; */
-  // Type InteropUnion#951955330(parent: InteropGetter#439861548(name: currentIteration))
+  // Type InteropUnion#1028073555(parent: InteropGetter#327863985(name: currentIteration))
   set currentIteration(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -9755,7 +9755,7 @@ extension ComputedEffectTiming$Typings on ComputedEffectTiming {
   /* #230
   source: 
     endTime?: CSSNumberish; */
-  // Type InteropTypedef#795901438(name: CSSNumberish)
+  // Type InteropTypedef#220920917(name: CSSNumberish)
   set endTime(_i3.CSSNumberish? value) {
     _i4.setProperty(
       this,
@@ -9774,7 +9774,7 @@ extension ComputedEffectTiming$Typings on ComputedEffectTiming {
   /* #231
   source: 
     localTime?: CSSNumberish | null; */
-  // Type InteropUnion#556877679(parent: InteropGetter#491340177(name: localTime))
+  // Type InteropUnion#170994274(parent: InteropGetter#601961148(name: localTime))
   set localTime(_i3.CSSNumberish? value) {
     _i4.setProperty(
       this,
@@ -9793,7 +9793,7 @@ extension ComputedEffectTiming$Typings on ComputedEffectTiming {
   /* #232
   source: 
     progress?: number | null; */
-  // Type InteropUnion#439845296(parent: InteropGetter#252786572(name: progress))
+  // Type InteropUnion#889019880(parent: InteropGetter#468800094(name: progress))
   set progress(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -9812,7 +9812,7 @@ extension ComputedEffectTiming$Typings on ComputedEffectTiming {
   /* #233
   source: 
     startTime?: CSSNumberish; */
-  // Type InteropTypedef#795901438(name: CSSNumberish)
+  // Type InteropTypedef#220920917(name: CSSNumberish)
   set startTime(_i3.CSSNumberish? value) {
     _i4.setProperty(
       this,
@@ -9838,7 +9838,7 @@ extension ComputedKeyframe$Typings on ComputedKeyframe {
   /* #237
   source: 
     composite: CompositeOperationOrAuto; */
-  // Type InteropTypedef#569445556(name: CompositeOperationOrAuto)
+  // Type InteropTypedef#851075691(name: CompositeOperationOrAuto)
   set composite(_i3.CompositeOperationOrAuto value) {
     _i4.setProperty(
       this,
@@ -9895,7 +9895,7 @@ extension ComputedKeyframe$Typings on ComputedKeyframe {
   /* #240
   source: 
     offset: number | null; */
-  // Type InteropUnion#25084386(parent: InteropGetter#256974839(name: offset))
+  // Type InteropUnion#959675269(parent: InteropGetter#605901888(name: offset))
   set offset(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -10040,7 +10040,7 @@ extension ConstrainDOMStringParameters$Typings on ConstrainDOMStringParameters {
   /* #254
   source: 
     exact?: string | string[]; */
-  // Type InteropUnion#75311833(parent: InteropGetter#778183664(name: exact))
+  // Type InteropUnion#231654182(parent: InteropGetter#779983960(name: exact))
   set exact(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -10059,7 +10059,7 @@ extension ConstrainDOMStringParameters$Typings on ConstrainDOMStringParameters {
   /* #255
   source: 
     ideal?: string | string[]; */
-  // Type InteropUnion#106375200(parent: InteropGetter#628330815(name: ideal))
+  // Type InteropUnion#103933198(parent: InteropGetter#526725018(name: ideal))
   set ideal(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -10240,7 +10240,7 @@ extension ConvolverOptions$Typings on ConvolverOptions {
   /* #269
   source: 
     buffer?: AudioBuffer | null; */
-  // Type InteropUnion#261215760(parent: InteropGetter#636433662(name: buffer))
+  // Type InteropUnion#645403007(parent: InteropGetter#541775332(name: buffer))
   set buffer(_i3.AudioBuffer? value) {
     _i4.setProperty(
       this,
@@ -10396,7 +10396,7 @@ extension CredentialRequestOptions$Typings on CredentialRequestOptions {
   /* #283
   source: 
     mediation?: CredentialMediationRequirement; */
-  // Type InteropTypedef#539326270(name: CredentialMediationRequirement)
+  // Type InteropTypedef#637050094(name: CredentialMediationRequirement)
   set mediation(_i3.CredentialMediationRequirement? value) {
     _i4.setProperty(
       this,
@@ -11534,7 +11534,7 @@ extension DeviceMotionEventAccelerationInit$Typings
   /* #353
   source: 
     x?: number | null; */
-  // Type InteropUnion#760684853(parent: InteropGetter#621075736(name: x))
+  // Type InteropUnion#118697069(parent: InteropGetter#905345138(name: x))
   set x(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11553,7 +11553,7 @@ extension DeviceMotionEventAccelerationInit$Typings
   /* #354
   source: 
     y?: number | null; */
-  // Type InteropUnion#995966420(parent: InteropGetter#204197115(name: y))
+  // Type InteropUnion#597018205(parent: InteropGetter#910473458(name: y))
   set y(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11572,7 +11572,7 @@ extension DeviceMotionEventAccelerationInit$Typings
   /* #355
   source: 
     z?: number | null; */
-  // Type InteropUnion#394822142(parent: InteropGetter#865682848(name: z))
+  // Type InteropUnion#2877652(parent: InteropGetter#39343381(name: z))
   set z(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11731,7 +11731,7 @@ extension DeviceMotionEventRotationRateInit$Typings
   /* #366
   source: 
     alpha?: number | null; */
-  // Type InteropUnion#608570713(parent: InteropGetter#204014580(name: alpha))
+  // Type InteropUnion#117636699(parent: InteropGetter#951654144(name: alpha))
   set alpha(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11750,7 +11750,7 @@ extension DeviceMotionEventRotationRateInit$Typings
   /* #367
   source: 
     beta?: number | null; */
-  // Type InteropUnion#691680065(parent: InteropGetter#127576981(name: beta))
+  // Type InteropUnion#196778012(parent: InteropGetter#936932983(name: beta))
   set beta(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11769,7 +11769,7 @@ extension DeviceMotionEventRotationRateInit$Typings
   /* #368
   source: 
     gamma?: number | null; */
-  // Type InteropUnion#358421159(parent: InteropGetter#253351302(name: gamma))
+  // Type InteropUnion#321504786(parent: InteropGetter#122010692(name: gamma))
   set gamma(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11843,7 +11843,7 @@ extension DeviceOrientationEventInit$Typings on DeviceOrientationEventInit {
   /* #373
   source: 
     alpha?: number | null; */
-  // Type InteropUnion#947189522(parent: InteropGetter#381593833(name: alpha))
+  // Type InteropUnion#983819470(parent: InteropGetter#728286833(name: alpha))
   set alpha(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11862,7 +11862,7 @@ extension DeviceOrientationEventInit$Typings on DeviceOrientationEventInit {
   /* #374
   source: 
     beta?: number | null; */
-  // Type InteropUnion#161501096(parent: InteropGetter#816440377(name: beta))
+  // Type InteropUnion#534918193(parent: InteropGetter#744432746(name: beta))
   set beta(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11881,7 +11881,7 @@ extension DeviceOrientationEventInit$Typings on DeviceOrientationEventInit {
   /* #375
   source: 
     gamma?: number | null; */
-  // Type InteropUnion#35599775(parent: InteropGetter#478642562(name: gamma))
+  // Type InteropUnion#277296708(parent: InteropGetter#495747801(name: gamma))
   set gamma(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11921,7 +11921,7 @@ extension DisplayMediaStreamOptions$Typings on DisplayMediaStreamOptions {
   /* #379
   source: 
     audio?: boolean | MediaTrackConstraints; */
-  // Type InteropUnion#876472514(parent: InteropGetter#930077035(name: audio))
+  // Type InteropUnion#660111168(parent: InteropGetter#590425178(name: audio))
   set audio(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -11940,7 +11940,7 @@ extension DisplayMediaStreamOptions$Typings on DisplayMediaStreamOptions {
   /* #380
   source: 
     video?: boolean | MediaTrackConstraints; */
-  // Type InteropUnion#458839864(parent: InteropGetter#290950525(name: video))
+  // Type InteropUnion#811920274(parent: InteropGetter#1047969152(name: video))
   set video(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -11972,7 +11972,7 @@ extension DocumentTimelineOptions$Typings on DocumentTimelineOptions {
   /* #384
   source: 
     originTime?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set originTime(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -12095,7 +12095,7 @@ extension DragEventInit$Typings on DragEventInit {
   /* #393
   source: 
     dataTransfer?: DataTransfer | null; */
-  // Type InteropUnion#780485977(parent: InteropGetter#697015210(name: dataTransfer))
+  // Type InteropUnion#994161141(parent: InteropGetter#837860031(name: dataTransfer))
   set dataTransfer(_i3.DataTransfer? value) {
     _i4.setProperty(
       this,
@@ -12271,7 +12271,7 @@ extension EcKeyAlgorithm$Typings on EcKeyAlgorithm {
   /* #405
   source: 
     namedCurve: NamedCurve; */
-  // Type InteropTypedef#860877957(name: NamedCurve)
+  // Type InteropTypedef#734005303(name: NamedCurve)
   set namedCurve(_i3.NamedCurve value) {
     _i4.setProperty(
       this,
@@ -12311,7 +12311,7 @@ extension EcKeyGenParams$Typings on EcKeyGenParams {
   /* #409
   source: 
     namedCurve: NamedCurve; */
-  // Type InteropTypedef#860877957(name: NamedCurve)
+  // Type InteropTypedef#734005303(name: NamedCurve)
   set namedCurve(_i3.NamedCurve value) {
     _i4.setProperty(
       this,
@@ -12351,7 +12351,7 @@ extension EcKeyImportParams$Typings on EcKeyImportParams {
   /* #413
   source: 
     namedCurve: NamedCurve; */
-  // Type InteropTypedef#860877957(name: NamedCurve)
+  // Type InteropTypedef#734005303(name: NamedCurve)
   set namedCurve(_i3.NamedCurve value) {
     _i4.setProperty(
       this,
@@ -12431,7 +12431,7 @@ extension EcdsaParams$Typings on EcdsaParams {
   /* #421
   source: 
     hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#1015774708(name: HashAlgorithmIdentifier)
+  // Type InteropTypedef#75209943(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -12514,7 +12514,7 @@ extension EffectTiming$Typings on EffectTiming {
   /* #426
   source: 
     direction?: PlaybackDirection; */
-  // Type InteropTypedef#637405757(name: PlaybackDirection)
+  // Type InteropTypedef#261717340(name: PlaybackDirection)
   set direction(_i3.PlaybackDirection? value) {
     _i4.setProperty(
       this,
@@ -12533,7 +12533,7 @@ extension EffectTiming$Typings on EffectTiming {
   /* #427
   source: 
     duration?: number | string; */
-  // Type InteropUnion#796419334(parent: InteropGetter#439008285(name: duration))
+  // Type InteropUnion#89024777(parent: InteropGetter#597297456(name: duration))
   set duration(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -12593,7 +12593,7 @@ extension EffectTiming$Typings on EffectTiming {
   /* #430
   source: 
     fill?: FillMode; */
-  // Type InteropTypedef#758689521(name: FillMode)
+  // Type InteropTypedef#1065874129(name: FillMode)
   set fill(_i3.FillMode? value) {
     _i4.setProperty(
       this,
@@ -13563,7 +13563,7 @@ extension FocusEventInit$Typings on FocusEventInit {
   /* #505
   source: 
     relatedTarget?: EventTarget | null; */
-  // Type InteropUnion#29183394(parent: InteropGetter#694095167(name: relatedTarget))
+  // Type InteropUnion#625914018(parent: InteropGetter#405988695(name: relatedTarget))
   set relatedTarget(_i3.EventTarget? value) {
     _i4.setProperty(
       this,
@@ -13699,7 +13699,7 @@ extension FontFaceDescriptors$Typings on FontFaceDescriptors {
   /* #515
   source: 
     display?: FontDisplay; */
-  // Type InteropTypedef#601950385(name: FontDisplay)
+  // Type InteropTypedef#180654085(name: FontDisplay)
   set display(_i3.FontDisplay? value) {
     _i4.setProperty(
       this,
@@ -13854,7 +13854,7 @@ class FontFaceSetLoadEventInit implements _i3.EventInit {
   });
 
   factory FontFaceSetLoadEventInit({
-    _i2.List /*LIST InteropStaticType.list,315223768,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,42772253,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.FontFace>?
         fontfaces,
     _i2.bool? bubbles,
@@ -13873,7 +13873,7 @@ extension FontFaceSetLoadEventInit$Typings on FontFaceSetLoadEventInit {
   /* #526
   source: 
     fontfaces?: FontFace[]; */
-  _i2.List /*LIST InteropStaticType.list,315223768,[Instance of 'InteropRef<InteropType>']*/ <_i3.FontFace>?
+  _i2.List /*LIST InteropStaticType.list,42772253,[Instance of 'InteropRef<InteropType>']*/ <_i3.FontFace>?
       get fontfaces => (_i4.getProperty(
             this,
             'fontfaces',
@@ -13884,7 +13884,7 @@ extension FontFaceSetLoadEventInit$Typings on FontFaceSetLoadEventInit {
     fontfaces?: FontFace[]; */
   // Type InteropStaticType.list
   set fontfaces(
-      _i2.List /*LIST InteropStaticType.list,315223768,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,42772253,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.FontFace>?
           value) {
     _i4.setProperty(
@@ -13966,7 +13966,7 @@ extension FullscreenOptions$Typings on FullscreenOptions {
   /* #534
   source: 
     navigationUI?: FullscreenNavigationUI; */
-  // Type InteropTypedef#663922996(name: FullscreenNavigationUI)
+  // Type InteropTypedef#916658623(name: FullscreenNavigationUI)
   set navigationUI(_i3.FullscreenNavigationUI? value) {
     _i4.setProperty(
       this,
@@ -14267,7 +14267,7 @@ extension HkdfParams$Typings on HkdfParams {
   /* #563
   source: 
     hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#1015774708(name: HashAlgorithmIdentifier)
+  // Type InteropTypedef#75209943(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -14286,7 +14286,7 @@ extension HkdfParams$Typings on HkdfParams {
   /* #564
   source: 
     info: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set info(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -14305,7 +14305,7 @@ extension HkdfParams$Typings on HkdfParams {
   /* #565
   source: 
     salt: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set salt(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -14348,7 +14348,7 @@ extension HmacImportParams$Typings on HmacImportParams {
   /* #569
   source: 
     hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#1015774708(name: HashAlgorithmIdentifier)
+  // Type InteropTypedef#75209943(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -14472,7 +14472,7 @@ extension HmacKeyGenParams$Typings on HmacKeyGenParams {
   /* #579
   source: 
     hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#1015774708(name: HashAlgorithmIdentifier)
+  // Type InteropTypedef#75209943(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -14668,7 +14668,7 @@ extension IDBObjectStoreParameters$Typings on IDBObjectStoreParameters {
   /* #595
   source: 
     keyPath?: string | string[] | null; */
-  // Type InteropUnion#242120450(parent: InteropGetter#620403616(name: keyPath))
+  // Type InteropUnion#783274742(parent: InteropGetter#433784971(name: keyPath))
   set keyPath(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -14703,7 +14703,7 @@ extension IDBTransactionOptions$Typings on IDBTransactionOptions {
   /* #599
   source: 
     durability?: IDBTransactionDurability; */
-  // Type InteropTypedef#757854176(name: IDBTransactionDurability)
+  // Type InteropTypedef#646293044(name: IDBTransactionDurability)
   set durability(_i3.IDBTransactionDurability? value) {
     _i4.setProperty(
       this,
@@ -14752,7 +14752,7 @@ extension IDBVersionChangeEventInit$Typings on IDBVersionChangeEventInit {
   /* #603
   source: 
     newVersion?: number | null; */
-  // Type InteropUnion#508144771(parent: InteropGetter#793339292(name: newVersion))
+  // Type InteropUnion#929647245(parent: InteropGetter#934232924(name: newVersion))
   set newVersion(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -14794,10 +14794,10 @@ class IIRFilterOptions implements _i3.AudioNodeOptions {
   });
 
   factory IIRFilterOptions({
-    required _i2.List /*LIST InteropStaticType.list,604237148,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,215092597,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.num>
         feedback,
-    required _i2.List /*LIST InteropStaticType.list,1066043982,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,625405211,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.num>
         feedforward,
     _i2.num? channelCount,
@@ -14819,7 +14819,7 @@ extension IIRFilterOptions$Typings on IIRFilterOptions {
   /* #608
   source: 
     feedback: number[]; */
-  _i2.List /*LIST InteropStaticType.list,604237148,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>
+  _i2.List /*LIST InteropStaticType.list,215092597,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>
       get feedback => (_i4.getProperty(
             this,
             'feedback',
@@ -14830,7 +14830,7 @@ extension IIRFilterOptions$Typings on IIRFilterOptions {
     feedback: number[]; */
   // Type InteropStaticType.list
   set feedback(
-      _i2.List /*LIST InteropStaticType.list,604237148,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,215092597,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.num>
           value) {
     _i4.setProperty(
@@ -14843,7 +14843,7 @@ extension IIRFilterOptions$Typings on IIRFilterOptions {
   /* #609
   source: 
     feedforward: number[]; */
-  _i2.List /*LIST InteropStaticType.list,1066043982,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>
+  _i2.List /*LIST InteropStaticType.list,625405211,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>
       get feedforward => (_i4.getProperty(
             this,
             'feedforward',
@@ -14854,7 +14854,7 @@ extension IIRFilterOptions$Typings on IIRFilterOptions {
     feedforward: number[]; */
   // Type InteropStaticType.list
   set feedforward(
-      _i2.List /*LIST InteropStaticType.list,1066043982,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,625405211,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.num>
           value) {
     _i4.setProperty(
@@ -14944,7 +14944,7 @@ extension ImageBitmapOptions$Typings on ImageBitmapOptions {
   /* #617
   source: 
     colorSpaceConversion?: ColorSpaceConversion; */
-  // Type InteropTypedef#602325086(name: ColorSpaceConversion)
+  // Type InteropTypedef#972256162(name: ColorSpaceConversion)
   set colorSpaceConversion(_i3.ColorSpaceConversion? value) {
     _i4.setProperty(
       this,
@@ -14966,7 +14966,7 @@ extension ImageBitmapOptions$Typings on ImageBitmapOptions {
   /* #618
   source: 
     imageOrientation?: ImageOrientation; */
-  // Type InteropTypedef#310722950(name: ImageOrientation)
+  // Type InteropTypedef#296515586(name: ImageOrientation)
   set imageOrientation(_i3.ImageOrientation? value) {
     _i4.setProperty(
       this,
@@ -14988,7 +14988,7 @@ extension ImageBitmapOptions$Typings on ImageBitmapOptions {
   /* #619
   source: 
     premultiplyAlpha?: PremultiplyAlpha; */
-  // Type InteropTypedef#924416554(name: PremultiplyAlpha)
+  // Type InteropTypedef#430852653(name: PremultiplyAlpha)
   set premultiplyAlpha(_i3.PremultiplyAlpha? value) {
     _i4.setProperty(
       this,
@@ -15029,7 +15029,7 @@ extension ImageBitmapOptions$Typings on ImageBitmapOptions {
   /* #621
   source: 
     resizeQuality?: ResizeQuality; */
-  // Type InteropTypedef#656349302(name: ResizeQuality)
+  // Type InteropTypedef#667667235(name: ResizeQuality)
   set resizeQuality(_i3.ResizeQuality? value) {
     _i4.setProperty(
       this,
@@ -15115,7 +15115,7 @@ extension ImageDataSettings$Typings on ImageDataSettings {
   /* #630
   source: 
     colorSpace?: PredefinedColorSpace; */
-  // Type InteropTypedef#301469201(name: PredefinedColorSpace)
+  // Type InteropTypedef#250289665(name: PredefinedColorSpace)
   set colorSpace(_i3.PredefinedColorSpace? value) {
     _i4.setProperty(
       this,
@@ -15204,7 +15204,7 @@ class InputEventInit implements _i3.UIEventInit {
     _i3.DataTransfer? dataTransfer,
     _i2.String? inputType,
     _i2.bool? isComposing,
-    _i2.List /*LIST InteropStaticType.list,653963832,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,629137614,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.StaticRange>?
         targetRanges,
     _i2.num? detail,
@@ -15234,7 +15234,7 @@ extension InputEventInit$Typings on InputEventInit {
   /* #643
   source: 
     data?: string | null; */
-  // Type InteropUnion#236173359(parent: InteropGetter#253517845(name: data))
+  // Type InteropUnion#526156206(parent: InteropGetter#206378857(name: data))
   set data(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -15253,7 +15253,7 @@ extension InputEventInit$Typings on InputEventInit {
   /* #644
   source: 
     dataTransfer?: DataTransfer | null; */
-  // Type InteropUnion#294710595(parent: InteropGetter#869152264(name: dataTransfer))
+  // Type InteropUnion#387492260(parent: InteropGetter#594997743(name: dataTransfer))
   set dataTransfer(_i3.DataTransfer? value) {
     _i4.setProperty(
       this,
@@ -15303,7 +15303,7 @@ extension InputEventInit$Typings on InputEventInit {
   /* #647
   source: 
     targetRanges?: StaticRange[]; */
-  _i2.List /*LIST InteropStaticType.list,653963832,[Instance of 'InteropRef<InteropType>']*/ <_i3.StaticRange>?
+  _i2.List /*LIST InteropStaticType.list,629137614,[Instance of 'InteropRef<InteropType>']*/ <_i3.StaticRange>?
       get targetRanges => (_i4.getProperty(
             this,
             'targetRanges',
@@ -15314,7 +15314,7 @@ extension InputEventInit$Typings on InputEventInit {
     targetRanges?: StaticRange[]; */
   // Type InteropStaticType.list
   set targetRanges(
-      _i2.List /*LIST InteropStaticType.list,653963832,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,629137614,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.StaticRange>?
           value) {
     _i4.setProperty(
@@ -15447,7 +15447,7 @@ extension IntersectionObserverEntryInit$Typings
   /* #655
   source: 
     rootBounds: DOMRectInit | null; */
-  // Type InteropUnion#380508031(parent: InteropGetter#877144251(name: rootBounds))
+  // Type InteropUnion#524338431(parent: InteropGetter#499365720(name: rootBounds))
   set rootBounds(_i3.DOMRectInit? value) {
     _i4.setProperty(
       this,
@@ -15485,7 +15485,7 @@ extension IntersectionObserverEntryInit$Typings
   /* #657
   source: 
     time: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set time(_i3.DOMHighResTimeStamp value) {
     _i4.setProperty(
       this,
@@ -15528,7 +15528,7 @@ extension IntersectionObserverInit$Typings on IntersectionObserverInit {
   /* #661
   source: 
     root?: Element | Document | null; */
-  // Type InteropUnion#804894621(parent: InteropGetter#279270073(name: root))
+  // Type InteropUnion#422715223(parent: InteropGetter#958043680(name: root))
   set root(_i3.Node? value) {
     _i4.setProperty(
       this,
@@ -15566,7 +15566,7 @@ extension IntersectionObserverInit$Typings on IntersectionObserverInit {
   /* #663
   source: 
     threshold?: number | number[]; */
-  // Type InteropUnion#878081650(parent: InteropGetter#265499306(name: threshold))
+  // Type InteropUnion#167525827(parent: InteropGetter#277016527(name: threshold))
   set threshold(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -15610,12 +15610,12 @@ class JsonWebKey {
     _i2.String? e,
     _i2.bool? ext,
     _i2.String? k,
-    _i2.List /*LIST InteropStaticType.list,433546539,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,469784147,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         keyOps,
     _i2.String? kty,
     _i2.String? n,
-    _i2.List /*LIST InteropStaticType.list,560730322,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,533940077,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RsaOtherPrimesInfo>?
         oth,
     _i2.String? p,
@@ -15803,7 +15803,7 @@ extension JsonWebKey$Typings on JsonWebKey {
   /* #675
   source: 
     key_ops?: string[]; */
-  _i2.List /*LIST InteropStaticType.list,433546539,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
+  _i2.List /*LIST InteropStaticType.list,469784147,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
       get keyOps => (_i4.getProperty(
             this,
             'key_ops',
@@ -15814,7 +15814,7 @@ extension JsonWebKey$Typings on JsonWebKey {
     key_ops?: string[]; */
   // Type InteropStaticType.list
   set keyOps(
-      _i2.List /*LIST InteropStaticType.list,433546539,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,469784147,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.String>?
           value) {
     _i4.setProperty(
@@ -15865,7 +15865,7 @@ extension JsonWebKey$Typings on JsonWebKey {
   /* #678
   source: 
     oth?: RsaOtherPrimesInfo[]; */
-  _i2.List /*LIST InteropStaticType.list,560730322,[Instance of 'InteropRef<InteropType>']*/ <_i3.RsaOtherPrimesInfo>?
+  _i2.List /*LIST InteropStaticType.list,533940077,[Instance of 'InteropRef<InteropType>']*/ <_i3.RsaOtherPrimesInfo>?
       get oth => (_i4.getProperty(
             this,
             'oth',
@@ -15876,7 +15876,7 @@ extension JsonWebKey$Typings on JsonWebKey {
     oth?: RsaOtherPrimesInfo[]; */
   // Type InteropStaticType.list
   set oth(
-      _i2.List /*LIST InteropStaticType.list,560730322,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,533940077,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RsaOtherPrimesInfo>?
           value) {
     _i4.setProperty(
@@ -16267,7 +16267,7 @@ extension Keyframe$Typings on Keyframe {
   /* #704
   source: 
     composite?: CompositeOperationOrAuto; */
-  // Type InteropTypedef#569445556(name: CompositeOperationOrAuto)
+  // Type InteropTypedef#851075691(name: CompositeOperationOrAuto)
   set composite(_i3.CompositeOperationOrAuto? value) {
     _i4.setProperty(
       this,
@@ -16305,7 +16305,7 @@ extension Keyframe$Typings on Keyframe {
   /* #706
   source: 
     offset?: number | null; */
-  // Type InteropUnion#961186697(parent: InteropGetter#99910146(name: offset))
+  // Type InteropUnion#242494235(parent: InteropGetter#460428795(name: offset))
   set offset(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -16441,7 +16441,7 @@ extension KeyframeEffectOptions$Typings on KeyframeEffectOptions {
   /* #715
   source: 
     composite?: CompositeOperation; */
-  // Type InteropTypedef#928580075(name: CompositeOperation)
+  // Type InteropTypedef#401455404(name: CompositeOperation)
   set composite(_i3.CompositeOperation? value) {
     _i4.setProperty(
       this,
@@ -16465,7 +16465,7 @@ extension KeyframeEffectOptions$Typings on KeyframeEffectOptions {
   /* #716
   source: 
     iterationComposite?: IterationCompositeOperation; */
-  // Type InteropTypedef#842427747(name: IterationCompositeOperation)
+  // Type InteropTypedef#299893068(name: IterationCompositeOperation)
   set iterationComposite(_i3.IterationCompositeOperation? value) {
     _i4.setProperty(
       this,
@@ -16484,7 +16484,7 @@ extension KeyframeEffectOptions$Typings on KeyframeEffectOptions {
   /* #717
   source: 
     pseudoElement?: string | null; */
-  // Type InteropUnion#799240312(parent: InteropGetter#271596490(name: pseudoElement))
+  // Type InteropUnion#406502166(parent: InteropGetter#300754912(name: pseudoElement))
   set pseudoElement(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -16549,7 +16549,7 @@ extension LockInfo$Typings on LockInfo {
   /* #722
   source: 
     mode?: LockMode; */
-  // Type InteropTypedef#928152807(name: LockMode)
+  // Type InteropTypedef#498063430(name: LockMode)
   set mode(_i3.LockMode? value) {
     _i4.setProperty(
       this,
@@ -16588,10 +16588,10 @@ class LockManagerSnapshot {
   });
 
   factory LockManagerSnapshot({
-    _i2.List /*LIST InteropStaticType.list,688519371,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,791377711,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.LockInfo>?
         held,
-    _i2.List /*LIST InteropStaticType.list,571038804,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1035223357,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.LockInfo>?
         pending,
   }) =>
@@ -16605,7 +16605,7 @@ extension LockManagerSnapshot$Typings on LockManagerSnapshot {
   /* #727
   source: 
     held?: LockInfo[]; */
-  _i2.List /*LIST InteropStaticType.list,688519371,[Instance of 'InteropRef<InteropType>']*/ <_i3.LockInfo>?
+  _i2.List /*LIST InteropStaticType.list,791377711,[Instance of 'InteropRef<InteropType>']*/ <_i3.LockInfo>?
       get held => (_i4.getProperty(
             this,
             'held',
@@ -16616,7 +16616,7 @@ extension LockManagerSnapshot$Typings on LockManagerSnapshot {
     held?: LockInfo[]; */
   // Type InteropStaticType.list
   set held(
-      _i2.List /*LIST InteropStaticType.list,688519371,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,791377711,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.LockInfo>?
           value) {
     _i4.setProperty(
@@ -16629,7 +16629,7 @@ extension LockManagerSnapshot$Typings on LockManagerSnapshot {
   /* #728
   source: 
     pending?: LockInfo[]; */
-  _i2.List /*LIST InteropStaticType.list,571038804,[Instance of 'InteropRef<InteropType>']*/ <_i3.LockInfo>?
+  _i2.List /*LIST InteropStaticType.list,1035223357,[Instance of 'InteropRef<InteropType>']*/ <_i3.LockInfo>?
       get pending => (_i4.getProperty(
             this,
             'pending',
@@ -16640,7 +16640,7 @@ extension LockManagerSnapshot$Typings on LockManagerSnapshot {
     pending?: LockInfo[]; */
   // Type InteropStaticType.list
   set pending(
-      _i2.List /*LIST InteropStaticType.list,571038804,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1035223357,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.LockInfo>?
           value) {
     _i4.setProperty(
@@ -16709,7 +16709,7 @@ extension LockOptions$Typings on LockOptions {
   /* #733
   source: 
     mode?: LockMode; */
-  // Type InteropTypedef#928152807(name: LockMode)
+  // Type InteropTypedef#498063430(name: LockMode)
   set mode(_i3.LockMode? value) {
     _i4.setProperty(
       this,
@@ -17176,7 +17176,7 @@ extension MediaDecodingConfiguration$Typings on MediaDecodingConfiguration {
   /* #771
   source: 
     type: MediaDecodingType; */
-  // Type InteropTypedef#499096917(name: MediaDecodingType)
+  // Type InteropTypedef#141982564(name: MediaDecodingType)
   set type(_i3.MediaDecodingType value) {
     _i4.setProperty(
       this,
@@ -17253,7 +17253,7 @@ extension MediaEncodingConfiguration$Typings on MediaEncodingConfiguration {
   /* #779
   source: 
     type: MediaEncodingType; */
-  // Type InteropTypedef#447028551(name: MediaEncodingType)
+  // Type InteropTypedef#510047687(name: MediaEncodingType)
   set type(_i3.MediaEncodingType value) {
     _i4.setProperty(
       this,
@@ -17302,7 +17302,7 @@ extension MediaEncryptedEventInit$Typings on MediaEncryptedEventInit {
   /* #783
   source: 
     initData?: ArrayBuffer | null; */
-  // Type InteropUnion#719411807(parent: InteropGetter#771907356(name: initData))
+  // Type InteropUnion#248053286(parent: InteropGetter#35835331(name: initData))
   set initData(_i8.ByteBuffer? value) {
     _i4.setProperty(
       this,
@@ -17471,7 +17471,7 @@ extension MediaKeyMessageEventInit$Typings on MediaKeyMessageEventInit {
   /* #795
   source: 
     messageType: MediaKeyMessageType; */
-  // Type InteropTypedef#398247409(name: MediaKeyMessageType)
+  // Type InteropTypedef#1023075467(name: MediaKeyMessageType)
   set messageType(_i3.MediaKeyMessageType value) {
     _i4.setProperty(
       this,
@@ -17496,19 +17496,19 @@ class MediaKeySystemConfiguration {
   });
 
   factory MediaKeySystemConfiguration({
-    _i2.List /*LIST InteropStaticType.list,1068053934,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,862847197,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MediaKeySystemMediaCapability>?
         audioCapabilities,
     _i3.MediaKeysRequirement? distinctiveIdentifier,
-    _i2.List /*LIST InteropStaticType.list,791136375,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,716193888,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         initDataTypes,
     _i2.String? label,
     _i3.MediaKeysRequirement? persistentState,
-    _i2.List /*LIST InteropStaticType.list,905602203,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,916987310,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         sessionTypes,
-    _i2.List /*LIST InteropStaticType.list,941153860,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,737907256,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MediaKeySystemMediaCapability>?
         videoCapabilities,
   }) =>
@@ -17529,7 +17529,7 @@ extension MediaKeySystemConfiguration$Typings on MediaKeySystemConfiguration {
   /* #799
   source: 
     audioCapabilities?: MediaKeySystemMediaCapability[]; */
-  _i2.List /*LIST InteropStaticType.list,1068053934,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,862847197,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.MediaKeySystemMediaCapability>?
       get audioCapabilities => (_i4.getProperty(
             this,
@@ -17541,7 +17541,7 @@ extension MediaKeySystemConfiguration$Typings on MediaKeySystemConfiguration {
     audioCapabilities?: MediaKeySystemMediaCapability[]; */
   // Type InteropStaticType.list
   set audioCapabilities(
-      _i2.List /*LIST InteropStaticType.list,1068053934,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,862847197,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.MediaKeySystemMediaCapability>?
           value) {
     _i4.setProperty(
@@ -17565,7 +17565,7 @@ extension MediaKeySystemConfiguration$Typings on MediaKeySystemConfiguration {
   /* #800
   source: 
     distinctiveIdentifier?: MediaKeysRequirement; */
-  // Type InteropTypedef#915056710(name: MediaKeysRequirement)
+  // Type InteropTypedef#602465756(name: MediaKeysRequirement)
   set distinctiveIdentifier(_i3.MediaKeysRequirement? value) {
     _i4.setProperty(
       this,
@@ -17577,7 +17577,7 @@ extension MediaKeySystemConfiguration$Typings on MediaKeySystemConfiguration {
   /* #801
   source: 
     initDataTypes?: string[]; */
-  _i2.List /*LIST InteropStaticType.list,791136375,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
+  _i2.List /*LIST InteropStaticType.list,716193888,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
       get initDataTypes => (_i4.getProperty(
             this,
             'initDataTypes',
@@ -17588,7 +17588,7 @@ extension MediaKeySystemConfiguration$Typings on MediaKeySystemConfiguration {
     initDataTypes?: string[]; */
   // Type InteropStaticType.list
   set initDataTypes(
-      _i2.List /*LIST InteropStaticType.list,791136375,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,716193888,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.String>?
           value) {
     _i4.setProperty(
@@ -17630,7 +17630,7 @@ extension MediaKeySystemConfiguration$Typings on MediaKeySystemConfiguration {
   /* #803
   source: 
     persistentState?: MediaKeysRequirement; */
-  // Type InteropTypedef#915056710(name: MediaKeysRequirement)
+  // Type InteropTypedef#602465756(name: MediaKeysRequirement)
   set persistentState(_i3.MediaKeysRequirement? value) {
     _i4.setProperty(
       this,
@@ -17642,7 +17642,7 @@ extension MediaKeySystemConfiguration$Typings on MediaKeySystemConfiguration {
   /* #804
   source: 
     sessionTypes?: string[]; */
-  _i2.List /*LIST InteropStaticType.list,905602203,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
+  _i2.List /*LIST InteropStaticType.list,916987310,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
       get sessionTypes => (_i4.getProperty(
             this,
             'sessionTypes',
@@ -17653,7 +17653,7 @@ extension MediaKeySystemConfiguration$Typings on MediaKeySystemConfiguration {
     sessionTypes?: string[]; */
   // Type InteropStaticType.list
   set sessionTypes(
-      _i2.List /*LIST InteropStaticType.list,905602203,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,916987310,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.String>?
           value) {
     _i4.setProperty(
@@ -17666,7 +17666,7 @@ extension MediaKeySystemConfiguration$Typings on MediaKeySystemConfiguration {
   /* #805
   source: 
     videoCapabilities?: MediaKeySystemMediaCapability[]; */
-  _i2.List /*LIST InteropStaticType.list,941153860,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,737907256,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.MediaKeySystemMediaCapability>?
       get videoCapabilities => (_i4.getProperty(
             this,
@@ -17678,7 +17678,7 @@ extension MediaKeySystemConfiguration$Typings on MediaKeySystemConfiguration {
     videoCapabilities?: MediaKeySystemMediaCapability[]; */
   // Type InteropStaticType.list
   set videoCapabilities(
-      _i2.List /*LIST InteropStaticType.list,941153860,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,737907256,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.MediaKeySystemMediaCapability>?
           value) {
     _i4.setProperty(
@@ -17742,7 +17742,7 @@ extension MediaKeySystemMediaCapability$Typings
   /* #810
   source: 
     encryptionScheme?: string | null; */
-  // Type InteropUnion#107506080(parent: InteropGetter#637206383(name: encryptionScheme))
+  // Type InteropUnion#155589134(parent: InteropGetter#128793304(name: encryptionScheme))
   set encryptionScheme(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -17785,7 +17785,7 @@ class MediaMetadataInit {
   factory MediaMetadataInit({
     _i2.String? album,
     _i2.String? artist,
-    _i2.List /*LIST InteropStaticType.list,681097150,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,992819282,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MediaImage>?
         artwork,
     _i2.String? title,
@@ -17840,7 +17840,7 @@ extension MediaMetadataInit$Typings on MediaMetadataInit {
   /* #817
   source: 
     artwork?: MediaImage[]; */
-  _i2.List /*LIST InteropStaticType.list,681097150,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaImage>?
+  _i2.List /*LIST InteropStaticType.list,992819282,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaImage>?
       get artwork => (_i4.getProperty(
             this,
             'artwork',
@@ -17851,7 +17851,7 @@ extension MediaMetadataInit$Typings on MediaMetadataInit {
     artwork?: MediaImage[]; */
   // Type InteropStaticType.list
   set artwork(
-      _i2.List /*LIST InteropStaticType.list,681097150,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,992819282,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.MediaImage>?
           value) {
     _i4.setProperty(
@@ -18170,7 +18170,7 @@ extension MediaSessionActionDetails$Typings on MediaSessionActionDetails {
   /* #840
   source: 
     action: MediaSessionAction; */
-  // Type InteropTypedef#40244545(name: MediaSessionAction)
+  // Type InteropTypedef#37421004(name: MediaSessionAction)
   set action(_i3.MediaSessionAction value) {
     _i4.setProperty(
       this,
@@ -18306,7 +18306,7 @@ extension MediaStreamConstraints$Typings on MediaStreamConstraints {
   /* #851
   source: 
     audio?: boolean | MediaTrackConstraints; */
-  // Type InteropUnion#479348896(parent: InteropGetter#87972400(name: audio))
+  // Type InteropUnion#1030965394(parent: InteropGetter#655749154(name: audio))
   set audio(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -18363,7 +18363,7 @@ extension MediaStreamConstraints$Typings on MediaStreamConstraints {
   /* #854
   source: 
     video?: boolean | MediaTrackConstraints; */
-  // Type InteropUnion#399460150(parent: InteropGetter#104220537(name: video))
+  // Type InteropUnion#186520629(parent: InteropGetter#645636522(name: video))
   set video(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -18442,22 +18442,22 @@ class MediaTrackCapabilities {
 
   factory MediaTrackCapabilities({
     _i3.DoubleRange? aspectRatio,
-    _i2.List /*LIST InteropStaticType.list,600070439,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,100079613,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.bool>?
         autoGainControl,
     _i3.ULongRange? channelCount,
     _i2.String? deviceId,
     _i2.String? displaySurface,
-    _i2.List /*LIST InteropStaticType.list,778053663,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,999037815,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.bool>?
         echoCancellation,
-    _i2.List /*LIST InteropStaticType.list,809428029,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,167363172,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         facingMode,
     _i3.DoubleRange? frameRate,
     _i2.String? groupId,
     _i3.ULongRange? height,
-    _i2.List /*LIST InteropStaticType.list,542344451,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,810801459,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.bool>?
         noiseSuppression,
     _i3.ULongRange? sampleRate,
@@ -18505,7 +18505,7 @@ extension MediaTrackCapabilities$Typings on MediaTrackCapabilities {
   /* #863
   source: 
     autoGainControl?: boolean[]; */
-  _i2.List /*LIST InteropStaticType.list,600070439,[Instance of 'InteropRef<InteropType>']*/ <_i2.bool>?
+  _i2.List /*LIST InteropStaticType.list,100079613,[Instance of 'InteropRef<InteropType>']*/ <_i2.bool>?
       get autoGainControl => (_i4.getProperty(
             this,
             'autoGainControl',
@@ -18516,7 +18516,7 @@ extension MediaTrackCapabilities$Typings on MediaTrackCapabilities {
     autoGainControl?: boolean[]; */
   // Type InteropStaticType.list
   set autoGainControl(
-      _i2.List /*LIST InteropStaticType.list,600070439,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,100079613,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.bool>?
           value) {
     _i4.setProperty(
@@ -18586,7 +18586,7 @@ extension MediaTrackCapabilities$Typings on MediaTrackCapabilities {
   /* #867
   source: 
     echoCancellation?: boolean[]; */
-  _i2.List /*LIST InteropStaticType.list,778053663,[Instance of 'InteropRef<InteropType>']*/ <_i2.bool>?
+  _i2.List /*LIST InteropStaticType.list,999037815,[Instance of 'InteropRef<InteropType>']*/ <_i2.bool>?
       get echoCancellation => (_i4.getProperty(
             this,
             'echoCancellation',
@@ -18597,7 +18597,7 @@ extension MediaTrackCapabilities$Typings on MediaTrackCapabilities {
     echoCancellation?: boolean[]; */
   // Type InteropStaticType.list
   set echoCancellation(
-      _i2.List /*LIST InteropStaticType.list,778053663,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,999037815,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.bool>?
           value) {
     _i4.setProperty(
@@ -18610,7 +18610,7 @@ extension MediaTrackCapabilities$Typings on MediaTrackCapabilities {
   /* #868
   source: 
     facingMode?: string[]; */
-  _i2.List /*LIST InteropStaticType.list,809428029,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
+  _i2.List /*LIST InteropStaticType.list,167363172,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
       get facingMode => (_i4.getProperty(
             this,
             'facingMode',
@@ -18621,7 +18621,7 @@ extension MediaTrackCapabilities$Typings on MediaTrackCapabilities {
     facingMode?: string[]; */
   // Type InteropStaticType.list
   set facingMode(
-      _i2.List /*LIST InteropStaticType.list,809428029,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,167363172,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.String>?
           value) {
     _i4.setProperty(
@@ -18691,7 +18691,7 @@ extension MediaTrackCapabilities$Typings on MediaTrackCapabilities {
   /* #872
   source: 
     noiseSuppression?: boolean[]; */
-  _i2.List /*LIST InteropStaticType.list,542344451,[Instance of 'InteropRef<InteropType>']*/ <_i2.bool>?
+  _i2.List /*LIST InteropStaticType.list,810801459,[Instance of 'InteropRef<InteropType>']*/ <_i2.bool>?
       get noiseSuppression => (_i4.getProperty(
             this,
             'noiseSuppression',
@@ -18702,7 +18702,7 @@ extension MediaTrackCapabilities$Typings on MediaTrackCapabilities {
     noiseSuppression?: boolean[]; */
   // Type InteropStaticType.list
   set noiseSuppression(
-      _i2.List /*LIST InteropStaticType.list,542344451,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,810801459,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.bool>?
           value) {
     _i4.setProperty(
@@ -18836,7 +18836,7 @@ extension MediaTrackConstraintSet$Typings on MediaTrackConstraintSet {
   /* #879
   source: 
     aspectRatio?: ConstrainDouble; */
-  // Type InteropTypedef#603516868(name: ConstrainDouble)
+  // Type InteropTypedef#1051369878(name: ConstrainDouble)
   set aspectRatio(_i3.ConstrainDouble? value) {
     _i4.setProperty(
       this,
@@ -18855,7 +18855,7 @@ extension MediaTrackConstraintSet$Typings on MediaTrackConstraintSet {
   /* #880
   source: 
     autoGainControl?: ConstrainBoolean; */
-  // Type InteropTypedef#1061955705(name: ConstrainBoolean)
+  // Type InteropTypedef#820883485(name: ConstrainBoolean)
   set autoGainControl(_i3.ConstrainBoolean? value) {
     _i4.setProperty(
       this,
@@ -18893,7 +18893,7 @@ extension MediaTrackConstraintSet$Typings on MediaTrackConstraintSet {
   /* #882
   source: 
     deviceId?: ConstrainDOMString; */
-  // Type InteropTypedef#173256856(name: ConstrainDOMString)
+  // Type InteropTypedef#689913884(name: ConstrainDOMString)
   set deviceId(_i3.ConstrainDOMString? value) {
     _i4.setProperty(
       this,
@@ -18912,7 +18912,7 @@ extension MediaTrackConstraintSet$Typings on MediaTrackConstraintSet {
   /* #883
   source: 
     displaySurface?: ConstrainDOMString; */
-  // Type InteropTypedef#173256856(name: ConstrainDOMString)
+  // Type InteropTypedef#689913884(name: ConstrainDOMString)
   set displaySurface(_i3.ConstrainDOMString? value) {
     _i4.setProperty(
       this,
@@ -18931,7 +18931,7 @@ extension MediaTrackConstraintSet$Typings on MediaTrackConstraintSet {
   /* #884
   source: 
     echoCancellation?: ConstrainBoolean; */
-  // Type InteropTypedef#1061955705(name: ConstrainBoolean)
+  // Type InteropTypedef#820883485(name: ConstrainBoolean)
   set echoCancellation(_i3.ConstrainBoolean? value) {
     _i4.setProperty(
       this,
@@ -18950,7 +18950,7 @@ extension MediaTrackConstraintSet$Typings on MediaTrackConstraintSet {
   /* #885
   source: 
     facingMode?: ConstrainDOMString; */
-  // Type InteropTypedef#173256856(name: ConstrainDOMString)
+  // Type InteropTypedef#689913884(name: ConstrainDOMString)
   set facingMode(_i3.ConstrainDOMString? value) {
     _i4.setProperty(
       this,
@@ -18969,7 +18969,7 @@ extension MediaTrackConstraintSet$Typings on MediaTrackConstraintSet {
   /* #886
   source: 
     frameRate?: ConstrainDouble; */
-  // Type InteropTypedef#603516868(name: ConstrainDouble)
+  // Type InteropTypedef#1051369878(name: ConstrainDouble)
   set frameRate(_i3.ConstrainDouble? value) {
     _i4.setProperty(
       this,
@@ -18988,7 +18988,7 @@ extension MediaTrackConstraintSet$Typings on MediaTrackConstraintSet {
   /* #887
   source: 
     groupId?: ConstrainDOMString; */
-  // Type InteropTypedef#173256856(name: ConstrainDOMString)
+  // Type InteropTypedef#689913884(name: ConstrainDOMString)
   set groupId(_i3.ConstrainDOMString? value) {
     _i4.setProperty(
       this,
@@ -19026,7 +19026,7 @@ extension MediaTrackConstraintSet$Typings on MediaTrackConstraintSet {
   /* #889
   source: 
     noiseSuppression?: ConstrainBoolean; */
-  // Type InteropTypedef#1061955705(name: ConstrainBoolean)
+  // Type InteropTypedef#820883485(name: ConstrainBoolean)
   set noiseSuppression(_i3.ConstrainBoolean? value) {
     _i4.setProperty(
       this,
@@ -19116,7 +19116,7 @@ class MediaTrackConstraints implements _i3.MediaTrackConstraintSet {
   });
 
   factory MediaTrackConstraints({
-    _i2.List /*LIST InteropStaticType.list,170243346,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,662792304,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MediaTrackConstraintSet>?
         advanced,
     _i3.ConstrainDouble? aspectRatio,
@@ -19157,7 +19157,7 @@ extension MediaTrackConstraints$Typings on MediaTrackConstraints {
   /* #896
   source: 
     advanced?: MediaTrackConstraintSet[]; */
-  _i2.List /*LIST InteropStaticType.list,170243346,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaTrackConstraintSet>?
+  _i2.List /*LIST InteropStaticType.list,662792304,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaTrackConstraintSet>?
       get advanced => (_i4.getProperty(
             this,
             'advanced',
@@ -19168,7 +19168,7 @@ extension MediaTrackConstraints$Typings on MediaTrackConstraints {
     advanced?: MediaTrackConstraintSet[]; */
   // Type InteropStaticType.list
   set advanced(
-      _i2.List /*LIST InteropStaticType.list,170243346,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,662792304,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.MediaTrackConstraintSet>?
           value) {
     _i4.setProperty(
@@ -19845,7 +19845,7 @@ class MessageEventInit<T> implements _i3.EventInit {
     T? data,
     _i2.String? lastEventId,
     _i2.String? origin,
-    _i2.List /*LIST InteropStaticType.list,532443157,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,853258681,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MessagePort>?
         ports,
     _i3.MessageEventSource? source,
@@ -19926,7 +19926,7 @@ extension MessageEventInit$Typings<T> on MessageEventInit<T> {
   /* #937
   source: 
     ports?: MessagePort[]; */
-  _i2.List /*LIST InteropStaticType.list,532443157,[Instance of 'InteropRef<InteropType>']*/ <_i3.MessagePort>?
+  _i2.List /*LIST InteropStaticType.list,853258681,[Instance of 'InteropRef<InteropType>']*/ <_i3.MessagePort>?
       get ports => (_i4.getProperty(
             this,
             'ports',
@@ -19937,7 +19937,7 @@ extension MessageEventInit$Typings<T> on MessageEventInit<T> {
     ports?: MessagePort[]; */
   // Type InteropStaticType.list
   set ports(
-      _i2.List /*LIST InteropStaticType.list,532443157,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,853258681,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.MessagePort>?
           value) {
     _i4.setProperty(
@@ -19957,7 +19957,7 @@ extension MessageEventInit$Typings<T> on MessageEventInit<T> {
   /* #938
   source: 
     source?: MessageEventSource | null; */
-  // Type InteropUnion#401142098(parent: InteropGetter#455978877(name: source))
+  // Type InteropUnion#274605956(parent: InteropGetter#749407044(name: source))
   set source(_i3.MessageEventSource? value) {
     _i4.setProperty(
       this,
@@ -20174,7 +20174,7 @@ extension MouseEventInit$Typings on MouseEventInit {
   /* #948
   source: 
     relatedTarget?: EventTarget | null; */
-  // Type InteropUnion#472629748(parent: InteropGetter#150464395(name: relatedTarget))
+  // Type InteropUnion#427900688(parent: InteropGetter#658992524(name: relatedTarget))
   set relatedTarget(_i3.EventTarget? value) {
     _i4.setProperty(
       this,
@@ -20283,7 +20283,7 @@ class MutationObserverInit {
   });
 
   factory MutationObserverInit({
-    _i2.List /*LIST InteropStaticType.list,901498028,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,558815526,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         attributeFilter,
     _i2.bool? attributeOldValue,
@@ -20310,7 +20310,7 @@ extension MutationObserverInit$Typings on MutationObserverInit {
     /** Set to a list of attribute local names (without namespace) if not all attribute mutations need to be observed and attributes is true or omitted. */
     attributeFilter?: string[]; */
   /// Set to a list of attribute local names (without namespace) if not all attribute mutations need to be observed and attributes is true or omitted.
-  _i2.List /*LIST InteropStaticType.list,901498028,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
+  _i2.List /*LIST InteropStaticType.list,558815526,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
       get attributeFilter => (_i4.getProperty(
             this,
             'attributeFilter',
@@ -20322,7 +20322,7 @@ extension MutationObserverInit$Typings on MutationObserverInit {
     attributeFilter?: string[]; */
   // Type InteropStaticType.list
   set attributeFilter(
-      _i2.List /*LIST InteropStaticType.list,901498028,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,558815526,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.String>?
           value) {
     _i4.setProperty(
@@ -20627,7 +20627,7 @@ class NotificationOptions {
   });
 
   factory NotificationOptions({
-    _i2.List /*LIST InteropStaticType.list,99345254,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,300682029,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.NotificationAction>?
         actions,
     _i2.String? badge,
@@ -20666,7 +20666,7 @@ extension NotificationOptions$Typings on NotificationOptions {
   /* #986
   source: 
     actions?: NotificationAction[]; */
-  _i2.List /*LIST InteropStaticType.list,99345254,[Instance of 'InteropRef<InteropType>']*/ <_i3.NotificationAction>?
+  _i2.List /*LIST InteropStaticType.list,300682029,[Instance of 'InteropRef<InteropType>']*/ <_i3.NotificationAction>?
       get actions => (_i4.getProperty(
             this,
             'actions',
@@ -20677,7 +20677,7 @@ extension NotificationOptions$Typings on NotificationOptions {
     actions?: NotificationAction[]; */
   // Type InteropStaticType.list
   set actions(
-      _i2.List /*LIST InteropStaticType.list,99345254,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,300682029,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.NotificationAction>?
           value) {
     _i4.setProperty(
@@ -20757,7 +20757,7 @@ extension NotificationOptions$Typings on NotificationOptions {
   /* #990
   source: 
     dir?: NotificationDirection; */
-  // Type InteropTypedef#420183986(name: NotificationDirection)
+  // Type InteropTypedef#293065449(name: NotificationDirection)
   set dir(_i3.NotificationDirection? value) {
     _i4.setProperty(
       this,
@@ -20928,7 +20928,7 @@ extension NotificationOptions$Typings on NotificationOptions {
   /* #999
   source: 
     vibrate?: VibratePattern; */
-  // Type InteropTypedef#530174488(name: VibratePattern)
+  // Type InteropTypedef#670291635(name: VibratePattern)
   set vibrate(_i3.VibratePattern? value) {
     _i4.setProperty(
       this,
@@ -21139,7 +21139,7 @@ extension OptionalEffectTiming$Typings on OptionalEffectTiming {
   /* #1014
   source: 
     direction?: PlaybackDirection; */
-  // Type InteropTypedef#637405757(name: PlaybackDirection)
+  // Type InteropTypedef#261717340(name: PlaybackDirection)
   set direction(_i3.PlaybackDirection? value) {
     _i4.setProperty(
       this,
@@ -21158,7 +21158,7 @@ extension OptionalEffectTiming$Typings on OptionalEffectTiming {
   /* #1015
   source: 
     duration?: number | string; */
-  // Type InteropUnion#811319916(parent: InteropGetter#970224291(name: duration))
+  // Type InteropUnion#571892302(parent: InteropGetter#701477912(name: duration))
   set duration(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -21218,7 +21218,7 @@ extension OptionalEffectTiming$Typings on OptionalEffectTiming {
   /* #1018
   source: 
     fill?: FillMode; */
-  // Type InteropTypedef#758689521(name: FillMode)
+  // Type InteropTypedef#1065874129(name: FillMode)
   set fill(_i3.FillMode? value) {
     _i4.setProperty(
       this,
@@ -21392,7 +21392,7 @@ extension OscillatorOptions$Typings on OscillatorOptions {
   /* #1028
   source: 
     type?: OscillatorType; */
-  // Type InteropTypedef#798951156(name: OscillatorType)
+  // Type InteropTypedef#438076219(name: OscillatorType)
   set type(_i3.OscillatorType? value) {
     _i4.setProperty(
       this,
@@ -21585,7 +21585,7 @@ extension PannerOptions$Typings on PannerOptions {
   /* #1039
   source: 
     distanceModel?: DistanceModelType; */
-  // Type InteropTypedef#474152263(name: DistanceModelType)
+  // Type InteropTypedef#394665385(name: DistanceModelType)
   set distanceModel(_i3.DistanceModelType? value) {
     _i4.setProperty(
       this,
@@ -21683,7 +21683,7 @@ extension PannerOptions$Typings on PannerOptions {
   /* #1044
   source: 
     panningModel?: PanningModelType; */
-  // Type InteropTypedef#241729500(name: PanningModelType)
+  // Type InteropTypedef#798289897(name: PanningModelType)
   set panningModel(_i3.PanningModelType? value) {
     _i4.setProperty(
       this,
@@ -21857,10 +21857,10 @@ class PaymentDetailsBase {
   });
 
   factory PaymentDetailsBase({
-    _i2.List /*LIST InteropStaticType.list,282516700,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,621669932,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PaymentItem>?
         displayItems,
-    _i2.List /*LIST InteropStaticType.list,913659209,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,582769464,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PaymentDetailsModifier>?
         modifiers,
   }) =>
@@ -21874,7 +21874,7 @@ extension PaymentDetailsBase$Typings on PaymentDetailsBase {
   /* #1058
   source: 
     displayItems?: PaymentItem[]; */
-  _i2.List /*LIST InteropStaticType.list,282516700,[Instance of 'InteropRef<InteropType>']*/ <_i3.PaymentItem>?
+  _i2.List /*LIST InteropStaticType.list,621669932,[Instance of 'InteropRef<InteropType>']*/ <_i3.PaymentItem>?
       get displayItems => (_i4.getProperty(
             this,
             'displayItems',
@@ -21885,7 +21885,7 @@ extension PaymentDetailsBase$Typings on PaymentDetailsBase {
     displayItems?: PaymentItem[]; */
   // Type InteropStaticType.list
   set displayItems(
-      _i2.List /*LIST InteropStaticType.list,282516700,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,621669932,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.PaymentItem>?
           value) {
     _i4.setProperty(
@@ -21898,7 +21898,7 @@ extension PaymentDetailsBase$Typings on PaymentDetailsBase {
   /* #1059
   source: 
     modifiers?: PaymentDetailsModifier[]; */
-  _i2.List /*LIST InteropStaticType.list,913659209,[Instance of 'InteropRef<InteropType>']*/ <_i3.PaymentDetailsModifier>?
+  _i2.List /*LIST InteropStaticType.list,582769464,[Instance of 'InteropRef<InteropType>']*/ <_i3.PaymentDetailsModifier>?
       get modifiers => (_i4.getProperty(
             this,
             'modifiers',
@@ -21909,7 +21909,7 @@ extension PaymentDetailsBase$Typings on PaymentDetailsBase {
     modifiers?: PaymentDetailsModifier[]; */
   // Type InteropStaticType.list
   set modifiers(
-      _i2.List /*LIST InteropStaticType.list,913659209,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,582769464,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.PaymentDetailsModifier>?
           value) {
     _i4.setProperty(
@@ -21934,10 +21934,10 @@ class PaymentDetailsInit implements _i3.PaymentDetailsBase {
   factory PaymentDetailsInit({
     _i2.String? id,
     required _i3.PaymentItem total,
-    _i2.List /*LIST InteropStaticType.list,282516700,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,621669932,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PaymentItem>?
         displayItems,
-    _i2.List /*LIST InteropStaticType.list,913659209,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,582769464,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PaymentDetailsModifier>?
         modifiers,
   }) =>
@@ -22001,7 +22001,7 @@ class PaymentDetailsModifier {
   });
 
   factory PaymentDetailsModifier({
-    _i2.List /*LIST InteropStaticType.list,144921868,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,417474802,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PaymentItem>?
         additionalDisplayItems,
     _i2.dynamic data,
@@ -22020,7 +22020,7 @@ extension PaymentDetailsModifier$Typings on PaymentDetailsModifier {
   /* #1068
   source: 
     additionalDisplayItems?: PaymentItem[]; */
-  _i2.List /*LIST InteropStaticType.list,144921868,[Instance of 'InteropRef<InteropType>']*/ <_i3.PaymentItem>?
+  _i2.List /*LIST InteropStaticType.list,417474802,[Instance of 'InteropRef<InteropType>']*/ <_i3.PaymentItem>?
       get additionalDisplayItems => (_i4.getProperty(
             this,
             'additionalDisplayItems',
@@ -22031,7 +22031,7 @@ extension PaymentDetailsModifier$Typings on PaymentDetailsModifier {
     additionalDisplayItems?: PaymentItem[]; */
   // Type InteropStaticType.list
   set additionalDisplayItems(
-      _i2.List /*LIST InteropStaticType.list,144921868,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,417474802,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.PaymentItem>?
           value) {
     _i4.setProperty(
@@ -22113,10 +22113,10 @@ class PaymentDetailsUpdate implements _i3.PaymentDetailsBase {
   factory PaymentDetailsUpdate({
     _i2.dynamic paymentMethodErrors,
     _i3.PaymentItem? total,
-    _i2.List /*LIST InteropStaticType.list,282516700,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,621669932,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PaymentItem>?
         displayItems,
-    _i2.List /*LIST InteropStaticType.list,913659209,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,582769464,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PaymentDetailsModifier>?
         modifiers,
   }) =>
@@ -22485,7 +22485,7 @@ extension Pbkdf2Params$Typings on Pbkdf2Params {
   /* #1104
   source: 
     hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#1015774708(name: HashAlgorithmIdentifier)
+  // Type InteropTypedef#75209943(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -22523,7 +22523,7 @@ extension Pbkdf2Params$Typings on Pbkdf2Params {
   /* #1106
   source: 
     salt: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set salt(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -22582,7 +22582,7 @@ extension PerformanceMarkOptions$Typings on PerformanceMarkOptions {
   /* #1111
   source: 
     startTime?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set startTime(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -22647,7 +22647,7 @@ extension PerformanceMeasureOptions$Typings on PerformanceMeasureOptions {
   /* #1116
   source: 
     duration?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set duration(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -22666,7 +22666,7 @@ extension PerformanceMeasureOptions$Typings on PerformanceMeasureOptions {
   /* #1117
   source: 
     end?: string | DOMHighResTimeStamp; */
-  // Type InteropUnion#1035515244(parent: InteropGetter#11663075(name: end))
+  // Type InteropUnion#1046078567(parent: InteropGetter#554324865(name: end))
   set end(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -22685,7 +22685,7 @@ extension PerformanceMeasureOptions$Typings on PerformanceMeasureOptions {
   /* #1118
   source: 
     start?: string | DOMHighResTimeStamp; */
-  // Type InteropUnion#377580070(parent: InteropGetter#301564360(name: start))
+  // Type InteropUnion#987645519(parent: InteropGetter#819146541(name: start))
   set start(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -22707,7 +22707,7 @@ class PerformanceObserverInit {
 
   factory PerformanceObserverInit({
     _i2.bool? buffered,
-    _i2.List /*LIST InteropStaticType.list,482861983,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,568480638,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         entryTypes,
     _i2.String? type,
@@ -22742,7 +22742,7 @@ extension PerformanceObserverInit$Typings on PerformanceObserverInit {
   /* #1123
   source: 
     entryTypes?: string[]; */
-  _i2.List /*LIST InteropStaticType.list,482861983,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
+  _i2.List /*LIST InteropStaticType.list,568480638,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
       get entryTypes => (_i4.getProperty(
             this,
             'entryTypes',
@@ -22753,7 +22753,7 @@ extension PerformanceObserverInit$Typings on PerformanceObserverInit {
     entryTypes?: string[]; */
   // Type InteropStaticType.list
   set entryTypes(
-      _i2.List /*LIST InteropStaticType.list,482861983,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,568480638,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.String>?
           value) {
     _i4.setProperty(
@@ -22849,7 +22849,7 @@ extension PeriodicWaveOptions$Typings on PeriodicWaveOptions {
   /* #1132
   source: 
     imag?: number[] | Float32Array; */
-  // Type InteropUnion#233640339(parent: InteropGetter#855616688(name: imag))
+  // Type InteropUnion#791678295(parent: InteropGetter#555510034(name: imag))
   set imag(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -22868,7 +22868,7 @@ extension PeriodicWaveOptions$Typings on PeriodicWaveOptions {
   /* #1133
   source: 
     real?: number[] | Float32Array; */
-  // Type InteropUnion#757816887(parent: InteropGetter#544351392(name: real))
+  // Type InteropUnion#56299010(parent: InteropGetter#579357376(name: real))
   set real(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -22900,7 +22900,7 @@ extension PermissionDescriptor$Typings on PermissionDescriptor {
   /* #1137
   source: 
     name: PermissionName; */
-  // Type InteropTypedef#793653081(name: PermissionName)
+  // Type InteropTypedef#96639861(name: PermissionName)
   set name(_i3.PermissionName value) {
     _i4.setProperty(
       this,
@@ -22985,14 +22985,14 @@ class PointerEventInit implements _i3.MouseEventInit {
   });
 
   factory PointerEventInit({
-    _i2.List /*LIST InteropStaticType.list,117138788,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,501669956,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PointerEvent>?
         coalescedEvents,
     _i2.num? height,
     _i2.bool? isPrimary,
     _i2.num? pointerId,
     _i2.String? pointerType,
-    _i2.List /*LIST InteropStaticType.list,883335152,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,834213025,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PointerEvent>?
         predictedEvents,
     _i2.num? pressure,
@@ -23040,7 +23040,7 @@ extension PointerEventInit$Typings on PointerEventInit {
   /* #1145
   source: 
     coalescedEvents?: PointerEvent[]; */
-  _i2.List /*LIST InteropStaticType.list,117138788,[Instance of 'InteropRef<InteropType>']*/ <_i3.PointerEvent>?
+  _i2.List /*LIST InteropStaticType.list,501669956,[Instance of 'InteropRef<InteropType>']*/ <_i3.PointerEvent>?
       get coalescedEvents => (_i4.getProperty(
             this,
             'coalescedEvents',
@@ -23051,7 +23051,7 @@ extension PointerEventInit$Typings on PointerEventInit {
     coalescedEvents?: PointerEvent[]; */
   // Type InteropStaticType.list
   set coalescedEvents(
-      _i2.List /*LIST InteropStaticType.list,117138788,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,501669956,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.PointerEvent>?
           value) {
     _i4.setProperty(
@@ -23140,7 +23140,7 @@ extension PointerEventInit$Typings on PointerEventInit {
   /* #1150
   source: 
     predictedEvents?: PointerEvent[]; */
-  _i2.List /*LIST InteropStaticType.list,883335152,[Instance of 'InteropRef<InteropType>']*/ <_i3.PointerEvent>?
+  _i2.List /*LIST InteropStaticType.list,834213025,[Instance of 'InteropRef<InteropType>']*/ <_i3.PointerEvent>?
       get predictedEvents => (_i4.getProperty(
             this,
             'predictedEvents',
@@ -23151,7 +23151,7 @@ extension PointerEventInit$Typings on PointerEventInit {
     predictedEvents?: PointerEvent[]; */
   // Type InteropStaticType.list
   set predictedEvents(
-      _i2.List /*LIST InteropStaticType.list,883335152,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,834213025,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.PointerEvent>?
           value) {
     _i4.setProperty(
@@ -23532,7 +23532,7 @@ extension PromiseRejectionEventInit$Typings on PromiseRejectionEventInit {
   /* #1176
   source: 
     promise: Promise<any>; */
-  // Type InteropClass#990988074(name: Future)
+  // Type InteropClass#459811851(name: Future)
   set promise(_i2.Future<_i2.dynamic> value) {
     _i4.setProperty(
       this,
@@ -23576,7 +23576,7 @@ extension PropertyIndexedKeyframes$Typings on PropertyIndexedKeyframes {
   /* #1181
   source: 
     composite?: CompositeOperationOrAuto | CompositeOperationOrAuto[]; */
-  // Type InteropUnion#1046498174(parent: InteropGetter#200177033(name: composite))
+  // Type InteropUnion#1006091640(parent: InteropGetter#611838867(name: composite))
   set composite(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -23595,7 +23595,7 @@ extension PropertyIndexedKeyframes$Typings on PropertyIndexedKeyframes {
   /* #1182
   source: 
     easing?: string | string[]; */
-  // Type InteropUnion#508057861(parent: InteropGetter#136404446(name: easing))
+  // Type InteropUnion#7347188(parent: InteropGetter#718030251(name: easing))
   set easing(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -23614,7 +23614,7 @@ extension PropertyIndexedKeyframes$Typings on PropertyIndexedKeyframes {
   /* #1183
   source: 
     offset?: number | (number | null)[]; */
-  // Type InteropUnion#1056825056(parent: InteropGetter#926774101(name: offset))
+  // Type InteropUnion#629083359(parent: InteropGetter#67569120(name: offset))
   set offset(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -23659,11 +23659,11 @@ class PublicKeyCredentialCreationOptions {
     _i3.AttestationConveyancePreference? attestation,
     _i3.AuthenticatorSelectionCriteria? authenticatorSelection,
     required _i3.BufferSource challenge,
-    _i2.List /*LIST InteropStaticType.list,237494636,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,558430164,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PublicKeyCredentialDescriptor>?
         excludeCredentials,
     _i3.AuthenticationExtensionsClientInputs? extensions,
-    required _i2.List /*LIST InteropStaticType.list,686017827,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,199448677,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PublicKeyCredentialParameters>
         pubKeyCredParams,
     required _i3.PublicKeyCredentialRpEntity rp,
@@ -23700,7 +23700,7 @@ extension PublicKeyCredentialCreationOptions$Typings
   /* #1188
   source: 
     attestation?: AttestationConveyancePreference; */
-  // Type InteropTypedef#791985719(name: AttestationConveyancePreference)
+  // Type InteropTypedef#871399167(name: AttestationConveyancePreference)
   set attestation(_i3.AttestationConveyancePreference? value) {
     _i4.setProperty(
       this,
@@ -23739,7 +23739,7 @@ extension PublicKeyCredentialCreationOptions$Typings
   /* #1190
   source: 
     challenge: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set challenge(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -23751,7 +23751,7 @@ extension PublicKeyCredentialCreationOptions$Typings
   /* #1191
   source: 
     excludeCredentials?: PublicKeyCredentialDescriptor[]; */
-  _i2.List /*LIST InteropStaticType.list,237494636,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,558430164,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.PublicKeyCredentialDescriptor>?
       get excludeCredentials => (_i4.getProperty(
             this,
@@ -23763,7 +23763,7 @@ extension PublicKeyCredentialCreationOptions$Typings
     excludeCredentials?: PublicKeyCredentialDescriptor[]; */
   // Type InteropStaticType.list
   set excludeCredentials(
-      _i2.List /*LIST InteropStaticType.list,237494636,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,558430164,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.PublicKeyCredentialDescriptor>?
           value) {
     _i4.setProperty(
@@ -23795,7 +23795,7 @@ extension PublicKeyCredentialCreationOptions$Typings
   /* #1193
   source: 
     pubKeyCredParams: PublicKeyCredentialParameters[]; */
-  _i2.List /*LIST InteropStaticType.list,686017827,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,199448677,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.PublicKeyCredentialParameters>
       get pubKeyCredParams => (_i4.getProperty(
             this,
@@ -23807,7 +23807,7 @@ extension PublicKeyCredentialCreationOptions$Typings
     pubKeyCredParams: PublicKeyCredentialParameters[]; */
   // Type InteropStaticType.list
   set pubKeyCredParams(
-      _i2.List /*LIST InteropStaticType.list,686017827,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,199448677,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.PublicKeyCredentialParameters>
           value) {
     _i4.setProperty(
@@ -23887,7 +23887,7 @@ class PublicKeyCredentialDescriptor {
 
   factory PublicKeyCredentialDescriptor({
     required _i3.BufferSource id,
-    _i2.List /*LIST InteropStaticType.list,1006984754,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,592339046,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.AuthenticatorTransport>?
         transports,
     required _i3.PublicKeyCredentialType type,
@@ -23911,7 +23911,7 @@ extension PublicKeyCredentialDescriptor$Typings
   /* #1200
   source: 
     id: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set id(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -23923,7 +23923,7 @@ extension PublicKeyCredentialDescriptor$Typings
   /* #1201
   source: 
     transports?: AuthenticatorTransport[]; */
-  _i2.List /*LIST InteropStaticType.list,1006984754,[Instance of 'InteropRef<InteropType>']*/ <_i3.AuthenticatorTransport>?
+  _i2.List /*LIST InteropStaticType.list,592339046,[Instance of 'InteropRef<InteropType>']*/ <_i3.AuthenticatorTransport>?
       get transports => (_i4.getProperty(
             this,
             'transports',
@@ -23936,7 +23936,7 @@ extension PublicKeyCredentialDescriptor$Typings
     transports?: AuthenticatorTransport[]; */
   // Type InteropStaticType.list
   set transports(
-      _i2.List /*LIST InteropStaticType.list,1006984754,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,592339046,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.AuthenticatorTransport>?
           value) {
     _i4.setProperty(
@@ -23956,7 +23956,7 @@ extension PublicKeyCredentialDescriptor$Typings
   /* #1202
   source: 
     type: PublicKeyCredentialType; */
-  // Type InteropTypedef#96632664(name: PublicKeyCredentialType)
+  // Type InteropTypedef#779183361(name: PublicKeyCredentialType)
   set type(_i3.PublicKeyCredentialType value) {
     _i4.setProperty(
       this,
@@ -24028,7 +24028,7 @@ extension PublicKeyCredentialParameters$Typings
   /* #1210
   source: 
     alg: COSEAlgorithmIdentifier; */
-  // Type InteropTypedef#419223334(name: COSEAlgorithmIdentifier)
+  // Type InteropTypedef#483939131(name: COSEAlgorithmIdentifier)
   set alg(_i3.COSEAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -24047,7 +24047,7 @@ extension PublicKeyCredentialParameters$Typings
   /* #1211
   source: 
     type: PublicKeyCredentialType; */
-  // Type InteropTypedef#96632664(name: PublicKeyCredentialType)
+  // Type InteropTypedef#779183361(name: PublicKeyCredentialType)
   set type(_i3.PublicKeyCredentialType value) {
     _i4.setProperty(
       this,
@@ -24071,7 +24071,7 @@ class PublicKeyCredentialRequestOptions {
   });
 
   factory PublicKeyCredentialRequestOptions({
-    _i2.List /*LIST InteropStaticType.list,451997659,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,172407116,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PublicKeyCredentialDescriptor>?
         allowCredentials,
     required _i3.BufferSource challenge,
@@ -24096,7 +24096,7 @@ extension PublicKeyCredentialRequestOptions$Typings
   /* #1215
   source: 
     allowCredentials?: PublicKeyCredentialDescriptor[]; */
-  _i2.List /*LIST InteropStaticType.list,451997659,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,172407116,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.PublicKeyCredentialDescriptor>?
       get allowCredentials => (_i4.getProperty(
             this,
@@ -24108,7 +24108,7 @@ extension PublicKeyCredentialRequestOptions$Typings
     allowCredentials?: PublicKeyCredentialDescriptor[]; */
   // Type InteropStaticType.list
   set allowCredentials(
-      _i2.List /*LIST InteropStaticType.list,451997659,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,172407116,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.PublicKeyCredentialDescriptor>?
           value) {
     _i4.setProperty(
@@ -24128,7 +24128,7 @@ extension PublicKeyCredentialRequestOptions$Typings
   /* #1216
   source: 
     challenge: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set challenge(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -24209,7 +24209,7 @@ extension PublicKeyCredentialRequestOptions$Typings
   /* #1220
   source: 
     userVerification?: UserVerificationRequirement; */
-  // Type InteropTypedef#1046483473(name: UserVerificationRequirement)
+  // Type InteropTypedef#169270931(name: UserVerificationRequirement)
   set userVerification(_i3.UserVerificationRequirement? value) {
     _i4.setProperty(
       this,
@@ -24312,7 +24312,7 @@ extension PublicKeyCredentialUserEntity$Typings
   /* #1229
   source: 
     id: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set id(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -24374,7 +24374,7 @@ extension PushSubscriptionJSON$Typings on PushSubscriptionJSON {
   /* #1234
   source: 
     expirationTime?: EpochTimeStamp | null; */
-  // Type InteropUnion#766878348(parent: InteropGetter#916631946(name: expirationTime))
+  // Type InteropUnion#144261018(parent: InteropGetter#216462627(name: expirationTime))
   set expirationTime(_i2.int? value) {
     _i4.setProperty(
       this,
@@ -24393,7 +24393,7 @@ extension PushSubscriptionJSON$Typings on PushSubscriptionJSON {
   /* #1235
   source: 
     keys?: Record<string, string>; */
-  // Type InteropTypedef#188881979(name: Record)
+  // Type InteropTypedef#430466220(name: Record)
   set keys(_i7.Record<_i2.String, _i2.String>? value) {
     _i4.setProperty(
       this,
@@ -24433,7 +24433,7 @@ extension PushSubscriptionOptionsInit$Typings on PushSubscriptionOptionsInit {
   /* #1239
   source: 
     applicationServerKey?: BufferSource | string | null; */
-  // Type InteropUnion#989879222(parent: InteropGetter#69749057(name: applicationServerKey))
+  // Type InteropUnion#599315042(parent: InteropGetter#649336056(name: applicationServerKey))
   set applicationServerKey(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -24620,11 +24620,11 @@ class RTCConfiguration {
 
   factory RTCConfiguration({
     _i3.RTCBundlePolicy? bundlePolicy,
-    _i2.List /*LIST InteropStaticType.list,325344220,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,316136522,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCCertificate>?
         certificates,
     _i2.num? iceCandidatePoolSize,
-    _i2.List /*LIST InteropStaticType.list,931943114,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1070296859,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCIceServer>?
         iceServers,
     _i3.RTCIceTransportPolicy? iceTransportPolicy,
@@ -24655,7 +24655,7 @@ extension RTCConfiguration$Typings on RTCConfiguration {
   /* #1265
   source: 
     bundlePolicy?: RTCBundlePolicy; */
-  // Type InteropTypedef#800229569(name: RTCBundlePolicy)
+  // Type InteropTypedef#645066243(name: RTCBundlePolicy)
   set bundlePolicy(_i3.RTCBundlePolicy? value) {
     _i4.setProperty(
       this,
@@ -24667,7 +24667,7 @@ extension RTCConfiguration$Typings on RTCConfiguration {
   /* #1266
   source: 
     certificates?: RTCCertificate[]; */
-  _i2.List /*LIST InteropStaticType.list,325344220,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCCertificate>?
+  _i2.List /*LIST InteropStaticType.list,316136522,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCCertificate>?
       get certificates => (_i4.getProperty(
             this,
             'certificates',
@@ -24678,7 +24678,7 @@ extension RTCConfiguration$Typings on RTCConfiguration {
     certificates?: RTCCertificate[]; */
   // Type InteropStaticType.list
   set certificates(
-      _i2.List /*LIST InteropStaticType.list,325344220,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,316136522,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RTCCertificate>?
           value) {
     _i4.setProperty(
@@ -24710,7 +24710,7 @@ extension RTCConfiguration$Typings on RTCConfiguration {
   /* #1268
   source: 
     iceServers?: RTCIceServer[]; */
-  _i2.List /*LIST InteropStaticType.list,931943114,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCIceServer>?
+  _i2.List /*LIST InteropStaticType.list,1070296859,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCIceServer>?
       get iceServers => (_i4.getProperty(
             this,
             'iceServers',
@@ -24721,7 +24721,7 @@ extension RTCConfiguration$Typings on RTCConfiguration {
     iceServers?: RTCIceServer[]; */
   // Type InteropStaticType.list
   set iceServers(
-      _i2.List /*LIST InteropStaticType.list,931943114,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1070296859,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RTCIceServer>?
           value) {
     _i4.setProperty(
@@ -24744,7 +24744,7 @@ extension RTCConfiguration$Typings on RTCConfiguration {
   /* #1269
   source: 
     iceTransportPolicy?: RTCIceTransportPolicy; */
-  // Type InteropTypedef#446026692(name: RTCIceTransportPolicy)
+  // Type InteropTypedef#717937225(name: RTCIceTransportPolicy)
   set iceTransportPolicy(_i3.RTCIceTransportPolicy? value) {
     _i4.setProperty(
       this,
@@ -24763,7 +24763,7 @@ extension RTCConfiguration$Typings on RTCConfiguration {
   /* #1270
   source: 
     rtcpMuxPolicy?: RTCRtcpMuxPolicy; */
-  // Type InteropTypedef#356680276(name: RTCRtcpMuxPolicy)
+  // Type InteropTypedef#885754188(name: RTCRtcpMuxPolicy)
   set rtcpMuxPolicy(_i3.RTCRtcpMuxPolicy? value) {
     _i4.setProperty(
       this,
@@ -25081,7 +25081,7 @@ class RTCEncodedAudioFrameMetadata {
   });
 
   factory RTCEncodedAudioFrameMetadata({
-    _i2.List /*LIST InteropStaticType.list,189119373,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,208594777,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.num>?
         contributingSources,
     _i2.num? synchronizationSource,
@@ -25096,7 +25096,7 @@ extension RTCEncodedAudioFrameMetadata$Typings on RTCEncodedAudioFrameMetadata {
   /* #1296
   source: 
     contributingSources?: number[]; */
-  _i2.List /*LIST InteropStaticType.list,189119373,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>?
+  _i2.List /*LIST InteropStaticType.list,208594777,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>?
       get contributingSources => (_i4.getProperty(
             this,
             'contributingSources',
@@ -25107,7 +25107,7 @@ extension RTCEncodedAudioFrameMetadata$Typings on RTCEncodedAudioFrameMetadata {
     contributingSources?: number[]; */
   // Type InteropStaticType.list
   set contributingSources(
-      _i2.List /*LIST InteropStaticType.list,189119373,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,208594777,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.num>?
           value) {
     _i4.setProperty(
@@ -25153,10 +25153,10 @@ class RTCEncodedVideoFrameMetadata {
   });
 
   factory RTCEncodedVideoFrameMetadata({
-    _i2.List /*LIST InteropStaticType.list,589393165,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1064949876,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.num>?
         contributingSources,
-    _i2.List /*LIST InteropStaticType.list,616567914,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,58238993,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.num>?
         dependencies,
     _i2.num? frameId,
@@ -25182,7 +25182,7 @@ extension RTCEncodedVideoFrameMetadata$Typings on RTCEncodedVideoFrameMetadata {
   /* #1301
   source: 
     contributingSources?: number[]; */
-  _i2.List /*LIST InteropStaticType.list,589393165,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>?
+  _i2.List /*LIST InteropStaticType.list,1064949876,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>?
       get contributingSources => (_i4.getProperty(
             this,
             'contributingSources',
@@ -25193,7 +25193,7 @@ extension RTCEncodedVideoFrameMetadata$Typings on RTCEncodedVideoFrameMetadata {
     contributingSources?: number[]; */
   // Type InteropStaticType.list
   set contributingSources(
-      _i2.List /*LIST InteropStaticType.list,589393165,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1064949876,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.num>?
           value) {
     _i4.setProperty(
@@ -25206,7 +25206,7 @@ extension RTCEncodedVideoFrameMetadata$Typings on RTCEncodedVideoFrameMetadata {
   /* #1302
   source: 
     dependencies?: number[]; */
-  _i2.List /*LIST InteropStaticType.list,616567914,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>?
+  _i2.List /*LIST InteropStaticType.list,58238993,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>?
       get dependencies => (_i4.getProperty(
             this,
             'dependencies',
@@ -25217,7 +25217,7 @@ extension RTCEncodedVideoFrameMetadata$Typings on RTCEncodedVideoFrameMetadata {
     dependencies?: number[]; */
   // Type InteropStaticType.list
   set dependencies(
-      _i2.List /*LIST InteropStaticType.list,616567914,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,58238993,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.num>?
           value) {
     _i4.setProperty(
@@ -25431,7 +25431,7 @@ extension RTCErrorInit$Typings on RTCErrorInit {
   /* #1316
   source: 
     errorDetail: RTCErrorDetailType; */
-  // Type InteropTypedef#416152588(name: RTCErrorDetailType)
+  // Type InteropTypedef#261751063(name: RTCErrorDetailType)
   set errorDetail(_i3.RTCErrorDetailType value) {
     _i4.setProperty(
       this,
@@ -25591,7 +25591,7 @@ extension RTCIceCandidateInit$Typings on RTCIceCandidateInit {
   /* #1326
   source: 
     sdpMLineIndex?: number | null; */
-  // Type InteropUnion#216096421(parent: InteropGetter#303583569(name: sdpMLineIndex))
+  // Type InteropUnion#658433217(parent: InteropGetter#207131256(name: sdpMLineIndex))
   set sdpMLineIndex(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -25610,7 +25610,7 @@ extension RTCIceCandidateInit$Typings on RTCIceCandidateInit {
   /* #1327
   source: 
     sdpMid?: string | null; */
-  // Type InteropUnion#201724834(parent: InteropGetter#964400851(name: sdpMid))
+  // Type InteropUnion#789606974(parent: InteropGetter#815703590(name: sdpMid))
   set sdpMid(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -25629,7 +25629,7 @@ extension RTCIceCandidateInit$Typings on RTCIceCandidateInit {
   /* #1328
   source: 
     usernameFragment?: string | null; */
-  // Type InteropUnion#997643009(parent: InteropGetter#506412938(name: usernameFragment))
+  // Type InteropUnion#243511889(parent: InteropGetter#604837602(name: usernameFragment))
   set usernameFragment(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -25820,7 +25820,7 @@ extension RTCIceCandidatePairStats$Typings on RTCIceCandidatePairStats {
   /* #1337
   source: 
     lastPacketReceivedTimestamp?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set lastPacketReceivedTimestamp(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -25839,7 +25839,7 @@ extension RTCIceCandidatePairStats$Typings on RTCIceCandidatePairStats {
   /* #1338
   source: 
     lastPacketSentTimestamp?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set lastPacketSentTimestamp(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -25992,7 +25992,7 @@ extension RTCIceCandidatePairStats$Typings on RTCIceCandidatePairStats {
   /* #1346
   source: 
     state: RTCStatsIceCandidatePairState; */
-  // Type InteropTypedef#669994687(name: RTCStatsIceCandidatePairState)
+  // Type InteropTypedef#101954458(name: RTCStatsIceCandidatePairState)
   set state(_i3.RTCStatsIceCandidatePairState value) {
     _i4.setProperty(
       this,
@@ -26092,7 +26092,7 @@ extension RTCIceServer$Typings on RTCIceServer {
   /* #1353
   source: 
     urls: string | string[]; */
-  // Type InteropUnion#975941138(parent: InteropGetter#916817995(name: urls))
+  // Type InteropUnion#81475976(parent: InteropGetter#312095494(name: urls))
   set urls(_i2.Object value) {
     _i4.setProperty(
       this,
@@ -26362,7 +26362,7 @@ extension RTCInboundRtpStreamStats$Typings on RTCInboundRtpStreamStats {
   /* #1363
   source: 
     estimatedPlayoutTimestamp?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set estimatedPlayoutTimestamp(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -26666,7 +26666,7 @@ extension RTCInboundRtpStreamStats$Typings on RTCInboundRtpStreamStats {
   /* #1379
   source: 
     lastPacketReceivedTimestamp?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set lastPacketReceivedTimestamp(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -26995,7 +26995,7 @@ extension RTCLocalSessionDescriptionInit$Typings
   /* #1398
   source: 
     type?: RTCSdpType; */
-  // Type InteropTypedef#245592700(name: RTCSdpType)
+  // Type InteropTypedef#917966519(name: RTCSdpType)
   set type(_i3.RTCSdpType? value) {
     _i4.setProperty(
       this,
@@ -27650,7 +27650,7 @@ extension RTCPeerConnectionIceErrorEventInit$Typings
   /* #1436
   source: 
     address?: string | null; */
-  // Type InteropUnion#480847856(parent: InteropGetter#919594492(name: address))
+  // Type InteropUnion#766875464(parent: InteropGetter#804503491(name: address))
   set address(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -27707,7 +27707,7 @@ extension RTCPeerConnectionIceErrorEventInit$Typings
   /* #1439
   source: 
     port?: number | null; */
-  // Type InteropUnion#88858678(parent: InteropGetter#893893524(name: port))
+  // Type InteropUnion#714753907(parent: InteropGetter#768449810(name: port))
   set port(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -27776,7 +27776,7 @@ extension RTCPeerConnectionIceEventInit$Typings
   /* #1444
   source: 
     candidate?: RTCIceCandidate | null; */
-  // Type InteropUnion#262268851(parent: InteropGetter#423350363(name: candidate))
+  // Type InteropUnion#3275979(parent: InteropGetter#356000011(name: candidate))
   set candidate(_i3.RTCIceCandidate? value) {
     _i4.setProperty(
       this,
@@ -27795,7 +27795,7 @@ extension RTCPeerConnectionIceEventInit$Typings
   /* #1445
   source: 
     url?: string | null; */
-  // Type InteropUnion#1046362539(parent: InteropGetter#1046491553(name: url))
+  // Type InteropUnion#898551072(parent: InteropGetter#769726221(name: url))
   set url(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -27967,10 +27967,10 @@ class RTCRtpCapabilities {
   });
 
   factory RTCRtpCapabilities({
-    required _i2.List /*LIST InteropStaticType.list,426966090,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,778867502,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCRtpCodecCapability>
         codecs,
-    required _i2.List /*LIST InteropStaticType.list,293513290,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,657195197,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCRtpHeaderExtensionCapability>
         headerExtensions,
   }) =>
@@ -27984,7 +27984,7 @@ extension RTCRtpCapabilities$Typings on RTCRtpCapabilities {
   /* #1460
   source: 
     codecs: RTCRtpCodecCapability[]; */
-  _i2.List /*LIST InteropStaticType.list,426966090,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpCodecCapability>
+  _i2.List /*LIST InteropStaticType.list,778867502,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpCodecCapability>
       get codecs => (_i4.getProperty(
             this,
             'codecs',
@@ -27995,7 +27995,7 @@ extension RTCRtpCapabilities$Typings on RTCRtpCapabilities {
     codecs: RTCRtpCodecCapability[]; */
   // Type InteropStaticType.list
   set codecs(
-      _i2.List /*LIST InteropStaticType.list,426966090,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,778867502,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RTCRtpCodecCapability>
           value) {
     _i4.setProperty(
@@ -28008,7 +28008,7 @@ extension RTCRtpCapabilities$Typings on RTCRtpCapabilities {
   /* #1461
   source: 
     headerExtensions: RTCRtpHeaderExtensionCapability[]; */
-  _i2.List /*LIST InteropStaticType.list,293513290,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,657195197,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.RTCRtpHeaderExtensionCapability>
       get headerExtensions => (_i4.getProperty(
             this,
@@ -28020,7 +28020,7 @@ extension RTCRtpCapabilities$Typings on RTCRtpCapabilities {
     headerExtensions: RTCRtpHeaderExtensionCapability[]; */
   // Type InteropStaticType.list
   set headerExtensions(
-      _i2.List /*LIST InteropStaticType.list,293513290,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,657195197,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RTCRtpHeaderExtensionCapability>
           value) {
     _i4.setProperty(
@@ -28383,7 +28383,7 @@ extension RTCRtpContributingSource$Typings on RTCRtpContributingSource {
   /* #1487
   source: 
     timestamp: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set timestamp(_i3.DOMHighResTimeStamp value) {
     _i4.setProperty(
       this,
@@ -28499,7 +28499,7 @@ extension RTCRtpEncodingParameters$Typings on RTCRtpEncodingParameters {
   /* #1494
   source: 
     networkPriority?: RTCPriorityType; */
-  // Type InteropTypedef#319097187(name: RTCPriorityType)
+  // Type InteropTypedef#845107367(name: RTCPriorityType)
   set networkPriority(_i3.RTCPriorityType? value) {
     _i4.setProperty(
       this,
@@ -28521,7 +28521,7 @@ extension RTCRtpEncodingParameters$Typings on RTCRtpEncodingParameters {
   /* #1495
   source: 
     priority?: RTCPriorityType; */
-  // Type InteropTypedef#319097187(name: RTCPriorityType)
+  // Type InteropTypedef#845107367(name: RTCPriorityType)
   set priority(_i3.RTCPriorityType? value) {
     _i4.setProperty(
       this,
@@ -28675,10 +28675,10 @@ class RTCRtpParameters {
   });
 
   factory RTCRtpParameters({
-    required _i2.List /*LIST InteropStaticType.list,762691735,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,1039975928,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCRtpCodecParameters>
         codecs,
-    required _i2.List /*LIST InteropStaticType.list,277226015,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,512760611,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCRtpHeaderExtensionParameters>
         headerExtensions,
     required _i3.RTCRtcpParameters rtcp,
@@ -28694,7 +28694,7 @@ extension RTCRtpParameters$Typings on RTCRtpParameters {
   /* #1510
   source: 
     codecs: RTCRtpCodecParameters[]; */
-  _i2.List /*LIST InteropStaticType.list,762691735,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpCodecParameters>
+  _i2.List /*LIST InteropStaticType.list,1039975928,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpCodecParameters>
       get codecs => (_i4.getProperty(
             this,
             'codecs',
@@ -28705,7 +28705,7 @@ extension RTCRtpParameters$Typings on RTCRtpParameters {
     codecs: RTCRtpCodecParameters[]; */
   // Type InteropStaticType.list
   set codecs(
-      _i2.List /*LIST InteropStaticType.list,762691735,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1039975928,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RTCRtpCodecParameters>
           value) {
     _i4.setProperty(
@@ -28718,7 +28718,7 @@ extension RTCRtpParameters$Typings on RTCRtpParameters {
   /* #1511
   source: 
     headerExtensions: RTCRtpHeaderExtensionParameters[]; */
-  _i2.List /*LIST InteropStaticType.list,277226015,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,512760611,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.RTCRtpHeaderExtensionParameters>
       get headerExtensions => (_i4.getProperty(
             this,
@@ -28730,7 +28730,7 @@ extension RTCRtpParameters$Typings on RTCRtpParameters {
     headerExtensions: RTCRtpHeaderExtensionParameters[]; */
   // Type InteropStaticType.list
   set headerExtensions(
-      _i2.List /*LIST InteropStaticType.list,277226015,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,512760611,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RTCRtpHeaderExtensionParameters>
           value) {
     _i4.setProperty(
@@ -28771,10 +28771,10 @@ class RTCRtpReceiveParameters implements _i3.RTCRtpParameters {
   });
 
   factory RTCRtpReceiveParameters({
-    required _i2.List /*LIST InteropStaticType.list,762691735,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,1039975928,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCRtpCodecParameters>
         codecs,
-    required _i2.List /*LIST InteropStaticType.list,277226015,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,512760611,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCRtpHeaderExtensionParameters>
         headerExtensions,
     required _i3.RTCRtcpParameters rtcp,
@@ -28801,14 +28801,14 @@ class RTCRtpSendParameters implements _i3.RTCRtpParameters {
 
   factory RTCRtpSendParameters({
     _i3.RTCDegradationPreference? degradationPreference,
-    required _i2.List /*LIST InteropStaticType.list,121111616,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,781170408,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCRtpEncodingParameters>
         encodings,
     required _i2.String transactionId,
-    required _i2.List /*LIST InteropStaticType.list,762691735,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,1039975928,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCRtpCodecParameters>
         codecs,
-    required _i2.List /*LIST InteropStaticType.list,277226015,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,512760611,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCRtpHeaderExtensionParameters>
         headerExtensions,
     required _i3.RTCRtcpParameters rtcp,
@@ -28839,7 +28839,7 @@ extension RTCRtpSendParameters$Typings on RTCRtpSendParameters {
   /* #1519
   source: 
     degradationPreference?: RTCDegradationPreference; */
-  // Type InteropTypedef#595432028(name: RTCDegradationPreference)
+  // Type InteropTypedef#822657351(name: RTCDegradationPreference)
   set degradationPreference(_i3.RTCDegradationPreference? value) {
     _i4.setProperty(
       this,
@@ -28851,7 +28851,7 @@ extension RTCRtpSendParameters$Typings on RTCRtpSendParameters {
   /* #1520
   source: 
     encodings: RTCRtpEncodingParameters[]; */
-  _i2.List /*LIST InteropStaticType.list,121111616,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpEncodingParameters>
+  _i2.List /*LIST InteropStaticType.list,781170408,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpEncodingParameters>
       get encodings => (_i4.getProperty(
             this,
             'encodings',
@@ -28862,7 +28862,7 @@ extension RTCRtpSendParameters$Typings on RTCRtpSendParameters {
     encodings: RTCRtpEncodingParameters[]; */
   // Type InteropStaticType.list
   set encodings(
-      _i2.List /*LIST InteropStaticType.list,121111616,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,781170408,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RTCRtpEncodingParameters>
           value) {
     _i4.setProperty(
@@ -29041,10 +29041,10 @@ class RTCRtpTransceiverInit {
 
   factory RTCRtpTransceiverInit({
     _i3.RTCRtpTransceiverDirection? direction,
-    _i2.List /*LIST InteropStaticType.list,1008609570,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,769518374,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RTCRtpEncodingParameters>?
         sendEncodings,
-    _i2.List /*LIST InteropStaticType.list,344621995,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,515775502,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MediaStream>?
         streams,
   }) =>
@@ -29070,7 +29070,7 @@ extension RTCRtpTransceiverInit$Typings on RTCRtpTransceiverInit {
   /* #1535
   source: 
     direction?: RTCRtpTransceiverDirection; */
-  // Type InteropTypedef#852049650(name: RTCRtpTransceiverDirection)
+  // Type InteropTypedef#220753627(name: RTCRtpTransceiverDirection)
   set direction(_i3.RTCRtpTransceiverDirection? value) {
     _i4.setProperty(
       this,
@@ -29082,7 +29082,7 @@ extension RTCRtpTransceiverInit$Typings on RTCRtpTransceiverInit {
   /* #1536
   source: 
     sendEncodings?: RTCRtpEncodingParameters[]; */
-  _i2.List /*LIST InteropStaticType.list,1008609570,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpEncodingParameters>?
+  _i2.List /*LIST InteropStaticType.list,769518374,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpEncodingParameters>?
       get sendEncodings => (_i4.getProperty(
             this,
             'sendEncodings',
@@ -29093,7 +29093,7 @@ extension RTCRtpTransceiverInit$Typings on RTCRtpTransceiverInit {
     sendEncodings?: RTCRtpEncodingParameters[]; */
   // Type InteropStaticType.list
   set sendEncodings(
-      _i2.List /*LIST InteropStaticType.list,1008609570,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,769518374,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RTCRtpEncodingParameters>?
           value) {
     _i4.setProperty(
@@ -29106,7 +29106,7 @@ extension RTCRtpTransceiverInit$Typings on RTCRtpTransceiverInit {
   /* #1537
   source: 
     streams?: MediaStream[]; */
-  _i2.List /*LIST InteropStaticType.list,344621995,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaStream>?
+  _i2.List /*LIST InteropStaticType.list,515775502,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaStream>?
       get streams => (_i4.getProperty(
             this,
             'streams',
@@ -29117,7 +29117,7 @@ extension RTCRtpTransceiverInit$Typings on RTCRtpTransceiverInit {
     streams?: MediaStream[]; */
   // Type InteropStaticType.list
   set streams(
-      _i2.List /*LIST InteropStaticType.list,344621995,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,515775502,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.MediaStream>?
           value) {
     _i4.setProperty(
@@ -29248,7 +29248,7 @@ extension RTCSessionDescriptionInit$Typings on RTCSessionDescriptionInit {
   /* #1547
   source: 
     type: RTCSdpType; */
-  // Type InteropTypedef#245592700(name: RTCSdpType)
+  // Type InteropTypedef#917966519(name: RTCSdpType)
   set type(_i3.RTCSdpType value) {
     _i4.setProperty(
       this,
@@ -29310,7 +29310,7 @@ extension RTCStats$Typings on RTCStats {
   /* #1552
   source: 
     timestamp: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set timestamp(_i3.DOMHighResTimeStamp value) {
     _i4.setProperty(
       this,
@@ -29330,7 +29330,7 @@ extension RTCStats$Typings on RTCStats {
   /* #1553
   source: 
     type: RTCStatsType; */
-  // Type InteropTypedef#890151447(name: RTCStatsType)
+  // Type InteropTypedef#465327487(name: RTCStatsType)
   set type(_i3.RTCStatsType value) {
     _i4.setProperty(
       this,
@@ -29356,7 +29356,7 @@ class RTCTrackEventInit implements _i3.EventInit {
 
   factory RTCTrackEventInit({
     required _i3.RTCRtpReceiver receiver,
-    _i2.List /*LIST InteropStaticType.list,50753165,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,745115609,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MediaStream>?
         streams,
     required _i3.MediaStreamTrack track,
@@ -29399,7 +29399,7 @@ extension RTCTrackEventInit$Typings on RTCTrackEventInit {
   /* #1558
   source: 
     streams?: MediaStream[]; */
-  _i2.List /*LIST InteropStaticType.list,50753165,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaStream>?
+  _i2.List /*LIST InteropStaticType.list,745115609,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaStream>?
       get streams => (_i4.getProperty(
             this,
             'streams',
@@ -29410,7 +29410,7 @@ extension RTCTrackEventInit$Typings on RTCTrackEventInit {
     streams?: MediaStream[]; */
   // Type InteropStaticType.list
   set streams(
-      _i2.List /*LIST InteropStaticType.list,50753165,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,745115609,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.MediaStream>?
           value) {
     _i4.setProperty(
@@ -29577,7 +29577,7 @@ extension RTCTransportStats$Typings on RTCTransportStats {
   /* #1567
   source: 
     dtlsState: RTCDtlsTransportState; */
-  // Type InteropTypedef#1015085857(name: RTCDtlsTransportState)
+  // Type InteropTypedef#423469796(name: RTCDtlsTransportState)
   set dtlsState(_i3.RTCDtlsTransportState value) {
     _i4.setProperty(
       this,
@@ -29719,7 +29719,7 @@ extension ReadableStreamGetReaderOptions$Typings
      * This call behaves the same way as the no-argument variant, except that it only works on readable byte streams, i.e. streams which were constructed specifically with the ability to handle "bring your own buffer" reading. The returned BYOB reader provides the ability to directly read individual chunks from the stream via its read() method, into developer-supplied buffers, allowing more precise control over allocation.
      */
     mode?: ReadableStreamReaderMode; */
-  // Type InteropTypedef#503755855(name: ReadableStreamReaderMode)
+  // Type InteropTypedef#312030956(name: ReadableStreamReaderMode)
   set mode(_i3.ReadableStreamReaderMode? value) {
     _i4.setProperty(
       this,
@@ -29976,7 +29976,7 @@ extension RegistrationOptions$Typings on RegistrationOptions {
   /* #1606
   source: 
     type?: WorkerType; */
-  // Type InteropTypedef#245997730(name: WorkerType)
+  // Type InteropTypedef#254109532(name: WorkerType)
   set type(_i3.WorkerType? value) {
     _i4.setProperty(
       this,
@@ -30000,7 +30000,7 @@ extension RegistrationOptions$Typings on RegistrationOptions {
   /* #1607
   source: 
     updateViaCache?: ServiceWorkerUpdateViaCache; */
-  // Type InteropTypedef#977132652(name: ServiceWorkerUpdateViaCache)
+  // Type InteropTypedef#648520477(name: ServiceWorkerUpdateViaCache)
   set updateViaCache(_i3.ServiceWorkerUpdateViaCache? value) {
     _i4.setProperty(
       this,
@@ -30076,7 +30076,7 @@ extension RequestInit$Typings on RequestInit {
   source: 
     /** A BodyInit object or null to set request's body. */
     body?: BodyInit | null; */
-  // Type InteropUnion#638940033(parent: InteropGetter#33686165(name: body))
+  // Type InteropUnion#73498733(parent: InteropGetter#474671208(name: body))
   set body(_i3.BodyInit? value) {
     _i4.setProperty(
       this,
@@ -30101,7 +30101,7 @@ extension RequestInit$Typings on RequestInit {
   source: 
     /** A string indicating how the request will interact with the browser's cache to set request's cache. */
     cache?: RequestCache; */
-  // Type InteropTypedef#956118129(name: RequestCache)
+  // Type InteropTypedef#571033901(name: RequestCache)
   set cache(_i3.RequestCache? value) {
     _i4.setProperty(
       this,
@@ -30126,7 +30126,7 @@ extension RequestInit$Typings on RequestInit {
   source: 
     /** A string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL. Sets request's credentials. */
     credentials?: RequestCredentials; */
-  // Type InteropTypedef#342424618(name: RequestCredentials)
+  // Type InteropTypedef#318146231(name: RequestCredentials)
   set credentials(_i3.RequestCredentials? value) {
     _i4.setProperty(
       this,
@@ -30148,7 +30148,7 @@ extension RequestInit$Typings on RequestInit {
   source: 
     /** A Headers object, an object literal, or an array of two-item arrays to set request's headers. */
     headers?: HeadersInit; */
-  // Type InteropTypedef#336366232(name: HeadersInit)
+  // Type InteropTypedef#958753397(name: HeadersInit)
   set headers(_i3.HeadersInit? value) {
     _i4.setProperty(
       this,
@@ -30239,7 +30239,7 @@ extension RequestInit$Typings on RequestInit {
   source: 
     /** A string to indicate whether the request will use CORS, or will be restricted to same-origin URLs. Sets request's mode. */
     mode?: RequestMode; */
-  // Type InteropTypedef#853705666(name: RequestMode)
+  // Type InteropTypedef#283582289(name: RequestMode)
   set mode(_i3.RequestMode? value) {
     _i4.setProperty(
       this,
@@ -30264,7 +30264,7 @@ extension RequestInit$Typings on RequestInit {
   source: 
     /** A string indicating whether request follows redirects, results in an error upon encountering a redirect, or returns the redirect (in an opaque fashion). Sets request's redirect. */
     redirect?: RequestRedirect; */
-  // Type InteropTypedef#855819777(name: RequestRedirect)
+  // Type InteropTypedef#939525463(name: RequestRedirect)
   set redirect(_i3.RequestRedirect? value) {
     _i4.setProperty(
       this,
@@ -30311,7 +30311,7 @@ extension RequestInit$Typings on RequestInit {
   source: 
     /** A referrer policy to set request's referrerPolicy. */
     referrerPolicy?: ReferrerPolicy; */
-  // Type InteropTypedef#220144294(name: ReferrerPolicy)
+  // Type InteropTypedef#513382589(name: ReferrerPolicy)
   set referrerPolicy(_i3.ReferrerPolicy? value) {
     _i4.setProperty(
       this,
@@ -30333,7 +30333,7 @@ extension RequestInit$Typings on RequestInit {
   source: 
     /** An AbortSignal to set request's signal. */
     signal?: AbortSignal | null; */
-  // Type InteropUnion#477511925(parent: InteropGetter#1026303207(name: signal))
+  // Type InteropUnion#507773689(parent: InteropGetter#1000272482(name: signal))
   set signal(_i3.AbortSignal? value) {
     _i4.setProperty(
       this,
@@ -30389,7 +30389,7 @@ extension ResizeObserverOptions$Typings on ResizeObserverOptions {
   /* #1640
   source: 
     box?: ResizeObserverBoxOptions; */
-  // Type InteropTypedef#913372830(name: ResizeObserverBoxOptions)
+  // Type InteropTypedef#295158725(name: ResizeObserverBoxOptions)
   set box(_i3.ResizeObserverBoxOptions? value) {
     _i4.setProperty(
       this,
@@ -30432,7 +30432,7 @@ extension ResponseInit$Typings on ResponseInit {
   /* #1644
   source: 
     headers?: HeadersInit; */
-  // Type InteropTypedef#336366232(name: HeadersInit)
+  // Type InteropTypedef#958753397(name: HeadersInit)
   set headers(_i3.HeadersInit? value) {
     _i4.setProperty(
       this,
@@ -30510,7 +30510,7 @@ extension RsaHashedImportParams$Typings on RsaHashedImportParams {
   /* #1650
   source: 
     hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#1015774708(name: HashAlgorithmIdentifier)
+  // Type InteropTypedef#75209943(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -30596,7 +30596,7 @@ extension RsaHashedKeyGenParams$Typings on RsaHashedKeyGenParams {
   /* #1658
   source: 
     hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#1015774708(name: HashAlgorithmIdentifier)
+  // Type InteropTypedef#75209943(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -30658,7 +30658,7 @@ extension RsaKeyAlgorithm$Typings on RsaKeyAlgorithm {
   /* #1663
   source: 
     publicExponent: BigInteger; */
-  // Type InteropTypedef#1018551166(name: BigInteger)
+  // Type InteropTypedef#495143337(name: BigInteger)
   set publicExponent(_i3.BigInteger value) {
     _i4.setProperty(
       this,
@@ -30720,7 +30720,7 @@ extension RsaKeyGenParams$Typings on RsaKeyGenParams {
   /* #1668
   source: 
     publicExponent: BigInteger; */
-  // Type InteropTypedef#1018551166(name: BigInteger)
+  // Type InteropTypedef#495143337(name: BigInteger)
   set publicExponent(_i3.BigInteger value) {
     _i4.setProperty(
       this,
@@ -30760,7 +30760,7 @@ extension RsaOaepParams$Typings on RsaOaepParams {
   /* #1672
   source: 
     label?: BufferSource; */
-  // Type InteropTypedef#80978756(name: BufferSource)
+  // Type InteropTypedef#858646690(name: BufferSource)
   set label(_i3.BufferSource? value) {
     _i4.setProperty(
       this,
@@ -31030,7 +31030,7 @@ extension ScrollIntoViewOptions$Typings on ScrollIntoViewOptions {
   /* #1693
   source: 
     block?: ScrollLogicalPosition; */
-  // Type InteropTypedef#1065322816(name: ScrollLogicalPosition)
+  // Type InteropTypedef#762231976(name: ScrollLogicalPosition)
   set block(_i3.ScrollLogicalPosition? value) {
     _i4.setProperty(
       this,
@@ -31052,7 +31052,7 @@ extension ScrollIntoViewOptions$Typings on ScrollIntoViewOptions {
   /* #1694
   source: 
     inline?: ScrollLogicalPosition; */
-  // Type InteropTypedef#1065322816(name: ScrollLogicalPosition)
+  // Type InteropTypedef#762231976(name: ScrollLogicalPosition)
   set inline(_i3.ScrollLogicalPosition? value) {
     _i4.setProperty(
       this,
@@ -31086,7 +31086,7 @@ extension ScrollOptions$Typings on ScrollOptions {
   /* #1698
   source: 
     behavior?: ScrollBehavior; */
-  // Type InteropTypedef#673339073(name: ScrollBehavior)
+  // Type InteropTypedef#422629921(name: ScrollBehavior)
   set behavior(_i3.ScrollBehavior? value) {
     _i4.setProperty(
       this,
@@ -31268,7 +31268,7 @@ extension SecurityPolicyViolationEventInit$Typings
   /* #1709
   source: 
     disposition: SecurityPolicyViolationEventDisposition; */
-  // Type InteropTypedef#56083031(name: SecurityPolicyViolationEventDisposition)
+  // Type InteropTypedef#908438893(name: SecurityPolicyViolationEventDisposition)
   set disposition(_i3.SecurityPolicyViolationEventDisposition value) {
     _i4.setProperty(
       this,
@@ -31502,7 +31502,7 @@ extension ShadowRootInit$Typings on ShadowRootInit {
   /* #1723
   source: 
     mode: ShadowRootMode; */
-  // Type InteropTypedef#164282146(name: ShadowRootMode)
+  // Type InteropTypedef#1011767723(name: ShadowRootMode)
   set mode(_i3.ShadowRootMode value) {
     _i4.setProperty(
       this,
@@ -31524,7 +31524,7 @@ extension ShadowRootInit$Typings on ShadowRootInit {
   /* #1724
   source: 
     slotAssignment?: SlotAssignmentMode; */
-  // Type InteropTypedef#655408955(name: SlotAssignmentMode)
+  // Type InteropTypedef#569782203(name: SlotAssignmentMode)
   set slotAssignment(_i3.SlotAssignmentMode? value) {
     _i4.setProperty(
       this,
@@ -31546,7 +31546,7 @@ class ShareData {
   });
 
   factory ShareData({
-    _i2.List /*LIST InteropStaticType.list,497633898,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,611832058,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.File>?
         files,
     _i2.String? text,
@@ -31565,7 +31565,7 @@ extension ShareData$Typings on ShareData {
   /* #1728
   source: 
     files?: File[]; */
-  _i2.List /*LIST InteropStaticType.list,497633898,[Instance of 'InteropRef<InteropType>']*/ <_i3.File>?
+  _i2.List /*LIST InteropStaticType.list,611832058,[Instance of 'InteropRef<InteropType>']*/ <_i3.File>?
       get files => (_i4.getProperty(
             this,
             'files',
@@ -31576,7 +31576,7 @@ extension ShareData$Typings on ShareData {
     files?: File[]; */
   // Type InteropStaticType.list
   set files(
-      _i2.List /*LIST InteropStaticType.list,497633898,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,611832058,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.File>?
           value) {
     _i4.setProperty(
@@ -31688,7 +31688,7 @@ extension SpeechSynthesisErrorEventInit$Typings
   /* #1735
   source: 
     error: SpeechSynthesisErrorCode; */
-  // Type InteropTypedef#1054943539(name: SpeechSynthesisErrorCode)
+  // Type InteropTypedef#192574965(name: SpeechSynthesisErrorCode)
   set error(_i3.SpeechSynthesisErrorCode value) {
     _i4.setProperty(
       this,
@@ -32090,7 +32090,7 @@ extension StorageEventInit$Typings on StorageEventInit {
   /* #1763
   source: 
     key?: string | null; */
-  // Type InteropUnion#463004486(parent: InteropGetter#551223188(name: key))
+  // Type InteropUnion#902802557(parent: InteropGetter#881690156(name: key))
   set key(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -32109,7 +32109,7 @@ extension StorageEventInit$Typings on StorageEventInit {
   /* #1764
   source: 
     newValue?: string | null; */
-  // Type InteropUnion#212050452(parent: InteropGetter#550263173(name: newValue))
+  // Type InteropUnion#495249881(parent: InteropGetter#691264068(name: newValue))
   set newValue(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -32128,7 +32128,7 @@ extension StorageEventInit$Typings on StorageEventInit {
   /* #1765
   source: 
     oldValue?: string | null; */
-  // Type InteropUnion#617071670(parent: InteropGetter#694001601(name: oldValue))
+  // Type InteropUnion#130313847(parent: InteropGetter#842791909(name: oldValue))
   set oldValue(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -32147,7 +32147,7 @@ extension StorageEventInit$Typings on StorageEventInit {
   /* #1766
   source: 
     storageArea?: Storage | null; */
-  // Type InteropUnion#730500640(parent: InteropGetter#398767053(name: storageArea))
+  // Type InteropUnion#689620192(parent: InteropGetter#203895084(name: storageArea))
   set storageArea(_i3.Storage? value) {
     _i4.setProperty(
       this,
@@ -32335,7 +32335,7 @@ class StructuredSerializeOptions {
   external factory StructuredSerializeOptions._({_i2.dynamic transfer});
 
   factory StructuredSerializeOptions(
-          {_i2.List /*LIST InteropStaticType.list,979513599,[Instance of 'InteropRef<InteropType>']*/ <
+          {_i2.List /*LIST InteropStaticType.list,849855923,[Instance of 'InteropRef<InteropType>']*/ <
                   _i3.Transferable>?
               transfer}) =>
       StructuredSerializeOptions._(transfer: transfer ?? _i6.undefined);
@@ -32345,7 +32345,7 @@ extension StructuredSerializeOptions$Typings on StructuredSerializeOptions {
   /* #1795
   source: 
     transfer?: Transferable[]; */
-  _i2.List /*LIST InteropStaticType.list,979513599,[Instance of 'InteropRef<InteropType>']*/ <_i3.Transferable>?
+  _i2.List /*LIST InteropStaticType.list,849855923,[Instance of 'InteropRef<InteropType>']*/ <_i3.Transferable>?
       get transfer => (_i4.getProperty(
             this,
             'transfer',
@@ -32356,7 +32356,7 @@ extension StructuredSerializeOptions$Typings on StructuredSerializeOptions {
     transfer?: Transferable[]; */
   // Type InteropStaticType.list
   set transfer(
-      _i2.List /*LIST InteropStaticType.list,979513599,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,849855923,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Transferable>?
           value) {
     _i4.setProperty(
@@ -32403,7 +32403,7 @@ extension SubmitEventInit$Typings on SubmitEventInit {
   /* #1799
   source: 
     submitter?: HTMLElement | null; */
-  // Type InteropUnion#598957446(parent: InteropGetter#561425097(name: submitter))
+  // Type InteropUnion#375424566(parent: InteropGetter#424577871(name: submitter))
   set submitter(_i3.HTMLElement? value) {
     _i4.setProperty(
       this,
@@ -32587,13 +32587,13 @@ class TouchEventInit implements _i3.EventModifierInit {
   });
 
   factory TouchEventInit({
-    _i2.List /*LIST InteropStaticType.list,877672560,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,74809100,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Touch>?
         changedTouches,
-    _i2.List /*LIST InteropStaticType.list,192634598,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,418898723,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Touch>?
         targetTouches,
-    _i2.List /*LIST InteropStaticType.list,1039726718,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,782977495,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Touch>?
         touches,
     _i2.bool? altKey,
@@ -32636,7 +32636,7 @@ extension TouchEventInit$Typings on TouchEventInit {
   /* #1817
   source: 
     changedTouches?: Touch[]; */
-  _i2.List /*LIST InteropStaticType.list,877672560,[Instance of 'InteropRef<InteropType>']*/ <_i3.Touch>?
+  _i2.List /*LIST InteropStaticType.list,74809100,[Instance of 'InteropRef<InteropType>']*/ <_i3.Touch>?
       get changedTouches => (_i4.getProperty(
             this,
             'changedTouches',
@@ -32647,7 +32647,7 @@ extension TouchEventInit$Typings on TouchEventInit {
     changedTouches?: Touch[]; */
   // Type InteropStaticType.list
   set changedTouches(
-      _i2.List /*LIST InteropStaticType.list,877672560,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,74809100,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Touch>?
           value) {
     _i4.setProperty(
@@ -32660,7 +32660,7 @@ extension TouchEventInit$Typings on TouchEventInit {
   /* #1818
   source: 
     targetTouches?: Touch[]; */
-  _i2.List /*LIST InteropStaticType.list,192634598,[Instance of 'InteropRef<InteropType>']*/ <_i3.Touch>?
+  _i2.List /*LIST InteropStaticType.list,418898723,[Instance of 'InteropRef<InteropType>']*/ <_i3.Touch>?
       get targetTouches => (_i4.getProperty(
             this,
             'targetTouches',
@@ -32671,7 +32671,7 @@ extension TouchEventInit$Typings on TouchEventInit {
     targetTouches?: Touch[]; */
   // Type InteropStaticType.list
   set targetTouches(
-      _i2.List /*LIST InteropStaticType.list,192634598,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,418898723,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Touch>?
           value) {
     _i4.setProperty(
@@ -32684,7 +32684,7 @@ extension TouchEventInit$Typings on TouchEventInit {
   /* #1819
   source: 
     touches?: Touch[]; */
-  _i2.List /*LIST InteropStaticType.list,1039726718,[Instance of 'InteropRef<InteropType>']*/ <_i3.Touch>?
+  _i2.List /*LIST InteropStaticType.list,782977495,[Instance of 'InteropRef<InteropType>']*/ <_i3.Touch>?
       get touches => (_i4.getProperty(
             this,
             'touches',
@@ -32695,7 +32695,7 @@ extension TouchEventInit$Typings on TouchEventInit {
     touches?: Touch[]; */
   // Type InteropStaticType.list
   set touches(
-      _i2.List /*LIST InteropStaticType.list,1039726718,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,782977495,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Touch>?
           value) {
     _i4.setProperty(
@@ -33044,7 +33044,7 @@ extension TouchInit$Typings on TouchInit {
   /* #1837
   source: 
     touchType?: TouchType; */
-  // Type InteropTypedef#476012007(name: TouchType)
+  // Type InteropTypedef#219733807(name: TouchType)
   set touchType(_i3.TouchType? value) {
     _i4.setProperty(
       this,
@@ -33090,7 +33090,7 @@ extension TrackEventInit$Typings on TrackEventInit {
   /* #1841
   source: 
     track?: TextTrack | null; */
-  // Type InteropUnion#300858916(parent: InteropGetter#422938319(name: track))
+  // Type InteropUnion#451466167(parent: InteropGetter#292959515(name: track))
   set track(_i3.TextTrack? value) {
     _i4.setProperty(
       this,
@@ -33376,7 +33376,7 @@ extension UIEventInit$Typings on UIEventInit {
   /* #1860
   source: 
     view?: Window | null; */
-  // Type InteropUnion#758380986(parent: InteropGetter#47548053(name: view))
+  // Type InteropUnion#751882439(parent: InteropGetter#228047498(name: view))
   set view(_i3.Window? value) {
     _i4.setProperty(
       this,
@@ -33545,7 +33545,7 @@ extension UnderlyingByteSource$Typings on UnderlyingByteSource {
   /* #1873
   source: 
     pull?: (controller: ReadableByteStreamController) => void | PromiseLike<void>; */
-  // Type InteropFunction#1017023795(parent: InteropGetter#237095458(name: pull), library: lib.dom.d.ts)
+  // Type InteropFunction#472556012(parent: InteropGetter#228457595(name: pull), library: lib.dom.d.ts)
   set pull(_i2.Object Function(_i3.ReadableByteStreamController)? value) {
     _i4.setProperty(
       this,
@@ -33565,7 +33565,7 @@ extension UnderlyingByteSource$Typings on UnderlyingByteSource {
   /* #1874
   source: 
     start?: (controller: ReadableByteStreamController) => any; */
-  // Type InteropFunction#256213590(parent: InteropGetter#430044373(name: start), library: lib.dom.d.ts)
+  // Type InteropFunction#409935516(parent: InteropGetter#49944510(name: start), library: lib.dom.d.ts)
   set start(_i2.dynamic Function(_i3.ReadableByteStreamController)? value) {
     _i4.setProperty(
       this,
@@ -33650,7 +33650,7 @@ extension UnderlyingDefaultSource$Typings<R> on UnderlyingDefaultSource<R> {
   /* #1880
   source: 
     pull?: (controller: ReadableStreamDefaultController<R>) => void | PromiseLike<void>; */
-  // Type InteropFunction#490033503(parent: InteropGetter#975690740(name: pull), library: lib.dom.d.ts)
+  // Type InteropFunction#600592841(parent: InteropGetter#249218425(name: pull), library: lib.dom.d.ts)
   set pull(_i2.Object Function(_i3.ReadableStreamDefaultController<R>)? value) {
     _i4.setProperty(
       this,
@@ -33670,7 +33670,7 @@ extension UnderlyingDefaultSource$Typings<R> on UnderlyingDefaultSource<R> {
   /* #1881
   source: 
     start?: (controller: ReadableStreamDefaultController<R>) => any; */
-  // Type InteropFunction#751022871(parent: InteropGetter#940965301(name: start), library: lib.dom.d.ts)
+  // Type InteropFunction#20834411(parent: InteropGetter#714011687(name: start), library: lib.dom.d.ts)
   set start(
       _i2.dynamic Function(_i3.ReadableStreamDefaultController<R>)? value) {
     _i4.setProperty(
@@ -33940,7 +33940,7 @@ extension UnderlyingSource$Typings<R> on UnderlyingSource<R> {
   /* #1898
   source: 
     type?: ReadableStreamType; */
-  // Type InteropTypedef#1053159747(name: ReadableStreamType)
+  // Type InteropTypedef#304335688(name: ReadableStreamType)
   set type(_i3.ReadableStreamType? value) {
     _i4.setProperty(
       this,
@@ -34221,7 +34221,7 @@ extension VideoColorSpaceInit$Typings on VideoColorSpaceInit {
   /* #1915
   source: 
     fullRange?: boolean | null; */
-  // Type InteropUnion#919864366(parent: InteropGetter#97302245(name: fullRange))
+  // Type InteropUnion#919043089(parent: InteropGetter#263875158(name: fullRange))
   set fullRange(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -34243,7 +34243,7 @@ extension VideoColorSpaceInit$Typings on VideoColorSpaceInit {
   /* #1916
   source: 
     matrix?: VideoMatrixCoefficients | null; */
-  // Type InteropUnion#104806421(parent: InteropGetter#23975936(name: matrix))
+  // Type InteropUnion#10542691(parent: InteropGetter#732690826(name: matrix))
   set matrix(_i3.VideoMatrixCoefficients? value) {
     _i4.setProperty(
       this,
@@ -34265,7 +34265,7 @@ extension VideoColorSpaceInit$Typings on VideoColorSpaceInit {
   /* #1917
   source: 
     primaries?: VideoColorPrimaries | null; */
-  // Type InteropUnion#47053914(parent: InteropGetter#1040516885(name: primaries))
+  // Type InteropUnion#96462381(parent: InteropGetter#490170716(name: primaries))
   set primaries(_i3.VideoColorPrimaries? value) {
     _i4.setProperty(
       this,
@@ -34288,7 +34288,7 @@ extension VideoColorSpaceInit$Typings on VideoColorSpaceInit {
   /* #1918
   source: 
     transfer?: VideoTransferCharacteristics | null; */
-  // Type InteropUnion#61375358(parent: InteropGetter#492444854(name: transfer))
+  // Type InteropUnion#505089274(parent: InteropGetter#25834443(name: transfer))
   set transfer(_i3.VideoTransferCharacteristics? value) {
     _i4.setProperty(
       this,
@@ -34373,7 +34373,7 @@ extension VideoConfiguration$Typings on VideoConfiguration {
   /* #1923
   source: 
     colorGamut?: ColorGamut; */
-  // Type InteropTypedef#1008645237(name: ColorGamut)
+  // Type InteropTypedef#966687416(name: ColorGamut)
   set colorGamut(_i3.ColorGamut? value) {
     _i4.setProperty(
       this,
@@ -34433,7 +34433,7 @@ extension VideoConfiguration$Typings on VideoConfiguration {
   /* #1926
   source: 
     hdrMetadataType?: HdrMetadataType; */
-  // Type InteropTypedef#750718285(name: HdrMetadataType)
+  // Type InteropTypedef#976847862(name: HdrMetadataType)
   set hdrMetadataType(_i3.HdrMetadataType? value) {
     _i4.setProperty(
       this,
@@ -34493,7 +34493,7 @@ extension VideoConfiguration$Typings on VideoConfiguration {
   /* #1929
   source: 
     transferFunction?: TransferFunction; */
-  // Type InteropTypedef#268529772(name: TransferFunction)
+  // Type InteropTypedef#239267555(name: TransferFunction)
   set transferFunction(_i3.TransferFunction? value) {
     _i4.setProperty(
       this,
@@ -34576,7 +34576,7 @@ extension VideoFrameCallbackMetadata$Typings on VideoFrameCallbackMetadata {
   /* #1934
   source: 
     captureTime?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set captureTime(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -34595,7 +34595,7 @@ extension VideoFrameCallbackMetadata$Typings on VideoFrameCallbackMetadata {
   /* #1935
   source: 
     expectedDisplayTime: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set expectedDisplayTime(_i3.DOMHighResTimeStamp value) {
     _i4.setProperty(
       this,
@@ -34652,7 +34652,7 @@ extension VideoFrameCallbackMetadata$Typings on VideoFrameCallbackMetadata {
   /* #1938
   source: 
     presentationTime: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set presentationTime(_i3.DOMHighResTimeStamp value) {
     _i4.setProperty(
       this,
@@ -34709,7 +34709,7 @@ extension VideoFrameCallbackMetadata$Typings on VideoFrameCallbackMetadata {
   /* #1941
   source: 
     receiveTime?: DOMHighResTimeStamp; */
-  // Type InteropTypedef#585662257(name: DOMHighResTimeStamp)
+  // Type InteropTypedef#991237321(name: DOMHighResTimeStamp)
   set receiveTime(_i3.DOMHighResTimeStamp? value) {
     _i4.setProperty(
       this,
@@ -34798,7 +34798,7 @@ extension WaveShaperOptions$Typings on WaveShaperOptions {
   /* #1947
   source: 
     curve?: number[] | Float32Array; */
-  // Type InteropUnion#42622954(parent: InteropGetter#160145728(name: curve))
+  // Type InteropUnion#801665961(parent: InteropGetter#458420378(name: curve))
   set curve(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -34820,7 +34820,7 @@ extension WaveShaperOptions$Typings on WaveShaperOptions {
   /* #1948
   source: 
     oversample?: OverSampleType; */
-  // Type InteropTypedef#773765986(name: OverSampleType)
+  // Type InteropTypedef#6890165(name: OverSampleType)
   set oversample(_i3.OverSampleType? value) {
     _i4.setProperty(
       this,
@@ -34981,7 +34981,7 @@ extension WebGLContextAttributes$Typings on WebGLContextAttributes {
   /* #1957
   source: 
     powerPreference?: WebGLPowerPreference; */
-  // Type InteropTypedef#302183443(name: WebGLPowerPreference)
+  // Type InteropTypedef#146147211(name: WebGLPowerPreference)
   set powerPreference(_i3.WebGLPowerPreference? value) {
     _i4.setProperty(
       this,
@@ -35235,7 +35235,7 @@ class WindowPostMessageOptions implements _i3.StructuredSerializeOptions {
 
   factory WindowPostMessageOptions({
     _i2.String? targetOrigin,
-    _i2.List /*LIST InteropStaticType.list,979513599,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,849855923,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Transferable>?
         transfer,
   }) =>
@@ -35302,7 +35302,7 @@ extension WorkerOptions$Typings on WorkerOptions {
   /* #1979
   source: 
     credentials?: RequestCredentials; */
-  // Type InteropTypedef#342424618(name: RequestCredentials)
+  // Type InteropTypedef#318146231(name: RequestCredentials)
   set credentials(_i3.RequestCredentials? value) {
     _i4.setProperty(
       this,
@@ -35343,7 +35343,7 @@ extension WorkerOptions$Typings on WorkerOptions {
   /* #1981
   source: 
     type?: WorkerType; */
-  // Type InteropTypedef#245997730(name: WorkerType)
+  // Type InteropTypedef#254109532(name: WorkerType)
   set type(_i3.WorkerType? value) {
     _i4.setProperty(
       this,
@@ -35378,7 +35378,7 @@ extension WorkletOptions$Typings on WorkletOptions {
   /* #1985
   source: 
     credentials?: RequestCredentials; */
-  // Type InteropTypedef#342424618(name: RequestCredentials)
+  // Type InteropTypedef#318146231(name: RequestCredentials)
   set credentials(_i3.RequestCredentials? value) {
     _i4.setProperty(
       this,
@@ -35735,7 +35735,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2020
   source: 
     ariaAtomic: string | null; */
-  // Type InteropUnion#646115171(parent: InteropGetter#832542964(name: ariaAtomic))
+  // Type InteropUnion#981379117(parent: InteropGetter#945412972(name: ariaAtomic))
   set ariaAtomic(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35754,7 +35754,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2021
   source: 
     ariaAutoComplete: string | null; */
-  // Type InteropUnion#55024838(parent: InteropGetter#243040736(name: ariaAutoComplete))
+  // Type InteropUnion#1039708697(parent: InteropGetter#153456437(name: ariaAutoComplete))
   set ariaAutoComplete(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35773,7 +35773,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2022
   source: 
     ariaBusy: string | null; */
-  // Type InteropUnion#86872619(parent: InteropGetter#17725090(name: ariaBusy))
+  // Type InteropUnion#569506627(parent: InteropGetter#982105457(name: ariaBusy))
   set ariaBusy(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35792,7 +35792,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2023
   source: 
     ariaChecked: string | null; */
-  // Type InteropUnion#101478242(parent: InteropGetter#859570789(name: ariaChecked))
+  // Type InteropUnion#503576599(parent: InteropGetter#53953062(name: ariaChecked))
   set ariaChecked(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35811,7 +35811,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2024
   source: 
     ariaColCount: string | null; */
-  // Type InteropUnion#124669788(parent: InteropGetter#608197458(name: ariaColCount))
+  // Type InteropUnion#572678164(parent: InteropGetter#402302937(name: ariaColCount))
   set ariaColCount(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35830,7 +35830,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2025
   source: 
     ariaColIndex: string | null; */
-  // Type InteropUnion#910343254(parent: InteropGetter#194302556(name: ariaColIndex))
+  // Type InteropUnion#53589217(parent: InteropGetter#754368044(name: ariaColIndex))
   set ariaColIndex(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35849,7 +35849,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2026
   source: 
     ariaColSpan: string | null; */
-  // Type InteropUnion#40674562(parent: InteropGetter#373358851(name: ariaColSpan))
+  // Type InteropUnion#745875525(parent: InteropGetter#559982822(name: ariaColSpan))
   set ariaColSpan(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35868,7 +35868,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2027
   source: 
     ariaCurrent: string | null; */
-  // Type InteropUnion#182944250(parent: InteropGetter#447614632(name: ariaCurrent))
+  // Type InteropUnion#956494715(parent: InteropGetter#190487089(name: ariaCurrent))
   set ariaCurrent(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35887,7 +35887,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2028
   source: 
     ariaDisabled: string | null; */
-  // Type InteropUnion#279839185(parent: InteropGetter#408401134(name: ariaDisabled))
+  // Type InteropUnion#326366580(parent: InteropGetter#870012947(name: ariaDisabled))
   set ariaDisabled(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35906,7 +35906,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2029
   source: 
     ariaExpanded: string | null; */
-  // Type InteropUnion#84818315(parent: InteropGetter#640731701(name: ariaExpanded))
+  // Type InteropUnion#712867787(parent: InteropGetter#745574647(name: ariaExpanded))
   set ariaExpanded(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35925,7 +35925,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2030
   source: 
     ariaHasPopup: string | null; */
-  // Type InteropUnion#1065802923(parent: InteropGetter#864616291(name: ariaHasPopup))
+  // Type InteropUnion#195015612(parent: InteropGetter#524663979(name: ariaHasPopup))
   set ariaHasPopup(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35944,7 +35944,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2031
   source: 
     ariaHidden: string | null; */
-  // Type InteropUnion#814139808(parent: InteropGetter#346915129(name: ariaHidden))
+  // Type InteropUnion#185252354(parent: InteropGetter#918150509(name: ariaHidden))
   set ariaHidden(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35963,7 +35963,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2032
   source: 
     ariaInvalid: string | null; */
-  // Type InteropUnion#85337825(parent: InteropGetter#944558961(name: ariaInvalid))
+  // Type InteropUnion#815359816(parent: InteropGetter#461719466(name: ariaInvalid))
   set ariaInvalid(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -35982,7 +35982,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2033
   source: 
     ariaKeyShortcuts: string | null; */
-  // Type InteropUnion#852458994(parent: InteropGetter#741967117(name: ariaKeyShortcuts))
+  // Type InteropUnion#360071718(parent: InteropGetter#797093893(name: ariaKeyShortcuts))
   set ariaKeyShortcuts(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36001,7 +36001,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2034
   source: 
     ariaLabel: string | null; */
-  // Type InteropUnion#718989568(parent: InteropGetter#714456613(name: ariaLabel))
+  // Type InteropUnion#802829027(parent: InteropGetter#765602877(name: ariaLabel))
   set ariaLabel(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36020,7 +36020,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2035
   source: 
     ariaLevel: string | null; */
-  // Type InteropUnion#324949121(parent: InteropGetter#13138573(name: ariaLevel))
+  // Type InteropUnion#666624248(parent: InteropGetter#409831960(name: ariaLevel))
   set ariaLevel(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36039,7 +36039,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2036
   source: 
     ariaLive: string | null; */
-  // Type InteropUnion#488882246(parent: InteropGetter#1019860158(name: ariaLive))
+  // Type InteropUnion#649956202(parent: InteropGetter#596483499(name: ariaLive))
   set ariaLive(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36058,7 +36058,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2037
   source: 
     ariaModal: string | null; */
-  // Type InteropUnion#805898181(parent: InteropGetter#420380532(name: ariaModal))
+  // Type InteropUnion#436129460(parent: InteropGetter#711668390(name: ariaModal))
   set ariaModal(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36077,7 +36077,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2038
   source: 
     ariaMultiLine: string | null; */
-  // Type InteropUnion#127661938(parent: InteropGetter#342635969(name: ariaMultiLine))
+  // Type InteropUnion#51926984(parent: InteropGetter#966573874(name: ariaMultiLine))
   set ariaMultiLine(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36096,7 +36096,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2039
   source: 
     ariaMultiSelectable: string | null; */
-  // Type InteropUnion#883011189(parent: InteropGetter#97115206(name: ariaMultiSelectable))
+  // Type InteropUnion#320558045(parent: InteropGetter#679777088(name: ariaMultiSelectable))
   set ariaMultiSelectable(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36115,7 +36115,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2040
   source: 
     ariaOrientation: string | null; */
-  // Type InteropUnion#795588927(parent: InteropGetter#1810299(name: ariaOrientation))
+  // Type InteropUnion#1065060735(parent: InteropGetter#535476635(name: ariaOrientation))
   set ariaOrientation(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36134,7 +36134,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2041
   source: 
     ariaPlaceholder: string | null; */
-  // Type InteropUnion#540459435(parent: InteropGetter#337352155(name: ariaPlaceholder))
+  // Type InteropUnion#1071562518(parent: InteropGetter#49527817(name: ariaPlaceholder))
   set ariaPlaceholder(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36153,7 +36153,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2042
   source: 
     ariaPosInSet: string | null; */
-  // Type InteropUnion#644612842(parent: InteropGetter#446294056(name: ariaPosInSet))
+  // Type InteropUnion#810519629(parent: InteropGetter#38036472(name: ariaPosInSet))
   set ariaPosInSet(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36172,7 +36172,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2043
   source: 
     ariaPressed: string | null; */
-  // Type InteropUnion#575072309(parent: InteropGetter#285208453(name: ariaPressed))
+  // Type InteropUnion#627217964(parent: InteropGetter#173326926(name: ariaPressed))
   set ariaPressed(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36191,7 +36191,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2044
   source: 
     ariaReadOnly: string | null; */
-  // Type InteropUnion#364041153(parent: InteropGetter#1045655639(name: ariaReadOnly))
+  // Type InteropUnion#984121348(parent: InteropGetter#19701990(name: ariaReadOnly))
   set ariaReadOnly(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36210,7 +36210,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2045
   source: 
     ariaRequired: string | null; */
-  // Type InteropUnion#279143608(parent: InteropGetter#189345303(name: ariaRequired))
+  // Type InteropUnion#212812067(parent: InteropGetter#199819462(name: ariaRequired))
   set ariaRequired(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36229,7 +36229,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2046
   source: 
     ariaRoleDescription: string | null; */
-  // Type InteropUnion#981886358(parent: InteropGetter#86074948(name: ariaRoleDescription))
+  // Type InteropUnion#970663500(parent: InteropGetter#809707266(name: ariaRoleDescription))
   set ariaRoleDescription(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36248,7 +36248,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2047
   source: 
     ariaRowCount: string | null; */
-  // Type InteropUnion#922743280(parent: InteropGetter#506615100(name: ariaRowCount))
+  // Type InteropUnion#193105958(parent: InteropGetter#727063120(name: ariaRowCount))
   set ariaRowCount(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36267,7 +36267,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2048
   source: 
     ariaRowIndex: string | null; */
-  // Type InteropUnion#795558959(parent: InteropGetter#699928676(name: ariaRowIndex))
+  // Type InteropUnion#792365709(parent: InteropGetter#536054056(name: ariaRowIndex))
   set ariaRowIndex(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36286,7 +36286,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2049
   source: 
     ariaRowSpan: string | null; */
-  // Type InteropUnion#733649691(parent: InteropGetter#140947782(name: ariaRowSpan))
+  // Type InteropUnion#606440389(parent: InteropGetter#1064188955(name: ariaRowSpan))
   set ariaRowSpan(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36305,7 +36305,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2050
   source: 
     ariaSelected: string | null; */
-  // Type InteropUnion#475222733(parent: InteropGetter#632201655(name: ariaSelected))
+  // Type InteropUnion#268323504(parent: InteropGetter#263348088(name: ariaSelected))
   set ariaSelected(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36324,7 +36324,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2051
   source: 
     ariaSetSize: string | null; */
-  // Type InteropUnion#930963858(parent: InteropGetter#263509424(name: ariaSetSize))
+  // Type InteropUnion#141068439(parent: InteropGetter#990358265(name: ariaSetSize))
   set ariaSetSize(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36343,7 +36343,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2052
   source: 
     ariaSort: string | null; */
-  // Type InteropUnion#323629339(parent: InteropGetter#461859996(name: ariaSort))
+  // Type InteropUnion#49235684(parent: InteropGetter#321625417(name: ariaSort))
   set ariaSort(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36362,7 +36362,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2053
   source: 
     ariaValueMax: string | null; */
-  // Type InteropUnion#662381561(parent: InteropGetter#165216538(name: ariaValueMax))
+  // Type InteropUnion#220006687(parent: InteropGetter#1003582774(name: ariaValueMax))
   set ariaValueMax(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36381,7 +36381,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2054
   source: 
     ariaValueMin: string | null; */
-  // Type InteropUnion#747285766(parent: InteropGetter#347447685(name: ariaValueMin))
+  // Type InteropUnion#538202224(parent: InteropGetter#529743220(name: ariaValueMin))
   set ariaValueMin(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36400,7 +36400,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2055
   source: 
     ariaValueNow: string | null; */
-  // Type InteropUnion#258146216(parent: InteropGetter#927302587(name: ariaValueNow))
+  // Type InteropUnion#1002392030(parent: InteropGetter#504840686(name: ariaValueNow))
   set ariaValueNow(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36419,7 +36419,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2056
   source: 
     ariaValueText: string | null; */
-  // Type InteropUnion#791422272(parent: InteropGetter#158863219(name: ariaValueText))
+  // Type InteropUnion#784717172(parent: InteropGetter#962447935(name: ariaValueText))
   set ariaValueText(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36438,7 +36438,7 @@ extension ARIAMixin$Typings on ARIAMixin {
   /* #2057
   source: 
     role: string | null; */
-  // Type InteropUnion#861850285(parent: InteropGetter#776804557(name: role))
+  // Type InteropUnion#1061817612(parent: InteropGetter#914153973(name: role))
   set role(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -36540,7 +36540,7 @@ extension AbortSignal$Typings on AbortSignal {
   /* #2081
   source: 
     onabort: ((this: AbortSignal, ev: Event) => any) | null; */
-  // Type InteropUnion#712986378(parent: InteropGetter#44753019(name: onabort))
+  // Type InteropUnion#247182969(parent: InteropGetter#241932141(name: onabort))
   set onabort(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -36769,7 +36769,7 @@ extension AbstractWorker$Typings on AbstractWorker {
   /* #2120
   source: 
     onerror: ((this: AbstractWorker, ev: ErrorEvent) => any) | null; */
-  // Type InteropUnion#267122991(parent: InteropGetter#68629679(name: onerror))
+  // Type InteropUnion#218485708(parent: InteropGetter#540050483(name: onerror))
   set onerror(_i2.dynamic Function(_i3.ErrorEvent)? value) {
     _i4.setProperty(
       this,
@@ -37036,7 +37036,7 @@ extension Animatable$Typings on Animatable {
           options ?? _i6.undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,719645120,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,197676493,[Instance of 'InteropRef<InteropType>']*/ <
       _i3.Animation> getAnimations(
           [_i3.GetAnimationsOptions? options]) =>
       (_i4.callMethod(
@@ -37090,7 +37090,7 @@ extension Animation$Typings on Animation {
   /* #2157
   source: 
     currentTime: CSSNumberish | null; */
-  // Type InteropUnion#169952725(parent: InteropGetter#287486399(name: currentTime))
+  // Type InteropUnion#461994325(parent: InteropGetter#316443408(name: currentTime))
   set currentTime(_i3.CSSNumberish? value) {
     _i4.setProperty(
       this,
@@ -37109,7 +37109,7 @@ extension Animation$Typings on Animation {
   /* #2158
   source: 
     effect: AnimationEffect | null; */
-  // Type InteropUnion#568602855(parent: InteropGetter#156684426(name: effect))
+  // Type InteropUnion#74827353(parent: InteropGetter#134962636(name: effect))
   set effect(_i3.AnimationEffect? value) {
     _i4.setProperty(
       this,
@@ -37155,7 +37155,7 @@ extension Animation$Typings on Animation {
   /* #2161
   source: 
     oncancel: ((this: Animation, ev: AnimationPlaybackEvent) => any) | null; */
-  // Type InteropUnion#148152679(parent: InteropGetter#301114314(name: oncancel))
+  // Type InteropUnion#551026326(parent: InteropGetter#706250251(name: oncancel))
   set oncancel(_i2.dynamic Function(_i3.AnimationPlaybackEvent)? value) {
     _i4.setProperty(
       this,
@@ -37175,7 +37175,7 @@ extension Animation$Typings on Animation {
   /* #2162
   source: 
     onfinish: ((this: Animation, ev: AnimationPlaybackEvent) => any) | null; */
-  // Type InteropUnion#292856021(parent: InteropGetter#524542220(name: onfinish))
+  // Type InteropUnion#809305526(parent: InteropGetter#576625770(name: onfinish))
   set onfinish(_i2.dynamic Function(_i3.AnimationPlaybackEvent)? value) {
     _i4.setProperty(
       this,
@@ -37194,7 +37194,7 @@ extension Animation$Typings on Animation {
   /* #2163
   source: 
     onremove: ((this: Animation, ev: Event) => any) | null; */
-  // Type InteropUnion#382009241(parent: InteropGetter#33025182(name: onremove))
+  // Type InteropUnion#719224161(parent: InteropGetter#437229287(name: onremove))
   set onremove(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -37262,7 +37262,7 @@ extension Animation$Typings on Animation {
   /* #2169
   source: 
     startTime: CSSNumberish | null; */
-  // Type InteropUnion#144060447(parent: InteropGetter#935038483(name: startTime))
+  // Type InteropUnion#979393180(parent: InteropGetter#723435566(name: startTime))
   set startTime(_i3.CSSNumberish? value) {
     _i4.setProperty(
       this,
@@ -37281,7 +37281,7 @@ extension Animation$Typings on Animation {
   /* #2170
   source: 
     timeline: AnimationTimeline | null; */
-  // Type InteropUnion#261108238(parent: InteropGetter#904940793(name: timeline))
+  // Type InteropUnion#8404134(parent: InteropGetter#313853782(name: timeline))
   set timeline(_i3.AnimationTimeline? value) {
     _i4.setProperty(
       this,
@@ -37849,7 +37849,7 @@ extension AudioBufferSourceNode$Typings on AudioBufferSourceNode {
   /* #2273
   source: 
     buffer: AudioBuffer | null; */
-  // Type InteropUnion#338715678(parent: InteropGetter#761902850(name: buffer))
+  // Type InteropUnion#939598834(parent: InteropGetter#533573089(name: buffer))
   set buffer(_i3.AudioBuffer? value) {
     _i4.setProperty(
       this,
@@ -38417,7 +38417,7 @@ extension AudioNode$Typings on AudioNode {
   /* #2348
   source: 
     channelCountMode: ChannelCountMode; */
-  // Type InteropTypedef#989503846(name: ChannelCountMode)
+  // Type InteropTypedef#85497763(name: ChannelCountMode)
   set channelCountMode(_i3.ChannelCountMode value) {
     _i4.setProperty(
       this,
@@ -38437,7 +38437,7 @@ extension AudioNode$Typings on AudioNode {
   /* #2349
   source: 
     channelInterpretation: ChannelInterpretation; */
-  // Type InteropTypedef#226219660(name: ChannelInterpretation)
+  // Type InteropTypedef#220867209(name: ChannelInterpretation)
   set channelInterpretation(_i3.ChannelInterpretation value) {
     _i4.setProperty(
       this,
@@ -38647,7 +38647,7 @@ extension AudioParam$Typings on AudioParam {
   /* #2371
   source: 
     automationRate: AutomationRate; */
-  // Type InteropTypedef#248072257(name: AutomationRate)
+  // Type InteropTypedef#103898352(name: AutomationRate)
   set automationRate(_i3.AutomationRate value) {
     _i4.setProperty(
       this,
@@ -38902,7 +38902,7 @@ extension AudioScheduledSourceNode$Typings on AudioScheduledSourceNode {
   /* #2423
   source: 
     onended: ((this: AudioScheduledSourceNode, ev: Event) => any) | null; */
-  // Type InteropUnion#403991784(parent: InteropGetter#83650566(name: onended))
+  // Type InteropUnion#1025546232(parent: InteropGetter#848848068(name: onended))
   set onended(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -39091,7 +39091,7 @@ extension AudioWorkletNode$Typings on AudioWorkletNode {
   /* #2452
   source: 
     onprocessorerror: ((this: AudioWorkletNode, ev: Event) => any) | null; */
-  // Type InteropUnion#71755325(parent: InteropGetter#497847552(name: onprocessorerror))
+  // Type InteropUnion#166299913(parent: InteropGetter#163441238(name: onprocessorerror))
   set onprocessorerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -39299,7 +39299,7 @@ extension AuthenticatorAttestationResponse$Typings
         'getPublicKeyAlgorithm',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,632967836,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,169243123,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       getTransports() => (_i4.callMethod(
             this,
             'getTransports',
@@ -39434,7 +39434,7 @@ extension BaseAudioContext$Typings on BaseAudioContext {
   /* #2521
   source: 
     onstatechange: ((this: BaseAudioContext, ev: Event) => any) | null; */
-  // Type InteropUnion#833331658(parent: InteropGetter#995738969(name: onstatechange))
+  // Type InteropUnion#127921554(parent: InteropGetter#443331022(name: onstatechange))
   set onstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -39525,10 +39525,10 @@ extension BaseAudioContext$Typings on BaseAudioContext {
         [],
       );
   _i3.IIRFilterNode createIIRFilter(
-    _i2.List /*LIST InteropStaticType.list,592808912,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,873954651,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.num>
         feedforward,
-    _i2.List /*LIST InteropStaticType.list,16950359,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,123009683,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.num>
         feedback,
   ) =>
@@ -39806,7 +39806,7 @@ extension BiquadFilterNode$Typings on BiquadFilterNode {
   /* #2571
   source: 
     type: BiquadFilterType; */
-  // Type InteropTypedef#78670960(name: BiquadFilterType)
+  // Type InteropTypedef#831716766(name: BiquadFilterType)
   set type(_i3.BiquadFilterType value) {
     _i4.setProperty(
       this,
@@ -39840,7 +39840,7 @@ class IInline72 {}
 @_i1.staticInterop
 class Blob {
   factory Blob([
-    _i2.List /*LIST InteropStaticType.list,459542271,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,678080026,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.BlobPart>?
         blobParts,
     _i3.BlobPropertyBag? options,
@@ -40046,7 +40046,7 @@ extension BroadcastChannel$Typings on BroadcastChannel {
   /* #2623
   source: 
     onmessage: ((this: BroadcastChannel, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#34176624(parent: InteropGetter#943210649(name: onmessage))
+  // Type InteropUnion#352370782(parent: InteropGetter#19238496(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -40066,7 +40066,7 @@ extension BroadcastChannel$Typings on BroadcastChannel {
   /* #2624
   source: 
     onmessageerror: ((this: BroadcastChannel, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#901981669(parent: InteropGetter#529105740(name: onmessageerror))
+  // Type InteropUnion#823750568(parent: InteropGetter#355853173(name: onmessageerror))
   set onmessageerror(
       _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
@@ -51038,7 +51038,7 @@ extension Cache$Typings on Cache {
         [request],
       ));
   _i2.Future<void> addAll(
-          _i2.List /*LIST InteropStaticType.list,1063294411,[Instance of 'InteropRef<InteropType>']*/ <
+          _i2.List /*LIST InteropStaticType.list,985741766,[Instance of 'InteropRef<InteropType>']*/ <
                   _i3.RequestInfo>
               requests) =>
       _i4.promiseToFuture(_i4.callMethod(
@@ -51141,7 +51141,7 @@ extension CacheStorage$Typings on CacheStorage {
         [cacheName],
       ));
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,799527754,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,701677054,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.String>> keys() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'keys',
@@ -51355,7 +51355,7 @@ extension CanvasCompositing$Typings on CanvasCompositing {
   /* #3549
   source: 
     globalCompositeOperation: GlobalCompositeOperation; */
-  // Type InteropTypedef#586744689(name: GlobalCompositeOperation)
+  // Type InteropTypedef#322054320(name: GlobalCompositeOperation)
   set globalCompositeOperation(_i3.GlobalCompositeOperation value) {
     _i4.setProperty(
       this,
@@ -51607,7 +51607,7 @@ extension CanvasFillStrokeStyles$Typings on CanvasFillStrokeStyles {
   /* #3573
   source: 
     fillStyle: string | CanvasGradient | CanvasPattern; */
-  // Type InteropUnion#216407700(parent: InteropGetter#973608895(name: fillStyle))
+  // Type InteropUnion#702111837(parent: InteropGetter#298903136(name: fillStyle))
   set fillStyle(_i2.Object value) {
     _i4.setProperty(
       this,
@@ -51626,7 +51626,7 @@ extension CanvasFillStrokeStyles$Typings on CanvasFillStrokeStyles {
   /* #3574
   source: 
     strokeStyle: string | CanvasGradient | CanvasPattern; */
-  // Type InteropUnion#376486054(parent: InteropGetter#1062555470(name: strokeStyle))
+  // Type InteropUnion#667832775(parent: InteropGetter#114969793(name: strokeStyle))
   set strokeStyle(_i2.Object value) {
     _i4.setProperty(
       this,
@@ -51931,7 +51931,7 @@ extension CanvasImageSmoothing$Typings on CanvasImageSmoothing {
   /* #3610
   source: 
     imageSmoothingQuality: ImageSmoothingQuality; */
-  // Type InteropTypedef#548746609(name: ImageSmoothingQuality)
+  // Type InteropTypedef#683339385(name: ImageSmoothingQuality)
   set imageSmoothingQuality(_i3.ImageSmoothingQuality value) {
     _i4.setProperty(
       this,
@@ -52145,7 +52145,7 @@ extension CanvasPathDrawingStyles$Typings on CanvasPathDrawingStyles {
   /* #3627
   source: 
     lineCap: CanvasLineCap; */
-  // Type InteropTypedef#353491141(name: CanvasLineCap)
+  // Type InteropTypedef#48158607(name: CanvasLineCap)
   set lineCap(_i3.CanvasLineCap value) {
     _i4.setProperty(
       this,
@@ -52184,7 +52184,7 @@ extension CanvasPathDrawingStyles$Typings on CanvasPathDrawingStyles {
   /* #3629
   source: 
     lineJoin: CanvasLineJoin; */
-  // Type InteropTypedef#350314691(name: CanvasLineJoin)
+  // Type InteropTypedef#303572337(name: CanvasLineJoin)
   set lineJoin(_i3.CanvasLineJoin value) {
     _i4.setProperty(
       this,
@@ -52231,7 +52231,7 @@ extension CanvasPathDrawingStyles$Typings on CanvasPathDrawingStyles {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,738073368,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>
+  _i2.List /*LIST InteropStaticType.list,421570623,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>
       getLineDash() => (_i4.callMethod(
             this,
             'getLineDash',
@@ -52239,7 +52239,7 @@ extension CanvasPathDrawingStyles$Typings on CanvasPathDrawingStyles {
           ) as _i2.List)
               .cast();
   void setLineDash(
-      _i2.List /*LIST InteropStaticType.list,848813536,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,859875383,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.num>
           segments) {
     _i4.callMethod(
@@ -52602,7 +52602,7 @@ extension CanvasTextDrawingStyles$Typings on CanvasTextDrawingStyles {
   /* #3683
   source: 
     direction: CanvasDirection; */
-  // Type InteropTypedef#909359039(name: CanvasDirection)
+  // Type InteropTypedef#1058925045(name: CanvasDirection)
   set direction(_i3.CanvasDirection value) {
     _i4.setProperty(
       this,
@@ -52641,7 +52641,7 @@ extension CanvasTextDrawingStyles$Typings on CanvasTextDrawingStyles {
   /* #3685
   source: 
     fontKerning: CanvasFontKerning; */
-  // Type InteropTypedef#861534318(name: CanvasFontKerning)
+  // Type InteropTypedef#689740685(name: CanvasFontKerning)
   set fontKerning(_i3.CanvasFontKerning value) {
     _i4.setProperty(
       this,
@@ -52661,7 +52661,7 @@ extension CanvasTextDrawingStyles$Typings on CanvasTextDrawingStyles {
   /* #3686
   source: 
     textAlign: CanvasTextAlign; */
-  // Type InteropTypedef#1052115621(name: CanvasTextAlign)
+  // Type InteropTypedef#850599641(name: CanvasTextAlign)
   set textAlign(_i3.CanvasTextAlign value) {
     _i4.setProperty(
       this,
@@ -52681,7 +52681,7 @@ extension CanvasTextDrawingStyles$Typings on CanvasTextDrawingStyles {
   /* #3687
   source: 
     textBaseline: CanvasTextBaseline; */
-  // Type InteropTypedef#46161810(name: CanvasTextBaseline)
+  // Type InteropTypedef#171940810(name: CanvasTextBaseline)
   set textBaseline(_i3.CanvasTextBaseline value) {
     _i4.setProperty(
       this,
@@ -53514,7 +53514,7 @@ extension ConvolverNode$Typings on ConvolverNode {
   /* #3854
   source: 
     buffer: AudioBuffer | null; */
-  // Type InteropUnion#211407794(parent: InteropGetter#594843515(name: buffer))
+  // Type InteropUnion#732444516(parent: InteropGetter#96774491(name: buffer))
   set buffer(_i3.AudioBuffer? value) {
     _i4.setProperty(
       this,
@@ -53747,7 +53747,7 @@ extension CryptoKey$Typings on CryptoKey {
   /* #3920
   source: 
     readonly usages: KeyUsage[]; */
-  _i2.List /*LIST InteropStaticType.list,759882403,[Instance of 'InteropRef<InteropType>']*/ <_i3.KeyUsage>
+  _i2.List /*LIST InteropStaticType.list,705218470,[Instance of 'InteropRef<InteropType>']*/ <_i3.KeyUsage>
       get usages => (_i4.getProperty(
             this,
             'usages',
@@ -56383,7 +56383,7 @@ extension DataTransfer$Typings on DataTransfer {
      * The possible values are "none", "copy", "link", and "move".
      */
     dropEffect: "none" | "copy" | "link" | "move"; */
-  // Type InteropUnion#133589032(parent: InteropGetter#628425404(name: dropEffect))
+  // Type InteropUnion#647127570(parent: InteropGetter#202845213(name: dropEffect))
   set dropEffect(DropEffect value) {
     _i4.setProperty(
       this,
@@ -56422,7 +56422,7 @@ extension DataTransfer$Typings on DataTransfer {
      * The possible values are "none", "copy", "copyLink", "copyMove", "link", "linkMove", "move", "all", and "uninitialized",
      */
     effectAllowed: "none" | "copy" | "copyLink" | "copyMove" | "link" | "linkMove" | "move" | "all" | "uninitialized"; */
-  // Type InteropUnion#451184697(parent: InteropGetter#701768915(name: effectAllowed))
+  // Type InteropUnion#181250349(parent: InteropGetter#484939364(name: effectAllowed))
   set effectAllowed(EffectAllowed value) {
     _i4.setProperty(
       this,
@@ -57551,7 +57551,7 @@ extension Document$Typings on Document {
   /* #4590
   source: 
     onfullscreenchange: ((this: Document, ev: Event) => any) | null; */
-  // Type InteropUnion#919538177(parent: InteropGetter#852149007(name: onfullscreenchange))
+  // Type InteropUnion#507169658(parent: InteropGetter#385514639(name: onfullscreenchange))
   set onfullscreenchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -57570,7 +57570,7 @@ extension Document$Typings on Document {
   /* #4591
   source: 
     onfullscreenerror: ((this: Document, ev: Event) => any) | null; */
-  // Type InteropUnion#481210530(parent: InteropGetter#583245050(name: onfullscreenerror))
+  // Type InteropUnion#614907704(parent: InteropGetter#969315326(name: onfullscreenerror))
   set onfullscreenerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -57589,7 +57589,7 @@ extension Document$Typings on Document {
   /* #4592
   source: 
     onpointerlockchange: ((this: Document, ev: Event) => any) | null; */
-  // Type InteropUnion#1065353661(parent: InteropGetter#839002387(name: onpointerlockchange))
+  // Type InteropUnion#250412252(parent: InteropGetter#873050845(name: onpointerlockchange))
   set onpointerlockchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -57608,7 +57608,7 @@ extension Document$Typings on Document {
   /* #4593
   source: 
     onpointerlockerror: ((this: Document, ev: Event) => any) | null; */
-  // Type InteropUnion#540582859(parent: InteropGetter#1059582830(name: onpointerlockerror))
+  // Type InteropUnion#369944831(parent: InteropGetter#609746335(name: onpointerlockerror))
   set onpointerlockerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -57637,7 +57637,7 @@ extension Document$Typings on Document {
      * @param ev The event
      */
     onreadystatechange: ((this: Document, ev: Event) => any) | null; */
-  // Type InteropUnion#540641213(parent: InteropGetter#718157811(name: onreadystatechange))
+  // Type InteropUnion#197024665(parent: InteropGetter#366994545(name: onreadystatechange))
   set onreadystatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -57656,7 +57656,7 @@ extension Document$Typings on Document {
   /* #4599
   source: 
     onvisibilitychange: ((this: Document, ev: Event) => any) | null; */
-  // Type InteropUnion#1007587652(parent: InteropGetter#46336053(name: onvisibilitychange))
+  // Type InteropUnion#430641121(parent: InteropGetter#727021075(name: onvisibilitychange))
   set onvisibilitychange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -59019,7 +59019,7 @@ extension DocumentOrShadowRoot$Typings on DocumentOrShadowRoot {
   /* #4907
   source: 
     adoptedStyleSheets: CSSStyleSheet[]; */
-  _i2.List /*LIST InteropStaticType.list,105671696,[Instance of 'InteropRef<InteropType>']*/ <_i3.CSSStyleSheet>
+  _i2.List /*LIST InteropStaticType.list,218965306,[Instance of 'InteropRef<InteropType>']*/ <_i3.CSSStyleSheet>
       get adoptedStyleSheets => (_i4.getProperty(
             this,
             'adoptedStyleSheets',
@@ -59030,7 +59030,7 @@ extension DocumentOrShadowRoot$Typings on DocumentOrShadowRoot {
     adoptedStyleSheets: CSSStyleSheet[]; */
   // Type InteropStaticType.list
   set adoptedStyleSheets(
-      _i2.List /*LIST InteropStaticType.list,105671696,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,218965306,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.CSSStyleSheet>
           value) {
     _i4.setProperty(
@@ -59084,7 +59084,7 @@ extension DocumentOrShadowRoot$Typings on DocumentOrShadowRoot {
           y,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,347908687,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,361093911,[Instance of 'InteropRef<InteropType>']*/ <
       _i3.Element> elementsFromPoint(
     _i2.num x,
     _i2.num y,
@@ -59098,7 +59098,7 @@ extension DocumentOrShadowRoot$Typings on DocumentOrShadowRoot {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,486001749,[Instance of 'InteropRef<InteropType>']*/ <_i3.Animation>
+  _i2.List /*LIST InteropStaticType.list,881328132,[Instance of 'InteropRef<InteropType>']*/ <_i3.Animation>
       getAnimations() => (_i4.callMethod(
             this,
             'getAnimations',
@@ -59867,7 +59867,7 @@ extension Element$Typings on Element {
   /* #5056
   source: 
     onfullscreenchange: ((this: Element, ev: Event) => any) | null; */
-  // Type InteropUnion#669143227(parent: InteropGetter#185672647(name: onfullscreenchange))
+  // Type InteropUnion#855403998(parent: InteropGetter#644068406(name: onfullscreenchange))
   set onfullscreenchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -59886,7 +59886,7 @@ extension Element$Typings on Element {
   /* #5057
   source: 
     onfullscreenerror: ((this: Element, ev: Event) => any) | null; */
-  // Type InteropUnion#236015430(parent: InteropGetter#232504901(name: onfullscreenerror))
+  // Type InteropUnion#839101142(parent: InteropGetter#241930968(name: onfullscreenerror))
   set onfullscreenerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -60077,7 +60077,7 @@ extension Element$Typings on Element {
           localName,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,397459543,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,772637835,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       getAttributeNames() => (_i4.callMethod(
             this,
             'getAttributeNames',
@@ -61121,7 +61121,7 @@ extension Event$Typings on Event {
         _i5.target598,
         'BUBBLING_PHASE',
       );
-  _i2.List /*LIST InteropStaticType.list,153636615,[Instance of 'InteropRef<InteropType>']*/ <_i3.EventTarget>
+  _i2.List /*LIST InteropStaticType.list,445408783,[Instance of 'InteropRef<InteropType>']*/ <_i3.EventTarget>
       composedPath() => (_i4.callMethod(
             this,
             'composedPath',
@@ -61339,7 +61339,7 @@ extension EventSource$Typings on EventSource {
   /* #5295
   source: 
     onerror: ((this: EventSource, ev: Event) => any) | null; */
-  // Type InteropUnion#806758234(parent: InteropGetter#1013533013(name: onerror))
+  // Type InteropUnion#821702125(parent: InteropGetter#979746847(name: onerror))
   set onerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -61359,7 +61359,7 @@ extension EventSource$Typings on EventSource {
   /* #5296
   source: 
     onmessage: ((this: EventSource, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#857225390(parent: InteropGetter#2940155(name: onmessage))
+  // Type InteropUnion#922966137(parent: InteropGetter#327693459(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -61378,7 +61378,7 @@ extension EventSource$Typings on EventSource {
   /* #5297
   source: 
     onopen: ((this: EventSource, ev: Event) => any) | null; */
-  // Type InteropUnion#457878087(parent: InteropGetter#36753011(name: onopen))
+  // Type InteropUnion#634476359(parent: InteropGetter#350594764(name: onopen))
   set onopen(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -61710,7 +61710,7 @@ class IInline158 {}
 @_i1.staticInterop
 class File implements _i3.Blob {
   factory File(
-    _i2.List /*LIST InteropStaticType.list,824422816,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,974336925,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.BlobPart>
         fileBits,
     _i2.String fileName, [
@@ -61877,7 +61877,7 @@ extension FileReader$Typings on FileReader {
   /* #5404
   source: 
     onabort: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#341398105(parent: InteropGetter#616731985(name: onabort))
+  // Type InteropUnion#1015211063(parent: InteropGetter#969636331(name: onabort))
   set onabort(_i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
@@ -61897,7 +61897,7 @@ extension FileReader$Typings on FileReader {
   /* #5405
   source: 
     onerror: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#535420173(parent: InteropGetter#93283287(name: onerror))
+  // Type InteropUnion#780348253(parent: InteropGetter#554630874(name: onerror))
   set onerror(_i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
@@ -61917,7 +61917,7 @@ extension FileReader$Typings on FileReader {
   /* #5406
   source: 
     onload: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#845988563(parent: InteropGetter#1004130345(name: onload))
+  // Type InteropUnion#995971002(parent: InteropGetter#93623160(name: onload))
   set onload(_i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
@@ -61937,7 +61937,7 @@ extension FileReader$Typings on FileReader {
   /* #5407
   source: 
     onloadend: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#185498507(parent: InteropGetter#100655673(name: onloadend))
+  // Type InteropUnion#180700329(parent: InteropGetter#304248648(name: onloadend))
   set onloadend(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
@@ -61958,7 +61958,7 @@ extension FileReader$Typings on FileReader {
   /* #5408
   source: 
     onloadstart: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#359576093(parent: InteropGetter#914427988(name: onloadstart))
+  // Type InteropUnion#203408732(parent: InteropGetter#853578873(name: onloadstart))
   set onloadstart(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
@@ -61979,7 +61979,7 @@ extension FileReader$Typings on FileReader {
   /* #5409
   source: 
     onprogress: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#334058491(parent: InteropGetter#527603821(name: onprogress))
+  // Type InteropUnion#1026421557(parent: InteropGetter#254788421(name: onprogress))
   set onprogress(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
@@ -62352,7 +62352,7 @@ extension FileSystemDirectoryHandle$Typings on FileSystemDirectoryHandle {
         ],
       ));
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,1001710683,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,659204445,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.String>?> resolve(_i3.FileSystemHandle possibleDescendant) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -62692,7 +62692,7 @@ extension FontFace$Typings on FontFace {
   /* #5537
   source: 
     display: FontDisplay; */
-  // Type InteropTypedef#601950385(name: FontDisplay)
+  // Type InteropTypedef#180654085(name: FontDisplay)
   set display(_i3.FontDisplay value) {
     _i4.setProperty(
       this,
@@ -62893,7 +62893,7 @@ enum FontFaceSetEventMap<T$> {
 @_i1.staticInterop
 class FontFaceSet implements _i3.EventTarget {
   factory FontFaceSet(
-          _i2.List /*LIST InteropStaticType.list,151700133,[Instance of 'InteropRef<InteropType>']*/ <
+          _i2.List /*LIST InteropStaticType.list,1011350757,[Instance of 'InteropRef<InteropType>']*/ <
                   _i3.FontFace>
               initialFaces) =>
       _i4.callConstructor(
@@ -62919,7 +62919,7 @@ extension FontFaceSet$Typings on FontFaceSet {
   /* #5563
   source: 
     onloading: ((this: FontFaceSet, ev: Event) => any) | null; */
-  // Type InteropUnion#960938635(parent: InteropGetter#1006228988(name: onloading))
+  // Type InteropUnion#85122284(parent: InteropGetter#463638182(name: onloading))
   set onloading(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -62938,7 +62938,7 @@ extension FontFaceSet$Typings on FontFaceSet {
   /* #5564
   source: 
     onloadingdone: ((this: FontFaceSet, ev: Event) => any) | null; */
-  // Type InteropUnion#489512244(parent: InteropGetter#240409720(name: onloadingdone))
+  // Type InteropUnion#478034860(parent: InteropGetter#714841794(name: onloadingdone))
   set onloadingdone(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -62957,7 +62957,7 @@ extension FontFaceSet$Typings on FontFaceSet {
   /* #5565
   source: 
     onloadingerror: ((this: FontFaceSet, ev: Event) => any) | null; */
-  // Type InteropUnion#90867963(parent: InteropGetter#190644088(name: onloadingerror))
+  // Type InteropUnion#669286446(parent: InteropGetter#489243422(name: onloadingerror))
   set onloadingerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -62994,7 +62994,7 @@ extension FontFaceSet$Typings on FontFaceSet {
         ],
       );
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,622303304,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,492183366,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.FontFace>> load(
     _i2.String font, [
     _i2.String? text,
@@ -63228,7 +63228,7 @@ extension FormData$Typings on FormData {
         'get',
         [name],
       );
-  _i2.List /*LIST InteropStaticType.list,96172863,[Instance of 'InteropRef<InteropType>']*/ <_i3.FormDataEntryValue>
+  _i2.List /*LIST InteropStaticType.list,345011375,[Instance of 'InteropRef<InteropType>']*/ <_i3.FormDataEntryValue>
       getAll(_i2.String name) => (_i4.callMethod(
             this,
             'getAll',
@@ -63977,7 +63977,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onabort: ((this: GlobalEventHandlers, ev: UIEvent) => any) | null; */
-  // Type InteropUnion#588989404(parent: InteropGetter#117276508(name: onabort))
+  // Type InteropUnion#915627756(parent: InteropGetter#575685854(name: onabort))
   set onabort(_i2.dynamic Function(_i3.UIEvent)? value) {
     _i4.setProperty(
       this,
@@ -63997,7 +63997,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5857
   source: 
     onanimationcancel: ((this: GlobalEventHandlers, ev: AnimationEvent) => any) | null; */
-  // Type InteropUnion#675338383(parent: InteropGetter#661274548(name: onanimationcancel))
+  // Type InteropUnion#214195918(parent: InteropGetter#312839802(name: onanimationcancel))
   set onanimationcancel(_i2.dynamic Function(_i3.AnimationEvent)? value) {
     _i4.setProperty(
       this,
@@ -64017,7 +64017,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5858
   source: 
     onanimationend: ((this: GlobalEventHandlers, ev: AnimationEvent) => any) | null; */
-  // Type InteropUnion#302918409(parent: InteropGetter#610606979(name: onanimationend))
+  // Type InteropUnion#173618112(parent: InteropGetter#12819989(name: onanimationend))
   set onanimationend(_i2.dynamic Function(_i3.AnimationEvent)? value) {
     _i4.setProperty(
       this,
@@ -64037,7 +64037,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5859
   source: 
     onanimationiteration: ((this: GlobalEventHandlers, ev: AnimationEvent) => any) | null; */
-  // Type InteropUnion#431070621(parent: InteropGetter#55341527(name: onanimationiteration))
+  // Type InteropUnion#184613424(parent: InteropGetter#117393960(name: onanimationiteration))
   set onanimationiteration(_i2.dynamic Function(_i3.AnimationEvent)? value) {
     _i4.setProperty(
       this,
@@ -64057,7 +64057,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5860
   source: 
     onanimationstart: ((this: GlobalEventHandlers, ev: AnimationEvent) => any) | null; */
-  // Type InteropUnion#12763006(parent: InteropGetter#615135562(name: onanimationstart))
+  // Type InteropUnion#213522514(parent: InteropGetter#971393739(name: onanimationstart))
   set onanimationstart(_i2.dynamic Function(_i3.AnimationEvent)? value) {
     _i4.setProperty(
       this,
@@ -64076,7 +64076,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5861
   source: 
     onauxclick: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#549550187(parent: InteropGetter#370726458(name: onauxclick))
+  // Type InteropUnion#232931830(parent: InteropGetter#651602351(name: onauxclick))
   set onauxclick(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -64095,7 +64095,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5862
   source: 
     onbeforeinput: ((this: GlobalEventHandlers, ev: InputEvent) => any) | null; */
-  // Type InteropUnion#274594349(parent: InteropGetter#378655696(name: onbeforeinput))
+  // Type InteropUnion#671645291(parent: InteropGetter#256543822(name: onbeforeinput))
   set onbeforeinput(_i2.dynamic Function(_i3.InputEvent)? value) {
     _i4.setProperty(
       this,
@@ -64124,7 +64124,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The focus event.
      */
     onblur: ((this: GlobalEventHandlers, ev: FocusEvent) => any) | null; */
-  // Type InteropUnion#942554462(parent: InteropGetter#50004198(name: onblur))
+  // Type InteropUnion#578031127(parent: InteropGetter#590109326(name: onblur))
   set onblur(_i2.dynamic Function(_i3.FocusEvent)? value) {
     _i4.setProperty(
       this,
@@ -64143,7 +64143,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5868
   source: 
     oncancel: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#388456155(parent: InteropGetter#819027105(name: oncancel))
+  // Type InteropUnion#550580742(parent: InteropGetter#84108713(name: oncancel))
   set oncancel(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64172,7 +64172,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     oncanplay: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#45838910(parent: InteropGetter#652372723(name: oncanplay))
+  // Type InteropUnion#100897492(parent: InteropGetter#76706569(name: oncanplay))
   set oncanplay(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64191,7 +64191,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5874
   source: 
     oncanplaythrough: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#581295234(parent: InteropGetter#687838126(name: oncanplaythrough))
+  // Type InteropUnion#74301324(parent: InteropGetter#666451561(name: oncanplaythrough))
   set oncanplaythrough(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64220,7 +64220,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onchange: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#999349281(parent: InteropGetter#976614386(name: onchange))
+  // Type InteropUnion#307936222(parent: InteropGetter#607606649(name: onchange))
   set onchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64249,7 +64249,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The mouse event.
      */
     onclick: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#130831890(parent: InteropGetter#433831935(name: onclick))
+  // Type InteropUnion#341232590(parent: InteropGetter#920254261(name: onclick))
   set onclick(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -64268,7 +64268,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5885
   source: 
     onclose: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#898644620(parent: InteropGetter#1020334190(name: onclose))
+  // Type InteropUnion#37457022(parent: InteropGetter#948926179(name: onclose))
   set onclose(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64297,7 +64297,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The mouse event.
      */
     oncontextmenu: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#945227147(parent: InteropGetter#720855794(name: oncontextmenu))
+  // Type InteropUnion#619825653(parent: InteropGetter#338852401(name: oncontextmenu))
   set oncontextmenu(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -64316,7 +64316,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5891
   source: 
     oncopy: ((this: GlobalEventHandlers, ev: ClipboardEvent) => any) | null; */
-  // Type InteropUnion#123962766(parent: InteropGetter#836358304(name: oncopy))
+  // Type InteropUnion#233748553(parent: InteropGetter#743137811(name: oncopy))
   set oncopy(_i2.dynamic Function(_i3.ClipboardEvent)? value) {
     _i4.setProperty(
       this,
@@ -64335,7 +64335,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5892
   source: 
     oncuechange: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#368295497(parent: InteropGetter#351669494(name: oncuechange))
+  // Type InteropUnion#636486664(parent: InteropGetter#732143561(name: oncuechange))
   set oncuechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64354,7 +64354,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5893
   source: 
     oncut: ((this: GlobalEventHandlers, ev: ClipboardEvent) => any) | null; */
-  // Type InteropUnion#21110853(parent: InteropGetter#1043987614(name: oncut))
+  // Type InteropUnion#624405046(parent: InteropGetter#41353478(name: oncut))
   set oncut(_i2.dynamic Function(_i3.ClipboardEvent)? value) {
     _i4.setProperty(
       this,
@@ -64383,7 +64383,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The mouse event.
      */
     ondblclick: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#968574908(parent: InteropGetter#294266598(name: ondblclick))
+  // Type InteropUnion#707273732(parent: InteropGetter#106167133(name: ondblclick))
   set ondblclick(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -64412,7 +64412,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     ondrag: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null; */
-  // Type InteropUnion#491640934(parent: InteropGetter#501867201(name: ondrag))
+  // Type InteropUnion#413823448(parent: InteropGetter#302187488(name: ondrag))
   set ondrag(_i2.dynamic Function(_i3.DragEvent)? value) {
     _i4.setProperty(
       this,
@@ -64441,7 +64441,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     ondragend: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null; */
-  // Type InteropUnion#994318649(parent: InteropGetter#922283404(name: ondragend))
+  // Type InteropUnion#960210456(parent: InteropGetter#653612778(name: ondragend))
   set ondragend(_i2.dynamic Function(_i3.DragEvent)? value) {
     _i4.setProperty(
       this,
@@ -64470,7 +64470,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The drag event.
      */
     ondragenter: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null; */
-  // Type InteropUnion#475213400(parent: InteropGetter#429677417(name: ondragenter))
+  // Type InteropUnion#290110857(parent: InteropGetter#472168778(name: ondragenter))
   set ondragenter(_i2.dynamic Function(_i3.DragEvent)? value) {
     _i4.setProperty(
       this,
@@ -64499,7 +64499,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The drag event.
      */
     ondragleave: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null; */
-  // Type InteropUnion#452998903(parent: InteropGetter#210265349(name: ondragleave))
+  // Type InteropUnion#129229113(parent: InteropGetter#333349617(name: ondragleave))
   set ondragleave(_i2.dynamic Function(_i3.DragEvent)? value) {
     _i4.setProperty(
       this,
@@ -64528,7 +64528,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     ondragover: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null; */
-  // Type InteropUnion#464499325(parent: InteropGetter#899444003(name: ondragover))
+  // Type InteropUnion#127118849(parent: InteropGetter#117393510(name: ondragover))
   set ondragover(_i2.dynamic Function(_i3.DragEvent)? value) {
     _i4.setProperty(
       this,
@@ -64557,7 +64557,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     ondragstart: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null; */
-  // Type InteropUnion#868341422(parent: InteropGetter#204527200(name: ondragstart))
+  // Type InteropUnion#160357202(parent: InteropGetter#831658298(name: ondragstart))
   set ondragstart(_i2.dynamic Function(_i3.DragEvent)? value) {
     _i4.setProperty(
       this,
@@ -64576,7 +64576,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5929
   source: 
     ondrop: ((this: GlobalEventHandlers, ev: DragEvent) => any) | null; */
-  // Type InteropUnion#309376676(parent: InteropGetter#231321786(name: ondrop))
+  // Type InteropUnion#573293437(parent: InteropGetter#623021286(name: ondrop))
   set ondrop(_i2.dynamic Function(_i3.DragEvent)? value) {
     _i4.setProperty(
       this,
@@ -64605,7 +64605,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     ondurationchange: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#463539816(parent: InteropGetter#497855155(name: ondurationchange))
+  // Type InteropUnion#324594382(parent: InteropGetter#116974103(name: ondurationchange))
   set ondurationchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64634,7 +64634,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onemptied: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#951522140(parent: InteropGetter#774589131(name: onemptied))
+  // Type InteropUnion#102173814(parent: InteropGetter#702221407(name: onemptied))
   set onemptied(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64663,7 +64663,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event
      */
     onended: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#168048265(parent: InteropGetter#430668724(name: onended))
+  // Type InteropUnion#507544920(parent: InteropGetter#209870937(name: onended))
   set onended(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64692,7 +64692,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onerror: OnErrorEventHandler; */
-  // Type InteropTypedef#40628093(name: OnErrorEventHandler)
+  // Type InteropTypedef#350038634(name: OnErrorEventHandler)
   set onerror(_i3.OnErrorEventHandler value) {
     _i4.setProperty(
       this,
@@ -64721,7 +64721,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onfocus: ((this: GlobalEventHandlers, ev: FocusEvent) => any) | null; */
-  // Type InteropUnion#262230749(parent: InteropGetter#327091779(name: onfocus))
+  // Type InteropUnion#22655080(parent: InteropGetter#1062122267(name: onfocus))
   set onfocus(_i2.dynamic Function(_i3.FocusEvent)? value) {
     _i4.setProperty(
       this,
@@ -64740,7 +64740,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5955
   source: 
     onformdata: ((this: GlobalEventHandlers, ev: FormDataEvent) => any) | null; */
-  // Type InteropUnion#399811005(parent: InteropGetter#185482755(name: onformdata))
+  // Type InteropUnion#261451577(parent: InteropGetter#946556671(name: onformdata))
   set onformdata(_i2.dynamic Function(_i3.FormDataEvent)? value) {
     _i4.setProperty(
       this,
@@ -64760,7 +64760,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5956
   source: 
     ongotpointercapture: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null; */
-  // Type InteropUnion#721789431(parent: InteropGetter#36033731(name: ongotpointercapture))
+  // Type InteropUnion#42235942(parent: InteropGetter#46604211(name: ongotpointercapture))
   set ongotpointercapture(_i2.dynamic Function(_i3.PointerEvent)? value) {
     _i4.setProperty(
       this,
@@ -64779,7 +64779,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5957
   source: 
     oninput: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#499533704(parent: InteropGetter#464041362(name: oninput))
+  // Type InteropUnion#21162138(parent: InteropGetter#244992365(name: oninput))
   set oninput(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64798,7 +64798,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5958
   source: 
     oninvalid: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#230641834(parent: InteropGetter#724366108(name: oninvalid))
+  // Type InteropUnion#584221520(parent: InteropGetter#14685640(name: oninvalid))
   set oninvalid(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64827,7 +64827,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The keyboard event
      */
     onkeydown: ((this: GlobalEventHandlers, ev: KeyboardEvent) => any) | null; */
-  // Type InteropUnion#1035022705(parent: InteropGetter#1039779421(name: onkeydown))
+  // Type InteropUnion#880739730(parent: InteropGetter#170748354(name: onkeydown))
   set onkeydown(_i2.dynamic Function(_i3.KeyboardEvent)? value) {
     _i4.setProperty(
       this,
@@ -64859,7 +64859,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @deprecated
      */
     onkeypress: ((this: GlobalEventHandlers, ev: KeyboardEvent) => any) | null; */
-  // Type InteropUnion#635660134(parent: InteropGetter#399160344(name: onkeypress))
+  // Type InteropUnion#302072925(parent: InteropGetter#746743113(name: onkeypress))
   set onkeypress(_i2.dynamic Function(_i3.KeyboardEvent)? value) {
     _i4.setProperty(
       this,
@@ -64888,7 +64888,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The keyboard event
      */
     onkeyup: ((this: GlobalEventHandlers, ev: KeyboardEvent) => any) | null; */
-  // Type InteropUnion#318108342(parent: InteropGetter#83141519(name: onkeyup))
+  // Type InteropUnion#341888097(parent: InteropGetter#114909207(name: onkeyup))
   set onkeyup(_i2.dynamic Function(_i3.KeyboardEvent)? value) {
     _i4.setProperty(
       this,
@@ -64917,7 +64917,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onload: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#593531620(parent: InteropGetter#381575273(name: onload))
+  // Type InteropUnion#679128034(parent: InteropGetter#668000488(name: onload))
   set onload(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64946,7 +64946,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onloadeddata: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#1060332355(parent: InteropGetter#679149069(name: onloadeddata))
+  // Type InteropUnion#1027431176(parent: InteropGetter#9251094(name: onloadeddata))
   set onloadeddata(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -64975,7 +64975,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onloadedmetadata: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#337094014(parent: InteropGetter#48225441(name: onloadedmetadata))
+  // Type InteropUnion#1050709134(parent: InteropGetter#646265496(name: onloadedmetadata))
   set onloadedmetadata(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65004,7 +65004,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onloadstart: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#808078372(parent: InteropGetter#999904369(name: onloadstart))
+  // Type InteropUnion#275321891(parent: InteropGetter#89695282(name: onloadstart))
   set onloadstart(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65024,7 +65024,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #5995
   source: 
     onlostpointercapture: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null; */
-  // Type InteropUnion#45773945(parent: InteropGetter#385183264(name: onlostpointercapture))
+  // Type InteropUnion#782223836(parent: InteropGetter#938307165(name: onlostpointercapture))
   set onlostpointercapture(_i2.dynamic Function(_i3.PointerEvent)? value) {
     _i4.setProperty(
       this,
@@ -65053,7 +65053,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The mouse event.
      */
     onmousedown: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#123755363(parent: InteropGetter#350703580(name: onmousedown))
+  // Type InteropUnion#557101935(parent: InteropGetter#977458789(name: onmousedown))
   set onmousedown(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -65072,7 +65072,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6001
   source: 
     onmouseenter: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#489354409(parent: InteropGetter#31248027(name: onmouseenter))
+  // Type InteropUnion#146074835(parent: InteropGetter#732507744(name: onmouseenter))
   set onmouseenter(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -65091,7 +65091,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6002
   source: 
     onmouseleave: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#187313587(parent: InteropGetter#974090481(name: onmouseleave))
+  // Type InteropUnion#921512732(parent: InteropGetter#119557162(name: onmouseleave))
   set onmouseleave(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -65120,7 +65120,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The mouse event.
      */
     onmousemove: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#4206944(parent: InteropGetter#185453305(name: onmousemove))
+  // Type InteropUnion#517718772(parent: InteropGetter#427094418(name: onmousemove))
   set onmousemove(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -65149,7 +65149,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The mouse event.
      */
     onmouseout: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#609819208(parent: InteropGetter#384433105(name: onmouseout))
+  // Type InteropUnion#676305597(parent: InteropGetter#245793137(name: onmouseout))
   set onmouseout(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -65178,7 +65178,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The mouse event.
      */
     onmouseover: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#396385514(parent: InteropGetter#1021465830(name: onmouseover))
+  // Type InteropUnion#1043321145(parent: InteropGetter#95826859(name: onmouseover))
   set onmouseover(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -65207,7 +65207,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The mouse event.
      */
     onmouseup: ((this: GlobalEventHandlers, ev: MouseEvent) => any) | null; */
-  // Type InteropUnion#281562568(parent: InteropGetter#490474324(name: onmouseup))
+  // Type InteropUnion#479059370(parent: InteropGetter#143651903(name: onmouseup))
   set onmouseup(_i2.dynamic Function(_i3.MouseEvent)? value) {
     _i4.setProperty(
       this,
@@ -65226,7 +65226,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6023
   source: 
     onpaste: ((this: GlobalEventHandlers, ev: ClipboardEvent) => any) | null; */
-  // Type InteropUnion#987370685(parent: InteropGetter#180996925(name: onpaste))
+  // Type InteropUnion#1020791638(parent: InteropGetter#79519323(name: onpaste))
   set onpaste(_i2.dynamic Function(_i3.ClipboardEvent)? value) {
     _i4.setProperty(
       this,
@@ -65255,7 +65255,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onpause: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#488959332(parent: InteropGetter#445302868(name: onpause))
+  // Type InteropUnion#748105233(parent: InteropGetter#959398578(name: onpause))
   set onpause(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65284,7 +65284,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onplay: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#301876768(parent: InteropGetter#763001430(name: onplay))
+  // Type InteropUnion#328789542(parent: InteropGetter#851956401(name: onplay))
   set onplay(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65313,7 +65313,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onplaying: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#524139994(parent: InteropGetter#431027314(name: onplaying))
+  // Type InteropUnion#671707374(parent: InteropGetter#932725096(name: onplaying))
   set onplaying(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65333,7 +65333,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6039
   source: 
     onpointercancel: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null; */
-  // Type InteropUnion#385966861(parent: InteropGetter#478377929(name: onpointercancel))
+  // Type InteropUnion#520398652(parent: InteropGetter#126393385(name: onpointercancel))
   set onpointercancel(_i2.dynamic Function(_i3.PointerEvent)? value) {
     _i4.setProperty(
       this,
@@ -65352,7 +65352,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6040
   source: 
     onpointerdown: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null; */
-  // Type InteropUnion#554296173(parent: InteropGetter#696281213(name: onpointerdown))
+  // Type InteropUnion#848927743(parent: InteropGetter#647285213(name: onpointerdown))
   set onpointerdown(_i2.dynamic Function(_i3.PointerEvent)? value) {
     _i4.setProperty(
       this,
@@ -65371,7 +65371,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6041
   source: 
     onpointerenter: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null; */
-  // Type InteropUnion#187616184(parent: InteropGetter#872301340(name: onpointerenter))
+  // Type InteropUnion#990062357(parent: InteropGetter#184115799(name: onpointerenter))
   set onpointerenter(_i2.dynamic Function(_i3.PointerEvent)? value) {
     _i4.setProperty(
       this,
@@ -65390,7 +65390,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6042
   source: 
     onpointerleave: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null; */
-  // Type InteropUnion#9436383(parent: InteropGetter#184800704(name: onpointerleave))
+  // Type InteropUnion#518544169(parent: InteropGetter#58444764(name: onpointerleave))
   set onpointerleave(_i2.dynamic Function(_i3.PointerEvent)? value) {
     _i4.setProperty(
       this,
@@ -65409,7 +65409,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6043
   source: 
     onpointermove: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null; */
-  // Type InteropUnion#457797923(parent: InteropGetter#990675044(name: onpointermove))
+  // Type InteropUnion#277734290(parent: InteropGetter#964115828(name: onpointermove))
   set onpointermove(_i2.dynamic Function(_i3.PointerEvent)? value) {
     _i4.setProperty(
       this,
@@ -65428,7 +65428,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6044
   source: 
     onpointerout: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null; */
-  // Type InteropUnion#536288973(parent: InteropGetter#689747300(name: onpointerout))
+  // Type InteropUnion#597488151(parent: InteropGetter#738158977(name: onpointerout))
   set onpointerout(_i2.dynamic Function(_i3.PointerEvent)? value) {
     _i4.setProperty(
       this,
@@ -65447,7 +65447,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6045
   source: 
     onpointerover: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null; */
-  // Type InteropUnion#820704150(parent: InteropGetter#301636344(name: onpointerover))
+  // Type InteropUnion#632988805(parent: InteropGetter#55303992(name: onpointerover))
   set onpointerover(_i2.dynamic Function(_i3.PointerEvent)? value) {
     _i4.setProperty(
       this,
@@ -65466,7 +65466,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6046
   source: 
     onpointerup: ((this: GlobalEventHandlers, ev: PointerEvent) => any) | null; */
-  // Type InteropUnion#232704758(parent: InteropGetter#21290834(name: onpointerup))
+  // Type InteropUnion#576182730(parent: InteropGetter#1010912271(name: onpointerup))
   set onpointerup(_i2.dynamic Function(_i3.PointerEvent)? value) {
     _i4.setProperty(
       this,
@@ -65496,7 +65496,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onprogress: ((this: GlobalEventHandlers, ev: ProgressEvent) => any) | null; */
-  // Type InteropUnion#265363143(parent: InteropGetter#888136274(name: onprogress))
+  // Type InteropUnion#97217645(parent: InteropGetter#1010636721(name: onprogress))
   set onprogress(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.EventTarget>)? value) {
     _i4.setProperty(
@@ -65526,7 +65526,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onratechange: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#52270415(parent: InteropGetter#1056680466(name: onratechange))
+  // Type InteropUnion#124584813(parent: InteropGetter#503915452(name: onratechange))
   set onratechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65555,7 +65555,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onreset: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#87705308(parent: InteropGetter#327925597(name: onreset))
+  // Type InteropUnion#227903578(parent: InteropGetter#292835637(name: onreset))
   set onreset(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65574,7 +65574,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6062
   source: 
     onresize: ((this: GlobalEventHandlers, ev: UIEvent) => any) | null; */
-  // Type InteropUnion#784721797(parent: InteropGetter#740992275(name: onresize))
+  // Type InteropUnion#647649953(parent: InteropGetter#142390846(name: onresize))
   set onresize(_i2.dynamic Function(_i3.UIEvent)? value) {
     _i4.setProperty(
       this,
@@ -65603,7 +65603,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onscroll: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#376277001(parent: InteropGetter#695847575(name: onscroll))
+  // Type InteropUnion#449719923(parent: InteropGetter#364330129(name: onscroll))
   set onscroll(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65623,7 +65623,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6068
   source: 
     onsecuritypolicyviolation: ((this: GlobalEventHandlers, ev: SecurityPolicyViolationEvent) => any) | null; */
-  // Type InteropUnion#964744332(parent: InteropGetter#331180371(name: onsecuritypolicyviolation))
+  // Type InteropUnion#574520124(parent: InteropGetter#152631733(name: onsecuritypolicyviolation))
   set onsecuritypolicyviolation(
       _i2.dynamic Function(_i3.SecurityPolicyViolationEvent)? value) {
     _i4.setProperty(
@@ -65653,7 +65653,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onseeked: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#379801533(parent: InteropGetter#701009674(name: onseeked))
+  // Type InteropUnion#530855369(parent: InteropGetter#643138439(name: onseeked))
   set onseeked(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65682,7 +65682,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onseeking: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#644219699(parent: InteropGetter#301343697(name: onseeking))
+  // Type InteropUnion#881123602(parent: InteropGetter#323358799(name: onseeking))
   set onseeking(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65711,7 +65711,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onselect: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#727220312(parent: InteropGetter#460436101(name: onselect))
+  // Type InteropUnion#463810834(parent: InteropGetter#127201253(name: onselect))
   set onselect(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65730,7 +65730,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6084
   source: 
     onselectionchange: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#820858254(parent: InteropGetter#735633683(name: onselectionchange))
+  // Type InteropUnion#527963335(parent: InteropGetter#553597639(name: onselectionchange))
   set onselectionchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65749,7 +65749,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6085
   source: 
     onselectstart: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#481402969(parent: InteropGetter#760826404(name: onselectstart))
+  // Type InteropUnion#1030998926(parent: InteropGetter#967326035(name: onselectstart))
   set onselectstart(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65768,7 +65768,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6086
   source: 
     onslotchange: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#176511942(parent: InteropGetter#507616280(name: onslotchange))
+  // Type InteropUnion#498011330(parent: InteropGetter#1024932444(name: onslotchange))
   set onslotchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65797,7 +65797,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onstalled: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#70641130(parent: InteropGetter#915201304(name: onstalled))
+  // Type InteropUnion#282222858(parent: InteropGetter#577141292(name: onstalled))
   set onstalled(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65816,7 +65816,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6092
   source: 
     onsubmit: ((this: GlobalEventHandlers, ev: SubmitEvent) => any) | null; */
-  // Type InteropUnion#113508141(parent: InteropGetter#787470113(name: onsubmit))
+  // Type InteropUnion#595857005(parent: InteropGetter#1028366900(name: onsubmit))
   set onsubmit(_i2.dynamic Function(_i3.SubmitEvent)? value) {
     _i4.setProperty(
       this,
@@ -65845,7 +65845,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onsuspend: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#901089504(parent: InteropGetter#375876891(name: onsuspend))
+  // Type InteropUnion#588826345(parent: InteropGetter#472403627(name: onsuspend))
   set onsuspend(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65874,7 +65874,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     ontimeupdate: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#414434151(parent: InteropGetter#58927575(name: ontimeupdate))
+  // Type InteropUnion#313596860(parent: InteropGetter#656787597(name: ontimeupdate))
   set ontimeupdate(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65893,7 +65893,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6103
   source: 
     ontoggle: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#892376069(parent: InteropGetter#888303209(name: ontoggle))
+  // Type InteropUnion#205334634(parent: InteropGetter#911361062(name: ontoggle))
   set ontoggle(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -65912,7 +65912,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6104
   source: 
     ontouchcancel?: ((this: GlobalEventHandlers, ev: TouchEvent) => any) | null | undefined; */
-  // Type InteropUnion#145279997(parent: InteropGetter#782244374(name: ontouchcancel))
+  // Type InteropUnion#726350028(parent: InteropGetter#862215487(name: ontouchcancel))
   set ontouchcancel(_i2.dynamic Function(_i3.TouchEvent)? value) {
     _i4.setProperty(
       this,
@@ -65931,7 +65931,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6105
   source: 
     ontouchend?: ((this: GlobalEventHandlers, ev: TouchEvent) => any) | null | undefined; */
-  // Type InteropUnion#796087870(parent: InteropGetter#176590010(name: ontouchend))
+  // Type InteropUnion#1048252695(parent: InteropGetter#461130034(name: ontouchend))
   set ontouchend(_i2.dynamic Function(_i3.TouchEvent)? value) {
     _i4.setProperty(
       this,
@@ -65950,7 +65950,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6106
   source: 
     ontouchmove?: ((this: GlobalEventHandlers, ev: TouchEvent) => any) | null | undefined; */
-  // Type InteropUnion#864746583(parent: InteropGetter#817575101(name: ontouchmove))
+  // Type InteropUnion#901076955(parent: InteropGetter#170394555(name: ontouchmove))
   set ontouchmove(_i2.dynamic Function(_i3.TouchEvent)? value) {
     _i4.setProperty(
       this,
@@ -65969,7 +65969,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6107
   source: 
     ontouchstart?: ((this: GlobalEventHandlers, ev: TouchEvent) => any) | null | undefined; */
-  // Type InteropUnion#547737489(parent: InteropGetter#851393205(name: ontouchstart))
+  // Type InteropUnion#508620394(parent: InteropGetter#57580647(name: ontouchstart))
   set ontouchstart(_i2.dynamic Function(_i3.TouchEvent)? value) {
     _i4.setProperty(
       this,
@@ -65989,7 +65989,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6108
   source: 
     ontransitioncancel: ((this: GlobalEventHandlers, ev: TransitionEvent) => any) | null; */
-  // Type InteropUnion#946081571(parent: InteropGetter#912899459(name: ontransitioncancel))
+  // Type InteropUnion#186772(parent: InteropGetter#406255811(name: ontransitioncancel))
   set ontransitioncancel(_i2.dynamic Function(_i3.TransitionEvent)? value) {
     _i4.setProperty(
       this,
@@ -66009,7 +66009,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6109
   source: 
     ontransitionend: ((this: GlobalEventHandlers, ev: TransitionEvent) => any) | null; */
-  // Type InteropUnion#609439917(parent: InteropGetter#469866769(name: ontransitionend))
+  // Type InteropUnion#65677687(parent: InteropGetter#298383331(name: ontransitionend))
   set ontransitionend(_i2.dynamic Function(_i3.TransitionEvent)? value) {
     _i4.setProperty(
       this,
@@ -66029,7 +66029,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6110
   source: 
     ontransitionrun: ((this: GlobalEventHandlers, ev: TransitionEvent) => any) | null; */
-  // Type InteropUnion#70627832(parent: InteropGetter#1005532140(name: ontransitionrun))
+  // Type InteropUnion#742677119(parent: InteropGetter#843078653(name: ontransitionrun))
   set ontransitionrun(_i2.dynamic Function(_i3.TransitionEvent)? value) {
     _i4.setProperty(
       this,
@@ -66049,7 +66049,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6111
   source: 
     ontransitionstart: ((this: GlobalEventHandlers, ev: TransitionEvent) => any) | null; */
-  // Type InteropUnion#941839813(parent: InteropGetter#43473394(name: ontransitionstart))
+  // Type InteropUnion#687839091(parent: InteropGetter#178103597(name: ontransitionstart))
   set ontransitionstart(_i2.dynamic Function(_i3.TransitionEvent)? value) {
     _i4.setProperty(
       this,
@@ -66078,7 +66078,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onvolumechange: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#1008886632(parent: InteropGetter#819825297(name: onvolumechange))
+  // Type InteropUnion#137780546(parent: InteropGetter#358554321(name: onvolumechange))
   set onvolumechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -66107,7 +66107,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
      * @param ev The event.
      */
     onwaiting: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#495078427(parent: InteropGetter#133191582(name: onwaiting))
+  // Type InteropUnion#54820670(parent: InteropGetter#661653339(name: onwaiting))
   set onwaiting(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -66129,7 +66129,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   source: 
     /** @deprecated This is a legacy alias of `onanimationend`. */
     onwebkitanimationend: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#848430755(parent: InteropGetter#71870518(name: onwebkitanimationend))
+  // Type InteropUnion#329233263(parent: InteropGetter#575702174(name: onwebkitanimationend))
   set onwebkitanimationend(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -66152,7 +66152,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   source: 
     /** @deprecated This is a legacy alias of `onanimationiteration`. */
     onwebkitanimationiteration: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#153202242(parent: InteropGetter#976078432(name: onwebkitanimationiteration))
+  // Type InteropUnion#544366643(parent: InteropGetter#861883927(name: onwebkitanimationiteration))
   set onwebkitanimationiteration(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -66175,7 +66175,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   source: 
     /** @deprecated This is a legacy alias of `onanimationstart`. */
     onwebkitanimationstart: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#151492427(parent: InteropGetter#93908798(name: onwebkitanimationstart))
+  // Type InteropUnion#838303422(parent: InteropGetter#626399368(name: onwebkitanimationstart))
   set onwebkitanimationstart(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -66197,7 +66197,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   source: 
     /** @deprecated This is a legacy alias of `ontransitionend`. */
     onwebkittransitionend: ((this: GlobalEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#880213773(parent: InteropGetter#1020495905(name: onwebkittransitionend))
+  // Type InteropUnion#267550750(parent: InteropGetter#825495090(name: onwebkittransitionend))
   set onwebkittransitionend(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -66216,7 +66216,7 @@ extension GlobalEventHandlers$Typings on GlobalEventHandlers {
   /* #6130
   source: 
     onwheel: ((this: GlobalEventHandlers, ev: WheelEvent) => any) | null; */
-  // Type InteropUnion#443063409(parent: InteropGetter#926810114(name: onwheel))
+  // Type InteropUnion#982537857(parent: InteropGetter#890082569(name: onwheel))
   set onwheel(_i2.dynamic Function(_i3.WheelEvent)? value) {
     _i4.setProperty(
       this,
@@ -73400,7 +73400,7 @@ extension HTMLIFrameElement$Typings on HTMLIFrameElement {
   /* #7015
   source: 
     referrerPolicy: ReferrerPolicy; */
-  // Type InteropTypedef#220144294(name: ReferrerPolicy)
+  // Type InteropTypedef#513382589(name: ReferrerPolicy)
   set referrerPolicy(_i3.ReferrerPolicy value) {
     _i4.setProperty(
       this,
@@ -73733,7 +73733,7 @@ extension HTMLImageElement$Typings on HTMLImageElement {
   /* #7056
   source: 
     crossOrigin: string | null; */
-  // Type InteropUnion#350637393(parent: InteropGetter#856107717(name: crossOrigin))
+  // Type InteropUnion#278294607(parent: InteropGetter#694310852(name: crossOrigin))
   set crossOrigin(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -73759,7 +73759,7 @@ extension HTMLImageElement$Typings on HTMLImageElement {
   /* #7058
   source: 
     decoding: "async" | "sync" | "auto"; */
-  // Type InteropUnion#440678268(parent: InteropGetter#111390322(name: decoding))
+  // Type InteropUnion#634553427(parent: InteropGetter#1048708843(name: decoding))
   set decoding(Decoding value) {
     _i4.setProperty(
       this,
@@ -73854,7 +73854,7 @@ extension HTMLImageElement$Typings on HTMLImageElement {
   source: 
     /** Sets or retrieves the policy for loading image elements that are outside the viewport. */
     loading: "eager" | "lazy"; */
-  // Type InteropUnion#308568274(parent: InteropGetter#407707194(name: loading))
+  // Type InteropUnion#135279208(parent: InteropGetter#623486755(name: loading))
   set loading(Loading value) {
     _i4.setProperty(
       this,
@@ -74481,7 +74481,7 @@ extension HTMLInputElement$Typings on HTMLInputElement {
   source: 
     /** Returns a FileList object on a file type input object. */
     files: FileList | null; */
-  // Type InteropUnion#354425313(parent: InteropGetter#362772865(name: files))
+  // Type InteropUnion#772355908(parent: InteropGetter#947087266(name: files))
   set files(_i3.FileList? value) {
     _i4.setProperty(
       this,
@@ -74896,7 +74896,7 @@ extension HTMLInputElement$Typings on HTMLInputElement {
   /* #7175
   source: 
     selectionDirection: "forward" | "backward" | "none" | null; */
-  // Type InteropUnion#444849776(parent: InteropGetter#244454748(name: selectionDirection))
+  // Type InteropUnion#811690210(parent: InteropGetter#399146536(name: selectionDirection))
   set selectionDirection(SelectionDirection? value) {
     _i4.setProperty(
       this,
@@ -74918,7 +74918,7 @@ extension HTMLInputElement$Typings on HTMLInputElement {
   source: 
     /** Gets or sets the end position or offset of a text selection. */
     selectionEnd: number | null; */
-  // Type InteropUnion#816986007(parent: InteropGetter#232304647(name: selectionEnd))
+  // Type InteropUnion#627122871(parent: InteropGetter#376532633(name: selectionEnd))
   set selectionEnd(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -74940,7 +74940,7 @@ extension HTMLInputElement$Typings on HTMLInputElement {
   source: 
     /** Gets or sets the starting position or offset of a text selection. */
     selectionStart: number | null; */
-  // Type InteropUnion#95143494(parent: InteropGetter#880823885(name: selectionStart))
+  // Type InteropUnion#267472690(parent: InteropGetter#253690174(name: selectionStart))
   set selectionStart(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -75116,7 +75116,7 @@ extension HTMLInputElement$Typings on HTMLInputElement {
   source: 
     /** Returns a Date object representing the form control's value, if applicable; otherwise, returns null. Can be set, to change the value. Throws an "InvalidStateError" DOMException if the control isn't date- or time-based. */
     valueAsDate: Date | null; */
-  // Type InteropUnion#514453454(parent: InteropGetter#424375149(name: valueAsDate))
+  // Type InteropUnion#813790497(parent: InteropGetter#952728198(name: valueAsDate))
   set valueAsDate(_i2.DateTime? value) {
     _i4.setProperty(
       this,
@@ -75933,7 +75933,7 @@ extension HTMLLinkElement$Typings on HTMLLinkElement {
   /* #7310
   source: 
     crossOrigin: string | null; */
-  // Type InteropUnion#18774426(parent: InteropGetter#1070243239(name: crossOrigin))
+  // Type InteropUnion#212392590(parent: InteropGetter#877859269(name: crossOrigin))
   set crossOrigin(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -77100,7 +77100,7 @@ extension HTMLMediaElement$Typings on HTMLMediaElement {
   /* #7422
   source: 
     crossOrigin: string | null; */
-  // Type InteropUnion#427642751(parent: InteropGetter#242793775(name: crossOrigin))
+  // Type InteropUnion#192892143(parent: InteropGetter#706976364(name: crossOrigin))
   set crossOrigin(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -77300,7 +77300,7 @@ extension HTMLMediaElement$Typings on HTMLMediaElement {
   /* #7445
   source: 
     onencrypted: ((this: HTMLMediaElement, ev: MediaEncryptedEvent) => any) | null; */
-  // Type InteropUnion#690482624(parent: InteropGetter#961494527(name: onencrypted))
+  // Type InteropUnion#974173019(parent: InteropGetter#802679678(name: onencrypted))
   set onencrypted(_i2.dynamic Function(_i3.MediaEncryptedEvent)? value) {
     _i4.setProperty(
       this,
@@ -77319,7 +77319,7 @@ extension HTMLMediaElement$Typings on HTMLMediaElement {
   /* #7446
   source: 
     onwaitingforkey: ((this: HTMLMediaElement, ev: Event) => any) | null; */
-  // Type InteropUnion#486176899(parent: InteropGetter#106125927(name: onwaitingforkey))
+  // Type InteropUnion#233575770(parent: InteropGetter#723558289(name: onwaitingforkey))
   set onwaitingforkey(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -77381,7 +77381,7 @@ extension HTMLMediaElement$Typings on HTMLMediaElement {
   source: 
     /** Gets or sets a value indicating what data should be preloaded, if any. */
     preload: "none" | "metadata" | "auto" | ""; */
-  // Type InteropUnion#589589320(parent: InteropGetter#791887089(name: preload))
+  // Type InteropUnion#228131647(parent: InteropGetter#463433905(name: preload))
   set preload(Preload value) {
     _i4.setProperty(
       this,
@@ -77473,7 +77473,7 @@ extension HTMLMediaElement$Typings on HTMLMediaElement {
   /* #7464
   source: 
     srcObject: MediaProvider | null; */
-  // Type InteropUnion#713204895(parent: InteropGetter#641982473(name: srcObject))
+  // Type InteropUnion#440947225(parent: InteropGetter#349617996(name: srcObject))
   set srcObject(_i3.MediaProvider? value) {
     _i4.setProperty(
       this,
@@ -81273,7 +81273,7 @@ extension HTMLScriptElement$Typings on HTMLScriptElement {
   /* #7933
   source: 
     crossOrigin: string | null; */
-  // Type InteropUnion#372702514(parent: InteropGetter#96161975(name: crossOrigin))
+  // Type InteropUnion#174496086(parent: InteropGetter#775847964(name: crossOrigin))
   set crossOrigin(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -82097,7 +82097,7 @@ extension HTMLSlotElement$Typings on HTMLSlotElement {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,875907342,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,152107626,[Instance of 'InteropRef<InteropType>']*/ <
       _i3.Element> assignedElements(
           [_i3.AssignedNodesOptions? options]) =>
       (_i4.callMethod(
@@ -82106,7 +82106,7 @@ extension HTMLSlotElement$Typings on HTMLSlotElement {
         [options ?? _i6.undefined],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,622057310,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,411140931,[Instance of 'InteropRef<InteropType>']*/ <
       _i3.Node> assignedNodes(
           [_i3.AssignedNodesOptions? options]) =>
       (_i4.callMethod(
@@ -83879,7 +83879,7 @@ extension HTMLTableElement$Typings on HTMLTableElement {
   source: 
     /** Retrieves the caption object of a table. */
     caption: HTMLTableCaptionElement | null; */
-  // Type InteropUnion#247584048(parent: InteropGetter#920673508(name: caption))
+  // Type InteropUnion#413647736(parent: InteropGetter#151954409(name: caption))
   set caption(_i3.HTMLTableCaptionElement? value) {
     _i4.setProperty(
       this,
@@ -84065,7 +84065,7 @@ extension HTMLTableElement$Typings on HTMLTableElement {
   source: 
     /** Retrieves the tFoot object of the table. */
     tFoot: HTMLTableSectionElement | null; */
-  // Type InteropUnion#201005722(parent: InteropGetter#991071534(name: tFoot))
+  // Type InteropUnion#450832619(parent: InteropGetter#394936736(name: tFoot))
   set tFoot(_i3.HTMLTableSectionElement? value) {
     _i4.setProperty(
       this,
@@ -84087,7 +84087,7 @@ extension HTMLTableElement$Typings on HTMLTableElement {
   source: 
     /** Retrieves the tHead object of the table. */
     tHead: HTMLTableSectionElement | null; */
-  // Type InteropUnion#755876677(parent: InteropGetter#38615612(name: tHead))
+  // Type InteropUnion#8667800(parent: InteropGetter#667216322(name: tHead))
   set tHead(_i3.HTMLTableSectionElement? value) {
     _i4.setProperty(
       this,
@@ -85319,7 +85319,7 @@ extension HTMLTextAreaElement$Typings on HTMLTextAreaElement {
   /* #8446
   source: 
     selectionDirection: "forward" | "backward" | "none"; */
-  // Type InteropUnion#363579691(parent: InteropGetter#948438985(name: selectionDirection))
+  // Type InteropUnion#393082423(parent: InteropGetter#904070337(name: selectionDirection))
   set selectionDirection(SelectionDirectionOptions value) {
     _i4.setProperty(
       this,
@@ -86674,7 +86674,7 @@ extension HTMLVideoElement$Typings on HTMLVideoElement {
   /* #8592
   source: 
     onenterpictureinpicture: ((this: HTMLVideoElement, ev: Event) => any) | null; */
-  // Type InteropUnion#269406293(parent: InteropGetter#456673352(name: onenterpictureinpicture))
+  // Type InteropUnion#264114302(parent: InteropGetter#913599580(name: onenterpictureinpicture))
   set onenterpictureinpicture(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -86694,7 +86694,7 @@ extension HTMLVideoElement$Typings on HTMLVideoElement {
   /* #8593
   source: 
     onleavepictureinpicture: ((this: HTMLVideoElement, ev: Event) => any) | null; */
-  // Type InteropUnion#94863681(parent: InteropGetter#578850433(name: onleavepictureinpicture))
+  // Type InteropUnion#700799187(parent: InteropGetter#1057730791(name: onleavepictureinpicture))
   set onleavepictureinpicture(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -87080,7 +87080,7 @@ extension History$Typings on History {
   /* #8650
   source: 
     scrollRestoration: ScrollRestoration; */
-  // Type InteropTypedef#720362327(name: ScrollRestoration)
+  // Type InteropTypedef#465282999(name: ScrollRestoration)
   set scrollRestoration(_i3.ScrollRestoration value) {
     _i4.setProperty(
       this,
@@ -87349,7 +87349,7 @@ extension IDBDatabase$Typings on IDBDatabase {
   /* #8726
   source: 
     onabort: ((this: IDBDatabase, ev: Event) => any) | null; */
-  // Type InteropUnion#53891045(parent: InteropGetter#171488509(name: onabort))
+  // Type InteropUnion#284231375(parent: InteropGetter#593265170(name: onabort))
   set onabort(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -87368,7 +87368,7 @@ extension IDBDatabase$Typings on IDBDatabase {
   /* #8727
   source: 
     onclose: ((this: IDBDatabase, ev: Event) => any) | null; */
-  // Type InteropUnion#936727882(parent: InteropGetter#124061830(name: onclose))
+  // Type InteropUnion#1001360980(parent: InteropGetter#834726220(name: onclose))
   set onclose(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -87387,7 +87387,7 @@ extension IDBDatabase$Typings on IDBDatabase {
   /* #8728
   source: 
     onerror: ((this: IDBDatabase, ev: Event) => any) | null; */
-  // Type InteropUnion#98146931(parent: InteropGetter#837508812(name: onerror))
+  // Type InteropUnion#858167795(parent: InteropGetter#411510031(name: onerror))
   set onerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -87407,7 +87407,7 @@ extension IDBDatabase$Typings on IDBDatabase {
   /* #8729
   source: 
     onversionchange: ((this: IDBDatabase, ev: IDBVersionChangeEvent) => any) | null; */
-  // Type InteropUnion#1073102051(parent: InteropGetter#556704937(name: onversionchange))
+  // Type InteropUnion#786124878(parent: InteropGetter#196407707(name: onversionchange))
   set onversionchange(_i2.dynamic Function(_i3.IDBVersionChangeEvent)? value) {
     _i4.setProperty(
       this,
@@ -87598,7 +87598,7 @@ extension IDBFactory$Typings on IDBFactory {
         ],
       );
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,152282320,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,813492803,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.IDBDatabaseInfo>> databases() =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -87707,7 +87707,7 @@ extension IDBIndex$Typings on IDBIndex {
         [query],
       );
   _i3.IDBRequest<
-      _i2.List /*LIST InteropStaticType.list,640776222,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,42849062,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.dynamic>> getAll([
     _i2.dynamic query,
     _i2.num? count,
@@ -87721,7 +87721,7 @@ extension IDBIndex$Typings on IDBIndex {
         ],
       );
   _i3.IDBRequest<
-      _i2.List /*LIST InteropStaticType.list,35167319,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,907688569,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.IDBValidKey>> getAllKeys([
     _i2.dynamic query,
     _i2.num? count,
@@ -88055,7 +88055,7 @@ extension IDBObjectStore$Typings on IDBObjectStore {
         [query],
       );
   _i3.IDBRequest<
-      _i2.List /*LIST InteropStaticType.list,561420479,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1023066789,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.dynamic>> getAll([
     _i2.dynamic query,
     _i2.num? count,
@@ -88069,7 +88069,7 @@ extension IDBObjectStore$Typings on IDBObjectStore {
         ],
       );
   _i3.IDBRequest<
-      _i2.List /*LIST InteropStaticType.list,746726238,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1067691967,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.IDBValidKey>> getAllKeys([
     _i2.dynamic query,
     _i2.num? count,
@@ -88172,7 +88172,7 @@ extension IDBOpenDBRequest$Typings on IDBOpenDBRequest {
   /* #8977
   source: 
     onblocked: ((this: IDBOpenDBRequest, ev: IDBVersionChangeEvent) => any) | null; */
-  // Type InteropUnion#763753378(parent: InteropGetter#169428222(name: onblocked))
+  // Type InteropUnion#233436942(parent: InteropGetter#178136395(name: onblocked))
   set onblocked(_i2.dynamic Function(_i3.IDBVersionChangeEvent)? value) {
     _i4.setProperty(
       this,
@@ -88192,7 +88192,7 @@ extension IDBOpenDBRequest$Typings on IDBOpenDBRequest {
   /* #8978
   source: 
     onupgradeneeded: ((this: IDBOpenDBRequest, ev: IDBVersionChangeEvent) => any) | null; */
-  // Type InteropUnion#14369017(parent: InteropGetter#294120412(name: onupgradeneeded))
+  // Type InteropUnion#441248518(parent: InteropGetter#383796122(name: onupgradeneeded))
   set onupgradeneeded(_i2.dynamic Function(_i3.IDBVersionChangeEvent)? value) {
     _i4.setProperty(
       this,
@@ -88347,7 +88347,7 @@ extension IDBRequest$Typings<T> on IDBRequest<T> {
   /* #8999
   source: 
     onerror: ((this: IDBRequest<T>, ev: Event) => any) | null; */
-  // Type InteropUnion#945354548(parent: InteropGetter#915128261(name: onerror))
+  // Type InteropUnion#993896578(parent: InteropGetter#574206280(name: onerror))
   set onerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -88366,7 +88366,7 @@ extension IDBRequest$Typings<T> on IDBRequest<T> {
   /* #9000
   source: 
     onsuccess: ((this: IDBRequest<T>, ev: Event) => any) | null; */
-  // Type InteropUnion#617962129(parent: InteropGetter#1072785018(name: onsuccess))
+  // Type InteropUnion#583605270(parent: InteropGetter#910298262(name: onsuccess))
   set onsuccess(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -88595,7 +88595,7 @@ extension IDBTransaction$Typings on IDBTransaction {
   /* #9036
   source: 
     onabort: ((this: IDBTransaction, ev: Event) => any) | null; */
-  // Type InteropUnion#169275690(parent: InteropGetter#718693832(name: onabort))
+  // Type InteropUnion#603030783(parent: InteropGetter#990343941(name: onabort))
   set onabort(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -88614,7 +88614,7 @@ extension IDBTransaction$Typings on IDBTransaction {
   /* #9037
   source: 
     oncomplete: ((this: IDBTransaction, ev: Event) => any) | null; */
-  // Type InteropUnion#842518647(parent: InteropGetter#688564523(name: oncomplete))
+  // Type InteropUnion#649156252(parent: InteropGetter#291373220(name: oncomplete))
   set oncomplete(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -88633,7 +88633,7 @@ extension IDBTransaction$Typings on IDBTransaction {
   /* #9038
   source: 
     onerror: ((this: IDBTransaction, ev: Event) => any) | null; */
-  // Type InteropUnion#707095953(parent: InteropGetter#318082629(name: onerror))
+  // Type InteropUnion#121051865(parent: InteropGetter#524474393(name: onerror))
   set onerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -89159,7 +89159,7 @@ extension InputEvent$Typings on InputEvent {
         this,
         'isComposing',
       );
-  _i2.List /*LIST InteropStaticType.list,638718341,[Instance of 'InteropRef<InteropType>']*/ <_i3.StaticRange>
+  _i2.List /*LIST InteropStaticType.list,863452123,[Instance of 'InteropRef<InteropType>']*/ <_i3.StaticRange>
       getTargetRanges() => (_i4.callMethod(
             this,
             'getTargetRanges',
@@ -89232,7 +89232,7 @@ extension IntersectionObserver$Typings on IntersectionObserver {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,288649440,[Instance of 'InteropRef<InteropType>']*/ <_i3.IntersectionObserverEntry>
+  _i2.List /*LIST InteropStaticType.list,747498668,[Instance of 'InteropRef<InteropType>']*/ <_i3.IntersectionObserverEntry>
       takeRecords() => (_i4.callMethod(
             this,
             'takeRecords',
@@ -89620,7 +89620,7 @@ extension KeyframeEffect$Typings on KeyframeEffect {
   /* #9225
   source: 
     composite: CompositeOperation; */
-  // Type InteropTypedef#928580075(name: CompositeOperation)
+  // Type InteropTypedef#401455404(name: CompositeOperation)
   set composite(_i3.CompositeOperation value) {
     _i4.setProperty(
       this,
@@ -89640,7 +89640,7 @@ extension KeyframeEffect$Typings on KeyframeEffect {
   /* #9226
   source: 
     iterationComposite: IterationCompositeOperation; */
-  // Type InteropTypedef#842427747(name: IterationCompositeOperation)
+  // Type InteropTypedef#299893068(name: IterationCompositeOperation)
   set iterationComposite(_i3.IterationCompositeOperation value) {
     _i4.setProperty(
       this,
@@ -89659,7 +89659,7 @@ extension KeyframeEffect$Typings on KeyframeEffect {
   /* #9227
   source: 
     pseudoElement: string | null; */
-  // Type InteropUnion#971074047(parent: InteropGetter#450674478(name: pseudoElement))
+  // Type InteropUnion#147309872(parent: InteropGetter#814273493(name: pseudoElement))
   set pseudoElement(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -89678,7 +89678,7 @@ extension KeyframeEffect$Typings on KeyframeEffect {
   /* #9228
   source: 
     target: Element | null; */
-  // Type InteropUnion#589624451(parent: InteropGetter#798085799(name: target))
+  // Type InteropUnion#489576139(parent: InteropGetter#506823734(name: target))
   set target(_i3.Element? value) {
     _i4.setProperty(
       this,
@@ -89687,7 +89687,7 @@ extension KeyframeEffect$Typings on KeyframeEffect {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,573535381,[Instance of 'InteropRef<InteropType>']*/ <_i3.ComputedKeyframe>
+  _i2.List /*LIST InteropStaticType.list,68961959,[Instance of 'InteropRef<InteropType>']*/ <_i3.ComputedKeyframe>
       getKeyframes() => (_i4.callMethod(
             this,
             'getKeyframes',
@@ -90197,7 +90197,7 @@ extension MIDIAccess$Typings on MIDIAccess {
   /* #9341
   source: 
     onstatechange: ((this: MIDIAccess, ev: Event) => any) | null; */
-  // Type InteropUnion#69264337(parent: InteropGetter#506927067(name: onstatechange))
+  // Type InteropUnion#500517568(parent: InteropGetter#49170718(name: onstatechange))
   set onstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -90393,7 +90393,7 @@ extension MIDIInput$Typings on MIDIInput {
   /* #9371
   source: 
     onmidimessage: ((this: MIDIInput, ev: Event) => any) | null; */
-  // Type InteropUnion#158755632(parent: InteropGetter#539784291(name: onmidimessage))
+  // Type InteropUnion#457470956(parent: InteropGetter#782834252(name: onmidimessage))
   set onmidimessage(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -90596,7 +90596,7 @@ external _i2.Object _declaredMIDIOutput;
 
 extension MIDIOutput$Typings on MIDIOutput {
   void send(
-    _i2.List /*LIST InteropStaticType.list,554160463,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,795869823,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.num>
         data, [
     _i3.DOMHighResTimeStamp? timestamp,
@@ -90815,7 +90815,7 @@ extension MIDIPort$Typings on MIDIPort {
   /* #9437
   source: 
     onstatechange: ((this: MIDIPort, ev: Event) => any) | null; */
-  // Type InteropUnion#990963808(parent: InteropGetter#1072795501(name: onstatechange))
+  // Type InteropUnion#129704488(parent: InteropGetter#373680607(name: onstatechange))
   set onstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -91317,7 +91317,7 @@ extension MediaDevices$Typings on MediaDevices {
   /* #9505
   source: 
     ondevicechange: ((this: MediaDevices, ev: Event) => any) | null; */
-  // Type InteropUnion#594103255(parent: InteropGetter#603049776(name: ondevicechange))
+  // Type InteropUnion#22765206(parent: InteropGetter#185999639(name: ondevicechange))
   set ondevicechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -91327,7 +91327,7 @@ extension MediaDevices$Typings on MediaDevices {
   }
 
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,441319575,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,394369821,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.MediaDeviceInfo>> enumerateDevices() =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -91758,7 +91758,7 @@ extension MediaKeySession$Typings on MediaKeySession {
   /* #9587
   source: 
     onkeystatuseschange: ((this: MediaKeySession, ev: Event) => any) | null; */
-  // Type InteropUnion#491228059(parent: InteropGetter#492083924(name: onkeystatuseschange))
+  // Type InteropUnion#735346202(parent: InteropGetter#467796456(name: onkeystatuseschange))
   set onkeystatuseschange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -91778,7 +91778,7 @@ extension MediaKeySession$Typings on MediaKeySession {
   /* #9588
   source: 
     onmessage: ((this: MediaKeySession, ev: MediaKeyMessageEvent) => any) | null; */
-  // Type InteropUnion#727366050(parent: InteropGetter#321315046(name: onmessage))
+  // Type InteropUnion#808370321(parent: InteropGetter#755197272(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MediaKeyMessageEvent)? value) {
     _i4.setProperty(
       this,
@@ -92298,7 +92298,7 @@ extension MediaQueryList$Typings on MediaQueryList {
   /* #9686
   source: 
     onchange: ((this: MediaQueryList, ev: MediaQueryListEvent) => any) | null; */
-  // Type InteropUnion#666088345(parent: InteropGetter#831857215(name: onchange))
+  // Type InteropUnion#1030555244(parent: InteropGetter#73312623(name: onchange))
   set onchange(_i2.dynamic Function(_i3.MediaQueryListEvent)? value) {
     _i4.setProperty(
       this,
@@ -92535,7 +92535,7 @@ extension MediaRecorder$Typings on MediaRecorder {
   /* #9724
   source: 
     ondataavailable: ((this: MediaRecorder, ev: BlobEvent) => any) | null; */
-  // Type InteropUnion#838809711(parent: InteropGetter#622748277(name: ondataavailable))
+  // Type InteropUnion#839237766(parent: InteropGetter#540359471(name: ondataavailable))
   set ondataavailable(_i2.dynamic Function(_i3.BlobEvent)? value) {
     _i4.setProperty(
       this,
@@ -92554,7 +92554,7 @@ extension MediaRecorder$Typings on MediaRecorder {
   /* #9725
   source: 
     onerror: ((this: MediaRecorder, ev: Event) => any) | null; */
-  // Type InteropUnion#1071978500(parent: InteropGetter#425451140(name: onerror))
+  // Type InteropUnion#1063789203(parent: InteropGetter#831026366(name: onerror))
   set onerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -92573,7 +92573,7 @@ extension MediaRecorder$Typings on MediaRecorder {
   /* #9726
   source: 
     onpause: ((this: MediaRecorder, ev: Event) => any) | null; */
-  // Type InteropUnion#950839917(parent: InteropGetter#830226455(name: onpause))
+  // Type InteropUnion#46662920(parent: InteropGetter#244519600(name: onpause))
   set onpause(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -92592,7 +92592,7 @@ extension MediaRecorder$Typings on MediaRecorder {
   /* #9727
   source: 
     onresume: ((this: MediaRecorder, ev: Event) => any) | null; */
-  // Type InteropUnion#121463960(parent: InteropGetter#315667354(name: onresume))
+  // Type InteropUnion#867957072(parent: InteropGetter#30058459(name: onresume))
   set onresume(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -92611,7 +92611,7 @@ extension MediaRecorder$Typings on MediaRecorder {
   /* #9728
   source: 
     onstart: ((this: MediaRecorder, ev: Event) => any) | null; */
-  // Type InteropUnion#766015659(parent: InteropGetter#498927521(name: onstart))
+  // Type InteropUnion#211482337(parent: InteropGetter#131908465(name: onstart))
   set onstart(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -92630,7 +92630,7 @@ extension MediaRecorder$Typings on MediaRecorder {
   /* #9729
   source: 
     onstop: ((this: MediaRecorder, ev: Event) => any) | null; */
-  // Type InteropUnion#589714367(parent: InteropGetter#1054106786(name: onstop))
+  // Type InteropUnion#37628424(parent: InteropGetter#657288322(name: onstop))
   set onstop(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -92837,7 +92837,7 @@ extension MediaSession$Typings on MediaSession {
   /* #9751
   source: 
     metadata: MediaMetadata | null; */
-  // Type InteropUnion#716202998(parent: InteropGetter#1020503244(name: metadata))
+  // Type InteropUnion#475591054(parent: InteropGetter#822464550(name: metadata))
   set metadata(_i3.MediaMetadata? value) {
     _i4.setProperty(
       this,
@@ -92857,7 +92857,7 @@ extension MediaSession$Typings on MediaSession {
   /* #9752
   source: 
     playbackState: MediaSessionPlaybackState; */
-  // Type InteropTypedef#198795887(name: MediaSessionPlaybackState)
+  // Type InteropTypedef#1018963716(name: MediaSessionPlaybackState)
   set playbackState(_i3.MediaSessionPlaybackState value) {
     _i4.setProperty(
       this,
@@ -92961,7 +92961,7 @@ extension MediaSource$Typings on MediaSource {
   /* #9772
   source: 
     onsourceclose: ((this: MediaSource, ev: Event) => any) | null; */
-  // Type InteropUnion#256265689(parent: InteropGetter#998240588(name: onsourceclose))
+  // Type InteropUnion#150983171(parent: InteropGetter#741008907(name: onsourceclose))
   set onsourceclose(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -92980,7 +92980,7 @@ extension MediaSource$Typings on MediaSource {
   /* #9773
   source: 
     onsourceended: ((this: MediaSource, ev: Event) => any) | null; */
-  // Type InteropUnion#485449367(parent: InteropGetter#707281653(name: onsourceended))
+  // Type InteropUnion#656096420(parent: InteropGetter#847015650(name: onsourceended))
   set onsourceended(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -92999,7 +92999,7 @@ extension MediaSource$Typings on MediaSource {
   /* #9774
   source: 
     onsourceopen: ((this: MediaSource, ev: Event) => any) | null; */
-  // Type InteropUnion#473974876(parent: InteropGetter#331738320(name: onsourceopen))
+  // Type InteropUnion#265001911(parent: InteropGetter#897917335(name: onsourceopen))
   set onsourceopen(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -93199,7 +93199,7 @@ class MediaStream implements _i3.EventTarget {
       );
 
   factory MediaStream.$3(
-          _i2.List /*LIST InteropStaticType.list,267016032,[Instance of 'InteropRef<InteropType>']*/ <
+          _i2.List /*LIST InteropStaticType.list,364533195,[Instance of 'InteropRef<InteropType>']*/ <
                   _i3.MediaStreamTrack>
               tracks) =>
       _i4.callConstructor(
@@ -93240,7 +93240,7 @@ extension MediaStream$Typings on MediaStream {
   /* #9803
   source: 
     onaddtrack: ((this: MediaStream, ev: MediaStreamTrackEvent) => any) | null; */
-  // Type InteropUnion#600945000(parent: InteropGetter#34151793(name: onaddtrack))
+  // Type InteropUnion#33670319(parent: InteropGetter#355720937(name: onaddtrack))
   set onaddtrack(_i2.dynamic Function(_i3.MediaStreamTrackEvent)? value) {
     _i4.setProperty(
       this,
@@ -93260,7 +93260,7 @@ extension MediaStream$Typings on MediaStream {
   /* #9804
   source: 
     onremovetrack: ((this: MediaStream, ev: MediaStreamTrackEvent) => any) | null; */
-  // Type InteropUnion#250018598(parent: InteropGetter#507945611(name: onremovetrack))
+  // Type InteropUnion#395481565(parent: InteropGetter#35017352(name: onremovetrack))
   set onremovetrack(_i2.dynamic Function(_i3.MediaStreamTrackEvent)? value) {
     _i4.setProperty(
       this,
@@ -93282,7 +93282,7 @@ extension MediaStream$Typings on MediaStream {
         'clone',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,957882117,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaStreamTrack>
+  _i2.List /*LIST InteropStaticType.list,339798428,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaStreamTrack>
       getAudioTracks() => (_i4.callMethod(
             this,
             'getAudioTracks',
@@ -93294,14 +93294,14 @@ extension MediaStream$Typings on MediaStream {
         'getTrackById',
         [trackId],
       );
-  _i2.List /*LIST InteropStaticType.list,558813333,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaStreamTrack>
+  _i2.List /*LIST InteropStaticType.list,1064329990,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaStreamTrack>
       getTracks() => (_i4.callMethod(
             this,
             'getTracks',
             [],
           ) as _i2.List)
               .cast();
-  _i2.List /*LIST InteropStaticType.list,620684511,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaStreamTrack>
+  _i2.List /*LIST InteropStaticType.list,790857704,[Instance of 'InteropRef<InteropType>']*/ <_i3.MediaStreamTrack>
       getVideoTracks() => (_i4.callMethod(
             this,
             'getVideoTracks',
@@ -93593,7 +93593,7 @@ extension MediaStreamTrack$Typings on MediaStreamTrack {
   /* #9858
   source: 
     onended: ((this: MediaStreamTrack, ev: Event) => any) | null; */
-  // Type InteropUnion#193588640(parent: InteropGetter#71556688(name: onended))
+  // Type InteropUnion#298289079(parent: InteropGetter#546018449(name: onended))
   set onended(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -93612,7 +93612,7 @@ extension MediaStreamTrack$Typings on MediaStreamTrack {
   /* #9859
   source: 
     onmute: ((this: MediaStreamTrack, ev: Event) => any) | null; */
-  // Type InteropUnion#373374678(parent: InteropGetter#61396470(name: onmute))
+  // Type InteropUnion#782057635(parent: InteropGetter#847827492(name: onmute))
   set onmute(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -93631,7 +93631,7 @@ extension MediaStreamTrack$Typings on MediaStreamTrack {
   /* #9860
   source: 
     onunmute: ((this: MediaStreamTrack, ev: Event) => any) | null; */
-  // Type InteropUnion#695713887(parent: InteropGetter#863669404(name: onunmute))
+  // Type InteropUnion#88310125(parent: InteropGetter#736531508(name: onunmute))
   set onunmute(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -93936,7 +93936,7 @@ extension MessageEvent$Typings<T> on MessageEvent<T> {
     _i2.String? origin,
     _i2.String? lastEventId,
     _i3.MessageEventSource? source,
-    _i2.List /*LIST InteropStaticType.list,973592931,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,765582732,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MessagePort>?
         ports,
   ]) {
@@ -93997,7 +93997,7 @@ extension MessagePort$Typings on MessagePort {
   /* #9930
   source: 
     onmessage: ((this: MessagePort, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#300961906(parent: InteropGetter#642554424(name: onmessage))
+  // Type InteropUnion#855054060(parent: InteropGetter#294737987(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -94017,7 +94017,7 @@ extension MessagePort$Typings on MessagePort {
   /* #9931
   source: 
     onmessageerror: ((this: MessagePort, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#907170000(parent: InteropGetter#725500056(name: onmessageerror))
+  // Type InteropUnion#133135362(parent: InteropGetter#115801353(name: onmessageerror))
   set onmessageerror(
       _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
@@ -94037,7 +94037,7 @@ extension MessagePort$Typings on MessagePort {
 
   void _postMessage$1(
     _i2.dynamic message,
-    _i2.List /*LIST InteropStaticType.list,103753766,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,794343372,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Transferable>
         transfer,
   ) {
@@ -94069,7 +94069,7 @@ extension MessagePort$Typings on MessagePort {
   ({
     void Function(
       _i2.dynamic message,
-      _i2.List /*LIST InteropStaticType.list,103753766,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,794343372,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Transferable>
           transfer,
     ) $1,
@@ -94712,7 +94712,7 @@ extension MutationObserver$Typings on MutationObserver {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,454174990,[Instance of 'InteropRef<InteropType>']*/ <_i3.MutationRecord>
+  _i2.List /*LIST InteropStaticType.list,468059456,[Instance of 'InteropRef<InteropType>']*/ <_i3.MutationRecord>
       takeRecords() => (_i4.callMethod(
             this,
             'takeRecords',
@@ -95075,7 +95075,7 @@ extension Navigator$Typings on Navigator {
         'canShare',
         [data ?? _i6.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,209320149,[Instance of 'InteropRef<InteropType>']*/ <_i3.Gamepad?>
+  _i2.List /*LIST InteropStaticType.list,998107795,[Instance of 'InteropRef<InteropType>']*/ <_i3.Gamepad?>
       getGamepads() => (_i4.callMethod(
             this,
             'getGamepads',
@@ -95090,7 +95090,7 @@ extension Navigator$Typings on Navigator {
       ));
   _i2.Future<_i3.MediaKeySystemAccess> requestMediaKeySystemAccess(
     _i2.String keySystem,
-    _i2.List /*LIST InteropStaticType.list,464651018,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,864037789,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MediaKeySystemConfiguration>
         supportedConfigurations,
   ) =>
@@ -95709,7 +95709,7 @@ extension Node$Typings on Node {
   /* #10264
   source: 
     nodeValue: string | null; */
-  // Type InteropUnion#990355900(parent: InteropGetter#385123664(name: nodeValue))
+  // Type InteropUnion#877092110(parent: InteropGetter#320876405(name: nodeValue))
   set nodeValue(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -95764,7 +95764,7 @@ extension Node$Typings on Node {
   /* #10273
   source: 
     textContent: string | null; */
-  // Type InteropUnion#568605791(parent: InteropGetter#226049671(name: textContent))
+  // Type InteropUnion#745403060(parent: InteropGetter#381837681(name: textContent))
   set textContent(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -96511,7 +96511,7 @@ extension Notification$Typings on Notification {
   /* #10440
   source: 
     onclick: ((this: Notification, ev: Event) => any) | null; */
-  // Type InteropUnion#830572935(parent: InteropGetter#157424928(name: onclick))
+  // Type InteropUnion#472646091(parent: InteropGetter#208946948(name: onclick))
   set onclick(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -96530,7 +96530,7 @@ extension Notification$Typings on Notification {
   /* #10441
   source: 
     onclose: ((this: Notification, ev: Event) => any) | null; */
-  // Type InteropUnion#794542585(parent: InteropGetter#475763272(name: onclose))
+  // Type InteropUnion#296759796(parent: InteropGetter#416081876(name: onclose))
   set onclose(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -96549,7 +96549,7 @@ extension Notification$Typings on Notification {
   /* #10442
   source: 
     onerror: ((this: Notification, ev: Event) => any) | null; */
-  // Type InteropUnion#374823956(parent: InteropGetter#466249442(name: onerror))
+  // Type InteropUnion#216691319(parent: InteropGetter#816086287(name: onerror))
   set onerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -96568,7 +96568,7 @@ extension Notification$Typings on Notification {
   /* #10443
   source: 
     onshow: ((this: Notification, ev: Event) => any) | null; */
-  // Type InteropUnion#314750366(parent: InteropGetter#278637787(name: onshow))
+  // Type InteropUnion#279807601(parent: InteropGetter#7313234(name: onshow))
   set onshow(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -97126,7 +97126,7 @@ extension OfflineAudioContext$Typings on OfflineAudioContext {
   /* #10532
   source: 
     oncomplete: ((this: OfflineAudioContext, ev: OfflineAudioCompletionEvent) => any) | null; */
-  // Type InteropUnion#35036424(parent: InteropGetter#1071509771(name: oncomplete))
+  // Type InteropUnion#713003480(parent: InteropGetter#723496419(name: oncomplete))
   set oncomplete(_i2.dynamic Function(_i3.OfflineAudioCompletionEvent)? value) {
     _i4.setProperty(
       this,
@@ -97328,7 +97328,7 @@ extension OffscreenCanvas$Typings on OffscreenCanvas {
   /* #10560
   source: 
     oncontextlost: ((this: OffscreenCanvas, ev: Event) => any) | null; */
-  // Type InteropUnion#57102308(parent: InteropGetter#874988092(name: oncontextlost))
+  // Type InteropUnion#229686428(parent: InteropGetter#521656945(name: oncontextlost))
   set oncontextlost(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -97347,7 +97347,7 @@ extension OffscreenCanvas$Typings on OffscreenCanvas {
   /* #10561
   source: 
     oncontextrestored: ((this: OffscreenCanvas, ev: Event) => any) | null; */
-  // Type InteropUnion#846357481(parent: InteropGetter#380270195(name: oncontextrestored))
+  // Type InteropUnion#189638299(parent: InteropGetter#550038323(name: oncontextrestored))
   set oncontextrestored(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -97691,7 +97691,7 @@ extension OscillatorNode$Typings on OscillatorNode {
   /* #10613
   source: 
     type: OscillatorType; */
-  // Type InteropTypedef#798951156(name: OscillatorType)
+  // Type InteropTypedef#438076219(name: OscillatorType)
   set type(_i3.OscillatorType value) {
     _i4.setProperty(
       this,
@@ -97995,7 +97995,7 @@ extension PannerNode$Typings on PannerNode {
   /* #10662
   source: 
     distanceModel: DistanceModelType; */
-  // Type InteropTypedef#474152263(name: DistanceModelType)
+  // Type InteropTypedef#394665385(name: DistanceModelType)
   set distanceModel(_i3.DistanceModelType value) {
     _i4.setProperty(
       this,
@@ -98055,7 +98055,7 @@ extension PannerNode$Typings on PannerNode {
   /* #10667
   source: 
     panningModel: PanningModelType; */
-  // Type InteropTypedef#241729500(name: PanningModelType)
+  // Type InteropTypedef#798289897(name: PanningModelType)
   set panningModel(_i3.PanningModelType value) {
     _i4.setProperty(
       this,
@@ -98359,7 +98359,7 @@ enum PaymentRequestEventMap<T$> {
 @_i1.staticInterop
 class PaymentRequest implements _i3.EventTarget {
   factory PaymentRequest(
-    _i2.List /*LIST InteropStaticType.list,997461979,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,612708677,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.PaymentMethodData>
         methodData,
     _i3.PaymentDetailsInit details,
@@ -98397,7 +98397,7 @@ extension PaymentRequest$Typings on PaymentRequest {
   /* #10758
   source: 
     onpaymentmethodchange: ((this: PaymentRequest, ev: Event) => any) | null; */
-  // Type InteropUnion#592046514(parent: InteropGetter#566566440(name: onpaymentmethodchange))
+  // Type InteropUnion#837833606(parent: InteropGetter#607050461(name: onpaymentmethodchange))
   set onpaymentmethodchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -98670,7 +98670,7 @@ extension Performance$Typings on Performance {
   /* #10813
   source: 
     onresourcetimingbufferfull: ((this: Performance, ev: Event) => any) | null; */
-  // Type InteropUnion#746603891(parent: InteropGetter#873481461(name: onresourcetimingbufferfull))
+  // Type InteropUnion#859068701(parent: InteropGetter#97141281(name: onresourcetimingbufferfull))
   set onresourcetimingbufferfull(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -99884,7 +99884,7 @@ extension PermissionStatus$Typings on PermissionStatus {
   /* #11076
   source: 
     onchange: ((this: PermissionStatus, ev: Event) => any) | null; */
-  // Type InteropUnion#1013835143(parent: InteropGetter#161622902(name: onchange))
+  // Type InteropUnion#520513352(parent: InteropGetter#333619392(name: onchange))
   set onchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -100109,7 +100109,7 @@ extension PictureInPictureWindow$Typings on PictureInPictureWindow {
   /* #11113
   source: 
     onresize: ((this: PictureInPictureWindow, ev: Event) => any) | null; */
-  // Type InteropUnion#275566683(parent: InteropGetter#468680271(name: onresize))
+  // Type InteropUnion#67682833(parent: InteropGetter#241536373(name: onresize))
   set onresize(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -100476,14 +100476,14 @@ extension PointerEvent$Typings on PointerEvent {
         this,
         'width',
       );
-  _i2.List /*LIST InteropStaticType.list,426499345,[Instance of 'InteropRef<InteropType>']*/ <_i3.PointerEvent>
+  _i2.List /*LIST InteropStaticType.list,629399703,[Instance of 'InteropRef<InteropType>']*/ <_i3.PointerEvent>
       getCoalescedEvents() => (_i4.callMethod(
             this,
             'getCoalescedEvents',
             [],
           ) as _i2.List)
               .cast();
-  _i2.List /*LIST InteropStaticType.list,989703741,[Instance of 'InteropRef<InteropType>']*/ <_i3.PointerEvent>
+  _i2.List /*LIST InteropStaticType.list,839329727,[Instance of 'InteropRef<InteropType>']*/ <_i3.PointerEvent>
       getPredictedEvents() => (_i4.callMethod(
             this,
             'getPredictedEvents',
@@ -100926,7 +100926,7 @@ extension RTCCertificate$Typings on RTCCertificate {
         this,
         'expires',
       );
-  _i2.List /*LIST InteropStaticType.list,318026827,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCDtlsFingerprint>
+  _i2.List /*LIST InteropStaticType.list,144970627,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCDtlsFingerprint>
       getFingerprints() => (_i4.callMethod(
             this,
             'getFingerprints',
@@ -100981,7 +100981,7 @@ extension RTCDTMFSender$Typings on RTCDTMFSender {
   /* #11332
   source: 
     ontonechange: ((this: RTCDTMFSender, ev: RTCDTMFToneChangeEvent) => any) | null; */
-  // Type InteropUnion#316437038(parent: InteropGetter#1065946656(name: ontonechange))
+  // Type InteropUnion#761806244(parent: InteropGetter#66915322(name: ontonechange))
   set ontonechange(_i2.dynamic Function(_i3.RTCDTMFToneChangeEvent)? value) {
     _i4.setProperty(
       this,
@@ -101191,7 +101191,7 @@ extension RTCDataChannel$Typings on RTCDataChannel {
   /* #11366
   source: 
     binaryType: BinaryType; */
-  // Type InteropTypedef#576233383(name: BinaryType)
+  // Type InteropTypedef#69248441(name: BinaryType)
   set binaryType(_i3.BinaryType value) {
     _i4.setProperty(
       this,
@@ -101271,7 +101271,7 @@ extension RTCDataChannel$Typings on RTCDataChannel {
   /* #11374
   source: 
     onbufferedamountlow: ((this: RTCDataChannel, ev: Event) => any) | null; */
-  // Type InteropUnion#229764433(parent: InteropGetter#112842668(name: onbufferedamountlow))
+  // Type InteropUnion#545432754(parent: InteropGetter#822806230(name: onbufferedamountlow))
   set onbufferedamountlow(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -101290,7 +101290,7 @@ extension RTCDataChannel$Typings on RTCDataChannel {
   /* #11375
   source: 
     onclose: ((this: RTCDataChannel, ev: Event) => any) | null; */
-  // Type InteropUnion#68754298(parent: InteropGetter#438898969(name: onclose))
+  // Type InteropUnion#313291520(parent: InteropGetter#726693481(name: onclose))
   set onclose(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -101309,7 +101309,7 @@ extension RTCDataChannel$Typings on RTCDataChannel {
   /* #11376
   source: 
     onclosing: ((this: RTCDataChannel, ev: Event) => any) | null; */
-  // Type InteropUnion#354339977(parent: InteropGetter#142088947(name: onclosing))
+  // Type InteropUnion#177576916(parent: InteropGetter#954139488(name: onclosing))
   set onclosing(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -101328,7 +101328,7 @@ extension RTCDataChannel$Typings on RTCDataChannel {
   /* #11377
   source: 
     onerror: ((this: RTCDataChannel, ev: Event) => any) | null; */
-  // Type InteropUnion#916516226(parent: InteropGetter#405848718(name: onerror))
+  // Type InteropUnion#1016436798(parent: InteropGetter#955545218(name: onerror))
   set onerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -101348,7 +101348,7 @@ extension RTCDataChannel$Typings on RTCDataChannel {
   /* #11378
   source: 
     onmessage: ((this: RTCDataChannel, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#607745657(parent: InteropGetter#174103050(name: onmessage))
+  // Type InteropUnion#127866825(parent: InteropGetter#1052021221(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -101367,7 +101367,7 @@ extension RTCDataChannel$Typings on RTCDataChannel {
   /* #11379
   source: 
     onopen: ((this: RTCDataChannel, ev: Event) => any) | null; */
-  // Type InteropUnion#1005998832(parent: InteropGetter#845564220(name: onopen))
+  // Type InteropUnion#1013077767(parent: InteropGetter#118250525(name: onopen))
   set onopen(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -101630,7 +101630,7 @@ extension RTCDtlsTransport$Typings on RTCDtlsTransport {
   /* #11415
   source: 
     onerror: ((this: RTCDtlsTransport, ev: Event) => any) | null; */
-  // Type InteropUnion#268904489(parent: InteropGetter#681126662(name: onerror))
+  // Type InteropUnion#152955714(parent: InteropGetter#365888516(name: onerror))
   set onerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -101649,7 +101649,7 @@ extension RTCDtlsTransport$Typings on RTCDtlsTransport {
   /* #11416
   source: 
     onstatechange: ((this: RTCDtlsTransport, ev: Event) => any) | null; */
-  // Type InteropUnion#900561988(parent: InteropGetter#1055065755(name: onstatechange))
+  // Type InteropUnion#301316920(parent: InteropGetter#706776632(name: onstatechange))
   set onstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -101666,7 +101666,7 @@ extension RTCDtlsTransport$Typings on RTCDtlsTransport {
         this,
         'state',
       ));
-  _i2.List /*LIST InteropStaticType.list,634984565,[Instance of 'InteropRef<InteropType>']*/ <_i8.ByteBuffer>
+  _i2.List /*LIST InteropStaticType.list,308595438,[Instance of 'InteropRef<InteropType>']*/ <_i8.ByteBuffer>
       getRemoteCertificates() => (_i4.callMethod(
             this,
             'getRemoteCertificates',
@@ -102172,7 +102172,7 @@ extension RTCIceTransport$Typings on RTCIceTransport {
   /* #11507
   source: 
     ongatheringstatechange: ((this: RTCIceTransport, ev: Event) => any) | null; */
-  // Type InteropUnion#381146853(parent: InteropGetter#279276579(name: ongatheringstatechange))
+  // Type InteropUnion#858730389(parent: InteropGetter#233922221(name: ongatheringstatechange))
   set ongatheringstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -102191,7 +102191,7 @@ extension RTCIceTransport$Typings on RTCIceTransport {
   /* #11508
   source: 
     onstatechange: ((this: RTCIceTransport, ev: Event) => any) | null; */
-  // Type InteropUnion#391682769(parent: InteropGetter#37550610(name: onstatechange))
+  // Type InteropUnion#664162357(parent: InteropGetter#1040046414(name: onstatechange))
   set onstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -102414,7 +102414,7 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
   /* #11542
   source: 
     onconnectionstatechange: ((this: RTCPeerConnection, ev: Event) => any) | null; */
-  // Type InteropUnion#7918471(parent: InteropGetter#295465852(name: onconnectionstatechange))
+  // Type InteropUnion#168665590(parent: InteropGetter#336385274(name: onconnectionstatechange))
   set onconnectionstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -102434,7 +102434,7 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
   /* #11543
   source: 
     ondatachannel: ((this: RTCPeerConnection, ev: RTCDataChannelEvent) => any) | null; */
-  // Type InteropUnion#865868450(parent: InteropGetter#869170247(name: ondatachannel))
+  // Type InteropUnion#994911334(parent: InteropGetter#417359326(name: ondatachannel))
   set ondatachannel(_i2.dynamic Function(_i3.RTCDataChannelEvent)? value) {
     _i4.setProperty(
       this,
@@ -102454,7 +102454,7 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
   /* #11544
   source: 
     onicecandidate: ((this: RTCPeerConnection, ev: RTCPeerConnectionIceEvent) => any) | null; */
-  // Type InteropUnion#778470332(parent: InteropGetter#286815974(name: onicecandidate))
+  // Type InteropUnion#422882814(parent: InteropGetter#335715188(name: onicecandidate))
   set onicecandidate(
       _i2.dynamic Function(_i3.RTCPeerConnectionIceEvent)? value) {
     _i4.setProperty(
@@ -102474,7 +102474,7 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
   /* #11545
   source: 
     onicecandidateerror: ((this: RTCPeerConnection, ev: Event) => any) | null; */
-  // Type InteropUnion#117787097(parent: InteropGetter#824389685(name: onicecandidateerror))
+  // Type InteropUnion#186531078(parent: InteropGetter#224968954(name: onicecandidateerror))
   set onicecandidateerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -102494,7 +102494,7 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
   /* #11546
   source: 
     oniceconnectionstatechange: ((this: RTCPeerConnection, ev: Event) => any) | null; */
-  // Type InteropUnion#741519078(parent: InteropGetter#711019042(name: oniceconnectionstatechange))
+  // Type InteropUnion#321530702(parent: InteropGetter#234190680(name: oniceconnectionstatechange))
   set oniceconnectionstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -102514,7 +102514,7 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
   /* #11547
   source: 
     onicegatheringstatechange: ((this: RTCPeerConnection, ev: Event) => any) | null; */
-  // Type InteropUnion#168733153(parent: InteropGetter#213395801(name: onicegatheringstatechange))
+  // Type InteropUnion#762655902(parent: InteropGetter#563011162(name: onicegatheringstatechange))
   set onicegatheringstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -102533,7 +102533,7 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
   /* #11548
   source: 
     onnegotiationneeded: ((this: RTCPeerConnection, ev: Event) => any) | null; */
-  // Type InteropUnion#95619664(parent: InteropGetter#570889107(name: onnegotiationneeded))
+  // Type InteropUnion#798364170(parent: InteropGetter#582887885(name: onnegotiationneeded))
   set onnegotiationneeded(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -102553,7 +102553,7 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
   /* #11549
   source: 
     onsignalingstatechange: ((this: RTCPeerConnection, ev: Event) => any) | null; */
-  // Type InteropUnion#494503414(parent: InteropGetter#53497033(name: onsignalingstatechange))
+  // Type InteropUnion#527390593(parent: InteropGetter#82905692(name: onsignalingstatechange))
   set onsignalingstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -102572,7 +102572,7 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
   /* #11550
   source: 
     ontrack: ((this: RTCPeerConnection, ev: RTCTrackEvent) => any) | null; */
-  // Type InteropUnion#660648186(parent: InteropGetter#344859348(name: ontrack))
+  // Type InteropUnion#926581999(parent: InteropGetter#39965178(name: ontrack))
   set ontrack(_i2.dynamic Function(_i3.RTCTrackEvent)? value) {
     _i4.setProperty(
       this,
@@ -102763,14 +102763,14 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
         'getConfiguration',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,981941616,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpReceiver>
+  _i2.List /*LIST InteropStaticType.list,692222462,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpReceiver>
       getReceivers() => (_i4.callMethod(
             this,
             'getReceivers',
             [],
           ) as _i2.List)
               .cast();
-  _i2.List /*LIST InteropStaticType.list,572559818,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpSender>
+  _i2.List /*LIST InteropStaticType.list,354027536,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpSender>
       getSenders() => (_i4.callMethod(
             this,
             'getSenders',
@@ -102783,7 +102783,7 @@ extension RTCPeerConnection$Typings on RTCPeerConnection {
         'getStats',
         [selector ?? _i6.undefined],
       ));
-  _i2.List /*LIST InteropStaticType.list,322593680,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpTransceiver>
+  _i2.List /*LIST InteropStaticType.list,183305671,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpTransceiver>
       getTransceivers() => (_i4.callMethod(
             this,
             'getTransceivers',
@@ -103131,7 +103131,7 @@ extension RTCRtpReceiver$Typings on RTCRtpReceiver {
         this,
         'transport',
       );
-  _i2.List /*LIST InteropStaticType.list,442999622,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpContributingSource>
+  _i2.List /*LIST InteropStaticType.list,966705769,[Instance of 'InteropRef<InteropType>']*/ <_i3.RTCRtpContributingSource>
       getContributingSources() => (_i4.callMethod(
             this,
             'getContributingSources',
@@ -103149,7 +103149,7 @@ extension RTCRtpReceiver$Typings on RTCRtpReceiver {
         'getStats',
         [],
       ));
-  _i2.List /*LIST InteropStaticType.list,323499033,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,20838404,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.RTCRtpSynchronizationSource>
       getSynchronizationSources() => (_i4.callMethod(
             this,
@@ -103298,7 +103298,7 @@ extension RTCRtpTransceiver$Typings on RTCRtpTransceiver {
   /* #11654
   source: 
     direction: RTCRtpTransceiverDirection; */
-  // Type InteropTypedef#852049650(name: RTCRtpTransceiverDirection)
+  // Type InteropTypedef#220753627(name: RTCRtpTransceiverDirection)
   set direction(_i3.RTCRtpTransceiverDirection value) {
     _i4.setProperty(
       this,
@@ -103329,7 +103329,7 @@ extension RTCRtpTransceiver$Typings on RTCRtpTransceiver {
         'sender',
       );
   void setCodecPreferences(
-      _i2.List /*LIST InteropStaticType.list,650765693,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,230091812,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RTCRtpCodecCapability>
           codecs) {
     _i4.callMethod(
@@ -103400,7 +103400,7 @@ extension RTCSctpTransport$Typings on RTCSctpTransport {
   /* #11674
   source: 
     onstatechange: ((this: RTCSctpTransport, ev: Event) => any) | null; */
-  // Type InteropUnion#777178864(parent: InteropGetter#695380154(name: onstatechange))
+  // Type InteropUnion#776013450(parent: InteropGetter#761383986(name: onstatechange))
   set onstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -104495,7 +104495,7 @@ extension RemotePlayback$Typings on RemotePlayback {
   /* #11863
   source: 
     onconnect: ((this: RemotePlayback, ev: Event) => any) | null; */
-  // Type InteropUnion#996531602(parent: InteropGetter#186171895(name: onconnect))
+  // Type InteropUnion#537877271(parent: InteropGetter#785433702(name: onconnect))
   set onconnect(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -104514,7 +104514,7 @@ extension RemotePlayback$Typings on RemotePlayback {
   /* #11864
   source: 
     onconnecting: ((this: RemotePlayback, ev: Event) => any) | null; */
-  // Type InteropUnion#50108063(parent: InteropGetter#779232709(name: onconnecting))
+  // Type InteropUnion#537039775(parent: InteropGetter#769725124(name: onconnecting))
   set onconnecting(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -104533,7 +104533,7 @@ extension RemotePlayback$Typings on RemotePlayback {
   /* #11865
   source: 
     ondisconnect: ((this: RemotePlayback, ev: Event) => any) | null; */
-  // Type InteropUnion#715230108(parent: InteropGetter#451854551(name: ondisconnect))
+  // Type InteropUnion#427922222(parent: InteropGetter#471916604(name: ondisconnect))
   set ondisconnect(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -119652,7 +119652,7 @@ extension ScreenOrientation$Typings on ScreenOrientation {
   /* #13714
   source: 
     onchange: ((this: ScreenOrientation, ev: Event) => any) | null; */
-  // Type InteropUnion#277188642(parent: InteropGetter#359624025(name: onchange))
+  // Type InteropUnion#715142497(parent: InteropGetter#471066323(name: onchange))
   set onchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -119831,7 +119831,7 @@ extension ScriptProcessorNode$Typings on ScriptProcessorNode {
   source: 
     /** @deprecated */
     onaudioprocess: ((this: ScriptProcessorNode, ev: AudioProcessingEvent) => any) | null; */
-  // Type InteropUnion#629320246(parent: InteropGetter#648925657(name: onaudioprocess))
+  // Type InteropUnion#434590480(parent: InteropGetter#375775115(name: onaudioprocess))
   set onaudioprocess(_i2.dynamic Function(_i3.AudioProcessingEvent)? value) {
     _i4.setProperty(
       this,
@@ -120339,7 +120339,7 @@ extension ServiceWorker$Typings on ServiceWorker {
   /* #13817
   source: 
     onstatechange: ((this: ServiceWorker, ev: Event) => any) | null; */
-  // Type InteropUnion#414020201(parent: InteropGetter#880793966(name: onstatechange))
+  // Type InteropUnion#312282986(parent: InteropGetter#293352883(name: onstatechange))
   set onstatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -120365,7 +120365,7 @@ extension ServiceWorker$Typings on ServiceWorker {
       ));
   void _postMessage$1(
     _i2.dynamic message,
-    _i2.List /*LIST InteropStaticType.list,432216430,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,339942788,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Transferable>
         transfer,
   ) {
@@ -120397,7 +120397,7 @@ extension ServiceWorker$Typings on ServiceWorker {
   ({
     void Function(
       _i2.dynamic message,
-      _i2.List /*LIST InteropStaticType.list,432216430,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,339942788,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Transferable>
           transfer,
     ) $1,
@@ -120554,7 +120554,7 @@ extension ServiceWorkerContainer$Typings on ServiceWorkerContainer {
   /* #13845
   source: 
     oncontrollerchange: ((this: ServiceWorkerContainer, ev: Event) => any) | null; */
-  // Type InteropUnion#47742326(parent: InteropGetter#635946141(name: oncontrollerchange))
+  // Type InteropUnion#45397833(parent: InteropGetter#79740155(name: oncontrollerchange))
   set oncontrollerchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -120574,7 +120574,7 @@ extension ServiceWorkerContainer$Typings on ServiceWorkerContainer {
   /* #13846
   source: 
     onmessage: ((this: ServiceWorkerContainer, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#947559353(parent: InteropGetter#423578148(name: onmessage))
+  // Type InteropUnion#867106095(parent: InteropGetter#544843695(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -120594,7 +120594,7 @@ extension ServiceWorkerContainer$Typings on ServiceWorkerContainer {
   /* #13847
   source: 
     onmessageerror: ((this: ServiceWorkerContainer, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#611600808(parent: InteropGetter#643836999(name: onmessageerror))
+  // Type InteropUnion#853764270(parent: InteropGetter#656041480(name: onmessageerror))
   set onmessageerror(
       _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
@@ -120802,7 +120802,7 @@ extension ServiceWorkerRegistration$Typings on ServiceWorkerRegistration {
   /* #13876
   source: 
     onupdatefound: ((this: ServiceWorkerRegistration, ev: Event) => any) | null; */
-  // Type InteropUnion#779445079(parent: InteropGetter#370027478(name: onupdatefound))
+  // Type InteropUnion#902419814(parent: InteropGetter#76249967(name: onupdatefound))
   set onupdatefound(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -120841,7 +120841,7 @@ extension ServiceWorkerRegistration$Typings on ServiceWorkerRegistration {
         'waiting',
       );
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,676495668,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,415156076,[Instance of 'InteropRef<InteropType>']*/ <
           _i3
               .Notification>> getNotifications(
           [_i3.GetNotificationOptions? filter]) =>
@@ -121031,7 +121031,7 @@ extension ShadowRoot$Typings on ShadowRoot {
   /* #13904
   source: 
     onslotchange: ((this: ShadowRoot, ev: Event) => any) | null; */
-  // Type InteropUnion#793914161(parent: InteropGetter#298263538(name: onslotchange))
+  // Type InteropUnion#978388414(parent: InteropGetter#375681986(name: onslotchange))
   set onslotchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -121387,7 +121387,7 @@ extension SourceBuffer$Typings on SourceBuffer {
   /* #13949
   source: 
     mode: AppendMode; */
-  // Type InteropTypedef#232445364(name: AppendMode)
+  // Type InteropTypedef#172897642(name: AppendMode)
   set mode(_i3.AppendMode value) {
     _i4.setProperty(
       this,
@@ -121406,7 +121406,7 @@ extension SourceBuffer$Typings on SourceBuffer {
   /* #13950
   source: 
     onabort: ((this: SourceBuffer, ev: Event) => any) | null; */
-  // Type InteropUnion#477154695(parent: InteropGetter#436394821(name: onabort))
+  // Type InteropUnion#221379294(parent: InteropGetter#722958278(name: onabort))
   set onabort(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -121425,7 +121425,7 @@ extension SourceBuffer$Typings on SourceBuffer {
   /* #13951
   source: 
     onerror: ((this: SourceBuffer, ev: Event) => any) | null; */
-  // Type InteropUnion#184129303(parent: InteropGetter#908569897(name: onerror))
+  // Type InteropUnion#625924796(parent: InteropGetter#427839094(name: onerror))
   set onerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -121444,7 +121444,7 @@ extension SourceBuffer$Typings on SourceBuffer {
   /* #13952
   source: 
     onupdate: ((this: SourceBuffer, ev: Event) => any) | null; */
-  // Type InteropUnion#743309259(parent: InteropGetter#733827816(name: onupdate))
+  // Type InteropUnion#54985359(parent: InteropGetter#218560022(name: onupdate))
   set onupdate(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -121463,7 +121463,7 @@ extension SourceBuffer$Typings on SourceBuffer {
   /* #13953
   source: 
     onupdateend: ((this: SourceBuffer, ev: Event) => any) | null; */
-  // Type InteropUnion#616297265(parent: InteropGetter#819670027(name: onupdateend))
+  // Type InteropUnion#711125402(parent: InteropGetter#768900943(name: onupdateend))
   set onupdateend(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -121482,7 +121482,7 @@ extension SourceBuffer$Typings on SourceBuffer {
   /* #13954
   source: 
     onupdatestart: ((this: SourceBuffer, ev: Event) => any) | null; */
-  // Type InteropUnion#524151078(parent: InteropGetter#380945780(name: onupdatestart))
+  // Type InteropUnion#1023501903(parent: InteropGetter#372015745(name: onupdatestart))
   set onupdatestart(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -121699,7 +121699,7 @@ extension SourceBufferList$Typings on SourceBufferList {
   /* #13980
   source: 
     onaddsourcebuffer: ((this: SourceBufferList, ev: Event) => any) | null; */
-  // Type InteropUnion#611155331(parent: InteropGetter#596628825(name: onaddsourcebuffer))
+  // Type InteropUnion#142577153(parent: InteropGetter#527240041(name: onaddsourcebuffer))
   set onaddsourcebuffer(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -121718,7 +121718,7 @@ extension SourceBufferList$Typings on SourceBufferList {
   /* #13981
   source: 
     onremovesourcebuffer: ((this: SourceBufferList, ev: Event) => any) | null; */
-  // Type InteropUnion#71440609(parent: InteropGetter#820624169(name: onremovesourcebuffer))
+  // Type InteropUnion#18822843(parent: InteropGetter#706801366(name: onremovesourcebuffer))
   set onremovesourcebuffer(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -122017,7 +122017,7 @@ extension SpeechSynthesis$Typings on SpeechSynthesis {
   /* #14033
   source: 
     onvoiceschanged: ((this: SpeechSynthesis, ev: Event) => any) | null; */
-  // Type InteropUnion#453635274(parent: InteropGetter#914775475(name: onvoiceschanged))
+  // Type InteropUnion#338023792(parent: InteropGetter#784869397(name: onvoiceschanged))
   set onvoiceschanged(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -122055,7 +122055,7 @@ extension SpeechSynthesis$Typings on SpeechSynthesis {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,57799908,[Instance of 'InteropRef<InteropType>']*/ <_i3.SpeechSynthesisVoice>
+  _i2.List /*LIST InteropStaticType.list,782998061,[Instance of 'InteropRef<InteropType>']*/ <_i3.SpeechSynthesisVoice>
       getVoices() => (_i4.callMethod(
             this,
             'getVoices',
@@ -122349,7 +122349,7 @@ extension SpeechSynthesisUtterance$Typings on SpeechSynthesisUtterance {
   /* #14089
   source: 
     onboundary: ((this: SpeechSynthesisUtterance, ev: SpeechSynthesisEvent) => any) | null; */
-  // Type InteropUnion#302698044(parent: InteropGetter#838959004(name: onboundary))
+  // Type InteropUnion#403294263(parent: InteropGetter#381990869(name: onboundary))
   set onboundary(_i2.dynamic Function(_i3.SpeechSynthesisEvent)? value) {
     _i4.setProperty(
       this,
@@ -122368,7 +122368,7 @@ extension SpeechSynthesisUtterance$Typings on SpeechSynthesisUtterance {
   /* #14090
   source: 
     onend: ((this: SpeechSynthesisUtterance, ev: SpeechSynthesisEvent) => any) | null; */
-  // Type InteropUnion#195750626(parent: InteropGetter#1055318653(name: onend))
+  // Type InteropUnion#88718229(parent: InteropGetter#635218418(name: onend))
   set onend(_i2.dynamic Function(_i3.SpeechSynthesisEvent)? value) {
     _i4.setProperty(
       this,
@@ -122388,7 +122388,7 @@ extension SpeechSynthesisUtterance$Typings on SpeechSynthesisUtterance {
   /* #14091
   source: 
     onerror: ((this: SpeechSynthesisUtterance, ev: SpeechSynthesisErrorEvent) => any) | null; */
-  // Type InteropUnion#461904312(parent: InteropGetter#967257023(name: onerror))
+  // Type InteropUnion#481047424(parent: InteropGetter#863447009(name: onerror))
   set onerror(_i2.dynamic Function(_i3.SpeechSynthesisErrorEvent)? value) {
     _i4.setProperty(
       this,
@@ -122407,7 +122407,7 @@ extension SpeechSynthesisUtterance$Typings on SpeechSynthesisUtterance {
   /* #14092
   source: 
     onmark: ((this: SpeechSynthesisUtterance, ev: SpeechSynthesisEvent) => any) | null; */
-  // Type InteropUnion#593572564(parent: InteropGetter#871354723(name: onmark))
+  // Type InteropUnion#753324730(parent: InteropGetter#866467988(name: onmark))
   set onmark(_i2.dynamic Function(_i3.SpeechSynthesisEvent)? value) {
     _i4.setProperty(
       this,
@@ -122427,7 +122427,7 @@ extension SpeechSynthesisUtterance$Typings on SpeechSynthesisUtterance {
   /* #14093
   source: 
     onpause: ((this: SpeechSynthesisUtterance, ev: SpeechSynthesisEvent) => any) | null; */
-  // Type InteropUnion#942325589(parent: InteropGetter#599499150(name: onpause))
+  // Type InteropUnion#921586741(parent: InteropGetter#614475842(name: onpause))
   set onpause(_i2.dynamic Function(_i3.SpeechSynthesisEvent)? value) {
     _i4.setProperty(
       this,
@@ -122447,7 +122447,7 @@ extension SpeechSynthesisUtterance$Typings on SpeechSynthesisUtterance {
   /* #14094
   source: 
     onresume: ((this: SpeechSynthesisUtterance, ev: SpeechSynthesisEvent) => any) | null; */
-  // Type InteropUnion#675790251(parent: InteropGetter#12785689(name: onresume))
+  // Type InteropUnion#295937621(parent: InteropGetter#150042694(name: onresume))
   set onresume(_i2.dynamic Function(_i3.SpeechSynthesisEvent)? value) {
     _i4.setProperty(
       this,
@@ -122467,7 +122467,7 @@ extension SpeechSynthesisUtterance$Typings on SpeechSynthesisUtterance {
   /* #14095
   source: 
     onstart: ((this: SpeechSynthesisUtterance, ev: SpeechSynthesisEvent) => any) | null; */
-  // Type InteropUnion#1017122921(parent: InteropGetter#922333278(name: onstart))
+  // Type InteropUnion#491243740(parent: InteropGetter#961798378(name: onstart))
   set onstart(_i2.dynamic Function(_i3.SpeechSynthesisEvent)? value) {
     _i4.setProperty(
       this,
@@ -122543,7 +122543,7 @@ extension SpeechSynthesisUtterance$Typings on SpeechSynthesisUtterance {
   /* #14099
   source: 
     voice: SpeechSynthesisVoice | null; */
-  // Type InteropUnion#17688350(parent: InteropGetter#217038144(name: voice))
+  // Type InteropUnion#581779768(parent: InteropGetter#625683429(name: voice))
   set voice(_i3.SpeechSynthesisVoice? value) {
     _i4.setProperty(
       this,
@@ -123262,7 +123262,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i3.CryptoKey baseKey,
     _i2.Object derivedKeyType,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,298652367,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,463782829,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -123372,7 +123372,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
   _i2.Future<_i2.Object> _generateKey$3(
     _i3.AlgorithmIdentifier algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,450437576,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,699236544,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -123400,7 +123400,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i2.Future<_i2.Object> Function(
       _i3.AlgorithmIdentifier algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,450437576,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,699236544,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.KeyUsage>
           keyUsages,
     ) $3,
@@ -123432,7 +123432,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i3.BufferSource keyData,
     _i2.Object algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,51321385,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,625341838,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -123461,7 +123461,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
       _i3.BufferSource keyData,
       _i2.Object algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,51321385,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,625341838,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.KeyUsage>
           keyUsages,
     ) $2,
@@ -123490,7 +123490,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i2.Object unwrapAlgorithm,
     _i2.Object unwrappedKeyAlgorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,95409448,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,649881606,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -124023,7 +124023,7 @@ extension TextTrack$Typings on TextTrack {
      * Can be set, to change the mode.
      */
     mode: TextTrackMode; */
-  // Type InteropTypedef#1048417882(name: TextTrackMode)
+  // Type InteropTypedef#225476807(name: TextTrackMode)
   set mode(_i3.TextTrackMode value) {
     _i4.setProperty(
       this,
@@ -124042,7 +124042,7 @@ extension TextTrack$Typings on TextTrack {
   /* #14424
   source: 
     oncuechange: ((this: TextTrack, ev: Event) => any) | null; */
-  // Type InteropUnion#285926519(parent: InteropGetter#484883305(name: oncuechange))
+  // Type InteropUnion#456677922(parent: InteropGetter#431317248(name: oncuechange))
   set oncuechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -124268,7 +124268,7 @@ extension TextTrackCue$Typings on TextTrackCue {
   /* #14459
   source: 
     onenter: ((this: TextTrackCue, ev: Event) => any) | null; */
-  // Type InteropUnion#78005591(parent: InteropGetter#832312097(name: onenter))
+  // Type InteropUnion#747376059(parent: InteropGetter#817680148(name: onenter))
   set onenter(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -124287,7 +124287,7 @@ extension TextTrackCue$Typings on TextTrackCue {
   /* #14460
   source: 
     onexit: ((this: TextTrackCue, ev: Event) => any) | null; */
-  // Type InteropUnion#636657193(parent: InteropGetter#252699487(name: onexit))
+  // Type InteropUnion#492406211(parent: InteropGetter#97354957(name: onexit))
   set onexit(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -124564,7 +124564,7 @@ extension TextTrackList$Typings on TextTrackList {
   /* #14511
   source: 
     onaddtrack: ((this: TextTrackList, ev: TrackEvent) => any) | null; */
-  // Type InteropUnion#1060606661(parent: InteropGetter#55918541(name: onaddtrack))
+  // Type InteropUnion#243421776(parent: InteropGetter#754368883(name: onaddtrack))
   set onaddtrack(_i2.dynamic Function(_i3.TrackEvent)? value) {
     _i4.setProperty(
       this,
@@ -124583,7 +124583,7 @@ extension TextTrackList$Typings on TextTrackList {
   /* #14512
   source: 
     onchange: ((this: TextTrackList, ev: Event) => any) | null; */
-  // Type InteropUnion#453782512(parent: InteropGetter#879506033(name: onchange))
+  // Type InteropUnion#927624842(parent: InteropGetter#331487162(name: onchange))
   set onchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -124602,7 +124602,7 @@ extension TextTrackList$Typings on TextTrackList {
   /* #14513
   source: 
     onremovetrack: ((this: TextTrackList, ev: TrackEvent) => any) | null; */
-  // Type InteropUnion#680427207(parent: InteropGetter#731418092(name: onremovetrack))
+  // Type InteropUnion#609205884(parent: InteropGetter#1068680959(name: onremovetrack))
   set onremovetrack(_i2.dynamic Function(_i3.TrackEvent)? value) {
     _i4.setProperty(
       this,
@@ -125678,7 +125678,7 @@ extension URLSearchParams$Typings on URLSearchParams {
         'get',
         [name],
       );
-  _i2.List /*LIST InteropStaticType.list,700398027,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,907977243,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       getAll(_i2.String name) => (_i4.callMethod(
             this,
             'getAll',
@@ -125784,7 +125784,7 @@ extension VTTCue$Typings on VTTCue {
   /* #14733
   source: 
     align: AlignSetting; */
-  // Type InteropTypedef#59515878(name: AlignSetting)
+  // Type InteropTypedef#1033649823(name: AlignSetting)
   set align(_i3.AlignSetting value) {
     _i4.setProperty(
       this,
@@ -125803,7 +125803,7 @@ extension VTTCue$Typings on VTTCue {
   /* #14734
   source: 
     line: LineAndPositionSetting; */
-  // Type InteropTypedef#937933024(name: LineAndPositionSetting)
+  // Type InteropTypedef#1039583256(name: LineAndPositionSetting)
   set line(_i3.LineAndPositionSetting value) {
     _i4.setProperty(
       this,
@@ -125823,7 +125823,7 @@ extension VTTCue$Typings on VTTCue {
   /* #14735
   source: 
     lineAlign: LineAlignSetting; */
-  // Type InteropTypedef#327719336(name: LineAlignSetting)
+  // Type InteropTypedef#789535210(name: LineAlignSetting)
   set lineAlign(_i3.LineAlignSetting value) {
     _i4.setProperty(
       this,
@@ -125842,7 +125842,7 @@ extension VTTCue$Typings on VTTCue {
   /* #14736
   source: 
     position: LineAndPositionSetting; */
-  // Type InteropTypedef#937933024(name: LineAndPositionSetting)
+  // Type InteropTypedef#1039583256(name: LineAndPositionSetting)
   set position(_i3.LineAndPositionSetting value) {
     _i4.setProperty(
       this,
@@ -125862,7 +125862,7 @@ extension VTTCue$Typings on VTTCue {
   /* #14737
   source: 
     positionAlign: PositionAlignSetting; */
-  // Type InteropTypedef#501278738(name: PositionAlignSetting)
+  // Type InteropTypedef#188402696(name: PositionAlignSetting)
   set positionAlign(_i3.PositionAlignSetting value) {
     _i4.setProperty(
       this,
@@ -125881,7 +125881,7 @@ extension VTTCue$Typings on VTTCue {
   /* #14738
   source: 
     region: VTTRegion | null; */
-  // Type InteropUnion#290771398(parent: InteropGetter#599739310(name: region))
+  // Type InteropUnion#907911441(parent: InteropGetter#292559767(name: region))
   set region(_i3.VTTRegion? value) {
     _i4.setProperty(
       this,
@@ -125958,7 +125958,7 @@ extension VTTCue$Typings on VTTCue {
   /* #14742
   source: 
     vertical: DirectionSetting; */
-  // Type InteropTypedef#630138448(name: DirectionSetting)
+  // Type InteropTypedef#631519111(name: DirectionSetting)
   set vertical(_i3.DirectionSetting value) {
     _i4.setProperty(
       this,
@@ -126177,7 +126177,7 @@ extension VTTRegion$Typings on VTTRegion {
   /* #14760
   source: 
     scroll: ScrollSetting; */
-  // Type InteropTypedef#258626899(name: ScrollSetting)
+  // Type InteropTypedef#790675563(name: ScrollSetting)
   set scroll(_i3.ScrollSetting value) {
     _i4.setProperty(
       this,
@@ -126520,7 +126520,7 @@ extension VisualViewport$Typings on VisualViewport {
   /* #14827
   source: 
     onresize: ((this: VisualViewport, ev: Event) => any) | null; */
-  // Type InteropUnion#932484440(parent: InteropGetter#618707446(name: onresize))
+  // Type InteropUnion#763332381(parent: InteropGetter#548666628(name: onresize))
   set onresize(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -126539,7 +126539,7 @@ extension VisualViewport$Typings on VisualViewport {
   /* #14828
   source: 
     onscroll: ((this: VisualViewport, ev: Event) => any) | null; */
-  // Type InteropUnion#354451299(parent: InteropGetter#323499070(name: onscroll))
+  // Type InteropUnion#438545082(parent: InteropGetter#1021316272(name: onscroll))
   set onscroll(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -126926,7 +126926,7 @@ extension WEBGLCompressedTextureAstc$Typings on WEBGLCompressedTextureAstc {
         this,
         'COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR',
       );
-  _i2.List /*LIST InteropStaticType.list,733678175,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,690373315,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       getSupportedProfiles() => (_i4.callMethod(
             this,
             'getSupportedProfiles',
@@ -127502,7 +127502,7 @@ extension WEBGLDrawBuffers$Typings on WEBGLDrawBuffers {
         'MAX_DRAW_BUFFERS_WEBGL',
       );
   void drawBuffersWEBGL(
-      _i2.List /*LIST InteropStaticType.list,563938663,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,645291425,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.GLenum>
           buffers) {
     _i4.callMethod(
@@ -127674,7 +127674,7 @@ extension WaveShaperNode$Typings on WaveShaperNode {
   /* #14981
   source: 
     curve: Float32Array | null; */
-  // Type InteropUnion#426551745(parent: InteropGetter#580295112(name: curve))
+  // Type InteropUnion#706332496(parent: InteropGetter#111473634(name: curve))
   set curve(_i8.Float32List? value) {
     _i4.setProperty(
       this,
@@ -127694,7 +127694,7 @@ extension WaveShaperNode$Typings on WaveShaperNode {
   /* #14982
   source: 
     oversample: OverSampleType; */
-  // Type InteropTypedef#773765986(name: OverSampleType)
+  // Type InteropTypedef#6890165(name: OverSampleType)
   set oversample(_i3.OverSampleType value) {
     _i4.setProperty(
       this,
@@ -137930,7 +137930,7 @@ extension WebGL2RenderingContextBase$Typings on WebGL2RenderingContextBase {
   }
 
   void drawBuffers(
-      _i2.List /*LIST InteropStaticType.list,430513813,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,845581043,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.GLenum>
           buffers) {
     _i4.callMethod(
@@ -138058,7 +138058,7 @@ extension WebGL2RenderingContextBase$Typings on WebGL2RenderingContextBase {
       );
   _i2.dynamic getActiveUniforms(
     _i3.WebGLProgram program,
-    _i2.List /*LIST InteropStaticType.list,18936049,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,652183291,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.GLuint>
         uniformIndices,
     _i3.GLenum pname,
@@ -138202,10 +138202,10 @@ extension WebGL2RenderingContextBase$Typings on WebGL2RenderingContextBase {
           uniformBlockName,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,307919528,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,87848947,[Instance of 'InteropRef<InteropType>']*/ <
       _i3.GLuint>? getUniformIndices(
     _i3.WebGLProgram program,
-    _i2.List /*LIST InteropStaticType.list,593532601,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1057969110,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         uniformNames,
   ) =>
@@ -138220,7 +138220,7 @@ extension WebGL2RenderingContextBase$Typings on WebGL2RenderingContextBase {
           ?.cast();
   void invalidateFramebuffer(
     _i3.GLenum target,
-    _i2.List /*LIST InteropStaticType.list,695470175,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,19571261,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.GLenum>
         attachments,
   ) {
@@ -138236,7 +138236,7 @@ extension WebGL2RenderingContextBase$Typings on WebGL2RenderingContextBase {
 
   void invalidateSubFramebuffer(
     _i3.GLenum target,
-    _i2.List /*LIST InteropStaticType.list,236159117,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,575592675,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.GLenum>
         attachments,
     _i3.GLint x,
@@ -138729,7 +138729,7 @@ extension WebGL2RenderingContextBase$Typings on WebGL2RenderingContextBase {
       );
   void transformFeedbackVaryings(
     _i3.WebGLProgram program,
-    _i2.List /*LIST InteropStaticType.list,432193613,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,215548381,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         varyings,
     _i3.GLenum bufferMode,
@@ -147178,7 +147178,7 @@ extension WebGLRenderingContextBase$Typings on WebGLRenderingContextBase {
           index,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,676523432,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,172079766,[Instance of 'InteropRef<InteropType>']*/ <
       _i3.WebGLShader>? getAttachedShaders(
           _i3.WebGLProgram program) =>
       (_i4.callMethod(
@@ -147577,7 +147577,7 @@ extension WebGLRenderingContextBase$Typings on WebGLRenderingContextBase {
         'getShaderSource',
         [shader],
       );
-  _i2.List /*LIST InteropStaticType.list,300399860,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
+  _i2.List /*LIST InteropStaticType.list,772697807,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
       getSupportedExtensions() => (_i4.callMethod(
             this,
             'getSupportedExtensions',
@@ -148977,7 +148977,7 @@ extension WebSocket$Typings on WebSocket {
      * Can be set, to change how binary data is returned. The default is "blob".
      */
     binaryType: BinaryType; */
-  // Type InteropTypedef#576233383(name: BinaryType)
+  // Type InteropTypedef#69248441(name: BinaryType)
   set binaryType(_i3.BinaryType value) {
     _i4.setProperty(
       this,
@@ -149020,7 +149020,7 @@ extension WebSocket$Typings on WebSocket {
   /* #16899
   source: 
     onclose: ((this: WebSocket, ev: CloseEvent) => any) | null; */
-  // Type InteropUnion#185939296(parent: InteropGetter#520399435(name: onclose))
+  // Type InteropUnion#424075083(parent: InteropGetter#1019462974(name: onclose))
   set onclose(_i2.dynamic Function(_i3.CloseEvent)? value) {
     _i4.setProperty(
       this,
@@ -149039,7 +149039,7 @@ extension WebSocket$Typings on WebSocket {
   /* #16900
   source: 
     onerror: ((this: WebSocket, ev: Event) => any) | null; */
-  // Type InteropUnion#445812418(parent: InteropGetter#794549870(name: onerror))
+  // Type InteropUnion#271402971(parent: InteropGetter#625041788(name: onerror))
   set onerror(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -149059,7 +149059,7 @@ extension WebSocket$Typings on WebSocket {
   /* #16901
   source: 
     onmessage: ((this: WebSocket, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#693985873(parent: InteropGetter#1059454810(name: onmessage))
+  // Type InteropUnion#964346895(parent: InteropGetter#866869833(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -149078,7 +149078,7 @@ extension WebSocket$Typings on WebSocket {
   /* #16902
   source: 
     onopen: ((this: WebSocket, ev: Event) => any) | null; */
-  // Type InteropUnion#853257863(parent: InteropGetter#679145730(name: onopen))
+  // Type InteropUnion#483657486(parent: InteropGetter#653647920(name: onopen))
   set onopen(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -149745,7 +149745,7 @@ extension Window$Typings on Window {
   source: 
     /** Available only in secure contexts. */
     ondevicemotion: ((this: Window, ev: DeviceMotionEvent) => any) | null; */
-  // Type InteropUnion#1061363568(parent: InteropGetter#191808974(name: ondevicemotion))
+  // Type InteropUnion#727838873(parent: InteropGetter#119285749(name: ondevicemotion))
   set ondevicemotion(_i2.dynamic Function(_i3.DeviceMotionEvent)? value) {
     _i4.setProperty(
       this,
@@ -149768,7 +149768,7 @@ extension Window$Typings on Window {
   source: 
     /** Available only in secure contexts. */
     ondeviceorientation: ((this: Window, ev: DeviceOrientationEvent) => any) | null; */
-  // Type InteropUnion#585069874(parent: InteropGetter#380937178(name: ondeviceorientation))
+  // Type InteropUnion#790540302(parent: InteropGetter#328908495(name: ondeviceorientation))
   set ondeviceorientation(
       _i2.dynamic Function(_i3.DeviceOrientationEvent)? value) {
     _i4.setProperty(
@@ -149791,7 +149791,7 @@ extension Window$Typings on Window {
   source: 
     /** @deprecated */
     onorientationchange: ((this: Window, ev: Event) => any) | null; */
-  // Type InteropUnion#754912629(parent: InteropGetter#123291914(name: onorientationchange))
+  // Type InteropUnion#611196761(parent: InteropGetter#145579327(name: onorientationchange))
   set onorientationchange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -150148,7 +150148,7 @@ extension Window$Typings on Window {
   void _postMessage$2(
     _i2.dynamic message,
     _i2.String targetOrigin, [
-    _i2.List /*LIST InteropStaticType.list,162175489,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,548848178,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Transferable>?
         transfer,
   ]) {
@@ -150172,7 +150172,7 @@ extension Window$Typings on Window {
     void Function(
       _i2.dynamic message,
       _i2.String targetOrigin, [
-      _i2.List /*LIST InteropStaticType.list,162175489,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,548848178,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Transferable>?
           transfer,
     ]) $2,
@@ -150511,7 +150511,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17109
   source: 
     onafterprint: ((this: WindowEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#888944546(parent: InteropGetter#715666464(name: onafterprint))
+  // Type InteropUnion#843514382(parent: InteropGetter#189203935(name: onafterprint))
   set onafterprint(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -150530,7 +150530,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17110
   source: 
     onbeforeprint: ((this: WindowEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#653993617(parent: InteropGetter#672674301(name: onbeforeprint))
+  // Type InteropUnion#760287426(parent: InteropGetter#780243385(name: onbeforeprint))
   set onbeforeprint(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -150550,7 +150550,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17111
   source: 
     onbeforeunload: ((this: WindowEventHandlers, ev: BeforeUnloadEvent) => any) | null; */
-  // Type InteropUnion#12223412(parent: InteropGetter#1060592460(name: onbeforeunload))
+  // Type InteropUnion#281529138(parent: InteropGetter#571219157(name: onbeforeunload))
   set onbeforeunload(_i2.dynamic Function(_i3.BeforeUnloadEvent)? value) {
     _i4.setProperty(
       this,
@@ -150570,7 +150570,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17112
   source: 
     ongamepadconnected: ((this: WindowEventHandlers, ev: GamepadEvent) => any) | null; */
-  // Type InteropUnion#1025947437(parent: InteropGetter#733086375(name: ongamepadconnected))
+  // Type InteropUnion#722928800(parent: InteropGetter#185929484(name: ongamepadconnected))
   set ongamepadconnected(_i2.dynamic Function(_i3.GamepadEvent)? value) {
     _i4.setProperty(
       this,
@@ -150590,7 +150590,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17113
   source: 
     ongamepaddisconnected: ((this: WindowEventHandlers, ev: GamepadEvent) => any) | null; */
-  // Type InteropUnion#523555496(parent: InteropGetter#661705852(name: ongamepaddisconnected))
+  // Type InteropUnion#1037421984(parent: InteropGetter#1016215307(name: ongamepaddisconnected))
   set ongamepaddisconnected(_i2.dynamic Function(_i3.GamepadEvent)? value) {
     _i4.setProperty(
       this,
@@ -150610,7 +150610,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17114
   source: 
     onhashchange: ((this: WindowEventHandlers, ev: HashChangeEvent) => any) | null; */
-  // Type InteropUnion#292219150(parent: InteropGetter#576389014(name: onhashchange))
+  // Type InteropUnion#1024516477(parent: InteropGetter#511641370(name: onhashchange))
   set onhashchange(_i2.dynamic Function(_i3.HashChangeEvent)? value) {
     _i4.setProperty(
       this,
@@ -150629,7 +150629,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17115
   source: 
     onlanguagechange: ((this: WindowEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#334849925(parent: InteropGetter#83452703(name: onlanguagechange))
+  // Type InteropUnion#807707638(parent: InteropGetter#738891117(name: onlanguagechange))
   set onlanguagechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -150649,7 +150649,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17116
   source: 
     onmessage: ((this: WindowEventHandlers, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#834487942(parent: InteropGetter#87633346(name: onmessage))
+  // Type InteropUnion#234423240(parent: InteropGetter#13976660(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -150669,7 +150669,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17117
   source: 
     onmessageerror: ((this: WindowEventHandlers, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#798799593(parent: InteropGetter#208917111(name: onmessageerror))
+  // Type InteropUnion#916672855(parent: InteropGetter#916724060(name: onmessageerror))
   set onmessageerror(
       _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
@@ -150689,7 +150689,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17118
   source: 
     onoffline: ((this: WindowEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#910275121(parent: InteropGetter#451212028(name: onoffline))
+  // Type InteropUnion#252518644(parent: InteropGetter#934888185(name: onoffline))
   set onoffline(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -150708,7 +150708,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17119
   source: 
     ononline: ((this: WindowEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#720385917(parent: InteropGetter#934108670(name: ononline))
+  // Type InteropUnion#743337184(parent: InteropGetter#491207593(name: ononline))
   set ononline(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -150728,7 +150728,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17120
   source: 
     onpagehide: ((this: WindowEventHandlers, ev: PageTransitionEvent) => any) | null; */
-  // Type InteropUnion#128782596(parent: InteropGetter#800731219(name: onpagehide))
+  // Type InteropUnion#829481470(parent: InteropGetter#394334666(name: onpagehide))
   set onpagehide(_i2.dynamic Function(_i3.PageTransitionEvent)? value) {
     _i4.setProperty(
       this,
@@ -150748,7 +150748,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17121
   source: 
     onpageshow: ((this: WindowEventHandlers, ev: PageTransitionEvent) => any) | null; */
-  // Type InteropUnion#973926687(parent: InteropGetter#47639567(name: onpageshow))
+  // Type InteropUnion#817140444(parent: InteropGetter#1042280314(name: onpageshow))
   set onpageshow(_i2.dynamic Function(_i3.PageTransitionEvent)? value) {
     _i4.setProperty(
       this,
@@ -150767,7 +150767,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17122
   source: 
     onpopstate: ((this: WindowEventHandlers, ev: PopStateEvent) => any) | null; */
-  // Type InteropUnion#645013574(parent: InteropGetter#592099522(name: onpopstate))
+  // Type InteropUnion#1027739831(parent: InteropGetter#632099248(name: onpopstate))
   set onpopstate(_i2.dynamic Function(_i3.PopStateEvent)? value) {
     _i4.setProperty(
       this,
@@ -150787,7 +150787,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17123
   source: 
     onrejectionhandled: ((this: WindowEventHandlers, ev: PromiseRejectionEvent) => any) | null; */
-  // Type InteropUnion#777338194(parent: InteropGetter#175946301(name: onrejectionhandled))
+  // Type InteropUnion#322275479(parent: InteropGetter#984572766(name: onrejectionhandled))
   set onrejectionhandled(
       _i2.dynamic Function(_i3.PromiseRejectionEvent)? value) {
     _i4.setProperty(
@@ -150807,7 +150807,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17124
   source: 
     onstorage: ((this: WindowEventHandlers, ev: StorageEvent) => any) | null; */
-  // Type InteropUnion#603109792(parent: InteropGetter#568804586(name: onstorage))
+  // Type InteropUnion#116010746(parent: InteropGetter#376567977(name: onstorage))
   set onstorage(_i2.dynamic Function(_i3.StorageEvent)? value) {
     _i4.setProperty(
       this,
@@ -150827,7 +150827,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17125
   source: 
     onunhandledrejection: ((this: WindowEventHandlers, ev: PromiseRejectionEvent) => any) | null; */
-  // Type InteropUnion#676919498(parent: InteropGetter#917468585(name: onunhandledrejection))
+  // Type InteropUnion#489705471(parent: InteropGetter#971003948(name: onunhandledrejection))
   set onunhandledrejection(
       _i2.dynamic Function(_i3.PromiseRejectionEvent)? value) {
     _i4.setProperty(
@@ -150847,7 +150847,7 @@ extension WindowEventHandlers$Typings on WindowEventHandlers {
   /* #17126
   source: 
     onunload: ((this: WindowEventHandlers, ev: Event) => any) | null; */
-  // Type InteropUnion#358438318(parent: InteropGetter#877987622(name: onunload))
+  // Type InteropUnion#1041968225(parent: InteropGetter#966111491(name: onunload))
   set onunload(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -151240,7 +151240,7 @@ extension Worker$Typings on Worker {
   /* #17171
   source: 
     onmessage: ((this: Worker, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#674213159(parent: InteropGetter#820121228(name: onmessage))
+  // Type InteropUnion#84960618(parent: InteropGetter#330650848(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -151260,7 +151260,7 @@ extension Worker$Typings on Worker {
   /* #17172
   source: 
     onmessageerror: ((this: Worker, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#531514900(parent: InteropGetter#327392497(name: onmessageerror))
+  // Type InteropUnion#304886100(parent: InteropGetter#656507239(name: onmessageerror))
   set onmessageerror(
       _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
@@ -151272,7 +151272,7 @@ extension Worker$Typings on Worker {
 
   void _postMessage$1(
     _i2.dynamic message,
-    _i2.List /*LIST InteropStaticType.list,176506809,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,395093804,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Transferable>
         transfer,
   ) {
@@ -151304,7 +151304,7 @@ extension Worker$Typings on Worker {
   ({
     void Function(
       _i2.dynamic message,
-      _i2.List /*LIST InteropStaticType.list,176506809,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,395093804,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Transferable>
           transfer,
     ) $1,
@@ -151813,7 +151813,7 @@ extension XMLHttpRequest$Typings on XMLHttpRequest {
   /* #17265
   source: 
     onreadystatechange: ((this: XMLHttpRequest, ev: Event) => any) | null; */
-  // Type InteropUnion#994104966(parent: InteropGetter#658308825(name: onreadystatechange))
+  // Type InteropUnion#749263328(parent: InteropGetter#46451079(name: onreadystatechange))
   set onreadystatechange(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -151897,7 +151897,7 @@ extension XMLHttpRequest$Typings on XMLHttpRequest {
      * When set: throws an "InvalidAccessError" DOMException if the synchronous flag is set and current global object is a Window object.
      */
     responseType: XMLHttpRequestResponseType; */
-  // Type InteropTypedef#60935835(name: XMLHttpRequestResponseType)
+  // Type InteropTypedef#457102109(name: XMLHttpRequestResponseType)
   set responseType(_i3.XMLHttpRequestResponseType value) {
     _i4.setProperty(
       this,
@@ -152328,7 +152328,7 @@ extension XMLHttpRequestEventTarget$Typings on XMLHttpRequestEventTarget {
   /* #17378
   source: 
     onabort: ((this: XMLHttpRequest, ev: ProgressEvent) => any) | null; */
-  // Type InteropUnion#193533242(parent: InteropGetter#755457703(name: onabort))
+  // Type InteropUnion#55516175(parent: InteropGetter#93595494(name: onabort))
   set onabort(_i2.dynamic Function(_i3.ProgressEvent<_i3.EventTarget>)? value) {
     _i4.setProperty(
       this,
@@ -152348,7 +152348,7 @@ extension XMLHttpRequestEventTarget$Typings on XMLHttpRequestEventTarget {
   /* #17379
   source: 
     onerror: ((this: XMLHttpRequest, ev: ProgressEvent) => any) | null; */
-  // Type InteropUnion#54987416(parent: InteropGetter#526371745(name: onerror))
+  // Type InteropUnion#580440681(parent: InteropGetter#843071733(name: onerror))
   set onerror(_i2.dynamic Function(_i3.ProgressEvent<_i3.EventTarget>)? value) {
     _i4.setProperty(
       this,
@@ -152368,7 +152368,7 @@ extension XMLHttpRequestEventTarget$Typings on XMLHttpRequestEventTarget {
   /* #17380
   source: 
     onload: ((this: XMLHttpRequest, ev: ProgressEvent) => any) | null; */
-  // Type InteropUnion#777596902(parent: InteropGetter#839824987(name: onload))
+  // Type InteropUnion#592244721(parent: InteropGetter#650728572(name: onload))
   set onload(_i2.dynamic Function(_i3.ProgressEvent<_i3.EventTarget>)? value) {
     _i4.setProperty(
       this,
@@ -152388,7 +152388,7 @@ extension XMLHttpRequestEventTarget$Typings on XMLHttpRequestEventTarget {
   /* #17381
   source: 
     onloadend: ((this: XMLHttpRequest, ev: ProgressEvent) => any) | null; */
-  // Type InteropUnion#920298330(parent: InteropGetter#111617355(name: onloadend))
+  // Type InteropUnion#856388333(parent: InteropGetter#185634911(name: onloadend))
   set onloadend(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.EventTarget>)? value) {
     _i4.setProperty(
@@ -152409,7 +152409,7 @@ extension XMLHttpRequestEventTarget$Typings on XMLHttpRequestEventTarget {
   /* #17382
   source: 
     onloadstart: ((this: XMLHttpRequest, ev: ProgressEvent) => any) | null; */
-  // Type InteropUnion#749116086(parent: InteropGetter#919650118(name: onloadstart))
+  // Type InteropUnion#786695532(parent: InteropGetter#917012955(name: onloadstart))
   set onloadstart(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.EventTarget>)? value) {
     _i4.setProperty(
@@ -152430,7 +152430,7 @@ extension XMLHttpRequestEventTarget$Typings on XMLHttpRequestEventTarget {
   /* #17383
   source: 
     onprogress: ((this: XMLHttpRequest, ev: ProgressEvent) => any) | null; */
-  // Type InteropUnion#895126900(parent: InteropGetter#1025571829(name: onprogress))
+  // Type InteropUnion#561424155(parent: InteropGetter#131053118(name: onprogress))
   set onprogress(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.EventTarget>)? value) {
     _i4.setProperty(
@@ -152451,7 +152451,7 @@ extension XMLHttpRequestEventTarget$Typings on XMLHttpRequestEventTarget {
   /* #17384
   source: 
     ontimeout: ((this: XMLHttpRequest, ev: ProgressEvent) => any) | null; */
-  // Type InteropUnion#963876362(parent: InteropGetter#430388364(name: ontimeout))
+  // Type InteropUnion#35481823(parent: InteropGetter#929254960(name: ontimeout))
   set ontimeout(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.EventTarget>)? value) {
     _i4.setProperty(
@@ -153326,7 +153326,7 @@ extension Console$Typings on Console {
 
   void table([
     _i2.dynamic tabularData,
-    _i2.List /*LIST InteropStaticType.list,168919125,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,946046787,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         properties,
   ]) {
@@ -153505,7 +153505,7 @@ class FileSystemEntriesCallback {
 
 extension FileSystemEntriesCallback$Typings on FileSystemEntriesCallback {
   void call(
-      _i2.List /*LIST InteropStaticType.list,536978749,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,19065023,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.FileSystemEntry>
           entries) {
     _i4.callMethod(
@@ -153603,7 +153603,7 @@ class IntersectionObserverCallback {
 
 extension IntersectionObserverCallback$Typings on IntersectionObserverCallback {
   void call(
-    _i2.List /*LIST InteropStaticType.list,1002414765,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,923863451,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.IntersectionObserverEntry>
         entries,
     _i3.IntersectionObserver observer,
@@ -153666,7 +153666,7 @@ class MutationCallback {
 
 extension MutationCallback$Typings on MutationCallback {
   void call(
-    _i2.List /*LIST InteropStaticType.list,293115414,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,388656664,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.MutationRecord>
         mutations,
     _i3.MutationObserver observer,
@@ -153905,7 +153905,7 @@ class ResizeObserverCallback {
 
 extension ResizeObserverCallback$Typings on ResizeObserverCallback {
   void call(
-    _i2.List /*LIST InteropStaticType.list,875110763,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,835524044,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.ResizeObserverEntry>
         entries,
     _i3.ResizeObserver observer,
@@ -154567,7 +154567,7 @@ void _postMessage$1(
 void _postMessage$2(
   _i2.dynamic message,
   _i2.String targetOrigin, [
-  _i2.List /*LIST InteropStaticType.list,974667481,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,77812269,[Instance of 'InteropRef<InteropType>']*/ <
           _i3.Transferable>?
       transfer,
 ]) {
@@ -154590,7 +154590,7 @@ void _postMessage$2(
   void Function(
     _i2.dynamic message,
     _i2.String targetOrigin, [
-    _i2.List /*LIST InteropStaticType.list,974667481,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,77812269,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Transferable>?
         transfer,
   ]) $2,

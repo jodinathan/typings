@@ -97,13 +97,13 @@ class InteropUnion extends InteropType
           _ => 'UnionEnum${_cc++}'
         };
 
-        final dyn = _declare = InteropDynamicEnum(
+        final dyn = library.declareEnum(InteropDynamicEnum(
             name: symbol,
             library: library,
             lineNumber: lineNumber,
             source: '--From union\n$source',
             values:
-                filtered.map((ref) => ref.type as InteropConstType).toList());
+                filtered.map((ref) => ref.type as InteropConstType).toList()));
 
         _delegate = InteropRef(dyn);
       } else {
@@ -122,11 +122,6 @@ class InteropUnion extends InteropType
             _delegate = filtered.first;
           } else {
             _delegate = filtered.commonInheritor();
-
-            if (lineNumber == 21) {
-              print(
-                  'MOTHERFUCKER $_delegate\n${filtered.first.type.realType}\n-----');
-            }
 
             if (_delegate == null) {
               final first = filtered.first.type.realType;
@@ -152,13 +147,13 @@ class InteropUnion extends InteropType
                       parent.availableName(suffix: 'Common'),
                     _ => 'UnionCommon${_cc++}'
                   };
-                  final cl = _declare = InteropClass(
+                  final cl = library.declareClass(InteropClass(
                       name: name,
                       library: library,
                       lineNumber: lineNumber,
                       source: 'ForcedCommon from $source',
                       addAnonymousFlag: true,
-                      isInline: false);
+                      isInline: false));
 
                   for (final prop in firstProps) {
                     final copy = prop.copyWith(cl: cl);
@@ -210,12 +205,6 @@ class InteropUnion extends InteropType
 
     super.configure();
   }
-
-  InteropItem? _declare;
-
-  @override
-  Iterable<InteropItem> get toDeclare =>
-      [if (_declare case InteropItem dyn) dyn];
 
   @override
   bool get nullable => hasNull;

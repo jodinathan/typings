@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:js/js.dart';
 
-import 'package:typings/d/core.dart' as js;
+import 'package:typings/core.dart' as js;
 import 'package:typings/d/gojs.dart' as go;
 
 Future<void> _fetch() async {
@@ -197,13 +197,15 @@ Future<void> makeGo() async {
   js.window.document.title = 'GoJS example';
 
   final source = start('go');
-  await go.useDist();
+  await go.import();
 
   var diagram = source.getElementsByClassName('diagram')[0];
   var palette = source.getElementsByClassName('palette')[0];
 
   try {
-    var god = go.Diagram.$2(diagram)
+    js.console.log(['Building Go JS diagram']);
+
+    final god = go.Diagram.$2(diagram)
       ..addDiagramListener(go.DiagramEventNameOptions.linkDrawn, showLinkLabel)
       ..addDiagramListener(
           go.DiagramEventNameOptions.linkRelinked, showLinkLabel);
@@ -594,7 +596,7 @@ void makeCore() {
 void main() {
   js.console.log(['Starting']);
 
-  makeCore();
+  //makeCore();
 
-  //makeGo();
+  makeGo();
 }

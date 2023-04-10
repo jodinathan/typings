@@ -50,12 +50,6 @@ mixin InteropDelegateType on InteropType, InteropDiamondType {
   bool get passthrough => false;
 
   @override
-  InteropTypes get interopType => realType.interopType;
-
-  @override
-  Map<String, dynamic> toMap() => realType.toMap();
-
-  @override
   Expression toInterop(
           {required Expression argument,
           bool isNullable = false,

@@ -1051,7 +1051,7 @@ extension VBArray$Typings<T> on VBArray<T> {
         'ubound',
         [dimension ?? _i6.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,7822708,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i2.List /*LIST InteropStaticType.list,793723740,[Instance of 'InteropRef<InteropType>']*/ <T>
       toArray() => (_i4.callMethod(
             this,
             'toArray',

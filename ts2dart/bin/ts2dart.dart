@@ -71,21 +71,17 @@ Future<void> main(List<String> arguments) async {
   }
 
   if (1 > 0) {
-    // https://github.com/denoland/deno/releases/download/v1.32.3/lib.deno.d.ts
-    await Transpiler.fromUris(
+    await Transpiler.fromUrls(
         package: 'deno',
         version: 'v1.32.3',
         targetMainFile: 'deno',
         dirName: 'deno',
         targetPath: libPath,
-        uses: {
+        uses: [
           'core'
-        },
-        uris: [
-          Uri(
-              scheme: 'https',
-              host: 'github.com',
-              path: 'denoland/deno/releases/download/v1.32.3/lib.deno.d.ts')
+        ],
+        urls: [
+          'https://github.com/denoland/deno/releases/download/v1.32.3/lib.deno.d.ts'
         ]);
   }
 

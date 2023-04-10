@@ -35,14 +35,12 @@ class InteropIndexed extends InteropType
 
   @override
   void configure() {
-    print('ConfigureIndexed ${obj.type}\n${obj.realType}\n${index.realType}');
     final ot = obj.realType;
     final it = index.realType;
 
     if (it is InteropLocalType &&
         ot is InteropDynamicEnum &&
         ot.addedTypeParam) {
-      print('ChangedConfigure! ${it.symbol}');
       _delegate = InteropRef(InteropLocalType('${it.symbol}\$'));
     }
 

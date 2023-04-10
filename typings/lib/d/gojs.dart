@@ -1,4 +1,12 @@
 import 'package:typings/annotations.dart';
 
-@Typed(urls: {''})
+@Typings.npm(
+    package: 'gojs',
+    version: 'latest',
+    dirName: 'gojs',
+    contextCheck: 'go',
+    uses: [
+      'core'
+    ]
+  )
 export 'gojs/gojs.dart';

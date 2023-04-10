@@ -44,10 +44,6 @@ class InteropIntersection extends InteropType
 
     if (parent.isTypedefLike) {
       final filtered = types.toList();
-
-      print(
-          'IntersectionFUC ${parent} $source\n${types.map((t) => t.type)}\n----\n$filtered');
-
       final newClass = InteropClass(
           name: 'Intersection${_cc++}',
           library: library,
@@ -65,16 +61,15 @@ class InteropIntersection extends InteropType
         };
 
         if (cl is InteropClass) {
-          print('ADDINGCLASSS to ${newClass.name}');
           newClass.inheritance.add(InteropRef(cl));
         }
-
-        print('Intersctionitem $cl \n${ref.type}');
       }
 
       newClass.configure();
-      _declare.add(newClass);
-      _delegate = InteropRef(newClass);
+
+      final added = library.declareClass(newClass);
+
+      _delegate = InteropRef(added);
     } else {
       _delegate = InteropStaticType.obj.asRef;
     }
@@ -87,8 +82,4 @@ class InteropIntersection extends InteropType
 
   @override
   bool get configured => _configured;
-
-  final List<InteropItem> _declare = [];
-  @override
-  Iterable<InteropItem> get toDeclare => _declare;
 }

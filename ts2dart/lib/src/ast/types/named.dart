@@ -57,7 +57,7 @@ abstract class InteropNamedDeclaration extends InteropType
   @override
   Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) => refer(
       usableName,
-      escopedReference && !isPrivate ? library.targetFileName : null);
+      escopedReference && !isPrivate ? library.fullPath : null);
 
   bool nameExists(String name) {
     return library.findDeclared(name) != null;

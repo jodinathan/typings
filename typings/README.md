@@ -1,39 +1,63 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# What is this
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+Use NPM packages in your projects with the power of sound Dart.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+This package reads and translates TypeScript declaration files (.d.ts) to Dart through interop and enables importing the JS file without having to include it in your HTML file.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+It is also possible to generate interop from files without using NPM, one example is Deno.
 
-## Features
+# Sponsorship, donations
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Please, if you find this package useful, consider sponsoring or donating.
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?hosted_button_id=YNCG33GLM3494)
 
-## Getting started
+# Examples
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+## Simple console.log
 
 ```dart
-const like = 'sample';
+import 'package:typings/core.dart' as js;
+
+void main() {
+    js.console.log(['Hello', 'World']);
+}
+
 ```
 
-## Additional information
+## Using the GoJS library
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```dart
+import 'package:typings/d/gojs.dart' as go;
+
+void main() {
+    // inserts the GoJS js file into the DOM
+    await go.import(); 
+    
+    // from here you can use the go library, ie:
+    final goDiagram = go.Diagram.$2(diagram)
+      ..addDiagramListener(go.DiagramEventNameOptions.linkDrawn, showLinkLabel)
+      ..addDiagramListener(
+          go.DiagramEventNameOptions.linkRelinked, showLinkLabel);
+}
+```
+
+# Adding packages
+
+It is very simple to add libraries from NPM:
+
+```dart
+import 'package:typings/annotations.dart';
+
+@Typings.npm(
+    package: 'gojs', // package name
+    version: 'latest', // the version that should be fetched from NPM
+    dirName: 'gojs', // the dir name to be created
+    contextCheck: 'go', // the namespace to be checked in the JS when the JS file is imported
+    uses: [
+      'core' // the GoJS uses the core (DOM) types
+    ]
+  )
+export 'gojs/gojs.dart';
+```
+
+From this, the builder will fetch the package from NPM, parse the ` package.json`  and from there generate the import file and the interop typings.

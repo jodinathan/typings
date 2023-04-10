@@ -58,7 +58,7 @@ extension AggregateError$Typings on AggregateError {
   /* #20
   source: 
     errors: any[] */
-  _i2.List /*LIST InteropStaticType.list,840290327,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+  _i2.List /*LIST InteropStaticType.list,902767718,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
       get errors => (_i4.getProperty(
             this,
             'errors',
@@ -69,7 +69,7 @@ extension AggregateError$Typings on AggregateError {
     errors: any[] */
   // Type InteropStaticType.list
   set errors(
-      _i2.List /*LIST InteropStaticType.list,840290327,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,902767718,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.dynamic>
           value) {
     _i4.setProperty(

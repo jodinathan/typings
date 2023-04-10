@@ -35,6 +35,7 @@ interface Library {
     funcs: any[];
     vars: any[];
     modules: any[];
+    enums: any[];
   };
   namespace: string;
   from: string;
@@ -66,7 +67,7 @@ function extract(files: string[]): void {
   };
 
   const parseNodes = (source: ts.Node, lib: Library) => {
-    const { typedefs, structs, funcs, vars, modules } = lib.items;
+    const { typedefs, structs, funcs, vars, modules, enums } = lib.items;
 
     const parseType = (type?: ts.TypeNode) => {
       if (!type) {
@@ -164,7 +165,7 @@ function extract(files: string[]): void {
             targs: parseTypeArguments(type.typeArguments),
           };
         }
-      } else if (ts.isParenthesizedTypeNode(type)) {
+      } else if (ts.isParenthesizedTypeNode(type) || ts.isRestTypeNode(type)) {
         ret = parseType(type.type);
       } else if (ts.isArrayTypeNode(type)) {
         ret = {
@@ -634,10 +635,6 @@ function extract(files: string[]): void {
         const name = node.name.text;
         const typedef: any = { name };
 
-        if (name == "LocalesArgument") {
-          console.log("LocalesArgumentFUCK", lib);
-        }
-
         withNamed(typedef, () => {
           typedef.generics = parseTypeParameters(node.typeParameters);
 
@@ -664,19 +661,6 @@ function extract(files: string[]): void {
           }
 
           if (!module) {
-            console.log("TSAdding module", node.name.text);
-            console.log(
-              "modules",
-              modules.map((m) => m.namespace)
-            );
-            console.log(
-              "mainModules",
-              mainModules.map((m) => {
-                return `${m.namespace}: [${m.items.modules
-                  .map((i) => i.namespace)
-                  .join(", ")}]`;
-              })
-            );
             module = {
               _: lineNumber,
               namespace: node.name.text,
@@ -687,6 +671,7 @@ function extract(files: string[]): void {
                 modules: [],
                 funcs: [],
                 vars: [],
+                enums: []
               },
             };
             modules.push(module);
@@ -694,10 +679,29 @@ function extract(files: string[]): void {
 
           parseNodes(node.body, module);
         }
+      } else if (ts.isEnumDeclaration(node)) {
+        const en = addSource(node, {
+          name: node.name.text,
+          doc: parseDoc(node)
+        });
+        const members: any[] = [];
+
+        for (const member of node.members) {
+          const m = addSource(member, {
+            name: member.name.getText(),
+            doc: parseDoc(member),
+            value: member.initializer?.getText() ?? ''
+          })
+
+          members.push(m)
+        }
+
+        en.members = members;
+        enums.push(en);
       } else {
-        if (node.kind != 1 && dev) {
+        if (node.kind != 1) {
           console.error(
-            "Unkown node type",
+            "Unknown node type",
             node.getSourceFile().fileName,
             lineNumber,
             "kind:",
@@ -716,12 +720,6 @@ function extract(files: string[]): void {
     ts.forEachChild(source, (node) => {
       if (ts.isNamespaceExportDeclaration(node)) {
         lib.namespace = node.name.text;
-        console.log(
-          "Namespace set",
-          lib.namespace,
-          "\n",
-          modules.map((m) => m.namespace)
-        );
       }
     });
 
@@ -750,7 +748,7 @@ function extract(files: string[]): void {
     }
 
     if (debug) {
-      console.log("Parsing", file);
+      //console.log("Parsing", file);
     }
     const sourceFile = program.getSourceFile(file)!;
     const module = {
@@ -763,6 +761,7 @@ function extract(files: string[]): void {
         modules: [],
         funcs: [],
         vars: [],
+        enums: []
       },
     };
 
@@ -787,10 +786,10 @@ function extract(files: string[]): void {
       "./toExport.json",
       JSON.stringify({ files: toExport }, null, 2)
     );
-    console.log("Written toExport.json!");
+    //console.log("Written toExport.json!");
   }
 
-  console.log("Done extracting\n");
+  //console.log("Done extracting\n");
 }
 
 // Run the extract function with the script's arguments

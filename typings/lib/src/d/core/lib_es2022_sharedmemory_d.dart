@@ -20,7 +20,7 @@ enum Value {
 
 /* Closure: () => String from Function 'makeDoc':. */
 enum ValueOptions {
-  ok(r'ok'),
+  notEqual(r'not-equal'),
   timedOut(r'timed-out');
 
   const ValueOptions(this.value);
@@ -29,11 +29,11 @@ enum ValueOptions {
 }
 
 /* Closure: () => String from Function 'makeDoc':. */
-enum Value {
-  notEqual(r'not-equal'),
+enum IInline38ValueOptions {
+  ok(r'ok'),
   timedOut(r'timed-out');
 
-  const Value(this.value);
+  const IInline38ValueOptions(this.value);
 
   final _i2.String value;
 }
@@ -79,7 +79,7 @@ extension IInline37$Typings on IInline37 {
       ));
   /* #28
   source:  value: "not-equal" | "timed-out" */
-  // Type InteropUnion#1030357788(parent: InteropGetter#380401461(name: value))
+  // Type InteropUnion#208660401(parent: InteropGetter#493643198(name: value))
   set value(Value value) {
     _i3.setProperty(
       this,
@@ -114,14 +114,15 @@ extension IInline38$Typings on IInline38 {
 
   /* #28
   source:  value: Promise<"ok" | "timed-out"> */
-  _i2.Future<ValueOptions> get value => _i3.promiseToFuture(_i3.getProperty(
+  _i2.Future<IInline38ValueOptions> get value =>
+      _i3.promiseToFuture(_i3.getProperty(
         this,
         'value',
       ));
   /* #28
   source:  value: Promise<"ok" | "timed-out"> */
-  // Type InteropClass#990988074(name: Future)
-  set value(_i2.Future<ValueOptions> value) {
+  // Type InteropClass#459811851(name: Future)
+  set value(_i2.Future<IInline38ValueOptions> value) {
     _i3.setProperty(
       this,
       'value',
@@ -155,14 +156,14 @@ extension IInline39$Typings on IInline39 {
 
   /* #38
   source:  value: "not-equal" | "timed-out" */
-  Value get value => Value.values.byName(_i3.getProperty(
+  ValueOptions get value => ValueOptions.values.byName(_i3.getProperty(
         this,
         'value',
       ));
   /* #38
   source:  value: "not-equal" | "timed-out" */
-  // Type InteropUnion#665326226(parent: InteropGetter#251559831(name: value))
-  set value(Value value) {
+  // Type InteropUnion#156980063(parent: InteropGetter#413309852(name: value))
+  set value(ValueOptions value) {
     _i3.setProperty(
       this,
       'value',
@@ -203,7 +204,7 @@ extension IInline40$Typings on IInline40 {
       ));
   /* #38
   source:  value: Promise<"ok" | "timed-out"> */
-  // Type InteropClass#990988074(name: Future)
+  // Type InteropClass#459811851(name: Future)
   set value(_i2.Future<IInline40ValueOptions> value) {
     _i3.setProperty(
       this,

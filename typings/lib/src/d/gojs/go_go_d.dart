@@ -4,11 +4,24 @@ library go; // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'go_go_d.dart' as _i3;
-import '/d/core.dart' as _i4;
+import '/src/d/core/lib_es5_d.dart' as _i4;
 import 'dart:js_util' as _i5;
+import '/src/d/core/lib_dom_d.dart' as _i6;
+import '/d/core.dart' as _i7;
 
 @_i1.JS('go')
 external _i2.Object _self;
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class CreateLinearGradient {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class CreateRadialGradient {}
+
 typedef MarginLike = _i2.Object;
 typedef DiagramEventHandler = void Function(_i3.DiagramEvent);
 typedef DiagramEventName = DiagramEventNameOptions;
@@ -19,11 +32,11 @@ typedef EasingFunction = _i2.num Function(
   _i2.num,
   _i2.num,
 );
-typedef DiagramInitOptions = _i4.Partial;
+typedef DiagramInitOptions = _i4.Partial<_i2.Object>;
 typedef DiagramEvents = _i2.dynamic;
 typedef ConstructorType<
-        T extends _i4.InstanceType Function(_i2.Iterable<_i2.dynamic>?)>
-    = _i4.InstanceType Function(_i2.Iterable<_i2.dynamic>?);
+        T extends _i4.InstanceType<T> Function(_i2.Iterable<_i2.dynamic>?)>
+    = _i4.InstanceType<T> Function(_i2.Iterable<_i2.dynamic>?);
 typedef MakeAllow<CT extends _i3.ConstructorType<CT>, C, E> = _i2.dynamic;
 typedef BrushLike = _i2.dynamic;
 typedef Key = _i2.dynamic;
@@ -458,15 +471,15 @@ extension ISurface$Typings on ISurface {
   /* #211
   source: 
     domElement: Element; */
-  _i4.Element get domElement => _i5.getProperty(
+  _i6.Element get domElement => _i5.getProperty(
         this,
         'domElement',
       );
   /* #211
   source: 
     domElement: Element; */
-  // Type Instance of 'ExternalInteropType'
-  set domElement(_i4.Element value) {
+  // Type Instance of 'InteropInterface'
+  set domElement(_i6.Element value) {
     _i5.setProperty(
       this,
       'domElement',
@@ -534,15 +547,15 @@ extension ISurface$Typings on ISurface {
   /* #215
   source: 
     ownerDocument: Document; */
-  _i4.Document get ownerDocument => _i5.getProperty(
+  _i6.Document get ownerDocument => _i5.getProperty(
         this,
         'ownerDocument',
       );
   /* #215
   source: 
     ownerDocument: Document; */
-  // Type Instance of 'ExternalInteropType'
-  set ownerDocument(_i4.Document value) {
+  // Type Instance of 'InteropInterface'
+  set ownerDocument(_i6.Document value) {
     _i5.setProperty(
       this,
       'ownerDocument',
@@ -555,7 +568,7 @@ extension ISurface$Typings on ISurface {
     elementFinished: ((a: GraphObject, b: SVGElement) => void) | null; */
   void Function(
     _i3.GraphObject,
-    _i4.SVGElement,
+    _i6.SVGElement,
   )? get elementFinished => _i5.getProperty(
         this,
         'elementFinished',
@@ -563,31 +576,31 @@ extension ISurface$Typings on ISurface {
   /* #217
   source: 
     elementFinished: ((a: GraphObject, b: SVGElement) => void) | null; */
-  // Type InteropUnion#1046358210(parent: InteropGetter#786004815(name: elementFinished))
+  // Type InteropUnion#606013041(parent: InteropGetter#782491383(name: elementFinished))
   set elementFinished(
       void Function(
         _i3.GraphObject,
-        _i4.SVGElement,
+        _i6.SVGElement,
       )? value) {
     _i5.setProperty(
       this,
       'elementFinished',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
   /* #221
   source: 
     style: CSSStyleDeclaration; */
-  _i4.CSSStyleDeclaration get style => _i5.getProperty(
+  _i6.CSSStyleDeclaration get style => _i5.getProperty(
         this,
         'style',
       );
   /* #221
   source: 
     style: CSSStyleDeclaration; */
-  // Type Instance of 'ExternalInteropType'
-  set style(_i4.CSSStyleDeclaration value) {
+  // Type Instance of 'InteropInterface'
+  set style(_i6.CSSStyleDeclaration value) {
     _i5.setProperty(
       this,
       'style',
@@ -611,7 +624,7 @@ extension ISurface$Typings on ISurface {
           height,
         ],
       );
-  _i4.DOMRect getBoundingClientRect() => _i5.callMethod(
+  _i6.DOMRect getBoundingClientRect() => _i5.callMethod(
         this,
         'getBoundingClientRect',
         [],
@@ -648,7 +661,7 @@ extension IContext$Typings on IContext {
   /* #227
   source: 
     fillStyle: string | CanvasGradient | CanvasPattern | SGradient; */
-  // Type InteropUnion#913839391(parent: InteropGetter#1060557252(name: fillStyle))
+  // Type InteropUnion#1025364665(parent: InteropGetter#698949118(name: fillStyle))
   set fillStyle(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -876,7 +889,7 @@ extension IContext$Typings on IContext {
   /* #239
   source: 
     strokeStyle: string | CanvasGradient | CanvasPattern | SGradient; */
-  // Type InteropUnion#119173218(parent: InteropGetter#59560348(name: strokeStyle))
+  // Type InteropUnion#733901564(parent: InteropGetter#935407243(name: strokeStyle))
   set strokeStyle(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -1054,8 +1067,8 @@ extension IContext$Typings on IContext {
         startAngle,
         endAngle,
         counterclockwise,
-        lx ?? _i4.undefined,
-        ly ?? _i4.undefined,
+        lx ?? _i7.undefined,
+        ly ?? _i7.undefined,
       ],
     );
   }
@@ -1072,7 +1085,7 @@ extension IContext$Typings on IContext {
     _i5.callMethod(
       this,
       'endPath',
-      [pathIndex ?? _i4.undefined],
+      [pathIndex ?? _i7.undefined],
     );
   }
 
@@ -1132,7 +1145,7 @@ extension IContext$Typings on IContext {
     );
   }
 
-  _i2.Object createLinearGradient(
+  _i3.CreateLinearGradient createLinearGradient(
     _i2.num aX0,
     _i2.num aY0,
     _i2.num aX1,
@@ -1149,7 +1162,7 @@ extension IContext$Typings on IContext {
         ],
       );
   _i2.Object createPattern(
-    _i2.Object image,
+    _i6.HTMLElement image,
     _i2.String repetition,
   ) =>
       _i5.callMethod(
@@ -1160,7 +1173,7 @@ extension IContext$Typings on IContext {
           repetition,
         ],
       );
-  _i2.Object createRadialGradient(
+  _i3.CreateRadialGradient createRadialGradient(
     _i2.num aX0,
     _i2.num aY0,
     _i2.num aR0,
@@ -1181,7 +1194,7 @@ extension IContext$Typings on IContext {
         ],
       );
   void drawImage(
-    _i2.Object src,
+    _i6.HTMLElement src,
     _i2.num sx,
     _i2.num sy, [
     _i2.num? sw,
@@ -1198,12 +1211,12 @@ extension IContext$Typings on IContext {
         src,
         sx,
         sy,
-        sw ?? _i4.undefined,
-        sh ?? _i4.undefined,
-        dx ?? _i4.undefined,
-        dy ?? _i4.undefined,
-        dw ?? _i4.undefined,
-        dh ?? _i4.undefined,
+        sw ?? _i7.undefined,
+        sh ?? _i7.undefined,
+        dx ?? _i7.undefined,
+        dy ?? _i7.undefined,
+        dw ?? _i7.undefined,
+        dh ?? _i7.undefined,
       ],
     );
   }
@@ -1212,7 +1225,7 @@ extension IContext$Typings on IContext {
     _i5.callMethod(
       this,
       'fill',
-      [fillRule ?? _i4.undefined],
+      [fillRule ?? _i7.undefined],
     );
   }
 
@@ -1268,7 +1281,7 @@ extension IContext$Typings on IContext {
     );
   }
 
-  _i4.ImageData getImageData(
+  _i6.ImageData getImageData(
     _i2.num x,
     _i2.num y,
     _i2.num w,
@@ -1298,7 +1311,7 @@ extension IContext$Typings on IContext {
     );
   }
 
-  _i4.TextMetrics measureText(_i2.String text) => _i5.callMethod(
+  _i6.TextMetrics measureText(_i2.String text) => _i5.callMethod(
         this,
         'measureText',
         [text],
@@ -1465,8 +1478,8 @@ extension IContext$Typings on IContext {
       this,
       'fillContext',
       [
-        brush ?? _i4.undefined,
-        fillRule ?? _i4.undefined,
+        brush ?? _i7.undefined,
+        fillRule ?? _i7.undefined,
       ],
     );
   }
@@ -1512,7 +1525,7 @@ extension IContext$Typings on IContext {
   }
 
   void enableDash(
-    _i4.Array strokeDashArray,
+    _i4.Array<_i2.num> strokeDashArray,
     _i2.num strokeDashOffset,
   ) {
     _i5.callMethod(
@@ -1555,7 +1568,7 @@ extension IContext$Typings on IContext {
 class List<T> implements _i3.Iterable<T> {
   factory List([_i2.Object? coll]) => _i5.callConstructor(
         _declaredList,
-        [coll ?? _i4.undefined],
+        [coll ?? _i7.undefined],
       );
 }
 
@@ -1758,7 +1771,7 @@ extension List$Typings<T> on List<T> {
         'toString',
         [],
       );
-  _i3.List /*LIST InteropClass#847625641(name: List),945337203,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i3.List /*LIST InteropClass#991808747(name: List),520643538,[Instance of 'InteropRef<InteropType>']*/ <T>
       add(T val) => _i5.callMethod(
             this,
             'add',
@@ -1772,7 +1785,7 @@ extension List$Typings<T> on List<T> {
     );
   }
 
-  _i3.List /*LIST InteropClass#847625641(name: List),48130252,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i3.List /*LIST InteropClass#991808747(name: List),417859094,[Instance of 'InteropRef<InteropType>']*/ <T>
       addAll(_i2.Object coll) => _i5.callMethod(
             this,
             'addAll',
@@ -1864,19 +1877,19 @@ extension List$Typings<T> on List<T> {
         'all',
         [_i5.allowInterop(pred)],
       );
-  _i3.List /*LIST InteropClass#847625641(name: List),87890465,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i3.List /*LIST InteropClass#991808747(name: List),975226154,[Instance of 'InteropRef<InteropType>']*/ <T>
       each(void Function(T) func) => _i5.callMethod(
             this,
             'each',
             [_i5.allowInterop(func)],
           );
-  _i3.List /*LIST InteropClass#847625641(name: List),757360865,[Instance of 'InteropRef<InteropType>']*/ <S>
+  _i3.List /*LIST InteropClass#991808747(name: List),34503511,[Instance of 'InteropRef<InteropType>']*/ <S>
       map<S>(S Function(T) func) => _i5.callMethod(
             this,
             'map',
             [_i5.allowInterop(func)],
           );
-  _i3.List /*LIST InteropClass#847625641(name: List),947346893,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i3.List /*LIST InteropClass#991808747(name: List),458130734,[Instance of 'InteropRef<InteropType>']*/ <T>
       filter(_i2.bool Function(T) pred) => _i5.callMethod(
             this,
             'filter',
@@ -1914,7 +1927,7 @@ extension List$Typings<T> on List<T> {
     );
   }
 
-  _i3.List /*LIST InteropClass#847625641(name: List),443708804,[Instance of 'InteropRef<InteropType>']*/ <
+  _i3.List /*LIST InteropClass#991808747(name: List),856296104,[Instance of 'InteropRef<InteropType>']*/ <
       T> removeRange(
     _i2.num from,
     _i2.num to,
@@ -1927,13 +1940,13 @@ extension List$Typings<T> on List<T> {
           to,
         ],
       );
-  _i3.List /*LIST InteropClass#847625641(name: List),6568733,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i3.List /*LIST InteropClass#991808747(name: List),881297411,[Instance of 'InteropRef<InteropType>']*/ <T>
       copy() => _i5.callMethod(
             this,
             'copy',
             [],
           );
-  _i4.Array toArray() => _i5.callMethod(
+  _i4.Array<T> toArray() => _i5.callMethod(
         this,
         'toArray',
         [],
@@ -1943,7 +1956,7 @@ extension List$Typings<T> on List<T> {
         'toSet',
         [],
       );
-  _i3.List /*LIST InteropClass#847625641(name: List),531005494,[Instance of 'InteropRef<InteropType>']*/ <
+  _i3.List /*LIST InteropClass#991808747(name: List),1010042747,[Instance of 'InteropRef<InteropType>']*/ <
       T> sort(
           _i2.num Function(
             T,
@@ -1954,7 +1967,7 @@ extension List$Typings<T> on List<T> {
         'sort',
         [_i5.allowInterop(sortfunc)],
       );
-  _i3.List /*LIST InteropClass#847625641(name: List),124956493,[Instance of 'InteropRef<InteropType>']*/ <
+  _i3.List /*LIST InteropClass#991808747(name: List),186775471,[Instance of 'InteropRef<InteropType>']*/ <
       T> sortRange(
     _i2.num Function(
       T,
@@ -1968,11 +1981,11 @@ extension List$Typings<T> on List<T> {
         'sortRange',
         [
           _i5.allowInterop(sortfunc),
-          from ?? _i4.undefined,
-          to ?? _i4.undefined,
+          from ?? _i7.undefined,
+          to ?? _i7.undefined,
         ],
       );
-  _i3.List /*LIST InteropClass#847625641(name: List),739602517,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i3.List /*LIST InteropClass#991808747(name: List),693034482,[Instance of 'InteropRef<InteropType>']*/ <T>
       reverse() => _i5.callMethod(
             this,
             'reverse',
@@ -1985,7 +1998,7 @@ extension List$Typings<T> on List<T> {
 class Set<T> implements _i3.Iterable<T> {
   factory Set([_i2.Object? coll]) => _i5.callConstructor(
         _declaredSet,
-        [coll ?? _i4.undefined],
+        [coll ?? _i7.undefined],
       );
 
   static void uniqueHash(_i2.Object obj) {
@@ -2215,12 +2228,12 @@ extension Set$Typings<T> on Set<T> {
         'copy',
         [],
       );
-  _i4.Array toArray() => _i5.callMethod(
+  _i4.Array<T> toArray() => _i5.callMethod(
         this,
         'toArray',
         [],
       );
-  _i3.List /*LIST InteropClass#847625641(name: List),216372994,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i3.List /*LIST InteropClass#991808747(name: List),1024598718,[Instance of 'InteropRef<InteropType>']*/ <T>
       toList() => _i5.callMethod(
             this,
             'toList',
@@ -2428,7 +2441,7 @@ extension IMapIterator$Typings<K, T> on IMapIterator<K, T> {
 class Map<K, V> {
   factory Map([_i2.Object? coll]) => _i5.callConstructor(
         _declaredMap,
-        [coll ?? _i4.undefined],
+        [coll ?? _i7.undefined],
       );
 }
 
@@ -2748,7 +2761,7 @@ extension Map$Typings<K, V> on Map<K, V> {
         'copy',
         [],
       );
-  _i4.Array toArray() => _i5.callMethod(
+  _i4.Array<_i3.KeyValuePair<K, V>> toArray() => _i5.callMethod(
         this,
         'toArray',
         [],
@@ -2770,8 +2783,8 @@ class Point {
       _i5.callConstructor(
         _declaredPoint,
         [
-          x ?? _i4.undefined,
-          y ?? _i4.undefined,
+          x ?? _i7.undefined,
+          y ?? _i7.undefined,
         ],
       );
 
@@ -3203,8 +3216,8 @@ class Size {
       _i5.callConstructor(
         _declaredSize,
         [
-          w ?? _i4.undefined,
-          h ?? _i4.undefined,
+          w ?? _i7.undefined,
+          h ?? _i7.undefined,
         ],
       );
 
@@ -3372,10 +3385,10 @@ class Rect {
       _i5.callConstructor(
         _declaredRect,
         [
-          x ?? _i4.undefined,
-          y ?? _i4.undefined,
-          w ?? _i4.undefined,
-          h ?? _i4.undefined,
+          x ?? _i7.undefined,
+          y ?? _i7.undefined,
+          w ?? _i7.undefined,
+          h ?? _i7.undefined,
         ],
       );
 
@@ -3409,8 +3422,8 @@ class Rect {
           rh,
           x,
           y,
-          w ?? _i4.undefined,
-          h ?? _i4.undefined,
+          w ?? _i7.undefined,
+          h ?? _i7.undefined,
         ],
       );
   static _i2.bool intersects(
@@ -3941,8 +3954,8 @@ extension Rect$Typings on Rect {
         [
           x,
           y,
-          w ?? _i4.undefined,
-          h ?? _i4.undefined,
+          w ?? _i7.undefined,
+          h ?? _i7.undefined,
         ],
       );
   _i3.Rect offset(
@@ -4059,8 +4072,8 @@ extension Rect$Typings on Rect {
         [
           x,
           y,
-          w ?? _i4.undefined,
-          h ?? _i4.undefined,
+          w ?? _i7.undefined,
+          h ?? _i7.undefined,
         ],
       );
   _i3.Rect setSpot(
@@ -4101,10 +4114,10 @@ class Margin {
       _i5.callConstructor(
         _declaredMargin,
         [
-          t ?? _i4.undefined,
-          r ?? _i4.undefined,
-          b ?? _i4.undefined,
-          l ?? _i4.undefined,
+          t ?? _i7.undefined,
+          r ?? _i7.undefined,
+          b ?? _i7.undefined,
+          l ?? _i7.undefined,
         ],
       );
 
@@ -4314,10 +4327,10 @@ class Spot {
       _i5.callConstructor(
         _declaredSpot,
         [
-          x ?? _i4.undefined,
-          y ?? _i4.undefined,
-          offx ?? _i4.undefined,
-          offy ?? _i4.undefined,
+          x ?? _i7.undefined,
+          y ?? _i7.undefined,
+          offx ?? _i7.undefined,
+          offy ?? _i7.undefined,
         ],
       );
 
@@ -5556,7 +5569,7 @@ extension Spot$Typings on Spot {
 class Geometry {
   factory Geometry([_i3.EnumValue? type]) => _i5.callConstructor(
         _declaredGeometry,
-        [type ?? _i4.undefined],
+        [type ?? _i7.undefined],
       );
 
   /* #2668
@@ -5720,7 +5733,7 @@ class Geometry {
         'parse',
         [
           str,
-          filled ?? _i4.undefined,
+          filled ?? _i7.undefined,
         ],
       );
 }
@@ -5745,7 +5758,7 @@ extension Geometry$Typings on Geometry {
   /// Flattened segments represents a series of points making up a Geometry.
   /// The inner arrays consist of a sequence of PathSegment coordinates making up a PathFigure,
   /// while the outer array represents the whole Geometry of these PathFigures.
-  _i4.Array get flattenedSegments => _i5.getProperty(
+  _i4.Array<_i4.Array<_i2.num>> get flattenedSegments => _i5.getProperty(
         this,
         'flattenedSegments',
       );
@@ -5758,8 +5771,8 @@ extension Geometry$Typings on Geometry {
      * while the outer array represents the whole Geometry of these PathFigures.
      */
     get flattenedSegments(): Array<Array<number>>; */
-  // Type Instance of 'ExternalInteropType'
-  set flattenedSegments(_i4.Array value) {
+  // Type Instance of 'InteropInterface'
+  set flattenedSegments(_i4.Array<_i4.Array<_i2.num>> value) {
     _i5.setProperty(
       this,
       'flattenedSegments',
@@ -5780,7 +5793,7 @@ extension Geometry$Typings on Geometry {
   /// Flattened lengths represents a series of lengths of the paths making up a Geometry.
   /// The inner arrays consist of a sequence of PathSegment lengths making up a PathFigure,
   /// while the outer array represents the whole Geometry of these PathFigures.
-  _i4.Array get flattenedLengths => _i5.getProperty(
+  _i4.Array<_i4.Array<_i2.num>> get flattenedLengths => _i5.getProperty(
         this,
         'flattenedLengths',
       );
@@ -5793,8 +5806,8 @@ extension Geometry$Typings on Geometry {
      * while the outer array represents the whole Geometry of these PathFigures.
      */
     get flattenedLengths(): Array<Array<number>>; */
-  // Type Instance of 'ExternalInteropType'
-  set flattenedLengths(_i4.Array value) {
+  // Type Instance of 'InteropInterface'
+  set flattenedLengths(_i4.Array<_i4.Array<_i2.num>> value) {
     _i5.setProperty(
       this,
       'flattenedLengths',
@@ -6008,7 +6021,7 @@ extension Geometry$Typings on Geometry {
   /// Gets or sets the List of PathFigures
   /// that describes the content of the
   /// path for Geometries of type Geometry.Path|Path.
-  _i3.List /*LIST InteropClass#847625641(name: List),984173621,[Instance of 'InteropRef<InteropType>']*/ <_i3.PathFigure>
+  _i3.List /*LIST InteropClass#991808747(name: List),470140022,[Instance of 'InteropRef<InteropType>']*/ <_i3.PathFigure>
       get figures => _i5.getProperty(
             this,
             'figures',
@@ -6023,7 +6036,7 @@ extension Geometry$Typings on Geometry {
     get figures(): List<PathFigure>; */
   // Type Instance of 'InteropInterface'
   set figures(
-      _i3.List /*LIST InteropClass#847625641(name: List),633050930,[Instance of 'InteropRef<InteropType>']*/ <
+      _i3.List /*LIST InteropClass#991808747(name: List),1574522,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.PathFigure>
           value) {
     _i5.setProperty(
@@ -6220,8 +6233,8 @@ extension Geometry$Typings on Geometry {
         'rotate',
         [
           angle,
-          x ?? _i4.undefined,
-          y ?? _i4.undefined,
+          x ?? _i7.undefined,
+          y ?? _i7.undefined,
         ],
       );
   _i2.bool containsPoint(
@@ -6233,7 +6246,7 @@ extension Geometry$Typings on Geometry {
         'containsPoint',
         [
           p,
-          sw ?? _i4.undefined,
+          sw ?? _i7.undefined,
         ],
       );
   _i3.Point getPointAlongPath(
@@ -6245,7 +6258,7 @@ extension Geometry$Typings on Geometry {
         'getPointAlongPath',
         [
           fraction,
-          result ?? _i4.undefined,
+          result ?? _i7.undefined,
         ],
       );
   _i2.num getAngleAlongPath(_i2.num fraction) => _i5.callMethod(
@@ -6281,10 +6294,10 @@ extension Geometry$Typings on Geometry {
           f1y,
           f2x,
           f2y,
-          o1x ?? _i4.undefined,
-          o1y ?? _i4.undefined,
-          o2x ?? _i4.undefined,
-          o2y ?? _i4.undefined,
+          o1x ?? _i7.undefined,
+          o1y ?? _i7.undefined,
+          o2x ?? _i7.undefined,
+          o2y ?? _i7.undefined,
         ],
       );
 }
@@ -6302,11 +6315,11 @@ class PathFigure {
       _i5.callConstructor(
         _declaredPathFigure,
         [
-          sx ?? _i4.undefined,
-          sy ?? _i4.undefined,
-          filled ?? _i4.undefined,
-          shadowed ?? _i4.undefined,
-          isEvenOdd ?? _i4.undefined,
+          sx ?? _i7.undefined,
+          sy ?? _i7.undefined,
+          filled ?? _i7.undefined,
+          shadowed ?? _i7.undefined,
+          isEvenOdd ?? _i7.undefined,
         ],
       );
 }
@@ -6484,7 +6497,7 @@ extension PathFigure$Typings on PathFigure {
      */
     get segments(): List<PathSegment>; */
   /// Gets or sets the List of PathSegments that define this PathFigure.
-  _i3.List /*LIST InteropClass#847625641(name: List),776741256,[Instance of 'InteropRef<InteropType>']*/ <_i3.PathSegment>
+  _i3.List /*LIST InteropClass#991808747(name: List),338295898,[Instance of 'InteropRef<InteropType>']*/ <_i3.PathSegment>
       get segments => _i5.getProperty(
             this,
             'segments',
@@ -6497,7 +6510,7 @@ extension PathFigure$Typings on PathFigure {
     get segments(): List<PathSegment>; */
   // Type Instance of 'InteropInterface'
   set segments(
-      _i3.List /*LIST InteropClass#847625641(name: List),597300782,[Instance of 'InteropRef<InteropType>']*/ <
+      _i3.List /*LIST InteropClass#991808747(name: List),680209498,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.PathSegment>
           value) {
     _i5.setProperty(
@@ -6540,14 +6553,14 @@ class PathSegment {
       _i5.callConstructor(
         _declaredPathSegment,
         [
-          type ?? _i4.undefined,
-          ex ?? _i4.undefined,
-          ey ?? _i4.undefined,
-          x1 ?? _i4.undefined,
-          y1 ?? _i4.undefined,
-          x2 ?? _i4.undefined,
-          y2 ?? _i4.undefined,
-          clockwise ?? _i4.undefined,
+          type ?? _i7.undefined,
+          ex ?? _i7.undefined,
+          ey ?? _i7.undefined,
+          x1 ?? _i7.undefined,
+          y1 ?? _i7.undefined,
+          x2 ?? _i7.undefined,
+          y2 ?? _i7.undefined,
+          clockwise ?? _i7.undefined,
         ],
       );
 
@@ -7914,7 +7927,7 @@ extension InputEvent$Typings on InputEvent {
     get event(): Event | null; */
   /// Gets or sets the platform's user-agent-supplied event for this event.
   /// It may be null if no underlying event exists.
-  _i4.Event? get event => _i5.getProperty(
+  _i6.Event? get event => _i5.getProperty(
         this,
         'event',
       );
@@ -7926,12 +7939,12 @@ extension InputEvent$Typings on InputEvent {
      * @see #timestamp
      */
     get event(): Event | null; */
-  // Type InteropUnion#207854424(parent: InteropGetter#206094612(name: event))
-  set event(_i4.Event? value) {
+  // Type InteropUnion#139488126(parent: InteropGetter#521088290(name: event))
+  set event(_i6.Event? value) {
     _i5.setProperty(
       this,
       'event',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -8008,12 +8021,12 @@ extension InputEvent$Typings on InputEvent {
      * Gets or sets the diagram associated with the canvas that the event is currently targeting.
      */
     get targetDiagram(): Diagram | null; */
-  // Type InteropUnion#659278362(parent: InteropGetter#805329640(name: targetDiagram))
+  // Type InteropUnion#207444976(parent: InteropGetter#852057730(name: targetDiagram))
   set targetDiagram(_i3.Diagram? value) {
     _i5.setProperty(
       this,
       'targetDiagram',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -8045,12 +8058,12 @@ extension InputEvent$Typings on InputEvent {
      * @see #handled
      */
     get targetObject(): GraphObject | null; */
-  // Type InteropUnion#166703980(parent: InteropGetter#523316111(name: targetObject))
+  // Type InteropUnion#648205305(parent: InteropGetter#721728100(name: targetObject))
   set targetObject(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'targetObject',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -8547,106 +8560,106 @@ class DiagramEventsInterface {
   }) =>
       DiagramEventsInterface._(
         animationStarting: animationStarting == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(animationStarting),
         animationFinished: animationFinished == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(animationFinished),
         backgroundSingleClicked: backgroundSingleClicked == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(backgroundSingleClicked),
         backgroundDoubleClicked: backgroundDoubleClicked == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(backgroundDoubleClicked),
         backgroundContextClicked: backgroundContextClicked == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(backgroundContextClicked),
         changingSelection: changingSelection == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(changingSelection),
         changedSelection: changedSelection == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(changedSelection),
         clipboardChanged: clipboardChanged == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(clipboardChanged),
         clipboardPasted: clipboardPasted == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(clipboardPasted),
         documentBoundsChanged: documentBoundsChanged == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(documentBoundsChanged),
         externalObjectsDropped: externalObjectsDropped == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(externalObjectsDropped),
         gainedFocus:
-            gainedFocus == null ? _i4.undefined : _i5.allowInterop(gainedFocus),
+            gainedFocus == null ? _i7.undefined : _i5.allowInterop(gainedFocus),
         initialLayoutCompleted: initialLayoutCompleted == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(initialLayoutCompleted),
         layoutCompleted: layoutCompleted == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(layoutCompleted),
         linkDrawn:
-            linkDrawn == null ? _i4.undefined : _i5.allowInterop(linkDrawn),
+            linkDrawn == null ? _i7.undefined : _i5.allowInterop(linkDrawn),
         linkRelinked: linkRelinked == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(linkRelinked),
         linkReshaped: linkReshaped == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(linkReshaped),
         lostFocus:
-            lostFocus == null ? _i4.undefined : _i5.allowInterop(lostFocus),
-        modified: modified == null ? _i4.undefined : _i5.allowInterop(modified),
+            lostFocus == null ? _i7.undefined : _i5.allowInterop(lostFocus),
+        modified: modified == null ? _i7.undefined : _i5.allowInterop(modified),
         objectSingleClicked: objectSingleClicked == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(objectSingleClicked),
         objectDoubleClicked: objectDoubleClicked == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(objectDoubleClicked),
         objectContextClicked: objectContextClicked == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(objectContextClicked),
         partCreated:
-            partCreated == null ? _i4.undefined : _i5.allowInterop(partCreated),
+            partCreated == null ? _i7.undefined : _i5.allowInterop(partCreated),
         partResized:
-            partResized == null ? _i4.undefined : _i5.allowInterop(partResized),
+            partResized == null ? _i7.undefined : _i5.allowInterop(partResized),
         partRotated:
-            partRotated == null ? _i4.undefined : _i5.allowInterop(partRotated),
+            partRotated == null ? _i7.undefined : _i5.allowInterop(partRotated),
         selectionMoved: selectionMoved == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(selectionMoved),
         selectionCopied: selectionCopied == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(selectionCopied),
         selectionDeleted: selectionDeleted == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(selectionDeleted),
         selectionDeleting: selectionDeleting == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(selectionDeleting),
         selectionGrouped: selectionGrouped == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(selectionGrouped),
         selectionUngrouped: selectionUngrouped == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(selectionUngrouped),
         subGraphCollapsed: subGraphCollapsed == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(subGraphCollapsed),
         subGraphExpanded: subGraphExpanded == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(subGraphExpanded),
         textEdited:
-            textEdited == null ? _i4.undefined : _i5.allowInterop(textEdited),
+            textEdited == null ? _i7.undefined : _i5.allowInterop(textEdited),
         treeCollapsed: treeCollapsed == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(treeCollapsed),
         treeExpanded: treeExpanded == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(treeExpanded),
         viewportBoundsChanged: viewportBoundsChanged == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(viewportBoundsChanged),
       );
 }
@@ -8662,12 +8675,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3769
   source: 
     AnimationStarting?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set animationStarting(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'AnimationStarting',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8681,12 +8694,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3770
   source: 
     AnimationFinished?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set animationFinished(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'AnimationFinished',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8700,12 +8713,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3771
   source: 
     BackgroundSingleClicked?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set backgroundSingleClicked(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'BackgroundSingleClicked',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8719,12 +8732,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3772
   source: 
     BackgroundDoubleClicked?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set backgroundDoubleClicked(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'BackgroundDoubleClicked',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8738,12 +8751,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3773
   source: 
     BackgroundContextClicked?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set backgroundContextClicked(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'BackgroundContextClicked',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8757,12 +8770,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3774
   source: 
     ChangingSelection?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set changingSelection(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'ChangingSelection',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8776,12 +8789,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3775
   source: 
     ChangedSelection?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set changedSelection(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'ChangedSelection',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8795,12 +8808,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3776
   source: 
     ClipboardChanged?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set clipboardChanged(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'ClipboardChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8814,12 +8827,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3777
   source: 
     ClipboardPasted?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set clipboardPasted(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'ClipboardPasted',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8833,12 +8846,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3778
   source: 
     DocumentBoundsChanged?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set documentBoundsChanged(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'DocumentBoundsChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8852,12 +8865,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3779
   source: 
     ExternalObjectsDropped?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set externalObjectsDropped(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'ExternalObjectsDropped',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8871,12 +8884,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3780
   source: 
     GainedFocus?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set gainedFocus(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'GainedFocus',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8890,12 +8903,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3781
   source: 
     InitialLayoutCompleted?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set initialLayoutCompleted(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'InitialLayoutCompleted',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8909,12 +8922,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3782
   source: 
     LayoutCompleted?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set layoutCompleted(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'LayoutCompleted',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8928,12 +8941,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3783
   source: 
     LinkDrawn?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set linkDrawn(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'LinkDrawn',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8947,12 +8960,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3784
   source: 
     LinkRelinked?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set linkRelinked(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'LinkRelinked',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8966,12 +8979,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3785
   source: 
     LinkReshaped?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set linkReshaped(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'LinkReshaped',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -8985,12 +8998,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3786
   source: 
     LostFocus?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set lostFocus(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'LostFocus',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9004,12 +9017,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3787
   source: 
     Modified?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set modified(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'Modified',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9023,12 +9036,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3788
   source: 
     ObjectSingleClicked?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set objectSingleClicked(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'ObjectSingleClicked',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9042,12 +9055,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3789
   source: 
     ObjectDoubleClicked?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set objectDoubleClicked(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'ObjectDoubleClicked',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9061,12 +9074,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3790
   source: 
     ObjectContextClicked?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set objectContextClicked(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'ObjectContextClicked',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9080,12 +9093,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3791
   source: 
     PartCreated?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set partCreated(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'PartCreated',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9099,12 +9112,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3792
   source: 
     PartResized?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set partResized(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'PartResized',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9118,12 +9131,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3793
   source: 
     PartRotated?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set partRotated(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'PartRotated',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9137,12 +9150,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3794
   source: 
     SelectionMoved?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set selectionMoved(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'SelectionMoved',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9156,12 +9169,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3795
   source: 
     SelectionCopied?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set selectionCopied(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'SelectionCopied',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9175,12 +9188,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3796
   source: 
     SelectionDeleted?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set selectionDeleted(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'SelectionDeleted',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9194,12 +9207,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3797
   source: 
     SelectionDeleting?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set selectionDeleting(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'SelectionDeleting',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9213,12 +9226,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3798
   source: 
     SelectionGrouped?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set selectionGrouped(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'SelectionGrouped',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9232,12 +9245,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3799
   source: 
     SelectionUngrouped?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set selectionUngrouped(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'SelectionUngrouped',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9251,12 +9264,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3800
   source: 
     SubGraphCollapsed?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set subGraphCollapsed(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'SubGraphCollapsed',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9270,12 +9283,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3801
   source: 
     SubGraphExpanded?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set subGraphExpanded(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'SubGraphExpanded',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9289,12 +9302,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3802
   source: 
     TextEdited?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set textEdited(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'TextEdited',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9308,12 +9321,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3803
   source: 
     TreeCollapsed?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set treeCollapsed(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'TreeCollapsed',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9327,12 +9340,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3804
   source: 
     TreeExpanded?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set treeExpanded(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'TreeExpanded',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -9346,12 +9359,12 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
   /* #3805
   source: 
     ViewportBoundsChanged?: DiagramEventHandler; */
-  // Type InteropTypedef#253355606(name: DiagramEventHandler)
+  // Type InteropTypedef#15694688(name: DiagramEventHandler)
   set viewportBoundsChanged(_i3.DiagramEventHandler? value) {
     _i5.setProperty(
       this,
       'ViewportBoundsChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -9570,12 +9583,12 @@ extension ChangedEvent$Typings on ChangedEvent {
      * when no particular model or diagram applies.
      */
     get model(): Model | null; */
-  // Type InteropUnion#1070634688(parent: InteropGetter#113405966(name: model))
+  // Type InteropUnion#963783538(parent: InteropGetter#314506247(name: model))
   set model(_i3.Model? value) {
     _i5.setProperty(
       this,
       'model',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -9605,12 +9618,12 @@ extension ChangedEvent$Typings on ChangedEvent {
      * when no particular model or diagram applies.
      */
     get diagram(): Diagram | null; */
-  // Type InteropUnion#853201526(parent: InteropGetter#275683063(name: diagram))
+  // Type InteropUnion#979802024(parent: InteropGetter#958103533(name: diagram))
   set diagram(_i3.Diagram? value) {
     _i5.setProperty(
       this,
       'diagram',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -9728,7 +9741,7 @@ extension ChangedEvent$Typings on ChangedEvent {
      * or the stage of the current transaction (for ChangedEvent.Transaction).
      */
     get propertyName(): string | ((a: ObjectData, b: any) => any); */
-  // Type InteropUnion#39408788(parent: InteropGetter#834248505(name: propertyName))
+  // Type InteropUnion#148159912(parent: InteropGetter#1032868194(name: propertyName))
   set propertyName(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -9810,12 +9823,12 @@ extension ChangedEvent$Typings on ChangedEvent {
      * For ChangedEvent.Transaction changes, this may be the Transaction.
      */
     get object(): ObjectData | null; */
-  // Type InteropUnion#202123629(parent: InteropGetter#875502647(name: object))
+  // Type InteropUnion#812582526(parent: InteropGetter#480968876(name: object))
   set object(_i2.Object? value) {
     _i5.setProperty(
       this,
       'object',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -10032,7 +10045,7 @@ extension Transaction$Typings on Transaction {
   /// The changes are stored in order of occurrence.
   ///
   /// You should not modify this list.
-  _i3.List /*LIST InteropClass#847625641(name: List),330668975,[Instance of 'InteropRef<InteropType>']*/ <_i3.ChangedEvent>
+  _i3.List /*LIST InteropClass#991808747(name: List),723564684,[Instance of 'InteropRef<InteropType>']*/ <_i3.ChangedEvent>
       get changes => _i5.getProperty(
             this,
             'changes',
@@ -10048,7 +10061,7 @@ extension Transaction$Typings on Transaction {
     get changes(): List<ChangedEvent>; */
   // Type Instance of 'InteropInterface'
   set changes(
-      _i3.List /*LIST InteropClass#847625641(name: List),920850035,[Instance of 'InteropRef<InteropType>']*/ <
+      _i3.List /*LIST InteropClass#991808747(name: List),413931545,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.ChangedEvent>
           value) {
     _i5.setProperty(
@@ -10178,7 +10191,7 @@ FieldExternal:
 external _i2.Object _declaredUndoManager;
 
 extension UndoManager$Typings on UndoManager {
-  /* #4417
+  /* #4432
   source: 
     /**
      * This read-only property returns an iterator for all of the Models that this UndoManager is handling.
@@ -10191,7 +10204,7 @@ extension UndoManager$Typings on UndoManager {
         this,
         'models',
       );
-  /* #4417
+  /* #4432
   source: 
     /**
      * This read-only property returns an iterator for all of the Models that this UndoManager is handling.
@@ -10208,7 +10221,7 @@ extension UndoManager$Typings on UndoManager {
     );
   }
 
-  /* #4426
+  /* #4441
   source: 
     /**
      * Gets or sets whether this UndoManager records any changes.
@@ -10229,7 +10242,7 @@ extension UndoManager$Typings on UndoManager {
         this,
         'isEnabled',
       );
-  /* #4426
+  /* #4441
   source: 
     /**
      * Gets or sets whether this UndoManager records any changes.
@@ -10249,7 +10262,7 @@ extension UndoManager$Typings on UndoManager {
     );
   }
 
-  /* #4433
+  /* #4448
   source: 
     /**
      * This read-only property returns the Transaction in the #history to be undone next.
@@ -10263,7 +10276,7 @@ extension UndoManager$Typings on UndoManager {
         this,
         'transactionToUndo',
       );
-  /* #4433
+  /* #4448
   source: 
     /**
      * This read-only property returns the Transaction in the #history to be undone next.
@@ -10271,16 +10284,16 @@ extension UndoManager$Typings on UndoManager {
      * @see #transactionToRedo
      */
     get transactionToUndo(): Transaction | null; */
-  // Type InteropUnion#731442573(parent: InteropGetter#143790439(name: transactionToUndo))
+  // Type InteropUnion#952238455(parent: InteropGetter#234284481(name: transactionToUndo))
   set transactionToUndo(_i3.Transaction? value) {
     _i5.setProperty(
       this,
       'transactionToUndo',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #4439
+  /* #4454
   source: 
     /**
      * This read-only property returns the Transaction in the #history to be redone next.
@@ -10294,7 +10307,7 @@ extension UndoManager$Typings on UndoManager {
         this,
         'transactionToRedo',
       );
-  /* #4439
+  /* #4454
   source: 
     /**
      * This read-only property returns the Transaction in the #history to be redone next.
@@ -10302,16 +10315,16 @@ extension UndoManager$Typings on UndoManager {
      * @see #transactionToUndo
      */
     get transactionToRedo(): Transaction | null; */
-  // Type InteropUnion#1012668661(parent: InteropGetter#1002645242(name: transactionToRedo))
+  // Type InteropUnion#489972033(parent: InteropGetter#408948205(name: transactionToRedo))
   set transactionToRedo(_i3.Transaction? value) {
     _i5.setProperty(
       this,
       'transactionToRedo',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #4443
+  /* #4458
   source: 
     /**
      * This read-only property is true during a call to #undo or #redo.
@@ -10322,7 +10335,7 @@ extension UndoManager$Typings on UndoManager {
         this,
         'isUndoingRedoing',
       );
-  /* #4443
+  /* #4458
   source: 
     /**
      * This read-only property is true during a call to #undo or #redo.
@@ -10337,7 +10350,7 @@ extension UndoManager$Typings on UndoManager {
     );
   }
 
-  /* #4450
+  /* #4465
   source: 
     /**
      * This read-only property returns the whole history, a list of all of the Transactions,
@@ -10350,12 +10363,12 @@ extension UndoManager$Typings on UndoManager {
   /// each representing a transaction with some number of ChangedEvents.
   ///
   /// You should not modify this List.
-  _i3.List /*LIST InteropClass#847625641(name: List),696561512,[Instance of 'InteropRef<InteropType>']*/ <_i3.Transaction>
+  _i3.List /*LIST InteropClass#991808747(name: List),394819011,[Instance of 'InteropRef<InteropType>']*/ <_i3.Transaction>
       get history => _i5.getProperty(
             this,
             'history',
           );
-  /* #4450
+  /* #4465
   source: 
     /**
      * This read-only property returns the whole history, a list of all of the Transactions,
@@ -10366,7 +10379,7 @@ extension UndoManager$Typings on UndoManager {
     get history(): List<Transaction>; */
   // Type Instance of 'InteropInterface'
   set history(
-      _i3.List /*LIST InteropClass#847625641(name: List),83893042,[Instance of 'InteropRef<InteropType>']*/ <
+      _i3.List /*LIST InteropClass#991808747(name: List),26846315,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Transaction>
           value) {
     _i5.setProperty(
@@ -10376,7 +10389,7 @@ extension UndoManager$Typings on UndoManager {
     );
   }
 
-  /* #4468
+  /* #4483
   source: 
     /**
      * Gets or sets the maximum number of transactions that this undo manager will remember.
@@ -10415,7 +10428,7 @@ extension UndoManager$Typings on UndoManager {
         this,
         'maxHistoryLength',
       );
-  /* #4468
+  /* #4483
   source: 
     /**
      * Gets or sets the maximum number of transactions that this undo manager will remember.
@@ -10444,7 +10457,7 @@ extension UndoManager$Typings on UndoManager {
     );
   }
 
-  /* #4474
+  /* #4489
   source: 
     /**
      * This read-only property returns the index into #history for the current undoable Transaction.
@@ -10457,7 +10470,7 @@ extension UndoManager$Typings on UndoManager {
         this,
         'historyIndex',
       );
-  /* #4474
+  /* #4489
   source: 
     /**
      * This read-only property returns the index into #history for the current undoable Transaction.
@@ -10473,7 +10486,7 @@ extension UndoManager$Typings on UndoManager {
     );
   }
 
-  /* #4482
+  /* #4497
   source: 
     /**
      * This read-only property returns the current Transaction for recording additional model change events.
@@ -10492,7 +10505,7 @@ extension UndoManager$Typings on UndoManager {
         this,
         'currentTransaction',
       );
-  /* #4482
+  /* #4497
   source: 
     /**
      * This read-only property returns the current Transaction for recording additional model change events.
@@ -10502,16 +10515,16 @@ extension UndoManager$Typings on UndoManager {
      * The value will be null between transactions.
      */
     get currentTransaction(): Transaction | null; */
-  // Type InteropUnion#176521688(parent: InteropGetter#810557719(name: currentTransaction))
+  // Type InteropUnion#609733129(parent: InteropGetter#1054850913(name: currentTransaction))
   set currentTransaction(_i3.Transaction? value) {
     _i5.setProperty(
       this,
       'currentTransaction',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #4493
+  /* #4508
   source: 
     /**
      * This read-only property returns the current transaction level.
@@ -10536,7 +10549,7 @@ extension UndoManager$Typings on UndoManager {
         this,
         'transactionLevel',
       );
-  /* #4493
+  /* #4508
   source: 
     /**
      * This read-only property returns the current transaction level.
@@ -10558,7 +10571,7 @@ extension UndoManager$Typings on UndoManager {
     );
   }
 
-  /* #4501
+  /* #4516
   source: 
     /**
      * This read-only property is true after the first call to #startTransaction
@@ -10577,7 +10590,7 @@ extension UndoManager$Typings on UndoManager {
         this,
         'isInTransaction',
       );
-  /* #4501
+  /* #4516
   source: 
     /**
      * This read-only property is true after the first call to #startTransaction
@@ -10596,7 +10609,7 @@ extension UndoManager$Typings on UndoManager {
     );
   }
 
-  /* #4511
+  /* #4526
   source: 
     /**
      * This read-only property returns a stack of ongoing transaction names.
@@ -10613,12 +10626,12 @@ extension UndoManager$Typings on UndoManager {
   /// to #startTransaction.
   ///
   /// You should not modify this List.
-  _i3.List /*LIST InteropClass#847625641(name: List),871931907,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i3.List /*LIST InteropClass#991808747(name: List),11985523,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       get nestedTransactionNames => _i5.getProperty(
             this,
             'nestedTransactionNames',
           );
-  /* #4511
+  /* #4526
   source: 
     /**
      * This read-only property returns a stack of ongoing transaction names.
@@ -10631,7 +10644,7 @@ extension UndoManager$Typings on UndoManager {
     get nestedTransactionNames(): List<string>; */
   // Type Instance of 'InteropInterface'
   set nestedTransactionNames(
-      _i3.List /*LIST InteropClass#847625641(name: List),969157865,[Instance of 'InteropRef<InteropType>']*/ <
+      _i3.List /*LIST InteropClass#991808747(name: List),512649295,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.String>
           value) {
     _i5.setProperty(
@@ -10676,18 +10689,26 @@ extension UndoManager$Typings on UndoManager {
   _i2.bool startTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'startTransaction',
-        [tname ?? _i4.undefined],
+        [tname ?? _i7.undefined],
       );
   _i2.bool commitTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'commitTransaction',
-        [tname ?? _i4.undefined],
+        [tname ?? _i7.undefined],
       );
   _i2.bool rollbackTransaction() => _i5.callMethod(
         this,
         'rollbackTransaction',
         [],
       );
+  void discardHistoryAfterIndex() {
+    _i5.callMethod(
+      this,
+      'discardHistoryAfterIndex',
+      [],
+    );
+  }
+
   _i2.bool canUndo() => _i5.callMethod(
         this,
         'canUndo',
@@ -10745,7 +10766,7 @@ FieldExternal:
 external _i2.Object _declaredTool;
 
 extension Tool$Typings on Tool {
-  /* #4584
+  /* #4599
   source: 
     /**
      * This read-only property returns the Diagram that owns this tool and
@@ -10758,7 +10779,7 @@ extension Tool$Typings on Tool {
         this,
         'diagram',
       );
-  /* #4584
+  /* #4599
   source: 
     /**
      * This read-only property returns the Diagram that owns this tool and
@@ -10774,7 +10795,7 @@ extension Tool$Typings on Tool {
     );
   }
 
-  /* #5063
+  /* #5078
   source: 
     /**
      * Gets or sets the name of this tool.
@@ -10797,7 +10818,7 @@ extension Tool$Typings on Tool {
         this,
         'name',
       );
-  /* #5063
+  /* #5078
   source: 
     /**
      * Gets or sets the name of this tool.
@@ -10818,7 +10839,7 @@ extension Tool$Typings on Tool {
     );
   }
 
-  /* #5077
+  /* #5092
   source: 
     /**
      * Gets or sets whether this tool can be started by a mouse event.
@@ -10847,7 +10868,7 @@ extension Tool$Typings on Tool {
         this,
         'isEnabled',
       );
-  /* #5077
+  /* #5092
   source: 
     /**
      * Gets or sets whether this tool can be started by a mouse event.
@@ -10871,7 +10892,7 @@ extension Tool$Typings on Tool {
     );
   }
 
-  /* #5092
+  /* #5107
   source: 
     /**
      * Gets or sets whether this tool is started and is actively doing something.
@@ -10902,7 +10923,7 @@ extension Tool$Typings on Tool {
         this,
         'isActive',
       );
-  /* #5092
+  /* #5107
   source: 
     /**
      * Gets or sets whether this tool is started and is actively doing something.
@@ -10927,7 +10948,7 @@ extension Tool$Typings on Tool {
     );
   }
 
-  /* #5113
+  /* #5128
   source: 
     /**
      * Gets or sets the name of the transaction to be committed by #stopTransaction
@@ -10970,7 +10991,7 @@ extension Tool$Typings on Tool {
         this,
         'transactionResult',
       );
-  /* #5113
+  /* #5128
   source: 
     /**
      * Gets or sets the name of the transaction to be committed by #stopTransaction
@@ -10992,12 +11013,12 @@ extension Tool$Typings on Tool {
      * #doCancel also sets this property to null.
      */
     get transactionResult(): string | null; */
-  // Type InteropUnion#950208169(parent: InteropGetter#1015841189(name: transactionResult))
+  // Type InteropUnion#825273927(parent: InteropGetter#136433640(name: transactionResult))
   set transactionResult(_i2.String? value) {
     _i5.setProperty(
       this,
       'transactionResult',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -11134,7 +11155,7 @@ extension Tool$Typings on Tool {
   _i2.bool startTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'startTransaction',
-        [tname ?? _i4.undefined],
+        [tname ?? _i7.undefined],
       );
   _i2.bool stopTransaction() => _i5.callMethod(
         this,
@@ -11157,8 +11178,8 @@ extension Tool$Typings on Tool {
         this,
         'standardMouseClick',
         [
-          navig == null ? _i4.undefined : _i5.allowInterop(navig),
-          pred == null ? _i4.undefined : _i5.allowInterop(pred),
+          navig == null ? _i7.undefined : _i5.allowInterop(navig),
+          pred == null ? _i7.undefined : _i5.allowInterop(pred),
         ],
       );
   void standardMouseOver() {
@@ -11186,7 +11207,7 @@ extension Tool$Typings on Tool {
       'standardWaitAfter',
       [
         delay,
-        event ?? _i4.undefined,
+        event ?? _i7.undefined,
       ],
     );
   }
@@ -11227,8 +11248,8 @@ extension Tool$Typings on Tool {
         this,
         'isBeyondDragSize',
         [
-          first ?? _i4.undefined,
-          last ?? _i4.undefined,
+          first ?? _i7.undefined,
+          last ?? _i7.undefined,
         ],
       );
 }
@@ -11241,7 +11262,7 @@ class ToolManager implements _i3.Tool {
         [],
       );
 
-  /* #5172
+  /* #5187
   source: 
     /**
      * This default value for #mouseWheelBehavior indicates that mouse wheel events scroll the diagram.
@@ -11253,7 +11274,7 @@ class ToolManager implements _i3.Tool {
         _declaredToolManager,
         'WheelScroll',
       );
-  /* #5172
+  /* #5187
   source: 
     /**
      * This default value for #mouseWheelBehavior indicates that mouse wheel events scroll the diagram.
@@ -11269,7 +11290,7 @@ class ToolManager implements _i3.Tool {
     );
   }
 
-  /* #5177
+  /* #5192
   source: 
     /**
      * This value for #mouseWheelBehavior indicates that the mouse wheel events change the scale of the diagram.
@@ -11281,7 +11302,7 @@ class ToolManager implements _i3.Tool {
         _declaredToolManager,
         'WheelZoom',
       );
-  /* #5177
+  /* #5192
   source: 
     /**
      * This value for #mouseWheelBehavior indicates that the mouse wheel events change the scale of the diagram.
@@ -11297,7 +11318,7 @@ class ToolManager implements _i3.Tool {
     );
   }
 
-  /* #5184
+  /* #5199
   source: 
     /**
      * This value for #mouseWheelBehavior indicates that the mouse wheel events are ignored,
@@ -11312,7 +11333,7 @@ class ToolManager implements _i3.Tool {
         _declaredToolManager,
         'WheelNone',
       );
-  /* #5184
+  /* #5199
   source: 
     /**
      * This value for #mouseWheelBehavior indicates that the mouse wheel events are ignored,
@@ -11330,7 +11351,7 @@ class ToolManager implements _i3.Tool {
     );
   }
 
-  /* #5191
+  /* #5206
   source: 
     /**
      * This value for #gestureBehavior indicates that the pointer/touch pinch gestures
@@ -11345,7 +11366,7 @@ class ToolManager implements _i3.Tool {
         _declaredToolManager,
         'GestureZoom',
       );
-  /* #5191
+  /* #5206
   source: 
     /**
      * This value for #gestureBehavior indicates that the pointer/touch pinch gestures
@@ -11363,7 +11384,7 @@ class ToolManager implements _i3.Tool {
     );
   }
 
-  /* #5198
+  /* #5213
   source: 
     /**
      * This value for #gestureBehavior indicates that the pointer/touch pinch gestures
@@ -11378,7 +11399,7 @@ class ToolManager implements _i3.Tool {
         _declaredToolManager,
         'GestureCancel',
       );
-  /* #5198
+  /* #5213
   source: 
     /**
      * This value for #gestureBehavior indicates that the pointer/touch pinch gestures
@@ -11396,7 +11417,7 @@ class ToolManager implements _i3.Tool {
     );
   }
 
-  /* #5206
+  /* #5221
   source: 
     /**
      * This value for #gestureBehavior indicates that the pointer/touch pinch gestures
@@ -11413,7 +11434,7 @@ class ToolManager implements _i3.Tool {
         _declaredToolManager,
         'GestureNone',
       );
-  /* #5206
+  /* #5221
   source: 
     /**
      * This value for #gestureBehavior indicates that the pointer/touch pinch gestures
@@ -11440,7 +11461,7 @@ FieldExternal:
 external _i2.Object _declaredToolManager;
 
 extension ToolManager$Typings on ToolManager {
-  /* #5213
+  /* #5228
   source: 
     /**
      * Gets or sets the ToolManager's mouse wheel behavior. Allowed values are ToolManager.WheelScroll and
@@ -11457,7 +11478,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'mouseWheelBehavior',
       );
-  /* #5213
+  /* #5228
   source: 
     /**
      * Gets or sets the ToolManager's mouse wheel behavior. Allowed values are ToolManager.WheelScroll and
@@ -11475,7 +11496,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5228
+  /* #5243
   source: 
     /**
      * Gets or sets the ToolManager's touch pinching behavior.
@@ -11504,7 +11525,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'gestureBehavior',
       );
-  /* #5228
+  /* #5243
   source: 
     /**
      * Gets or sets the ToolManager's touch pinching behavior.
@@ -11529,7 +11550,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5379
+  /* #5394
   source: 
     /**
      * This read-only property returns the currently showing tooltip, or null if there is none.
@@ -11540,22 +11561,22 @@ extension ToolManager$Typings on ToolManager {
         this,
         'currentToolTip',
       );
-  /* #5379
+  /* #5394
   source: 
     /**
      * This read-only property returns the currently showing tooltip, or null if there is none.
      */
     get currentToolTip(): Adornment | HTMLInfo | null; */
-  // Type InteropUnion#191972019(parent: InteropGetter#346371409(name: currentToolTip))
+  // Type InteropUnion#590884124(parent: InteropGetter#45790455(name: currentToolTip))
   set currentToolTip(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'currentToolTip',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #5472
+  /* #5487
   source: 
     /**
      * This read-only property returns the list of Tools that might be started upon a mouse or finger press event.
@@ -11588,12 +11609,12 @@ extension ToolManager$Typings on ToolManager {
   ///   - #linkReshapingTool, a LinkReshapingTool
   ///   - #rotatingTool, a RotatingTool
   ///   - #resizingTool, a ResizingTool
-  _i3.List /*LIST InteropClass#847625641(name: List),404776270,[Instance of 'InteropRef<InteropType>']*/ <_i3.Tool>
+  _i3.List /*LIST InteropClass#991808747(name: List),890895543,[Instance of 'InteropRef<InteropType>']*/ <_i3.Tool>
       get mouseDownTools => _i5.getProperty(
             this,
             'mouseDownTools',
           );
-  /* #5472
+  /* #5487
   source: 
     /**
      * This read-only property returns the list of Tools that might be started upon a mouse or finger press event.
@@ -11614,7 +11635,7 @@ extension ToolManager$Typings on ToolManager {
     get mouseDownTools(): List<Tool>; */
   // Type Instance of 'InteropInterface'
   set mouseDownTools(
-      _i3.List /*LIST InteropClass#847625641(name: List),702674798,[Instance of 'InteropRef<InteropType>']*/ <
+      _i3.List /*LIST InteropClass#991808747(name: List),101728896,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Tool>
           value) {
     _i5.setProperty(
@@ -11624,7 +11645,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5488
+  /* #5503
   source: 
     /**
      * This read-only property returns the list of Tools that might be started upon a mouse or finger move event.
@@ -11655,12 +11676,12 @@ extension ToolManager$Typings on ToolManager {
   ///   - #draggingTool, a DraggingTool
   ///   - #dragSelectingTool, a DragSelectingTool
   ///   - #panningTool, a PanningTool
-  _i3.List /*LIST InteropClass#847625641(name: List),738505273,[Instance of 'InteropRef<InteropType>']*/ <_i3.Tool>
+  _i3.List /*LIST InteropClass#991808747(name: List),392439657,[Instance of 'InteropRef<InteropType>']*/ <_i3.Tool>
       get mouseMoveTools => _i5.getProperty(
             this,
             'mouseMoveTools',
           );
-  /* #5488
+  /* #5503
   source: 
     /**
      * This read-only property returns the list of Tools that might be started upon a mouse or finger move event.
@@ -11680,7 +11701,7 @@ extension ToolManager$Typings on ToolManager {
     get mouseMoveTools(): List<Tool>; */
   // Type Instance of 'InteropInterface'
   set mouseMoveTools(
-      _i3.List /*LIST InteropClass#847625641(name: List),624228728,[Instance of 'InteropRef<InteropType>']*/ <
+      _i3.List /*LIST InteropClass#991808747(name: List),86607765,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Tool>
           value) {
     _i5.setProperty(
@@ -11690,7 +11711,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5504
+  /* #5519
   source: 
     /**
      * This read-only property returns the list of Tools that might be started upon a mouse or finger up event.
@@ -11721,12 +11742,12 @@ extension ToolManager$Typings on ToolManager {
   ///   - #textEditingTool, a TextEditingTool
   ///   - #clickCreatingTool, a ClickCreatingTool
   ///   - #clickSelectingTool, a ClickSelectingTool
-  _i3.List /*LIST InteropClass#847625641(name: List),672094417,[Instance of 'InteropRef<InteropType>']*/ <_i3.Tool>
+  _i3.List /*LIST InteropClass#991808747(name: List),570446495,[Instance of 'InteropRef<InteropType>']*/ <_i3.Tool>
       get mouseUpTools => _i5.getProperty(
             this,
             'mouseUpTools',
           );
-  /* #5504
+  /* #5519
   source: 
     /**
      * This read-only property returns the list of Tools that might be started upon a mouse or finger up event.
@@ -11746,7 +11767,7 @@ extension ToolManager$Typings on ToolManager {
     get mouseUpTools(): List<Tool>; */
   // Type Instance of 'InteropInterface'
   set mouseUpTools(
-      _i3.List /*LIST InteropClass#847625641(name: List),198607458,[Instance of 'InteropRef<InteropType>']*/ <
+      _i3.List /*LIST InteropClass#991808747(name: List),453327634,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Tool>
           value) {
     _i5.setProperty(
@@ -11756,7 +11777,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5512
+  /* #5527
   source: 
     /**
      * Gets or sets the time between when the mouse stops moving and a hover event,
@@ -11775,7 +11796,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'hoverDelay',
       );
-  /* #5512
+  /* #5527
   source: 
     /**
      * Gets or sets the time between when the mouse stops moving and a hover event,
@@ -11794,7 +11815,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5519
+  /* #5534
   source: 
     /**
      * Gets or sets the time between when the mouse stops moving and a hold event,
@@ -11809,7 +11830,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'holdDelay',
       );
-  /* #5519
+  /* #5534
   source: 
     /**
      * Gets or sets the time between when the mouse stops moving and a hold event,
@@ -11826,7 +11847,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5527
+  /* #5542
   source: 
     /**
      * Gets or sets the distance in view coordinates within which a mouse down-and-up is considered a click and beyond which a mouse movement is considered a drag.
@@ -11842,7 +11863,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'dragSize',
       );
-  /* #5527
+  /* #5542
   source: 
     /**
      * Gets or sets the distance in view coordinates within which a mouse down-and-up is considered a click and beyond which a mouse movement is considered a drag.
@@ -11860,7 +11881,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5537
+  /* #5552
   source: 
     /**
      * Gets or sets how long a tool tip is visible.
@@ -11881,7 +11902,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'toolTipDuration',
       );
-  /* #5537
+  /* #5552
   source: 
     /**
      * Gets or sets how long a tool tip is visible.
@@ -11901,7 +11922,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5544
+  /* #5559
   source: 
     /**
      * Gets or sets the mode-less ActionTool, normally one of the #mouseDownTools.
@@ -11916,7 +11937,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'actionTool',
       );
-  /* #5544
+  /* #5559
   source: 
     /**
      * Gets or sets the mode-less ActionTool, normally one of the #mouseDownTools.
@@ -11933,7 +11954,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5551
+  /* #5566
   source: 
     /**
      * Gets or sets the mode-less RelinkingTool, normally one of the #mouseDownTools.
@@ -11948,7 +11969,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'relinkingTool',
       );
-  /* #5551
+  /* #5566
   source: 
     /**
      * Gets or sets the mode-less RelinkingTool, normally one of the #mouseDownTools.
@@ -11965,7 +11986,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5558
+  /* #5573
   source: 
     /**
      * Gets or sets the mode-less LinkReshapingTool, normally one of the #mouseDownTools.
@@ -11980,7 +12001,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'linkReshapingTool',
       );
-  /* #5558
+  /* #5573
   source: 
     /**
      * Gets or sets the mode-less LinkReshapingTool, normally one of the #mouseDownTools.
@@ -11997,7 +12018,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5565
+  /* #5580
   source: 
     /**
      * Gets or sets the mode-less ResizingTool, normally one of the #mouseDownTools.
@@ -12012,7 +12033,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'resizingTool',
       );
-  /* #5565
+  /* #5580
   source: 
     /**
      * Gets or sets the mode-less ResizingTool, normally one of the #mouseDownTools.
@@ -12029,7 +12050,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5572
+  /* #5587
   source: 
     /**
      * Gets or sets the mode-less RotatingTool, normally one of the #mouseDownTools.
@@ -12044,7 +12065,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'rotatingTool',
       );
-  /* #5572
+  /* #5587
   source: 
     /**
      * Gets or sets the mode-less RotatingTool, normally one of the #mouseDownTools.
@@ -12061,7 +12082,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5579
+  /* #5594
   source: 
     /**
      * Gets or sets the mode-less LinkingTool, normally one of the #mouseMoveTools.
@@ -12076,7 +12097,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'linkingTool',
       );
-  /* #5579
+  /* #5594
   source: 
     /**
      * Gets or sets the mode-less LinkingTool, normally one of the #mouseMoveTools.
@@ -12093,7 +12114,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5586
+  /* #5601
   source: 
     /**
      * Gets or sets the mode-less DraggingTool, normally one of the #mouseMoveTools.
@@ -12108,7 +12129,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'draggingTool',
       );
-  /* #5586
+  /* #5601
   source: 
     /**
      * Gets or sets the mode-less DraggingTool, normally one of the #mouseMoveTools.
@@ -12125,7 +12146,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5593
+  /* #5608
   source: 
     /**
      * Gets or sets the mode-less DragSelectingTool, normally one of the #mouseMoveTools.
@@ -12140,7 +12161,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'dragSelectingTool',
       );
-  /* #5593
+  /* #5608
   source: 
     /**
      * Gets or sets the mode-less DragSelectingTool, normally one of the #mouseMoveTools.
@@ -12157,7 +12178,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5600
+  /* #5615
   source: 
     /**
      * Gets or sets the mode-less PanningTool, normally one of the #mouseMoveTools.
@@ -12172,7 +12193,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'panningTool',
       );
-  /* #5600
+  /* #5615
   source: 
     /**
      * Gets or sets the mode-less PanningTool, normally one of the #mouseMoveTools.
@@ -12189,7 +12210,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5607
+  /* #5622
   source: 
     /**
      * Gets or sets the mode-less ContextMenuTool, normally one of the #mouseUpTools.
@@ -12204,7 +12225,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'contextMenuTool',
       );
-  /* #5607
+  /* #5622
   source: 
     /**
      * Gets or sets the mode-less ContextMenuTool, normally one of the #mouseUpTools.
@@ -12221,7 +12242,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5614
+  /* #5629
   source: 
     /**
      * Gets or sets the mode-less TextEditingTool, normally one of the #mouseUpTools.
@@ -12236,7 +12257,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'textEditingTool',
       );
-  /* #5614
+  /* #5629
   source: 
     /**
      * Gets or sets the mode-less TextEditingTool, normally one of the #mouseUpTools.
@@ -12253,7 +12274,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5621
+  /* #5636
   source: 
     /**
      * Gets or sets the mode-less ClickCreatingTool, normally one of the #mouseUpTools.
@@ -12268,7 +12289,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'clickCreatingTool',
       );
-  /* #5621
+  /* #5636
   source: 
     /**
      * Gets or sets the mode-less ClickCreatingTool, normally one of the #mouseUpTools.
@@ -12285,7 +12306,7 @@ extension ToolManager$Typings on ToolManager {
     );
   }
 
-  /* #5628
+  /* #5643
   source: 
     /**
      * Gets or sets the mode-less ClickSelectingTool, normally one of the #mouseUpTools.
@@ -12300,7 +12321,7 @@ extension ToolManager$Typings on ToolManager {
         this,
         'clickSelectingTool',
       );
-  /* #5628
+  /* #5643
   source: 
     /**
      * Gets or sets the mode-less ClickSelectingTool, normally one of the #mouseUpTools.
@@ -12453,7 +12474,7 @@ extension ToolManager$Typings on ToolManager {
   void replaceStandardTool(
     _i2.String name,
     _i3.Tool newtool,
-    _i3.List /*LIST InteropClass#847625641(name: List),245470836,[Instance of 'InteropRef<InteropType>']*/ <
+    _i3.List /*LIST InteropClass#991808747(name: List),19128765,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Tool>
         list,
   ) {
@@ -12485,7 +12506,7 @@ FieldExternal:
 external _i2.Object _declaredDraggingTool;
 
 extension DraggingTool$Typings on DraggingTool {
-  /* #5754
+  /* #5769
   source: 
     /**
      * Gets or sets whether for any internal copying operation is permitted by control-drag-and-drop.
@@ -12507,7 +12528,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'isCopyEnabled',
       );
-  /* #5754
+  /* #5769
   source: 
     /**
      * Gets or sets whether for any internal copying operation is permitted by control-drag-and-drop.
@@ -12528,7 +12549,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5765
+  /* #5780
   source: 
     /**
      * Gets or sets whether for a copying operation the extended selection
@@ -12551,7 +12572,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'copiesEffectiveCollection',
       );
-  /* #5765
+  /* #5780
   source: 
     /**
      * Gets or sets whether for a copying operation the extended selection
@@ -12572,7 +12593,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5784
+  /* #5799
   source: 
     /**
      * Gets or sets the DraggingTool's DraggingOptions instance, which controls several dragging properties.
@@ -12610,7 +12631,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'dragOptions',
       );
-  /* #5784
+  /* #5799
   source: 
     /**
      * Gets or sets the DraggingTool's DraggingOptions instance, which controls several dragging properties.
@@ -12639,7 +12660,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5799
+  /* #5814
   source: 
     /**
      * Gets or sets whether the DraggingTool snaps objects to grid points.
@@ -12670,7 +12691,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'isGridSnapEnabled',
       );
-  /* #5799
+  /* #5814
   source: 
     /**
      * Gets or sets whether the DraggingTool snaps objects to grid points.
@@ -12695,7 +12716,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5807
+  /* #5822
   source: 
     /**
      * Gets or sets whether link routing takes some short-cuts during dragging.
@@ -12711,7 +12732,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'isComplexRoutingRealtime',
       );
-  /* #5807
+  /* #5822
   source: 
     /**
      * Gets or sets whether link routing takes some short-cuts during dragging.
@@ -12729,7 +12750,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5818
+  /* #5833
   source: 
     /**
      * Gets or sets whether the DraggingTool snaps objects to grid points during the drag.
@@ -12751,7 +12772,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'isGridSnapRealtime',
       );
-  /* #5818
+  /* #5833
   source: 
     /**
      * Gets or sets whether the DraggingTool snaps objects to grid points during the drag.
@@ -12772,7 +12793,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5828
+  /* #5843
   source: 
     /**
      * Gets or sets the size of the grid cell used when snapping during a drag
@@ -12793,7 +12814,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'gridSnapCellSize',
       );
-  /* #5828
+  /* #5843
   source: 
     /**
      * Gets or sets the size of the grid cell used when snapping during a drag
@@ -12813,7 +12834,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5839
+  /* #5854
   source: 
     /**
      * Gets or sets the Spot that specifies what point in the grid cell dragged parts snap to,
@@ -12836,7 +12857,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'gridSnapCellSpot',
       );
-  /* #5839
+  /* #5854
   source: 
     /**
      * Gets or sets the Spot that specifies what point in the grid cell dragged parts snap to,
@@ -12857,7 +12878,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5850
+  /* #5865
   source: 
     /**
      * Gets or sets the snapping grid's origin point, in document coordinates,
@@ -12880,7 +12901,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'gridSnapOrigin',
       );
-  /* #5850
+  /* #5865
   source: 
     /**
      * Gets or sets the snapping grid's origin point, in document coordinates,
@@ -12901,7 +12922,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5865
+  /* #5880
   source: 
     /**
      * Gets or sets whether the user can drag a single Link,
@@ -12931,7 +12952,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'dragsLink',
       );
-  /* #5865
+  /* #5880
   source: 
     /**
      * Gets or sets whether the user can drag a single Link,
@@ -12956,7 +12977,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5878
+  /* #5893
   source: 
     /**
      * Gets or sets whether moving or copying a node also includes all of the
@@ -12983,7 +13004,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'dragsTree',
       );
-  /* #5878
+  /* #5893
   source: 
     /**
      * Gets or sets whether moving or copying a node also includes all of the
@@ -13006,7 +13027,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5886
+  /* #5901
   source: 
     /**
      * The cursor to show when a drop is allowed and will result in a copy.
@@ -13022,7 +13043,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'copyCursor',
       );
-  /* #5886
+  /* #5901
   source: 
     /**
      * The cursor to show when a drop is allowed and will result in a copy.
@@ -13040,7 +13061,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5894
+  /* #5909
   source: 
     /**
      * The cursor to show when a drop is allowed and will result in a move.
@@ -13056,7 +13077,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'moveCursor',
       );
-  /* #5894
+  /* #5909
   source: 
     /**
      * The cursor to show when a drop is allowed and will result in a move.
@@ -13074,7 +13095,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5902
+  /* #5917
   source: 
     /**
      * The cursor to show when a drop is not allowed.
@@ -13090,7 +13111,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'nodropCursor',
       );
-  /* #5902
+  /* #5917
   source: 
     /**
      * The cursor to show when a drop is not allowed.
@@ -13108,7 +13129,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5908
+  /* #5923
   source: 
     /**
      * Gets the Part found at the mouse point.
@@ -13121,23 +13142,23 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'currentPart',
       );
-  /* #5908
+  /* #5923
   source: 
     /**
      * Gets the Part found at the mouse point.
      * This is normally set by a call to #standardMouseSelect.
      */
     get currentPart(): Part | null; */
-  // Type InteropUnion#217853456(parent: InteropGetter#143491557(name: currentPart))
+  // Type InteropUnion#406256138(parent: InteropGetter#515668195(name: currentPart))
   set currentPart(_i3.Part? value) {
     _i5.setProperty(
       this,
       'currentPart',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #5918
+  /* #5933
   source: 
     /**
      * Gets the collection of Parts that this tool has copied.
@@ -13158,7 +13179,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'copiedParts',
       );
-  /* #5918
+  /* #5933
   source: 
     /**
      * Gets the collection of Parts that this tool has copied.
@@ -13169,16 +13190,16 @@ extension DraggingTool$Typings on DraggingTool {
      * #draggedParts provides the map of Parts that are being moved and from which this collection was copied.
      */
     get copiedParts(): Map<Part, DraggingInfo> | null; */
-  // Type InteropUnion#156392581(parent: InteropGetter#386320288(name: copiedParts))
+  // Type InteropUnion#61797958(parent: InteropGetter#192496814(name: copiedParts))
   set copiedParts(_i3.Map<_i3.Part, _i3.DraggingInfo>? value) {
     _i5.setProperty(
       this,
       'copiedParts',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #5927
+  /* #5942
   source: 
     /**
      * Gets the collection of Parts being moved.
@@ -13197,7 +13218,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'draggedParts',
       );
-  /* #5927
+  /* #5942
   source: 
     /**
      * Gets the collection of Parts being moved.
@@ -13207,16 +13228,16 @@ extension DraggingTool$Typings on DraggingTool {
      * #copiedParts provides the map of Parts that have been copied during a copying operation, if any.
      */
     get draggedParts(): Map<Part, DraggingInfo> | null; */
-  // Type InteropUnion#21111439(parent: InteropGetter#1072994565(name: draggedParts))
+  // Type InteropUnion#477109826(parent: InteropGetter#762764081(name: draggedParts))
   set draggedParts(_i3.Map<_i3.Part, _i3.DraggingInfo>? value) {
     _i5.setProperty(
       this,
       'draggedParts',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #5934
+  /* #5949
   source: 
     /**
      * (undocumented)
@@ -13230,7 +13251,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'draggingParts',
       );
-  /* #5934
+  /* #5949
   source: 
     /**
      * (undocumented)
@@ -13247,7 +13268,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5944
+  /* #5959
   source: 
     /**
      * Gets or sets the mouse point from which parts start to move.
@@ -13266,7 +13287,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'startPoint',
       );
-  /* #5944
+  /* #5959
   source: 
     /**
      * Gets or sets the mouse point from which parts start to move.
@@ -13285,7 +13306,7 @@ extension DraggingTool$Typings on DraggingTool {
     );
   }
 
-  /* #5952
+  /* #5967
   source: 
     /**
      * On touch gestures only, this property gets or sets the time in milliseconds
@@ -13302,7 +13323,7 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'delay',
       );
-  /* #5952
+  /* #5967
   source: 
     /**
      * On touch gestures only, this property gets or sets the time in milliseconds
@@ -13406,7 +13427,7 @@ extension DraggingTool$Typings on DraggingTool {
       [
         parts,
         offset,
-        check ?? _i4.undefined,
+        check ?? _i7.undefined,
       ],
     );
   }
@@ -13425,7 +13446,7 @@ extension DraggingTool$Typings on DraggingTool {
       'doDragOver',
       [
         pt,
-        obj ?? _i4.undefined,
+        obj ?? _i7.undefined,
       ],
     );
   }
@@ -13439,7 +13460,7 @@ extension DraggingTool$Typings on DraggingTool {
       'doDropOnto',
       [
         pt,
-        obj ?? _i4.undefined,
+        obj ?? _i7.undefined,
       ],
     );
   }
@@ -13469,9 +13490,9 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'simulatedMouseMove',
         [
-          e ?? _i4.undefined,
+          e ?? _i7.undefined,
           modelpt,
-          overdiag ?? _i4.undefined,
+          overdiag ?? _i7.undefined,
         ],
       );
   _i2.bool simulatedMouseUp(
@@ -13483,9 +13504,9 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'simulatedMouseUp',
         [
-          e ?? _i4.undefined,
+          e ?? _i7.undefined,
           modelpt,
-          curdiag ?? _i4.undefined,
+          curdiag ?? _i7.undefined,
         ],
       );
   _i2.bool mayCopy() => _i5.callMethod(
@@ -13510,8 +13531,8 @@ extension DraggingTool$Typings on DraggingTool {
         [
           n,
           newloc,
-          draggedparts ?? _i4.undefined,
-          result ?? _i4.undefined,
+          draggedparts ?? _i7.undefined,
+          result ?? _i7.undefined,
         ],
       );
 }
@@ -13532,7 +13553,7 @@ FieldExternal:
 external _i2.Object _declaredLinkingBaseTool;
 
 extension LinkingBaseTool$Typings on LinkingBaseTool {
-  /* #6209
+  /* #6224
   source: 
     /**
      * Gets or sets the distance at which link snapping occurs.
@@ -13549,7 +13570,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'portGravity',
       );
-  /* #6209
+  /* #6224
   source: 
     /**
      * Gets or sets the distance at which link snapping occurs.
@@ -13567,7 +13588,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     );
   }
 
-  /* #6218
+  /* #6233
   source: 
     /**
      * Gets or sets whether it is valid to have partly or completely unconnected links.
@@ -13585,7 +13606,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isUnconnectedLinkValid',
       );
-  /* #6218
+  /* #6233
   source: 
     /**
      * Gets or sets whether it is valid to have partly or completely unconnected links.
@@ -13604,7 +13625,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     );
   }
 
-  /* #6226
+  /* #6241
   source: 
     /**
      * Gets or sets the cursor used during the linking or relinking operation.
@@ -13620,7 +13641,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'linkingCursor',
       );
-  /* #6226
+  /* #6241
   source: 
     /**
      * Gets or sets the cursor used during the linking or relinking operation.
@@ -13638,7 +13659,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     );
   }
 
-  /* #6232
+  /* #6247
   source: 
     /**
      * Gets or sets the temporary Link that is shown while the user is drawing or reconnecting a link.
@@ -13651,7 +13672,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'temporaryLink',
       );
-  /* #6232
+  /* #6247
   source: 
     /**
      * Gets or sets the temporary Link that is shown while the user is drawing or reconnecting a link.
@@ -13667,7 +13688,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     );
   }
 
-  /* #6239
+  /* #6254
   source: 
     /**
      * Gets or sets the temporary Node at the "from" end of the #temporaryLink
@@ -13682,7 +13703,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'temporaryFromNode',
       );
-  /* #6239
+  /* #6254
   source: 
     /**
      * Gets or sets the temporary Node at the "from" end of the #temporaryLink
@@ -13699,7 +13720,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     );
   }
 
-  /* #6246
+  /* #6261
   source: 
     /**
      * Gets or sets the GraphObject that is the port at the "from" end of the #temporaryLink
@@ -13714,7 +13735,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'temporaryFromPort',
       );
-  /* #6246
+  /* #6261
   source: 
     /**
      * Gets or sets the GraphObject that is the port at the "from" end of the #temporaryLink
@@ -13731,7 +13752,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     );
   }
 
-  /* #6253
+  /* #6268
   source: 
     /**
      * Gets or sets the temporary Node at the "to" end of the #temporaryLink
@@ -13746,7 +13767,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'temporaryToNode',
       );
-  /* #6253
+  /* #6268
   source: 
     /**
      * Gets or sets the temporary Node at the "to" end of the #temporaryLink
@@ -13763,7 +13784,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     );
   }
 
-  /* #6260
+  /* #6275
   source: 
     /**
      * Gets or sets the GraphObject that is the port at the "to" end of the #temporaryLink
@@ -13778,7 +13799,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'temporaryToPort',
       );
-  /* #6260
+  /* #6275
   source: 
     /**
      * Gets or sets the GraphObject that is the port at the "to" end of the #temporaryLink
@@ -13795,7 +13816,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     );
   }
 
-  /* #6266
+  /* #6281
   source: 
     /**
      * Gets or sets the original Link being reconnected by the RelinkingTool.
@@ -13808,23 +13829,23 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'originalLink',
       );
-  /* #6266
+  /* #6281
   source: 
     /**
      * Gets or sets the original Link being reconnected by the RelinkingTool.
      * Setting this property does not raise any events.
      */
     get originalLink(): Link | null; */
-  // Type InteropUnion#775504653(parent: InteropGetter#62060221(name: originalLink))
+  // Type InteropUnion#837804453(parent: InteropGetter#1037878072(name: originalLink))
   set originalLink(_i3.Link? value) {
     _i5.setProperty(
       this,
       'originalLink',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #6273
+  /* #6288
   source: 
     /**
      * Gets or sets the original Node from which the new link is being drawn
@@ -13839,7 +13860,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'originalFromNode',
       );
-  /* #6273
+  /* #6288
   source: 
     /**
      * Gets or sets the original Node from which the new link is being drawn
@@ -13847,16 +13868,16 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
      * Setting this property does not raise any events.
      */
     get originalFromNode(): Node | null; */
-  // Type InteropUnion#73968607(parent: InteropGetter#634969977(name: originalFromNode))
+  // Type InteropUnion#496730758(parent: InteropGetter#543764143(name: originalFromNode))
   set originalFromNode(_i3.Node? value) {
     _i5.setProperty(
       this,
       'originalFromNode',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #6279
+  /* #6294
   source: 
     /**
      * Gets or sets the GraphObject that is the port in the #originalFromNode.
@@ -13869,23 +13890,23 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'originalFromPort',
       );
-  /* #6279
+  /* #6294
   source: 
     /**
      * Gets or sets the GraphObject that is the port in the #originalFromNode.
      * Setting this property does not raise any events.
      */
     get originalFromPort(): GraphObject | null; */
-  // Type InteropUnion#711542235(parent: InteropGetter#392019221(name: originalFromPort))
+  // Type InteropUnion#143139244(parent: InteropGetter#654201160(name: originalFromPort))
   set originalFromPort(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'originalFromPort',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #6286
+  /* #6301
   source: 
     /**
      * Gets or sets the original Node to which the new link is being drawn
@@ -13900,7 +13921,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'originalToNode',
       );
-  /* #6286
+  /* #6301
   source: 
     /**
      * Gets or sets the original Node to which the new link is being drawn
@@ -13908,16 +13929,16 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
      * Setting this property does not raise any events.
      */
     get originalToNode(): Node | null; */
-  // Type InteropUnion#450673965(parent: InteropGetter#15511627(name: originalToNode))
+  // Type InteropUnion#248782972(parent: InteropGetter#143403298(name: originalToNode))
   set originalToNode(_i3.Node? value) {
     _i5.setProperty(
       this,
       'originalToNode',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #6292
+  /* #6307
   source: 
     /**
      * Gets or sets the GraphObject that is the port in the #originalToNode.
@@ -13930,23 +13951,23 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'originalToPort',
       );
-  /* #6292
+  /* #6307
   source: 
     /**
      * Gets or sets the GraphObject that is the port in the #originalToNode.
      * Setting this property does not raise any events.
      */
     get originalToPort(): GraphObject | null; */
-  // Type InteropUnion#308302038(parent: InteropGetter#728466391(name: originalToPort))
+  // Type InteropUnion#1037346864(parent: InteropGetter#623423296(name: originalToPort))
   set originalToPort(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'originalToPort',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #6298
+  /* #6313
   source: 
     /**
      * Gets whether the linking operation is in the forwards direction,
@@ -13959,7 +13980,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isForwards',
       );
-  /* #6298
+  /* #6313
   source: 
     /**
      * Gets whether the linking operation is in the forwards direction,
@@ -13975,7 +13996,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     );
   }
 
-  /* #6309
+  /* #6324
   source: 
     /**
      * Gets or sets a proposed GraphObject port for connecting a link.
@@ -13998,7 +14019,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'targetPort',
       );
-  /* #6309
+  /* #6324
   source: 
     /**
      * Gets or sets a proposed GraphObject port for connecting a link.
@@ -14010,16 +14031,16 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
      * Setting this property does not raise any events.
      */
     get targetPort(): GraphObject | null; */
-  // Type InteropUnion#277567641(parent: InteropGetter#17906999(name: targetPort))
+  // Type InteropUnion#138111523(parent: InteropGetter#837463822(name: targetPort))
   set targetPort(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'targetPort',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #6503
+  /* #6518
   source: 
     /**
      * Gets or sets a predicate that determines whether or not a new link between two ports would be valid.
@@ -14052,7 +14073,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'linkValidation',
       );
-  /* #6503
+  /* #6518
   source: 
     /**
      * Gets or sets a predicate that determines whether or not a new link between two ports would be valid.
@@ -14066,7 +14087,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
      * The function, if supplied, must not have any side-effects.
      */
     get linkValidation(): ((fromNode: Node, fromPort: GraphObject, toNode: Node, toPort: GraphObject, link: Link) => boolean) | null; */
-  // Type InteropUnion#687690906(parent: InteropGetter#780096305(name: linkValidation))
+  // Type InteropUnion#472623419(parent: InteropGetter#592903083(name: linkValidation))
   set linkValidation(
       _i2.bool Function(
         _i3.Node,
@@ -14078,11 +14099,11 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     _i5.setProperty(
       this,
       'linkValidation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #6522
+  /* #6537
   source: 
     /**
      * Gets or sets a function that is called as the tool targets the nearest valid port.
@@ -14126,7 +14147,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'portTargeted',
       );
-  /* #6522
+  /* #6537
   source: 
     /**
      * Gets or sets a function that is called as the tool targets the nearest valid port.
@@ -14146,7 +14167,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
      * @since 1.2
      */
     get portTargeted(): ((node: Node | null, port: GraphObject | null, tempNode: Node, tempPort: GraphObject, toEnd: boolean) => void) | null; */
-  // Type InteropUnion#551711214(parent: InteropGetter#123935266(name: portTargeted))
+  // Type InteropUnion#382047610(parent: InteropGetter#805593468(name: portTargeted))
   set portTargeted(
       void Function(
         _i3.Node?,
@@ -14158,7 +14179,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     _i5.setProperty(
       this,
       'portTargeted',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -14173,8 +14194,8 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
       this,
       'copyPortProperties',
       [
-        realnode ?? _i4.undefined,
-        realport ?? _i4.undefined,
+        realnode ?? _i7.undefined,
+        realport ?? _i7.undefined,
         tempnode,
         tempport,
         toend,
@@ -14219,8 +14240,8 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isValidFrom',
         [
-          fromnode ?? _i4.undefined,
-          fromport ?? _i4.undefined,
+          fromnode ?? _i7.undefined,
+          fromport ?? _i7.undefined,
         ],
       );
   _i2.bool isValidTo([
@@ -14231,8 +14252,8 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isValidTo',
         [
-          tonode ?? _i4.undefined,
-          toport ?? _i4.undefined,
+          tonode ?? _i7.undefined,
+          toport ?? _i7.undefined,
         ],
       );
   _i2.bool isInSameNode([
@@ -14243,8 +14264,8 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isInSameNode',
         [
-          fromport ?? _i4.undefined,
-          toport ?? _i4.undefined,
+          fromport ?? _i7.undefined,
+          toport ?? _i7.undefined,
         ],
       );
   _i2.bool isLinked([
@@ -14255,8 +14276,8 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isLinked',
         [
-          fromport ?? _i4.undefined,
-          toport ?? _i4.undefined,
+          fromport ?? _i7.undefined,
+          toport ?? _i7.undefined,
         ],
       );
   _i2.bool isValidLink([
@@ -14269,10 +14290,10 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isValidLink',
         [
-          fromnode ?? _i4.undefined,
-          fromport ?? _i4.undefined,
-          tonode ?? _i4.undefined,
-          toport ?? _i4.undefined,
+          fromnode ?? _i7.undefined,
+          fromport ?? _i7.undefined,
+          tonode ?? _i7.undefined,
+          toport ?? _i7.undefined,
         ],
       );
   _i2.bool isValidCycle([
@@ -14284,9 +14305,9 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isValidCycle',
         [
-          from ?? _i4.undefined,
-          to ?? _i4.undefined,
-          ignore ?? _i4.undefined,
+          from ?? _i7.undefined,
+          to ?? _i7.undefined,
+          ignore ?? _i7.undefined,
         ],
       );
 }
@@ -14299,7 +14320,7 @@ class LinkingTool implements _i3.LinkingBaseTool {
         [],
       );
 
-  /* #6572
+  /* #6587
   source: 
     /**
      * This value for LinkingTool#direction indicates that users may draw new links in either direction.
@@ -14311,7 +14332,7 @@ class LinkingTool implements _i3.LinkingBaseTool {
         _declaredLinkingTool,
         'Either',
       );
-  /* #6572
+  /* #6587
   source: 
     /**
      * This value for LinkingTool#direction indicates that users may draw new links in either direction.
@@ -14327,7 +14348,7 @@ class LinkingTool implements _i3.LinkingBaseTool {
     );
   }
 
-  /* #6578
+  /* #6593
   source: 
     /**
      * This value for LinkingTool#direction indicates that users may draw new links forwards only
@@ -14341,7 +14362,7 @@ class LinkingTool implements _i3.LinkingBaseTool {
         _declaredLinkingTool,
         'ForwardsOnly',
       );
-  /* #6578
+  /* #6593
   source: 
     /**
      * This value for LinkingTool#direction indicates that users may draw new links forwards only
@@ -14358,7 +14379,7 @@ class LinkingTool implements _i3.LinkingBaseTool {
     );
   }
 
-  /* #6584
+  /* #6599
   source: 
     /**
      * This value for LinkingTool#direction indicates that users may draw new links backwards only
@@ -14372,7 +14393,7 @@ class LinkingTool implements _i3.LinkingBaseTool {
         _declaredLinkingTool,
         'BackwardsOnly',
       );
-  /* #6584
+  /* #6599
   source: 
     /**
      * This value for LinkingTool#direction indicates that users may draw new links backwards only
@@ -14397,7 +14418,7 @@ FieldExternal:
 external _i2.Object _declaredLinkingTool;
 
 extension LinkingTool$Typings on LinkingTool {
-  /* #6602
+  /* #6617
   source: 
     /**
      * Gets or sets a data object that is copied by #insertLink
@@ -14436,7 +14457,7 @@ extension LinkingTool$Typings on LinkingTool {
         this,
         'archetypeLinkData',
       );
-  /* #6602
+  /* #6617
   source: 
     /**
      * Gets or sets a data object that is copied by #insertLink
@@ -14456,16 +14477,16 @@ extension LinkingTool$Typings on LinkingTool {
      * This property is ignored if the Diagram#model is not a GraphLinksModel.
      */
     get archetypeLinkData(): ObjectData | null; */
-  // Type InteropUnion#932064196(parent: InteropGetter#969053776(name: archetypeLinkData))
+  // Type InteropUnion#569771854(parent: InteropGetter#153581612(name: archetypeLinkData))
   set archetypeLinkData(_i2.Object? value) {
     _i5.setProperty(
       this,
       'archetypeLinkData',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #6617
+  /* #6632
   source: 
     /**
      * Gets or sets an optional node data object representing a link label, that is copied by #insertLink
@@ -14496,7 +14517,7 @@ extension LinkingTool$Typings on LinkingTool {
         this,
         'archetypeLabelNodeData',
       );
-  /* #6617
+  /* #6632
   source: 
     /**
      * Gets or sets an optional node data object representing a link label, that is copied by #insertLink
@@ -14512,16 +14533,16 @@ extension LinkingTool$Typings on LinkingTool {
      * This property is ignored if the Diagram#model is not a GraphLinksModel.
      */
     get archetypeLabelNodeData(): ObjectData | null; */
-  // Type InteropUnion#939072434(parent: InteropGetter#889818486(name: archetypeLabelNodeData))
+  // Type InteropUnion#1041494061(parent: InteropGetter#420394769(name: archetypeLabelNodeData))
   set archetypeLabelNodeData(_i2.Object? value) {
     _i5.setProperty(
       this,
       'archetypeLabelNodeData',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #6625
+  /* #6640
   source: 
     /**
      * Gets or sets the direction in which new links may be drawn.
@@ -14538,7 +14559,7 @@ extension LinkingTool$Typings on LinkingTool {
         this,
         'direction',
       );
-  /* #6625
+  /* #6640
   source: 
     /**
      * Gets or sets the direction in which new links may be drawn.
@@ -14556,7 +14577,7 @@ extension LinkingTool$Typings on LinkingTool {
     );
   }
 
-  /* #6644
+  /* #6659
   source: 
     /**
      * Gets or sets the GraphObject at which #findLinkablePort should start its search.
@@ -14595,7 +14616,7 @@ extension LinkingTool$Typings on LinkingTool {
         this,
         'startObject',
       );
-  /* #6644
+  /* #6659
   source: 
     /**
      * Gets or sets the GraphObject at which #findLinkablePort should start its search.
@@ -14615,12 +14636,12 @@ extension LinkingTool$Typings on LinkingTool {
      * ```
      */
     get startObject(): GraphObject | null; */
-  // Type InteropUnion#630726599(parent: InteropGetter#519439890(name: startObject))
+  // Type InteropUnion#226143151(parent: InteropGetter#1057862626(name: startObject))
   set startObject(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'startObject',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -14668,10 +14689,10 @@ extension LinkingTool$Typings on LinkingTool {
         this,
         'insertLink',
         [
-          fromnode ?? _i4.undefined,
-          fromport ?? _i4.undefined,
-          tonode ?? _i4.undefined,
-          toport ?? _i4.undefined,
+          fromnode ?? _i7.undefined,
+          fromport ?? _i7.undefined,
+          tonode ?? _i7.undefined,
+          toport ?? _i7.undefined,
         ],
       );
   void doNoLink([
@@ -14684,10 +14705,10 @@ extension LinkingTool$Typings on LinkingTool {
       this,
       'doNoLink',
       [
-        fromnode ?? _i4.undefined,
-        fromport ?? _i4.undefined,
-        tonode ?? _i4.undefined,
-        toport ?? _i4.undefined,
+        fromnode ?? _i7.undefined,
+        fromport ?? _i7.undefined,
+        tonode ?? _i7.undefined,
+        toport ?? _i7.undefined,
       ],
     );
   }
@@ -14709,7 +14730,7 @@ FieldExternal:
 external _i2.Object _declaredRelinkingTool;
 
 extension RelinkingTool$Typings on RelinkingTool {
-  /* #6829
+  /* #6844
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a relinking handle for the selected link path
@@ -14741,7 +14762,7 @@ extension RelinkingTool$Typings on RelinkingTool {
         this,
         'fromHandleArchetype',
       );
-  /* #6829
+  /* #6844
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a relinking handle for the selected link path
@@ -14758,16 +14779,16 @@ extension RelinkingTool$Typings on RelinkingTool {
      * @see #toHandleArchetype
      */
     get fromHandleArchetype(): GraphObject | null; */
-  // Type InteropUnion#468302610(parent: InteropGetter#12655392(name: fromHandleArchetype))
+  // Type InteropUnion#687354758(parent: InteropGetter#762523693(name: fromHandleArchetype))
   set fromHandleArchetype(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'fromHandleArchetype',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #6845
+  /* #6860
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a relinking handle for the selected link path
@@ -14799,7 +14820,7 @@ extension RelinkingTool$Typings on RelinkingTool {
         this,
         'toHandleArchetype',
       );
-  /* #6845
+  /* #6860
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a relinking handle for the selected link path
@@ -14816,16 +14837,16 @@ extension RelinkingTool$Typings on RelinkingTool {
      * @see #fromHandleArchetype
      */
     get toHandleArchetype(): GraphObject | null; */
-  // Type InteropUnion#990789144(parent: InteropGetter#65992164(name: toHandleArchetype))
+  // Type InteropUnion#142000270(parent: InteropGetter#31258749(name: toHandleArchetype))
   set toHandleArchetype(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'toHandleArchetype',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #6855
+  /* #6870
   source: 
     /**
      * Returns the GraphObject that is the tool handle being dragged by the user.
@@ -14846,7 +14867,7 @@ extension RelinkingTool$Typings on RelinkingTool {
         this,
         'handle',
       );
-  /* #6855
+  /* #6870
   source: 
     /**
      * Returns the GraphObject that is the tool handle being dragged by the user.
@@ -14857,12 +14878,12 @@ extension RelinkingTool$Typings on RelinkingTool {
      * or prior to calling #doActivate.
      */
     get handle(): GraphObject | null; */
-  // Type InteropUnion#1671015(parent: InteropGetter#78571503(name: handle))
+  // Type InteropUnion#810433654(parent: InteropGetter#847797485(name: handle))
   set handle(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'handle',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -14907,7 +14928,7 @@ extension RelinkingTool$Typings on RelinkingTool {
       this,
       'copyLinkProperties',
       [
-        reallink ?? _i4.undefined,
+        reallink ?? _i7.undefined,
         templink,
       ],
     );
@@ -14940,8 +14961,8 @@ extension RelinkingTool$Typings on RelinkingTool {
         'reconnectLink',
         [
           existinglink,
-          newnode ?? _i4.undefined,
-          newport ?? _i4.undefined,
+          newnode ?? _i7.undefined,
+          newport ?? _i7.undefined,
           toend,
         ],
       );
@@ -14968,7 +14989,7 @@ class LinkReshapingTool implements _i3.Tool {
         [],
       );
 
-  /* #6989
+  /* #7004
   source: 
     /**
      * Disallow dragging.
@@ -14980,7 +15001,7 @@ class LinkReshapingTool implements _i3.Tool {
         _declaredLinkReshapingTool,
         'None',
       );
-  /* #6989
+  /* #7004
   source: 
     /**
      * Disallow dragging.
@@ -14996,7 +15017,7 @@ class LinkReshapingTool implements _i3.Tool {
     );
   }
 
-  /* #6994
+  /* #7009
   source: 
     /**
      * Allow only horizontal (left-and-right) dragging.
@@ -15008,7 +15029,7 @@ class LinkReshapingTool implements _i3.Tool {
         _declaredLinkReshapingTool,
         'Horizontal',
       );
-  /* #6994
+  /* #7009
   source: 
     /**
      * Allow only horizontal (left-and-right) dragging.
@@ -15024,7 +15045,7 @@ class LinkReshapingTool implements _i3.Tool {
     );
   }
 
-  /* #6999
+  /* #7014
   source: 
     /**
      * Allow only vertical (up-and-down) dragging.
@@ -15036,7 +15057,7 @@ class LinkReshapingTool implements _i3.Tool {
         _declaredLinkReshapingTool,
         'Vertical',
       );
-  /* #6999
+  /* #7014
   source: 
     /**
      * Allow only vertical (up-and-down) dragging.
@@ -15052,7 +15073,7 @@ class LinkReshapingTool implements _i3.Tool {
     );
   }
 
-  /* #7004
+  /* #7019
   source: 
     /**
      * Allow dragging in any direction.
@@ -15064,7 +15085,7 @@ class LinkReshapingTool implements _i3.Tool {
         _declaredLinkReshapingTool,
         'All',
       );
-  /* #7004
+  /* #7019
   source: 
     /**
      * Allow dragging in any direction.
@@ -15088,7 +15109,7 @@ FieldExternal:
 external _i2.Object _declaredLinkReshapingTool;
 
 extension LinkReshapingTool$Typings on LinkReshapingTool {
-  /* #7060
+  /* #7075
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a reshape handle at each movable point in the selected link's route.
@@ -15118,7 +15139,7 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
         this,
         'handleArchetype',
       );
-  /* #7060
+  /* #7075
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a reshape handle at each movable point in the selected link's route.
@@ -15134,16 +15155,16 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
      * @see #midHandleArchetype
      */
     get handleArchetype(): GraphObject | null; */
-  // Type InteropUnion#267504315(parent: InteropGetter#724888754(name: handleArchetype))
+  // Type InteropUnion#405678682(parent: InteropGetter#29164954(name: handleArchetype))
   set handleArchetype(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'handleArchetype',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #7086
+  /* #7101
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a resegment handle at each mid-point in the selected Link's route.
@@ -15172,7 +15193,7 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
         this,
         'midHandleArchetype',
       );
-  /* #7086
+  /* #7101
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a resegment handle at each mid-point in the selected Link's route.
@@ -15188,16 +15209,16 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
      * @since 1.2
      */
     get midHandleArchetype(): GraphObject | null; */
-  // Type InteropUnion#333246366(parent: InteropGetter#643448119(name: midHandleArchetype))
+  // Type InteropUnion#838358871(parent: InteropGetter#333394768(name: midHandleArchetype))
   set midHandleArchetype(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'midHandleArchetype',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #7094
+  /* #7109
   source: 
     /**
      * Returns the GraphObject that is the tool handle being dragged by the user.
@@ -15214,7 +15235,7 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
         this,
         'handle',
       );
-  /* #7094
+  /* #7109
   source: 
     /**
      * Returns the GraphObject that is the tool handle being dragged by the user.
@@ -15223,16 +15244,16 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
      * This is normally set by #doActivate, remembering the result of the call to Tool#findToolHandleAt.
      */
     get handle(): GraphObject | null; */
-  // Type InteropUnion#922217250(parent: InteropGetter#761480054(name: handle))
+  // Type InteropUnion#401400143(parent: InteropGetter#992925011(name: handle))
   set handle(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'handle',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #7099
+  /* #7114
   source: 
     /**
      * This read-only property returns the Link that is being routed manually.
@@ -15243,22 +15264,22 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
         this,
         'adornedLink',
       );
-  /* #7099
+  /* #7114
   source: 
     /**
      * This read-only property returns the Link that is being routed manually.
      */
     get adornedLink(): Link | null; */
-  // Type InteropUnion#764470620(parent: InteropGetter#792621887(name: adornedLink))
+  // Type InteropUnion#285298030(parent: InteropGetter#992921063(name: adornedLink))
   set adornedLink(_i3.Link? value) {
     _i5.setProperty(
       this,
       'adornedLink',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #7188
+  /* #7203
   source: 
     /**
      * This read-only property returns the Point that was the original location of the handle that is being dragged to reshape the Link.
@@ -15270,7 +15291,7 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
         this,
         'originalPoint',
       );
-  /* #7188
+  /* #7203
   source: 
     /**
      * This read-only property returns the Point that was the original location of the handle that is being dragged to reshape the Link.
@@ -15286,7 +15307,7 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
     );
   }
 
-  /* #7194
+  /* #7209
   source: 
     /**
      * This read-only property returns the List of Points that was the original route of the Link that is being reshaped.
@@ -15296,12 +15317,12 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
     get originalPoints(): List<Point>; */
   /// This read-only property returns the List of Points that was the original route of the Link that is being reshaped.
   /// This List should not be modified; its value is indeterminate until a reshaping has been activated.
-  _i3.List /*LIST InteropClass#847625641(name: List),253702025,[Instance of 'InteropRef<InteropType>']*/ <_i3.Point>
+  _i3.List /*LIST InteropClass#991808747(name: List),207221773,[Instance of 'InteropRef<InteropType>']*/ <_i3.Point>
       get originalPoints => _i5.getProperty(
             this,
             'originalPoints',
           );
-  /* #7194
+  /* #7209
   source: 
     /**
      * This read-only property returns the List of Points that was the original route of the Link that is being reshaped.
@@ -15311,7 +15332,7 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
     get originalPoints(): List<Point>; */
   // Type Instance of 'InteropInterface'
   set originalPoints(
-      _i3.List /*LIST InteropClass#847625641(name: List),151066934,[Instance of 'InteropRef<InteropType>']*/ <
+      _i3.List /*LIST InteropClass#991808747(name: List),252324842,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Point>
           value) {
     _i5.setProperty(
@@ -15463,7 +15484,7 @@ FieldExternal:
 external _i2.Object _declaredResizingTool;
 
 extension ResizingTool$Typings on ResizingTool {
-  /* #7319
+  /* #7334
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a resizing handle for the selected part.
@@ -15502,7 +15523,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'handleArchetype',
       );
-  /* #7319
+  /* #7334
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a resizing handle for the selected part.
@@ -15522,16 +15543,16 @@ extension ResizingTool$Typings on ResizingTool {
      * standard eight Spots.
      */
     get handleArchetype(): GraphObject | null; */
-  // Type InteropUnion#248224399(parent: InteropGetter#724921875(name: handleArchetype))
+  // Type InteropUnion#1018152727(parent: InteropGetter#907481908(name: handleArchetype))
   set handleArchetype(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'handleArchetype',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #7330
+  /* #7345
   source: 
     /**
      * Returns the GraphObject that is the tool handle being dragged by the user.
@@ -15554,7 +15575,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'handle',
       );
-  /* #7330
+  /* #7345
   source: 
     /**
      * Returns the GraphObject that is the tool handle being dragged by the user.
@@ -15566,16 +15587,16 @@ extension ResizingTool$Typings on ResizingTool {
      * or prior to calling #doActivate.
      */
     get handle(): GraphObject | null; */
-  // Type InteropUnion#1068727189(parent: InteropGetter#702485446(name: handle))
+  // Type InteropUnion#244597624(parent: InteropGetter#977317762(name: handle))
   set handle(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'handle',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #7339
+  /* #7354
   source: 
     /**
      * Gets the GraphObject that is being resized.
@@ -15594,7 +15615,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'adornedObject',
       );
-  /* #7339
+  /* #7354
   source: 
     /**
      * Gets the GraphObject that is being resized.
@@ -15604,16 +15625,16 @@ extension ResizingTool$Typings on ResizingTool {
      * in ResizingTool, and not during normal operation.
      */
     get adornedObject(): GraphObject | null; */
-  // Type InteropUnion#4880751(parent: InteropGetter#940608838(name: adornedObject))
+  // Type InteropUnion#118058030(parent: InteropGetter#1053015441(name: adornedObject))
   set adornedObject(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'adornedObject',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #7503
+  /* #7518
   source: 
     /**
      * Gets or sets the minimum size to which the user can resize.
@@ -15636,7 +15657,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'minSize',
       );
-  /* #7503
+  /* #7518
   source: 
     /**
      * Gets or sets the minimum size to which the user can resize.
@@ -15657,7 +15678,7 @@ extension ResizingTool$Typings on ResizingTool {
     );
   }
 
-  /* #7514
+  /* #7529
   source: 
     /**
      * Gets or sets the maximum size to which the user can resize.
@@ -15680,7 +15701,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'maxSize',
       );
-  /* #7514
+  /* #7529
   source: 
     /**
      * Gets or sets the maximum size to which the user can resize.
@@ -15701,7 +15722,7 @@ extension ResizingTool$Typings on ResizingTool {
     );
   }
 
-  /* #7526
+  /* #7541
   source: 
     /**
      * Gets or sets the width and height multiples with which the user must resize.
@@ -15726,7 +15747,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'cellSize',
       );
-  /* #7526
+  /* #7541
   source: 
     /**
      * Gets or sets the width and height multiples with which the user must resize.
@@ -15748,7 +15769,7 @@ extension ResizingTool$Typings on ResizingTool {
     );
   }
 
-  /* #7533
+  /* #7548
   source: 
     /**
      * Gets or sets whether the ResizingTool snaps object sizes to the diagram's background grid during the resize.
@@ -15763,7 +15784,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'isGridSnapEnabled',
       );
-  /* #7533
+  /* #7548
   source: 
     /**
      * Gets or sets whether the ResizingTool snaps object sizes to the diagram's background grid during the resize.
@@ -15780,7 +15801,7 @@ extension ResizingTool$Typings on ResizingTool {
     );
   }
 
-  /* #7541
+  /* #7556
   source: 
     /**
      * Gets or sets whether the ResizingTool moves the member Parts of a Group that has no Group#placeholder.
@@ -15796,7 +15817,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'dragsMembers',
       );
-  /* #7541
+  /* #7556
   source: 
     /**
      * Gets or sets whether the ResizingTool moves the member Parts of a Group that has no Group#placeholder.
@@ -15814,7 +15835,7 @@ extension ResizingTool$Typings on ResizingTool {
     );
   }
 
-  /* #7548
+  /* #7563
   source: 
     /**
      * Gets the Point opposite to the chosen, dragged handle of the "Resizing" Adornment.
@@ -15828,7 +15849,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'oppositePoint',
       );
-  /* #7548
+  /* #7563
   source: 
     /**
      * Gets the Point opposite to the chosen, dragged handle of the "Resizing" Adornment.
@@ -15845,7 +15866,7 @@ extension ResizingTool$Typings on ResizingTool {
     );
   }
 
-  /* #7555
+  /* #7570
   source: 
     /**
      * This read-only property returns the Size that was the original value of the GraphObject#desiredSize
@@ -15859,7 +15880,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'originalDesiredSize',
       );
-  /* #7555
+  /* #7570
   source: 
     /**
      * This read-only property returns the Size that was the original value of the GraphObject#desiredSize
@@ -15876,7 +15897,7 @@ extension ResizingTool$Typings on ResizingTool {
     );
   }
 
-  /* #7561
+  /* #7576
   source: 
     /**
      * This read-only property returns the Point that was the original value of the Part#location
@@ -15890,7 +15911,7 @@ extension ResizingTool$Typings on ResizingTool {
         this,
         'originalLocation',
       );
-  /* #7561
+  /* #7576
   source: 
     /**
      * This read-only property returns the Point that was the original value of the Part#location
@@ -16050,7 +16071,7 @@ FieldExternal:
 external _i2.Object _declaredRotatingTool;
 
 extension RotatingTool$Typings on RotatingTool {
-  /* #7654
+  /* #7669
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a rotation handle for the selected part.
@@ -16083,7 +16104,7 @@ extension RotatingTool$Typings on RotatingTool {
         this,
         'handleArchetype',
       );
-  /* #7654
+  /* #7669
   source: 
     /**
      * Gets or sets a small GraphObject that is copied as a rotation handle for the selected part.
@@ -16100,16 +16121,16 @@ extension RotatingTool$Typings on RotatingTool {
      * This property is ignored when a custom rotating Adornment is specified as the Part#rotateAdornmentTemplate.
      */
     get handleArchetype(): GraphObject | null; */
-  // Type InteropUnion#160923827(parent: InteropGetter#492680924(name: handleArchetype))
+  // Type InteropUnion#17870767(parent: InteropGetter#738347943(name: handleArchetype))
   set handleArchetype(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'handleArchetype',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #7664
+  /* #7679
   source: 
     /**
      * This read-only property returns the GraphObject that is the tool handle being dragged by the user.
@@ -16130,7 +16151,7 @@ extension RotatingTool$Typings on RotatingTool {
         this,
         'handle',
       );
-  /* #7664
+  /* #7679
   source: 
     /**
      * This read-only property returns the GraphObject that is the tool handle being dragged by the user.
@@ -16141,16 +16162,16 @@ extension RotatingTool$Typings on RotatingTool {
      * or prior to calling #doActivate.
      */
     get handle(): GraphObject | null; */
-  // Type InteropUnion#16059862(parent: InteropGetter#438964330(name: handle))
+  // Type InteropUnion#380932046(parent: InteropGetter#957623869(name: handle))
   set handle(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'handle',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #7673
+  /* #7688
   source: 
     /**
      * Gets the GraphObject that is being rotated.
@@ -16169,7 +16190,7 @@ extension RotatingTool$Typings on RotatingTool {
         this,
         'adornedObject',
       );
-  /* #7673
+  /* #7688
   source: 
     /**
      * Gets the GraphObject that is being rotated.
@@ -16179,16 +16200,16 @@ extension RotatingTool$Typings on RotatingTool {
      * in RotatingTool, and not during normal operation.
      */
     get adornedObject(): GraphObject | null; */
-  // Type InteropUnion#745895693(parent: InteropGetter#50344215(name: adornedObject))
+  // Type InteropUnion#947714605(parent: InteropGetter#323764966(name: adornedObject))
   set adornedObject(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'adornedObject',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #7773
+  /* #7788
   source: 
     /**
      * Gets or sets the preferred angles for the selected object.
@@ -16213,7 +16234,7 @@ extension RotatingTool$Typings on RotatingTool {
         this,
         'snapAngleMultiple',
       );
-  /* #7773
+  /* #7788
   source: 
     /**
      * Gets or sets the preferred angles for the selected object.
@@ -16235,7 +16256,7 @@ extension RotatingTool$Typings on RotatingTool {
     );
   }
 
-  /* #7786
+  /* #7801
   source: 
     /**
      * Gets or sets the the closeness to a desired angle at which the angle is "snapped to".
@@ -16262,7 +16283,7 @@ extension RotatingTool$Typings on RotatingTool {
         this,
         'snapAngleEpsilon',
       );
-  /* #7786
+  /* #7801
   source: 
     /**
      * Gets or sets the the closeness to a desired angle at which the angle is "snapped to".
@@ -16285,7 +16306,7 @@ extension RotatingTool$Typings on RotatingTool {
     );
   }
 
-  /* #7794
+  /* #7809
   source: 
     /**
      * This read-only property returns the angle that was the original value of the GraphObject#angle
@@ -16301,7 +16322,7 @@ extension RotatingTool$Typings on RotatingTool {
         this,
         'originalAngle',
       );
-  /* #7794
+  /* #7809
   source: 
     /**
      * This read-only property returns the angle that was the original value of the GraphObject#angle
@@ -16319,7 +16340,7 @@ extension RotatingTool$Typings on RotatingTool {
     );
   }
 
-  /* #7801
+  /* #7816
   source: 
     /**
      * Gets or sets the Point at which the axis of the rotation should be.
@@ -16335,7 +16356,7 @@ extension RotatingTool$Typings on RotatingTool {
         this,
         'rotationPoint',
       );
-  /* #7801
+  /* #7816
   source: 
     /**
      * Gets or sets the Point at which the axis of the rotation should be.
@@ -16353,7 +16374,7 @@ extension RotatingTool$Typings on RotatingTool {
     );
   }
 
-  /* #7813
+  /* #7828
   source: 
     /**
      * Gets or sets the spot to locate the Adornment for the rotation handle when it does not have a Placeholder.
@@ -16377,7 +16398,7 @@ extension RotatingTool$Typings on RotatingTool {
         this,
         'handleAngle',
       );
-  /* #7813
+  /* #7828
   source: 
     /**
      * Gets or sets the spot to locate the Adornment for the rotation handle when it does not have a Placeholder.
@@ -16399,7 +16420,7 @@ extension RotatingTool$Typings on RotatingTool {
     );
   }
 
-  /* #7823
+  /* #7838
   source: 
     /**
      * Gets or sets the spot to locate the Adornment at a particular distance from the #adornedObject.
@@ -16419,7 +16440,7 @@ extension RotatingTool$Typings on RotatingTool {
         this,
         'handleDistance',
       );
-  /* #7823
+  /* #7838
   source: 
     /**
      * Gets or sets the spot to locate the Adornment at a particular distance from the #adornedObject.
@@ -16622,7 +16643,7 @@ FieldExternal:
 external _i2.Object _declaredClickCreatingTool;
 
 extension ClickCreatingTool$Typings on ClickCreatingTool {
-  /* #8005
+  /* #8020
   source: 
     /**
      * Gets or sets a data object that will be copied and added to the diagram's model each time this tool executes.
@@ -16639,7 +16660,7 @@ extension ClickCreatingTool$Typings on ClickCreatingTool {
         this,
         'archetypeNodeData',
       );
-  /* #8005
+  /* #8020
   source: 
     /**
      * Gets or sets a data object that will be copied and added to the diagram's model each time this tool executes.
@@ -16648,16 +16669,16 @@ extension ClickCreatingTool$Typings on ClickCreatingTool {
      * Setting this property does not raise any events.
      */
     get archetypeNodeData(): ObjectData | null; */
-  // Type InteropUnion#138319572(parent: InteropGetter#408149754(name: archetypeNodeData))
+  // Type InteropUnion#913574606(parent: InteropGetter#1000974311(name: archetypeNodeData))
   set archetypeNodeData(_i2.Object? value) {
     _i5.setProperty(
       this,
       'archetypeNodeData',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #8013
+  /* #8028
   source: 
     /**
      * Gets or sets whether a double click rather than a single-click is required
@@ -16674,7 +16695,7 @@ extension ClickCreatingTool$Typings on ClickCreatingTool {
         this,
         'isDoubleClick',
       );
-  /* #8013
+  /* #8028
   source: 
     /**
      * Gets or sets whether a double click rather than a single-click is required
@@ -16692,7 +16713,7 @@ extension ClickCreatingTool$Typings on ClickCreatingTool {
     );
   }
 
-  /* #8022
+  /* #8037
   source: 
     /**
      * Gets or sets whether the ClickCreatingTool snaps object sizes to the diagram's background grid during creation.
@@ -16709,7 +16730,7 @@ extension ClickCreatingTool$Typings on ClickCreatingTool {
         this,
         'isGridSnapEnabled',
       );
-  /* #8022
+  /* #8037
   source: 
     /**
      * Gets or sets whether the ClickCreatingTool snaps object sizes to the diagram's background grid during creation.
@@ -16764,7 +16785,7 @@ FieldExternal:
 external _i2.Object _declaredDragSelectingTool;
 
 extension DragSelectingTool$Typings on DragSelectingTool {
-  /* #8137
+  /* #8152
   source: 
     /**
      * Gets or sets the time in milliseconds for which the mouse must be stationary
@@ -16781,7 +16802,7 @@ extension DragSelectingTool$Typings on DragSelectingTool {
         this,
         'delay',
       );
-  /* #8137
+  /* #8152
   source: 
     /**
      * Gets or sets the time in milliseconds for which the mouse must be stationary
@@ -16799,7 +16820,7 @@ extension DragSelectingTool$Typings on DragSelectingTool {
     );
   }
 
-  /* #8145
+  /* #8160
   source: 
     /**
      * Gets or sets whether a selectable Part may be only partly
@@ -16816,7 +16837,7 @@ extension DragSelectingTool$Typings on DragSelectingTool {
         this,
         'isPartialInclusion',
       );
-  /* #8145
+  /* #8160
   source: 
     /**
      * Gets or sets whether a selectable Part may be only partly
@@ -16834,7 +16855,7 @@ extension DragSelectingTool$Typings on DragSelectingTool {
     );
   }
 
-  /* #8168
+  /* #8183
   source: 
     /**
      * Gets or sets the Part used as the "rubber-band selection box"
@@ -16881,7 +16902,7 @@ extension DragSelectingTool$Typings on DragSelectingTool {
         this,
         'box',
       );
-  /* #8168
+  /* #8183
   source: 
     /**
      * Gets or sets the Part used as the "rubber-band selection box"
@@ -16905,12 +16926,12 @@ extension DragSelectingTool$Typings on DragSelectingTool {
      * Modifying this property while this tool Tool#isActive might have no effect.
      */
     get box(): Part | null; */
-  // Type InteropUnion#216851336(parent: InteropGetter#340777095(name: box))
+  // Type InteropUnion#584074373(parent: InteropGetter#40355000(name: box))
   set box(_i3.Part? value) {
     _i5.setProperty(
       this,
       'box',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -16981,7 +17002,7 @@ FieldExternal:
 external _i2.Object _declaredPanningTool;
 
 extension PanningTool$Typings on PanningTool {
-  /* #8237
+  /* #8252
   source: 
     /**
      * Gets or sets whether panning actions will allow
@@ -17004,7 +17025,7 @@ extension PanningTool$Typings on PanningTool {
         this,
         'bubbles',
       );
-  /* #8237
+  /* #8252
   source: 
     /**
      * Gets or sets whether panning actions will allow
@@ -17025,7 +17046,7 @@ extension PanningTool$Typings on PanningTool {
     );
   }
 
-  /* #8243
+  /* #8258
   source: 
     /**
      * This read-only property returns the Point that was the original value of Diagram#position when the panning operation started.
@@ -17037,7 +17058,7 @@ extension PanningTool$Typings on PanningTool {
         this,
         'originalPosition',
       );
-  /* #8243
+  /* #8258
   source: 
     /**
      * This read-only property returns the Point that was the original value of Diagram#position when the panning operation started.
@@ -17115,7 +17136,7 @@ FieldExternal:
 external _i2.Object _declaredHTMLInfo;
 
 extension HTMLInfo$Typings on HTMLInfo {
-  /* #8332
+  /* #8347
   source: 
     /**
      * Gets or sets the primary HTML Element that represents this HTMLInfo.
@@ -17141,11 +17162,11 @@ extension HTMLInfo$Typings on HTMLInfo {
   /// when #hide would typically be called.
   ///
   /// This is set only for convenience; the default value for this property is null.
-  _i4.HTMLElement? get mainElement => _i5.getProperty(
+  _i6.HTMLElement? get mainElement => _i5.getProperty(
         this,
         'mainElement',
       );
-  /* #8332
+  /* #8347
   source: 
     /**
      * Gets or sets the primary HTML Element that represents this HTMLInfo.
@@ -17161,16 +17182,16 @@ extension HTMLInfo$Typings on HTMLInfo {
      * @see #hide
      */
     get mainElement(): HTMLElement | null; */
-  // Type InteropUnion#621400057(parent: InteropGetter#673749524(name: mainElement))
-  set mainElement(_i4.HTMLElement? value) {
+  // Type InteropUnion#619603536(parent: InteropGetter#495752670(name: mainElement))
+  set mainElement(_i6.HTMLElement? value) {
     _i5.setProperty(
       this,
       'mainElement',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #8350
+  /* #8365
   source: 
     /**
      * Gets or sets the function to call when an HTMLInfo is to be shown,
@@ -17211,7 +17232,7 @@ extension HTMLInfo$Typings on HTMLInfo {
         this,
         'show',
       );
-  /* #8350
+  /* #8365
   source: 
     /**
      * Gets or sets the function to call when an HTMLInfo is to be shown,
@@ -17230,7 +17251,7 @@ extension HTMLInfo$Typings on HTMLInfo {
      * `diagram.currentTool.stopTool();` when their action is completed.
      */
     get show(): ((a: GraphObject, b: Diagram, c: Tool) => void) | null; */
-  // Type InteropUnion#361568228(parent: InteropGetter#554872154(name: show))
+  // Type InteropUnion#955523889(parent: InteropGetter#886345288(name: show))
   set show(
       void Function(
         _i3.GraphObject,
@@ -17240,11 +17261,11 @@ extension HTMLInfo$Typings on HTMLInfo {
     _i5.setProperty(
       this,
       'show',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #8366
+  /* #8381
   source: 
     /**
      * Gets or sets the function to call when an HTMLInfo is to be hidden.
@@ -17278,7 +17299,7 @@ extension HTMLInfo$Typings on HTMLInfo {
         this,
         'hide',
       );
-  /* #8366
+  /* #8381
   source: 
     /**
      * Gets or sets the function to call when an HTMLInfo is to be hidden.
@@ -17295,7 +17316,7 @@ extension HTMLInfo$Typings on HTMLInfo {
      * @see #mainElement
      */
     get hide(): ((a: Diagram, b: Tool) => void) | null; */
-  // Type InteropUnion#400903068(parent: InteropGetter#633014883(name: hide))
+  // Type InteropUnion#811551411(parent: InteropGetter#601440855(name: hide))
   set hide(
       void Function(
         _i3.Diagram,
@@ -17304,11 +17325,11 @@ extension HTMLInfo$Typings on HTMLInfo {
     _i5.setProperty(
       this,
       'hide',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #8374
+  /* #8389
   source: 
     /**
      * Gets or sets a function that returns the primary value associated with this HTMLInfo,
@@ -17325,7 +17346,7 @@ extension HTMLInfo$Typings on HTMLInfo {
         this,
         'valueFunction',
       );
-  /* #8374
+  /* #8389
   source: 
     /**
      * Gets or sets a function that returns the primary value associated with this HTMLInfo,
@@ -17334,12 +17355,12 @@ extension HTMLInfo$Typings on HTMLInfo {
      * This typically returns a string.
      */
     get valueFunction(): (() => any) | null; */
-  // Type InteropUnion#540638261(parent: InteropGetter#320026348(name: valueFunction))
+  // Type InteropUnion#98066519(parent: InteropGetter#1015600138(name: valueFunction))
   set valueFunction(_i2.dynamic Function()? value) {
     _i5.setProperty(
       this,
       'valueFunction',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -17360,7 +17381,7 @@ FieldExternal:
 external _i2.Object _declaredContextMenuTool;
 
 extension ContextMenuTool$Typings on ContextMenuTool {
-  /* #8559
+  /* #8574
   source: 
     /**
      * Gets or sets the currently showing context menu, or null if there is none.
@@ -17375,7 +17396,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
         this,
         'currentContextMenu',
       );
-  /* #8559
+  /* #8574
   source: 
     /**
      * Gets or sets the currently showing context menu, or null if there is none.
@@ -17383,16 +17404,16 @@ extension ContextMenuTool$Typings on ContextMenuTool {
      * It is also typically set to null in #hideContextMenu.
      */
     get currentContextMenu(): Adornment | HTMLInfo | null; */
-  // Type InteropUnion#5907117(parent: InteropGetter#336893660(name: currentContextMenu))
+  // Type InteropUnion#641151453(parent: InteropGetter#101439610(name: currentContextMenu))
   set currentContextMenu(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'currentContextMenu',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #8570
+  /* #8585
   source: 
     /**
      * Gets or sets the HTMLInfo or Adornment that acts as the default touch context menu.
@@ -17414,7 +17435,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
         this,
         'defaultTouchContextMenu',
       );
-  /* #8570
+  /* #8585
   source: 
     /**
      * Gets or sets the HTMLInfo or Adornment that acts as the default touch context menu.
@@ -17426,16 +17447,16 @@ extension ContextMenuTool$Typings on ContextMenuTool {
      * @since 1.7
      */
     get defaultTouchContextMenu(): Adornment | HTMLInfo | null; */
-  // Type InteropUnion#230852549(parent: InteropGetter#715310990(name: defaultTouchContextMenu))
+  // Type InteropUnion#781325945(parent: InteropGetter#1007700280(name: defaultTouchContextMenu))
   set defaultTouchContextMenu(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'defaultTouchContextMenu',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #8579
+  /* #8594
   source: 
     /**
      * Gets or sets the GraphObject found at the mouse point that has a context menu.
@@ -17453,7 +17474,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
         this,
         'currentObject',
       );
-  /* #8579
+  /* #8594
   source: 
     /**
      * Gets or sets the GraphObject found at the mouse point that has a context menu.
@@ -17463,16 +17484,16 @@ extension ContextMenuTool$Typings on ContextMenuTool {
      * @since 1.4
      */
     get currentObject(): GraphObject | null; */
-  // Type InteropUnion#198247717(parent: InteropGetter#504505215(name: currentObject))
+  // Type InteropUnion#98530417(parent: InteropGetter#175275262(name: currentObject))
   set currentObject(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'currentObject',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #8584
+  /* #8599
   source: 
     /**
      * This read-only property returns the original mouse-down point in document coordinates.
@@ -17483,7 +17504,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
         this,
         'mouseDownPoint',
       );
-  /* #8584
+  /* #8599
   source: 
     /**
      * This read-only property returns the original mouse-down point in document coordinates.
@@ -17506,7 +17527,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
   _i2.dynamic findObjectWithContextMenu([_i2.Object? obj]) => _i5.callMethod(
         this,
         'findObjectWithContextMenu',
-        [obj ?? _i4.undefined],
+        [obj ?? _i7.undefined],
       );
   void doActivate() {
     _i5.callMethod(
@@ -17549,7 +17570,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
       'showContextMenu',
       [
         contextmenu,
-        obj ?? _i4.undefined,
+        obj ?? _i7.undefined,
       ],
     );
   }
@@ -17563,7 +17584,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
       'positionContextMenu',
       [
         contextmenu,
-        obj ?? _i4.undefined,
+        obj ?? _i7.undefined,
       ],
     );
   }
@@ -17601,7 +17622,7 @@ class TextEditingTool implements _i3.Tool {
         [],
       );
 
-  /* #8633
+  /* #8648
   source: 
     /**
      * A possible value for TextEditingTool#acceptText, the text editing control has lost focus.
@@ -17613,7 +17634,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'LostFocus',
       );
-  /* #8633
+  /* #8648
   source: 
     /**
      * A possible value for TextEditingTool#acceptText, the text editing control has lost focus.
@@ -17629,7 +17650,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8638
+  /* #8653
   source: 
     /**
      * A possible value for TextEditingTool#acceptText, the user has clicked somewhere else in the diagram.
@@ -17641,7 +17662,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'MouseDown',
       );
-  /* #8638
+  /* #8653
   source: 
     /**
      * A possible value for TextEditingTool#acceptText, the user has clicked somewhere else in the diagram.
@@ -17657,7 +17678,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8643
+  /* #8658
   source: 
     /**
      * A possible value for TextEditingTool#acceptText, the user has typed TAB.
@@ -17669,7 +17690,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'Tab',
       );
-  /* #8643
+  /* #8658
   source: 
     /**
      * A possible value for TextEditingTool#acceptText, the user has typed TAB.
@@ -17685,7 +17706,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8648
+  /* #8663
   source: 
     /**
      * A possible value for TextEditingTool#acceptText, the user has typed ENTER.
@@ -17697,7 +17718,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'Enter',
       );
-  /* #8648
+  /* #8663
   source: 
     /**
      * A possible value for TextEditingTool#acceptText, the user has typed ENTER.
@@ -17713,7 +17734,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8655
+  /* #8670
   source: 
     /**
      * A possible value for TextEditingTool#starting,
@@ -17729,7 +17750,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'SingleClick',
       );
-  /* #8655
+  /* #8670
   source: 
     /**
      * A possible value for TextEditingTool#starting,
@@ -17747,7 +17768,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8662
+  /* #8677
   source: 
     /**
      * A possible value for TextEditingTool#starting,
@@ -17763,7 +17784,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'SingleClickSelected',
       );
-  /* #8662
+  /* #8677
   source: 
     /**
      * A possible value for TextEditingTool#starting,
@@ -17781,7 +17802,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8669
+  /* #8684
   source: 
     /**
      * A possible value for TextEditingTool#starting,
@@ -17797,7 +17818,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'DoubleClick',
       );
-  /* #8669
+  /* #8684
   source: 
     /**
      * A possible value for TextEditingTool#starting,
@@ -17815,7 +17836,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8675
+  /* #8690
   source: 
     /**
      * A possible value for #state,
@@ -17829,7 +17850,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'StateNone',
       );
-  /* #8675
+  /* #8690
   source: 
     /**
      * A possible value for #state,
@@ -17846,7 +17867,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8681
+  /* #8696
   source: 
     /**
      * A possible value for #state,
@@ -17860,7 +17881,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'StateActive',
       );
-  /* #8681
+  /* #8696
   source: 
     /**
      * A possible value for #state,
@@ -17877,7 +17898,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8687
+  /* #8702
   source: 
     /**
      * A possible value for #state,
@@ -17891,7 +17912,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'StateEditing',
       );
-  /* #8687
+  /* #8702
   source: 
     /**
      * A possible value for #state,
@@ -17908,7 +17929,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8693
+  /* #8708
   source: 
     /**
      * A possible value for #state,
@@ -17922,7 +17943,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'StateValidating',
       );
-  /* #8693
+  /* #8708
   source: 
     /**
      * A possible value for #state,
@@ -17939,7 +17960,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8699
+  /* #8714
   source: 
     /**
      * A possible value for #state,
@@ -17953,7 +17974,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'StateInvalid',
       );
-  /* #8699
+  /* #8714
   source: 
     /**
      * A possible value for #state,
@@ -17970,7 +17991,7 @@ class TextEditingTool implements _i3.Tool {
     );
   }
 
-  /* #8705
+  /* #8720
   source: 
     /**
      * A possible value for #state,
@@ -17984,7 +18005,7 @@ class TextEditingTool implements _i3.Tool {
         _declaredTextEditingTool,
         'StateValidated',
       );
-  /* #8705
+  /* #8720
   source: 
     /**
      * A possible value for #state,
@@ -18009,7 +18030,7 @@ FieldExternal:
 external _i2.Object _declaredTextEditingTool;
 
 extension TextEditingTool$Typings on TextEditingTool {
-  /* #8713
+  /* #8728
   source: 
     /**
      * Gets or sets the TextBlock that is being edited.
@@ -18028,7 +18049,7 @@ extension TextEditingTool$Typings on TextEditingTool {
         this,
         'textBlock',
       );
-  /* #8713
+  /* #8728
   source: 
     /**
      * Gets or sets the TextBlock that is being edited.
@@ -18038,16 +18059,16 @@ extension TextEditingTool$Typings on TextEditingTool {
      * will not set it, and this tool will edit the given TextBlock.
      */
     get textBlock(): TextBlock | null; */
-  // Type InteropUnion#1064009808(parent: InteropGetter#818004269(name: textBlock))
+  // Type InteropUnion#1018366211(parent: InteropGetter#921854152(name: textBlock))
   set textBlock(_i3.TextBlock? value) {
     _i5.setProperty(
       this,
       'textBlock',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #8718
+  /* #8733
   source: 
     /**
      * Gets or sets the HTMLInfo that is editing the text.
@@ -18058,22 +18079,22 @@ extension TextEditingTool$Typings on TextEditingTool {
         this,
         'currentTextEditor',
       );
-  /* #8718
+  /* #8733
   source: 
     /**
      * Gets or sets the HTMLInfo that is editing the text.
      */
     get currentTextEditor(): HTMLInfo | null; */
-  // Type InteropUnion#908655371(parent: InteropGetter#553982710(name: currentTextEditor))
+  // Type InteropUnion#338419624(parent: InteropGetter#408884366(name: currentTextEditor))
   set currentTextEditor(_i3.HTMLInfo? value) {
     _i5.setProperty(
       this,
       'currentTextEditor',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #8734
+  /* #8749
   source: 
     /**
      * Gets or sets the default HTMLInfo that edits the text.
@@ -18106,7 +18127,7 @@ extension TextEditingTool$Typings on TextEditingTool {
         this,
         'defaultTextEditor',
       );
-  /* #8734
+  /* #8749
   source: 
     /**
      * Gets or sets the default HTMLInfo that edits the text.
@@ -18132,7 +18153,7 @@ extension TextEditingTool$Typings on TextEditingTool {
     );
   }
 
-  /* #8743
+  /* #8758
   source: 
     /**
      * Gets or sets how user gestures can start in-place editing of text.
@@ -18151,7 +18172,7 @@ extension TextEditingTool$Typings on TextEditingTool {
         this,
         'starting',
       );
-  /* #8743
+  /* #8758
   source: 
     /**
      * Gets or sets how user gestures can start in-place editing of text.
@@ -18170,7 +18191,7 @@ extension TextEditingTool$Typings on TextEditingTool {
     );
   }
 
-  /* #8856
+  /* #8871
   source: 
     /**
      * Gets or sets the predicate that determines whether or not a string of text is valid.
@@ -18195,7 +18216,7 @@ extension TextEditingTool$Typings on TextEditingTool {
         this,
         'textValidation',
       );
-  /* #8856
+  /* #8871
   source: 
     /**
      * Gets or sets the predicate that determines whether or not a string of text is valid.
@@ -18206,7 +18227,7 @@ extension TextEditingTool$Typings on TextEditingTool {
      * The function, if supplied, must not have any side-effects.
      */
     get textValidation(): ((aTextBlock: TextBlock, oldString: string, newString: string) => boolean) | null; */
-  // Type InteropUnion#924291964(parent: InteropGetter#17789921(name: textValidation))
+  // Type InteropUnion#858097944(parent: InteropGetter#658404113(name: textValidation))
   set textValidation(
       _i2.bool Function(
         _i3.TextBlock,
@@ -18216,11 +18237,11 @@ extension TextEditingTool$Typings on TextEditingTool {
     _i5.setProperty(
       this,
       'textValidation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #8864
+  /* #8879
   source: 
     /**
      * Gets or sets whether to select (highlight) the editable text when the TextEditingTool is activated.
@@ -18234,7 +18255,7 @@ extension TextEditingTool$Typings on TextEditingTool {
         this,
         'selectsTextOnActivate',
       );
-  /* #8864
+  /* #8879
   source: 
     /**
      * Gets or sets whether to select (highlight) the editable text when the TextEditingTool is activated.
@@ -18251,7 +18272,7 @@ extension TextEditingTool$Typings on TextEditingTool {
     );
   }
 
-  /* #8882
+  /* #8897
   source: 
     /**
      * Gets or sets the state of the TextEditingTool.
@@ -18287,7 +18308,7 @@ extension TextEditingTool$Typings on TextEditingTool {
         this,
         'state',
       );
-  /* #8882
+  /* #8897
   source: 
     /**
      * Gets or sets the state of the TextEditingTool.
@@ -18428,12 +18449,13 @@ extension TextEditingTool$Typings on TextEditingTool {
 @_i1.JS()
 @_i1.staticInterop
 class AnimationManager {
-  factory AnimationManager([_i4.Partial? init]) => _i5.callConstructor(
+  factory AnimationManager([_i4.Partial<_i3.AnimationManager>? init]) =>
+      _i5.callConstructor(
         _declaredAnimationManager,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
-  /* #9116
+  /* #9131
   source: 
     /**
      * Used as the default value for #initialAnimationStyle.
@@ -18456,7 +18478,7 @@ class AnimationManager {
         _declaredAnimationManager,
         'Default',
       );
-  /* #9116
+  /* #9131
   source: 
     /**
      * Used as the default value for #initialAnimationStyle.
@@ -18478,7 +18500,7 @@ class AnimationManager {
     );
   }
 
-  /* #9125
+  /* #9140
   source: 
     /**
      * Used as a value for #initialAnimationStyle.
@@ -18497,7 +18519,7 @@ class AnimationManager {
         _declaredAnimationManager,
         'AnimateLocations',
       );
-  /* #9125
+  /* #9140
   source: 
     /**
      * Used as a value for #initialAnimationStyle.
@@ -18517,7 +18539,7 @@ class AnimationManager {
     );
   }
 
-  /* #9134
+  /* #9149
   source: 
     /**
      * Used as a value for #initialAnimationStyle.
@@ -18536,7 +18558,7 @@ class AnimationManager {
         _declaredAnimationManager,
         'None',
       );
-  /* #9134
+  /* #9149
   source: 
     /**
      * Used as a value for #initialAnimationStyle.
@@ -18586,7 +18608,7 @@ FieldExternal:
 external _i2.Object _declaredAnimationManager;
 
 extension AnimationManager$Typings on AnimationManager {
-  /* #8995
+  /* #9010
   source: 
     /**
      * Gets or sets whether this AnimationManager operates.
@@ -18618,7 +18640,7 @@ extension AnimationManager$Typings on AnimationManager {
         this,
         'isEnabled',
       );
-  /* #8995
+  /* #9010
   source: 
     /**
      * Gets or sets whether this AnimationManager operates.
@@ -18644,7 +18666,7 @@ extension AnimationManager$Typings on AnimationManager {
     );
   }
 
-  /* #9007
+  /* #9022
   source: 
     /**
      * Gets or sets the default duration, in milliseconds, used as the duration for the #defaultAnimation
@@ -18667,7 +18689,7 @@ extension AnimationManager$Typings on AnimationManager {
         this,
         'duration',
       );
-  /* #9007
+  /* #9022
   source: 
     /**
      * Gets or sets the default duration, in milliseconds, used as the duration for the #defaultAnimation
@@ -18689,7 +18711,7 @@ extension AnimationManager$Typings on AnimationManager {
     );
   }
 
-  /* #9016
+  /* #9031
   source: 
     /**
      * This read-only property is true when the animation manager is currently animating any animation,
@@ -18708,7 +18730,7 @@ extension AnimationManager$Typings on AnimationManager {
         this,
         'isAnimating',
       );
-  /* #9016
+  /* #9031
   source: 
     /**
      * This read-only property is true when the animation manager is currently animating any animation,
@@ -18727,7 +18749,7 @@ extension AnimationManager$Typings on AnimationManager {
     );
   }
 
-  /* #9023
+  /* #9038
   source: 
     /**
      * This read-only property is true when the animation manager is in the middle of an animation tick.
@@ -18744,7 +18766,7 @@ extension AnimationManager$Typings on AnimationManager {
         this,
         'isTicking',
       );
-  /* #9023
+  /* #9038
   source: 
     /**
      * This read-only property is true when the animation manager is in the middle of an animation tick.
@@ -18762,7 +18784,7 @@ extension AnimationManager$Typings on AnimationManager {
     );
   }
 
-  /* #9032
+  /* #9047
   source: 
     /**
      * Gets or sets whether a default animation is performed on an initial layout.
@@ -18782,7 +18804,7 @@ extension AnimationManager$Typings on AnimationManager {
         this,
         'isInitial',
       );
-  /* #9032
+  /* #9047
   source: 
     /**
      * Gets or sets whether a default animation is performed on an initial layout.
@@ -18802,7 +18824,7 @@ extension AnimationManager$Typings on AnimationManager {
     );
   }
 
-  /* #9047
+  /* #9062
   source: 
     /**
      * This read-only property gets the Animation that carries out the default built-in GoJS animations.
@@ -18832,7 +18854,7 @@ extension AnimationManager$Typings on AnimationManager {
         this,
         'defaultAnimation',
       );
-  /* #9047
+  /* #9062
   source: 
     /**
      * This read-only property gets the Animation that carries out the default built-in GoJS animations.
@@ -18857,7 +18879,7 @@ extension AnimationManager$Typings on AnimationManager {
     );
   }
 
-  /* #9052
+  /* #9067
   source: 
     /**
      * Gets the set of currently animating Animations being managed by this AnimationManager, including any running #defaultAnimation.
@@ -18869,7 +18891,7 @@ extension AnimationManager$Typings on AnimationManager {
         this,
         'activeAnimations',
       );
-  /* #9052
+  /* #9067
   source: 
     /**
      * Gets the set of currently animating Animations being managed by this AnimationManager, including any running #defaultAnimation.
@@ -18885,7 +18907,7 @@ extension AnimationManager$Typings on AnimationManager {
     );
   }
 
-  /* #9078
+  /* #9093
   source: 
     /**
      * Gets or sets the initial animation style that is set up by the #defaultAnimation.
@@ -18937,7 +18959,7 @@ extension AnimationManager$Typings on AnimationManager {
         this,
         'initialAnimationStyle',
       );
-  /* #9078
+  /* #9093
   source: 
     /**
      * Gets or sets the initial animation style that is set up by the #defaultAnimation.
@@ -18983,7 +19005,7 @@ extension AnimationManager$Typings on AnimationManager {
     _i5.callMethod(
       this,
       'stopAnimation',
-      [stopsAllAnimations ?? _i4.undefined],
+      [stopsAllAnimations ?? _i7.undefined],
     );
   }
 }
@@ -18991,12 +19013,12 @@ extension AnimationManager$Typings on AnimationManager {
 @_i1.JS()
 @_i1.staticInterop
 class Animation {
-  factory Animation([_i4.Partial? init]) => _i5.callConstructor(
+  factory Animation([_i4.Partial<_i3.Animation>? init]) => _i5.callConstructor(
         _declaredAnimation,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
-  /* #9351
+  /* #9366
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
@@ -19008,14 +19030,14 @@ class Animation {
         _declaredAnimation,
         'EaseLinear',
       );
-  /* #9351
+  /* #9366
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
      * @constant
      */
     static EaseLinear: EasingFunction; */
-  // Type InteropTypedef#314510757(name: EasingFunction)
+  // Type InteropTypedef#213552029(name: EasingFunction)
   static set easeLinear(_i3.EasingFunction value) {
     _i5.setProperty(
       _declaredAnimation,
@@ -19024,7 +19046,7 @@ class Animation {
     );
   }
 
-  /* #9357
+  /* #9372
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
@@ -19038,7 +19060,7 @@ class Animation {
         _declaredAnimation,
         'EaseInOutQuad',
       );
-  /* #9357
+  /* #9372
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
@@ -19046,7 +19068,7 @@ class Animation {
      * @constant
      */
     static EaseInOutQuad: EasingFunction; */
-  // Type InteropTypedef#314510757(name: EasingFunction)
+  // Type InteropTypedef#213552029(name: EasingFunction)
   static set easeInOutQuad(_i3.EasingFunction value) {
     _i5.setProperty(
       _declaredAnimation,
@@ -19055,7 +19077,7 @@ class Animation {
     );
   }
 
-  /* #9362
+  /* #9377
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
@@ -19067,14 +19089,14 @@ class Animation {
         _declaredAnimation,
         'EaseInQuad',
       );
-  /* #9362
+  /* #9377
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
      * @constant
      */
     static EaseInQuad: EasingFunction; */
-  // Type InteropTypedef#314510757(name: EasingFunction)
+  // Type InteropTypedef#213552029(name: EasingFunction)
   static set easeInQuad(_i3.EasingFunction value) {
     _i5.setProperty(
       _declaredAnimation,
@@ -19083,7 +19105,7 @@ class Animation {
     );
   }
 
-  /* #9367
+  /* #9382
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
@@ -19095,14 +19117,14 @@ class Animation {
         _declaredAnimation,
         'EaseOutQuad',
       );
-  /* #9367
+  /* #9382
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
      * @constant
      */
     static EaseOutQuad: EasingFunction; */
-  // Type InteropTypedef#314510757(name: EasingFunction)
+  // Type InteropTypedef#213552029(name: EasingFunction)
   static set easeOutQuad(_i3.EasingFunction value) {
     _i5.setProperty(
       _declaredAnimation,
@@ -19111,7 +19133,7 @@ class Animation {
     );
   }
 
-  /* #9372
+  /* #9387
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
@@ -19123,14 +19145,14 @@ class Animation {
         _declaredAnimation,
         'EaseInExpo',
       );
-  /* #9372
+  /* #9387
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
      * @constant
      */
     static EaseInExpo: EasingFunction; */
-  // Type InteropTypedef#314510757(name: EasingFunction)
+  // Type InteropTypedef#213552029(name: EasingFunction)
   static set easeInExpo(_i3.EasingFunction value) {
     _i5.setProperty(
       _declaredAnimation,
@@ -19139,7 +19161,7 @@ class Animation {
     );
   }
 
-  /* #9377
+  /* #9392
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
@@ -19151,14 +19173,14 @@ class Animation {
         _declaredAnimation,
         'EaseOutExpo',
       );
-  /* #9377
+  /* #9392
   source: 
     /**
      * Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
      * @constant
      */
     static EaseOutExpo: EasingFunction; */
-  // Type InteropTypedef#314510757(name: EasingFunction)
+  // Type InteropTypedef#213552029(name: EasingFunction)
   static set easeOutExpo(_i3.EasingFunction value) {
     _i5.setProperty(
       _declaredAnimation,
@@ -19175,7 +19197,7 @@ FieldExternal:
 external _i2.Object _declaredAnimation;
 
 extension Animation$Typings on Animation {
-  /* #9278
+  /* #9293
   source: 
     /**
      * Gets or sets the duration for animations, in milliseconds.
@@ -19198,7 +19220,7 @@ extension Animation$Typings on Animation {
         this,
         'duration',
       );
-  /* #9278
+  /* #9293
   source: 
     /**
      * Gets or sets the duration for animations, in milliseconds.
@@ -19219,7 +19241,7 @@ extension Animation$Typings on Animation {
     );
   }
 
-  /* #9288
+  /* #9303
   source: 
     /**
      * Gets or sets whether this Animation will repeat its animation in reverse at the end of the duration. Default false.
@@ -19240,7 +19262,7 @@ extension Animation$Typings on Animation {
         this,
         'reversible',
       );
-  /* #9288
+  /* #9303
   source: 
     /**
      * Gets or sets whether this Animation will repeat its animation in reverse at the end of the duration. Default false.
@@ -19260,7 +19282,7 @@ extension Animation$Typings on Animation {
     );
   }
 
-  /* #9299
+  /* #9314
   source: 
     /**
      * Gets or sets whether this Animation should be repeat, and how many times. The default is 1, which means the animation does not repeat.
@@ -19281,7 +19303,7 @@ extension Animation$Typings on Animation {
         this,
         'runCount',
       );
-  /* #9299
+  /* #9314
   source: 
     /**
      * Gets or sets whether this Animation should be repeat, and how many times. The default is 1, which means the animation does not repeat.
@@ -19302,7 +19324,7 @@ extension Animation$Typings on Animation {
     );
   }
 
-  /* #9306
+  /* #9321
   source: 
     /**
      * Gets or sets the function to execute when the user Animation finishes.
@@ -19317,7 +19339,7 @@ extension Animation$Typings on Animation {
         this,
         'finished',
       );
-  /* #9306
+  /* #9321
   source: 
     /**
      * Gets or sets the function to execute when the user Animation finishes.
@@ -19325,16 +19347,16 @@ extension Animation$Typings on Animation {
      * By default this property is null.
      */
     get finished(): ((animation: Animation) => void) | null; */
-  // Type InteropUnion#1064114134(parent: InteropGetter#696990762(name: finished))
+  // Type InteropUnion#154404298(parent: InteropGetter#278183752(name: finished))
   set finished(void Function(_i3.Animation)? value) {
     _i5.setProperty(
       this,
       'finished',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #9321
+  /* #9336
   source: 
     /**
      * Gets or sets the easing function this Animation will use to modify default properties.
@@ -19364,7 +19386,7 @@ extension Animation$Typings on Animation {
         this,
         'easing',
       );
-  /* #9321
+  /* #9336
   source: 
     /**
      * Gets or sets the easing function this Animation will use to modify default properties.
@@ -19380,7 +19402,7 @@ extension Animation$Typings on Animation {
      *
      */
     get easing(): EasingFunction; */
-  // Type InteropTypedef#314510757(name: EasingFunction)
+  // Type InteropTypedef#213552029(name: EasingFunction)
   set easing(_i3.EasingFunction value) {
     _i5.setProperty(
       this,
@@ -19389,7 +19411,7 @@ extension Animation$Typings on Animation {
     );
   }
 
-  /* #9331
+  /* #9346
   source: 
     /**
      * Gets or sets whether this Animation should allow an unconstrained viewport during the runtime of the animation.
@@ -19410,7 +19432,7 @@ extension Animation$Typings on Animation {
         this,
         'isViewportUnconstrained',
       );
-  /* #9331
+  /* #9346
   source: 
     /**
      * Gets or sets whether this Animation should allow an unconstrained viewport during the runtime of the animation.
@@ -19430,7 +19452,7 @@ extension Animation$Typings on Animation {
     );
   }
 
-  /* #9338
+  /* #9353
   source: 
     /**
      * This read-only property is true when the Animation is currently running.
@@ -19445,7 +19467,7 @@ extension Animation$Typings on Animation {
         this,
         'isAnimating',
       );
-  /* #9338
+  /* #9353
   source: 
     /**
      * This read-only property is true when the Animation is currently running.
@@ -19479,7 +19501,7 @@ extension Animation$Typings on Animation {
       'advanceTo',
       [
         duration,
-        resume ?? _i4.undefined,
+        resume ?? _i7.undefined,
       ],
     );
   }
@@ -19516,7 +19538,7 @@ extension Animation$Typings on Animation {
           effectName,
           startValue,
           endValue,
-          cosmetic ?? _i4.undefined,
+          cosmetic ?? _i7.undefined,
         ],
       );
   _i3.Animation stop() => _i5.callMethod(
@@ -19537,14 +19559,14 @@ extension Animation$Typings on Animation {
 class IInline0 {}
 
 extension IInline0$Typings on IInline0 {
-  /* #9466
+  /* #9481
   source: 
         duration?: number; */
   _i2.num? get duration => _i5.getProperty(
         this,
         'duration',
       );
-  /* #9466
+  /* #9481
   source: 
         duration?: number; */
   // Type InteropStaticType.number
@@ -19552,45 +19574,45 @@ extension IInline0$Typings on IInline0 {
     _i5.setProperty(
       this,
       'duration',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #9467
+  /* #9482
   source: 
         finished?: (animation: Animation) => void; */
   void Function(_i3.Animation)? get finished => _i5.getProperty(
         this,
         'finished',
       );
-  /* #9467
+  /* #9482
   source: 
         finished?: (animation: Animation) => void; */
-  // Type InteropFunction#306222342(parent: InteropGetter#1038399110(name: finished), library: go.d.ts)
+  // Type InteropFunction#1026278736(parent: InteropGetter#1054908456(name: finished), library: go.d.ts)
   set finished(void Function(_i3.Animation)? value) {
     _i5.setProperty(
       this,
       'finished',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #9468
+  /* #9483
   source: 
         easing?: EasingFunction; */
   _i3.EasingFunction? get easing => _i5.getProperty(
         this,
         'easing',
       );
-  /* #9468
+  /* #9483
   source: 
         easing?: EasingFunction; */
-  // Type InteropTypedef#314510757(name: EasingFunction)
+  // Type InteropTypedef#213552029(name: EasingFunction)
   set easing(_i3.EasingFunction? value) {
     _i5.setProperty(
       this,
       'easing',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -19601,14 +19623,14 @@ extension IInline0$Typings on IInline0 {
 class IInline1 {}
 
 extension IInline1$Typings on IInline1 {
-  /* #9522
+  /* #9537
   source: 
         duration?: number; */
   _i2.num? get duration => _i5.getProperty(
         this,
         'duration',
       );
-  /* #9522
+  /* #9537
   source: 
         duration?: number; */
   // Type InteropStaticType.number
@@ -19616,45 +19638,45 @@ extension IInline1$Typings on IInline1 {
     _i5.setProperty(
       this,
       'duration',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #9523
+  /* #9538
   source: 
         finished?: (animation: Animation) => void; */
   void Function(_i3.Animation)? get finished => _i5.getProperty(
         this,
         'finished',
       );
-  /* #9523
+  /* #9538
   source: 
         finished?: (animation: Animation) => void; */
-  // Type InteropFunction#315741981(parent: InteropGetter#964216115(name: finished), library: go.d.ts)
+  // Type InteropFunction#948072978(parent: InteropGetter#190777221(name: finished), library: go.d.ts)
   set finished(void Function(_i3.Animation)? value) {
     _i5.setProperty(
       this,
       'finished',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #9524
+  /* #9539
   source: 
         easing?: EasingFunction; */
   _i3.EasingFunction? get easing => _i5.getProperty(
         this,
         'easing',
       );
-  /* #9524
+  /* #9539
   source: 
         easing?: EasingFunction; */
-  // Type InteropTypedef#314510757(name: EasingFunction)
+  // Type InteropTypedef#213552029(name: EasingFunction)
   set easing(_i3.EasingFunction? value) {
     _i5.setProperty(
       this,
       'easing',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -19665,14 +19687,14 @@ extension IInline1$Typings on IInline1 {
 class IInline2 {}
 
 extension IInline2$Typings on IInline2 {
-  /* #9527
+  /* #9542
   source: 
         duration?: number; */
   _i2.num? get duration => _i5.getProperty(
         this,
         'duration',
       );
-  /* #9527
+  /* #9542
   source: 
         duration?: number; */
   // Type InteropStaticType.number
@@ -19680,45 +19702,45 @@ extension IInline2$Typings on IInline2 {
     _i5.setProperty(
       this,
       'duration',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #9528
+  /* #9543
   source: 
         finished?: (animation: Animation) => void; */
   void Function(_i3.Animation)? get finished => _i5.getProperty(
         this,
         'finished',
       );
-  /* #9528
+  /* #9543
   source: 
         finished?: (animation: Animation) => void; */
-  // Type InteropFunction#743371077(parent: InteropGetter#194111974(name: finished), library: go.d.ts)
+  // Type InteropFunction#744911450(parent: InteropGetter#691464996(name: finished), library: go.d.ts)
   set finished(void Function(_i3.Animation)? value) {
     _i5.setProperty(
       this,
       'finished',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #9529
+  /* #9544
   source: 
         easing?: EasingFunction; */
   _i3.EasingFunction? get easing => _i5.getProperty(
         this,
         'easing',
       );
-  /* #9529
+  /* #9544
   source: 
         easing?: EasingFunction; */
-  // Type InteropTypedef#314510757(name: EasingFunction)
+  // Type InteropTypedef#213552029(name: EasingFunction)
   set easing(_i3.EasingFunction? value) {
     _i5.setProperty(
       this,
       'easing',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -19735,12 +19757,12 @@ class AnimationTrigger {
         _declaredAnimationTrigger,
         [
           propertyName,
-          animationSettings ?? _i4.undefined,
-          startCondition ?? _i4.undefined,
+          animationSettings ?? _i7.undefined,
+          startCondition ?? _i7.undefined,
         ],
       );
 
-  /* #9558
+  /* #9573
   source: 
     /**
      * Used as a value for #startCondition.
@@ -19758,7 +19780,7 @@ class AnimationTrigger {
         _declaredAnimationTrigger,
         'Default',
       );
-  /* #9558
+  /* #9573
   source: 
     /**
      * Used as a value for #startCondition.
@@ -19777,7 +19799,7 @@ class AnimationTrigger {
     );
   }
 
-  /* #9567
+  /* #9582
   source: 
     /**
      * Used as a value for #startCondition.
@@ -19797,7 +19819,7 @@ class AnimationTrigger {
         _declaredAnimationTrigger,
         'Immediate',
       );
-  /* #9567
+  /* #9582
   source: 
     /**
      * Used as a value for #startCondition.
@@ -19817,7 +19839,7 @@ class AnimationTrigger {
     );
   }
 
-  /* #9574
+  /* #9589
   source: 
     /**
      * Used as a value for #startCondition.
@@ -19833,7 +19855,7 @@ class AnimationTrigger {
         _declaredAnimationTrigger,
         'Bundled',
       );
-  /* #9574
+  /* #9589
   source: 
     /**
      * Used as a value for #startCondition.
@@ -19859,7 +19881,7 @@ FieldExternal:
 external _i2.Object _declaredAnimationTrigger;
 
 extension AnimationTrigger$Typings on AnimationTrigger {
-  /* #9499
+  /* #9514
   source: 
     /**
      * Gets or sets the name of the property to animate on the target GraphObject.
@@ -19910,7 +19932,7 @@ extension AnimationTrigger$Typings on AnimationTrigger {
         this,
         'propertyName',
       );
-  /* #9499
+  /* #9514
   source: 
     /**
      * Gets or sets the name of the property to animate on the target GraphObject.
@@ -19945,7 +19967,7 @@ extension AnimationTrigger$Typings on AnimationTrigger {
     );
   }
 
-  /* #9521
+  /* #9536
   source: 
     /**
      * These settings are only used if the #startCondition is AnimationTrigger.Immediate.
@@ -19994,7 +20016,7 @@ extension AnimationTrigger$Typings on AnimationTrigger {
         this,
         'animationSettings',
       );
-  /* #9521
+  /* #9536
   source: 
     /**
      * These settings are only used if the #startCondition is AnimationTrigger.Immediate.
@@ -20030,7 +20052,7 @@ extension AnimationTrigger$Typings on AnimationTrigger {
     );
   }
 
-  /* #9549
+  /* #9564
   source: 
     /**
      * Gets or sets the starting condition for this trigger.
@@ -20071,7 +20093,7 @@ extension AnimationTrigger$Typings on AnimationTrigger {
         this,
         'startCondition',
       );
-  /* #9549
+  /* #9564
   source: 
     /**
      * Gets or sets the starting condition for this trigger.
@@ -20111,9 +20133,9 @@ extension AnimationTrigger$Typings on AnimationTrigger {
 @_i1.JS()
 @_i1.staticInterop
 class Layer {
-  factory Layer([_i4.Partial? init]) => _i5.callConstructor(
+  factory Layer([_i4.Partial<_i3.Layer>? init]) => _i5.callConstructor(
         _declaredLayer,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 }
 
@@ -20124,7 +20146,7 @@ FieldExternal:
 external _i2.Object _declaredLayer;
 
 extension Layer$Typings on Layer {
-  /* #9693
+  /* #9708
   source: 
     /**
      * This read-only property returns an iterator for this Layer's Parts.
@@ -20137,7 +20159,7 @@ extension Layer$Typings on Layer {
         this,
         'parts',
       );
-  /* #9693
+  /* #9708
   source: 
     /**
      * This read-only property returns an iterator for this Layer's Parts.
@@ -20153,7 +20175,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9699
+  /* #9714
   source: 
     /**
      * This read-only property returns a backwards iterator for this Layer's Parts,
@@ -20168,7 +20190,7 @@ extension Layer$Typings on Layer {
         this,
         'partsBackwards',
       );
-  /* #9699
+  /* #9714
   source: 
     /**
      * This read-only property returns a backwards iterator for this Layer's Parts,
@@ -20185,7 +20207,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9703
+  /* #9718
   source: 
     /**
      * This read-only property returns the Diagram that is using this Layer.
@@ -20196,22 +20218,22 @@ extension Layer$Typings on Layer {
         this,
         'diagram',
       );
-  /* #9703
+  /* #9718
   source: 
     /**
      * This read-only property returns the Diagram that is using this Layer.
      */
     get diagram(): Diagram | null; */
-  // Type InteropUnion#635463400(parent: InteropGetter#374500531(name: diagram))
+  // Type InteropUnion#592323344(parent: InteropGetter#815645886(name: diagram))
   set diagram(_i3.Diagram? value) {
     _i5.setProperty(
       this,
       'diagram',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #9709
+  /* #9724
   source: 
     /**
      * Gets or sets the name for this layer.
@@ -20226,7 +20248,7 @@ extension Layer$Typings on Layer {
         this,
         'name',
       );
-  /* #9709
+  /* #9724
   source: 
     /**
      * Gets or sets the name for this layer.
@@ -20243,7 +20265,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9723
+  /* #9738
   source: 
     /**
      * Gets or sets the opacity for all parts in this layer.
@@ -20269,7 +20291,7 @@ extension Layer$Typings on Layer {
         this,
         'opacity',
       );
-  /* #9723
+  /* #9738
   source: 
     /**
      * Gets or sets the opacity for all parts in this layer.
@@ -20293,7 +20315,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9742
+  /* #9757
   source: 
     /**
      * Gets or sets whether the objects in this layer are considered temporary.
@@ -20330,7 +20352,7 @@ extension Layer$Typings on Layer {
         this,
         'isTemporary',
       );
-  /* #9742
+  /* #9757
   source: 
     /**
      * Gets or sets whether the objects in this layer are considered temporary.
@@ -20359,7 +20381,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9751
+  /* #9766
   source: 
     /**
      * Gets or sets whether the user may view any of the objects in this layer.
@@ -20377,7 +20399,7 @@ extension Layer$Typings on Layer {
         this,
         'visible',
       );
-  /* #9751
+  /* #9766
   source: 
     /**
      * Gets or sets whether the user may view any of the objects in this layer.
@@ -20396,7 +20418,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9768
+  /* #9783
   source: 
     /**
      * Gets or sets whether methods such as #findObjectAt find any of the objects in this layer.
@@ -20429,7 +20451,7 @@ extension Layer$Typings on Layer {
         this,
         'pickable',
       );
-  /* #9768
+  /* #9783
   source: 
     /**
      * Gets or sets whether methods such as #findObjectAt find any of the objects in this layer.
@@ -20456,7 +20478,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9776
+  /* #9791
   source: 
     /**
      * Gets or sets whether or not a layer is included in the documentBounds computation.
@@ -20471,7 +20493,7 @@ extension Layer$Typings on Layer {
         this,
         'isInDocumentBounds',
       );
-  /* #9776
+  /* #9791
   source: 
     /**
      * Gets or sets whether or not a layer is included in the documentBounds computation.
@@ -20489,7 +20511,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9782
+  /* #9797
   source: 
     /**
      * Gets or sets whether the user may copy objects in this layer.
@@ -20502,7 +20524,7 @@ extension Layer$Typings on Layer {
         this,
         'allowCopy',
       );
-  /* #9782
+  /* #9797
   source: 
     /**
      * Gets or sets whether the user may copy objects in this layer.
@@ -20518,7 +20540,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9788
+  /* #9803
   source: 
     /**
      * Gets or sets whether the user may delete objects in this layer.
@@ -20531,7 +20553,7 @@ extension Layer$Typings on Layer {
         this,
         'allowDelete',
       );
-  /* #9788
+  /* #9803
   source: 
     /**
      * Gets or sets whether the user may delete objects in this layer.
@@ -20547,7 +20569,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9794
+  /* #9809
   source: 
     /**
      * Gets or sets whether the user may do in-place text editing in this layer.
@@ -20560,7 +20582,7 @@ extension Layer$Typings on Layer {
         this,
         'allowTextEdit',
       );
-  /* #9794
+  /* #9809
   source: 
     /**
      * Gets or sets whether the user may do in-place text editing in this layer.
@@ -20576,7 +20598,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9800
+  /* #9815
   source: 
     /**
      * Gets or sets whether the user may group parts together in this layer.
@@ -20589,7 +20611,7 @@ extension Layer$Typings on Layer {
         this,
         'allowGroup',
       );
-  /* #9800
+  /* #9815
   source: 
     /**
      * Gets or sets whether the user may group parts together in this layer.
@@ -20605,7 +20627,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9806
+  /* #9821
   source: 
     /**
      * Gets or sets whether the user may ungroup existing groups in this layer.
@@ -20618,7 +20640,7 @@ extension Layer$Typings on Layer {
         this,
         'allowUngroup',
       );
-  /* #9806
+  /* #9821
   source: 
     /**
      * Gets or sets whether the user may ungroup existing groups in this layer.
@@ -20634,7 +20656,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9812
+  /* #9827
   source: 
     /**
      * Gets or sets whether the user may draw new links in this layer.
@@ -20647,7 +20669,7 @@ extension Layer$Typings on Layer {
         this,
         'allowLink',
       );
-  /* #9812
+  /* #9827
   source: 
     /**
      * Gets or sets whether the user may draw new links in this layer.
@@ -20663,7 +20685,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9818
+  /* #9833
   source: 
     /**
      * Gets or sets whether the user may reconnect existing links in this layer.
@@ -20676,7 +20698,7 @@ extension Layer$Typings on Layer {
         this,
         'allowRelink',
       );
-  /* #9818
+  /* #9833
   source: 
     /**
      * Gets or sets whether the user may reconnect existing links in this layer.
@@ -20692,7 +20714,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9824
+  /* #9839
   source: 
     /**
      * Gets or sets whether the user may move objects in this layer.
@@ -20705,7 +20727,7 @@ extension Layer$Typings on Layer {
         this,
         'allowMove',
       );
-  /* #9824
+  /* #9839
   source: 
     /**
      * Gets or sets whether the user may move objects in this layer.
@@ -20721,7 +20743,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9830
+  /* #9845
   source: 
     /**
      * Gets or sets whether the user may reshape parts in this layer.
@@ -20734,7 +20756,7 @@ extension Layer$Typings on Layer {
         this,
         'allowReshape',
       );
-  /* #9830
+  /* #9845
   source: 
     /**
      * Gets or sets whether the user may reshape parts in this layer.
@@ -20750,7 +20772,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9836
+  /* #9851
   source: 
     /**
      * Gets or sets whether the user may resize parts in this layer.
@@ -20763,7 +20785,7 @@ extension Layer$Typings on Layer {
         this,
         'allowResize',
       );
-  /* #9836
+  /* #9851
   source: 
     /**
      * Gets or sets whether the user may resize parts in this layer.
@@ -20779,7 +20801,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9842
+  /* #9857
   source: 
     /**
      * Gets or sets whether the user may rotate parts in this layer.
@@ -20792,7 +20814,7 @@ extension Layer$Typings on Layer {
         this,
         'allowRotate',
       );
-  /* #9842
+  /* #9857
   source: 
     /**
      * Gets or sets whether the user may rotate parts in this layer.
@@ -20808,7 +20830,7 @@ extension Layer$Typings on Layer {
     );
   }
 
-  /* #9848
+  /* #9863
   source: 
     /**
      * Gets or sets whether the user may select objects in this layer.
@@ -20821,7 +20843,7 @@ extension Layer$Typings on Layer {
         this,
         'allowSelect',
       );
-  /* #9848
+  /* #9863
   source: 
     /**
      * Gets or sets whether the user may select objects in this layer.
@@ -20847,8 +20869,8 @@ extension Layer$Typings on Layer {
         'findObjectAt',
         [
           p,
-          navig == null ? _i4.undefined : _i5.allowInterop(navig),
-          pred == null ? _i4.undefined : _i5.allowInterop(pred),
+          navig == null ? _i7.undefined : _i5.allowInterop(navig),
+          pred == null ? _i7.undefined : _i5.allowInterop(pred),
         ],
       );
   S findObjectsAt<T extends _i3.GraphObject, S extends _i3.Iterable<T>>(
@@ -20862,9 +20884,9 @@ extension Layer$Typings on Layer {
         'findObjectsAt',
         [
           p,
-          navig == null ? _i4.undefined : _i5.allowInterop(navig),
-          pred == null ? _i4.undefined : _i5.allowInterop(pred),
-          coll ?? _i4.undefined,
+          navig == null ? _i7.undefined : _i5.allowInterop(navig),
+          pred == null ? _i7.undefined : _i5.allowInterop(pred),
+          coll ?? _i7.undefined,
         ],
       );
   S findObjectsIn<T extends _i3.GraphObject, S extends _i3.Iterable<T>>(
@@ -20879,10 +20901,10 @@ extension Layer$Typings on Layer {
         'findObjectsIn',
         [
           r,
-          navig == null ? _i4.undefined : _i5.allowInterop(navig),
-          pred == null ? _i4.undefined : _i5.allowInterop(pred),
-          partialInclusion ?? _i4.undefined,
-          coll ?? _i4.undefined,
+          navig == null ? _i7.undefined : _i5.allowInterop(navig),
+          pred == null ? _i7.undefined : _i5.allowInterop(pred),
+          partialInclusion ?? _i7.undefined,
+          coll ?? _i7.undefined,
         ],
       );
   S findObjectsNear<T extends _i3.GraphObject, S extends _i3.Iterable<T>>(
@@ -20899,10 +20921,10 @@ extension Layer$Typings on Layer {
         [
           p,
           dist,
-          navig == null ? _i4.undefined : _i5.allowInterop(navig),
-          pred == null ? _i4.undefined : _i5.allowInterop(pred),
-          partialInclusion ?? _i4.undefined,
-          coll ?? _i4.undefined,
+          navig == null ? _i7.undefined : _i5.allowInterop(navig),
+          pred == null ? _i7.undefined : _i5.allowInterop(pred),
+          partialInclusion ?? _i7.undefined,
+          coll ?? _i7.undefined,
         ],
       );
 }
@@ -20988,7 +21010,7 @@ class Diagram {
 
   factory Diagram.$2([_i3.DiagramInitOptions? init]) => _i5.callConstructor(
         _declaredDiagram,
-        [init ?? _i4.undefined ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Diagram.$3([
@@ -20998,12 +21020,12 @@ class Diagram {
       _i5.callConstructor(
         _declaredDiagram,
         [
-          div ?? _i4.undefined,
-          init ?? _i4.undefined ?? _i4.undefined,
+          div ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 
-  /* #11216
+  /* #11231
   source: 
     /**
      * The default autoScale type, used as the value of Diagram#autoScale:
@@ -21017,7 +21039,7 @@ class Diagram {
         _declaredDiagram,
         'None',
       );
-  /* #11216
+  /* #11231
   source: 
     /**
      * The default autoScale type, used as the value of Diagram#autoScale:
@@ -21034,7 +21056,7 @@ class Diagram {
     );
   }
 
-  /* #11222
+  /* #11237
   source: 
     /**
      * Diagrams with this autoScale type, used as the value of Diagram#autoScale,
@@ -21048,7 +21070,7 @@ class Diagram {
         _declaredDiagram,
         'Uniform',
       );
-  /* #11222
+  /* #11237
   source: 
     /**
      * Diagrams with this autoScale type, used as the value of Diagram#autoScale,
@@ -21065,7 +21087,7 @@ class Diagram {
     );
   }
 
-  /* #11229
+  /* #11244
   source: 
     /**
      * Diagrams with this autoScale type, used as the value of Diagram#autoScale,
@@ -21081,7 +21103,7 @@ class Diagram {
         _declaredDiagram,
         'UniformToFill',
       );
-  /* #11229
+  /* #11244
   source: 
     /**
      * Diagrams with this autoScale type, used as the value of Diagram#autoScale,
@@ -21099,7 +21121,7 @@ class Diagram {
     );
   }
 
-  /* #11235
+  /* #11250
   source: 
     /**
      * This value for Diagram#validCycle states that
@@ -21113,7 +21135,7 @@ class Diagram {
         _declaredDiagram,
         'CycleAll',
       );
-  /* #11235
+  /* #11250
   source: 
     /**
      * This value for Diagram#validCycle states that
@@ -21130,7 +21152,7 @@ class Diagram {
     );
   }
 
-  /* #11241
+  /* #11256
   source: 
     /**
      * This value for Diagram#validCycle states that
@@ -21144,7 +21166,7 @@ class Diagram {
         _declaredDiagram,
         'CycleNotDirected',
       );
-  /* #11241
+  /* #11256
   source: 
     /**
      * This value for Diagram#validCycle states that
@@ -21161,7 +21183,7 @@ class Diagram {
     );
   }
 
-  /* #11247
+  /* #11262
   source: 
     /**
      * This value for Diagram#validCycle states that
@@ -21175,7 +21197,7 @@ class Diagram {
         _declaredDiagram,
         'CycleNotUndirected',
       );
-  /* #11247
+  /* #11262
   source: 
     /**
      * This value for Diagram#validCycle states that
@@ -21192,7 +21214,7 @@ class Diagram {
     );
   }
 
-  /* #11257
+  /* #11272
   source: 
     /**
      * This value for Diagram#validCycle states that
@@ -21214,7 +21236,7 @@ class Diagram {
         _declaredDiagram,
         'CycleDestinationTree',
       );
-  /* #11257
+  /* #11272
   source: 
     /**
      * This value for Diagram#validCycle states that
@@ -21235,7 +21257,7 @@ class Diagram {
     );
   }
 
-  /* #11267
+  /* #11282
   source: 
     /**
      * This value for Diagram#validCycle states that
@@ -21257,7 +21279,7 @@ class Diagram {
         _declaredDiagram,
         'CycleSourceTree',
       );
-  /* #11267
+  /* #11282
   source: 
     /**
      * This value for Diagram#validCycle states that
@@ -21278,7 +21300,7 @@ class Diagram {
     );
   }
 
-  /* #11273
+  /* #11288
   source: 
     /**
      * This value for Diagram#scrollMode states that
@@ -21292,7 +21314,7 @@ class Diagram {
         _declaredDiagram,
         'DocumentScroll',
       );
-  /* #11273
+  /* #11288
   source: 
     /**
      * This value for Diagram#scrollMode states that
@@ -21309,7 +21331,7 @@ class Diagram {
     );
   }
 
-  /* #11279
+  /* #11294
   source: 
     /**
      * This value for Diagram#scrollMode states that
@@ -21323,7 +21345,7 @@ class Diagram {
         _declaredDiagram,
         'InfiniteScroll',
       );
-  /* #11279
+  /* #11294
   source: 
     /**
      * This value for Diagram#scrollMode states that
@@ -21340,7 +21362,7 @@ class Diagram {
     );
   }
 
-  /* #12005
+  /* #12020
   source: 
     /**
      * Gets or sets the license key.
@@ -21352,7 +21374,7 @@ class Diagram {
         _declaredDiagram,
         'licenseKey',
       );
-  /* #12005
+  /* #12020
   source: 
     /**
      * Gets or sets the license key.
@@ -21368,7 +21390,7 @@ class Diagram {
     );
   }
 
-  /* #12011
+  /* #12026
   source: 
     /**
      * Gets the current GoJS version.
@@ -21380,7 +21402,7 @@ class Diagram {
         _declaredDiagram,
         'version',
       );
-  /* #12011
+  /* #12026
   source: 
     /**
      * Gets the current GoJS version.
@@ -21436,7 +21458,7 @@ FieldExternal:
 external _i2.Object _declaredDiagram;
 
 extension Diagram$Typings on Diagram {
-  /* #10186
+  /* #10201
   source: 
     /**
      * Gets or sets the rendering context type. Values are `'default'`, which uses the HTML Canvas,
@@ -21465,7 +21487,7 @@ extension Diagram$Typings on Diagram {
         this,
         'renderer',
       ));
-  /* #10186
+  /* #10201
   source: 
     /**
      * Gets or sets the rendering context type. Values are `'default'`, which uses the HTML Canvas,
@@ -21481,7 +21503,7 @@ extension Diagram$Typings on Diagram {
      * @since 2.3
      */
     get renderer(): 'default' | 'svg' | 'canvas'; */
-  // Type InteropUnion#519634730(parent: InteropGetter#483054317(name: renderer))
+  // Type InteropUnion#601978334(parent: InteropGetter#294417079(name: renderer))
   set renderer(Renderer value) {
     _i5.setProperty(
       this,
@@ -21490,7 +21512,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #10264
+  /* #10279
   source: 
     /**
      * Gets or sets the Diagram's HTMLDivElement, via an HTML Element ID.
@@ -21523,11 +21545,11 @@ extension Diagram$Typings on Diagram {
   ///
   /// You should not attempt to manually modify the contents of this Div.
   /// Changing this property value does not raise a Changed event.
-  _i4.HTMLDivElement? get div => _i5.getProperty(
+  _i6.HTMLDivElement? get div => _i5.getProperty(
         this,
         'div',
       );
-  /* #10264
+  /* #10279
   source: 
     /**
      * Gets or sets the Diagram's HTMLDivElement, via an HTML Element ID.
@@ -21546,16 +21568,16 @@ extension Diagram$Typings on Diagram {
      * Changing this property value does not raise a Changed event.
      */
     get div(): HTMLDivElement | null; */
-  // Type InteropUnion#746825114(parent: InteropGetter#806854460(name: div))
-  set div(_i4.HTMLDivElement? value) {
+  // Type InteropUnion#823246319(parent: InteropGetter#118744138(name: div))
+  set div(_i6.HTMLDivElement? value) {
     _i5.setProperty(
       this,
       'div',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #10954
+  /* #10969
   source: 
     /**
      * This read-only property returns the AnimationManager for this Diagram.
@@ -21567,7 +21589,7 @@ extension Diagram$Typings on Diagram {
         this,
         'animationManager',
       );
-  /* #10954
+  /* #10969
   source: 
     /**
      * This read-only property returns the AnimationManager for this Diagram.
@@ -21583,7 +21605,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #10964
+  /* #10979
   source: 
     /**
      * This read-only property returns the UndoManager for this Diagram, which actually belongs to the #model.
@@ -21606,7 +21628,7 @@ extension Diagram$Typings on Diagram {
         this,
         'undoManager',
       );
-  /* #10964
+  /* #10979
   source: 
     /**
      * This read-only property returns the UndoManager for this Diagram, which actually belongs to the #model.
@@ -21627,7 +21649,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #10987
+  /* #11002
   source: 
     /**
      * Gets or sets whether ChangedEvents are not recorded by the UndoManager.
@@ -21676,7 +21698,7 @@ extension Diagram$Typings on Diagram {
         this,
         'skipsUndoManager',
       );
-  /* #10987
+  /* #11002
   source: 
     /**
      * Gets or sets whether ChangedEvents are not recorded by the UndoManager.
@@ -21710,7 +21732,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #10994
+  /* #11009
   source: 
     /**
      * (undocumented)
@@ -21725,7 +21747,7 @@ extension Diagram$Typings on Diagram {
         this,
         'delaysLayout',
       );
-  /* #10994
+  /* #11009
   source: 
     /**
      * (undocumented)
@@ -21742,7 +21764,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11290
+  /* #11305
   source: 
     /**
      * Gets or sets the opacity for all parts in this diagram.
@@ -21764,7 +21786,7 @@ extension Diagram$Typings on Diagram {
         this,
         'opacity',
       );
-  /* #11290
+  /* #11305
   source: 
     /**
      * Gets or sets the opacity for all parts in this diagram.
@@ -21786,7 +21808,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11297
+  /* #11312
   source: 
     /**
      * Gets or sets what kinds of graphs this diagram allows the user to draw.
@@ -21801,7 +21823,7 @@ extension Diagram$Typings on Diagram {
         this,
         'validCycle',
       );
-  /* #11297
+  /* #11312
   source: 
     /**
      * Gets or sets what kinds of graphs this diagram allows the user to draw.
@@ -21818,7 +21840,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11304
+  /* #11319
   source: 
     /**
      * This read-only property returns an iterator for this Diagram's Layers.
@@ -21831,7 +21853,7 @@ extension Diagram$Typings on Diagram {
         this,
         'layers',
       );
-  /* #11304
+  /* #11319
   source: 
     /**
      * This read-only property returns an iterator for this Diagram's Layers.
@@ -21848,7 +21870,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11310
+  /* #11325
   source: 
     /**
      * Gets or sets whether the Diagram's Diagram#model is Model#isReadOnly.
@@ -21861,7 +21883,7 @@ extension Diagram$Typings on Diagram {
         this,
         'isModelReadOnly',
       );
-  /* #11310
+  /* #11325
   source: 
     /**
      * Gets or sets whether the Diagram's Diagram#model is Model#isReadOnly.
@@ -21878,7 +21900,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11319
+  /* #11334
   source: 
     /**
      * Gets or sets whether the Diagram may be modified by the user,
@@ -21895,7 +21917,7 @@ extension Diagram$Typings on Diagram {
         this,
         'isReadOnly',
       );
-  /* #11319
+  /* #11334
   source: 
     /**
      * Gets or sets whether the Diagram may be modified by the user,
@@ -21914,7 +21936,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11326
+  /* #11341
   source: 
     /**
      * Gets or sets whether the user may interact with the Diagram.
@@ -21927,7 +21949,7 @@ extension Diagram$Typings on Diagram {
         this,
         'isEnabled',
       );
-  /* #11326
+  /* #11341
   source: 
     /**
      * Gets or sets whether the user may interact with the Diagram.
@@ -21944,7 +21966,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11334
+  /* #11349
   source: 
     /**
      * Gets or sets whether the user may copy to or paste parts from the internal clipboard.
@@ -21961,7 +21983,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowClipboard',
       );
-  /* #11334
+  /* #11349
   source: 
     /**
      * Gets or sets whether the user may copy to or paste parts from the internal clipboard.
@@ -21979,7 +22001,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11340
+  /* #11355
   source: 
     /**
      * Gets or sets whether the user may copy objects.
@@ -21992,7 +22014,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowCopy',
       );
-  /* #11340
+  /* #11355
   source: 
     /**
      * Gets or sets whether the user may copy objects.
@@ -22008,7 +22030,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11346
+  /* #11361
   source: 
     /**
      * Gets or sets whether the user may delete objects from the Diagram.
@@ -22021,7 +22043,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowDelete',
       );
-  /* #11346
+  /* #11361
   source: 
     /**
      * Gets or sets whether the user may delete objects from the Diagram.
@@ -22037,7 +22059,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11353
+  /* #11368
   source: 
     /**
      * Gets or sets whether the user may start a drag-and-drop in this Diagram,
@@ -22052,7 +22074,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowDragOut',
       );
-  /* #11353
+  /* #11368
   source: 
     /**
      * Gets or sets whether the user may start a drag-and-drop in this Diagram,
@@ -22069,7 +22091,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11361
+  /* #11376
   source: 
     /**
      * Gets or sets whether the user may end a drag-and-drop operation in this Diagram.
@@ -22086,7 +22108,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowDrop',
       );
-  /* #11361
+  /* #11376
   source: 
     /**
      * Gets or sets whether the user may end a drag-and-drop operation in this Diagram.
@@ -22104,7 +22126,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11367
+  /* #11382
   source: 
     /**
      * Gets or sets whether the user may do in-place text editing.
@@ -22117,7 +22139,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowTextEdit',
       );
-  /* #11367
+  /* #11382
   source: 
     /**
      * Gets or sets whether the user may do in-place text editing.
@@ -22133,7 +22155,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11373
+  /* #11388
   source: 
     /**
      * Gets or sets whether the user may group parts together.
@@ -22146,7 +22168,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowGroup',
       );
-  /* #11373
+  /* #11388
   source: 
     /**
      * Gets or sets whether the user may group parts together.
@@ -22162,7 +22184,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11379
+  /* #11394
   source: 
     /**
      * Gets or sets whether the user may ungroup existing groups.
@@ -22175,7 +22197,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowUngroup',
       );
-  /* #11379
+  /* #11394
   source: 
     /**
      * Gets or sets whether the user may ungroup existing groups.
@@ -22191,7 +22213,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11385
+  /* #11400
   source: 
     /**
      * Gets or sets whether the user may add parts to the Diagram.
@@ -22204,7 +22226,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowInsert',
       );
-  /* #11385
+  /* #11400
   source: 
     /**
      * Gets or sets whether the user may add parts to the Diagram.
@@ -22220,7 +22242,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11391
+  /* #11406
   source: 
     /**
      * Gets or sets whether the user may draw new links.
@@ -22233,7 +22255,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowLink',
       );
-  /* #11391
+  /* #11406
   source: 
     /**
      * Gets or sets whether the user may draw new links.
@@ -22249,7 +22271,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11397
+  /* #11412
   source: 
     /**
      * Gets or sets whether the user may reconnect existing links.
@@ -22262,7 +22284,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowRelink',
       );
-  /* #11397
+  /* #11412
   source: 
     /**
      * Gets or sets whether the user may reconnect existing links.
@@ -22278,7 +22300,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11403
+  /* #11418
   source: 
     /**
      * Gets or sets whether the user may move objects.
@@ -22291,7 +22313,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowMove',
       );
-  /* #11403
+  /* #11418
   source: 
     /**
      * Gets or sets whether the user may move objects.
@@ -22307,7 +22329,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11409
+  /* #11424
   source: 
     /**
      * Gets or sets whether the user may reshape parts.
@@ -22320,7 +22342,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowReshape',
       );
-  /* #11409
+  /* #11424
   source: 
     /**
      * Gets or sets whether the user may reshape parts.
@@ -22336,7 +22358,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11415
+  /* #11430
   source: 
     /**
      * Gets or sets whether the user may resize parts.
@@ -22349,7 +22371,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowResize',
       );
-  /* #11415
+  /* #11430
   source: 
     /**
      * Gets or sets whether the user may resize parts.
@@ -22365,7 +22387,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11421
+  /* #11436
   source: 
     /**
      * Gets or sets whether the user may rotate parts.
@@ -22378,7 +22400,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowRotate',
       );
-  /* #11421
+  /* #11436
   source: 
     /**
      * Gets or sets whether the user may rotate parts.
@@ -22394,7 +22416,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11427
+  /* #11442
   source: 
     /**
      * Gets or sets whether the user may select objects.
@@ -22407,7 +22429,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowSelect',
       );
-  /* #11427
+  /* #11442
   source: 
     /**
      * Gets or sets whether the user may select objects.
@@ -22423,7 +22445,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11433
+  /* #11448
   source: 
     /**
      * Gets or sets whether the user may undo or redo any changes.
@@ -22436,7 +22458,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowUndo',
       );
-  /* #11433
+  /* #11448
   source: 
     /**
      * Gets or sets whether the user may undo or redo any changes.
@@ -22452,7 +22474,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11439
+  /* #11454
   source: 
     /**
      * Gets or sets whether the user may zoom into or out of the Diagram.
@@ -22465,7 +22487,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowZoom',
       );
-  /* #11439
+  /* #11454
   source: 
     /**
      * Gets or sets whether the user may zoom into or out of the Diagram.
@@ -22481,7 +22503,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11452
+  /* #11467
   source: 
     /**
      * Gets or sets whether the Diagram has a vertical Scrollbar.
@@ -22506,7 +22528,7 @@ extension Diagram$Typings on Diagram {
         this,
         'hasVerticalScrollbar',
       );
-  /* #11452
+  /* #11467
   source: 
     /**
      * Gets or sets whether the Diagram has a vertical Scrollbar.
@@ -22529,7 +22551,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11465
+  /* #11480
   source: 
     /**
      * Gets or sets whether the Diagram has a horizontal Scrollbar.
@@ -22554,7 +22576,7 @@ extension Diagram$Typings on Diagram {
         this,
         'hasHorizontalScrollbar',
       );
-  /* #11465
+  /* #11480
   source: 
     /**
      * Gets or sets whether the Diagram has a horizontal Scrollbar.
@@ -22577,7 +22599,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11473
+  /* #11488
   source: 
     /**
      * Gets or sets whether the user is allowed to use the horizontal scrollbar.
@@ -22592,7 +22614,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowHorizontalScroll',
       );
-  /* #11473
+  /* #11488
   source: 
     /**
      * Gets or sets whether the user is allowed to use the horizontal scrollbar.
@@ -22610,7 +22632,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11481
+  /* #11496
   source: 
     /**
      * Gets or sets whether the user is allowed to use the vertical scrollbar.
@@ -22625,7 +22647,7 @@ extension Diagram$Typings on Diagram {
         this,
         'allowVerticalScroll',
       );
-  /* #11481
+  /* #11496
   source: 
     /**
      * Gets or sets whether the user is allowed to use the vertical scrollbar.
@@ -22643,7 +22665,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11490
+  /* #11505
   source: 
     /**
      * Gets or sets the distance in screen pixels that the horizontal scrollbar will scroll
@@ -22661,7 +22683,7 @@ extension Diagram$Typings on Diagram {
         this,
         'scrollHorizontalLineChange',
       );
-  /* #11490
+  /* #11505
   source: 
     /**
      * Gets or sets the distance in screen pixels that the horizontal scrollbar will scroll
@@ -22680,7 +22702,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11499
+  /* #11514
   source: 
     /**
      * Gets or sets the distance in screen pixels that the vertical scrollbar will scroll
@@ -22698,7 +22720,7 @@ extension Diagram$Typings on Diagram {
         this,
         'scrollVerticalLineChange',
       );
-  /* #11499
+  /* #11514
   source: 
     /**
      * Gets or sets the distance in screen pixels that the vertical scrollbar will scroll
@@ -22717,7 +22739,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11510
+  /* #11525
   source: 
     /**
      * Gets or sets the last InputEvent that occurred.
@@ -22739,7 +22761,7 @@ extension Diagram$Typings on Diagram {
         this,
         'lastInput',
       );
-  /* #11510
+  /* #11525
   source: 
     /**
      * Gets or sets the last InputEvent that occurred.
@@ -22760,7 +22782,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11519
+  /* #11534
   source: 
     /**
      * Gets or sets the most recent mouse-down InputEvent that occurred.
@@ -22776,7 +22798,7 @@ extension Diagram$Typings on Diagram {
         this,
         'firstInput',
       );
-  /* #11519
+  /* #11534
   source: 
     /**
      * Gets or sets the most recent mouse-down InputEvent that occurred.
@@ -22794,7 +22816,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11541
+  /* #11556
   source: 
     /**
      * Gets or sets the current cursor for the Diagram, overriding the #defaultCursor.
@@ -22837,7 +22859,7 @@ extension Diagram$Typings on Diagram {
         this,
         'currentCursor',
       );
-  /* #11541
+  /* #11556
   source: 
     /**
      * Gets or sets the current cursor for the Diagram, overriding the #defaultCursor.
@@ -22869,7 +22891,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11559
+  /* #11574
   source: 
     /**
      * Gets or sets the cursor to be used for the Diagram
@@ -22904,7 +22926,7 @@ extension Diagram$Typings on Diagram {
         this,
         'defaultCursor',
       );
-  /* #11559
+  /* #11574
   source: 
     /**
      * Gets or sets the cursor to be used for the Diagram
@@ -22932,7 +22954,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11581
+  /* #11596
   source: 
     /**
      * Gets or sets the function to execute when the user single-primary-clicks
@@ -22974,7 +22996,7 @@ extension Diagram$Typings on Diagram {
         this,
         'click',
       );
-  /* #11581
+  /* #11596
   source: 
     /**
      * Gets or sets the function to execute when the user single-primary-clicks
@@ -22997,16 +23019,16 @@ extension Diagram$Typings on Diagram {
      * @see GraphObject#click
      */
     get click(): ((e: InputEvent) => void) | null; */
-  // Type InteropUnion#601092244(parent: InteropGetter#229619056(name: click))
+  // Type InteropUnion#733493955(parent: InteropGetter#1059662779(name: click))
   set click(void Function(_i3.InputEvent)? value) {
     _i5.setProperty(
       this,
       'click',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #11603
+  /* #11618
   source: 
     /**
      * Gets or sets the function to execute when the user double-primary-clicks
@@ -23048,7 +23070,7 @@ extension Diagram$Typings on Diagram {
         this,
         'doubleClick',
       );
-  /* #11603
+  /* #11618
   source: 
     /**
      * Gets or sets the function to execute when the user double-primary-clicks
@@ -23071,16 +23093,16 @@ extension Diagram$Typings on Diagram {
      * @see GraphObject#doubleClick
      */
     get doubleClick(): ((e: InputEvent) => void) | null; */
-  // Type InteropUnion#1048120000(parent: InteropGetter#32778741(name: doubleClick))
+  // Type InteropUnion#1037304881(parent: InteropGetter#870279580(name: doubleClick))
   set doubleClick(void Function(_i3.InputEvent)? value) {
     _i5.setProperty(
       this,
       'doubleClick',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #11625
+  /* #11640
   source: 
     /**
      * Gets or sets the function to execute when the user single-secondary-clicks
@@ -23122,7 +23144,7 @@ extension Diagram$Typings on Diagram {
         this,
         'contextClick',
       );
-  /* #11625
+  /* #11640
   source: 
     /**
      * Gets or sets the function to execute when the user single-secondary-clicks
@@ -23145,16 +23167,16 @@ extension Diagram$Typings on Diagram {
      * @see GraphObject#contextClick
      */
     get contextClick(): ((e: InputEvent) => void) | null; */
-  // Type InteropUnion#1036152112(parent: InteropGetter#208297844(name: contextClick))
+  // Type InteropUnion#1003345719(parent: InteropGetter#250329707(name: contextClick))
   set contextClick(void Function(_i3.InputEvent)? value) {
     _i5.setProperty(
       this,
       'contextClick',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #11643
+  /* #11658
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse (pointer) in
@@ -23189,7 +23211,7 @@ extension Diagram$Typings on Diagram {
         this,
         'mouseOver',
       );
-  /* #11643
+  /* #11658
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse (pointer) in
@@ -23208,16 +23230,16 @@ extension Diagram$Typings on Diagram {
      * @see GraphObject#mouseOver
      */
     get mouseOver(): ((e: InputEvent) => void) | null; */
-  // Type InteropUnion#669336641(parent: InteropGetter#573016794(name: mouseOver))
+  // Type InteropUnion#628323009(parent: InteropGetter#480347123(name: mouseOver))
   set mouseOver(void Function(_i3.InputEvent)? value) {
     _i5.setProperty(
       this,
       'mouseOver',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #11661
+  /* #11676
   source: 
     /**
      * Gets or sets the function to execute when the user holds the mouse (pointer) stationary in
@@ -23251,7 +23273,7 @@ extension Diagram$Typings on Diagram {
         this,
         'mouseHover',
       );
-  /* #11661
+  /* #11676
   source: 
     /**
      * Gets or sets the function to execute when the user holds the mouse (pointer) stationary in
@@ -23270,16 +23292,16 @@ extension Diagram$Typings on Diagram {
      * @see ToolManager#doMouseHover
      */
     get mouseHover(): ((e: InputEvent) => void) | null; */
-  // Type InteropUnion#977560263(parent: InteropGetter#258435388(name: mouseHover))
+  // Type InteropUnion#84950556(parent: InteropGetter#512811098(name: mouseHover))
   set mouseHover(void Function(_i3.InputEvent)? value) {
     _i5.setProperty(
       this,
       'mouseHover',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #11678
+  /* #11693
   source: 
     /**
      * Gets or sets the function to execute when the user holds the mouse (pointer) stationary in
@@ -23312,7 +23334,7 @@ extension Diagram$Typings on Diagram {
         this,
         'mouseHold',
       );
-  /* #11678
+  /* #11693
   source: 
     /**
      * Gets or sets the function to execute when the user holds the mouse (pointer) stationary in
@@ -23330,16 +23352,16 @@ extension Diagram$Typings on Diagram {
      * @see ToolManager#doMouseHover
      */
     get mouseHold(): ((e: InputEvent) => void) | null; */
-  // Type InteropUnion#919877051(parent: InteropGetter#366339229(name: mouseHold))
+  // Type InteropUnion#413648704(parent: InteropGetter#244306357(name: mouseHold))
   set mouseHold(void Function(_i3.InputEvent)? value) {
     _i5.setProperty(
       this,
       'mouseHold',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #11709
+  /* #11724
   source: 
     /**
      * Gets or sets the function to execute when the user is dragging the selection in
@@ -23399,7 +23421,7 @@ extension Diagram$Typings on Diagram {
         this,
         'mouseDragOver',
       );
-  /* #11709
+  /* #11724
   source: 
     /**
      * Gets or sets the function to execute when the user is dragging the selection in
@@ -23431,16 +23453,16 @@ extension Diagram$Typings on Diagram {
      * @see GraphObject#mouseDragLeave
      */
     get mouseDragOver(): ((e: InputEvent) => void) | null; */
-  // Type InteropUnion#1022394154(parent: InteropGetter#974509137(name: mouseDragOver))
+  // Type InteropUnion#67459893(parent: InteropGetter#151872623(name: mouseDragOver))
   set mouseDragOver(void Function(_i3.InputEvent)? value) {
     _i5.setProperty(
       this,
       'mouseDragOver',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #11729
+  /* #11744
   source: 
     /**
      * Gets or sets the function to execute when the user drops the selection in
@@ -23479,7 +23501,7 @@ extension Diagram$Typings on Diagram {
         this,
         'mouseDrop',
       );
-  /* #11729
+  /* #11744
   source: 
     /**
      * Gets or sets the function to execute when the user drops the selection in
@@ -23500,16 +23522,16 @@ extension Diagram$Typings on Diagram {
      * @see GraphObject#mouseDrop
      */
     get mouseDrop(): ((e: InputEvent) => void) | null; */
-  // Type InteropUnion#28430358(parent: InteropGetter#965886951(name: mouseDrop))
+  // Type InteropUnion#892333741(parent: InteropGetter#315167191(name: mouseDrop))
   set mouseDrop(void Function(_i3.InputEvent)? value) {
     _i5.setProperty(
       this,
       'mouseDrop',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #11751
+  /* #11766
   source: 
     /**
      * Gets or sets whether drag-and-drop events may be bubbled up to the diagram if not handled by a part.
@@ -23549,7 +23571,7 @@ extension Diagram$Typings on Diagram {
         this,
         'handlesDragDropForTopLevelParts',
       );
-  /* #11751
+  /* #11766
   source: 
     /**
      * Gets or sets whether drag-and-drop events may be bubbled up to the diagram if not handled by a part.
@@ -23581,7 +23603,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11767
+  /* #11782
   source: 
     /**
      * Gets or sets the function to execute when the mouse (pointer) enters the Diagram.
@@ -23611,7 +23633,7 @@ extension Diagram$Typings on Diagram {
         this,
         'mouseEnter',
       );
-  /* #11767
+  /* #11782
   source: 
     /**
      * Gets or sets the function to execute when the mouse (pointer) enters the Diagram.
@@ -23628,16 +23650,16 @@ extension Diagram$Typings on Diagram {
      * @since 2.0
      */
     get mouseEnter(): ((e: InputEvent) => void) | null; */
-  // Type InteropUnion#470365942(parent: InteropGetter#988250431(name: mouseEnter))
+  // Type InteropUnion#985244444(parent: InteropGetter#82422601(name: mouseEnter))
   set mouseEnter(void Function(_i3.InputEvent)? value) {
     _i5.setProperty(
       this,
       'mouseEnter',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #11782
+  /* #11797
   source: 
     /**
      * Gets or sets the function to execute when the mouse (pointer) leaves the Diagram.
@@ -23665,7 +23687,7 @@ extension Diagram$Typings on Diagram {
         this,
         'mouseLeave',
       );
-  /* #11782
+  /* #11797
   source: 
     /**
      * Gets or sets the function to execute when the mouse (pointer) leaves the Diagram.
@@ -23681,16 +23703,16 @@ extension Diagram$Typings on Diagram {
      * @since 2.0
      */
     get mouseLeave(): ((e: InputEvent) => void) | null; */
-  // Type InteropUnion#277987047(parent: InteropGetter#533365790(name: mouseLeave))
+  // Type InteropUnion#668377532(parent: InteropGetter#20644196(name: mouseLeave))
   set mouseLeave(void Function(_i3.InputEvent)? value) {
     _i5.setProperty(
       this,
       'mouseLeave',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #11800
+  /* #11815
   source: 
     /**
      * This Adornment or HTMLInfo is shown when the mouse (pointer) stays motionless in the background.
@@ -23725,7 +23747,7 @@ extension Diagram$Typings on Diagram {
         this,
         'toolTip',
       );
-  /* #11800
+  /* #11815
   source: 
     /**
      * This Adornment or HTMLInfo is shown when the mouse (pointer) stays motionless in the background.
@@ -23744,16 +23766,16 @@ extension Diagram$Typings on Diagram {
      * @see ToolManager#doToolTip
      */
     get toolTip(): Adornment | HTMLInfo | null; */
-  // Type InteropUnion#212944134(parent: InteropGetter#515291472(name: toolTip))
+  // Type InteropUnion#486354574(parent: InteropGetter#675317660(name: toolTip))
   set toolTip(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'toolTip',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #11824
+  /* #11839
   source: 
     /**
      * This Adornment or HTMLInfo is shown when the use context clicks in the background.
@@ -23800,7 +23822,7 @@ extension Diagram$Typings on Diagram {
         this,
         'contextMenu',
       );
-  /* #11824
+  /* #11839
   source: 
     /**
      * This Adornment or HTMLInfo is shown when the use context clicks in the background.
@@ -23825,16 +23847,16 @@ extension Diagram$Typings on Diagram {
      * @see ContextMenuTool
      */
     get contextMenu(): Adornment | HTMLInfo | null; */
-  // Type InteropUnion#275480129(parent: InteropGetter#582210206(name: contextMenu))
+  // Type InteropUnion#156190768(parent: InteropGetter#714322554(name: contextMenu))
   set contextMenu(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'contextMenu',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #11834
+  /* #11849
   source: 
     /**
      * Gets or sets the CommandHandler for this Diagram.
@@ -23855,7 +23877,7 @@ extension Diagram$Typings on Diagram {
         this,
         'commandHandler',
       );
-  /* #11834
+  /* #11849
   source: 
     /**
      * Gets or sets the CommandHandler for this Diagram.
@@ -23875,7 +23897,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11850
+  /* #11865
   source: 
     /**
      * Gets or sets the ToolManager for this Diagram.
@@ -23907,7 +23929,7 @@ extension Diagram$Typings on Diagram {
         this,
         'toolManager',
       );
-  /* #11850
+  /* #11865
   source: 
     /**
      * Gets or sets the ToolManager for this Diagram.
@@ -23933,7 +23955,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11863
+  /* #11878
   source: 
     /**
      * Gets or sets the default tool for this Diagram that becomes the current tool when the current tool stops.
@@ -23958,7 +23980,7 @@ extension Diagram$Typings on Diagram {
         this,
         'defaultTool',
       );
-  /* #11863
+  /* #11878
   source: 
     /**
      * Gets or sets the default tool for this Diagram that becomes the current tool when the current tool stops.
@@ -23981,7 +24003,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11885
+  /* #11900
   source: 
     /**
      * Gets or sets the current tool for this Diagram that handles all input events.
@@ -24024,7 +24046,7 @@ extension Diagram$Typings on Diagram {
         this,
         'currentTool',
       );
-  /* #11885
+  /* #11900
   source: 
     /**
      * Gets or sets the current tool for this Diagram that handles all input events.
@@ -24056,7 +24078,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11906
+  /* #11921
   source: 
     /**
      * This read-only property returns the read-only collection of selected objects.
@@ -24099,7 +24121,7 @@ extension Diagram$Typings on Diagram {
         this,
         'selection',
       );
-  /* #11906
+  /* #11921
   source: 
     /**
      * This read-only property returns the read-only collection of selected objects.
@@ -24130,7 +24152,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11914
+  /* #11929
   source: 
     /**
      * Gets or sets the maximum number of selected objects.
@@ -24149,7 +24171,7 @@ extension Diagram$Typings on Diagram {
         this,
         'maxSelectionCount',
       );
-  /* #11914
+  /* #11929
   source: 
     /**
      * Gets or sets the maximum number of selected objects.
@@ -24168,7 +24190,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11924
+  /* #11939
   source: 
     /**
      * Gets or sets the default selection Adornment template, used to adorn selected Parts other than Groups or Links.
@@ -24189,7 +24211,7 @@ extension Diagram$Typings on Diagram {
         this,
         'nodeSelectionAdornmentTemplate',
       );
-  /* #11924
+  /* #11939
   source: 
     /**
      * Gets or sets the default selection Adornment template, used to adorn selected Parts other than Groups or Links.
@@ -24209,7 +24231,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11933
+  /* #11948
   source: 
     /**
      * Gets or sets the default selection Adornment template, used to adorn selected Groups.
@@ -24228,7 +24250,7 @@ extension Diagram$Typings on Diagram {
         this,
         'groupSelectionAdornmentTemplate',
       );
-  /* #11933
+  /* #11948
   source: 
     /**
      * Gets or sets the default selection Adornment template, used to adorn selected Groups.
@@ -24247,7 +24269,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11942
+  /* #11957
   source: 
     /**
      * Gets or sets the default selection Adornment template, used to adorn selected Links.
@@ -24266,7 +24288,7 @@ extension Diagram$Typings on Diagram {
         this,
         'linkSelectionAdornmentTemplate',
       );
-  /* #11942
+  /* #11957
   source: 
     /**
      * Gets or sets the default selection Adornment template, used to adorn selected Links.
@@ -24285,7 +24307,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11958
+  /* #11973
   source: 
     /**
      * This read-only property returns the read-only collection of highlighted parts.
@@ -24318,7 +24340,7 @@ extension Diagram$Typings on Diagram {
         this,
         'highlighteds',
       );
-  /* #11958
+  /* #11973
   source: 
     /**
      * This read-only property returns the read-only collection of highlighted parts.
@@ -24344,7 +24366,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11973
+  /* #11988
   source: 
     /**
      * Gets or sets whether this Diagram's state has been modified.
@@ -24377,7 +24399,7 @@ extension Diagram$Typings on Diagram {
         this,
         'isModified',
       );
-  /* #11973
+  /* #11988
   source: 
     /**
      * Gets or sets whether this Diagram's state has been modified.
@@ -24403,7 +24425,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #11999
+  /* #12014
   source: 
     /**
      * Gets or sets the Model holding data corresponding to the
@@ -24456,7 +24478,7 @@ extension Diagram$Typings on Diagram {
         this,
         'model',
       );
-  /* #11999
+  /* #12014
   source: 
     /**
      * Gets or sets the Model holding data corresponding to the
@@ -24492,7 +24514,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12148
+  /* #12163
   source: 
     /**
      * Gets or sets the default Node template used as the archetype
@@ -24521,7 +24543,7 @@ extension Diagram$Typings on Diagram {
         this,
         'nodeTemplate',
       );
-  /* #12148
+  /* #12163
   source: 
     /**
      * Gets or sets the default Node template used as the archetype
@@ -24545,7 +24567,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12164
+  /* #12179
   source: 
     /**
      * Gets or sets a Map mapping template names to Parts.
@@ -24578,7 +24600,7 @@ extension Diagram$Typings on Diagram {
         this,
         'nodeTemplateMap',
       );
-  /* #12164
+  /* #12179
   source: 
     /**
      * Gets or sets a Map mapping template names to Parts.
@@ -24604,7 +24626,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12175
+  /* #12190
   source: 
     /**
      * Gets or sets the default Group template used as the archetype
@@ -24627,7 +24649,7 @@ extension Diagram$Typings on Diagram {
         this,
         'groupTemplate',
       );
-  /* #12175
+  /* #12190
   source: 
     /**
      * Gets or sets the default Group template used as the archetype
@@ -24648,7 +24670,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12188
+  /* #12203
   source: 
     /**
      * Gets or sets a Map mapping template names to Groups.
@@ -24675,7 +24697,7 @@ extension Diagram$Typings on Diagram {
         this,
         'groupTemplateMap',
       );
-  /* #12188
+  /* #12203
   source: 
     /**
      * Gets or sets a Map mapping template names to Groups.
@@ -24698,7 +24720,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12199
+  /* #12214
   source: 
     /**
      * Gets or sets the default Link template used as the archetype
@@ -24721,7 +24743,7 @@ extension Diagram$Typings on Diagram {
         this,
         'linkTemplate',
       );
-  /* #12199
+  /* #12214
   source: 
     /**
      * Gets or sets the default Link template used as the archetype
@@ -24742,7 +24764,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12212
+  /* #12227
   source: 
     /**
      * Gets or sets a Map mapping template names to Links.
@@ -24769,7 +24791,7 @@ extension Diagram$Typings on Diagram {
         this,
         'linkTemplateMap',
       );
-  /* #12212
+  /* #12227
   source: 
     /**
      * Gets or sets a Map mapping template names to Links.
@@ -24792,7 +24814,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12219
+  /* #12234
   source: 
     /**
      * Gets or sets whether mouse events initiated within the Diagram will be captured.
@@ -24807,7 +24829,7 @@ extension Diagram$Typings on Diagram {
         this,
         'isMouseCaptured',
       );
-  /* #12219
+  /* #12234
   source: 
     /**
      * Gets or sets whether mouse events initiated within the Diagram will be captured.
@@ -24824,7 +24846,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12240
+  /* #12255
   source: 
     /**
      * Gets or sets the coordinates of this Diagram in the viewport.
@@ -24867,7 +24889,7 @@ extension Diagram$Typings on Diagram {
         this,
         'position',
       );
-  /* #12240
+  /* #12255
   source: 
     /**
      * Gets or sets the coordinates of this Diagram in the viewport.
@@ -24898,7 +24920,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12256
+  /* #12271
   source: 
     /**
      * Gets or sets the initial coordinates of this Diagram in the viewport, eventually setting the #position.
@@ -24928,7 +24950,7 @@ extension Diagram$Typings on Diagram {
         this,
         'initialPosition',
       );
-  /* #12256
+  /* #12271
   source: 
     /**
      * Gets or sets the initial coordinates of this Diagram in the viewport, eventually setting the #position.
@@ -24954,7 +24976,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12267
+  /* #12282
   source: 
     /**
      * Gets or sets the initial scale of this Diagram in the viewport, eventually setting the #scale.
@@ -24976,7 +24998,7 @@ extension Diagram$Typings on Diagram {
         this,
         'initialScale',
       );
-  /* #12267
+  /* #12282
   source: 
     /**
      * Gets or sets the initial scale of this Diagram in the viewport, eventually setting the #scale.
@@ -24997,7 +25019,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12273
+  /* #12288
   source: 
     /**
      * Gets or sets a Panel of type Panel.Grid acting as the background grid
@@ -25010,7 +25032,7 @@ extension Diagram$Typings on Diagram {
         this,
         'grid',
       );
-  /* #12273
+  /* #12288
   source: 
     /**
      * Gets or sets a Panel of type Panel.Grid acting as the background grid
@@ -25026,7 +25048,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12283
+  /* #12298
   source: 
     /**
      * This read-only property returns the bounds of the portion of the Diagram in document coordinates that is viewable from its HTML Canvas.
@@ -25047,7 +25069,7 @@ extension Diagram$Typings on Diagram {
         this,
         'viewportBounds',
       );
-  /* #12283
+  /* #12298
   source: 
     /**
      * This read-only property returns the bounds of the portion of the Diagram in document coordinates that is viewable from its HTML Canvas.
@@ -25067,7 +25089,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12298
+  /* #12313
   source: 
     /**
      * Gets or sets a fixed size in document coordinates to be returned by #viewportBounds. This is typically only set when the Diagram's #div is `null`.
@@ -25097,7 +25119,7 @@ extension Diagram$Typings on Diagram {
         this,
         'viewSize',
       );
-  /* #12298
+  /* #12313
   source: 
     /**
      * Gets or sets a fixed size in document coordinates to be returned by #viewportBounds. This is typically only set when the Diagram's #div is `null`.
@@ -25123,7 +25145,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12307
+  /* #12322
   source: 
     /**
      * Gets or sets a fixed bounding rectangle to be returned by #documentBounds
@@ -25142,7 +25164,7 @@ extension Diagram$Typings on Diagram {
         this,
         'fixedBounds',
       );
-  /* #12307
+  /* #12322
   source: 
     /**
      * Gets or sets a fixed bounding rectangle to be returned by #documentBounds
@@ -25161,7 +25183,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12317
+  /* #12332
   source: 
     /**
      * Gets or sets a scrollable area in document coordinates that surrounds the document bounds, allowing the user to scroll into empty space.
@@ -25181,7 +25203,7 @@ extension Diagram$Typings on Diagram {
         this,
         'scrollMargin',
       );
-  /* #12317
+  /* #12332
   source: 
     /**
      * Gets or sets a scrollable area in document coordinates that surrounds the document bounds, allowing the user to scroll into empty space.
@@ -25192,7 +25214,7 @@ extension Diagram$Typings on Diagram {
      * @since 1.5
      */
     get scrollMargin(): MarginLike; */
-  // Type InteropTypedef#88783230(name: MarginLike)
+  // Type InteropTypedef#1053273812(name: MarginLike)
   set scrollMargin(_i3.MarginLike value) {
     _i5.setProperty(
       this,
@@ -25201,7 +25223,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12328
+  /* #12343
   source: 
     /**
      * Gets or sets the scrollMode of the Diagram, allowing the user to either
@@ -25223,7 +25245,7 @@ extension Diagram$Typings on Diagram {
         this,
         'scrollMode',
       );
-  /* #12328
+  /* #12343
   source: 
     /**
      * Gets or sets the scrollMode of the Diagram, allowing the user to either
@@ -25244,7 +25266,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12338
+  /* #12353
   source: 
     /**
      * Gets or sets whether the page may be scrolled when the diagram receives focus.
@@ -25264,7 +25286,7 @@ extension Diagram$Typings on Diagram {
         this,
         'scrollsPageOnFocus',
       );
-  /* #12338
+  /* #12353
   source: 
     /**
      * Gets or sets whether the page may be scrolled when the diagram receives focus.
@@ -25284,7 +25306,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12358
+  /* #12373
   source: 
     /**
      * Gets or sets the function used to determine the position that this Diagram can be scrolled or moved to.
@@ -25327,7 +25349,7 @@ extension Diagram$Typings on Diagram {
         this,
         'positionComputation',
       );
-  /* #12358
+  /* #12373
   source: 
     /**
      * Gets or sets the function used to determine the position that this Diagram can be scrolled or moved to.
@@ -25348,7 +25370,7 @@ extension Diagram$Typings on Diagram {
      * @since 1.5
      */
     get positionComputation(): ((thisDiagram: Diagram, newPosition: Point) => Point) | null; */
-  // Type InteropUnion#209407859(parent: InteropGetter#842573075(name: positionComputation))
+  // Type InteropUnion#273241685(parent: InteropGetter#130067200(name: positionComputation))
   set positionComputation(
       _i3.Point Function(
         _i3.Diagram,
@@ -25357,11 +25379,11 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'positionComputation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #12364
+  /* #12379
   source: 
     /**
      * Gets or sets the function used to determine valid scale values for this Diagram.
@@ -25376,14 +25398,14 @@ extension Diagram$Typings on Diagram {
         this,
         'scaleComputation',
       );
-  /* #12364
+  /* #12379
   source: 
     /**
      * Gets or sets the function used to determine valid scale values for this Diagram.
      * @since 1.5
      */
     get scaleComputation(): ((thisDiagram: Diagram, newScale: number) => number) | null; */
-  // Type InteropUnion#728825449(parent: InteropGetter#574972947(name: scaleComputation))
+  // Type InteropUnion#652741665(parent: InteropGetter#333465998(name: scaleComputation))
   set scaleComputation(
       _i2.num Function(
         _i3.Diagram,
@@ -25392,11 +25414,11 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'scaleComputation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #12381
+  /* #12396
   source: 
     /**
      * This read-only property returns the bounds of the diagram's contents, in document coordinates.
@@ -25431,7 +25453,7 @@ extension Diagram$Typings on Diagram {
         this,
         'documentBounds',
       );
-  /* #12381
+  /* #12396
   source: 
     /**
      * This read-only property returns the bounds of the diagram's contents, in document coordinates.
@@ -25458,7 +25480,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12395
+  /* #12410
   source: 
     /**
      * (undocumented)
@@ -25469,7 +25491,7 @@ extension Diagram$Typings on Diagram {
         this,
         'isVirtualized',
       );
-  /* #12395
+  /* #12410
   source: 
     /**
      * (undocumented)
@@ -25484,7 +25506,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12417
+  /* #12432
   source: 
     /**
      * Gets or sets the scale transform of this Diagram.
@@ -25529,7 +25551,7 @@ extension Diagram$Typings on Diagram {
         this,
         'scale',
       );
-  /* #12417
+  /* #12432
   source: 
     /**
      * Gets or sets the scale transform of this Diagram.
@@ -25561,7 +25583,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12429
+  /* #12444
   source: 
     /**
      * Gets or sets the Diagram#scale set by CommandHandler#resetZoom
@@ -25585,7 +25607,7 @@ extension Diagram$Typings on Diagram {
         this,
         'defaultScale',
       );
-  /* #12429
+  /* #12444
   source: 
     /**
      * Gets or sets the Diagram#scale set by CommandHandler#resetZoom
@@ -25607,7 +25629,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12453
+  /* #12468
   source: 
     /**
      * Gets or sets the autoScale behavior of the Diagram, controlling whether or not the
@@ -25656,7 +25678,7 @@ extension Diagram$Typings on Diagram {
         this,
         'autoScale',
       );
-  /* #12453
+  /* #12468
   source: 
     /**
      * Gets or sets the autoScale behavior of the Diagram, controlling whether or not the
@@ -25690,7 +25712,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12476
+  /* #12491
   source: 
     /**
      * Gets or sets how the scale of the diagram is automatically
@@ -25737,7 +25759,7 @@ extension Diagram$Typings on Diagram {
         this,
         'initialAutoScale',
       );
-  /* #12476
+  /* #12491
   source: 
     /**
      * Gets or sets how the scale of the diagram is automatically
@@ -25770,7 +25792,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12492
+  /* #12507
   source: 
     /**
      * Gets or sets the spot in the viewport that should be coincident with the
@@ -25800,7 +25822,7 @@ extension Diagram$Typings on Diagram {
         this,
         'initialViewportSpot',
       );
-  /* #12492
+  /* #12507
   source: 
     /**
      * Gets or sets the spot in the viewport that should be coincident with the
@@ -25826,7 +25848,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12509
+  /* #12524
   source: 
     /**
      * Gets or sets the spot in the document's area that should be coincident with the
@@ -25857,7 +25879,7 @@ extension Diagram$Typings on Diagram {
         this,
         'initialDocumentSpot',
       );
-  /* #12509
+  /* #12524
   source: 
     /**
      * Gets or sets the spot in the document's area that should be coincident with the
@@ -25884,7 +25906,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12520
+  /* #12535
   source: 
     /**
      * Gets or sets the smallest value greater than zero that #scale may take.
@@ -25907,7 +25929,7 @@ extension Diagram$Typings on Diagram {
         this,
         'minScale',
       );
-  /* #12520
+  /* #12535
   source: 
     /**
      * Gets or sets the smallest value greater than zero that #scale may take.
@@ -25928,7 +25950,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12531
+  /* #12546
   source: 
     /**
      * Gets or sets the largest value that #scale may take.
@@ -25951,7 +25973,7 @@ extension Diagram$Typings on Diagram {
         this,
         'maxScale',
       );
-  /* #12531
+  /* #12546
   source: 
     /**
      * Gets or sets the largest value that #scale may take.
@@ -25972,7 +25994,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12549
+  /* #12564
   source: 
     /**
      * Gets or sets the zoom point of this Diagram, in viewport coordinates.
@@ -26008,7 +26030,7 @@ extension Diagram$Typings on Diagram {
         this,
         'zoomPoint',
       );
-  /* #12549
+  /* #12564
   source: 
     /**
      * Gets or sets the zoom point of this Diagram, in viewport coordinates.
@@ -26036,7 +26058,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12567
+  /* #12582
   source: 
     /**
      * Gets or sets the content alignment Spot of this Diagram, to be used in determining
@@ -26072,7 +26094,7 @@ extension Diagram$Typings on Diagram {
         this,
         'contentAlignment',
       );
-  /* #12567
+  /* #12582
   source: 
     /**
      * Gets or sets the content alignment Spot of this Diagram, to be used in determining
@@ -26100,7 +26122,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12587
+  /* #12602
   source: 
     /**
      * Gets or sets the initial content alignment Spot of this Diagram, to be used in determining
@@ -26138,7 +26160,7 @@ extension Diagram$Typings on Diagram {
         this,
         'initialContentAlignment',
       );
-  /* #12587
+  /* #12602
   source: 
     /**
      * Gets or sets the initial content alignment Spot of this Diagram, to be used in determining
@@ -26168,7 +26190,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12596
+  /* #12611
   source: 
     /**
      * Gets or sets the Margin that describes the Diagram's padding,
@@ -26187,7 +26209,7 @@ extension Diagram$Typings on Diagram {
         this,
         'padding',
       );
-  /* #12596
+  /* #12611
   source: 
     /**
      * Gets or sets the Margin that describes the Diagram's padding,
@@ -26197,7 +26219,7 @@ extension Diagram$Typings on Diagram {
      * The default value is a margin of 5, all around the edge of the document.
      */
     get padding(): MarginLike; */
-  // Type InteropTypedef#88783230(name: MarginLike)
+  // Type InteropTypedef#1053273812(name: MarginLike)
   set padding(_i3.MarginLike value) {
     _i5.setProperty(
       this,
@@ -26206,7 +26228,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12607
+  /* #12622
   source: 
     /**
      * This read-only property returns an iterator of all Nodes and Groups in the Diagram.
@@ -26227,7 +26249,7 @@ extension Diagram$Typings on Diagram {
         this,
         'nodes',
       );
-  /* #12607
+  /* #12622
   source: 
     /**
      * This read-only property returns an iterator of all Nodes and Groups in the Diagram.
@@ -26248,7 +26270,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12614
+  /* #12629
   source: 
     /**
      * This read-only property returns an iterator of all Links in the Diagram.
@@ -26265,7 +26287,7 @@ extension Diagram$Typings on Diagram {
         this,
         'links',
       );
-  /* #12614
+  /* #12629
   source: 
     /**
      * This read-only property returns an iterator of all Links in the Diagram.
@@ -26283,7 +26305,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12624
+  /* #12639
   source: 
     /**
      * This read-only property returns an iterator of all Parts in the Diagram
@@ -26306,7 +26328,7 @@ extension Diagram$Typings on Diagram {
         this,
         'parts',
       );
-  /* #12624
+  /* #12639
   source: 
     /**
      * This read-only property returns an iterator of all Parts in the Diagram
@@ -26327,7 +26349,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12640
+  /* #12655
   source: 
     /**
      * Gets or sets the Layout used to position all of the top-level nodes and links in this Diagram.
@@ -26344,7 +26366,7 @@ extension Diagram$Typings on Diagram {
         this,
         'layout',
       );
-  /* #12640
+  /* #12655
   source: 
     /**
      * Gets or sets the Layout used to position all of the top-level nodes and links in this Diagram.
@@ -26362,7 +26384,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12662
+  /* #12677
   source: 
     /**
      * Gets or sets whether the Diagram tree structure is defined by
@@ -26377,7 +26399,7 @@ extension Diagram$Typings on Diagram {
         this,
         'isTreePathToChildren',
       );
-  /* #12662
+  /* #12677
   source: 
     /**
      * Gets or sets whether the Diagram tree structure is defined by
@@ -26394,7 +26416,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12706
+  /* #12721
   source: 
     /**
      * (undocumented)
@@ -26405,7 +26427,7 @@ extension Diagram$Typings on Diagram {
         this,
         'avoidanceCellSize',
       );
-  /* #12706
+  /* #12721
   source: 
     /**
      * (undocumented)
@@ -26420,7 +26442,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12711
+  /* #12726
   source: 
     /**
      * (undocumented)
@@ -26431,7 +26453,7 @@ extension Diagram$Typings on Diagram {
         this,
         'avoidanceLimit',
       );
-  /* #12711
+  /* #12726
   source: 
     /**
      * (undocumented)
@@ -26446,7 +26468,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12718
+  /* #12733
   source: 
     /**
      * Gets or sets number of milliseconds between autoscroll events.
@@ -26460,7 +26482,7 @@ extension Diagram$Typings on Diagram {
         this,
         'autoScrollInterval',
       );
-  /* #12718
+  /* #12733
   source: 
     /**
      * Gets or sets number of milliseconds between autoscroll events.
@@ -26477,7 +26499,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  /* #12736
+  /* #12751
   source: 
     /**
      * Gets or sets the Margin that describes the area along the inside edges of the viewport,
@@ -26514,7 +26536,7 @@ extension Diagram$Typings on Diagram {
         this,
         'autoScrollRegion',
       );
-  /* #12736
+  /* #12751
   source: 
     /**
      * Gets or sets the Margin that describes the area along the inside edges of the viewport,
@@ -26533,7 +26555,7 @@ extension Diagram$Typings on Diagram {
      * a value of Margin(0,0,0,0) turns off autoscrolling in all four directions.
      */
     get autoScrollRegion(): MarginLike; */
-  // Type InteropTypedef#88783230(name: MarginLike)
+  // Type InteropTypedef#1053273812(name: MarginLike)
   set autoScrollRegion(_i3.MarginLike value) {
     _i5.setProperty(
       this,
@@ -26558,24 +26580,24 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  void setRTL([_i4.HTMLElement? elem]) {
+  void setRTL([_i6.HTMLElement? elem]) {
     _i5.callMethod(
       this,
       'setRTL',
-      [elem ?? _i4.undefined],
+      [elem ?? _i7.undefined],
     );
   }
 
-  void setScrollWidth([_i4.HTMLElement? elem]) {
+  void setScrollWidth([_i6.HTMLElement? elem]) {
     _i5.callMethod(
       this,
       'setScrollWidth',
-      [elem ?? _i4.undefined],
+      [elem ?? _i7.undefined],
     );
   }
 
   void addEventListener(
-    _i2.Object domElement,
+    _i6.EventTarget domElement,
     _i2.String name,
     _i2.dynamic listener,
     _i2.bool capture,
@@ -26593,7 +26615,7 @@ extension Diagram$Typings on Diagram {
   }
 
   void removeEventListener(
-    _i2.Object domElement,
+    _i6.EventTarget domElement,
     _i2.String name,
     _i2.dynamic listener,
     _i2.bool capture,
@@ -26634,7 +26656,7 @@ extension Diagram$Typings on Diagram {
   _i3.Rect computeBounds([_i3.Rect? rect]) => _i5.callMethod(
         this,
         'computeBounds',
-        [rect ?? _i4.undefined],
+        [rect ?? _i7.undefined],
       );
   _i3.Rect computePartsBounds(
     _i2.Object coll, [
@@ -26645,7 +26667,7 @@ extension Diagram$Typings on Diagram {
         'computePartsBounds',
         [
           coll,
-          includeLinks ?? _i4.undefined,
+          includeLinks ?? _i7.undefined,
         ],
       );
   void zoomToFit() {
@@ -26665,7 +26687,7 @@ extension Diagram$Typings on Diagram {
       'zoomToRect',
       [
         r,
-        scaling ?? _i4.undefined,
+        scaling ?? _i7.undefined,
       ],
     );
   }
@@ -26688,7 +26710,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'focusObject',
-      [obj ?? _i4.undefined],
+      [obj ?? _i7.undefined],
     );
   }
 
@@ -26701,7 +26723,7 @@ extension Diagram$Typings on Diagram {
         'findPartAt',
         [
           p,
-          selectable ?? _i4.undefined,
+          selectable ?? _i7.undefined,
         ],
       );
   T? findObjectAt<T extends _i3.GraphObject>(
@@ -26714,8 +26736,8 @@ extension Diagram$Typings on Diagram {
         'findObjectAt',
         [
           p,
-          navig == null ? _i4.undefined : _i5.allowInterop(navig),
-          pred == null ? _i4.undefined : _i5.allowInterop(pred),
+          navig == null ? _i7.undefined : _i5.allowInterop(navig),
+          pred == null ? _i7.undefined : _i5.allowInterop(pred),
         ],
       );
   S findPartsAt<T extends _i3.Part, S extends _i3.Iterable<T>>(
@@ -26728,8 +26750,8 @@ extension Diagram$Typings on Diagram {
         'findPartsAt',
         [
           p,
-          selectable ?? _i4.undefined,
-          coll ?? _i4.undefined,
+          selectable ?? _i7.undefined,
+          coll ?? _i7.undefined,
         ],
       );
   S findObjectsAt<T extends _i3.GraphObject, S extends _i3.Iterable<T>>(
@@ -26743,9 +26765,9 @@ extension Diagram$Typings on Diagram {
         'findObjectsAt',
         [
           p,
-          navig == null ? _i4.undefined : _i5.allowInterop(navig),
-          pred == null ? _i4.undefined : _i5.allowInterop(pred),
-          coll ?? _i4.undefined,
+          navig == null ? _i7.undefined : _i5.allowInterop(navig),
+          pred == null ? _i7.undefined : _i5.allowInterop(pred),
+          coll ?? _i7.undefined,
         ],
       );
   S findPartsIn<T extends _i3.Part, S extends _i3.Iterable<T>>(
@@ -26759,9 +26781,9 @@ extension Diagram$Typings on Diagram {
         'findPartsIn',
         [
           r,
-          partialInclusion ?? _i4.undefined,
-          selectable ?? _i4.undefined,
-          coll ?? _i4.undefined,
+          partialInclusion ?? _i7.undefined,
+          selectable ?? _i7.undefined,
+          coll ?? _i7.undefined,
         ],
       );
   S findObjectsIn<T extends _i3.GraphObject, S extends _i3.Iterable<T>>(
@@ -26776,10 +26798,10 @@ extension Diagram$Typings on Diagram {
         'findObjectsIn',
         [
           r,
-          navig == null ? _i4.undefined : _i5.allowInterop(navig),
-          pred == null ? _i4.undefined : _i5.allowInterop(pred),
-          partialInclusion ?? _i4.undefined,
-          coll ?? _i4.undefined,
+          navig == null ? _i7.undefined : _i5.allowInterop(navig),
+          pred == null ? _i7.undefined : _i5.allowInterop(pred),
+          partialInclusion ?? _i7.undefined,
+          coll ?? _i7.undefined,
         ],
       );
   S findPartsNear<T extends _i3.Part, S extends _i3.Iterable<T>>(
@@ -26795,9 +26817,9 @@ extension Diagram$Typings on Diagram {
         [
           p,
           dist,
-          partialInclusion ?? _i4.undefined,
-          selectable ?? _i4.undefined,
-          coll ?? _i4.undefined,
+          partialInclusion ?? _i7.undefined,
+          selectable ?? _i7.undefined,
+          coll ?? _i7.undefined,
         ],
       );
   S findObjectsNear<T extends _i3.GraphObject, S extends _i3.Iterable<T>>(
@@ -26814,10 +26836,10 @@ extension Diagram$Typings on Diagram {
         [
           p,
           dist,
-          navig == null ? _i4.undefined : _i5.allowInterop(navig),
-          pred == null ? _i4.undefined : _i5.allowInterop(pred),
-          partialInclusion ?? _i4.undefined,
-          coll ?? _i4.undefined,
+          navig == null ? _i7.undefined : _i5.allowInterop(navig),
+          pred == null ? _i7.undefined : _i5.allowInterop(pred),
+          partialInclusion ?? _i7.undefined,
+          coll ?? _i7.undefined,
         ],
       );
   void invalidateDocumentBounds() {
@@ -26840,7 +26862,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'delayInitialization',
-      [func == null ? _i4.undefined : _i5.allowInterop(func)],
+      [func == null ? _i7.undefined : _i5.allowInterop(func)],
     );
   }
 
@@ -26848,7 +26870,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'requestUpdate',
-      [alwaysQueueUpdate ?? _i4.undefined],
+      [alwaysQueueUpdate ?? _i7.undefined],
     );
   }
 
@@ -26898,7 +26920,7 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  _i3.Diagram set(_i4.Partial config) => _i5.callMethod(
+  _i3.Diagram set(_i4.Partial<_i3.Diagram> config) => _i5.callMethod(
         this,
         'set',
         [config],
@@ -26938,7 +26960,7 @@ extension Diagram$Typings on Diagram {
       'removeParts',
       [
         coll,
-        check ?? _i4.undefined,
+        check ?? _i7.undefined,
       ],
     );
   }
@@ -26953,8 +26975,8 @@ extension Diagram$Typings on Diagram {
         'copyParts',
         [
           coll,
-          diagram ?? _i4.undefined,
-          check ?? _i4.undefined,
+          diagram ?? _i7.undefined,
+          check ?? _i7.undefined,
         ],
       );
   void moveParts(
@@ -26969,8 +26991,8 @@ extension Diagram$Typings on Diagram {
       [
         coll,
         offset,
-        check ?? _i4.undefined,
-        dragOptions ?? _i4.undefined,
+        check ?? _i7.undefined,
+        dragOptions ?? _i7.undefined,
       ],
     );
   }
@@ -26988,7 +27010,7 @@ extension Diagram$Typings on Diagram {
           n,
           newloc,
           dragOptions,
-          result ?? _i4.undefined,
+          result ?? _i7.undefined,
         ],
       );
   _i3.Diagram addLayer(_i3.Layer layer) => _i5.callMethod(
@@ -27065,12 +27087,12 @@ extension Diagram$Typings on Diagram {
   _i2.bool startTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'startTransaction',
-        [tname ?? _i4.undefined],
+        [tname ?? _i7.undefined],
       );
   _i2.bool commitTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'commitTransaction',
-        [tname ?? _i4.undefined],
+        [tname ?? _i7.undefined],
       );
   _i2.bool rollbackTransaction() => _i5.callMethod(
         this,
@@ -27086,7 +27108,7 @@ extension Diagram$Typings on Diagram {
       'commit',
       [
         _i5.allowInterop(func),
-        tname ?? _i4.undefined,
+        tname ?? _i7.undefined,
       ],
     );
   }
@@ -27095,7 +27117,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'updateAllTargetBindings',
-      [srcprop ?? _i4.undefined],
+      [srcprop ?? _i7.undefined],
     );
   }
 
@@ -27111,7 +27133,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'clearSelection',
-      [skipsEvents ?? _i4.undefined],
+      [skipsEvents ?? _i7.undefined],
     );
   }
 
@@ -27119,7 +27141,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'select',
-      [part ?? _i4.undefined],
+      [part ?? _i7.undefined],
     );
   }
 
@@ -27143,7 +27165,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'highlight',
-      [part ?? _i4.undefined],
+      [part ?? _i7.undefined],
     );
   }
 
@@ -27166,7 +27188,7 @@ extension Diagram$Typings on Diagram {
       [
         unit.name,
         dir.name,
-        dist ?? _i4.undefined,
+        dist ?? _i7.undefined,
       ],
     );
   }
@@ -27208,17 +27230,17 @@ extension Diagram$Typings on Diagram {
   _i3.Part? findPartForKey(_i3.Key key) => _i5.callMethod(
         this,
         'findPartForKey',
-        [key ?? _i4.undefined],
+        [key ?? _i7.undefined],
       );
   _i3.Node? findNodeForKey(_i3.Key key) => _i5.callMethod(
         this,
         'findNodeForKey',
-        [key ?? _i4.undefined],
+        [key ?? _i7.undefined],
       );
   _i3.Link? findLinkForKey(_i3.Key key) => _i5.callMethod(
         this,
         'findLinkForKey',
-        [key ?? _i4.undefined],
+        [key ?? _i7.undefined],
       );
   _i3.Part? findPartForData(_i2.Object data) => _i5.callMethod(
         this,
@@ -27266,7 +27288,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'layoutDiagram',
-      [invalidateAll ?? _i4.undefined],
+      [invalidateAll ?? _i7.undefined],
     );
   }
 
@@ -27311,8 +27333,8 @@ extension Diagram$Typings on Diagram {
       'raiseDiagramEvent',
       [
         name.name,
-        obj ?? _i4.undefined,
-        param ?? _i4.undefined,
+        obj ?? _i7.undefined,
+        param ?? _i7.undefined,
       ],
     );
   }
@@ -27338,10 +27360,10 @@ extension Diagram$Typings on Diagram {
         'computeAutoScrollPosition',
         [viewPnt],
       );
-  _i4.SVGElement? makeSvg([_i3.SvgRendererOptions? options]) => _i5.callMethod(
+  _i6.SVGElement? makeSvg([_i3.SvgRendererOptions? options]) => _i5.callMethod(
         this,
         'makeSvg',
-        [options ?? _i4.undefined],
+        [options ?? _i7.undefined],
       );
   void addRenderer(
     _i2.String name,
@@ -27365,17 +27387,17 @@ extension Diagram$Typings on Diagram {
     );
   }
 
-  _i4.HTMLImageElement? makeImage([_i3.ImageRendererOptions? options]) =>
+  _i6.HTMLImageElement? makeImage([_i3.ImageRendererOptions? options]) =>
       _i5.callMethod(
         this,
         'makeImage',
-        [options ?? _i4.undefined],
+        [options ?? _i7.undefined],
       );
   _i2.dynamic makeImageData([_i3.ImageRendererOptions? options]) =>
       _i5.callMethod(
         this,
         'makeImageData',
-        [options ?? _i4.undefined],
+        [options ?? _i7.undefined],
       );
 }
 
@@ -27384,7 +27406,7 @@ extension Diagram$Typings on Diagram {
 class DraggingInfo {
   factory DraggingInfo([_i3.Point? pt]) => _i5.callConstructor(
         _declaredDraggingInfo,
-        [pt ?? _i4.undefined],
+        [pt ?? _i7.undefined],
       );
 }
 
@@ -27395,7 +27417,7 @@ FieldExternal:
 external _i2.Object _declaredDraggingInfo;
 
 extension DraggingInfo$Typings on DraggingInfo {
-  /* #12999
+  /* #13014
   source: 
     /**
      * Gets or sets the initial location for a dragged object.
@@ -27408,7 +27430,7 @@ extension DraggingInfo$Typings on DraggingInfo {
         this,
         'point',
       );
-  /* #12999
+  /* #13014
   source: 
     /**
      * Gets or sets the initial location for a dragged object.
@@ -27441,7 +27463,7 @@ FieldExternal:
 external _i2.Object _declaredDraggingOptions;
 
 extension DraggingOptions$Typings on DraggingOptions {
-  /* #13026
+  /* #13041
   source: 
     /**
      * Whether or not the dragged parts snap to the Diagram#grid.
@@ -27458,7 +27480,7 @@ extension DraggingOptions$Typings on DraggingOptions {
         this,
         'isGridSnapEnabled',
       );
-  /* #13026
+  /* #13041
   source: 
     /**
      * Whether or not the dragged parts snap to the Diagram#grid.
@@ -27476,7 +27498,7 @@ extension DraggingOptions$Typings on DraggingOptions {
     );
   }
 
-  /* #13034
+  /* #13049
   source: 
     /**
      * If dragging with the DraggingTool, whether or not Parts snap to a grid (if applicable) in real-time,
@@ -27495,7 +27517,7 @@ extension DraggingOptions$Typings on DraggingOptions {
         this,
         'isGridSnapRealtime',
       );
-  /* #13034
+  /* #13049
   source: 
     /**
      * If dragging with the DraggingTool, whether or not Parts snap to a grid (if applicable) in real-time,
@@ -27514,7 +27536,7 @@ extension DraggingOptions$Typings on DraggingOptions {
     );
   }
 
-  /* #13041
+  /* #13056
   source: 
     /**
      * Gets or sets the size of the grid cell used when snapping during a drag.
@@ -27531,7 +27553,7 @@ extension DraggingOptions$Typings on DraggingOptions {
         this,
         'gridSnapCellSize',
       );
-  /* #13041
+  /* #13056
   source: 
     /**
      * Gets or sets the size of the grid cell used when snapping during a drag.
@@ -27549,7 +27571,7 @@ extension DraggingOptions$Typings on DraggingOptions {
     );
   }
 
-  /* #13048
+  /* #13063
   source: 
     /**
      * Gets or sets the Spot that specifies what point in the grid cell dragged parts snap to,
@@ -27566,7 +27588,7 @@ extension DraggingOptions$Typings on DraggingOptions {
         this,
         'gridSnapCellSpot',
       );
-  /* #13048
+  /* #13063
   source: 
     /**
      * Gets or sets the Spot that specifies what point in the grid cell dragged parts snap to,
@@ -27584,7 +27606,7 @@ extension DraggingOptions$Typings on DraggingOptions {
     );
   }
 
-  /* #13055
+  /* #13070
   source: 
     /**
      * Gets or sets the snapping grid's origin point, in document coordinates,
@@ -27601,7 +27623,7 @@ extension DraggingOptions$Typings on DraggingOptions {
         this,
         'gridSnapOrigin',
       );
-  /* #13055
+  /* #13070
   source: 
     /**
      * Gets or sets the snapping grid's origin point, in document coordinates,
@@ -27619,7 +27641,7 @@ extension DraggingOptions$Typings on DraggingOptions {
     );
   }
 
-  /* #13063
+  /* #13078
   source: 
     /**
      * Gets or sets whether the user can move a single Link,
@@ -27638,7 +27660,7 @@ extension DraggingOptions$Typings on DraggingOptions {
         this,
         'dragsLink',
       );
-  /* #13063
+  /* #13078
   source: 
     /**
      * Gets or sets whether the user can move a single Link,
@@ -27657,7 +27679,7 @@ extension DraggingOptions$Typings on DraggingOptions {
     );
   }
 
-  /* #13071
+  /* #13086
   source: 
     /**
      * Gets or sets whether moving or copying a node also includes all of the
@@ -27676,7 +27698,7 @@ extension DraggingOptions$Typings on DraggingOptions {
         this,
         'dragsTree',
       );
-  /* #13071
+  /* #13086
   source: 
     /**
      * Gets or sets whether moving or copying a node also includes all of the
@@ -27695,7 +27717,7 @@ extension DraggingOptions$Typings on DraggingOptions {
     );
   }
 
-  /* #13076
+  /* #13091
   source: 
     /**
      * Determines whether or not Groups will snap their member Parts in addition to themselves when moving.
@@ -27708,7 +27730,7 @@ extension DraggingOptions$Typings on DraggingOptions {
         this,
         'groupsSnapMembers',
       );
-  /* #13076
+  /* #13091
   source: 
     /**
      * Determines whether or not Groups will snap their member Parts in addition to themselves when moving.
@@ -27724,7 +27746,7 @@ extension DraggingOptions$Typings on DraggingOptions {
     );
   }
 
-  /* #13082
+  /* #13097
   source: 
     /**
      * Determines whether or not Groups will ensure their member Parts always move,
@@ -27739,7 +27761,7 @@ extension DraggingOptions$Typings on DraggingOptions {
         this,
         'groupsAlwaysMove',
       );
-  /* #13082
+  /* #13097
   source: 
     /**
      * Determines whether or not Groups will ensure their member Parts always move,
@@ -27756,7 +27778,7 @@ extension DraggingOptions$Typings on DraggingOptions {
     );
   }
 
-  /* #13087
+  /* #13102
   source: 
     /**
      * Determines whether dragging a Group also drags its member Parts if there is no Group.placeholder.
@@ -27769,7 +27791,7 @@ extension DraggingOptions$Typings on DraggingOptions {
         this,
         'dragsMembers',
       );
-  /* #13087
+  /* #13102
   source: 
     /**
      * Determines whether dragging a Group also drags its member Parts if there is no Group.placeholder.
@@ -27813,31 +27835,31 @@ class DiagramRendererOptions {
     _i3.BrushLike? background,
     _i2.bool? showTemporary,
     _i2.bool? showGrid,
-    _i4.HTMLDocument? document,
+    _i6.HTMLDocument? document,
   }) =>
       DiagramRendererOptions._(
-        size: size ?? _i4.undefined,
-        scale: scale ?? _i4.undefined,
-        maxSize: maxSize ?? _i4.undefined,
-        position: position ?? _i4.undefined,
-        parts: parts ?? _i4.undefined,
-        padding: padding ?? _i4.undefined ?? _i4.undefined,
-        background: background ?? _i4.undefined ?? _i4.undefined,
-        showTemporary: showTemporary ?? _i4.undefined,
-        showGrid: showGrid ?? _i4.undefined,
-        document: document ?? _i4.undefined,
+        size: size ?? _i7.undefined,
+        scale: scale ?? _i7.undefined,
+        maxSize: maxSize ?? _i7.undefined,
+        position: position ?? _i7.undefined,
+        parts: parts ?? _i7.undefined,
+        padding: padding ?? _i7.undefined ?? _i7.undefined,
+        background: background ?? _i7.undefined ?? _i7.undefined,
+        showTemporary: showTemporary ?? _i7.undefined,
+        showGrid: showGrid ?? _i7.undefined,
+        document: document ?? _i7.undefined,
       );
 }
 
 extension DiagramRendererOptions$Typings on DiagramRendererOptions {
-  /* #13094
+  /* #13109
   source: 
     size?: Size; */
   _i3.Size? get size => _i5.getProperty(
         this,
         'size',
       );
-  /* #13094
+  /* #13109
   source: 
     size?: Size; */
   // Type Instance of 'InteropInterface'
@@ -27845,18 +27867,18 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'size',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13095
+  /* #13110
   source: 
     scale?: number; */
   _i2.num? get scale => _i5.getProperty(
         this,
         'scale',
       );
-  /* #13095
+  /* #13110
   source: 
     scale?: number; */
   // Type InteropStaticType.number
@@ -27864,18 +27886,18 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'scale',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13096
+  /* #13111
   source: 
     maxSize?: Size; */
   _i3.Size? get maxSize => _i5.getProperty(
         this,
         'maxSize',
       );
-  /* #13096
+  /* #13111
   source: 
     maxSize?: Size; */
   // Type Instance of 'InteropInterface'
@@ -27883,18 +27905,18 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'maxSize',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13097
+  /* #13112
   source: 
     position?: Point; */
   _i3.Point? get position => _i5.getProperty(
         this,
         'position',
       );
-  /* #13097
+  /* #13112
   source: 
     position?: Point; */
   // Type Instance of 'InteropInterface'
@@ -27902,18 +27924,18 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'position',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13098
+  /* #13113
   source: 
     parts?: Iterable<Part>; */
   _i3.Iterable<_i3.Part>? get parts => _i5.getProperty(
         this,
         'parts',
       );
-  /* #13098
+  /* #13113
   source: 
     parts?: Iterable<Part>; */
   // Type Instance of 'InteropInterface'
@@ -27921,56 +27943,56 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'parts',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13099
+  /* #13114
   source: 
     padding?: MarginLike; */
   _i3.MarginLike? get padding => _i5.getProperty(
         this,
         'padding',
       );
-  /* #13099
+  /* #13114
   source: 
     padding?: MarginLike; */
-  // Type InteropTypedef#88783230(name: MarginLike)
+  // Type InteropTypedef#1053273812(name: MarginLike)
   set padding(_i3.MarginLike? value) {
     _i5.setProperty(
       this,
       'padding',
-      value ?? _i4.undefined ?? _i4.undefined,
+      value ?? _i7.undefined ?? _i7.undefined,
     );
   }
 
-  /* #13100
+  /* #13115
   source: 
     background?: BrushLike; */
   _i3.BrushLike? get background => _i5.getProperty(
         this,
         'background',
       );
-  /* #13100
+  /* #13115
   source: 
     background?: BrushLike; */
-  // Type InteropTypedef#450957626(name: BrushLike)
+  // Type InteropTypedef#603506640(name: BrushLike)
   set background(_i3.BrushLike? value) {
     _i5.setProperty(
       this,
       'background',
-      value ?? _i4.undefined ?? _i4.undefined,
+      value ?? _i7.undefined ?? _i7.undefined,
     );
   }
 
-  /* #13101
+  /* #13116
   source: 
     showTemporary?: boolean; */
   _i2.bool? get showTemporary => _i5.getProperty(
         this,
         'showTemporary',
       );
-  /* #13101
+  /* #13116
   source: 
     showTemporary?: boolean; */
   // Type InteropStaticType.boolean
@@ -27978,18 +28000,18 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'showTemporary',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13102
+  /* #13117
   source: 
     showGrid?: boolean; */
   _i2.bool? get showGrid => _i5.getProperty(
         this,
         'showGrid',
       );
-  /* #13102
+  /* #13117
   source: 
     showGrid?: boolean; */
   // Type InteropStaticType.boolean
@@ -27997,26 +28019,26 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'showGrid',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13103
+  /* #13118
   source: 
     document?: HTMLDocument; */
-  _i4.HTMLDocument? get document => _i5.getProperty(
+  _i6.HTMLDocument? get document => _i5.getProperty(
         this,
         'document',
       );
-  /* #13103
+  /* #13118
   source: 
     document?: HTMLDocument; */
-  // Type Instance of 'ExternalInteropType'
-  set document(_i4.HTMLDocument? value) {
+  // Type Instance of 'InteropInterface'
+  set document(_i6.HTMLDocument? value) {
     _i5.setProperty(
       this,
       'document',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -28042,7 +28064,7 @@ class SvgRendererOptions implements _i3.DiagramRendererOptions {
   factory SvgRendererOptions({
     void Function(
       _i3.GraphObject,
-      _i4.SVGElement,
+      _i6.SVGElement,
     )? elementFinished,
     _i3.Size? size,
     _i2.num? scale,
@@ -28053,49 +28075,49 @@ class SvgRendererOptions implements _i3.DiagramRendererOptions {
     _i3.BrushLike? background,
     _i2.bool? showTemporary,
     _i2.bool? showGrid,
-    _i4.HTMLDocument? document,
+    _i6.HTMLDocument? document,
   }) =>
       SvgRendererOptions._(
         elementFinished: elementFinished == null
-            ? _i4.undefined
+            ? _i7.undefined
             : _i5.allowInterop(elementFinished),
-        size: size ?? _i4.undefined,
-        scale: scale ?? _i4.undefined,
-        maxSize: maxSize ?? _i4.undefined,
-        position: position ?? _i4.undefined,
-        parts: parts ?? _i4.undefined,
-        padding: padding ?? _i4.undefined ?? _i4.undefined,
-        background: background ?? _i4.undefined ?? _i4.undefined,
-        showTemporary: showTemporary ?? _i4.undefined,
-        showGrid: showGrid ?? _i4.undefined,
-        document: document ?? _i4.undefined,
+        size: size ?? _i7.undefined,
+        scale: scale ?? _i7.undefined,
+        maxSize: maxSize ?? _i7.undefined,
+        position: position ?? _i7.undefined,
+        parts: parts ?? _i7.undefined,
+        padding: padding ?? _i7.undefined ?? _i7.undefined,
+        background: background ?? _i7.undefined ?? _i7.undefined,
+        showTemporary: showTemporary ?? _i7.undefined,
+        showGrid: showGrid ?? _i7.undefined,
+        document: document ?? _i7.undefined,
       );
 }
 
 extension SvgRendererOptions$Typings on SvgRendererOptions {
-  /* #13109
+  /* #13124
   source: 
     elementFinished?: ((graphobj: GraphObject, svgelt: SVGElement) => void) | null; */
   void Function(
     _i3.GraphObject,
-    _i4.SVGElement,
+    _i6.SVGElement,
   )? get elementFinished => _i5.getProperty(
         this,
         'elementFinished',
       );
-  /* #13109
+  /* #13124
   source: 
     elementFinished?: ((graphobj: GraphObject, svgelt: SVGElement) => void) | null; */
-  // Type InteropUnion#687753731(parent: InteropGetter#608078386(name: elementFinished))
+  // Type InteropUnion#125508722(parent: InteropGetter#862292713(name: elementFinished))
   set elementFinished(
       void Function(
         _i3.GraphObject,
-        _i4.SVGElement,
+        _i6.SVGElement,
       )? value) {
     _i5.setProperty(
       this,
       'elementFinished',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -28137,36 +28159,36 @@ class ImageRendererOptions implements _i3.DiagramRendererOptions {
     _i3.BrushLike? background,
     _i2.bool? showTemporary,
     _i2.bool? showGrid,
-    _i4.HTMLDocument? document,
+    _i6.HTMLDocument? document,
   }) =>
       ImageRendererOptions._(
-        type: type ?? _i4.undefined,
-        returnType: returnType ?? _i4.undefined,
-        callback: callback == null ? _i4.undefined : _i5.allowInterop(callback),
-        callbackTimeout: callbackTimeout ?? _i4.undefined,
-        details: details ?? _i4.undefined,
-        size: size ?? _i4.undefined,
-        scale: scale ?? _i4.undefined,
-        maxSize: maxSize ?? _i4.undefined,
-        position: position ?? _i4.undefined,
-        parts: parts ?? _i4.undefined,
-        padding: padding ?? _i4.undefined ?? _i4.undefined,
-        background: background ?? _i4.undefined ?? _i4.undefined,
-        showTemporary: showTemporary ?? _i4.undefined,
-        showGrid: showGrid ?? _i4.undefined,
-        document: document ?? _i4.undefined,
+        type: type ?? _i7.undefined,
+        returnType: returnType ?? _i7.undefined,
+        callback: callback == null ? _i7.undefined : _i5.allowInterop(callback),
+        callbackTimeout: callbackTimeout ?? _i7.undefined,
+        details: details ?? _i7.undefined,
+        size: size ?? _i7.undefined,
+        scale: scale ?? _i7.undefined,
+        maxSize: maxSize ?? _i7.undefined,
+        position: position ?? _i7.undefined,
+        parts: parts ?? _i7.undefined,
+        padding: padding ?? _i7.undefined ?? _i7.undefined,
+        background: background ?? _i7.undefined ?? _i7.undefined,
+        showTemporary: showTemporary ?? _i7.undefined,
+        showGrid: showGrid ?? _i7.undefined,
+        document: document ?? _i7.undefined,
       );
 }
 
 extension ImageRendererOptions$Typings on ImageRendererOptions {
-  /* #13115
+  /* #13130
   source: 
     type?: string; */
   _i2.String? get type => _i5.getProperty(
         this,
         'type',
       );
-  /* #13115
+  /* #13130
   source: 
     type?: string; */
   // Type InteropStaticType.string
@@ -28174,18 +28196,18 @@ extension ImageRendererOptions$Typings on ImageRendererOptions {
     _i5.setProperty(
       this,
       'type',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13116
+  /* #13131
   source: 
     returnType?: string; */
   _i2.String? get returnType => _i5.getProperty(
         this,
         'returnType',
       );
-  /* #13116
+  /* #13131
   source: 
     returnType?: string; */
   // Type InteropStaticType.string
@@ -28193,37 +28215,37 @@ extension ImageRendererOptions$Typings on ImageRendererOptions {
     _i5.setProperty(
       this,
       'returnType',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13117
+  /* #13132
   source: 
     callback?: ((result: any) => void) | null; */
   void Function(_i2.dynamic)? get callback => _i5.getProperty(
         this,
         'callback',
       );
-  /* #13117
+  /* #13132
   source: 
     callback?: ((result: any) => void) | null; */
-  // Type InteropUnion#472719904(parent: InteropGetter#508015359(name: callback))
+  // Type InteropUnion#777395770(parent: InteropGetter#965366253(name: callback))
   set callback(void Function(_i2.dynamic)? value) {
     _i5.setProperty(
       this,
       'callback',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #13118
+  /* #13133
   source: 
     callbackTimeout?: number; */
   _i2.num? get callbackTimeout => _i5.getProperty(
         this,
         'callbackTimeout',
       );
-  /* #13118
+  /* #13133
   source: 
     callbackTimeout?: number; */
   // Type InteropStaticType.number
@@ -28231,18 +28253,18 @@ extension ImageRendererOptions$Typings on ImageRendererOptions {
     _i5.setProperty(
       this,
       'callbackTimeout',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13119
+  /* #13134
   source: 
     details?: ObjectData; */
   _i2.Object? get details => _i5.getProperty(
         this,
         'details',
       );
-  /* #13119
+  /* #13134
   source: 
     details?: ObjectData; */
   // Type Instance of 'InteropInterface'
@@ -28250,7 +28272,7 @@ extension ImageRendererOptions$Typings on ImageRendererOptions {
     _i5.setProperty(
       this,
       'details',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -28263,20 +28285,20 @@ class Palette implements _i3.Diagram {
         [],
       );
 
-  factory Palette.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory Palette.$2([_i4.Partial<_i3.Palette>? init]) => _i5.callConstructor(
         _declaredPalette,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Palette.$3([
     _i2.Object? div,
-    _i4.Partial? init,
+    _i4.Partial<_i3.Palette>? init,
   ]) =>
       _i5.callConstructor(
         _declaredPalette,
         [
-          div ?? _i4.undefined,
-          init ?? _i4.undefined,
+          div ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 }
@@ -28295,20 +28317,20 @@ class Overview implements _i3.Diagram {
         [],
       );
 
-  factory Overview.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory Overview.$2([_i4.Partial<_i3.Overview>? init]) => _i5.callConstructor(
         _declaredOverview,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Overview.$3([
     _i2.Object? div,
-    _i4.Partial? init,
+    _i4.Partial<_i3.Overview>? init,
   ]) =>
       _i5.callConstructor(
         _declaredOverview,
         [
-          div ?? _i4.undefined,
-          init ?? _i4.undefined,
+          div ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 }
@@ -28320,7 +28342,7 @@ FieldExternal:
 external _i2.Object _declaredOverview;
 
 extension Overview$Typings on Overview {
-  /* #13212
+  /* #13227
   source: 
     /**
      * Gets or sets the Diagram for which this Overview is
@@ -28337,7 +28359,7 @@ extension Overview$Typings on Overview {
         this,
         'observed',
       );
-  /* #13212
+  /* #13227
   source: 
     /**
      * Gets or sets the Diagram for which this Overview is
@@ -28346,16 +28368,16 @@ extension Overview$Typings on Overview {
      * The value must be null or another Diagram, but may not be an Overview.
      */
     get observed(): Diagram | null; */
-  // Type InteropUnion#818288283(parent: InteropGetter#838548806(name: observed))
+  // Type InteropUnion#865458176(parent: InteropGetter#121701697(name: observed))
   set observed(_i3.Diagram? value) {
     _i5.setProperty(
       this,
       'observed',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #13220
+  /* #13235
   source: 
     /**
      * Gets or sets the rectangular Part that represents the
@@ -28372,7 +28394,7 @@ extension Overview$Typings on Overview {
         this,
         'box',
       );
-  /* #13220
+  /* #13235
   source: 
     /**
      * Gets or sets the rectangular Part that represents the
@@ -28390,7 +28412,7 @@ extension Overview$Typings on Overview {
     );
   }
 
-  /* #13231
+  /* #13246
   source: 
     /**
      * Gets or sets whether this overview draws the temporary layers of the observed Diagram.
@@ -28412,7 +28434,7 @@ extension Overview$Typings on Overview {
         this,
         'drawsTemporaryLayers',
       );
-  /* #13231
+  /* #13246
   source: 
     /**
      * Gets or sets whether this overview draws the temporary layers of the observed Diagram.
@@ -28433,7 +28455,7 @@ extension Overview$Typings on Overview {
     );
   }
 
-  /* #13243
+  /* #13258
   source: 
     /**
      * Gets or sets whether this overview draws the Diagram#grid of the observed Diagram,
@@ -28457,7 +28479,7 @@ extension Overview$Typings on Overview {
         this,
         'drawsGrid',
       );
-  /* #13243
+  /* #13258
   source: 
     /**
      * Gets or sets whether this overview draws the Diagram#grid of the observed Diagram,
@@ -28479,7 +28501,7 @@ extension Overview$Typings on Overview {
     );
   }
 
-  /* #13253
+  /* #13268
   source: 
     /**
      * Gets or sets how long it waits before updating, in milliseconds.
@@ -28499,7 +28521,7 @@ extension Overview$Typings on Overview {
         this,
         'updateDelay',
       );
-  /* #13253
+  /* #13268
   source: 
     /**
      * Gets or sets how long it waits before updating, in milliseconds.
@@ -28536,7 +28558,7 @@ FieldExternal:
 external _i2.Object _declaredCommandHandler;
 
 extension CommandHandler$Typings on CommandHandler {
-  /* #13313
+  /* #13328
   source: 
     /**
      * This read-only property returns the Diagram that is using this CommandHandler,
@@ -28549,7 +28571,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'diagram',
       );
-  /* #13313
+  /* #13328
   source: 
     /**
      * This read-only property returns the Diagram that is using this CommandHandler,
@@ -28565,7 +28587,7 @@ extension CommandHandler$Typings on CommandHandler {
     );
   }
 
-  /* #14051
+  /* #14066
   source: 
     /**
      * Gets or sets whether #copySelection should also copy Links that connect with selected Nodes.
@@ -28587,7 +28609,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'copiesConnectedLinks',
       );
-  /* #14051
+  /* #14066
   source: 
     /**
      * Gets or sets whether #copySelection should also copy Links that connect with selected Nodes.
@@ -28608,7 +28630,7 @@ extension CommandHandler$Typings on CommandHandler {
     );
   }
 
-  /* #14059
+  /* #14074
   source: 
     /**
      * Gets or sets whether #deleteSelection should also delete links that are connected to nodes that are deleted.
@@ -28624,7 +28646,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'deletesConnectedLinks',
       );
-  /* #14059
+  /* #14074
   source: 
     /**
      * Gets or sets whether #deleteSelection should also delete links that are connected to nodes that are deleted.
@@ -28642,7 +28664,7 @@ extension CommandHandler$Typings on CommandHandler {
     );
   }
 
-  /* #14069
+  /* #14084
   source: 
     /**
      * Gets or sets whether #copySelection should also copy subtrees.
@@ -28663,7 +28685,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'copiesTree',
       );
-  /* #14069
+  /* #14084
   source: 
     /**
      * Gets or sets whether #copySelection should also copy subtrees.
@@ -28683,7 +28705,7 @@ extension CommandHandler$Typings on CommandHandler {
     );
   }
 
-  /* #14076
+  /* #14091
   source: 
     /**
      * Gets or sets whether #deleteSelection should also delete subtrees.
@@ -28698,7 +28720,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'deletesTree',
       );
-  /* #14076
+  /* #14091
   source: 
     /**
      * Gets or sets whether #deleteSelection should also delete subtrees.
@@ -28715,7 +28737,7 @@ extension CommandHandler$Typings on CommandHandler {
     );
   }
 
-  /* #14088
+  /* #14103
   source: 
     /**
      * Gets or sets whether #copySelection and #copyToClipboard copy the node data property
@@ -28739,7 +28761,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'copiesParentKey',
       );
-  /* #14088
+  /* #14103
   source: 
     /**
      * Gets or sets whether #copySelection and #copyToClipboard copy the node data property
@@ -28761,7 +28783,7 @@ extension CommandHandler$Typings on CommandHandler {
     );
   }
 
-  /* #14100
+  /* #14115
   source: 
     /**
      * Gets or sets whether #copySelection and #copyToClipboard copy the node data property
@@ -28785,7 +28807,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'copiesGroupKey',
       );
-  /* #14100
+  /* #14115
   source: 
     /**
      * Gets or sets whether #copySelection and #copyToClipboard copy the node data property
@@ -28807,7 +28829,7 @@ extension CommandHandler$Typings on CommandHandler {
     );
   }
 
-  /* #14110
+  /* #14125
   source: 
     /**
      * Gets or sets a data object that is copied by #groupSelection
@@ -28828,7 +28850,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'archetypeGroupData',
       );
-  /* #14110
+  /* #14125
   source: 
     /**
      * Gets or sets a data object that is copied by #groupSelection
@@ -28848,7 +28870,7 @@ extension CommandHandler$Typings on CommandHandler {
     );
   }
 
-  /* #14123
+  /* #14138
   source: 
     /**
      * Gets or sets the predicate that determines whether or not a node may become a member of a group.
@@ -28878,7 +28900,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'memberValidation',
       );
-  /* #14123
+  /* #14138
   source: 
     /**
      * Gets or sets the predicate that determines whether or not a node may become a member of a group.
@@ -28892,7 +28914,7 @@ extension CommandHandler$Typings on CommandHandler {
      * The function, if supplied, must not have any side-effects.
      */
     get memberValidation(): ((aGroup: Group, somePart: Part) => boolean) | null; */
-  // Type InteropUnion#366986942(parent: InteropGetter#71644085(name: memberValidation))
+  // Type InteropUnion#208735190(parent: InteropGetter#911522887(name: memberValidation))
   set memberValidation(
       _i2.bool Function(
         _i3.Group,
@@ -28901,11 +28923,11 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.setProperty(
       this,
       'memberValidation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #14129
+  /* #14144
   source: 
     /**
      * (undocumented)
@@ -28918,7 +28940,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'defaultScale',
       );
-  /* #14129
+  /* #14144
   source: 
     /**
      * (undocumented)
@@ -28934,7 +28956,7 @@ extension CommandHandler$Typings on CommandHandler {
     );
   }
 
-  /* #14140
+  /* #14155
   source: 
     /**
      * Gets or sets the amount by which #decreaseZoom and #increaseZoom change
@@ -28956,7 +28978,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'zoomFactor',
       );
-  /* #14140
+  /* #14155
   source: 
     /**
      * Gets or sets the amount by which #decreaseZoom and #increaseZoom change
@@ -28977,7 +28999,7 @@ extension CommandHandler$Typings on CommandHandler {
     );
   }
 
-  /* #14151
+  /* #14166
   source: 
     /**
      * Gets or sets whether the #zoomToFit command ever restores the previous
@@ -28999,7 +29021,7 @@ extension CommandHandler$Typings on CommandHandler {
         this,
         'isZoomToFitRestoreEnabled',
       );
-  /* #14151
+  /* #14166
   source: 
     /**
      * Gets or sets whether the #zoomToFit command ever restores the previous
@@ -29105,7 +29127,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'copyToClipboard',
-      [coll ?? _i4.undefined],
+      [coll ?? _i7.undefined],
     );
   }
 
@@ -29118,14 +29140,14 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'pasteSelection',
-      [pos ?? _i4.undefined],
+      [pos ?? _i7.undefined],
     );
   }
 
   _i2.bool canPasteSelection([_i3.Point? pos]) => _i5.callMethod(
         this,
         'canPasteSelection',
-        [pos ?? _i4.undefined],
+        [pos ?? _i7.undefined],
       );
   void undo() {
     _i5.callMethod(
@@ -29157,40 +29179,40 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'decreaseZoom',
-      [factor ?? _i4.undefined],
+      [factor ?? _i7.undefined],
     );
   }
 
   _i2.bool canDecreaseZoom([_i2.num? factor]) => _i5.callMethod(
         this,
         'canDecreaseZoom',
-        [factor ?? _i4.undefined],
+        [factor ?? _i7.undefined],
       );
   void increaseZoom([_i2.num? factor]) {
     _i5.callMethod(
       this,
       'increaseZoom',
-      [factor ?? _i4.undefined],
+      [factor ?? _i7.undefined],
     );
   }
 
   _i2.bool canIncreaseZoom([_i2.num? factor]) => _i5.callMethod(
         this,
         'canIncreaseZoom',
-        [factor ?? _i4.undefined],
+        [factor ?? _i7.undefined],
       );
   void resetZoom([_i2.num? newscale]) {
     _i5.callMethod(
       this,
       'resetZoom',
-      [newscale ?? _i4.undefined],
+      [newscale ?? _i7.undefined],
     );
   }
 
   _i2.bool canResetZoom([_i2.num? newscale]) => _i5.callMethod(
         this,
         'canResetZoom',
-        [newscale ?? _i4.undefined],
+        [newscale ?? _i7.undefined],
       );
   void zoomToFit() {
     _i5.callMethod(
@@ -29209,40 +29231,40 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'scrollToPart',
-      [part ?? _i4.undefined],
+      [part ?? _i7.undefined],
     );
   }
 
   _i2.bool canScrollToPart([_i3.Part? part]) => _i5.callMethod(
         this,
         'canScrollToPart',
-        [part ?? _i4.undefined],
+        [part ?? _i7.undefined],
       );
   void collapseTree([_i3.Node? node]) {
     _i5.callMethod(
       this,
       'collapseTree',
-      [node ?? _i4.undefined],
+      [node ?? _i7.undefined],
     );
   }
 
   _i2.bool canCollapseTree([_i3.Node? node]) => _i5.callMethod(
         this,
         'canCollapseTree',
-        [node ?? _i4.undefined],
+        [node ?? _i7.undefined],
       );
   void expandTree([_i3.Node? node]) {
     _i5.callMethod(
       this,
       'expandTree',
-      [node ?? _i4.undefined],
+      [node ?? _i7.undefined],
     );
   }
 
   _i2.bool canExpandTree([_i3.Node? node]) => _i5.callMethod(
         this,
         'canExpandTree',
-        [node ?? _i4.undefined],
+        [node ?? _i7.undefined],
       );
   void groupSelection() {
     _i5.callMethod(
@@ -29273,14 +29295,14 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'ungroupSelection',
-      [group ?? _i4.undefined],
+      [group ?? _i7.undefined],
     );
   }
 
   _i2.bool canUngroupSelection([_i3.Group? group]) => _i5.callMethod(
         this,
         'canUngroupSelection',
-        [group ?? _i4.undefined],
+        [group ?? _i7.undefined],
       );
   _i2.bool addTopLevelParts(
     _i3.Iterable<_i3.Part> coll, [
@@ -29291,60 +29313,60 @@ extension CommandHandler$Typings on CommandHandler {
         'addTopLevelParts',
         [
           coll,
-          check ?? _i4.undefined,
+          check ?? _i7.undefined,
         ],
       );
   void collapseSubGraph([_i3.Group? group]) {
     _i5.callMethod(
       this,
       'collapseSubGraph',
-      [group ?? _i4.undefined],
+      [group ?? _i7.undefined],
     );
   }
 
   _i2.bool canCollapseSubGraph([_i3.Group? group]) => _i5.callMethod(
         this,
         'canCollapseSubGraph',
-        [group ?? _i4.undefined],
+        [group ?? _i7.undefined],
       );
   void expandSubGraph([_i3.Group? group]) {
     _i5.callMethod(
       this,
       'expandSubGraph',
-      [group ?? _i4.undefined],
+      [group ?? _i7.undefined],
     );
   }
 
   _i2.bool canExpandSubGraph([_i3.Group? group]) => _i5.callMethod(
         this,
         'canExpandSubGraph',
-        [group ?? _i4.undefined],
+        [group ?? _i7.undefined],
       );
   void editTextBlock([_i3.TextBlock? textblock]) {
     _i5.callMethod(
       this,
       'editTextBlock',
-      [textblock ?? _i4.undefined],
+      [textblock ?? _i7.undefined],
     );
   }
 
   _i2.bool canEditTextBlock([_i3.TextBlock? textblock]) => _i5.callMethod(
         this,
         'canEditTextBlock',
-        [textblock ?? _i4.undefined],
+        [textblock ?? _i7.undefined],
       );
   void showContextMenu([_i2.Object? obj]) {
     _i5.callMethod(
       this,
       'showContextMenu',
-      [obj ?? _i4.undefined],
+      [obj ?? _i7.undefined],
     );
   }
 
   _i2.bool canShowContextMenu([_i2.Object? obj]) => _i5.callMethod(
         this,
         'canShowContextMenu',
-        [obj ?? _i4.undefined],
+        [obj ?? _i7.undefined],
       );
   _i3.Map<_i3.Part, _i3.DraggingInfo> computeEffectiveCollection(
     _i3.Iterable<_i3.Part> parts, [
@@ -29355,7 +29377,7 @@ extension CommandHandler$Typings on CommandHandler {
         'computeEffectiveCollection',
         [
           parts,
-          options ?? _i4.undefined,
+          options ?? _i7.undefined,
         ],
       );
 }
@@ -29368,7 +29390,7 @@ class GraphObject {
         [],
       );
 
-  /* #14437
+  /* #14452
   source: 
     /**
      * GraphObjects with this enumeration as the value of GraphObject#stretch
@@ -29384,7 +29406,7 @@ class GraphObject {
         _declaredGraphObject,
         'None',
       );
-  /* #14437
+  /* #14452
   source: 
     /**
      * GraphObjects with this enumeration as the value of GraphObject#stretch
@@ -29402,7 +29424,7 @@ class GraphObject {
     );
   }
 
-  /* #14444
+  /* #14459
   source: 
     /**
      * GraphObjects with this enumeration as the value of GraphObject#stretch
@@ -29418,7 +29440,7 @@ class GraphObject {
         _declaredGraphObject,
         'Default',
       );
-  /* #14444
+  /* #14459
   source: 
     /**
      * GraphObjects with this enumeration as the value of GraphObject#stretch
@@ -29436,7 +29458,7 @@ class GraphObject {
     );
   }
 
-  /* #14450
+  /* #14465
   source: 
     /**
      * GraphObjects with this enumeration as the value of GraphObject#stretch
@@ -29450,7 +29472,7 @@ class GraphObject {
         _declaredGraphObject,
         'Vertical',
       );
-  /* #14450
+  /* #14465
   source: 
     /**
      * GraphObjects with this enumeration as the value of GraphObject#stretch
@@ -29467,7 +29489,7 @@ class GraphObject {
     );
   }
 
-  /* #14456
+  /* #14471
   source: 
     /**
      * GraphObjects with this enumeration as the value of GraphObject#stretch
@@ -29481,7 +29503,7 @@ class GraphObject {
         _declaredGraphObject,
         'Horizontal',
       );
-  /* #14456
+  /* #14471
   source: 
     /**
      * GraphObjects with this enumeration as the value of GraphObject#stretch
@@ -29498,7 +29520,7 @@ class GraphObject {
     );
   }
 
-  /* #14463
+  /* #14478
   source: 
     /**
      * GraphObjects with this enumeration as the value of GraphObject#stretch
@@ -29514,7 +29536,7 @@ class GraphObject {
         _declaredGraphObject,
         'Fill',
       );
-  /* #14463
+  /* #14478
   source: 
     /**
      * GraphObjects with this enumeration as the value of GraphObject#stretch
@@ -29532,7 +29554,7 @@ class GraphObject {
     );
   }
 
-  /* #14472
+  /* #14487
   source: 
     /**
      * Pictures with this enumeration as the value of Picture#imageStretch are drawn with equal
@@ -29552,7 +29574,7 @@ class GraphObject {
         _declaredGraphObject,
         'Uniform',
       );
-  /* #14472
+  /* #14487
   source: 
     /**
      * Pictures with this enumeration as the value of Picture#imageStretch are drawn with equal
@@ -29572,7 +29594,7 @@ class GraphObject {
     );
   }
 
-  /* #14482
+  /* #14497
   source: 
     /**
      * Pictures with this enumeration as the value of Picture#imageStretch are drawn with equal
@@ -29594,7 +29616,7 @@ class GraphObject {
         _declaredGraphObject,
         'UniformToFill',
       );
-  /* #14482
+  /* #14497
   source: 
     /**
      * Pictures with this enumeration as the value of Picture#imageStretch are drawn with equal
@@ -29615,7 +29637,7 @@ class GraphObject {
     );
   }
 
-  /* #14489
+  /* #14504
   source: 
     /**
      * GraphObjects with this enumeration as the value of Picture#flip or TextBlock#flip
@@ -29630,7 +29652,7 @@ class GraphObject {
         _declaredGraphObject,
         'FlipVertical',
       );
-  /* #14489
+  /* #14504
   source: 
     /**
      * GraphObjects with this enumeration as the value of Picture#flip or TextBlock#flip
@@ -29648,7 +29670,7 @@ class GraphObject {
     );
   }
 
-  /* #14496
+  /* #14511
   source: 
     /**
      * GraphObjects with this enumeration as the value of Picture#flip or TextBlock#flip
@@ -29663,7 +29685,7 @@ class GraphObject {
         _declaredGraphObject,
         'FlipHorizontal',
       );
-  /* #14496
+  /* #14511
   source: 
     /**
      * GraphObjects with this enumeration as the value of Picture#flip or TextBlock#flip
@@ -29681,7 +29703,7 @@ class GraphObject {
     );
   }
 
-  /* #14503
+  /* #14518
   source: 
     /**
      * GraphObjects with this enumeration as the value of Picture#flip or TextBlock#flip
@@ -29696,7 +29718,7 @@ class GraphObject {
         _declaredGraphObject,
         'FlipBoth',
       );
-  /* #14503
+  /* #14518
   source: 
     /**
      * GraphObjects with this enumeration as the value of Picture#flip or TextBlock#flip
@@ -29716,7 +29738,7 @@ class GraphObject {
 
   static T build<T extends _i3.GraphObject>(
     _i2.String name, [
-    _i4.Partial? config,
+    _i4.Partial<T>? config,
     _i2.Iterable<_i2.dynamic>? args,
   ]) =>
       _i5.callMethod(
@@ -29724,7 +29746,7 @@ class GraphObject {
         'build',
         [
           name,
-          config ?? _i4.undefined,
+          config ?? _i7.undefined ?? _i7.undefined,
           ...?args,
         ],
       );
@@ -29764,7 +29786,7 @@ class GraphObject {
           ...?initializers,
         ],
       );
-  static _i4.InstanceType _make$4<CT extends _i3.ConstructorType<CT>>(
+  static _i4.InstanceType<CT> _make$4<CT extends _i3.ConstructorType<CT>>(
     CT cls, [
     _i2.Iterable<_i2.dynamic>? initializers,
   ]) =>
@@ -29790,7 +29812,7 @@ class GraphObject {
       _i2.String cls, [
       _i2.Iterable<_i2.dynamic>? initializers,
     ]) $3,
-    _i4.InstanceType Function<CT extends _i3.ConstructorType<CT>>(
+    _i4.InstanceType<CT> Function<CT extends _i3.ConstructorType<CT>>(
       CT cls, [
       _i2.Iterable<_i2.dynamic>? initializers,
     ]) $4,
@@ -29802,7 +29824,7 @@ class GraphObject {
       );
   static void defineBuilder(
     _i2.String name,
-    _i2.Object Function(_i4.Array) func,
+    _i2.Object Function(_i4.Array<_i2.dynamic>) func,
   ) {
     _i5.callMethod(
       _declaredGraphObject,
@@ -29815,7 +29837,7 @@ class GraphObject {
   }
 
   static _i2.dynamic takeBuilderArgument(
-    _i4.Array args, [
+    _i4.Array<_i2.dynamic> args, [
     _i2.dynamic defval,
     _i2.bool Function(_i2.dynamic)? pred,
   ]) =>
@@ -29824,8 +29846,8 @@ class GraphObject {
         'takeBuilderArgument',
         [
           args,
-          defval ?? _i4.undefined,
-          pred == null ? _i4.undefined : _i5.allowInterop(pred),
+          defval ?? _i7.undefined,
+          pred == null ? _i7.undefined : _i5.allowInterop(pred),
         ],
       );
 }
@@ -29837,7 +29859,7 @@ FieldExternal:
 external _i2.Object _declaredGraphObject;
 
 extension GraphObject$Typings on GraphObject {
-  /* #14584
+  /* #14599
   source: 
     /**
      * Gets or sets whether or not this GraphObject will be shadowed inside a Part that has Part#isShadowed set to true.
@@ -29866,7 +29888,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'shadowVisible',
       );
-  /* #14584
+  /* #14599
   source: 
     /**
      * Gets or sets whether or not this GraphObject will be shadowed inside a Part that has Part#isShadowed set to true.
@@ -29882,16 +29904,16 @@ extension GraphObject$Typings on GraphObject {
      * @since 1.6
      */
     get shadowVisible(): boolean | null; */
-  // Type InteropUnion#778793909(parent: InteropGetter#667886401(name: shadowVisible))
+  // Type InteropUnion#244963048(parent: InteropGetter#683185659(name: shadowVisible))
   set shadowVisible(_i2.bool? value) {
     _i5.setProperty(
       this,
       'shadowVisible',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #14632
+  /* #14647
   source: 
     /**
      * Gets or sets the function to execute when some containing Panel changes the value of Panel#isEnabled.
@@ -29920,7 +29942,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'enabledChanged',
       );
-  /* #14632
+  /* #14647
   source: 
     /**
      * Gets or sets the function to execute when some containing Panel changes the value of Panel#isEnabled.
@@ -29935,7 +29957,7 @@ extension GraphObject$Typings on GraphObject {
      * @since 1.7
      */
     get enabledChanged(): ((thisObj: GraphObject, enabled: boolean) => void) | null; */
-  // Type InteropUnion#78382668(parent: InteropGetter#604906852(name: enabledChanged))
+  // Type InteropUnion#373770919(parent: InteropGetter#78054879(name: enabledChanged))
   set enabledChanged(
       void Function(
         _i3.GraphObject,
@@ -29944,11 +29966,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'enabledChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #14660
+  /* #14675
   source: 
     /**
      * Gets or sets the orientation of a GraphObject that is in a Link or Panel.Graduated.
@@ -30002,7 +30024,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'segmentOrientation',
       );
-  /* #14660
+  /* #14675
   source: 
     /**
      * Gets or sets the orientation of a GraphObject that is in a Link or Panel.Graduated.
@@ -30040,7 +30062,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14680
+  /* #14695
   source: 
     /**
      * Gets or sets the segment index of a GraphObject that is in a Link.
@@ -30078,7 +30100,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'segmentIndex',
       );
-  /* #14680
+  /* #14695
   source: 
     /**
      * Gets or sets the segment index of a GraphObject that is in a Link.
@@ -30108,7 +30130,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14695
+  /* #14710
   source: 
     /**
      * Gets or sets the fractional distance along a segment of a GraphObject that is in a Link.
@@ -30136,7 +30158,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'segmentFraction',
       );
-  /* #14695
+  /* #14710
   source: 
     /**
      * Gets or sets the fractional distance along a segment of a GraphObject that is in a Link.
@@ -30161,7 +30183,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14716
+  /* #14731
   source: 
     /**
      * Gets or sets the offset of a GraphObject that is in a Link from a point on a segment
@@ -30201,7 +30223,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'segmentOffset',
       );
-  /* #14716
+  /* #14731
   source: 
     /**
      * Gets or sets the offset of a GraphObject that is in a Link from a point on a segment
@@ -30232,7 +30254,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14745
+  /* #14760
   source: 
     /**
      * Gets or sets the stretch of the GraphObject.
@@ -30283,7 +30305,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'stretch',
       );
-  /* #14745
+  /* #14760
   source: 
     /**
      * Gets or sets the stretch of the GraphObject.
@@ -30322,7 +30344,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14759
+  /* #14774
   source: 
     /**
      * Gets or sets the name for this object.
@@ -30351,7 +30373,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'name',
       );
-  /* #14759
+  /* #14774
   source: 
     /**
      * Gets or sets the name for this object.
@@ -30375,7 +30397,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14779
+  /* #14794
   source: 
     /**
      * Gets or sets the multiplicative opacity for this GraphObject and (if a Panel) all elements.
@@ -30411,7 +30433,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'opacity',
       );
-  /* #14779
+  /* #14794
   source: 
     /**
      * Gets or sets the multiplicative opacity for this GraphObject and (if a Panel) all elements.
@@ -30441,7 +30463,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14784
+  /* #14799
   source: 
     /**
      * Undocumented. May not work in Safari.
@@ -30452,7 +30474,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'filter',
       );
-  /* #14784
+  /* #14799
   source: 
     /**
      * Undocumented. May not work in Safari.
@@ -30467,7 +30489,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14817
+  /* #14832
   source: 
     /**
      * Gets or sets whether a GraphObject is visible.
@@ -30525,7 +30547,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'visible',
       );
-  /* #14817
+  /* #14832
   source: 
     /**
      * Gets or sets whether a GraphObject is visible.
@@ -30565,7 +30587,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14835
+  /* #14850
   source: 
     /**
      * Gets or sets whether or not this GraphObject can be chosen by visual "find" or "hit-test" methods such
@@ -30597,7 +30619,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'pickable',
       );
-  /* #14835
+  /* #14850
   source: 
     /**
      * Gets or sets whether or not this GraphObject can be chosen by visual "find" or "hit-test" methods such
@@ -30625,7 +30647,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14849
+  /* #14864
   source: 
     /**
      * Gets or sets whether the user may draw duplicate Links from this port.
@@ -30651,7 +30673,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'fromLinkableDuplicates',
       );
-  /* #14849
+  /* #14864
   source: 
     /**
      * Gets or sets whether the user may draw duplicate Links from this port.
@@ -30675,7 +30697,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14863
+  /* #14878
   source: 
     /**
      * Gets or sets whether the user may draw Links that connect from this port's Node.
@@ -30701,7 +30723,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'fromLinkableSelfNode',
       );
-  /* #14863
+  /* #14878
   source: 
     /**
      * Gets or sets whether the user may draw Links that connect from this port's Node.
@@ -30725,7 +30747,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14877
+  /* #14892
   source: 
     /**
      * Gets or sets whether the user may draw duplicate Links to this port.
@@ -30751,7 +30773,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'toLinkableDuplicates',
       );
-  /* #14877
+  /* #14892
   source: 
     /**
      * Gets or sets whether the user may draw duplicate Links to this port.
@@ -30775,7 +30797,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14891
+  /* #14906
   source: 
     /**
      * Gets or sets whether the user may draw Links that connect to this port's Node.
@@ -30801,7 +30823,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'toLinkableSelfNode',
       );
-  /* #14891
+  /* #14906
   source: 
     /**
      * Gets or sets whether the user may draw Links that connect to this port's Node.
@@ -30825,7 +30847,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14902
+  /* #14917
   source: 
     /**
      * Gets or sets whether a GraphObject is the "main" object for some types of Panel.
@@ -30848,7 +30870,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'isPanelMain',
       );
-  /* #14902
+  /* #14917
   source: 
     /**
      * Gets or sets whether a GraphObject is the "main" object for some types of Panel.
@@ -30869,7 +30891,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14923
+  /* #14938
   source: 
     /**
      * This property determines whether or not this GraphObject's events occur
@@ -30906,7 +30928,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'isActionable',
       );
-  /* #14923
+  /* #14938
   source: 
     /**
      * This property determines whether or not this GraphObject's events occur
@@ -30937,7 +30959,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #14938
+  /* #14953
   source: 
     /**
      * Gets or sets the areaBackground Brush of this GraphObject.
@@ -30966,7 +30988,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'areaBackground',
       );
-  /* #14938
+  /* #14953
   source: 
     /**
      * Gets or sets the areaBackground Brush of this GraphObject.
@@ -30982,16 +31004,16 @@ extension GraphObject$Typings on GraphObject {
      * @see Shape#fill
      */
     get areaBackground(): BrushLike; */
-  // Type InteropTypedef#450957626(name: BrushLike)
+  // Type InteropTypedef#603506640(name: BrushLike)
   set areaBackground(_i3.BrushLike value) {
     _i5.setProperty(
       this,
       'areaBackground',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #14951
+  /* #14966
   source: 
     /**
      * Gets or sets the background Brush of this GraphObject,
@@ -31017,7 +31039,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'background',
       );
-  /* #14951
+  /* #14966
   source: 
     /**
      * Gets or sets the background Brush of this GraphObject,
@@ -31031,16 +31053,16 @@ extension GraphObject$Typings on GraphObject {
      * @see Shape#fill
      */
     get background(): BrushLike; */
-  // Type InteropTypedef#450957626(name: BrushLike)
+  // Type InteropTypedef#603506640(name: BrushLike)
   set background(_i3.BrushLike value) {
     _i5.setProperty(
       this,
       'background',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #14970
+  /* #14985
   source: 
     /**
      * This read-only property returns the Part containing this object, if any.
@@ -31079,7 +31101,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'part',
       );
-  /* #14970
+  /* #14985
   source: 
     /**
      * This read-only property returns the Part containing this object, if any.
@@ -31099,16 +31121,16 @@ extension GraphObject$Typings on GraphObject {
      * `someObj.part.containingGroup`
      */
     get part(): Part | null; */
-  // Type InteropUnion#343620681(parent: InteropGetter#466423537(name: part))
+  // Type InteropUnion#246507232(parent: InteropGetter#10073768(name: part))
   set part(_i3.Part? value) {
     _i5.setProperty(
       this,
       'part',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #14981
+  /* #14996
   source: 
     /**
      * This read-only property returns the GraphObject's containing Panel, or null if this object is not in a Panel.
@@ -31131,7 +31153,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'panel',
       );
-  /* #14981
+  /* #14996
   source: 
     /**
      * This read-only property returns the GraphObject's containing Panel, or null if this object is not in a Panel.
@@ -31143,16 +31165,16 @@ extension GraphObject$Typings on GraphObject {
      * Instead, call Panel#add in order to put a GraphObject in a Panel.
      */
     get panel(): Panel | null; */
-  // Type InteropUnion#754319456(parent: InteropGetter#552915716(name: panel))
+  // Type InteropUnion#936550647(parent: InteropGetter#595848689(name: panel))
   set panel(_i3.Panel? value) {
     _i5.setProperty(
       this,
       'panel',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #14990
+  /* #15005
   source: 
     /**
      * This read-only property returns the GraphObject's containing Layer, if there is any.
@@ -31173,7 +31195,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'layer',
       );
-  /* #14990
+  /* #15005
   source: 
     /**
      * This read-only property returns the GraphObject's containing Layer, if there is any.
@@ -31184,16 +31206,16 @@ extension GraphObject$Typings on GraphObject {
      * Adding a Part to a Diagram will automatically add that Part to a Layer in that Diagram based on the layerName.
      */
     get layer(): Layer | null; */
-  // Type InteropUnion#308757369(parent: InteropGetter#101797070(name: layer))
+  // Type InteropUnion#394129836(parent: InteropGetter#408737454(name: layer))
   set layer(_i3.Layer? value) {
     _i5.setProperty(
       this,
       'layer',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #14998
+  /* #15013
   source: 
     /**
      * This read-only property returns the Diagram that this GraphObject is in, if it is.
@@ -31212,7 +31234,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'diagram',
       );
-  /* #14998
+  /* #15013
   source: 
     /**
      * This read-only property returns the Diagram that this GraphObject is in, if it is.
@@ -31222,16 +31244,16 @@ extension GraphObject$Typings on GraphObject {
      * to add a Part to a Diagram.
      */
     get diagram(): Diagram | null; */
-  // Type InteropUnion#227456004(parent: InteropGetter#980085102(name: diagram))
+  // Type InteropUnion#181236263(parent: InteropGetter#826493408(name: diagram))
   set diagram(_i3.Diagram? value) {
     _i5.setProperty(
       this,
       'diagram',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #15009
+  /* #15024
   source: 
     /**
      * Gets or sets the position of this GraphObject in container coordinates
@@ -31256,7 +31278,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'position',
       );
-  /* #15009
+  /* #15024
   source: 
     /**
      * Gets or sets the position of this GraphObject in container coordinates
@@ -31278,7 +31300,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15039
+  /* #15054
   source: 
     /**
      * This read-only property returns the bounds of this GraphObject in container coordinates. This means that
@@ -31337,7 +31359,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'actualBounds',
       );
-  /* #15039
+  /* #15054
   source: 
     /**
      * This read-only property returns the bounds of this GraphObject in container coordinates. This means that
@@ -31377,7 +31399,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15047
+  /* #15062
   source: 
     /**
      * Gets or sets the scale transform of this GraphObject.
@@ -31394,7 +31416,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'scale',
       );
-  /* #15047
+  /* #15062
   source: 
     /**
      * Gets or sets the scale transform of this GraphObject.
@@ -31413,7 +31435,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15064
+  /* #15079
   source: 
     /**
      * Gets or sets the angle transform, in degrees, of this GraphObject.
@@ -31446,7 +31468,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'angle',
       );
-  /* #15064
+  /* #15079
   source: 
     /**
      * Gets or sets the angle transform, in degrees, of this GraphObject.
@@ -31473,7 +31495,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15088
+  /* #15103
   source: 
     /**
      * Gets or sets the desired size of this GraphObject in local coordinates.
@@ -31517,7 +31539,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'desiredSize',
       );
-  /* #15088
+  /* #15103
   source: 
     /**
      * Gets or sets the desired size of this GraphObject in local coordinates.
@@ -31551,7 +31573,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15101
+  /* #15116
   source: 
     /**
      * Gets or sets the desired width of this GraphObject in local coordinates.
@@ -31578,7 +31600,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'width',
       );
-  /* #15101
+  /* #15116
   source: 
     /**
      * Gets or sets the desired width of this GraphObject in local coordinates.
@@ -31601,7 +31623,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15114
+  /* #15129
   source: 
     /**
      * Gets or sets the desired height of this GraphObject in local coordinates.
@@ -31628,7 +31650,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'height',
       );
-  /* #15114
+  /* #15129
   source: 
     /**
      * Gets or sets the desired height of this GraphObject in local coordinates.
@@ -31651,7 +31673,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15128
+  /* #15143
   source: 
     /**
      * Gets or sets the minimum size of this GraphObject in container coordinates
@@ -31678,7 +31700,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'minSize',
       );
-  /* #15128
+  /* #15143
   source: 
     /**
      * Gets or sets the minimum size of this GraphObject in container coordinates
@@ -31702,7 +31724,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15142
+  /* #15157
   source: 
     /**
      * Gets or sets the maximum size of this GraphObject in container coordinates
@@ -31729,7 +31751,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'maxSize',
       );
-  /* #15142
+  /* #15157
   source: 
     /**
      * Gets or sets the maximum size of this GraphObject in container coordinates
@@ -31753,7 +31775,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15156
+  /* #15171
   source: 
     /**
      * This read-only property returns the measuredBounds of the GraphObject in container coordinates
@@ -31779,7 +31801,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'measuredBounds',
       );
-  /* #15156
+  /* #15171
   source: 
     /**
      * This read-only property returns the measuredBounds of the GraphObject in container coordinates
@@ -31803,12 +31825,11 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15173
+  /* #15187
   source: 
     /**
      * This read-only property returns the natural bounding rectangle of this GraphObject in local coordinates,
-     * before any transformation by #scale or #angle,
-     * and before any resizing due to #minSize or #maxSize or #stretch.
+     * before any transformation by #scale or #angle.
      * Defaults to unknown (NaN,NaN).
      *
      * You must not modify any of the properties of the Rect that is the value of this property.
@@ -31823,8 +31844,7 @@ extension GraphObject$Typings on GraphObject {
      */
     get naturalBounds(): Rect; */
   /// This read-only property returns the natural bounding rectangle of this GraphObject in local coordinates,
-  /// before any transformation by #scale or #angle,
-  /// and before any resizing due to #minSize or #maxSize or #stretch.
+  /// before any transformation by #scale or #angle.
   /// Defaults to unknown (NaN,NaN).
   ///
   /// You must not modify any of the properties of the Rect that is the value of this property.
@@ -31837,12 +31857,11 @@ extension GraphObject$Typings on GraphObject {
         this,
         'naturalBounds',
       );
-  /* #15173
+  /* #15187
   source: 
     /**
      * This read-only property returns the natural bounding rectangle of this GraphObject in local coordinates,
-     * before any transformation by #scale or #angle,
-     * and before any resizing due to #minSize or #maxSize or #stretch.
+     * before any transformation by #scale or #angle.
      * Defaults to unknown (NaN,NaN).
      *
      * You must not modify any of the properties of the Rect that is the value of this property.
@@ -31865,7 +31884,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15195
+  /* #15209
   source: 
     /**
      * Gets or sets the size of empty area around this GraphObject, as a Margin,
@@ -31908,7 +31927,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'margin',
       );
-  /* #15195
+  /* #15209
   source: 
     /**
      * Gets or sets the size of empty area around this GraphObject, as a Margin,
@@ -31932,7 +31951,7 @@ extension GraphObject$Typings on GraphObject {
      * @see Panel#padding
      */
     get margin(): MarginLike; */
-  // Type InteropTypedef#88783230(name: MarginLike)
+  // Type InteropTypedef#1053273812(name: MarginLike)
   set margin(_i3.MarginLike value) {
     _i5.setProperty(
       this,
@@ -31941,7 +31960,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15217
+  /* #15231
   source: 
     /**********************************************************
     Panel-specific properties:
@@ -31980,7 +31999,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'alignment',
       );
-  /* #15217
+  /* #15231
   source: 
     /**********************************************************
     Panel-specific properties:
@@ -32012,7 +32031,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15223
+  /* #15237
   source: 
     /**
      * Gets or sets the column of this GraphObject if it is in a Table Panel.
@@ -32025,7 +32044,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'column',
       );
-  /* #15223
+  /* #15237
   source: 
     /**
      * Gets or sets the column of this GraphObject if it is in a Table Panel.
@@ -32041,7 +32060,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15229
+  /* #15243
   source: 
     /**
      * Gets or sets the number of columns spanned by this GraphObject if it is in a Table Panel.
@@ -32054,7 +32073,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'columnSpan',
       );
-  /* #15229
+  /* #15243
   source: 
     /**
      * Gets or sets the number of columns spanned by this GraphObject if it is in a Table Panel.
@@ -32070,7 +32089,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15235
+  /* #15249
   source: 
     /**
      * Gets or sets the row of this GraphObject if it is in a Table Panel.
@@ -32083,7 +32102,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'row',
       );
-  /* #15235
+  /* #15249
   source: 
     /**
      * Gets or sets the row of this GraphObject if it is in a Table Panel.
@@ -32099,7 +32118,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15241
+  /* #15255
   source: 
     /**
      * Gets or sets the number of rows spanned by this GraphObject if it is in a Table Panel.
@@ -32112,7 +32131,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'rowSpan',
       );
-  /* #15241
+  /* #15255
   source: 
     /**
      * Gets or sets the number of rows spanned by this GraphObject if it is in a Table Panel.
@@ -32128,7 +32147,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15246
+  /* #15260
   source: 
     /**
      * (undocumented)
@@ -32143,13 +32162,13 @@ extension GraphObject$Typings on GraphObject {
         this,
         'spanAllocation',
       );
-  /* #15246
+  /* #15260
   source: 
     /**
      * (undocumented)
      */
     get spanAllocation(): ((a: GraphObject, b: RowColumnDefinition, c: number) => number) | null; */
-  // Type InteropUnion#292210508(parent: InteropGetter#978001060(name: spanAllocation))
+  // Type InteropUnion#945101729(parent: InteropGetter#661181604(name: spanAllocation))
   set spanAllocation(
       _i2.num Function(
         _i3.GraphObject,
@@ -32159,11 +32178,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'spanAllocation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15271
+  /* #15285
   source: 
     /**
      * Gets or sets the spot on this GraphObject to be used as the alignment point
@@ -32213,7 +32232,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'alignmentFocus',
       );
-  /* #15271
+  /* #15285
   source: 
     /**
      * Gets or sets the spot on this GraphObject to be used as the alignment point
@@ -32248,7 +32267,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15301
+  /* #15315
   source: 
     /**********************************************************
     Port-specific properties:
@@ -32300,7 +32319,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'portId',
       );
-  /* #15301
+  /* #15315
   source: 
     /**********************************************************
     Port-specific properties:
@@ -32340,7 +32359,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15325
+  /* #15339
   source: 
     /**
      * Gets or sets where a link should connect to this port.
@@ -32385,7 +32404,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'toSpot',
       );
-  /* #15325
+  /* #15339
   source: 
     /**
      * Gets or sets where a link should connect to this port.
@@ -32419,7 +32438,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15346
+  /* #15360
   source: 
     /**
      * Gets or sets the length of the last segment of a link going to this port.
@@ -32458,7 +32477,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'toEndSegmentLength',
       );
-  /* #15346
+  /* #15360
   source: 
     /**
      * Gets or sets the length of the last segment of a link going to this port.
@@ -32489,7 +32508,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15376
+  /* #15390
   source: 
     /**
      * Gets or sets how far the end segment of a link going to this port stops short of the actual port.
@@ -32547,7 +32566,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'toShortLength',
       );
-  /* #15376
+  /* #15390
   source: 
     /**
      * Gets or sets how far the end segment of a link going to this port stops short of the actual port.
@@ -32587,7 +32606,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15395
+  /* #15409
   source: 
     /**
      * Gets or sets whether the user may draw Links to this port.
@@ -32622,7 +32641,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'toLinkable',
       );
-  /* #15395
+  /* #15409
   source: 
     /**
      * Gets or sets whether the user may draw Links to this port.
@@ -32642,16 +32661,16 @@ extension GraphObject$Typings on GraphObject {
      * @see #cursor
      */
     get toLinkable(): boolean | null; */
-  // Type InteropUnion#27276305(parent: InteropGetter#272908060(name: toLinkable))
+  // Type InteropUnion#394087805(parent: InteropGetter#878870783(name: toLinkable))
   set toLinkable(_i2.bool? value) {
     _i5.setProperty(
       this,
       'toLinkable',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #15411
+  /* #15425
   source: 
     /**
      * Gets or sets the maximum number of links that may go into this port.
@@ -32681,7 +32700,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'toMaxLinks',
       );
-  /* #15411
+  /* #15425
   source: 
     /**
      * Gets or sets the maximum number of links that may go into this port.
@@ -32707,7 +32726,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15435
+  /* #15449
   source: 
     /**
      * Gets or sets where a link should connect from this port.
@@ -32752,7 +32771,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'fromSpot',
       );
-  /* #15435
+  /* #15449
   source: 
     /**
      * Gets or sets where a link should connect from this port.
@@ -32786,7 +32805,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15456
+  /* #15470
   source: 
     /**
      * Gets or sets the length of the first segment of a link coming from this port.
@@ -32825,7 +32844,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'fromEndSegmentLength',
       );
-  /* #15456
+  /* #15470
   source: 
     /**
      * Gets or sets the length of the first segment of a link coming from this port.
@@ -32856,7 +32875,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15486
+  /* #15500
   source: 
     /**
      * Gets or sets how far the end segment of a link coming from this port stops short of the actual port.
@@ -32914,7 +32933,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'fromShortLength',
       );
-  /* #15486
+  /* #15500
   source: 
     /**
      * Gets or sets how far the end segment of a link coming from this port stops short of the actual port.
@@ -32954,7 +32973,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15505
+  /* #15519
   source: 
     /**
      * Gets or sets whether the user may draw Links from this port.
@@ -32989,7 +33008,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'fromLinkable',
       );
-  /* #15505
+  /* #15519
   source: 
     /**
      * Gets or sets whether the user may draw Links from this port.
@@ -33009,16 +33028,16 @@ extension GraphObject$Typings on GraphObject {
      * @see #cursor
      */
     get fromLinkable(): boolean | null; */
-  // Type InteropUnion#169728313(parent: InteropGetter#928322897(name: fromLinkable))
+  // Type InteropUnion#296372033(parent: InteropGetter#525584773(name: fromLinkable))
   set fromLinkable(_i2.bool? value) {
     _i5.setProperty(
       this,
       'fromLinkable',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #15521
+  /* #15535
   source: 
     /**
      * Gets or sets the maximum number of links that may come out of this port.
@@ -33048,7 +33067,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'fromMaxLinks',
       );
-  /* #15521
+  /* #15535
   source: 
     /**
      * Gets or sets the maximum number of links that may come out of this port.
@@ -33074,7 +33093,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15541
+  /* #15555
   source: 
     /**********************************************************
     Event Handling:
@@ -33110,7 +33129,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'cursor',
       );
-  /* #15541
+  /* #15555
   source: 
     /**********************************************************
     Event Handling:
@@ -33140,7 +33159,7 @@ extension GraphObject$Typings on GraphObject {
     );
   }
 
-  /* #15577
+  /* #15591
   source: 
     /**
      * Gets or sets the function to execute when the user single-primary-clicks on this object.
@@ -33213,7 +33232,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'click',
       );
-  /* #15577
+  /* #15591
   source: 
     /**
      * Gets or sets the function to execute when the user single-primary-clicks on this object.
@@ -33250,7 +33269,7 @@ extension GraphObject$Typings on GraphObject {
      * @see Diagram#click
      */
     get click(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#540068150(parent: InteropGetter#737363622(name: click))
+  // Type InteropUnion#8373718(parent: InteropGetter#408937521(name: click))
   set click(
       void Function(
         _i3.InputEvent,
@@ -33259,11 +33278,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'click',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15624
+  /* #15638
   source: 
     /**
      * Gets or sets the function to execute when the user double-primary-clicks on this object.
@@ -33358,7 +33377,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'doubleClick',
       );
-  /* #15624
+  /* #15638
   source: 
     /**
      * Gets or sets the function to execute when the user double-primary-clicks on this object.
@@ -33406,7 +33425,7 @@ extension GraphObject$Typings on GraphObject {
      * @see Diagram#doubleClick
      */
     get doubleClick(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#719447393(parent: InteropGetter#595510257(name: doubleClick))
+  // Type InteropUnion#16112157(parent: InteropGetter#925312202(name: doubleClick))
   set doubleClick(
       void Function(
         _i3.InputEvent,
@@ -33415,11 +33434,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'doubleClick',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15657
+  /* #15671
   source: 
     /**
      * Gets or sets the function to execute when the user single-secondary-clicks on this object.
@@ -33486,7 +33505,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'contextClick',
       );
-  /* #15657
+  /* #15671
   source: 
     /**
      * Gets or sets the function to execute when the user single-secondary-clicks on this object.
@@ -33520,7 +33539,7 @@ extension GraphObject$Typings on GraphObject {
      * @see Diagram#contextClick
      */
     get contextClick(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#215237781(parent: InteropGetter#1035899847(name: contextClick))
+  // Type InteropUnion#391431451(parent: InteropGetter#956544794(name: contextClick))
   set contextClick(
       void Function(
         _i3.InputEvent,
@@ -33529,11 +33548,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'contextClick',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15730
+  /* #15744
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse
@@ -33680,7 +33699,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'mouseEnter',
       );
-  /* #15730
+  /* #15744
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse
@@ -33754,7 +33773,7 @@ extension GraphObject$Typings on GraphObject {
      * @see #mouseDragEnter
      */
     get mouseEnter(): ((e: InputEvent, thisObj: GraphObject, prevObj: GraphObject) => void) | null; */
-  // Type InteropUnion#672834634(parent: InteropGetter#997445310(name: mouseEnter))
+  // Type InteropUnion#613362256(parent: InteropGetter#318424122(name: mouseEnter))
   set mouseEnter(
       void Function(
         _i3.InputEvent,
@@ -33764,11 +33783,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseEnter',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15772
+  /* #15786
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse
@@ -33853,7 +33872,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'mouseLeave',
       );
-  /* #15772
+  /* #15786
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse
@@ -33896,7 +33915,7 @@ extension GraphObject$Typings on GraphObject {
      * @see #mouseDragLeave
      */
     get mouseLeave(): ((e: InputEvent, thisObj: GraphObject, nextObj: GraphObject) => void) | null; */
-  // Type InteropUnion#1045147027(parent: InteropGetter#442276989(name: mouseLeave))
+  // Type InteropUnion#477288835(parent: InteropGetter#238397251(name: mouseLeave))
   set mouseLeave(
       void Function(
         _i3.InputEvent,
@@ -33906,11 +33925,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseLeave',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15796
+  /* #15810
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse
@@ -33959,7 +33978,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'mouseOver',
       );
-  /* #15796
+  /* #15810
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse
@@ -33984,7 +34003,7 @@ extension GraphObject$Typings on GraphObject {
      * @see #mouseLeave
      */
     get mouseOver(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#1009274617(parent: InteropGetter#703165119(name: mouseOver))
+  // Type InteropUnion#133375873(parent: InteropGetter#964327182(name: mouseOver))
   set mouseOver(
       void Function(
         _i3.InputEvent,
@@ -33993,11 +34012,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseOver',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15825
+  /* #15839
   source: 
     /**
      * Gets or sets the function to execute when the user holds the mouse still for a while
@@ -34056,7 +34075,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'mouseHover',
       );
-  /* #15825
+  /* #15839
   source: 
     /**
      * Gets or sets the function to execute when the user holds the mouse still for a while
@@ -34086,7 +34105,7 @@ extension GraphObject$Typings on GraphObject {
      * @see #mouseLeave
      */
     get mouseHover(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#915690418(parent: InteropGetter#330348296(name: mouseHover))
+  // Type InteropUnion#565060924(parent: InteropGetter#586130007(name: mouseHover))
   set mouseHover(
       void Function(
         _i3.InputEvent,
@@ -34095,11 +34114,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseHover',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15854
+  /* #15868
   source: 
     /**
      * Gets or sets the function to execute when the user holds the mouse still for a while
@@ -34158,7 +34177,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'mouseHold',
       );
-  /* #15854
+  /* #15868
   source: 
     /**
      * Gets or sets the function to execute when the user holds the mouse still for a while
@@ -34188,7 +34207,7 @@ extension GraphObject$Typings on GraphObject {
      * @see #mouseHover
      */
     get mouseHold(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#828266877(parent: InteropGetter#120060849(name: mouseHold))
+  // Type InteropUnion#207723784(parent: InteropGetter#379375878(name: mouseHold))
   set mouseHold(
       void Function(
         _i3.InputEvent,
@@ -34197,11 +34216,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseHold',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15886
+  /* #15900
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse
@@ -34265,7 +34284,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'mouseDragEnter',
       );
-  /* #15886
+  /* #15900
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse
@@ -34298,7 +34317,7 @@ extension GraphObject$Typings on GraphObject {
      * @see Group#handlesDragDropForMembers
      */
     get mouseDragEnter(): ((e: InputEvent, thisObj: GraphObject, prevObj: GraphObject) => void) | null; */
-  // Type InteropUnion#942167933(parent: InteropGetter#292845258(name: mouseDragEnter))
+  // Type InteropUnion#382066965(parent: InteropGetter#405663552(name: mouseDragEnter))
   set mouseDragEnter(
       void Function(
         _i3.InputEvent,
@@ -34308,11 +34327,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseDragEnter',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15918
+  /* #15932
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse
@@ -34376,7 +34395,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'mouseDragLeave',
       );
-  /* #15918
+  /* #15932
   source: 
     /**
      * Gets or sets the function to execute when the user moves the mouse
@@ -34409,7 +34428,7 @@ extension GraphObject$Typings on GraphObject {
      * @see Group#handlesDragDropForMembers
      */
     get mouseDragLeave(): ((e: InputEvent, thisObj: GraphObject, nextObj: GraphObject) => void) | null; */
-  // Type InteropUnion#195515847(parent: InteropGetter#622881440(name: mouseDragLeave))
+  // Type InteropUnion#782887109(parent: InteropGetter#235001584(name: mouseDragLeave))
   set mouseDragLeave(
       void Function(
         _i3.InputEvent,
@@ -34419,11 +34438,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseDragLeave',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15941
+  /* #15955
   source: 
     /**
      * Gets or sets the function to execute when a user drops the selection on this object
@@ -34469,7 +34488,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'mouseDrop',
       );
-  /* #15941
+  /* #15955
   source: 
     /**
      * Gets or sets the function to execute when a user drops the selection on this object
@@ -34493,7 +34512,7 @@ extension GraphObject$Typings on GraphObject {
      * @see Group#handlesDragDropForMembers
      */
     get mouseDrop(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#219932641(parent: InteropGetter#944233324(name: mouseDrop))
+  // Type InteropUnion#930392434(parent: InteropGetter#990483(name: mouseDrop))
   set mouseDrop(
       void Function(
         _i3.InputEvent,
@@ -34502,11 +34521,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseDrop',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15958
+  /* #15972
   source: 
     /**
      * Gets or sets the function to execute on a mouse-down event when this GraphObject's #isActionable
@@ -34541,7 +34560,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'actionDown',
       );
-  /* #15958
+  /* #15972
   source: 
     /**
      * Gets or sets the function to execute on a mouse-down event when this GraphObject's #isActionable
@@ -34559,7 +34578,7 @@ extension GraphObject$Typings on GraphObject {
      * @see #actionCancel
      */
     get actionDown(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#902030760(parent: InteropGetter#57332991(name: actionDown))
+  // Type InteropUnion#1054722583(parent: InteropGetter#639190472(name: actionDown))
   set actionDown(
       void Function(
         _i3.InputEvent,
@@ -34568,11 +34587,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'actionDown',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15975
+  /* #15989
   source: 
     /**
      * Gets or sets the function to execute on a mouse-move event when this GraphObject's #isActionable
@@ -34607,7 +34626,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'actionMove',
       );
-  /* #15975
+  /* #15989
   source: 
     /**
      * Gets or sets the function to execute on a mouse-move event when this GraphObject's #isActionable
@@ -34625,7 +34644,7 @@ extension GraphObject$Typings on GraphObject {
      * @see #actionCancel
      */
     get actionMove(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#631282729(parent: InteropGetter#773311953(name: actionMove))
+  // Type InteropUnion#773161377(parent: InteropGetter#721509368(name: actionMove))
   set actionMove(
       void Function(
         _i3.InputEvent,
@@ -34634,11 +34653,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'actionMove',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #15995
+  /* #16009
   source: 
     /**
      * Gets or sets the function to execute on a mouse-up event when this GraphObject's #isActionable
@@ -34679,7 +34698,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'actionUp',
       );
-  /* #15995
+  /* #16009
   source: 
     /**
      * Gets or sets the function to execute on a mouse-up event when this GraphObject's #isActionable
@@ -34700,7 +34719,7 @@ extension GraphObject$Typings on GraphObject {
      * @see #actionCancel
      */
     get actionUp(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#337153235(parent: InteropGetter#645779710(name: actionUp))
+  // Type InteropUnion#99774724(parent: InteropGetter#790068571(name: actionUp))
   set actionUp(
       void Function(
         _i3.InputEvent,
@@ -34709,11 +34728,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'actionUp',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #16012
+  /* #16026
   source: 
     /**
      * Gets or sets the function to execute when the ActionTool is cancelled and this GraphObject's #isActionable
@@ -34748,7 +34767,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'actionCancel',
       );
-  /* #16012
+  /* #16026
   source: 
     /**
      * Gets or sets the function to execute when the ActionTool is cancelled and this GraphObject's #isActionable
@@ -34766,7 +34785,7 @@ extension GraphObject$Typings on GraphObject {
      * @see #actionUp
      */
     get actionCancel(): ((e: InputEvent, thisObj: GraphObject) => void) | null; */
-  // Type InteropUnion#1019151901(parent: InteropGetter#267832914(name: actionCancel))
+  // Type InteropUnion#557671480(parent: InteropGetter#712646567(name: actionCancel))
   set actionCancel(
       void Function(
         _i3.InputEvent,
@@ -34775,11 +34794,11 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'actionCancel',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #16058
+  /* #16072
   source: 
     /**
      * This Adornment or HTMLInfo is shown when the mouse hovers over this object.
@@ -34872,7 +34891,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'toolTip',
       );
-  /* #16058
+  /* #16072
   source: 
     /**
      * This Adornment or HTMLInfo is shown when the mouse hovers over this object.
@@ -34919,16 +34938,16 @@ extension GraphObject$Typings on GraphObject {
      * Read more about tooltips at <a href="../../intro/toolTips.html">ToolTips</a>.
      */
     get toolTip(): Adornment | HTMLInfo | null; */
-  // Type InteropUnion#648208906(parent: InteropGetter#102818548(name: toolTip))
+  // Type InteropUnion#416317645(parent: InteropGetter#509376790(name: toolTip))
   set toolTip(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'toolTip',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #16111
+  /* #16125
   source: 
     /**
      * This Adornment or HTMLInfo is shown upon a context click on this object.
@@ -35035,7 +35054,7 @@ extension GraphObject$Typings on GraphObject {
         this,
         'contextMenu',
       );
-  /* #16111
+  /* #16125
   source: 
     /**
      * This Adornment or HTMLInfo is shown upon a context click on this object.
@@ -35089,12 +35108,12 @@ extension GraphObject$Typings on GraphObject {
      * Read more about context menus at <a href="../../intro/contextMenus.html">Context Menus</a>.
      */
     get contextMenu(): Adornment | HTMLInfo | null; */
-  // Type InteropUnion#392726169(parent: InteropGetter#549523408(name: contextMenu))
+  // Type InteropUnion#534841262(parent: InteropGetter#192711054(name: contextMenu))
   set contextMenu(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'contextMenu',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -35120,13 +35139,13 @@ extension GraphObject$Typings on GraphObject {
         'getDocumentPoint',
         [
           local,
-          result ?? _i4.undefined,
+          result ?? _i7.undefined,
         ],
       );
   _i3.Rect getDocumentBounds([_i3.Rect? result]) => _i5.callMethod(
         this,
         'getDocumentBounds',
-        [result ?? _i4.undefined],
+        [result ?? _i7.undefined],
       );
   _i2.num getDocumentAngle() => _i5.callMethod(
         this,
@@ -35147,7 +35166,7 @@ extension GraphObject$Typings on GraphObject {
         'getLocalPoint',
         [
           p,
-          result ?? _i4.undefined,
+          result ?? _i7.undefined,
         ],
       );
   _i2.bool isContainedBy(_i3.GraphObject panel) => _i5.callMethod(
@@ -35180,10 +35199,10 @@ extension GraphObject$Typings on GraphObject {
         this,
         'bind',
         [
-          targetprop ?? _i4.undefined,
-          sourceprop ?? _i4.undefined,
-          conv == null ? _i4.undefined : _i5.allowInterop(conv),
-          backconv == null ? _i4.undefined : _i5.allowInterop(backconv),
+          targetprop ?? _i7.undefined,
+          sourceprop ?? _i7.undefined,
+          conv == null ? _i7.undefined : _i5.allowInterop(conv),
+          backconv == null ? _i7.undefined : _i5.allowInterop(backconv),
         ],
       );
   // HEYA bind
@@ -35199,7 +35218,7 @@ extension GraphObject$Typings on GraphObject {
         $1: _bind$1,
         $2: _bind$2,
       );
-  _i3.GraphObject set(_i4.Partial config) => _i5.callMethod(
+  _i3.GraphObject set(_i4.Partial<_i3.GraphObject> config) => _i5.callMethod(
         this,
         'set',
         [config],
@@ -35256,17 +35275,17 @@ external _i2.Object _declaredSGradient;
 class Brush {
   factory Brush([
     _i2.Object? type,
-    _i4.Partial? init,
+    _i4.Partial<_i3.Brush>? init,
   ]) =>
       _i5.callConstructor(
         _declaredBrush,
         [
-          type ?? _i4.undefined,
-          init ?? _i4.undefined,
+          type ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 
-  /* #16758
+  /* #16770
   source: 
     /**
      * For simple, solid color brushes, used as the value for Brush#type.
@@ -35278,7 +35297,7 @@ class Brush {
         _declaredBrush,
         'Solid',
       );
-  /* #16758
+  /* #16770
   source: 
     /**
      * For simple, solid color brushes, used as the value for Brush#type.
@@ -35294,7 +35313,7 @@ class Brush {
     );
   }
 
-  /* #16763
+  /* #16775
   source: 
     /**
      * For linear gradient brushes, used as the value for Brush#type.
@@ -35306,7 +35325,7 @@ class Brush {
         _declaredBrush,
         'Linear',
       );
-  /* #16763
+  /* #16775
   source: 
     /**
      * For linear gradient brushes, used as the value for Brush#type.
@@ -35322,7 +35341,7 @@ class Brush {
     );
   }
 
-  /* #16768
+  /* #16780
   source: 
     /**
      * For radial gradient brushes, used as the value for Brush#type.
@@ -35334,7 +35353,7 @@ class Brush {
         _declaredBrush,
         'Radial',
       );
-  /* #16768
+  /* #16780
   source: 
     /**
      * For radial gradient brushes, used as the value for Brush#type.
@@ -35350,7 +35369,7 @@ class Brush {
     );
   }
 
-  /* #16773
+  /* #16785
   source: 
     /**
      * For pattern brushes, used as the value for Brush#type.
@@ -35362,7 +35381,7 @@ class Brush {
         _declaredBrush,
         'Pattern',
       );
-  /* #16773
+  /* #16785
   source: 
     /**
      * For pattern brushes, used as the value for Brush#type.
@@ -35378,7 +35397,7 @@ class Brush {
     );
   }
 
-  /* #16778
+  /* #16790
   source: 
     /**
      * For lightening and darkening, used as a color-space value.
@@ -35390,7 +35409,7 @@ class Brush {
         _declaredBrush,
         'Lab',
       );
-  /* #16778
+  /* #16790
   source: 
     /**
      * For lightening and darkening, used as a color-space value.
@@ -35406,7 +35425,7 @@ class Brush {
     );
   }
 
-  /* #16783
+  /* #16795
   source: 
     /**
      * For lightening and darkening, used as a color-space value.
@@ -35418,7 +35437,7 @@ class Brush {
         _declaredBrush,
         'HSL',
       );
-  /* #16783
+  /* #16795
   source: 
     /**
      * For lightening and darkening, used as a color-space value.
@@ -35442,8 +35461,8 @@ class Brush {
         _declaredBrush,
         'randomColor',
         [
-          min ?? _i4.undefined,
-          max ?? _i4.undefined,
+          min ?? _i7.undefined,
+          max ?? _i7.undefined,
         ],
       );
   static _i2.bool isValidColor(_i2.String color) => _i5.callMethod(
@@ -35466,8 +35485,8 @@ class Brush {
         'lightenBy',
         [
           color,
-          fraction ?? _i4.undefined,
-          mode ?? _i4.undefined,
+          fraction ?? _i7.undefined,
+          mode ?? _i7.undefined,
         ],
       );
   static _i2.String darken(_i2.String color) => _i5.callMethod(
@@ -35485,8 +35504,8 @@ class Brush {
         'darkenBy',
         [
           color,
-          fraction ?? _i4.undefined,
-          mode ?? _i4.undefined,
+          fraction ?? _i7.undefined,
+          mode ?? _i7.undefined,
         ],
       );
   static _i2.String mix(
@@ -35500,13 +35519,13 @@ class Brush {
         [
           color1,
           color2,
-          fraction ?? _i4.undefined,
+          fraction ?? _i7.undefined,
         ],
       );
   static _i2.bool isDark(_i3.BrushLike color) => _i5.callMethod(
         _declaredBrush,
         'isDark',
-        [color ?? _i4.undefined],
+        [color ?? _i7.undefined],
       );
 }
 
@@ -35517,7 +35536,7 @@ FieldExternal:
 external _i2.Object _declaredBrush;
 
 extension Brush$Typings on Brush {
-  /* #16601
+  /* #16613
   source: 
     /**
      * Gets or sets the type of brush.
@@ -35538,7 +35557,7 @@ extension Brush$Typings on Brush {
         this,
         'type',
       );
-  /* #16601
+  /* #16613
   source: 
     /**
      * Gets or sets the type of brush.
@@ -35558,7 +35577,7 @@ extension Brush$Typings on Brush {
     );
   }
 
-  /* #16608
+  /* #16620
   source: 
     /**
      * Gets or sets the color of a solid Brush.
@@ -35573,7 +35592,7 @@ extension Brush$Typings on Brush {
         this,
         'color',
       );
-  /* #16608
+  /* #16620
   source: 
     /**
      * Gets or sets the color of a solid Brush.
@@ -35590,7 +35609,7 @@ extension Brush$Typings on Brush {
     );
   }
 
-  /* #16615
+  /* #16627
   source: 
     /**
      * Gets or sets the starting location for a linear or radial gradient.
@@ -35605,7 +35624,7 @@ extension Brush$Typings on Brush {
         this,
         'start',
       );
-  /* #16615
+  /* #16627
   source: 
     /**
      * Gets or sets the starting location for a linear or radial gradient.
@@ -35622,7 +35641,7 @@ extension Brush$Typings on Brush {
     );
   }
 
-  /* #16622
+  /* #16634
   source: 
     /**
      * Gets or sets the ending location for a linear or radial gradient.
@@ -35637,7 +35656,7 @@ extension Brush$Typings on Brush {
         this,
         'end',
       );
-  /* #16622
+  /* #16634
   source: 
     /**
      * Gets or sets the ending location for a linear or radial gradient.
@@ -35654,7 +35673,7 @@ extension Brush$Typings on Brush {
     );
   }
 
-  /* #16628
+  /* #16640
   source: 
     /**
      * Gets or sets the radius of a radial brush at the start location.
@@ -35667,7 +35686,7 @@ extension Brush$Typings on Brush {
         this,
         'startRadius',
       );
-  /* #16628
+  /* #16640
   source: 
     /**
      * Gets or sets the radius of a radial brush at the start location.
@@ -35683,7 +35702,7 @@ extension Brush$Typings on Brush {
     );
   }
 
-  /* #16634
+  /* #16646
   source: 
     /**
      * Gets or sets the radius of a radial brush at the end location.
@@ -35696,7 +35715,7 @@ extension Brush$Typings on Brush {
         this,
         'endRadius',
       );
-  /* #16634
+  /* #16646
   source: 
     /**
      * Gets or sets the radius of a radial brush at the end location.
@@ -35712,7 +35731,7 @@ extension Brush$Typings on Brush {
     );
   }
 
-  /* #16644
+  /* #16656
   source: 
     /**
      * Gets or sets a Map holding all of the color stops used in this gradient,
@@ -35733,7 +35752,7 @@ extension Brush$Typings on Brush {
         this,
         'colorStops',
       );
-  /* #16644
+  /* #16656
   source: 
     /**
      * Gets or sets a Map holding all of the color stops used in this gradient,
@@ -35744,38 +35763,38 @@ extension Brush$Typings on Brush {
      * This property value may be null if no gradient stops have been defined.
      */
     get colorStops(): Map<number, string> | null; */
-  // Type InteropUnion#406233337(parent: InteropGetter#831460184(name: colorStops))
+  // Type InteropUnion#1034290277(parent: InteropGetter#45954083(name: colorStops))
   set colorStops(_i3.Map<_i2.num, _i2.String>? value) {
     _i5.setProperty(
       this,
       'colorStops',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #16649
+  /* #16661
   source: 
     /**
      * Gets or sets the pattern of a brush of type Brush.Pattern.
      */
     get pattern(): HTMLCanvasElement | HTMLImageElement | null; */
   /// Gets or sets the pattern of a brush of type Brush.Pattern.
-  _i2.dynamic get pattern => _i5.getProperty(
+  _i6.HTMLElement? get pattern => _i5.getProperty(
         this,
         'pattern',
       );
-  /* #16649
+  /* #16661
   source: 
     /**
      * Gets or sets the pattern of a brush of type Brush.Pattern.
      */
     get pattern(): HTMLCanvasElement | HTMLImageElement | null; */
-  // Type InteropUnion#579716490(parent: InteropGetter#1039420707(name: pattern))
-  set pattern(_i2.dynamic value) {
+  // Type InteropUnion#832146072(parent: InteropGetter#56101660(name: pattern))
+  set pattern(_i6.HTMLElement? value) {
     _i5.setProperty(
       this,
       'pattern',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -35804,8 +35823,8 @@ extension Brush$Typings on Brush {
         this,
         'lightenBy',
         [
-          fraction ?? _i4.undefined,
-          mode ?? _i4.undefined,
+          fraction ?? _i7.undefined,
+          mode ?? _i7.undefined,
         ],
       );
   _i3.Brush darkenBy([
@@ -35816,8 +35835,8 @@ extension Brush$Typings on Brush {
         this,
         'darkenBy',
         [
-          fraction ?? _i4.undefined,
-          mode ?? _i4.undefined,
+          fraction ?? _i7.undefined,
+          mode ?? _i7.undefined,
         ],
       );
   _i2.bool isDark() => _i5.callMethod(
@@ -35843,7 +35862,7 @@ FieldExternal:
 external _i2.Object _declaredPanelLayout;
 
 extension PanelLayout$Typings on PanelLayout {
-  /* #16835
+  /* #16847
   source: 
     /**
      * Gets or sets the name of this instance of a particular panel layout.
@@ -35854,7 +35873,7 @@ extension PanelLayout$Typings on PanelLayout {
         this,
         'name',
       );
-  /* #16835
+  /* #16847
   source: 
     /**
      * Gets or sets the name of this instance of a particular panel layout.
@@ -35869,7 +35888,7 @@ extension PanelLayout$Typings on PanelLayout {
     );
   }
 
-  /* #16844
+  /* #16856
   source: 
     /**
      * (undocumented)
@@ -35880,7 +35899,7 @@ extension PanelLayout$Typings on PanelLayout {
         this,
         'classType',
       );
-  /* #16844
+  /* #16856
   source: 
     /**
      * (undocumented)
@@ -35899,7 +35918,7 @@ extension PanelLayout$Typings on PanelLayout {
     _i3.Panel panel,
     _i2.num width,
     _i2.num height,
-    _i4.Array elements,
+    _i4.Array<_i3.GraphObject> elements,
     _i3.Rect union,
     _i2.num minw,
     _i2.num minh,
@@ -35941,7 +35960,7 @@ extension PanelLayout$Typings on PanelLayout {
 
   void arrange(
     _i3.Panel panel,
-    _i4.Array elements,
+    _i4.Array<_i3.GraphObject> elements,
     _i3.Rect union,
   ) {
     _i5.callMethod(
@@ -35972,7 +35991,7 @@ extension PanelLayout$Typings on PanelLayout {
         y,
         width,
         height,
-        clipRect ?? _i4.undefined,
+        clipRect ?? _i7.undefined,
       ],
     );
   }
@@ -35994,24 +36013,24 @@ class Panel implements _i3.GraphObject {
         [],
       );
 
-  factory Panel.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory Panel.$2([_i4.Partial<_i3.Panel>? init]) => _i5.callConstructor(
         _declaredPanel,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Panel.$3([
     _i2.Object? type,
-    _i4.Partial? init,
+    _i4.Partial<_i3.Panel>? init,
   ]) =>
       _i5.callConstructor(
         _declaredPanel,
         [
-          type ?? _i4.undefined,
-          init ?? _i4.undefined,
+          type ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 
-  /* #17847
+  /* #17908
   source: 
     /**
      * The default #type, arranges each element according to their GraphObject#position.
@@ -36023,7 +36042,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'Position',
       );
-  /* #17847
+  /* #17908
   source: 
     /**
      * The default #type, arranges each element according to their GraphObject#position.
@@ -36039,7 +36058,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17853
+  /* #17914
   source: 
     /**
      * This value for #type lays out the elements horizontally with
@@ -36053,7 +36072,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'Horizontal',
       );
-  /* #17853
+  /* #17914
   source: 
     /**
      * This value for #type lays out the elements horizontally with
@@ -36070,7 +36089,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17859
+  /* #17920
   source: 
     /**
      * This value for #type lays out the elements vertically with
@@ -36084,7 +36103,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'Vertical',
       );
-  /* #17859
+  /* #17920
   source: 
     /**
      * This value for #type lays out the elements vertically with
@@ -36101,7 +36120,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17867
+  /* #17928
   source: 
     /**
      * This value for #type arranges GraphObjects about a main element using the
@@ -36119,7 +36138,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'Spot',
       );
-  /* #17867
+  /* #17928
   source: 
     /**
      * This value for #type arranges GraphObjects about a main element using the
@@ -36138,7 +36157,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17874
+  /* #17935
   source: 
     /**
      * This value for #type resizes the main element to fit around the other elements;
@@ -36154,7 +36173,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'Auto',
       );
-  /* #17874
+  /* #17935
   source: 
     /**
      * This value for #type resizes the main element to fit around the other elements;
@@ -36172,7 +36191,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17880
+  /* #17941
   source: 
     /**
      * This value for #type arranges GraphObjects into rows and columns;
@@ -36186,7 +36205,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'Table',
       );
-  /* #17880
+  /* #17941
   source: 
     /**
      * This value for #type arranges GraphObjects into rows and columns;
@@ -36203,7 +36222,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17886
+  /* #17947
   source: 
     /**
      * This value for #type rescales a single GraphObject to fit inside the panel
@@ -36217,7 +36236,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'Viewbox',
       );
-  /* #17886
+  /* #17947
   source: 
     /**
      * This value for #type rescales a single GraphObject to fit inside the panel
@@ -36234,7 +36253,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17894
+  /* #17955
   source: 
     /**
      * Organizational Panel type that is only valid inside of a Table panel;
@@ -36251,7 +36270,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'TableRow',
       );
-  /* #17894
+  /* #17955
   source: 
     /**
      * Organizational Panel type that is only valid inside of a Table panel;
@@ -36270,7 +36289,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17902
+  /* #17963
   source: 
     /**
      * Organizational Panel type that is only valid inside of a Table panel;
@@ -36287,7 +36306,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'TableColumn',
       );
-  /* #17902
+  /* #17963
   source: 
     /**
      * Organizational Panel type that is only valid inside of a Table panel;
@@ -36306,7 +36325,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17907
+  /* #17968
   source: 
     /**
      * This value for #type is used for Links and adornments that act as Links.
@@ -36318,7 +36337,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'Link',
       );
-  /* #17907
+  /* #17968
   source: 
     /**
      * This value for #type is used for Links and adornments that act as Links.
@@ -36334,7 +36353,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17912
+  /* #17973
   source: 
     /**
      * This value for #type is used to draw regular patterns of lines.
@@ -36346,7 +36365,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'Grid',
       );
-  /* #17912
+  /* #17973
   source: 
     /**
      * This value for #type is used to draw regular patterns of lines.
@@ -36362,7 +36381,7 @@ class Panel implements _i3.GraphObject {
     );
   }
 
-  /* #17920
+  /* #17981
   source: 
     /**
      * This value for #type is used to draw regular tick marks and labels along some shape.
@@ -36379,7 +36398,7 @@ class Panel implements _i3.GraphObject {
         _declaredPanel,
         'Graduated',
       );
-  /* #17920
+  /* #17981
   source: 
     /**
      * This value for #type is used to draw regular tick marks and labels along some shape.
@@ -36420,7 +36439,7 @@ FieldExternal:
 external _i2.Object _declaredPanel;
 
 extension Panel$Typings on Panel {
-  /* #17191
+  /* #17203
   source: 
     /**
      * Gets or sets the type of the Panel, which controls how the Panel's elements are measured and arranged.
@@ -36467,7 +36486,7 @@ extension Panel$Typings on Panel {
         this,
         'type',
       );
-  /* #17191
+  /* #17203
   source: 
     /**
      * Gets or sets the type of the Panel, which controls how the Panel's elements are measured and arranged.
@@ -36500,7 +36519,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17200
+  /* #17212
   source: 
     /**
      * This read-only property returns an iterator over the collection of the GraphObjects that this panel manages.
@@ -36519,7 +36538,7 @@ extension Panel$Typings on Panel {
         this,
         'elements',
       );
-  /* #17200
+  /* #17212
   source: 
     /**
      * This read-only property returns an iterator over the collection of the GraphObjects that this panel manages.
@@ -36538,7 +36557,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17214
+  /* #17226
   source: 
     /**
      * Gets or sets the space between this Panel's border and its content.
@@ -36568,7 +36587,7 @@ extension Panel$Typings on Panel {
         this,
         'padding',
       );
-  /* #17214
+  /* #17226
   source: 
     /**
      * Gets or sets the space between this Panel's border and its content.
@@ -36584,7 +36603,7 @@ extension Panel$Typings on Panel {
      * @see GraphObject#margin
      */
     get padding(): MarginLike; */
-  // Type InteropTypedef#88783230(name: MarginLike)
+  // Type InteropTypedef#1053273812(name: MarginLike)
   set padding(_i3.MarginLike value) {
     _i5.setProperty(
       this,
@@ -36593,7 +36612,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17222
+  /* #17234
   source: 
     /**
      * Gets or sets the default alignment spot of this Panel, used as
@@ -36610,7 +36629,7 @@ extension Panel$Typings on Panel {
         this,
         'defaultAlignment',
       );
-  /* #17222
+  /* #17234
   source: 
     /**
      * Gets or sets the default alignment spot of this Panel, used as
@@ -36628,7 +36647,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17229
+  /* #17241
   source: 
     /**
      * Gets or sets the default stretch of this Panel, used as
@@ -36643,7 +36662,7 @@ extension Panel$Typings on Panel {
         this,
         'defaultStretch',
       );
-  /* #17229
+  /* #17241
   source: 
     /**
      * Gets or sets the default stretch of this Panel, used as
@@ -36660,7 +36679,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17239
+  /* #17251
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the additional padding for rows and columns.
@@ -36677,7 +36696,7 @@ extension Panel$Typings on Panel {
         this,
         'defaultSeparatorPadding',
       );
-  /* #17239
+  /* #17251
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the additional padding for rows and columns.
@@ -36688,7 +36707,7 @@ extension Panel$Typings on Panel {
      * @since 1.2
      */
     get defaultSeparatorPadding(): MarginLike; */
-  // Type InteropTypedef#88783230(name: MarginLike)
+  // Type InteropTypedef#1053273812(name: MarginLike)
   set defaultSeparatorPadding(_i3.MarginLike value) {
     _i5.setProperty(
       this,
@@ -36697,7 +36716,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17253
+  /* #17265
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default stroke (color) for rows
@@ -36720,7 +36739,7 @@ extension Panel$Typings on Panel {
         this,
         'defaultRowSeparatorStroke',
       );
-  /* #17253
+  /* #17265
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default stroke (color) for rows
@@ -36735,16 +36754,16 @@ extension Panel$Typings on Panel {
      * @since 1.2
      */
     get defaultRowSeparatorStroke(): BrushLike; */
-  // Type InteropTypedef#450957626(name: BrushLike)
+  // Type InteropTypedef#603506640(name: BrushLike)
   set defaultRowSeparatorStroke(_i3.BrushLike value) {
     _i5.setProperty(
       this,
       'defaultRowSeparatorStroke',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #17263
+  /* #17275
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default stroke width for a row's separator.
@@ -36762,7 +36781,7 @@ extension Panel$Typings on Panel {
         this,
         'defaultRowSeparatorStrokeWidth',
       );
-  /* #17263
+  /* #17275
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default stroke width for a row's separator.
@@ -36782,7 +36801,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17281
+  /* #17293
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default dash array for a row's separator.
@@ -36812,11 +36831,11 @@ extension Panel$Typings on Panel {
   /// Setting an array with all zeroes will set the value to null.
   ///
   /// Default is null.
-  _i4.Array? get defaultRowSeparatorDashArray => _i5.getProperty(
+  _i4.Array<_i2.num>? get defaultRowSeparatorDashArray => _i5.getProperty(
         this,
         'defaultRowSeparatorDashArray',
       );
-  /* #17281
+  /* #17293
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default dash array for a row's separator.
@@ -36835,16 +36854,16 @@ extension Panel$Typings on Panel {
      * @since 1.2
      */
     get defaultRowSeparatorDashArray(): Array<number> | null; */
-  // Type InteropUnion#413911225(parent: InteropGetter#390053866(name: defaultRowSeparatorDashArray))
-  set defaultRowSeparatorDashArray(_i4.Array? value) {
+  // Type InteropUnion#609186995(parent: InteropGetter#975216034(name: defaultRowSeparatorDashArray))
+  set defaultRowSeparatorDashArray(_i4.Array<_i2.num>? value) {
     _i5.setProperty(
       this,
       'defaultRowSeparatorDashArray',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #17294
+  /* #17306
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default stroke (color) for columns
@@ -36866,7 +36885,7 @@ extension Panel$Typings on Panel {
         this,
         'defaultColumnSeparatorStroke',
       );
-  /* #17294
+  /* #17306
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default stroke (color) for columns
@@ -36880,16 +36899,16 @@ extension Panel$Typings on Panel {
      * @since 1.2
      */
     get defaultColumnSeparatorStroke(): BrushLike; */
-  // Type InteropTypedef#450957626(name: BrushLike)
+  // Type InteropTypedef#603506640(name: BrushLike)
   set defaultColumnSeparatorStroke(_i3.BrushLike value) {
     _i5.setProperty(
       this,
       'defaultColumnSeparatorStroke',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #17304
+  /* #17316
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default stroke width for a column's separator.
@@ -36907,7 +36926,7 @@ extension Panel$Typings on Panel {
         this,
         'defaultColumnSeparatorStrokeWidth',
       );
-  /* #17304
+  /* #17316
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default stroke width for a column's separator.
@@ -36927,7 +36946,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17322
+  /* #17334
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default dash array for a column's separator.
@@ -36957,11 +36976,11 @@ extension Panel$Typings on Panel {
   /// Setting an array with all zeroes will set the value to null.
   ///
   /// Default is null.
-  _i4.Array? get defaultColumnSeparatorDashArray => _i5.getProperty(
+  _i4.Array<_i2.num>? get defaultColumnSeparatorDashArray => _i5.getProperty(
         this,
         'defaultColumnSeparatorDashArray',
       );
-  /* #17322
+  /* #17334
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the default dash array for a column's separator.
@@ -36980,16 +36999,16 @@ extension Panel$Typings on Panel {
      * @since 1.2
      */
     get defaultColumnSeparatorDashArray(): Array<number> | null; */
-  // Type InteropUnion#827769027(parent: InteropGetter#679589931(name: defaultColumnSeparatorDashArray))
-  set defaultColumnSeparatorDashArray(_i4.Array? value) {
+  // Type InteropUnion#323291887(parent: InteropGetter#128590703(name: defaultColumnSeparatorDashArray))
+  set defaultColumnSeparatorDashArray(_i4.Array<_i2.num>? value) {
     _i5.setProperty(
       this,
       'defaultColumnSeparatorDashArray',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #17330
+  /* #17342
   source: 
     /**
      * For Panel.Viewbox|Viewbox Panels: Gets or sets how the panel will resize its content.
@@ -37006,7 +37025,7 @@ extension Panel$Typings on Panel {
         this,
         'viewboxStretch',
       );
-  /* #17330
+  /* #17342
   source: 
     /**
      * For Panel.Viewbox|Viewbox Panels: Gets or sets how the panel will resize its content.
@@ -37024,7 +37043,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17337
+  /* #17349
   source: 
     /**
      * For Panel.Grid|Grid Panels: Gets or sets the distance between lines.
@@ -37039,7 +37058,7 @@ extension Panel$Typings on Panel {
         this,
         'gridCellSize',
       );
-  /* #17337
+  /* #17349
   source: 
     /**
      * For Panel.Grid|Grid Panels: Gets or sets the distance between lines.
@@ -37056,7 +37075,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17344
+  /* #17356
   source: 
     /**
      * For Panel.Grid|Grid Panels: Gets or sets an origin point for the grid cells.
@@ -37071,7 +37090,7 @@ extension Panel$Typings on Panel {
         this,
         'gridOrigin',
       );
-  /* #17344
+  /* #17356
   source: 
     /**
      * For Panel.Grid|Grid Panels: Gets or sets an origin point for the grid cells.
@@ -37088,7 +37107,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17351
+  /* #17363
   source: 
     /**
      * For Panel.Graduated|Graduated Panels: Gets or sets the minimum value represented.
@@ -37102,7 +37121,7 @@ extension Panel$Typings on Panel {
         this,
         'graduatedMin',
       );
-  /* #17351
+  /* #17363
   source: 
     /**
      * For Panel.Graduated|Graduated Panels: Gets or sets the minimum value represented.
@@ -37119,7 +37138,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17358
+  /* #17370
   source: 
     /**
      * For Panel.Graduated|Graduated Panels: Gets or sets the maximum value represented.
@@ -37133,7 +37152,7 @@ extension Panel$Typings on Panel {
         this,
         'graduatedMax',
       );
-  /* #17358
+  /* #17370
   source: 
     /**
      * For Panel.Graduated|Graduated Panels: Gets or sets the maximum value represented.
@@ -37150,7 +37169,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17366
+  /* #17378
   source: 
     /**
      * For Panel.Graduated|Graduated Panels: This read-only property returns the range of values represented by the Panel.
@@ -37166,7 +37185,7 @@ extension Panel$Typings on Panel {
         this,
         'graduatedRange',
       );
-  /* #17366
+  /* #17378
   source: 
     /**
      * For Panel.Graduated|Graduated Panels: This read-only property returns the range of values represented by the Panel.
@@ -37184,7 +37203,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17372
+  /* #17384
   source: 
     /**
      * For Panel.Graduated|Graduated Panels: Gets or sets the difference between two consecutive values marked by ticks.
@@ -37198,7 +37217,7 @@ extension Panel$Typings on Panel {
         this,
         'graduatedTickUnit',
       );
-  /* #17372
+  /* #17384
   source: 
     /**
      * For Panel.Graduated|Graduated Panels: Gets or sets the difference between two consecutive values marked by ticks.
@@ -37215,7 +37234,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17379
+  /* #17391
   source: 
     /**
      * For Panel.Graduated|Graduated Panels: Gets or sets the base value which is marked with a tick.
@@ -37229,7 +37248,7 @@ extension Panel$Typings on Panel {
         this,
         'graduatedTickBase',
       );
-  /* #17379
+  /* #17391
   source: 
     /**
      * For Panel.Graduated|Graduated Panels: Gets or sets the base value which is marked with a tick.
@@ -37246,7 +37265,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17391
+  /* #17403
   source: 
     /**
      * Undocumented state for PanelLayouts
@@ -37257,22 +37276,22 @@ extension Panel$Typings on Panel {
         this,
         'panelLayoutState',
       );
-  /* #17391
+  /* #17403
   source: 
     /**
      * Undocumented state for PanelLayouts
     */
     get panelLayoutState(): any | null; */
-  // Type InteropUnion#153558990(parent: InteropGetter#295442549(name: panelLayoutState))
+  // Type InteropUnion#964290650(parent: InteropGetter#912113049(name: panelLayoutState))
   set panelLayoutState(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'panelLayoutState',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #17445
+  /* #17457
   source: 
     /**
      * For Panel.Table|Table Panels: This read-only property returns the number of rows.
@@ -37285,7 +37304,7 @@ extension Panel$Typings on Panel {
         this,
         'rowCount',
       );
-  /* #17445
+  /* #17457
   source: 
     /**
      * For Panel.Table|Table Panels: This read-only property returns the number of rows.
@@ -37301,7 +37320,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17468
+  /* #17479
   source: 
     /**
      * For Panel.Table|Table Panels: This read-only property returns the number of columns.
@@ -37314,7 +37333,7 @@ extension Panel$Typings on Panel {
         this,
         'columnCount',
       );
-  /* #17468
+  /* #17479
   source: 
     /**
      * For Panel.Table|Table Panels: This read-only property returns the number of columns.
@@ -37330,7 +37349,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17504
+  /* #17565
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets how this Panel's rows deal with extra space.
@@ -37346,7 +37365,7 @@ extension Panel$Typings on Panel {
         this,
         'rowSizing',
       );
-  /* #17504
+  /* #17565
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets how this Panel's rows deal with extra space.
@@ -37364,7 +37383,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17513
+  /* #17574
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets how this Panel's columns deal with extra space.
@@ -37381,7 +37400,7 @@ extension Panel$Typings on Panel {
         this,
         'columnSizing',
       );
-  /* #17513
+  /* #17574
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets how this Panel's columns deal with extra space.
@@ -37400,7 +37419,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17520
+  /* #17581
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the first row that this Panel displays.
@@ -37414,7 +37433,7 @@ extension Panel$Typings on Panel {
         this,
         'topIndex',
       );
-  /* #17520
+  /* #17581
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the first row that this Panel displays.
@@ -37431,7 +37450,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17527
+  /* #17588
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the first column that this Panel displays.
@@ -37445,7 +37464,7 @@ extension Panel$Typings on Panel {
         this,
         'leftIndex',
       );
-  /* #17527
+  /* #17588
   source: 
     /**
      * For Panel.Table|Table Panels: Gets or sets the first column that this Panel displays.
@@ -37462,7 +37481,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17606
+  /* #17667
   source: 
     /**
      * Gets or sets the optional model data to which this panel is data-bound.
@@ -37521,7 +37540,7 @@ extension Panel$Typings on Panel {
         this,
         'data',
       );
-  /* #17606
+  /* #17667
   source: 
     /**
      * Gets or sets the optional model data to which this panel is data-bound.
@@ -37551,16 +37570,16 @@ extension Panel$Typings on Panel {
      * of Bindings on GraphObject properties that are in the visual tree of this panel/part.
      */
     get data(): any | null; */
-  // Type InteropUnion#162195604(parent: InteropGetter#483933683(name: data))
+  // Type InteropUnion#685370897(parent: InteropGetter#395989309(name: data))
   set data(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'data',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #17644
+  /* #17705
   source: 
     /**
      * Gets the index of this Panel's data if it was created to represent an item in its containing Panel's Panel#itemArray.
@@ -37636,7 +37655,7 @@ extension Panel$Typings on Panel {
         this,
         'itemIndex',
       );
-  /* #17644
+  /* #17705
   source: 
     /**
      * Gets the index of this Panel's data if it was created to represent an item in its containing Panel's Panel#itemArray.
@@ -37684,7 +37703,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17702
+  /* #17763
   source: 
     /**
      * Gets or sets a JavaScript Array of values or objects, each of which will be represented
@@ -37741,11 +37760,11 @@ extension Panel$Typings on Panel {
   /// An item Array may be shared by multiple Panels.
   ///
   /// Item Arrays should not be used with Grid Panels or Graduated Panels as they may not have nested Panels.
-  _i4.Array? get itemArray => _i5.getProperty(
+  _i4.Array<_i2.dynamic>? get itemArray => _i5.getProperty(
         this,
         'itemArray',
       );
-  /* #17702
+  /* #17763
   source: 
     /**
      * Gets or sets a JavaScript Array of values or objects, each of which will be represented
@@ -37776,16 +37795,16 @@ extension Panel$Typings on Panel {
      * Item Arrays should not be used with Grid Panels or Graduated Panels as they may not have nested Panels.
      */
     get itemArray(): Array<any> | null; */
-  // Type InteropUnion#510149843(parent: InteropGetter#673376473(name: itemArray))
-  set itemArray(_i4.Array? value) {
+  // Type InteropUnion#843286006(parent: InteropGetter#491616556(name: itemArray))
+  set itemArray(_i4.Array<_i2.dynamic>? value) {
     _i5.setProperty(
       this,
       'itemArray',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #17751
+  /* #17812
   source: 
     /**
      * Gets or sets the default Panel template used as the archetype
@@ -37814,7 +37833,7 @@ extension Panel$Typings on Panel {
         this,
         'itemTemplate',
       );
-  /* #17751
+  /* #17812
   source: 
     /**
      * Gets or sets the default Panel template used as the archetype
@@ -37838,7 +37857,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17767
+  /* #17828
   source: 
     /**
      * Gets or sets a Map mapping template names to Panels.
@@ -37871,7 +37890,7 @@ extension Panel$Typings on Panel {
         this,
         'itemTemplateMap',
       );
-  /* #17767
+  /* #17828
   source: 
     /**
      * Gets or sets a Map mapping template names to Panels.
@@ -37888,16 +37907,16 @@ extension Panel$Typings on Panel {
      * between the original panel and the copied panel.
      */
     get itemTemplateMap(): Map<string, Panel> | null; */
-  // Type InteropUnion#621949381(parent: InteropGetter#10780824(name: itemTemplateMap))
+  // Type InteropUnion#211932887(parent: InteropGetter#549180957(name: itemTemplateMap))
   set itemTemplateMap(_i3.Map<_i2.String, _i3.Panel>? value) {
     _i5.setProperty(
       this,
       'itemTemplateMap',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #17781
+  /* #17842
   source: 
     /**
      * Gets or sets the name of the item data property that returns a string describing that data's category,
@@ -37926,7 +37945,7 @@ extension Panel$Typings on Panel {
         this,
         'itemCategoryProperty',
       );
-  /* #17781
+  /* #17842
   source: 
     /**
      * Gets or sets the name of the item data property that returns a string describing that data's category,
@@ -37941,7 +37960,7 @@ extension Panel$Typings on Panel {
      * You must not change this property when the #itemArray already has a value.
      */
     get itemCategoryProperty(): string | ((a: any) => string); */
-  // Type InteropUnion#944784155(parent: InteropGetter#756542395(name: itemCategoryProperty))
+  // Type InteropUnion#302353346(parent: InteropGetter#571928680(name: itemCategoryProperty))
   set itemCategoryProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -37950,7 +37969,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17796
+  /* #17857
   source: 
     /**
      * For Spot Panels: Gets or sets whether this Panel's main element clips instead of fills.
@@ -37978,7 +37997,7 @@ extension Panel$Typings on Panel {
         this,
         'isClipping',
       );
-  /* #17796
+  /* #17857
   source: 
     /**
      * For Spot Panels: Gets or sets whether this Panel's main element clips instead of fills.
@@ -38002,7 +38021,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17805
+  /* #17866
   source: 
     /**
      * For Panel.Horizontal|Horizontal and Panel.Vertical|Vertical Panels: gets or sets whether this Panel arranges its contents from the
@@ -38020,7 +38039,7 @@ extension Panel$Typings on Panel {
         this,
         'isOpposite',
       );
-  /* #17805
+  /* #17866
   source: 
     /**
      * For Panel.Horizontal|Horizontal and Panel.Vertical|Vertical Panels: gets or sets whether this Panel arranges its contents from the
@@ -38039,7 +38058,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17824
+  /* #17885
   source: 
     /**
      * Gets or sets whether this Panel or any GraphObject inside the panel actually responds to user click events.
@@ -38073,7 +38092,7 @@ extension Panel$Typings on Panel {
         this,
         'isEnabled',
       );
-  /* #17824
+  /* #17885
   source: 
     /**
      * Gets or sets whether this Panel or any GraphObject inside the panel actually responds to user click events.
@@ -38102,7 +38121,7 @@ extension Panel$Typings on Panel {
     );
   }
 
-  /* #17833
+  /* #17894
   source: 
     /**
      * For Panels which are elements of Spot Panels: Gets or sets the name
@@ -38120,7 +38139,7 @@ extension Panel$Typings on Panel {
         this,
         'alignmentFocusName',
       );
-  /* #17833
+  /* #17894
   source: 
     /**
      * For Panels which are elements of Spot Panels: Gets or sets the name
@@ -38226,6 +38245,30 @@ extension Panel$Typings on Panel {
         'addRowColumnDefinition',
         [rowOrColumnDef],
       );
+  _i3.Panel addRowDefinition(
+    _i2.num rowIndex,
+    _i4.Partial<_i3.RowColumnDefinition> options,
+  ) =>
+      _i5.callMethod(
+        this,
+        'addRowDefinition',
+        [
+          rowIndex,
+          options,
+        ],
+      );
+  _i3.Panel addColumnDefinition(
+    _i2.num colIndex,
+    _i4.Partial<_i3.RowColumnDefinition> options,
+  ) =>
+      _i5.callMethod(
+        this,
+        'addColumnDefinition',
+        [
+          colIndex,
+          options,
+        ],
+      );
   _i2.num findRowForLocalY(_i2.num y) => _i5.callMethod(
         this,
         'findRowForLocalY',
@@ -38245,7 +38288,7 @@ extension Panel$Typings on Panel {
         'graduatedPointForValue',
         [
           val,
-          result ?? _i4.undefined,
+          result ?? _i7.undefined,
         ],
       );
   _i2.num graduatedValueForPoint(_i3.Point pt) => _i5.callMethod(
@@ -38256,13 +38299,13 @@ extension Panel$Typings on Panel {
   _i3.Panel copyTemplate([_i2.bool? freeze]) => _i5.callMethod(
         this,
         'copyTemplate',
-        [freeze ?? _i4.undefined],
+        [freeze ?? _i7.undefined],
       );
   void updateTargetBindings([_i2.String? srcprop]) {
     _i5.callMethod(
       this,
       'updateTargetBindings',
-      [srcprop ?? _i4.undefined],
+      [srcprop ?? _i7.undefined],
     );
   }
 
@@ -38286,14 +38329,14 @@ extension Panel$Typings on Panel {
 class IInline11 {}
 
 extension IInline11$Typings on IInline11 {
-  /* #17941
+  /* #18002
   source: 
         row?: number; */
   _i2.num? get row => _i5.getProperty(
         this,
         'row',
       );
-  /* #17941
+  /* #18002
   source: 
         row?: number; */
   // Type InteropStaticType.number
@@ -38301,18 +38344,18 @@ extension IInline11$Typings on IInline11 {
     _i5.setProperty(
       this,
       'row',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #17942
+  /* #18003
   source: 
         column?: number; */
   _i2.num? get column => _i5.getProperty(
         this,
         'column',
       );
-  /* #17942
+  /* #18003
   source: 
         column?: number; */
   // Type InteropStaticType.number
@@ -38320,7 +38363,7 @@ extension IInline11$Typings on IInline11 {
     _i5.setProperty(
       this,
       'column',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -38328,12 +38371,13 @@ extension IInline11$Typings on IInline11 {
 @_i1.JS()
 @_i1.staticInterop
 class RowColumnDefinition {
-  factory RowColumnDefinition([_i4.Partial? init]) => _i5.callConstructor(
+  factory RowColumnDefinition([_i4.Partial<_i2.Object>? init]) =>
+      _i5.callConstructor(
         _declaredRowColumnDefinition,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
-  /* #17949
+  /* #18010
   source: 
     /**
      * The default #sizing, which resolves to RowColumnDefinition.None or else
@@ -38347,7 +38391,7 @@ class RowColumnDefinition {
         _declaredRowColumnDefinition,
         'Default',
       );
-  /* #17949
+  /* #18010
   source: 
     /**
      * The default #sizing, which resolves to RowColumnDefinition.None or else
@@ -38364,7 +38408,7 @@ class RowColumnDefinition {
     );
   }
 
-  /* #17954
+  /* #18015
   source: 
     /**
      * The default #sizing if none is specified on the Table Panel's rowSizing and columnSizing.
@@ -38376,7 +38420,7 @@ class RowColumnDefinition {
         _declaredRowColumnDefinition,
         'None',
       );
-  /* #17954
+  /* #18015
   source: 
     /**
      * The default #sizing if none is specified on the Table Panel's rowSizing and columnSizing.
@@ -38392,7 +38436,7 @@ class RowColumnDefinition {
     );
   }
 
-  /* #17960
+  /* #18021
   source: 
     /**
      * If a Table Panel is larger than all the rows then this #sizing
@@ -38406,7 +38450,7 @@ class RowColumnDefinition {
         _declaredRowColumnDefinition,
         'ProportionalExtra',
       );
-  /* #17960
+  /* #18021
   source: 
     /**
      * If a Table Panel is larger than all the rows then this #sizing
@@ -38431,7 +38475,7 @@ FieldExternal:
 external _i2.Object _declaredRowColumnDefinition;
 
 extension RowColumnDefinition$Typings on RowColumnDefinition {
-  /* #17981
+  /* #18042
   source: 
     /**
      * This read-only property returns the Panel that this row or column definition is in.
@@ -38442,22 +38486,22 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'panel',
       );
-  /* #17981
+  /* #18042
   source: 
     /**
      * This read-only property returns the Panel that this row or column definition is in.
      */
     get panel(): Panel | null; */
-  // Type InteropUnion#23249223(parent: InteropGetter#181568562(name: panel))
+  // Type InteropUnion#352787892(parent: InteropGetter#190863458(name: panel))
   set panel(_i3.Panel? value) {
     _i5.setProperty(
       this,
       'panel',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #17988
+  /* #18049
   source: 
     /**
      * This read-only property is true when this describes a row instead of a column in the #panel.
@@ -38474,7 +38518,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'isRow',
       );
-  /* #17988
+  /* #18049
   source: 
     /**
      * This read-only property is true when this describes a row instead of a column in the #panel.
@@ -38492,7 +38536,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #17999
+  /* #18060
   source: 
     /**
      * This read-only property returns which row or column this RowColumnDefinition describes in the #panel.
@@ -38510,7 +38554,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'index',
       );
-  /* #17999
+  /* #18060
   source: 
     /**
      * This read-only property returns which row or column this RowColumnDefinition describes in the #panel.
@@ -38531,7 +38575,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18020
+  /* #18081
   source: 
     /**
      * Gets or sets the row height, in local coordinates.
@@ -38570,7 +38614,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'height',
       );
-  /* #18020
+  /* #18081
   source: 
     /**
      * Gets or sets the row height, in local coordinates.
@@ -38601,7 +38645,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18041
+  /* #18102
   source: 
     /**
      * Gets or sets the column width, in local coordinates.
@@ -38640,7 +38684,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'width',
       );
-  /* #18041
+  /* #18102
   source: 
     /**
      * Gets or sets the column width, in local coordinates.
@@ -38671,7 +38715,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18058
+  /* #18119
   source: 
     /**
      * Gets or sets the minimum row height or column width, in local coordinates.
@@ -38702,7 +38746,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'minimum',
       );
-  /* #18058
+  /* #18119
   source: 
     /**
      * Gets or sets the minimum row height or column width, in local coordinates.
@@ -38729,7 +38773,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18075
+  /* #18136
   source: 
     /**
      * Gets or sets the maximum row height or column width, in local coordinates.
@@ -38760,7 +38804,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'maximum',
       );
-  /* #18075
+  /* #18136
   source: 
     /**
      * Gets or sets the maximum row height or column width, in local coordinates.
@@ -38787,7 +38831,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18091
+  /* #18152
   source: 
     /**
      * Gets or sets a default alignment for elements that are in this row or column.
@@ -38818,7 +38862,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'alignment',
       );
-  /* #18091
+  /* #18152
   source: 
     /**
      * Gets or sets a default alignment for elements that are in this row or column.
@@ -38844,7 +38888,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18111
+  /* #18172
   source: 
     /**
      * Gets or sets the default stretch for elements that are in this row or column.
@@ -38880,7 +38924,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'stretch',
       );
-  /* #18111
+  /* #18172
   source: 
     /**
      * Gets or sets the default stretch for elements that are in this row or column.
@@ -38910,7 +38954,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18128
+  /* #18189
   source: 
     /**
      * Gets or sets the additional padding for a particular row or column, in local coordinates.
@@ -38939,7 +38983,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'separatorPadding',
       );
-  /* #18128
+  /* #18189
   source: 
     /**
      * Gets or sets the additional padding for a particular row or column, in local coordinates.
@@ -38957,7 +39001,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
      * @since 1.2
      */
     get separatorPadding(): MarginLike; */
-  // Type InteropTypedef#88783230(name: MarginLike)
+  // Type InteropTypedef#1053273812(name: MarginLike)
   set separatorPadding(_i3.MarginLike value) {
     _i5.setProperty(
       this,
@@ -38966,7 +39010,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18149
+  /* #18210
   source: 
     /**
      * Gets or sets the stroke (color) for the separator line that is drawn before a particular row or column,
@@ -39002,7 +39046,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'separatorStroke',
       );
-  /* #18149
+  /* #18210
   source: 
     /**
      * Gets or sets the stroke (color) for the separator line that is drawn before a particular row or column,
@@ -39024,16 +39068,16 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
      * @since 1.2
      */
     get separatorStroke(): BrushLike; */
-  // Type InteropTypedef#450957626(name: BrushLike)
+  // Type InteropTypedef#603506640(name: BrushLike)
   set separatorStroke(_i3.BrushLike value) {
     _i5.setProperty(
       this,
       'separatorStroke',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #18166
+  /* #18227
   source: 
     /**
      * Gets or sets the stroke width for a particular row or column's separator line, in local coordinates.
@@ -39061,7 +39105,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'separatorStrokeWidth',
       );
-  /* #18166
+  /* #18227
   source: 
     /**
      * Gets or sets the stroke width for a particular row or column's separator line, in local coordinates.
@@ -39088,7 +39132,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18191
+  /* #18252
   source: 
     /**
      * Gets or sets the dash array for dashing the separator line, provided this
@@ -39128,11 +39172,11 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
   /// does not supply any stroke dash array information for what is drawn before the row or column.
   /// The separator line may still be drawn using dashes if Panel#defaultRowSeparatorDashArray
   /// or Panel#defaultColumnSeparatorDashArray is non-null.
-  _i4.Array? get separatorDashArray => _i5.getProperty(
+  _i4.Array<_i2.num>? get separatorDashArray => _i5.getProperty(
         this,
         'separatorDashArray',
       );
-  /* #18191
+  /* #18252
   source: 
     /**
      * Gets or sets the dash array for dashing the separator line, provided this
@@ -39158,16 +39202,16 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
      * @since 1.2
      */
     get separatorDashArray(): Array<number> | null; */
-  // Type InteropUnion#461855030(parent: InteropGetter#568151057(name: separatorDashArray))
-  set separatorDashArray(_i4.Array? value) {
+  // Type InteropUnion#392818568(parent: InteropGetter#821417583(name: separatorDashArray))
+  set separatorDashArray(_i4.Array<_i2.num>? value) {
     _i5.setProperty(
       this,
       'separatorDashArray',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #18201
+  /* #18262
   source: 
     /**
      * Gets or sets the background color for a particular row or column,
@@ -39186,7 +39230,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'background',
       );
-  /* #18201
+  /* #18262
   source: 
     /**
      * Gets or sets the background color for a particular row or column,
@@ -39197,16 +39241,16 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
      * @since 1.2
      */
     get background(): BrushLike; */
-  // Type InteropTypedef#450957626(name: BrushLike)
+  // Type InteropTypedef#603506640(name: BrushLike)
   set background(_i3.BrushLike value) {
     _i5.setProperty(
       this,
       'background',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #18209
+  /* #18270
   source: 
     /**
      * Determines whether or not the #background, if there is one, is in front of or behind the separators.
@@ -39222,7 +39266,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'coversSeparators',
       );
-  /* #18209
+  /* #18270
   source: 
     /**
      * Determines whether or not the #background, if there is one, is in front of or behind the separators.
@@ -39240,7 +39284,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18223
+  /* #18284
   source: 
     /**
      * Gets or sets how this row or column deals with a Table Panel's extra space.
@@ -39263,7 +39307,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'sizing',
       );
-  /* #18223
+  /* #18284
   source: 
     /**
      * Gets or sets how this row or column deals with a Table Panel's extra space.
@@ -39287,7 +39331,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18239
+  /* #18300
   source: 
     /**
      * This read-only property returns the usable row height or column width, after arrangement, in local coordinates,
@@ -39316,7 +39360,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'actual',
       );
-  /* #18239
+  /* #18300
   source: 
     /**
      * This read-only property returns the usable row height or column width, after arrangement, in local coordinates,
@@ -39342,7 +39386,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18244
+  /* #18305
   source: 
     /**
      * (undocumented)
@@ -39353,7 +39397,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'measured',
       );
-  /* #18244
+  /* #18305
   source: 
     /**
      * (undocumented)
@@ -39368,7 +39412,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18260
+  /* #18321
   source: 
     /**
      * This read-only property returns the total arranged row height or column width, after arrangement, in local coordinates.
@@ -39396,7 +39440,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'total',
       );
-  /* #18260
+  /* #18321
   source: 
     /**
      * This read-only property returns the total arranged row height or column width, after arrangement, in local coordinates.
@@ -39422,7 +39466,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     );
   }
 
-  /* #18273
+  /* #18334
   source: 
     /**
      * This read-only property returns the actual arranged row or column starting position, after arrangement, in local coordinates.
@@ -39446,7 +39490,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'position',
       );
-  /* #18273
+  /* #18334
   source: 
     /**
      * This read-only property returns the actual arranged row or column starting position, after arrangement, in local coordinates.
@@ -39495,10 +39539,10 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'bind',
         [
-          targetprop ?? _i4.undefined,
-          sourceprop ?? _i4.undefined,
-          conv == null ? _i4.undefined : _i5.allowInterop(conv),
-          backconv == null ? _i4.undefined : _i5.allowInterop(backconv),
+          targetprop ?? _i7.undefined,
+          sourceprop ?? _i7.undefined,
+          conv == null ? _i7.undefined : _i5.allowInterop(conv),
+          backconv == null ? _i7.undefined : _i5.allowInterop(backconv),
         ],
       );
   // HEYA bind
@@ -39524,20 +39568,20 @@ class Shape implements _i3.GraphObject {
         [],
       );
 
-  factory Shape.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory Shape.$2([_i4.Partial<_i3.Shape>? init]) => _i5.callConstructor(
         _declaredShape,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Shape.$3([
     _i2.String? figure,
-    _i4.Partial? init,
+    _i4.Partial<_i3.Shape>? init,
   ]) =>
       _i5.callConstructor(
         _declaredShape,
         [
-          figure ?? _i4.undefined,
-          init ?? _i4.undefined,
+          figure ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 
@@ -39589,7 +39633,7 @@ FieldExternal:
 external _i2.Object _declaredShape;
 
 extension Shape$Typings on Shape {
-  /* #18444
+  /* #18505
   source: 
     /**
      * Gets or sets the Shape's Geometry that defines the Shape's figure.
@@ -39615,7 +39659,7 @@ extension Shape$Typings on Shape {
         this,
         'geometry',
       );
-  /* #18444
+  /* #18505
   source: 
     /**
      * Gets or sets the Shape's Geometry that defines the Shape's figure.
@@ -39629,16 +39673,16 @@ extension Shape$Typings on Shape {
      * @see #geometryString
      */
     get geometry(): Geometry | null; */
-  // Type InteropUnion#387356723(parent: InteropGetter#114642330(name: geometry))
+  // Type InteropUnion#649832638(parent: InteropGetter#50622212(name: geometry))
   set geometry(_i3.Geometry? value) {
     _i5.setProperty(
       this,
       'geometry',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #18456
+  /* #18517
   source: 
     /**
      * When set, creates a Geometry and normalizes it from a given path string,
@@ -39662,7 +39706,7 @@ extension Shape$Typings on Shape {
         this,
         'geometryString',
       );
-  /* #18456
+  /* #18517
   source: 
     /**
      * When set, creates a Geometry and normalizes it from a given path string,
@@ -39684,7 +39728,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18466
+  /* #18527
   source: 
     /**
      * Gets or sets the whether the GraphObject#position of this shape denotes
@@ -39704,7 +39748,7 @@ extension Shape$Typings on Shape {
         this,
         'isGeometryPositioned',
       );
-  /* #18466
+  /* #18527
   source: 
     /**
      * Gets or sets the whether the GraphObject#position of this shape denotes
@@ -39724,7 +39768,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18483
+  /* #18544
   source: 
     /**
      * Gets or sets the Brush or string that describes how the geometry is filled when drawn.
@@ -39759,7 +39803,7 @@ extension Shape$Typings on Shape {
         this,
         'fill',
       );
-  /* #18483
+  /* #18544
   source: 
     /**
      * Gets or sets the Brush or string that describes how the geometry is filled when drawn.
@@ -39777,16 +39821,16 @@ extension Shape$Typings on Shape {
      * The geometry is filled before the #stroke is drawn.
      */
     get fill(): BrushLike; */
-  // Type InteropTypedef#450957626(name: BrushLike)
+  // Type InteropTypedef#603506640(name: BrushLike)
   set fill(_i3.BrushLike value) {
     _i5.setProperty(
       this,
       'fill',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #18499
+  /* #18560
   source: 
     /**
      * Gets or sets the Brush or string that describes how the geometry is drawn as if by a pen.
@@ -39819,7 +39863,7 @@ extension Shape$Typings on Shape {
         this,
         'stroke',
       );
-  /* #18499
+  /* #18560
   source: 
     /**
      * Gets or sets the Brush or string that describes how the geometry is drawn as if by a pen.
@@ -39836,16 +39880,16 @@ extension Shape$Typings on Shape {
      * The stroke is drawn after the geometry is filled with the #fill Brush.
      */
     get stroke(): BrushLike; */
-  // Type InteropTypedef#450957626(name: BrushLike)
+  // Type InteropTypedef#603506640(name: BrushLike)
   set stroke(_i3.BrushLike value) {
     _i5.setProperty(
       this,
       'stroke',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #18514
+  /* #18575
   source: 
     /**
      * Gets or sets the thickness of the stroke's pen.
@@ -39876,7 +39920,7 @@ extension Shape$Typings on Shape {
         this,
         'strokeWidth',
       );
-  /* #18514
+  /* #18575
   source: 
     /**
      * Gets or sets the thickness of the stroke's pen.
@@ -39901,7 +39945,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18522
+  /* #18583
   source: 
     /**
      * Gets or sets the style for how the ends of the stroke's line are drawn.
@@ -39918,7 +39962,7 @@ extension Shape$Typings on Shape {
         this,
         'strokeCap',
       ));
-  /* #18522
+  /* #18583
   source: 
     /**
      * Gets or sets the style for how the ends of the stroke's line are drawn.
@@ -39927,7 +39971,7 @@ extension Shape$Typings on Shape {
      * For more information, see <a href="https://www.w3.org/TR/2dcontext/#dom-context-2d-linecap">Stroke Line Cap (w3.org)</a>.
      */
     get strokeCap(): ('butt' | 'round' | 'square'); */
-  // Type InteropUnion#73663473(parent: InteropGetter#405072051(name: strokeCap))
+  // Type InteropUnion#586095505(parent: InteropGetter#25574988(name: strokeCap))
   set strokeCap(StrokeCap value) {
     _i5.setProperty(
       this,
@@ -39936,7 +39980,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18530
+  /* #18591
   source: 
     /**
      * Gets or sets the type of corner that will be drawn for a stroke at the intersection of two straight segments of the geometry.
@@ -39953,7 +39997,7 @@ extension Shape$Typings on Shape {
         this,
         'strokeJoin',
       ));
-  /* #18530
+  /* #18591
   source: 
     /**
      * Gets or sets the type of corner that will be drawn for a stroke at the intersection of two straight segments of the geometry.
@@ -39962,7 +40006,7 @@ extension Shape$Typings on Shape {
      * For more information, see <a href="https://www.w3.org/TR/2dcontext/#dom-context-2d-linejoin">Stroke Line Join (w3.org)</a>.
      */
     get strokeJoin(): ('miter' | 'bevel' | 'round'); */
-  // Type InteropUnion#802523728(parent: InteropGetter#92695927(name: strokeJoin))
+  // Type InteropUnion#160260051(parent: InteropGetter#601759438(name: strokeJoin))
   set strokeJoin(StrokeJoin value) {
     _i5.setProperty(
       this,
@@ -39971,7 +40015,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18539
+  /* #18600
   source: 
     /**
      * Gets or sets the style for the stroke's mitre limit ratio.
@@ -39990,7 +40034,7 @@ extension Shape$Typings on Shape {
         this,
         'strokeMiterLimit',
       );
-  /* #18539
+  /* #18600
   source: 
     /**
      * Gets or sets the style for the stroke's mitre limit ratio.
@@ -40009,7 +40053,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18552
+  /* #18613
   source: 
     /**
      * Gets or sets the dash array for creating dashed or dotted lines.
@@ -40031,11 +40075,11 @@ extension Shape$Typings on Shape {
   ///
   /// The default value is null, resulting in a line without dashes or dots.
   /// Setting an array with all zeroes will set the value to null.
-  _i4.Array? get strokeDashArray => _i5.getProperty(
+  _i4.Array<_i2.num>? get strokeDashArray => _i5.getProperty(
         this,
         'strokeDashArray',
       );
-  /* #18552
+  /* #18613
   source: 
     /**
      * Gets or sets the dash array for creating dashed or dotted lines.
@@ -40049,16 +40093,16 @@ extension Shape$Typings on Shape {
      * @since 1.1
      */
     get strokeDashArray(): Array<number> | null; */
-  // Type InteropUnion#327504735(parent: InteropGetter#548067030(name: strokeDashArray))
-  set strokeDashArray(_i4.Array? value) {
+  // Type InteropUnion#673471043(parent: InteropGetter#876501740(name: strokeDashArray))
+  set strokeDashArray(_i4.Array<_i2.num>? value) {
     _i5.setProperty(
       this,
       'strokeDashArray',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #18561
+  /* #18622
   source: 
     /**
      * Gets or sets the offset for dashed lines, used to start the drawing of the dash pattern with some space.
@@ -40076,7 +40120,7 @@ extension Shape$Typings on Shape {
         this,
         'strokeDashOffset',
       );
-  /* #18561
+  /* #18622
   source: 
     /**
      * Gets or sets the offset for dashed lines, used to start the drawing of the dash pattern with some space.
@@ -40095,7 +40139,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18576
+  /* #18637
   source: 
     /**
      * Gets or sets the figure name, used to construct a Geometry.
@@ -40126,7 +40170,7 @@ extension Shape$Typings on Shape {
         this,
         'figure',
       );
-  /* #18576
+  /* #18637
   source: 
     /**
      * Gets or sets the figure name, used to construct a Geometry.
@@ -40151,7 +40195,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18604
+  /* #18665
   source: 
     /**
      * Gets or sets the name of the kind of arrowhead that this shape should take
@@ -40208,7 +40252,7 @@ extension Shape$Typings on Shape {
         this,
         'toArrow',
       );
-  /* #18604
+  /* #18665
   source: 
     /**
      * Gets or sets the name of the kind of arrowhead that this shape should take
@@ -40246,7 +40290,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18633
+  /* #18694
   source: 
     /**
      * Gets or sets the name of the kind of arrowhead that this shape should take
@@ -40305,7 +40349,7 @@ extension Shape$Typings on Shape {
         this,
         'fromArrow',
       );
-  /* #18633
+  /* #18694
   source: 
     /**
      * Gets or sets the name of the kind of arrowhead that this shape should take
@@ -40344,7 +40388,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18639
+  /* #18700
   source: 
     /**
      * Gets or sets the top-left Spot used by some Panels for determining where in the shape other objects may be placed.
@@ -40357,7 +40401,7 @@ extension Shape$Typings on Shape {
         this,
         'spot1',
       );
-  /* #18639
+  /* #18700
   source: 
     /**
      * Gets or sets the top-left Spot used by some Panels for determining where in the shape other objects may be placed.
@@ -40373,7 +40417,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18645
+  /* #18706
   source: 
     /**
      * Gets or sets the bottom-right Spot used by some Panels for determining where in the shape other objects may be placed.
@@ -40386,7 +40430,7 @@ extension Shape$Typings on Shape {
         this,
         'spot2',
       );
-  /* #18645
+  /* #18706
   source: 
     /**
      * Gets or sets the bottom-right Spot used by some Panels for determining where in the shape other objects may be placed.
@@ -40402,7 +40446,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18652
+  /* #18713
   source: 
     /**
      * Gets or sets a property for parameterizing the construction of a Geometry from a figure.
@@ -40417,7 +40461,7 @@ extension Shape$Typings on Shape {
         this,
         'parameter1',
       );
-  /* #18652
+  /* #18713
   source: 
     /**
      * Gets or sets a property for parameterizing the construction of a Geometry from a figure.
@@ -40434,7 +40478,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18659
+  /* #18720
   source: 
     /**
      * Gets or sets a property for parameterizing the construction of a Geometry from a figure.
@@ -40449,7 +40493,7 @@ extension Shape$Typings on Shape {
         this,
         'parameter2',
       );
-  /* #18659
+  /* #18720
   source: 
     /**
      * Gets or sets a property for parameterizing the construction of a Geometry from a figure.
@@ -40466,7 +40510,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18667
+  /* #18728
   source: 
     /**
      * This read-only property returns the natural bounds of this Shape as determined by its #geometry's bounds.
@@ -40483,7 +40527,7 @@ extension Shape$Typings on Shape {
         this,
         'naturalBounds',
       );
-  /* #18667
+  /* #18728
   source: 
     /**
      * This read-only property returns the natural bounds of this Shape as determined by its #geometry's bounds.
@@ -40501,7 +40545,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18687
+  /* #18748
   source: 
     /**
      * Gets or sets a GraphObject that is drawn repeatedly along the path of the stroke of this shape.
@@ -40543,7 +40587,7 @@ extension Shape$Typings on Shape {
         this,
         'pathPattern',
       );
-  /* #18687
+  /* #18748
   source: 
     /**
      * Gets or sets a GraphObject that is drawn repeatedly along the path of the stroke of this shape.
@@ -40565,16 +40609,16 @@ extension Shape$Typings on Shape {
      * @since 1.6
      */
     get pathPattern(): GraphObject | null; */
-  // Type InteropUnion#408737631(parent: InteropGetter#333461201(name: pathPattern))
+  // Type InteropUnion#843429473(parent: InteropGetter#664143871(name: pathPattern))
   set pathPattern(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'pathPattern',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #18695
+  /* #18756
   source: 
     /**
      * Gets or sets how the shape's geometry is proportionally created given its computed size.
@@ -40591,7 +40635,7 @@ extension Shape$Typings on Shape {
         this,
         'geometryStretch',
       );
-  /* #18695
+  /* #18756
   source: 
     /**
      * Gets or sets how the shape's geometry is proportionally created given its computed size.
@@ -40609,7 +40653,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18702
+  /* #18763
   source: 
     /**
      * Gets or sets how frequently this shape should be drawn within a "Grid" or "Graduated" Panel,
@@ -40624,7 +40668,7 @@ extension Shape$Typings on Shape {
         this,
         'interval',
       );
-  /* #18702
+  /* #18763
   source: 
     /**
      * Gets or sets how frequently this shape should be drawn within a "Grid" or "Graduated" Panel,
@@ -40641,7 +40685,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18709
+  /* #18770
   source: 
     /**
      * Gets or sets the fractional distance along the main shape of a "Graduated" Panel at which this kind of tick should start.
@@ -40655,7 +40699,7 @@ extension Shape$Typings on Shape {
         this,
         'graduatedStart',
       );
-  /* #18709
+  /* #18770
   source: 
     /**
      * Gets or sets the fractional distance along the main shape of a "Graduated" Panel at which this kind of tick should start.
@@ -40672,7 +40716,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18716
+  /* #18777
   source: 
     /**
      * Gets or sets the fractional distance along the main shape of a "Graduated" Panel at which this kind of tick should end.
@@ -40686,7 +40730,7 @@ extension Shape$Typings on Shape {
         this,
         'graduatedEnd',
       );
-  /* #18716
+  /* #18777
   source: 
     /**
      * Gets or sets the fractional distance along the main shape of a "Graduated" Panel at which this kind of tick should end.
@@ -40703,7 +40747,7 @@ extension Shape$Typings on Shape {
     );
   }
 
-  /* #18730
+  /* #18791
   source: 
     /**
      * Gets or sets the function to determine which values along a "Graduated" Panel will be skipped.
@@ -40734,7 +40778,7 @@ extension Shape$Typings on Shape {
         this,
         'graduatedSkip',
       );
-  /* #18730
+  /* #18791
   source: 
     /**
      * Gets or sets the function to determine which values along a "Graduated" Panel will be skipped.
@@ -40749,7 +40793,7 @@ extension Shape$Typings on Shape {
      * @since 2.0
      */
     get graduatedSkip(): ((val: number, shape: Shape) => boolean) | null; */
-  // Type InteropUnion#405700652(parent: InteropGetter#376971354(name: graduatedSkip))
+  // Type InteropUnion#753844325(parent: InteropGetter#1031657380(name: graduatedSkip))
   set graduatedSkip(
       _i2.bool Function(
         _i2.num,
@@ -40758,7 +40802,7 @@ extension Shape$Typings on Shape {
     _i5.setProperty(
       this,
       'graduatedSkip',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -40771,24 +40815,25 @@ class TextBlock implements _i3.GraphObject {
         [],
       );
 
-  factory TextBlock.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory TextBlock.$2([_i4.Partial<_i3.TextBlock>? init]) =>
+      _i5.callConstructor(
         _declaredTextBlock,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory TextBlock.$3([
     _i2.String? text,
-    _i4.Partial? init,
+    _i4.Partial<_i3.TextBlock>? init,
   ]) =>
       _i5.callConstructor(
         _declaredTextBlock,
         [
-          text ?? _i4.undefined,
-          init ?? _i4.undefined,
+          text ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 
-  /* #18939
+  /* #19000
   source: 
     /**
      * Used as a value for TextBlock#wrap, the TextBlock will not wrap its text.
@@ -40800,7 +40845,7 @@ class TextBlock implements _i3.GraphObject {
         _declaredTextBlock,
         'None',
       );
-  /* #18939
+  /* #19000
   source: 
     /**
      * Used as a value for TextBlock#wrap, the TextBlock will not wrap its text.
@@ -40816,7 +40861,7 @@ class TextBlock implements _i3.GraphObject {
     );
   }
 
-  /* #18945
+  /* #19006
   source: 
     /**
      * Used as a value for TextBlock#wrap, the TextBlock will wrap text, making the width of
@@ -40830,7 +40875,7 @@ class TextBlock implements _i3.GraphObject {
         _declaredTextBlock,
         'WrapFit',
       );
-  /* #18945
+  /* #19006
   source: 
     /**
      * Used as a value for TextBlock#wrap, the TextBlock will wrap text, making the width of
@@ -40847,7 +40892,7 @@ class TextBlock implements _i3.GraphObject {
     );
   }
 
-  /* #18951
+  /* #19012
   source: 
     /**
      * Used as the default value for TextBlock#wrap, the TextBlock will wrap text and the width of
@@ -40861,7 +40906,7 @@ class TextBlock implements _i3.GraphObject {
         _declaredTextBlock,
         'WrapDesiredSize',
       );
-  /* #18951
+  /* #19012
   source: 
     /**
      * Used as the default value for TextBlock#wrap, the TextBlock will wrap text and the width of
@@ -40878,7 +40923,7 @@ class TextBlock implements _i3.GraphObject {
     );
   }
 
-  /* #18958
+  /* #19019
   source: 
     /**
      * Used a a value for TextBlock#wrap, the TextBlock will attempt to wrap at each character, allowing
@@ -40893,7 +40938,7 @@ class TextBlock implements _i3.GraphObject {
         _declaredTextBlock,
         'WrapBreakAll',
       );
-  /* #18958
+  /* #19019
   source: 
     /**
      * Used a a value for TextBlock#wrap, the TextBlock will attempt to wrap at each character, allowing
@@ -40911,7 +40956,7 @@ class TextBlock implements _i3.GraphObject {
     );
   }
 
-  /* #18965
+  /* #19026
   source: 
     /**
      * Used as the default value for TextBlock#overflow: if the width is too small to display all text,
@@ -40926,7 +40971,7 @@ class TextBlock implements _i3.GraphObject {
         _declaredTextBlock,
         'OverflowClip',
       );
-  /* #18965
+  /* #19026
   source: 
     /**
      * Used as the default value for TextBlock#overflow: if the width is too small to display all text,
@@ -40944,7 +40989,7 @@ class TextBlock implements _i3.GraphObject {
     );
   }
 
-  /* #18972
+  /* #19033
   source: 
     /**
      * Used as a value for TextBlock#overflow: if the width is too small to display all text,
@@ -40959,7 +41004,7 @@ class TextBlock implements _i3.GraphObject {
         _declaredTextBlock,
         'OverflowEllipsis',
       );
-  /* #18972
+  /* #19033
   source: 
     /**
      * Used as a value for TextBlock#overflow: if the width is too small to display all text,
@@ -40977,7 +41022,7 @@ class TextBlock implements _i3.GraphObject {
     );
   }
 
-  /* #18979
+  /* #19040
   source: 
     /**
      * Used as the default value for TextBlock#formatting: the TextBlock will automatically trim any whitespace at the start
@@ -40992,7 +41037,7 @@ class TextBlock implements _i3.GraphObject {
         _declaredTextBlock,
         'FormatTrim',
       );
-  /* #18979
+  /* #19040
   source: 
     /**
      * Used as the default value for TextBlock#formatting: the TextBlock will automatically trim any whitespace at the start
@@ -41010,7 +41055,7 @@ class TextBlock implements _i3.GraphObject {
     );
   }
 
-  /* #18986
+  /* #19047
   source: 
     /**
      * Used as a value for TextBlock#formatting: the TextBlock will *not* trim any whitespace at the start
@@ -41025,7 +41070,7 @@ class TextBlock implements _i3.GraphObject {
         _declaredTextBlock,
         'FormatNone',
       );
-  /* #18986
+  /* #19047
   source: 
     /**
      * Used as a value for TextBlock#formatting: the TextBlock will *not* trim any whitespace at the start
@@ -41072,7 +41117,7 @@ class TextBlock implements _i3.GraphObject {
     _i5.callMethod(
       _declaredTextBlock,
       'setBaseline',
-      [value == null ? _i4.undefined : _i5.allowInterop(value)],
+      [value == null ? _i7.undefined : _i5.allowInterop(value)],
     );
   }
 
@@ -41092,7 +41137,7 @@ class TextBlock implements _i3.GraphObject {
     _i5.callMethod(
       _declaredTextBlock,
       'setUnderline',
-      [value == null ? _i4.undefined : _i5.allowInterop(value)],
+      [value == null ? _i7.undefined : _i5.allowInterop(value)],
     );
   }
 
@@ -41110,7 +41155,7 @@ FieldExternal:
 external _i2.Object _declaredTextBlock;
 
 extension TextBlock$Typings on TextBlock {
-  /* #19004
+  /* #19065
   source: 
     /**
      * Gets or sets the current font settings.
@@ -41149,7 +41194,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'font',
       );
-  /* #19004
+  /* #19065
   source: 
     /**
      * Gets or sets the current font settings.
@@ -41178,7 +41223,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19025
+  /* #19086
   source: 
     /**
      * Gets or sets the TextBlock's text string. The default is an empty string.
@@ -41207,7 +41252,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'text',
       );
-  /* #19025
+  /* #19086
   source: 
     /**
      * Gets or sets the TextBlock's text string. The default is an empty string.
@@ -41231,7 +41276,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19040
+  /* #19101
   source: 
     /**
      * Gets or sets the alignment location in the TextBlock's given space.
@@ -41261,7 +41306,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'textAlign',
       ));
-  /* #19040
+  /* #19101
   source: 
     /**
      * Gets or sets the alignment location in the TextBlock's given space.
@@ -41277,7 +41322,7 @@ extension TextBlock$Typings on TextBlock {
      * @see #verticalAlignment
      */
     get textAlign(): ('start' | 'end' | 'left' | 'right' | 'center'); */
-  // Type InteropUnion#115691497(parent: InteropGetter#696171398(name: textAlign))
+  // Type InteropUnion#194713327(parent: InteropGetter#500827433(name: textAlign))
   set textAlign(TextAlign value) {
     _i5.setProperty(
       this,
@@ -41286,7 +41331,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19049
+  /* #19110
   source: 
     /**
      * Gets or sets how the TextBlock is displayed: Either normally or with a Horizontal or Vertical flip or both.
@@ -41304,7 +41349,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'flip',
       );
-  /* #19049
+  /* #19110
   source: 
     /**
      * Gets or sets how the TextBlock is displayed: Either normally or with a Horizontal or Vertical flip or both.
@@ -41323,7 +41368,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19064
+  /* #19125
   source: 
     /**
      * Gets or sets the vertical alignment Spot of this TextBlock, used when
@@ -41352,7 +41397,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'verticalAlignment',
       );
-  /* #19064
+  /* #19125
   source: 
     /**
      * Gets or sets the vertical alignment Spot of this TextBlock, used when
@@ -41377,7 +41422,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19070
+  /* #19131
   source: 
     /**
      * This read-only property returns the natural bounds of this TextBlock in local coordinates,
@@ -41390,7 +41435,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'naturalBounds',
       );
-  /* #19070
+  /* #19131
   source: 
     /**
      * This read-only property returns the natural bounds of this TextBlock in local coordinates,
@@ -41406,7 +41451,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19077
+  /* #19138
   source: 
     /**
      * Gets or sets whether or not the text displays multiple lines or embedded newlines.
@@ -41422,7 +41467,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'isMultiline',
       );
-  /* #19077
+  /* #19138
   source: 
     /**
      * Gets or sets whether or not the text displays multiple lines or embedded newlines.
@@ -41440,7 +41485,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19085
+  /* #19146
   source: 
     /**
      * Gets or sets whether or not the text is underlined.
@@ -41455,7 +41500,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'isUnderline',
       );
-  /* #19085
+  /* #19146
   source: 
     /**
      * Gets or sets whether or not the text is underlined.
@@ -41473,7 +41518,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19093
+  /* #19154
   source: 
     /**
      * Gets or sets whether or not the text has a strikethrough line (line-through).
@@ -41488,7 +41533,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'isStrikethrough',
       );
-  /* #19093
+  /* #19154
   source: 
     /**
      * Gets or sets whether or not the text has a strikethrough line (line-through).
@@ -41506,7 +41551,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19104
+  /* #19165
   source: 
     /**
      * Gets or sets whether the text should be wrapped if it is too long to fit on one line.
@@ -41528,7 +41573,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'wrap',
       );
-  /* #19104
+  /* #19165
   source: 
     /**
      * Gets or sets whether the text should be wrapped if it is too long to fit on one line.
@@ -41549,7 +41594,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19118
+  /* #19179
   source: 
     /**
      * Gets or sets how text that is too long to display should be handled.
@@ -41576,7 +41621,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'overflow',
       );
-  /* #19118
+  /* #19179
   source: 
     /**
      * Gets or sets how text that is too long to display should be handled.
@@ -41600,7 +41645,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19129
+  /* #19190
   source: 
     /**
      * Gets or sets the Brush or string that describes the stroke (color) of the text that is drawn.
@@ -41623,7 +41668,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'stroke',
       );
-  /* #19129
+  /* #19190
   source: 
     /**
      * Gets or sets the Brush or string that describes the stroke (color) of the text that is drawn.
@@ -41635,16 +41680,16 @@ extension TextBlock$Typings on TextBlock {
      * <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">CSS colors (mozilla.org)</a>.
      */
     get stroke(): BrushLike; */
-  // Type InteropTypedef#450957626(name: BrushLike)
+  // Type InteropTypedef#603506640(name: BrushLike)
   set stroke(_i3.BrushLike value) {
     _i5.setProperty(
       this,
       'stroke',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #19138
+  /* #19199
   source: 
     /**
      * This read-only property returns the computed number of lines in this TextBlock, including lines created
@@ -41662,7 +41707,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'lineCount',
       );
-  /* #19138
+  /* #19199
   source: 
     /**
      * This read-only property returns the computed number of lines in this TextBlock, including lines created
@@ -41681,7 +41726,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19146
+  /* #19207
   source: 
     /**
      * This read-only property returns the height of a line of text in this TextBlock, not including any #spacingAbove or #spacingBelow.
@@ -41698,7 +41743,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'lineHeight',
       );
-  /* #19146
+  /* #19207
   source: 
     /**
      * This read-only property returns the height of a line of text in this TextBlock, not including any #spacingAbove or #spacingBelow.
@@ -41717,7 +41762,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19154
+  /* #19215
   source: 
     /**
      * Gets or sets whether or not this TextBlock allows in-place editing of the #text
@@ -41736,7 +41781,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'editable',
       );
-  /* #19154
+  /* #19215
   source: 
     /**
      * Gets or sets whether or not this TextBlock allows in-place editing of the #text
@@ -41755,7 +41800,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19167
+  /* #19228
   source: 
     /**
      * Gets or sets the HTMLInfo that this TextBlock uses as its text editor in the TextEditingTool.
@@ -41782,7 +41827,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'textEditor',
       );
-  /* #19167
+  /* #19228
   source: 
     /**
      * Gets or sets the HTMLInfo that this TextBlock uses as its text editor in the TextEditingTool.
@@ -41796,16 +41841,16 @@ extension TextBlock$Typings on TextBlock {
      * For example usage, see the <a href="../../samples/customTextEditingTool.html">Custom TextEditingTool Sample</a>.
      */
     get textEditor(): HTMLInfo | null; */
-  // Type InteropUnion#806640756(parent: InteropGetter#461138218(name: textEditor))
+  // Type InteropUnion#1047713676(parent: InteropGetter#996072298(name: textEditor))
   set textEditor(_i3.HTMLInfo? value) {
     _i5.setProperty(
       this,
       'textEditor',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #19173
+  /* #19234
   source: 
     /**
      * Gets or sets the function to call if a text edit made with the TextEditingTool is invalid.
@@ -41822,14 +41867,14 @@ extension TextBlock$Typings on TextBlock {
         this,
         'errorFunction',
       );
-  /* #19173
+  /* #19234
   source: 
     /**
      * Gets or sets the function to call if a text edit made with the TextEditingTool is invalid.
      * The default is null.
      */
     get errorFunction(): ((tool: TextEditingTool, oldString: string, newString: string) => void) | null; */
-  // Type InteropUnion#580643046(parent: InteropGetter#335378142(name: errorFunction))
+  // Type InteropUnion#684857681(parent: InteropGetter#54022546(name: errorFunction))
   set errorFunction(
       void Function(
         _i3.TextEditingTool,
@@ -41839,11 +41884,11 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'errorFunction',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #19181
+  /* #19242
   source: 
     /**
      * Gets or sets how frequently this text should be drawn within a "Graduated" Panel,
@@ -41859,7 +41904,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'interval',
       );
-  /* #19181
+  /* #19242
   source: 
     /**
      * Gets or sets how frequently this text should be drawn within a "Graduated" Panel,
@@ -41877,7 +41922,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19188
+  /* #19249
   source: 
     /**
      * Gets or sets the fractional distance along the main shape of a "Graduated" Panel at which this text should start.
@@ -41891,7 +41936,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'graduatedStart',
       );
-  /* #19188
+  /* #19249
   source: 
     /**
      * Gets or sets the fractional distance along the main shape of a "Graduated" Panel at which this text should start.
@@ -41908,7 +41953,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19195
+  /* #19256
   source: 
     /**
      * Gets or sets the fractional distance along the main shape of a "Graduated" Panel at which this kind of tick text should end.
@@ -41922,7 +41967,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'graduatedEnd',
       );
-  /* #19195
+  /* #19256
   source: 
     /**
      * Gets or sets the fractional distance along the main shape of a "Graduated" Panel at which this kind of tick text should end.
@@ -41939,7 +41984,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19209
+  /* #19270
   source: 
     /**
      * Gets or sets the function to convert from a value along a "Graduated" Panel to a string.
@@ -41970,7 +42015,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'graduatedFunction',
       );
-  /* #19209
+  /* #19270
   source: 
     /**
      * Gets or sets the function to convert from a value along a "Graduated" Panel to a string.
@@ -41985,7 +42030,7 @@ extension TextBlock$Typings on TextBlock {
      * @since 1.7
      */
     get graduatedFunction(): ((val: number, tb: TextBlock) => string) | null; */
-  // Type InteropUnion#369157918(parent: InteropGetter#134641173(name: graduatedFunction))
+  // Type InteropUnion#84751212(parent: InteropGetter#932620494(name: graduatedFunction))
   set graduatedFunction(
       _i2.String Function(
         _i2.num,
@@ -41994,11 +42039,11 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'graduatedFunction',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #19223
+  /* #19284
   source: 
     /**
      * Gets or sets the function to determine which values along a "Graduated" Panel will be skipped.
@@ -42029,7 +42074,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'graduatedSkip',
       );
-  /* #19223
+  /* #19284
   source: 
     /**
      * Gets or sets the function to determine which values along a "Graduated" Panel will be skipped.
@@ -42044,7 +42089,7 @@ extension TextBlock$Typings on TextBlock {
      * @since 2.0
      */
     get graduatedSkip(): ((val: number, tb: TextBlock) => boolean) | null; */
-  // Type InteropUnion#720140912(parent: InteropGetter#829698031(name: graduatedSkip))
+  // Type InteropUnion#940868077(parent: InteropGetter#739421552(name: graduatedSkip))
   set graduatedSkip(
       _i2.bool Function(
         _i2.num,
@@ -42053,11 +42098,11 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'graduatedSkip',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #19239
+  /* #19300
   source: 
     /**
      * Gets or sets the predicate that determines whether or not a user-edited string of text is valid.
@@ -42093,7 +42138,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'textValidation',
       );
-  /* #19239
+  /* #19300
   source: 
     /**
      * Gets or sets the predicate that determines whether or not a user-edited string of text is valid.
@@ -42110,7 +42155,7 @@ extension TextBlock$Typings on TextBlock {
      * @see TextEditingTool#textValidation
      */
     get textValidation(): ((thisTextBlock: TextBlock, oldString: string, newString: string) => boolean) | null; */
-  // Type InteropUnion#685052128(parent: InteropGetter#162410835(name: textValidation))
+  // Type InteropUnion#627675423(parent: InteropGetter#763887693(name: textValidation))
   set textValidation(
       _i2.bool Function(
         _i3.TextBlock,
@@ -42120,11 +42165,11 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'textValidation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #19254
+  /* #19315
   source: 
     /**
      * Gets or sets the function that is called after the TextBlock's text has been edited by the TextEditingTool.
@@ -42158,7 +42203,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'textEdited',
       );
-  /* #19254
+  /* #19315
   source: 
     /**
      * Gets or sets the function that is called after the TextBlock's text has been edited by the TextEditingTool.
@@ -42174,7 +42219,7 @@ extension TextBlock$Typings on TextBlock {
      * @since 1.7
      */
     get textEdited(): ((thisTextBlock: TextBlock, oldString: string, newString: string) => void) | null; */
-  // Type InteropUnion#948129052(parent: InteropGetter#905718964(name: textEdited))
+  // Type InteropUnion#904278373(parent: InteropGetter#778810081(name: textEdited))
   set textEdited(
       void Function(
         _i3.TextBlock,
@@ -42184,11 +42229,11 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'textEdited',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #19265
+  /* #19326
   source: 
     /**
      * Gets or sets additional spacing above each line of text.
@@ -42209,7 +42254,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'spacingAbove',
       );
-  /* #19265
+  /* #19326
   source: 
     /**
      * Gets or sets additional spacing above each line of text.
@@ -42230,7 +42275,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19276
+  /* #19337
   source: 
     /**
      * Gets or sets additional spacing below each line of text.
@@ -42251,7 +42296,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'spacingBelow',
       );
-  /* #19276
+  /* #19337
   source: 
     /**
      * Gets or sets additional spacing below each line of text.
@@ -42272,7 +42317,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19286
+  /* #19347
   source: 
     /**
      * Gets or sets the policy for trimming whitespace on each line of text.
@@ -42292,7 +42337,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'formatting',
       );
-  /* #19286
+  /* #19347
   source: 
     /**
      * Gets or sets the policy for trimming whitespace on each line of text.
@@ -42312,7 +42357,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19298
+  /* #19359
   source: 
     /**
      * Gets or sets the maximum number of lines that this TextBlock can display.
@@ -42335,7 +42380,7 @@ extension TextBlock$Typings on TextBlock {
         this,
         'maxLines',
       );
-  /* #19298
+  /* #19359
   source: 
     /**
      * Gets or sets the maximum number of lines that this TextBlock can display.
@@ -42357,7 +42402,7 @@ extension TextBlock$Typings on TextBlock {
     );
   }
 
-  /* #19308
+  /* #19369
   source: 
     /**
      * Gets or sets the an array of possible choices for a custom TextEditingTool.
@@ -42373,11 +42418,11 @@ extension TextBlock$Typings on TextBlock {
   ///
   /// The default value is null.
   /// For example usage, see the <a href="../../samples/customTextEditingTool.html">Custom TextEditingTool Sample</a>.
-  _i4.Array? get choices => _i5.getProperty(
+  _i4.Array<_i2.String>? get choices => _i5.getProperty(
         this,
         'choices',
       );
-  /* #19308
+  /* #19369
   source: 
     /**
      * Gets or sets the an array of possible choices for a custom TextEditingTool.
@@ -42388,12 +42433,12 @@ extension TextBlock$Typings on TextBlock {
      * @since 1.7
      */
     get choices(): Array<string> | null; */
-  // Type InteropUnion#1047362818(parent: InteropGetter#485109023(name: choices))
-  set choices(_i4.Array? value) {
+  // Type InteropUnion#271024466(parent: InteropGetter#808545617(name: choices))
+  set choices(_i4.Array<_i2.String>? value) {
     _i5.setProperty(
       this,
       'choices',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -42406,20 +42451,20 @@ class Picture implements _i3.GraphObject {
         [],
       );
 
-  factory Picture.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory Picture.$2([_i4.Partial<_i3.Picture>? init]) => _i5.callConstructor(
         _declaredPicture,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Picture.$3([
     _i2.String? source,
-    _i4.Partial? init,
+    _i4.Partial<_i3.Picture>? init,
   ]) =>
       _i5.callConstructor(
         _declaredPicture,
         [
-          source ?? _i4.undefined,
-          init ?? _i4.undefined,
+          source ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 
@@ -42427,7 +42472,7 @@ class Picture implements _i3.GraphObject {
     _i5.callMethod(
       _declaredPicture,
       'clearCache',
-      [url ?? _i4.undefined],
+      [url ?? _i7.undefined],
     );
   }
 }
@@ -42439,7 +42484,7 @@ FieldExternal:
 external _i2.Object _declaredPicture;
 
 extension Picture$Typings on Picture {
-  /* #19416
+  /* #19477
   source: 
     /**
      * Gets or sets the Picture's HTML element that provides some kind of visual image.
@@ -42464,11 +42509,11 @@ extension Picture$Typings on Picture {
   /// If this property is set to an HTMLImageElement, and that element is not yet loaded before it is used,
   /// the Diagrams using that Element will not redraw on their own.
   /// You must call #redraw after the image is finished loading if you wish for the Diagram to be updated immediately.
-  _i2.dynamic get element => _i5.getProperty(
+  _i6.HTMLElement? get element => _i5.getProperty(
         this,
         'element',
       );
-  /* #19416
+  /* #19477
   source: 
     /**
      * Gets or sets the Picture's HTML element that provides some kind of visual image.
@@ -42483,16 +42528,16 @@ extension Picture$Typings on Picture {
      * You must call #redraw after the image is finished loading if you wish for the Diagram to be updated immediately.
      */
     get element(): HTMLImageElement | HTMLVideoElement | HTMLCanvasElement | null; */
-  // Type InteropUnion#813033773(parent: InteropGetter#955962604(name: element))
-  set element(_i2.dynamic value) {
+  // Type InteropUnion#1017631188(parent: InteropGetter#44197416(name: element))
+  set element(_i6.HTMLElement? value) {
     _i5.setProperty(
       this,
       'element',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #19438
+  /* #19499
   source: 
     /**
      * Gets or sets the Picture's source URL, which can be any valid image (png, jpg, gif, etc) URL.
@@ -42537,7 +42582,7 @@ extension Picture$Typings on Picture {
         this,
         'source',
       );
-  /* #19438
+  /* #19499
   source: 
     /**
      * Gets or sets the Picture's source URL, which can be any valid image (png, jpg, gif, etc) URL.
@@ -42569,7 +42614,7 @@ extension Picture$Typings on Picture {
     );
   }
 
-  /* #19478
+  /* #19539
   source: 
     /**
      * Gets or sets a function that returns a value for image.crossOrigin.
@@ -42603,7 +42648,7 @@ extension Picture$Typings on Picture {
         this,
         'sourceCrossOrigin',
       );
-  /* #19478
+  /* #19539
   source: 
     /**
      * Gets or sets a function that returns a value for image.crossOrigin.
@@ -42621,16 +42666,16 @@ extension Picture$Typings on Picture {
      * @since 1.5
      */
     get sourceCrossOrigin(): ((a: Picture) => string) | null; */
-  // Type InteropUnion#199586986(parent: InteropGetter#731560847(name: sourceCrossOrigin))
+  // Type InteropUnion#554072899(parent: InteropGetter#264972328(name: sourceCrossOrigin))
   set sourceCrossOrigin(_i2.String Function(_i3.Picture)? value) {
     _i5.setProperty(
       this,
       'sourceCrossOrigin',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #19487
+  /* #19548
   source: 
     /**
      * Gets or sets the rectangular area of the source image that this picture should display.
@@ -42649,7 +42694,7 @@ extension Picture$Typings on Picture {
         this,
         'sourceRect',
       );
-  /* #19487
+  /* #19548
   source: 
     /**
      * Gets or sets the rectangular area of the source image that this picture should display.
@@ -42668,7 +42713,7 @@ extension Picture$Typings on Picture {
     );
   }
 
-  /* #19500
+  /* #19561
   source: 
     /**
      * Gets or sets how the Picture's image is stretched within its bounding box.
@@ -42694,7 +42739,7 @@ extension Picture$Typings on Picture {
         this,
         'imageStretch',
       );
-  /* #19500
+  /* #19561
   source: 
     /**
      * Gets or sets how the Picture's image is stretched within its bounding box.
@@ -42717,7 +42762,7 @@ extension Picture$Typings on Picture {
     );
   }
 
-  /* #19509
+  /* #19570
   source: 
     /**
      * Gets or sets how the Picture is displayed: Either normally or with a Horizontal or Vertical flip or both.
@@ -42735,7 +42780,7 @@ extension Picture$Typings on Picture {
         this,
         'flip',
       );
-  /* #19509
+  /* #19570
   source: 
     /**
      * Gets or sets how the Picture is displayed: Either normally or with a Horizontal or Vertical flip or both.
@@ -42754,7 +42799,7 @@ extension Picture$Typings on Picture {
     );
   }
 
-  /* #19521
+  /* #19582
   source: 
     /**
      * Gets or sets the Spot to align the source image to, when the source image
@@ -42777,7 +42822,7 @@ extension Picture$Typings on Picture {
         this,
         'imageAlignment',
       );
-  /* #19521
+  /* #19582
   source: 
     /**
      * Gets or sets the Spot to align the source image to, when the source image
@@ -42799,7 +42844,7 @@ extension Picture$Typings on Picture {
     );
   }
 
-  /* #19533
+  /* #19594
   source: 
     /**
      * Gets or sets the function to call if an image set by #source fails to load.
@@ -42821,12 +42866,12 @@ extension Picture$Typings on Picture {
   /// The default value is null, meaning that no specific action occurs when there is an error loading an image.
   void Function(
     _i3.Picture,
-    _i4.Event,
+    _i6.Event,
   )? get errorFunction => _i5.getProperty(
         this,
         'errorFunction',
       );
-  /* #19533
+  /* #19594
   source: 
     /**
      * Gets or sets the function to call if an image set by #source fails to load.
@@ -42839,20 +42884,20 @@ extension Picture$Typings on Picture {
      * @see #successFunction
      */
     get errorFunction(): ((a: Picture, b: Event) => void) | null; */
-  // Type InteropUnion#430915762(parent: InteropGetter#594005144(name: errorFunction))
+  // Type InteropUnion#889891521(parent: InteropGetter#326972151(name: errorFunction))
   set errorFunction(
       void Function(
         _i3.Picture,
-        _i4.Event,
+        _i6.Event,
       )? value) {
     _i5.setProperty(
       this,
       'errorFunction',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #19548
+  /* #19609
   source: 
     /**
      * Gets or sets the function to call when an image set by #source loads successfully.
@@ -42879,12 +42924,12 @@ extension Picture$Typings on Picture {
   /// The default value is null, meaning that no specific action occurs when an image finishes loading.
   void Function(
     _i3.Picture,
-    _i4.Event,
+    _i6.Event,
   )? get successFunction => _i5.getProperty(
         this,
         'successFunction',
       );
-  /* #19548
+  /* #19609
   source: 
     /**
      * Gets or sets the function to call when an image set by #source loads successfully.
@@ -42900,20 +42945,20 @@ extension Picture$Typings on Picture {
      * @since 1.7
      */
     get successFunction(): ((a: Picture, b: Event) => void) | null; */
-  // Type InteropUnion#463803980(parent: InteropGetter#463855457(name: successFunction))
+  // Type InteropUnion#32128804(parent: InteropGetter#132098183(name: successFunction))
   set successFunction(
       void Function(
         _i3.Picture,
-        _i4.Event,
+        _i6.Event,
       )? value) {
     _i5.setProperty(
       this,
       'successFunction',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #19555
+  /* #19616
   source: 
     /**
      * This read-only property returns the natural size of this picture as determined by its source's width and height.
@@ -42928,7 +42973,7 @@ extension Picture$Typings on Picture {
         this,
         'naturalBounds',
       );
-  /* #19555
+  /* #19616
   source: 
     /**
      * This read-only property returns the natural size of this picture as determined by its source's width and height.
@@ -42970,24 +43015,24 @@ class Part implements _i3.Panel {
         [],
       );
 
-  factory Part.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory Part.$2([_i4.Partial<_i3.Part>? init]) => _i5.callConstructor(
         _declaredPart,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Part.$3([
     _i2.Object? type,
-    _i4.Partial? init,
+    _i4.Partial<_i3.Part>? init,
   ]) =>
       _i5.callConstructor(
         _declaredPart,
         [
-          type ?? _i4.undefined,
-          init ?? _i4.undefined,
+          type ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 
-  /* #19767
+  /* #19828
   source: 
     /**
      * This value may be used as the value of the Part#layoutConditions property to indicate that
@@ -43001,7 +43046,7 @@ class Part implements _i3.Panel {
         _declaredPart,
         'LayoutNone',
       );
-  /* #19767
+  /* #19828
   source: 
     /**
      * This value may be used as the value of the Part#layoutConditions property to indicate that
@@ -43018,7 +43063,7 @@ class Part implements _i3.Panel {
     );
   }
 
-  /* #19773
+  /* #19834
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43032,7 +43077,7 @@ class Part implements _i3.Panel {
         _declaredPart,
         'LayoutAdded',
       );
-  /* #19773
+  /* #19834
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43049,7 +43094,7 @@ class Part implements _i3.Panel {
     );
   }
 
-  /* #19779
+  /* #19840
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43063,7 +43108,7 @@ class Part implements _i3.Panel {
         _declaredPart,
         'LayoutRemoved',
       );
-  /* #19779
+  /* #19840
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43080,7 +43125,7 @@ class Part implements _i3.Panel {
     );
   }
 
-  /* #19785
+  /* #19846
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43094,7 +43139,7 @@ class Part implements _i3.Panel {
         _declaredPart,
         'LayoutShown',
       );
-  /* #19785
+  /* #19846
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43111,7 +43156,7 @@ class Part implements _i3.Panel {
     );
   }
 
-  /* #19791
+  /* #19852
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43125,7 +43170,7 @@ class Part implements _i3.Panel {
         _declaredPart,
         'LayoutHidden',
       );
-  /* #19791
+  /* #19852
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43142,7 +43187,7 @@ class Part implements _i3.Panel {
     );
   }
 
-  /* #19798
+  /* #19859
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43158,7 +43203,7 @@ class Part implements _i3.Panel {
         _declaredPart,
         'LayoutNodeSized',
       );
-  /* #19798
+  /* #19859
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43176,7 +43221,7 @@ class Part implements _i3.Panel {
     );
   }
 
-  /* #19805
+  /* #19866
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43192,7 +43237,7 @@ class Part implements _i3.Panel {
         _declaredPart,
         'LayoutGroupLayout',
       );
-  /* #19805
+  /* #19866
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43210,7 +43255,7 @@ class Part implements _i3.Panel {
     );
   }
 
-  /* #19812
+  /* #19873
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43226,7 +43271,7 @@ class Part implements _i3.Panel {
         _declaredPart,
         'LayoutNodeReplaced',
       );
-  /* #19812
+  /* #19873
   source: 
     /**
      * This flag may be combined with other "Layout" flags as the value of the Part#layoutConditions property to indicate that
@@ -43244,7 +43289,7 @@ class Part implements _i3.Panel {
     );
   }
 
-  /* #19819
+  /* #19880
   source: 
     /**
      * This is the default value for the Part#layoutConditions property, basically a combination of all of the conditions:
@@ -43260,7 +43305,7 @@ class Part implements _i3.Panel {
         _declaredPart,
         'LayoutStandard',
       );
-  /* #19819
+  /* #19880
   source: 
     /**
      * This is the default value for the Part#layoutConditions property, basically a combination of all of the conditions:
@@ -43286,7 +43331,7 @@ FieldExternal:
 external _i2.Object _declaredPart;
 
 extension Part$Typings on Part {
-  /* #19860
+  /* #19921
   source: 
     /**
      * This read-only property returns the Part's Model data key if it is in a Diagram and is backed by Model data.
@@ -43301,7 +43346,7 @@ extension Part$Typings on Part {
         this,
         'key',
       );
-  /* #19860
+  /* #19921
   source: 
     /**
      * This read-only property returns the Part's Model data key if it is in a Diagram and is backed by Model data.
@@ -43310,16 +43355,16 @@ extension Part$Typings on Part {
      * @see Model#getKeyForNodeData
      */
     get key(): Key; */
-  // Type InteropTypedef#911623829(name: Key)
+  // Type InteropTypedef#178589699(name: Key)
   set key(_i3.Key value) {
     _i5.setProperty(
       this,
       'key',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #19869
+  /* #19930
   source: 
     /**
      * This read-only property returns an iterator over all of the Adornments associated with this part.
@@ -43340,7 +43385,7 @@ extension Part$Typings on Part {
         this,
         'adornments',
       );
-  /* #19869
+  /* #19930
   source: 
     /**
      * This read-only property returns an iterator over all of the Adornments associated with this part.
@@ -43360,7 +43405,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #19919
+  /* #19980
   source: 
     /**
      * This read-only property returns the Layer that this Part is in.
@@ -43382,7 +43427,7 @@ extension Part$Typings on Part {
         this,
         'layer',
       );
-  /* #19919
+  /* #19980
   source: 
     /**
      * This read-only property returns the Layer that this Part is in.
@@ -43394,16 +43439,16 @@ extension Part$Typings on Part {
      * @see #layerName
      */
     get layer(): Layer | null; */
-  // Type InteropUnion#601644942(parent: InteropGetter#380060464(name: layer))
+  // Type InteropUnion#269101642(parent: InteropGetter#473433517(name: layer))
   set layer(_i3.Layer? value) {
     _i5.setProperty(
       this,
       'layer',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #19925
+  /* #19986
   source: 
     /**
      * This read-only property returns the Diagram that this Part is in.
@@ -43418,7 +43463,7 @@ extension Part$Typings on Part {
         this,
         'diagram',
       );
-  /* #19925
+  /* #19986
   source: 
     /**
      * This read-only property returns the Diagram that this Part is in.
@@ -43426,16 +43471,16 @@ extension Part$Typings on Part {
      * This will be null if it is not in a Layer.
      */
     get diagram(): Diagram | null; */
-  // Type InteropUnion#625190418(parent: InteropGetter#715292846(name: diagram))
+  // Type InteropUnion#812418116(parent: InteropGetter#431221524(name: diagram))
   set diagram(_i3.Diagram? value) {
     _i5.setProperty(
       this,
       'diagram',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #19940
+  /* #20001
   source: 
     /**
      * Gets or sets the layer name for this part.
@@ -43467,7 +43512,7 @@ extension Part$Typings on Part {
         this,
         'layerName',
       );
-  /* #19940
+  /* #20001
   source: 
     /**
      * Gets or sets the layer name for this part.
@@ -43493,7 +43538,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #19952
+  /* #20013
   source: 
     /**
      * Gets or sets the function to execute when this part changes layers.
@@ -43521,7 +43566,7 @@ extension Part$Typings on Part {
         this,
         'layerChanged',
       );
-  /* #19952
+  /* #20013
   source: 
     /**
      * Gets or sets the function to execute when this part changes layers.
@@ -43534,7 +43579,7 @@ extension Part$Typings on Part {
      * @see #layerName
      */
     get layerChanged(): ((thisPart: Part, oldLayer: Layer | null, newLayer: Layer | null) => void) | null; */
-  // Type InteropUnion#767331974(parent: InteropGetter#32282416(name: layerChanged))
+  // Type InteropUnion#951286659(parent: InteropGetter#828384697(name: layerChanged))
   set layerChanged(
       void Function(
         _i3.Part,
@@ -43544,11 +43589,11 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'layerChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #19968
+  /* #20029
   source: 
     /**
      * Gets or sets the Z-ordering position of this Part within its Layer.
@@ -43580,7 +43625,7 @@ extension Part$Typings on Part {
         this,
         'zOrder',
       );
-  /* #19968
+  /* #20029
   source: 
     /**
      * Gets or sets the Z-ordering position of this Part within its Layer.
@@ -43606,7 +43651,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #19975
+  /* #20036
   source: 
     /**
      * This read-only property returns the GraphObject that determines the location of this Part.
@@ -43621,7 +43666,7 @@ extension Part$Typings on Part {
         this,
         'locationObject',
       );
-  /* #19975
+  /* #20036
   source: 
     /**
      * This read-only property returns the GraphObject that determines the location of this Part.
@@ -43638,7 +43683,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #19988
+  /* #20049
   source: 
     /**
      * Gets or sets the minimum location of this Part to which the user may drag using the DraggingTool.
@@ -43663,7 +43708,7 @@ extension Part$Typings on Part {
         this,
         'minLocation',
       );
-  /* #19988
+  /* #20049
   source: 
     /**
      * Gets or sets the minimum location of this Part to which the user may drag using the DraggingTool.
@@ -43687,7 +43732,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20002
+  /* #20063
   source: 
     /**
      * Gets or sets the maximum location of this Part to which the user may drag using the DraggingTool.
@@ -43712,7 +43757,7 @@ extension Part$Typings on Part {
         this,
         'maxLocation',
       );
-  /* #20002
+  /* #20063
   source: 
     /**
      * Gets or sets the maximum location of this Part to which the user may drag using the DraggingTool.
@@ -43736,7 +43781,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20015
+  /* #20076
   source: 
     /**
      * Gets or sets the name of the GraphObject that provides the location of this Part.
@@ -43761,7 +43806,7 @@ extension Part$Typings on Part {
         this,
         'locationObjectName',
       );
-  /* #20015
+  /* #20076
   source: 
     /**
      * Gets or sets the name of the GraphObject that provides the location of this Part.
@@ -43784,7 +43829,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20032
+  /* #20093
   source: 
     /**
      * Gets or sets the location Spot of this Node, the spot on the #locationObject
@@ -43817,7 +43862,7 @@ extension Part$Typings on Part {
         this,
         'locationSpot',
       );
-  /* #20032
+  /* #20093
   source: 
     /**
      * Gets or sets the location Spot of this Node, the spot on the #locationObject
@@ -43844,7 +43889,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20139
+  /* #20200
   source: 
     /**
      * Gets or sets the position of this part in document coordinates,
@@ -43893,7 +43938,7 @@ extension Part$Typings on Part {
         this,
         'location',
       );
-  /* #20139
+  /* #20200
   source: 
     /**
      * Gets or sets the position of this part in document coordinates,
@@ -43930,7 +43975,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20171
+  /* #20232
   source: 
     /**
      * Gets or sets the category of this part,
@@ -43995,7 +44040,7 @@ extension Part$Typings on Part {
         this,
         'category',
       );
-  /* #20171
+  /* #20232
   source: 
     /**
      * Gets or sets the category of this part,
@@ -44037,7 +44082,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20278
+  /* #20339
   source: 
     /**
      * Gets or sets whether the user may copy this part.
@@ -44051,7 +44096,7 @@ extension Part$Typings on Part {
         this,
         'copyable',
       );
-  /* #20278
+  /* #20339
   source: 
     /**
      * Gets or sets whether the user may copy this part.
@@ -44068,7 +44113,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20285
+  /* #20346
   source: 
     /**
      * Gets or sets whether the user may delete this part.
@@ -44082,7 +44127,7 @@ extension Part$Typings on Part {
         this,
         'deletable',
       );
-  /* #20285
+  /* #20346
   source: 
     /**
      * Gets or sets whether the user may delete this part.
@@ -44099,7 +44144,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20294
+  /* #20355
   source: 
     /**
      * Gets or sets whether the user may do in-place text editing on TextBlocks in this part
@@ -44116,7 +44161,7 @@ extension Part$Typings on Part {
         this,
         'textEditable',
       );
-  /* #20294
+  /* #20355
   source: 
     /**
      * Gets or sets whether the user may do in-place text editing on TextBlocks in this part
@@ -44135,7 +44180,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20305
+  /* #20366
   source: 
     /**
      * Gets or sets whether the user may group this part to be a member of a new Group.
@@ -44157,7 +44202,7 @@ extension Part$Typings on Part {
         this,
         'groupable',
       );
-  /* #20305
+  /* #20366
   source: 
     /**
      * Gets or sets whether the user may group this part to be a member of a new Group.
@@ -44178,7 +44223,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20315
+  /* #20376
   source: 
     /**
      * Gets or sets whether the user may move this part.
@@ -44195,7 +44240,7 @@ extension Part$Typings on Part {
         this,
         'movable',
       );
-  /* #20315
+  /* #20376
   source: 
     /**
      * Gets or sets whether the user may move this part.
@@ -44215,7 +44260,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20323
+  /* #20384
   source: 
     /**
      * Gets or sets whether a selection adornment is shown for this part when it is selected.
@@ -44230,7 +44275,7 @@ extension Part$Typings on Part {
         this,
         'selectionAdorned',
       );
-  /* #20323
+  /* #20384
   source: 
     /**
      * Gets or sets whether a selection adornment is shown for this part when it is selected.
@@ -44248,7 +44293,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20333
+  /* #20394
   source: 
     /**
      * Gets or sets whether this Part is part of the document bounds.
@@ -44269,7 +44314,7 @@ extension Part$Typings on Part {
         this,
         'isInDocumentBounds',
       );
-  /* #20333
+  /* #20394
   source: 
     /**
      * Gets or sets whether this Part is part of the document bounds.
@@ -44289,7 +44334,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20351
+  /* #20412
   source: 
     /**
      * Gets or sets whether a Layout positions this Node or routes this Link.
@@ -44326,7 +44371,7 @@ extension Part$Typings on Part {
         this,
         'isLayoutPositioned',
       );
-  /* #20351
+  /* #20412
   source: 
     /**
      * Gets or sets whether a Layout positions this Node or routes this Link.
@@ -44354,7 +44399,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20367
+  /* #20428
   source: 
     /**
      * Gets or sets whether the user may select this part.
@@ -44381,7 +44426,7 @@ extension Part$Typings on Part {
         this,
         'selectable',
       );
-  /* #20367
+  /* #20428
   source: 
     /**
      * Gets or sets whether the user may select this part.
@@ -44407,7 +44452,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20375
+  /* #20436
   source: 
     /**
      * Gets or sets whether the user may reshape this part.
@@ -44422,7 +44467,7 @@ extension Part$Typings on Part {
         this,
         'reshapable',
       );
-  /* #20375
+  /* #20436
   source: 
     /**
      * Gets or sets whether the user may reshape this part.
@@ -44440,7 +44485,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20391
+  /* #20452
   source: 
     /**
      * Gets or sets whether the user may resize this part.
@@ -44469,7 +44514,7 @@ extension Part$Typings on Part {
         this,
         'resizable',
       );
-  /* #20391
+  /* #20452
   source: 
     /**
      * Gets or sets whether the user may resize this part.
@@ -44495,7 +44540,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20406
+  /* #20467
   source: 
     /**
      * Gets or sets whether the user may rotate this part.
@@ -44523,7 +44568,7 @@ extension Part$Typings on Part {
         this,
         'rotatable',
       );
-  /* #20406
+  /* #20467
   source: 
     /**
      * Gets or sets whether the user may rotate this part.
@@ -44548,7 +44593,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20425
+  /* #20486
   source: 
     /**
      * Gets or sets whether this Part is selected.
@@ -44582,7 +44627,7 @@ extension Part$Typings on Part {
         this,
         'isSelected',
       );
-  /* #20425
+  /* #20486
   source: 
     /**
      * Gets or sets whether this Part is selected.
@@ -44611,7 +44656,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20452
+  /* #20513
   source: 
     /**
      * Gets or sets whether this Part is highlighted.
@@ -44660,7 +44705,7 @@ extension Part$Typings on Part {
         this,
         'isHighlighted',
       );
-  /* #20452
+  /* #20513
   source: 
     /**
      * Gets or sets whether this Part is highlighted.
@@ -44697,7 +44742,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20478
+  /* #20539
   source: 
     /**
      * Gets or sets whether this part will draw shadows.
@@ -44746,7 +44791,7 @@ extension Part$Typings on Part {
         this,
         'isShadowed',
       );
-  /* #20478
+  /* #20539
   source: 
     /**
      * Gets or sets whether this part will draw shadows.
@@ -44782,7 +44827,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20485
+  /* #20546
   source: 
     /**
      * Gets or sets whether this part may be animated.
@@ -44796,7 +44841,7 @@ extension Part$Typings on Part {
         this,
         'isAnimated',
       );
-  /* #20485
+  /* #20546
   source: 
     /**
      * Gets or sets whether this part may be animated.
@@ -44813,7 +44858,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20498
+  /* #20559
   source: 
     /**
      * Gets or sets the function to execute when this #isHighlighted changes.
@@ -44838,7 +44883,7 @@ extension Part$Typings on Part {
         this,
         'highlightedChanged',
       );
-  /* #20498
+  /* #20559
   source: 
     /**
      * Gets or sets the function to execute when this #isHighlighted changes.
@@ -44852,16 +44897,16 @@ extension Part$Typings on Part {
      * @since 1.7
      */
     get highlightedChanged(): ((thisPart: Part) => void) | null; */
-  // Type InteropUnion#166768893(parent: InteropGetter#198837749(name: highlightedChanged))
+  // Type InteropUnion#680015224(parent: InteropGetter#353145072(name: highlightedChanged))
   set highlightedChanged(void Function(_i3.Part)? value) {
     _i5.setProperty(
       this,
       'highlightedChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #20510
+  /* #20571
   source: 
     /**
      * Gets or sets the name of the GraphObject that should get a selection handle
@@ -44884,7 +44929,7 @@ extension Part$Typings on Part {
         this,
         'selectionObjectName',
       );
-  /* #20510
+  /* #20571
   source: 
     /**
      * Gets or sets the name of the GraphObject that should get a selection handle
@@ -44906,7 +44951,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20524
+  /* #20585
   source: 
     /**
      * Gets or sets the Adornment template used to create a selection handle for this Part.
@@ -44933,7 +44978,7 @@ extension Part$Typings on Part {
         this,
         'selectionAdornmentTemplate',
       );
-  /* #20524
+  /* #20585
   source: 
     /**
      * Gets or sets the Adornment template used to create a selection handle for this Part.
@@ -44948,16 +44993,16 @@ extension Part$Typings on Part {
      * @see #selectionObjectName
      */
     get selectionAdornmentTemplate(): Adornment | null; */
-  // Type InteropUnion#715819508(parent: InteropGetter#637400436(name: selectionAdornmentTemplate))
+  // Type InteropUnion#80181875(parent: InteropGetter#141875203(name: selectionAdornmentTemplate))
   set selectionAdornmentTemplate(_i3.Adornment? value) {
     _i5.setProperty(
       this,
       'selectionAdornmentTemplate',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #20534
+  /* #20595
   source: 
     /**
      * This read-only property returns the GraphObject that should get a selection handle when this part is selected.
@@ -44976,7 +45021,7 @@ extension Part$Typings on Part {
         this,
         'selectionObject',
       );
-  /* #20534
+  /* #20595
   source: 
     /**
      * This read-only property returns the GraphObject that should get a selection handle when this part is selected.
@@ -44996,7 +45041,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20552
+  /* #20613
   source: 
     /**
      * Gets or sets the function to execute when this part is selected or deselected.
@@ -45032,7 +45077,7 @@ extension Part$Typings on Part {
         this,
         'selectionChanged',
       );
-  /* #20552
+  /* #20613
   source: 
     /**
      * Gets or sets the function to execute when this part is selected or deselected.
@@ -45052,16 +45097,16 @@ extension Part$Typings on Part {
      * @see #selectionAdornmentTemplate
      */
     get selectionChanged(): ((thisPart: Part) => void) | null; */
-  // Type InteropUnion#494226595(parent: InteropGetter#638563538(name: selectionChanged))
+  // Type InteropUnion#553438739(parent: InteropGetter#27793912(name: selectionChanged))
   set selectionChanged(void Function(_i3.Part)? value) {
     _i5.setProperty(
       this,
       'selectionChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #20564
+  /* #20625
   source: 
     /**
      * Gets or sets the adornment template used to create a resize handle Adornment for this part.
@@ -45083,7 +45128,7 @@ extension Part$Typings on Part {
         this,
         'resizeAdornmentTemplate',
       );
-  /* #20564
+  /* #20625
   source: 
     /**
      * Gets or sets the adornment template used to create a resize handle Adornment for this part.
@@ -45096,16 +45141,16 @@ extension Part$Typings on Part {
      * @see ResizingTool
      */
     get resizeAdornmentTemplate(): Adornment | null; */
-  // Type InteropUnion#881956473(parent: InteropGetter#887335491(name: resizeAdornmentTemplate))
+  // Type InteropUnion#231982794(parent: InteropGetter#258238172(name: resizeAdornmentTemplate))
   set resizeAdornmentTemplate(_i3.Adornment? value) {
     _i5.setProperty(
       this,
       'resizeAdornmentTemplate',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #20575
+  /* #20636
   source: 
     /**
      * Gets or sets the name of the GraphObject that should get a resize handle
@@ -45125,7 +45170,7 @@ extension Part$Typings on Part {
         this,
         'resizeObjectName',
       );
-  /* #20575
+  /* #20636
   source: 
     /**
      * Gets or sets the name of the GraphObject that should get a resize handle
@@ -45146,7 +45191,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20585
+  /* #20646
   source: 
     /**
      * This read-only property returns the GraphObject that should get resize handles when this part is selected.
@@ -45164,7 +45209,7 @@ extension Part$Typings on Part {
         this,
         'resizeObject',
       );
-  /* #20585
+  /* #20646
   source: 
     /**
      * This read-only property returns the GraphObject that should get resize handles when this part is selected.
@@ -45184,7 +45229,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20593
+  /* #20654
   source: 
     /**
      * Gets or sets the width and height multiples used when resizing.
@@ -45200,7 +45245,7 @@ extension Part$Typings on Part {
         this,
         'resizeCellSize',
       );
-  /* #20593
+  /* #20654
   source: 
     /**
      * Gets or sets the width and height multiples used when resizing.
@@ -45219,7 +45264,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20605
+  /* #20666
   source: 
     /**
      * Gets or sets the adornment template used to create a rotation handle Adornment for this part.
@@ -45241,7 +45286,7 @@ extension Part$Typings on Part {
         this,
         'rotateAdornmentTemplate',
       );
-  /* #20605
+  /* #20666
   source: 
     /**
      * Gets or sets the adornment template used to create a rotation handle Adornment for this part.
@@ -45254,16 +45299,16 @@ extension Part$Typings on Part {
      * @see RotatingTool
      */
     get rotateAdornmentTemplate(): Adornment | null; */
-  // Type InteropUnion#865010667(parent: InteropGetter#58665401(name: rotateAdornmentTemplate))
+  // Type InteropUnion#999951542(parent: InteropGetter#115353639(name: rotateAdornmentTemplate))
   set rotateAdornmentTemplate(_i3.Adornment? value) {
     _i5.setProperty(
       this,
       'rotateAdornmentTemplate',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #20616
+  /* #20677
   source: 
     /**
      * Gets or sets the name of the GraphObject that should get a rotate handle
@@ -45283,7 +45328,7 @@ extension Part$Typings on Part {
         this,
         'rotateObjectName',
       );
-  /* #20616
+  /* #20677
   source: 
     /**
      * Gets or sets the name of the GraphObject that should get a rotate handle
@@ -45304,7 +45349,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20626
+  /* #20687
   source: 
     /**
      * This read-only property returns the GraphObject that should get rotate handles when this part is selected.
@@ -45322,7 +45367,7 @@ extension Part$Typings on Part {
         this,
         'rotateObject',
       );
-  /* #20626
+  /* #20687
   source: 
     /**
      * This read-only property returns the GraphObject that should get rotate handles when this part is selected.
@@ -45342,7 +45387,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20643
+  /* #20704
   source: 
     /**
      * Gets or sets the spot on the #rotateObject
@@ -45376,7 +45421,7 @@ extension Part$Typings on Part {
         this,
         'rotationSpot',
       );
-  /* #20643
+  /* #20704
   source: 
     /**
      * Gets or sets the spot on the #rotateObject
@@ -45404,7 +45449,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20651
+  /* #20712
   source: 
     /**
      * Gets or sets a text string that is associated with this part.
@@ -45421,7 +45466,7 @@ extension Part$Typings on Part {
         this,
         'text',
       );
-  /* #20651
+  /* #20712
   source: 
     /**
      * Gets or sets a text string that is associated with this part.
@@ -45439,7 +45484,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20666
+  /* #20727
   source: 
     /**
      * Gets or sets the Group of which this Part or Node is a member.
@@ -45467,7 +45512,7 @@ extension Part$Typings on Part {
         this,
         'containingGroup',
       );
-  /* #20666
+  /* #20727
   source: 
     /**
      * Gets or sets the Group of which this Part or Node is a member.
@@ -45483,16 +45528,16 @@ extension Part$Typings on Part {
      * @see #isTopLevel
      */
     get containingGroup(): Group | null; */
-  // Type InteropUnion#646726305(parent: InteropGetter#213938023(name: containingGroup))
+  // Type InteropUnion#278095699(parent: InteropGetter#761524784(name: containingGroup))
   set containingGroup(_i3.Group? value) {
     _i5.setProperty(
       this,
       'containingGroup',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #20680
+  /* #20741
   source: 
     /**
      * Gets or sets the function that is called after this Part has changed which Group it belongs to, if any.
@@ -45525,7 +45570,7 @@ extension Part$Typings on Part {
         this,
         'containingGroupChanged',
       );
-  /* #20680
+  /* #20741
   source: 
     /**
      * Gets or sets the function that is called after this Part has changed which Group it belongs to, if any.
@@ -45540,7 +45585,7 @@ extension Part$Typings on Part {
      * The initial value is null -- no function is called.
      */
     get containingGroupChanged(): ((thisPart: Part, oldGroup: Group | null, newGroup: Group | null) => void) | null; */
-  // Type InteropUnion#720180782(parent: InteropGetter#525001918(name: containingGroupChanged))
+  // Type InteropUnion#763300115(parent: InteropGetter#254637799(name: containingGroupChanged))
   set containingGroupChanged(
       void Function(
         _i3.Part,
@@ -45550,11 +45595,11 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'containingGroupChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #20707
+  /* #20768
   source: 
     /**
      * This read-only property is true when this part is not member of any Group node
@@ -45569,7 +45614,7 @@ extension Part$Typings on Part {
         this,
         'isTopLevel',
       );
-  /* #20707
+  /* #20768
   source: 
     /**
      * This read-only property is true when this part is not member of any Group node
@@ -45587,7 +45632,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20750
+  /* #20811
   source: 
     /**
      * Gets or sets flags that control when the Layout that is responsible for this Part is invalidated.
@@ -45618,7 +45663,7 @@ extension Part$Typings on Part {
         this,
         'layoutConditions',
       );
-  /* #20750
+  /* #20811
   source: 
     /**
      * Gets or sets flags that control when the Layout that is responsible for this Part is invalidated.
@@ -45643,7 +45688,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20840
+  /* #20901
   source: 
     /**
      * Gets or sets the function used to determine the location that this Part can be dragged to.
@@ -45776,7 +45821,7 @@ extension Part$Typings on Part {
         this,
         'dragComputation',
       );
-  /* #20840
+  /* #20901
   source: 
     /**
      * Gets or sets the function used to determine the location that this Part can be dragged to.
@@ -45842,7 +45887,7 @@ extension Part$Typings on Part {
      * @see #minLocation
      */
     get dragComputation(): ((thisPart: Part, newLoc: Point, snappedLoc: Point) => Point) | null; */
-  // Type InteropUnion#676951310(parent: InteropGetter#567287051(name: dragComputation))
+  // Type InteropUnion#772975027(parent: InteropGetter#1057952584(name: dragComputation))
   set dragComputation(
       _i3.Point Function(
         _i3.Part,
@@ -45852,11 +45897,11 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'dragComputation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #20849
+  /* #20910
   source: 
     /**
      * Gets or sets the X and Y offset of this part's shadow. This is only relevant if #isShadowed is true.
@@ -45872,7 +45917,7 @@ extension Part$Typings on Part {
         this,
         'shadowOffset',
       );
-  /* #20849
+  /* #20910
   source: 
     /**
      * Gets or sets the X and Y offset of this part's shadow. This is only relevant if #isShadowed is true.
@@ -45891,7 +45936,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20862
+  /* #20923
   source: 
     /**
      * Gets or sets the CSS string that describes a shadow color. Default is 'gray'.
@@ -45915,7 +45960,7 @@ extension Part$Typings on Part {
         this,
         'shadowColor',
       );
-  /* #20862
+  /* #20923
   source: 
     /**
      * Gets or sets the CSS string that describes a shadow color. Default is 'gray'.
@@ -45938,7 +45983,7 @@ extension Part$Typings on Part {
     );
   }
 
-  /* #20874
+  /* #20935
   source: 
     /**
      * Gets or sets the numerical value that describes the shadow's blur. Number must be non-negative and non-infinity.
@@ -45960,7 +46005,7 @@ extension Part$Typings on Part {
         this,
         'shadowBlur',
       );
-  /* #20874
+  /* #20935
   source: 
     /**
      * Gets or sets the numerical value that describes the shadow's blur. Number must be non-negative and non-infinity.
@@ -45986,7 +46031,7 @@ extension Part$Typings on Part {
     _i5.callMethod(
       this,
       'updateTargetBindings',
-      [srcprop ?? _i4.undefined],
+      [srcprop ?? _i7.undefined],
     );
   }
 
@@ -46058,7 +46103,7 @@ extension Part$Typings on Part {
       'move',
       [
         newpos,
-        useLocation ?? _i4.undefined,
+        useLocation ?? _i7.undefined,
       ],
     );
   }
@@ -46074,7 +46119,7 @@ extension Part$Typings on Part {
       [
         newx,
         newy,
-        useLocation ?? _i4.undefined,
+        useLocation ?? _i7.undefined,
       ],
     );
   }
@@ -46087,7 +46132,7 @@ extension Part$Typings on Part {
   _i3.Rect getDocumentBounds([_i3.Rect? result]) => _i5.callMethod(
         this,
         'getDocumentBounds',
-        [result ?? _i4.undefined],
+        [result ?? _i7.undefined],
       );
   void ensureBounds() {
     _i5.callMethod(
@@ -46171,7 +46216,7 @@ extension Part$Typings on Part {
     _i5.callMethod(
       this,
       'invalidateLayout',
-      [condition ?? _i4.undefined],
+      [condition ?? _i7.undefined],
     );
   }
 }
@@ -46184,20 +46229,21 @@ class Adornment implements _i3.Part {
         [],
       );
 
-  factory Adornment.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory Adornment.$2([_i4.Partial<_i3.Adornment>? init]) =>
+      _i5.callConstructor(
         _declaredAdornment,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Adornment.$3([
     _i2.Object? type,
-    _i4.Partial? init,
+    _i4.Partial<_i3.Adornment>? init,
   ]) =>
       _i5.callConstructor(
         _declaredAdornment,
         [
-          type ?? _i4.undefined,
-          init ?? _i4.undefined,
+          type ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 }
@@ -46209,7 +46255,7 @@ FieldExternal:
 external _i2.Object _declaredAdornment;
 
 extension Adornment$Typings on Adornment {
-  /* #20956
+  /* #21017
   source: 
     /**
      * This read-only property returns a Placeholder that this Adornment may contain in its visual tree.
@@ -46222,23 +46268,23 @@ extension Adornment$Typings on Adornment {
         this,
         'placeholder',
       );
-  /* #20956
+  /* #21017
   source: 
     /**
      * This read-only property returns a Placeholder that this Adornment may contain in its visual tree.
      * This may be null if there is no such placeholder object.
      */
     get placeholder(): Placeholder | null; */
-  // Type InteropUnion#333757307(parent: InteropGetter#933675895(name: placeholder))
+  // Type InteropUnion#367799910(parent: InteropGetter#1051287155(name: placeholder))
   set placeholder(_i3.Placeholder? value) {
     _i5.setProperty(
       this,
       'placeholder',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #20962
+  /* #21023
   source: 
     /**
      * Gets or sets the GraphObject that is adorned.
@@ -46253,7 +46299,7 @@ extension Adornment$Typings on Adornment {
         this,
         'adornedObject',
       );
-  /* #20962
+  /* #21023
   source: 
     /**
      * Gets or sets the GraphObject that is adorned.
@@ -46261,16 +46307,16 @@ extension Adornment$Typings on Adornment {
      * This may be null if the Adornment does not adorn a particular object.
      */
     get adornedObject(): GraphObject | null; */
-  // Type InteropUnion#688985406(parent: InteropGetter#1039696120(name: adornedObject))
+  // Type InteropUnion#806609601(parent: InteropGetter#42572382(name: adornedObject))
   set adornedObject(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'adornedObject',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #20968
+  /* #21029
   source: 
     /**
      * This read-only property returns the Part that contains the adorned object.
@@ -46283,19 +46329,19 @@ extension Adornment$Typings on Adornment {
         this,
         'adornedPart',
       );
-  /* #20968
+  /* #21029
   source: 
     /**
      * This read-only property returns the Part that contains the adorned object.
      * This will be null if the #adornedObject is null.
      */
     get adornedPart(): Part | null; */
-  // Type InteropUnion#18160941(parent: InteropGetter#77841690(name: adornedPart))
+  // Type InteropUnion#961368703(parent: InteropGetter#1050083870(name: adornedPart))
   set adornedPart(_i3.Part? value) {
     _i5.setProperty(
       this,
       'adornedPart',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -46308,24 +46354,24 @@ class Node implements _i3.Part {
         [],
       );
 
-  factory Node.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory Node.$2([_i4.Partial<_i3.Node>? init]) => _i5.callConstructor(
         _declaredNode,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Node.$3([
     _i2.Object? type,
-    _i4.Partial? init,
+    _i4.Partial<_i3.Node>? init,
   ]) =>
       _i5.callConstructor(
         _declaredNode,
         [
-          type ?? _i4.undefined,
-          init ?? _i4.undefined,
+          type ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 
-  /* #21199
+  /* #21260
   source: 
     /**
      * This value for Node#portSpreading indicates that links connecting with a port
@@ -46339,7 +46385,7 @@ class Node implements _i3.Part {
         _declaredNode,
         'SpreadingNone',
       );
-  /* #21199
+  /* #21260
   source: 
     /**
      * This value for Node#portSpreading indicates that links connecting with a port
@@ -46356,7 +46402,7 @@ class Node implements _i3.Part {
     );
   }
 
-  /* #21205
+  /* #21266
   source: 
     /**
      * This default value for Node#portSpreading indicates that links connecting with a port
@@ -46370,7 +46416,7 @@ class Node implements _i3.Part {
         _declaredNode,
         'SpreadingEvenly',
       );
-  /* #21205
+  /* #21266
   source: 
     /**
      * This default value for Node#portSpreading indicates that links connecting with a port
@@ -46387,7 +46433,7 @@ class Node implements _i3.Part {
     );
   }
 
-  /* #21212
+  /* #21273
   source: 
     /**
      * This value for Node#portSpreading indicates that links connecting with a port
@@ -46403,7 +46449,7 @@ class Node implements _i3.Part {
         _declaredNode,
         'SpreadingPacked',
       );
-  /* #21212
+  /* #21273
   source: 
     /**
      * This value for Node#portSpreading indicates that links connecting with a port
@@ -46429,7 +46475,7 @@ FieldExternal:
 external _i2.Object _declaredNode;
 
 extension Node$Typings on Node {
-  /* #21235
+  /* #21296
   source: 
     /**
      * Gets or sets how link points are computed when the port spot is a "side" spot.
@@ -46447,7 +46493,7 @@ extension Node$Typings on Node {
         this,
         'portSpreading',
       );
-  /* #21235
+  /* #21296
   source: 
     /**
      * Gets or sets how link points are computed when the port spot is a "side" spot.
@@ -46466,7 +46512,7 @@ extension Node$Typings on Node {
     );
   }
 
-  /* #21243
+  /* #21304
   source: 
     /**
      * Gets or sets whether this Node is to be avoided by Links
@@ -46483,7 +46529,7 @@ extension Node$Typings on Node {
         this,
         'avoidable',
       );
-  /* #21243
+  /* #21304
   source: 
     /**
      * Gets or sets whether this Node is to be avoided by Links
@@ -46501,7 +46547,7 @@ extension Node$Typings on Node {
     );
   }
 
-  /* #21254
+  /* #21315
   source: 
     /**
      * Gets or sets the margin around this Node in which avoidable links will not be routed.
@@ -46524,7 +46570,7 @@ extension Node$Typings on Node {
         this,
         'avoidableMargin',
       );
-  /* #21254
+  /* #21315
   source: 
     /**
      * Gets or sets the margin around this Node in which avoidable links will not be routed.
@@ -46536,7 +46582,7 @@ extension Node$Typings on Node {
      * The default margin is Margin(2,2,2,2)
      */
     get avoidableMargin(): MarginLike; */
-  // Type InteropTypedef#88783230(name: MarginLike)
+  // Type InteropTypedef#1053273812(name: MarginLike)
   set avoidableMargin(_i3.MarginLike value) {
     _i5.setProperty(
       this,
@@ -46545,7 +46591,7 @@ extension Node$Typings on Node {
     );
   }
 
-  /* #21285
+  /* #21346
   source: 
     /**
      * This read-only property returns an iterator over all of the Links that are connected with this node.
@@ -46572,7 +46618,7 @@ extension Node$Typings on Node {
         this,
         'linksConnected',
       );
-  /* #21285
+  /* #21346
   source: 
     /**
      * This read-only property returns an iterator over all of the Links that are connected with this node.
@@ -46595,7 +46641,7 @@ extension Node$Typings on Node {
     );
   }
 
-  /* #21376
+  /* #21437
   source: 
     /**
      * Gets or sets the function that is called after a Link has been connected with this Node.
@@ -46632,7 +46678,7 @@ extension Node$Typings on Node {
         this,
         'linkConnected',
       );
-  /* #21376
+  /* #21437
   source: 
     /**
      * Gets or sets the function that is called after a Link has been connected with this Node.
@@ -46649,7 +46695,7 @@ extension Node$Typings on Node {
      * The default value is null -- no function is called.
      */
     get linkConnected(): ((thisNode: Node, newLink: Link, thisPort: GraphObject) => void) | null; */
-  // Type InteropUnion#870377079(parent: InteropGetter#178611226(name: linkConnected))
+  // Type InteropUnion#104113009(parent: InteropGetter#138813628(name: linkConnected))
   set linkConnected(
       void Function(
         _i3.Node,
@@ -46659,11 +46705,11 @@ extension Node$Typings on Node {
     _i5.setProperty(
       this,
       'linkConnected',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #21392
+  /* #21453
   source: 
     /**
      * Gets or sets the function that is called after a Link has been disconnected from this Node.
@@ -46700,7 +46746,7 @@ extension Node$Typings on Node {
         this,
         'linkDisconnected',
       );
-  /* #21392
+  /* #21453
   source: 
     /**
      * Gets or sets the function that is called after a Link has been disconnected from this Node.
@@ -46717,7 +46763,7 @@ extension Node$Typings on Node {
      * The default value is null -- no function is called.
      */
     get linkDisconnected(): ((thisNode: Node, oldLink: Link, thisPort: GraphObject) => void) | null; */
-  // Type InteropUnion#800052346(parent: InteropGetter#45793116(name: linkDisconnected))
+  // Type InteropUnion#1072369396(parent: InteropGetter#471763089(name: linkDisconnected))
   set linkDisconnected(
       void Function(
         _i3.Node,
@@ -46727,11 +46773,11 @@ extension Node$Typings on Node {
     _i5.setProperty(
       this,
       'linkDisconnected',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #21411
+  /* #21472
   source: 
     /**
      * Gets or sets a predicate that determines whether or not a Link may be connected with this node.
@@ -46775,7 +46821,7 @@ extension Node$Typings on Node {
         this,
         'linkValidation',
       );
-  /* #21411
+  /* #21472
   source: 
     /**
      * Gets or sets a predicate that determines whether or not a Link may be connected with this node.
@@ -46795,7 +46841,7 @@ extension Node$Typings on Node {
      * @since 1.3
      */
     get linkValidation(): ((fromNode: Node, fromPort: GraphObject, toNode: Node, toPort: GraphObject, link: Link) => boolean) | null; */
-  // Type InteropUnion#693380(parent: InteropGetter#884035778(name: linkValidation))
+  // Type InteropUnion#523711768(parent: InteropGetter#1042806352(name: linkValidation))
   set linkValidation(
       _i2.bool Function(
         _i3.Node,
@@ -46807,11 +46853,11 @@ extension Node$Typings on Node {
     _i5.setProperty(
       this,
       'linkValidation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #21419
+  /* #21480
   source: 
     /**
      * This read-only property is true when this Node is a label node for a Link.
@@ -46827,7 +46873,7 @@ extension Node$Typings on Node {
         this,
         'isLinkLabel',
       );
-  /* #21419
+  /* #21480
   source: 
     /**
      * This read-only property is true when this Node is a label node for a Link.
@@ -46845,7 +46891,7 @@ extension Node$Typings on Node {
     );
   }
 
-  /* #21427
+  /* #21488
   source: 
     /**
      * Gets or sets the Link for which this Node is acting as a smart label.
@@ -46863,7 +46909,7 @@ extension Node$Typings on Node {
         this,
         'labeledLink',
       );
-  /* #21427
+  /* #21488
   source: 
     /**
      * Gets or sets the Link for which this Node is acting as a smart label.
@@ -46873,16 +46919,16 @@ extension Node$Typings on Node {
      * @see #isLinkLabel
      */
     get labeledLink(): Link | null; */
-  // Type InteropUnion#624772557(parent: InteropGetter#948711802(name: labeledLink))
+  // Type InteropUnion#1036753770(parent: InteropGetter#792461704(name: labeledLink))
   set labeledLink(_i3.Link? value) {
     _i5.setProperty(
       this,
       'labeledLink',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #21443
+  /* #21504
   source: 
     /**
      * This read-only property returns the primary GraphObject representing a port in this node.
@@ -46897,7 +46943,7 @@ extension Node$Typings on Node {
         this,
         'port',
       );
-  /* #21443
+  /* #21504
   source: 
     /**
      * This read-only property returns the primary GraphObject representing a port in this node.
@@ -46914,7 +46960,7 @@ extension Node$Typings on Node {
     );
   }
 
-  /* #21447
+  /* #21508
   source: 
     /**
      * This read-only property returns an iterator over all of the GraphObjects in this node that act as ports.
@@ -46925,7 +46971,7 @@ extension Node$Typings on Node {
         this,
         'ports',
       );
-  /* #21447
+  /* #21508
   source: 
     /**
      * This read-only property returns an iterator over all of the GraphObjects in this node that act as ports.
@@ -46940,7 +46986,7 @@ extension Node$Typings on Node {
     );
   }
 
-  /* #21669
+  /* #21730
   source: 
     /**
      * Gets or sets whether the subtree graph starting at this node is expanded.
@@ -46963,7 +47009,7 @@ extension Node$Typings on Node {
         this,
         'isTreeExpanded',
       );
-  /* #21669
+  /* #21730
   source: 
     /**
      * Gets or sets whether the subtree graph starting at this node is expanded.
@@ -46984,7 +47030,7 @@ extension Node$Typings on Node {
     );
   }
 
-  /* #21677
+  /* #21738
   source: 
     /**
      * Gets or sets whether the subtree graph starting at this node
@@ -47000,7 +47046,7 @@ extension Node$Typings on Node {
         this,
         'wasTreeExpanded',
       );
-  /* #21677
+  /* #21738
   source: 
     /**
      * Gets or sets whether the subtree graph starting at this node
@@ -47018,7 +47064,7 @@ extension Node$Typings on Node {
     );
   }
 
-  /* #21688
+  /* #21749
   source: 
     /**
      * Gets or sets the function that is called when #isTreeExpanded has changed value.
@@ -47041,7 +47087,7 @@ extension Node$Typings on Node {
         this,
         'treeExpandedChanged',
       );
-  /* #21688
+  /* #21749
   source: 
     /**
      * Gets or sets the function that is called when #isTreeExpanded has changed value.
@@ -47053,16 +47099,16 @@ extension Node$Typings on Node {
      * The default value is null -- no function is called.
      */
     get treeExpandedChanged(): ((thisNode: Node) => void) | null; */
-  // Type InteropUnion#50586510(parent: InteropGetter#155070913(name: treeExpandedChanged))
+  // Type InteropUnion#994962806(parent: InteropGetter#377712717(name: treeExpandedChanged))
   set treeExpandedChanged(void Function(_i3.Node)? value) {
     _i5.setProperty(
       this,
       'treeExpandedChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #21698
+  /* #21759
   source: 
     /**
      * Gets whether this node has no tree children.
@@ -47083,7 +47129,7 @@ extension Node$Typings on Node {
         this,
         'isTreeLeaf',
       );
-  /* #21698
+  /* #21759
   source: 
     /**
      * Gets whether this node has no tree children.
@@ -47113,8 +47159,8 @@ extension Node$Typings on Node {
       'invalidateLinkBundle',
       [
         other,
-        thisportid ?? _i4.undefined,
-        otherportid ?? _i4.undefined,
+        thisportid ?? _i7.undefined,
+        otherportid ?? _i7.undefined,
       ],
     );
   }
@@ -47123,7 +47169,7 @@ extension Node$Typings on Node {
     _i5.callMethod(
       this,
       'invalidateConnectedLinks',
-      [ignore ?? _i4.undefined],
+      [ignore ?? _i7.undefined],
     );
   }
 
@@ -47146,33 +47192,33 @@ extension Node$Typings on Node {
       _i5.callMethod(
         this,
         'findLinksConnected',
-        [pid ?? _i4.undefined],
+        [pid ?? _i7.undefined],
       );
   _i3.Iterator<_i3.Link> findLinksOutOf([_i2.String? pid]) => _i5.callMethod(
         this,
         'findLinksOutOf',
-        [pid ?? _i4.undefined],
+        [pid ?? _i7.undefined],
       );
   _i3.Iterator<_i3.Link> findLinksInto([_i2.String? pid]) => _i5.callMethod(
         this,
         'findLinksInto',
-        [pid ?? _i4.undefined],
+        [pid ?? _i7.undefined],
       );
   _i3.Iterator<_i3.Node> findNodesConnected([_i2.String? pid]) =>
       _i5.callMethod(
         this,
         'findNodesConnected',
-        [pid ?? _i4.undefined],
+        [pid ?? _i7.undefined],
       );
   _i3.Iterator<_i3.Node> findNodesOutOf([_i2.String? pid]) => _i5.callMethod(
         this,
         'findNodesOutOf',
-        [pid ?? _i4.undefined],
+        [pid ?? _i7.undefined],
       );
   _i3.Iterator<_i3.Node> findNodesInto([_i2.String? pid]) => _i5.callMethod(
         this,
         'findNodesInto',
-        [pid ?? _i4.undefined],
+        [pid ?? _i7.undefined],
       );
   _i3.Iterator<_i3.Link> findLinksBetween(
     _i3.Node othernode, [
@@ -47184,8 +47230,8 @@ extension Node$Typings on Node {
         'findLinksBetween',
         [
           othernode,
-          pid ?? _i4.undefined,
-          otherpid ?? _i4.undefined,
+          pid ?? _i7.undefined,
+          otherpid ?? _i7.undefined,
         ],
       );
   _i3.Iterator<_i3.Link> findLinksTo(
@@ -47198,8 +47244,8 @@ extension Node$Typings on Node {
         'findLinksTo',
         [
           othernode,
-          pid ?? _i4.undefined,
-          otherpid ?? _i4.undefined,
+          pid ?? _i7.undefined,
+          otherpid ?? _i7.undefined,
         ],
       );
   _i3.GraphObject findPort(_i2.String pid) => _i5.callMethod(
@@ -47255,13 +47301,13 @@ extension Node$Typings on Node {
   _i3.Set<_i3.Part> findTreeParts([_i2.num? level]) => _i5.callMethod(
         this,
         'findTreeParts',
-        [level ?? _i4.undefined],
+        [level ?? _i7.undefined],
       );
   void collapseTree([_i2.num? level]) {
     _i5.callMethod(
       this,
       'collapseTree',
-      [level ?? _i4.undefined],
+      [level ?? _i7.undefined],
     );
   }
 
@@ -47269,7 +47315,7 @@ extension Node$Typings on Node {
     _i5.callMethod(
       this,
       'expandTree',
-      [level ?? _i4.undefined],
+      [level ?? _i7.undefined],
     );
   }
 }
@@ -47282,20 +47328,20 @@ class Group implements _i3.Node {
         [],
       );
 
-  factory Group.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory Group.$2([_i4.Partial<_i3.Group>? init]) => _i5.callConstructor(
         _declaredGroup,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Group.$3([
     _i2.Object? type,
-    _i4.Partial? init,
+    _i4.Partial<_i3.Group>? init,
   ]) =>
       _i5.callConstructor(
         _declaredGroup,
         [
-          type ?? _i4.undefined,
-          init ?? _i4.undefined,
+          type ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 }
@@ -47307,7 +47353,7 @@ FieldExternal:
 external _i2.Object _declaredGroup;
 
 extension Group$Typings on Group {
-  /* #21848
+  /* #21909
   source: 
     /**
      * This read-only property returns a Placeholder that this group may contain in its visual tree.
@@ -47318,22 +47364,22 @@ extension Group$Typings on Group {
         this,
         'placeholder',
       );
-  /* #21848
+  /* #21909
   source: 
     /**
      * This read-only property returns a Placeholder that this group may contain in its visual tree.
      */
     get placeholder(): Placeholder | null; */
-  // Type InteropUnion#137495663(parent: InteropGetter#931751028(name: placeholder))
+  // Type InteropUnion#7338628(parent: InteropGetter#566343578(name: placeholder))
   set placeholder(_i3.Placeholder? value) {
     _i5.setProperty(
       this,
       'placeholder',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #21859
+  /* #21920
   source: 
     /**
      * Gets or sets whether the size of the area of the Group's #placeholder
@@ -47358,7 +47404,7 @@ extension Group$Typings on Group {
         this,
         'computesBoundsAfterDrag',
       );
-  /* #21859
+  /* #21920
   source: 
     /**
      * Gets or sets whether the size of the area of the Group's #placeholder
@@ -47380,7 +47426,7 @@ extension Group$Typings on Group {
     );
   }
 
-  /* #21866
+  /* #21927
   source: 
     /**
      * Gets or sets whether a #placeholder's bounds includes the bounds of member Links.
@@ -47395,7 +47441,7 @@ extension Group$Typings on Group {
         this,
         'computesBoundsIncludingLinks',
       );
-  /* #21866
+  /* #21927
   source: 
     /**
      * Gets or sets whether a #placeholder's bounds includes the bounds of member Links.
@@ -47412,7 +47458,7 @@ extension Group$Typings on Group {
     );
   }
 
-  /* #21872
+  /* #21933
   source: 
     /**
      * Gets or sets whether a #placeholder's bounds includes the previous Group.location.
@@ -47425,7 +47471,7 @@ extension Group$Typings on Group {
         this,
         'computesBoundsIncludingLocation',
       );
-  /* #21872
+  /* #21933
   source: 
     /**
      * Gets or sets whether a #placeholder's bounds includes the previous Group.location.
@@ -47441,7 +47487,7 @@ extension Group$Typings on Group {
     );
   }
 
-  /* #21884
+  /* #21945
   source: 
     /**
      * Gets or sets whether drag-and-drop events may be bubbled up to this Group if not handled by member Parts.
@@ -47465,7 +47511,7 @@ extension Group$Typings on Group {
         this,
         'handlesDragDropForMembers',
       );
-  /* #21884
+  /* #21945
   source: 
     /**
      * Gets or sets whether drag-and-drop events may be bubbled up to this Group if not handled by member Parts.
@@ -47487,7 +47533,7 @@ extension Group$Typings on Group {
     );
   }
 
-  /* #21894
+  /* #21955
   source: 
     /**
      * This read-only property returns an iterator over the member Parts of this Group.
@@ -47508,7 +47554,7 @@ extension Group$Typings on Group {
         this,
         'memberParts',
       );
-  /* #21894
+  /* #21955
   source: 
     /**
      * This read-only property returns an iterator over the member Parts of this Group.
@@ -47528,7 +47574,7 @@ extension Group$Typings on Group {
     );
   }
 
-  /* #21902
+  /* #21963
   source: 
     /**
      * Gets or sets the Layout used to position all of the immediate member nodes and links in this group.
@@ -47547,7 +47593,7 @@ extension Group$Typings on Group {
         this,
         'layout',
       );
-  /* #21902
+  /* #21963
   source: 
     /**
      * Gets or sets the Layout used to position all of the immediate member nodes and links in this group.
@@ -47557,16 +47603,16 @@ extension Group$Typings on Group {
      * A group layout must not be shared with any Diagram#layout.
      */
     get layout(): Layout | null; */
-  // Type InteropUnion#777502455(parent: InteropGetter#7341178(name: layout))
+  // Type InteropUnion#160797590(parent: InteropGetter#260458411(name: layout))
   set layout(_i3.Layout? value) {
     _i5.setProperty(
       this,
       'layout',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #21915
+  /* #21976
   source: 
     /**
      * Gets or sets the function that is called after a member Part has been added to this Group.
@@ -47596,7 +47642,7 @@ extension Group$Typings on Group {
         this,
         'memberAdded',
       );
-  /* #21915
+  /* #21976
   source: 
     /**
      * Gets or sets the function that is called after a member Part has been added to this Group.
@@ -47610,7 +47656,7 @@ extension Group$Typings on Group {
      * The default value is null -- no function is called.
      */
     get memberAdded(): ((thisGroup: Group, newPart: Part) => void) | null; */
-  // Type InteropUnion#941570962(parent: InteropGetter#560846828(name: memberAdded))
+  // Type InteropUnion#1020481169(parent: InteropGetter#1038973676(name: memberAdded))
   set memberAdded(
       void Function(
         _i3.Group,
@@ -47619,11 +47665,11 @@ extension Group$Typings on Group {
     _i5.setProperty(
       this,
       'memberAdded',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #21928
+  /* #21989
   source: 
     /**
      * Gets or sets the function that is called after a member Part has been removed from this Group.
@@ -47653,7 +47699,7 @@ extension Group$Typings on Group {
         this,
         'memberRemoved',
       );
-  /* #21928
+  /* #21989
   source: 
     /**
      * Gets or sets the function that is called after a member Part has been removed from this Group.
@@ -47667,7 +47713,7 @@ extension Group$Typings on Group {
      * The default value is null -- no function is called.
      */
     get memberRemoved(): ((thisGroup: Group, oldPart: Part) => void) | null; */
-  // Type InteropUnion#347138287(parent: InteropGetter#904038594(name: memberRemoved))
+  // Type InteropUnion#865060773(parent: InteropGetter#801478999(name: memberRemoved))
   set memberRemoved(
       void Function(
         _i3.Group,
@@ -47676,11 +47722,11 @@ extension Group$Typings on Group {
     _i5.setProperty(
       this,
       'memberRemoved',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #21940
+  /* #22001
   source: 
     /**
      * Gets or sets the predicate that determines whether or not a Part may become a member of this group.
@@ -47708,7 +47754,7 @@ extension Group$Typings on Group {
         this,
         'memberValidation',
       );
-  /* #21940
+  /* #22001
   source: 
     /**
      * Gets or sets the predicate that determines whether or not a Part may become a member of this group.
@@ -47721,7 +47767,7 @@ extension Group$Typings on Group {
      * The function, if supplied, must not have any side-effects.
      */
     get memberValidation(): ((thisGroup: Group, part: Part) => boolean) | null; */
-  // Type InteropUnion#523884695(parent: InteropGetter#883365182(name: memberValidation))
+  // Type InteropUnion#950787384(parent: InteropGetter#638449747(name: memberValidation))
   set memberValidation(
       _i2.bool Function(
         _i3.Group,
@@ -47730,11 +47776,11 @@ extension Group$Typings on Group {
     _i5.setProperty(
       this,
       'memberValidation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #21979
+  /* #22040
   source: 
     /**
      * Gets or sets whether the user may ungroup this group.
@@ -47748,7 +47794,7 @@ extension Group$Typings on Group {
         this,
         'ungroupable',
       );
-  /* #21979
+  /* #22040
   source: 
     /**
      * Gets or sets whether the user may ungroup this group.
@@ -47765,7 +47811,7 @@ extension Group$Typings on Group {
     );
   }
 
-  /* #22066
+  /* #22127
   source: 
     /**
      * Gets or sets whether the subgraph contained by this group is expanded.
@@ -47788,7 +47834,7 @@ extension Group$Typings on Group {
         this,
         'isSubGraphExpanded',
       );
-  /* #22066
+  /* #22127
   source: 
     /**
      * Gets or sets whether the subgraph contained by this group is expanded.
@@ -47809,7 +47855,7 @@ extension Group$Typings on Group {
     );
   }
 
-  /* #22074
+  /* #22135
   source: 
     /**
      * Gets or sets whether the subgraph starting at this group
@@ -47825,7 +47871,7 @@ extension Group$Typings on Group {
         this,
         'wasSubGraphExpanded',
       );
-  /* #22074
+  /* #22135
   source: 
     /**
      * Gets or sets whether the subgraph starting at this group
@@ -47843,7 +47889,7 @@ extension Group$Typings on Group {
     );
   }
 
-  /* #22085
+  /* #22146
   source: 
     /**
      * Gets or sets the function that is called when #isSubGraphExpanded has changed value.
@@ -47866,7 +47912,7 @@ extension Group$Typings on Group {
         this,
         'subGraphExpandedChanged',
       );
-  /* #22085
+  /* #22146
   source: 
     /**
      * Gets or sets the function that is called when #isSubGraphExpanded has changed value.
@@ -47878,12 +47924,12 @@ extension Group$Typings on Group {
      * The default value is null -- no function is called.
      */
     get subGraphExpandedChanged(): ((thisGroup: Group) => void) | null; */
-  // Type InteropUnion#90280007(parent: InteropGetter#53746585(name: subGraphExpandedChanged))
+  // Type InteropUnion#286956119(parent: InteropGetter#775513979(name: subGraphExpandedChanged))
   set subGraphExpandedChanged(void Function(_i3.Group)? value) {
     _i5.setProperty(
       this,
       'subGraphExpandedChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -47901,7 +47947,7 @@ extension Group$Typings on Group {
         'addMembers',
         [
           coll,
-          check ?? _i4.undefined,
+          check ?? _i7.undefined,
         ],
       );
   _i2.bool canUngroup() => _i5.callMethod(
@@ -47949,7 +47995,7 @@ extension Group$Typings on Group {
       'move',
       [
         newpos,
-        useLocation ?? _i4.undefined,
+        useLocation ?? _i7.undefined,
       ],
     );
   }
@@ -47958,9 +48004,10 @@ extension Group$Typings on Group {
 @_i1.JS()
 @_i1.staticInterop
 class Placeholder implements _i3.GraphObject {
-  factory Placeholder([_i4.Partial? init]) => _i5.callConstructor(
+  factory Placeholder([_i4.Partial<_i3.Placeholder>? init]) =>
+      _i5.callConstructor(
         _declaredPlaceholder,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 }
 
@@ -47971,7 +48018,7 @@ FieldExternal:
 external _i2.Object _declaredPlaceholder;
 
 extension Placeholder$Typings on Placeholder {
-  /* #22144
+  /* #22205
   source: 
     /**
      * Gets or sets the padding around the members of the Group or around the Adornment#adornedObject GraphObject.
@@ -47984,14 +48031,14 @@ extension Placeholder$Typings on Placeholder {
         this,
         'padding',
       );
-  /* #22144
+  /* #22205
   source: 
     /**
      * Gets or sets the padding around the members of the Group or around the Adornment#adornedObject GraphObject.
      * The initial value is a Margin of zero on all sides.
      */
     get padding(): MarginLike; */
-  // Type InteropTypedef#88783230(name: MarginLike)
+  // Type InteropTypedef#1053273812(name: MarginLike)
   set padding(_i3.MarginLike value) {
     _i5.setProperty(
       this,
@@ -48015,12 +48062,12 @@ extension Placeholder$Typings on Placeholder {
 @_i1.JS()
 @_i1.staticInterop
 class Link implements _i3.Part {
-  factory Link([_i4.Partial? init]) => _i5.callConstructor(
+  factory Link([_i4.Partial<_i3.Link>? init]) => _i5.callConstructor(
         _declaredLink,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
-  /* #22309
+  /* #22370
   source: 
     /**
      * Used as the default value for Link#routing:
@@ -48034,7 +48081,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'Normal',
       );
-  /* #22309
+  /* #22370
   source: 
     /**
      * Used as the default value for Link#routing:
@@ -48051,7 +48098,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22315
+  /* #22376
   source: 
     /**
      * Used as a value for Link#routing:
@@ -48065,7 +48112,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'Orthogonal',
       );
-  /* #22315
+  /* #22376
   source: 
     /**
      * Used as a value for Link#routing:
@@ -48082,7 +48129,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22321
+  /* #22382
   source: 
     /**
      * Used as a value for Link#routing:
@@ -48096,7 +48143,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'AvoidsNodes',
       );
-  /* #22321
+  /* #22382
   source: 
     /**
      * Used as a value for Link#routing:
@@ -48113,7 +48160,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22330
+  /* #22391
   source: 
     /**
      * This is the default value for Link#curve and Link#adjusting,
@@ -48133,7 +48180,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'None',
       );
-  /* #22330
+  /* #22391
   source: 
     /**
      * This is the default value for Link#curve and Link#adjusting,
@@ -48153,7 +48200,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22336
+  /* #22397
   source: 
     /**
      * Used as a value for Link#curve, to indicate that
@@ -48167,7 +48214,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'Bezier',
       );
-  /* #22336
+  /* #22397
   source: 
     /**
      * Used as a value for Link#curve, to indicate that
@@ -48184,7 +48231,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22343
+  /* #22404
   source: 
     /**
      * Used as a value for Link#curve, to indicate that
@@ -48200,7 +48247,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'JumpGap',
       );
-  /* #22343
+  /* #22404
   source: 
     /**
      * Used as a value for Link#curve, to indicate that
@@ -48218,7 +48265,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22350
+  /* #22411
   source: 
     /**
      * Used as a value for Link#curve, to indicate that
@@ -48234,7 +48281,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'JumpOver',
       );
-  /* #22350
+  /* #22411
   source: 
     /**
      * Used as a value for Link#curve, to indicate that
@@ -48252,7 +48299,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22358
+  /* #22419
   source: 
     /**
      * Used as a value for Link#adjusting,
@@ -48270,7 +48317,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'End',
       );
-  /* #22358
+  /* #22419
   source: 
     /**
      * Used as a value for Link#adjusting,
@@ -48289,7 +48336,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22366
+  /* #22427
   source: 
     /**
      * Used as a value for Link#adjusting,
@@ -48307,7 +48354,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'Scale',
       );
-  /* #22366
+  /* #22427
   source: 
     /**
      * Used as a value for Link#adjusting,
@@ -48326,7 +48373,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22374
+  /* #22435
   source: 
     /**
      * Used as a value for Link#adjusting,
@@ -48344,7 +48391,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'Stretch',
       );
-  /* #22374
+  /* #22435
   source: 
     /**
      * Used as a value for Link#adjusting,
@@ -48363,7 +48410,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22383
+  /* #22444
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48383,7 +48430,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'OrientAlong',
       );
-  /* #22383
+  /* #22444
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48403,7 +48450,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22391
+  /* #22452
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48421,7 +48468,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'OrientPlus90',
       );
-  /* #22391
+  /* #22452
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48440,7 +48487,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22399
+  /* #22460
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48458,7 +48505,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'OrientMinus90',
       );
-  /* #22399
+  /* #22460
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48477,7 +48524,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22406
+  /* #22467
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48493,7 +48540,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'OrientOpposite',
       );
-  /* #22406
+  /* #22467
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48511,7 +48558,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22415
+  /* #22476
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48531,7 +48578,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'OrientUpright',
       );
-  /* #22415
+  /* #22476
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48551,7 +48598,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22424
+  /* #22485
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48571,7 +48618,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'OrientPlus90Upright',
       );
-  /* #22424
+  /* #22485
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48591,7 +48638,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22433
+  /* #22494
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48611,7 +48658,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'OrientMinus90Upright',
       );
-  /* #22433
+  /* #22494
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48631,7 +48678,7 @@ class Link implements _i3.Part {
     );
   }
 
-  /* #22444
+  /* #22505
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48655,7 +48702,7 @@ class Link implements _i3.Part {
         _declaredLink,
         'OrientUpright45',
       );
-  /* #22444
+  /* #22505
   source: 
     /**
      * This value for GraphObject#segmentOrientation results in
@@ -48685,7 +48732,7 @@ FieldExternal:
 external _i2.Object _declaredLink;
 
 extension Link$Typings on Link {
-  /* #22452
+  /* #22513
   source: 
     /**
      * Gets or sets the Node that this link comes from.
@@ -48704,7 +48751,7 @@ extension Link$Typings on Link {
         this,
         'fromNode',
       );
-  /* #22452
+  /* #22513
   source: 
     /**
      * Gets or sets the Node that this link comes from.
@@ -48714,16 +48761,16 @@ extension Link$Typings on Link {
      * A template should not be connected with any node.
      */
     get fromNode(): Node | null; */
-  // Type InteropUnion#474022(parent: InteropGetter#857142479(name: fromNode))
+  // Type InteropUnion#259949063(parent: InteropGetter#98273415(name: fromNode))
   set fromNode(_i3.Node? value) {
     _i5.setProperty(
       this,
       'fromNode',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #22458
+  /* #22519
   source: 
     /**
      * Gets or sets the identifier of the port that this link comes from.
@@ -48736,7 +48783,7 @@ extension Link$Typings on Link {
         this,
         'fromPortId',
       );
-  /* #22458
+  /* #22519
   source: 
     /**
      * Gets or sets the identifier of the port that this link comes from.
@@ -48752,7 +48799,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22467
+  /* #22528
   source: 
     /**
      * This read-only property returns a GraphObject that is the "from" port that this link is connected from.
@@ -48771,7 +48818,7 @@ extension Link$Typings on Link {
         this,
         'fromPort',
       );
-  /* #22467
+  /* #22528
   source: 
     /**
      * This read-only property returns a GraphObject that is the "from" port that this link is connected from.
@@ -48781,16 +48828,16 @@ extension Link$Typings on Link {
      * This method may return null.
      */
     get fromPort(): GraphObject | null; */
-  // Type InteropUnion#862136285(parent: InteropGetter#868102306(name: fromPort))
+  // Type InteropUnion#828970160(parent: InteropGetter#630860683(name: fromPort))
   set fromPort(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'fromPort',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #22479
+  /* #22540
   source: 
     /**
      * Gets or sets the function that is called after this Link changes which Node or port it connects from.
@@ -48821,7 +48868,7 @@ extension Link$Typings on Link {
         this,
         'fromPortChanged',
       );
-  /* #22479
+  /* #22540
   source: 
     /**
      * Gets or sets the function that is called after this Link changes which Node or port it connects from.
@@ -48835,7 +48882,7 @@ extension Link$Typings on Link {
      * The default value is null -- no function is called.
      */
     get fromPortChanged(): ((thisLink: Link, oldPort: GraphObject | null, newPort: GraphObject | null) => void) | null; */
-  // Type InteropUnion#322659706(parent: InteropGetter#741303307(name: fromPortChanged))
+  // Type InteropUnion#240963297(parent: InteropGetter#269425118(name: fromPortChanged))
   set fromPortChanged(
       void Function(
         _i3.Link,
@@ -48845,11 +48892,11 @@ extension Link$Typings on Link {
     _i5.setProperty(
       this,
       'fromPortChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #22488
+  /* #22549
   source: 
     /**
      * Gets or sets the Node that this link goes to.
@@ -48868,7 +48915,7 @@ extension Link$Typings on Link {
         this,
         'toNode',
       );
-  /* #22488
+  /* #22549
   source: 
     /**
      * Gets or sets the Node that this link goes to.
@@ -48878,16 +48925,16 @@ extension Link$Typings on Link {
      * A template should not be connected with any node.
      */
     get toNode(): Node | null; */
-  // Type InteropUnion#139897042(parent: InteropGetter#938876855(name: toNode))
+  // Type InteropUnion#641635091(parent: InteropGetter#66055397(name: toNode))
   set toNode(_i3.Node? value) {
     _i5.setProperty(
       this,
       'toNode',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #22494
+  /* #22555
   source: 
     /**
      * Gets or sets the identifier of the port that this link goes to.
@@ -48900,7 +48947,7 @@ extension Link$Typings on Link {
         this,
         'toPortId',
       );
-  /* #22494
+  /* #22555
   source: 
     /**
      * Gets or sets the identifier of the port that this link goes to.
@@ -48916,7 +48963,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22503
+  /* #22564
   source: 
     /**
      * This read-only property returns a GraphObject that is the "to" port that this link is connected to.
@@ -48935,7 +48982,7 @@ extension Link$Typings on Link {
         this,
         'toPort',
       );
-  /* #22503
+  /* #22564
   source: 
     /**
      * This read-only property returns a GraphObject that is the "to" port that this link is connected to.
@@ -48945,16 +48992,16 @@ extension Link$Typings on Link {
      * This method may return null.
      */
     get toPort(): GraphObject | null; */
-  // Type InteropUnion#870547951(parent: InteropGetter#467715645(name: toPort))
+  // Type InteropUnion#117257730(parent: InteropGetter#333251652(name: toPort))
   set toPort(_i3.GraphObject? value) {
     _i5.setProperty(
       this,
       'toPort',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #22515
+  /* #22576
   source: 
     /**
      * Gets or sets the function that is called after this Link changes which Node or port it connects to.
@@ -48985,7 +49032,7 @@ extension Link$Typings on Link {
         this,
         'toPortChanged',
       );
-  /* #22515
+  /* #22576
   source: 
     /**
      * Gets or sets the function that is called after this Link changes which Node or port it connects to.
@@ -48999,7 +49046,7 @@ extension Link$Typings on Link {
      * The default value is null -- no function is called.
      */
     get toPortChanged(): ((thisLink: Link, oldPort: GraphObject | null, newPort: GraphObject) => void) | null; */
-  // Type InteropUnion#648120684(parent: InteropGetter#78625088(name: toPortChanged))
+  // Type InteropUnion#1058648407(parent: InteropGetter#742796568(name: toPortChanged))
   set toPortChanged(
       void Function(
         _i3.Link,
@@ -49009,11 +49056,11 @@ extension Link$Typings on Link {
     _i5.setProperty(
       this,
       'toPortChanged',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #22531
+  /* #22592
   source: 
     /**
      * Gets or sets where this link should connect at the #fromPort.
@@ -49043,7 +49090,7 @@ extension Link$Typings on Link {
         this,
         'fromSpot',
       );
-  /* #22531
+  /* #22592
   source: 
     /**
      * Gets or sets where this link should connect at the #fromPort.
@@ -49069,7 +49116,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22545
+  /* #22606
   source: 
     /**
      * Gets or sets the length of the first segment, when the computed "from spot" at the #fromPort is not Spot.None.
@@ -49094,7 +49141,7 @@ extension Link$Typings on Link {
         this,
         'fromEndSegmentLength',
       );
-  /* #22545
+  /* #22606
   source: 
     /**
      * Gets or sets the length of the first segment, when the computed "from spot" at the #fromPort is not Spot.None.
@@ -49118,7 +49165,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22561
+  /* #22622
   source: 
     /**
      * Gets or sets how far the end segment stops short of the actual port.
@@ -49148,7 +49195,7 @@ extension Link$Typings on Link {
         this,
         'fromShortLength',
       );
-  /* #22561
+  /* #22622
   source: 
     /**
      * Gets or sets how far the end segment stops short of the actual port.
@@ -49174,7 +49221,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22577
+  /* #22638
   source: 
     /**
      * Gets or sets where this link should connect at the #toPort.
@@ -49204,7 +49251,7 @@ extension Link$Typings on Link {
         this,
         'toSpot',
       );
-  /* #22577
+  /* #22638
   source: 
     /**
      * Gets or sets where this link should connect at the #toPort.
@@ -49230,7 +49277,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22591
+  /* #22652
   source: 
     /**
      * Gets or sets the length of the last segment.
@@ -49255,7 +49302,7 @@ extension Link$Typings on Link {
         this,
         'toEndSegmentLength',
       );
-  /* #22591
+  /* #22652
   source: 
     /**
      * Gets or sets the length of the last segment.
@@ -49279,7 +49326,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22607
+  /* #22668
   source: 
     /**
      * Gets or sets how far the end segment stops short of the actual port.
@@ -49309,7 +49356,7 @@ extension Link$Typings on Link {
         this,
         'toShortLength',
       );
-  /* #22607
+  /* #22668
   source: 
     /**
      * Gets or sets how far the end segment stops short of the actual port.
@@ -49335,7 +49382,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22627
+  /* #22688
   source: 
     /**
      * This read-only property is true when this Link has any label Nodes, Nodes that are owned by this Link
@@ -49350,7 +49397,7 @@ extension Link$Typings on Link {
         this,
         'isLabeledLink',
       );
-  /* #22627
+  /* #22688
   source: 
     /**
      * This read-only property is true when this Link has any label Nodes, Nodes that are owned by this Link
@@ -49368,7 +49415,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22642
+  /* #22703
   source: 
     /**
      * This read-only property returns an iterator over the Nodes that act as labels on this Link.
@@ -49400,7 +49447,7 @@ extension Link$Typings on Link {
         this,
         'labelNodes',
       );
-  /* #22642
+  /* #22703
   source: 
     /**
      * This read-only property returns an iterator over the Nodes that act as labels on this Link.
@@ -49426,7 +49473,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22657
+  /* #22718
   source: 
     /**
      * Gets or sets whether the user may reconnect an existing link at the "from" end.
@@ -49443,7 +49490,7 @@ extension Link$Typings on Link {
         this,
         'relinkableFrom',
       );
-  /* #22657
+  /* #22718
   source: 
     /**
      * Gets or sets whether the user may reconnect an existing link at the "from" end.
@@ -49461,7 +49508,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22665
+  /* #22726
   source: 
     /**
      * Gets or sets whether the user may reconnect an existing link at the "to" end.
@@ -49478,7 +49525,7 @@ extension Link$Typings on Link {
         this,
         'relinkableTo',
       );
-  /* #22665
+  /* #22726
   source: 
     /**
      * Gets or sets whether the user may reconnect an existing link at the "to" end.
@@ -49496,7 +49543,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22697
+  /* #22758
   source: 
     /**
      * Gets or sets whether the user may change the number of segments in this Link,
@@ -49516,7 +49563,7 @@ extension Link$Typings on Link {
         this,
         'resegmentable',
       );
-  /* #22697
+  /* #22758
   source: 
     /**
      * Gets or sets whether the user may change the number of segments in this Link,
@@ -49536,7 +49583,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22706
+  /* #22767
   source: 
     /**
      * Gets or sets whether this Link is part of the tree for tree operations
@@ -49554,7 +49601,7 @@ extension Link$Typings on Link {
         this,
         'isTreeLink',
       );
-  /* #22706
+  /* #22767
   source: 
     /**
      * Gets or sets whether this Link is part of the tree for tree operations
@@ -49573,7 +49620,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22724
+  /* #22785
   source: 
     /**
      * This read-only property returns the main Shape representing the path of this Link.
@@ -49610,7 +49657,7 @@ extension Link$Typings on Link {
         this,
         'path',
       );
-  /* #22724
+  /* #22785
   source: 
     /**
      * This read-only property returns the main Shape representing the path of this Link.
@@ -49629,16 +49676,16 @@ extension Link$Typings on Link {
      * the Link will use the first Shape for its path.
      */
     get path(): Shape | null; */
-  // Type InteropUnion#397875400(parent: InteropGetter#325217368(name: path))
+  // Type InteropUnion#452926298(parent: InteropGetter#148905545(name: path))
   set path(_i3.Shape? value) {
     _i5.setProperty(
       this,
       'path',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #22729
+  /* #22790
   source: 
     /**
      * This read-only property returns the bounds of the link geometry in document coordinates.
@@ -49650,7 +49697,7 @@ extension Link$Typings on Link {
         this,
         'routeBounds',
       );
-  /* #22729
+  /* #22790
   source: 
     /**
      * This read-only property returns the bounds of the link geometry in document coordinates.
@@ -49666,7 +49713,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22733
+  /* #22794
   source: 
     /**
      * This read-only property returns the point at the middle of the path, in document coordinates.
@@ -49677,7 +49724,7 @@ extension Link$Typings on Link {
         this,
         'midPoint',
       );
-  /* #22733
+  /* #22794
   source: 
     /**
      * This read-only property returns the point at the middle of the path, in document coordinates.
@@ -49692,7 +49739,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22737
+  /* #22798
   source: 
     /**
      * This read-only property returns the angle of the path at the #midPoint.
@@ -49703,7 +49750,7 @@ extension Link$Typings on Link {
         this,
         'midAngle',
       );
-  /* #22737
+  /* #22798
   source: 
     /**
      * This read-only property returns the angle of the path at the #midPoint.
@@ -49718,7 +49765,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22752
+  /* #22813
   source: 
     /**
      * Gets or sets the List of Points in the route.
@@ -49747,12 +49794,12 @@ extension Link$Typings on Link {
   ///
   /// Ownership of the List and all of its Points that is provided to the setter
   /// is transferred to this Link.
-  _i3.List /*LIST InteropClass#847625641(name: List),334299092,[Instance of 'InteropRef<InteropType>']*/ <_i3.Point>
+  _i3.List /*LIST InteropClass#991808747(name: List),862695844,[Instance of 'InteropRef<InteropType>']*/ <_i3.Point>
       get points => _i5.getProperty(
             this,
             'points',
           );
-  /* #22752
+  /* #22813
   source: 
     /**
      * Gets or sets the List of Points in the route.
@@ -49771,7 +49818,7 @@ extension Link$Typings on Link {
     get points(): List<Point>; */
   // Type Instance of 'InteropInterface'
   set points(
-      _i3.List /*LIST InteropClass#847625641(name: List),842389355,[Instance of 'InteropRef<InteropType>']*/ <
+      _i3.List /*LIST InteropClass#991808747(name: List),139465759,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Point>
           value) {
     _i5.setProperty(
@@ -49781,7 +49828,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22757
+  /* #22818
   source: 
     /**
      * This read-only property returns the number of points in the route.
@@ -49792,7 +49839,7 @@ extension Link$Typings on Link {
         this,
         'pointsCount',
       );
-  /* #22757
+  /* #22818
   source: 
     /**
      * This read-only property returns the number of points in the route.
@@ -49807,7 +49854,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22868
+  /* #22929
   source: 
     /**
      * (undocumented)
@@ -49818,7 +49865,7 @@ extension Link$Typings on Link {
         this,
         'defaultFromPoint',
       );
-  /* #22868
+  /* #22929
   source: 
     /**
      * (undocumented)
@@ -49833,7 +49880,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #22873
+  /* #22934
   source: 
     /**
      * (undocumented)
@@ -49844,7 +49891,7 @@ extension Link$Typings on Link {
         this,
         'defaultToPoint',
       );
-  /* #22873
+  /* #22934
   source: 
     /**
      * (undocumented)
@@ -49859,7 +49906,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23021
+  /* #23082
   source: 
     /**
      * This read-only property is true if #routing is a value that implies that the points
@@ -49885,7 +49932,7 @@ extension Link$Typings on Link {
         this,
         'isOrthogonal',
       );
-  /* #23021
+  /* #23082
   source: 
     /**
      * This read-only property is true if #routing is a value that implies that the points
@@ -49908,7 +49955,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23026
+  /* #23087
   source: 
     /**
      * (undocumented)
@@ -49921,7 +49968,7 @@ extension Link$Typings on Link {
         this,
         'isAvoiding',
       );
-  /* #23026
+  /* #23087
   source: 
     /**
      * (undocumented)
@@ -49937,7 +49984,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23169
+  /* #23230
   source: 
     /**
      * This read-only property returns the Geometry that is used by the #path, the link Shape based on the route points.
@@ -49962,7 +50009,7 @@ extension Link$Typings on Link {
         this,
         'geometry',
       );
-  /* #23169
+  /* #23230
   source: 
     /**
      * This read-only property returns the Geometry that is used by the #path, the link Shape based on the route points.
@@ -49984,7 +50031,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23185
+  /* #23246
   source: 
     /**
      * (undocumented)
@@ -49995,7 +50042,7 @@ extension Link$Typings on Link {
         this,
         'firstPickIndex',
       );
-  /* #23185
+  /* #23246
   source: 
     /**
      * (undocumented)
@@ -50010,7 +50057,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23189
+  /* #23250
   source: 
     /**
      * (undocumented)
@@ -50021,7 +50068,7 @@ extension Link$Typings on Link {
         this,
         'lastPickIndex',
       );
-  /* #23189
+  /* #23250
   source: 
     /**
      * (undocumented)
@@ -50036,7 +50083,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23197
+  /* #23258
   source: 
     /**
      * Gets or sets how the route is computed, including whether it uses the points of its old route to determine the new route.
@@ -50054,7 +50101,7 @@ extension Link$Typings on Link {
         this,
         'adjusting',
       );
-  /* #23197
+  /* #23258
   source: 
     /**
      * Gets or sets how the route is computed, including whether it uses the points of its old route to determine the new route.
@@ -50073,7 +50120,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23219
+  /* #23280
   source: 
     /**
      * Gets or sets how rounded the corners are for adjacent line segments when the #curve
@@ -50092,7 +50139,7 @@ extension Link$Typings on Link {
         this,
         'corner',
       );
-  /* #23219
+  /* #23280
   source: 
     /**
      * Gets or sets how rounded the corners are for adjacent line segments when the #curve
@@ -50111,7 +50158,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23233
+  /* #23294
   source: 
     /**
      * Gets or sets the way the path is generated from the route's points.
@@ -50139,7 +50186,7 @@ extension Link$Typings on Link {
         this,
         'curve',
       );
-  /* #23233
+  /* #23294
   source: 
     /**
      * Gets or sets the way the path is generated from the route's points.
@@ -50163,7 +50210,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23242
+  /* #23303
   source: 
     /**
      * Gets or sets how far the control points are offset when the #curve is Link.Bezier|Bezier
@@ -50181,7 +50228,7 @@ extension Link$Typings on Link {
         this,
         'curviness',
       );
-  /* #23242
+  /* #23303
   source: 
     /**
      * Gets or sets how far the control points are offset when the #curve is Link.Bezier|Bezier
@@ -50200,7 +50247,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23258
+  /* #23319
   source: 
     /**
      * Gets or sets whether the link's path tries to avoid other nodes.
@@ -50233,7 +50280,7 @@ extension Link$Typings on Link {
         this,
         'routing',
       );
-  /* #23258
+  /* #23319
   source: 
     /**
      * Gets or sets whether the link's path tries to avoid other nodes.
@@ -50259,7 +50306,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23274
+  /* #23335
   source: 
     /**
      * Gets or sets how far the control points are from the points of the route
@@ -50292,7 +50339,7 @@ extension Link$Typings on Link {
         this,
         'smoothness',
       );
-  /* #23274
+  /* #23335
   source: 
     /**
      * Gets or sets how far the control points are from the points of the route
@@ -50318,7 +50365,7 @@ extension Link$Typings on Link {
     );
   }
 
-  /* #23284
+  /* #23345
   source: 
     /**
      * This read-only property returns the Links's Model data key if it is in a Diagram and is backed by Model data.
@@ -50337,7 +50384,7 @@ extension Link$Typings on Link {
         this,
         'key',
       );
-  /* #23284
+  /* #23345
   source: 
     /**
      * This read-only property returns the Links's Model data key if it is in a Diagram and is backed by Model data.
@@ -50348,12 +50395,12 @@ extension Link$Typings on Link {
      * @see GraphLinksModel#getKeyForLinkData
      */
     get key(): Key; */
-  // Type InteropTypedef#911623829(name: Key)
+  // Type InteropTypedef#178589699(name: Key)
   set key(_i3.Key value) {
     _i5.setProperty(
       this,
       'key',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -50376,7 +50423,7 @@ extension Link$Typings on Link {
       'move',
       [
         newpos,
-        useLocation ?? _i4.undefined,
+        useLocation ?? _i7.undefined,
       ],
     );
   }
@@ -50551,12 +50598,12 @@ extension Link$Typings on Link {
         this,
         'getLinkPointFromPoint',
         [
-          node ?? _i4.undefined,
-          port ?? _i4.undefined,
+          node ?? _i7.undefined,
+          port ?? _i7.undefined,
           focus,
           p,
           from,
-          result ?? _i4.undefined,
+          result ?? _i7.undefined,
         ],
       );
   _i3.Point getLinkPoint(
@@ -50573,14 +50620,14 @@ extension Link$Typings on Link {
         this,
         'getLinkPoint',
         [
-          node ?? _i4.undefined,
+          node ?? _i7.undefined,
           port,
           spot,
           from,
           ortho,
-          othernode ?? _i4.undefined,
+          othernode ?? _i7.undefined,
           otherport,
-          result ?? _i4.undefined,
+          result ?? _i7.undefined,
         ],
       );
   _i2.num getLinkDirection(
@@ -50597,14 +50644,14 @@ extension Link$Typings on Link {
         this,
         'getLinkDirection',
         [
-          node ?? _i4.undefined,
-          port ?? _i4.undefined,
+          node ?? _i7.undefined,
+          port ?? _i7.undefined,
           linkpoint,
           spot,
           from,
           ortho,
-          othernode ?? _i4.undefined,
-          otherport ?? _i4.undefined,
+          othernode ?? _i7.undefined,
+          otherport ?? _i7.undefined,
         ],
       );
   _i2.num computeEndSegmentLength(
@@ -50617,8 +50664,8 @@ extension Link$Typings on Link {
         this,
         'computeEndSegmentLength',
         [
-          node ?? _i4.undefined,
-          port ?? _i4.undefined,
+          node ?? _i7.undefined,
+          port ?? _i7.undefined,
           spot,
           from,
         ],
@@ -50632,7 +50679,7 @@ extension Link$Typings on Link {
         'computeSpot',
         [
           from,
-          port ?? _i4.undefined,
+          port ?? _i7.undefined,
         ],
       );
   _i3.Point computeOtherPoint(
@@ -50673,7 +50720,7 @@ extension Link$Typings on Link {
         [],
       );
   void arrangeBundledLinks(
-    _i4.Array links,
+    _i4.Array<_i3.Link> links,
     _i2.bool reroute,
   ) {
     _i5.callMethod(
@@ -50761,9 +50808,9 @@ extension Link$Typings on Link {
 @_i1.JS()
 @_i1.staticInterop
 class Layout {
-  factory Layout([_i4.Partial? init]) => _i5.callConstructor(
+  factory Layout([_i4.Partial<_i3.Layout>? init]) => _i5.callConstructor(
         _declaredLayout,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 }
 
@@ -50774,7 +50821,7 @@ FieldExternal:
 external _i2.Object _declaredLayout;
 
 extension Layout$Typings on Layout {
-  /* #23406
+  /* #23467
   source: 
     /**
      * Gets the Diagram that owns this layout, if it is the value of Diagram#layout.
@@ -50790,7 +50837,7 @@ extension Layout$Typings on Layout {
         this,
         'diagram',
       );
-  /* #23406
+  /* #23467
   source: 
     /**
      * Gets the Diagram that owns this layout, if it is the value of Diagram#layout.
@@ -50799,16 +50846,16 @@ extension Layout$Typings on Layout {
      * @see #group
      */
     get diagram(): Diagram | null; */
-  // Type InteropUnion#475637666(parent: InteropGetter#558647404(name: diagram))
+  // Type InteropUnion#918988396(parent: InteropGetter#216071579(name: diagram))
   set diagram(_i3.Diagram? value) {
     _i5.setProperty(
       this,
       'diagram',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #23414
+  /* #23475
   source: 
     /**
      * Gets the Group that uses this layout, if it is the value of a group's Group#layout.
@@ -50824,7 +50871,7 @@ extension Layout$Typings on Layout {
         this,
         'group',
       );
-  /* #23414
+  /* #23475
   source: 
     /**
      * Gets the Group that uses this layout, if it is the value of a group's Group#layout.
@@ -50833,16 +50880,16 @@ extension Layout$Typings on Layout {
      * @see #diagram
      */
     get group(): Group | null; */
-  // Type InteropUnion#662763924(parent: InteropGetter#874437787(name: group))
+  // Type InteropUnion#845261491(parent: InteropGetter#613158434(name: group))
   set group(_i3.Group? value) {
     _i5.setProperty(
       this,
       'group',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #23431
+  /* #23492
   source: 
     /**
      * Gets or sets whether this layout can be invalidated by #invalidateLayout.
@@ -50877,7 +50924,7 @@ extension Layout$Typings on Layout {
         this,
         'isOngoing',
       );
-  /* #23431
+  /* #23492
   source: 
     /**
      * Gets or sets whether this layout can be invalidated by #invalidateLayout.
@@ -50904,7 +50951,7 @@ extension Layout$Typings on Layout {
     );
   }
 
-  /* #23448
+  /* #23509
   source: 
     /**
      * Gets or sets whether this layout is performed on an initial layout.
@@ -50939,7 +50986,7 @@ extension Layout$Typings on Layout {
         this,
         'isInitial',
       );
-  /* #23448
+  /* #23509
   source: 
     /**
      * Gets or sets whether this layout is performed on an initial layout.
@@ -50966,7 +51013,7 @@ extension Layout$Typings on Layout {
     );
   }
 
-  /* #23465
+  /* #23526
   source: 
     /**
      * Gets or sets whether this layout depends on the Diagram#viewportBounds's size.
@@ -51001,7 +51048,7 @@ extension Layout$Typings on Layout {
         this,
         'isViewportSized',
       );
-  /* #23465
+  /* #23526
   source: 
     /**
      * Gets or sets whether this layout depends on the Diagram#viewportBounds's size.
@@ -51028,7 +51075,7 @@ extension Layout$Typings on Layout {
     );
   }
 
-  /* #23477
+  /* #23538
   source: 
     /**
      * Gets or sets whether this layout routes Links.
@@ -51052,7 +51099,7 @@ extension Layout$Typings on Layout {
         this,
         'isRouting',
       );
-  /* #23477
+  /* #23538
   source: 
     /**
      * Gets or sets whether this layout routes Links.
@@ -51074,7 +51121,7 @@ extension Layout$Typings on Layout {
     );
   }
 
-  /* #23487
+  /* #23548
   source: 
     /**
      * Gets or sets whether this layout be performed in real-time, before the end of a transaction.
@@ -51094,7 +51141,7 @@ extension Layout$Typings on Layout {
         this,
         'isRealtime',
       );
-  /* #23487
+  /* #23548
   source: 
     /**
      * Gets or sets whether this layout be performed in real-time, before the end of a transaction.
@@ -51105,16 +51152,16 @@ extension Layout$Typings on Layout {
      * @since 1.2
      */
     get isRealtime(): boolean | null; */
-  // Type InteropUnion#309554249(parent: InteropGetter#264762316(name: isRealtime))
+  // Type InteropUnion#22671917(parent: InteropGetter#229507481(name: isRealtime))
   set isRealtime(_i2.bool? value) {
     _i5.setProperty(
       this,
       'isRealtime',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #23494
+  /* #23555
   source: 
     /**
      * Gets or sets whether this layout needs to be performed again (if false).
@@ -51129,7 +51176,7 @@ extension Layout$Typings on Layout {
         this,
         'isValidLayout',
       );
-  /* #23494
+  /* #23555
   source: 
     /**
      * Gets or sets whether this layout needs to be performed again (if false).
@@ -51146,7 +51193,7 @@ extension Layout$Typings on Layout {
     );
   }
 
-  /* #23519
+  /* #23580
   source: 
     /**
      * Gets or sets the LayoutNetwork used by this Layout, if any.
@@ -51165,7 +51212,7 @@ extension Layout$Typings on Layout {
         this,
         'network',
       );
-  /* #23519
+  /* #23580
   source: 
     /**
      * Gets or sets the LayoutNetwork used by this Layout, if any.
@@ -51175,16 +51222,16 @@ extension Layout$Typings on Layout {
      * Call #createNetwork or #makeNetwork to create a network.
      */
     get network(): LayoutNetwork | null; */
-  // Type InteropUnion#520515344(parent: InteropGetter#482059914(name: network))
+  // Type InteropUnion#470537972(parent: InteropGetter#742537738(name: network))
   set network(_i3.LayoutNetwork? value) {
     _i5.setProperty(
       this,
       'network',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #23647
+  /* #23708
   source: 
     /**
      * Gets or sets a function that determines the initial size and position in document coordinates of a LayoutVertex corresponding to a Node.
@@ -51220,7 +51267,7 @@ extension Layout$Typings on Layout {
         this,
         'boundsComputation',
       );
-  /* #23647
+  /* #23708
   source: 
     /**
      * Gets or sets a function that determines the initial size and position in document coordinates of a LayoutVertex corresponding to a Node.
@@ -51237,7 +51284,7 @@ extension Layout$Typings on Layout {
      * @since 2.0
      */
     get boundsComputation(): ((part: Part, lay: Layout, rect: Rect) => Rect) | null; */
-  // Type InteropUnion#661122195(parent: InteropGetter#503210293(name: boundsComputation))
+  // Type InteropUnion#210127671(parent: InteropGetter#1006274912(name: boundsComputation))
   set boundsComputation(
       _i3.Rect Function(
         _i3.Part,
@@ -51247,11 +51294,11 @@ extension Layout$Typings on Layout {
     _i5.setProperty(
       this,
       'boundsComputation',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #23681
+  /* #23742
   source: 
     /**
      * Gets or sets the top-left point for where the graph should be positioned when laid out.
@@ -51268,7 +51315,7 @@ extension Layout$Typings on Layout {
         this,
         'arrangementOrigin',
       );
-  /* #23681
+  /* #23742
   source: 
     /**
      * Gets or sets the top-left point for where the graph should be positioned when laid out.
@@ -51350,7 +51397,7 @@ extension Layout$Typings on Layout {
         'getLayoutBounds',
         [
           part,
-          rect ?? _i4.undefined,
+          rect ?? _i7.undefined,
         ],
       );
   _i3.Set<_i3.Part> collectParts(_i2.Object coll) => _i5.callMethod(
@@ -51381,7 +51428,7 @@ FieldExternal:
 external _i2.Object _declaredLayoutNetwork;
 
 extension LayoutNetwork$Typings on LayoutNetwork {
-  /* #23728
+  /* #23789
   source: 
     /**
      * Gets the Layout that uses this network
@@ -51398,7 +51445,7 @@ extension LayoutNetwork$Typings on LayoutNetwork {
         this,
         'layout',
       );
-  /* #23728
+  /* #23789
   source: 
     /**
      * Gets the Layout that uses this network
@@ -51416,7 +51463,7 @@ extension LayoutNetwork$Typings on LayoutNetwork {
     );
   }
 
-  /* #23735
+  /* #23796
   source: 
     /**
      * Gets a collection of all of the LayoutVertexes in this network.
@@ -51431,7 +51478,7 @@ extension LayoutNetwork$Typings on LayoutNetwork {
         this,
         'vertexes',
       );
-  /* #23735
+  /* #23796
   source: 
     /**
      * Gets a collection of all of the LayoutVertexes in this network.
@@ -51448,7 +51495,7 @@ extension LayoutNetwork$Typings on LayoutNetwork {
     );
   }
 
-  /* #23741
+  /* #23802
   source: 
     /**
      * Gets a collection of all of the LayoutEdges in this network.
@@ -51463,7 +51510,7 @@ extension LayoutNetwork$Typings on LayoutNetwork {
         this,
         'edges',
       );
-  /* #23741
+  /* #23802
   source: 
     /**
      * Gets a collection of all of the LayoutEdges in this network.
@@ -51500,8 +51547,8 @@ extension LayoutNetwork$Typings on LayoutNetwork {
       'addParts',
       [
         parts,
-        toplevelonly ?? _i4.undefined,
-        pred == null ? _i4.undefined : _i5.allowInterop(pred),
+        toplevelonly ?? _i7.undefined,
+        pred == null ? _i7.undefined : _i5.allowInterop(pred),
       ],
     );
   }
@@ -51585,7 +51632,7 @@ extension LayoutNetwork$Typings on LayoutNetwork {
         [
           fromVertex,
           toVertex,
-          link ?? _i4.undefined,
+          link ?? _i7.undefined,
         ],
       );
   void reverseEdge(_i3.LayoutEdge edge) {
@@ -51612,13 +51659,13 @@ extension LayoutNetwork$Typings on LayoutNetwork {
     );
   }
 
-  _i3.List /*LIST InteropClass#847625641(name: List),39638134,[Instance of 'InteropRef<InteropType>']*/ <
+  _i3.List /*LIST InteropClass#991808747(name: List),370150744,[Instance of 'InteropRef<InteropType>']*/ <
       _i3.LayoutNetwork> splitIntoSubNetworks(
           [_i2.bool? clean]) =>
       _i5.callMethod(
         this,
         'splitIntoSubNetworks',
-        [clean ?? _i4.undefined],
+        [clean ?? _i7.undefined],
       );
   _i3.Set<_i3.Part> findAllParts() => _i5.callMethod(
         this,
@@ -51668,25 +51715,25 @@ FieldExternal:
 external _i2.Object _declaredLayoutVertex;
 
 extension LayoutVertex$Typings on LayoutVertex {
-  /* #23907
+  /* #23968
   source: 
     /**
      * (undocumented)
      */
     get sourceEdgesArrayAccess(): Array<LayoutEdge>; */
   /// (undocumented)
-  _i4.Array get sourceEdgesArrayAccess => _i5.getProperty(
+  _i4.Array<_i3.LayoutEdge> get sourceEdgesArrayAccess => _i5.getProperty(
         this,
         'sourceEdgesArrayAccess',
       );
-  /* #23907
+  /* #23968
   source: 
     /**
      * (undocumented)
      */
     get sourceEdgesArrayAccess(): Array<LayoutEdge>; */
-  // Type Instance of 'ExternalInteropType'
-  set sourceEdgesArrayAccess(_i4.Array value) {
+  // Type Instance of 'InteropInterface'
+  set sourceEdgesArrayAccess(_i4.Array<_i3.LayoutEdge> value) {
     _i5.setProperty(
       this,
       'sourceEdgesArrayAccess',
@@ -51694,25 +51741,25 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23911
+  /* #23972
   source: 
     /**
      * (undocumented)
      */
     get destinationEdgesArrayAccess(): Array<LayoutEdge>; */
   /// (undocumented)
-  _i4.Array get destinationEdgesArrayAccess => _i5.getProperty(
+  _i4.Array<_i3.LayoutEdge> get destinationEdgesArrayAccess => _i5.getProperty(
         this,
         'destinationEdgesArrayAccess',
       );
-  /* #23911
+  /* #23972
   source: 
     /**
      * (undocumented)
      */
     get destinationEdgesArrayAccess(): Array<LayoutEdge>; */
-  // Type Instance of 'ExternalInteropType'
-  set destinationEdgesArrayAccess(_i4.Array value) {
+  // Type Instance of 'InteropInterface'
+  set destinationEdgesArrayAccess(_i4.Array<_i3.LayoutEdge> value) {
     _i5.setProperty(
       this,
       'destinationEdgesArrayAccess',
@@ -51720,7 +51767,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23922
+  /* #23983
   source: 
     /**
      * Gets or sets the data object in the model that should be associated with this vertex, if any.
@@ -51744,7 +51791,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'data',
       );
-  /* #23922
+  /* #23983
   source: 
     /**
      * Gets or sets the data object in the model that should be associated with this vertex, if any.
@@ -51757,16 +51804,16 @@ extension LayoutVertex$Typings on LayoutVertex {
      * @since 1.6
      */
     get data(): ObjectData | null; */
-  // Type InteropUnion#1000427547(parent: InteropGetter#681059056(name: data))
+  // Type InteropUnion#907312871(parent: InteropGetter#150845801(name: data))
   set data(_i2.Object? value) {
     _i5.setProperty(
       this,
       'data',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #23932
+  /* #23993
   source: 
     /**
      * Gets or sets the Node associated with this vertex, if any.
@@ -51787,7 +51834,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'node',
       );
-  /* #23932
+  /* #23993
   source: 
     /**
      * Gets or sets the Node associated with this vertex, if any.
@@ -51798,16 +51845,16 @@ extension LayoutVertex$Typings on LayoutVertex {
      * according to the value of the Node's actualBounds and its Part#locationObject's center point.
      */
     get node(): Node | null; */
-  // Type InteropUnion#135713144(parent: InteropGetter#371565065(name: node))
+  // Type InteropUnion#884082055(parent: InteropGetter#329238078(name: node))
   set node(_i3.Node? value) {
     _i5.setProperty(
       this,
       'node',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #23940
+  /* #24001
   source: 
     /**
      * Gets or sets the bounds of this vertex, in document coordinates.
@@ -51824,7 +51871,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'bounds',
       );
-  /* #23940
+  /* #24001
   source: 
     /**
      * Gets or sets the bounds of this vertex, in document coordinates.
@@ -51842,7 +51889,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23950
+  /* #24011
   source: 
     /**
      * Gets or sets the offset of the #focusX and #focusY
@@ -51863,7 +51910,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'focus',
       );
-  /* #23950
+  /* #24011
   source: 
     /**
      * Gets or sets the offset of the #focusX and #focusY
@@ -51883,7 +51930,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23958
+  /* #24019
   source: 
     /**
      * Gets or sets the center Point#x of this vertex, in document coordinates.
@@ -51900,7 +51947,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'centerX',
       );
-  /* #23958
+  /* #24019
   source: 
     /**
      * Gets or sets the center Point#x of this vertex, in document coordinates.
@@ -51918,7 +51965,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23966
+  /* #24027
   source: 
     /**
      * Gets or sets the center Point#y of this vertex, in document coordinates.
@@ -51935,7 +51982,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'centerY',
       );
-  /* #23966
+  /* #24027
   source: 
     /**
      * Gets or sets the center Point#y of this vertex, in document coordinates.
@@ -51953,7 +52000,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23971
+  /* #24032
   source: 
     /**
      * Gets or sets the relative X position of the "center" point, the focus.
@@ -51964,7 +52011,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'focusX',
       );
-  /* #23971
+  /* #24032
   source: 
     /**
      * Gets or sets the relative X position of the "center" point, the focus.
@@ -51979,7 +52026,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23976
+  /* #24037
   source: 
     /**
      * Gets or sets the relative Y position of the "center" point, the focus.
@@ -51990,7 +52037,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'focusY',
       );
-  /* #23976
+  /* #24037
   source: 
     /**
      * Gets or sets the relative Y position of the "center" point, the focus.
@@ -52005,7 +52052,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23981
+  /* #24042
   source: 
     /**
      * Gets or sets the left point of this vertex.
@@ -52016,7 +52063,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'x',
       );
-  /* #23981
+  /* #24042
   source: 
     /**
      * Gets or sets the left point of this vertex.
@@ -52031,7 +52078,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23986
+  /* #24047
   source: 
     /**
      * Gets or sets the top point of this vertex.
@@ -52042,7 +52089,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'y',
       );
-  /* #23986
+  /* #24047
   source: 
     /**
      * Gets or sets the top point of this vertex.
@@ -52057,7 +52104,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23992
+  /* #24053
   source: 
     /**
      * Gets or sets the width of this vertex.
@@ -52070,7 +52117,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'width',
       );
-  /* #23992
+  /* #24053
   source: 
     /**
      * Gets or sets the width of this vertex.
@@ -52086,7 +52133,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #23998
+  /* #24059
   source: 
     /**
      * Gets or sets the height of this vertex.
@@ -52099,7 +52146,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'height',
       );
-  /* #23998
+  /* #24059
   source: 
     /**
      * Gets or sets the height of this vertex.
@@ -52115,7 +52162,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #24044
+  /* #24105
   source: 
     /**
      * Gets the LayoutNetwork that owns this vertex.
@@ -52130,7 +52177,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'network',
       );
-  /* #24044
+  /* #24105
   source: 
     /**
      * Gets the LayoutNetwork that owns this vertex.
@@ -52147,7 +52194,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #24052
+  /* #24113
   source: 
     /**
      * This read-only property returns an iterator for all of the vertexes that are connected with edges coming into this vertex.
@@ -52164,7 +52211,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'sourceVertexes',
       );
-  /* #24052
+  /* #24113
   source: 
     /**
      * This read-only property returns an iterator for all of the vertexes that are connected with edges coming into this vertex.
@@ -52182,7 +52229,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #24059
+  /* #24120
   source: 
     /**
      * This read-only property returns an iterator for all of the vertexes that are connected with edges going out of this vertex.
@@ -52199,7 +52246,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'destinationVertexes',
       );
-  /* #24059
+  /* #24120
   source: 
     /**
      * This read-only property returns an iterator for all of the vertexes that are connected with edges going out of this vertex.
@@ -52217,7 +52264,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #24066
+  /* #24127
   source: 
     /**
      * This read-only property returns an iterator for all of the vertexes that are connected in either direction with this vertex.
@@ -52234,7 +52281,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'vertexes',
       );
-  /* #24066
+  /* #24127
   source: 
     /**
      * This read-only property returns an iterator for all of the vertexes that are connected in either direction with this vertex.
@@ -52252,7 +52299,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #24070
+  /* #24131
   source: 
     /**
      * This read-only property returns an iterator for all of the edges that come into this vertex.
@@ -52263,7 +52310,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'sourceEdges',
       );
-  /* #24070
+  /* #24131
   source: 
     /**
      * This read-only property returns an iterator for all of the edges that come into this vertex.
@@ -52278,7 +52325,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #24074
+  /* #24135
   source: 
     /**
      * This read-only property returns an iterator for all of the edges that go out of this vertex.
@@ -52289,7 +52336,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'destinationEdges',
       );
-  /* #24074
+  /* #24135
   source: 
     /**
      * This read-only property returns an iterator for all of the edges that go out of this vertex.
@@ -52304,7 +52351,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #24080
+  /* #24141
   source: 
     /**
      * This read-only property returns an iterator for all of the edges that are connected with this vertex in either direction.
@@ -52319,7 +52366,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'edges',
       );
-  /* #24080
+  /* #24141
   source: 
     /**
      * This read-only property returns an iterator for all of the edges that are connected with this vertex in either direction.
@@ -52336,7 +52383,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     );
   }
 
-  /* #24084
+  /* #24145
   source: 
     /**
      * This read-only property returns the total number of edges that are connected with this vertex in either direction.
@@ -52347,7 +52394,7 @@ extension LayoutVertex$Typings on LayoutVertex {
         this,
         'edgesCount',
       );
-  /* #24084
+  /* #24145
   source: 
     /**
      * This read-only property returns the total number of edges that are connected with this vertex in either direction.
@@ -52419,7 +52466,7 @@ FieldExternal:
 external _i2.Object _declaredLayoutEdge;
 
 extension LayoutEdge$Typings on LayoutEdge {
-  /* #24146
+  /* #24207
   source: 
     /**
      * Gets the LayoutNetwork that owns this edge.
@@ -52434,7 +52481,7 @@ extension LayoutEdge$Typings on LayoutEdge {
         this,
         'network',
       );
-  /* #24146
+  /* #24207
   source: 
     /**
      * Gets the LayoutNetwork that owns this edge.
@@ -52451,7 +52498,7 @@ extension LayoutEdge$Typings on LayoutEdge {
     );
   }
 
-  /* #24152
+  /* #24213
   source: 
     /**
      * For virtualized layouts working on model data instead of a Link.
@@ -52463,23 +52510,23 @@ extension LayoutEdge$Typings on LayoutEdge {
         this,
         'data',
       );
-  /* #24152
+  /* #24213
   source: 
     /**
      * For virtualized layouts working on model data instead of a Link.
      * @since 1.6
      */
     get data(): ObjectData | null; */
-  // Type InteropUnion#374063993(parent: InteropGetter#165059946(name: data))
+  // Type InteropUnion#751752311(parent: InteropGetter#443849331(name: data))
   set data(_i2.Object? value) {
     _i5.setProperty(
       this,
       'data',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #24159
+  /* #24220
   source: 
     /**
      * Gets or sets the Link associated with this edge, if any.
@@ -52494,7 +52541,7 @@ extension LayoutEdge$Typings on LayoutEdge {
         this,
         'link',
       );
-  /* #24159
+  /* #24220
   source: 
     /**
      * Gets or sets the Link associated with this edge, if any.
@@ -52502,16 +52549,16 @@ extension LayoutEdge$Typings on LayoutEdge {
      * not represented by a real Link in the Diagram.
      */
     get link(): Link | null; */
-  // Type InteropUnion#893362165(parent: InteropGetter#87281765(name: link))
+  // Type InteropUnion#605042700(parent: InteropGetter#474478668(name: link))
   set link(_i3.Link? value) {
     _i5.setProperty(
       this,
       'link',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #24165
+  /* #24226
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge comes from.
@@ -52524,23 +52571,23 @@ extension LayoutEdge$Typings on LayoutEdge {
         this,
         'fromVertex',
       );
-  /* #24165
+  /* #24226
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge comes from.
      * Setting this property does not change any LayoutVertex#destinationEdges collection.
      */
     get fromVertex(): LayoutVertex | null; */
-  // Type InteropUnion#1022527231(parent: InteropGetter#487527128(name: fromVertex))
+  // Type InteropUnion#746187964(parent: InteropGetter#492221944(name: fromVertex))
   set fromVertex(_i3.LayoutVertex? value) {
     _i5.setProperty(
       this,
       'fromVertex',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #24171
+  /* #24232
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge goes to.
@@ -52553,19 +52600,19 @@ extension LayoutEdge$Typings on LayoutEdge {
         this,
         'toVertex',
       );
-  /* #24171
+  /* #24232
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge goes to.
      * Setting this property does not change any LayoutVertex#sourceEdges collection.
      */
     get toVertex(): LayoutVertex | null; */
-  // Type InteropUnion#48002475(parent: InteropGetter#958415454(name: toVertex))
+  // Type InteropUnion#726789363(parent: InteropGetter#506809220(name: toVertex))
   set toVertex(_i3.LayoutVertex? value) {
     _i5.setProperty(
       this,
       'toVertex',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
@@ -52587,12 +52634,13 @@ extension LayoutEdge$Typings on LayoutEdge {
 @_i1.JS()
 @_i1.staticInterop
 class GridLayout implements _i3.Layout {
-  factory GridLayout([_i4.Partial? init]) => _i5.callConstructor(
+  factory GridLayout([_i4.Partial<_i3.GridLayout>? init]) =>
+      _i5.callConstructor(
         _declaredGridLayout,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
-  /* #24309
+  /* #24370
   source: 
     /**
      * Position the top-left corner of each part at a grid point;
@@ -52606,7 +52654,7 @@ class GridLayout implements _i3.Layout {
         _declaredGridLayout,
         'Position',
       );
-  /* #24309
+  /* #24370
   source: 
     /**
      * Position the top-left corner of each part at a grid point;
@@ -52623,7 +52671,7 @@ class GridLayout implements _i3.Layout {
     );
   }
 
-  /* #24315
+  /* #24376
   source: 
     /**
      * Position the part's Part#location at a grid point;
@@ -52637,7 +52685,7 @@ class GridLayout implements _i3.Layout {
         _declaredGridLayout,
         'Location',
       );
-  /* #24315
+  /* #24376
   source: 
     /**
      * Position the part's Part#location at a grid point;
@@ -52654,7 +52702,7 @@ class GridLayout implements _i3.Layout {
     );
   }
 
-  /* #24321
+  /* #24382
   source: 
     /**
      * Fill each row from left to right;
@@ -52668,7 +52716,7 @@ class GridLayout implements _i3.Layout {
         _declaredGridLayout,
         'LeftToRight',
       );
-  /* #24321
+  /* #24382
   source: 
     /**
      * Fill each row from left to right;
@@ -52685,7 +52733,7 @@ class GridLayout implements _i3.Layout {
     );
   }
 
-  /* #24327
+  /* #24388
   source: 
     /**
      * Fill each row from right to left;
@@ -52699,7 +52747,7 @@ class GridLayout implements _i3.Layout {
         _declaredGridLayout,
         'RightToLeft',
       );
-  /* #24327
+  /* #24388
   source: 
     /**
      * Fill each row from right to left;
@@ -52716,7 +52764,7 @@ class GridLayout implements _i3.Layout {
     );
   }
 
-  /* #24333
+  /* #24394
   source: 
     /**
      * Lay out each child in the order in which they were found;
@@ -52730,7 +52778,7 @@ class GridLayout implements _i3.Layout {
         _declaredGridLayout,
         'Forward',
       );
-  /* #24333
+  /* #24394
   source: 
     /**
      * Lay out each child in the order in which they were found;
@@ -52747,7 +52795,7 @@ class GridLayout implements _i3.Layout {
     );
   }
 
-  /* #24339
+  /* #24400
   source: 
     /**
      * Lay out each child in reverse order from which they were found;
@@ -52761,7 +52809,7 @@ class GridLayout implements _i3.Layout {
         _declaredGridLayout,
         'Reverse',
       );
-  /* #24339
+  /* #24400
   source: 
     /**
      * Lay out each child in reverse order from which they were found;
@@ -52778,7 +52826,7 @@ class GridLayout implements _i3.Layout {
     );
   }
 
-  /* #24345
+  /* #24406
   source: 
     /**
      * Lay out each child according to the sort order given by GridLayout#comparer
@@ -52792,7 +52840,7 @@ class GridLayout implements _i3.Layout {
         _declaredGridLayout,
         'Ascending',
       );
-  /* #24345
+  /* #24406
   source: 
     /**
      * Lay out each child according to the sort order given by GridLayout#comparer
@@ -52809,7 +52857,7 @@ class GridLayout implements _i3.Layout {
     );
   }
 
-  /* #24351
+  /* #24412
   source: 
     /**
      * Lay out each child in reverse sort order given by GridLayout#comparer
@@ -52823,7 +52871,7 @@ class GridLayout implements _i3.Layout {
         _declaredGridLayout,
         'Descending',
       );
-  /* #24351
+  /* #24412
   source: 
     /**
      * Lay out each child in reverse sort order given by GridLayout#comparer
@@ -52848,7 +52896,7 @@ FieldExternal:
 external _i2.Object _declaredGridLayout;
 
 extension GridLayout$Typings on GridLayout {
-  /* #24226
+  /* #24287
   source: 
     /**
      * Gets or sets the wrapping width.
@@ -52865,7 +52913,7 @@ extension GridLayout$Typings on GridLayout {
         this,
         'wrappingWidth',
       );
-  /* #24226
+  /* #24287
   source: 
     /**
      * Gets or sets the wrapping width.
@@ -52883,7 +52931,7 @@ extension GridLayout$Typings on GridLayout {
     );
   }
 
-  /* #24234
+  /* #24295
   source: 
     /**
      * Gets or sets the maximum number of columns.
@@ -52900,7 +52948,7 @@ extension GridLayout$Typings on GridLayout {
         this,
         'wrappingColumn',
       );
-  /* #24234
+  /* #24295
   source: 
     /**
      * Gets or sets the maximum number of columns.
@@ -52918,7 +52966,7 @@ extension GridLayout$Typings on GridLayout {
     );
   }
 
-  /* #24246
+  /* #24307
   source: 
     /**
      * Gets or sets the minimum part size by which each part is positioned in the grid.
@@ -52943,7 +52991,7 @@ extension GridLayout$Typings on GridLayout {
         this,
         'cellSize',
       );
-  /* #24246
+  /* #24307
   source: 
     /**
      * Gets or sets the minimum part size by which each part is positioned in the grid.
@@ -52965,7 +53013,7 @@ extension GridLayout$Typings on GridLayout {
     );
   }
 
-  /* #24254
+  /* #24315
   source: 
     /**
      * Gets or sets the minimum horizontal and vertical space between parts.
@@ -52982,7 +53030,7 @@ extension GridLayout$Typings on GridLayout {
         this,
         'spacing',
       );
-  /* #24254
+  /* #24315
   source: 
     /**
      * Gets or sets the minimum horizontal and vertical space between parts.
@@ -53000,7 +53048,7 @@ extension GridLayout$Typings on GridLayout {
     );
   }
 
-  /* #24263
+  /* #24324
   source: 
     /**
      * Gets or sets whether the Part#location or the position should be used
@@ -53019,7 +53067,7 @@ extension GridLayout$Typings on GridLayout {
         this,
         'alignment',
       );
-  /* #24263
+  /* #24324
   source: 
     /**
      * Gets or sets whether the Part#location or the position should be used
@@ -53038,7 +53086,7 @@ extension GridLayout$Typings on GridLayout {
     );
   }
 
-  /* #24271
+  /* #24332
   source: 
     /**
      * Gets or sets how to arrange the parts.
@@ -53055,7 +53103,7 @@ extension GridLayout$Typings on GridLayout {
         this,
         'arrangement',
       );
-  /* #24271
+  /* #24332
   source: 
     /**
      * Gets or sets how to arrange the parts.
@@ -53073,7 +53121,7 @@ extension GridLayout$Typings on GridLayout {
     );
   }
 
-  /* #24280
+  /* #24341
   source: 
     /**
      * Gets or sets what order to place the parts.
@@ -53092,7 +53140,7 @@ extension GridLayout$Typings on GridLayout {
         this,
         'sorting',
       );
-  /* #24280
+  /* #24341
   source: 
     /**
      * Gets or sets what order to place the parts.
@@ -53111,7 +53159,7 @@ extension GridLayout$Typings on GridLayout {
     );
   }
 
-  /* #24302
+  /* #24363
   source: 
     /**
      * Gets or sets the comparison function used to sort the parts.
@@ -53159,7 +53207,7 @@ extension GridLayout$Typings on GridLayout {
         this,
         'comparer',
       );
-  /* #24302
+  /* #24363
   source: 
     /**
      * Gets or sets the comparison function used to sort the parts.
@@ -53182,7 +53230,7 @@ extension GridLayout$Typings on GridLayout {
      * ```
      */
     get comparer(): ((a: Part, b: Part) => number); */
-  // Type InteropFunction#507218598(parent: InteropGetter#387653343(name: comparer), library: go.d.ts)
+  // Type InteropFunction#877514594(parent: InteropGetter#585642751(name: comparer), library: go.d.ts)
   set comparer(
       _i2.num Function(
         _i3.Part,
@@ -53220,26 +53268,26 @@ class IncrementalData {
 
   factory IncrementalData({
     _i2.Object? modelData,
-    _i4.Array? insertedNodeKeys,
-    _i4.Array? modifiedNodeData,
-    _i4.Array? removedNodeKeys,
-    _i4.Array? insertedLinkKeys,
-    _i4.Array? modifiedLinkData,
-    _i4.Array? removedLinkKeys,
+    _i4.Array<_i3.Key>? insertedNodeKeys,
+    _i4.Array<_i2.Object>? modifiedNodeData,
+    _i4.Array<_i3.Key>? removedNodeKeys,
+    _i4.Array<_i3.Key>? insertedLinkKeys,
+    _i4.Array<_i2.Object>? modifiedLinkData,
+    _i4.Array<_i3.Key>? removedLinkKeys,
   }) =>
       IncrementalData._(
-        modelData: modelData ?? _i4.undefined,
-        insertedNodeKeys: insertedNodeKeys ?? _i4.undefined,
-        modifiedNodeData: modifiedNodeData ?? _i4.undefined,
-        removedNodeKeys: removedNodeKeys ?? _i4.undefined,
-        insertedLinkKeys: insertedLinkKeys ?? _i4.undefined,
-        modifiedLinkData: modifiedLinkData ?? _i4.undefined,
-        removedLinkKeys: removedLinkKeys ?? _i4.undefined,
+        modelData: modelData ?? _i7.undefined,
+        insertedNodeKeys: insertedNodeKeys ?? _i7.undefined,
+        modifiedNodeData: modifiedNodeData ?? _i7.undefined,
+        removedNodeKeys: removedNodeKeys ?? _i7.undefined,
+        insertedLinkKeys: insertedLinkKeys ?? _i7.undefined,
+        modifiedLinkData: modifiedLinkData ?? _i7.undefined,
+        removedLinkKeys: removedLinkKeys ?? _i7.undefined,
       );
 }
 
 extension IncrementalData$Typings on IncrementalData {
-  /* #24386
+  /* #24447
   source: 
     /**
      * Object containing the modified Model#modelData.
@@ -53250,7 +53298,7 @@ extension IncrementalData$Typings on IncrementalData {
         this,
         'modelData',
       );
-  /* #24386
+  /* #24447
   source: 
     /**
      * Object containing the modified Model#modelData.
@@ -53261,163 +53309,163 @@ extension IncrementalData$Typings on IncrementalData {
     _i5.setProperty(
       this,
       'modelData',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #24390
+  /* #24451
   source: 
     /**
      * Array of node keys added. Any key included will also be included in the modifiedNodeData array.
      */
     insertedNodeKeys?: Array<Key>; */
   /// Array of node keys added. Any key included will also be included in the modifiedNodeData array.
-  _i4.Array? get insertedNodeKeys => _i5.getProperty(
+  _i4.Array<_i3.Key>? get insertedNodeKeys => _i5.getProperty(
         this,
         'insertedNodeKeys',
       );
-  /* #24390
+  /* #24451
   source: 
     /**
      * Array of node keys added. Any key included will also be included in the modifiedNodeData array.
      */
     insertedNodeKeys?: Array<Key>; */
-  // Type Instance of 'ExternalInteropType'
-  set insertedNodeKeys(_i4.Array? value) {
+  // Type Instance of 'InteropInterface'
+  set insertedNodeKeys(_i4.Array<_i3.Key>? value) {
     _i5.setProperty(
       this,
       'insertedNodeKeys',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #24394
+  /* #24455
   source: 
     /**
      * Array of node data objects modified.
      */
     modifiedNodeData?: Array<ObjectData>; */
   /// Array of node data objects modified.
-  _i4.Array? get modifiedNodeData => _i5.getProperty(
+  _i4.Array<_i2.Object>? get modifiedNodeData => _i5.getProperty(
         this,
         'modifiedNodeData',
       );
-  /* #24394
+  /* #24455
   source: 
     /**
      * Array of node data objects modified.
      */
     modifiedNodeData?: Array<ObjectData>; */
-  // Type Instance of 'ExternalInteropType'
-  set modifiedNodeData(_i4.Array? value) {
+  // Type Instance of 'InteropInterface'
+  set modifiedNodeData(_i4.Array<_i2.Object>? value) {
     _i5.setProperty(
       this,
       'modifiedNodeData',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #24398
+  /* #24459
   source: 
     /**
      * Array of node keys deleted.
      */
     removedNodeKeys?: Array<Key>; */
   /// Array of node keys deleted.
-  _i4.Array? get removedNodeKeys => _i5.getProperty(
+  _i4.Array<_i3.Key>? get removedNodeKeys => _i5.getProperty(
         this,
         'removedNodeKeys',
       );
-  /* #24398
+  /* #24459
   source: 
     /**
      * Array of node keys deleted.
      */
     removedNodeKeys?: Array<Key>; */
-  // Type Instance of 'ExternalInteropType'
-  set removedNodeKeys(_i4.Array? value) {
+  // Type Instance of 'InteropInterface'
+  set removedNodeKeys(_i4.Array<_i3.Key>? value) {
     _i5.setProperty(
       this,
       'removedNodeKeys',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #24402
+  /* #24463
   source: 
     /**
      * Array of link keys added. Any key included will also be included in the modifiedLinkData array.
      */
     insertedLinkKeys?: Array<Key>; */
   /// Array of link keys added. Any key included will also be included in the modifiedLinkData array.
-  _i4.Array? get insertedLinkKeys => _i5.getProperty(
+  _i4.Array<_i3.Key>? get insertedLinkKeys => _i5.getProperty(
         this,
         'insertedLinkKeys',
       );
-  /* #24402
+  /* #24463
   source: 
     /**
      * Array of link keys added. Any key included will also be included in the modifiedLinkData array.
      */
     insertedLinkKeys?: Array<Key>; */
-  // Type Instance of 'ExternalInteropType'
-  set insertedLinkKeys(_i4.Array? value) {
+  // Type Instance of 'InteropInterface'
+  set insertedLinkKeys(_i4.Array<_i3.Key>? value) {
     _i5.setProperty(
       this,
       'insertedLinkKeys',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #24406
+  /* #24467
   source: 
     /**
      * Array of link data objects modified.
      */
     modifiedLinkData?: Array<ObjectData>; */
   /// Array of link data objects modified.
-  _i4.Array? get modifiedLinkData => _i5.getProperty(
+  _i4.Array<_i2.Object>? get modifiedLinkData => _i5.getProperty(
         this,
         'modifiedLinkData',
       );
-  /* #24406
+  /* #24467
   source: 
     /**
      * Array of link data objects modified.
      */
     modifiedLinkData?: Array<ObjectData>; */
-  // Type Instance of 'ExternalInteropType'
-  set modifiedLinkData(_i4.Array? value) {
+  // Type Instance of 'InteropInterface'
+  set modifiedLinkData(_i4.Array<_i2.Object>? value) {
     _i5.setProperty(
       this,
       'modifiedLinkData',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #24410
+  /* #24471
   source: 
     /**
      * Array of link keys deleted.
      */
     removedLinkKeys?: Array<Key>; */
   /// Array of link keys deleted.
-  _i4.Array? get removedLinkKeys => _i5.getProperty(
+  _i4.Array<_i3.Key>? get removedLinkKeys => _i5.getProperty(
         this,
         'removedLinkKeys',
       );
-  /* #24410
+  /* #24471
   source: 
     /**
      * Array of link keys deleted.
      */
     removedLinkKeys?: Array<Key>; */
-  // Type Instance of 'ExternalInteropType'
-  set removedLinkKeys(_i4.Array? value) {
+  // Type Instance of 'InteropInterface'
+  set removedLinkKeys(_i4.Array<_i3.Key>? value) {
     _i5.setProperty(
       this,
       'removedLinkKeys',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -53430,20 +53478,20 @@ class Model {
         [],
       );
 
-  factory Model.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory Model.$2([_i4.Partial<_i3.Model>? init]) => _i5.callConstructor(
         _declaredModel,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory Model.$3([
-    _i4.Array? nodedataarray,
-    _i4.Partial? init,
+    _i4.Array<_i2.Object>? nodedataarray,
+    _i4.Partial<_i3.Model>? init,
   ]) =>
       _i5.callConstructor(
         _declaredModel,
         [
-          nodedataarray ?? _i4.undefined,
-          init ?? _i4.undefined,
+          nodedataarray ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 
@@ -53456,7 +53504,7 @@ class Model {
         'fromJson',
         [
           s,
-          model ?? _i4.undefined,
+          model ?? _i7.undefined,
         ],
       );
 }
@@ -53468,7 +53516,7 @@ FieldExternal:
 external _i2.Object _declaredModel;
 
 extension Model$Typings on Model {
-  /* #24767
+  /* #24828
   source: 
     /**
      * Gets or sets the name of this model.
@@ -53483,7 +53531,7 @@ extension Model$Typings on Model {
         this,
         'name',
       );
-  /* #24767
+  /* #24828
   source: 
     /**
      * Gets or sets the name of this model.
@@ -53500,7 +53548,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #24775
+  /* #24836
   source: 
     /**
      * Gets or sets the name of the format of the diagram data.
@@ -53517,7 +53565,7 @@ extension Model$Typings on Model {
         this,
         'dataFormat',
       );
-  /* #24775
+  /* #24836
   source: 
     /**
      * Gets or sets the name of the format of the diagram data.
@@ -53535,7 +53583,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #24787
+  /* #24848
   source: 
     /**
      * Gets or sets whether this model may be modified, such as adding nodes.
@@ -53560,7 +53608,7 @@ extension Model$Typings on Model {
         this,
         'isReadOnly',
       );
-  /* #24787
+  /* #24848
   source: 
     /**
      * Gets or sets whether this model may be modified, such as adding nodes.
@@ -53582,7 +53630,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #24812
+  /* #24873
   source: 
     /**
      * Gets a JavaScript Object that can hold programmer-defined property values for the model as a whole,
@@ -53633,7 +53681,7 @@ extension Model$Typings on Model {
         this,
         'modelData',
       );
-  /* #24812
+  /* #24873
   source: 
     /**
      * Gets a JavaScript Object that can hold programmer-defined property values for the model as a whole,
@@ -53668,7 +53716,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #24873
+  /* #24934
   source: 
     /**
      * Gets or sets the UndoManager for this Model.
@@ -53689,7 +53737,7 @@ extension Model$Typings on Model {
         this,
         'undoManager',
       );
-  /* #24873
+  /* #24934
   source: 
     /**
      * Gets or sets the UndoManager for this Model.
@@ -53709,7 +53757,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #24895
+  /* #24956
   source: 
     /**
      * Gets or sets whether ChangedEvents are not recorded by the UndoManager.
@@ -53754,7 +53802,7 @@ extension Model$Typings on Model {
         this,
         'skipsUndoManager',
       );
-  /* #24895
+  /* #24956
   source: 
     /**
      * Gets or sets whether ChangedEvents are not recorded by the UndoManager.
@@ -53786,7 +53834,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #24973
+  /* #25034
   source: 
     /**
      * Gets or sets the name of the data property that returns a unique id number or string for each node data object.
@@ -53820,7 +53868,7 @@ extension Model$Typings on Model {
         this,
         'nodeKeyProperty',
       );
-  /* #24973
+  /* #25034
   source: 
     /**
      * Gets or sets the name of the data property that returns a unique id number or string for each node data object.
@@ -53838,7 +53886,7 @@ extension Model$Typings on Model {
      * @see #getKeyForNodeData
      */
     get nodeKeyProperty(): string | ((a: ObjectData, b?: Key) => Key); */
-  // Type InteropUnion#418188260(parent: InteropGetter#422099830(name: nodeKeyProperty))
+  // Type InteropUnion#917979218(parent: InteropGetter#717971695(name: nodeKeyProperty))
   set nodeKeyProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -53847,7 +53895,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #25028
+  /* #25089
   source: 
     /**
      * Gets or sets a function that returns a unique id number or string for a node data object.
@@ -53903,7 +53951,7 @@ extension Model$Typings on Model {
         this,
         'makeUniqueKeyFunction',
       );
-  /* #25028
+  /* #25089
   source: 
     /**
      * Gets or sets a function that returns a unique id number or string for a node data object.
@@ -53930,7 +53978,7 @@ extension Model$Typings on Model {
      * call #setKeyForNodeData with a new and unique key.
      */
     get makeUniqueKeyFunction(): ((model: Model, data: ObjectData) => Key) | null; */
-  // Type InteropUnion#361265441(parent: InteropGetter#1071888197(name: makeUniqueKeyFunction))
+  // Type InteropUnion#1029921951(parent: InteropGetter#766627709(name: makeUniqueKeyFunction))
   set makeUniqueKeyFunction(
       _i3.Key Function(
         _i3.Model,
@@ -53939,11 +53987,11 @@ extension Model$Typings on Model {
     _i5.setProperty(
       this,
       'makeUniqueKeyFunction',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #25071
+  /* #25132
   source: 
     /**
      * Gets or sets the array of node data objects that correspond to Nodes,
@@ -53984,11 +54032,11 @@ extension Model$Typings on Model {
   /// Adding or removing data from this Array will not notify this model or the diagram
   /// that there are any new nodes or that any nodes have been deleted.
   /// Instead you should call #addNodeData or #removeNodeData.
-  _i4.Array get nodeDataArray => _i5.getProperty(
+  _i4.Array<_i2.Object> get nodeDataArray => _i5.getProperty(
         this,
         'nodeDataArray',
       );
-  /* #25071
+  /* #25132
   source: 
     /**
      * Gets or sets the array of node data objects that correspond to Nodes,
@@ -54011,8 +54059,8 @@ extension Model$Typings on Model {
      * Instead you should call #addNodeData or #removeNodeData.
      */
     get nodeDataArray(): Array<ObjectData>; */
-  // Type Instance of 'ExternalInteropType'
-  set nodeDataArray(_i4.Array value) {
+  // Type Instance of 'InteropInterface'
+  set nodeDataArray(_i4.Array<_i2.Object> value) {
     _i5.setProperty(
       this,
       'nodeDataArray',
@@ -54020,7 +54068,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #25176
+  /* #25237
   source: 
     /**
      * Gets or sets a function that makes a copy of a node data object.
@@ -54058,7 +54106,7 @@ extension Model$Typings on Model {
         this,
         'copyNodeDataFunction',
       );
-  /* #25176
+  /* #25237
   source: 
     /**
      * Gets or sets a function that makes a copy of a node data object.
@@ -54076,7 +54124,7 @@ extension Model$Typings on Model {
      * Often the objects that are in the Array also need to be copied.
      */
     get copyNodeDataFunction(): ((data: ObjectData, model: Model) => ObjectData) | null; */
-  // Type InteropUnion#1033677083(parent: InteropGetter#388342501(name: copyNodeDataFunction))
+  // Type InteropUnion#687236086(parent: InteropGetter#540477636(name: copyNodeDataFunction))
   set copyNodeDataFunction(
       _i2.Object Function(
         _i2.Object,
@@ -54085,11 +54133,11 @@ extension Model$Typings on Model {
     _i5.setProperty(
       this,
       'copyNodeDataFunction',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #25198
+  /* #25259
   source: 
     /**
      * Gets or sets whether the default behavior for #copyNodeData or GraphLinksModel#copyLinkData
@@ -54131,7 +54179,7 @@ extension Model$Typings on Model {
         this,
         'copiesArrays',
       );
-  /* #25198
+  /* #25259
   source: 
     /**
      * Gets or sets whether the default behavior for #copyNodeData or GraphLinksModel#copyLinkData
@@ -54163,7 +54211,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #25221
+  /* #25282
   source: 
     /**
      * Gets or sets whether the default behavior for #copyNodeData or GraphLinksModel#copyLinkData
@@ -54207,7 +54255,7 @@ extension Model$Typings on Model {
         this,
         'copiesArrayObjects',
       );
-  /* #25221
+  /* #25282
   source: 
     /**
      * Gets or sets whether the default behavior for #copyNodeData or GraphLinksModel#copyLinkData
@@ -54240,7 +54288,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #25235
+  /* #25296
   source: 
     /**
      * Gets or sets whether the default behavior for #copyNodeData or GraphLinksModel#copyLinkData
@@ -54265,7 +54313,7 @@ extension Model$Typings on Model {
         this,
         'copiesKey',
       );
-  /* #25235
+  /* #25296
   source: 
     /**
      * Gets or sets whether the default behavior for #copyNodeData or GraphLinksModel#copyLinkData
@@ -54289,7 +54337,7 @@ extension Model$Typings on Model {
     );
   }
 
-  /* #25277
+  /* #25338
   source: 
     /**
      * (undocumented)
@@ -54316,7 +54364,7 @@ extension Model$Typings on Model {
         this,
         'afterCopyFunction',
       );
-  /* #25277
+  /* #25338
   source: 
     /**
      * (undocumented)
@@ -54328,7 +54376,7 @@ extension Model$Typings on Model {
      * The third argument to the function is the source Model, of the original data objects.
      */
     get afterCopyFunction(): ((map: Map<ObjectData, ObjectData>, destModel: Model, srcModel: Model) => void) | null; */
-  // Type InteropUnion#749820627(parent: InteropGetter#853391217(name: afterCopyFunction))
+  // Type InteropUnion#847477758(parent: InteropGetter#1067530359(name: afterCopyFunction))
   set afterCopyFunction(
       void Function(
         _i3.Map<_i2.Object, _i2.Object>,
@@ -54338,11 +54386,11 @@ extension Model$Typings on Model {
     _i5.setProperty(
       this,
       'afterCopyFunction',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #25386
+  /* #25447
   source: 
     /**
      * Gets or sets the name of the node data property that returns a string naming that data's category.
@@ -54381,7 +54429,7 @@ extension Model$Typings on Model {
         this,
         'nodeCategoryProperty',
       );
-  /* #25386
+  /* #25447
   source: 
     /**
      * Gets or sets the name of the node data property that returns a string naming that data's category.
@@ -54402,7 +54450,7 @@ extension Model$Typings on Model {
      * @see #setCategoryForNodeData
      */
     get nodeCategoryProperty(): string | ((a: ObjectData, b?: string) => string); */
-  // Type InteropUnion#158926506(parent: InteropGetter#314301994(name: nodeCategoryProperty))
+  // Type InteropUnion#540550721(parent: InteropGetter#523894358(name: nodeCategoryProperty))
   set nodeCategoryProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -54451,13 +54499,13 @@ extension Model$Typings on Model {
         'toIncrementalJson',
         [
           e,
-          classname ?? _i4.undefined,
+          classname ?? _i7.undefined,
         ],
       );
   _i2.String toJson([_i2.String? classname]) => _i5.callMethod(
         this,
         'toJson',
-        [classname ?? _i4.undefined],
+        [classname ?? _i7.undefined],
       );
   void applyIncrementalJson(_i2.Object s) {
     _i5.callMethod(
@@ -54499,8 +54547,8 @@ extension Model$Typings on Model {
         obj,
         oldval,
         newval,
-        oldparam ?? _i4.undefined,
-        newparam ?? _i4.undefined,
+        oldparam ?? _i7.undefined,
+        newparam ?? _i7.undefined,
       ],
     );
   }
@@ -54521,8 +54569,8 @@ extension Model$Typings on Model {
         propertyname,
         oldval,
         newval,
-        oldparam ?? _i4.undefined,
-        newparam ?? _i4.undefined,
+        oldparam ?? _i7.undefined,
+        newparam ?? _i7.undefined,
       ],
     );
   }
@@ -54544,12 +54592,12 @@ extension Model$Typings on Model {
   _i2.bool startTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'startTransaction',
-        [tname ?? _i4.undefined],
+        [tname ?? _i7.undefined],
       );
   _i2.bool commitTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'commitTransaction',
-        [tname ?? _i4.undefined],
+        [tname ?? _i7.undefined],
       );
   _i2.bool rollbackTransaction() => _i5.callMethod(
         this,
@@ -54565,7 +54613,7 @@ extension Model$Typings on Model {
       'commit',
       [
         _i5.allowInterop(func),
-        tname ?? _i4.undefined,
+        tname ?? _i7.undefined,
       ],
     );
   }
@@ -54579,7 +54627,7 @@ extension Model$Typings on Model {
       'updateTargetBindings',
       [
         data,
-        srcpropname ?? _i4.undefined,
+        srcpropname ?? _i7.undefined,
       ],
     );
   }
@@ -54598,7 +54646,7 @@ extension Model$Typings on Model {
       'setKeyForNodeData',
       [
         nodedata,
-        key ?? _i4.undefined,
+        key ?? _i7.undefined,
       ],
     );
   }
@@ -54611,7 +54659,7 @@ extension Model$Typings on Model {
   _i2.Object? findNodeDataForKey(_i3.Key key) => _i5.callMethod(
         this,
         'findNodeDataForKey',
-        [key ?? _i4.undefined],
+        [key ?? _i7.undefined],
       );
   void makeNodeDataKeyUnique(_i2.Object nodedata) {
     _i5.callMethod(
@@ -54653,7 +54701,7 @@ extension Model$Typings on Model {
     );
   }
 
-  void mergeNodeDataArray(_i4.Array arr) {
+  void mergeNodeDataArray(_i4.Array<_i2.Object> arr) {
     _i5.callMethod(
       this,
       'mergeNodeDataArray',
@@ -54665,7 +54713,7 @@ extension Model$Typings on Model {
     _i5.callMethod(
       this,
       'clearUnresolvedReferences',
-      [key ?? _i4.undefined ?? _i4.undefined],
+      [key ?? _i7.undefined ?? _i7.undefined],
     );
   }
 
@@ -54721,7 +54769,7 @@ extension Model$Typings on Model {
   }
 
   void addArrayItem(
-    _i4.Array arr,
+    _i4.Array<_i2.dynamic> arr,
     _i2.dynamic val,
   ) {
     _i5.callMethod(
@@ -54735,7 +54783,7 @@ extension Model$Typings on Model {
   }
 
   void insertArrayItem(
-    _i4.Array arr,
+    _i4.Array<_i2.dynamic> arr,
     _i2.num idx,
     _i2.dynamic val,
   ) {
@@ -54751,7 +54799,7 @@ extension Model$Typings on Model {
   }
 
   void removeArrayItem(
-    _i4.Array arr, [
+    _i4.Array<_i2.dynamic> arr, [
     _i2.num? idx,
   ]) {
     _i5.callMethod(
@@ -54759,7 +54807,7 @@ extension Model$Typings on Model {
       'removeArrayItem',
       [
         arr,
-        idx ?? _i4.undefined,
+        idx ?? _i7.undefined,
       ],
     );
   }
@@ -54796,14 +54844,14 @@ class Binding {
       _i5.callConstructor(
         _declaredBinding,
         [
-          targetprop ?? _i4.undefined,
-          sourceprop ?? _i4.undefined,
-          conv == null ? _i4.undefined : _i5.allowInterop(conv),
-          backconv == null ? _i4.undefined : _i5.allowInterop(backconv),
+          targetprop ?? _i7.undefined,
+          sourceprop ?? _i7.undefined,
+          conv == null ? _i7.undefined : _i5.allowInterop(conv),
+          backconv == null ? _i7.undefined : _i5.allowInterop(backconv),
         ],
       );
 
-  /* #25678
+  /* #25739
   source: 
     /**
      * This value for Binding#mode uses data source values and sets GraphObject properties.
@@ -54817,7 +54865,7 @@ class Binding {
         _declaredBinding,
         'OneWay',
       );
-  /* #25678
+  /* #25739
   source: 
     /**
      * This value for Binding#mode uses data source values and sets GraphObject properties.
@@ -54834,7 +54882,7 @@ class Binding {
     );
   }
 
-  /* #25685
+  /* #25746
   source: 
     /**
      * This value for Binding#mode uses data source values and GraphObject properties and keeps them in sync.
@@ -54850,7 +54898,7 @@ class Binding {
         _declaredBinding,
         'TwoWay',
       );
-  /* #25685
+  /* #25746
   source: 
     /**
      * This value for Binding#mode uses data source values and GraphObject properties and keeps them in sync.
@@ -54883,7 +54931,7 @@ class Binding {
   static _i2.String toString$([_i2.dynamic val]) => _i5.callMethod(
         _declaredBinding,
         'toString',
-        [val ?? _i4.undefined],
+        [val ?? _i7.undefined],
       );
 }
 
@@ -54894,7 +54942,7 @@ FieldExternal:
 external _i2.Object _declaredBinding;
 
 extension Binding$Typings on Binding {
-  /* #25717
+  /* #25778
   source: 
     /**
      * Gets or sets the name of the property to be set on the target GraphObject.
@@ -54907,7 +54955,7 @@ extension Binding$Typings on Binding {
         this,
         'targetProperty',
       );
-  /* #25717
+  /* #25778
   source: 
     /**
      * Gets or sets the name of the property to be set on the target GraphObject.
@@ -54923,7 +54971,7 @@ extension Binding$Typings on Binding {
     );
   }
 
-  /* #25734
+  /* #25795
   source: 
     /**
      * Gets or sets the name of the GraphObject that should act as a source object
@@ -54958,7 +55006,7 @@ extension Binding$Typings on Binding {
         this,
         'sourceName',
       );
-  /* #25734
+  /* #25795
   source: 
     /**
      * Gets or sets the name of the GraphObject that should act as a source object
@@ -54976,16 +55024,16 @@ extension Binding$Typings on Binding {
      * and if it does not notify.
      */
     get sourceName(): string | null; */
-  // Type InteropUnion#1068360801(parent: InteropGetter#599326250(name: sourceName))
+  // Type InteropUnion#426811364(parent: InteropGetter#187348772(name: sourceName))
   set sourceName(_i2.String? value) {
     _i5.setProperty(
       this,
       'sourceName',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #25742
+  /* #25803
   source: 
     /**
      * Gets or sets whether the source data is Model#modelData rather than a node data or link data object in the model.
@@ -55000,7 +55048,7 @@ extension Binding$Typings on Binding {
         this,
         'isToModel',
       );
-  /* #25742
+  /* #25803
   source: 
     /**
      * Gets or sets whether the source data is Model#modelData rather than a node data or link data object in the model.
@@ -55018,7 +55066,7 @@ extension Binding$Typings on Binding {
     );
   }
 
-  /* #25753
+  /* #25814
   source: 
     /**
      * Gets or sets the name of the property to get from the bound data object,
@@ -55041,7 +55089,7 @@ extension Binding$Typings on Binding {
         this,
         'sourceProperty',
       );
-  /* #25753
+  /* #25814
   source: 
     /**
      * Gets or sets the name of the property to get from the bound data object,
@@ -55062,7 +55110,7 @@ extension Binding$Typings on Binding {
     );
   }
 
-  /* #25777
+  /* #25838
   source: 
     /**
      * Gets or sets a converter function to apply to the data property value
@@ -55111,7 +55159,7 @@ extension Binding$Typings on Binding {
         this,
         'converter',
       );
-  /* #25777
+  /* #25838
   source: 
     /**
      * Gets or sets a converter function to apply to the data property value
@@ -55136,16 +55184,16 @@ extension Binding$Typings on Binding {
      * set a property on the second argument, which will be the target GraphObject.
      */
     get converter(): TargetConversion; */
-  // Type InteropTypedef#319543839(name: TargetConversion)
+  // Type InteropTypedef#1030793419(name: TargetConversion)
   set converter(_i3.TargetConversion value) {
     _i5.setProperty(
       this,
       'converter',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #25801
+  /* #25862
   source: 
     /**
      * Gets or sets a converter function to apply to the GraphObject property value
@@ -55194,7 +55242,7 @@ extension Binding$Typings on Binding {
         this,
         'backConverter',
       );
-  /* #25801
+  /* #25862
   source: 
     /**
      * Gets or sets a converter function to apply to the GraphObject property value
@@ -55219,16 +55267,16 @@ extension Binding$Typings on Binding {
      * modify the second argument, which will be the source data object.
      */
     get backConverter(): BackConversion; */
-  // Type InteropTypedef#416671858(name: BackConversion)
+  // Type InteropTypedef#432834666(name: BackConversion)
   set backConverter(_i3.BackConversion value) {
     _i5.setProperty(
       this,
       'backConverter',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #25815
+  /* #25876
   source: 
     /**
      * Gets or sets the directions and frequency in which the binding may be evaluated.
@@ -55257,7 +55305,7 @@ extension Binding$Typings on Binding {
         this,
         'mode',
       );
-  /* #25815
+  /* #25876
   source: 
     /**
      * Gets or sets the directions and frequency in which the binding may be evaluated.
@@ -55289,12 +55337,12 @@ extension Binding$Typings on Binding {
   _i3.Binding makeTwoWay([_i3.BackConversion? backconv]) => _i5.callMethod(
         this,
         'makeTwoWay',
-        [backconv == null ? _i4.undefined : _i5.allowInterop(backconv)],
+        [backconv == null ? _i7.undefined : _i5.allowInterop(backconv)],
       );
   _i3.Binding ofObject([_i2.String? srcname]) => _i5.callMethod(
         this,
         'ofObject',
-        [srcname ?? _i4.undefined],
+        [srcname ?? _i7.undefined],
       );
   _i3.Binding ofModel() => _i5.callMethod(
         this,
@@ -55311,22 +55359,23 @@ class GraphLinksModel implements _i3.Model {
         [],
       );
 
-  factory GraphLinksModel.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory GraphLinksModel.$2([_i4.Partial<_i3.GraphLinksModel>? init]) =>
+      _i5.callConstructor(
         _declaredGraphLinksModel,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory GraphLinksModel.$3([
-    _i4.Array? nodedataarray,
-    _i4.Array? linkdataarray,
-    _i4.Partial? init,
+    _i4.Array<_i2.Object>? nodedataarray,
+    _i4.Array<_i2.Object>? linkdataarray,
+    _i4.Partial<_i3.GraphLinksModel>? init,
   ]) =>
       _i5.callConstructor(
         _declaredGraphLinksModel,
         [
-          nodedataarray ?? _i4.undefined,
-          linkdataarray ?? _i4.undefined,
-          init ?? _i4.undefined,
+          nodedataarray ?? _i7.undefined,
+          linkdataarray ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 }
@@ -55338,7 +55387,7 @@ FieldExternal:
 external _i2.Object _declaredGraphLinksModel;
 
 extension GraphLinksModel$Typings on GraphLinksModel {
-  /* #25995
+  /* #26056
   source: 
     /**
      * Gets or sets a data object that will be copied and added to the model as a new node data each time there
@@ -55362,7 +55411,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'archetypeNodeData',
       );
-  /* #25995
+  /* #26056
   source: 
     /**
      * Gets or sets a data object that will be copied and added to the model as a new node data each time there
@@ -55375,16 +55424,16 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * @since 1.1
      */
     get archetypeNodeData(): ObjectData | null; */
-  // Type InteropUnion#999812021(parent: InteropGetter#543767081(name: archetypeNodeData))
+  // Type InteropUnion#665876406(parent: InteropGetter#837079854(name: archetypeNodeData))
   set archetypeNodeData(_i2.Object? value) {
     _i5.setProperty(
       this,
       'archetypeNodeData',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #26016
+  /* #26077
   source: 
     /**
      * Gets or sets the name of the data property that returns
@@ -55425,7 +55474,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'linkFromKeyProperty',
       );
-  /* #26016
+  /* #26077
   source: 
     /**
      * Gets or sets the name of the data property that returns
@@ -55447,7 +55496,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * @see #setFromKeyForLinkData
      */
     get linkFromKeyProperty(): string | ((a: ObjectData, b?: Key) => Key); */
-  // Type InteropUnion#617921093(parent: InteropGetter#22902972(name: linkFromKeyProperty))
+  // Type InteropUnion#403410815(parent: InteropGetter#385433129(name: linkFromKeyProperty))
   set linkFromKeyProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -55456,7 +55505,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  /* #26057
+  /* #26118
   source: 
     /**
      * Gets or sets the name of the data property that returns
@@ -55497,7 +55546,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'linkToKeyProperty',
       );
-  /* #26057
+  /* #26118
   source: 
     /**
      * Gets or sets the name of the data property that returns
@@ -55519,7 +55568,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * @see #setToKeyForLinkData
      */
     get linkToKeyProperty(): string | ((a: ObjectData, b?: Key) => Key); */
-  // Type InteropUnion#156470296(parent: InteropGetter#591003040(name: linkToKeyProperty))
+  // Type InteropUnion#222430080(parent: InteropGetter#276270664(name: linkToKeyProperty))
   set linkToKeyProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -55528,7 +55577,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  /* #26098
+  /* #26159
   source: 
     /**
      * Gets or sets the name of the data property that returns
@@ -55569,7 +55618,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'linkFromPortIdProperty',
       );
-  /* #26098
+  /* #26159
   source: 
     /**
      * Gets or sets the name of the data property that returns
@@ -55591,7 +55640,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * @see #setFromPortIdForLinkData
      */
     get linkFromPortIdProperty(): string | ((a: ObjectData, b?: string) => string); */
-  // Type InteropUnion#111593505(parent: InteropGetter#649513661(name: linkFromPortIdProperty))
+  // Type InteropUnion#191897246(parent: InteropGetter#23572923(name: linkFromPortIdProperty))
   set linkFromPortIdProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -55600,7 +55649,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  /* #26139
+  /* #26200
   source: 
     /**
      * Gets or sets the name of the data property that returns
@@ -55641,7 +55690,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'linkToPortIdProperty',
       );
-  /* #26139
+  /* #26200
   source: 
     /**
      * Gets or sets the name of the data property that returns
@@ -55663,7 +55712,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * @see #setToPortIdForLinkData
      */
     get linkToPortIdProperty(): string | ((a: ObjectData, b?: string) => string); */
-  // Type InteropUnion#265388380(parent: InteropGetter#199558321(name: linkToPortIdProperty))
+  // Type InteropUnion#794339683(parent: InteropGetter#148581897(name: linkToPortIdProperty))
   set linkToPortIdProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -55672,7 +55721,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  /* #26181
+  /* #26242
   source: 
     /**
      * Gets or sets the name of the data property that returns
@@ -55715,7 +55764,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'linkLabelKeysProperty',
       );
-  /* #26181
+  /* #26242
   source: 
     /**
      * Gets or sets the name of the data property that returns
@@ -55738,7 +55787,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * @see #setLabelKeysForLinkData
      */
     get linkLabelKeysProperty(): string | ((a: ObjectData, b?: Array<Key>) => Array<Key>); */
-  // Type InteropUnion#317058379(parent: InteropGetter#332054773(name: linkLabelKeysProperty))
+  // Type InteropUnion#26195055(parent: InteropGetter#193335499(name: linkLabelKeysProperty))
   set linkLabelKeysProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -55747,7 +55796,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  /* #26234
+  /* #26295
   source: 
     /**
      * Gets or sets the array of link data objects that correspond to Links in the Diagram.
@@ -55756,19 +55805,19 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     get linkDataArray(): Array<ObjectData>; */
   /// Gets or sets the array of link data objects that correspond to Links in the Diagram.
   /// The initial value is an empty Array.
-  _i4.Array get linkDataArray => _i5.getProperty(
+  _i4.Array<_i2.Object> get linkDataArray => _i5.getProperty(
         this,
         'linkDataArray',
       );
-  /* #26234
+  /* #26295
   source: 
     /**
      * Gets or sets the array of link data objects that correspond to Links in the Diagram.
      * The initial value is an empty Array.
      */
     get linkDataArray(): Array<ObjectData>; */
-  // Type Instance of 'ExternalInteropType'
-  set linkDataArray(_i4.Array value) {
+  // Type Instance of 'InteropInterface'
+  set linkDataArray(_i4.Array<_i2.Object> value) {
     _i5.setProperty(
       this,
       'linkDataArray',
@@ -55776,7 +55825,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  /* #26254
+  /* #26315
   source: 
     /**
      * Gets or sets the name of the data property that returns a unique id number or string for each link data object.
@@ -55815,7 +55864,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'linkKeyProperty',
       );
-  /* #26254
+  /* #26315
   source: 
     /**
      * Gets or sets the name of the data property that returns a unique id number or string for each link data object.
@@ -55836,7 +55885,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * @since 1.6
      */
     get linkKeyProperty(): string | ((a: ObjectData, b?: Key) => Key); */
-  // Type InteropUnion#974430193(parent: InteropGetter#98402190(name: linkKeyProperty))
+  // Type InteropUnion#954066359(parent: InteropGetter#662756513(name: linkKeyProperty))
   set linkKeyProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -55845,7 +55894,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  /* #26306
+  /* #26367
   source: 
     /**
      * Gets or sets a function that returns a unique id number or string for a link data object.
@@ -55890,7 +55939,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'makeUniqueLinkKeyFunction',
       );
-  /* #26306
+  /* #26367
   source: 
     /**
      * Gets or sets a function that returns a unique id number or string for a link data object.
@@ -55912,7 +55961,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * @since 1.6
      */
     get makeUniqueLinkKeyFunction(): ((a: GraphLinksModel, b: ObjectData) => Key) | null; */
-  // Type InteropUnion#303224886(parent: InteropGetter#317281368(name: makeUniqueLinkKeyFunction))
+  // Type InteropUnion#267489373(parent: InteropGetter#379239440(name: makeUniqueLinkKeyFunction))
   set makeUniqueLinkKeyFunction(
       _i3.Key Function(
         _i3.GraphLinksModel,
@@ -55921,11 +55970,11 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     _i5.setProperty(
       this,
       'makeUniqueLinkKeyFunction',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #26430
+  /* #26491
   source: 
     /**
      * Gets or sets a function that makes a copy of a link data object.
@@ -55949,7 +55998,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'copyLinkDataFunction',
       );
-  /* #26430
+  /* #26491
   source: 
     /**
      * Gets or sets a function that makes a copy of a link data object.
@@ -55960,7 +56009,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * The default value is null.
      */
     get copyLinkDataFunction(): ((a: ObjectData, b: GraphLinksModel) => ObjectData) | null; */
-  // Type InteropUnion#435600102(parent: InteropGetter#161999847(name: copyLinkDataFunction))
+  // Type InteropUnion#682127381(parent: InteropGetter#1036650826(name: copyLinkDataFunction))
   set copyLinkDataFunction(
       _i2.Object Function(
         _i2.Object,
@@ -55969,11 +56018,11 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     _i5.setProperty(
       this,
       'copyLinkDataFunction',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i5.allowInterop(value),
     );
   }
 
-  /* #26462
+  /* #26523
   source: 
     /**
      * Gets or sets the name of the boolean property on node data that indicates
@@ -56012,7 +56061,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'nodeIsGroupProperty',
       );
-  /* #26462
+  /* #26523
   source: 
     /**
      * Gets or sets the name of the boolean property on node data that indicates
@@ -56032,7 +56081,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * immediately after creating the model, including when it is created by Model.fromJson.
      */
     get nodeIsGroupProperty(): string | ((a: ObjectData, b?: boolean) => boolean); */
-  // Type InteropUnion#361942940(parent: InteropGetter#729239648(name: nodeIsGroupProperty))
+  // Type InteropUnion#349492974(parent: InteropGetter#176689916(name: nodeIsGroupProperty))
   set nodeIsGroupProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -56041,7 +56090,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  /* #26494
+  /* #26555
   source: 
     /**
      * Gets or sets the name of the property on node data that specifies
@@ -56084,7 +56133,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'nodeGroupKeyProperty',
       );
-  /* #26494
+  /* #26555
   source: 
     /**
      * Gets or sets the name of the property on node data that specifies
@@ -56107,7 +56156,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * @see #setGroupKeyForNodeData
      */
     get nodeGroupKeyProperty(): string | ((a: ObjectData, b?: Key) => Key); */
-  // Type InteropUnion#400158209(parent: InteropGetter#464928654(name: nodeGroupKeyProperty))
+  // Type InteropUnion#529697419(parent: InteropGetter#8250547(name: nodeGroupKeyProperty))
   set nodeGroupKeyProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -56116,7 +56165,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  /* #26559
+  /* #26620
   source: 
     /**
      * Gets or sets the name of the data property that returns a string naming that data's category,
@@ -56155,7 +56204,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
         this,
         'linkCategoryProperty',
       );
-  /* #26559
+  /* #26620
   source: 
     /**
      * Gets or sets the name of the data property that returns a string naming that data's category,
@@ -56176,7 +56225,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
      * @see #setCategoryForLinkData
      */
     get linkCategoryProperty(): string | ((a: ObjectData, b?: string) => string); */
-  // Type InteropUnion#175689495(parent: InteropGetter#616515891(name: linkCategoryProperty))
+  // Type InteropUnion#525568235(parent: InteropGetter#953279404(name: linkCategoryProperty))
   set linkCategoryProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -56199,7 +56248,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'setFromKeyForLinkData',
       [
         linkdata,
-        key ?? _i4.undefined,
+        key ?? _i7.undefined,
       ],
     );
   }
@@ -56218,7 +56267,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'setToKeyForLinkData',
       [
         linkdata,
-        key ?? _i4.undefined,
+        key ?? _i7.undefined,
       ],
     );
   }
@@ -56261,14 +56310,15 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  _i4.Array getLabelKeysForLinkData(_i2.Object linkdata) => _i5.callMethod(
+  _i4.Array<_i3.Key> getLabelKeysForLinkData(_i2.Object linkdata) =>
+      _i5.callMethod(
         this,
         'getLabelKeysForLinkData',
         [linkdata],
       );
   void setLabelKeysForLinkData(
     _i2.Object linkdata,
-    _i4.Array arr,
+    _i4.Array<_i3.Key> arr,
   ) {
     _i5.callMethod(
       this,
@@ -56289,7 +56339,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'addLabelKeyForLinkData',
       [
         linkdata,
-        key ?? _i4.undefined,
+        key ?? _i7.undefined,
       ],
     );
   }
@@ -56303,7 +56353,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'removeLabelKeyForLinkData',
       [
         linkdata,
-        key ?? _i4.undefined,
+        key ?? _i7.undefined,
       ],
     );
   }
@@ -56322,7 +56372,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'setKeyForLinkData',
       [
         linkdata,
-        key ?? _i4.undefined,
+        key ?? _i7.undefined,
       ],
     );
   }
@@ -56330,7 +56380,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
   _i2.Object? findLinkDataForKey(_i3.Key key) => _i5.callMethod(
         this,
         'findLinkDataForKey',
-        [key ?? _i4.undefined],
+        [key ?? _i7.undefined],
       );
   void makeLinkDataKeyUnique(_i2.Object linkdata) {
     _i5.callMethod(
@@ -56377,7 +56427,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     );
   }
 
-  void mergeLinkDataArray(_i4.Array arr) {
+  void mergeLinkDataArray(_i4.Array<_i2.Object> arr) {
     _i5.callMethod(
       this,
       'mergeLinkDataArray',
@@ -56409,7 +56459,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'setGroupKeyForNodeData',
       [
         nodedata,
-        key ?? _i4.undefined,
+        key ?? _i7.undefined,
       ],
     );
   }
@@ -56477,20 +56527,21 @@ class TreeModel implements _i3.Model {
         [],
       );
 
-  factory TreeModel.$2([_i4.Partial? init]) => _i5.callConstructor(
+  factory TreeModel.$2([_i4.Partial<_i3.TreeModel>? init]) =>
+      _i5.callConstructor(
         _declaredTreeModel,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
   factory TreeModel.$3([
-    _i4.Array? nodedataarray,
-    _i4.Partial? init,
+    _i4.Array<_i2.Object>? nodedataarray,
+    _i4.Partial<_i3.TreeModel>? init,
   ]) =>
       _i5.callConstructor(
         _declaredTreeModel,
         [
-          nodedataarray ?? _i4.undefined,
-          init ?? _i4.undefined,
+          nodedataarray ?? _i7.undefined,
+          init ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 }
@@ -56502,7 +56553,7 @@ FieldExternal:
 external _i2.Object _declaredTreeModel;
 
 extension TreeModel$Typings on TreeModel {
-  /* #26648
+  /* #26709
   source: 
     /**
      * Gets or sets the name of the property on node data that specifies
@@ -56539,7 +56590,7 @@ extension TreeModel$Typings on TreeModel {
         this,
         'nodeParentKeyProperty',
       );
-  /* #26648
+  /* #26709
   source: 
     /**
      * Gets or sets the name of the property on node data that specifies
@@ -56559,7 +56610,7 @@ extension TreeModel$Typings on TreeModel {
      * @see #setParentKeyForNodeData
      */
     get nodeParentKeyProperty(): string | ((a: ObjectData, b?: Key) => Key); */
-  // Type InteropUnion#303427192(parent: InteropGetter#1034470877(name: nodeParentKeyProperty))
+  // Type InteropUnion#1057964156(parent: InteropGetter#436656358(name: nodeParentKeyProperty))
   set nodeParentKeyProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -56568,7 +56619,7 @@ extension TreeModel$Typings on TreeModel {
     );
   }
 
-  /* #26684
+  /* #26745
   source: 
     /**
      * Gets or sets the name of the data property that returns a string describing that node data's parent link's category.
@@ -56607,7 +56658,7 @@ extension TreeModel$Typings on TreeModel {
         this,
         'parentLinkCategoryProperty',
       );
-  /* #26684
+  /* #26745
   source: 
     /**
      * Gets or sets the name of the data property that returns a string describing that node data's parent link's category.
@@ -56628,7 +56679,7 @@ extension TreeModel$Typings on TreeModel {
      * @see #setParentLinkCategoryForNodeData
      */
     get parentLinkCategoryProperty(): string | ((a: ObjectData, b?: string) => string); */
-  // Type InteropUnion#564795020(parent: InteropGetter#1069704098(name: parentLinkCategoryProperty))
+  // Type InteropUnion#393555854(parent: InteropGetter#408859410(name: parentLinkCategoryProperty))
   set parentLinkCategoryProperty(_i2.Object value) {
     _i5.setProperty(
       this,
@@ -56651,7 +56702,7 @@ extension TreeModel$Typings on TreeModel {
       'setParentKeyForNodeData',
       [
         nodedata,
-        key ?? _i4.undefined,
+        key ?? _i7.undefined,
       ],
     );
   }
@@ -56701,12 +56752,13 @@ extension TreeModel$Typings on TreeModel {
 @_i1.JS()
 @_i1.staticInterop
 class CircularLayout implements _i3.Layout {
-  factory CircularLayout([_i4.Partial? init]) => _i5.callConstructor(
+  factory CircularLayout([_i4.Partial<_i3.CircularLayout>? init]) =>
+      _i5.callConstructor(
         _declaredCircularLayout,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
-  /* #26916
+  /* #26977
   source: 
     /**
      * The spacing between the idealized boundaries of the nodes is constant;
@@ -56720,7 +56772,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'ConstantSpacing',
       );
-  /* #26916
+  /* #26977
   source: 
     /**
      * The spacing between the idealized boundaries of the nodes is constant;
@@ -56737,7 +56789,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26922
+  /* #26983
   source: 
     /**
      * The distance between the centers of the nodes is constant;
@@ -56751,7 +56803,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'ConstantDistance',
       );
-  /* #26922
+  /* #26983
   source: 
     /**
      * The distance between the centers of the nodes is constant;
@@ -56768,7 +56820,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26928
+  /* #26989
   source: 
     /**
      * The angular distance between the nodes is constant;
@@ -56782,7 +56834,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'ConstantAngle',
       );
-  /* #26928
+  /* #26989
   source: 
     /**
      * The angular distance between the nodes is constant;
@@ -56799,7 +56851,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26935
+  /* #26996
   source: 
     /**
      * The vertices are arranged as close together as possible considering the CircularLayout#spacing,
@@ -56815,7 +56867,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'Packed',
       );
-  /* #26935
+  /* #26996
   source: 
     /**
      * The vertices are arranged as close together as possible considering the CircularLayout#spacing,
@@ -56833,7 +56885,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26941
+  /* #27002
   source: 
     /**
      * Rings are filled clockwise;
@@ -56847,7 +56899,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'Clockwise',
       );
-  /* #26941
+  /* #27002
   source: 
     /**
      * Rings are filled clockwise;
@@ -56864,7 +56916,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26947
+  /* #27008
   source: 
     /**
      * Rings are filled counterclockwise;
@@ -56878,7 +56930,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'Counterclockwise',
       );
-  /* #26947
+  /* #27008
   source: 
     /**
      * Rings are filled counterclockwise;
@@ -56895,7 +56947,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26953
+  /* #27014
   source: 
     /**
      * The ring is filled by alternating sides; the second node is counterclockwise from the first node;
@@ -56909,7 +56961,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'BidirectionalLeft',
       );
-  /* #26953
+  /* #27014
   source: 
     /**
      * The ring is filled by alternating sides; the second node is counterclockwise from the first node;
@@ -56926,7 +56978,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26959
+  /* #27020
   source: 
     /**
      * The ring is filled by alternating sides; the second node is clockwise from the first node;
@@ -56940,7 +56992,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'BidirectionalRight',
       );
-  /* #26959
+  /* #27020
   source: 
     /**
      * The ring is filled by alternating sides; the second node is clockwise from the first node;
@@ -56957,7 +57009,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26965
+  /* #27026
   source: 
     /**
      * Nodes are arranged in the order given;
@@ -56971,7 +57023,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'Forwards',
       );
-  /* #26965
+  /* #27026
   source: 
     /**
      * Nodes are arranged in the order given;
@@ -56988,7 +57040,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26971
+  /* #27032
   source: 
     /**
      * Nodes are arranged in the reverse of the order given;
@@ -57002,7 +57054,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'Reverse',
       );
-  /* #26971
+  /* #27032
   source: 
     /**
      * Nodes are arranged in the reverse of the order given;
@@ -57019,7 +57071,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26977
+  /* #27038
   source: 
     /**
      * Nodes are sorted using the #comparer, in ascending order;
@@ -57033,7 +57085,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'Ascending',
       );
-  /* #26977
+  /* #27038
   source: 
     /**
      * Nodes are sorted using the #comparer, in ascending order;
@@ -57050,7 +57102,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26983
+  /* #27044
   source: 
     /**
      * Nodes are sorted using the #comparer, in reverse ascending (descending) order;
@@ -57064,7 +57116,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'Descending',
       );
-  /* #26983
+  /* #27044
   source: 
     /**
      * Nodes are sorted using the #comparer, in reverse ascending (descending) order;
@@ -57081,7 +57133,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26989
+  /* #27050
   source: 
     /**
      * Nodes are ordered to reduce link crossings;
@@ -57095,7 +57147,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'Optimized',
       );
-  /* #26989
+  /* #27050
   source: 
     /**
      * Nodes are ordered to reduce link crossings;
@@ -57112,7 +57164,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #26996
+  /* #27057
   source: 
     /**
      * The effective diameter is sqrt(width^2+height^2);
@@ -57128,7 +57180,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'Pythagorean',
       );
-  /* #26996
+  /* #27057
   source: 
     /**
      * The effective diameter is sqrt(width^2+height^2);
@@ -57146,7 +57198,7 @@ class CircularLayout implements _i3.Layout {
     );
   }
 
-  /* #27004
+  /* #27065
   source: 
     /**
      * The effective diameter is either the width or height of the node, whichever is larger;
@@ -57164,7 +57216,7 @@ class CircularLayout implements _i3.Layout {
         _declaredCircularLayout,
         'Circular',
       );
-  /* #27004
+  /* #27065
   source: 
     /**
      * The effective diameter is either the width or height of the node, whichever is larger;
@@ -57191,7 +57243,7 @@ FieldExternal:
 external _i2.Object _declaredCircularLayout;
 
 extension CircularLayout$Typings on CircularLayout {
-  /* #26797
+  /* #26858
   source: 
     /**
      * Gets or sets the horizontal radius of the elliptical arrangement.
@@ -57218,7 +57270,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'radius',
       );
-  /* #26797
+  /* #26858
   source: 
     /**
      * Gets or sets the horizontal radius of the elliptical arrangement.
@@ -57241,7 +57293,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26808
+  /* #26869
   source: 
     /**
      * Gets or sets the ratio of the arrangement's height to its width
@@ -57264,7 +57316,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'aspectRatio',
       );
-  /* #26808
+  /* #26869
   source: 
     /**
      * Gets or sets the ratio of the arrangement's height to its width
@@ -57285,7 +57337,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26815
+  /* #26876
   source: 
     /**
      * Gets or sets the angle (in degrees, clockwise from the positive side of the X axis) of the first element.
@@ -57300,7 +57352,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'startAngle',
       );
-  /* #26815
+  /* #26876
   source: 
     /**
      * Gets or sets the angle (in degrees, clockwise from the positive side of the X axis) of the first element.
@@ -57317,7 +57369,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26830
+  /* #26891
   source: 
     /**
      * Gets or sets the absolute angle (in degrees) between the first and last node.
@@ -57348,7 +57400,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'sweepAngle',
       );
-  /* #26830
+  /* #26891
   source: 
     /**
      * Gets or sets the absolute angle (in degrees) between the first and last node.
@@ -57373,7 +57425,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26839
+  /* #26900
   source: 
     /**
      * Gets or sets how the nodes are spaced.
@@ -57392,7 +57444,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'arrangement',
       );
-  /* #26839
+  /* #26900
   source: 
     /**
      * Gets or sets how the nodes are spaced.
@@ -57411,7 +57463,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26846
+  /* #26907
   source: 
     /**
      * Gets or sets whether the nodes are arranged clockwise or counterclockwise.
@@ -57426,7 +57478,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'direction',
       );
-  /* #26846
+  /* #26907
   source: 
     /**
      * Gets or sets whether the nodes are arranged clockwise or counterclockwise.
@@ -57443,7 +57495,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26859
+  /* #26920
   source: 
     /**
      * Gets or sets if and how the nodes are sorted.
@@ -57470,7 +57522,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'sorting',
       );
-  /* #26859
+  /* #26920
   source: 
     /**
      * Gets or sets if and how the nodes are sorted.
@@ -57493,7 +57545,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26867
+  /* #26928
   source: 
     /**
      * Gets or sets the comparer which sorts the data when #sorting is
@@ -57513,7 +57565,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'comparer',
       );
-  /* #26867
+  /* #26928
   source: 
     /**
      * Gets or sets the comparer which sorts the data when #sorting is
@@ -57522,7 +57574,7 @@ extension CircularLayout$Typings on CircularLayout {
      * The default function compares the Part#text values of the vertexes' LayoutVertex#nodes.
      */
     get comparer(): ((a: CircularVertex, b: CircularVertex) => number); */
-  // Type InteropFunction#797427196(parent: InteropGetter#449899863(name: comparer), library: go.d.ts)
+  // Type InteropFunction#79845870(parent: InteropGetter#212430507(name: comparer), library: go.d.ts)
   set comparer(
       _i2.num Function(
         _i3.CircularVertex,
@@ -57535,7 +57587,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26885
+  /* #26946
   source: 
     /**
      * Gets or sets the distance between nodes (if #radius is NaN)
@@ -57572,7 +57624,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'spacing',
       );
-  /* #26885
+  /* #26946
   source: 
     /**
      * Gets or sets the distance between nodes (if #radius is NaN)
@@ -57600,7 +57652,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26893
+  /* #26954
   source: 
     /**
      * Specifies how the diameter of nodes will be calculated.
@@ -57617,7 +57669,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'nodeDiameterFormula',
       );
-  /* #26893
+  /* #26954
   source: 
     /**
      * Specifies how the diameter of nodes will be calculated.
@@ -57635,7 +57687,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26898
+  /* #26959
   source: 
     /**
      * This read-only property is the effective X radius that may have been calculated by the layout.
@@ -57646,7 +57698,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'actualXRadius',
       );
-  /* #26898
+  /* #26959
   source: 
     /**
      * This read-only property is the effective X radius that may have been calculated by the layout.
@@ -57661,7 +57713,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26902
+  /* #26963
   source: 
     /**
      * This read-only property is the effective Y radius that may have been calculated by the layout.
@@ -57672,7 +57724,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'actualYRadius',
       );
-  /* #26902
+  /* #26963
   source: 
     /**
      * This read-only property is the effective Y radius that may have been calculated by the layout.
@@ -57687,7 +57739,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26906
+  /* #26967
   source: 
     /**
      * This read-only property is the effective spacing that may have been calculated by the layout.
@@ -57698,7 +57750,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'actualSpacing',
       );
-  /* #26906
+  /* #26967
   source: 
     /**
      * This read-only property is the effective spacing that may have been calculated by the layout.
@@ -57713,7 +57765,7 @@ extension CircularLayout$Typings on CircularLayout {
     );
   }
 
-  /* #26910
+  /* #26971
   source: 
     /**
      * This read-only property is the coordinates of the center of the laid-out ellipse immediately after the layout.
@@ -57724,7 +57776,7 @@ extension CircularLayout$Typings on CircularLayout {
         this,
         'actualCenter',
       );
-  /* #26910
+  /* #26971
   source: 
     /**
      * This read-only property is the coordinates of the center of the laid-out ellipse immediately after the layout.
@@ -57808,7 +57860,7 @@ FieldExternal:
 external _i2.Object _declaredCircularVertex;
 
 extension CircularVertex$Typings on CircularVertex {
-  /* #27038
+  /* #27099
   source: 
     /**
      * Gets or sets the value used as the vertex's diameter.
@@ -57825,7 +57877,7 @@ extension CircularVertex$Typings on CircularVertex {
         this,
         'diameter',
       );
-  /* #27038
+  /* #27099
   source: 
     /**
      * Gets or sets the value used as the vertex's diameter.
@@ -57843,7 +57895,7 @@ extension CircularVertex$Typings on CircularVertex {
     );
   }
 
-  /* #27043
+  /* #27104
   source: 
     /**
      * Gets or sets the value used as the vertex's angle.
@@ -57854,7 +57906,7 @@ extension CircularVertex$Typings on CircularVertex {
         this,
         'actualAngle',
       );
-  /* #27043
+  /* #27104
   source: 
     /**
      * Gets or sets the value used as the vertex's angle.
@@ -57891,17 +57943,17 @@ external _i2.Object _declaredCircularEdge;
 class IInline12 {}
 
 extension IInline12$Typings on IInline12 {
-  /* #27409
+  /* #27470
   source: 
         random: () => number; */
   _i2.num Function() get random => _i5.getProperty(
         this,
         'random',
       );
-  /* #27409
+  /* #27470
   source: 
         random: () => number; */
-  // Type InteropFunction#360099879(parent: InteropGetter#514048502(name: random), library: go.d.ts)
+  // Type InteropFunction#713546910(parent: InteropGetter#1063552837(name: random), library: go.d.ts)
   set random(_i2.num Function() value) {
     _i5.setProperty(
       this,
@@ -57917,17 +57969,17 @@ extension IInline12$Typings on IInline12 {
 class IInline13 {}
 
 extension IInline13$Typings on IInline13 {
-  /* #27412
+  /* #27473
   source: 
         random: () => number; */
   _i2.num Function() get random => _i5.getProperty(
         this,
         'random',
       );
-  /* #27412
+  /* #27473
   source: 
         random: () => number; */
-  // Type InteropFunction#582521958(parent: InteropGetter#546093028(name: random), library: go.d.ts)
+  // Type InteropFunction#59431299(parent: InteropGetter#985101975(name: random), library: go.d.ts)
   set random(_i2.num Function() value) {
     _i5.setProperty(
       this,
@@ -57940,9 +57992,10 @@ extension IInline13$Typings on IInline13 {
 @_i1.JS()
 @_i1.staticInterop
 class ForceDirectedLayout implements _i3.Layout {
-  factory ForceDirectedLayout([_i4.Partial? init]) => _i5.callConstructor(
+  factory ForceDirectedLayout([_i4.Partial<_i3.ForceDirectedLayout>? init]) =>
+      _i5.callConstructor(
         _declaredForceDirectedLayout,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 }
 
@@ -57953,7 +58006,7 @@ FieldExternal:
 external _i2.Object _declaredForceDirectedLayout;
 
 extension ForceDirectedLayout$Typings on ForceDirectedLayout {
-  /* #27330
+  /* #27391
   source: 
     /**
      * This read-only property returns the current iteration count, valid during a call to #doLayout.
@@ -57964,7 +58017,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'currentIteration',
       );
-  /* #27330
+  /* #27391
   source: 
     /**
      * This read-only property returns the current iteration count, valid during a call to #doLayout.
@@ -57979,7 +58032,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27340
+  /* #27401
   source: 
     /**
      * Gets or sets the space between which the layout
@@ -58002,7 +58055,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'arrangementSpacing',
       );
-  /* #27340
+  /* #27401
   source: 
     /**
      * Gets or sets the space between which the layout
@@ -58023,7 +58076,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27349
+  /* #27410
   source: 
     /**
      * Gets or sets whether #commitNodes should move all of the
@@ -58042,7 +58095,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'arrangesToOrigin',
       );
-  /* #27349
+  /* #27410
   source: 
     /**
      * Gets or sets whether #commitNodes should move all of the
@@ -58061,7 +58114,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27356
+  /* #27417
   source: 
     /**
      * Gets or sets whether the fromSpot and the toSpot of every Link
@@ -58076,7 +58129,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'setsPortSpots',
       );
-  /* #27356
+  /* #27417
   source: 
     /**
      * Gets or sets whether the fromSpot and the toSpot of every Link
@@ -58093,7 +58146,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27366
+  /* #27427
   source: 
     /**
      * Gets or sets whether this layout should find all Nodes
@@ -58114,7 +58167,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'comments',
       );
-  /* #27366
+  /* #27427
   source: 
     /**
      * Gets or sets whether this layout should find all Nodes
@@ -58134,7 +58187,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27374
+  /* #27435
   source: 
     /**
      * Gets or sets the maximum number of iterations to perform when doing the
@@ -58151,7 +58204,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'maxIterations',
       );
-  /* #27374
+  /* #27435
   source: 
     /**
      * Gets or sets the maximum number of iterations to perform when doing the
@@ -58169,7 +58222,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27381
+  /* #27442
   source: 
     /**
      * Gets or sets approximately how far a node must move in order for the iterations to continue.
@@ -58184,7 +58237,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'epsilonDistance',
       );
-  /* #27381
+  /* #27442
   source: 
     /**
      * Gets or sets approximately how far a node must move in order for the iterations to continue.
@@ -58201,7 +58254,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27388
+  /* #27449
   source: 
     /**
      * Gets or sets a threshold for the distance beyond which the electrical charge forces may be ignored.
@@ -58216,7 +58269,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'infinityDistance',
       );
-  /* #27388
+  /* #27449
   source: 
     /**
      * Gets or sets a threshold for the distance beyond which the electrical charge forces may be ignored.
@@ -58233,7 +58286,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27396
+  /* #27457
   source: 
     /**
      * Gets or sets how far a vertex may be moved in an iteration.
@@ -58249,7 +58302,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'moveLimit',
       );
-  /* #27396
+  /* #27457
   source: 
     /**
      * Gets or sets how far a vertex may be moved in an iteration.
@@ -58267,7 +58320,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27408
+  /* #27469
   source: 
     /**
      * Gets or sets a random number generator.
@@ -58293,7 +58346,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'randomNumberGenerator',
       );
-  /* #27408
+  /* #27469
   source: 
     /**
      * Gets or sets a random number generator.
@@ -58308,16 +58361,16 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     get randomNumberGenerator(): ({
         random: () => number;
     } | null); */
-  // Type InteropUnion#348017121(parent: InteropGetter#1015173981(name: randomNumberGenerator))
+  // Type InteropUnion#125064397(parent: InteropGetter#154476963(name: randomNumberGenerator))
   set randomNumberGenerator(_i3.IInline12? value) {
     _i5.setProperty(
       this,
       'randomNumberGenerator',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #27418
+  /* #27479
   source: 
     /**
      * Gets or sets the default value computed by #springStiffness.
@@ -58330,7 +58383,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'defaultSpringStiffness',
       );
-  /* #27418
+  /* #27479
   source: 
     /**
      * Gets or sets the default value computed by #springStiffness.
@@ -58346,7 +58399,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27424
+  /* #27485
   source: 
     /**
      * Gets or sets the default value computed by #springLength.
@@ -58359,7 +58412,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'defaultSpringLength',
       );
-  /* #27424
+  /* #27485
   source: 
     /**
      * Gets or sets the default value computed by #springLength.
@@ -58375,7 +58428,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27430
+  /* #27491
   source: 
     /**
      * Gets or sets the default value computed by #electricalCharge.
@@ -58388,7 +58441,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'defaultElectricalCharge',
       );
-  /* #27430
+  /* #27491
   source: 
     /**
      * Gets or sets the default value computed by #electricalCharge.
@@ -58404,7 +58457,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27436
+  /* #27497
   source: 
     /**
      * Gets or sets the default value computed by #gravitationalMass.
@@ -58417,7 +58470,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'defaultGravitationalMass',
       );
-  /* #27436
+  /* #27497
   source: 
     /**
      * Gets or sets the default value computed by #gravitationalMass.
@@ -58433,7 +58486,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27442
+  /* #27503
   source: 
     /**
      * Gets or sets the default value computed by #springLength.
@@ -58446,7 +58499,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'defaultCommentSpringLength',
       );
-  /* #27442
+  /* #27503
   source: 
     /**
      * Gets or sets the default value computed by #springLength.
@@ -58462,7 +58515,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     );
   }
 
-  /* #27448
+  /* #27509
   source: 
     /**
      * Gets or sets the default value computed by #electricalCharge.
@@ -58475,7 +58528,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
         this,
         'defaultCommentElectricalCharge',
       );
-  /* #27448
+  /* #27509
   source: 
     /**
      * Gets or sets the default value computed by #electricalCharge.
@@ -58657,7 +58710,7 @@ FieldExternal:
 external _i2.Object _declaredForceDirectedVertex;
 
 extension ForceDirectedVertex$Typings on ForceDirectedVertex {
-  /* #27481
+  /* #27542
   source: 
     /**
      * Gets or sets whether the vertex may be moved by any forces.
@@ -58670,7 +58723,7 @@ extension ForceDirectedVertex$Typings on ForceDirectedVertex {
         this,
         'isFixed',
       );
-  /* #27481
+  /* #27542
   source: 
     /**
      * Gets or sets whether the vertex may be moved by any forces.
@@ -58686,7 +58739,7 @@ extension ForceDirectedVertex$Typings on ForceDirectedVertex {
     );
   }
 
-  /* #27487
+  /* #27548
   source: 
     /**
      * Gets or sets the electrical charge for this vertex.
@@ -58699,7 +58752,7 @@ extension ForceDirectedVertex$Typings on ForceDirectedVertex {
         this,
         'charge',
       );
-  /* #27487
+  /* #27548
   source: 
     /**
      * Gets or sets the electrical charge for this vertex.
@@ -58715,7 +58768,7 @@ extension ForceDirectedVertex$Typings on ForceDirectedVertex {
     );
   }
 
-  /* #27493
+  /* #27554
   source: 
     /**
      * Gets or sets the gravitational mass for this vertex.
@@ -58728,7 +58781,7 @@ extension ForceDirectedVertex$Typings on ForceDirectedVertex {
         this,
         'mass',
       );
-  /* #27493
+  /* #27554
   source: 
     /**
      * Gets or sets the gravitational mass for this vertex.
@@ -58744,7 +58797,7 @@ extension ForceDirectedVertex$Typings on ForceDirectedVertex {
     );
   }
 
-  /* #27499
+  /* #27560
   source: 
     /**
      * Gets or sets the cumulative force on the vertex in the X direction.
@@ -58757,7 +58810,7 @@ extension ForceDirectedVertex$Typings on ForceDirectedVertex {
         this,
         'forceX',
       );
-  /* #27499
+  /* #27560
   source: 
     /**
      * Gets or sets the cumulative force on the vertex in the X direction.
@@ -58773,7 +58826,7 @@ extension ForceDirectedVertex$Typings on ForceDirectedVertex {
     );
   }
 
-  /* #27505
+  /* #27566
   source: 
     /**
      * Gets or sets the cumulative force on the vertex in the Y direction.
@@ -58786,7 +58839,7 @@ extension ForceDirectedVertex$Typings on ForceDirectedVertex {
         this,
         'forceY',
       );
-  /* #27505
+  /* #27566
   source: 
     /**
      * Gets or sets the cumulative force on the vertex in the Y direction.
@@ -58820,7 +58873,7 @@ FieldExternal:
 external _i2.Object _declaredForceDirectedEdge;
 
 extension ForceDirectedEdge$Typings on ForceDirectedEdge {
-  /* #27523
+  /* #27584
   source: 
     /**
      * Gets or sets this edge's stiffness or resistance to compression or stretching.
@@ -58833,7 +58886,7 @@ extension ForceDirectedEdge$Typings on ForceDirectedEdge {
         this,
         'stiffness',
       );
-  /* #27523
+  /* #27584
   source: 
     /**
      * Gets or sets this edge's stiffness or resistance to compression or stretching.
@@ -58849,7 +58902,7 @@ extension ForceDirectedEdge$Typings on ForceDirectedEdge {
     );
   }
 
-  /* #27529
+  /* #27590
   source: 
     /**
      * Gets or sets the length of this edge.
@@ -58862,7 +58915,7 @@ extension ForceDirectedEdge$Typings on ForceDirectedEdge {
         this,
         'length',
       );
-  /* #27529
+  /* #27590
   source: 
     /**
      * Gets or sets the length of this edge.
@@ -58882,12 +58935,13 @@ extension ForceDirectedEdge$Typings on ForceDirectedEdge {
 @_i1.JS()
 @_i1.staticInterop
 class LayeredDigraphLayout implements _i3.Layout {
-  factory LayeredDigraphLayout([_i4.Partial? init]) => _i5.callConstructor(
+  factory LayeredDigraphLayout([_i4.Partial<_i3.LayeredDigraphLayout>? init]) =>
+      _i5.callConstructor(
         _declaredLayeredDigraphLayout,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
-  /* #27946
+  /* #28008
   source: 
     /**
      * Remove cycles using depth first cycle removal;
@@ -58901,7 +58955,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'CycleDepthFirst',
       );
-  /* #27946
+  /* #28008
   source: 
     /**
      * Remove cycles using depth first cycle removal;
@@ -58918,7 +58972,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #27952
+  /* #28014
   source: 
     /**
      * Remove cycles using greedy cycle removal;
@@ -58932,7 +58986,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'CycleGreedy',
       );
-  /* #27952
+  /* #28014
   source: 
     /**
      * Remove cycles using greedy cycle removal;
@@ -58949,7 +59003,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #27958
+  /* #28020
   source: 
     /**
      * Remove cycles depending on #assignLayers determining entirely which links are backwards links;
@@ -58963,7 +59017,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'CycleFromLayers',
       );
-  /* #27958
+  /* #28020
   source: 
     /**
      * Remove cycles depending on #assignLayers determining entirely which links are backwards links;
@@ -58980,24 +59034,24 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #27964
+  /* #28026
   source: 
     /**
-     * Assign layers using optimal link length layering;
+     * Assign layers using optimal link length layering, so that links tend to cross the fewest number of layers;
      * A valid value for LayeredDigraphLayout#layeringOption.
      * @constant
      */
     static LayerOptimalLinkLength: EnumValue; */
-  /// Assign layers using optimal link length layering;
+  /// Assign layers using optimal link length layering, so that links tend to cross the fewest number of layers;
   /// A valid value for LayeredDigraphLayout#layeringOption.
   static _i3.EnumValue get layerOptimalLinkLength => _i5.getProperty(
         _declaredLayeredDigraphLayout,
         'LayerOptimalLinkLength',
       );
-  /* #27964
+  /* #28026
   source: 
     /**
-     * Assign layers using optimal link length layering;
+     * Assign layers using optimal link length layering, so that links tend to cross the fewest number of layers;
      * A valid value for LayeredDigraphLayout#layeringOption.
      * @constant
      */
@@ -59011,24 +59065,27 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #27970
+  /* #28033
   source: 
     /**
-     * Assign layers using longest path sink layering;
+     * Assign layers using longest path sink layering, so that nodes are placed in the latest layer possible
+     * possibly resulting in longer links to nodes at the last/deepest layers;
      * a valid value for LayeredDigraphLayout#layeringOption.
      * @constant
      */
     static LayerLongestPathSink: EnumValue; */
-  /// Assign layers using longest path sink layering;
+  /// Assign layers using longest path sink layering, so that nodes are placed in the latest layer possible
+  /// possibly resulting in longer links to nodes at the last/deepest layers;
   /// a valid value for LayeredDigraphLayout#layeringOption.
   static _i3.EnumValue get layerLongestPathSink => _i5.getProperty(
         _declaredLayeredDigraphLayout,
         'LayerLongestPathSink',
       );
-  /* #27970
+  /* #28033
   source: 
     /**
-     * Assign layers using longest path sink layering;
+     * Assign layers using longest path sink layering, so that nodes are placed in the latest layer possible
+     * possibly resulting in longer links to nodes at the last/deepest layers;
      * a valid value for LayeredDigraphLayout#layeringOption.
      * @constant
      */
@@ -59042,24 +59099,27 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #27976
+  /* #28040
   source: 
     /**
-     * Assign layers using longest path source layering;
+     * Assign layers using longest path source layering, so that nodes without any predecessors are placed
+     * in the first layer possibly resulting in longer links from nodes at the first/shallowest layers;
      * a valid value for LayeredDigraphLayout#layeringOption.
      * @constant
      */
     static LayerLongestPathSource: EnumValue; */
-  /// Assign layers using longest path source layering;
+  /// Assign layers using longest path source layering, so that nodes without any predecessors are placed
+  /// in the first layer possibly resulting in longer links from nodes at the first/shallowest layers;
   /// a valid value for LayeredDigraphLayout#layeringOption.
   static _i3.EnumValue get layerLongestPathSource => _i5.getProperty(
         _declaredLayeredDigraphLayout,
         'LayerLongestPathSource',
       );
-  /* #27976
+  /* #28040
   source: 
     /**
-     * Assign layers using longest path source layering;
+     * Assign layers using longest path source layering, so that nodes without any predecessors are placed
+     * in the first layer possibly resulting in longer links from nodes at the first/shallowest layers;
      * a valid value for LayeredDigraphLayout#layeringOption.
      * @constant
      */
@@ -59073,7 +59133,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #27982
+  /* #28046
   source: 
     /**
      * Initialize using depth first out initialization;
@@ -59087,7 +59147,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'InitDepthFirstOut',
       );
-  /* #27982
+  /* #28046
   source: 
     /**
      * Initialize using depth first out initialization;
@@ -59104,7 +59164,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #27988
+  /* #28052
   source: 
     /**
      * Initialize using depth first in initialization;
@@ -59118,7 +59178,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'InitDepthFirstIn',
       );
-  /* #27988
+  /* #28052
   source: 
     /**
      * Initialize using depth first in initialization;
@@ -59135,7 +59195,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #27994
+  /* #28058
   source: 
     /**
      * Initialize using naive initialization;
@@ -59149,7 +59209,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'InitNaive',
       );
-  /* #27994
+  /* #28058
   source: 
     /**
      * Initialize using naive initialization;
@@ -59166,7 +59226,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28000
+  /* #28064
   source: 
     /**
      * The fastest, but poorest, crossing reduction algorithm;
@@ -59180,7 +59240,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'AggressiveNone',
       );
-  /* #28000
+  /* #28064
   source: 
     /**
      * The fastest, but poorest, crossing reduction algorithm;
@@ -59197,7 +59257,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28006
+  /* #28070
   source: 
     /**
      * The faster, less aggressive, crossing reduction algorithm;
@@ -59211,7 +59271,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'AggressiveLess',
       );
-  /* #28006
+  /* #28070
   source: 
     /**
      * The faster, less aggressive, crossing reduction algorithm;
@@ -59228,7 +59288,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28012
+  /* #28076
   source: 
     /**
      * The slower, more aggressive, crossing reduction algorithm,
@@ -59242,7 +59302,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'AggressiveMore',
       );
-  /* #28012
+  /* #28076
   source: 
     /**
      * The slower, more aggressive, crossing reduction algorithm,
@@ -59259,25 +59319,28 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28018
+  /* #28083
   source: 
     /**
      * Does minimal work in packing the nodes;
-     * a valid value for LayeredDigraphLayout#packOption.
+     * a valid value for LayeredDigraphLayout#packOption;
+     * but we recommend using #alignOption instead for better alignment and speed.
      * @constant
      */
     static PackNone: number; */
   /// Does minimal work in packing the nodes;
-  /// a valid value for LayeredDigraphLayout#packOption.
+  /// a valid value for LayeredDigraphLayout#packOption;
+  /// but we recommend using #alignOption instead for better alignment and speed.
   static _i2.num get packNone => _i5.getProperty(
         _declaredLayeredDigraphLayout,
         'PackNone',
       );
-  /* #28018
+  /* #28083
   source: 
     /**
      * Does minimal work in packing the nodes;
-     * a valid value for LayeredDigraphLayout#packOption.
+     * a valid value for LayeredDigraphLayout#packOption;
+     * but we recommend using #alignOption instead for better alignment and speed.
      * @constant
      */
     static PackNone: number; */
@@ -59290,27 +59353,30 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28025
+  /* #28091
   source: 
     /**
      * This option gives more chances for the packing algorithm to improve the network,
      * but is very expensive in time for large networks;
+     * but we recommend using #alignOption instead for better alignment and speed;
      * a valid value for LayeredDigraphLayout#packOption.
      * @constant
      */
     static PackExpand: number; */
   /// This option gives more chances for the packing algorithm to improve the network,
   /// but is very expensive in time for large networks;
+  /// but we recommend using #alignOption instead for better alignment and speed;
   /// a valid value for LayeredDigraphLayout#packOption.
   static _i2.num get packExpand => _i5.getProperty(
         _declaredLayeredDigraphLayout,
         'PackExpand',
       );
-  /* #28025
+  /* #28091
   source: 
     /**
      * This option gives more chances for the packing algorithm to improve the network,
      * but is very expensive in time for large networks;
+     * but we recommend using #alignOption instead for better alignment and speed;
      * a valid value for LayeredDigraphLayout#packOption.
      * @constant
      */
@@ -59324,28 +59390,31 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28032
+  /* #28099
   source: 
     /**
      * This option tries to have the packing algorithm straighten many of the
      * links that cross layers,
-     * a valid value for LayeredDigraphLayout#packOption.
+     * a valid value for LayeredDigraphLayout#packOption;
+     * but we recommend using #alignOption instead for better alignment and speed.
      * @constant
      */
     static PackStraighten: number; */
   /// This option tries to have the packing algorithm straighten many of the
   /// links that cross layers,
-  /// a valid value for LayeredDigraphLayout#packOption.
+  /// a valid value for LayeredDigraphLayout#packOption;
+  /// but we recommend using #alignOption instead for better alignment and speed.
   static _i2.num get packStraighten => _i5.getProperty(
         _declaredLayeredDigraphLayout,
         'PackStraighten',
       );
-  /* #28032
+  /* #28099
   source: 
     /**
      * This option tries to have the packing algorithm straighten many of the
      * links that cross layers,
-     * a valid value for LayeredDigraphLayout#packOption.
+     * a valid value for LayeredDigraphLayout#packOption;
+     * but we recommend using #alignOption instead for better alignment and speed.
      * @constant
      */
     static PackStraighten: number; */
@@ -59358,28 +59427,31 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28039
+  /* #28107
   source: 
     /**
      * This option tries to have the packing algorithm center groups of nodes
      * based on their relationships with nodes in other layers,
-     * a valid value for LayeredDigraphLayout#packOption.
+     * a valid value for LayeredDigraphLayout#packOption;
+     * but we recommend using #alignOption instead for better alignment and speed.
      * @constant
      */
     static PackMedian: number; */
   /// This option tries to have the packing algorithm center groups of nodes
   /// based on their relationships with nodes in other layers,
-  /// a valid value for LayeredDigraphLayout#packOption.
+  /// a valid value for LayeredDigraphLayout#packOption;
+  /// but we recommend using #alignOption instead for better alignment and speed.
   static _i2.num get packMedian => _i5.getProperty(
         _declaredLayeredDigraphLayout,
         'PackMedian',
       );
-  /* #28039
+  /* #28107
   source: 
     /**
      * This option tries to have the packing algorithm center groups of nodes
      * based on their relationships with nodes in other layers,
-     * a valid value for LayeredDigraphLayout#packOption.
+     * a valid value for LayeredDigraphLayout#packOption;
+     * but we recommend using #alignOption instead for better alignment and speed.
      * @constant
      */
     static PackMedian: number; */
@@ -59392,26 +59464,29 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28046
+  /* #28115
   source: 
     /**
      * Enable all options for the LayeredDigraphLayout#packOption property;
+     * but we recommend using #alignOption instead for better alignment and speed;
      * See also LayeredDigraphLayout.PackExpand, LayeredDigraphLayout.PackStraighten,
      * and LayeredDigraphLayout.PackMedian.
      * @constant
      */
     static PackAll: number; */
   /// Enable all options for the LayeredDigraphLayout#packOption property;
+  /// but we recommend using #alignOption instead for better alignment and speed;
   /// See also LayeredDigraphLayout.PackExpand, LayeredDigraphLayout.PackStraighten,
   /// and LayeredDigraphLayout.PackMedian.
   static _i2.num get packAll => _i5.getProperty(
         _declaredLayeredDigraphLayout,
         'PackAll',
       );
-  /* #28046
+  /* #28115
   source: 
     /**
      * Enable all options for the LayeredDigraphLayout#packOption property;
+     * but we recommend using #alignOption instead for better alignment and speed;
      * See also LayeredDigraphLayout.PackExpand, LayeredDigraphLayout.PackStraighten,
      * and LayeredDigraphLayout.PackMedian.
      * @constant
@@ -59426,7 +59501,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28052
+  /* #28121
   source: 
     /**
      * This option means the the layout will pack nodes using the LayeredDigraphLayout#packOption instead of LayeredDigraphLayout#alignOption,
@@ -59440,7 +59515,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'AlignNone',
       );
-  /* #28052
+  /* #28121
   source: 
     /**
      * This option means the the layout will pack nodes using the LayeredDigraphLayout#packOption instead of LayeredDigraphLayout#alignOption,
@@ -59457,7 +59532,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28058
+  /* #28127
   source: 
     /**
      * This option aligns and compacts nodes based on upper neighbors, favoring leftmost neighbors,
@@ -59471,7 +59546,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'AlignUpperLeft',
       );
-  /* #28058
+  /* #28127
   source: 
     /**
      * This option aligns and compacts nodes based on upper neighbors, favoring leftmost neighbors,
@@ -59488,7 +59563,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28064
+  /* #28133
   source: 
     /**
      * This option aligns and compacts nodes based on upper neighbors, favoring rightmost neighbors,
@@ -59502,7 +59577,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'AlignUpperRight',
       );
-  /* #28064
+  /* #28133
   source: 
     /**
      * This option aligns and compacts nodes based on upper neighbors, favoring rightmost neighbors,
@@ -59519,7 +59594,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28070
+  /* #28139
   source: 
     /**
      * This option aligns and compacts nodes based on lower neighbors, favoring leftmost neighbors,
@@ -59533,7 +59608,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'AlignLowerLeft',
       );
-  /* #28070
+  /* #28139
   source: 
     /**
      * This option aligns and compacts nodes based on lower neighbors, favoring leftmost neighbors,
@@ -59550,7 +59625,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28076
+  /* #28145
   source: 
     /**
      * This option aligns and compacts nodes based on lower neighbors, favoring rightmost neighbors,
@@ -59564,7 +59639,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'AlignLowerRight',
       );
-  /* #28076
+  /* #28145
   source: 
     /**
      * This option aligns and compacts nodes based on lower neighbors, favoring rightmost neighbors,
@@ -59581,7 +59656,7 @@ class LayeredDigraphLayout implements _i3.Layout {
     );
   }
 
-  /* #28085
+  /* #28154
   source: 
     /**
      * Enable all options for the LayeredDigraphLayout#alignOption property;
@@ -59601,7 +59676,7 @@ class LayeredDigraphLayout implements _i3.Layout {
         _declaredLayeredDigraphLayout,
         'AlignAll',
       );
-  /* #28085
+  /* #28154
   source: 
     /**
      * Enable all options for the LayeredDigraphLayout#alignOption property;
@@ -59629,7 +59704,7 @@ FieldExternal:
 external _i2.Object _declaredLayeredDigraphLayout;
 
 extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
-  /* #27785
+  /* #27846
   source: 
     /**
      * Gets or sets the space between each layer.
@@ -59642,7 +59717,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'layerSpacing',
       );
-  /* #27785
+  /* #27846
   source: 
     /**
      * Gets or sets the space between each layer.
@@ -59658,7 +59733,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27793
+  /* #27854
   source: 
     /**
      * Gets or sets the size of each column.
@@ -59675,7 +59750,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'columnSpacing',
       );
-  /* #27793
+  /* #27854
   source: 
     /**
      * Gets or sets the size of each column.
@@ -59693,7 +59768,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27800
+  /* #27861
   source: 
     /**
      * Gets or sets the direction the graph grows towards.
@@ -59708,7 +59783,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'direction',
       );
-  /* #27800
+  /* #27861
   source: 
     /**
      * Gets or sets the direction the graph grows towards.
@@ -59725,7 +59800,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27810
+  /* #27871
   source: 
     /**
      * Gets or set which cycle removal option is used.
@@ -59746,7 +59821,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'cycleRemoveOption',
       );
-  /* #27810
+  /* #27871
   source: 
     /**
      * Gets or set which cycle removal option is used.
@@ -59766,7 +59841,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27821
+  /* #27882
   source: 
     /**
      * Gets or sets which layering option is being used.
@@ -59789,7 +59864,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'layeringOption',
       );
-  /* #27821
+  /* #27882
   source: 
     /**
      * Gets or sets which layering option is being used.
@@ -59810,7 +59885,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27831
+  /* #27892
   source: 
     /**
      * Gets or sets which indices initialization option is being used.
@@ -59831,7 +59906,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'initializeOption',
       );
-  /* #27831
+  /* #27892
   source: 
     /**
      * Gets or sets which indices initialization option is being used.
@@ -59851,7 +59926,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27837
+  /* #27898
   source: 
     /**
      * Gets or sets the number of iterations to be done.
@@ -59864,7 +59939,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'iterations',
       );
-  /* #27837
+  /* #27898
   source: 
     /**
      * Gets or sets the number of iterations to be done.
@@ -59880,7 +59955,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27844
+  /* #27905
   source: 
     /**
      * Gets or sets which aggressive option is being used to look for link crossings.
@@ -59895,7 +59970,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'aggressiveOption',
       );
-  /* #27844
+  /* #27905
   source: 
     /**
      * Gets or sets which aggressive option is being used to look for link crossings.
@@ -59912,10 +59987,11 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27866
+  /* #27928
   source: 
     /**
-     * Gets or sets the options used by the straighten and pack function.
+     * Gets or sets the options used by the straighten and pack function;
+     * this option is deprecated -- we recommend using #alignOption instead for better alignment and speed.
      *
      * The value must be a combination of the following bit flags:
      * LayeredDigraphLayout.PackMedian,
@@ -59935,7 +60011,8 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
      * @see #alignOption
      */
     get packOption(): number; */
-  /// Gets or sets the options used by the straighten and pack function.
+  /// Gets or sets the options used by the straighten and pack function;
+  /// this option is deprecated -- we recommend using #alignOption instead for better alignment and speed.
   ///
   /// The value must be a combination of the following bit flags:
   /// LayeredDigraphLayout.PackMedian,
@@ -59955,10 +60032,11 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'packOption',
       );
-  /* #27866
+  /* #27928
   source: 
     /**
-     * Gets or sets the options used by the straighten and pack function.
+     * Gets or sets the options used by the straighten and pack function;
+     * this option is deprecated -- we recommend using #alignOption instead for better alignment and speed.
      *
      * The value must be a combination of the following bit flags:
      * LayeredDigraphLayout.PackMedian,
@@ -59987,7 +60065,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27897
+  /* #27959
   source: 
     /**
      * Gets or sets the options used by the straighten and pack function, as a potentially faster
@@ -60047,7 +60125,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'alignOption',
       );
-  /* #27897
+  /* #27959
   source: 
     /**
      * Gets or sets the options used by the straighten and pack function, as a potentially faster
@@ -60088,7 +60166,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27908
+  /* #27970
   source: 
     /**
      * Gets or sets whether the FromSpot and ToSpot of each link should be set
@@ -60111,7 +60189,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'setsPortSpots',
       );
-  /* #27908
+  /* #27970
   source: 
     /**
      * Gets or sets whether the FromSpot and ToSpot of each link should be set
@@ -60132,7 +60210,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27919
+  /* #27981
   source: 
     /**
      * (undocumented)
@@ -60155,7 +60233,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'linkSpacing',
       );
-  /* #27919
+  /* #27981
   source: 
     /**
      * (undocumented)
@@ -60176,7 +60254,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27924
+  /* #27986
   source: 
     /**
      * This read-only property returns the largest layer value.
@@ -60187,7 +60265,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'maxLayer',
       );
-  /* #27924
+  /* #27986
   source: 
     /**
      * This read-only property returns the largest layer value.
@@ -60202,7 +60280,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27928
+  /* #27990
   source: 
     /**
      * This read-only property returns the largest index value.
@@ -60213,7 +60291,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'maxIndex',
       );
-  /* #27928
+  /* #27990
   source: 
     /**
      * This read-only property returns the largest index value.
@@ -60228,7 +60306,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27932
+  /* #27994
   source: 
     /**
      * This read-only property returns the largest column value.
@@ -60239,7 +60317,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'maxColumn',
       );
-  /* #27932
+  /* #27994
   source: 
     /**
      * This read-only property returns the largest column value.
@@ -60254,7 +60332,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27936
+  /* #27998
   source: 
     /**
      * This read-only property returns the smallest index layer.
@@ -60265,7 +60343,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'minIndexLayer',
       );
-  /* #27936
+  /* #27998
   source: 
     /**
      * This read-only property returns the smallest index layer.
@@ -60280,7 +60358,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
     );
   }
 
-  /* #27940
+  /* #28002
   source: 
     /**
      * This read-only property returns the larges index layer.
@@ -60291,7 +60369,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
         this,
         'maxIndexLayer',
       );
-  /* #27940
+  /* #28002
   source: 
     /**
      * This read-only property returns the larges index layer.
@@ -60405,7 +60483,7 @@ extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
   }
 
   void commitLayers(
-    _i4.Array layerRects,
+    _i4.Array<_i3.Rect> layerRects,
     _i3.Point offset,
   ) {
     _i5.callMethod(
@@ -60460,7 +60538,7 @@ FieldExternal:
 external _i2.Object _declaredLayeredDigraphVertex;
 
 extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
-  /* #28133
+  /* #28202
   source: 
     /**
      * Gets or sets the layer to which the node is assigned.
@@ -60473,7 +60551,7 @@ extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
         this,
         'layer',
       );
-  /* #28133
+  /* #28202
   source: 
     /**
      * Gets or sets the layer to which the node is assigned.
@@ -60489,7 +60567,7 @@ extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
     );
   }
 
-  /* #28142
+  /* #28211
   source: 
     /**
      * Gets or sets the column to which the node is assigned.
@@ -60508,7 +60586,7 @@ extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
         this,
         'column',
       );
-  /* #28142
+  /* #28211
   source: 
     /**
      * Gets or sets the column to which the node is assigned.
@@ -60527,7 +60605,7 @@ extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
     );
   }
 
-  /* #28148
+  /* #28217
   source: 
     /**
      * Gets or sets the index to which the node is assigned.
@@ -60540,7 +60618,7 @@ extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
         this,
         'index',
       );
-  /* #28148
+  /* #28217
   source: 
     /**
      * Gets or sets the index to which the node is assigned.
@@ -60556,7 +60634,7 @@ extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
     );
   }
 
-  /* #28157
+  /* #28226
   source: 
     /**
      * Gets or sets the connected component to which the node is assigned.
@@ -60575,7 +60653,7 @@ extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
         this,
         'component',
       );
-  /* #28157
+  /* #28226
   source: 
     /**
      * Gets or sets the connected component to which the node is assigned.
@@ -60594,7 +60672,7 @@ extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
     );
   }
 
-  /* #28163
+  /* #28232
   source: 
     /**
      * Gets or sets another LayeredDigraphVertex in the same layer that this node should be near.
@@ -60607,7 +60685,7 @@ extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
         this,
         'near',
       );
-  /* #28163
+  /* #28232
   source: 
     /**
      * Gets or sets another LayeredDigraphVertex in the same layer that this node should be near.
@@ -60673,7 +60751,7 @@ FieldExternal:
 external _i2.Object _declaredLayeredDigraphEdge;
 
 extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
-  /* #28181
+  /* #28250
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge comes from.
@@ -60686,23 +60764,23 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
         this,
         'fromVertex',
       );
-  /* #28181
+  /* #28250
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge comes from.
      * Setting this property does not change any LayoutVertex#destinationEdges collection.
      */
     get fromVertex(): LayeredDigraphVertex | null; */
-  // Type InteropUnion#700454673(parent: InteropGetter#182349594(name: fromVertex))
+  // Type InteropUnion#563599120(parent: InteropGetter#970014040(name: fromVertex))
   set fromVertex(_i3.LayeredDigraphVertex? value) {
     _i5.setProperty(
       this,
       'fromVertex',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #28187
+  /* #28256
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge goes to.
@@ -60715,23 +60793,23 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
         this,
         'toVertex',
       );
-  /* #28187
+  /* #28256
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge goes to.
      * Setting this property does not change any LayoutVertex#sourceEdges collection.
      */
     get toVertex(): LayeredDigraphVertex | null; */
-  // Type InteropUnion#59395529(parent: InteropGetter#448401578(name: toVertex))
+  // Type InteropUnion#985982016(parent: InteropGetter#76158178(name: toVertex))
   set toVertex(_i3.LayeredDigraphVertex? value) {
     _i5.setProperty(
       this,
       'toVertex',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #28193
+  /* #28262
   source: 
     /**
      * True if the link is part of the proper digraph.
@@ -60744,7 +60822,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
         this,
         'valid',
       );
-  /* #28193
+  /* #28262
   source: 
     /**
      * True if the link is part of the proper digraph.
@@ -60760,7 +60838,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
     );
   }
 
-  /* #28199
+  /* #28268
   source: 
     /**
      * True if the link was reversed during cycle removal.
@@ -60773,7 +60851,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
         this,
         'rev',
       );
-  /* #28199
+  /* #28268
   source: 
     /**
      * True if the link was reversed during cycle removal.
@@ -60789,7 +60867,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
     );
   }
 
-  /* #28205
+  /* #28274
   source: 
     /**
      * True if the link is part of the depth first forest.
@@ -60802,7 +60880,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
         this,
         'forest',
       );
-  /* #28205
+  /* #28274
   source: 
     /**
      * True if the link is part of the depth first forest.
@@ -60818,7 +60896,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
     );
   }
 
-  /* #28214
+  /* #28283
   source: 
     /**
      * Location of the port at the from node of the link.
@@ -60837,7 +60915,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
         this,
         'portFromPos',
       );
-  /* #28214
+  /* #28283
   source: 
     /**
      * Location of the port at the from node of the link.
@@ -60856,7 +60934,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
     );
   }
 
-  /* #28223
+  /* #28292
   source: 
     /**
      * Location of the port at the to node of the link.
@@ -60875,7 +60953,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
         this,
         'portToPos',
       );
-  /* #28223
+  /* #28292
   source: 
     /**
      * Location of the port at the to node of the link.
@@ -60894,7 +60972,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
     );
   }
 
-  /* #28229
+  /* #28298
   source: 
     /**
      * Approximate column offset of the from port of the link from the from node column used in straightening.
@@ -60907,7 +60985,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
         this,
         'portFromColOffset',
       );
-  /* #28229
+  /* #28298
   source: 
     /**
      * Approximate column offset of the from port of the link from the from node column used in straightening.
@@ -60923,7 +61001,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
     );
   }
 
-  /* #28235
+  /* #28304
   source: 
     /**
      * Approximate column offset of the to port of the link from the to node column used in straightening.
@@ -60936,7 +61014,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
         this,
         'portToColOffset',
       );
-  /* #28235
+  /* #28304
   source: 
     /**
      * Approximate column offset of the to port of the link from the to node column used in straightening.
@@ -60956,12 +61034,13 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
 @_i1.JS()
 @_i1.staticInterop
 class TreeLayout implements _i3.Layout {
-  factory TreeLayout([_i4.Partial? init]) => _i5.callConstructor(
+  factory TreeLayout([_i4.Partial<_i3.TreeLayout>? init]) =>
+      _i5.callConstructor(
         _declaredTreeLayout,
-        [init ?? _i4.undefined],
+        [init ?? _i7.undefined ?? _i7.undefined],
       );
 
-  /* #29159
+  /* #29228
   source: 
     /**
      * This value for TreeLayout#path causes the value of Diagram#isTreePathToChildren
@@ -60975,7 +61054,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'PathDefault',
       );
-  /* #29159
+  /* #29228
   source: 
     /**
      * This value for TreeLayout#path causes the value of Diagram#isTreePathToChildren
@@ -60992,7 +61071,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29168
+  /* #29237
   source: 
     /**
      * The children of a TreeVertex are its LayoutVertex#destinationVertexes,
@@ -61012,7 +61091,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'PathDestination',
       );
-  /* #29168
+  /* #29237
   source: 
     /**
      * The children of a TreeVertex are its LayoutVertex#destinationVertexes,
@@ -61032,7 +61111,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29177
+  /* #29246
   source: 
     /**
      * The children of a TreeVertex are its LayoutVertex#sourceVertexes,
@@ -61052,7 +61131,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'PathSource',
       );
-  /* #29177
+  /* #29246
   source: 
     /**
      * The children of a TreeVertex are its LayoutVertex#sourceVertexes,
@@ -61072,7 +61151,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29183
+  /* #29252
   source: 
     /**
      * Lay out each child in the order in which they were found;
@@ -61086,7 +61165,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'SortingForwards',
       );
-  /* #29183
+  /* #29252
   source: 
     /**
      * Lay out each child in the order in which they were found;
@@ -61103,7 +61182,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29189
+  /* #29258
   source: 
     /**
      * Lay out each child in reverse order from which they were found;
@@ -61117,7 +61196,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'SortingReverse',
       );
-  /* #29189
+  /* #29258
   source: 
     /**
      * Lay out each child in reverse order from which they were found;
@@ -61134,7 +61213,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29195
+  /* #29264
   source: 
     /**
      * Lay out each child according to the sort order given by TreeVertex#comparer;
@@ -61148,7 +61227,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'SortingAscending',
       );
-  /* #29195
+  /* #29264
   source: 
     /**
      * Lay out each child according to the sort order given by TreeVertex#comparer;
@@ -61165,7 +61244,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29201
+  /* #29270
   source: 
     /**
      * Lay out each child in reverse sort order given by TreeVertex#comparer;
@@ -61179,7 +61258,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'SortingDescending',
       );
-  /* #29201
+  /* #29270
   source: 
     /**
      * Lay out each child in reverse sort order given by TreeVertex#comparer;
@@ -61196,7 +61275,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29211
+  /* #29280
   source: 
     /**
      * The parent is centered at the middle of the range of its child subtrees;
@@ -61218,7 +61297,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'AlignmentCenterSubtrees',
       );
-  /* #29211
+  /* #29280
   source: 
     /**
      * The parent is centered at the middle of the range of its child subtrees;
@@ -61239,7 +61318,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29221
+  /* #29290
   source: 
     /**
      * The parent is centered at the middle of the range of its immediate child nodes;
@@ -61261,7 +61340,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'AlignmentCenterChildren',
       );
-  /* #29221
+  /* #29290
   source: 
     /**
      * The parent is centered at the middle of the range of its immediate child nodes;
@@ -61282,7 +61361,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29227
+  /* #29296
   source: 
     /**
      * The parent is positioned near the first of its children;
@@ -61296,7 +61375,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'AlignmentStart',
       );
-  /* #29227
+  /* #29296
   source: 
     /**
      * The parent is positioned near the first of its children;
@@ -61313,7 +61392,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29233
+  /* #29302
   source: 
     /**
      * The parent is positioned near the last of its children;
@@ -61327,7 +61406,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'AlignmentEnd',
       );
-  /* #29233
+  /* #29302
   source: 
     /**
      * The parent is positioned near the last of its children;
@@ -61344,7 +61423,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29246
+  /* #29315
   source: 
     /**
      * The children are positioned in a bus on both sides of an "aisle" where the links to them go,
@@ -61372,7 +61451,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'AlignmentBus',
       );
-  /* #29246
+  /* #29315
   source: 
     /**
      * The children are positioned in a bus on both sides of an "aisle" where the links to them go,
@@ -61396,7 +61475,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29259
+  /* #29328
   source: 
     /**
      * Like TreeLayout.AlignmentBus with the children arranged on both sides of an "aisle"
@@ -61424,7 +61503,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'AlignmentBusBranching',
       );
-  /* #29259
+  /* #29328
   source: 
     /**
      * Like TreeLayout.AlignmentBus with the children arranged on both sides of an "aisle"
@@ -61448,7 +61527,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29267
+  /* #29336
   source: 
     /**
      * The children are positioned in a bus, only on the top or left side of the parent;
@@ -61466,7 +61545,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'AlignmentTopLeftBus',
       );
-  /* #29267
+  /* #29336
   source: 
     /**
      * The children are positioned in a bus, only on the top or left side of the parent;
@@ -61485,7 +61564,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29275
+  /* #29344
   source: 
     /**
      * The children are positioned in a bus, only on the bottom or right side of the parent;
@@ -61503,7 +61582,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'AlignmentBottomRightBus',
       );
-  /* #29275
+  /* #29344
   source: 
     /**
      * The children are positioned in a bus, only on the bottom or right side of the parent;
@@ -61522,7 +61601,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29285
+  /* #29354
   source: 
     /**
      * Only simple placement of children next to each other, as determined by their subtree breadth;
@@ -61544,7 +61623,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'CompactionNone',
       );
-  /* #29285
+  /* #29354
   source: 
     /**
      * Only simple placement of children next to each other, as determined by their subtree breadth;
@@ -61565,7 +61644,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29298
+  /* #29367
   source: 
     /**
      * A simple fitting of subtrees;
@@ -61593,7 +61672,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'CompactionBlock',
       );
-  /* #29298
+  /* #29367
   source: 
     /**
      * A simple fitting of subtrees;
@@ -61617,7 +61696,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29309
+  /* #29378
   source: 
     /**
      * The normal tree style, where all of the children of each TreeVertex are lined up
@@ -61641,7 +61720,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'StyleLayered',
       );
-  /* #29309
+  /* #29378
   source: 
     /**
      * The normal tree style, where all of the children of each TreeVertex are lined up
@@ -61663,7 +61742,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29323
+  /* #29392
   source: 
     /**
      * Just like the standard layered tree style, except that the nodes with children but no grandchildren
@@ -61693,7 +61772,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'StyleLastParents',
       );
-  /* #29323
+  /* #29392
   source: 
     /**
      * Just like the standard layered tree style, except that the nodes with children but no grandchildren
@@ -61718,7 +61797,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29336
+  /* #29405
   source: 
     /**
      * Alternate layers of the tree have different properties, typically including the angle;
@@ -61746,7 +61825,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'StyleAlternating',
       );
-  /* #29336
+  /* #29405
   source: 
     /**
      * Alternate layers of the tree have different properties, typically including the angle;
@@ -61770,7 +61849,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29346
+  /* #29415
   source: 
     /**
      * All of the nodes get the alternate properties, except the root node gets the default properties;
@@ -61792,7 +61871,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'StyleRootOnly',
       );
-  /* #29346
+  /* #29415
   source: 
     /**
      * All of the nodes get the alternate properties, except the root node gets the default properties;
@@ -61813,7 +61892,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29353
+  /* #29422
   source: 
     /**
      * Position each tree in a non-overlapping fashion by increasing Y coordinates,
@@ -61829,7 +61908,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'ArrangementVertical',
       );
-  /* #29353
+  /* #29422
   source: 
     /**
      * Position each tree in a non-overlapping fashion by increasing Y coordinates,
@@ -61847,7 +61926,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29360
+  /* #29429
   source: 
     /**
      * Position each tree in a non-overlapping fashion by increasing X coordinates,
@@ -61863,7 +61942,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'ArrangementHorizontal',
       );
-  /* #29360
+  /* #29429
   source: 
     /**
      * Position each tree in a non-overlapping fashion by increasing X coordinates,
@@ -61881,7 +61960,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29366
+  /* #29435
   source: 
     /**
      * Do not move each root node, but position all of their descendants relative to their root;
@@ -61895,7 +61974,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'ArrangementFixedRoots',
       );
-  /* #29366
+  /* #29435
   source: 
     /**
      * Do not move each root node, but position all of their descendants relative to their root;
@@ -61912,7 +61991,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29373
+  /* #29442
   source: 
     /**
      * The normal layer style, where each node takes up only the depth that it needs;
@@ -61927,7 +62006,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'LayerIndividual',
       );
-  /* #29373
+  /* #29442
   source: 
     /**
      * The normal layer style, where each node takes up only the depth that it needs;
@@ -61945,7 +62024,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29381
+  /* #29450
   source: 
     /**
      * A layer style where all of the children of a parent node take up the same amount of depth --
@@ -61962,7 +62041,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'LayerSiblings',
       );
-  /* #29381
+  /* #29450
   source: 
     /**
      * A layer style where all of the children of a parent node take up the same amount of depth --
@@ -61981,7 +62060,7 @@ class TreeLayout implements _i3.Layout {
     );
   }
 
-  /* #29389
+  /* #29458
   source: 
     /**
      * A layer style where all nodes with the same TreeVertex#level throughout the tree take up the same amount of depth --
@@ -61998,7 +62077,7 @@ class TreeLayout implements _i3.Layout {
         _declaredTreeLayout,
         'LayerUniform',
       );
-  /* #29389
+  /* #29458
   source: 
     /**
      * A layer style where all nodes with the same TreeVertex#level throughout the tree take up the same amount of depth --
@@ -62025,7 +62104,7 @@ FieldExternal:
 external _i2.Object _declaredTreeLayout;
 
 extension TreeLayout$Typings on TreeLayout {
-  /* #28558
+  /* #28627
   source: 
     /**
      * Gets or sets the collection of root vertexes.
@@ -62052,7 +62131,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'roots',
       );
-  /* #28558
+  /* #28627
   source: 
     /**
      * Gets or sets the collection of root vertexes.
@@ -62075,7 +62154,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28568
+  /* #28637
   source: 
     /**
      * Gets or sets how the tree should be constructed from the
@@ -62096,7 +62175,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'path',
       );
-  /* #28568
+  /* #28637
   source: 
     /**
      * Gets or sets how the tree should be constructed from the
@@ -62116,7 +62195,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28577
+  /* #28646
   source: 
     /**
      * Gets or sets the Style for the resulting trees.
@@ -62135,7 +62214,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'treeStyle',
       );
-  /* #28577
+  /* #28646
   source: 
     /**
      * Gets or sets the Style for the resulting trees.
@@ -62154,7 +62233,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28587
+  /* #28656
   source: 
     /**
      * Gets or sets the manner in which the nodes are aligned in layers.
@@ -62174,7 +62253,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'layerStyle',
       );
-  /* #28587
+  /* #28656
   source: 
     /**
      * Gets or sets the manner in which the nodes are aligned in layers.
@@ -62194,7 +62273,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28597
+  /* #28666
   source: 
     /**
      * Gets or sets whether this layout should find all Nodes
@@ -62214,7 +62293,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'comments',
       );
-  /* #28597
+  /* #28666
   source: 
     /**
      * Gets or sets whether this layout should find all Nodes
@@ -62234,7 +62313,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28606
+  /* #28675
   source: 
     /**
      * Gets or sets how #arrangeTrees should lay out the separate trees.
@@ -62253,7 +62332,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'arrangement',
       );
-  /* #28606
+  /* #28675
   source: 
     /**
      * Gets or sets how #arrangeTrees should lay out the separate trees.
@@ -62272,7 +62351,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28615
+  /* #28684
   source: 
     /**
      * Gets or sets the space between which #arrangeTrees will position the trees.
@@ -62291,7 +62370,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'arrangementSpacing',
       );
-  /* #28615
+  /* #28684
   source: 
     /**
      * Gets or sets the space between which #arrangeTrees will position the trees.
@@ -62310,7 +62389,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28629
+  /* #28698
   source: 
     /**
      * Gets or sets the object holding the default values for root TreeVertexes.
@@ -62339,7 +62418,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'rootDefaults',
       );
-  /* #28629
+  /* #28698
   source: 
     /**
      * Gets or sets the object holding the default values for root TreeVertexes.
@@ -62363,7 +62442,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28638
+  /* #28707
   source: 
     /**
      * Gets or sets the object holding the default values for alternate layer TreeVertexes,
@@ -62382,7 +62461,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateDefaults',
       );
-  /* #28638
+  /* #28707
   source: 
     /**
      * Gets or sets the object holding the default values for alternate layer TreeVertexes,
@@ -62401,7 +62480,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28650
+  /* #28719
   source: 
     /**
      * Gets or sets the default sorting policy for ordering the immediate children of a vertex.
@@ -62426,7 +62505,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'sorting',
       );
-  /* #28650
+  /* #28719
   source: 
     /**
      * Gets or sets the default sorting policy for ordering the immediate children of a vertex.
@@ -62448,7 +62527,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28674
+  /* #28743
   source: 
     /**
      * Gets or sets the default comparison function used for sorting the immediate children of a vertex.
@@ -62500,7 +62579,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'comparer',
       );
-  /* #28674
+  /* #28743
   source: 
     /**
      * Gets or sets the default comparison function used for sorting the immediate children of a vertex.
@@ -62525,7 +62604,7 @@ extension TreeLayout$Typings on TreeLayout {
      * ```
      */
     get comparer(): ((a: TreeVertex, b: TreeVertex) => number); */
-  // Type InteropFunction#93411398(parent: InteropGetter#598874946(name: comparer), library: go.d.ts)
+  // Type InteropFunction#872230872(parent: InteropGetter#576658343(name: comparer), library: go.d.ts)
   set comparer(
       _i2.num Function(
         _i3.TreeVertex,
@@ -62538,7 +62617,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28686
+  /* #28755
   source: 
     /**
      * Gets or sets the default direction for tree growth.
@@ -62563,7 +62642,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'angle',
       );
-  /* #28686
+  /* #28755
   source: 
     /**
      * Gets or sets the default direction for tree growth.
@@ -62585,7 +62664,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28696
+  /* #28765
   source: 
     /**
      * Gets or sets the default alignment of parents relative to their children.
@@ -62606,7 +62685,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alignment',
       );
-  /* #28696
+  /* #28765
   source: 
     /**
      * Gets or sets the default alignment of parents relative to their children.
@@ -62626,7 +62705,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28712
+  /* #28781
   source: 
     /**
      * Gets or sets the default indentation of the first child.
@@ -62659,7 +62738,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'nodeIndent',
       );
-  /* #28712
+  /* #28781
   source: 
     /**
      * Gets or sets the default indentation of the first child.
@@ -62685,7 +62764,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28726
+  /* #28795
   source: 
     /**
      * Gets or sets the fraction of this node's breadth is added to #nodeIndent
@@ -62714,7 +62793,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'nodeIndentPastParent',
       );
-  /* #28726
+  /* #28795
   source: 
     /**
      * Gets or sets the fraction of this node's breadth is added to #nodeIndent
@@ -62738,7 +62817,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28739
+  /* #28808
   source: 
     /**
      * Gets or sets the distance between child nodes.
@@ -62765,7 +62844,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'nodeSpacing',
       );
-  /* #28739
+  /* #28808
   source: 
     /**
      * Gets or sets the distance between child nodes.
@@ -62788,7 +62867,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28754
+  /* #28823
   source: 
     /**
      * Gets or sets the distance between a parent node and its children.
@@ -62819,7 +62898,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'layerSpacing',
       );
-  /* #28754
+  /* #28823
   source: 
     /**
      * Gets or sets the distance between a parent node and its children.
@@ -62844,7 +62923,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28769
+  /* #28838
   source: 
     /**
      * Gets or sets the fraction of the node's depth for which the children's layer starts overlapped with the parent's layer.
@@ -62875,7 +62954,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'layerSpacingParentOverlap',
       );
-  /* #28769
+  /* #28838
   source: 
     /**
      * Gets or sets the fraction of the node's depth for which the children's layer starts overlapped with the parent's layer.
@@ -62900,7 +62979,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28779
+  /* #28848
   source: 
     /**
      * Gets or sets how closely to pack the child nodes of a subtree.
@@ -62921,7 +63000,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'compaction',
       );
-  /* #28779
+  /* #28848
   source: 
     /**
      * Gets or sets how closely to pack the child nodes of a subtree.
@@ -62941,7 +63020,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28805
+  /* #28874
   source: 
     /**
      * Gets or sets a limit on how broad a tree should be.
@@ -62994,7 +63073,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'breadthLimit',
       );
-  /* #28805
+  /* #28874
   source: 
     /**
      * Gets or sets a limit on how broad a tree should be.
@@ -63030,7 +63109,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28820
+  /* #28889
   source: 
     /**
      * Gets or sets the distance between rows or columns of a parent node's immediate children.
@@ -63061,7 +63140,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'rowSpacing',
       );
-  /* #28820
+  /* #28889
   source: 
     /**
      * Gets or sets the distance between rows or columns of a parent node's immediate children.
@@ -63086,7 +63165,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28833
+  /* #28902
   source: 
     /**
      * Gets or sets the default indentation of the first child of each row,
@@ -63113,7 +63192,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'rowIndent',
       );
-  /* #28833
+  /* #28902
   source: 
     /**
      * Gets or sets the default indentation of the first child of each row,
@@ -63136,7 +63215,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28844
+  /* #28913
   source: 
     /**
      * Gets or sets the distance between comments.
@@ -63159,7 +63238,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'commentSpacing',
       );
-  /* #28844
+  /* #28913
   source: 
     /**
      * Gets or sets the distance between comments.
@@ -63180,7 +63259,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28855
+  /* #28924
   source: 
     /**
      * Gets or sets the distance between a node and its comments.
@@ -63203,7 +63282,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'commentMargin',
       );
-  /* #28855
+  /* #28924
   source: 
     /**
      * Gets or sets the distance between a node and its comments.
@@ -63224,7 +63303,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28868
+  /* #28937
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the
@@ -63251,7 +63330,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'setsPortSpot',
       );
-  /* #28868
+  /* #28937
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the
@@ -63274,7 +63353,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28883
+  /* #28952
   source: 
     /**
      * Gets or sets the spot that this node's port gets as its FromSpot.
@@ -63305,7 +63384,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'portSpot',
       );
-  /* #28883
+  /* #28952
   source: 
     /**
      * Gets or sets the spot that this node's port gets as its FromSpot.
@@ -63330,7 +63409,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28896
+  /* #28965
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the
@@ -63357,7 +63436,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'setsChildPortSpot',
       );
-  /* #28896
+  /* #28965
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the
@@ -63380,7 +63459,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28911
+  /* #28980
   source: 
     /**
      * Gets or sets the spot that children nodes' ports get as their ToSpot.
@@ -63411,7 +63490,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'childPortSpot',
       );
-  /* #28911
+  /* #28980
   source: 
     /**
      * Gets or sets the spot that children nodes' ports get as their ToSpot.
@@ -63436,7 +63515,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28923
+  /* #28992
   source: 
     /**
      * Gets or sets the alternate sorting policy for ordering the immediate children of a vertex.
@@ -63461,7 +63540,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateSorting',
       );
-  /* #28923
+  /* #28992
   source: 
     /**
      * Gets or sets the alternate sorting policy for ordering the immediate children of a vertex.
@@ -63483,7 +63562,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28933
+  /* #29002
   source: 
     /**
      * Gets or sets the alternate comparison function used for sorting the immediate children of a vertex.
@@ -63507,7 +63586,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateComparer',
       );
-  /* #28933
+  /* #29002
   source: 
     /**
      * Gets or sets the alternate comparison function used for sorting the immediate children of a vertex.
@@ -63518,7 +63597,7 @@ extension TreeLayout$Typings on TreeLayout {
      * Whether this comparison function is used is determined by the value of #alternateSorting.
      */
     get alternateComparer(): ((a: TreeVertex, b: TreeVertex) => number); */
-  // Type InteropFunction#469877567(parent: InteropGetter#1029811579(name: alternateComparer), library: go.d.ts)
+  // Type InteropFunction#468433988(parent: InteropGetter#952063070(name: alternateComparer), library: go.d.ts)
   set alternateComparer(
       _i2.num Function(
         _i3.TreeVertex,
@@ -63531,7 +63610,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28944
+  /* #29013
   source: 
     /**
      * Gets or sets the alternate direction for tree growth.
@@ -63554,7 +63633,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateAngle',
       );
-  /* #28944
+  /* #29013
   source: 
     /**
      * Gets or sets the alternate direction for tree growth.
@@ -63575,7 +63654,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28954
+  /* #29023
   source: 
     /**
      * Gets or sets the alternate alignment of parents relative to their children.
@@ -63596,7 +63675,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateAlignment',
       );
-  /* #28954
+  /* #29023
   source: 
     /**
      * Gets or sets the alternate alignment of parents relative to their children.
@@ -63616,7 +63695,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28969
+  /* #29038
   source: 
     /**
      * Gets or sets the alternate indentation of the first child.
@@ -63647,7 +63726,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateNodeIndent',
       );
-  /* #28969
+  /* #29038
   source: 
     /**
      * Gets or sets the alternate indentation of the first child.
@@ -63672,7 +63751,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28981
+  /* #29050
   source: 
     /**
      * Gets or sets the fraction of this node's breadth is added to #alternateNodeIndent
@@ -63697,7 +63776,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateNodeIndentPastParent',
       );
-  /* #28981
+  /* #29050
   source: 
     /**
      * Gets or sets the fraction of this node's breadth is added to #alternateNodeIndent
@@ -63719,7 +63798,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #28991
+  /* #29060
   source: 
     /**
      * Gets or sets the alternate distance between child nodes.
@@ -63740,7 +63819,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateNodeSpacing',
       );
-  /* #28991
+  /* #29060
   source: 
     /**
      * Gets or sets the alternate distance between child nodes.
@@ -63760,7 +63839,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29006
+  /* #29075
   source: 
     /**
      * Gets or sets the alternate distance between a parent node and its children.
@@ -63791,7 +63870,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateLayerSpacing',
       );
-  /* #29006
+  /* #29075
   source: 
     /**
      * Gets or sets the alternate distance between a parent node and its children.
@@ -63816,7 +63895,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29020
+  /* #29089
   source: 
     /**
      * Gets or sets the alternate fraction of the node's depth for which the children's layer starts overlapped with the parent's layer.
@@ -63845,7 +63924,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateLayerSpacingParentOverlap',
       );
-  /* #29020
+  /* #29089
   source: 
     /**
      * Gets or sets the alternate fraction of the node's depth for which the children's layer starts overlapped with the parent's layer.
@@ -63869,7 +63948,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29030
+  /* #29099
   source: 
     /**
      * Gets or sets how closely to pack the child nodes of a subtree.
@@ -63890,7 +63969,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateCompaction',
       );
-  /* #29030
+  /* #29099
   source: 
     /**
      * Gets or sets how closely to pack the child nodes of a subtree.
@@ -63910,7 +63989,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29055
+  /* #29124
   source: 
     /**
      * Gets or sets an alternate limit on how broad a tree should be.
@@ -63961,7 +64040,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateBreadthLimit',
       );
-  /* #29055
+  /* #29124
   source: 
     /**
      * Gets or sets an alternate limit on how broad a tree should be.
@@ -63996,7 +64075,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29068
+  /* #29137
   source: 
     /**
      * Gets or sets the alternate distance between rows of children.
@@ -64023,7 +64102,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateRowSpacing',
       );
-  /* #29068
+  /* #29137
   source: 
     /**
      * Gets or sets the alternate distance between rows of children.
@@ -64046,7 +64125,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29080
+  /* #29149
   source: 
     /**
      * Gets or sets the alternate indentation of the first child of each row,
@@ -64071,7 +64150,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateRowIndent',
       );
-  /* #29080
+  /* #29149
   source: 
     /**
      * Gets or sets the alternate indentation of the first child of each row,
@@ -64093,7 +64172,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29090
+  /* #29159
   source: 
     /**
      * Gets or sets the alternate distance between comments.
@@ -64114,7 +64193,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateCommentSpacing',
       );
-  /* #29090
+  /* #29159
   source: 
     /**
      * Gets or sets the alternate distance between comments.
@@ -64134,7 +64213,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29100
+  /* #29169
   source: 
     /**
      * Gets or sets the alternate distance between a node and its comments.
@@ -64155,7 +64234,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateCommentMargin',
       );
-  /* #29100
+  /* #29169
   source: 
     /**
      * Gets or sets the alternate distance between a node and its comments.
@@ -64175,7 +64254,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29112
+  /* #29181
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the
@@ -64200,7 +64279,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateSetsPortSpot',
       );
-  /* #29112
+  /* #29181
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the
@@ -64222,7 +64301,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29126
+  /* #29195
   source: 
     /**
      * Gets or sets the alternate spot that this node's port gets as its FromSpot.
@@ -64251,7 +64330,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternatePortSpot',
       );
-  /* #29126
+  /* #29195
   source: 
     /**
      * Gets or sets the alternate spot that this node's port gets as its FromSpot.
@@ -64275,7 +64354,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29138
+  /* #29207
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the
@@ -64300,7 +64379,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateSetsChildPortSpot',
       );
-  /* #29138
+  /* #29207
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the
@@ -64322,7 +64401,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  /* #29152
+  /* #29221
   source: 
     /**
      * Gets or sets the alternate spot that children nodes' ports get as their ToSpot
@@ -64351,7 +64430,7 @@ extension TreeLayout$Typings on TreeLayout {
         this,
         'alternateChildPortSpot',
       );
-  /* #29152
+  /* #29221
   source: 
     /**
      * Gets or sets the alternate spot that children nodes' ports get as their ToSpot
@@ -64425,7 +64504,7 @@ extension TreeLayout$Typings on TreeLayout {
     );
   }
 
-  _i4.Array customAlignment(
+  _i4.Array<_i2.num> customAlignment(
     _i3.TreeVertex v,
     _i2.num offx,
     _i2.num offy,
@@ -64485,7 +64564,7 @@ extension TreeLayout$Typings on TreeLayout {
   }
 
   void commitLayers(
-    _i4.Array layerRects,
+    _i4.Array<_i3.Rect> layerRects,
     _i3.Point offset,
   ) {
     _i5.callMethod(
@@ -64549,7 +64628,7 @@ FieldExternal:
 external _i2.Object _declaredTreeVertex;
 
 extension TreeVertex$Typings on TreeVertex {
-  /* #29428
+  /* #29497
   source: 
     /**
      * Gets or sets whether this node has been initialized as part of TreeLayout#doLayout when building the tree structures.
@@ -64564,7 +64643,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'initialized',
       );
-  /* #29428
+  /* #29497
   source: 
     /**
      * Gets or sets whether this node has been initialized as part of TreeLayout#doLayout when building the tree structures.
@@ -64581,7 +64660,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29438
+  /* #29507
   source: 
     /**
      * Gets or sets the logical parent for this node.
@@ -64602,7 +64681,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'parent',
       );
-  /* #29438
+  /* #29507
   source: 
     /**
      * Gets or sets the logical parent for this node.
@@ -64622,7 +64701,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29448
+  /* #29517
   source: 
     /**
      * Gets or sets the logical children for this node.
@@ -64639,11 +64718,11 @@ extension TreeVertex$Typings on TreeVertex {
   ///
   /// This structural property is computed in TreeLayout#doLayout when building the tree structures.
   /// You should probably not be setting this property.
-  _i4.Array get children => _i5.getProperty(
+  _i4.Array<_i3.TreeVertex> get children => _i5.getProperty(
         this,
         'children',
       );
-  /* #29448
+  /* #29517
   source: 
     /**
      * Gets or sets the logical children for this node.
@@ -64654,8 +64733,8 @@ extension TreeVertex$Typings on TreeVertex {
      * You should probably not be setting this property.
      */
     get children(): Array<TreeVertex>; */
-  // Type Instance of 'ExternalInteropType'
-  set children(_i4.Array value) {
+  // Type Instance of 'InteropInterface'
+  set children(_i4.Array<_i3.TreeVertex> value) {
     _i5.setProperty(
       this,
       'children',
@@ -64663,7 +64742,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29459
+  /* #29528
   source: 
     /**
      * Gets or sets the number of single-parent ancestors this node has.
@@ -64686,7 +64765,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'level',
       );
-  /* #29459
+  /* #29528
   source: 
     /**
      * Gets or sets the number of single-parent ancestors this node has.
@@ -64707,7 +64786,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29469
+  /* #29538
   source: 
     /**
      * Gets or sets the number of descendants this node has.
@@ -64728,7 +64807,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'descendantCount',
       );
-  /* #29469
+  /* #29538
   source: 
     /**
      * Gets or sets the number of descendants this node has.
@@ -64748,7 +64827,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29479
+  /* #29548
   source: 
     /**
      * Gets or sets the maximum number of children of any descendant of this node.
@@ -64769,7 +64848,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'maxChildrenCount',
       );
-  /* #29479
+  /* #29548
   source: 
     /**
      * Gets or sets the maximum number of children of any descendant of this node.
@@ -64789,7 +64868,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29489
+  /* #29558
   source: 
     /**
      * Gets or sets the maximum depth of the subtrees below this node.
@@ -64810,7 +64889,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'maxGenerationCount',
       );
-  /* #29489
+  /* #29558
   source: 
     /**
      * Gets or sets the maximum depth of the subtrees below this node.
@@ -64830,7 +64909,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29500
+  /* #29569
   source: 
     /**
      * Gets or sets an array of Nodes that will be positioned near this node.
@@ -64849,11 +64928,11 @@ extension TreeVertex$Typings on TreeVertex {
   /// These objects should not have their own TreeVertexes to be laid out.
   /// Typically these will be Nodes whose Category is "Comment".
   /// This array should be allocated and initialized in TreeLayout#addComments.
-  _i4.Array get comments => _i5.getProperty(
+  _i4.Array<_i3.Node> get comments => _i5.getProperty(
         this,
         'comments',
       );
-  /* #29500
+  /* #29569
   source: 
     /**
      * Gets or sets an array of Nodes that will be positioned near this node.
@@ -64865,8 +64944,8 @@ extension TreeVertex$Typings on TreeVertex {
      * This array should be allocated and initialized in TreeLayout#addComments.
      */
     get comments(): Array<Node>; */
-  // Type Instance of 'ExternalInteropType'
-  set comments(_i4.Array value) {
+  // Type Instance of 'InteropInterface'
+  set comments(_i4.Array<_i3.Node> value) {
     _i5.setProperty(
       this,
       'comments',
@@ -64874,7 +64953,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29509
+  /* #29578
   source: 
     /**
      * Gets or sets whether and in what order the children should be sorted.
@@ -64893,7 +64972,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'sorting',
       );
-  /* #29509
+  /* #29578
   source: 
     /**
      * Gets or sets whether and in what order the children should be sorted.
@@ -64912,7 +64991,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29516
+  /* #29585
   source: 
     /**
      * Gets or sets how the children should be sorted.
@@ -64930,7 +65009,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'comparer',
       );
-  /* #29516
+  /* #29585
   source: 
     /**
      * Gets or sets how the children should be sorted.
@@ -64938,7 +65017,7 @@ extension TreeVertex$Typings on TreeVertex {
      * This inherited property is initialized in the TreeLayout#initializeTreeVertexValues pass.
      */
     get comparer(): ((a: TreeVertex, b: TreeVertex) => number); */
-  // Type InteropFunction#507787452(parent: InteropGetter#349120738(name: comparer), library: go.d.ts)
+  // Type InteropFunction#904175504(parent: InteropGetter#883972144(name: comparer), library: go.d.ts)
   set comparer(
       _i2.num Function(
         _i3.TreeVertex,
@@ -64951,7 +65030,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29529
+  /* #29598
   source: 
     /**
      * Gets or sets the absolute angle at which this subtree should grow from this vertex.
@@ -64978,7 +65057,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'angle',
       );
-  /* #29529
+  /* #29598
   source: 
     /**
      * Gets or sets the absolute angle at which this subtree should grow from this vertex.
@@ -65001,7 +65080,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29538
+  /* #29607
   source: 
     /**
      * Gets or sets how this parent node should be aligned relative to its children.
@@ -65020,7 +65099,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'alignment',
       );
-  /* #29538
+  /* #29607
   source: 
     /**
      * Gets or sets how this parent node should be aligned relative to its children.
@@ -65039,7 +65118,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29549
+  /* #29618
   source: 
     /**
      * Gets or sets the distance the first child should be indented.
@@ -65062,7 +65141,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'nodeIndent',
       );
-  /* #29549
+  /* #29618
   source: 
     /**
      * Gets or sets the distance the first child should be indented.
@@ -65083,7 +65162,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29561
+  /* #29630
   source: 
     /**
      * Gets or sets whether the first child should be indented past the parent node's breadth.
@@ -65108,7 +65187,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'nodeIndentPastParent',
       );
-  /* #29561
+  /* #29630
   source: 
     /**
      * Gets or sets whether the first child should be indented past the parent node's breadth.
@@ -65130,7 +65209,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29571
+  /* #29640
   source: 
     /**
      * Gets or sets the distance between child nodes.
@@ -65151,7 +65230,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'nodeSpacing',
       );
-  /* #29571
+  /* #29640
   source: 
     /**
      * Gets or sets the distance between child nodes.
@@ -65171,7 +65250,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29581
+  /* #29650
   source: 
     /**
      * Gets or sets the distance between this node and its children.
@@ -65192,7 +65271,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'layerSpacing',
       );
-  /* #29581
+  /* #29650
   source: 
     /**
      * Gets or sets the distance between this node and its children.
@@ -65212,7 +65291,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29594
+  /* #29663
   source: 
     /**
      * Gets or sets the fraction of this node's depth that may overlap with the children's layer.
@@ -65239,7 +65318,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'layerSpacingParentOverlap',
       );
-  /* #29594
+  /* #29663
   source: 
     /**
      * Gets or sets the fraction of this node's depth that may overlap with the children's layer.
@@ -65262,7 +65341,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29603
+  /* #29672
   source: 
     /**
      * Gets or sets how the children of this node should be packed together.
@@ -65281,7 +65360,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'compaction',
       );
-  /* #29603
+  /* #29672
   source: 
     /**
      * Gets or sets how the children of this node should be packed together.
@@ -65300,7 +65379,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29613
+  /* #29682
   source: 
     /**
      * Gets or sets how broad a node and its descendants should be.
@@ -65321,7 +65400,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'breadthLimit',
       );
-  /* #29613
+  /* #29682
   source: 
     /**
      * Gets or sets how broad a node and its descendants should be.
@@ -65341,7 +65420,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29623
+  /* #29692
   source: 
     /**
      * Gets or sets the distance between rows within one layer, all sharing the same parent.
@@ -65362,7 +65441,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'rowSpacing',
       );
-  /* #29623
+  /* #29692
   source: 
     /**
      * Gets or sets the distance between rows within one layer, all sharing the same parent.
@@ -65382,7 +65461,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29635
+  /* #29704
   source: 
     /**
      * Gets or sets the distance the first child of each row should be indented.
@@ -65407,7 +65486,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'rowIndent',
       );
-  /* #29635
+  /* #29704
   source: 
     /**
      * Gets or sets the distance the first child of each row should be indented.
@@ -65429,7 +65508,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29645
+  /* #29714
   source: 
     /**
      * Gets or sets the space to leave between consecutive comments.
@@ -65450,7 +65529,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'commentSpacing',
       );
-  /* #29645
+  /* #29714
   source: 
     /**
      * Gets or sets the space to leave between consecutive comments.
@@ -65470,7 +65549,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29655
+  /* #29724
   source: 
     /**
      * Gets or sets the space to leave between the node and the comments.
@@ -65491,7 +65570,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'commentMargin',
       );
-  /* #29655
+  /* #29724
   source: 
     /**
      * Gets or sets the space to leave between the node and the comments.
@@ -65511,7 +65590,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29666
+  /* #29735
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the FromSpot for this parent node port.
@@ -65534,7 +65613,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'setsPortSpot',
       );
-  /* #29666
+  /* #29735
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the FromSpot for this parent node port.
@@ -65555,7 +65634,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29680
+  /* #29749
   source: 
     /**
      * Gets or sets the spot that this node's port gets as its FromSpot,
@@ -65584,7 +65663,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'portSpot',
       );
-  /* #29680
+  /* #29749
   source: 
     /**
      * Gets or sets the spot that this node's port gets as its FromSpot,
@@ -65608,7 +65687,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29691
+  /* #29760
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the ToSpot for each child node port.
@@ -65631,7 +65710,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'setsChildPortSpot',
       );
-  /* #29691
+  /* #29760
   source: 
     /**
      * Gets or sets whether the TreeLayout should set the ToSpot for each child node port.
@@ -65652,7 +65731,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29705
+  /* #29774
   source: 
     /**
      * Gets or sets the spot that children nodes' ports get as their ToSpot,
@@ -65681,7 +65760,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'childPortSpot',
       );
-  /* #29705
+  /* #29774
   source: 
     /**
      * Gets or sets the spot that children nodes' ports get as their ToSpot,
@@ -65705,7 +65784,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29712
+  /* #29781
   source: 
     /**
      * This read-only property returns the number of immediate children this node has.
@@ -65720,7 +65799,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'childrenCount',
       );
-  /* #29712
+  /* #29781
   source: 
     /**
      * This read-only property returns the number of immediate children this node has.
@@ -65737,7 +65816,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29719
+  /* #29788
   source: 
     /**
      * Gets or sets the position of this node relative to its parent node.
@@ -65754,7 +65833,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'relativePosition',
       );
-  /* #29719
+  /* #29788
   source: 
     /**
      * Gets or sets the position of this node relative to its parent node.
@@ -65772,7 +65851,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29728
+  /* #29797
   source: 
     /**
      * Gets or sets the size of the subtree (including all descendants) parented by this node.
@@ -65791,7 +65870,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'subtreeSize',
       );
-  /* #29728
+  /* #29797
   source: 
     /**
      * Gets or sets the size of the subtree (including all descendants) parented by this node.
@@ -65810,7 +65889,7 @@ extension TreeVertex$Typings on TreeVertex {
     );
   }
 
-  /* #29737
+  /* #29806
   source: 
     /**
      * Gets or sets the offset of this parent node relative to its whole subtree.
@@ -65829,7 +65908,7 @@ extension TreeVertex$Typings on TreeVertex {
         this,
         'subtreeOffset',
       );
-  /* #29737
+  /* #29806
   source: 
     /**
      * Gets or sets the offset of this parent node relative to its whole subtree.
@@ -65873,7 +65952,7 @@ FieldExternal:
 external _i2.Object _declaredTreeEdge;
 
 extension TreeEdge$Typings on TreeEdge {
-  /* #29759
+  /* #29828
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge comes from.
@@ -65886,7 +65965,7 @@ extension TreeEdge$Typings on TreeEdge {
         this,
         'fromVertex',
       );
-  /* #29759
+  /* #29828
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge comes from.
@@ -65902,7 +65981,7 @@ extension TreeEdge$Typings on TreeEdge {
     );
   }
 
-  /* #29765
+  /* #29834
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge goes to.
@@ -65915,23 +65994,23 @@ extension TreeEdge$Typings on TreeEdge {
         this,
         'toVertex',
       );
-  /* #29765
+  /* #29834
   source: 
     /**
      * Gets or sets the LayoutVertex that this edge goes to.
      * Setting this property does not change any LayoutVertex#sourceEdges collection.
      */
     get toVertex(): TreeVertex | null; */
-  // Type InteropUnion#11607172(parent: InteropGetter#229593711(name: toVertex))
+  // Type InteropUnion#1067377108(parent: InteropGetter#979258766(name: toVertex))
   set toVertex(_i3.TreeVertex? value) {
     _i5.setProperty(
       this,
       'toVertex',
-      value ?? _i4.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  /* #29771
+  /* #29840
   source: 
     /**
      * Gets or sets a Point, relative to the parent node,
@@ -65944,7 +66023,7 @@ extension TreeEdge$Typings on TreeEdge {
         this,
         'relativePoint',
       );
-  /* #29771
+  /* #29840
   source: 
     /**
      * Gets or sets a Point, relative to the parent node,

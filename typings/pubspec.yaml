@@ -1,22 +1,29 @@
 name: typings
-description: Automated TypeScript bindings
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+description: Use NPM packages in your projects through TypeScript interop
+version: 0.0.1
+repository: https://github.com/jodinathan/typings/typings
+
+funding: https://www.paypal.com/donate?hosted_button_id=YNCG33GLM3494
 
 environment:
   sdk: '>=3.0.0-277.0.dev <4.0.0'
 
 # Add regular dependencies here.
-dependencies:
-  js: ^0.6.7
-  # path: ^1.8.0
+#dependencies:
+  
 
 dev_dependencies:
-  lints: ^2.0.0
-  test: ^1.21.0
-  build_runner: ^2.4.1
+  analyzer: ^5.10.0
   build_web_compilers: ^4.0.0
+  build: ^2.3.1
+  build_runner: ^2.4.1
+  js: ^0.6.7
+  lints: ^2.0.0
+  source_gen: ^1.2.7
+  test: ^1.21.0
+  ts2dart:
+    path: ../ts2dart
 
 dependency_overrides:
-  build_runner:
-   path: ../../build/build_runner
+  code_builder:
+   path: ../code_builder

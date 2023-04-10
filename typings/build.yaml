@@ -1,9 +1,39 @@
+builders:
+  typesgenerator:
+    import: "package:typings/tool/build.dart"
+    builder_factories: [
+        "typingsBuilder"
+    ]
+    build_extensions: {".dart": [".info.dart"]}
+    #auto_apply: dependents
+    auto_apply: none
+    build_to: source
+  coregenerator:
+    import: "package:typings/tool/build.dart"
+    builder_factories: [
+        "typingsBuilder"
+    ]
+    build_extensions: {".dart": [".info.dart"]}
+    #auto_apply: dependents
+    auto_apply: none
+    build_to: source
+    runs_before: [
+        "typings|typesgenerator",
+    ]
+
 targets:
   $default:
-    sources:
-      exclude: []
     builders:
+      typings|coregenerator:
+        enabled: false
+        generate_for:
+          - lib/core.dart
+      typings|typesgenerator:
+        enabled: false
+        generate_for:
+          - lib/d/*.dart
       build_web_compilers|entrypoint:
+        enabled: true
         options:
           compiler: dart2js
           dart2js_args:
@@ -21,3 +51,4 @@ targets:
             - --trust-primitives
             - --omit-implicit-checks
             #- --dump-info
+

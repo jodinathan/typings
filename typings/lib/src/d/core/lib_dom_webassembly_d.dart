@@ -244,7 +244,7 @@ class Module {
         [bytes],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,186020950,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,120018122,[Instance of 'InteropRef<InteropType>']*/ <
       _i7.ByteBuffer> customSections(
     _i4.Module moduleObject,
     _i2.String sectionName,
@@ -258,7 +258,7 @@ class Module {
         ],
       ) as _i2.List)
           .cast();
-  static _i2.List /*LIST InteropStaticType.list,890513711,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,320172449,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleExportDescriptor> exports(
           _i4.Module moduleObject) =>
       (_i5.callMethod(
@@ -267,7 +267,7 @@ class Module {
         [moduleObject],
       ) as _i2.List)
           .cast();
-  static _i2.List /*LIST InteropStaticType.list,621576268,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,546199235,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleImportDescriptor> imports(
           _i4.Module moduleObject) =>
       (_i5.callMethod(
@@ -289,7 +289,7 @@ external _i2.Object _declaredModule;
 class IInline608 {}
 
 extension IInline608$Typings on IInline608 {
-  _i2.List /*LIST InteropStaticType.list,186020950,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,120018122,[Instance of 'InteropRef<InteropType>']*/ <
       _i7.ByteBuffer> customSections(
     _i4.Module moduleObject,
     _i2.String sectionName,
@@ -303,7 +303,7 @@ extension IInline608$Typings on IInline608 {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,890513711,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,320172449,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleExportDescriptor> exports(
           _i4.Module moduleObject) =>
       (_i5.callMethod(
@@ -312,7 +312,7 @@ extension IInline608$Typings on IInline608 {
         [moduleObject],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,621576268,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,546199235,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleImportDescriptor> imports(
           _i4.Module moduleObject) =>
       (_i5.callMethod(
@@ -465,7 +465,7 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
   /* #17612
   source: 
         value: ValueType; */
-  // Type InteropTypedef#563827621(name: ValueType)
+  // Type InteropTypedef#24377892(name: ValueType)
   set value(_i4.ValueType value) {
     _i5.setProperty(
       this,
@@ -587,7 +587,7 @@ extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
   /* #17622
   source: 
         kind: ImportExportKind; */
-  // Type InteropTypedef#310160992(name: ImportExportKind)
+  // Type InteropTypedef#912179614(name: ImportExportKind)
   set kind(_i4.ImportExportKind value) {
     _i5.setProperty(
       this,
@@ -650,7 +650,7 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
   /* #17627
   source: 
         kind: ImportExportKind; */
-  // Type InteropTypedef#310160992(name: ImportExportKind)
+  // Type InteropTypedef#912179614(name: ImportExportKind)
   set kind(_i4.ImportExportKind value) {
     _i5.setProperty(
       this,
@@ -731,7 +731,7 @@ extension TableDescriptor$Typings on TableDescriptor {
   /* #17633
   source: 
         element: TableKind; */
-  // Type InteropTypedef#553066772(name: TableKind)
+  // Type InteropTypedef#178116963(name: TableKind)
   set element(_i4.TableKind value) {
     _i5.setProperty(
       this,

@@ -448,7 +448,7 @@ class PromiseConstructor {}
 
 extension PromiseConstructor$Typings on PromiseConstructor {
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,437775093,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,700629655,[Instance of 'InteropRef<InteropType>']*/ <
           _i7.Awaited<T>>> _all$1<T>(_i5.Iterable<_i2.Object> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
@@ -464,7 +464,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   // HEYA all
   ({
     _i2.Future<
-            _i2.List /*LIST InteropStaticType.list,437775093,[Instance of 'InteropRef<InteropType>']*/ <
+            _i2.List /*LIST InteropStaticType.list,700629655,[Instance of 'InteropRef<InteropType>']*/ <
                 _i7.Awaited<T>>>
         Function<T>(_i5.Iterable<_i2.Object> values) $1,
     _i2.Future<_i2.dynamic> Function<T extends _i2.Object>(T values) $2,
@@ -534,7 +534,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
         [values],
       ));
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,982194118,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,419383012,[Instance of 'InteropRef<InteropType>']*/ <
           _i8
               .PromiseSettledResult<_i7.Awaited<T>>>> _allSettled$2<T>(
           _i5.Iterable<_i2.Object> values) =>
@@ -547,7 +547,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ({
     _i2.Future<_i2.dynamic> Function<T extends _i2.Object>(T values) $1,
     _i2.Future<
-            _i2.List /*LIST InteropStaticType.list,982194118,[Instance of 'InteropRef<InteropType>']*/ <
+            _i2.List /*LIST InteropStaticType.list,419383012,[Instance of 'InteropRef<InteropType>']*/ <
                 _i8.PromiseSettledResult<_i7.Awaited<T>>>>
         Function<T>(_i5.Iterable<_i2.Object> values) $2,
   }) get allSettled => (

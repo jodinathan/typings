@@ -143,7 +143,6 @@ class InteropMethodHolder extends InteropMethod {
                 final ref = values.commonType().ref();
 
                 b
-                  ..docs.add('  // FUCKING SHIT $usableName, ${name}')
                   ..name = enumName
                   ..types.add(tref)
                   ..fields.add(Field((b) {

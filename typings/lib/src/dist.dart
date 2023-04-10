@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:js_util' as jsu;
-import '../d/core.dart' as js;
+import '../core.dart' as js;
 
 class TypingsDist {
   static final Map<String, FutureOr<bool>> _scriptFetched = {};
@@ -15,17 +15,14 @@ class TypingsDist {
     final item = jsu.getProperty(js.window, contextCheck);
     final ret = item != null && item.toString() != 'null';
 
-    print('HasContext $contextCheck: $ret. Item: $item');
-
     return ret;
   }
 
   static FutureOr<bool> useScript(String name, String buffer,
       {String? contextCheck}) async {
-    contextCheck ??= name;
     assert(buffer.isNotEmpty == true);
 
-    if (hasContext(contextCheck)) return true;
+    if (contextCheck != null && hasContext(contextCheck)) return true;
 
     final ret = _scriptFetched[name];
 
@@ -46,7 +43,7 @@ class TypingsDist {
 
       js.document.body.appendChild(scr);
 
-      if (hasContext(contextCheck)) return true;
+      if (contextCheck != null && hasContext(contextCheck)) return true;
 
       Timer.periodic(Duration(milliseconds: 10), (t) {
         if (hasContext(contextCheck!)) {

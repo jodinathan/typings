@@ -5,11 +5,8 @@ import 'package:code_builder/code_builder.dart';
 import 'package:collection/collection.dart';
 import 'package:dart_style/dart_style.dart';
 import 'package:ts2dart/src/ast/library.dart';
-import 'package:ts2dart/src/ast/types/enum.dart';
-import 'package:ts2dart/src/ast/types/named.dart';
 import 'package:ts2dart/src/module.dart';
 
-import 'ast/class.dart';
 import 'ast/types/type.dart';
 import 'common.dart';
 
@@ -92,8 +89,9 @@ class InteropProject {
       required this.dirName,
       required this.libPath,
       this.distBuffer,
+      this.isExternal = false,
       String? contextCheck,
-      Set<String> uses = const {}})
+      Iterable<String> uses = const {}})
       : contextCheck = contextCheck ?? dirName,
         _uses = uses;
 
@@ -106,9 +104,10 @@ class InteropProject {
   final String libPath;
   final String dirName;
   final Iterable<String> _uses;
-  final List<ExternalInteropProject> externals = [];
+  final List<InteropProject> externals = [];
   final String? distBuffer;
   final String contextCheck;
+  final bool isExternal;
 
   InteropType? dig(Iterable<String> path) {
     final list = path.toList();
@@ -172,11 +171,10 @@ class InteropProject {
       final module = ext.modules.firstWhereOrNull((m) => m.path == '');
 
       if (module != null) {
-        final enumType = module.item(name);
+        final type = module.findDeclared(name);
 
-        if (enumType != null) {
-          return ExternalInteropType(
-              kind: enumType, name: name, packagePath: '/d/${ext.name}.dart');
+        if (type != null) {
+          return type;
         }
       }
     }
@@ -185,6 +183,46 @@ class InteropProject {
   }
 
   void generate({required Iterable<Map<String, dynamic>> mapFiles}) {
+    parse(mapFiles: mapFiles);
+
+    final distPath = srcDirFullPath('_dist.dart');
+    final distFile = File(distPath);
+    var usesDist = false;
+
+    if (distFile.existsSync()) {
+      distFile.deleteSync();
+    }
+
+    if (distBuffer case String buffer when buffer.isNotEmpty) {
+      final buf = '''
+      import 'dart:async';
+      import '/src/dist.dart';
+
+      FutureOr<bool> import() => 
+        TypingsDist.useScript('$dirName', dist, contextCheck: '${contextCheck}');
+
+      const dist = r\'''
+      ${buffer}
+      \''';
+      ''';
+
+      distFile.writeAsStringSync(DartFormatter().format(buf), flush: true);
+      usesDist = true;
+    }
+
+    final encoder = conv.JsonEncoder.withIndent('  ');
+
+    for (final module in modules) {
+      module
+        ..exportsDist = usesDist && (module.path.isEmpty || modules.length == 1)
+        ..generate();
+    }
+
+    File(srcDirFullPath('struct.json'))
+        .writeAsStringSync(encoder.convert(mapFiles), flush: true);
+  }
+
+  void parse({required Iterable<Map<String, dynamic>> mapFiles}) {
     final parseMapping = <InteropLibrary, Map<String, dynamic>>{};
 
     modules.clear();
@@ -199,9 +237,11 @@ class InteropProject {
       }
 
       final buf = jsonFile.readAsStringSync();
-      final list = conv.json.decode(buf) as ExternalInteropProject;
+      final mapFiles = conv.json.decode(buf) as Iterable;
+      final proj = InteropProject(dirName: use, libPath: '', isExternal: true)
+        ..parse(mapFiles: mapFiles.cast());
 
-      externals.add(list);
+      externals.add(proj);
     }
 
     final src = Directory(srcDirFullPath(''));
@@ -298,94 +338,5 @@ class InteropProject {
             library.cache();
           });
     }
-
-    final distPath = srcDirFullPath('_dist.dart');
-    final distFile = File(distPath);
-    var usesDist = false;
-
-    if (distFile.existsSync()) {
-      distFile.deleteSync();
-    }
-
-    if (distBuffer case String buffer when buffer.isNotEmpty) {
-      final buf = '''
-      import 'dart:async';
-      import '/src/dist.dart';
-
-      const dist = r\'''
-      ${buffer}
-      \''';
-
-      FutureOr<bool> useDist() => 
-        TypingsDist.useScript('$dirName', dist, contextCheck: '${contextCheck}');
-      ''';
-
-      distFile.writeAsStringSync(DartFormatter().format(buf), flush: true);
-      usesDist = true;
-    }
-
-    final exportModules = [];
-    final encoder = conv.JsonEncoder.withIndent('  ');
-
-    for (final module in modules) {
-      final namedTypes = <({String name, InteropType type})>{};
-      final props = <String>{};
-      final methods = <String>{};
-
-      module
-        ..exportsDist = usesDist && (module.path.isEmpty || modules.length == 1)
-        ..generate();
-
-      for (final lib in module.libraries) {
-        namedTypes.addAll([
-          ...lib.classes
-              .where((cl) => !cl.isInline && !cl.isPrivate)
-              .map((cl) => (name: cl.usableName, type: cl)),
-          ...lib.enums
-              .where((en) => en.isPrivate)
-              .map((en) => (name: en.usableName, type: en)),
-          ...lib.typedefs
-              .where((td) => switch (td.definition) {
-                    InteropClass cl => !cl.isInline && !cl.isPrivate,
-                    _ => true
-                  })
-              .map(
-                  (td) => (name: td.usableName, type: td.definition!.realType)),
-          ...lib.interfaces
-              .where((td) => switch (td.realType) {
-                    InteropClass cl => !cl.isInline && !cl.isPrivate,
-                    _ => true
-                  })
-              .map((td) => (
-                    name: switch (td.realType) {
-                      InteropNamedDeclaration d => d.usableName,
-                      _ => td.name
-                    },
-                    type: td.realType
-                  ))
-        ]);
-
-        props.addAll(lib.global.properties.map((p) => p.usableName));
-        methods.addAll(lib.global.properties.map((p) => p.usableName));
-      }
-
-      exportModules.add({
-        'module': module.path,
-        'items': {
-          for (final (:name, :type) in namedTypes)
-            name: switch (type) {
-              InteropClass _ => ExternalInteropItem.class$.name,
-              InteropDynamicEnum _ => ExternalInteropItem.enum$.name,
-              _ => ExternalInteropItem.other.name
-            },
-          for (final prop in props) prop: ExternalInteropItem.prop.name,
-          for (final method in methods) method: ExternalInteropItem.method.name,
-        }
-      });
-    }
-
-    File(srcDirFullPath('struct.json')).writeAsStringSync(
-        encoder.convert({'modules': exportModules, 'name': dirName}),
-        flush: true);
   }
 }

@@ -1,11 +1,9 @@
 @JS('self')
-library typings;
+library typings.core;
 
 import 'package:js/js.dart';
-import 'package:typings/annotations.dart';
-
-@Typed(urls: {''})
 export 'core/core.dart';
+
 
 @JS()
 external dynamic undefined;

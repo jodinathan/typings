@@ -2,14 +2,12 @@ import 'package:built_collection/built_collection.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:collection/collection.dart';
 import 'package:meta/meta.dart';
-import 'package:ts2dart/src/ast/types/enum.dart';
 import 'package:ts2dart/src/ast/types/tuple.dart';
 import 'package:ts2dart/src/common.dart';
 
 import '../class.dart';
 import '../method_param.dart';
 import 'accessor.dart';
-import 'const.dart';
 import 'indexed.dart';
 import '../library.dart';
 import 'function.dart';
@@ -30,33 +28,11 @@ typedef SymbolSwapItem = ({String symbol, InteropRef reference});
 typedef SymbolSwap = Iterable<SymbolSwapItem>;
 
 mixin InteropTypeDeclare on InteropType {
-  Iterable<InteropItem> get toDeclare;
-
   bool get configured;
 }
 
 mixin WithInteropTypeParams {
   int get typeParamsLength;
-}
-
-enum InteropTypes {
-  constString(InteropConstString.fromMap),
-  constNum(InteropConstNum.fromMap),
-  constConstrained(InteropConstrainedConstType.fromMap),
-  enum$(InteropDynamicEnum.fromMap);
-
-  const InteropTypes(this.loadMap);
-
-  static T fromMap<T extends InteropType>(Map<String, dynamic> map) {
-    final interop = values.byName(map.prop('interopType'));
-    final ret = interop.loadMap(map);
-
-    assert(ret is T, 'Loaded from map was expecting "$T", got ${ret}');
-
-    return ret as T;
-  }
-
-  final InteropType Function(Map<String, dynamic>) loadMap;
 }
 
 abstract mixin class InteropType {
@@ -74,9 +50,6 @@ abstract mixin class InteropType {
   bool get isArrayLike => false;
   InteropType get jsType => this;
   bool get toInteropDealsWithNull => false;
-  InteropTypes get interopType;
-
-  Map<String, dynamic> toMap();
 
   void configure() {}
   void cache() {}
@@ -264,12 +237,14 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
         '_': int lineNumber,
         'source': String source,
       } =>
-        InteropUnion(
+        () {
+        return InteropUnion(
             library: library,
             lineNumber: lineNumber,
             source: source,
-            types: union.map((u) => parseRef((u as Map).cast())),
-            parent: this),
+            types: union.map((u) => parseRef((u as Map).cast())).toList(),
+            parent: this);
+      }(),
       _ => parent?.parseType(map)
     };
   }

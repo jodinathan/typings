@@ -471,7 +471,7 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
      * The minimum number of integer digits to use. Possible values are from 1 to 21; the default is 1.
      */
     minimumIntegerDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21; */
-  // Type InteropUnion#341302215(parent: InteropGetter#353808897(name: minimumIntegerDigits))
+  // Type InteropUnion#309614982(parent: InteropGetter#548147610(name: minimumIntegerDigits))
   set minimumIntegerDigits(MinimumIntegerDigits? value) {
     _i4.setProperty(
       this,
@@ -502,7 +502,7 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
      * The minimum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number and percent formatting is 0; the default for currency formatting is the number of minor unit digits provided by the {@link http://www.currency-iso.org/en/home/tables/table-a1.html ISO 4217 currency codes list} (2 if the list doesn't provide that information).
      */
     minimumFractionDigits?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20; */
-  // Type InteropUnion#864361411(parent: InteropGetter#409413011(name: minimumFractionDigits))
+  // Type InteropUnion#688526170(parent: InteropGetter#782103319(name: minimumFractionDigits))
   set minimumFractionDigits(MinimumFractionDigits? value) {
     _i4.setProperty(
       this,
@@ -533,7 +533,7 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
      * The maximum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number formatting is the larger of minimumFractionDigits and 3; the default for currency formatting is the larger of minimumFractionDigits and the number of minor unit digits provided by the {@link http://www.currency-iso.org/en/home/tables/table-a1.html ISO 4217 currency codes list} (2 if the list doesn't provide that information); the default for percent formatting is the larger of minimumFractionDigits and 0.
      */
     maximumFractionDigits?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20; */
-  // Type InteropUnion#587623445(parent: InteropGetter#701167602(name: maximumFractionDigits))
+  // Type InteropUnion#550347474(parent: InteropGetter#375220328(name: maximumFractionDigits))
   set maximumFractionDigits(MaximumFractionDigits? value) {
     _i4.setProperty(
       this,
@@ -565,7 +565,7 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
      * The minimum number of significant digits to use. Possible values are from 1 to 21; the default is 1.
      */
     minimumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21; */
-  // Type InteropUnion#404773585(parent: InteropGetter#9582792(name: minimumSignificantDigits))
+  // Type InteropUnion#1018344448(parent: InteropGetter#257656399(name: minimumSignificantDigits))
   set minimumSignificantDigits(MinimumSignificantDigits? value) {
     _i4.setProperty(
       this,
@@ -597,7 +597,7 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
      * The maximum number of significant digits to use. Possible values are from 1 to 21; the default is 21.
      */
     maximumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21; */
-  // Type InteropUnion#454699790(parent: InteropGetter#588802968(name: maximumSignificantDigits))
+  // Type InteropUnion#946916252(parent: InteropGetter#870283457(name: maximumSignificantDigits))
   set maximumSignificantDigits(MaximumSignificantDigits? value) {
     _i4.setProperty(
       this,
@@ -826,7 +826,7 @@ class BigInt64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
         [...?items],
       );
   static _i7.BigInt64Array from<U>(
-    _i2.List /*LIST InteropClass#291800405(name: List),147283872,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#884072815(name: List),976308731,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         arrayLike,
     _i2.int Function(
@@ -1191,7 +1191,7 @@ extension BigInt64Array$Typings on BigInt64Array {
         [],
       );
   void set(
-    _i2.List /*LIST InteropClass#291800405(name: List),30493282,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#884072815(name: List),1024265411,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.int>
         array, [
     _i2.num? offset,
@@ -1389,7 +1389,7 @@ extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
         [...?items],
       );
   _i7.BigInt64Array from<U>(
-    _i2.List /*LIST InteropClass#291800405(name: List),147283872,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#884072815(name: List),976308731,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         arrayLike,
     _i2.int Function(
@@ -1458,7 +1458,7 @@ class BigUint64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
         [...?items],
       );
   static _i7.BigUint64Array from<U>(
-    _i2.List /*LIST InteropClass#291800405(name: List),853514803,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#884072815(name: List),1005337282,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         arrayLike,
     _i2.int Function(
@@ -1823,7 +1823,7 @@ extension BigUint64Array$Typings on BigUint64Array {
         [],
       );
   void set(
-    _i2.List /*LIST InteropClass#291800405(name: List),906362939,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#884072815(name: List),792570502,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.int>
         array, [
     _i2.num? offset,
@@ -2021,7 +2021,7 @@ extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
         [...?items],
       );
   _i7.BigUint64Array from<U>(
-    _i2.List /*LIST InteropClass#291800405(name: List),853514803,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#884072815(name: List),1005337282,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         arrayLike,
     _i2.int Function(
