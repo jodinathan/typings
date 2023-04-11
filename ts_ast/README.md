@@ -1,0 +1,1 @@
+There should be the few logic as possible in this NodeJS project as it is inteded only to easily read and map a `.d.ts`  type info into a JSON file.
