@@ -1,5 +1,5 @@
 @_i1.JS('Reflect')
-library reflect; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop.reflect; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -9,9 +9,12 @@ import '/d/core.dart' as _i5;
 
 @_i1.JS('Reflect')
 external _i2.Object _self;
+
+/// Calls the function with the specified object as the this value
+/// and the elements of specified array as the arguments.
 R _apply$1<
         T,
-        A extends _i2.List /*LIST InteropStaticType.list,158948074,[Instance of 'InteropRef<InteropType>']*/ <
+        A extends _i2.List /*LIST InteropStaticType.list,104686246,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>,
         R>(
   R Function(_i2.Iterable<_i2.dynamic>?) target,
@@ -27,10 +30,13 @@ R _apply$1<
         argumentsList,
       ],
     );
+
+/// Calls the function with the specified object as the this value
+/// and the elements of specified array as the arguments.
 _i2.dynamic _apply$2(
   _i2.Function target,
   _i2.dynamic thisArgument,
-  _i2.List /*LIST InteropClass#884072815(name: List),1049361021,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropClass#925945977(name: List),959118293,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.dynamic>
       argumentsList,
 ) =>
@@ -42,21 +48,28 @@ _i2.dynamic _apply$2(
         thisArgument,
         argumentsList,
       ],
-    ); // HEYA apply
+    );
+
+/// Overload accessor: $1, $2
 ({
+  /// Calls the function with the specified object as the this value
+  /// and the elements of specified array as the arguments.
   R Function<
       T,
-      A extends _i2.List /*LIST InteropStaticType.list,158948074,[Instance of 'InteropRef<InteropType>']*/ <
+      A extends _i2.List /*LIST InteropStaticType.list,104686246,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.dynamic>,
       R>(
     R Function(_i2.Iterable<_i2.dynamic>?) target,
     T thisArgument,
     _i3.Readonly<A> argumentsList,
   ) $1,
+
+  /// Calls the function with the specified object as the this value
+  /// and the elements of specified array as the arguments.
   _i2.dynamic Function(
     _i2.Function target,
     _i2.dynamic thisArgument,
-    _i2.List /*LIST InteropClass#884072815(name: List),1049361021,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),959118293,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         argumentsList,
   ) $2,
@@ -64,8 +77,11 @@ _i2.dynamic _apply$2(
       $1: _apply$1,
       $2: _apply$2,
     );
+
+/// Constructs the target with the elements of specified array as the arguments
+/// and the specified constructor as the `new.target` value.
 R _construct$1<
-        A extends _i2.List /*LIST InteropStaticType.list,894743778,[Instance of 'InteropRef<InteropType>']*/ <
+        A extends _i2.List /*LIST InteropStaticType.list,237310777,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>,
         R>(
   R Function(_i2.Iterable<_i2.dynamic>?) target,
@@ -81,9 +97,12 @@ R _construct$1<
         newTarget == null ? _i5.undefined : _i4.allowInterop(newTarget),
       ],
     );
+
+/// Constructs the target with the elements of specified array as the arguments
+/// and the specified constructor as the `new.target` value.
 _i2.dynamic _construct$2(
   _i2.Function target,
-  _i2.List /*LIST InteropClass#884072815(name: List),550165534,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropClass#925945977(name: List),341621920,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.dynamic>
       argumentsList, [
   _i2.Function? newTarget,
@@ -96,19 +115,26 @@ _i2.dynamic _construct$2(
         argumentsList,
         newTarget ?? _i5.undefined,
       ],
-    ); // HEYA construct
+    );
+
+/// Overload accessor: $1, $2
 ({
+  /// Constructs the target with the elements of specified array as the arguments
+  /// and the specified constructor as the `new.target` value.
   R Function<
-      A extends _i2.List /*LIST InteropStaticType.list,894743778,[Instance of 'InteropRef<InteropType>']*/ <
+      A extends _i2.List /*LIST InteropStaticType.list,237310777,[Instance of 'InteropRef<InteropType>']*/ <
           _i2.dynamic>,
       R>(
     R Function(_i2.Iterable<_i2.dynamic>?) target,
     _i3.Readonly<A> argumentsList, [
     _i2.dynamic Function(_i2.Iterable<_i2.dynamic>?)? newTarget,
   ]) $1,
+
+  /// Constructs the target with the elements of specified array as the arguments
+  /// and the specified constructor as the `new.target` value.
   _i2.dynamic Function(
     _i2.Function target,
-    _i2.List /*LIST InteropClass#884072815(name: List),550165534,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),341621920,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         argumentsList, [
     _i2.Function? newTarget,
@@ -117,6 +143,8 @@ _i2.dynamic _construct$2(
       $1: _construct$1,
       $2: _construct$2,
     );
+
+/// Adds a property to an object, or modifies attributes of an existing property.
 _i2.bool defineProperty(
   _i2.Object target,
   _i3.PropertyKey propertyKey,
@@ -131,6 +159,9 @@ _i2.bool defineProperty(
         attributes,
       ],
     );
+
+/// Removes a property from an object, equivalent to `delete target[propertyKey]`,
+/// except it won't throw if `target[propertyKey]` is non-configurable.
 _i2.bool deleteProperty(
   _i2.Object target,
   _i3.PropertyKey propertyKey,
@@ -143,6 +174,8 @@ _i2.bool deleteProperty(
         propertyKey,
       ],
     );
+
+/// Gets the property of target, equivalent to `target[propertyKey]` when `receiver === target`.
 _i2.dynamic get<T extends _i2.Object, P extends _i3.PropertyKey>(
   T target,
   P propertyKey, [
@@ -157,6 +190,9 @@ _i2.dynamic get<T extends _i2.Object, P extends _i3.PropertyKey>(
         receiver ?? _i5.undefined,
       ],
     );
+
+/// Gets the own property descriptor of the specified object.
+/// An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
 _i3.TypedPropertyDescriptor<_i2.dynamic>?
     getOwnPropertyDescriptor<T extends _i2.Object, P extends _i3.PropertyKey>(
   T target,
@@ -170,11 +206,15 @@ _i3.TypedPropertyDescriptor<_i2.dynamic>?
             propertyKey,
           ],
         );
+
+/// Returns the prototype of an object.
 _i2.Object? getPrototypeOf(_i2.Object target) => _i4.callMethod(
       _self,
       'getPrototypeOf',
       [target],
     );
+
+/// Equivalent to `propertyKey in target`.
 _i2.bool has(
   _i2.Object target,
   _i3.PropertyKey propertyKey,
@@ -187,23 +227,32 @@ _i2.bool has(
         propertyKey,
       ],
     );
+
+/// Returns a value that indicates whether new properties can be added to an object.
 _i2.bool isExtensible(_i2.Object target) => _i4.callMethod(
       _self,
       'isExtensible',
       [target],
     );
-_i2.List /*LIST InteropStaticType.list,92641026,[Instance of 'InteropRef<InteropType>']*/ <_i2.Object>
+
+/// Returns the string and symbol keys of the own properties of an object. The own properties of an object
+/// are those that are defined directly on that object, and are not inherited from the object's prototype.
+_i2.List /*LIST InteropStaticType.list,21545053,[Instance of 'InteropRef<InteropType>']*/ <_i2.Object>
     ownKeys(_i2.Object target) => (_i4.callMethod(
           _self,
           'ownKeys',
           [target],
         ) as _i2.List)
             .cast();
+
+/// Prevents the addition of new properties to an object.
 _i2.bool preventExtensions(_i2.Object target) => _i4.callMethod(
       _self,
       'preventExtensions',
       [target],
     );
+
+/// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
 _i2.bool _set$1<T extends _i2.Object, P extends _i3.PropertyKey>(
   T target,
   P propertyKey, [
@@ -220,6 +269,8 @@ _i2.bool _set$1<T extends _i2.Object, P extends _i3.PropertyKey>(
         receiver ?? _i5.undefined,
       ],
     );
+
+/// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
 _i2.bool _set$2(
   _i2.Object target,
   _i3.PropertyKey propertyKey,
@@ -235,14 +286,19 @@ _i2.bool _set$2(
         value,
         receiver ?? _i5.undefined,
       ],
-    ); // HEYA set
+    );
+
+/// Overload accessor: $1, $2
 ({
+  /// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
   _i2.bool Function<T extends _i2.Object, P extends _i3.PropertyKey>(
     T target,
     P propertyKey, [
     _i2.dynamic value,
     _i2.dynamic receiver,
   ]) $1,
+
+  /// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
   _i2.bool Function(
     _i2.Object target,
     _i3.PropertyKey propertyKey,
@@ -253,6 +309,8 @@ _i2.bool _set$2(
       $1: _set$1,
       $2: _set$2,
     );
+
+/// Sets the prototype of a specified object o to object proto or null.
 _i2.bool setPrototypeOf(
   _i2.Object target, [
   _i2.Object? proto,

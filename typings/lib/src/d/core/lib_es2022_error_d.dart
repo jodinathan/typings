@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -20,17 +20,10 @@ class ErrorOptions {
 }
 
 extension ErrorOptions$Typings on ErrorOptions {
-  /* #20
-  source: 
-    cause?: unknown; */
   _i2.Object? get cause => _i4.getProperty(
         this,
         'cause',
       );
-  /* #20
-  source: 
-    cause?: unknown; */
-  // Type InteropStaticType.nullableObj
   set cause(_i2.Object? value) {
     _i4.setProperty(
       this,

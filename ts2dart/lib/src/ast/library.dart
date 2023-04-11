@@ -49,7 +49,8 @@ class InteropLibrary with InteropItem {
       fileName: 'dart:core',
       targetFileName: 'dart:core',
       module: InteropModule(
-          path: '', project: InteropProject(libPath: '', dirName: '')));
+          path: '',
+          project: InteropProject(libPath: '', dirName: '', name: '')));
   static InteropLibrary get current =>
       Zone.current[#interopLibrary] as InteropLibrary;
 
@@ -137,7 +138,8 @@ class InteropLibrary with InteropItem {
         }
 
         b
-          ..name = namespace.snakeCase
+          ..name =
+              'typings.${module.project.dirName.snakeCase}.interop${namespace.isEmpty ? '' : '.${namespace.snakeCase}'}'
           ..annotations
               .add(pkgJs.js(name: namespace.isEmpty ? null : namespace))
           ..body.addAll([

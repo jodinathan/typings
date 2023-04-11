@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -19,15 +19,10 @@ external _i2.Object _self;
 class WaitAsync {}
 
 extension WaitAsync$Typings on WaitAsync {
-  /* #28
-  source:  async: false, */
   _i2.bool get async => _i3.getProperty(
         this,
         'async',
       );
-  /* #28
-  source:  async: false, */
-  // Type InteropStaticType.boolean
   set async(_i2.bool value) {
     _i3.setProperty(
       this,
@@ -36,15 +31,10 @@ extension WaitAsync$Typings on WaitAsync {
     );
   }
 
-  /* #28
-  source:  value: "not-equal" | "timed-out" */
   _i2.dynamic get value => _i3.getProperty(
         this,
         'value',
       );
-  /* #28
-  source:  value: "not-equal" | "timed-out" */
-  // Type InteropStaticType.dyn
   set value(_i2.dynamic value) {
     _i3.setProperty(
       this,
@@ -60,15 +50,10 @@ extension WaitAsync$Typings on WaitAsync {
 class WaitAsyncCommon {}
 
 extension WaitAsyncCommon$Typings on WaitAsyncCommon {
-  /* #38
-  source:  async: false, */
   _i2.bool get async => _i3.getProperty(
         this,
         'async',
       );
-  /* #38
-  source:  async: false, */
-  // Type InteropStaticType.boolean
   set async(_i2.bool value) {
     _i3.setProperty(
       this,
@@ -77,15 +62,10 @@ extension WaitAsyncCommon$Typings on WaitAsyncCommon {
     );
   }
 
-  /* #38
-  source:  value: "not-equal" | "timed-out" */
   _i2.dynamic get value => _i3.getProperty(
         this,
         'value',
       );
-  /* #38
-  source:  value: "not-equal" | "timed-out" */
-  // Type InteropStaticType.dyn
   set value(_i2.dynamic value) {
     _i3.setProperty(
       this,
@@ -95,7 +75,6 @@ extension WaitAsyncCommon$Typings on WaitAsyncCommon {
   }
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum Wait {
   ok(r'ok'),
   notEqual(r'not-equal'),
@@ -106,7 +85,6 @@ enum Wait {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum WaitOptions {
   ok(r'ok'),
   notEqual(r'not-equal'),
@@ -133,17 +111,13 @@ FieldExternal:
 external _i2.Object _declaredSharedArrayBuffer;
 
 extension SharedArrayBuffer$Typings on SharedArrayBuffer {
-  /* #26
-  source: 
-    /**
-     * Read-only. The length of the ArrayBuffer (in bytes).
-     */
-    readonly byteLength: number; */
   /// Read-only. The length of the ArrayBuffer (in bytes).
   _i2.num get byteLength => _i3.getProperty(
         this,
         'byteLength',
       );
+
+  /// Returns a section of an SharedArrayBuffer.
   _i4.SharedArrayBuffer slice(
     _i2.num begin, [
     _i2.num? end,
@@ -167,6 +141,9 @@ class SharedArrayBufferConstructor {}
 class Atomics {}
 
 extension Atomics$Typings on Atomics {
+  /// Adds a value to the value at the given position in the array, returning the original value.
+  ///  Until this atomic operation completes, any other read or write operation against the array
+  ///  will block.
   _i2.num _add$1(
     _i2.Object typedArray,
     _i2.num index,
@@ -181,6 +158,10 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
+
+  /// Adds a value to the value at the given position in the array, returning the original value.
+  ///  Until this atomic operation completes, any other read or write operation against the array
+  ///  will block.
   _i2.int _add$2(
     _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
@@ -195,13 +176,21 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
-  // HEYA add
+
+  /// Overload accessor: $1, $2
   ({
+    /// Adds a value to the value at the given position in the array, returning the original value.
+    ///  Until this atomic operation completes, any other read or write operation against the array
+    ///  will block.
     _i2.num Function(
       _i2.Object typedArray,
       _i2.num index,
       _i2.num value,
     ) $1,
+
+    /// Adds a value to the value at the given position in the array, returning the original value.
+    ///  Until this atomic operation completes, any other read or write operation against the array
+    ///  will block.
     _i2.int Function(
       _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
@@ -211,6 +200,10 @@ extension Atomics$Typings on Atomics {
         $1: _add$1,
         $2: _add$2,
       );
+
+  /// Stores the bitwise AND of a value with the value at the given position in the array,
+  ///  returning the original value. Until this atomic operation completes, any other read or
+  ///  write operation against the array will block.
   _i2.num _and$1(
     _i2.Object typedArray,
     _i2.num index,
@@ -225,6 +218,10 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
+
+  /// Stores the bitwise AND of a value with the value at the given position in the array,
+  ///  returning the original value. Until this atomic operation completes, any other read or
+  ///  write operation against the array will block.
   _i2.int _and$2(
     _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
@@ -239,13 +236,21 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
-  // HEYA and
+
+  /// Overload accessor: $1, $2
   ({
+    /// Stores the bitwise AND of a value with the value at the given position in the array,
+    ///  returning the original value. Until this atomic operation completes, any other read or
+    ///  write operation against the array will block.
     _i2.num Function(
       _i2.Object typedArray,
       _i2.num index,
       _i2.num value,
     ) $1,
+
+    /// Stores the bitwise AND of a value with the value at the given position in the array,
+    ///  returning the original value. Until this atomic operation completes, any other read or
+    ///  write operation against the array will block.
     _i2.int Function(
       _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
@@ -255,6 +260,10 @@ extension Atomics$Typings on Atomics {
         $1: _and$1,
         $2: _and$2,
       );
+
+  /// Replaces the value at the given position in the array if the original value equals the given
+  ///  expected value, returning the original value. Until this atomic operation completes, any
+  ///  other read or write operation against the array will block.
   _i2.num _compareExchange$1(
     _i2.Object typedArray,
     _i2.num index,
@@ -271,6 +280,10 @@ extension Atomics$Typings on Atomics {
           replacementValue,
         ],
       );
+
+  /// Replaces the value at the given position in the array if the original value equals the given
+  ///  expected value, returning the original value. Until this atomic operation completes, any
+  ///  other read or write operation against the array will block.
   _i2.int _compareExchange$2(
     _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
@@ -287,14 +300,22 @@ extension Atomics$Typings on Atomics {
           replacementValue,
         ],
       );
-  // HEYA compareExchange
+
+  /// Overload accessor: $1, $2
   ({
+    /// Replaces the value at the given position in the array if the original value equals the given
+    ///  expected value, returning the original value. Until this atomic operation completes, any
+    ///  other read or write operation against the array will block.
     _i2.num Function(
       _i2.Object typedArray,
       _i2.num index,
       _i2.num expectedValue,
       _i2.num replacementValue,
     ) $1,
+
+    /// Replaces the value at the given position in the array if the original value equals the given
+    ///  expected value, returning the original value. Until this atomic operation completes, any
+    ///  other read or write operation against the array will block.
     _i2.int Function(
       _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
@@ -305,6 +326,10 @@ extension Atomics$Typings on Atomics {
         $1: _compareExchange$1,
         $2: _compareExchange$2,
       );
+
+  /// Replaces the value at the given position in the array, returning the original value. Until
+  ///  this atomic operation completes, any other read or write operation against the array will
+  ///  block.
   _i2.num _exchange$1(
     _i2.Object typedArray,
     _i2.num index,
@@ -319,6 +344,10 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
+
+  /// Replaces the value at the given position in the array, returning the original value. Until
+  ///  this atomic operation completes, any other read or write operation against the array will
+  ///  block.
   _i2.int _exchange$2(
     _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
@@ -333,13 +362,21 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
-  // HEYA exchange
+
+  /// Overload accessor: $1, $2
   ({
+    /// Replaces the value at the given position in the array, returning the original value. Until
+    ///  this atomic operation completes, any other read or write operation against the array will
+    ///  block.
     _i2.num Function(
       _i2.Object typedArray,
       _i2.num index,
       _i2.num value,
     ) $1,
+
+    /// Replaces the value at the given position in the array, returning the original value. Until
+    ///  this atomic operation completes, any other read or write operation against the array will
+    ///  block.
     _i2.int Function(
       _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
@@ -349,11 +386,18 @@ extension Atomics$Typings on Atomics {
         $1: _exchange$1,
         $2: _exchange$2,
       );
+
+  /// Returns a value indicating whether high-performance algorithms can use atomic operations
+  ///  (`true`) or must use locks (`false`) for the given number of bytes-per-element of a typed
+  ///  array.
   _i2.bool isLockFree(_i2.num size) => _i3.callMethod(
         this,
         'isLockFree',
         [size],
       );
+
+  /// Returns the value at the given position in the array. Until this atomic operation completes,
+  ///  any other read or write operation against the array will block.
   _i2.num _load$1(
     _i2.Object typedArray,
     _i2.num index,
@@ -366,6 +410,9 @@ extension Atomics$Typings on Atomics {
           index,
         ],
       );
+
+  /// Returns the value at the given position in the array. Until this atomic operation completes,
+  ///  any other read or write operation against the array will block.
   _i2.int _load$2(
     _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
@@ -378,12 +425,18 @@ extension Atomics$Typings on Atomics {
           index,
         ],
       );
-  // HEYA load
+
+  /// Overload accessor: $1, $2
   ({
+    /// Returns the value at the given position in the array. Until this atomic operation completes,
+    ///  any other read or write operation against the array will block.
     _i2.num Function(
       _i2.Object typedArray,
       _i2.num index,
     ) $1,
+
+    /// Returns the value at the given position in the array. Until this atomic operation completes,
+    ///  any other read or write operation against the array will block.
     _i2.int Function(
       _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
@@ -392,6 +445,10 @@ extension Atomics$Typings on Atomics {
         $1: _load$1,
         $2: _load$2,
       );
+
+  /// Stores the bitwise OR of a value with the value at the given position in the array,
+  ///  returning the original value. Until this atomic operation completes, any other read or write
+  ///  operation against the array will block.
   _i2.num _or$1(
     _i2.Object typedArray,
     _i2.num index,
@@ -406,6 +463,10 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
+
+  /// Stores the bitwise OR of a value with the value at the given position in the array,
+  ///  returning the original value. Until this atomic operation completes, any other read or write
+  ///  operation against the array will block.
   _i2.int _or$2(
     _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
@@ -420,13 +481,21 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
-  // HEYA or
+
+  /// Overload accessor: $1, $2
   ({
+    /// Stores the bitwise OR of a value with the value at the given position in the array,
+    ///  returning the original value. Until this atomic operation completes, any other read or write
+    ///  operation against the array will block.
     _i2.num Function(
       _i2.Object typedArray,
       _i2.num index,
       _i2.num value,
     ) $1,
+
+    /// Stores the bitwise OR of a value with the value at the given position in the array,
+    ///  returning the original value. Until this atomic operation completes, any other read or write
+    ///  operation against the array will block.
     _i2.int Function(
       _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
@@ -436,6 +505,9 @@ extension Atomics$Typings on Atomics {
         $1: _or$1,
         $2: _or$2,
       );
+
+  /// Stores a value at the given position in the array, returning the new value. Until this
+  ///  atomic operation completes, any other read or write operation against the array will block.
   _i2.num _store$1(
     _i2.Object typedArray,
     _i2.num index,
@@ -450,6 +522,9 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
+
+  /// Stores a value at the given position in the array, returning the new value. Until this
+  ///  atomic operation completes, any other read or write operation against the array will block.
   _i2.int _store$2(
     _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
@@ -464,13 +539,19 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
-  // HEYA store
+
+  /// Overload accessor: $1, $2
   ({
+    /// Stores a value at the given position in the array, returning the new value. Until this
+    ///  atomic operation completes, any other read or write operation against the array will block.
     _i2.num Function(
       _i2.Object typedArray,
       _i2.num index,
       _i2.num value,
     ) $1,
+
+    /// Stores a value at the given position in the array, returning the new value. Until this
+    ///  atomic operation completes, any other read or write operation against the array will block.
     _i2.int Function(
       _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
@@ -480,6 +561,10 @@ extension Atomics$Typings on Atomics {
         $1: _store$1,
         $2: _store$2,
       );
+
+  /// Subtracts a value from the value at the given position in the array, returning the original
+  ///  value. Until this atomic operation completes, any other read or write operation against the
+  ///  array will block.
   _i2.num _sub$1(
     _i2.Object typedArray,
     _i2.num index,
@@ -494,6 +579,10 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
+
+  /// Subtracts a value from the value at the given position in the array, returning the original
+  ///  value. Until this atomic operation completes, any other read or write operation against the
+  ///  array will block.
   _i2.int _sub$2(
     _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
@@ -508,13 +597,21 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
-  // HEYA sub
+
+  /// Overload accessor: $1, $2
   ({
+    /// Subtracts a value from the value at the given position in the array, returning the original
+    ///  value. Until this atomic operation completes, any other read or write operation against the
+    ///  array will block.
     _i2.num Function(
       _i2.Object typedArray,
       _i2.num index,
       _i2.num value,
     ) $1,
+
+    /// Subtracts a value from the value at the given position in the array, returning the original
+    ///  value. Until this atomic operation completes, any other read or write operation against the
+    ///  array will block.
     _i2.int Function(
       _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
@@ -524,6 +621,11 @@ extension Atomics$Typings on Atomics {
         $1: _sub$1,
         $2: _sub$2,
       );
+
+  /// If the value at the given position in the array is equal to the provided value, the current
+  ///  agent is put to sleep causing execution to suspend until the timeout expires (returning
+  ///  `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
+  ///  `"not-equal"`.
   Wait _wait$1(
     _i7.Int32List typedArray,
     _i2.num index,
@@ -540,6 +642,11 @@ extension Atomics$Typings on Atomics {
           timeout ?? _i5.undefined,
         ],
       ));
+
+  /// If the value at the given position in the array is equal to the provided value, the current
+  ///  agent is put to sleep causing execution to suspend until the timeout expires (returning
+  ///  `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
+  ///  `"not-equal"`.
   WaitOptions _wait$2(
     _i8.BigInt64Array typedArray,
     _i2.num index,
@@ -556,14 +663,24 @@ extension Atomics$Typings on Atomics {
           timeout ?? _i5.undefined,
         ],
       ));
-  // HEYA wait
+
+  /// Overload accessor: $1, $2
   ({
+    /// If the value at the given position in the array is equal to the provided value, the current
+    ///  agent is put to sleep causing execution to suspend until the timeout expires (returning
+    ///  `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
+    ///  `"not-equal"`.
     Wait Function(
       _i7.Int32List typedArray,
       _i2.num index,
       _i2.num value, [
       _i2.num? timeout,
     ]) $1,
+
+    /// If the value at the given position in the array is equal to the provided value, the current
+    ///  agent is put to sleep causing execution to suspend until the timeout expires (returning
+    ///  `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
+    ///  `"not-equal"`.
     WaitOptions Function(
       _i8.BigInt64Array typedArray,
       _i2.num index,
@@ -574,6 +691,12 @@ extension Atomics$Typings on Atomics {
         $1: _wait$1,
         $2: _wait$2,
       );
+
+  /// Wakes up sleeping agents that are waiting on the given index of the array, returning the
+  ///  number of agents that were awoken.
+  ///  @param typedArray A shared Int32Array.
+  ///  @param index The position in the typedArray to wake up on.
+  ///  @param count The number of sleeping agents to notify. Defaults to +Infinity.
   _i2.num _notify$1(
     _i7.Int32List typedArray,
     _i2.num index, [
@@ -588,6 +711,12 @@ extension Atomics$Typings on Atomics {
           count ?? _i5.undefined,
         ],
       );
+
+  /// Wakes up sleeping agents that are waiting on the given index of the array, returning the
+  ///  number of agents that were awoken.
+  ///  @param typedArray A shared BigInt64Array.
+  ///  @param index The position in the typedArray to wake up on.
+  ///  @param count The number of sleeping agents to notify. Defaults to +Infinity.
   _i2.num _notify$2(
     _i8.BigInt64Array typedArray,
     _i2.num index, [
@@ -602,13 +731,25 @@ extension Atomics$Typings on Atomics {
           count ?? _i5.undefined,
         ],
       );
-  // HEYA notify
+
+  /// Overload accessor: $1, $2
   ({
+    /// Wakes up sleeping agents that are waiting on the given index of the array, returning the
+    ///  number of agents that were awoken.
+    ///  @param typedArray A shared Int32Array.
+    ///  @param index The position in the typedArray to wake up on.
+    ///  @param count The number of sleeping agents to notify. Defaults to +Infinity.
     _i2.num Function(
       _i7.Int32List typedArray,
       _i2.num index, [
       _i2.num? count,
     ]) $1,
+
+    /// Wakes up sleeping agents that are waiting on the given index of the array, returning the
+    ///  number of agents that were awoken.
+    ///  @param typedArray A shared BigInt64Array.
+    ///  @param index The position in the typedArray to wake up on.
+    ///  @param count The number of sleeping agents to notify. Defaults to +Infinity.
     _i2.num Function(
       _i8.BigInt64Array typedArray,
       _i2.num index, [
@@ -618,6 +759,10 @@ extension Atomics$Typings on Atomics {
         $1: _notify$1,
         $2: _notify$2,
       );
+
+  /// Stores the bitwise XOR of a value with the value at the given position in the array,
+  ///  returning the original value. Until this atomic operation completes, any other read or write
+  ///  operation against the array will block.
   _i2.num _xor$1(
     _i2.Object typedArray,
     _i2.num index,
@@ -632,6 +777,10 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
+
+  /// Stores the bitwise XOR of a value with the value at the given position in the array,
+  ///  returning the original value. Until this atomic operation completes, any other read or write
+  ///  operation against the array will block.
   _i2.int _xor$2(
     _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
@@ -646,13 +795,21 @@ extension Atomics$Typings on Atomics {
           value,
         ],
       );
-  // HEYA xor
+
+  /// Overload accessor: $1, $2
   ({
+    /// Stores the bitwise XOR of a value with the value at the given position in the array,
+    ///  returning the original value. Until this atomic operation completes, any other read or write
+    ///  operation against the array will block.
     _i2.num Function(
       _i2.Object typedArray,
       _i2.num index,
       _i2.num value,
     ) $1,
+
+    /// Stores the bitwise XOR of a value with the value at the given position in the array,
+    ///  returning the original value. Until this atomic operation completes, any other read or write
+    ///  operation against the array will block.
     _i2.int Function(
       _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
@@ -662,6 +819,13 @@ extension Atomics$Typings on Atomics {
         $1: _xor$1,
         $2: _xor$2,
       );
+
+  /// A non-blocking, asynchronous version of wait which is usable on the main thread.
+  ///  Waits asynchronously on a shared memory location and returns a Promise
+  ///  @param typedArray A shared Int32Array or BigInt64Array.
+  ///  @param index The position in the typedArray to wait on.
+  ///  @param value The expected value to test.
+  ///  @param [timeout] The expected value to test.
   _i4.WaitAsync _waitAsync$1(
     _i7.Int32List typedArray,
     _i2.num index,
@@ -678,6 +842,13 @@ extension Atomics$Typings on Atomics {
           timeout ?? _i5.undefined,
         ],
       );
+
+  /// A non-blocking, asynchronous version of wait which is usable on the main thread.
+  ///  Waits asynchronously on a shared memory location and returns a Promise
+  ///  @param typedArray A shared Int32Array or BigInt64Array.
+  ///  @param index The position in the typedArray to wait on.
+  ///  @param value The expected value to test.
+  ///  @param [timeout] The expected value to test.
   _i4.WaitAsyncCommon _waitAsync$2(
     _i8.BigInt64Array typedArray,
     _i2.num index,
@@ -694,14 +865,28 @@ extension Atomics$Typings on Atomics {
           timeout ?? _i5.undefined,
         ],
       );
-  // HEYA waitAsync
+
+  /// Overload accessor: $1, $2
   ({
+    /// A non-blocking, asynchronous version of wait which is usable on the main thread.
+    ///  Waits asynchronously on a shared memory location and returns a Promise
+    ///  @param typedArray A shared Int32Array or BigInt64Array.
+    ///  @param index The position in the typedArray to wait on.
+    ///  @param value The expected value to test.
+    ///  @param [timeout] The expected value to test.
     _i4.WaitAsync Function(
       _i7.Int32List typedArray,
       _i2.num index,
       _i2.num value, [
       _i2.num? timeout,
     ]) $1,
+
+    /// A non-blocking, asynchronous version of wait which is usable on the main thread.
+    ///  Waits asynchronously on a shared memory location and returns a Promise
+    ///  @param typedArray A shared Int32Array or BigInt64Array.
+    ///  @param index The position in the typedArray to wait on.
+    ///  @param value The expected value to test.
+    ///  @param [timeout] The expected value to test.
     _i4.WaitAsyncCommon Function(
       _i8.BigInt64Array typedArray,
       _i2.num index,

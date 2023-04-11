@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -14,7 +14,6 @@ import 'lib_es5_d.dart' as _i9;
 @_i1.JS('self')
 external _i2.Object _self;
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum MinimumIntegerDigits {
   number1(1),
   number2(2),
@@ -43,7 +42,6 @@ enum MinimumIntegerDigits {
   final _i2.num value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum MinimumFractionDigits {
   number0(0),
   number1(1),
@@ -72,7 +70,6 @@ enum MinimumFractionDigits {
   final _i2.num value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum MaximumFractionDigits {
   number0(0),
   number1(1),
@@ -101,7 +98,6 @@ enum MaximumFractionDigits {
   final _i2.num value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum MinimumSignificantDigits {
   number1(1),
   number2(2),
@@ -130,7 +126,6 @@ enum MinimumSignificantDigits {
   final _i2.num value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum MaximumSignificantDigits {
   number1(1),
   number2(2),
@@ -220,24 +215,11 @@ class BigIntToLocaleStringOptions {
 }
 
 extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
-  /* #25
-  source: 
-    /**
-     * The locale matching algorithm to use.The default is "best fit". For information about this option, see the {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation Intl page}.
-     */
-    localeMatcher?: string; */
   /// The locale matching algorithm to use.The default is "best fit". For information about this option, see the {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation Intl page}.
   _i2.String? get localeMatcher => _i4.getProperty(
         this,
         'localeMatcher',
       );
-  /* #25
-  source: 
-    /**
-     * The locale matching algorithm to use.The default is "best fit". For information about this option, see the {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation Intl page}.
-     */
-    localeMatcher?: string; */
-  // Type InteropStaticType.string
   set localeMatcher(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -246,24 +228,11 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #29
-  source: 
-    /**
-     * The formatting style to use , the default is "decimal".
-     */
-    style?: string; */
   /// The formatting style to use , the default is "decimal".
   _i2.String? get style => _i4.getProperty(
         this,
         'style',
       );
-  /* #29
-  source: 
-    /**
-     * The formatting style to use , the default is "decimal".
-     */
-    style?: string; */
-  // Type InteropStaticType.string
   set style(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -272,19 +241,10 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #31
-  source: 
-
-    numberingSystem?: string; */
   _i2.String? get numberingSystem => _i4.getProperty(
         this,
         'numberingSystem',
       );
-  /* #31
-  source: 
-
-    numberingSystem?: string; */
-  // Type InteropStaticType.string
   set numberingSystem(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -293,24 +253,11 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #35
-  source: 
-    /**
-     * The unit to use in unit formatting, Possible values are core unit identifiers, defined in UTS #35, Part 2, Section 6. A subset of units from the full list was selected for use in ECMAScript. Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the style is "unit", the unit property must be provided.
-     */
-    unit?: string; */
   /// The unit to use in unit formatting, Possible values are core unit identifiers, defined in UTS #35, Part 2, Section 6. A subset of units from the full list was selected for use in ECMAScript. Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the style is "unit", the unit property must be provided.
   _i2.String? get unit => _i4.getProperty(
         this,
         'unit',
       );
-  /* #35
-  source: 
-    /**
-     * The unit to use in unit formatting, Possible values are core unit identifiers, defined in UTS #35, Part 2, Section 6. A subset of units from the full list was selected for use in ECMAScript. Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the style is "unit", the unit property must be provided.
-     */
-    unit?: string; */
-  // Type InteropStaticType.string
   set unit(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -319,26 +266,11 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #40
-  source: 
-
-    /**
-     * The unit formatting style to use in unit formatting, the defaults is "short".
-     */
-    unitDisplay?: string; */
   /// The unit formatting style to use in unit formatting, the defaults is "short".
   _i2.String? get unitDisplay => _i4.getProperty(
         this,
         'unitDisplay',
       );
-  /* #40
-  source: 
-
-    /**
-     * The unit formatting style to use in unit formatting, the defaults is "short".
-     */
-    unitDisplay?: string; */
-  // Type InteropStaticType.string
   set unitDisplay(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -347,26 +279,11 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #45
-  source: 
-
-    /**
-     * The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as "USD" for the US dollar, "EUR" for the euro, or "CNY" for the Chinese RMB — see the Current currency & funds code list. There is no default value; if the style is "currency", the currency property must be provided. It is only used when [[Style]] has the value "currency".
-     */
-    currency?: string; */
   /// The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as "USD" for the US dollar, "EUR" for the euro, or "CNY" for the Chinese RMB — see the Current currency & funds code list. There is no default value; if the style is "currency", the currency property must be provided. It is only used when [[Style]] has the value "currency".
   _i2.String? get currency => _i4.getProperty(
         this,
         'currency',
       );
-  /* #45
-  source: 
-
-    /**
-     * The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as "USD" for the US dollar, "EUR" for the euro, or "CNY" for the Chinese RMB — see the Current currency & funds code list. There is no default value; if the style is "currency", the currency property must be provided. It is only used when [[Style]] has the value "currency".
-     */
-    currency?: string; */
-  // Type InteropStaticType.string
   set currency(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -375,19 +292,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #56
-  source: 
-
-    /**
-     * How to display the currency in currency formatting. It is only used when [[Style]] has the value "currency". The default is "symbol".
-     *
-     * "symbol" to use a localized currency symbol such as €,
-     *
-     * "code" to use the ISO currency code,
-     *
-     * "name" to use a localized currency name such as "dollar"
-     */
-    currencyDisplay?: string; */
   /// How to display the currency in currency formatting. It is only used when [[Style]] has the value "currency". The default is "symbol".
   ///
   ///  "symbol" to use a localized currency symbol such as €,
@@ -399,20 +303,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
         this,
         'currencyDisplay',
       );
-  /* #56
-  source: 
-
-    /**
-     * How to display the currency in currency formatting. It is only used when [[Style]] has the value "currency". The default is "symbol".
-     *
-     * "symbol" to use a localized currency symbol such as €,
-     *
-     * "code" to use the ISO currency code,
-     *
-     * "name" to use a localized currency name such as "dollar"
-     */
-    currencyDisplay?: string; */
-  // Type InteropStaticType.string
   set currencyDisplay(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -421,26 +311,11 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #61
-  source: 
-
-    /**
-     * Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators. The default is true.
-     */
-    useGrouping?: boolean; */
   /// Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators. The default is true.
   _i2.bool? get useGrouping => _i4.getProperty(
         this,
         'useGrouping',
       );
-  /* #61
-  source: 
-
-    /**
-     * Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators. The default is true.
-     */
-    useGrouping?: boolean; */
-  // Type InteropStaticType.boolean
   set useGrouping(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -449,13 +324,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #66
-  source: 
-
-    /**
-     * The minimum number of integer digits to use. Possible values are from 1 to 21; the default is 1.
-     */
-    minimumIntegerDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21; */
   /// The minimum number of integer digits to use. Possible values are from 1 to 21; the default is 1.
   MinimumIntegerDigits? get minimumIntegerDigits => switch (_i4.getProperty(
         this,
@@ -464,14 +332,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
         _i2.String name => MinimumIntegerDigits.values.byName(name),
         _ => null
       };
-  /* #66
-  source: 
-
-    /**
-     * The minimum number of integer digits to use. Possible values are from 1 to 21; the default is 1.
-     */
-    minimumIntegerDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21; */
-  // Type InteropUnion#309614982(parent: InteropGetter#548147610(name: minimumIntegerDigits))
   set minimumIntegerDigits(MinimumIntegerDigits? value) {
     _i4.setProperty(
       this,
@@ -480,13 +340,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #71
-  source: 
-
-    /**
-     * The minimum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number and percent formatting is 0; the default for currency formatting is the number of minor unit digits provided by the {@link http://www.currency-iso.org/en/home/tables/table-a1.html ISO 4217 currency codes list} (2 if the list doesn't provide that information).
-     */
-    minimumFractionDigits?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20; */
   /// The minimum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number and percent formatting is 0; the default for currency formatting is the number of minor unit digits provided by the {@link http://www.currency-iso.org/en/home/tables/table-a1.html ISO 4217 currency codes list} (2 if the list doesn't provide that information).
   MinimumFractionDigits? get minimumFractionDigits => switch (_i4.getProperty(
         this,
@@ -495,14 +348,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
         _i2.String name => MinimumFractionDigits.values.byName(name),
         _ => null
       };
-  /* #71
-  source: 
-
-    /**
-     * The minimum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number and percent formatting is 0; the default for currency formatting is the number of minor unit digits provided by the {@link http://www.currency-iso.org/en/home/tables/table-a1.html ISO 4217 currency codes list} (2 if the list doesn't provide that information).
-     */
-    minimumFractionDigits?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20; */
-  // Type InteropUnion#688526170(parent: InteropGetter#782103319(name: minimumFractionDigits))
   set minimumFractionDigits(MinimumFractionDigits? value) {
     _i4.setProperty(
       this,
@@ -511,13 +356,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #76
-  source: 
-
-    /**
-     * The maximum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number formatting is the larger of minimumFractionDigits and 3; the default for currency formatting is the larger of minimumFractionDigits and the number of minor unit digits provided by the {@link http://www.currency-iso.org/en/home/tables/table-a1.html ISO 4217 currency codes list} (2 if the list doesn't provide that information); the default for percent formatting is the larger of minimumFractionDigits and 0.
-     */
-    maximumFractionDigits?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20; */
   /// The maximum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number formatting is the larger of minimumFractionDigits and 3; the default for currency formatting is the larger of minimumFractionDigits and the number of minor unit digits provided by the {@link http://www.currency-iso.org/en/home/tables/table-a1.html ISO 4217 currency codes list} (2 if the list doesn't provide that information); the default for percent formatting is the larger of minimumFractionDigits and 0.
   MaximumFractionDigits? get maximumFractionDigits => switch (_i4.getProperty(
         this,
@@ -526,14 +364,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
         _i2.String name => MaximumFractionDigits.values.byName(name),
         _ => null
       };
-  /* #76
-  source: 
-
-    /**
-     * The maximum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number formatting is the larger of minimumFractionDigits and 3; the default for currency formatting is the larger of minimumFractionDigits and the number of minor unit digits provided by the {@link http://www.currency-iso.org/en/home/tables/table-a1.html ISO 4217 currency codes list} (2 if the list doesn't provide that information); the default for percent formatting is the larger of minimumFractionDigits and 0.
-     */
-    maximumFractionDigits?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20; */
-  // Type InteropUnion#550347474(parent: InteropGetter#375220328(name: maximumFractionDigits))
   set maximumFractionDigits(MaximumFractionDigits? value) {
     _i4.setProperty(
       this,
@@ -542,13 +372,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #81
-  source: 
-
-    /**
-     * The minimum number of significant digits to use. Possible values are from 1 to 21; the default is 1.
-     */
-    minimumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21; */
   /// The minimum number of significant digits to use. Possible values are from 1 to 21; the default is 1.
   MinimumSignificantDigits? get minimumSignificantDigits =>
       switch (_i4.getProperty(
@@ -558,14 +381,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
         _i2.String name => MinimumSignificantDigits.values.byName(name),
         _ => null
       };
-  /* #81
-  source: 
-
-    /**
-     * The minimum number of significant digits to use. Possible values are from 1 to 21; the default is 1.
-     */
-    minimumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21; */
-  // Type InteropUnion#1018344448(parent: InteropGetter#257656399(name: minimumSignificantDigits))
   set minimumSignificantDigits(MinimumSignificantDigits? value) {
     _i4.setProperty(
       this,
@@ -574,13 +389,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #86
-  source: 
-
-    /**
-     * The maximum number of significant digits to use. Possible values are from 1 to 21; the default is 21.
-     */
-    maximumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21; */
   /// The maximum number of significant digits to use. Possible values are from 1 to 21; the default is 21.
   MaximumSignificantDigits? get maximumSignificantDigits =>
       switch (_i4.getProperty(
@@ -590,14 +398,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
         _i2.String name => MaximumSignificantDigits.values.byName(name),
         _ => null
       };
-  /* #86
-  source: 
-
-    /**
-     * The maximum number of significant digits to use. Possible values are from 1 to 21; the default is 21.
-     */
-    maximumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21; */
-  // Type InteropUnion#946916252(parent: InteropGetter#870283457(name: maximumSignificantDigits))
   set maximumSignificantDigits(MaximumSignificantDigits? value) {
     _i4.setProperty(
       this,
@@ -606,21 +406,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #99
-  source: 
-
-    /**
-     * The formatting that should be displayed for the number, the defaults is "standard"
-     *
-     *     "standard" plain number formatting
-     *
-     *     "scientific" return the order-of-magnitude for formatted number.
-     *
-     *     "engineering" return the exponent of ten when divisible by three
-     *
-     *     "compact" string representing exponent, defaults is using the "short" form
-     */
-    notation?: string; */
   /// The formatting that should be displayed for the number, the defaults is "standard"
   ///
   ///      "standard" plain number formatting
@@ -634,22 +419,6 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
         this,
         'notation',
       );
-  /* #99
-  source: 
-
-    /**
-     * The formatting that should be displayed for the number, the defaults is "standard"
-     *
-     *     "standard" plain number formatting
-     *
-     *     "scientific" return the order-of-magnitude for formatted number.
-     *
-     *     "engineering" return the exponent of ten when divisible by three
-     *
-     *     "compact" string representing exponent, defaults is using the "short" form
-     */
-    notation?: string; */
-  // Type InteropStaticType.string
   set notation(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -658,26 +427,11 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
     );
   }
 
-  /* #104
-  source: 
-
-    /**
-     * used only when notation is "compact"
-     */
-    compactDisplay?: string; */
   /// used only when notation is "compact"
   _i2.String? get compactDisplay => _i4.getProperty(
         this,
         'compactDisplay',
       );
-  /* #104
-  source: 
-
-    /**
-     * used only when notation is "compact"
-     */
-    compactDisplay?: string; */
-  // Type InteropStaticType.string
   set compactDisplay(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -690,6 +444,10 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
 @_i1.JS()
 @_i1.staticInterop
 class BigInt {
+  /// Interprets the low bits of a BigInt as a 2's-complement signed integer.
+  ///  All higher bits are discarded.
+  ///  @param bits The number of low bits to use
+  ///  @param int The BigInt whose bits to extract
   static _i2.int asIntN(
     _i2.num bits,
     _i2.int int$,
@@ -702,6 +460,11 @@ class BigInt {
           int$,
         ],
       );
+
+  /// Interprets the low bits of a BigInt as an unsigned integer.
+  ///  All higher bits are discarded.
+  ///  @param bits The number of low bits to use
+  ///  @param int The BigInt whose bits to extract
   static _i2.int asUintN(
     _i2.num bits,
     _i2.int int$,
@@ -717,11 +480,15 @@ class BigInt {
 }
 
 extension BigInt$Typings on BigInt {
+  /// Returns a string representation of an object.
+  ///  @param radix Specifies a radix for converting numeric values to strings.
   _i2.String toString$([_i2.num? radix]) => _i4.callMethod(
         this,
         'toString',
         [radix ?? _i3.undefined],
       );
+
+  /// Returns a string representation appropriate to the host environment's current locale.
   _i2.String toLocaleString([
     _i6.LocalesArgument? locales,
     _i7.BigIntToLocaleStringOptions? options,
@@ -734,6 +501,8 @@ extension BigInt$Typings on BigInt {
           options ?? _i3.undefined,
         ],
       );
+
+  /// Returns the primitive value of the specified object.
   _i2.int valueOf() => _i4.callMethod(
         this,
         'valueOf',
@@ -746,6 +515,10 @@ extension BigInt$Typings on BigInt {
 class BigIntConstructor {}
 
 extension BigIntConstructor$Typings on BigIntConstructor {
+  /// Interprets the low bits of a BigInt as a 2's-complement signed integer.
+  ///  All higher bits are discarded.
+  ///  @param bits The number of low bits to use
+  ///  @param int The BigInt whose bits to extract
   _i2.int asIntN(
     _i2.num bits,
     _i2.int int$,
@@ -758,6 +531,11 @@ extension BigIntConstructor$Typings on BigIntConstructor {
           int$,
         ],
       );
+
+  /// Interprets the low bits of a BigInt as an unsigned integer.
+  ///  All higher bits are discarded.
+  ///  @param bits The number of low bits to use
+  ///  @param int The BigInt whose bits to extract
   _i2.int asUintN(
     _i2.num bits,
     _i2.int int$,
@@ -777,6 +555,8 @@ extension BigIntConstructor$Typings on BigIntConstructor {
       );
 }
 
+/// A typed array of 64-bit signed integer values. The contents are initialized to 0. If the
+/// requested number of bytes could not be allocated, an exception is raised.
 @_i1.JS()
 @_i1.staticInterop
 class BigInt64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
@@ -809,24 +589,24 @@ class BigInt64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
         ],
       );
 
-  /* #397
-  source: 
-
-    /** The size in bytes of each element in the array. */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   static _i2.num get bytesPerElement => _i4.getProperty(
         _i5.target30,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   static _i7.BigInt64Array of([_i2.Iterable<_i2.dynamic>? items]) =>
       _i4.callMethod(
         _i5.target30,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
   static _i7.BigInt64Array from<U>(
-    _i2.List /*LIST InteropClass#884072815(name: List),976308731,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),80514112,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         arrayLike,
     _i2.int Function(
@@ -853,55 +633,43 @@ FieldExternal:
 external _i2.Object _declaredBigInt64Array;
 
 extension BigInt64Array$Typings on BigInt64Array {
-  /* #151
-  source: 
-    /** The size in bytes of each element in the array. */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
-  /* #154
-  source: 
 
-    /** The ArrayBuffer instance referenced by the array. */
-    readonly buffer: ArrayBufferLike; */
   /// The ArrayBuffer instance referenced by the array.
   _i9.ArrayBufferLike get buffer => _i4.getProperty(
         this,
         'buffer',
       );
-  /* #157
-  source: 
 
-    /** The length in bytes of the array. */
-    readonly byteLength: number; */
   /// The length in bytes of the array.
   _i2.num get byteLength => _i4.getProperty(
         this,
         'byteLength',
       );
-  /* #160
-  source: 
 
-    /** The offset in bytes of the array. */
-    readonly byteOffset: number; */
   /// The offset in bytes of the array.
   _i2.num get byteOffset => _i4.getProperty(
         this,
         'byteOffset',
       );
-  /* #270
-  source: 
 
-    /** The length of the array. */
-    readonly length: number; */
   /// The length of the array.
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
+
+  /// Returns the this object after copying a section of the array identified by start and end
+  ///  to the same array starting at position target
+  ///  @param target If target is negative, it is treated as length+target where length is the
+  ///  length of the array.
+  ///  @param start If start is negative, it is treated as length+start. If end is negative, it
+  ///  is treated as length+end.
+  ///  @param end If not specified, length of the this object is used as its default value.
   _i7.BigInt64Array copyWithin(
     _i2.num target,
     _i2.num start, [
@@ -916,6 +684,8 @@ extension BigInt64Array$Typings on BigInt64Array {
           end ?? _i3.undefined,
         ],
       );
+
+  /// Yields index, value pairs for every entry in the array.
   _i8.IterableIterator<
       (
         _i2.num,
@@ -925,6 +695,13 @@ extension BigInt64Array$Typings on BigInt64Array {
         'entries',
         [],
       );
+
+  /// Determines whether all the members of an array satisfy the specified test.
+  ///  @param predicate A function that accepts up to three arguments. The every method calls
+  ///  the predicate function for each element in the array until the predicate returns false,
+  ///  or until the end of the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i2.bool every(
     _i2.bool Function(
       _i2.int,
@@ -941,6 +718,13 @@ extension BigInt64Array$Typings on BigInt64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Changes all array elements from `start` to `end` index to a static `value` and returns the modified array
+  ///  @param value value to fill array section with
+  ///  @param start index to start filling the array at. If start is negative, it is treated as
+  ///  length+start where length is the length of the array.
+  ///  @param end index to stop filling the array at. If end is negative, it is treated as
+  ///  length+end.
   _i7.BigInt64Array fill(
     _i2.int value, [
     _i2.num? start,
@@ -955,6 +739,12 @@ extension BigInt64Array$Typings on BigInt64Array {
           end ?? _i3.undefined,
         ],
       );
+
+  /// Returns the elements of an array that meet the condition specified in a callback function.
+  ///  @param predicate A function that accepts up to three arguments. The filter method calls
+  ///  the predicate function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i7.BigInt64Array filter(
     _i2.dynamic Function(
       _i2.int,
@@ -971,6 +761,14 @@ extension BigInt64Array$Typings on BigInt64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Returns the value of the first element in the array where predicate is true, and undefined
+  ///  otherwise.
+  ///  @param predicate find calls predicate once for each element of the array, in ascending
+  ///  order, until it finds one where predicate returns true. If such an element is found, find
+  ///  immediately returns that element value. Otherwise, find returns undefined.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   _i2.int? find(
     _i2.bool Function(
       _i2.int,
@@ -987,6 +785,14 @@ extension BigInt64Array$Typings on BigInt64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Returns the index of the first element in the array where predicate is true, and -1
+  ///  otherwise.
+  ///  @param predicate find calls predicate once for each element of the array, in ascending
+  ///  order, until it finds one where predicate returns true. If such an element is found,
+  ///  findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   _i2.num findIndex(
     _i2.bool Function(
       _i2.int,
@@ -1003,6 +809,12 @@ extension BigInt64Array$Typings on BigInt64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Performs the specified action for each element in an array.
+  ///  @param callbackfn A function that accepts up to three arguments. forEach calls the
+  ///  callbackfn function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the callbackfn function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   void forEach(
     void Function(
       _i2.int,
@@ -1021,6 +833,9 @@ extension BigInt64Array$Typings on BigInt64Array {
     );
   }
 
+  /// Determines whether an array includes a certain element, returning true or false as appropriate.
+  ///  @param searchElement The element to search for.
+  ///  @param fromIndex The position in this array at which to begin searching for searchElement.
   _i2.bool includes(
     _i2.int searchElement, [
     _i2.num? fromIndex,
@@ -1033,6 +848,11 @@ extension BigInt64Array$Typings on BigInt64Array {
           fromIndex ?? _i3.undefined,
         ],
       );
+
+  /// Returns the index of the first occurrence of a value in an array.
+  ///  @param searchElement The value to locate in the array.
+  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+  ///  search starts at index 0.
   _i2.num indexOf(
     _i2.int searchElement, [
     _i2.num? fromIndex,
@@ -1045,16 +865,27 @@ extension BigInt64Array$Typings on BigInt64Array {
           fromIndex ?? _i3.undefined,
         ],
       );
+
+  /// Adds all the elements of an array separated by the specified separator string.
+  ///  @param separator A string used to separate one element of an array from the next in the
+  ///  resulting String. If omitted, the array elements are separated with a comma.
   _i2.String join([_i2.String? separator]) => _i4.callMethod(
         this,
         'join',
         [separator ?? _i3.undefined],
       );
+
+  /// Yields each index in the array.
   _i8.IterableIterator<_i2.num> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
+
+  /// Returns the index of the last occurrence of a value in an array.
+  ///  @param searchElement The value to locate in the array.
+  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+  ///  search starts at index 0.
   _i2.num lastIndexOf(
     _i2.int searchElement, [
     _i2.num? fromIndex,
@@ -1067,6 +898,13 @@ extension BigInt64Array$Typings on BigInt64Array {
           fromIndex ?? _i3.undefined,
         ],
       );
+
+  /// Calls a defined callback function on each element of an array, and returns an array that
+  ///  contains the results.
+  ///  @param callbackfn A function that accepts up to three arguments. The map method calls the
+  ///  callbackfn function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the callbackfn function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i7.BigInt64Array map(
     _i2.int Function(
       _i2.int,
@@ -1083,6 +921,15 @@ extension BigInt64Array$Typings on BigInt64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Calls the specified callback function for all the elements in an array. The return value of
+  ///  the callback function is the accumulated result, and is provided as an argument in the next
+  ///  call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+  ///  callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+  ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+  ///  instead of an array value.
   _i2.int _reduce$1(
           _i2.int Function(
             _i2.int,
@@ -1095,6 +942,15 @@ extension BigInt64Array$Typings on BigInt64Array {
         'reduce',
         [_i4.allowInterop(callbackfn)],
       );
+
+  /// Calls the specified callback function for all the elements in an array. The return value of
+  ///  the callback function is the accumulated result, and is provided as an argument in the next
+  ///  call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+  ///  callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+  ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+  ///  instead of an array value.
   U _reduce$2<U>(
     U Function(
       U,
@@ -1112,8 +968,17 @@ extension BigInt64Array$Typings on BigInt64Array {
           initialValue,
         ],
       );
-  // HEYA reduce
+
+  /// Overload accessor: $1, $2
   ({
+    /// Calls the specified callback function for all the elements in an array. The return value of
+    ///  the callback function is the accumulated result, and is provided as an argument in the next
+    ///  call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+    ///  callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+    ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+    ///  instead of an array value.
     _i2.int Function(
         _i2.int Function(
           _i2.int,
@@ -1121,6 +986,15 @@ extension BigInt64Array$Typings on BigInt64Array {
           _i2.num,
           _i7.BigInt64Array,
         ) callbackfn) $1,
+
+    /// Calls the specified callback function for all the elements in an array. The return value of
+    ///  the callback function is the accumulated result, and is provided as an argument in the next
+    ///  call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+    ///  callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+    ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+    ///  instead of an array value.
     U Function<U>(
       U Function(
         U,
@@ -1134,6 +1008,15 @@ extension BigInt64Array$Typings on BigInt64Array {
         $1: _reduce$1,
         $2: _reduce$2,
       );
+
+  /// Calls the specified callback function for all the elements in an array, in descending order.
+  ///  The return value of the callback function is the accumulated result, and is provided as an
+  ///  argument in the next call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+  ///  the callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+  ///  the accumulation. The first call to the callbackfn function provides this value as an
+  ///  argument instead of an array value.
   _i2.int _reduceRight$1(
           _i2.int Function(
             _i2.int,
@@ -1146,6 +1029,15 @@ extension BigInt64Array$Typings on BigInt64Array {
         'reduceRight',
         [_i4.allowInterop(callbackfn)],
       );
+
+  /// Calls the specified callback function for all the elements in an array, in descending order.
+  ///  The return value of the callback function is the accumulated result, and is provided as an
+  ///  argument in the next call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+  ///  the callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+  ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+  ///  instead of an array value.
   U _reduceRight$2<U>(
     U Function(
       U,
@@ -1163,8 +1055,17 @@ extension BigInt64Array$Typings on BigInt64Array {
           initialValue,
         ],
       );
-  // HEYA reduceRight
+
+  /// Overload accessor: $1, $2
   ({
+    /// Calls the specified callback function for all the elements in an array, in descending order.
+    ///  The return value of the callback function is the accumulated result, and is provided as an
+    ///  argument in the next call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+    ///  the callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+    ///  the accumulation. The first call to the callbackfn function provides this value as an
+    ///  argument instead of an array value.
     _i2.int Function(
         _i2.int Function(
           _i2.int,
@@ -1172,6 +1073,15 @@ extension BigInt64Array$Typings on BigInt64Array {
           _i2.num,
           _i7.BigInt64Array,
         ) callbackfn) $1,
+
+    /// Calls the specified callback function for all the elements in an array, in descending order.
+    ///  The return value of the callback function is the accumulated result, and is provided as an
+    ///  argument in the next call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+    ///  the callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+    ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+    ///  instead of an array value.
     U Function<U>(
       U Function(
         U,
@@ -1185,13 +1095,19 @@ extension BigInt64Array$Typings on BigInt64Array {
         $1: _reduceRight$1,
         $2: _reduceRight$2,
       );
+
+  /// Reverses the elements in the array.
   _i7.BigInt64Array reverse() => _i4.callMethod(
         this,
         'reverse',
         [],
       );
+
+  /// Sets a value or an array of values.
+  ///  @param array A typed or untyped array of values to set.
+  ///  @param offset The index in the current array at which the values are to be written.
   void set(
-    _i2.List /*LIST InteropClass#884072815(name: List),1024265411,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),741983802,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.int>
         array, [
     _i2.num? offset,
@@ -1206,6 +1122,9 @@ extension BigInt64Array$Typings on BigInt64Array {
     );
   }
 
+  /// Returns a section of an array.
+  ///  @param start The beginning of the specified portion of the array.
+  ///  @param end The end of the specified portion of the array.
   _i7.BigInt64Array slice([
     _i2.num? start,
     _i2.num? end,
@@ -1218,6 +1137,13 @@ extension BigInt64Array$Typings on BigInt64Array {
           end ?? _i3.undefined,
         ],
       );
+
+  /// Determines whether the specified callback function returns true for any element of an array.
+  ///  @param predicate A function that accepts up to three arguments. The some method calls the
+  ///  predicate function for each element in the array until the predicate returns true, or until
+  ///  the end of the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i2.bool some(
     _i2.bool Function(
       _i2.int,
@@ -1234,6 +1160,9 @@ extension BigInt64Array$Typings on BigInt64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Sorts the array.
+  ///  @param compareFn The function used to determine the order of the elements. If omitted, the elements are sorted in ascending order.
   _i7.BigInt64Array sort(
           [_i2.Object Function(
             _i2.int,
@@ -1244,6 +1173,11 @@ extension BigInt64Array$Typings on BigInt64Array {
         'sort',
         [compareFn == null ? _i3.undefined : _i4.allowInterop(compareFn)],
       );
+
+  /// Gets a new BigInt64Array view of the ArrayBuffer store for this array, referencing the elements
+  ///  at begin, inclusive, up to end, exclusive.
+  ///  @param begin The index of the beginning of the array.
+  ///  @param end The index of the end of the array.
   _i7.BigInt64Array subarray([
     _i2.num? begin,
     _i2.num? end,
@@ -1256,31 +1190,50 @@ extension BigInt64Array$Typings on BigInt64Array {
           end ?? _i3.undefined,
         ],
       );
+
+  /// Converts the array to a string by using the current locale.
   _i2.String toLocaleString() => _i4.callMethod(
         this,
         'toLocaleString',
         [],
       );
+
+  /// Returns a string representation of the array.
   _i2.String toString$() => _i4.callMethod(
         this,
         'toString',
         [],
       );
+
+  /// Returns the primitive value of the specified object.
   _i7.BigInt64Array valueOf() => _i4.callMethod(
         this,
         'valueOf',
         [],
       );
+
+  /// Yields each value in the array.
   _i8.IterableIterator<_i2.int> values() => _i4.callMethod(
         this,
         'values',
         [],
       );
+
+  /// Returns the item located at the specified index.
+  ///  @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
   _i2.int? at(_i2.num index) => _i4.callMethod(
         this,
         'at',
         [index],
       );
+
+  /// Returns the value of the last element in the array where predicate is true, and undefined
+  ///  otherwise.
+  ///  @param predicate findLast calls predicate once for each element of the array, in descending
+  ///  order, until it finds one where predicate returns true. If such an element is found, findLast
+  ///  immediately returns that element value. Otherwise, findLast returns undefined.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   S? _findLast$1<S extends _i2.int>(
     _i2.dynamic Function(
       _i2.int,
@@ -1297,6 +1250,9 @@ extension BigInt64Array$Typings on BigInt64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Returns the value of the last element in the array where predicate is true, and undefined
+  /// otherwise.
   _i2.int? _findLast$2(
     _i2.Object? Function(
       _i2.int,
@@ -1313,8 +1269,16 @@ extension BigInt64Array$Typings on BigInt64Array {
           thisArg ?? _i3.undefined,
         ],
       );
-  // HEYA findLast
+
+  /// Overload accessor: $1, $2
   ({
+    /// Returns the value of the last element in the array where predicate is true, and undefined
+    ///  otherwise.
+    ///  @param predicate findLast calls predicate once for each element of the array, in descending
+    ///  order, until it finds one where predicate returns true. If such an element is found, findLast
+    ///  immediately returns that element value. Otherwise, findLast returns undefined.
+    ///  @param thisArg If provided, it will be used as the this value for each invocation of
+    ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends _i2.int>(
       _i2.dynamic Function(
         _i2.int,
@@ -1323,6 +1287,9 @@ extension BigInt64Array$Typings on BigInt64Array {
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Returns the value of the last element in the array where predicate is true, and undefined
+    /// otherwise.
     _i2.int? Function(
       _i2.Object? Function(
         _i2.int,
@@ -1335,6 +1302,14 @@ extension BigInt64Array$Typings on BigInt64Array {
         $1: _findLast$1,
         $2: _findLast$2,
       );
+
+  /// Returns the index of the last element in the array where predicate is true, and -1
+  ///  otherwise.
+  ///  @param predicate findLastIndex calls predicate once for each element of the array, in descending
+  ///  order, until it finds one where predicate returns true. If such an element is found,
+  ///  findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   _i2.num findLastIndex(
     _i2.Object? Function(
       _i2.int,
@@ -1370,11 +1345,6 @@ extension BigInt64Array$Typings on BigInt64Array {
 @_i1.JS()
 @_i1.staticInterop
 class BigInt64ArrayConstructor {
-  /* #397
-  source: 
-
-    /** The size in bytes of each element in the array. */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   static _i2.num get bytesPerElement => _i4.getProperty(
         _i5.target30,
@@ -1383,13 +1353,17 @@ class BigInt64ArrayConstructor {
 }
 
 extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i7.BigInt64Array of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
   _i7.BigInt64Array from<U>(
-    _i2.List /*LIST InteropClass#884072815(name: List),976308731,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),80514112,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         arrayLike,
     _i2.int Function(
@@ -1409,6 +1383,8 @@ extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
       );
 }
 
+/// A typed array of 64-bit unsigned integer values. The contents are initialized to 0. If the
+/// requested number of bytes could not be allocated, an exception is raised.
 @_i1.JS()
 @_i1.staticInterop
 class BigUint64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
@@ -1441,24 +1417,24 @@ class BigUint64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
         ],
       );
 
-  /* #669
-  source: 
-
-    /** The size in bytes of each element in the array. */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   static _i2.num get bytesPerElement => _i4.getProperty(
         _i5.target31,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   static _i7.BigUint64Array of([_i2.Iterable<_i2.dynamic>? items]) =>
       _i4.callMethod(
         _i5.target31,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
   static _i7.BigUint64Array from<U>(
-    _i2.List /*LIST InteropClass#884072815(name: List),1005337282,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),931256743,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         arrayLike,
     _i2.int Function(
@@ -1485,55 +1461,43 @@ FieldExternal:
 external _i2.Object _declaredBigUint64Array;
 
 extension BigUint64Array$Typings on BigUint64Array {
-  /* #423
-  source: 
-    /** The size in bytes of each element in the array. */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
-  /* #426
-  source: 
 
-    /** The ArrayBuffer instance referenced by the array. */
-    readonly buffer: ArrayBufferLike; */
   /// The ArrayBuffer instance referenced by the array.
   _i9.ArrayBufferLike get buffer => _i4.getProperty(
         this,
         'buffer',
       );
-  /* #429
-  source: 
 
-    /** The length in bytes of the array. */
-    readonly byteLength: number; */
   /// The length in bytes of the array.
   _i2.num get byteLength => _i4.getProperty(
         this,
         'byteLength',
       );
-  /* #432
-  source: 
 
-    /** The offset in bytes of the array. */
-    readonly byteOffset: number; */
   /// The offset in bytes of the array.
   _i2.num get byteOffset => _i4.getProperty(
         this,
         'byteOffset',
       );
-  /* #542
-  source: 
 
-    /** The length of the array. */
-    readonly length: number; */
   /// The length of the array.
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
+
+  /// Returns the this object after copying a section of the array identified by start and end
+  ///  to the same array starting at position target
+  ///  @param target If target is negative, it is treated as length+target where length is the
+  ///  length of the array.
+  ///  @param start If start is negative, it is treated as length+start. If end is negative, it
+  ///  is treated as length+end.
+  ///  @param end If not specified, length of the this object is used as its default value.
   _i7.BigUint64Array copyWithin(
     _i2.num target,
     _i2.num start, [
@@ -1548,6 +1512,8 @@ extension BigUint64Array$Typings on BigUint64Array {
           end ?? _i3.undefined,
         ],
       );
+
+  /// Yields index, value pairs for every entry in the array.
   _i8.IterableIterator<
       (
         _i2.num,
@@ -1557,6 +1523,13 @@ extension BigUint64Array$Typings on BigUint64Array {
         'entries',
         [],
       );
+
+  /// Determines whether all the members of an array satisfy the specified test.
+  ///  @param predicate A function that accepts up to three arguments. The every method calls
+  ///  the predicate function for each element in the array until the predicate returns false,
+  ///  or until the end of the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i2.bool every(
     _i2.bool Function(
       _i2.int,
@@ -1573,6 +1546,13 @@ extension BigUint64Array$Typings on BigUint64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Changes all array elements from `start` to `end` index to a static `value` and returns the modified array
+  ///  @param value value to fill array section with
+  ///  @param start index to start filling the array at. If start is negative, it is treated as
+  ///  length+start where length is the length of the array.
+  ///  @param end index to stop filling the array at. If end is negative, it is treated as
+  ///  length+end.
   _i7.BigUint64Array fill(
     _i2.int value, [
     _i2.num? start,
@@ -1587,6 +1567,12 @@ extension BigUint64Array$Typings on BigUint64Array {
           end ?? _i3.undefined,
         ],
       );
+
+  /// Returns the elements of an array that meet the condition specified in a callback function.
+  ///  @param predicate A function that accepts up to three arguments. The filter method calls
+  ///  the predicate function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i7.BigUint64Array filter(
     _i2.dynamic Function(
       _i2.int,
@@ -1603,6 +1589,14 @@ extension BigUint64Array$Typings on BigUint64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Returns the value of the first element in the array where predicate is true, and undefined
+  ///  otherwise.
+  ///  @param predicate find calls predicate once for each element of the array, in ascending
+  ///  order, until it finds one where predicate returns true. If such an element is found, find
+  ///  immediately returns that element value. Otherwise, find returns undefined.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   _i2.int? find(
     _i2.bool Function(
       _i2.int,
@@ -1619,6 +1613,14 @@ extension BigUint64Array$Typings on BigUint64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Returns the index of the first element in the array where predicate is true, and -1
+  ///  otherwise.
+  ///  @param predicate find calls predicate once for each element of the array, in ascending
+  ///  order, until it finds one where predicate returns true. If such an element is found,
+  ///  findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   _i2.num findIndex(
     _i2.bool Function(
       _i2.int,
@@ -1635,6 +1637,12 @@ extension BigUint64Array$Typings on BigUint64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Performs the specified action for each element in an array.
+  ///  @param callbackfn A function that accepts up to three arguments. forEach calls the
+  ///  callbackfn function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the callbackfn function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   void forEach(
     void Function(
       _i2.int,
@@ -1653,6 +1661,9 @@ extension BigUint64Array$Typings on BigUint64Array {
     );
   }
 
+  /// Determines whether an array includes a certain element, returning true or false as appropriate.
+  ///  @param searchElement The element to search for.
+  ///  @param fromIndex The position in this array at which to begin searching for searchElement.
   _i2.bool includes(
     _i2.int searchElement, [
     _i2.num? fromIndex,
@@ -1665,6 +1676,11 @@ extension BigUint64Array$Typings on BigUint64Array {
           fromIndex ?? _i3.undefined,
         ],
       );
+
+  /// Returns the index of the first occurrence of a value in an array.
+  ///  @param searchElement The value to locate in the array.
+  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+  ///  search starts at index 0.
   _i2.num indexOf(
     _i2.int searchElement, [
     _i2.num? fromIndex,
@@ -1677,16 +1693,27 @@ extension BigUint64Array$Typings on BigUint64Array {
           fromIndex ?? _i3.undefined,
         ],
       );
+
+  /// Adds all the elements of an array separated by the specified separator string.
+  ///  @param separator A string used to separate one element of an array from the next in the
+  ///  resulting String. If omitted, the array elements are separated with a comma.
   _i2.String join([_i2.String? separator]) => _i4.callMethod(
         this,
         'join',
         [separator ?? _i3.undefined],
       );
+
+  /// Yields each index in the array.
   _i8.IterableIterator<_i2.num> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
+
+  /// Returns the index of the last occurrence of a value in an array.
+  ///  @param searchElement The value to locate in the array.
+  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+  ///  search starts at index 0.
   _i2.num lastIndexOf(
     _i2.int searchElement, [
     _i2.num? fromIndex,
@@ -1699,6 +1726,13 @@ extension BigUint64Array$Typings on BigUint64Array {
           fromIndex ?? _i3.undefined,
         ],
       );
+
+  /// Calls a defined callback function on each element of an array, and returns an array that
+  ///  contains the results.
+  ///  @param callbackfn A function that accepts up to three arguments. The map method calls the
+  ///  callbackfn function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the callbackfn function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i7.BigUint64Array map(
     _i2.int Function(
       _i2.int,
@@ -1715,6 +1749,15 @@ extension BigUint64Array$Typings on BigUint64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Calls the specified callback function for all the elements in an array. The return value of
+  ///  the callback function is the accumulated result, and is provided as an argument in the next
+  ///  call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+  ///  callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+  ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+  ///  instead of an array value.
   _i2.int _reduce$1(
           _i2.int Function(
             _i2.int,
@@ -1727,6 +1770,15 @@ extension BigUint64Array$Typings on BigUint64Array {
         'reduce',
         [_i4.allowInterop(callbackfn)],
       );
+
+  /// Calls the specified callback function for all the elements in an array. The return value of
+  ///  the callback function is the accumulated result, and is provided as an argument in the next
+  ///  call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+  ///  callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+  ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+  ///  instead of an array value.
   U _reduce$2<U>(
     U Function(
       U,
@@ -1744,8 +1796,17 @@ extension BigUint64Array$Typings on BigUint64Array {
           initialValue,
         ],
       );
-  // HEYA reduce
+
+  /// Overload accessor: $1, $2
   ({
+    /// Calls the specified callback function for all the elements in an array. The return value of
+    ///  the callback function is the accumulated result, and is provided as an argument in the next
+    ///  call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+    ///  callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+    ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+    ///  instead of an array value.
     _i2.int Function(
         _i2.int Function(
           _i2.int,
@@ -1753,6 +1814,15 @@ extension BigUint64Array$Typings on BigUint64Array {
           _i2.num,
           _i7.BigUint64Array,
         ) callbackfn) $1,
+
+    /// Calls the specified callback function for all the elements in an array. The return value of
+    ///  the callback function is the accumulated result, and is provided as an argument in the next
+    ///  call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+    ///  callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+    ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+    ///  instead of an array value.
     U Function<U>(
       U Function(
         U,
@@ -1766,6 +1836,15 @@ extension BigUint64Array$Typings on BigUint64Array {
         $1: _reduce$1,
         $2: _reduce$2,
       );
+
+  /// Calls the specified callback function for all the elements in an array, in descending order.
+  ///  The return value of the callback function is the accumulated result, and is provided as an
+  ///  argument in the next call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+  ///  the callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+  ///  the accumulation. The first call to the callbackfn function provides this value as an
+  ///  argument instead of an array value.
   _i2.int _reduceRight$1(
           _i2.int Function(
             _i2.int,
@@ -1778,6 +1857,15 @@ extension BigUint64Array$Typings on BigUint64Array {
         'reduceRight',
         [_i4.allowInterop(callbackfn)],
       );
+
+  /// Calls the specified callback function for all the elements in an array, in descending order.
+  ///  The return value of the callback function is the accumulated result, and is provided as an
+  ///  argument in the next call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+  ///  the callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+  ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+  ///  instead of an array value.
   U _reduceRight$2<U>(
     U Function(
       U,
@@ -1795,8 +1883,17 @@ extension BigUint64Array$Typings on BigUint64Array {
           initialValue,
         ],
       );
-  // HEYA reduceRight
+
+  /// Overload accessor: $1, $2
   ({
+    /// Calls the specified callback function for all the elements in an array, in descending order.
+    ///  The return value of the callback function is the accumulated result, and is provided as an
+    ///  argument in the next call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+    ///  the callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+    ///  the accumulation. The first call to the callbackfn function provides this value as an
+    ///  argument instead of an array value.
     _i2.int Function(
         _i2.int Function(
           _i2.int,
@@ -1804,6 +1901,15 @@ extension BigUint64Array$Typings on BigUint64Array {
           _i2.num,
           _i7.BigUint64Array,
         ) callbackfn) $1,
+
+    /// Calls the specified callback function for all the elements in an array, in descending order.
+    ///  The return value of the callback function is the accumulated result, and is provided as an
+    ///  argument in the next call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+    ///  the callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start
+    ///  the accumulation. The first call to the callbackfn function provides this value as an argument
+    ///  instead of an array value.
     U Function<U>(
       U Function(
         U,
@@ -1817,13 +1923,19 @@ extension BigUint64Array$Typings on BigUint64Array {
         $1: _reduceRight$1,
         $2: _reduceRight$2,
       );
+
+  /// Reverses the elements in the array.
   _i7.BigUint64Array reverse() => _i4.callMethod(
         this,
         'reverse',
         [],
       );
+
+  /// Sets a value or an array of values.
+  ///  @param array A typed or untyped array of values to set.
+  ///  @param offset The index in the current array at which the values are to be written.
   void set(
-    _i2.List /*LIST InteropClass#884072815(name: List),792570502,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),461731677,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.int>
         array, [
     _i2.num? offset,
@@ -1838,6 +1950,9 @@ extension BigUint64Array$Typings on BigUint64Array {
     );
   }
 
+  /// Returns a section of an array.
+  ///  @param start The beginning of the specified portion of the array.
+  ///  @param end The end of the specified portion of the array.
   _i7.BigUint64Array slice([
     _i2.num? start,
     _i2.num? end,
@@ -1850,6 +1965,13 @@ extension BigUint64Array$Typings on BigUint64Array {
           end ?? _i3.undefined,
         ],
       );
+
+  /// Determines whether the specified callback function returns true for any element of an array.
+  ///  @param predicate A function that accepts up to three arguments. The some method calls the
+  ///  predicate function for each element in the array until the predicate returns true, or until
+  ///  the end of the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i2.bool some(
     _i2.bool Function(
       _i2.int,
@@ -1866,6 +1988,9 @@ extension BigUint64Array$Typings on BigUint64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Sorts the array.
+  ///  @param compareFn The function used to determine the order of the elements. If omitted, the elements are sorted in ascending order.
   _i7.BigUint64Array sort(
           [_i2.Object Function(
             _i2.int,
@@ -1876,6 +2001,11 @@ extension BigUint64Array$Typings on BigUint64Array {
         'sort',
         [compareFn == null ? _i3.undefined : _i4.allowInterop(compareFn)],
       );
+
+  /// Gets a new BigUint64Array view of the ArrayBuffer store for this array, referencing the elements
+  ///  at begin, inclusive, up to end, exclusive.
+  ///  @param begin The index of the beginning of the array.
+  ///  @param end The index of the end of the array.
   _i7.BigUint64Array subarray([
     _i2.num? begin,
     _i2.num? end,
@@ -1888,31 +2018,50 @@ extension BigUint64Array$Typings on BigUint64Array {
           end ?? _i3.undefined,
         ],
       );
+
+  /// Converts the array to a string by using the current locale.
   _i2.String toLocaleString() => _i4.callMethod(
         this,
         'toLocaleString',
         [],
       );
+
+  /// Returns a string representation of the array.
   _i2.String toString$() => _i4.callMethod(
         this,
         'toString',
         [],
       );
+
+  /// Returns the primitive value of the specified object.
   _i7.BigUint64Array valueOf() => _i4.callMethod(
         this,
         'valueOf',
         [],
       );
+
+  /// Yields each value in the array.
   _i8.IterableIterator<_i2.int> values() => _i4.callMethod(
         this,
         'values',
         [],
       );
+
+  /// Returns the item located at the specified index.
+  ///  @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
   _i2.int? at(_i2.num index) => _i4.callMethod(
         this,
         'at',
         [index],
       );
+
+  /// Returns the value of the last element in the array where predicate is true, and undefined
+  ///  otherwise.
+  ///  @param predicate findLast calls predicate once for each element of the array, in descending
+  ///  order, until it finds one where predicate returns true. If such an element is found, findLast
+  ///  immediately returns that element value. Otherwise, findLast returns undefined.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   S? _findLast$1<S extends _i2.int>(
     _i2.dynamic Function(
       _i2.int,
@@ -1929,6 +2078,9 @@ extension BigUint64Array$Typings on BigUint64Array {
           thisArg ?? _i3.undefined,
         ],
       );
+
+  /// Returns the value of the last element in the array where predicate is true, and undefined
+  /// otherwise.
   _i2.int? _findLast$2(
     _i2.Object? Function(
       _i2.int,
@@ -1945,8 +2097,16 @@ extension BigUint64Array$Typings on BigUint64Array {
           thisArg ?? _i3.undefined,
         ],
       );
-  // HEYA findLast
+
+  /// Overload accessor: $1, $2
   ({
+    /// Returns the value of the last element in the array where predicate is true, and undefined
+    ///  otherwise.
+    ///  @param predicate findLast calls predicate once for each element of the array, in descending
+    ///  order, until it finds one where predicate returns true. If such an element is found, findLast
+    ///  immediately returns that element value. Otherwise, findLast returns undefined.
+    ///  @param thisArg If provided, it will be used as the this value for each invocation of
+    ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends _i2.int>(
       _i2.dynamic Function(
         _i2.int,
@@ -1955,6 +2115,9 @@ extension BigUint64Array$Typings on BigUint64Array {
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Returns the value of the last element in the array where predicate is true, and undefined
+    /// otherwise.
     _i2.int? Function(
       _i2.Object? Function(
         _i2.int,
@@ -1967,6 +2130,14 @@ extension BigUint64Array$Typings on BigUint64Array {
         $1: _findLast$1,
         $2: _findLast$2,
       );
+
+  /// Returns the index of the last element in the array where predicate is true, and -1
+  ///  otherwise.
+  ///  @param predicate findLastIndex calls predicate once for each element of the array, in descending
+  ///  order, until it finds one where predicate returns true. If such an element is found,
+  ///  findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   _i2.num findLastIndex(
     _i2.Object? Function(
       _i2.int,
@@ -2002,11 +2173,6 @@ extension BigUint64Array$Typings on BigUint64Array {
 @_i1.JS()
 @_i1.staticInterop
 class BigUint64ArrayConstructor {
-  /* #669
-  source: 
-
-    /** The size in bytes of each element in the array. */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   static _i2.num get bytesPerElement => _i4.getProperty(
         _i5.target31,
@@ -2015,13 +2181,17 @@ class BigUint64ArrayConstructor {
 }
 
 extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i7.BigUint64Array of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
   _i7.BigUint64Array from<U>(
-    _i2.List /*LIST InteropClass#884072815(name: List),1005337282,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),931256743,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         arrayLike,
     _i2.int Function(

@@ -106,7 +106,7 @@ mixin InteropDiamondType on InteropType {
 
   void buildDocs(ListBuilder docsBuilder) {
     if (source.isNotEmpty) {
-      docsBuilder.add('/* ${makeDoc} */');
+      //docsBuilder.add('/* ${makeDoc()} */');
     }
   }
 

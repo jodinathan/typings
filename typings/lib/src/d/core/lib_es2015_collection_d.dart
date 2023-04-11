@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -32,7 +32,7 @@ class Map<K, V>
       );
 
   factory Map.$3(
-          [_i2.List /*LIST InteropStaticType.list,22633638,[Instance of 'InteropRef<InteropType>']*/ <
+          [_i2.List /*LIST InteropStaticType.list,343463115,[Instance of 'InteropRef<InteropType>']*/ <
                   (
                     K,
                     V,
@@ -71,12 +71,6 @@ FieldExternal:
 external _i2.Object _declaredMap;
 
 extension Map$Typings<K, V> on Map<K, V> {
-  /* #46
-  source: 
-    /**
-     * @returns the number of elements in the Map.
-     */
-    readonly size: number; */
   _i2.num get size => _i4.getProperty(
         this,
         'size',
@@ -89,11 +83,14 @@ extension Map$Typings<K, V> on Map<K, V> {
     );
   }
 
+  /// @returns true if an element in the Map existed and has been removed, or false if the element does not exist.
   _i2.bool delete(K key) => _i4.callMethod(
         this,
         'delete',
         [key],
       );
+
+  /// Executes a provided function once per each key/value pair in the Map, in insertion order.
   void forEach(
     void Function(
       V,
@@ -112,16 +109,22 @@ extension Map$Typings<K, V> on Map<K, V> {
     );
   }
 
+  /// Returns a specified element from the Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object and any change made to that object will effectively modify it inside the Map.
+  ///  @returns Returns the element associated with the specified key. If no element is associated with the specified key, undefined is returned.
   V? get(K key) => _i4.callMethod(
         this,
         'get',
         [key],
       );
+
+  /// @returns boolean indicating whether an element with the specified key exists or not.
   _i2.bool has(K key) => _i4.callMethod(
         this,
         'has',
         [key],
       );
+
+  /// Adds a new element with a specified key and value to the Map. If an element with the same key already exists, the element will be updated.
   _i6.Map<_i2.dynamic, _i2.dynamic> set(
     K key,
     V value,
@@ -134,6 +137,8 @@ extension Map$Typings<K, V> on Map<K, V> {
           value,
         ],
       );
+
+  /// Returns an iterable of key, value pairs for every entry in the map.
   _i3.IterableIterator<
       (
         K,
@@ -143,11 +148,15 @@ extension Map$Typings<K, V> on Map<K, V> {
         'entries',
         [],
       );
+
+  /// Returns an iterable of keys in the map
   _i3.IterableIterator<K> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
+
+  /// Returns an iterable of values in the map
   _i3.IterableIterator<V> values() => _i4.callMethod(
         this,
         'values',
@@ -171,9 +180,6 @@ class ReadonlyMap<K, V>
                 )>> {}
 
 extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
-  /* #60
-  source: 
-    readonly size: number; */
   _i2.num get size => _i4.getProperty(
         this,
         'size',
@@ -206,6 +212,8 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
         'has',
         [key],
       );
+
+  /// Returns an iterable of key, value pairs for every entry in the map.
   _i3.IterableIterator<
       (
         K,
@@ -215,11 +223,15 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
         'entries',
         [],
       );
+
+  /// Returns an iterable of keys in the map
   _i3.IterableIterator<K> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
+
+  /// Returns an iterable of values in the map
   _i3.IterableIterator<V> values() => _i4.callMethod(
         this,
         'values',
@@ -236,7 +248,7 @@ class WeakMap<K extends _i2.Object, V> {
       );
 
   factory WeakMap.$2(
-          [_i2.List /*LIST InteropStaticType.list,318126835,[Instance of 'InteropRef<InteropType>']*/ <
+          [_i2.List /*LIST InteropStaticType.list,641569679,[Instance of 'InteropRef<InteropType>']*/ <
                   (
                     K,
                     V,
@@ -275,21 +287,30 @@ FieldExternal:
 external _i2.Object _declaredWeakMap;
 
 extension WeakMap$Typings<K extends _i2.Object, V> on WeakMap<K, V> {
+  /// Removes the specified element from the WeakMap.
+  ///  @returns true if the element was successfully removed, or false if it was not present.
   _i2.bool delete(K key) => _i4.callMethod(
         this,
         'delete',
         [key],
       );
+
+  /// @returns a specified element.
   V? get(K key) => _i4.callMethod(
         this,
         'get',
         [key],
       );
+
+  /// @returns a boolean indicating whether an element with the specified key exists or not.
   _i2.bool has(K key) => _i4.callMethod(
         this,
         'has',
         [key],
       );
+
+  /// Adds a new element with a specified key and value.
+  ///  @param key Must be an object.
   _i6.WeakMap<_i2.Object, _i2.dynamic> set(
     K key,
     V value,
@@ -317,7 +338,7 @@ class Set<T> implements _IterableLike$<_i3.IterableIterator<T>> {
       );
 
   factory Set.$2(
-          [_i2.List /*LIST InteropStaticType.list,602251399,[Instance of 'InteropRef<InteropType>']*/ <
+          [_i2.List /*LIST InteropStaticType.list,770078608,[Instance of 'InteropRef<InteropType>']*/ <
                   T>?
               values]) =>
       _i4.callConstructor(
@@ -338,16 +359,12 @@ FieldExternal:
 external _i2.Object _declaredSet;
 
 extension Set$Typings<T> on Set<T> {
-  /* #113
-  source: 
-    /**
-     * @returns the number of (unique) elements in Set.
-     */
-    readonly size: number; */
   _i2.num get size => _i4.getProperty(
         this,
         'size',
       );
+
+  /// Appends a new element with a specified value to the end of the Set.
   _i6.Set<_i2.dynamic> add(T value) => _i4.callMethod(
         this,
         'add',
@@ -361,11 +378,15 @@ extension Set$Typings<T> on Set<T> {
     );
   }
 
+  /// Removes a specified value from the Set.
+  ///  @returns Returns true if an element in the Set existed and has been removed, or false if the element does not exist.
   _i2.bool delete(T value) => _i4.callMethod(
         this,
         'delete',
         [value],
       );
+
+  /// Executes a provided function once per each value in the Set object, in insertion order.
   void forEach(
     void Function(
       T,
@@ -384,11 +405,14 @@ extension Set$Typings<T> on Set<T> {
     );
   }
 
+  /// @returns a boolean indicating whether an element with the specified value exists in the Set or not.
   _i2.bool has(T value) => _i4.callMethod(
         this,
         'has',
         [value],
       );
+
+  /// Returns an iterable of [v,v] pairs for every value `v` in the set.
   _i3.IterableIterator<
       (
         T,
@@ -398,11 +422,15 @@ extension Set$Typings<T> on Set<T> {
         'entries',
         [],
       );
+
+  /// Despite its name, returns an iterable of the values in the set.
   _i3.IterableIterator<T> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
+
+  /// Returns an iterable of values in the set.
   _i3.IterableIterator<T> values() => _i4.callMethod(
         this,
         'values',
@@ -419,9 +447,6 @@ class SetConstructor {}
 class ReadonlySet<T> implements _IterableLike$<_i3.IterableIterator<T>> {}
 
 extension ReadonlySet$Typings<T> on ReadonlySet<T> {
-  /* #125
-  source: 
-    readonly size: number; */
   _i2.num get size => _i4.getProperty(
         this,
         'size',
@@ -449,6 +474,8 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
         'has',
         [value],
       );
+
+  /// Returns an iterable of [v,v] pairs for every value `v` in the set.
   _i3.IterableIterator<
       (
         T,
@@ -458,11 +485,15 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
         'entries',
         [],
       );
+
+  /// Despite its name, returns an iterable of the values in the set.
   _i3.IterableIterator<T> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
+
+  /// Returns an iterable of values in the set.
   _i3.IterableIterator<T> values() => _i4.callMethod(
         this,
         'values',
@@ -479,7 +510,7 @@ class WeakSet<T extends _i2.Object> {
       );
 
   factory WeakSet.$2(
-          [_i2.List /*LIST InteropStaticType.list,388235600,[Instance of 'InteropRef<InteropType>']*/ <
+          [_i2.List /*LIST InteropStaticType.list,349272960,[Instance of 'InteropRef<InteropType>']*/ <
                   T>?
               values]) =>
       _i4.callConstructor(
@@ -500,16 +531,22 @@ FieldExternal:
 external _i2.Object _declaredWeakSet;
 
 extension WeakSet$Typings<T extends _i2.Object> on WeakSet<T> {
+  /// Appends a new object to the end of the WeakSet.
   _i6.WeakSet<_i2.Object> add(T value) => _i4.callMethod(
         this,
         'add',
         [value],
       );
+
+  /// Removes the specified element from the WeakSet.
+  ///  @returns Returns true if the element existed and has been removed, or false if the element does not exist.
   _i2.bool delete(T value) => _i4.callMethod(
         this,
         'delete',
         [value],
       );
+
+  /// @returns a boolean indicating whether an object exists in the WeakSet or not.
   _i2.bool has(T value) => _i4.callMethod(
         this,
         'has',

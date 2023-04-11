@@ -85,7 +85,8 @@ inline class ExternalInteropProject {
 
 class InteropProject {
   InteropProject(
-      {this.targetMainFile,
+      {required this.name,
+      this.targetMainFile,
       required this.dirName,
       required this.libPath,
       this.distBuffer,
@@ -98,6 +99,7 @@ class InteropProject {
   static DartEmitter emitter() =>
       DartEmitter(allocator: _PrefixedAllocator(), useNullSafetySyntax: true);
 
+  final String name;
   final List<InteropModule> modules = [];
   late final mainModule = InteropModule(path: '', project: this);
   final String? targetMainFile;
@@ -238,8 +240,9 @@ class InteropProject {
 
       final buf = jsonFile.readAsStringSync();
       final mapFiles = conv.json.decode(buf) as Iterable;
-      final proj = InteropProject(dirName: use, libPath: '', isExternal: true)
-        ..parse(mapFiles: mapFiles.cast());
+      final proj =
+          InteropProject(dirName: use, libPath: '', isExternal: true, name: use)
+            ..parse(mapFiles: mapFiles.cast());
 
       externals.add(proj);
     }

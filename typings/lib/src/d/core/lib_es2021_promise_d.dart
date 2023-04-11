@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -55,21 +55,14 @@ FieldExternal:
 external _i2.Object _declaredAggregateError;
 
 extension AggregateError$Typings on AggregateError {
-  /* #20
-  source: 
-    errors: any[] */
-  _i2.List /*LIST InteropStaticType.list,902767718,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+  _i2.List /*LIST InteropStaticType.list,142674882,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
       get errors => (_i4.getProperty(
             this,
             'errors',
           ) as _i2.List)
               .cast();
-  /* #20
-  source: 
-    errors: any[] */
-  // Type InteropStaticType.list
   set errors(
-      _i2.List /*LIST InteropStaticType.list,902767718,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,142674882,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.dynamic>
           value) {
     _i4.setProperty(
@@ -111,7 +104,8 @@ extension AggregateErrorConstructor$Typings on AggregateErrorConstructor {
           options ?? _i6.undefined,
         ],
       );
-  // HEYA call
+
+  /// Overload accessor: $1, $2
   ({
     _i8.AggregateError Function(
       _i5.Iterable<_i2.dynamic> errors, [

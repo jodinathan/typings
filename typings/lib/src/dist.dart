@@ -20,7 +20,7 @@ class TypingsDist {
 
   static FutureOr<bool> useScript(String name, String buffer,
       {String? contextCheck}) async {
-    assert(buffer.isNotEmpty == true);
+    assert(buffer.isNotEmpty);
 
     if (contextCheck != null && hasContext(contextCheck)) return true;
 
@@ -34,8 +34,12 @@ class TypingsDist {
 
       assert(() {
         // fix importing error when in DDC
-        jsu.setProperty(jsu.getProperty(js.window, 'define'), 'amd', false);
-        //jsw.define?.amd = false;
+        final prop = jsu.getProperty(js.window, 'define');
+
+        if (prop != null) {
+          jsu.setProperty(prop, 'amd', false);
+          //jsw.define?.amd = false;
+        }
         return true;
       }());
 

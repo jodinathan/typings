@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.deno.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -36,17 +36,10 @@ class ReadableStreamDefaultReadResultCommon {}
 
 extension ReadableStreamDefaultReadResultCommon$Typings
     on ReadableStreamDefaultReadResultCommon {
-  /* #6453
-  source: 
-  done: false; */
   _i2.bool get done => _i4.getProperty(
         this,
         'done',
       );
-  /* #6453
-  source: 
-  done: false; */
-  // Type InteropStaticType.boolean
   set done(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -55,17 +48,10 @@ extension ReadableStreamDefaultReadResultCommon$Typings
     );
   }
 
-  /* #6454
-  source: 
-  value: T; */
   _i2.dynamic get value => _i4.getProperty(
         this,
         'value',
       );
-  /* #6454
-  source: 
-  value: T; */
-  // Type InteropStaticType.dyn
   set value(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -82,17 +68,10 @@ class ReadableStreamBYOBReadResultCommon<V extends _i5.ArrayBufferView> {}
 
 extension ReadableStreamBYOBReadResultCommon$Typings<
     V extends _i5.ArrayBufferView> on ReadableStreamBYOBReadResultCommon<V> {
-  /* #6478
-  source: 
-  done: true; */
   _i2.bool get done => _i4.getProperty(
         this,
         'done',
       );
-  /* #6478
-  source: 
-  done: true; */
-  // Type InteropStaticType.boolean
   set done(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -101,17 +80,10 @@ extension ReadableStreamBYOBReadResultCommon$Typings<
     );
   }
 
-  /* #6479
-  source: 
-  value?: V; */
   V? get value => _i4.getProperty(
         this,
         'value',
       );
-  /* #6479
-  source: 
-  value?: V; */
-  // Type InteropLocalType(V)
   set value(V? value) {
     _i4.setProperty(
       this,
@@ -137,9 +109,6 @@ class _Intersection17 implements _i3.Window, _GlobalThis {}
 class _CryptoAccessor {}
 
 extension CryptoAccessor$Typings on _CryptoAccessor {
-  /* #8038
-  source: 
-  readonly subtle: SubtleCrypto; */
   _i3.SubtleCrypto get subtle => _i4.getProperty(
         _i7.target1278,
         'subtle',
@@ -280,7 +249,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void table([
     _i2.dynamic tabularData,
-    _i2.List /*LIST InteropStaticType.list,475137587,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,480644257,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         properties,
   ]) {
@@ -340,6 +309,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
+  /// This method is a noop, unless used in inspector
   void timeStamp([_i2.String? label]) {
     _i4.callMethod(
       _i7.target1283,
@@ -348,6 +318,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
+  /// This method is a noop, unless used in inspector
   void profile([_i2.String? label]) {
     _i4.callMethod(
       _i7.target1283,
@@ -356,6 +327,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
+  /// This method is a noop, unless used in inspector
   void profileEnd([_i2.String? label]) {
     _i4.callMethod(
       _i7.target1283,
@@ -371,15 +343,13 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 class _PerformanceAccessor implements _i3.EventTarget {}
 
 extension PerformanceAccessor$Typings on _PerformanceAccessor {
-  /* #8993
-  source: 
-  /** Returns a timestamp representing the start of the performance measurement. */
-  readonly timeOrigin: number; */
   /// Returns a timestamp representing the start of the performance measurement.
   _i2.num get timeOrigin => _i4.getProperty(
         _i7.target1284,
         'timeOrigin',
       );
+
+  /// Removes the stored timestamp with the associated name.
   void clearMarks([_i2.String? markName]) {
     _i4.callMethod(
       _i7.target1284,
@@ -388,6 +358,7 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
     );
   }
 
+  /// Removes stored timestamp with the associated name.
   void clearMeasures([_i2.String? measureName]) {
     _i4.callMethod(
       _i7.target1284,
@@ -421,6 +392,8 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
         [type],
       ) as _i2.List)
           .cast();
+
+  /// Stores a timestamp with the associated name (a "mark").
   _i3.PerformanceMark mark(
     _i2.String markName, [
     _i3.PerformanceMarkOptions? options,
@@ -433,6 +406,9 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
           options ?? _i6.undefined,
         ],
       );
+
+  /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+  ///  associated name (a "measure").
   _i3.PerformanceMeasure _measure$1(
     _i2.String measureName, [
     _i3.PerformanceMeasureOptions? options,
@@ -445,6 +421,9 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
           options ?? _i6.undefined,
         ],
       );
+
+  /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+  ///  associated name (a "measure").
   _i3.PerformanceMeasure _measure$2(
     _i2.String measureName, [
     _i2.String? startMark,
@@ -459,12 +438,18 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
           endMark ?? _i6.undefined,
         ],
       );
-  // HEYA measure
+
+  /// Overload accessor: $1, $2
   ({
+    /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+    ///  associated name (a "measure").
     _i3.PerformanceMeasure Function(
       _i2.String measureName, [
       _i3.PerformanceMeasureOptions? options,
     ]) $1,
+
+    /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+    ///  associated name (a "measure").
     _i3.PerformanceMeasure Function(
       _i2.String measureName, [
       _i2.String? startMark,
@@ -474,11 +459,24 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
         $1: _measure$1,
         $2: _measure$2,
       );
+
+  /// Returns a current time from Deno's start in milliseconds.
+  ///
+  ///  Use the permission flag `--allow-hrtime` return a precise value.
+  ///
+  ///  ```ts
+  ///  const t = performance.now();
+  ///  console.log(`${t} ms since start!`);
+  ///  ```
+  ///
+  ///  @tags allow-hrtime
   _i2.num now() => _i4.callMethod(
         _i7.target1284,
         'now',
         [],
       );
+
+  /// Returns a JSON representation of the performance object.
   _i2.dynamic toJSON() => _i4.callMethod(
         _i7.target1284,
         'toJSON',
@@ -497,18 +495,23 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
 class _CachesAccessor {}
 
 extension CachesAccessor$Typings on _CachesAccessor {
+  /// Open a cache storage for the provided name.
   _i2.Future<_i3.Cache> open(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         _i7.target1285,
         'open',
         [cacheName],
       ));
+
+  /// Check if cache already exists for the provided name.
   _i2.Future<_i2.bool> has(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         _i7.target1285,
         'has',
         [cacheName],
       ));
+
+  /// Delete cache storage for the provided name.
   _i2.Future<_i2.bool> delete(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         _i7.target1285,
@@ -533,17 +536,13 @@ class _SelfAccessor implements _i3.Window, _GlobalThis {}
 class _LocalStorageAccessor {}
 
 extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
-  /* #7634
-  source: 
-  /**
-   * Returns the number of key/value pairs currently present in the list associated with the object.
-   */
-  readonly length: number; */
   /// Returns the number of key/value pairs currently present in the list associated with the object.
   _i2.num get length => _i4.getProperty(
         _i7.target1289,
         'length',
       );
+
+  /// Empties the list associated with the object of all key/value pairs, if there are any.
   void clear() {
     _i4.callMethod(
       _i7.target1288,
@@ -552,16 +551,21 @@ extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
     );
   }
 
+  /// Returns the current value associated with the given key, or null if the given key does not exist in the list associated with the object.
   _i2.String? getItem(_i2.String key) => _i4.callMethod(
         _i7.target1288,
         'getItem',
         [key],
       );
+
+  /// Returns the name of the nth key in the list, or null if n is greater than or equal to the number of key/value pairs in the object.
   _i2.String? key(_i2.num index) => _i4.callMethod(
         _i7.target1288,
         'key',
         [index],
       );
+
+  /// Removes the key/value pair with the given key from the list associated with the object, if a key/value pair with the given key exists.
   void removeItem(_i2.String key) {
     _i4.callMethod(
       _i7.target1288,
@@ -570,6 +574,9 @@ extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
     );
   }
 
+  /// Sets the value of the pair identified by key to value, creating a new key/value pair if none existed for key previously.
+  ///
+  ///  Throws a "QuotaExceededError" DOMException exception if the new value couldn't be set. (Setting could fail if, e.g., the user has disabled storage for the site, or if the quota has been exceeded.)
   void setItem(
     _i2.String key,
     _i2.String value,
@@ -597,17 +604,13 @@ extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
 class _SessionStorageAccessor {}
 
 extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
-  /* #7634
-  source: 
-  /**
-   * Returns the number of key/value pairs currently present in the list associated with the object.
-   */
-  readonly length: number; */
   /// Returns the number of key/value pairs currently present in the list associated with the object.
   _i2.num get length => _i4.getProperty(
         _i7.target1289,
         'length',
       );
+
+  /// Empties the list associated with the object of all key/value pairs, if there are any.
   void clear() {
     _i4.callMethod(
       _i7.target1289,
@@ -616,16 +619,21 @@ extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
     );
   }
 
+  /// Returns the current value associated with the given key, or null if the given key does not exist in the list associated with the object.
   _i2.String? getItem(_i2.String key) => _i4.callMethod(
         _i7.target1289,
         'getItem',
         [key],
       );
+
+  /// Returns the name of the nth key in the list, or null if n is greater than or equal to the number of key/value pairs in the object.
   _i2.String? key(_i2.num index) => _i4.callMethod(
         _i7.target1289,
         'key',
         [index],
       );
+
+  /// Removes the key/value pair with the given key from the list associated with the object, if a key/value pair with the given key exists.
   void removeItem(_i2.String key) {
     _i4.callMethod(
       _i7.target1289,
@@ -634,6 +642,9 @@ extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
     );
   }
 
+  /// Sets the value of the pair identified by key to value, creating a new key/value pair if none existed for key previously.
+  ///
+  ///  Throws a "QuotaExceededError" DOMException exception if the new value couldn't be set. (Setting could fail if, e.g., the user has disabled storage for the site, or if the quota has been exceeded.)
   void setItem(
     _i2.String key,
     _i2.String value,
@@ -661,31 +672,19 @@ extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
 class _NavigatorAccessor {}
 
 extension NavigatorAccessor$Typings on _NavigatorAccessor {
-  /* #9296
-  source: 
-  readonly hardwareConcurrency: number; */
   _i2.num get hardwareConcurrency => _i4.getProperty(
         _i7.target1290,
         'hardwareConcurrency',
       );
-  /* #9297
-  source: 
-  readonly userAgent: string; */
   _i2.String get userAgent => _i4.getProperty(
         _i7.target1290,
         'userAgent',
       );
-  /* #9298
-  source: 
-  readonly language: string; */
   _i2.String get language => _i4.getProperty(
         _i7.target1290,
         'language',
       );
-  /* #9299
-  source: 
-  readonly languages: string[]; */
-  _i2.List /*LIST InteropStaticType.list,178108343,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,875090875,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       get languages => (_i4.getProperty(
             _i7.target1290,
             'languages',
@@ -704,14 +703,6 @@ extension NavigatorAccessor$Typings on _NavigatorAccessor {
 class _LocationAccessor {}
 
 extension LocationAccessor$Typings on _LocationAccessor {
-  /* #9409
-  source: 
-  /** Returns a DOMStringList object listing the origins of the ancestor
-   * browsing contexts, from the parent browsing context to the top-level
-   * browsing context.
-   *
-   * Always empty in Deno. */
-  readonly ancestorOrigins: DOMStringList; */
   /// Returns a DOMStringList object listing the origins of the ancestor
   /// browsing contexts, from the parent browsing context to the top-level
   /// browsing context.
@@ -721,13 +712,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
         _i7.target1291,
         'ancestorOrigins',
       );
-  /* #9414
-  source: 
-  /** Returns the Location object's URL's fragment (includes leading "#" if
-   * non-empty).
-   *
-   * Cannot be set in Deno. */
-  hash: string; */
+
   /// Returns the Location object's URL's fragment (includes leading "#" if
   ///  non-empty).
   ///
@@ -736,13 +721,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
         _i7.target1291,
         'hash',
       );
-  /* #9419
-  source: 
-  /** Returns the Location object's URL's host and port (if different from the
-   * default port for the scheme).
-   *
-   * Cannot be set in Deno. */
-  host: string; */
+
   /// Returns the Location object's URL's host and port (if different from the
   ///  default port for the scheme).
   ///
@@ -751,12 +730,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
         _i7.target1291,
         'host',
       );
-  /* #9423
-  source: 
-  /** Returns the Location object's URL's host.
-   *
-   * Cannot be set in Deno. */
-  hostname: string; */
+
   /// Returns the Location object's URL's host.
   ///
   ///  Cannot be set in Deno.
@@ -764,12 +738,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
         _i7.target1291,
         'hostname',
       );
-  /* #9427
-  source: 
-  /** Returns the Location object's URL.
-   *
-   * Cannot be set in Deno. */
-  href: string; */
+
   /// Returns the Location object's URL.
   ///
   ///  Cannot be set in Deno.
@@ -777,21 +746,13 @@ extension LocationAccessor$Typings on _LocationAccessor {
         _i7.target1291,
         'href',
       );
-  /* #9430
-  source: 
-  /** Returns the Location object's URL's origin. */
-  readonly origin: string; */
+
   /// Returns the Location object's URL's origin.
   _i2.String get origin => _i4.getProperty(
         _i7.target1291,
         'origin',
       );
-  /* #9434
-  source: 
-  /** Returns the Location object's URL's path.
-   *
-   * Cannot be set in Deno. */
-  pathname: string; */
+
   /// Returns the Location object's URL's path.
   ///
   ///  Cannot be set in Deno.
@@ -799,12 +760,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
         _i7.target1291,
         'pathname',
       );
-  /* #9438
-  source: 
-  /** Returns the Location object's URL's port.
-   *
-   * Cannot be set in Deno. */
-  port: string; */
+
   /// Returns the Location object's URL's port.
   ///
   ///  Cannot be set in Deno.
@@ -812,12 +768,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
         _i7.target1291,
         'port',
       );
-  /* #9442
-  source: 
-  /** Returns the Location object's URL's scheme.
-   *
-   * Cannot be set in Deno. */
-  protocol: string; */
+
   /// Returns the Location object's URL's scheme.
   ///
   ///  Cannot be set in Deno.
@@ -825,13 +776,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
         _i7.target1291,
         'protocol',
       );
-  /* #9447
-  source: 
-  /** Returns the Location object's URL's query (includes leading "?" if
-   * non-empty).
-   *
-   * Cannot be set in Deno. */
-  search: string; */
+
   /// Returns the Location object's URL's query (includes leading "?" if
   ///  non-empty).
   ///
@@ -845,6 +790,10 @@ extension LocationAccessor$Typings on _LocationAccessor {
         'toString',
         [],
       );
+
+  /// Navigates to the given URL.
+  ///
+  ///  Cannot be set in Deno.
   void assign(_i2.String url) {
     _i4.callMethod(
       _i7.target1291,
@@ -853,6 +802,9 @@ extension LocationAccessor$Typings on _LocationAccessor {
     );
   }
 
+  /// Reloads the current page.
+  ///
+  ///  Disabled in Deno.
   void _reload$1() {
     _i4.callMethod(
       _i7.target1291,
@@ -861,6 +813,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
     );
   }
 
+  /// @deprecated
   void _reload$2(_i2.bool forcedReload) {
     _i4.callMethod(
       _i7.target1291,
@@ -869,14 +822,24 @@ extension LocationAccessor$Typings on _LocationAccessor {
     );
   }
 
-  // HEYA reload
+  /// Overload accessor: $1, $2
   ({
+    /// Reloads the current page.
+    ///
+    ///  Disabled in Deno.
     void Function() $1,
+
+    /// @deprecated
     void Function(_i2.bool forcedReload) $2,
   }) get reload => (
         $1: _reload$1,
         $2: _reload$2,
       );
+
+  /// Removes the current page from the session history and navigates to the
+  ///  given URL.
+  ///
+  ///  Disabled in Deno.
   void replace(_i2.String url) {
     _i4.callMethod(
       _i7.target1291,
@@ -922,10 +885,9 @@ typedef KeyFormat = KeyFormatOptions;
 typedef NamedCurve = _i2.String;
 typedef BufferSource = _i2.Object;
 typedef PerformanceEntryList
-    = _i2.List /*LIST InteropStaticType.list,102152475,[Instance of 'InteropRef<InteropType>']*/ <
+    = _i2.List /*LIST InteropStaticType.list,964945873,[Instance of 'InteropRef<InteropType>']*/ <
         _i3.PerformanceEntry>;
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum Endings {
   transparent(r'transparent'),
   native(r'native');
@@ -935,7 +897,6 @@ enum Endings {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum Type {
   classic(r'classic'),
   module(r'module');
@@ -945,7 +906,6 @@ enum Type {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum RequestCacheOptions {
   default$(r'default'),
   forceCache(r'force-cache'),
@@ -959,7 +919,6 @@ enum RequestCacheOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum RequestCredentialsOptions {
   include(r'include'),
   omit(r'omit'),
@@ -970,7 +929,6 @@ enum RequestCredentialsOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum RequestModeOptions {
   cors(r'cors'),
   navigate(r'navigate'),
@@ -982,7 +940,6 @@ enum RequestModeOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum RequestRedirectOptions {
   error(r'error'),
   follow(r'follow'),
@@ -993,7 +950,6 @@ enum RequestRedirectOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum ReferrerPolicyOptions {
   empty(r''),
   noReferrer(r'no-referrer'),
@@ -1010,7 +966,6 @@ enum ReferrerPolicyOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum RequestDestinationOptions {
   empty(r''),
   audio(r'audio'),
@@ -1036,7 +991,6 @@ enum RequestDestinationOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum ResponseTypeOptions {
   basic(r'basic'),
   cors(r'cors'),
@@ -1050,7 +1004,6 @@ enum ResponseTypeOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum BinaryTypeOptions {
   arraybuffer(r'arraybuffer'),
   blob(r'blob');
@@ -1060,7 +1013,6 @@ enum BinaryTypeOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum KeyTypeOptions {
   private(r'private'),
   public(r'public'),
@@ -1071,7 +1023,6 @@ enum KeyTypeOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum KeyUsageOptions {
   decrypt(r'decrypt'),
   deriveBits(r'deriveBits'),
@@ -1087,7 +1038,6 @@ enum KeyUsageOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum KeyFormatOptions {
   jwk(r'jwk'),
   pkcs8(r'pkcs8'),
@@ -1099,29 +1049,18 @@ enum KeyFormatOptions {
   final _i2.String value;
 }
 
+/// The type of `import.meta`.
+///
+/// If you need to declare that a given property exists on `import.meta`,
+/// this type may be augmented via interface merging.
+/// Deno provides extra properties on `import.meta`. These are included here
+/// to ensure that these are still available when using the Deno namespace in
+/// conjunction with other type libs, like `dom`.
 @_i1.JS()
 @_i1.staticInterop
 class ImportMeta {}
 
 extension ImportMeta$Typings on ImportMeta {
-  /* #29
-  source: 
-  /** A string representation of the fully qualified module URL. When the
-   * module is loaded locally, the value will be a file URL (e.g.
-   * `file:///path/module.ts`).
-   *
-   * You can also parse the string as a URL to determine more information about
-   * how the current module was loaded. For example to determine if a module was
-   * local or not:
-   *
-   * ```ts
-   * const url = new URL(import.meta.url);
-   * if (url.protocol === "file:") {
-   *   console.log("this module was loaded locally");
-   * }
-   * ```
-   */
-  url: string; */
   /// A string representation of the fully qualified module URL. When the
   ///  module is loaded locally, the value will be a file URL (e.g.
   ///  `file:///path/module.ts`).
@@ -1140,25 +1079,6 @@ extension ImportMeta$Typings on ImportMeta {
         this,
         'url',
       );
-  /* #29
-  source: 
-  /** A string representation of the fully qualified module URL. When the
-   * module is loaded locally, the value will be a file URL (e.g.
-   * `file:///path/module.ts`).
-   *
-   * You can also parse the string as a URL to determine more information about
-   * how the current module was loaded. For example to determine if a module was
-   * local or not:
-   *
-   * ```ts
-   * const url = new URL(import.meta.url);
-   * if (url.protocol === "file:") {
-   *   console.log("this module was loaded locally");
-   * }
-   * ```
-   */
-  url: string; */
-  // Type InteropStaticType.string
   set url(_i2.String value) {
     _i4.setProperty(
       this,
@@ -1167,19 +1087,6 @@ extension ImportMeta$Typings on ImportMeta {
     );
   }
 
-  /* #40
-  source: 
-
-  /** A flag that indicates if the current module is the main module that was
-   * called when starting the program under Deno.
-   *
-   * ```ts
-   * if (import.meta.main) {
-   *   // this was loaded as the main module, maybe do some bootstrapping
-   * }
-   * ```
-   */
-  main: boolean; */
   /// A flag that indicates if the current module is the main module that was
   ///  called when starting the program under Deno.
   ///
@@ -1192,20 +1099,6 @@ extension ImportMeta$Typings on ImportMeta {
         this,
         'main',
       );
-  /* #40
-  source: 
-
-  /** A flag that indicates if the current module is the main module that was
-   * called when starting the program under Deno.
-   *
-   * ```ts
-   * if (import.meta.main) {
-   *   // this was loaded as the main module, maybe do some bootstrapping
-   * }
-   * ```
-   */
-  main: boolean; */
-  // Type InteropStaticType.boolean
   set main(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -1214,6 +1107,13 @@ extension ImportMeta$Typings on ImportMeta {
     );
   }
 
+  /// A function that returns resolved specifier as if it would be imported
+  ///  using `import(specifier)`.
+  ///
+  ///  ```ts
+  ///  console.log(import.meta.resolve("./foo.js"));
+  ///  // file:///dev/foo.js
+  ///  ```
   _i2.String resolve(_i2.String specifier) => _i4.callMethod(
         this,
         'resolve',
@@ -1221,6 +1121,10 @@ extension ImportMeta$Typings on ImportMeta {
       );
 }
 
+/// Options which are used in conjunction with `performance.mark`. Check out the
+/// MDN
+/// [`performance.mark()`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark#markoptions)
+/// documentation for more details.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1241,22 +1145,11 @@ class PerformanceMarkOptions {
 }
 
 extension PerformanceMarkOptions$Typings on PerformanceMarkOptions {
-  /* #85
-  source: 
-  /** Metadata to be included in the mark. */
-  // deno-lint-ignore no-explicit-any
-  detail?: any; */
   /// Metadata to be included in the mark.
   _i2.dynamic get detail => _i4.getProperty(
         this,
         'detail',
       );
-  /* #85
-  source: 
-  /** Metadata to be included in the mark. */
-  // deno-lint-ignore no-explicit-any
-  detail?: any; */
-  // Type InteropStaticType.dyn
   set detail(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -1265,22 +1158,11 @@ extension PerformanceMarkOptions$Typings on PerformanceMarkOptions {
     );
   }
 
-  /* #88
-  source: 
-
-  /** Timestamp to be used as the mark time. */
-  startTime?: number; */
   /// Timestamp to be used as the mark time.
   _i2.num? get startTime => _i4.getProperty(
         this,
         'startTime',
       );
-  /* #88
-  source: 
-
-  /** Timestamp to be used as the mark time. */
-  startTime?: number; */
-  // Type InteropStaticType.number
   set startTime(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -1290,6 +1172,10 @@ extension PerformanceMarkOptions$Typings on PerformanceMarkOptions {
   }
 }
 
+/// Options which are used in conjunction with `performance.measure`. Check out the
+/// MDN
+/// [`performance.mark()`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure#measureoptions)
+/// documentation for more details.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1316,22 +1202,11 @@ class PerformanceMeasureOptions {
 }
 
 extension PerformanceMeasureOptions$Typings on PerformanceMeasureOptions {
-  /* #102
-  source: 
-  /** Metadata to be included in the measure. */
-  // deno-lint-ignore no-explicit-any
-  detail?: any; */
   /// Metadata to be included in the measure.
   _i2.dynamic get detail => _i4.getProperty(
         this,
         'detail',
       );
-  /* #102
-  source: 
-  /** Metadata to be included in the measure. */
-  // deno-lint-ignore no-explicit-any
-  detail?: any; */
-  // Type InteropStaticType.dyn
   set detail(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -1340,25 +1215,12 @@ extension PerformanceMeasureOptions$Typings on PerformanceMeasureOptions {
     );
   }
 
-  /* #106
-  source: 
-
-  /** Timestamp to be used as the start time or string to be used as start
-   * mark. */
-  start?: string | number; */
   /// Timestamp to be used as the start time or string to be used as start
   ///  mark.
   _i2.Object? get start => _i4.getProperty(
         this,
         'start',
       );
-  /* #106
-  source: 
-
-  /** Timestamp to be used as the start time or string to be used as start
-   * mark. */
-  start?: string | number; */
-  // Type InteropUnion#926524412(parent: InteropGetter#613839538(name: start))
   set start(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -1367,22 +1229,11 @@ extension PerformanceMeasureOptions$Typings on PerformanceMeasureOptions {
     );
   }
 
-  /* #109
-  source: 
-
-  /** Duration between the start and end times. */
-  duration?: number; */
   /// Duration between the start and end times.
   _i2.num? get duration => _i4.getProperty(
         this,
         'duration',
       );
-  /* #109
-  source: 
-
-  /** Duration between the start and end times. */
-  duration?: number; */
-  // Type InteropStaticType.number
   set duration(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -1391,22 +1242,11 @@ extension PerformanceMeasureOptions$Typings on PerformanceMeasureOptions {
     );
   }
 
-  /* #112
-  source: 
-
-  /** Timestamp to be used as the end time or string to be used as end mark. */
-  end?: string | number; */
   /// Timestamp to be used as the end time or string to be used as end mark.
   _i2.Object? get end => _i4.getProperty(
         this,
         'end',
       );
-  /* #112
-  source: 
-
-  /** Timestamp to be used as the end time or string to be used as end mark. */
-  end?: string | number; */
-  // Type InteropUnion#1060414800(parent: InteropGetter#117385017(name: end))
   set end(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -1539,7 +1379,7 @@ extension Console$Typings on Console {
 
   void table([
     _i2.dynamic tabularData,
-    _i2.List /*LIST InteropStaticType.list,475137587,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,480644257,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         properties,
   ]) {
@@ -1599,6 +1439,7 @@ extension Console$Typings on Console {
     );
   }
 
+  /// This method is a noop, unless used in inspector
   void timeStamp([_i2.String? label]) {
     _i4.callMethod(
       this,
@@ -1607,6 +1448,7 @@ extension Console$Typings on Console {
     );
   }
 
+  /// This method is a noop, unless used in inspector
   void profile([_i2.String? label]) {
     _i4.callMethod(
       this,
@@ -1615,6 +1457,7 @@ extension Console$Typings on Console {
     );
   }
 
+  /// This method is a noop, unless used in inspector
   void profileEnd([_i2.String? label]) {
     _i4.callMethod(
       this,
@@ -1653,16 +1496,6 @@ FieldExternal:
 external _i2.Object _declaredURLSearchParams;
 
 extension URLSearchParams$Typings on URLSearchParams {
-  /* #5803
-  source: 
-
-  /** Contains the number of search parameters
-   *
-   * ```ts
-   * searchParams.size
-   * ```
-   */
-  size: number; */
   /// Contains the number of search parameters
   ///
   ///  ```ts
@@ -1672,17 +1505,6 @@ extension URLSearchParams$Typings on URLSearchParams {
         this,
         'size',
       );
-  /* #5803
-  source: 
-
-  /** Contains the number of search parameters
-   *
-   * ```ts
-   * searchParams.size
-   * ```
-   */
-  size: number; */
-  // Type InteropStaticType.number
   set size(_i2.num value) {
     _i4.setProperty(
       this,
@@ -1691,6 +1513,13 @@ extension URLSearchParams$Typings on URLSearchParams {
     );
   }
 
+  /// Appends a specified key/value pair as a new search parameter.
+  ///
+  ///  ```ts
+  ///  let searchParams = new URLSearchParams();
+  ///  searchParams.append('name', 'first');
+  ///  searchParams.append('name', 'second');
+  ///  ```
   void append(
     _i2.String name,
     _i2.String value,
@@ -1705,6 +1534,13 @@ extension URLSearchParams$Typings on URLSearchParams {
     );
   }
 
+  /// Deletes the given search parameter and its associated value,
+  ///  from the list of all search parameters.
+  ///
+  ///  ```ts
+  ///  let searchParams = new URLSearchParams([['name', 'value']]);
+  ///  searchParams.delete('name');
+  ///  ```
   void delete(_i2.String name) {
     _i4.callMethod(
       this,
@@ -1713,23 +1549,51 @@ extension URLSearchParams$Typings on URLSearchParams {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,101705320,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  /// Returns all the values associated with a given search parameter
+  ///  as an array.
+  ///
+  ///  ```ts
+  ///  searchParams.getAll('name');
+  ///  ```
+  _i2.List /*LIST InteropStaticType.list,513150745,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       getAll(_i2.String name) => (_i4.callMethod(
             this,
             'getAll',
             [name],
           ) as _i2.List)
               .cast();
+
+  /// Returns the first value associated to the given search parameter.
+  ///
+  ///  ```ts
+  ///  searchParams.get('name');
+  ///  ```
   _i2.String? get(_i2.String name) => _i4.callMethod(
         this,
         'get',
         [name],
       );
+
+  /// Returns a Boolean that indicates whether a parameter with the
+  ///  specified name exists.
+  ///
+  ///  ```ts
+  ///  searchParams.has('name');
+  ///  ```
   _i2.bool has(_i2.String name) => _i4.callMethod(
         this,
         'has',
         [name],
       );
+
+  /// Sets the value associated with a given search parameter to the
+  ///  given value. If there were several matching values, this method
+  ///  deletes the others. If the search parameter doesn't exist, this
+  ///  method creates it.
+  ///
+  ///  ```ts
+  ///  searchParams.set('name', 'value');
+  ///  ```
   void set(
     _i2.String name,
     _i2.String value,
@@ -1744,6 +1608,13 @@ extension URLSearchParams$Typings on URLSearchParams {
     );
   }
 
+  /// Sort all key/value pairs contained in this object in place and
+  ///  return undefined. The sort order is according to Unicode code
+  ///  points of the keys.
+  ///
+  ///  ```ts
+  ///  searchParams.sort();
+  ///  ```
   void sort() {
     _i4.callMethod(
       this,
@@ -1752,6 +1623,16 @@ extension URLSearchParams$Typings on URLSearchParams {
     );
   }
 
+  /// Calls a function for each element contained in this object in
+  ///  place and return undefined. Optionally accepts an object to use
+  ///  as this when executing callback as second argument.
+  ///
+  ///  ```ts
+  ///  const params = new URLSearchParams([["a", "b"], ["c", "d"]]);
+  ///  params.forEach((value, key, parent) => {
+  ///    console.log(value, key, parent);
+  ///  });
+  ///  ```
   void forEach(
     void Function(
       _i2.String,
@@ -1770,16 +1651,45 @@ extension URLSearchParams$Typings on URLSearchParams {
     );
   }
 
+  /// Returns an iterator allowing to go through all keys contained
+  ///  in this object.
+  ///
+  ///  ```ts
+  ///  const params = new URLSearchParams([["a", "b"], ["c", "d"]]);
+  ///  for (const key of params.keys()) {
+  ///    console.log(key);
+  ///  }
+  ///  ```
   _i8.IterableIterator<_i2.String> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
+
+  /// Returns an iterator allowing to go through all values contained
+  ///  in this object.
+  ///
+  ///  ```ts
+  ///  const params = new URLSearchParams([["a", "b"], ["c", "d"]]);
+  ///  for (const value of params.values()) {
+  ///    console.log(value);
+  ///  }
+  ///  ```
   _i8.IterableIterator<_i2.String> values() => _i4.callMethod(
         this,
         'values',
         [],
       );
+
+  /// Returns an iterator allowing to go through all key/value
+  ///  pairs contained in this object.
+  ///
+  ///  ```ts
+  ///  const params = new URLSearchParams([["a", "b"], ["c", "d"]]);
+  ///  for (const [key, value] of params.entries()) {
+  ///    console.log(key, value);
+  ///  }
+  ///  ```
   _i8.IterableIterator<
       (
         _i2.String,
@@ -1789,6 +1699,12 @@ extension URLSearchParams$Typings on URLSearchParams {
         'entries',
         [],
       );
+
+  /// Returns a query string suitable for use in a URL.
+  ///
+  ///  ```ts
+  ///  searchParams.toString();
+  ///  ```
   _i2.String toString$() => _i4.callMethod(
         this,
         'toString',
@@ -1796,6 +1712,8 @@ extension URLSearchParams$Typings on URLSearchParams {
       );
 }
 
+/// The URL interface represents an object providing static methods used for
+/// creating object URLs.
 @_i1.JS('URL')
 @_i1.staticInterop
 class Url {
@@ -1832,19 +1750,10 @@ FieldExternal:
 external _i2.Object _declaredUrl;
 
 extension Url$Typings on Url {
-  /* #5816
-  source: 
-
-  hash: string; */
   _i2.String get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #5816
-  source: 
-
-  hash: string; */
-  // Type InteropStaticType.string
   set hash(_i2.String value) {
     _i4.setProperty(
       this,
@@ -1853,17 +1762,10 @@ extension Url$Typings on Url {
     );
   }
 
-  /* #5817
-  source: 
-  host: string; */
   _i2.String get host => _i4.getProperty(
         this,
         'host',
       );
-  /* #5817
-  source: 
-  host: string; */
-  // Type InteropStaticType.string
   set host(_i2.String value) {
     _i4.setProperty(
       this,
@@ -1872,17 +1774,10 @@ extension Url$Typings on Url {
     );
   }
 
-  /* #5818
-  source: 
-  hostname: string; */
   _i2.String get hostname => _i4.getProperty(
         this,
         'hostname',
       );
-  /* #5818
-  source: 
-  hostname: string; */
-  // Type InteropStaticType.string
   set hostname(_i2.String value) {
     _i4.setProperty(
       this,
@@ -1891,17 +1786,10 @@ extension Url$Typings on Url {
     );
   }
 
-  /* #5819
-  source: 
-  href: string; */
   _i2.String get href => _i4.getProperty(
         this,
         'href',
       );
-  /* #5819
-  source: 
-  href: string; */
-  // Type InteropStaticType.string
   set href(_i2.String value) {
     _i4.setProperty(
       this,
@@ -1910,24 +1798,14 @@ extension Url$Typings on Url {
     );
   }
 
-  /* #5821
-  source: 
-  readonly origin: string; */
   _i2.String get origin => _i4.getProperty(
         this,
         'origin',
       );
-  /* #5822
-  source: 
-  password: string; */
   _i2.String get password => _i4.getProperty(
         this,
         'password',
       );
-  /* #5822
-  source: 
-  password: string; */
-  // Type InteropStaticType.string
   set password(_i2.String value) {
     _i4.setProperty(
       this,
@@ -1936,17 +1814,10 @@ extension Url$Typings on Url {
     );
   }
 
-  /* #5823
-  source: 
-  pathname: string; */
   _i2.String get pathname => _i4.getProperty(
         this,
         'pathname',
       );
-  /* #5823
-  source: 
-  pathname: string; */
-  // Type InteropStaticType.string
   set pathname(_i2.String value) {
     _i4.setProperty(
       this,
@@ -1955,17 +1826,10 @@ extension Url$Typings on Url {
     );
   }
 
-  /* #5824
-  source: 
-  port: string; */
   _i2.String get port => _i4.getProperty(
         this,
         'port',
       );
-  /* #5824
-  source: 
-  port: string; */
-  // Type InteropStaticType.string
   set port(_i2.String value) {
     _i4.setProperty(
       this,
@@ -1974,17 +1838,10 @@ extension Url$Typings on Url {
     );
   }
 
-  /* #5825
-  source: 
-  protocol: string; */
   _i2.String get protocol => _i4.getProperty(
         this,
         'protocol',
       );
-  /* #5825
-  source: 
-  protocol: string; */
-  // Type InteropStaticType.string
   set protocol(_i2.String value) {
     _i4.setProperty(
       this,
@@ -1993,17 +1850,10 @@ extension Url$Typings on Url {
     );
   }
 
-  /* #5826
-  source: 
-  search: string; */
   _i2.String get search => _i4.getProperty(
         this,
         'search',
       );
-  /* #5826
-  source: 
-  search: string; */
-  // Type InteropStaticType.string
   set search(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2012,24 +1862,14 @@ extension Url$Typings on Url {
     );
   }
 
-  /* #5827
-  source: 
-  readonly searchParams: URLSearchParams; */
   _i3.URLSearchParams get searchParams => _i4.getProperty(
         this,
         'searchParams',
       );
-  /* #5828
-  source: 
-  username: string; */
   _i2.String get username => _i4.getProperty(
         this,
         'username',
       );
-  /* #5828
-  source: 
-  username: string; */
-  // Type InteropStaticType.string
   set username(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2091,17 +1931,10 @@ class URLPatternInit {
 }
 
 extension URLPatternInit$Typings on URLPatternInit {
-  /* #5834
-  source: 
-  protocol?: string; */
   _i2.String? get protocol => _i4.getProperty(
         this,
         'protocol',
       );
-  /* #5834
-  source: 
-  protocol?: string; */
-  // Type InteropStaticType.string
   set protocol(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -2110,17 +1943,10 @@ extension URLPatternInit$Typings on URLPatternInit {
     );
   }
 
-  /* #5835
-  source: 
-  username?: string; */
   _i2.String? get username => _i4.getProperty(
         this,
         'username',
       );
-  /* #5835
-  source: 
-  username?: string; */
-  // Type InteropStaticType.string
   set username(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -2129,17 +1955,10 @@ extension URLPatternInit$Typings on URLPatternInit {
     );
   }
 
-  /* #5836
-  source: 
-  password?: string; */
   _i2.String? get password => _i4.getProperty(
         this,
         'password',
       );
-  /* #5836
-  source: 
-  password?: string; */
-  // Type InteropStaticType.string
   set password(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -2148,17 +1967,10 @@ extension URLPatternInit$Typings on URLPatternInit {
     );
   }
 
-  /* #5837
-  source: 
-  hostname?: string; */
   _i2.String? get hostname => _i4.getProperty(
         this,
         'hostname',
       );
-  /* #5837
-  source: 
-  hostname?: string; */
-  // Type InteropStaticType.string
   set hostname(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -2167,17 +1979,10 @@ extension URLPatternInit$Typings on URLPatternInit {
     );
   }
 
-  /* #5838
-  source: 
-  port?: string; */
   _i2.String? get port => _i4.getProperty(
         this,
         'port',
       );
-  /* #5838
-  source: 
-  port?: string; */
-  // Type InteropStaticType.string
   set port(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -2186,17 +1991,10 @@ extension URLPatternInit$Typings on URLPatternInit {
     );
   }
 
-  /* #5839
-  source: 
-  pathname?: string; */
   _i2.String? get pathname => _i4.getProperty(
         this,
         'pathname',
       );
-  /* #5839
-  source: 
-  pathname?: string; */
-  // Type InteropStaticType.string
   set pathname(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -2205,17 +2003,10 @@ extension URLPatternInit$Typings on URLPatternInit {
     );
   }
 
-  /* #5840
-  source: 
-  search?: string; */
   _i2.String? get search => _i4.getProperty(
         this,
         'search',
       );
-  /* #5840
-  source: 
-  search?: string; */
-  // Type InteropStaticType.string
   set search(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -2224,17 +2015,10 @@ extension URLPatternInit$Typings on URLPatternInit {
     );
   }
 
-  /* #5841
-  source: 
-  hash?: string; */
   _i2.String? get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #5841
-  source: 
-  hash?: string; */
-  // Type InteropStaticType.string
   set hash(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -2243,17 +2027,10 @@ extension URLPatternInit$Typings on URLPatternInit {
     );
   }
 
-  /* #5842
-  source: 
-  baseURL?: string; */
   _i2.String? get baseURL => _i4.getProperty(
         this,
         'baseURL',
       );
-  /* #5842
-  source: 
-  baseURL?: string; */
-  // Type InteropStaticType.string
   set baseURL(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -2283,17 +2060,10 @@ class URLPatternComponentResult {
 }
 
 extension URLPatternComponentResult$Typings on URLPatternComponentResult {
-  /* #5850
-  source: 
-  input: string; */
   _i2.String get input => _i4.getProperty(
         this,
         'input',
       );
-  /* #5850
-  source: 
-  input: string; */
-  // Type InteropStaticType.string
   set input(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2302,17 +2072,10 @@ extension URLPatternComponentResult$Typings on URLPatternComponentResult {
     );
   }
 
-  /* #5851
-  source: 
-  groups: Record<string, string>; */
   _i5.Record<_i2.String, _i2.String> get groups => _i4.getProperty(
         this,
         'groups',
       );
-  /* #5851
-  source: 
-  groups: Record<string, string>; */
-  // Type InteropTypedef#919730739(name: Record)
   set groups(_i5.Record<_i2.String, _i2.String> value) {
     _i4.setProperty(
       this,
@@ -2322,6 +2085,7 @@ extension URLPatternComponentResult$Typings on URLPatternComponentResult {
   }
 }
 
+/// `URLPatternResult` is the object returned from `URLPattern.exec`.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2363,20 +2127,11 @@ class URLPatternResult {
 }
 
 extension URLPatternResult$Typings on URLPatternResult {
-  /* #5860
-  source: 
-  /** The inputs provided when matching. */
-  inputs: [URLPatternInit] | [URLPatternInit, string]; */
   /// The inputs provided when matching.
   _i2.Object get inputs => _i4.getProperty(
         this,
         'inputs',
       );
-  /* #5860
-  source: 
-  /** The inputs provided when matching. */
-  inputs: [URLPatternInit] | [URLPatternInit, string]; */
-  // Type InteropUnion#545005783(parent: InteropGetter#419068315(name: inputs))
   set inputs(_i2.Object value) {
     _i4.setProperty(
       this,
@@ -2385,22 +2140,11 @@ extension URLPatternResult$Typings on URLPatternResult {
     );
   }
 
-  /* #5863
-  source: 
-
-  /** The matched result for the `protocol` matcher. */
-  protocol: URLPatternComponentResult; */
   /// The matched result for the `protocol` matcher.
   _i3.URLPatternComponentResult get protocol => _i4.getProperty(
         this,
         'protocol',
       );
-  /* #5863
-  source: 
-
-  /** The matched result for the `protocol` matcher. */
-  protocol: URLPatternComponentResult; */
-  // Type Instance of 'InteropInterface'
   set protocol(_i3.URLPatternComponentResult value) {
     _i4.setProperty(
       this,
@@ -2409,20 +2153,11 @@ extension URLPatternResult$Typings on URLPatternResult {
     );
   }
 
-  /* #5865
-  source: 
-  /** The matched result for the `username` matcher. */
-  username: URLPatternComponentResult; */
   /// The matched result for the `username` matcher.
   _i3.URLPatternComponentResult get username => _i4.getProperty(
         this,
         'username',
       );
-  /* #5865
-  source: 
-  /** The matched result for the `username` matcher. */
-  username: URLPatternComponentResult; */
-  // Type Instance of 'InteropInterface'
   set username(_i3.URLPatternComponentResult value) {
     _i4.setProperty(
       this,
@@ -2431,20 +2166,11 @@ extension URLPatternResult$Typings on URLPatternResult {
     );
   }
 
-  /* #5867
-  source: 
-  /** The matched result for the `password` matcher. */
-  password: URLPatternComponentResult; */
   /// The matched result for the `password` matcher.
   _i3.URLPatternComponentResult get password => _i4.getProperty(
         this,
         'password',
       );
-  /* #5867
-  source: 
-  /** The matched result for the `password` matcher. */
-  password: URLPatternComponentResult; */
-  // Type Instance of 'InteropInterface'
   set password(_i3.URLPatternComponentResult value) {
     _i4.setProperty(
       this,
@@ -2453,20 +2179,11 @@ extension URLPatternResult$Typings on URLPatternResult {
     );
   }
 
-  /* #5869
-  source: 
-  /** The matched result for the `hostname` matcher. */
-  hostname: URLPatternComponentResult; */
   /// The matched result for the `hostname` matcher.
   _i3.URLPatternComponentResult get hostname => _i4.getProperty(
         this,
         'hostname',
       );
-  /* #5869
-  source: 
-  /** The matched result for the `hostname` matcher. */
-  hostname: URLPatternComponentResult; */
-  // Type Instance of 'InteropInterface'
   set hostname(_i3.URLPatternComponentResult value) {
     _i4.setProperty(
       this,
@@ -2475,20 +2192,11 @@ extension URLPatternResult$Typings on URLPatternResult {
     );
   }
 
-  /* #5871
-  source: 
-  /** The matched result for the `port` matcher. */
-  port: URLPatternComponentResult; */
   /// The matched result for the `port` matcher.
   _i3.URLPatternComponentResult get port => _i4.getProperty(
         this,
         'port',
       );
-  /* #5871
-  source: 
-  /** The matched result for the `port` matcher. */
-  port: URLPatternComponentResult; */
-  // Type Instance of 'InteropInterface'
   set port(_i3.URLPatternComponentResult value) {
     _i4.setProperty(
       this,
@@ -2497,20 +2205,11 @@ extension URLPatternResult$Typings on URLPatternResult {
     );
   }
 
-  /* #5873
-  source: 
-  /** The matched result for the `pathname` matcher. */
-  pathname: URLPatternComponentResult; */
   /// The matched result for the `pathname` matcher.
   _i3.URLPatternComponentResult get pathname => _i4.getProperty(
         this,
         'pathname',
       );
-  /* #5873
-  source: 
-  /** The matched result for the `pathname` matcher. */
-  pathname: URLPatternComponentResult; */
-  // Type Instance of 'InteropInterface'
   set pathname(_i3.URLPatternComponentResult value) {
     _i4.setProperty(
       this,
@@ -2519,20 +2218,11 @@ extension URLPatternResult$Typings on URLPatternResult {
     );
   }
 
-  /* #5875
-  source: 
-  /** The matched result for the `search` matcher. */
-  search: URLPatternComponentResult; */
   /// The matched result for the `search` matcher.
   _i3.URLPatternComponentResult get search => _i4.getProperty(
         this,
         'search',
       );
-  /* #5875
-  source: 
-  /** The matched result for the `search` matcher. */
-  search: URLPatternComponentResult; */
-  // Type Instance of 'InteropInterface'
   set search(_i3.URLPatternComponentResult value) {
     _i4.setProperty(
       this,
@@ -2541,20 +2231,11 @@ extension URLPatternResult$Typings on URLPatternResult {
     );
   }
 
-  /* #5877
-  source: 
-  /** The matched result for the `hash` matcher. */
-  hash: URLPatternComponentResult; */
   /// The matched result for the `hash` matcher.
   _i3.URLPatternComponentResult get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #5877
-  source: 
-  /** The matched result for the `hash` matcher. */
-  hash: URLPatternComponentResult; */
-  // Type Instance of 'InteropInterface'
   set hash(_i3.URLPatternComponentResult value) {
     _i4.setProperty(
       this,
@@ -2564,6 +2245,32 @@ extension URLPatternResult$Typings on URLPatternResult {
   }
 }
 
+/// The URLPattern API provides a web platform primitive for matching URLs based
+/// on a convenient pattern syntax.
+///
+/// The syntax is based on path-to-regexp. Wildcards, named capture groups,
+/// regular groups, and group modifiers are all supported.
+///
+/// ```ts
+/// // Specify the pattern as structured data.
+/// const pattern = new URLPattern({ pathname: "/users/:user" });
+/// const match = pattern.exec("https://blog.example.com/users/joe");
+/// console.log(match.pathname.groups.user); // joe
+/// ```
+///
+/// ```ts
+/// // Specify a fully qualified string pattern.
+/// const pattern = new URLPattern("https://example.com/books/:id");
+/// console.log(pattern.test("https://example.com/books/123")); // true
+/// console.log(pattern.test("https://deno.land/books/123")); // false
+/// ```
+///
+/// ```ts
+/// // Specify a relative string pattern with a base URL.
+/// const pattern = new URLPattern("/article/:id", "https://blog.example.com");
+/// console.log(pattern.test("https://blog.example.com/article")); // false
+/// console.log(pattern.test("https://blog.example.com/article/123")); // true
+/// ```
 @_i1.JS()
 @_i1.staticInterop
 class URLPattern {
@@ -2587,79 +2294,72 @@ FieldExternal:
 external _i2.Object _declaredURLPattern;
 
 extension URLPattern$Typings on URLPattern {
-  /* #5961
-  source: 
-
-  /** The pattern string for the `protocol`. */
-  readonly protocol: string; */
   /// The pattern string for the `protocol`.
   _i2.String get protocol => _i4.getProperty(
         this,
         'protocol',
       );
-  /* #5963
-  source: 
-  /** The pattern string for the `username`. */
-  readonly username: string; */
+
   /// The pattern string for the `username`.
   _i2.String get username => _i4.getProperty(
         this,
         'username',
       );
-  /* #5965
-  source: 
-  /** The pattern string for the `password`. */
-  readonly password: string; */
+
   /// The pattern string for the `password`.
   _i2.String get password => _i4.getProperty(
         this,
         'password',
       );
-  /* #5967
-  source: 
-  /** The pattern string for the `hostname`. */
-  readonly hostname: string; */
+
   /// The pattern string for the `hostname`.
   _i2.String get hostname => _i4.getProperty(
         this,
         'hostname',
       );
-  /* #5969
-  source: 
-  /** The pattern string for the `port`. */
-  readonly port: string; */
+
   /// The pattern string for the `port`.
   _i2.String get port => _i4.getProperty(
         this,
         'port',
       );
-  /* #5971
-  source: 
-  /** The pattern string for the `pathname`. */
-  readonly pathname: string; */
+
   /// The pattern string for the `pathname`.
   _i2.String get pathname => _i4.getProperty(
         this,
         'pathname',
       );
-  /* #5973
-  source: 
-  /** The pattern string for the `search`. */
-  readonly search: string; */
+
   /// The pattern string for the `search`.
   _i2.String get search => _i4.getProperty(
         this,
         'search',
       );
-  /* #5975
-  source: 
-  /** The pattern string for the `hash`. */
-  readonly hash: string; */
+
   /// The pattern string for the `hash`.
   _i2.String get hash => _i4.getProperty(
         this,
         'hash',
       );
+
+  /// Test if the given input matches the stored pattern.
+  ///
+  ///  The input can either be provided as an absolute URL string with an optional base,
+  ///  relative URL string with a required base, or as individual components
+  ///  in the form of an `URLPatternInit` object.
+  ///
+  ///  ```ts
+  ///  const pattern = new URLPattern("https://example.com/books/:id");
+  ///
+  ///  // Test an absolute url string.
+  ///  console.log(pattern.test("https://example.com/books/123")); // true
+  ///
+  ///  // Test a relative url with a base.
+  ///  console.log(pattern.test("/books/123", "https://example.com")); // true
+  ///
+  ///  // Test an object of url components.
+  ///  console.log(pattern.test({ pathname: "/books/123" })); // true
+  ///  ```
   _i2.bool test(
     _i3.URLPatternInput input, [
     _i2.String? baseURL,
@@ -2672,6 +2372,28 @@ extension URLPattern$Typings on URLPattern {
           baseURL ?? _i6.undefined,
         ],
       );
+
+  /// Match the given input against the stored pattern.
+  ///
+  ///  The input can either be provided as an absolute URL string with an optional base,
+  ///  relative URL string with a required base, or as individual components
+  ///  in the form of an `URLPatternInit` object.
+  ///
+  ///  ```ts
+  ///  const pattern = new URLPattern("https://example.com/books/:id");
+  ///
+  ///  // Match an absolute url string.
+  ///  let match = pattern.exec("https://example.com/books/123");
+  ///  console.log(match.pathname.groups.id); // 123
+  ///
+  ///  // Match a relative url with a base.
+  ///  match = pattern.exec("/books/123", "https://example.com");
+  ///  console.log(match.pathname.groups.id); // 123
+  ///
+  ///  // Match an object of url components.
+  ///  match = pattern.exec({ pathname: "/books/123" });
+  ///  console.log(match.pathname.groups.id); // 123
+  ///  ```
   _i3.URLPatternResult? exec(
     _i3.URLPatternInput input, [
     _i2.String? baseURL,
@@ -2709,23 +2431,14 @@ FieldExternal:
 external _i2.Object _declaredDOMException;
 
 extension DOMException$Typings on DOMException {
-  /* #5988
-  source: 
-  readonly name: string; */
   _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
-  /* #5989
-  source: 
-  readonly message: string; */
   _i2.String get message => _i4.getProperty(
         this,
         'message',
       );
-  /* #5990
-  source: 
-  readonly code: number; */
   _i2.num get code => _i4.getProperty(
         this,
         'code',
@@ -2755,17 +2468,10 @@ class EventInit {
 }
 
 extension EventInit$Typings on EventInit {
-  /* #5995
-  source: 
-  bubbles?: boolean; */
   _i2.bool? get bubbles => _i4.getProperty(
         this,
         'bubbles',
       );
-  /* #5995
-  source: 
-  bubbles?: boolean; */
-  // Type InteropStaticType.boolean
   set bubbles(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -2774,17 +2480,10 @@ extension EventInit$Typings on EventInit {
     );
   }
 
-  /* #5996
-  source: 
-  cancelable?: boolean; */
   _i2.bool? get cancelable => _i4.getProperty(
         this,
         'cancelable',
       );
-  /* #5996
-  source: 
-  cancelable?: boolean; */
-  // Type InteropStaticType.boolean
   set cancelable(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -2793,17 +2492,10 @@ extension EventInit$Typings on EventInit {
     );
   }
 
-  /* #5997
-  source: 
-  composed?: boolean; */
   _i2.bool? get composed => _i4.getProperty(
         this,
         'composed',
       );
-  /* #5997
-  source: 
-  composed?: boolean; */
-  // Type InteropStaticType.boolean
   set composed(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -2813,6 +2505,7 @@ extension EventInit$Typings on EventInit {
   }
 }
 
+/// An event which takes place in the DOM.
 @_i1.JS()
 @_i1.staticInterop
 class Event {
@@ -2836,12 +2529,6 @@ FieldExternal:
 external _i2.Object _declaredEvent;
 
 extension Event$Typings on Event {
-  /* #6009
-  source: 
-  /** Returns true or false depending on how event was initialized. True if
-   * event goes through its target's ancestors in reverse tree order, and
-   * false otherwise. */
-  readonly bubbles: boolean; */
   /// Returns true or false depending on how event was initialized. True if
   /// event goes through its target's ancestors in reverse tree order, and
   /// false otherwise.
@@ -2849,17 +2536,10 @@ extension Event$Typings on Event {
         this,
         'bubbles',
       );
-  /* #6010
-  source: 
-  cancelBubble: boolean; */
   _i2.bool get cancelBubble => _i4.getProperty(
         this,
         'cancelBubble',
       );
-  /* #6010
-  source: 
-  cancelBubble: boolean; */
-  // Type InteropStaticType.boolean
   set cancelBubble(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -2868,13 +2548,6 @@ extension Event$Typings on Event {
     );
   }
 
-  /* #6015
-  source: 
-  /** Returns true or false depending on how event was initialized. Its return
-   * value does not always carry meaning, but true can indicate that part of the
-   * operation during which event was dispatched, can be canceled by invoking
-   * the preventDefault() method. */
-  readonly cancelable: boolean; */
   /// Returns true or false depending on how event was initialized. Its return
   /// value does not always carry meaning, but true can indicate that part of the
   /// operation during which event was dispatched, can be canceled by invoking
@@ -2883,12 +2556,7 @@ extension Event$Typings on Event {
         this,
         'cancelable',
       );
-  /* #6019
-  source: 
-  /** Returns true or false depending on how event was initialized. True if
-   * event invokes listeners past a ShadowRoot node that is the root of its
-   * target, and false otherwise. */
-  readonly composed: boolean; */
+
   /// Returns true or false depending on how event was initialized. True if
   /// event invokes listeners past a ShadowRoot node that is the root of its
   /// target, and false otherwise.
@@ -2896,114 +2564,86 @@ extension Event$Typings on Event {
         this,
         'composed',
       );
-  /* #6022
-  source: 
-  /** Returns the object whose event listener's callback is currently being
-   * invoked. */
-  readonly currentTarget: EventTarget | null; */
+
   /// Returns the object whose event listener's callback is currently being
   /// invoked.
   _i3.EventTarget? get currentTarget => _i4.getProperty(
         this,
         'currentTarget',
       );
-  /* #6025
-  source: 
-  /** Returns true if preventDefault() was invoked successfully to indicate
-   * cancellation, and false otherwise. */
-  readonly defaultPrevented: boolean; */
+
   /// Returns true if preventDefault() was invoked successfully to indicate
   /// cancellation, and false otherwise.
   _i2.bool get defaultPrevented => _i4.getProperty(
         this,
         'defaultPrevented',
       );
-  /* #6028
-  source: 
-  /** Returns the event's phase, which is one of NONE, CAPTURING_PHASE,
-   * AT_TARGET, and BUBBLING_PHASE. */
-  readonly eventPhase: number; */
+
   /// Returns the event's phase, which is one of NONE, CAPTURING_PHASE,
   /// AT_TARGET, and BUBBLING_PHASE.
   _i2.num get eventPhase => _i4.getProperty(
         this,
         'eventPhase',
       );
-  /* #6031
-  source: 
-  /** Returns true if event was dispatched by the user agent, and false
-   * otherwise. */
-  readonly isTrusted: boolean; */
+
   /// Returns true if event was dispatched by the user agent, and false
   /// otherwise.
   _i2.bool get isTrusted => _i4.getProperty(
         this,
         'isTrusted',
       );
-  /* #6033
-  source: 
-  /** Returns the object to which event is dispatched (its target). */
-  readonly target: EventTarget | null; */
+
   /// Returns the object to which event is dispatched (its target).
   _i3.EventTarget? get target => _i4.getProperty(
         this,
         'target',
       );
-  /* #6036
-  source: 
-  /** Returns the event's timestamp as the number of milliseconds measured
-   * relative to the time origin. */
-  readonly timeStamp: number; */
+
   /// Returns the event's timestamp as the number of milliseconds measured
   /// relative to the time origin.
   _i2.num get timeStamp => _i4.getProperty(
         this,
         'timeStamp',
       );
-  /* #6038
-  source: 
-  /** Returns the type of event, e.g. "click", "hashchange", or "submit". */
-  readonly type: string; */
+
   /// Returns the type of event, e.g. "click", "hashchange", or "submit".
   _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  /* #6056
-  source: 
-  readonly AT_TARGET: number; */
   _i2.num get atTarget => _i4.getProperty(
         this,
         'AT_TARGET',
       );
-  /* #6057
-  source: 
-  readonly BUBBLING_PHASE: number; */
   _i2.num get bubblingPhase => _i4.getProperty(
         this,
         'BUBBLING_PHASE',
       );
-  /* #6058
-  source: 
-  readonly CAPTURING_PHASE: number; */
   _i2.num get capturingPhase => _i4.getProperty(
         this,
         'CAPTURING_PHASE',
       );
-  /* #6059
-  source: 
-  readonly NONE: number; */
   _i2.num get none => _i4.getProperty(
         this,
         'NONE',
       );
-  _i2.List /*LIST InteropStaticType.list,693574396,[Instance of 'InteropRef<InteropType>']*/ <_i3.EventTarget>
+
+  /// Returns the invocation target objects of event's path (objects on which
+  ///  listeners will be invoked), except for any nodes in shadow trees of which
+  ///  the shadow root's mode is "closed" that are not reachable from event's
+  ///  currentTarget.
+  _i2.List /*LIST InteropStaticType.list,169987846,[Instance of 'InteropRef<InteropType>']*/ <_i3.EventTarget>
       composedPath() => (_i4.callMethod(
             this,
             'composedPath',
             [],
           ) as _i2.List)
               .cast();
+
+  /// If invoked when the cancelable attribute value is true, and while
+  ///  executing a listener for the event with passive set to false, signals to
+  ///  the operation that caused event to be dispatched that it needs to be
+  ///  canceled.
   void preventDefault() {
     _i4.callMethod(
       this,
@@ -3012,6 +2652,9 @@ extension Event$Typings on Event {
     );
   }
 
+  /// Invoking this method prevents event from reaching any registered event
+  ///  listeners after the current one finishes running and, when dispatched in a
+  ///  tree, also prevents event from reaching any other objects.
   void stopImmediatePropagation() {
     _i4.callMethod(
       this,
@@ -3020,6 +2663,8 @@ extension Event$Typings on Event {
     );
   }
 
+  /// When dispatched in a tree, invoking this method prevents event from
+  ///  reaching any objects other than the current object.
   void stopPropagation() {
     _i4.callMethod(
       this,
@@ -3029,11 +2674,36 @@ extension Event$Typings on Event {
   }
 }
 
+/// EventTarget is a DOM interface implemented by objects that can receive events
+/// and may have listeners for them.
 @_i1.JS()
 @_i1.staticInterop
 class EventTarget {}
 
 extension EventTarget$Typings on EventTarget {
+  /// Appends an event listener for events whose type attribute value is type.
+  ///  The callback argument sets the callback that will be invoked when the event
+  ///  is dispatched.
+  ///
+  ///  The options argument sets listener-specific options. For compatibility this
+  ///  can be a boolean, in which case the method behaves exactly as if the value
+  ///  was specified as options's capture.
+  ///
+  ///  When set to true, options's capture prevents callback from being invoked
+  ///  when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  ///  (or not present), callback will not be invoked when event's eventPhase
+  ///  attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  ///  event's eventPhase attribute value is AT_TARGET.
+  ///
+  ///  When set to true, options's passive indicates that the callback will not
+  ///  cancel the event by invoking preventDefault(). This is used to enable
+  ///  performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  ///  When set to true, options's once indicates that the callback will only be
+  ///  invoked once after which the event listener will be removed.
+  ///
+  ///  The event listener is appended to target's event listener list and is not
+  ///  appended if it has the same type, callback, and capture.
   void addEventListener(
     _i2.String type, [
     _i3.EventListenerOrEventListenerObject? listener,
@@ -3050,11 +2720,17 @@ extension EventTarget$Typings on EventTarget {
     );
   }
 
+  /// Dispatches a synthetic event event to target and returns true if either
+  ///  event's cancelable attribute value is false or its preventDefault() method
+  ///  was not invoked, and false otherwise.
   _i2.bool dispatchEvent(_i3.Event event) => _i4.callMethod(
         this,
         'dispatchEvent',
         [event],
       );
+
+  /// Removes the event listener in target's event listener list with the same
+  ///  type, callback, and options.
   void removeEventListener(
     _i2.String type, [
     _i3.EventListenerOrEventListenerObject? callback,
@@ -3127,17 +2803,10 @@ class AddEventListenerOptions implements _i3.EventListenerOptions {
 }
 
 extension AddEventListenerOptions$Typings on AddEventListenerOptions {
-  /* #6131
-  source: 
-  once?: boolean; */
   _i2.bool? get once => _i4.getProperty(
         this,
         'once',
       );
-  /* #6131
-  source: 
-  once?: boolean; */
-  // Type InteropStaticType.boolean
   set once(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -3146,17 +2815,10 @@ extension AddEventListenerOptions$Typings on AddEventListenerOptions {
     );
   }
 
-  /* #6132
-  source: 
-  passive?: boolean; */
   _i2.bool? get passive => _i4.getProperty(
         this,
         'passive',
       );
-  /* #6132
-  source: 
-  passive?: boolean; */
-  // Type InteropStaticType.boolean
   set passive(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -3165,17 +2827,10 @@ extension AddEventListenerOptions$Typings on AddEventListenerOptions {
     );
   }
 
-  /* #6133
-  source: 
-  signal?: AbortSignal; */
   _i3.AbortSignal? get signal => _i4.getProperty(
         this,
         'signal',
       );
-  /* #6133
-  source: 
-  signal?: AbortSignal; */
-  // Type Instance of 'InteropInterface'
   set signal(_i3.AbortSignal? value) {
     _i4.setProperty(
       this,
@@ -3196,17 +2851,10 @@ class EventListenerOptions {
 }
 
 extension EventListenerOptions$Typings on EventListenerOptions {
-  /* #6138
-  source: 
-  capture?: boolean; */
   _i2.bool? get capture => _i4.getProperty(
         this,
         'capture',
       );
-  /* #6138
-  source: 
-  capture?: boolean; */
-  // Type InteropStaticType.boolean
   set capture(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -3248,17 +2896,10 @@ class ProgressEventInit implements _i3.EventInit {
 }
 
 extension ProgressEventInit$Typings on ProgressEventInit {
-  /* #6143
-  source: 
-  lengthComputable?: boolean; */
   _i2.bool? get lengthComputable => _i4.getProperty(
         this,
         'lengthComputable',
       );
-  /* #6143
-  source: 
-  lengthComputable?: boolean; */
-  // Type InteropStaticType.boolean
   set lengthComputable(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -3267,17 +2908,10 @@ extension ProgressEventInit$Typings on ProgressEventInit {
     );
   }
 
-  /* #6144
-  source: 
-  loaded?: number; */
   _i2.num? get loaded => _i4.getProperty(
         this,
         'loaded',
       );
-  /* #6144
-  source: 
-  loaded?: number; */
-  // Type InteropStaticType.number
   set loaded(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -3286,17 +2920,10 @@ extension ProgressEventInit$Typings on ProgressEventInit {
     );
   }
 
-  /* #6145
-  source: 
-  total?: number; */
   _i2.num? get total => _i4.getProperty(
         this,
         'total',
       );
-  /* #6145
-  source: 
-  total?: number; */
-  // Type InteropStaticType.number
   set total(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -3306,6 +2933,9 @@ extension ProgressEventInit$Typings on ProgressEventInit {
   }
 }
 
+/// Events measuring progress of an underlying process, like an HTTP request
+/// (for an XMLHttpRequest, or the loading of the underlying resource of an
+/// <img>, <audio>, <video>, <style> or <link>).
 @_i1.JS()
 @_i1.staticInterop
 class ProgressEvent<T extends _i3.EventTarget> implements _i3.Event {
@@ -3329,31 +2959,20 @@ FieldExternal:
 external _i2.Object _declaredProgressEvent;
 
 extension ProgressEvent$Typings<T extends _i3.EventTarget> on ProgressEvent<T> {
-  /* #6156
-  source: 
-  readonly lengthComputable: boolean; */
   _i2.bool get lengthComputable => _i4.getProperty(
         this,
         'lengthComputable',
       );
-  /* #6157
-  source: 
-  readonly loaded: number; */
   _i2.num get loaded => _i4.getProperty(
         this,
         'loaded',
       );
-  /* #6158
-  source: 
-  readonly target: T | null; */
+
   /// Returns the object to which event is dispatched (its target).
   T? get target => _i4.getProperty(
         this,
         'target',
       );
-  /* #6159
-  source: 
-  readonly total: number; */
   _i2.num get total => _i4.getProperty(
         this,
         'total',
@@ -3380,17 +2999,10 @@ class TextDecoderOptions {
 }
 
 extension TextDecoderOptions$Typings on TextDecoderOptions {
-  /* #6184
-  source: 
-  fatal?: boolean; */
   _i2.bool? get fatal => _i4.getProperty(
         this,
         'fatal',
       );
-  /* #6184
-  source: 
-  fatal?: boolean; */
-  // Type InteropStaticType.boolean
   set fatal(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -3399,17 +3011,10 @@ extension TextDecoderOptions$Typings on TextDecoderOptions {
     );
   }
 
-  /* #6185
-  source: 
-  ignoreBOM?: boolean; */
   _i2.bool? get ignoreBOM => _i4.getProperty(
         this,
         'ignoreBOM',
       );
-  /* #6185
-  source: 
-  ignoreBOM?: boolean; */
-  // Type InteropStaticType.boolean
   set ignoreBOM(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -3430,17 +3035,10 @@ class TextDecodeOptions {
 }
 
 extension TextDecodeOptions$Typings on TextDecodeOptions {
-  /* #6190
-  source: 
-  stream?: boolean; */
   _i2.bool? get stream => _i4.getProperty(
         this,
         'stream',
       );
-  /* #6190
-  source: 
-  stream?: boolean; */
-  // Type InteropStaticType.boolean
   set stream(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -3473,33 +3071,25 @@ FieldExternal:
 external _i2.Object _declaredTextDecoder;
 
 extension TextDecoder$Typings on TextDecoder {
-  /* #6196
-  source: 
-  /** Returns encoding's name, lowercased. */
-  readonly encoding: string; */
   /// Returns encoding's name, lowercased.
   _i2.String get encoding => _i4.getProperty(
         this,
         'encoding',
       );
-  /* #6198
-  source: 
-  /** Returns `true` if error mode is "fatal", and `false` otherwise. */
-  readonly fatal: boolean; */
+
   /// Returns `true` if error mode is "fatal", and `false` otherwise.
   _i2.bool get fatal => _i4.getProperty(
         this,
         'fatal',
       );
-  /* #6200
-  source: 
-  /** Returns `true` if ignore BOM flag is set, and `false` otherwise. */
-  readonly ignoreBOM: boolean; */
+
   /// Returns `true` if ignore BOM flag is set, and `false` otherwise.
   _i2.bool get ignoreBOM => _i4.getProperty(
         this,
         'ignoreBOM',
       );
+
+  /// Returns the result of running encoding's decoder.
   _i2.String decode([
     _i3.BufferSource? input,
     _i3.TextDecodeOptions? options,
@@ -3538,17 +3128,10 @@ class TextEncoderEncodeIntoResult {
 }
 
 extension TextEncoderEncodeIntoResult$Typings on TextEncoderEncodeIntoResult {
-  /* #6214
-  source: 
-  read: number; */
   _i2.num get read => _i4.getProperty(
         this,
         'read',
       );
-  /* #6214
-  source: 
-  read: number; */
-  // Type InteropStaticType.number
   set read(_i2.num value) {
     _i4.setProperty(
       this,
@@ -3557,17 +3140,10 @@ extension TextEncoderEncodeIntoResult$Typings on TextEncoderEncodeIntoResult {
     );
   }
 
-  /* #6215
-  source: 
-  written: number; */
   _i2.num get written => _i4.getProperty(
         this,
         'written',
       );
-  /* #6215
-  source: 
-  written: number; */
-  // Type InteropStaticType.number
   set written(_i2.num value) {
     _i4.setProperty(
       this,
@@ -3593,15 +3169,13 @@ FieldExternal:
 external _i2.Object _declaredTextEncoder;
 
 extension TextEncoder$Typings on TextEncoder {
-  /* #6221
-  source: 
-  /** Returns "utf-8". */
-  readonly encoding: "utf-8"; */
   /// Returns "utf-8".
   _i2.String get encoding => _i4.getProperty(
         this,
         'encoding',
       );
+
+  /// Returns the result of running UTF-8's encoder.
   _i9.Uint8List encode([_i2.String? input]) => _i4.callMethod(
         this,
         'encode',
@@ -3648,43 +3222,27 @@ FieldExternal:
 external _i2.Object _declaredTextDecoderStream;
 
 extension TextDecoderStream$Typings on TextDecoderStream {
-  /* #6236
-  source: 
-  /** Returns encoding's name, lowercased. */
-  readonly encoding: string; */
   /// Returns encoding's name, lowercased.
   _i2.String get encoding => _i4.getProperty(
         this,
         'encoding',
       );
-  /* #6238
-  source: 
-  /** Returns `true` if error mode is "fatal", and `false` otherwise. */
-  readonly fatal: boolean; */
+
   /// Returns `true` if error mode is "fatal", and `false` otherwise.
   _i2.bool get fatal => _i4.getProperty(
         this,
         'fatal',
       );
-  /* #6240
-  source: 
-  /** Returns `true` if ignore BOM flag is set, and `false` otherwise. */
-  readonly ignoreBOM: boolean; */
+
   /// Returns `true` if ignore BOM flag is set, and `false` otherwise.
   _i2.bool get ignoreBOM => _i4.getProperty(
         this,
         'ignoreBOM',
       );
-  /* #6241
-  source: 
-  readonly readable: ReadableStream<string>; */
   _i3.ReadableStream<_i2.String> get readable => _i4.getProperty(
         this,
         'readable',
       );
-  /* #6242
-  source: 
-  readonly writable: WritableStream<BufferSource>; */
   _i3.WritableStream<_i3.BufferSource> get writable => _i4.getProperty(
         this,
         'writable',
@@ -3711,25 +3269,15 @@ FieldExternal:
 external _i2.Object _declaredTextEncoderStream;
 
 extension TextEncoderStream$Typings on TextEncoderStream {
-  /* #6255
-  source: 
-  /** Returns "utf-8". */
-  readonly encoding: "utf-8"; */
   /// Returns "utf-8".
   _i2.String get encoding => _i4.getProperty(
         this,
         'encoding',
       );
-  /* #6256
-  source: 
-  readonly readable: ReadableStream<Uint8Array>; */
   _i3.ReadableStream<_i9.Uint8List> get readable => _i4.getProperty(
         this,
         'readable',
       );
-  /* #6257
-  source: 
-  readonly writable: WritableStream<string>; */
   _i3.WritableStream<_i2.String> get writable => _i4.getProperty(
         this,
         'writable',
@@ -3740,20 +3288,21 @@ extension TextEncoderStream$Typings on TextEncoderStream {
 @_i1.staticInterop
 class IInline18 {}
 
+/// A controller object that allows you to abort one or more DOM requests as and
+/// when desired.
 @_i1.JS()
 @_i1.staticInterop
 class AbortController {}
 
 extension AbortController$Typings on AbortController {
-  /* #6274
-  source: 
-  /** Returns the AbortSignal object associated with this object. */
-  readonly signal: AbortSignal; */
   /// Returns the AbortSignal object associated with this object.
   _i3.AbortSignal get signal => _i4.getProperty(
         this,
         'signal',
       );
+
+  /// Invoking this method will set this object's AbortSignal's aborted flag and
+  ///  signal to any observers that the associated activity is to be aborted.
   void abort([_i2.dynamic reason]) {
     _i4.callMethod(
       this,
@@ -3773,7 +3322,6 @@ class AbortSignalEventMap {
       AbortSignalEventMap._(abort: abort);
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum AbortSignalEventMapKeys {
   abort(r'abort');
 
@@ -3783,17 +3331,10 @@ enum AbortSignalEventMapKeys {
 }
 
 extension AbortSignalEventMap$Typings on AbortSignalEventMap {
-  /* #6282
-  source: 
-  abort: Event; */
   _i3.Event get abort => _i4.getProperty(
         this,
         'abort',
       );
-  /* #6282
-  source: 
-  abort: Event; */
-  // Type Instance of 'InteropInterface'
   set abort(_i3.Event value) {
     _i4.setProperty(
       this,
@@ -3803,6 +3344,8 @@ extension AbortSignalEventMap$Typings on AbortSignalEventMap {
   }
 }
 
+/// A signal object that allows you to communicate with a DOM request (such as a
+/// Fetch) and abort it if required via an AbortController object.
 @_i1.JS()
 @_i1.staticInterop
 class AbortSignal implements _i3.EventTarget {
@@ -3830,35 +3373,20 @@ FieldExternal:
 external _i2.Object _declaredAbortSignal;
 
 extension AbortSignal$Typings on AbortSignal {
-  /* #6293
-  source: 
-  /** Returns true if this AbortSignal's AbortController has signaled to abort,
-   * and false otherwise. */
-  readonly aborted: boolean; */
   /// Returns true if this AbortSignal's AbortController has signaled to abort,
   /// and false otherwise.
   _i2.bool get aborted => _i4.getProperty(
         this,
         'aborted',
       );
-  /* #6294
-  source: 
-  readonly reason: any; */
   _i2.dynamic get reason => _i4.getProperty(
         this,
         'reason',
       );
-  /* #6295
-  source: 
-  onabort: ((this: AbortSignal, ev: Event) => any) | null; */
   _i2.dynamic Function(_i3.Event)? get onabort => _i4.getProperty(
         this,
         'onabort',
       );
-  /* #6295
-  source: 
-  onabort: ((this: AbortSignal, ev: Event) => any) | null; */
-  // Type InteropUnion#611594821(parent: InteropGetter#194178883(name: onabort))
   set onabort(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -3867,6 +3395,29 @@ extension AbortSignal$Typings on AbortSignal {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K extends AbortSignalEventMapKeys>(
     K type,
     _i2.dynamic Function(_i2.dynamic) listener, [
@@ -3883,6 +3434,29 @@ extension AbortSignal$Typings on AbortSignal {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -3899,13 +3473,60 @@ extension AbortSignal$Typings on AbortSignal {
     );
   }
 
-  // HEYA addEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function<K extends AbortSignalEventMapKeys>(
       K type,
       _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -3915,6 +3536,9 @@ extension AbortSignal$Typings on AbortSignal {
         $1: _addEventListener$1,
         $2: _addEventListener$2,
       );
+
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$1<K extends AbortSignalEventMapKeys>(
     K type,
     _i2.dynamic Function(_i2.dynamic) listener, [
@@ -3931,6 +3555,8 @@ extension AbortSignal$Typings on AbortSignal {
     );
   }
 
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -3947,13 +3573,18 @@ extension AbortSignal$Typings on AbortSignal {
     );
   }
 
-  // HEYA removeEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function<K extends AbortSignalEventMapKeys>(
       K type,
       _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -3963,6 +3594,9 @@ extension AbortSignal$Typings on AbortSignal {
         $1: _removeEventListener$1,
         $2: _removeEventListener$2,
       );
+
+  /// Throws this AbortSignal's abort reason, if its AbortController has
+  ///  signaled to abort; otherwise, does nothing.
   void throwIfAborted() {
     _i4.callMethod(
       this,
@@ -4002,6 +3636,9 @@ enum FileReaderEventMap<T$ extends _i3.Event> {
   final _i2.String value;
 }
 
+/// Lets web applications asynchronously read the contents of files (or raw data
+/// buffers) stored on the user's computer, using File or Blob objects to specify
+/// the file or data to read.
 @_i1.JS()
 @_i1.staticInterop
 class FileReader implements _i3.EventTarget {
@@ -4010,23 +3647,14 @@ class FileReader implements _i3.EventTarget {
         [],
       );
 
-  /* #6392
-  source: 
-  readonly DONE: number; */
   static _i2.num get done => _i4.getProperty(
         _i7.target1265,
         'DONE',
       );
-  /* #6393
-  source: 
-  readonly EMPTY: number; */
   static _i2.num get empty => _i4.getProperty(
         _i7.target1265,
         'EMPTY',
       );
-  /* #6394
-  source: 
-  readonly LOADING: number; */
   static _i2.num get loading => _i4.getProperty(
         _i7.target1265,
         'LOADING',
@@ -4040,25 +3668,15 @@ FieldExternal:
 external _i2.Object _declaredFileReader;
 
 extension FileReader$Typings on FileReader {
-  /* #6347
-  source: 
-  readonly error: DOMException | null; */
   _i3.DOMException? get error => _i4.getProperty(
         this,
         'error',
       );
-  /* #6348
-  source: 
-  onabort: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
   _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onabort =>
       _i4.getProperty(
         this,
         'onabort',
       );
-  /* #6348
-  source: 
-  onabort: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#855978401(parent: InteropGetter#21516362(name: onabort))
   set onabort(_i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
@@ -4067,18 +3685,11 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  /* #6349
-  source: 
-  onerror: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
   _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onerror =>
       _i4.getProperty(
         this,
         'onerror',
       );
-  /* #6349
-  source: 
-  onerror: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#864058868(parent: InteropGetter#843429207(name: onerror))
   set onerror(_i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
@@ -4087,18 +3698,11 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  /* #6350
-  source: 
-  onload: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
   _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onload =>
       _i4.getProperty(
         this,
         'onload',
       );
-  /* #6350
-  source: 
-  onload: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#654260466(parent: InteropGetter#377900094(name: onload))
   set onload(_i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
@@ -4107,18 +3711,11 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  /* #6351
-  source: 
-  onloadend: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
   _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onloadend =>
       _i4.getProperty(
         this,
         'onloadend',
       );
-  /* #6351
-  source: 
-  onloadend: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#9492813(parent: InteropGetter#220667468(name: onloadend))
   set onloadend(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
@@ -4128,22 +3725,11 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  /* #6352
-  source: 
-  onloadstart:
-    | ((this: FileReader, ev: ProgressEvent<FileReader>) => any)
-    | null; */
   _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onloadstart =>
       _i4.getProperty(
         this,
         'onloadstart',
       );
-  /* #6352
-  source: 
-  onloadstart:
-    | ((this: FileReader, ev: ProgressEvent<FileReader>) => any)
-    | null; */
-  // Type InteropUnion#769915188(parent: InteropGetter#428520666(name: onloadstart))
   set onloadstart(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
@@ -4153,18 +3739,11 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  /* #6355
-  source: 
-  onprogress: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
   _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onprogress =>
       _i4.getProperty(
         this,
         'onprogress',
       );
-  /* #6355
-  source: 
-  onprogress: ((this: FileReader, ev: ProgressEvent<FileReader>) => any) | null; */
-  // Type InteropUnion#77206440(parent: InteropGetter#956375282(name: onprogress))
   set onprogress(
       _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
@@ -4174,37 +3753,22 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  /* #6356
-  source: 
-  readonly readyState: number; */
   _i2.num get readyState => _i4.getProperty(
         this,
         'readyState',
       );
-  /* #6357
-  source: 
-  readonly result: string | ArrayBuffer | null; */
   _i2.dynamic get result => _i4.getProperty(
         this,
         'result',
       );
-  /* #6363
-  source: 
-  readonly DONE: number; */
   _i2.num get done => _i4.getProperty(
         this,
         'DONE',
       );
-  /* #6364
-  source: 
-  readonly EMPTY: number; */
   _i2.num get empty => _i4.getProperty(
         this,
         'EMPTY',
       );
-  /* #6365
-  source: 
-  readonly LOADING: number; */
   _i2.num get loading => _i4.getProperty(
         this,
         'LOADING',
@@ -4255,6 +3819,29 @@ extension FileReader$Typings on FileReader {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$ extends _i3.Event>(
     FileReaderEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
@@ -4271,6 +3858,29 @@ extension FileReader$Typings on FileReader {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -4287,13 +3897,60 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  // HEYA addEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function<K$ extends _i3.Event>(
       FileReaderEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -4303,6 +3960,9 @@ extension FileReader$Typings on FileReader {
         $1: _addEventListener$1,
         $2: _addEventListener$2,
       );
+
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$1<K$ extends _i3.Event>(
     FileReaderEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
@@ -4319,6 +3979,8 @@ extension FileReader$Typings on FileReader {
     );
   }
 
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -4335,13 +3997,18 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  // HEYA removeEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function<K$ extends _i3.Event>(
       FileReaderEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -4356,23 +4023,14 @@ extension FileReader$Typings on FileReader {
 @_i1.JS()
 @_i1.staticInterop
 class IInline20 {
-  /* #6392
-  source: 
-  readonly DONE: number; */
   static _i2.num get done => _i4.getProperty(
         _i7.target1265,
         'DONE',
       );
-  /* #6393
-  source: 
-  readonly EMPTY: number; */
   static _i2.num get empty => _i4.getProperty(
         _i7.target1265,
         'EMPTY',
       );
-  /* #6394
-  source: 
-  readonly LOADING: number; */
   static _i2.num get loading => _i4.getProperty(
         _i7.target1265,
         'LOADING',
@@ -4399,17 +4057,10 @@ class BlobPropertyBag {
 }
 
 extension BlobPropertyBag$Typings on BlobPropertyBag {
-  /* #6402
-  source: 
-  type?: string; */
   _i2.String? get type => _i4.getProperty(
         this,
         'type',
       );
-  /* #6402
-  source: 
-  type?: string; */
-  // Type InteropStaticType.string
   set type(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -4418,9 +4069,6 @@ extension BlobPropertyBag$Typings on BlobPropertyBag {
     );
   }
 
-  /* #6403
-  source: 
-  endings?: "transparent" | "native"; */
   Endings? get endings => switch (_i4.getProperty(
         this,
         'endings',
@@ -4428,10 +4076,6 @@ extension BlobPropertyBag$Typings on BlobPropertyBag {
         _i2.String name => Endings.values.byName(name),
         _ => null
       };
-  /* #6403
-  source: 
-  endings?: "transparent" | "native"; */
-  // Type InteropUnion#857973421(parent: InteropGetter#257688758(name: endings))
   set endings(Endings? value) {
     _i4.setProperty(
       this,
@@ -4441,11 +4085,15 @@ extension BlobPropertyBag$Typings on BlobPropertyBag {
   }
 }
 
+/// A file-like object of immutable, raw data. Blobs represent data that isn't
+/// necessarily in a JavaScript-native format. The File interface is based on
+/// Blob, inheriting blob functionality and expanding it to support files on the
+/// user's system.
 @_i1.JS()
 @_i1.staticInterop
 class Blob {
   factory Blob([
-    _i2.List /*LIST InteropStaticType.list,474893648,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1032139415,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.BlobPart>?
         blobParts,
     _i3.BlobPropertyBag? options,
@@ -4466,17 +4114,10 @@ FieldExternal:
 external _i2.Object _declaredBlob;
 
 extension Blob$Typings on Blob {
-  /* #6416
-  source: 
-
-  readonly size: number; */
   _i2.num get size => _i4.getProperty(
         this,
         'size',
       );
-  /* #6417
-  source: 
-  readonly type: string; */
   _i2.String get type => _i4.getProperty(
         this,
         'type',
@@ -4536,17 +4177,10 @@ class FilePropertyBag implements _i3.BlobPropertyBag {
 }
 
 extension FilePropertyBag$Typings on FilePropertyBag {
-  /* #6426
-  source: 
-  lastModified?: number; */
   _i2.num? get lastModified => _i4.getProperty(
         this,
         'lastModified',
       );
-  /* #6426
-  source: 
-  lastModified?: number; */
-  // Type InteropStaticType.number
   set lastModified(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -4556,11 +4190,13 @@ extension FilePropertyBag$Typings on FilePropertyBag {
   }
 }
 
+/// Provides information about files and allows JavaScript in a web page to
+/// access their content.
 @_i1.JS()
 @_i1.staticInterop
 class File implements _i3.Blob {
   factory File(
-    _i2.List /*LIST InteropStaticType.list,697134532,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,307941888,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.BlobPart>
         fileBits,
     _i2.String fileName, [
@@ -4583,17 +4219,10 @@ FieldExternal:
 external _i2.Object _declaredFile;
 
 extension File$Typings on File {
-  /* #6441
-  source: 
-
-  readonly lastModified: number; */
   _i2.num get lastModified => _i4.getProperty(
         this,
         'lastModified',
       );
-  /* #6442
-  source: 
-  readonly name: string; */
   _i2.String get name => _i4.getProperty(
         this,
         'name',
@@ -4621,17 +4250,10 @@ class ReadableStreamDefaultReadDoneResult {
 
 extension ReadableStreamDefaultReadDoneResult$Typings
     on ReadableStreamDefaultReadDoneResult {
-  /* #6447
-  source: 
-  done: true; */
   _i2.bool get done => _i4.getProperty(
         this,
         'done',
       );
-  /* #6447
-  source: 
-  done: true; */
-  // Type InteropStaticType.boolean
   set done(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -4640,17 +4262,10 @@ extension ReadableStreamDefaultReadDoneResult$Typings
     );
   }
 
-  /* #6448
-  source: 
-  value?: undefined; */
   _i2.dynamic get value => _i4.getProperty(
         this,
         'value',
       );
-  /* #6448
-  source: 
-  value?: undefined; */
-  // Type InteropStaticType.undefined
   set value(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -4681,17 +4296,10 @@ class ReadableStreamDefaultReadValueResult<T> {
 
 extension ReadableStreamDefaultReadValueResult$Typings<T>
     on ReadableStreamDefaultReadValueResult<T> {
-  /* #6453
-  source: 
-  done: false; */
   _i2.bool get done => _i4.getProperty(
         this,
         'done',
       );
-  /* #6453
-  source: 
-  done: false; */
-  // Type InteropStaticType.boolean
   set done(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -4700,17 +4308,10 @@ extension ReadableStreamDefaultReadValueResult$Typings<T>
     );
   }
 
-  /* #6454
-  source: 
-  value: T; */
   T get value => _i4.getProperty(
         this,
         'value',
       );
-  /* #6454
-  source: 
-  value: T; */
-  // Type InteropLocalType(T)
   set value(T value) {
     _i4.setProperty(
       this,
@@ -4738,9 +4339,6 @@ external _i2.Object _declaredReadableStreamDefaultReader;
 
 extension ReadableStreamDefaultReader$Typings<R>
     on ReadableStreamDefaultReader<R> {
-  /* #6464
-  source: 
-  readonly closed: Promise<void>; */
   _i2.Future<void> get closed => _i4.promiseToFuture(_i4.getProperty(
         this,
         'closed',
@@ -4791,17 +4389,10 @@ class ReadableStreamBYOBReadDoneResult<V extends _i5.ArrayBufferView> {
 
 extension ReadableStreamBYOBReadDoneResult$Typings<
     V extends _i5.ArrayBufferView> on ReadableStreamBYOBReadDoneResult<V> {
-  /* #6478
-  source: 
-  done: true; */
   _i2.bool get done => _i4.getProperty(
         this,
         'done',
       );
-  /* #6478
-  source: 
-  done: true; */
-  // Type InteropStaticType.boolean
   set done(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -4810,17 +4401,10 @@ extension ReadableStreamBYOBReadDoneResult$Typings<
     );
   }
 
-  /* #6479
-  source: 
-  value?: V; */
   V? get value => _i4.getProperty(
         this,
         'value',
       );
-  /* #6479
-  source: 
-  value?: V; */
-  // Type InteropLocalType(V)
   set value(V? value) {
     _i4.setProperty(
       this,
@@ -4851,17 +4435,10 @@ class ReadableStreamBYOBReadValueResult<V extends _i5.ArrayBufferView> {
 
 extension ReadableStreamBYOBReadValueResult$Typings<
     V extends _i5.ArrayBufferView> on ReadableStreamBYOBReadValueResult<V> {
-  /* #6484
-  source: 
-  done: false; */
   _i2.bool get done => _i4.getProperty(
         this,
         'done',
       );
-  /* #6484
-  source: 
-  done: false; */
-  // Type InteropStaticType.boolean
   set done(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -4870,17 +4447,10 @@ extension ReadableStreamBYOBReadValueResult$Typings<
     );
   }
 
-  /* #6485
-  source: 
-  value: V; */
   V get value => _i4.getProperty(
         this,
         'value',
       );
-  /* #6485
-  source: 
-  value: V; */
-  // Type InteropLocalType(V)
   set value(V value) {
     _i4.setProperty(
       this,
@@ -4907,9 +4477,6 @@ FieldExternal:
 external _i2.Object _declaredReadableStreamBYOBReader;
 
 extension ReadableStreamBYOBReader$Typings on ReadableStreamBYOBReader {
-  /* #6495
-  source: 
-  readonly closed: Promise<void>; */
   _i2.Future<void> get closed => _i4.promiseToFuture(_i4.getProperty(
         this,
         'closed',
@@ -4945,9 +4512,6 @@ class IInline22 {}
 class ReadableStreamBYOBRequest {}
 
 extension ReadableStreamBYOBRequest$Typings on ReadableStreamBYOBRequest {
-  /* #6511
-  source: 
-  readonly view: ArrayBufferView | null; */
   _i5.ArrayBufferView? get view => _i4.getProperty(
         this,
         'view',
@@ -5018,17 +4582,10 @@ class UnderlyingByteSource {
 }
 
 extension UnderlyingByteSource$Typings on UnderlyingByteSource {
-  /* #6523
-  source: 
-  autoAllocateChunkSize?: number; */
   _i2.num? get autoAllocateChunkSize => _i4.getProperty(
         this,
         'autoAllocateChunkSize',
       );
-  /* #6523
-  source: 
-  autoAllocateChunkSize?: number; */
-  // Type InteropStaticType.number
   set autoAllocateChunkSize(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -5037,17 +4594,10 @@ extension UnderlyingByteSource$Typings on UnderlyingByteSource {
     );
   }
 
-  /* #6524
-  source: 
-  cancel?: ReadableStreamErrorCallback; */
   _i3.ReadableStreamErrorCallback? get cancel => _i4.getProperty(
         this,
         'cancel',
       );
-  /* #6524
-  source: 
-  cancel?: ReadableStreamErrorCallback; */
-  // Type Instance of 'InteropInterface'
   set cancel(_i3.ReadableStreamErrorCallback? value) {
     _i4.setProperty(
       this,
@@ -5056,17 +4606,10 @@ extension UnderlyingByteSource$Typings on UnderlyingByteSource {
     );
   }
 
-  /* #6525
-  source: 
-  pull?: ReadableByteStreamControllerCallback; */
   _i3.ReadableByteStreamControllerCallback? get pull => _i4.getProperty(
         this,
         'pull',
       );
-  /* #6525
-  source: 
-  pull?: ReadableByteStreamControllerCallback; */
-  // Type Instance of 'InteropInterface'
   set pull(_i3.ReadableByteStreamControllerCallback? value) {
     _i4.setProperty(
       this,
@@ -5075,17 +4618,10 @@ extension UnderlyingByteSource$Typings on UnderlyingByteSource {
     );
   }
 
-  /* #6526
-  source: 
-  start?: ReadableByteStreamControllerCallback; */
   _i3.ReadableByteStreamControllerCallback? get start => _i4.getProperty(
         this,
         'start',
       );
-  /* #6526
-  source: 
-  start?: ReadableByteStreamControllerCallback; */
-  // Type Instance of 'InteropInterface'
   set start(_i3.ReadableByteStreamControllerCallback? value) {
     _i4.setProperty(
       this,
@@ -5094,17 +4630,10 @@ extension UnderlyingByteSource$Typings on UnderlyingByteSource {
     );
   }
 
-  /* #6527
-  source: 
-  type: "bytes"; */
   _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  /* #6527
-  source: 
-  type: "bytes"; */
-  // Type Instance of 'InteropConstString'
   set type(_i2.String value) {
     _i4.setProperty(
       this,
@@ -5143,17 +4672,10 @@ class UnderlyingSink<W> {
 }
 
 extension UnderlyingSink$Typings<W> on UnderlyingSink<W> {
-  /* #6532
-  source: 
-  abort?: WritableStreamErrorCallback; */
   _i3.WritableStreamErrorCallback? get abort => _i4.getProperty(
         this,
         'abort',
       );
-  /* #6532
-  source: 
-  abort?: WritableStreamErrorCallback; */
-  // Type Instance of 'InteropInterface'
   set abort(_i3.WritableStreamErrorCallback? value) {
     _i4.setProperty(
       this,
@@ -5162,18 +4684,11 @@ extension UnderlyingSink$Typings<W> on UnderlyingSink<W> {
     );
   }
 
-  /* #6533
-  source: 
-  close?: WritableStreamDefaultControllerCloseCallback; */
   _i3.WritableStreamDefaultControllerCloseCallback? get close =>
       _i4.getProperty(
         this,
         'close',
       );
-  /* #6533
-  source: 
-  close?: WritableStreamDefaultControllerCloseCallback; */
-  // Type Instance of 'InteropInterface'
   set close(_i3.WritableStreamDefaultControllerCloseCallback? value) {
     _i4.setProperty(
       this,
@@ -5182,18 +4697,11 @@ extension UnderlyingSink$Typings<W> on UnderlyingSink<W> {
     );
   }
 
-  /* #6534
-  source: 
-  start?: WritableStreamDefaultControllerStartCallback; */
   _i3.WritableStreamDefaultControllerStartCallback? get start =>
       _i4.getProperty(
         this,
         'start',
       );
-  /* #6534
-  source: 
-  start?: WritableStreamDefaultControllerStartCallback; */
-  // Type Instance of 'InteropInterface'
   set start(_i3.WritableStreamDefaultControllerStartCallback? value) {
     _i4.setProperty(
       this,
@@ -5202,17 +4710,10 @@ extension UnderlyingSink$Typings<W> on UnderlyingSink<W> {
     );
   }
 
-  /* #6535
-  source: 
-  type?: undefined; */
   _i2.dynamic get type => _i4.getProperty(
         this,
         'type',
       );
-  /* #6535
-  source: 
-  type?: undefined; */
-  // Type InteropStaticType.undefined
   set type(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -5221,18 +4722,11 @@ extension UnderlyingSink$Typings<W> on UnderlyingSink<W> {
     );
   }
 
-  /* #6536
-  source: 
-  write?: WritableStreamDefaultControllerWriteCallback<W>; */
   _i3.WritableStreamDefaultControllerWriteCallback<W>? get write =>
       _i4.getProperty(
         this,
         'write',
       );
-  /* #6536
-  source: 
-  write?: WritableStreamDefaultControllerWriteCallback<W>; */
-  // Type Instance of 'InteropInterface'
   set write(_i3.WritableStreamDefaultControllerWriteCallback<W>? value) {
     _i4.setProperty(
       this,
@@ -5268,17 +4762,10 @@ class UnderlyingSource<R> {
 }
 
 extension UnderlyingSource$Typings<R> on UnderlyingSource<R> {
-  /* #6541
-  source: 
-  cancel?: ReadableStreamErrorCallback; */
   _i3.ReadableStreamErrorCallback? get cancel => _i4.getProperty(
         this,
         'cancel',
       );
-  /* #6541
-  source: 
-  cancel?: ReadableStreamErrorCallback; */
-  // Type Instance of 'InteropInterface'
   set cancel(_i3.ReadableStreamErrorCallback? value) {
     _i4.setProperty(
       this,
@@ -5287,17 +4774,10 @@ extension UnderlyingSource$Typings<R> on UnderlyingSource<R> {
     );
   }
 
-  /* #6542
-  source: 
-  pull?: ReadableStreamDefaultControllerCallback<R>; */
   _i3.ReadableStreamDefaultControllerCallback<R>? get pull => _i4.getProperty(
         this,
         'pull',
       );
-  /* #6542
-  source: 
-  pull?: ReadableStreamDefaultControllerCallback<R>; */
-  // Type Instance of 'InteropInterface'
   set pull(_i3.ReadableStreamDefaultControllerCallback<R>? value) {
     _i4.setProperty(
       this,
@@ -5306,17 +4786,10 @@ extension UnderlyingSource$Typings<R> on UnderlyingSource<R> {
     );
   }
 
-  /* #6543
-  source: 
-  start?: ReadableStreamDefaultControllerCallback<R>; */
   _i3.ReadableStreamDefaultControllerCallback<R>? get start => _i4.getProperty(
         this,
         'start',
       );
-  /* #6543
-  source: 
-  start?: ReadableStreamDefaultControllerCallback<R>; */
-  // Type Instance of 'InteropInterface'
   set start(_i3.ReadableStreamDefaultControllerCallback<R>? value) {
     _i4.setProperty(
       this,
@@ -5325,17 +4798,10 @@ extension UnderlyingSource$Typings<R> on UnderlyingSource<R> {
     );
   }
 
-  /* #6544
-  source: 
-  type?: undefined; */
   _i2.dynamic get type => _i4.getProperty(
         this,
         'type',
       );
-  /* #6544
-  source: 
-  type?: undefined; */
-  // Type InteropStaticType.undefined
   set type(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -5399,9 +4865,6 @@ external _i2.Object _declaredReadableStreamDefaultController;
 
 extension ReadableStreamDefaultController$Typings<R>
     on ReadableStreamDefaultController<R> {
-  /* #6559
-  source: 
-  readonly desiredSize: number | null; */
   _i2.num? get desiredSize => _i4.getProperty(
         this,
         'desiredSize',
@@ -5451,16 +4914,10 @@ FieldExternal:
 external _i2.Object _declaredReadableByteStreamController;
 
 extension ReadableByteStreamController$Typings on ReadableByteStreamController {
-  /* #6573
-  source: 
-  readonly byobRequest: ReadableStreamBYOBRequest | null; */
   _i3.ReadableStreamBYOBRequest? get byobRequest => _i4.getProperty(
         this,
         'byobRequest',
       );
-  /* #6574
-  source: 
-  readonly desiredSize: number | null; */
   _i2.num? get desiredSize => _i4.getProperty(
         this,
         'desiredSize',
@@ -5520,17 +4977,10 @@ class PipeOptions {
 }
 
 extension PipeOptions$Typings on PipeOptions {
-  /* #6588
-  source: 
-  preventAbort?: boolean; */
   _i2.bool? get preventAbort => _i4.getProperty(
         this,
         'preventAbort',
       );
-  /* #6588
-  source: 
-  preventAbort?: boolean; */
-  // Type InteropStaticType.boolean
   set preventAbort(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -5539,17 +4989,10 @@ extension PipeOptions$Typings on PipeOptions {
     );
   }
 
-  /* #6589
-  source: 
-  preventCancel?: boolean; */
   _i2.bool? get preventCancel => _i4.getProperty(
         this,
         'preventCancel',
       );
-  /* #6589
-  source: 
-  preventCancel?: boolean; */
-  // Type InteropStaticType.boolean
   set preventCancel(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -5558,17 +5001,10 @@ extension PipeOptions$Typings on PipeOptions {
     );
   }
 
-  /* #6590
-  source: 
-  preventClose?: boolean; */
   _i2.bool? get preventClose => _i4.getProperty(
         this,
         'preventClose',
       );
-  /* #6590
-  source: 
-  preventClose?: boolean; */
-  // Type InteropStaticType.boolean
   set preventClose(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -5577,17 +5013,10 @@ extension PipeOptions$Typings on PipeOptions {
     );
   }
 
-  /* #6591
-  source: 
-  signal?: AbortSignal; */
   _i3.AbortSignal? get signal => _i4.getProperty(
         this,
         'signal',
       );
-  /* #6591
-  source: 
-  signal?: AbortSignal; */
-  // Type Instance of 'InteropInterface'
   set signal(_i3.AbortSignal? value) {
     _i4.setProperty(
       this,
@@ -5635,17 +5064,10 @@ class QueuingStrategy<T> {
 }
 
 extension QueuingStrategy$Typings<T> on QueuingStrategy<T> {
-  /* #6601
-  source: 
-  highWaterMark?: number; */
   _i2.num? get highWaterMark => _i4.getProperty(
         this,
         'highWaterMark',
       );
-  /* #6601
-  source: 
-  highWaterMark?: number; */
-  // Type InteropStaticType.number
   set highWaterMark(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -5654,17 +5076,10 @@ extension QueuingStrategy$Typings<T> on QueuingStrategy<T> {
     );
   }
 
-  /* #6602
-  source: 
-  size?: QueuingStrategySizeCallback<T>; */
   _i3.QueuingStrategySizeCallback<T>? get size => _i4.getProperty(
         this,
         'size',
       );
-  /* #6602
-  source: 
-  size?: QueuingStrategySizeCallback<T>; */
-  // Type Instance of 'InteropInterface'
   set size(_i3.QueuingStrategySizeCallback<T>? value) {
     _i4.setProperty(
       this,
@@ -5674,6 +5089,8 @@ extension QueuingStrategy$Typings<T> on QueuingStrategy<T> {
   }
 }
 
+/// This Streams API interface provides a built-in byte length queuing strategy
+/// that can be used when constructing streams.
 @_i1.JS()
 @_i1.staticInterop
 class CountQueuingStrategy implements _i3.QueuingStrategy<_i2.dynamic> {
@@ -5690,17 +5107,10 @@ FieldExternal:
 external _i2.Object _declaredCountQueuingStrategy;
 
 extension CountQueuingStrategy$Typings on CountQueuingStrategy {
-  /* #6611
-  source: 
-  highWaterMark: number; */
   _i2.num get highWaterMark => _i4.getProperty(
         this,
         'highWaterMark',
       );
-  /* #6611
-  source: 
-  highWaterMark: number; */
-  // Type InteropStaticType.number
   set highWaterMark(_i2.num value) {
     _i4.setProperty(
       this,
@@ -5722,15 +5132,10 @@ extension CountQueuingStrategy$Typings on CountQueuingStrategy {
 class IInline26 {}
 
 extension IInline26$Typings on IInline26 {
-  /* #6618
-  source:  highWaterMark: number */
   _i2.num get highWaterMark => _i4.getProperty(
         this,
         'highWaterMark',
       );
-  /* #6618
-  source:  highWaterMark: number */
-  // Type InteropStaticType.number
   set highWaterMark(_i2.num value) {
     _i4.setProperty(
       this,
@@ -5762,17 +5167,10 @@ FieldExternal:
 external _i2.Object _declaredByteLengthQueuingStrategy;
 
 extension ByteLengthQueuingStrategy$Typings on ByteLengthQueuingStrategy {
-  /* #6623
-  source: 
-  highWaterMark: number; */
   _i2.num get highWaterMark => _i4.getProperty(
         this,
         'highWaterMark',
       );
-  /* #6623
-  source: 
-  highWaterMark: number; */
-  // Type InteropStaticType.number
   set highWaterMark(_i2.num value) {
     _i4.setProperty(
       this,
@@ -5794,15 +5192,10 @@ extension ByteLengthQueuingStrategy$Typings on ByteLengthQueuingStrategy {
 class IInline28 {}
 
 extension IInline28$Typings on IInline28 {
-  /* #6630
-  source:  highWaterMark: number */
   _i2.num get highWaterMark => _i4.getProperty(
         this,
         'highWaterMark',
       );
-  /* #6630
-  source:  highWaterMark: number */
-  // Type InteropStaticType.number
   set highWaterMark(_i2.num value) {
     _i4.setProperty(
       this,
@@ -5822,15 +5215,10 @@ class IInline27 {}
 class IInline29 {}
 
 extension IInline29$Typings on IInline29 {
-  /* #6642
-  source:  mode: "byob" */
   _i2.String get mode => _i4.getProperty(
         this,
         'mode',
       );
-  /* #6642
-  source:  mode: "byob" */
-  // Type Instance of 'InteropConstString'
   set mode(_i2.String value) {
     _i4.setProperty(
       this,
@@ -5846,15 +5234,10 @@ extension IInline29$Typings on IInline29 {
 class IInline30 {}
 
 extension IInline30$Typings on IInline30 {
-  /* #6643
-  source:  mode?: undefined */
   _i2.dynamic get mode => _i4.getProperty(
         this,
         'mode',
       );
-  /* #6643
-  source:  mode?: undefined */
-  // Type InteropStaticType.undefined
   set mode(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -5870,17 +5253,10 @@ extension IInline30$Typings on IInline30 {
 class IInline31<R, T> {}
 
 extension IInline31$Typings<R, T> on IInline31<R, T> {
-  /* #6645
-  source: 
-    writable: WritableStream<R>; */
   _i3.WritableStream<R> get writable => _i4.getProperty(
         this,
         'writable',
       );
-  /* #6645
-  source: 
-    writable: WritableStream<R>; */
-  // Type Instance of 'InteropInterface'
   set writable(_i3.WritableStream<R> value) {
     _i4.setProperty(
       this,
@@ -5889,17 +5265,10 @@ extension IInline31$Typings<R, T> on IInline31<R, T> {
     );
   }
 
-  /* #6646
-  source: 
-    readable: ReadableStream<T>; */
   _i3.ReadableStream<T> get readable => _i4.getProperty(
         this,
         'readable',
       );
-  /* #6646
-  source: 
-    readable: ReadableStream<T>; */
-  // Type Instance of 'InteropInterface'
   set readable(_i3.ReadableStream<T> value) {
     _i4.setProperty(
       this,
@@ -5915,17 +5284,10 @@ extension IInline31$Typings<R, T> on IInline31<R, T> {
 class IInline32 {}
 
 extension IInline32$Typings on IInline32 {
-  /* #6651
-  source: 
-    preventCancel?: boolean; */
   _i2.bool? get preventCancel => _i4.getProperty(
         this,
         'preventCancel',
       );
-  /* #6651
-  source: 
-    preventCancel?: boolean; */
-  // Type InteropStaticType.boolean
   set preventCancel(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -5935,6 +5297,9 @@ extension IInline32$Typings on IInline32 {
   }
 }
 
+/// This Streams API interface represents a readable stream of byte data. The
+/// Fetch API offers a concrete instance of a ReadableStream through the body
+/// property of a Response object.
 @_i1.JS()
 @_i1.staticInterop
 class ReadableStream<R> {
@@ -5975,9 +5340,6 @@ FieldExternal:
 external _i2.Object _declaredReadableStream;
 
 extension ReadableStream$Typings<R> on ReadableStream<R> {
-  /* #6640
-  source: 
-  readonly locked: boolean; */
   _i2.bool get locked => _i4.getProperty(
         this,
         'locked',
@@ -6000,7 +5362,8 @@ extension ReadableStream$Typings<R> on ReadableStream<R> {
         'getReader',
         [options ?? _i6.undefined],
       );
-  // HEYA getReader
+
+  /// Overload accessor: $1, $2
   ({
     _i3.ReadableStreamBYOBReader Function(_i3.IInline29 options) $1,
     _i3.ReadableStreamDefaultReader<R> Function([_i3.IInline30? options]) $2,
@@ -6048,15 +5411,10 @@ extension ReadableStream$Typings<R> on ReadableStream<R> {
 class IInline34 {}
 
 extension IInline34$Typings on IInline34 {
-  /* #6660
-  source:  highWaterMark?: number; */
   _i2.num? get highWaterMark => _i4.getProperty(
         this,
         'highWaterMark',
       );
-  /* #6660
-  source:  highWaterMark?: number; */
-  // Type InteropStaticType.number
   set highWaterMark(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -6065,15 +5423,10 @@ extension IInline34$Typings on IInline34 {
     );
   }
 
-  /* #6660
-  source:  size?: undefined */
   _i2.dynamic get size => _i4.getProperty(
         this,
         'size',
       );
-  /* #6660
-  source:  size?: undefined */
-  // Type InteropStaticType.undefined
   set size(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -6169,6 +5522,9 @@ extension WritableStreamErrorCallback$Typings on WritableStreamErrorCallback {
       );
 }
 
+/// This Streams API interface provides a standard abstraction for writing
+/// streaming data to a destination, known as a sink. This object comes with
+/// built-in backpressure and queuing.
 @_i1.JS()
 @_i1.staticInterop
 class WritableStream<W> {
@@ -6192,9 +5548,6 @@ FieldExternal:
 external _i2.Object _declaredWritableStream;
 
 extension WritableStream$Typings<W> on WritableStream<W> {
-  /* #6699
-  source: 
-  readonly locked: boolean; */
   _i2.bool get locked => _i4.getProperty(
         this,
         'locked',
@@ -6221,23 +5574,20 @@ extension WritableStream$Typings<W> on WritableStream<W> {
 @_i1.staticInterop
 class IInline35<W> {}
 
+/// This Streams API interface represents a controller allowing control of a
+/// WritableStream's state. When constructing a WritableStream, the underlying
+/// sink is given a corresponding WritableStreamDefaultController instance to
+/// manipulate.
 @_i1.JS()
 @_i1.staticInterop
 class WritableStreamDefaultController {}
 
 extension WritableStreamDefaultController$Typings
     on WritableStreamDefaultController {
-  /* #6722
-  source: 
-  signal: AbortSignal; */
   _i3.AbortSignal get signal => _i4.getProperty(
         this,
         'signal',
       );
-  /* #6722
-  source: 
-  signal: AbortSignal; */
-  // Type Instance of 'InteropInterface'
   set signal(_i3.AbortSignal value) {
     _i4.setProperty(
       this,
@@ -6255,6 +5605,10 @@ extension WritableStreamDefaultController$Typings
   }
 }
 
+/// This Streams API interface is the object returned by
+/// WritableStream.getWriter() and once created locks the < writer to the
+/// WritableStream ensuring that no other streams can write to the underlying
+/// sink.
 @_i1.JS()
 @_i1.staticInterop
 class WritableStreamDefaultWriter<W> {
@@ -6272,23 +5626,14 @@ external _i2.Object _declaredWritableStreamDefaultWriter;
 
 extension WritableStreamDefaultWriter$Typings<W>
     on WritableStreamDefaultWriter<W> {
-  /* #6737
-  source: 
-  readonly closed: Promise<void>; */
   _i2.Future<void> get closed => _i4.promiseToFuture(_i4.getProperty(
         this,
         'closed',
       ));
-  /* #6738
-  source: 
-  readonly desiredSize: number | null; */
   _i2.num? get desiredSize => _i4.getProperty(
         this,
         'desiredSize',
       );
-  /* #6739
-  source: 
-  readonly ready: Promise<void>; */
   _i2.Future<void> get ready => _i4.promiseToFuture(_i4.getProperty(
         this,
         'ready',
@@ -6348,16 +5693,10 @@ FieldExternal:
 external _i2.Object _declaredTransformStream;
 
 extension TransformStream$Typings<I, O> on TransformStream<I, O> {
-  /* #6754
-  source: 
-  readonly readable: ReadableStream<O>; */
   _i3.ReadableStream<O> get readable => _i4.getProperty(
         this,
         'readable',
       );
-  /* #6755
-  source: 
-  readonly writable: WritableStream<I>; */
   _i3.WritableStream<I> get writable => _i4.getProperty(
         this,
         'writable',
@@ -6374,9 +5713,6 @@ class TransformStreamDefaultController<O> {}
 
 extension TransformStreamDefaultController$Typings<O>
     on TransformStreamDefaultController<O> {
-  /* #6770
-  source: 
-  readonly desiredSize: number | null; */
   _i2.num? get desiredSize => _i4.getProperty(
         this,
         'desiredSize',
@@ -6435,17 +5771,10 @@ class Transformer<I, O> {
 }
 
 extension Transformer$Typings<I, O> on Transformer<I, O> {
-  /* #6781
-  source: 
-  flush?: TransformStreamDefaultControllerCallback<O>; */
   _i3.TransformStreamDefaultControllerCallback<O>? get flush => _i4.getProperty(
         this,
         'flush',
       );
-  /* #6781
-  source: 
-  flush?: TransformStreamDefaultControllerCallback<O>; */
-  // Type Instance of 'InteropInterface'
   set flush(_i3.TransformStreamDefaultControllerCallback<O>? value) {
     _i4.setProperty(
       this,
@@ -6454,17 +5783,10 @@ extension Transformer$Typings<I, O> on Transformer<I, O> {
     );
   }
 
-  /* #6782
-  source: 
-  readableType?: undefined; */
   _i2.dynamic get readableType => _i4.getProperty(
         this,
         'readableType',
       );
-  /* #6782
-  source: 
-  readableType?: undefined; */
-  // Type InteropStaticType.undefined
   set readableType(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -6473,17 +5795,10 @@ extension Transformer$Typings<I, O> on Transformer<I, O> {
     );
   }
 
-  /* #6783
-  source: 
-  start?: TransformStreamDefaultControllerCallback<O>; */
   _i3.TransformStreamDefaultControllerCallback<O>? get start => _i4.getProperty(
         this,
         'start',
       );
-  /* #6783
-  source: 
-  start?: TransformStreamDefaultControllerCallback<O>; */
-  // Type Instance of 'InteropInterface'
   set start(_i3.TransformStreamDefaultControllerCallback<O>? value) {
     _i4.setProperty(
       this,
@@ -6492,18 +5807,11 @@ extension Transformer$Typings<I, O> on Transformer<I, O> {
     );
   }
 
-  /* #6784
-  source: 
-  transform?: TransformStreamDefaultControllerTransformCallback<I, O>; */
   _i3.TransformStreamDefaultControllerTransformCallback<I, O>? get transform =>
       _i4.getProperty(
         this,
         'transform',
       );
-  /* #6784
-  source: 
-  transform?: TransformStreamDefaultControllerTransformCallback<I, O>; */
-  // Type Instance of 'InteropInterface'
   set transform(
       _i3.TransformStreamDefaultControllerTransformCallback<I, O>? value) {
     _i4.setProperty(
@@ -6513,17 +5821,10 @@ extension Transformer$Typings<I, O> on Transformer<I, O> {
     );
   }
 
-  /* #6785
-  source: 
-  writableType?: undefined; */
   _i2.dynamic get writableType => _i4.getProperty(
         this,
         'writableType',
       );
-  /* #6785
-  source: 
-  writableType?: undefined; */
-  // Type InteropStaticType.undefined
   set writableType(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -6611,17 +5912,10 @@ class MessageEventInit<T> implements _i3.EventInit {
 }
 
 extension MessageEventInit$Typings<T> on MessageEventInit<T> {
-  /* #6803
-  source: 
-  data?: T; */
   T? get data => _i4.getProperty(
         this,
         'data',
       );
-  /* #6803
-  source: 
-  data?: T; */
-  // Type InteropLocalType(T)
   set data(T? value) {
     _i4.setProperty(
       this,
@@ -6630,17 +5924,10 @@ extension MessageEventInit$Typings<T> on MessageEventInit<T> {
     );
   }
 
-  /* #6804
-  source: 
-  origin?: string; */
   _i2.String? get origin => _i4.getProperty(
         this,
         'origin',
       );
-  /* #6804
-  source: 
-  origin?: string; */
-  // Type InteropStaticType.string
   set origin(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -6649,17 +5936,10 @@ extension MessageEventInit$Typings<T> on MessageEventInit<T> {
     );
   }
 
-  /* #6805
-  source: 
-  lastEventId?: string; */
   _i2.String? get lastEventId => _i4.getProperty(
         this,
         'lastEventId',
       );
-  /* #6805
-  source: 
-  lastEventId?: string; */
-  // Type InteropStaticType.string
   set lastEventId(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -6692,34 +5972,18 @@ FieldExternal:
 external _i2.Object _declaredMessageEvent;
 
 extension MessageEvent$Typings<T> on MessageEvent<T> {
-  /* #6813
-  source: 
-  /**
-   * Returns the data of the message.
-   */
-  readonly data: T; */
   /// Returns the data of the message.
   T get data => _i4.getProperty(
         this,
         'data',
       );
-  /* #6817
-  source: 
-  /**
-   * Returns the last event ID string, for server-sent events.
-   */
-  readonly lastEventId: string; */
+
   /// Returns the last event ID string, for server-sent events.
   _i2.String get lastEventId => _i4.getProperty(
         this,
         'lastEventId',
       );
-  /* #6821
-  source: 
-  /**
-   * Returns transferred ports.
-   */
-  readonly ports: ReadonlyArray<MessagePort>; */
+
   /// Returns transferred ports.
   _i5.ReadonlyArray<_i3.MessagePort> get ports => _i4.getProperty(
         this,
@@ -6734,28 +5998,21 @@ class StructuredSerializeOptions {
   external factory StructuredSerializeOptions._({_i2.dynamic transfer});
 
   factory StructuredSerializeOptions(
-          {_i2.List /*LIST InteropStaticType.list,479833139,[Instance of 'InteropRef<InteropType>']*/ <
+          {_i2.List /*LIST InteropStaticType.list,918724438,[Instance of 'InteropRef<InteropType>']*/ <
                   _i3.Transferable>?
               transfer}) =>
       StructuredSerializeOptions._(transfer: transfer ?? _i6.undefined);
 }
 
 extension StructuredSerializeOptions$Typings on StructuredSerializeOptions {
-  /* #6839
-  source: 
-  transfer?: Transferable[]; */
-  _i2.List /*LIST InteropStaticType.list,479833139,[Instance of 'InteropRef<InteropType>']*/ <_i3.Transferable>?
+  _i2.List /*LIST InteropStaticType.list,918724438,[Instance of 'InteropRef<InteropType>']*/ <_i3.Transferable>?
       get transfer => (_i4.getProperty(
             this,
             'transfer',
           ) as _i2.List?)
               ?.cast();
-  /* #6839
-  source: 
-  transfer?: Transferable[]; */
-  // Type InteropStaticType.list
   set transfer(
-      _i2.List /*LIST InteropStaticType.list,479833139,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,918724438,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Transferable>?
           value) {
     _i4.setProperty(
@@ -6766,6 +6023,9 @@ extension StructuredSerializeOptions$Typings on StructuredSerializeOptions {
   }
 }
 
+/// The MessageChannel interface of the Channel Messaging API allows us to
+/// create a new message channel and send data through it via its two MessagePort
+/// properties.
 @_i1.JS()
 @_i1.staticInterop
 class MessageChannel {
@@ -6782,16 +6042,10 @@ FieldExternal:
 external _i2.Object _declaredMessageChannel;
 
 extension MessageChannel$Typings on MessageChannel {
-  /* #6850
-  source: 
-  readonly port1: MessagePort; */
   _i3.MessagePort get port1 => _i4.getProperty(
         this,
         'port1',
       );
-  /* #6851
-  source: 
-  readonly port2: MessagePort; */
   _i3.MessagePort get port2 => _i4.getProperty(
         this,
         'port2',
@@ -6807,23 +6061,19 @@ enum MessagePortEventMap<T$ extends _i3.Event> {
   final _i2.String value;
 }
 
+/// The MessagePort interface of the Channel Messaging API represents one of the
+/// two ports of a MessageChannel, allowing messages to be sent from one port and
+/// listening out for them arriving at the other.
 @_i1.JS()
 @_i1.staticInterop
 class MessagePort implements _i3.EventTarget {}
 
 extension MessagePort$Typings on MessagePort {
-  /* #6867
-  source: 
-  onmessage: ((this: MessagePort, ev: MessageEvent) => any) | null; */
   _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? get onmessage =>
       _i4.getProperty(
         this,
         'onmessage',
       );
-  /* #6867
-  source: 
-  onmessage: ((this: MessagePort, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#316777277(parent: InteropGetter#427539916(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -6832,18 +6082,11 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
-  /* #6868
-  source: 
-  onmessageerror: ((this: MessagePort, ev: MessageEvent) => any) | null; */
   _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? get onmessageerror =>
       _i4.getProperty(
         this,
         'onmessageerror',
       );
-  /* #6868
-  source: 
-  onmessageerror: ((this: MessagePort, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#479738203(parent: InteropGetter#379974536(name: onmessageerror))
   set onmessageerror(
       _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
@@ -6853,6 +6096,7 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
+  /// Disconnects the port, so that it is no longer active.
   void close() {
     _i4.callMethod(
       this,
@@ -6861,9 +6105,15 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
+  /// Posts a message through the channel. Objects listed in transfer are
+  ///  transferred, not just cloned, meaning that they are no longer usable on the
+  ///  sending side.
+  ///
+  ///  Throws a "DataCloneError" DOMException if transfer contains duplicate
+  ///  objects or port, or if message could not be cloned.
   void _postMessage$1(
     _i2.dynamic message,
-    _i2.List /*LIST InteropStaticType.list,808974533,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,779250404,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Transferable>
         transfer,
   ) {
@@ -6877,6 +6127,12 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
+  /// Posts a message through the channel. Objects listed in transfer are
+  /// transferred, not just cloned, meaning that they are no longer usable on the
+  /// sending side.
+  ///
+  /// Throws a "DataCloneError" DOMException if transfer contains duplicate
+  /// objects or port, or if message could not be cloned.
   void _postMessage$2(
     _i2.dynamic message, [
     _i3.StructuredSerializeOptions? options,
@@ -6891,14 +6147,27 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
-  // HEYA postMessage
+  /// Overload accessor: $1, $2
   ({
+    /// Posts a message through the channel. Objects listed in transfer are
+    ///  transferred, not just cloned, meaning that they are no longer usable on the
+    ///  sending side.
+    ///
+    ///  Throws a "DataCloneError" DOMException if transfer contains duplicate
+    ///  objects or port, or if message could not be cloned.
     void Function(
       _i2.dynamic message,
-      _i2.List /*LIST InteropStaticType.list,808974533,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,779250404,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Transferable>
           transfer,
     ) $1,
+
+    /// Posts a message through the channel. Objects listed in transfer are
+    /// transferred, not just cloned, meaning that they are no longer usable on the
+    /// sending side.
+    ///
+    /// Throws a "DataCloneError" DOMException if transfer contains duplicate
+    /// objects or port, or if message could not be cloned.
     void Function(
       _i2.dynamic message, [
       _i3.StructuredSerializeOptions? options,
@@ -6907,6 +6176,9 @@ extension MessagePort$Typings on MessagePort {
         $1: _postMessage$1,
         $2: _postMessage$2,
       );
+
+  /// Begins dispatching messages received on the port. This is implicitly called
+  ///  when assigning a value to `this.onmessage`.
   void start() {
     _i4.callMethod(
       this,
@@ -6915,6 +6187,29 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$ extends _i3.Event>(
     MessagePortEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
@@ -6931,6 +6226,29 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -6947,13 +6265,60 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
-  // HEYA addEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function<K$ extends _i3.Event>(
       MessagePortEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -6963,6 +6328,9 @@ extension MessagePort$Typings on MessagePort {
         $1: _addEventListener$1,
         $2: _addEventListener$2,
       );
+
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$1<K$ extends _i3.Event>(
     MessagePortEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
@@ -6979,6 +6347,8 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -6995,13 +6365,18 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
-  // HEYA removeEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function<K$ extends _i3.Event>(
       MessagePortEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -7013,6 +6388,7 @@ extension MessagePort$Typings on MessagePort {
       );
 }
 
+/// An API for compressing a stream of data.
 @_i1.JS()
 @_i1.staticInterop
 class CompressionStream {
@@ -7029,23 +6405,17 @@ FieldExternal:
 external _i2.Object _declaredCompressionStream;
 
 extension CompressionStream$Typings on CompressionStream {
-  /* #6964
-  source: 
-
-  readonly readable: ReadableStream<Uint8Array>; */
   _i3.ReadableStream<_i9.Uint8List> get readable => _i4.getProperty(
         this,
         'readable',
       );
-  /* #6965
-  source: 
-  readonly writable: WritableStream<Uint8Array>; */
   _i3.WritableStream<_i9.Uint8List> get writable => _i4.getProperty(
         this,
         'writable',
       );
 }
 
+/// An API for decompressing a stream of data.
 @_i1.JS()
 @_i1.staticInterop
 class DecompressionStream {
@@ -7062,17 +6432,10 @@ FieldExternal:
 external _i2.Object _declaredDecompressionStream;
 
 extension DecompressionStream$Typings on DecompressionStream {
-  /* #6993
-  source: 
-
-  readonly readable: ReadableStream<Uint8Array>; */
   _i3.ReadableStream<_i9.Uint8List> get readable => _i4.getProperty(
         this,
         'readable',
       );
-  /* #6994
-  source: 
-  readonly writable: WritableStream<Uint8Array>; */
   _i3.WritableStream<_i9.Uint8List> get writable => _i4.getProperty(
         this,
         'writable',
@@ -7129,6 +6492,10 @@ extension DomIterable$Typings<K, V> on DomIterable<K, V> {
   }
 }
 
+/// Provides a way to easily construct a set of key/value pairs representing
+/// form fields and their values, which can then be easily sent using the
+/// XMLHttpRequest.send() method. It uses the same format a form would use if the
+/// encoding type were set to "multipart/form-data".
 @_i1.JS()
 @_i1.staticInterop
 class FormData
@@ -7181,7 +6548,7 @@ extension FormData$Typings on FormData {
         'get',
         [name],
       );
-  _i2.List /*LIST InteropStaticType.list,257112287,[Instance of 'InteropRef<InteropType>']*/ <_i3.FormDataEntryValue>
+  _i2.List /*LIST InteropStaticType.list,339686982,[Instance of 'InteropRef<InteropType>']*/ <_i3.FormDataEntryValue>
       getAll(_i2.String name) => (_i4.callMethod(
             this,
             'getAll',
@@ -7256,48 +6623,54 @@ class IInline38 {}
 class Body {}
 
 extension Body$Typings on Body {
-  /* #7073
-  source: 
-  /** A simple getter used to expose a `ReadableStream` of the body contents. */
-  readonly body: ReadableStream<Uint8Array> | null; */
   /// A simple getter used to expose a `ReadableStream` of the body contents.
   _i3.ReadableStream<_i9.Uint8List>? get body => _i4.getProperty(
         this,
         'body',
       );
-  /* #7077
-  source: 
-  /** Stores a `Boolean` that declares whether the body has been used in a
-   * response yet.
-   */
-  readonly bodyUsed: boolean; */
+
   /// Stores a `Boolean` that declares whether the body has been used in a
   /// response yet.
   _i2.bool get bodyUsed => _i4.getProperty(
         this,
         'bodyUsed',
       );
+
+  /// Takes a `Response` stream and reads it to completion. It returns a promise
+  ///  that resolves with an `ArrayBuffer`.
   _i2.Future<_i9.ByteBuffer> arrayBuffer() =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'arrayBuffer',
         [],
       ));
+
+  /// Takes a `Response` stream and reads it to completion. It returns a promise
+  ///  that resolves with a `Blob`.
   _i2.Future<_i3.Blob> blob() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'blob',
         [],
       ));
+
+  /// Takes a `Response` stream and reads it to completion. It returns a promise
+  ///  that resolves with a `FormData` object.
   _i2.Future<_i3.FormData> formData() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'formData',
         [],
       ));
+
+  /// Takes a `Response` stream and reads it to completion. It returns a promise
+  ///  that resolves with the result of parsing the body text as JSON.
   _i2.Future<_i2.dynamic> json() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'json',
         [],
       ));
+
+  /// Takes a `Response` stream and reads it to completion. It returns a promise
+  ///  that resolves with a `USVString` (text).
   _i2.Future<_i2.String> text() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'text',
@@ -7305,6 +6678,13 @@ extension Body$Typings on Body {
       ));
 }
 
+/// This Fetch API interface allows you to perform various actions on HTTP
+/// request and response headers. These actions include retrieving, setting,
+/// adding to, and removing. A Headers object has an associated header list,
+/// which is initially empty and consists of zero or more name and value pairs.
+/// You can add to this using methods like append() (see Examples). In all
+/// methods of this interface, header names are matched by case-insensitive byte
+/// sequence.
 @_i1.JS()
 @_i1.staticInterop
 class Headers
@@ -7329,6 +6709,8 @@ FieldExternal:
 external _i2.Object _declaredHeaders;
 
 extension Headers$Typings on Headers {
+  /// Appends a new value onto an existing header inside a `Headers` object, or
+  ///  adds the header if it does not already exist.
   void append(
     _i2.String name,
     _i2.String value,
@@ -7343,6 +6725,7 @@ extension Headers$Typings on Headers {
     );
   }
 
+  /// Deletes a header from a `Headers` object.
   void delete(_i2.String name) {
     _i4.callMethod(
       this,
@@ -7351,6 +6734,9 @@ extension Headers$Typings on Headers {
     );
   }
 
+  /// Returns an iterator allowing to go through all key/value pairs
+  ///  contained in this Headers object. The both the key and value of each pairs
+  ///  are ByteString objects.
   _i8.IterableIterator<
       (
         _i2.String,
@@ -7360,21 +6746,33 @@ extension Headers$Typings on Headers {
         'entries',
         [],
       );
+
+  /// Returns a `ByteString` sequence of all the values of a header within a
+  ///  `Headers` object with a given name.
   _i2.String? get(_i2.String name) => _i4.callMethod(
         this,
         'get',
         [name],
       );
+
+  /// Returns a boolean stating whether a `Headers` object contains a certain
+  ///  header.
   _i2.bool has(_i2.String name) => _i4.callMethod(
         this,
         'has',
         [name],
       );
+
+  /// Returns an iterator allowing to go through all keys contained in
+  ///  this Headers object. The keys are ByteString objects.
   _i8.IterableIterator<_i2.String> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
+
+  /// Sets a new value for an existing header inside a Headers object, or adds
+  ///  the header if it does not already exist.
   void set(
     _i2.String name,
     _i2.String value,
@@ -7389,6 +6787,8 @@ extension Headers$Typings on Headers {
     );
   }
 
+  /// Returns an iterator allowing to go through all values contained in
+  ///  this Headers object. The values are ByteString objects.
   _i8.IterableIterator<_i2.String> values() => _i4.callMethod(
         this,
         'values',
@@ -7466,24 +6866,11 @@ class RequestInit {
 }
 
 extension RequestInit$Typings on RequestInit {
-  /* #7231
-  source: 
-  /**
-   * A BodyInit object or null to set request's body.
-   */
-  body?: BodyInit | null; */
   /// A BodyInit object or null to set request's body.
   _i3.BodyInit? get body => _i4.getProperty(
         this,
         'body',
       );
-  /* #7231
-  source: 
-  /**
-   * A BodyInit object or null to set request's body.
-   */
-  body?: BodyInit | null; */
-  // Type InteropUnion#180176508(parent: InteropGetter#143948339(name: body))
   set body(_i3.BodyInit? value) {
     _i4.setProperty(
       this,
@@ -7492,13 +6879,6 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7236
-  source: 
-  /**
-   * A string indicating how the request will interact with the browser's cache
-   * to set request's cache.
-   */
-  cache?: RequestCache; */
   /// A string indicating how the request will interact with the browser's cache
   ///  to set request's cache.
   _i3.RequestCache? get cache => switch (_i4.getProperty(
@@ -7508,14 +6888,6 @@ extension RequestInit$Typings on RequestInit {
         _i2.String name => RequestCacheOptions.values.byName(name),
         _ => null
       };
-  /* #7236
-  source: 
-  /**
-   * A string indicating how the request will interact with the browser's cache
-   * to set request's cache.
-   */
-  cache?: RequestCache; */
-  // Type InteropTypedef#14413163(name: RequestCache)
   set cache(_i3.RequestCache? value) {
     _i4.setProperty(
       this,
@@ -7524,14 +6896,6 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7242
-  source: 
-  /**
-   * A string indicating whether credentials will be sent with the request
-   * always, never, or only when sent to a same-origin URL. Sets request's
-   * credentials.
-   */
-  credentials?: RequestCredentials; */
   /// A string indicating whether credentials will be sent with the request
   ///  always, never, or only when sent to a same-origin URL. Sets request's
   ///  credentials.
@@ -7542,15 +6906,6 @@ extension RequestInit$Typings on RequestInit {
         _i2.String name => RequestCredentialsOptions.values.byName(name),
         _ => null
       };
-  /* #7242
-  source: 
-  /**
-   * A string indicating whether credentials will be sent with the request
-   * always, never, or only when sent to a same-origin URL. Sets request's
-   * credentials.
-   */
-  credentials?: RequestCredentials; */
-  // Type InteropTypedef#917205060(name: RequestCredentials)
   set credentials(_i3.RequestCredentials? value) {
     _i4.setProperty(
       this,
@@ -7559,27 +6914,12 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7247
-  source: 
-  /**
-   * A Headers object, an object literal, or an array of two-item arrays to set
-   * request's headers.
-   */
-  headers?: HeadersInit; */
   /// A Headers object, an object literal, or an array of two-item arrays to set
   ///  request's headers.
   _i3.HeadersInit? get headers => _i4.getProperty(
         this,
         'headers',
       );
-  /* #7247
-  source: 
-  /**
-   * A Headers object, an object literal, or an array of two-item arrays to set
-   * request's headers.
-   */
-  headers?: HeadersInit; */
-  // Type InteropTypedef#86461503(name: HeadersInit)
   set headers(_i3.HeadersInit? value) {
     _i4.setProperty(
       this,
@@ -7588,27 +6928,12 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7252
-  source: 
-  /**
-   * A cryptographic hash of the resource to be fetched by request. Sets
-   * request's integrity.
-   */
-  integrity?: string; */
   /// A cryptographic hash of the resource to be fetched by request. Sets
   ///  request's integrity.
   _i2.String? get integrity => _i4.getProperty(
         this,
         'integrity',
       );
-  /* #7252
-  source: 
-  /**
-   * A cryptographic hash of the resource to be fetched by request. Sets
-   * request's integrity.
-   */
-  integrity?: string; */
-  // Type InteropStaticType.string
   set integrity(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -7617,24 +6942,11 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7256
-  source: 
-  /**
-   * A boolean to set request's keepalive.
-   */
-  keepalive?: boolean; */
   /// A boolean to set request's keepalive.
   _i2.bool? get keepalive => _i4.getProperty(
         this,
         'keepalive',
       );
-  /* #7256
-  source: 
-  /**
-   * A boolean to set request's keepalive.
-   */
-  keepalive?: boolean; */
-  // Type InteropStaticType.boolean
   set keepalive(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -7643,24 +6955,11 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7260
-  source: 
-  /**
-   * A string to set request's method.
-   */
-  method?: string; */
   /// A string to set request's method.
   _i2.String? get method => _i4.getProperty(
         this,
         'method',
       );
-  /* #7260
-  source: 
-  /**
-   * A string to set request's method.
-   */
-  method?: string; */
-  // Type InteropStaticType.string
   set method(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -7669,13 +6968,6 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7265
-  source: 
-  /**
-   * A string to indicate whether the request will use CORS, or will be
-   * restricted to same-origin URLs. Sets request's mode.
-   */
-  mode?: RequestMode; */
   /// A string to indicate whether the request will use CORS, or will be
   ///  restricted to same-origin URLs. Sets request's mode.
   _i3.RequestMode? get mode => switch (_i4.getProperty(
@@ -7685,14 +6977,6 @@ extension RequestInit$Typings on RequestInit {
         _i2.String name => RequestModeOptions.values.byName(name),
         _ => null
       };
-  /* #7265
-  source: 
-  /**
-   * A string to indicate whether the request will use CORS, or will be
-   * restricted to same-origin URLs. Sets request's mode.
-   */
-  mode?: RequestMode; */
-  // Type InteropTypedef#356373987(name: RequestMode)
   set mode(_i3.RequestMode? value) {
     _i4.setProperty(
       this,
@@ -7701,14 +6985,6 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7271
-  source: 
-  /**
-   * A string indicating whether request follows redirects, results in an error
-   * upon encountering a redirect, or returns the redirect (in an opaque
-   * fashion). Sets request's redirect.
-   */
-  redirect?: RequestRedirect; */
   /// A string indicating whether request follows redirects, results in an error
   ///  upon encountering a redirect, or returns the redirect (in an opaque
   ///  fashion). Sets request's redirect.
@@ -7719,15 +6995,6 @@ extension RequestInit$Typings on RequestInit {
         _i2.String name => RequestRedirectOptions.values.byName(name),
         _ => null
       };
-  /* #7271
-  source: 
-  /**
-   * A string indicating whether request follows redirects, results in an error
-   * upon encountering a redirect, or returns the redirect (in an opaque
-   * fashion). Sets request's redirect.
-   */
-  redirect?: RequestRedirect; */
-  // Type InteropTypedef#601199025(name: RequestRedirect)
   set redirect(_i3.RequestRedirect? value) {
     _i4.setProperty(
       this,
@@ -7736,27 +7003,12 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7276
-  source: 
-  /**
-   * A string whose value is a same-origin URL, "about:client", or the empty
-   * string, to set request's referrer.
-   */
-  referrer?: string; */
   /// A string whose value is a same-origin URL, "about:client", or the empty
   ///  string, to set request's referrer.
   _i2.String? get referrer => _i4.getProperty(
         this,
         'referrer',
       );
-  /* #7276
-  source: 
-  /**
-   * A string whose value is a same-origin URL, "about:client", or the empty
-   * string, to set request's referrer.
-   */
-  referrer?: string; */
-  // Type InteropStaticType.string
   set referrer(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -7765,12 +7017,6 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7280
-  source: 
-  /**
-   * A referrer policy to set request's referrerPolicy.
-   */
-  referrerPolicy?: ReferrerPolicy; */
   /// A referrer policy to set request's referrerPolicy.
   _i3.ReferrerPolicy? get referrerPolicy => switch (_i4.getProperty(
         this,
@@ -7779,13 +7025,6 @@ extension RequestInit$Typings on RequestInit {
         _i2.String name => ReferrerPolicyOptions.values.byName(name),
         _ => null
       };
-  /* #7280
-  source: 
-  /**
-   * A referrer policy to set request's referrerPolicy.
-   */
-  referrerPolicy?: ReferrerPolicy; */
-  // Type InteropTypedef#898215429(name: ReferrerPolicy)
   set referrerPolicy(_i3.ReferrerPolicy? value) {
     _i4.setProperty(
       this,
@@ -7794,24 +7033,11 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7284
-  source: 
-  /**
-   * An AbortSignal to set request's signal.
-   */
-  signal?: AbortSignal | null; */
   /// An AbortSignal to set request's signal.
   _i3.AbortSignal? get signal => _i4.getProperty(
         this,
         'signal',
       );
-  /* #7284
-  source: 
-  /**
-   * An AbortSignal to set request's signal.
-   */
-  signal?: AbortSignal | null; */
-  // Type InteropUnion#1026269723(parent: InteropGetter#688001122(name: signal))
   set signal(_i3.AbortSignal? value) {
     _i4.setProperty(
       this,
@@ -7820,24 +7046,11 @@ extension RequestInit$Typings on RequestInit {
     );
   }
 
-  /* #7288
-  source: 
-  /**
-   * Can only be null. Used to disassociate request from any Window.
-   */
-  window?: any; */
   /// Can only be null. Used to disassociate request from any Window.
   _i2.dynamic get window => _i4.getProperty(
         this,
         'window',
       );
-  /* #7288
-  source: 
-  /**
-   * Can only be null. Used to disassociate request from any Window.
-   */
-  window?: any; */
-  // Type InteropStaticType.dyn
   set window(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -7847,6 +7060,7 @@ extension RequestInit$Typings on RequestInit {
   }
 }
 
+/// This Fetch API interface represents a resource request.
 @_i1.JS()
 @_i1.staticInterop
 class Request implements _i3.Body {
@@ -7870,15 +7084,6 @@ FieldExternal:
 external _i2.Object _declaredRequest;
 
 extension Request$Typings on Request {
-  /* #7303
-  source: 
-
-  /**
-   * Returns the cache mode associated with request, which is a string
-   * indicating how the request will interact with the browser's cache when
-   * fetching.
-   */
-  readonly cache: RequestCache; */
   /// Returns the cache mode associated with request, which is a string
   /// indicating how the request will interact with the browser's cache when
   /// fetching.
@@ -7887,14 +7092,7 @@ extension Request$Typings on Request {
         this,
         'cache',
       ));
-  /* #7309
-  source: 
-  /**
-   * Returns the credentials mode associated with request, which is a string
-   * indicating whether credentials will be sent with the request always, never,
-   * or only when sent to a same-origin URL.
-   */
-  readonly credentials: RequestCredentials; */
+
   /// Returns the credentials mode associated with request, which is a string
   /// indicating whether credentials will be sent with the request always, never,
   /// or only when sent to a same-origin URL.
@@ -7903,26 +7101,14 @@ extension Request$Typings on Request {
         this,
         'credentials',
       ));
-  /* #7313
-  source: 
-  /**
-   * Returns the kind of resource requested by request, e.g., "document" or "script".
-   */
-  readonly destination: RequestDestination; */
+
   /// Returns the kind of resource requested by request, e.g., "document" or "script".
   _i3.RequestDestination get destination =>
       RequestDestinationOptions.values.byName(_i4.getProperty(
         this,
         'destination',
       ));
-  /* #7319
-  source: 
-  /**
-   * Returns a Headers object consisting of the headers associated with request.
-   * Note that headers added in the network layer by the user agent will not be
-   * accounted for in this object, e.g., the "Host" header.
-   */
-  readonly headers: Headers; */
+
   /// Returns a Headers object consisting of the headers associated with request.
   /// Note that headers added in the network layer by the user agent will not be
   /// accounted for in this object, e.g., the "Host" header.
@@ -7930,14 +7116,7 @@ extension Request$Typings on Request {
         this,
         'headers',
       );
-  /* #7325
-  source: 
-  /**
-   * Returns request's subresource integrity metadata, which is a cryptographic
-   * hash of the resource being fetched. Its value consists of multiple hashes
-   * separated by whitespace. [SRI]
-   */
-  readonly integrity: string; */
+
   /// Returns request's subresource integrity metadata, which is a cryptographic
   /// hash of the resource being fetched. Its value consists of multiple hashes
   /// separated by whitespace. [SRI]
@@ -7945,64 +7124,34 @@ extension Request$Typings on Request {
         this,
         'integrity',
       );
-  /* #7330
-  source: 
-  /**
-   * Returns a boolean indicating whether or not request is for a history
-   * navigation (a.k.a. back-forward navigation).
-   */
-  readonly isHistoryNavigation: boolean; */
+
   /// Returns a boolean indicating whether or not request is for a history
   /// navigation (a.k.a. back-forward navigation).
   _i2.bool get isHistoryNavigation => _i4.getProperty(
         this,
         'isHistoryNavigation',
       );
-  /* #7335
-  source: 
-  /**
-   * Returns a boolean indicating whether or not request is for a reload
-   * navigation.
-   */
-  readonly isReloadNavigation: boolean; */
+
   /// Returns a boolean indicating whether or not request is for a reload
   /// navigation.
   _i2.bool get isReloadNavigation => _i4.getProperty(
         this,
         'isReloadNavigation',
       );
-  /* #7340
-  source: 
-  /**
-   * Returns a boolean indicating whether or not request can outlive the global
-   * in which it was created.
-   */
-  readonly keepalive: boolean; */
+
   /// Returns a boolean indicating whether or not request can outlive the global
   /// in which it was created.
   _i2.bool get keepalive => _i4.getProperty(
         this,
         'keepalive',
       );
-  /* #7344
-  source: 
-  /**
-   * Returns request's HTTP method, which is "GET" by default.
-   */
-  readonly method: string; */
+
   /// Returns request's HTTP method, which is "GET" by default.
   _i2.String get method => _i4.getProperty(
         this,
         'method',
       );
-  /* #7350
-  source: 
-  /**
-   * Returns the mode associated with request, which is a string indicating
-   * whether the request will use CORS, or will be restricted to same-origin
-   * URLs.
-   */
-  readonly mode: RequestMode; */
+
   /// Returns the mode associated with request, which is a string indicating
   /// whether the request will use CORS, or will be restricted to same-origin
   /// URLs.
@@ -8010,14 +7159,7 @@ extension Request$Typings on Request {
         this,
         'mode',
       ));
-  /* #7356
-  source: 
-  /**
-   * Returns the redirect mode associated with request, which is a string
-   * indicating how redirects for the request will be handled during fetching. A
-   * request will follow redirects by default.
-   */
-  readonly redirect: RequestRedirect; */
+
   /// Returns the redirect mode associated with request, which is a string
   /// indicating how redirects for the request will be handled during fetching. A
   /// request will follow redirects by default.
@@ -8026,16 +7168,7 @@ extension Request$Typings on Request {
         this,
         'redirect',
       ));
-  /* #7364
-  source: 
-  /**
-   * Returns the referrer of request. Its value can be a same-origin URL if
-   * explicitly set in init, the empty string to indicate no referrer, and
-   * "about:client" when defaulting to the global's default. This is used during
-   * fetching to determine the value of the `Referer` header of the request
-   * being made.
-   */
-  readonly referrer: string; */
+
   /// Returns the referrer of request. Its value can be a same-origin URL if
   /// explicitly set in init, the empty string to indicate no referrer, and
   /// "about:client" when defaulting to the global's default. This is used during
@@ -8045,13 +7178,7 @@ extension Request$Typings on Request {
         this,
         'referrer',
       );
-  /* #7369
-  source: 
-  /**
-   * Returns the referrer policy associated with request. This is used during
-   * fetching to compute the value of the request's referrer.
-   */
-  readonly referrerPolicy: ReferrerPolicy; */
+
   /// Returns the referrer policy associated with request. This is used during
   /// fetching to compute the value of the request's referrer.
   _i3.ReferrerPolicy get referrerPolicy =>
@@ -8059,14 +7186,7 @@ extension Request$Typings on Request {
         this,
         'referrerPolicy',
       ));
-  /* #7375
-  source: 
-  /**
-   * Returns the signal associated with request, which is an AbortSignal object
-   * indicating whether or not request has been aborted, and its abort event
-   * handler.
-   */
-  readonly signal: AbortSignal; */
+
   /// Returns the signal associated with request, which is an AbortSignal object
   /// indicating whether or not request has been aborted, and its abort event
   /// handler.
@@ -8074,33 +7194,19 @@ extension Request$Typings on Request {
         this,
         'signal',
       );
-  /* #7379
-  source: 
-  /**
-   * Returns the URL of request as a string.
-   */
-  readonly url: string; */
+
   /// Returns the URL of request as a string.
   _i2.String get url => _i4.getProperty(
         this,
         'url',
       );
-  /* #7383
-  source: 
 
-  /** A simple getter used to expose a `ReadableStream` of the body contents. */
-  readonly body: ReadableStream<Uint8Array> | null; */
   /// A simple getter used to expose a `ReadableStream` of the body contents.
   _i3.ReadableStream<_i9.Uint8List>? get body => _i4.getProperty(
         this,
         'body',
       );
-  /* #7387
-  source: 
-  /** Stores a `Boolean` that declares whether the body has been used in a
-   * request yet.
-   */
-  readonly bodyUsed: boolean; */
+
   /// Stores a `Boolean` that declares whether the body has been used in a
   /// request yet.
   _i2.bool get bodyUsed => _i4.getProperty(
@@ -8112,27 +7218,42 @@ extension Request$Typings on Request {
         'clone',
         [],
       );
+
+  /// Takes a `Request` stream and reads it to completion. It returns a promise
+  ///  that resolves with an `ArrayBuffer`.
   _i2.Future<_i9.ByteBuffer> arrayBuffer() =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'arrayBuffer',
         [],
       ));
+
+  /// Takes a `Request` stream and reads it to completion. It returns a promise
+  ///  that resolves with a `Blob`.
   _i2.Future<_i3.Blob> blob() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'blob',
         [],
       ));
+
+  /// Takes a `Request` stream and reads it to completion. It returns a promise
+  ///  that resolves with a `FormData` object.
   _i2.Future<_i3.FormData> formData() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'formData',
         [],
       ));
+
+  /// Takes a `Request` stream and reads it to completion. It returns a promise
+  ///  that resolves with the result of parsing the body text as JSON.
   _i2.Future<_i2.dynamic> json() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'json',
         [],
       ));
+
+  /// Takes a `Request` stream and reads it to completion. It returns a promise
+  ///  that resolves with a `USVString` (text).
   _i2.Future<_i2.String> text() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'text',
@@ -8163,17 +7284,10 @@ class ResponseInit {
 }
 
 extension ResponseInit$Typings on ResponseInit {
-  /* #7412
-  source: 
-  headers?: HeadersInit; */
   _i3.HeadersInit? get headers => _i4.getProperty(
         this,
         'headers',
       );
-  /* #7412
-  source: 
-  headers?: HeadersInit; */
-  // Type InteropTypedef#86461503(name: HeadersInit)
   set headers(_i3.HeadersInit? value) {
     _i4.setProperty(
       this,
@@ -8182,17 +7296,10 @@ extension ResponseInit$Typings on ResponseInit {
     );
   }
 
-  /* #7413
-  source: 
-  status?: number; */
   _i2.num? get status => _i4.getProperty(
         this,
         'status',
       );
-  /* #7413
-  source: 
-  status?: number; */
-  // Type InteropStaticType.number
   set status(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -8201,17 +7308,10 @@ extension ResponseInit$Typings on ResponseInit {
     );
   }
 
-  /* #7414
-  source: 
-  statusText?: string; */
   _i2.String? get statusText => _i4.getProperty(
         this,
         'statusText',
       );
-  /* #7414
-  source: 
-  statusText?: string; */
-  // Type InteropStaticType.string
   set statusText(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -8221,6 +7321,7 @@ extension ResponseInit$Typings on ResponseInit {
   }
 }
 
+/// This Fetch API interface represents the response to a request.
 @_i1.JS()
 @_i1.staticInterop
 class Response implements _i3.Body {
@@ -8274,73 +7375,42 @@ FieldExternal:
 external _i2.Object _declaredResponse;
 
 extension Response$Typings on Response {
-  /* #7436
-  source: 
-
-  readonly headers: Headers; */
   _i3.Headers get headers => _i4.getProperty(
         this,
         'headers',
       );
-  /* #7437
-  source: 
-  readonly ok: boolean; */
   _i2.bool get ok => _i4.getProperty(
         this,
         'ok',
       );
-  /* #7438
-  source: 
-  readonly redirected: boolean; */
   _i2.bool get redirected => _i4.getProperty(
         this,
         'redirected',
       );
-  /* #7439
-  source: 
-  readonly status: number; */
   _i2.num get status => _i4.getProperty(
         this,
         'status',
       );
-  /* #7440
-  source: 
-  readonly statusText: string; */
   _i2.String get statusText => _i4.getProperty(
         this,
         'statusText',
       );
-  /* #7441
-  source: 
-  readonly type: ResponseType; */
   _i3.ResponseType get type =>
       ResponseTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  /* #7442
-  source: 
-  readonly url: string; */
   _i2.String get url => _i4.getProperty(
         this,
         'url',
       );
-  /* #7446
-  source: 
 
-  /** A simple getter used to expose a `ReadableStream` of the body contents. */
-  readonly body: ReadableStream<Uint8Array> | null; */
   /// A simple getter used to expose a `ReadableStream` of the body contents.
   _i3.ReadableStream<_i9.Uint8List>? get body => _i4.getProperty(
         this,
         'body',
       );
-  /* #7450
-  source: 
-  /** Stores a `Boolean` that declares whether the body has been used in a
-   * response yet.
-   */
-  readonly bodyUsed: boolean; */
+
   /// Stores a `Boolean` that declares whether the body has been used in a
   /// response yet.
   _i2.bool get bodyUsed => _i4.getProperty(
@@ -8352,27 +7422,42 @@ extension Response$Typings on Response {
         'clone',
         [],
       );
+
+  /// Takes a `Response` stream and reads it to completion. It returns a promise
+  ///  that resolves with an `ArrayBuffer`.
   _i2.Future<_i9.ByteBuffer> arrayBuffer() =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'arrayBuffer',
         [],
       ));
+
+  /// Takes a `Response` stream and reads it to completion. It returns a promise
+  ///  that resolves with a `Blob`.
   _i2.Future<_i3.Blob> blob() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'blob',
         [],
       ));
+
+  /// Takes a `Response` stream and reads it to completion. It returns a promise
+  ///  that resolves with a `FormData` object.
   _i2.Future<_i3.FormData> formData() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'formData',
         [],
       ));
+
+  /// Takes a `Response` stream and reads it to completion. It returns a promise
+  ///  that resolves with the result of parsing the body text as JSON.
   _i2.Future<_i2.dynamic> json() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'json',
         [],
       ));
+
+  /// Takes a `Response` stream and reads it to completion. It returns a promise
+  ///  that resolves with a `USVString` (text).
   _i2.Future<_i2.String> text() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'text',
@@ -8412,17 +7497,10 @@ class CloseEventInit implements _i3.EventInit {
 }
 
 extension CloseEventInit$Typings on CloseEventInit {
-  /* #7500
-  source: 
-  code?: number; */
   _i2.num? get code => _i4.getProperty(
         this,
         'code',
       );
-  /* #7500
-  source: 
-  code?: number; */
-  // Type InteropStaticType.number
   set code(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -8431,17 +7509,10 @@ extension CloseEventInit$Typings on CloseEventInit {
     );
   }
 
-  /* #7501
-  source: 
-  reason?: string; */
   _i2.String? get reason => _i4.getProperty(
         this,
         'reason',
       );
-  /* #7501
-  source: 
-  reason?: string; */
-  // Type InteropStaticType.string
   set reason(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -8450,17 +7521,10 @@ extension CloseEventInit$Typings on CloseEventInit {
     );
   }
 
-  /* #7502
-  source: 
-  wasClean?: boolean; */
   _i2.bool? get wasClean => _i4.getProperty(
         this,
         'wasClean',
       );
-  /* #7502
-  source: 
-  wasClean?: boolean; */
-  // Type InteropStaticType.boolean
   set wasClean(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -8493,34 +7557,18 @@ FieldExternal:
 external _i2.Object _declaredCloseEvent;
 
 extension CloseEvent$Typings on CloseEvent {
-  /* #7511
-  source: 
-  /**
-   * Returns the WebSocket connection close code provided by the server.
-   */
-  readonly code: number; */
   /// Returns the WebSocket connection close code provided by the server.
   _i2.num get code => _i4.getProperty(
         this,
         'code',
       );
-  /* #7515
-  source: 
-  /**
-   * Returns the WebSocket connection close reason provided by the server.
-   */
-  readonly reason: string; */
+
   /// Returns the WebSocket connection close reason provided by the server.
   _i2.String get reason => _i4.getProperty(
         this,
         'reason',
       );
-  /* #7519
-  source: 
-  /**
-   * Returns true if the connection closed cleanly; false otherwise.
-   */
-  readonly wasClean: boolean; */
+
   /// Returns true if the connection closed cleanly; false otherwise.
   _i2.bool get wasClean => _i4.getProperty(
         this,
@@ -8553,7 +7601,6 @@ class WebSocketEventMap {
       );
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum WebSocketEventMapKeys {
   close(r'close'),
   error(r'error'),
@@ -8566,17 +7613,10 @@ enum WebSocketEventMapKeys {
 }
 
 extension WebSocketEventMap$Typings on WebSocketEventMap {
-  /* #7524
-  source: 
-  close: CloseEvent; */
   _i3.CloseEvent get close => _i4.getProperty(
         this,
         'close',
       );
-  /* #7524
-  source: 
-  close: CloseEvent; */
-  // Type Instance of 'InteropInterface'
   set close(_i3.CloseEvent value) {
     _i4.setProperty(
       this,
@@ -8585,17 +7625,10 @@ extension WebSocketEventMap$Typings on WebSocketEventMap {
     );
   }
 
-  /* #7525
-  source: 
-  error: Event; */
   _i3.Event get error => _i4.getProperty(
         this,
         'error',
       );
-  /* #7525
-  source: 
-  error: Event; */
-  // Type Instance of 'InteropInterface'
   set error(_i3.Event value) {
     _i4.setProperty(
       this,
@@ -8604,17 +7637,10 @@ extension WebSocketEventMap$Typings on WebSocketEventMap {
     );
   }
 
-  /* #7526
-  source: 
-  message: MessageEvent; */
   _i3.MessageEvent<_i2.dynamic> get message => _i4.getProperty(
         this,
         'message',
       );
-  /* #7526
-  source: 
-  message: MessageEvent; */
-  // Type Instance of 'InteropInterface'
   set message(_i3.MessageEvent<_i2.dynamic> value) {
     _i4.setProperty(
       this,
@@ -8623,17 +7649,10 @@ extension WebSocketEventMap$Typings on WebSocketEventMap {
     );
   }
 
-  /* #7527
-  source: 
-  open: Event; */
   _i3.Event get open => _i4.getProperty(
         this,
         'open',
       );
-  /* #7527
-  source: 
-  open: Event; */
-  // Type Instance of 'InteropInterface'
   set open(_i3.Event value) {
     _i4.setProperty(
       this,
@@ -8643,6 +7662,11 @@ extension WebSocketEventMap$Typings on WebSocketEventMap {
   }
 }
 
+/// Provides the API for creating and managing a WebSocket connection to a
+/// server, as well as for sending and receiving data on the connection.
+///
+/// If you are looking to create a WebSocket server, please take a look at
+/// `Deno.upgradeWebSocket()`.
 @_i1.JS()
 @_i1.staticInterop
 class WebSocket implements _i3.EventTarget {
@@ -8658,31 +7682,18 @@ class WebSocket implements _i3.EventTarget {
         ],
       );
 
-  /* #7543
-  source: 
-
-  static readonly CLOSED: number; */
   static _i2.num get closed => _i4.getProperty(
         _declaredWebSocket,
         'CLOSED',
       );
-  /* #7544
-  source: 
-  static readonly CLOSING: number; */
   static _i2.num get closing => _i4.getProperty(
         _declaredWebSocket,
         'CLOSING',
       );
-  /* #7545
-  source: 
-  static readonly CONNECTING: number; */
   static _i2.num get connecting => _i4.getProperty(
         _declaredWebSocket,
         'CONNECTING',
       );
-  /* #7546
-  source: 
-  static readonly OPEN: number; */
   static _i2.num get open => _i4.getProperty(
         _declaredWebSocket,
         'OPEN',
@@ -8696,15 +7707,6 @@ FieldExternal:
 external _i2.Object _declaredWebSocket;
 
 extension WebSocket$Typings on WebSocket {
-  /* #7553
-  source: 
-
-  /**
-   * Returns a string that indicates how binary data from the WebSocket object is exposed to scripts:
-   *
-   * Can be set, to change how binary data is returned. The default is "blob".
-   */
-  binaryType: BinaryType; */
   /// Returns a string that indicates how binary data from the WebSocket object is exposed to scripts:
   ///
   ///  Can be set, to change how binary data is returned. The default is "blob".
@@ -8713,16 +7715,6 @@ extension WebSocket$Typings on WebSocket {
         this,
         'binaryType',
       ));
-  /* #7553
-  source: 
-
-  /**
-   * Returns a string that indicates how binary data from the WebSocket object is exposed to scripts:
-   *
-   * Can be set, to change how binary data is returned. The default is "blob".
-   */
-  binaryType: BinaryType; */
-  // Type InteropTypedef#948252528(name: BinaryType)
   set binaryType(_i3.BinaryType value) {
     _i4.setProperty(
       this,
@@ -8731,14 +7723,6 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
-  /* #7559
-  source: 
-  /**
-   * Returns the number of bytes of application data (UTF-8 text and binary data) that have been queued using send() but not yet been transmitted to the network.
-   *
-   * If the WebSocket connection is closed, this attribute's value will only increase with each call to the send() method. (The number does not reset to zero once the connection closes.)
-   */
-  readonly bufferedAmount: number; */
   /// Returns the number of bytes of application data (UTF-8 text and binary data) that have been queued using send() but not yet been transmitted to the network.
   ///
   /// If the WebSocket connection is closed, this attribute's value will only increase with each call to the send() method. (The number does not reset to zero once the connection closes.)
@@ -8746,28 +7730,16 @@ extension WebSocket$Typings on WebSocket {
         this,
         'bufferedAmount',
       );
-  /* #7563
-  source: 
-  /**
-   * Returns the extensions selected by the server, if any.
-   */
-  readonly extensions: string; */
+
   /// Returns the extensions selected by the server, if any.
   _i2.String get extensions => _i4.getProperty(
         this,
         'extensions',
       );
-  /* #7564
-  source: 
-  onclose: ((this: WebSocket, ev: CloseEvent) => any) | null; */
   _i2.dynamic Function(_i3.CloseEvent)? get onclose => _i4.getProperty(
         this,
         'onclose',
       );
-  /* #7564
-  source: 
-  onclose: ((this: WebSocket, ev: CloseEvent) => any) | null; */
-  // Type InteropUnion#242113124(parent: InteropGetter#250253062(name: onclose))
   set onclose(_i2.dynamic Function(_i3.CloseEvent)? value) {
     _i4.setProperty(
       this,
@@ -8776,17 +7748,10 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
-  /* #7565
-  source: 
-  onerror: ((this: WebSocket, ev: Event | ErrorEvent) => any) | null; */
   _i2.dynamic Function(_i2.Object)? get onerror => _i4.getProperty(
         this,
         'onerror',
       );
-  /* #7565
-  source: 
-  onerror: ((this: WebSocket, ev: Event | ErrorEvent) => any) | null; */
-  // Type InteropUnion#605267339(parent: InteropGetter#264870680(name: onerror))
   set onerror(_i2.dynamic Function(_i2.Object)? value) {
     _i4.setProperty(
       this,
@@ -8795,18 +7760,11 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
-  /* #7566
-  source: 
-  onmessage: ((this: WebSocket, ev: MessageEvent) => any) | null; */
   _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? get onmessage =>
       _i4.getProperty(
         this,
         'onmessage',
       );
-  /* #7566
-  source: 
-  onmessage: ((this: WebSocket, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#846320726(parent: InteropGetter#124143964(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -8815,17 +7773,10 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
-  /* #7567
-  source: 
-  onopen: ((this: WebSocket, ev: Event) => any) | null; */
   _i2.dynamic Function(_i3.Event)? get onopen => _i4.getProperty(
         this,
         'onopen',
       );
-  /* #7567
-  source: 
-  onopen: ((this: WebSocket, ev: Event) => any) | null; */
-  // Type InteropUnion#290451656(parent: InteropGetter#955435686(name: onopen))
   set onopen(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -8834,39 +7785,25 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
-  /* #7571
-  source: 
-  /**
-   * Returns the subprotocol selected by the server, if any. It can be used in conjunction with the array form of the constructor's second argument to perform subprotocol negotiation.
-   */
-  readonly protocol: string; */
   /// Returns the subprotocol selected by the server, if any. It can be used in conjunction with the array form of the constructor's second argument to perform subprotocol negotiation.
   _i2.String get protocol => _i4.getProperty(
         this,
         'protocol',
       );
-  /* #7575
-  source: 
-  /**
-   * Returns the state of the WebSocket object's connection. It can have the values described below.
-   */
-  readonly readyState: number; */
+
   /// Returns the state of the WebSocket object's connection. It can have the values described below.
   _i2.num get readyState => _i4.getProperty(
         this,
         'readyState',
       );
-  /* #7579
-  source: 
-  /**
-   * Returns the URL that was used to establish the WebSocket connection.
-   */
-  readonly url: string; */
+
   /// Returns the URL that was used to establish the WebSocket connection.
   _i2.String get url => _i4.getProperty(
         this,
         'url',
       );
+
+  /// Closes the WebSocket connection, optionally using code as the the WebSocket connection close code and reason as the the WebSocket connection close reason.
   void close([
     _i2.num? code,
     _i2.String? reason,
@@ -8881,6 +7818,7 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
+  /// Transmits data using the WebSocket connection. data can be a string, a Blob, an ArrayBuffer, or an ArrayBufferView.
   void send(_i2.Object data) {
     _i4.callMethod(
       this,
@@ -8889,6 +7827,29 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K extends WebSocketEventMapKeys>(
     K type,
     _i2.dynamic Function(_i2.dynamic) listener, [
@@ -8905,6 +7866,29 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -8921,13 +7905,60 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
-  // HEYA addEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function<K extends WebSocketEventMapKeys>(
       K type,
       _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -8937,6 +7968,9 @@ extension WebSocket$Typings on WebSocket {
         $1: _addEventListener$1,
         $2: _addEventListener$2,
       );
+
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$1<K extends WebSocketEventMapKeys>(
     K type,
     _i2.dynamic Function(_i2.dynamic) listener, [
@@ -8953,6 +7987,8 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -8969,13 +8005,18 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
-  // HEYA removeEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function<K extends WebSocketEventMapKeys>(
       K type,
       _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -8987,6 +8028,9 @@ extension WebSocket$Typings on WebSocket {
       );
 }
 
+/// This Web Storage API interface provides access to a particular domain's
+/// session or local storage. It allows, for example, the addition, modification,
+/// or deletion of stored data items.
 @_i1.JS()
 @_i1.staticInterop
 class Storage {
@@ -9003,17 +8047,13 @@ FieldExternal:
 external _i2.Object _declaredStorage;
 
 extension Storage$Typings on Storage {
-  /* #7634
-  source: 
-  /**
-   * Returns the number of key/value pairs currently present in the list associated with the object.
-   */
-  readonly length: number; */
   /// Returns the number of key/value pairs currently present in the list associated with the object.
   _i2.num get length => _i4.getProperty(
         _i7.target1289,
         'length',
       );
+
+  /// Empties the list associated with the object of all key/value pairs, if there are any.
   void clear() {
     _i4.callMethod(
       this,
@@ -9022,16 +8062,21 @@ extension Storage$Typings on Storage {
     );
   }
 
+  /// Returns the current value associated with the given key, or null if the given key does not exist in the list associated with the object.
   _i2.String? getItem(_i2.String key) => _i4.callMethod(
         this,
         'getItem',
         [key],
       );
+
+  /// Returns the name of the nth key in the list, or null if n is greater than or equal to the number of key/value pairs in the object.
   _i2.String? key(_i2.num index) => _i4.callMethod(
         this,
         'key',
         [index],
       );
+
+  /// Removes the key/value pair with the given key from the list associated with the object, if a key/value pair with the given key exists.
   void removeItem(_i2.String key) {
     _i4.callMethod(
       this,
@@ -9040,6 +8085,9 @@ extension Storage$Typings on Storage {
     );
   }
 
+  /// Sets the value of the pair identified by key to value, creating a new key/value pair if none existed for key previously.
+  ///
+  ///  Throws a "QuotaExceededError" DOMException exception if the new value couldn't be set. (Setting could fail if, e.g., the user has disabled storage for the site, or if the quota has been exceeded.)
   void setItem(
     _i2.String key,
     _i2.String value,
@@ -9084,17 +8132,10 @@ class Algorithm {
 }
 
 extension Algorithm$Typings on Algorithm {
-  /* #7678
-  source: 
-  name: string; */
   _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
-  /* #7678
-  source: 
-  name: string; */
-  // Type InteropStaticType.string
   set name(_i2.String value) {
     _i4.setProperty(
       this,
@@ -9115,17 +8156,10 @@ class KeyAlgorithm {
 }
 
 extension KeyAlgorithm$Typings on KeyAlgorithm {
-  /* #7683
-  source: 
-  name: string; */
   _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
-  /* #7683
-  source: 
-  name: string; */
-  // Type InteropStaticType.string
   set name(_i2.String value) {
     _i4.setProperty(
       this,
@@ -9158,17 +8192,10 @@ class RsaOtherPrimesInfo {
 }
 
 extension RsaOtherPrimesInfo$Typings on RsaOtherPrimesInfo {
-  /* #7709
-  source: 
-  d?: string; */
   _i2.String? get d => _i4.getProperty(
         this,
         'd',
       );
-  /* #7709
-  source: 
-  d?: string; */
-  // Type InteropStaticType.string
   set d(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9177,17 +8204,10 @@ extension RsaOtherPrimesInfo$Typings on RsaOtherPrimesInfo {
     );
   }
 
-  /* #7710
-  source: 
-  r?: string; */
   _i2.String? get r => _i4.getProperty(
         this,
         'r',
       );
-  /* #7710
-  source: 
-  r?: string; */
-  // Type InteropStaticType.string
   set r(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9196,17 +8216,10 @@ extension RsaOtherPrimesInfo$Typings on RsaOtherPrimesInfo {
     );
   }
 
-  /* #7711
-  source: 
-  t?: string; */
   _i2.String? get t => _i4.getProperty(
         this,
         't',
       );
-  /* #7711
-  source: 
-  t?: string; */
-  // Type InteropStaticType.string
   set t(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9250,12 +8263,12 @@ class JsonWebKey {
     _i2.String? e,
     _i2.bool? ext,
     _i2.String? k,
-    _i2.List /*LIST InteropStaticType.list,456790818,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,945262743,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>?
         keyOps,
     _i2.String? kty,
     _i2.String? n,
-    _i2.List /*LIST InteropStaticType.list,723311090,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,771134083,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.RsaOtherPrimesInfo>?
         oth,
     _i2.String? p,
@@ -9288,17 +8301,10 @@ class JsonWebKey {
 }
 
 extension JsonWebKey$Typings on JsonWebKey {
-  /* #7716
-  source: 
-  alg?: string; */
   _i2.String? get alg => _i4.getProperty(
         this,
         'alg',
       );
-  /* #7716
-  source: 
-  alg?: string; */
-  // Type InteropStaticType.string
   set alg(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9307,17 +8313,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7717
-  source: 
-  crv?: string; */
   _i2.String? get crv => _i4.getProperty(
         this,
         'crv',
       );
-  /* #7717
-  source: 
-  crv?: string; */
-  // Type InteropStaticType.string
   set crv(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9326,17 +8325,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7718
-  source: 
-  d?: string; */
   _i2.String? get d => _i4.getProperty(
         this,
         'd',
       );
-  /* #7718
-  source: 
-  d?: string; */
-  // Type InteropStaticType.string
   set d(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9345,17 +8337,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7719
-  source: 
-  dp?: string; */
   _i2.String? get dp => _i4.getProperty(
         this,
         'dp',
       );
-  /* #7719
-  source: 
-  dp?: string; */
-  // Type InteropStaticType.string
   set dp(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9364,17 +8349,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7720
-  source: 
-  dq?: string; */
   _i2.String? get dq => _i4.getProperty(
         this,
         'dq',
       );
-  /* #7720
-  source: 
-  dq?: string; */
-  // Type InteropStaticType.string
   set dq(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9383,17 +8361,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7721
-  source: 
-  e?: string; */
   _i2.String? get e => _i4.getProperty(
         this,
         'e',
       );
-  /* #7721
-  source: 
-  e?: string; */
-  // Type InteropStaticType.string
   set e(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9402,17 +8373,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7722
-  source: 
-  ext?: boolean; */
   _i2.bool? get ext => _i4.getProperty(
         this,
         'ext',
       );
-  /* #7722
-  source: 
-  ext?: boolean; */
-  // Type InteropStaticType.boolean
   set ext(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -9421,17 +8385,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7723
-  source: 
-  k?: string; */
   _i2.String? get k => _i4.getProperty(
         this,
         'k',
       );
-  /* #7723
-  source: 
-  k?: string; */
-  // Type InteropStaticType.string
   set k(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9440,23 +8397,14 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7725
-  source: 
-  // deno-lint-ignore camelcase
-  key_ops?: string[]; */
-  _i2.List /*LIST InteropStaticType.list,456790818,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
+  _i2.List /*LIST InteropStaticType.list,945262743,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
       get keyOps => (_i4.getProperty(
             this,
             'key_ops',
           ) as _i2.List?)
               ?.cast();
-  /* #7725
-  source: 
-  // deno-lint-ignore camelcase
-  key_ops?: string[]; */
-  // Type InteropStaticType.list
   set keyOps(
-      _i2.List /*LIST InteropStaticType.list,456790818,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,945262743,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.String>?
           value) {
     _i4.setProperty(
@@ -9466,17 +8414,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7726
-  source: 
-  kty?: string; */
   _i2.String? get kty => _i4.getProperty(
         this,
         'kty',
       );
-  /* #7726
-  source: 
-  kty?: string; */
-  // Type InteropStaticType.string
   set kty(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9485,17 +8426,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7727
-  source: 
-  n?: string; */
   _i2.String? get n => _i4.getProperty(
         this,
         'n',
       );
-  /* #7727
-  source: 
-  n?: string; */
-  // Type InteropStaticType.string
   set n(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9504,21 +8438,14 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7728
-  source: 
-  oth?: RsaOtherPrimesInfo[]; */
-  _i2.List /*LIST InteropStaticType.list,723311090,[Instance of 'InteropRef<InteropType>']*/ <_i3.RsaOtherPrimesInfo>?
+  _i2.List /*LIST InteropStaticType.list,771134083,[Instance of 'InteropRef<InteropType>']*/ <_i3.RsaOtherPrimesInfo>?
       get oth => (_i4.getProperty(
             this,
             'oth',
           ) as _i2.List?)
               ?.cast();
-  /* #7728
-  source: 
-  oth?: RsaOtherPrimesInfo[]; */
-  // Type InteropStaticType.list
   set oth(
-      _i2.List /*LIST InteropStaticType.list,723311090,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,771134083,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.RsaOtherPrimesInfo>?
           value) {
     _i4.setProperty(
@@ -9528,17 +8455,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7729
-  source: 
-  p?: string; */
   _i2.String? get p => _i4.getProperty(
         this,
         'p',
       );
-  /* #7729
-  source: 
-  p?: string; */
-  // Type InteropStaticType.string
   set p(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9547,17 +8467,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7730
-  source: 
-  q?: string; */
   _i2.String? get q => _i4.getProperty(
         this,
         'q',
       );
-  /* #7730
-  source: 
-  q?: string; */
-  // Type InteropStaticType.string
   set q(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9566,17 +8479,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7731
-  source: 
-  qi?: string; */
   _i2.String? get qi => _i4.getProperty(
         this,
         'qi',
       );
-  /* #7731
-  source: 
-  qi?: string; */
-  // Type InteropStaticType.string
   set qi(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9585,17 +8491,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7732
-  source: 
-  use?: string; */
   _i2.String? get use => _i4.getProperty(
         this,
         'use',
       );
-  /* #7732
-  source: 
-  use?: string; */
-  // Type InteropStaticType.string
   set use(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9604,17 +8503,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7733
-  source: 
-  x?: string; */
   _i2.String? get x => _i4.getProperty(
         this,
         'x',
       );
-  /* #7733
-  source: 
-  x?: string; */
-  // Type InteropStaticType.string
   set x(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9623,17 +8515,10 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  /* #7734
-  source: 
-  y?: string; */
   _i2.String? get y => _i4.getProperty(
         this,
         'y',
       );
-  /* #7734
-  source: 
-  y?: string; */
-  // Type InteropStaticType.string
   set y(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -9663,17 +8548,10 @@ class AesCbcParams implements _i3.Algorithm {
 }
 
 extension AesCbcParams$Typings on AesCbcParams {
-  /* #7739
-  source: 
-  iv: BufferSource; */
   _i3.BufferSource get iv => _i4.getProperty(
         this,
         'iv',
       );
-  /* #7739
-  source: 
-  iv: BufferSource; */
-  // Type InteropTypedef#684633708(name: BufferSource)
   set iv(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -9709,17 +8587,10 @@ class AesGcmParams implements _i3.Algorithm {
 }
 
 extension AesGcmParams$Typings on AesGcmParams {
-  /* #7744
-  source: 
-  iv: BufferSource; */
   _i3.BufferSource get iv => _i4.getProperty(
         this,
         'iv',
       );
-  /* #7744
-  source: 
-  iv: BufferSource; */
-  // Type InteropTypedef#684633708(name: BufferSource)
   set iv(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -9728,17 +8599,10 @@ extension AesGcmParams$Typings on AesGcmParams {
     );
   }
 
-  /* #7745
-  source: 
-  additionalData?: BufferSource; */
   _i3.BufferSource? get additionalData => _i4.getProperty(
         this,
         'additionalData',
       );
-  /* #7745
-  source: 
-  additionalData?: BufferSource; */
-  // Type InteropTypedef#684633708(name: BufferSource)
   set additionalData(_i3.BufferSource? value) {
     _i4.setProperty(
       this,
@@ -9747,17 +8611,10 @@ extension AesGcmParams$Typings on AesGcmParams {
     );
   }
 
-  /* #7746
-  source: 
-  tagLength?: number; */
   _i2.num? get tagLength => _i4.getProperty(
         this,
         'tagLength',
       );
-  /* #7746
-  source: 
-  tagLength?: number; */
-  // Type InteropStaticType.number
   set tagLength(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -9790,17 +8647,10 @@ class AesCtrParams implements _i3.Algorithm {
 }
 
 extension AesCtrParams$Typings on AesCtrParams {
-  /* #7751
-  source: 
-  counter: BufferSource; */
   _i3.BufferSource get counter => _i4.getProperty(
         this,
         'counter',
       );
-  /* #7751
-  source: 
-  counter: BufferSource; */
-  // Type InteropTypedef#684633708(name: BufferSource)
   set counter(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -9809,17 +8659,10 @@ extension AesCtrParams$Typings on AesCtrParams {
     );
   }
 
-  /* #7752
-  source: 
-  length: number; */
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
-  /* #7752
-  source: 
-  length: number; */
-  // Type InteropStaticType.number
   set length(_i2.num value) {
     _i4.setProperty(
       this,
@@ -9852,17 +8695,10 @@ class HmacKeyGenParams implements _i3.Algorithm {
 }
 
 extension HmacKeyGenParams$Typings on HmacKeyGenParams {
-  /* #7757
-  source: 
-  hash: HashAlgorithmIdentifier; */
   _i3.HashAlgorithmIdentifier get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #7757
-  source: 
-  hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#864601681(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -9871,17 +8707,10 @@ extension HmacKeyGenParams$Typings on HmacKeyGenParams {
     );
   }
 
-  /* #7758
-  source: 
-  length?: number; */
   _i2.num? get length => _i4.getProperty(
         this,
         'length',
       );
-  /* #7758
-  source: 
-  length?: number; */
-  // Type InteropStaticType.number
   set length(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -9911,17 +8740,10 @@ class EcKeyGenParams implements _i3.Algorithm {
 }
 
 extension EcKeyGenParams$Typings on EcKeyGenParams {
-  /* #7763
-  source: 
-  namedCurve: NamedCurve; */
   _i3.NamedCurve get namedCurve => _i4.getProperty(
         this,
         'namedCurve',
       );
-  /* #7763
-  source: 
-  namedCurve: NamedCurve; */
-  // Type InteropTypedef#573687582(name: NamedCurve)
   set namedCurve(_i3.NamedCurve value) {
     _i4.setProperty(
       this,
@@ -9951,17 +8773,10 @@ class EcKeyImportParams implements _i3.Algorithm {
 }
 
 extension EcKeyImportParams$Typings on EcKeyImportParams {
-  /* #7768
-  source: 
-  namedCurve: NamedCurve; */
   _i3.NamedCurve get namedCurve => _i4.getProperty(
         this,
         'namedCurve',
       );
-  /* #7768
-  source: 
-  namedCurve: NamedCurve; */
-  // Type InteropTypedef#573687582(name: NamedCurve)
   set namedCurve(_i3.NamedCurve value) {
     _i4.setProperty(
       this,
@@ -9991,17 +8806,10 @@ class EcdsaParams implements _i3.Algorithm {
 }
 
 extension EcdsaParams$Typings on EcdsaParams {
-  /* #7773
-  source: 
-  hash: HashAlgorithmIdentifier; */
   _i3.HashAlgorithmIdentifier get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #7773
-  source: 
-  hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#864601681(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -10031,17 +8839,10 @@ class RsaHashedImportParams implements _i3.Algorithm {
 }
 
 extension RsaHashedImportParams$Typings on RsaHashedImportParams {
-  /* #7778
-  source: 
-  hash: HashAlgorithmIdentifier; */
   _i3.HashAlgorithmIdentifier get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #7778
-  source: 
-  hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#864601681(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -10074,17 +8875,10 @@ class RsaHashedKeyGenParams implements _i3.RsaKeyGenParams {
 }
 
 extension RsaHashedKeyGenParams$Typings on RsaHashedKeyGenParams {
-  /* #7783
-  source: 
-  hash: HashAlgorithmIdentifier; */
   _i3.HashAlgorithmIdentifier get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #7783
-  source: 
-  hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#864601681(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -10117,17 +8911,10 @@ class RsaKeyGenParams implements _i3.Algorithm {
 }
 
 extension RsaKeyGenParams$Typings on RsaKeyGenParams {
-  /* #7788
-  source: 
-  modulusLength: number; */
   _i2.num get modulusLength => _i4.getProperty(
         this,
         'modulusLength',
       );
-  /* #7788
-  source: 
-  modulusLength: number; */
-  // Type InteropStaticType.number
   set modulusLength(_i2.num value) {
     _i4.setProperty(
       this,
@@ -10136,17 +8923,10 @@ extension RsaKeyGenParams$Typings on RsaKeyGenParams {
     );
   }
 
-  /* #7789
-  source: 
-  publicExponent: Uint8Array; */
   _i9.Uint8List get publicExponent => _i4.getProperty(
         this,
         'publicExponent',
       );
-  /* #7789
-  source: 
-  publicExponent: Uint8Array; */
-  // Type InteropStaticType.uInt8List
   set publicExponent(_i9.Uint8List value) {
     _i4.setProperty(
       this,
@@ -10176,17 +8956,10 @@ class RsaPssParams implements _i3.Algorithm {
 }
 
 extension RsaPssParams$Typings on RsaPssParams {
-  /* #7794
-  source: 
-  saltLength: number; */
   _i2.num get saltLength => _i4.getProperty(
         this,
         'saltLength',
       );
-  /* #7794
-  source: 
-  saltLength: number; */
-  // Type InteropStaticType.number
   set saltLength(_i2.num value) {
     _i4.setProperty(
       this,
@@ -10216,17 +8989,10 @@ class RsaOaepParams implements _i3.Algorithm {
 }
 
 extension RsaOaepParams$Typings on RsaOaepParams {
-  /* #7799
-  source: 
-  label?: Uint8Array; */
   _i9.Uint8List? get label => _i4.getProperty(
         this,
         'label',
       );
-  /* #7799
-  source: 
-  label?: Uint8Array; */
-  // Type InteropStaticType.uInt8List
   set label(_i9.Uint8List? value) {
     _i4.setProperty(
       this,
@@ -10259,17 +9025,10 @@ class HmacImportParams implements _i3.Algorithm {
 }
 
 extension HmacImportParams$Typings on HmacImportParams {
-  /* #7804
-  source: 
-  hash: HashAlgorithmIdentifier; */
   _i3.HashAlgorithmIdentifier get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #7804
-  source: 
-  hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#864601681(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -10278,17 +9037,10 @@ extension HmacImportParams$Typings on HmacImportParams {
     );
   }
 
-  /* #7805
-  source: 
-  length?: number; */
   _i2.num? get length => _i4.getProperty(
         this,
         'length',
       );
-  /* #7805
-  source: 
-  length?: number; */
-  // Type InteropStaticType.number
   set length(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -10318,17 +9070,10 @@ class EcKeyAlgorithm implements _i3.KeyAlgorithm {
 }
 
 extension EcKeyAlgorithm$Typings on EcKeyAlgorithm {
-  /* #7810
-  source: 
-  namedCurve: NamedCurve; */
   _i3.NamedCurve get namedCurve => _i4.getProperty(
         this,
         'namedCurve',
       );
-  /* #7810
-  source: 
-  namedCurve: NamedCurve; */
-  // Type InteropTypedef#573687582(name: NamedCurve)
   set namedCurve(_i3.NamedCurve value) {
     _i4.setProperty(
       this,
@@ -10361,17 +9106,10 @@ class HmacKeyAlgorithm implements _i3.KeyAlgorithm {
 }
 
 extension HmacKeyAlgorithm$Typings on HmacKeyAlgorithm {
-  /* #7815
-  source: 
-  hash: KeyAlgorithm; */
   _i3.KeyAlgorithm get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #7815
-  source: 
-  hash: KeyAlgorithm; */
-  // Type Instance of 'InteropInterface'
   set hash(_i3.KeyAlgorithm value) {
     _i4.setProperty(
       this,
@@ -10380,17 +9118,10 @@ extension HmacKeyAlgorithm$Typings on HmacKeyAlgorithm {
     );
   }
 
-  /* #7816
-  source: 
-  length: number; */
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
-  /* #7816
-  source: 
-  length: number; */
-  // Type InteropStaticType.number
   set length(_i2.num value) {
     _i4.setProperty(
       this,
@@ -10423,17 +9154,10 @@ class RsaHashedKeyAlgorithm implements _i3.RsaKeyAlgorithm {
 }
 
 extension RsaHashedKeyAlgorithm$Typings on RsaHashedKeyAlgorithm {
-  /* #7821
-  source: 
-  hash: KeyAlgorithm; */
   _i3.KeyAlgorithm get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #7821
-  source: 
-  hash: KeyAlgorithm; */
-  // Type Instance of 'InteropInterface'
   set hash(_i3.KeyAlgorithm value) {
     _i4.setProperty(
       this,
@@ -10466,17 +9190,10 @@ class RsaKeyAlgorithm implements _i3.KeyAlgorithm {
 }
 
 extension RsaKeyAlgorithm$Typings on RsaKeyAlgorithm {
-  /* #7826
-  source: 
-  modulusLength: number; */
   _i2.num get modulusLength => _i4.getProperty(
         this,
         'modulusLength',
       );
-  /* #7826
-  source: 
-  modulusLength: number; */
-  // Type InteropStaticType.number
   set modulusLength(_i2.num value) {
     _i4.setProperty(
       this,
@@ -10485,17 +9202,10 @@ extension RsaKeyAlgorithm$Typings on RsaKeyAlgorithm {
     );
   }
 
-  /* #7827
-  source: 
-  publicExponent: Uint8Array; */
   _i9.Uint8List get publicExponent => _i4.getProperty(
         this,
         'publicExponent',
       );
-  /* #7827
-  source: 
-  publicExponent: Uint8Array; */
-  // Type InteropStaticType.uInt8List
   set publicExponent(_i9.Uint8List value) {
     _i4.setProperty(
       this,
@@ -10531,17 +9241,10 @@ class HkdfParams implements _i3.Algorithm {
 }
 
 extension HkdfParams$Typings on HkdfParams {
-  /* #7832
-  source: 
-  hash: HashAlgorithmIdentifier; */
   _i3.HashAlgorithmIdentifier get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #7832
-  source: 
-  hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#864601681(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -10550,17 +9253,10 @@ extension HkdfParams$Typings on HkdfParams {
     );
   }
 
-  /* #7833
-  source: 
-  info: BufferSource; */
   _i3.BufferSource get info => _i4.getProperty(
         this,
         'info',
       );
-  /* #7833
-  source: 
-  info: BufferSource; */
-  // Type InteropTypedef#684633708(name: BufferSource)
   set info(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -10569,17 +9265,10 @@ extension HkdfParams$Typings on HkdfParams {
     );
   }
 
-  /* #7834
-  source: 
-  salt: BufferSource; */
   _i3.BufferSource get salt => _i4.getProperty(
         this,
         'salt',
       );
-  /* #7834
-  source: 
-  salt: BufferSource; */
-  // Type InteropTypedef#684633708(name: BufferSource)
   set salt(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -10615,17 +9304,10 @@ class Pbkdf2Params implements _i3.Algorithm {
 }
 
 extension Pbkdf2Params$Typings on Pbkdf2Params {
-  /* #7839
-  source: 
-  hash: HashAlgorithmIdentifier; */
   _i3.HashAlgorithmIdentifier get hash => _i4.getProperty(
         this,
         'hash',
       );
-  /* #7839
-  source: 
-  hash: HashAlgorithmIdentifier; */
-  // Type InteropTypedef#864601681(name: HashAlgorithmIdentifier)
   set hash(_i3.HashAlgorithmIdentifier value) {
     _i4.setProperty(
       this,
@@ -10634,17 +9316,10 @@ extension Pbkdf2Params$Typings on Pbkdf2Params {
     );
   }
 
-  /* #7840
-  source: 
-  iterations: number; */
   _i2.num get iterations => _i4.getProperty(
         this,
         'iterations',
       );
-  /* #7840
-  source: 
-  iterations: number; */
-  // Type InteropStaticType.number
   set iterations(_i2.num value) {
     _i4.setProperty(
       this,
@@ -10653,17 +9328,10 @@ extension Pbkdf2Params$Typings on Pbkdf2Params {
     );
   }
 
-  /* #7841
-  source: 
-  salt: BufferSource; */
   _i3.BufferSource get salt => _i4.getProperty(
         this,
         'salt',
       );
-  /* #7841
-  source: 
-  salt: BufferSource; */
-  // Type InteropTypedef#684633708(name: BufferSource)
   set salt(_i3.BufferSource value) {
     _i4.setProperty(
       this,
@@ -10693,17 +9361,10 @@ class AesDerivedKeyParams implements _i3.Algorithm {
 }
 
 extension AesDerivedKeyParams$Typings on AesDerivedKeyParams {
-  /* #7846
-  source: 
-  length: number; */
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
-  /* #7846
-  source: 
-  length: number; */
-  // Type InteropStaticType.number
   set length(_i2.num value) {
     _i4.setProperty(
       this,
@@ -10733,17 +9394,10 @@ class EcdhKeyDeriveParams implements _i3.Algorithm {
 }
 
 extension EcdhKeyDeriveParams$Typings on EcdhKeyDeriveParams {
-  /* #7851
-  source: 
-  public: CryptoKey; */
   _i3.CryptoKey get public => _i4.getProperty(
         this,
         'public',
       );
-  /* #7851
-  source: 
-  public: CryptoKey; */
-  // Type Instance of 'InteropInterface'
   set public(_i3.CryptoKey value) {
     _i4.setProperty(
       this,
@@ -10773,17 +9427,10 @@ class AesKeyGenParams implements _i3.Algorithm {
 }
 
 extension AesKeyGenParams$Typings on AesKeyGenParams {
-  /* #7856
-  source: 
-  length: number; */
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
-  /* #7856
-  source: 
-  length: number; */
-  // Type InteropStaticType.number
   set length(_i2.num value) {
     _i4.setProperty(
       this,
@@ -10813,17 +9460,10 @@ class AesKeyAlgorithm implements _i3.KeyAlgorithm {
 }
 
 extension AesKeyAlgorithm$Typings on AesKeyAlgorithm {
-  /* #7861
-  source: 
-  length: number; */
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
-  /* #7861
-  source: 
-  length: number; */
-  // Type InteropStaticType.number
   set length(_i2.num value) {
     _i4.setProperty(
       this,
@@ -10833,6 +9473,8 @@ extension AesKeyAlgorithm$Typings on AesKeyAlgorithm {
   }
 }
 
+/// The CryptoKey dictionary of the Web Crypto API represents a cryptographic
+/// key.
 @_i1.JS()
 @_i1.staticInterop
 class CryptoKey {
@@ -10849,31 +9491,19 @@ FieldExternal:
 external _i2.Object _declaredCryptoKey;
 
 extension CryptoKey$Typings on CryptoKey {
-  /* #7870
-  source: 
-  readonly algorithm: KeyAlgorithm; */
   _i3.KeyAlgorithm get algorithm => _i4.getProperty(
         this,
         'algorithm',
       );
-  /* #7871
-  source: 
-  readonly extractable: boolean; */
   _i2.bool get extractable => _i4.getProperty(
         this,
         'extractable',
       );
-  /* #7872
-  source: 
-  readonly type: KeyType; */
   _i3.KeyType get type => KeyTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  /* #7873
-  source: 
-  readonly usages: KeyUsage[]; */
-  _i2.List /*LIST InteropStaticType.list,81177164,[Instance of 'InteropRef<InteropType>']*/ <_i3.KeyUsage>
+  _i2.List /*LIST InteropStaticType.list,151359626,[Instance of 'InteropRef<InteropType>']*/ <_i3.KeyUsage>
       get usages => (_i4.getProperty(
             this,
             'usages',
@@ -10887,6 +9517,8 @@ extension CryptoKey$Typings on CryptoKey {
 @_i1.staticInterop
 class IInline40 {}
 
+/// The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for
+/// an asymmetric cryptography algorithm, also known as a public-key algorithm.
 @_i1.JS()
 @_i1.staticInterop
 class CryptoKeyPair {
@@ -10903,17 +9535,10 @@ FieldExternal:
 external _i2.Object _declaredCryptoKeyPair;
 
 extension CryptoKeyPair$Typings on CryptoKeyPair {
-  /* #7888
-  source: 
-  privateKey: CryptoKey; */
   _i3.CryptoKey get privateKey => _i4.getProperty(
         this,
         'privateKey',
       );
-  /* #7888
-  source: 
-  privateKey: CryptoKey; */
-  // Type Instance of 'InteropInterface'
   set privateKey(_i3.CryptoKey value) {
     _i4.setProperty(
       this,
@@ -10922,17 +9547,10 @@ extension CryptoKeyPair$Typings on CryptoKeyPair {
     );
   }
 
-  /* #7889
-  source: 
-  publicKey: CryptoKey; */
   _i3.CryptoKey get publicKey => _i4.getProperty(
         this,
         'publicKey',
       );
-  /* #7889
-  source: 
-  publicKey: CryptoKey; */
-  // Type Instance of 'InteropInterface'
   set publicKey(_i3.CryptoKey value) {
     _i4.setProperty(
       this,
@@ -10946,6 +9564,9 @@ extension CryptoKeyPair$Typings on CryptoKeyPair {
 @_i1.staticInterop
 class IInline41 {}
 
+/// This Web Crypto API interface provides a number of low-level cryptographic
+/// functions. It is accessed via the Crypto.subtle properties available in a
+/// window context (via Window.crypto).
 @_i1.JS()
 @_i1.staticInterop
 class SubtleCrypto {
@@ -10965,7 +9586,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
   _i2.Future<_i3.CryptoKeyPair> _generateKey$1(
     _i3.Algorithm algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,440460461,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,94224700,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -10981,7 +9602,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
   _i2.Future<_i3.CryptoKey> _generateKey$2(
     _i3.Algorithm algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,360423715,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1058849468,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -10997,7 +9618,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
   _i2.Future<_i2.Object> _generateKey$3(
     _i3.AlgorithmIdentifier algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,606970077,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,714842533,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -11010,26 +9631,27 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           keyUsages.map((i) => i.name).toList(),
         ],
       ));
-  // HEYA generateKey
+
+  /// Overload accessor: $1, $2, $3
   ({
     _i2.Future<_i3.CryptoKeyPair> Function(
       _i3.Algorithm algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,440460461,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,94224700,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.KeyUsage>
           keyUsages,
     ) $1,
     _i2.Future<_i3.CryptoKey> Function(
       _i3.Algorithm algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,360423715,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1058849468,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.KeyUsage>
           keyUsages,
     ) $2,
     _i2.Future<_i2.Object> Function(
       _i3.AlgorithmIdentifier algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,606970077,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,714842533,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.KeyUsage>
           keyUsages,
     ) $3,
@@ -11043,7 +9665,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i3.JsonWebKey keyData,
     _i2.Object algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,82101176,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,169243026,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -11063,7 +9685,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i3.BufferSource keyData,
     _i2.Object algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,164520308,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,675339133,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -11078,14 +9700,15 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           keyUsages.map((i) => i.name).toList(),
         ],
       ));
-  // HEYA importKey
+
+  /// Overload accessor: $1, $2
   ({
     _i2.Future<_i3.CryptoKey> Function(
       _i2.String format,
       _i3.JsonWebKey keyData,
       _i2.Object algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,82101176,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,169243026,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.KeyUsage>
           keyUsages,
     ) $1,
@@ -11094,7 +9717,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
       _i3.BufferSource keyData,
       _i2.Object algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,164520308,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,675339133,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.KeyUsage>
           keyUsages,
     ) $2,
@@ -11126,7 +9749,8 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           key,
         ],
       ));
-  // HEYA exportKey
+
+  /// Overload accessor: $1, $2
   ({
     _i2.Future<_i3.JsonWebKey> Function(
       _i2.String format,
@@ -11229,7 +9853,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i3.CryptoKey baseKey,
     _i2.Object derivedKeyType,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,429942053,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,706020108,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -11267,7 +9891,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i2.Object unwrapAlgorithm,
     _i2.Object unwrappedKeyAlgorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,814822664,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1002644047,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.KeyUsage>
         keyUsages,
   ) =>
@@ -11291,9 +9915,6 @@ extension SubtleCrypto$Typings on SubtleCrypto {
 class Crypto {}
 
 extension Crypto$Typings on Crypto {
-  /* #8038
-  source: 
-  readonly subtle: SubtleCrypto; */
   _i3.SubtleCrypto get subtle => _i4.getProperty(
         _i7.target1278,
         'subtle',
@@ -11339,29 +9960,16 @@ FieldExternal:
 external _i2.Object _declaredBroadcastChannel;
 
 extension BroadcastChannel$Typings on BroadcastChannel {
-  /* #8080
-  source: 
-  /**
-   * Returns the channel name (as passed to the constructor).
-   */
-  readonly name: string; */
   /// Returns the channel name (as passed to the constructor).
   _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
-  /* #8081
-  source: 
-  onmessage: ((this: BroadcastChannel, ev: MessageEvent) => any) | null; */
   _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? get onmessage =>
       _i4.getProperty(
         this,
         'onmessage',
       );
-  /* #8081
-  source: 
-  onmessage: ((this: BroadcastChannel, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#851850905(parent: InteropGetter#26287734(name: onmessage))
   set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
@@ -11370,18 +9978,11 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     );
   }
 
-  /* #8082
-  source: 
-  onmessageerror: ((this: BroadcastChannel, ev: MessageEvent) => any) | null; */
   _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? get onmessageerror =>
       _i4.getProperty(
         this,
         'onmessageerror',
       );
-  /* #8082
-  source: 
-  onmessageerror: ((this: BroadcastChannel, ev: MessageEvent) => any) | null; */
-  // Type InteropUnion#4006665(parent: InteropGetter#92795501(name: onmessageerror))
   set onmessageerror(
       _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
@@ -11391,6 +9992,7 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     );
   }
 
+  /// Closes the BroadcastChannel object, opening it up to garbage collection.
   void close() {
     _i4.callMethod(
       this,
@@ -11399,6 +10001,9 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     );
   }
 
+  /// Sends the given message to other BroadcastChannel objects set up for
+  ///  this channel. Messages can be structured objects, e.g. nested objects
+  ///  and arrays.
   void postMessage(_i2.dynamic message) {
     _i4.callMethod(
       this,
@@ -11407,6 +10012,29 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$ extends _i3.Event>(
     BroadcastChannelEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
@@ -11423,6 +10051,29 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -11439,13 +10090,60 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     );
   }
 
-  // HEYA addEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function<K$ extends _i3.Event>(
       BroadcastChannelEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -11455,6 +10153,9 @@ extension BroadcastChannel$Typings on BroadcastChannel {
         $1: _addEventListener$1,
         $2: _addEventListener$2,
       );
+
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$1<K$ extends _i3.Event>(
     BroadcastChannelEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
@@ -11471,6 +10172,8 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     );
   }
 
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -11487,13 +10190,18 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     );
   }
 
-  // HEYA removeEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function<K$ extends _i3.Event>(
       BroadcastChannelEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -11533,20 +10241,20 @@ extension VoidFunction$Typings on VoidFunction {
 class DOMStringList {}
 
 extension DOMStringList$Typings on DOMStringList {
-  /* #8890
-  source: 
-  /** Returns the number of strings in strings. */
-  readonly length: number; */
   /// Returns the number of strings in strings.
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
+
+  /// Returns true if strings contains string, and false otherwise.
   _i2.bool contains(_i2.String string) => _i4.callMethod(
         this,
         'contains',
         [string],
       );
+
+  /// Returns the string with index index from strings.
   _i2.String? item(_i2.num index) => _i4.callMethod(
         this,
         'item',
@@ -11606,17 +10314,10 @@ class ErrorEventInit implements _i3.EventInit {
 }
 
 extension ErrorEventInit$Typings on ErrorEventInit {
-  /* #8906
-  source: 
-  message?: string; */
   _i2.String? get message => _i4.getProperty(
         this,
         'message',
       );
-  /* #8906
-  source: 
-  message?: string; */
-  // Type InteropStaticType.string
   set message(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -11625,17 +10326,10 @@ extension ErrorEventInit$Typings on ErrorEventInit {
     );
   }
 
-  /* #8907
-  source: 
-  filename?: string; */
   _i2.String? get filename => _i4.getProperty(
         this,
         'filename',
       );
-  /* #8907
-  source: 
-  filename?: string; */
-  // Type InteropStaticType.string
   set filename(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -11644,17 +10338,10 @@ extension ErrorEventInit$Typings on ErrorEventInit {
     );
   }
 
-  /* #8908
-  source: 
-  lineno?: number; */
   _i2.num? get lineno => _i4.getProperty(
         this,
         'lineno',
       );
-  /* #8908
-  source: 
-  lineno?: number; */
-  // Type InteropStaticType.number
   set lineno(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11663,17 +10350,10 @@ extension ErrorEventInit$Typings on ErrorEventInit {
     );
   }
 
-  /* #8909
-  source: 
-  colno?: number; */
   _i2.num? get colno => _i4.getProperty(
         this,
         'colno',
       );
-  /* #8909
-  source: 
-  colno?: number; */
-  // Type InteropStaticType.number
   set colno(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -11682,17 +10362,10 @@ extension ErrorEventInit$Typings on ErrorEventInit {
     );
   }
 
-  /* #8910
-  source: 
-  error?: any; */
   _i2.dynamic get error => _i4.getProperty(
         this,
         'error',
       );
-  /* #8910
-  source: 
-  error?: any; */
-  // Type InteropStaticType.dyn
   set error(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -11725,37 +10398,22 @@ FieldExternal:
 external _i2.Object _declaredErrorEvent;
 
 extension ErrorEvent$Typings on ErrorEvent {
-  /* #8915
-  source: 
-  readonly message: string; */
   _i2.String get message => _i4.getProperty(
         this,
         'message',
       );
-  /* #8916
-  source: 
-  readonly filename: string; */
   _i2.String get filename => _i4.getProperty(
         this,
         'filename',
       );
-  /* #8917
-  source: 
-  readonly lineno: number; */
   _i2.num get lineno => _i4.getProperty(
         this,
         'lineno',
       );
-  /* #8918
-  source: 
-  readonly colno: number; */
   _i2.num get colno => _i4.getProperty(
         this,
         'colno',
       );
-  /* #8919
-  source: 
-  readonly error: any; */
   _i2.dynamic get error => _i4.getProperty(
         this,
         'error',
@@ -11791,17 +10449,10 @@ class PromiseRejectionEventInit implements _i3.EventInit {
 }
 
 extension PromiseRejectionEventInit$Typings on PromiseRejectionEventInit {
-  /* #8925
-  source: 
-  promise: Promise<any>; */
   _i2.Future<_i2.dynamic> get promise => _i4.promiseToFuture(_i4.getProperty(
         this,
         'promise',
       ));
-  /* #8925
-  source: 
-  promise: Promise<any>; */
-  // Type InteropClass#459811851(name: Future)
   set promise(_i2.Future<_i2.dynamic> value) {
     _i4.setProperty(
       this,
@@ -11810,17 +10461,10 @@ extension PromiseRejectionEventInit$Typings on PromiseRejectionEventInit {
     );
   }
 
-  /* #8926
-  source: 
-  reason?: any; */
   _i2.dynamic get reason => _i4.getProperty(
         this,
         'reason',
       );
-  /* #8926
-  source: 
-  reason?: any; */
-  // Type InteropStaticType.dyn
   set reason(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -11853,16 +10497,10 @@ FieldExternal:
 external _i2.Object _declaredPromiseRejectionEvent;
 
 extension PromiseRejectionEvent$Typings on PromiseRejectionEvent {
-  /* #8931
-  source: 
-  readonly promise: Promise<any>; */
   _i2.Future<_i2.dynamic> get promise => _i4.promiseToFuture(_i4.getProperty(
         this,
         'promise',
       ));
-  /* #8932
-  source: 
-  readonly reason: any; */
   _i2.dynamic get reason => _i4.getProperty(
         this,
         'reason',
@@ -11907,9 +10545,6 @@ class WorkerOptions {
 }
 
 extension WorkerOptions$Typings on WorkerOptions {
-  /* #8949
-  source: 
-  type?: "classic" | "module"; */
   Type? get type => switch (_i4.getProperty(
         this,
         'type',
@@ -11917,10 +10552,6 @@ extension WorkerOptions$Typings on WorkerOptions {
         _i2.String name => Type.values.byName(name),
         _ => null
       };
-  /* #8949
-  source: 
-  type?: "classic" | "module"; */
-  // Type InteropUnion#717471102(parent: InteropGetter#730988787(name: type))
   set type(Type? value) {
     _i4.setProperty(
       this,
@@ -11929,17 +10560,10 @@ extension WorkerOptions$Typings on WorkerOptions {
     );
   }
 
-  /* #8950
-  source: 
-  name?: string; */
   _i2.String? get name => _i4.getProperty(
         this,
         'name',
       );
-  /* #8950
-  source: 
-  name?: string; */
-  // Type InteropStaticType.string
   set name(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -11972,17 +10596,10 @@ FieldExternal:
 external _i2.Object _declaredWorker;
 
 extension Worker$Typings on Worker {
-  /* #8955
-  source: 
-  onerror?: (e: ErrorEvent) => void; */
   void Function(_i3.ErrorEvent) get onerror => _i4.getProperty(
         this,
         'onerror',
       );
-  /* #8955
-  source: 
-  onerror?: (e: ErrorEvent) => void; */
-  // Type InteropFunction#500656589(parent: InteropGetter#366775706(name: onerror), library: 0lib.deno.d.ts)
   set onerror(void Function(_i3.ErrorEvent) value) {
     _i4.setProperty(
       this,
@@ -11991,17 +10608,10 @@ extension Worker$Typings on Worker {
     );
   }
 
-  /* #8956
-  source: 
-  onmessage?: (e: MessageEvent) => void; */
   void Function(_i3.MessageEvent<_i2.dynamic>) get onmessage => _i4.getProperty(
         this,
         'onmessage',
       );
-  /* #8956
-  source: 
-  onmessage?: (e: MessageEvent) => void; */
-  // Type InteropFunction#694427125(parent: InteropGetter#676955705(name: onmessage), library: 0lib.deno.d.ts)
   set onmessage(void Function(_i3.MessageEvent<_i2.dynamic>) value) {
     _i4.setProperty(
       this,
@@ -12010,18 +10620,11 @@ extension Worker$Typings on Worker {
     );
   }
 
-  /* #8957
-  source: 
-  onmessageerror?: (e: MessageEvent) => void; */
   void Function(_i3.MessageEvent<_i2.dynamic>) get onmessageerror =>
       _i4.getProperty(
         this,
         'onmessageerror',
       );
-  /* #8957
-  source: 
-  onmessageerror?: (e: MessageEvent) => void; */
-  // Type InteropFunction#694386040(parent: InteropGetter#309075595(name: onmessageerror), library: 0lib.deno.d.ts)
   set onmessageerror(void Function(_i3.MessageEvent<_i2.dynamic>) value) {
     _i4.setProperty(
       this,
@@ -12032,7 +10635,7 @@ extension Worker$Typings on Worker {
 
   void _postMessage$1(
     _i2.dynamic message,
-    _i2.List /*LIST InteropStaticType.list,15855224,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,401422692,[Instance of 'InteropRef<InteropType>']*/ <
             _i3.Transferable>
         transfer,
   ) {
@@ -12060,11 +10663,11 @@ extension Worker$Typings on Worker {
     );
   }
 
-  // HEYA postMessage
+  /// Overload accessor: $1, $2
   ({
     void Function(
       _i2.dynamic message,
-      _i2.List /*LIST InteropStaticType.list,15855224,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,401422692,[Instance of 'InteropRef<InteropType>']*/ <
               _i3.Transferable>
           transfer,
     ) $1,
@@ -12076,6 +10679,30 @@ extension Worker$Typings on Worker {
         $1: _postMessage$1,
         $2: _postMessage$2,
       );
+
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$ extends _i3.Event>(
     WorkerEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
@@ -12092,6 +10719,29 @@ extension Worker$Typings on Worker {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -12108,13 +10758,60 @@ extension Worker$Typings on Worker {
     );
   }
 
-  // HEYA addEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function<K$ extends _i3.Event>(
       WorkerEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -12124,6 +10821,9 @@ extension Worker$Typings on Worker {
         $1: _addEventListener$1,
         $2: _addEventListener$2,
       );
+
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$1<K$ extends _i3.Event>(
     WorkerEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
@@ -12140,6 +10840,8 @@ extension Worker$Typings on Worker {
     );
   }
 
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -12156,13 +10858,18 @@ extension Worker$Typings on Worker {
     );
   }
 
-  // HEYA removeEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function<K$ extends _i3.Event>(
       WorkerEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -12181,6 +10888,12 @@ extension Worker$Typings on Worker {
   }
 }
 
+/// Deno supports [User Timing Level 3](https://w3c.github.io/user-timing)
+/// which is not widely supported yet in other runtimes.
+///
+/// Check out the
+/// [Performance API](https://developer.mozilla.org/en-US/docs/Web/API/Performance)
+/// documentation on MDN for further information about how to use the API.
 @_i1.JS()
 @_i1.staticInterop
 class Performance implements _i3.EventTarget {
@@ -12197,15 +10910,13 @@ FieldExternal:
 external _i2.Object _declaredPerformance;
 
 extension Performance$Typings on Performance {
-  /* #8993
-  source: 
-  /** Returns a timestamp representing the start of the performance measurement. */
-  readonly timeOrigin: number; */
   /// Returns a timestamp representing the start of the performance measurement.
   _i2.num get timeOrigin => _i4.getProperty(
         _i7.target1284,
         'timeOrigin',
       );
+
+  /// Removes the stored timestamp with the associated name.
   void clearMarks([_i2.String? markName]) {
     _i4.callMethod(
       this,
@@ -12214,6 +10925,7 @@ extension Performance$Typings on Performance {
     );
   }
 
+  /// Removes stored timestamp with the associated name.
   void clearMeasures([_i2.String? measureName]) {
     _i4.callMethod(
       this,
@@ -12247,6 +10959,8 @@ extension Performance$Typings on Performance {
         [type],
       ) as _i2.List)
           .cast();
+
+  /// Stores a timestamp with the associated name (a "mark").
   _i3.PerformanceMark mark(
     _i2.String markName, [
     _i3.PerformanceMarkOptions? options,
@@ -12259,6 +10973,9 @@ extension Performance$Typings on Performance {
           options ?? _i6.undefined,
         ],
       );
+
+  /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+  ///  associated name (a "measure").
   _i3.PerformanceMeasure _measure$1(
     _i2.String measureName, [
     _i3.PerformanceMeasureOptions? options,
@@ -12271,6 +10988,9 @@ extension Performance$Typings on Performance {
           options ?? _i6.undefined,
         ],
       );
+
+  /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+  ///  associated name (a "measure").
   _i3.PerformanceMeasure _measure$2(
     _i2.String measureName, [
     _i2.String? startMark,
@@ -12285,12 +11005,18 @@ extension Performance$Typings on Performance {
           endMark ?? _i6.undefined,
         ],
       );
-  // HEYA measure
+
+  /// Overload accessor: $1, $2
   ({
+    /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+    ///  associated name (a "measure").
     _i3.PerformanceMeasure Function(
       _i2.String measureName, [
       _i3.PerformanceMeasureOptions? options,
     ]) $1,
+
+    /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+    ///  associated name (a "measure").
     _i3.PerformanceMeasure Function(
       _i2.String measureName, [
       _i2.String? startMark,
@@ -12300,11 +11026,24 @@ extension Performance$Typings on Performance {
         $1: _measure$1,
         $2: _measure$2,
       );
+
+  /// Returns a current time from Deno's start in milliseconds.
+  ///
+  ///  Use the permission flag `--allow-hrtime` return a precise value.
+  ///
+  ///  ```ts
+  ///  const t = performance.now();
+  ///  console.log(`${t} ms since start!`);
+  ///  ```
+  ///
+  ///  @tags allow-hrtime
   _i2.num now() => _i4.callMethod(
         this,
         'now',
         [],
       );
+
+  /// Returns a JSON representation of the performance object.
   _i2.dynamic toJSON() => _i4.callMethod(
         this,
         'toJSON',
@@ -12312,35 +11051,27 @@ extension Performance$Typings on Performance {
       );
 }
 
+/// Encapsulates a single performance metric that is part of the performance
+/// timeline. A performance entry can be directly created by making a performance
+/// mark or measure (for example by calling the `.mark()` method) at an explicit
+/// point in an application.
 @_i1.JS()
 @_i1.staticInterop
 class PerformanceEntry {}
 
 extension PerformanceEntry$Typings on PerformanceEntry {
-  /* #9075
-  source: 
-  readonly duration: number; */
   _i2.num get duration => _i4.getProperty(
         this,
         'duration',
       );
-  /* #9076
-  source: 
-  readonly entryType: string; */
   _i2.String get entryType => _i4.getProperty(
         this,
         'entryType',
       );
-  /* #9077
-  source: 
-  readonly name: string; */
   _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
-  /* #9078
-  source: 
-  readonly startTime: number; */
   _i2.num get startTime => _i4.getProperty(
         this,
         'startTime',
@@ -12352,6 +11083,10 @@ extension PerformanceEntry$Typings on PerformanceEntry {
       );
 }
 
+/// `PerformanceMark`Â is an abstract interface for `PerformanceEntry` objects
+/// with an entryType of `"mark"`. Entries of this type are created by calling
+/// `performance.mark()` to add a named `DOMHighResTimeStamp` (the mark) to the
+/// performance timeline.
 @_i1.JS()
 @_i1.staticInterop
 class PerformanceMark implements _i3.PerformanceEntry {
@@ -12375,37 +11110,29 @@ FieldExternal:
 external _i2.Object _declaredPerformanceMark;
 
 extension PerformanceMark$Typings on PerformanceMark {
-  /* #9090
-  source: 
-  readonly detail: any; */
   _i2.dynamic get detail => _i4.getProperty(
         this,
         'detail',
       );
-  /* #9091
-  source: 
-  readonly entryType: "mark"; */
   _i2.String get entryType => _i4.getProperty(
         this,
         'entryType',
       );
 }
 
+/// `PerformanceMeasure` is an abstract interface for `PerformanceEntry` objects
+/// with an entryType of `"measure"`. Entries of this type are created by calling
+/// `performance.measure()` to add a named `DOMHighResTimeStamp` (the measure)
+/// between two marks to the performance timeline.
 @_i1.JS()
 @_i1.staticInterop
 class PerformanceMeasure implements _i3.PerformanceEntry {}
 
 extension PerformanceMeasure$Typings on PerformanceMeasure {
-  /* #9103
-  source: 
-  readonly detail: any; */
   _i2.dynamic get detail => _i4.getProperty(
         this,
         'detail',
       );
-  /* #9104
-  source: 
-  readonly entryType: "measure"; */
   _i2.String get entryType => _i4.getProperty(
         this,
         'entryType',
@@ -12438,17 +11165,10 @@ class CustomEventInit<T> implements _i3.EventInit {
 }
 
 extension CustomEventInit$Typings<T> on CustomEventInit<T> {
-  /* #9109
-  source: 
-  detail?: T; */
   T? get detail => _i4.getProperty(
         this,
         'detail',
       );
-  /* #9109
-  source: 
-  detail?: T; */
-  // Type InteropLocalType(T)
   set detail(T? value) {
     _i4.setProperty(
       this,
@@ -12481,11 +11201,6 @@ FieldExternal:
 external _i2.Object _declaredCustomEvent;
 
 extension CustomEvent$Typings<T> on CustomEvent<T> {
-  /* #9117
-  source: 
-  /** Returns any custom data event was created with. Typically used for
-   * synthetic events. */
-  readonly detail: T; */
   /// Returns any custom data event was created with. Typically used for
   /// synthetic events.
   T get detail => _i4.getProperty(
@@ -12499,6 +11214,7 @@ extension CustomEvent$Typings<T> on CustomEvent<T> {
 class ErrorConstructor {}
 
 extension ErrorConstructor$Typings on ErrorConstructor {
+  /// See https://v8.dev/docs/stack-trace-api#stack-trace-collection-for-custom-exceptions.
   void captureStackTrace(
     _i5.Object error, [
     _i2.Function? constructor,
@@ -12530,18 +11246,23 @@ FieldExternal:
 external _i2.Object _declaredCacheStorage;
 
 extension CacheStorage$Typings on CacheStorage {
+  /// Open a cache storage for the provided name.
   _i2.Future<_i3.Cache> open(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'open',
         [cacheName],
       ));
+
+  /// Check if cache already exists for the provided name.
   _i2.Future<_i2.bool> has(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'has',
         [cacheName],
       ));
+
+  /// Delete cache storage for the provided name.
   _i2.Future<_i2.bool> delete(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -12566,6 +11287,11 @@ FieldExternal:
 external _i2.Object _declaredCache;
 
 extension Cache$Typings on Cache {
+  /// Put the provided request/response into the cache.
+  ///
+  ///  How is the API different from browsers?
+  ///  1. You cannot match cache objects using by relative paths.
+  ///  2. You cannot pass options like `ignoreVary`, `ignoreMethod`, `ignoreSearch`.
   _i2.Future<void> put(
     _i2.Object request,
     _i3.Response response,
@@ -12578,6 +11304,12 @@ extension Cache$Typings on Cache {
           response,
         ],
       ));
+
+  /// Return cache object matching the provided request.
+  ///
+  ///  How is the API different from browsers?
+  ///  1. You cannot match cache objects using by relative paths.
+  ///  2. You cannot pass options like `ignoreVary`, `ignoreMethod`, `ignoreSearch`.
   _i2.Future<_i3.Response?> match(
     _i2.Object request, [
     _i3.CacheQueryOptions? options,
@@ -12590,6 +11322,12 @@ extension Cache$Typings on Cache {
           options ?? _i6.undefined,
         ],
       ));
+
+  /// Delete cache object matching the provided request.
+  ///
+  ///  How is the API different from browsers?
+  ///  1. You cannot delete cache objects using by relative paths.
+  ///  2. You cannot pass options like `ignoreVary`, `ignoreMethod`, `ignoreSearch`.
   _i2.Future<_i2.bool> delete(
     _i2.Object request, [
     _i3.CacheQueryOptions? options,
@@ -12635,17 +11373,10 @@ class CacheQueryOptions {
 }
 
 extension CacheQueryOptions$Typings on CacheQueryOptions {
-  /* #9196
-  source: 
-  ignoreMethod?: boolean; */
   _i2.bool? get ignoreMethod => _i4.getProperty(
         this,
         'ignoreMethod',
       );
-  /* #9196
-  source: 
-  ignoreMethod?: boolean; */
-  // Type InteropStaticType.boolean
   set ignoreMethod(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -12654,17 +11385,10 @@ extension CacheQueryOptions$Typings on CacheQueryOptions {
     );
   }
 
-  /* #9197
-  source: 
-  ignoreSearch?: boolean; */
   _i2.bool? get ignoreSearch => _i4.getProperty(
         this,
         'ignoreSearch',
       );
-  /* #9197
-  source: 
-  ignoreSearch?: boolean; */
-  // Type InteropStaticType.boolean
   set ignoreSearch(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -12673,17 +11397,10 @@ extension CacheQueryOptions$Typings on CacheQueryOptions {
     );
   }
 
-  /* #9198
-  source: 
-  ignoreVary?: boolean; */
   _i2.bool? get ignoreVary => _i4.getProperty(
         this,
         'ignoreVary',
       );
-  /* #9198
-  source: 
-  ignoreVary?: boolean; */
-  // Type InteropStaticType.boolean
   set ignoreVary(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -12707,31 +11424,18 @@ enum WindowEventMap<T$ extends _i3.Event> {
 class Window implements _i3.EventTarget {}
 
 extension Window$Typings on Window {
-  /* #9219
-  source: 
-  readonly window: Window & typeof globalThis; */
   _Intersection14 get window => _i4.getProperty(
         this,
         'window',
       );
-  /* #9220
-  source: 
-  readonly self: Window & typeof globalThis; */
   _Intersection15 get self => _i4.getProperty(
         this,
         'self',
       );
-  /* #9221
-  source: 
-  onerror: ((this: Window, ev: ErrorEvent) => any) | null; */
   _i2.dynamic Function(_i3.ErrorEvent)? get onerror => _i4.getProperty(
         this,
         'onerror',
       );
-  /* #9221
-  source: 
-  onerror: ((this: Window, ev: ErrorEvent) => any) | null; */
-  // Type InteropUnion#399657943(parent: InteropGetter#567860094(name: onerror))
   set onerror(_i2.dynamic Function(_i3.ErrorEvent)? value) {
     _i4.setProperty(
       this,
@@ -12740,17 +11444,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9222
-  source: 
-  onload: ((this: Window, ev: Event) => any) | null; */
   _i2.dynamic Function(_i3.Event)? get onload => _i4.getProperty(
         this,
         'onload',
       );
-  /* #9222
-  source: 
-  onload: ((this: Window, ev: Event) => any) | null; */
-  // Type InteropUnion#979940781(parent: InteropGetter#948825154(name: onload))
   set onload(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -12759,17 +11456,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9223
-  source: 
-  onbeforeunload: ((this: Window, ev: Event) => any) | null; */
   _i2.dynamic Function(_i3.Event)? get onbeforeunload => _i4.getProperty(
         this,
         'onbeforeunload',
       );
-  /* #9223
-  source: 
-  onbeforeunload: ((this: Window, ev: Event) => any) | null; */
-  // Type InteropUnion#387800242(parent: InteropGetter#518753789(name: onbeforeunload))
   set onbeforeunload(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -12778,17 +11468,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9224
-  source: 
-  onunload: ((this: Window, ev: Event) => any) | null; */
   _i2.dynamic Function(_i3.Event)? get onunload => _i4.getProperty(
         this,
         'onunload',
       );
-  /* #9224
-  source: 
-  onunload: ((this: Window, ev: Event) => any) | null; */
-  // Type InteropUnion#390764585(parent: InteropGetter#530120387(name: onunload))
   set onunload(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
@@ -12797,22 +11480,11 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9225
-  source: 
-  onunhandledrejection:
-    | ((this: Window, ev: PromiseRejectionEvent) => any)
-    | null; */
   _i2.dynamic Function(_i3.PromiseRejectionEvent)? get onunhandledrejection =>
       _i4.getProperty(
         this,
         'onunhandledrejection',
       );
-  /* #9225
-  source: 
-  onunhandledrejection:
-    | ((this: Window, ev: PromiseRejectionEvent) => any)
-    | null; */
-  // Type InteropUnion#443684817(parent: InteropGetter#894106191(name: onunhandledrejection))
   set onunhandledrejection(
       _i2.dynamic Function(_i3.PromiseRejectionEvent)? value) {
     _i4.setProperty(
@@ -12822,17 +11494,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9228
-  source: 
-  close: () => void; */
   void Function() get close => _i4.getProperty(
         this,
         'close',
       );
-  /* #9228
-  source: 
-  close: () => void; */
-  // Type InteropFunction#716379557(parent: InteropGetter#233802696(name: close), library: 0lib.deno.d.ts)
   set close(void Function() value) {
     _i4.setProperty(
       this,
@@ -12841,24 +11506,14 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9229
-  source: 
-  readonly closed: boolean; */
   _i2.bool get closed => _i4.getProperty(
         this,
         'closed',
       );
-  /* #9230
-  source: 
-  alert: (message?: string) => void; */
   void Function(_i2.String?) get alert => _i4.getProperty(
         this,
         'alert',
       );
-  /* #9230
-  source: 
-  alert: (message?: string) => void; */
-  // Type InteropFunction#599212888(parent: InteropGetter#576781844(name: alert), library: 0lib.deno.d.ts)
   set alert(void Function(_i2.String?) value) {
     _i4.setProperty(
       this,
@@ -12867,17 +11522,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9231
-  source: 
-  confirm: (message?: string) => boolean; */
   _i2.bool Function(_i2.String?) get confirm => _i4.getProperty(
         this,
         'confirm',
       );
-  /* #9231
-  source: 
-  confirm: (message?: string) => boolean; */
-  // Type InteropFunction#79725124(parent: InteropGetter#469510651(name: confirm), library: 0lib.deno.d.ts)
   set confirm(_i2.bool Function(_i2.String?) value) {
     _i4.setProperty(
       this,
@@ -12886,9 +11534,6 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9232
-  source: 
-  prompt: (message?: string, defaultValue?: string) => string | null; */
   _i2.String? Function(
     _i2.String?,
     _i2.String?,
@@ -12896,10 +11541,6 @@ extension Window$Typings on Window {
         this,
         'prompt',
       );
-  /* #9232
-  source: 
-  prompt: (message?: string, defaultValue?: string) => string | null; */
-  // Type InteropFunction#823203037(parent: InteropGetter#710686259(name: prompt), library: 0lib.deno.d.ts)
   set prompt(
       _i2.String? Function(
         _i2.String?,
@@ -12912,18 +11553,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9233
-  source: 
-  Deno: typeof Deno; */
   _i2.dynamic get deno => _i4.getProperty(
         this,
         'Deno',
       );
-  /* #9233
-  source: 
-  Deno: typeof Deno; */
-  // Type   InteropAccessor(path: Deno, parent: InteropGetter#234219715(name: Deno))
-
   set deno(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -12932,18 +11565,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9234
-  source: 
-  Navigator: typeof Navigator; */
   _i2.dynamic get navigator$ => _i4.getProperty(
         this,
         'Navigator',
       );
-  /* #9234
-  source: 
-  Navigator: typeof Navigator; */
-  // Type   InteropAccessor(path: Navigator, parent: InteropGetter#872181725(name: Navigator))
-
   set navigator$1(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -12952,17 +11577,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9235
-  source: 
-  navigator: Navigator; */
   _i3.Navigator get navigator => _i4.getProperty(
         this,
         'navigator',
       );
-  /* #9235
-  source: 
-  navigator: Navigator; */
-  // Type Instance of 'InteropInterface'
   set navigator(_i3.Navigator value) {
     _i4.setProperty(
       this,
@@ -12971,18 +11589,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9236
-  source: 
-  Location: typeof Location; */
   _i2.dynamic get location$ => _i4.getProperty(
         this,
         'Location',
       );
-  /* #9236
-  source: 
-  Location: typeof Location; */
-  // Type   InteropAccessor(path: Location, parent: InteropGetter#134312459(name: Location))
-
   set location$1(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -12991,17 +11601,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9237
-  source: 
-  location: Location; */
   _i3.Location get location => _i4.getProperty(
         this,
         'location',
       );
-  /* #9237
-  source: 
-  location: Location; */
-  // Type Instance of 'InteropInterface'
   set location(_i3.Location value) {
     _i4.setProperty(
       this,
@@ -13010,17 +11613,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9238
-  source: 
-  localStorage: Storage; */
   _i3.Storage get localStorage => _i4.getProperty(
         this,
         'localStorage',
       );
-  /* #9238
-  source: 
-  localStorage: Storage; */
-  // Type Instance of 'InteropInterface'
   set localStorage(_i3.Storage value) {
     _i4.setProperty(
       this,
@@ -13029,17 +11625,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9239
-  source: 
-  sessionStorage: Storage; */
   _i3.Storage get sessionStorage => _i4.getProperty(
         this,
         'sessionStorage',
       );
-  /* #9239
-  source: 
-  sessionStorage: Storage; */
-  // Type Instance of 'InteropInterface'
   set sessionStorage(_i3.Storage value) {
     _i4.setProperty(
       this,
@@ -13048,17 +11637,10 @@ extension Window$Typings on Window {
     );
   }
 
-  /* #9240
-  source: 
-  caches: CacheStorage; */
   _i3.CacheStorage get caches => _i4.getProperty(
         this,
         'caches',
       );
-  /* #9240
-  source: 
-  caches: CacheStorage; */
-  // Type Instance of 'InteropInterface'
   set caches(_i3.CacheStorage value) {
     _i4.setProperty(
       this,
@@ -13072,6 +11654,30 @@ extension Window$Typings on Window {
         'new',
         [],
       );
+
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$ extends _i3.Event>(
     WindowEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
@@ -13088,6 +11694,29 @@ extension Window$Typings on Window {
     );
   }
 
+  /// Appends an event listener for events whose type attribute value is type.
+  /// The callback argument sets the callback that will be invoked when the event
+  /// is dispatched.
+  ///
+  /// The options argument sets listener-specific options. For compatibility this
+  /// can be a boolean, in which case the method behaves exactly as if the value
+  /// was specified as options's capture.
+  ///
+  /// When set to true, options's capture prevents callback from being invoked
+  /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+  /// (or not present), callback will not be invoked when event's eventPhase
+  /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+  /// event's eventPhase attribute value is AT_TARGET.
+  ///
+  /// When set to true, options's passive indicates that the callback will not
+  /// cancel the event by invoking preventDefault(). This is used to enable
+  /// performance optimizations described in Â§ 2.8 Observing event listeners.
+  ///
+  /// When set to true, options's once indicates that the callback will only be
+  /// invoked once after which the event listener will be removed.
+  ///
+  /// The event listener is appended to target's event listener list and is not
+  /// appended if it has the same type, callback, and capture.
   void _addEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -13104,13 +11733,60 @@ extension Window$Typings on Window {
     );
   }
 
-  // HEYA addEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function<K$ extends _i3.Event>(
       WindowEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Appends an event listener for events whose type attribute value is type.
+    /// The callback argument sets the callback that will be invoked when the event
+    /// is dispatched.
+    ///
+    /// The options argument sets listener-specific options. For compatibility this
+    /// can be a boolean, in which case the method behaves exactly as if the value
+    /// was specified as options's capture.
+    ///
+    /// When set to true, options's capture prevents callback from being invoked
+    /// when the event's eventPhase attribute value is BUBBLING_PHASE. When false
+    /// (or not present), callback will not be invoked when event's eventPhase
+    /// attribute value is CAPTURING_PHASE. Either way, callback will be invoked if
+    /// event's eventPhase attribute value is AT_TARGET.
+    ///
+    /// When set to true, options's passive indicates that the callback will not
+    /// cancel the event by invoking preventDefault(). This is used to enable
+    /// performance optimizations described in Â§ 2.8 Observing event listeners.
+    ///
+    /// When set to true, options's once indicates that the callback will only be
+    /// invoked once after which the event listener will be removed.
+    ///
+    /// The event listener is appended to target's event listener list and is not
+    /// appended if it has the same type, callback, and capture.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -13120,6 +11796,9 @@ extension Window$Typings on Window {
         $1: _addEventListener$1,
         $2: _addEventListener$2,
       );
+
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$1<K$ extends _i3.Event>(
     WindowEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
@@ -13136,6 +11815,8 @@ extension Window$Typings on Window {
     );
   }
 
+  /// Removes the event listener in target's event listener list with the same
+  /// type, callback, and options.
   void _removeEventListener$2(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -13152,13 +11833,18 @@ extension Window$Typings on Window {
     );
   }
 
-  // HEYA removeEventListener
+  /// Overload accessor: $1, $2
   ({
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function<K$ extends _i3.Event>(
       WindowEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
+
+    /// Removes the event listener in target's event listener list with the same
+    /// type, callback, and options.
     void Function(
       _i2.String type,
       _i3.EventListenerOrEventListenerObject listener, [
@@ -13186,31 +11872,19 @@ FieldExternal:
 external _i2.Object _declaredNavigator;
 
 extension Navigator$Typings on Navigator {
-  /* #9296
-  source: 
-  readonly hardwareConcurrency: number; */
   _i2.num get hardwareConcurrency => _i4.getProperty(
         _i7.target1290,
         'hardwareConcurrency',
       );
-  /* #9297
-  source: 
-  readonly userAgent: string; */
   _i2.String get userAgent => _i4.getProperty(
         _i7.target1290,
         'userAgent',
       );
-  /* #9298
-  source: 
-  readonly language: string; */
   _i2.String get language => _i4.getProperty(
         _i7.target1290,
         'language',
       );
-  /* #9299
-  source: 
-  readonly languages: string[]; */
-  _i2.List /*LIST InteropStaticType.list,178108343,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,875090875,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       get languages => (_i4.getProperty(
             _i7.target1290,
             'languages',
@@ -13218,6 +11892,9 @@ extension Navigator$Typings on Navigator {
               .cast();
 }
 
+/// The location (URL) of the object it is linked to. Changes done on it are
+/// reflected on the object it relates to. Accessible via
+/// `globalThis.location`.
 @_i1.JS()
 @_i1.staticInterop
 class Location {
@@ -13234,14 +11911,6 @@ FieldExternal:
 external _i2.Object _declaredLocation;
 
 extension Location$Typings on Location {
-  /* #9409
-  source: 
-  /** Returns a DOMStringList object listing the origins of the ancestor
-   * browsing contexts, from the parent browsing context to the top-level
-   * browsing context.
-   *
-   * Always empty in Deno. */
-  readonly ancestorOrigins: DOMStringList; */
   /// Returns a DOMStringList object listing the origins of the ancestor
   /// browsing contexts, from the parent browsing context to the top-level
   /// browsing context.
@@ -13251,13 +11920,7 @@ extension Location$Typings on Location {
         _i7.target1291,
         'ancestorOrigins',
       );
-  /* #9414
-  source: 
-  /** Returns the Location object's URL's fragment (includes leading "#" if
-   * non-empty).
-   *
-   * Cannot be set in Deno. */
-  hash: string; */
+
   /// Returns the Location object's URL's fragment (includes leading "#" if
   ///  non-empty).
   ///
@@ -13266,14 +11929,6 @@ extension Location$Typings on Location {
         _i7.target1291,
         'hash',
       );
-  /* #9414
-  source: 
-  /** Returns the Location object's URL's fragment (includes leading "#" if
-   * non-empty).
-   *
-   * Cannot be set in Deno. */
-  hash: string; */
-  // Type InteropStaticType.string
   set hash(_i2.String value) {
     _i4.setProperty(
       this,
@@ -13282,13 +11937,6 @@ extension Location$Typings on Location {
     );
   }
 
-  /* #9419
-  source: 
-  /** Returns the Location object's URL's host and port (if different from the
-   * default port for the scheme).
-   *
-   * Cannot be set in Deno. */
-  host: string; */
   /// Returns the Location object's URL's host and port (if different from the
   ///  default port for the scheme).
   ///
@@ -13297,14 +11945,6 @@ extension Location$Typings on Location {
         _i7.target1291,
         'host',
       );
-  /* #9419
-  source: 
-  /** Returns the Location object's URL's host and port (if different from the
-   * default port for the scheme).
-   *
-   * Cannot be set in Deno. */
-  host: string; */
-  // Type InteropStaticType.string
   set host(_i2.String value) {
     _i4.setProperty(
       this,
@@ -13313,12 +11953,6 @@ extension Location$Typings on Location {
     );
   }
 
-  /* #9423
-  source: 
-  /** Returns the Location object's URL's host.
-   *
-   * Cannot be set in Deno. */
-  hostname: string; */
   /// Returns the Location object's URL's host.
   ///
   ///  Cannot be set in Deno.
@@ -13326,13 +11960,6 @@ extension Location$Typings on Location {
         _i7.target1291,
         'hostname',
       );
-  /* #9423
-  source: 
-  /** Returns the Location object's URL's host.
-   *
-   * Cannot be set in Deno. */
-  hostname: string; */
-  // Type InteropStaticType.string
   set hostname(_i2.String value) {
     _i4.setProperty(
       this,
@@ -13341,12 +11968,6 @@ extension Location$Typings on Location {
     );
   }
 
-  /* #9427
-  source: 
-  /** Returns the Location object's URL.
-   *
-   * Cannot be set in Deno. */
-  href: string; */
   /// Returns the Location object's URL.
   ///
   ///  Cannot be set in Deno.
@@ -13354,13 +11975,6 @@ extension Location$Typings on Location {
         _i7.target1291,
         'href',
       );
-  /* #9427
-  source: 
-  /** Returns the Location object's URL.
-   *
-   * Cannot be set in Deno. */
-  href: string; */
-  // Type InteropStaticType.string
   set href(_i2.String value) {
     _i4.setProperty(
       this,
@@ -13369,21 +11983,12 @@ extension Location$Typings on Location {
     );
   }
 
-  /* #9430
-  source: 
-  /** Returns the Location object's URL's origin. */
-  readonly origin: string; */
   /// Returns the Location object's URL's origin.
   _i2.String get origin => _i4.getProperty(
         _i7.target1291,
         'origin',
       );
-  /* #9434
-  source: 
-  /** Returns the Location object's URL's path.
-   *
-   * Cannot be set in Deno. */
-  pathname: string; */
+
   /// Returns the Location object's URL's path.
   ///
   ///  Cannot be set in Deno.
@@ -13391,13 +11996,6 @@ extension Location$Typings on Location {
         _i7.target1291,
         'pathname',
       );
-  /* #9434
-  source: 
-  /** Returns the Location object's URL's path.
-   *
-   * Cannot be set in Deno. */
-  pathname: string; */
-  // Type InteropStaticType.string
   set pathname(_i2.String value) {
     _i4.setProperty(
       this,
@@ -13406,12 +12004,6 @@ extension Location$Typings on Location {
     );
   }
 
-  /* #9438
-  source: 
-  /** Returns the Location object's URL's port.
-   *
-   * Cannot be set in Deno. */
-  port: string; */
   /// Returns the Location object's URL's port.
   ///
   ///  Cannot be set in Deno.
@@ -13419,13 +12011,6 @@ extension Location$Typings on Location {
         _i7.target1291,
         'port',
       );
-  /* #9438
-  source: 
-  /** Returns the Location object's URL's port.
-   *
-   * Cannot be set in Deno. */
-  port: string; */
-  // Type InteropStaticType.string
   set port(_i2.String value) {
     _i4.setProperty(
       this,
@@ -13434,12 +12019,6 @@ extension Location$Typings on Location {
     );
   }
 
-  /* #9442
-  source: 
-  /** Returns the Location object's URL's scheme.
-   *
-   * Cannot be set in Deno. */
-  protocol: string; */
   /// Returns the Location object's URL's scheme.
   ///
   ///  Cannot be set in Deno.
@@ -13447,13 +12026,6 @@ extension Location$Typings on Location {
         _i7.target1291,
         'protocol',
       );
-  /* #9442
-  source: 
-  /** Returns the Location object's URL's scheme.
-   *
-   * Cannot be set in Deno. */
-  protocol: string; */
-  // Type InteropStaticType.string
   set protocol(_i2.String value) {
     _i4.setProperty(
       this,
@@ -13462,13 +12034,6 @@ extension Location$Typings on Location {
     );
   }
 
-  /* #9447
-  source: 
-  /** Returns the Location object's URL's query (includes leading "?" if
-   * non-empty).
-   *
-   * Cannot be set in Deno. */
-  search: string; */
   /// Returns the Location object's URL's query (includes leading "?" if
   ///  non-empty).
   ///
@@ -13477,14 +12042,6 @@ extension Location$Typings on Location {
         _i7.target1291,
         'search',
       );
-  /* #9447
-  source: 
-  /** Returns the Location object's URL's query (includes leading "?" if
-   * non-empty).
-   *
-   * Cannot be set in Deno. */
-  search: string; */
-  // Type InteropStaticType.string
   set search(_i2.String value) {
     _i4.setProperty(
       this,
@@ -13498,6 +12055,10 @@ extension Location$Typings on Location {
         'toString',
         [],
       );
+
+  /// Navigates to the given URL.
+  ///
+  ///  Cannot be set in Deno.
   void assign(_i2.String url) {
     _i4.callMethod(
       this,
@@ -13506,6 +12067,9 @@ extension Location$Typings on Location {
     );
   }
 
+  /// Reloads the current page.
+  ///
+  ///  Disabled in Deno.
   void _reload$1() {
     _i4.callMethod(
       this,
@@ -13514,6 +12078,7 @@ extension Location$Typings on Location {
     );
   }
 
+  /// @deprecated
   void _reload$2(_i2.bool forcedReload) {
     _i4.callMethod(
       this,
@@ -13522,14 +12087,24 @@ extension Location$Typings on Location {
     );
   }
 
-  // HEYA reload
+  /// Overload accessor: $1, $2
   ({
+    /// Reloads the current page.
+    ///
+    ///  Disabled in Deno.
     void Function() $1,
+
+    /// @deprecated
     void Function(_i2.bool forcedReload) $2,
   }) get reload => (
         $1: _reload$1,
         $2: _reload$2,
       );
+
+  /// Removes the current page from the session history and navigates to the
+  ///  given URL.
+  ///
+  ///  Disabled in Deno.
   void replace(_i2.String url) {
     _i4.callMethod(
       this,
@@ -13539,16 +12114,37 @@ extension Location$Typings on Location {
   }
 }
 
+/// Decodes a string of data which has been encoded using base-64 encoding.
+///
+/// ```
+/// console.log(atob("aGVsbG8gd29ybGQ=")); // outputs 'hello world'
+/// ```
 _i2.String atob(_i2.String s) => _i4.callMethod(
       _self,
       'atob',
       [s],
     );
+
+/// Creates a base-64 ASCII encoded string from the input string.
+///
+/// ```
+/// console.log(btoa("hello world"));  // outputs "aGVsbG8gd29ybGQ="
+/// ```
 _i2.String btoa(_i2.String s) => _i4.callMethod(
       _self,
       'btoa',
       [s],
     );
+
+/// Creates a deep copy of a given value using the structured clone algorithm.
+///
+/// Unlike a shallow copy, a deep copy does not hold the same references as the
+/// source object, meaning its properties can be changed without affecting the
+/// source. For more details, see
+/// [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy).
+///
+/// Throws a `DataCloneError` if any part of the input value is not
+/// serializable.
 _i2.dynamic structuredClone(
   _i2.dynamic value, [
   _i3.StructuredSerializeOptions? options,
@@ -13561,6 +12157,21 @@ _i2.dynamic structuredClone(
         options ?? _i6.undefined,
       ],
     );
+
+/// Dispatch an uncaught exception. Similar to a synchronous version of:
+/// ```ts
+/// setTimeout(() => { throw error; }, 0);
+/// ```
+/// The error can not be caught with a `try/catch` block. An error event will
+/// be dispatched to the global scope. You can prevent the error from being
+/// reported to the console with `Event.prototype.preventDefault()`:
+/// ```ts
+/// addEventListener("error", (event) => {
+///  event.preventDefault();
+/// });
+/// reportError(new Error("foo")); // Will not be reported.
+/// ```
+/// In Deno, this error will terminate the process if not intercepted like above.
 void reportError(_i2.dynamic error) {
   _i4.callMethod(
     _self,
@@ -13569,6 +12180,15 @@ void reportError(_i2.dynamic error) {
   );
 }
 
+/// Fetch a resource from the network. It returns a `Promise` that resolves to the
+/// `Response` to that `Request`, whether it is successful or not.
+///
+/// ```ts
+/// const response = await fetch("http://my.json.host/data.json");
+/// console.log(response.status);  // e.g. 200
+/// console.log(response.statusText); // e.g. "OK"
+/// const jsonData = await response.json();
+/// ```
 _i2.Future<_i3.Response> fetch(
   _i2.Object input, [
   _i3.RequestInit? init,
@@ -13581,6 +12201,13 @@ _i2.Future<_i3.Response> fetch(
         init ?? _i6.undefined,
       ],
     ));
+
+/// Sets a timer which executes a function once after the timer expires. Returns
+/// an id which may be used to cancel the timeout.
+///
+/// ```ts
+/// setTimeout(() => { console.log('hello'); }, 500);
+/// ```
 _i2.num setTimeout(
   void Function(_i2.Iterable<_i2.dynamic>?) cb, [
   _i2.num? delay,
@@ -13595,6 +12222,13 @@ _i2.num setTimeout(
         ...?args,
       ],
     );
+
+/// Repeatedly calls a function , with a fixed time delay between each call.
+///
+/// ```ts
+/// // Outputs 'hello' to the console every 500ms
+/// setInterval(() => { console.log('hello'); }, 500);
+/// ```
 _i2.num setInterval(
   void Function(_i2.Iterable<_i2.dynamic>?) cb, [
   _i2.num? delay,
@@ -13609,6 +12243,15 @@ _i2.num setInterval(
         ...?args,
       ],
     );
+
+/// Cancels a timed, repeating action which was previously started by a call
+/// to `setInterval()`
+///
+/// ```ts
+/// const id = setInterval(() => {console.log('hello');}, 500);
+/// // ...
+/// clearInterval(id);
+/// ```
 void clearInterval([_i2.num? id]) {
   _i4.callMethod(
     _self,
@@ -13617,6 +12260,13 @@ void clearInterval([_i2.num? id]) {
   );
 }
 
+/// Cancels a scheduled action initiated by `setTimeout()`
+///
+/// ```ts
+/// const id = setTimeout(() => {console.log('hello');}, 500);
+/// // ...
+/// clearTimeout(id);
+/// ```
 void clearTimeout([_i2.num? id]) {
   _i4.callMethod(
     _self,
@@ -13625,6 +12275,15 @@ void clearTimeout([_i2.num? id]) {
   );
 }
 
+/// A microtask is a short function which is executed after the function or
+/// module which created it exits and only if the JavaScript execution stack is
+/// empty, but before returning control to the event loop being used to drive the
+/// script's execution environment. This event loop may be either the main event
+/// loop or the event loop driving a web worker.
+///
+/// ```ts
+/// queueMicrotask(() => { console.log('This event loop stack is complete'); });
+/// ```
 void queueMicrotask(_i3.VoidFunction func) {
   _i4.callMethod(
     _self,
@@ -13633,11 +12292,23 @@ void queueMicrotask(_i3.VoidFunction func) {
   );
 }
 
+/// Dispatches an event in the global scope, synchronously invoking any
+/// registered event listeners for this event in the appropriate order. Returns
+/// false if event is cancelable and at least one of the event handlers which
+/// handled this event called Event.preventDefault(). Otherwise it returns true.
+///
+/// ```ts
+/// dispatchEvent(new Event('unload'));
+/// ```
 _i2.bool dispatchEvent(_i3.Event event) => _i4.callMethod(
       _self,
       'dispatchEvent',
       [event],
     );
+
+/// Shows the given message and waits for the enter key pressed.
+///
+/// If the stdin is not interactive, it does nothing.
 void alert([_i2.String? message]) {
   _i4.callMethod(
     _self,
@@ -13646,11 +12317,25 @@ void alert([_i2.String? message]) {
   );
 }
 
+/// Shows the given message and waits for the answer. Returns the user's answer as boolean.
+///
+/// Only `y` and `Y` are considered as true.
+///
+/// If the stdin is not interactive, it returns false.
 _i2.bool confirm([_i2.String? message]) => _i4.callMethod(
       _self,
       'confirm',
       [message ?? _i6.undefined],
     );
+
+/// Shows the given message and waits for the user's input. Returns the user's input as string.
+///
+/// If the default value is given and the user inputs the empty string, then it returns the given
+/// default value.
+///
+/// If the default value is not given and the user inputs the empty string, it returns null.
+///
+/// If the stdin is not interactive, it returns null.
 _i2.String? prompt([
   _i2.String? message,
   _i2.String? defaultValue,
@@ -13663,6 +12348,15 @@ _i2.String? prompt([
         defaultValue ?? _i6.undefined,
       ],
     );
+
+/// Registers an event listener in the global scope, which will be called
+/// synchronously whenever the event `type` is dispatched.
+///
+/// ```ts
+/// addEventListener('unload', () => { console.log('All finished!'); });
+/// ...
+/// dispatchEvent(new Event('unload'));
+/// ```
 void _addEventListener$1<K$ extends _i3.Event>(
   WindowEventMap<K$> type,
   _i2.dynamic Function(K$) listener, [
@@ -13679,6 +12373,14 @@ void _addEventListener$1<K$ extends _i3.Event>(
   );
 }
 
+/// Registers an event listener in the global scope, which will be called
+/// synchronously whenever the event `type` is dispatched.
+///
+/// ```ts
+/// addEventListener('unload', () => { console.log('All finished!'); });
+/// ...
+/// dispatchEvent(new Event('unload'));
+/// ```
 void _addEventListener$2(
   _i2.String type,
   _i3.EventListenerOrEventListenerObject listener, [
@@ -13693,14 +12395,32 @@ void _addEventListener$2(
       options ?? _i6.undefined,
     ],
   );
-} // HEYA addEventListener
+}
 
+/// Overload accessor: $1, $2
 ({
+  /// Registers an event listener in the global scope, which will be called
+  /// synchronously whenever the event `type` is dispatched.
+  ///
+  /// ```ts
+  /// addEventListener('unload', () => { console.log('All finished!'); });
+  /// ...
+  /// dispatchEvent(new Event('unload'));
+  /// ```
   void Function<K$ extends _i3.Event>(
     WindowEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) $1,
+
+  /// Registers an event listener in the global scope, which will be called
+  /// synchronously whenever the event `type` is dispatched.
+  ///
+  /// ```ts
+  /// addEventListener('unload', () => { console.log('All finished!'); });
+  /// ...
+  /// dispatchEvent(new Event('unload'));
+  /// ```
   void Function(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [
@@ -13710,6 +12430,14 @@ void _addEventListener$2(
       $1: _addEventListener$1,
       $2: _addEventListener$2,
     );
+
+/// Remove a previously registered event listener from the global scope
+///
+/// ```ts
+/// const listener = () => { console.log('hello'); };
+/// addEventListener('load', listener);
+/// removeEventListener('load', listener);
+/// ```
 void _removeEventListener$1<K$ extends _i3.Event>(
   WindowEventMap<K$> type,
   _i2.dynamic Function(K$) listener, [
@@ -13726,6 +12454,13 @@ void _removeEventListener$1<K$ extends _i3.Event>(
   );
 }
 
+/// Remove a previously registered event listener from the global scope
+///
+/// ```ts
+/// const listener = () => { console.log('hello'); };
+/// addEventListener('load', listener);
+/// removeEventListener('load', listener);
+/// ```
 void _removeEventListener$2(
   _i2.String type,
   _i3.EventListenerOrEventListenerObject listener, [
@@ -13740,14 +12475,30 @@ void _removeEventListener$2(
       options ?? _i6.undefined,
     ],
   );
-} // HEYA removeEventListener
+}
 
+/// Overload accessor: $1, $2
 ({
+  /// Remove a previously registered event listener from the global scope
+  ///
+  /// ```ts
+  /// const listener = () => { console.log('hello'); };
+  /// addEventListener('load', listener);
+  /// removeEventListener('load', listener);
+  /// ```
   void Function<K$ extends _i3.Event>(
     WindowEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) $1,
+
+  /// Remove a previously registered event listener from the global scope
+  ///
+  /// ```ts
+  /// const listener = () => { console.log('hello'); };
+  /// addEventListener('load', listener);
+  /// removeEventListener('load', listener);
+  /// ```
   void Function(
     _i2.String type,
     _i3.EventListenerOrEventListenerObject listener, [

@@ -1,3 +1,4 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:meta/meta.dart';
 import 'package:recase/recase.dart';
@@ -56,8 +57,7 @@ abstract class InteropNamedDeclaration extends InteropType
 
   @override
   Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) => refer(
-      usableName,
-      escopedReference && !isPrivate ? library.fullPath : null);
+      usableName, escopedReference && !isPrivate ? library.fullPath : null);
 
   bool nameExists(String name) {
     return library.findDeclared(name) != null;
@@ -91,6 +91,15 @@ abstract class InteropNamedDeclaration extends InteropType
     }
 
     return name;
+  }
+
+  @override
+  void buildDocs(ListBuilder docsBuilder) {
+    super.buildDocs(docsBuilder);
+
+    if (doc.isNotEmpty) {
+      docsBuilder.addAll(doc.split('\n').map((line) => '/// $line').toList());
+    }
   }
 
   @mustCallSuper

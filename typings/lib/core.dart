@@ -1,4 +1,16 @@
-library typings;
+/// TypeScript DOM & core bindings 
+/// 
+/// Official docs: https://www.typescriptlang.org/docs/handbook/dom-manipulation.html
+/// 
+/// ## Example:
+/// ```dart
+/// import 'package:typings/core.dart' as js;
+/// 
+/// void main() {
+///     js.console.log(['Hello', 'World']);
+/// }
+/// ```
+library typings.core;
 
 import 'package:typings/annotations.dart';
 

@@ -1,5 +1,5 @@
 @_i1.JS('WebAssembly')
-library web_assembly; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop.web_assembly; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -22,7 +22,6 @@ typedef ImportValue = _i2.Object;
 typedef Imports = _i3.Record<_i2.String, _i4.ModuleImports>;
 typedef ModuleImports = _i3.Record<_i2.String, _i4.ImportValue>;
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum ImportExportKindOptions {
   function(r'function'),
   global(r'global'),
@@ -34,7 +33,6 @@ enum ImportExportKindOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum TableKindOptions {
   anyfunc(r'anyfunc'),
   externref(r'externref');
@@ -44,7 +42,6 @@ enum TableKindOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum ValueTypeOptions {
   anyfunc(r'anyfunc'),
   externref(r'externref'),
@@ -109,17 +106,10 @@ FieldExternal:
 external _i2.Object _declaredGlobal;
 
 extension Global$Typings on Global {
-  /* #17541
-  source: 
-        value: any; */
   _i2.dynamic get value => _i5.getProperty(
         this,
         'value',
       );
-  /* #17541
-  source: 
-        value: any; */
-  // Type InteropStaticType.dyn
   set value(_i2.dynamic value) {
     _i5.setProperty(
       this,
@@ -162,9 +152,6 @@ FieldExternal:
 external _i2.Object _declaredInstance;
 
 extension Instance$Typings on Instance {
-  /* #17551
-  source: 
-        readonly exports: Exports; */
   _i4.Exports get exports => _i5.getProperty(
         this,
         'exports',
@@ -218,9 +205,6 @@ FieldExternal:
 external _i2.Object _declaredMemory;
 
 extension Memory$Typings on Memory {
-  /* #17569
-  source: 
-        readonly buffer: ArrayBuffer; */
   _i7.ByteBuffer get buffer => _i5.getProperty(
         this,
         'buffer',
@@ -244,7 +228,7 @@ class Module {
         [bytes],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,120018122,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,13017575,[Instance of 'InteropRef<InteropType>']*/ <
       _i7.ByteBuffer> customSections(
     _i4.Module moduleObject,
     _i2.String sectionName,
@@ -258,7 +242,7 @@ class Module {
         ],
       ) as _i2.List)
           .cast();
-  static _i2.List /*LIST InteropStaticType.list,320172449,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,109677766,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleExportDescriptor> exports(
           _i4.Module moduleObject) =>
       (_i5.callMethod(
@@ -267,7 +251,7 @@ class Module {
         [moduleObject],
       ) as _i2.List)
           .cast();
-  static _i2.List /*LIST InteropStaticType.list,546199235,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List /*LIST InteropStaticType.list,323713000,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleImportDescriptor> imports(
           _i4.Module moduleObject) =>
       (_i5.callMethod(
@@ -289,7 +273,7 @@ external _i2.Object _declaredModule;
 class IInline608 {}
 
 extension IInline608$Typings on IInline608 {
-  _i2.List /*LIST InteropStaticType.list,120018122,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,13017575,[Instance of 'InteropRef<InteropType>']*/ <
       _i7.ByteBuffer> customSections(
     _i4.Module moduleObject,
     _i2.String sectionName,
@@ -303,7 +287,7 @@ extension IInline608$Typings on IInline608 {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,320172449,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,109677766,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleExportDescriptor> exports(
           _i4.Module moduleObject) =>
       (_i5.callMethod(
@@ -312,7 +296,7 @@ extension IInline608$Typings on IInline608 {
         [moduleObject],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,546199235,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,323713000,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleImportDescriptor> imports(
           _i4.Module moduleObject) =>
       (_i5.callMethod(
@@ -373,9 +357,6 @@ FieldExternal:
 external _i2.Object _declaredTable;
 
 extension Table$Typings on Table {
-  /* #17599
-  source: 
-        readonly length: number; */
   _i2.num get length => _i5.getProperty(
         this,
         'length',
@@ -436,17 +417,10 @@ class GlobalDescriptor {
 }
 
 extension GlobalDescriptor$Typings on GlobalDescriptor {
-  /* #17611
-  source: 
-        mutable?: boolean; */
   _i2.bool? get mutable => _i5.getProperty(
         this,
         'mutable',
       );
-  /* #17611
-  source: 
-        mutable?: boolean; */
-  // Type InteropStaticType.boolean
   set mutable(_i2.bool? value) {
     _i5.setProperty(
       this,
@@ -455,17 +429,10 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
     );
   }
 
-  /* #17612
-  source: 
-        value: ValueType; */
   _i4.ValueType get value => ValueTypeOptions.values.byName(_i5.getProperty(
         this,
         'value',
       ));
-  /* #17612
-  source: 
-        value: ValueType; */
-  // Type InteropTypedef#24377892(name: ValueType)
   set value(_i4.ValueType value) {
     _i5.setProperty(
       this,
@@ -498,17 +465,10 @@ class MemoryDescriptor {
 }
 
 extension MemoryDescriptor$Typings on MemoryDescriptor {
-  /* #17616
-  source: 
-        initial: number; */
   _i2.num get initial => _i5.getProperty(
         this,
         'initial',
       );
-  /* #17616
-  source: 
-        initial: number; */
-  // Type InteropStaticType.number
   set initial(_i2.num value) {
     _i5.setProperty(
       this,
@@ -517,17 +477,10 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
     );
   }
 
-  /* #17617
-  source: 
-        maximum?: number; */
   _i2.num? get maximum => _i5.getProperty(
         this,
         'maximum',
       );
-  /* #17617
-  source: 
-        maximum?: number; */
-  // Type InteropStaticType.number
   set maximum(_i2.num? value) {
     _i5.setProperty(
       this,
@@ -536,17 +489,10 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
     );
   }
 
-  /* #17618
-  source: 
-        shared?: boolean; */
   _i2.bool? get shared => _i5.getProperty(
         this,
         'shared',
       );
-  /* #17618
-  source: 
-        shared?: boolean; */
-  // Type InteropStaticType.boolean
   set shared(_i2.bool? value) {
     _i5.setProperty(
       this,
@@ -576,18 +522,11 @@ class ModuleExportDescriptor {
 }
 
 extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
-  /* #17622
-  source: 
-        kind: ImportExportKind; */
   _i4.ImportExportKind get kind =>
       ImportExportKindOptions.values.byName(_i5.getProperty(
         this,
         'kind',
       ));
-  /* #17622
-  source: 
-        kind: ImportExportKind; */
-  // Type InteropTypedef#912179614(name: ImportExportKind)
   set kind(_i4.ImportExportKind value) {
     _i5.setProperty(
       this,
@@ -596,17 +535,10 @@ extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
     );
   }
 
-  /* #17623
-  source: 
-        name: string; */
   _i2.String get name => _i5.getProperty(
         this,
         'name',
       );
-  /* #17623
-  source: 
-        name: string; */
-  // Type InteropStaticType.string
   set name(_i2.String value) {
     _i5.setProperty(
       this,
@@ -639,18 +571,11 @@ class ModuleImportDescriptor {
 }
 
 extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
-  /* #17627
-  source: 
-        kind: ImportExportKind; */
   _i4.ImportExportKind get kind =>
       ImportExportKindOptions.values.byName(_i5.getProperty(
         this,
         'kind',
       ));
-  /* #17627
-  source: 
-        kind: ImportExportKind; */
-  // Type InteropTypedef#912179614(name: ImportExportKind)
   set kind(_i4.ImportExportKind value) {
     _i5.setProperty(
       this,
@@ -659,17 +584,10 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
     );
   }
 
-  /* #17628
-  source: 
-        module: string; */
   _i2.String get module => _i5.getProperty(
         this,
         'module',
       );
-  /* #17628
-  source: 
-        module: string; */
-  // Type InteropStaticType.string
   set module(_i2.String value) {
     _i5.setProperty(
       this,
@@ -678,17 +596,10 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
     );
   }
 
-  /* #17629
-  source: 
-        name: string; */
   _i2.String get name => _i5.getProperty(
         this,
         'name',
       );
-  /* #17629
-  source: 
-        name: string; */
-  // Type InteropStaticType.string
   set name(_i2.String value) {
     _i5.setProperty(
       this,
@@ -721,17 +632,10 @@ class TableDescriptor {
 }
 
 extension TableDescriptor$Typings on TableDescriptor {
-  /* #17633
-  source: 
-        element: TableKind; */
   _i4.TableKind get element => TableKindOptions.values.byName(_i5.getProperty(
         this,
         'element',
       ));
-  /* #17633
-  source: 
-        element: TableKind; */
-  // Type InteropTypedef#178116963(name: TableKind)
   set element(_i4.TableKind value) {
     _i5.setProperty(
       this,
@@ -740,17 +644,10 @@ extension TableDescriptor$Typings on TableDescriptor {
     );
   }
 
-  /* #17634
-  source: 
-        initial: number; */
   _i2.num get initial => _i5.getProperty(
         this,
         'initial',
       );
-  /* #17634
-  source: 
-        initial: number; */
-  // Type InteropStaticType.number
   set initial(_i2.num value) {
     _i5.setProperty(
       this,
@@ -759,17 +656,10 @@ extension TableDescriptor$Typings on TableDescriptor {
     );
   }
 
-  /* #17635
-  source: 
-        maximum?: number; */
   _i2.num? get maximum => _i5.getProperty(
         this,
         'maximum',
       );
-  /* #17635
-  source: 
-        maximum?: number; */
-  // Type InteropStaticType.number
   set maximum(_i2.num? value) {
     _i5.setProperty(
       this,
@@ -800,17 +690,10 @@ class WebAssemblyInstantiatedSource {
 
 extension WebAssemblyInstantiatedSource$Typings
     on WebAssemblyInstantiatedSource {
-  /* #17639
-  source: 
-        instance: Instance; */
   _i4.Instance get instance => _i5.getProperty(
         this,
         'instance',
       );
-  /* #17639
-  source: 
-        instance: Instance; */
-  // Type Instance of 'InteropInterface'
   set instance(_i4.Instance value) {
     _i5.setProperty(
       this,
@@ -819,17 +702,10 @@ extension WebAssemblyInstantiatedSource$Typings
     );
   }
 
-  /* #17640
-  source: 
-        module: Module; */
   _i4.Module get module => _i5.getProperty(
         this,
         'module',
       );
-  /* #17640
-  source: 
-        module: Module; */
-  // Type Instance of 'InteropInterface'
   set module(_i4.Module value) {
     _i5.setProperty(
       this,
@@ -874,7 +750,9 @@ _i2.Future<_i4.Instance> _instantiate$2(
         moduleObject,
         importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
       ],
-    )); // HEYA instantiate
+    ));
+
+/// Overload accessor: $1, $2
 ({
   _i2.Future<_i4.WebAssemblyInstantiatedSource> Function(
     _i8.BufferSource bytes, [

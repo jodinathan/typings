@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -44,23 +44,12 @@ extension AsyncGenerator$Typings<T, TReturn, TNext>
 class AsyncGeneratorFunction {}
 
 extension AsyncGeneratorFunction$Typings on AsyncGeneratorFunction {
-  /* #43
-  source: 
-    /**
-     * The length of the arguments.
-     */
-    readonly length: number; */
   /// The length of the arguments.
   _i2.num get length => _i5.getProperty(
         this,
         'length',
       );
-  /* #47
-  source: 
-    /**
-     * Returns the name of the function.
-     */
-    readonly name: string; */
+
   /// Returns the name of the function.
   _i2.String get name => _i5.getProperty(
         this,
@@ -81,23 +70,12 @@ class AsyncGeneratorFunctionConstructor {}
 
 extension AsyncGeneratorFunctionConstructor$Typings
     on AsyncGeneratorFunctionConstructor {
-  /* #68
-  source: 
-    /**
-     * The length of the arguments.
-     */
-    readonly length: number; */
   /// The length of the arguments.
   _i2.num get length => _i5.getProperty(
         this,
         'length',
       );
-  /* #72
-  source: 
-    /**
-     * Returns the name of the function.
-     */
-    readonly name: string; */
+
   /// Returns the name of the function.
   _i2.String get name => _i5.getProperty(
         this,

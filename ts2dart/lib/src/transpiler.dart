@@ -55,6 +55,7 @@ final class Transpiler {
 
     if (map case {'files': List files}) {
       return InteropProject(
+          name: package,
           targetMainFile: targetMainFile,
           dirName: dirName,
           libPath: targetPath,

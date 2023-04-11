@@ -257,7 +257,8 @@ class InteropMethodHolder extends InteropMethod {
         yield Method((b) {
           b
             ..name = name
-            ..docs.add('  // HEYA ${name}')
+            ..docs.add(
+                '  /// Overload accessor: ${overloadRecord.mapIndexed((i, el) => '\$${i + start}').join(', ')}')
             ..static = isStatic
             ..type = MethodType.getter
             ..returns = RecordType((b) {
@@ -409,6 +410,8 @@ class InteropMethod extends InteropNamedDeclaration
     return [
       Method((b) {
         final generics = <Reference>[];
+
+        buildDocs(b.docs);
 
         usableName ??= this.usableName;
 

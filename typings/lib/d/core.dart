@@ -4,7 +4,6 @@ library typings.core;
 import 'package:js/js.dart';
 export 'core/core.dart';
 
-
 @JS()
 external dynamic undefined;
 

@@ -1,5 +1,5 @@
 @_i1.JS('WebAssembly')
-library web_assembly; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.deno.interop.web_assembly; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -22,7 +22,6 @@ typedef ImportValue = _i2.Object;
 typedef ModuleImports = _i3.Record<_i2.String, _i4.ImportValue>;
 typedef Imports = _i3.Record<_i2.String, _i4.ModuleImports>;
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum ImportExportKindOptions {
   function(r'function'),
   global(r'global'),
@@ -34,7 +33,6 @@ enum ImportExportKindOptions {
   final _i2.String value;
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum ValueTypeOptions {
   f32(r'f32'),
   f64(r'f64'),
@@ -46,6 +44,9 @@ enum ValueTypeOptions {
   final _i2.String value;
 }
 
+/// The `WebAssembly.CompileError` object indicates an error during WebAssembly decoding or validation.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError)
 @_i1.JS()
 @_i1.staticInterop
 class CompileError implements _i3.Error {
@@ -68,6 +69,11 @@ FieldExternal:
 @_i1.JS('CompileError')
 external _i2.Object _declaredCompileError;
 
+/// A `WebAssembly.Global` object represents a global variable instance, accessible from
+/// both JavaScript and importable/exportable across one or more `WebAssembly.Module`
+/// instances. This allows dynamic linking of multiple modules.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global)
 @_i1.JS()
 @_i1.staticInterop
 class Global {
@@ -91,29 +97,12 @@ FieldExternal:
 external _i2.Object _declaredGlobal;
 
 extension Global$Typings on Global {
-  /* #8489
-  source: 
-
-    /**
-     * The value contained inside the global variable â this can be used to directly set
-     * and get the global's value.
-     */
-    value: any; */
   /// The value contained inside the global variable â this can be used to directly set
   ///  and get the global's value.
   _i2.dynamic get value => _i6.getProperty(
         this,
         'value',
       );
-  /* #8489
-  source: 
-
-    /**
-     * The value contained inside the global variable â this can be used to directly set
-     * and get the global's value.
-     */
-    value: any; */
-  // Type InteropStaticType.dyn
   set value(_i2.dynamic value) {
     _i6.setProperty(
       this,
@@ -122,6 +111,7 @@ extension Global$Typings on Global {
     );
   }
 
+  /// Old-style method that returns the value contained inside the global variable.
   _i2.dynamic valueOf() => _i6.callMethod(
         this,
         'valueOf',
@@ -129,6 +119,11 @@ extension Global$Typings on Global {
       );
 }
 
+/// A `WebAssembly.Instance` object is a stateful, executable instance of a `WebAssembly.Module`.
+/// Instance objects contain all the Exported WebAssembly functions that allow calling into
+/// WebAssembly code from JavaScript.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance)
 @_i1.JS()
 @_i1.staticInterop
 class Instance {
@@ -152,15 +147,6 @@ FieldExternal:
 external _i2.Object _declaredInstance;
 
 extension Instance$Typings on Instance {
-  /* #8513
-  source: 
-
-    /**
-     * Returns an object containing as its members all the functions exported from the
-     * WebAssembly module instance, to allow them to be accessed and used by JavaScript.
-     * Read-only.
-     */
-    readonly exports: Exports; */
   /// Returns an object containing as its members all the functions exported from the
   /// WebAssembly module instance, to allow them to be accessed and used by JavaScript.
   /// Read-only.
@@ -170,6 +156,10 @@ extension Instance$Typings on Instance {
       );
 }
 
+/// The `WebAssembly.LinkError` object indicates an error during module instantiation
+/// (besides traps from the start function).
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError)
 @_i1.JS()
 @_i1.staticInterop
 class LinkError implements _i3.Error {
@@ -192,6 +182,13 @@ FieldExternal:
 @_i1.JS('LinkError')
 external _i2.Object _declaredLinkError;
 
+/// The `WebAssembly.Memory` object is a resizable `ArrayBuffer` or `SharedArrayBuffer` that
+/// holds the raw bytes of memory accessed by a WebAssembly Instance.
+///
+/// A memory created by JavaScript or in WebAssembly code will be accessible and mutable
+/// from both JavaScript and WebAssembly.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
 @_i1.JS()
 @_i1.staticInterop
 class Memory {
@@ -208,16 +205,14 @@ FieldExternal:
 external _i2.Object _declaredMemory;
 
 extension Memory$Typings on Memory {
-  /* #8545
-  source: 
-
-    /** An accessor property that returns the buffer contained in the memory. */
-    readonly buffer: ArrayBuffer | SharedArrayBuffer; */
   /// An accessor property that returns the buffer contained in the memory.
   _i2.Object get buffer => _i6.getProperty(
         this,
         'buffer',
       );
+
+  /// Increases the size of the memory instance by a specified number of WebAssembly
+  ///  pages (each one is 64KB in size).
   _i2.num grow(_i2.num delta) => _i6.callMethod(
         this,
         'grow',
@@ -225,6 +220,10 @@ extension Memory$Typings on Memory {
       );
 }
 
+/// A `WebAssembly.Module` object contains stateless WebAssembly code that has already been compiled
+/// by the browser â this can be efficiently shared with Workers, and instantiated multiple times.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)
 @_i1.JS()
 @_i1.staticInterop
 class Module {
@@ -233,7 +232,9 @@ class Module {
         [bytes],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,306776995,[Instance of 'InteropRef<InteropType>']*/ <
+  /// Given a `Module` and string, returns a copy of the contents of all custom sections in the
+  /// module with the given string name.
+  static _i2.List /*LIST InteropStaticType.list,1069842366,[Instance of 'InteropRef<InteropType>']*/ <
       _i9.ByteBuffer> customSections(
     _i4.Module moduleObject,
     _i2.String sectionName,
@@ -247,7 +248,9 @@ class Module {
         ],
       ) as _i2.List)
           .cast();
-  static _i2.List /*LIST InteropStaticType.list,536122631,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Given a `Module`, returns an array containing descriptions of all the declared exports.
+  static _i2.List /*LIST InteropStaticType.list,59637737,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleExportDescriptor> exports(
           _i4.Module moduleObject) =>
       (_i6.callMethod(
@@ -256,7 +259,9 @@ class Module {
         [moduleObject],
       ) as _i2.List)
           .cast();
-  static _i2.List /*LIST InteropStaticType.list,534141539,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Given a `Module`, returns an array containing descriptions of all the declared imports.
+  static _i2.List /*LIST InteropStaticType.list,76926528,[Instance of 'InteropRef<InteropType>']*/ <
       _i4.ModuleImportDescriptor> imports(
           _i4.Module moduleObject) =>
       (_i6.callMethod(
@@ -273,6 +278,10 @@ FieldExternal:
 @_i1.JS('Module')
 external _i2.Object _declaredModule;
 
+/// The `WebAssembly.RuntimeError` object is the error type that is thrown whenever WebAssembly
+/// specifies a trap.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError)
 @_i1.JS()
 @_i1.staticInterop
 class RuntimeError implements _i3.Error {
@@ -295,6 +304,12 @@ FieldExternal:
 @_i1.JS('RuntimeError')
 external _i2.Object _declaredRuntimeError;
 
+/// The `WebAssembly.Table()` object is a JavaScript wrapper object â an array-like structure
+/// representing a WebAssembly Table, which stores function references. A table created by
+/// JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript
+/// and WebAssembly.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)
 @_i1.JS()
 @_i1.staticInterop
 class Table {
@@ -311,26 +326,27 @@ FieldExternal:
 external _i2.Object _declaredTable;
 
 extension Table$Typings on Table {
-  /* #8610
-  source: 
-
-    /** Returns the length of the table, i.e. the number of elements. */
-    readonly length: number; */
   /// Returns the length of the table, i.e. the number of elements.
   _i2.num get length => _i6.getProperty(
         this,
         'length',
       );
+
+  /// Accessor function â gets the element stored at a given index.
   _i2.Function? get(_i2.num index) => _i6.callMethod(
         this,
         'get',
         [index],
       );
+
+  /// Increases the size of the `Table` instance by a specified number of elements.
   _i2.num grow(_i2.num delta) => _i6.callMethod(
         this,
         'grow',
         [delta],
       );
+
+  /// Sets an element stored at a given index to a given value.
   void set(
     _i2.num index, [
     _i2.Function? value,
@@ -346,6 +362,8 @@ extension Table$Typings on Table {
   }
 }
 
+/// The `GlobalDescriptor` describes the options you can pass to
+/// `new WebAssembly.Global()`.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -366,17 +384,10 @@ class GlobalDescriptor {
 }
 
 extension GlobalDescriptor$Typings on GlobalDescriptor {
-  /* #8628
-  source: 
-    mutable?: boolean; */
   _i2.bool? get mutable => _i6.getProperty(
         this,
         'mutable',
       );
-  /* #8628
-  source: 
-    mutable?: boolean; */
-  // Type InteropStaticType.boolean
   set mutable(_i2.bool? value) {
     _i6.setProperty(
       this,
@@ -385,17 +396,10 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
     );
   }
 
-  /* #8629
-  source: 
-    value: ValueType; */
   _i4.ValueType get value => ValueTypeOptions.values.byName(_i6.getProperty(
         this,
         'value',
       ));
-  /* #8629
-  source: 
-    value: ValueType; */
-  // Type InteropTypedef#516038104(name: ValueType)
   set value(_i4.ValueType value) {
     _i6.setProperty(
       this,
@@ -405,6 +409,8 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
   }
 }
 
+/// The `MemoryDescriptor` describes the options you can pass to
+/// `new WebAssembly.Memory()`.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -428,17 +434,10 @@ class MemoryDescriptor {
 }
 
 extension MemoryDescriptor$Typings on MemoryDescriptor {
-  /* #8638
-  source: 
-    initial: number; */
   _i2.num get initial => _i6.getProperty(
         this,
         'initial',
       );
-  /* #8638
-  source: 
-    initial: number; */
-  // Type InteropStaticType.number
   set initial(_i2.num value) {
     _i6.setProperty(
       this,
@@ -447,17 +446,10 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
     );
   }
 
-  /* #8639
-  source: 
-    maximum?: number; */
   _i2.num? get maximum => _i6.getProperty(
         this,
         'maximum',
       );
-  /* #8639
-  source: 
-    maximum?: number; */
-  // Type InteropStaticType.number
   set maximum(_i2.num? value) {
     _i6.setProperty(
       this,
@@ -466,17 +458,10 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
     );
   }
 
-  /* #8640
-  source: 
-    shared?: boolean; */
   _i2.bool? get shared => _i6.getProperty(
         this,
         'shared',
       );
-  /* #8640
-  source: 
-    shared?: boolean; */
-  // Type InteropStaticType.boolean
   set shared(_i2.bool? value) {
     _i6.setProperty(
       this,
@@ -486,6 +471,8 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
   }
 }
 
+/// A `ModuleExportDescriptor` is the description of a declared export in a
+/// `WebAssembly.Module`.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -506,18 +493,11 @@ class ModuleExportDescriptor {
 }
 
 extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
-  /* #8649
-  source: 
-    kind: ImportExportKind; */
   _i4.ImportExportKind get kind =>
       ImportExportKindOptions.values.byName(_i6.getProperty(
         this,
         'kind',
       ));
-  /* #8649
-  source: 
-    kind: ImportExportKind; */
-  // Type InteropTypedef#922059197(name: ImportExportKind)
   set kind(_i4.ImportExportKind value) {
     _i6.setProperty(
       this,
@@ -526,17 +506,10 @@ extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
     );
   }
 
-  /* #8650
-  source: 
-    name: string; */
   _i2.String get name => _i6.getProperty(
         this,
         'name',
       );
-  /* #8650
-  source: 
-    name: string; */
-  // Type InteropStaticType.string
   set name(_i2.String value) {
     _i6.setProperty(
       this,
@@ -546,6 +519,8 @@ extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
   }
 }
 
+/// A `ModuleImportDescriptor` is the description of a declared import in a
+/// `WebAssembly.Module`.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -569,18 +544,11 @@ class ModuleImportDescriptor {
 }
 
 extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
-  /* #8659
-  source: 
-    kind: ImportExportKind; */
   _i4.ImportExportKind get kind =>
       ImportExportKindOptions.values.byName(_i6.getProperty(
         this,
         'kind',
       ));
-  /* #8659
-  source: 
-    kind: ImportExportKind; */
-  // Type InteropTypedef#922059197(name: ImportExportKind)
   set kind(_i4.ImportExportKind value) {
     _i6.setProperty(
       this,
@@ -589,17 +557,10 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
     );
   }
 
-  /* #8660
-  source: 
-    module: string; */
   _i2.String get module => _i6.getProperty(
         this,
         'module',
       );
-  /* #8660
-  source: 
-    module: string; */
-  // Type InteropStaticType.string
   set module(_i2.String value) {
     _i6.setProperty(
       this,
@@ -608,17 +569,10 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
     );
   }
 
-  /* #8661
-  source: 
-    name: string; */
   _i2.String get name => _i6.getProperty(
         this,
         'name',
       );
-  /* #8661
-  source: 
-    name: string; */
-  // Type InteropStaticType.string
   set name(_i2.String value) {
     _i6.setProperty(
       this,
@@ -628,6 +582,8 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
   }
 }
 
+/// The `TableDescriptor` describes the options you can pass to
+/// `new WebAssembly.Table()`.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -651,17 +607,10 @@ class TableDescriptor {
 }
 
 extension TableDescriptor$Typings on TableDescriptor {
-  /* #8670
-  source: 
-    element: TableKind; */
   _i4.TableKind get element => _i6.getProperty(
         this,
         'element',
       );
-  /* #8670
-  source: 
-    element: TableKind; */
-  // Type InteropTypedef#8787897(name: TableKind)
   set element(_i4.TableKind value) {
     _i6.setProperty(
       this,
@@ -670,17 +619,10 @@ extension TableDescriptor$Typings on TableDescriptor {
     );
   }
 
-  /* #8671
-  source: 
-    initial: number; */
   _i2.num get initial => _i6.getProperty(
         this,
         'initial',
       );
-  /* #8671
-  source: 
-    initial: number; */
-  // Type InteropStaticType.number
   set initial(_i2.num value) {
     _i6.setProperty(
       this,
@@ -689,17 +631,10 @@ extension TableDescriptor$Typings on TableDescriptor {
     );
   }
 
-  /* #8672
-  source: 
-    maximum?: number; */
   _i2.num? get maximum => _i6.getProperty(
         this,
         'maximum',
       );
-  /* #8672
-  source: 
-    maximum?: number; */
-  // Type InteropStaticType.number
   set maximum(_i2.num? value) {
     _i6.setProperty(
       this,
@@ -709,6 +644,7 @@ extension TableDescriptor$Typings on TableDescriptor {
   }
 }
 
+/// The value returned from `WebAssembly.instantiate`.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -730,19 +666,10 @@ class WebAssemblyInstantiatedSource {
 
 extension WebAssemblyInstantiatedSource$Typings
     on WebAssemblyInstantiatedSource {
-  /* #8681
-  source: 
-    /* A `WebAssembly.Instance` object that contains all the exported WebAssembly functions. */
-    instance: Instance; */
   _i4.Instance get instance => _i6.getProperty(
         this,
         'instance',
       );
-  /* #8681
-  source: 
-    /* A `WebAssembly.Instance` object that contains all the exported WebAssembly functions. */
-    instance: Instance; */
-  // Type Instance of 'InteropInterface'
   set instance(_i4.Instance value) {
     _i6.setProperty(
       this,
@@ -751,29 +678,12 @@ extension WebAssemblyInstantiatedSource$Typings
     );
   }
 
-  /* #8687
-  source: 
-
-    /**
-     * A `WebAssembly.Module` object representing the compiled WebAssembly module.
-     * This `Module` can be instantiated again, or shared via postMessage().
-     */
-    module: Module; */
   /// A `WebAssembly.Module` object representing the compiled WebAssembly module.
   ///  This `Module` can be instantiated again, or shared via postMessage().
   _i4.Module get module => _i6.getProperty(
         this,
         'module',
       );
-  /* #8687
-  source: 
-
-    /**
-     * A `WebAssembly.Module` object representing the compiled WebAssembly module.
-     * This `Module` can be instantiated again, or shared via postMessage().
-     */
-    module: Module; */
-  // Type Instance of 'InteropInterface'
   set module(_i4.Module value) {
     _i6.setProperty(
       this,
@@ -783,18 +693,49 @@ extension WebAssemblyInstantiatedSource$Typings
   }
 }
 
+/// The `WebAssembly.compile()` function compiles WebAssembly binary code into a
+/// `WebAssembly.Module` object. This function is useful if it is necessary to compile
+/// a module before it can be instantiated (otherwise, the `WebAssembly.instantiate()`
+/// function should be used).
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile)
 _i2.Future<_i4.Module> compile(_i8.BufferSource bytes) =>
     _i6.promiseToFuture(_i6.callMethod(
       _self,
       'compile',
       [bytes],
     ));
+
+/// The `WebAssembly.compileStreaming()` function compiles a `WebAssembly.Module`
+/// directly from a streamed underlying source. This function is useful if it is
+/// necessary to a compile a module before it can be instantiated (otherwise, the
+/// `WebAssembly.instantiateStreaming()` function should be used).
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming)
 _i2.Future<_i4.Module> compileStreaming(_i2.Object source) =>
     _i6.promiseToFuture(_i6.callMethod(
       _self,
       'compileStreaming',
       [source],
     ));
+
+/// The WebAssembly.instantiate() function allows you to compile and instantiate
+/// WebAssembly code.
+///
+/// This overload takes the WebAssembly binary code, in the form of a typed
+/// array or ArrayBuffer, and performs both compilation and instantiation in one step.
+/// The returned Promise resolves to both a compiled WebAssembly.Module and its first
+/// WebAssembly.Instance.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
+/// The WebAssembly.instantiate() function allows you to compile and instantiate
+/// WebAssembly code.
+///
+/// This overload takes an already-compiled WebAssembly.Module and returns
+/// a Promise that resolves to an Instance of that Module. This overload is useful
+/// if the Module has already been compiled.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
 _i2.Future<_i4.WebAssemblyInstantiatedSource> _instantiate$1(
   _i8.BufferSource bytes, [
   _i4.Imports? importObject,
@@ -807,6 +748,24 @@ _i2.Future<_i4.WebAssemblyInstantiatedSource> _instantiate$1(
         importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
       ],
     ));
+
+/// The WebAssembly.instantiate() function allows you to compile and instantiate
+/// WebAssembly code.
+///
+/// This overload takes the WebAssembly binary code, in the form of a typed
+/// array or ArrayBuffer, and performs both compilation and instantiation in one step.
+/// The returned Promise resolves to both a compiled WebAssembly.Module and its first
+/// WebAssembly.Instance.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
+/// The WebAssembly.instantiate() function allows you to compile and instantiate
+/// WebAssembly code.
+///
+/// This overload takes an already-compiled WebAssembly.Module and returns
+/// a Promise that resolves to an Instance of that Module. This overload is useful
+/// if the Module has already been compiled.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
 _i2.Future<_i4.Instance> _instantiate$2(
   _i4.Module moduleObject, [
   _i4.Imports? importObject,
@@ -818,12 +777,49 @@ _i2.Future<_i4.Instance> _instantiate$2(
         moduleObject,
         importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
       ],
-    )); // HEYA instantiate
+    ));
+
+/// Overload accessor: $1, $2
 ({
+  /// The WebAssembly.instantiate() function allows you to compile and instantiate
+  /// WebAssembly code.
+  ///
+  /// This overload takes the WebAssembly binary code, in the form of a typed
+  /// array or ArrayBuffer, and performs both compilation and instantiation in one step.
+  /// The returned Promise resolves to both a compiled WebAssembly.Module and its first
+  /// WebAssembly.Instance.
+  ///
+  /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
+  /// The WebAssembly.instantiate() function allows you to compile and instantiate
+  /// WebAssembly code.
+  ///
+  /// This overload takes an already-compiled WebAssembly.Module and returns
+  /// a Promise that resolves to an Instance of that Module. This overload is useful
+  /// if the Module has already been compiled.
+  ///
+  /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
   _i2.Future<_i4.WebAssemblyInstantiatedSource> Function(
     _i8.BufferSource bytes, [
     _i4.Imports? importObject,
   ]) $1,
+
+  /// The WebAssembly.instantiate() function allows you to compile and instantiate
+  /// WebAssembly code.
+  ///
+  /// This overload takes the WebAssembly binary code, in the form of a typed
+  /// array or ArrayBuffer, and performs both compilation and instantiation in one step.
+  /// The returned Promise resolves to both a compiled WebAssembly.Module and its first
+  /// WebAssembly.Instance.
+  ///
+  /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
+  /// The WebAssembly.instantiate() function allows you to compile and instantiate
+  /// WebAssembly code.
+  ///
+  /// This overload takes an already-compiled WebAssembly.Module and returns
+  /// a Promise that resolves to an Instance of that Module. This overload is useful
+  /// if the Module has already been compiled.
+  ///
+  /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
   _i2.Future<_i4.Instance> Function(
     _i4.Module moduleObject, [
     _i4.Imports? importObject,
@@ -832,6 +828,12 @@ _i2.Future<_i4.Instance> _instantiate$2(
       $1: _instantiate$1,
       $2: _instantiate$2,
     );
+
+/// The `WebAssembly.instantiateStreaming()` function compiles and instantiates a
+/// WebAssembly module directly from a streamed underlying source. This is the most
+/// efficient, optimized way to load wasm code.
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming)
 _i2.Future<_i4.WebAssemblyInstantiatedSource> instantiateStreaming(
   _i2.Object response, [
   _i4.Imports? importObject,
@@ -844,6 +846,12 @@ _i2.Future<_i4.WebAssemblyInstantiatedSource> instantiateStreaming(
         importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
       ],
     ));
+
+/// The `WebAssembly.validate()` function validates a given typed array of
+/// WebAssembly binary code, returning whether the bytes form a valid wasm
+/// module (`true`) or not (`false`).
+///
+/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate)
 _i2.bool validate(_i8.BufferSource bytes) => _i6.callMethod(
       _self,
       'validate',

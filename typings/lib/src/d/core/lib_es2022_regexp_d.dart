@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -36,21 +36,10 @@ class RegExpIndicesArray
 }
 
 extension RegExpIndicesArray$Typings on RegExpIndicesArray {
-  /* #28
-  source: 
-    groups?: {
-        [key: string]: [number, number];
-    }; */
   _i2.Object? get groups => _i5.getProperty(
         this,
         'groups',
       );
-  /* #28
-  source: 
-    groups?: {
-        [key: string]: [number, number];
-    }; */
-  // Type Instance of 'InteropInterface'
   set groups(_i2.Object? value) {
     _i5.setProperty(
       this,

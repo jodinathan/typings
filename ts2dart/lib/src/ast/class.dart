@@ -375,6 +375,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           ]
         ]);
 
+      buildDocs(b.docs);
+
       if (isAnonymous && !isInline) {
         final refs = [InteropRef(this), ...inheritance];
         final SymbolSwap targs = refs.expand((obj) {

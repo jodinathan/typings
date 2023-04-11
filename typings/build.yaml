@@ -25,15 +25,15 @@ targets:
   $default:
     builders:
       typings|coregenerator:
-        enabled: false
+        enabled: true
         generate_for:
           - lib/core.dart
       typings|typesgenerator:
-        enabled: false
+        enabled: true
         generate_for:
           - lib/d/*.dart
       build_web_compilers|entrypoint:
-        enabled: true
+        enabled: false
         options:
           compiler: dart2js
           dart2js_args:

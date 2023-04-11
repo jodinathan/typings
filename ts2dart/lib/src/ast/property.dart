@@ -121,7 +121,6 @@ final class InteropSetter extends InteropProperty {
             b
               ..lambda = false
               ..external = false
-              ..docs.add('  // Type ${reference.type}')
               ..requiredParameters.add(paramValue)
               ..body = pkgJsUtils.setProperty([
                 makeThis(),
@@ -225,13 +224,9 @@ abstract base class InteropProperty extends InteropNamedDeclaration
       b
         ..name = usableName
         ..static = isStatic
-        ..docs.addAll([
-          '  /* #$lineNumber',
-          '  source: $source */',
-          if (doc.isNotEmpty)
-            doc.split('\n').map((line) => '  /// $line').join('\n')
-        ])
         ..type = type;
+
+      buildDocs(b.docs);
 
       updates(b);
     });

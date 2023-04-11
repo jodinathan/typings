@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -19,17 +19,10 @@ external _i2.Object _self;
 class IteratorResultCommon {}
 
 extension IteratorResultCommon$Typings on IteratorResultCommon {
-  /* #30
-  source: 
-    done?: false; */
   _i2.bool? get done => _i3.getProperty(
         this,
         'done',
       );
-  /* #30
-  source: 
-    done?: false; */
-  // Type InteropStaticType.boolean
   set done(_i2.bool? value) {
     _i3.setProperty(
       this,
@@ -38,17 +31,10 @@ extension IteratorResultCommon$Typings on IteratorResultCommon {
     );
   }
 
-  /* #31
-  source: 
-    value: TYield; */
   _i2.dynamic get value => _i3.getProperty(
         this,
         'value',
       );
-  /* #31
-  source: 
-    value: TYield; */
-  // Type InteropStaticType.dyn
   set value(_i2.dynamic value) {
     _i3.setProperty(
       this,
@@ -65,13 +51,6 @@ typedef IteratorResult<T, TReturn> = _i5.IteratorResultCommon;
 class SymbolConstructor {}
 
 extension SymbolConstructor$Typings on SymbolConstructor {
-  /* #26
-  source: 
-    /**
-     * A method that returns the default iterator for an object. Called by the semantics of the
-     * for-of statement.
-     */
-    readonly iterator: unique symbol; */
   /// A method that returns the default iterator for an object. Called by the semantics of the
   /// for-of statement.
   /// A method that returns the default iterator for an object. Called by the semantics of the
@@ -80,13 +59,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'iterator',
       );
-  /* #26
-  source: 
-    /**
-     * A method that determines if a constructor object recognizes an object as one of the
-     * constructor’s instances. Called by the semantics of the instanceof operator.
-     */
-    readonly hasInstance: unique symbol; */
+
   /// A method that determines if a constructor object recognizes an object as one of the
   /// constructor’s instances. Called by the semantics of the instanceof operator.
   /// A method that determines if a constructor object recognizes an object as one of the
@@ -95,14 +68,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'hasInstance',
       );
-  /* #32
-  source: 
 
-    /**
-     * A Boolean value that if true indicates that an object should flatten to its array elements
-     * by Array.prototype.concat.
-     */
-    readonly isConcatSpreadable: unique symbol; */
   /// A Boolean value that if true indicates that an object should flatten to its array elements
   /// by Array.prototype.concat.
   /// A Boolean value that if true indicates that an object should flatten to its array elements
@@ -111,14 +77,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'isConcatSpreadable',
       );
-  /* #38
-  source: 
 
-    /**
-     * A regular expression method that matches the regular expression against a string. Called
-     * by the String.prototype.match method.
-     */
-    readonly match: unique symbol; */
   /// A regular expression method that matches the regular expression against a string. Called
   /// by the String.prototype.match method.
   /// A regular expression method that matches the regular expression against a string. Called
@@ -127,14 +86,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'match',
       );
-  /* #44
-  source: 
 
-    /**
-     * A regular expression method that replaces matched substrings of a string. Called by the
-     * String.prototype.replace method.
-     */
-    readonly replace: unique symbol; */
   /// A regular expression method that replaces matched substrings of a string. Called by the
   /// String.prototype.replace method.
   /// A regular expression method that replaces matched substrings of a string. Called by the
@@ -143,14 +95,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'replace',
       );
-  /* #50
-  source: 
 
-    /**
-     * A regular expression method that returns the index within a string that matches the
-     * regular expression. Called by the String.prototype.search method.
-     */
-    readonly search: unique symbol; */
   /// A regular expression method that returns the index within a string that matches the
   /// regular expression. Called by the String.prototype.search method.
   /// A regular expression method that returns the index within a string that matches the
@@ -159,14 +104,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'search',
       );
-  /* #56
-  source: 
 
-    /**
-     * A function valued property that is the constructor function that is used to create
-     * derived objects.
-     */
-    readonly species: unique symbol; */
   /// A function valued property that is the constructor function that is used to create
   /// derived objects.
   /// A function valued property that is the constructor function that is used to create
@@ -175,14 +113,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'species',
       );
-  /* #62
-  source: 
 
-    /**
-     * A regular expression method that splits a string at the indices that match the regular
-     * expression. Called by the String.prototype.split method.
-     */
-    readonly split: unique symbol; */
   /// A regular expression method that splits a string at the indices that match the regular
   /// expression. Called by the String.prototype.split method.
   /// A regular expression method that splits a string at the indices that match the regular
@@ -191,14 +122,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'split',
       );
-  /* #68
-  source: 
 
-    /**
-     * A method that converts an object to a corresponding primitive value.
-     * Called by the ToPrimitive abstract operation.
-     */
-    readonly toPrimitive: unique symbol; */
   /// A method that converts an object to a corresponding primitive value.
   /// Called by the ToPrimitive abstract operation.
   /// A method that converts an object to a corresponding primitive value.
@@ -207,14 +131,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'toPrimitive',
       );
-  /* #74
-  source: 
 
-    /**
-     * A String value that is used in the creation of the default string description of an object.
-     * Called by the built-in method Object.prototype.toString.
-     */
-    readonly toStringTag: unique symbol; */
   /// A String value that is used in the creation of the default string description of an object.
   /// Called by the built-in method Object.prototype.toString.
   /// A String value that is used in the creation of the default string description of an object.
@@ -223,14 +140,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'toStringTag',
       );
-  /* #80
-  source: 
 
-    /**
-     * An Object whose truthy properties are properties that are excluded from the 'with'
-     * environment bindings of the associated objects.
-     */
-    readonly unscopables: unique symbol; */
   /// An Object whose own property names are property names that are excluded from the 'with'
   /// environment bindings of the associated objects.
   /// An Object whose truthy properties are properties that are excluded from the 'with'
@@ -239,13 +149,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'unscopables',
       );
-  /* #27
-  source: 
-    /**
-     * A method that returns the default async iterator for an object. Called by the semantics of
-     * the for-await-of statement.
-     */
-    readonly asyncIterator: unique symbol; */
+
   /// A method that returns the default async iterator for an object. Called by the semantics of
   /// the for-await-of statement.
   /// A method that returns the default async iterator for an object. Called by the semantics of
@@ -254,24 +158,26 @@ extension SymbolConstructor$Typings on SymbolConstructor {
         _i6.target27,
         'asyncIterator',
       );
-  /* #27
-  source: 
-    /**
-     * A regular expression method that matches the regular expression against a string. Called
-     * by the String.prototype.matchAll method.
-     */
-    readonly matchAll: unique symbol; */
+
   /// A regular expression method that matches the regular expression against a string. Called
   /// by the String.prototype.matchAll method.
   _i2.Symbol get matchAll => _i3.getProperty(
         _i6.target27,
         'matchAll',
       );
+
+  /// Returns a Symbol object from the global symbol registry matching the given key if found.
+  ///  Otherwise, returns a new symbol with this key.
+  ///  @param key key to search for.
   _i2.Symbol for$(_i2.String key) => _i3.callMethod(
         this,
         'for',
         [key],
       );
+
+  /// Returns a key from the global symbol registry matching the given Symbol if found.
+  ///  Otherwise, returns a undefined.
+  ///  @param sym Symbol to find the key for.
   _i2.String? keyFor(_i2.Symbol sym) => _i3.callMethod(
         this,
         'keyFor',
@@ -304,17 +210,10 @@ class IteratorYieldResult<TYield> {
 }
 
 extension IteratorYieldResult$Typings<TYield> on IteratorYieldResult<TYield> {
-  /* #30
-  source: 
-    done?: false; */
   _i2.bool? get done => _i3.getProperty(
         this,
         'done',
       );
-  /* #30
-  source: 
-    done?: false; */
-  // Type InteropStaticType.boolean
   set done(_i2.bool? value) {
     _i3.setProperty(
       this,
@@ -323,17 +222,10 @@ extension IteratorYieldResult$Typings<TYield> on IteratorYieldResult<TYield> {
     );
   }
 
-  /* #31
-  source: 
-    value: TYield; */
   TYield get value => _i3.getProperty(
         this,
         'value',
       );
-  /* #31
-  source: 
-    value: TYield; */
-  // Type InteropLocalType(TYield)
   set value(TYield value) {
     _i3.setProperty(
       this,
@@ -364,17 +256,10 @@ class IteratorReturnResult<TReturn> {
 
 extension IteratorReturnResult$Typings<TReturn>
     on IteratorReturnResult<TReturn> {
-  /* #35
-  source: 
-    done: true; */
   _i2.bool get done => _i3.getProperty(
         this,
         'done',
       );
-  /* #35
-  source: 
-    done: true; */
-  // Type InteropStaticType.boolean
   set done(_i2.bool value) {
     _i3.setProperty(
       this,
@@ -383,17 +268,10 @@ extension IteratorReturnResult$Typings<TReturn>
     );
   }
 
-  /* #36
-  source: 
-    value: TReturn; */
   TReturn get value => _i3.getProperty(
         this,
         'value',
       );
-  /* #36
-  source: 
-    value: TReturn; */
-  // Type InteropLocalType(TReturn)
   set value(TReturn value) {
     _i3.setProperty(
       this,
@@ -442,42 +320,72 @@ class IterableIterator<T>
 
 extension IterableIterator$Typings<T> on IterableIterator<T> {}
 
+/// Represents the completion of an asynchronous operation
 @_i1.JS()
 @_i1.staticInterop
 class PromiseConstructor {}
 
 extension PromiseConstructor$Typings on PromiseConstructor {
+  /// Creates a Promise that is resolved with an array of results when all of the provided Promises
+  ///  resolve, or rejected when any Promise is rejected.
+  ///  @param values An iterable of Promises.
+  ///  @returns A new Promise.
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,700629655,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,935563580,[Instance of 'InteropRef<InteropType>']*/ <
           _i7.Awaited<T>>> _all$1<T>(_i5.Iterable<_i2.Object> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'all',
         [values],
       ));
+
+  /// Creates a Promise that is resolved with an array of results when all of the provided Promises
+  ///  resolve, or rejected when any Promise is rejected.
+  ///  @param values An array of Promises.
+  ///  @returns A new Promise.
   _i2.Future<_i2.dynamic> _all$2<T extends _i2.Object>(T values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'all',
         [values],
       ));
-  // HEYA all
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates a Promise that is resolved with an array of results when all of the provided Promises
+    ///  resolve, or rejected when any Promise is rejected.
+    ///  @param values An iterable of Promises.
+    ///  @returns A new Promise.
     _i2.Future<
-            _i2.List /*LIST InteropStaticType.list,700629655,[Instance of 'InteropRef<InteropType>']*/ <
+            _i2.List /*LIST InteropStaticType.list,935563580,[Instance of 'InteropRef<InteropType>']*/ <
                 _i7.Awaited<T>>>
         Function<T>(_i5.Iterable<_i2.Object> values) $1,
+
+    /// Creates a Promise that is resolved with an array of results when all of the provided Promises
+    ///  resolve, or rejected when any Promise is rejected.
+    ///  @param values An array of Promises.
+    ///  @returns A new Promise.
     _i2.Future<_i2.dynamic> Function<T extends _i2.Object>(T values) $2,
   }) get all => (
         $1: _all$1,
         $2: _all$2,
       );
+
+  /// Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+  ///  or rejected.
+  ///  @param values An iterable of Promises.
+  ///  @returns A new Promise.
   _i2.Future<_i7.Awaited<T>> _race$1<T>(_i5.Iterable<_i2.Object> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'race',
         [values],
       ));
+
+  /// Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+  ///  or rejected.
+  ///  @param values An array of Promises.
+  ///  @returns A new Promise.
   _i2.Future<_i7.Awaited<_i2.dynamic>> _race$2<T extends _i2.Object>(
           T values) =>
       _i3.promiseToFuture(_i3.callMethod(
@@ -485,56 +393,102 @@ extension PromiseConstructor$Typings on PromiseConstructor {
         'race',
         [values],
       ));
-  // HEYA race
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+    ///  or rejected.
+    ///  @param values An iterable of Promises.
+    ///  @returns A new Promise.
     _i2.Future<_i7.Awaited<T>> Function<T>(_i5.Iterable<_i2.Object> values) $1,
+
+    /// Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+    ///  or rejected.
+    ///  @param values An array of Promises.
+    ///  @returns A new Promise.
     _i2.Future<_i7.Awaited<_i2.dynamic>> Function<T extends _i2.Object>(
         T values) $2,
   }) get race => (
         $1: _race$1,
         $2: _race$2,
       );
+
+  /// Creates a new rejected promise for the provided reason.
+  ///  @param reason The reason the promise was rejected.
+  ///  @returns A new rejected Promise.
   _i2.Future<T> reject<T>([_i2.dynamic reason]) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'reject',
         [reason ?? _i4.undefined],
       ));
+
+  /// Creates a new resolved promise.
+  ///  @returns A resolved promise.
   _i2.Future<void> _resolve$1() => _i3.promiseToFuture(_i3.callMethod(
         this,
         'resolve',
         [],
       ));
+
+  /// Creates a new resolved promise for the provided value.
+  ///  @param value A promise.
+  ///  @returns A promise whose internal state matches the provided promise.
   _i2.Future<_i7.Awaited<T>> _resolve$2<T>(T value) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'resolve',
         [value],
       ));
+
+  /// Creates a new resolved promise for the provided value.
+  ///  @param value A promise.
+  ///  @returns A promise whose internal state matches the provided promise.
   _i2.Future<_i7.Awaited<T>> _resolve$3<T>(_i2.Object value) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'resolve',
         [value],
       ));
-  // HEYA resolve
+
+  /// Overload accessor: $1, $2, $3
   ({
+    /// Creates a new resolved promise.
+    ///  @returns A resolved promise.
     _i2.Future<void> Function() $1,
+
+    /// Creates a new resolved promise for the provided value.
+    ///  @param value A promise.
+    ///  @returns A promise whose internal state matches the provided promise.
     _i2.Future<_i7.Awaited<T>> Function<T>(T value) $2,
+
+    /// Creates a new resolved promise for the provided value.
+    ///  @param value A promise.
+    ///  @returns A promise whose internal state matches the provided promise.
     _i2.Future<_i7.Awaited<T>> Function<T>(_i2.Object value) $3,
   }) get resolve => (
         $1: _resolve$1,
         $2: _resolve$2,
         $3: _resolve$3,
       );
+
+  /// Creates a Promise that is resolved with an array of results when all
+  ///  of the provided Promises resolve or reject.
+  ///  @param values An array of Promises.
+  ///  @returns A new Promise.
   _i2.Future<_i2.dynamic> _allSettled$1<T extends _i2.Object>(T values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'allSettled',
         [values],
       ));
+
+  /// Creates a Promise that is resolved with an array of results when all
+  ///  of the provided Promises resolve or reject.
+  ///  @param values An array of Promises.
+  ///  @returns A new Promise.
   _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,419383012,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,364999734,[Instance of 'InteropRef<InteropType>']*/ <
           _i8
               .PromiseSettledResult<_i7.Awaited<T>>>> _allSettled$2<T>(
           _i5.Iterable<_i2.Object> values) =>
@@ -543,33 +497,59 @@ extension PromiseConstructor$Typings on PromiseConstructor {
         'allSettled',
         [values],
       ));
-  // HEYA allSettled
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates a Promise that is resolved with an array of results when all
+    ///  of the provided Promises resolve or reject.
+    ///  @param values An array of Promises.
+    ///  @returns A new Promise.
     _i2.Future<_i2.dynamic> Function<T extends _i2.Object>(T values) $1,
+
+    /// Creates a Promise that is resolved with an array of results when all
+    ///  of the provided Promises resolve or reject.
+    ///  @param values An array of Promises.
+    ///  @returns A new Promise.
     _i2.Future<
-            _i2.List /*LIST InteropStaticType.list,419383012,[Instance of 'InteropRef<InteropType>']*/ <
+            _i2.List /*LIST InteropStaticType.list,364999734,[Instance of 'InteropRef<InteropType>']*/ <
                 _i8.PromiseSettledResult<_i7.Awaited<T>>>>
         Function<T>(_i5.Iterable<_i2.Object> values) $2,
   }) get allSettled => (
         $1: _allSettled$1,
         $2: _allSettled$2,
       );
+
+  /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
+  ///  @param values An array or iterable of Promises.
+  ///  @returns A new Promise.
   _i2.Future<_i7.Awaited<_i2.dynamic>> _any$1<T extends _i2.Object>(T values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'any',
         [values],
       ));
+
+  /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
+  ///  @param values An array or iterable of Promises.
+  ///  @returns A new Promise.
   _i2.Future<_i7.Awaited<T>> _any$2<T>(_i5.Iterable<_i2.Object> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'any',
         [values],
       ));
-  // HEYA any
+
+  /// Overload accessor: $1, $2
   ({
+    /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
+    ///  @param values An array or iterable of Promises.
+    ///  @returns A new Promise.
     _i2.Future<_i7.Awaited<_i2.dynamic>> Function<T extends _i2.Object>(
         T values) $1,
+
+    /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
+    ///  @param values An array or iterable of Promises.
+    ///  @returns A new Promise.
     _i2.Future<_i7.Awaited<T>> Function<T>(_i5.Iterable<_i2.Object> values) $2,
   }) get any => (
         $1: _any$1,

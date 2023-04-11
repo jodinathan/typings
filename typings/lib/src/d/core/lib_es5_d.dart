@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -74,22 +74,20 @@ typedef ArrayBufferLike = _i2.dynamic;
 class Symbol {}
 
 extension Symbol$Typings on Symbol {
-  /* #23
-  source: 
-    /**
-     * Expose the [[Description]] internal slot of a symbol directly.
-     */
-    readonly description: string | undefined; */
   /// Expose the [[Description]] internal slot of a symbol directly.
   _i2.String? get description => _i4.getProperty(
         this,
         'description',
       );
+
+  /// Returns a string representation of an object.
   _i2.String toString$() => _i4.callMethod(
         this,
         'toString',
         [],
       );
+
+  /// Returns the primitive value of the specified object.
   _i2.Symbol valueOf() => _i4.callMethod(
         this,
         'valueOf',
@@ -102,17 +100,10 @@ extension Symbol$Typings on Symbol {
 class PropertyDescriptor {}
 
 extension PropertyDescriptor$Typings on PropertyDescriptor {
-  /* #111
-  source: 
-    configurable?: boolean; */
   _i2.bool? get configurable => _i4.getProperty(
         this,
         'configurable',
       );
-  /* #111
-  source: 
-    configurable?: boolean; */
-  // Type InteropStaticType.boolean
   set configurable(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -121,17 +112,10 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
     );
   }
 
-  /* #112
-  source: 
-    enumerable?: boolean; */
   _i2.bool? get enumerable => _i4.getProperty(
         this,
         'enumerable',
       );
-  /* #112
-  source: 
-    enumerable?: boolean; */
-  // Type InteropStaticType.boolean
   set enumerable(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -140,17 +124,10 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
     );
   }
 
-  /* #113
-  source: 
-    value?: any; */
   _i2.dynamic get value => _i4.getProperty(
         this,
         'value',
       );
-  /* #113
-  source: 
-    value?: any; */
-  // Type InteropStaticType.dyn
   set value(_i2.dynamic value) {
     _i4.setProperty(
       this,
@@ -159,17 +136,10 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
     );
   }
 
-  /* #114
-  source: 
-    writable?: boolean; */
   _i2.bool? get writable => _i4.getProperty(
         this,
         'writable',
       );
-  /* #114
-  source: 
-    writable?: boolean; */
-  // Type InteropStaticType.boolean
   set writable(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -192,6 +162,7 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
   }
 }
 
+/// Provides functionality common to all JavaScript objects.
 @_i1.JS()
 @_i1.staticInterop
 class Object {
@@ -200,11 +171,18 @@ class Object {
         [value ?? _i5.undefined],
       );
 
+  /// Returns the prototype of an object.
+  ///  @param o The object that references the prototype.
   static _i2.dynamic getPrototypeOf(_i2.dynamic o) => _i4.callMethod(
         _i6.target0,
         'getPrototypeOf',
         [o],
       );
+
+  /// Gets the own property descriptor of the specified object.
+  ///  An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
+  ///  @param o Object that contains the property.
+  ///  @param p Name of the property.
   static _i3.PropertyDescriptor? getOwnPropertyDescriptor(
     _i2.dynamic o,
     _i3.PropertyKey p,
@@ -217,19 +195,30 @@ class Object {
           p,
         ],
       );
+
+  /// Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
+  ///  on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
+  ///  @param o Object that contains the own properties.
   static _i2
-          .List /*LIST InteropStaticType.list,284881695,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+          .List /*LIST InteropStaticType.list,389460924,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       getOwnPropertyNames(_i2.dynamic o) => (_i4.callMethod(
             _i6.target0,
             'getOwnPropertyNames',
             [o],
           ) as _i2.List)
               .cast();
+
+  /// Creates an object that has the specified prototype or that has null prototype.
+  ///  @param o Object to use as a prototype. May be null.
   static _i2.dynamic _create$1([_i2.Object? o]) => _i4.callMethod(
         _i6.target0,
         'create',
         [o ?? _i5.undefined],
       );
+
+  /// Creates an object that has the specified prototype, and that optionally contains specified properties.
+  ///  @param o Object to use as a prototype. May be null
+  ///  @param properties JavaScript object that contains one or more property descriptors.
   static _i2.dynamic _create$2(
     _i2.Object? o,
     _i2.Object properties,
@@ -242,9 +231,16 @@ class Object {
           properties,
         ],
       );
-  // HEYA create
+
+  /// Overload accessor: $1, $2
   static ({
+    /// Creates an object that has the specified prototype or that has null prototype.
+    ///  @param o Object to use as a prototype. May be null.
     _i2.dynamic Function([_i2.Object? o]) $1,
+
+    /// Creates an object that has the specified prototype, and that optionally contains specified properties.
+    ///  @param o Object to use as a prototype. May be null
+    ///  @param properties JavaScript object that contains one or more property descriptors.
     _i2.dynamic Function(
       _i2.Object? o,
       _i2.Object properties,
@@ -253,6 +249,11 @@ class Object {
         $1: _create$1,
         $2: _create$2,
       );
+
+  /// Adds a property to an object, or modifies attributes of an existing property.
+  ///  @param o Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object.
+  ///  @param p The property name.
+  ///  @param attributes Descriptor for the property. It can be for a data property or an accessor property.
   static T defineProperty<T>(
     T o,
     _i3.PropertyKey p,
@@ -267,6 +268,10 @@ class Object {
           attributes,
         ],
       );
+
+  /// Adds one or more properties to an object, and/or modifies attributes of existing properties.
+  ///  @param o Object on which to add or modify the properties. This can be a native JavaScript object or a DOM object.
+  ///  @param properties JavaScript object that contains one or more descriptor objects. Each descriptor object describes a data property or an accessor property.
   static T defineProperties<T>(
     T o,
     _i2.Object properties,
@@ -279,64 +284,99 @@ class Object {
           properties,
         ],
       );
+
+  /// Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
+  ///  @param o Object on which to lock the attributes.
   static T seal<T>(T o) => _i4.callMethod(
         _i6.target0,
         'seal',
         [o],
       );
+
+  /// Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+  ///  @param f Object on which to lock the attributes.
   static T freeze<T extends _i2.Function>(T f) => _i4.callMethod(
         _i6.target0,
         'freeze',
         [f],
       );
+
+  /// Prevents the addition of new properties to an object.
+  ///  @param o Object to make non-extensible.
   static T preventExtensions<T>(T o) => _i4.callMethod(
         _i6.target0,
         'preventExtensions',
         [o],
       );
+
+  /// Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
+  ///  @param o Object to test.
   static _i2.bool isSealed(_i2.dynamic o) => _i4.callMethod(
         _i6.target0,
         'isSealed',
         [o],
       );
+
+  /// Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
+  ///  @param o Object to test.
   static _i2.bool isFrozen(_i2.dynamic o) => _i4.callMethod(
         _i6.target0,
         'isFrozen',
         [o],
       );
+
+  /// Returns a value that indicates whether new properties can be added to an object.
+  ///  @param o Object to test.
   static _i2.bool isExtensible(_i2.dynamic o) => _i4.callMethod(
         _i6.target0,
         'isExtensible',
         [o],
       );
+
+  /// Returns the names of the enumerable string properties and methods of an object.
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
   static _i2
-          .List /*LIST InteropStaticType.list,281174014,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+          .List /*LIST InteropStaticType.list,407538467,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       _keys$1(_i2.Object o) => (_i4.callMethod(
             _i6.target0,
             'keys',
             [o],
           ) as _i2.List)
               .cast();
+
+  /// Returns the names of the enumerable string properties and methods of an object.
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
   static _i2
-          .List /*LIST InteropStaticType.list,763630933,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+          .List /*LIST InteropStaticType.list,76127120,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       _keys$2(_i7.IInline8 o) => (_i4.callMethod(
             _i6.target0,
             'keys',
             [o],
           ) as _i2.List)
               .cast();
-  // HEYA keys
+
+  /// Overload accessor: $1, $2
   static ({
-    _i2.List /*LIST InteropStaticType.list,281174014,[Instance of 'InteropRef<InteropType>']*/ <
+    /// Returns the names of the enumerable string properties and methods of an object.
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,407538467,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         Function(_i2.Object o) $1,
-    _i2.List /*LIST InteropStaticType.list,763630933,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Returns the names of the enumerable string properties and methods of an object.
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,76127120,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         Function(_i7.IInline8 o) $2,
   }) get keys => (
         $1: _keys$1,
         $2: _keys$2,
       );
+
+  /// Copy the values of all of the enumerable own properties from one or more source objects to a
+  ///  target object. Returns the target object.
+  ///  @param target The target object to copy to.
+  ///  @param sources One or more source objects from which to copy properties
   static _i2.dynamic _assign$1(
     _i2.Object target, [
     _i2.Iterable<_i2.dynamic>? sources,
@@ -349,6 +389,13 @@ class Object {
           ...?sources,
         ],
       );
+
+  /// Copy the values of all of the enumerable own properties from one or more source objects to a
+  ///  target object. Returns the target object.
+  ///  @param target The target object to copy to.
+  ///  @param source1 The first source object from which to copy properties.
+  ///  @param source2 The second source object from which to copy properties.
+  ///  @param source3 The third source object from which to copy properties.
   static _i2.Object _assign$2<T extends _i7.IInline7, U, V, W>(
     T target,
     U source1,
@@ -365,12 +412,24 @@ class Object {
           source3,
         ],
       );
-  // HEYA assign
+
+  /// Overload accessor: $1, $2
   static ({
+    /// Copy the values of all of the enumerable own properties from one or more source objects to a
+    ///  target object. Returns the target object.
+    ///  @param target The target object to copy to.
+    ///  @param sources One or more source objects from which to copy properties
     _i2.dynamic Function(
       _i2.Object target, [
       _i2.Iterable<_i2.dynamic>? sources,
     ]) $1,
+
+    /// Copy the values of all of the enumerable own properties from one or more source objects to a
+    ///  target object. Returns the target object.
+    ///  @param target The target object to copy to.
+    ///  @param source1 The first source object from which to copy properties.
+    ///  @param source2 The second source object from which to copy properties.
+    ///  @param source3 The third source object from which to copy properties.
     _i2.Object Function<T extends _i7.IInline7, U, V, W>(
       T target,
       U source1,
@@ -381,14 +440,21 @@ class Object {
         $1: _assign$1,
         $2: _assign$2,
       );
+
+  /// Returns an array of all symbol properties found directly on object o.
+  ///  @param o Object to retrieve the symbols from.
   static _i2
-          .List /*LIST InteropStaticType.list,603157665,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
+          .List /*LIST InteropStaticType.list,110529253,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
       getOwnPropertySymbols(_i2.dynamic o) => (_i4.callMethod(
             _i6.target0,
             'getOwnPropertySymbols',
             [o],
           ) as _i2.List)
               .cast();
+
+  /// Returns true if the values are the same value, false otherwise.
+  ///  @param value1 The first value.
+  ///  @param value2 The second value.
   static _i2.bool is$(
     _i2.dynamic value1,
     _i2.dynamic value2,
@@ -401,6 +467,10 @@ class Object {
           value2,
         ],
       );
+
+  /// Sets the prototype of a specified object o to object proto or null. Returns the object o.
+  ///  @param o The object to change its prototype.
+  ///  @param proto The value of the new prototype or null.
   static _i2.dynamic setPrototypeOf(
     _i2.dynamic o, [
     _i2.Object? proto,
@@ -413,35 +483,50 @@ class Object {
           proto ?? _i5.undefined,
         ],
       );
+
+  /// Returns an array of values of the enumerable properties of an object
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
   static _i2
-          .List /*LIST InteropStaticType.list,813967142,[Instance of 'InteropRef<InteropType>']*/ <T>
+          .List /*LIST InteropStaticType.list,996235581,[Instance of 'InteropRef<InteropType>']*/ <T>
       _values$1<T>(_i2.Object o) => (_i4.callMethod(
             _i6.target0,
             'values',
             [o],
           ) as _i2.List)
               .cast();
+
+  /// Returns an array of values of the enumerable properties of an object
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
   static _i2
-          .List /*LIST InteropStaticType.list,500713267,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+          .List /*LIST InteropStaticType.list,412346121,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
       _values$2(_i8.IInline17 o) => (_i4.callMethod(
             _i6.target0,
             'values',
             [o],
           ) as _i2.List)
               .cast();
-  // HEYA values
+
+  /// Overload accessor: $1, $2
   static ({
-    _i2.List /*LIST InteropStaticType.list,813967142,[Instance of 'InteropRef<InteropType>']*/ <
+    /// Returns an array of values of the enumerable properties of an object
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,996235581,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>(_i2.Object o) $1,
-    _i2.List /*LIST InteropStaticType.list,500713267,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Returns an array of values of the enumerable properties of an object
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,412346121,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         Function(_i8.IInline17 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
       );
-  static _i2.List /*LIST InteropStaticType.list,913338348,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns an array of key/values of the enumerable properties of an object
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+  static _i2.List /*LIST InteropStaticType.list,944979034,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         T,
@@ -451,7 +536,10 @@ class Object {
         [o],
       ) as _i2.List)
           .cast();
-  static _i2.List /*LIST InteropStaticType.list,57044394,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns an array of key/values of the enumerable properties of an object
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+  static _i2.List /*LIST InteropStaticType.list,1003670848,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         _i2.dynamic,
@@ -461,15 +549,21 @@ class Object {
         [o],
       ) as _i2.List)
           .cast();
-  // HEYA entries
+
+  /// Overload accessor: $1, $2
   static ({
-    _i2.List /*LIST InteropStaticType.list,913338348,[Instance of 'InteropRef<InteropType>']*/ <
+    /// Returns an array of key/values of the enumerable properties of an object
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,944979034,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               T,
             )>
         Function<T>(_i2.Object o) $1,
-    _i2.List /*LIST InteropStaticType.list,57044394,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Returns an array of key/values of the enumerable properties of an object
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,1003670848,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               _i2.dynamic,
@@ -479,11 +573,17 @@ class Object {
         $1: _entries$1,
         $2: _entries$2,
       );
+
+  /// Returns an object containing all own property descriptors of an object
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
   static _i2.Object getOwnPropertyDescriptors<T>(T o) => _i4.callMethod(
         _i6.target0,
         'getOwnPropertyDescriptors',
         [o],
       );
+
+  /// Returns an object created by key-value entries for properties and methods
+  ///  @param entries An iterable object that contains key-value entries for properties and methods.
   static _i2.Object _fromEntries$1<T>(
           _i9.Iterable<
                   (
@@ -496,9 +596,12 @@ class Object {
         'fromEntries',
         [entries],
       );
+
+  /// Returns an object created by key-value entries for properties and methods
+  ///  @param entries An iterable object that contains key-value entries for properties and methods.
   static _i2.dynamic _fromEntries$2(
           _i9.Iterable<
-                  _i2.List /*LIST InteropStaticType.list,540672788,[Instance of 'InteropRef<InteropType>']*/ <
+                  _i2.List /*LIST InteropStaticType.list,1026995401,[Instance of 'InteropRef<InteropType>']*/ <
                       _i2.dynamic>>
               entries) =>
       _i4.callMethod(
@@ -506,8 +609,11 @@ class Object {
         'fromEntries',
         [entries],
       );
-  // HEYA fromEntries
+
+  /// Overload accessor: $1, $2
   static ({
+    /// Returns an object created by key-value entries for properties and methods
+    ///  @param entries An iterable object that contains key-value entries for properties and methods.
     _i2.Object Function<T>(
         _i9.Iterable<
                 (
@@ -515,15 +621,22 @@ class Object {
                   T,
                 )>
             entries) $1,
+
+    /// Returns an object created by key-value entries for properties and methods
+    ///  @param entries An iterable object that contains key-value entries for properties and methods.
     _i2.dynamic Function(
         _i9.Iterable<
-                _i2.List /*LIST InteropStaticType.list,540672788,[Instance of 'InteropRef<InteropType>']*/ <
+                _i2.List /*LIST InteropStaticType.list,1026995401,[Instance of 'InteropRef<InteropType>']*/ <
                     _i2.dynamic>>
             entries) $2,
   }) get fromEntries => (
         $1: _fromEntries$1,
         $2: _fromEntries$2,
       );
+
+  /// Determines whether an object has a property with the specified name.
+  ///  @param o An object.
+  ///  @param v A property name.
   static _i2.bool hasOwn(
     _i2.Object o,
     _i3.PropertyKey v,
@@ -545,20 +658,11 @@ FieldExternal:
 external _i2.Object _declaredObject;
 
 extension Object$Typings on Object {
-  /* #125
-  source: 
-    /** The initial value of Object.prototype.constructor is the standard built-in Object constructor. */
-    constructor: Function; */
   /// The initial value of Object.prototype.constructor is the standard built-in Object constructor.
   _i2.Function get constructor => _i4.getProperty(
         this,
         'constructor',
       );
-  /* #125
-  source: 
-    /** The initial value of Object.prototype.constructor is the standard built-in Object constructor. */
-    constructor: Function; */
-  // Type InteropStaticType.function
   set constructor(_i2.Function value) {
     _i4.setProperty(
       this,
@@ -567,31 +671,45 @@ extension Object$Typings on Object {
     );
   }
 
+  /// Returns a string representation of an object.
   _i2.String toString$() => _i4.callMethod(
         this,
         'toString',
         [],
       );
+
+  /// Returns a date converted to a string using the current locale.
   _i2.String toLocaleString() => _i4.callMethod(
         this,
         'toLocaleString',
         [],
       );
+
+  /// Returns the primitive value of the specified object.
   _i3.Object valueOf() => _i4.callMethod(
         this,
         'valueOf',
         [],
       );
+
+  /// Determines whether an object has a property with the specified name.
+  ///  @param v A property name.
   _i2.bool hasOwnProperty(_i3.PropertyKey v) => _i4.callMethod(
         this,
         'hasOwnProperty',
         [v],
       );
+
+  /// Determines whether an object exists in another object's prototype chain.
+  ///  @param v Another object whose prototype chain is to be checked.
   _i2.bool isPrototypeOf(_i3.Object v) => _i4.callMethod(
         this,
         'isPrototypeOf',
         [v],
       );
+
+  /// Determines whether a specified property is enumerable.
+  ///  @param v A property name.
   _i2.bool propertyIsEnumerable(_i3.PropertyKey v) => _i4.callMethod(
         this,
         'propertyIsEnumerable',
@@ -604,11 +722,18 @@ extension Object$Typings on Object {
 class ObjectConstructor {}
 
 extension ObjectConstructor$Typings on ObjectConstructor {
+  /// Returns the prototype of an object.
+  ///  @param o The object that references the prototype.
   _i2.dynamic getPrototypeOf(_i2.dynamic o) => _i4.callMethod(
         this,
         'getPrototypeOf',
         [o],
       );
+
+  /// Gets the own property descriptor of the specified object.
+  ///  An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
+  ///  @param o Object that contains the property.
+  ///  @param p Name of the property.
   _i3.PropertyDescriptor? getOwnPropertyDescriptor(
     _i2.dynamic o,
     _i3.PropertyKey p,
@@ -621,18 +746,29 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           p,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,284881695,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+
+  /// Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
+  ///  on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
+  ///  @param o Object that contains the own properties.
+  _i2.List /*LIST InteropStaticType.list,389460924,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       getOwnPropertyNames(_i2.dynamic o) => (_i4.callMethod(
             this,
             'getOwnPropertyNames',
             [o],
           ) as _i2.List)
               .cast();
+
+  /// Creates an object that has the specified prototype or that has null prototype.
+  ///  @param o Object to use as a prototype. May be null.
   _i2.dynamic _create$1([_i2.Object? o]) => _i4.callMethod(
         this,
         'create',
         [o ?? _i5.undefined],
       );
+
+  /// Creates an object that has the specified prototype, and that optionally contains specified properties.
+  ///  @param o Object to use as a prototype. May be null
+  ///  @param properties JavaScript object that contains one or more property descriptors.
   _i2.dynamic _create$2(
     _i2.Object? o,
     _i2.Object properties,
@@ -645,9 +781,16 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           properties,
         ],
       );
-  // HEYA create
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates an object that has the specified prototype or that has null prototype.
+    ///  @param o Object to use as a prototype. May be null.
     _i2.dynamic Function([_i2.Object? o]) $1,
+
+    /// Creates an object that has the specified prototype, and that optionally contains specified properties.
+    ///  @param o Object to use as a prototype. May be null
+    ///  @param properties JavaScript object that contains one or more property descriptors.
     _i2.dynamic Function(
       _i2.Object? o,
       _i2.Object properties,
@@ -656,6 +799,11 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         $1: _create$1,
         $2: _create$2,
       );
+
+  /// Adds a property to an object, or modifies attributes of an existing property.
+  ///  @param o Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object.
+  ///  @param p The property name.
+  ///  @param attributes Descriptor for the property. It can be for a data property or an accessor property.
   T defineProperty<T>(
     T o,
     _i3.PropertyKey p,
@@ -670,6 +818,10 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           attributes,
         ],
       );
+
+  /// Adds one or more properties to an object, and/or modifies attributes of existing properties.
+  ///  @param o Object on which to add or modify the properties. This can be a native JavaScript object or a DOM object.
+  ///  @param properties JavaScript object that contains one or more descriptor objects. Each descriptor object describes a data property or an accessor property.
   T defineProperties<T>(
     T o,
     _i2.Object properties,
@@ -682,62 +834,97 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           properties,
         ],
       );
+
+  /// Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
+  ///  @param o Object on which to lock the attributes.
   T seal<T>(T o) => _i4.callMethod(
         this,
         'seal',
         [o],
       );
+
+  /// Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+  ///  @param f Object on which to lock the attributes.
   T freeze<T extends _i2.Function>(T f) => _i4.callMethod(
         this,
         'freeze',
         [f],
       );
+
+  /// Prevents the addition of new properties to an object.
+  ///  @param o Object to make non-extensible.
   T preventExtensions<T>(T o) => _i4.callMethod(
         this,
         'preventExtensions',
         [o],
       );
+
+  /// Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
+  ///  @param o Object to test.
   _i2.bool isSealed(_i2.dynamic o) => _i4.callMethod(
         this,
         'isSealed',
         [o],
       );
+
+  /// Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
+  ///  @param o Object to test.
   _i2.bool isFrozen(_i2.dynamic o) => _i4.callMethod(
         this,
         'isFrozen',
         [o],
       );
+
+  /// Returns a value that indicates whether new properties can be added to an object.
+  ///  @param o Object to test.
   _i2.bool isExtensible(_i2.dynamic o) => _i4.callMethod(
         this,
         'isExtensible',
         [o],
       );
-  _i2.List /*LIST InteropStaticType.list,281174014,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+
+  /// Returns the names of the enumerable string properties and methods of an object.
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+  _i2.List /*LIST InteropStaticType.list,407538467,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       _keys$1(_i2.Object o) => (_i4.callMethod(
             this,
             'keys',
             [o],
           ) as _i2.List)
               .cast();
-  _i2.List /*LIST InteropStaticType.list,763630933,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+
+  /// Returns the names of the enumerable string properties and methods of an object.
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+  _i2.List /*LIST InteropStaticType.list,76127120,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       _keys$2(_i7.IInline8 o) => (_i4.callMethod(
             this,
             'keys',
             [o],
           ) as _i2.List)
               .cast();
-  // HEYA keys
+
+  /// Overload accessor: $1, $2
   ({
-    _i2.List /*LIST InteropStaticType.list,281174014,[Instance of 'InteropRef<InteropType>']*/ <
+    /// Returns the names of the enumerable string properties and methods of an object.
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,407538467,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         Function(_i2.Object o) $1,
-    _i2.List /*LIST InteropStaticType.list,763630933,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Returns the names of the enumerable string properties and methods of an object.
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,76127120,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         Function(_i7.IInline8 o) $2,
   }) get keys => (
         $1: _keys$1,
         $2: _keys$2,
       );
+
+  /// Copy the values of all of the enumerable own properties from one or more source objects to a
+  ///  target object. Returns the target object.
+  ///  @param target The target object to copy to.
+  ///  @param sources One or more source objects from which to copy properties
   _i2.dynamic _assign$1(
     _i2.Object target, [
     _i2.Iterable<_i2.dynamic>? sources,
@@ -750,6 +937,13 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           ...?sources,
         ],
       );
+
+  /// Copy the values of all of the enumerable own properties from one or more source objects to a
+  ///  target object. Returns the target object.
+  ///  @param target The target object to copy to.
+  ///  @param source1 The first source object from which to copy properties.
+  ///  @param source2 The second source object from which to copy properties.
+  ///  @param source3 The third source object from which to copy properties.
   _i2.Object _assign$2<T extends _i7.IInline7, U, V, W>(
     T target,
     U source1,
@@ -766,12 +960,24 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           source3,
         ],
       );
-  // HEYA assign
+
+  /// Overload accessor: $1, $2
   ({
+    /// Copy the values of all of the enumerable own properties from one or more source objects to a
+    ///  target object. Returns the target object.
+    ///  @param target The target object to copy to.
+    ///  @param sources One or more source objects from which to copy properties
     _i2.dynamic Function(
       _i2.Object target, [
       _i2.Iterable<_i2.dynamic>? sources,
     ]) $1,
+
+    /// Copy the values of all of the enumerable own properties from one or more source objects to a
+    ///  target object. Returns the target object.
+    ///  @param target The target object to copy to.
+    ///  @param source1 The first source object from which to copy properties.
+    ///  @param source2 The second source object from which to copy properties.
+    ///  @param source3 The third source object from which to copy properties.
     _i2.Object Function<T extends _i7.IInline7, U, V, W>(
       T target,
       U source1,
@@ -782,13 +988,20 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         $1: _assign$1,
         $2: _assign$2,
       );
-  _i2.List /*LIST InteropStaticType.list,603157665,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
+
+  /// Returns an array of all symbol properties found directly on object o.
+  ///  @param o Object to retrieve the symbols from.
+  _i2.List /*LIST InteropStaticType.list,110529253,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
       getOwnPropertySymbols(_i2.dynamic o) => (_i4.callMethod(
             this,
             'getOwnPropertySymbols',
             [o],
           ) as _i2.List)
               .cast();
+
+  /// Returns true if the values are the same value, false otherwise.
+  ///  @param value1 The first value.
+  ///  @param value2 The second value.
   _i2.bool is$(
     _i2.dynamic value1,
     _i2.dynamic value2,
@@ -801,6 +1014,10 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           value2,
         ],
       );
+
+  /// Sets the prototype of a specified object o to object proto or null. Returns the object o.
+  ///  @param o The object to change its prototype.
+  ///  @param proto The value of the new prototype or null.
   _i2.dynamic setPrototypeOf(
     _i2.dynamic o, [
     _i2.Object? proto,
@@ -813,33 +1030,48 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           proto ?? _i5.undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,813967142,[Instance of 'InteropRef<InteropType>']*/ <T>
+
+  /// Returns an array of values of the enumerable properties of an object
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+  _i2.List /*LIST InteropStaticType.list,996235581,[Instance of 'InteropRef<InteropType>']*/ <T>
       _values$1<T>(_i2.Object o) => (_i4.callMethod(
             this,
             'values',
             [o],
           ) as _i2.List)
               .cast();
-  _i2.List /*LIST InteropStaticType.list,500713267,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+
+  /// Returns an array of values of the enumerable properties of an object
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+  _i2.List /*LIST InteropStaticType.list,412346121,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
       _values$2(_i8.IInline17 o) => (_i4.callMethod(
             this,
             'values',
             [o],
           ) as _i2.List)
               .cast();
-  // HEYA values
+
+  /// Overload accessor: $1, $2
   ({
-    _i2.List /*LIST InteropStaticType.list,813967142,[Instance of 'InteropRef<InteropType>']*/ <
+    /// Returns an array of values of the enumerable properties of an object
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,996235581,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>(_i2.Object o) $1,
-    _i2.List /*LIST InteropStaticType.list,500713267,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Returns an array of values of the enumerable properties of an object
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,412346121,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         Function(_i8.IInline17 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
       );
-  _i2.List /*LIST InteropStaticType.list,913338348,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns an array of key/values of the enumerable properties of an object
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+  _i2.List /*LIST InteropStaticType.list,944979034,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         T,
@@ -849,7 +1081,10 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         [o],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,57044394,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns an array of key/values of the enumerable properties of an object
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+  _i2.List /*LIST InteropStaticType.list,1003670848,[Instance of 'InteropRef<InteropType>']*/ <
       (
         _i2.String,
         _i2.dynamic,
@@ -859,15 +1094,21 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         [o],
       ) as _i2.List)
           .cast();
-  // HEYA entries
+
+  /// Overload accessor: $1, $2
   ({
-    _i2.List /*LIST InteropStaticType.list,913338348,[Instance of 'InteropRef<InteropType>']*/ <
+    /// Returns an array of key/values of the enumerable properties of an object
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,944979034,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               T,
             )>
         Function<T>(_i2.Object o) $1,
-    _i2.List /*LIST InteropStaticType.list,57044394,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Returns an array of key/values of the enumerable properties of an object
+    ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+    _i2.List /*LIST InteropStaticType.list,1003670848,[Instance of 'InteropRef<InteropType>']*/ <
             (
               _i2.String,
               _i2.dynamic,
@@ -877,11 +1118,17 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         $1: _entries$1,
         $2: _entries$2,
       );
+
+  /// Returns an object containing all own property descriptors of an object
+  ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
   _i2.Object getOwnPropertyDescriptors<T>(T o) => _i4.callMethod(
         this,
         'getOwnPropertyDescriptors',
         [o],
       );
+
+  /// Returns an object created by key-value entries for properties and methods
+  ///  @param entries An iterable object that contains key-value entries for properties and methods.
   _i2.Object _fromEntries$1<T>(
           _i9.Iterable<
                   (
@@ -894,9 +1141,12 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         'fromEntries',
         [entries],
       );
+
+  /// Returns an object created by key-value entries for properties and methods
+  ///  @param entries An iterable object that contains key-value entries for properties and methods.
   _i2.dynamic _fromEntries$2(
           _i9.Iterable<
-                  _i2.List /*LIST InteropStaticType.list,540672788,[Instance of 'InteropRef<InteropType>']*/ <
+                  _i2.List /*LIST InteropStaticType.list,1026995401,[Instance of 'InteropRef<InteropType>']*/ <
                       _i2.dynamic>>
               entries) =>
       _i4.callMethod(
@@ -904,8 +1154,11 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         'fromEntries',
         [entries],
       );
-  // HEYA fromEntries
+
+  /// Overload accessor: $1, $2
   ({
+    /// Returns an object created by key-value entries for properties and methods
+    ///  @param entries An iterable object that contains key-value entries for properties and methods.
     _i2.Object Function<T>(
         _i9.Iterable<
                 (
@@ -913,15 +1166,22 @@ extension ObjectConstructor$Typings on ObjectConstructor {
                   T,
                 )>
             entries) $1,
+
+    /// Returns an object created by key-value entries for properties and methods
+    ///  @param entries An iterable object that contains key-value entries for properties and methods.
     _i2.dynamic Function(
         _i9.Iterable<
-                _i2.List /*LIST InteropStaticType.list,540672788,[Instance of 'InteropRef<InteropType>']*/ <
+                _i2.List /*LIST InteropStaticType.list,1026995401,[Instance of 'InteropRef<InteropType>']*/ <
                     _i2.dynamic>>
             entries) $2,
   }) get fromEntries => (
         $1: _fromEntries$1,
         $2: _fromEntries$2,
       );
+
+  /// Determines whether an object has a property with the specified name.
+  ///  @param o An object.
+  ///  @param v A property name.
   _i2.bool hasOwn(
     _i2.Object o,
     _i3.PropertyKey v,
@@ -944,7 +1204,8 @@ extension ObjectConstructor$Typings on ObjectConstructor {
         '',
         [value],
       );
-  // HEYA call
+
+  /// Overload accessor: $1, $2
   ({
     _i2.dynamic Function() $1,
     _i2.dynamic Function(_i2.dynamic value) $2,
@@ -971,17 +1232,10 @@ extension FunctionConstructor$Typings on FunctionConstructor {
 class IArguments implements _IterableLike$<_i9.IterableIterator<_i2.dynamic>> {}
 
 extension IArguments$Typings on IArguments {
-  /* #393
-  source: 
-    length: number; */
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
-  /* #393
-  source: 
-    length: number; */
-  // Type InteropStaticType.number
   set length(_i2.num value) {
     _i4.setProperty(
       this,
@@ -990,17 +1244,10 @@ extension IArguments$Typings on IArguments {
     );
   }
 
-  /* #394
-  source: 
-    callee: Function; */
   _i2.Function get callee => _i4.getProperty(
         this,
         'callee',
       );
-  /* #394
-  source: 
-    callee: Function; */
-  // Type InteropStaticType.function
   set callee(_i2.Function value) {
     _i4.setProperty(
       this,
@@ -1035,12 +1282,23 @@ extension StringConstructor$Typings on StringConstructor {
         'fromCharCode',
         [...?codes],
       );
+
+  /// Return the String value whose elements are, in order, the elements in the List elements.
+  ///  If length is 0, the empty string is returned.
   _i2.String fromCodePoint([_i2.Iterable<_i2.dynamic>? codePoints]) =>
       _i4.callMethod(
         this,
         'fromCodePoint',
         [...?codePoints],
       );
+
+  /// String.raw is usually used as a tag function of a Tagged Template String. When called as
+  ///  such, the first argument will be a well formed template call site object and the rest
+  ///  parameter will contain the substitution values. It can also be called directly, for example,
+  ///  to interleave strings and values from your own tag function, and in this case the only thing
+  ///  it needs from the first argument is the raw property.
+  ///  @param template A well-formed template string call site representation.
+  ///  @param substitutions A set of substitution values.
   _i2.String raw(
     _i7.IInline9 template, [
     _i2.Iterable<_i2.dynamic>? substitutions,
@@ -1076,6 +1334,7 @@ FieldExternal:
 external _i2.Object _declaredBoolean;
 
 extension Boolean$Typings on Boolean {
+  /// Returns the primitive value of the specified object.
   _i2.bool valueOf() => _i4.callMethod(
         this,
         'valueOf',
@@ -1095,6 +1354,7 @@ extension BooleanConstructor$Typings on BooleanConstructor {
       );
 }
 
+/// An object that represents a number of any kind. All JavaScript numbers are 64-bit floating-point numbers.
 @_i1.JS()
 @_i1.staticInterop
 class Number {
@@ -1103,76 +1363,39 @@ class Number {
         [value ?? _i5.undefined],
       );
 
-  /* #581
-  source: 
-
-    /** The largest number that can be represented in JavaScript. Equal to approximately 1.79E+308. */
-    readonly MAX_VALUE: number; */
   /// The largest number that can be represented in JavaScript. Equal to approximately 1.79E+308.
   static _i2.num get maxValue => _i4.getProperty(
         _i6.target2,
         'MAX_VALUE',
       );
-  /* #584
-  source: 
 
-    /** The closest number to zero that can be represented in JavaScript. Equal to approximately 5.00E-324. */
-    readonly MIN_VALUE: number; */
   /// The closest number to zero that can be represented in JavaScript. Equal to approximately 5.00E-324.
   static _i2.num get minValue => _i4.getProperty(
         _i6.target2,
         'MIN_VALUE',
       );
-  /* #590
-  source: 
 
-    /**
-     * A value that is not a number.
-     * In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
-     */
-    readonly NaN: number; */
   /// A value that is not a number.
   /// In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
   static _i2.num get naN => _i4.getProperty(
         _i6.target2,
         'NaN',
       );
-  /* #596
-  source: 
 
-    /**
-     * A value that is less than the largest negative number that can be represented in JavaScript.
-     * JavaScript displays NEGATIVE_INFINITY values as -infinity.
-     */
-    readonly NEGATIVE_INFINITY: number; */
   /// A value that is less than the largest negative number that can be represented in JavaScript.
   /// JavaScript displays NEGATIVE_INFINITY values as -infinity.
   static _i2.num get negativeInfinity => _i4.getProperty(
         _i6.target2,
         'NEGATIVE_INFINITY',
       );
-  /* #602
-  source: 
 
-    /**
-     * A value greater than the largest number that can be represented in JavaScript.
-     * JavaScript displays POSITIVE_INFINITY values as infinity.
-     */
-    readonly POSITIVE_INFINITY: number; */
   /// A value greater than the largest number that can be represented in JavaScript.
   /// JavaScript displays POSITIVE_INFINITY values as infinity.
   static _i2.num get positiveInfinity => _i4.getProperty(
         _i6.target2,
         'POSITIVE_INFINITY',
       );
-  /* #217
-  source: 
-    /**
-     * The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1
-     * that is representable as a Number value, which is approximately:
-     * 2.2204460492503130808472633361816 x 10‍−‍16.
-     */
-    readonly EPSILON: number; */
+
   /// The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1
   /// that is representable as a Number value, which is approximately:
   /// 2.2204460492503130808472633361816 x 10‍−‍16.
@@ -1180,15 +1403,7 @@ class Number {
         _i6.target2,
         'EPSILON',
       );
-  /* #252
-  source: 
 
-    /**
-     * The value of the largest integer n such that n and n + 1 are both exactly representable as
-     * a Number value.
-     * The value of Number.MAX_SAFE_INTEGER is 9007199254740991 2^53 − 1.
-     */
-    readonly MAX_SAFE_INTEGER: number; */
   /// The value of the largest integer n such that n and n + 1 are both exactly representable as
   /// a Number value.
   /// The value of Number.MAX_SAFE_INTEGER is 9007199254740991 2^53 − 1.
@@ -1196,15 +1411,7 @@ class Number {
         _i6.target2,
         'MAX_SAFE_INTEGER',
       );
-  /* #259
-  source: 
 
-    /**
-     * The value of the smallest integer n such that n and n − 1 are both exactly representable as
-     * a Number value.
-     * The value of Number.MIN_SAFE_INTEGER is −9007199254740991 (−(2^53 − 1)).
-     */
-    readonly MIN_SAFE_INTEGER: number; */
   /// The value of the smallest integer n such that n and n − 1 are both exactly representable as
   /// a Number value.
   /// The value of Number.MIN_SAFE_INTEGER is −9007199254740991 (−(2^53 − 1)).
@@ -1212,31 +1419,56 @@ class Number {
         _i6.target2,
         'MIN_SAFE_INTEGER',
       );
+
+  /// Returns true if passed value is finite.
+  ///  Unlike the global isFinite, Number.isFinite doesn't forcibly convert the parameter to a
+  ///  number. Only finite values of the type number, result in true.
+  ///  @param number A numeric value.
   static _i2.bool isFinite(_i2.Object? number) => _i4.callMethod(
         _i6.target2,
         'isFinite',
         [number],
       );
+
+  /// Returns true if the value passed is an integer, false otherwise.
+  ///  @param number A numeric value.
   static _i2.bool isInteger(_i2.Object? number) => _i4.callMethod(
         _i6.target2,
         'isInteger',
         [number],
       );
+
+  /// Returns a Boolean value that indicates whether a value is the reserved value NaN (not a
+  ///  number). Unlike the global isNaN(), Number.isNaN() doesn't forcefully convert the parameter
+  ///  to a number. Only values of the type number, that are also NaN, result in true.
+  ///  @param number A numeric value.
   static _i2.bool isNaN(_i2.Object? number) => _i4.callMethod(
         _i6.target2,
         'isNaN',
         [number],
       );
+
+  /// Returns true if the value passed is a safe integer.
+  ///  @param number A numeric value.
   static _i2.bool isSafeInteger(_i2.Object? number) => _i4.callMethod(
         _i6.target2,
         'isSafeInteger',
         [number],
       );
+
+  /// Converts a string to a floating-point number.
+  ///  @param string A string that contains a floating-point number.
   static _i2.num parseFloat(_i2.String string) => _i4.callMethod(
         _i6.target2,
         'parseFloat',
         [string],
       );
+
+  /// Converts A string to an integer.
+  ///  @param string A string to convert into a number.
+  ///  @param radix A value between 2 and 36 that specifies the base of the number in `string`.
+  ///  If this argument is not supplied, strings with a prefix of '0x' are considered hexadecimal.
+  ///  All other strings are considered decimal.
   static _i2.num parseInt(
     _i2.String string, [
     _i2.num? radix,
@@ -1258,31 +1490,48 @@ FieldExternal:
 external _i2.Object _declaredNumber;
 
 extension Number$Typings on Number {
+  /// Returns a string representation of an object.
+  ///  @param radix Specifies a radix for converting numeric values to strings. This value is only used for numbers.
   _i2.String toString$([_i2.num? radix]) => _i4.callMethod(
         this,
         'toString',
         [radix ?? _i5.undefined],
       );
+
+  /// Returns a string representing a number in fixed-point notation.
+  ///  @param fractionDigits Number of digits after the decimal point. Must be in the range 0 - 20, inclusive.
   _i2.String toFixed([_i2.num? fractionDigits]) => _i4.callMethod(
         this,
         'toFixed',
         [fractionDigits ?? _i5.undefined],
       );
+
+  /// Returns a string containing a number represented in exponential notation.
+  ///  @param fractionDigits Number of digits after the decimal point. Must be in the range 0 - 20, inclusive.
   _i2.String toExponential([_i2.num? fractionDigits]) => _i4.callMethod(
         this,
         'toExponential',
         [fractionDigits ?? _i5.undefined],
       );
+
+  /// Returns a string containing a number represented either in exponential or fixed-point notation with a specified number of digits.
+  ///  @param precision Number of significant digits. Must be in the range 1 - 21, inclusive.
   _i2.String toPrecision([_i2.num? precision]) => _i4.callMethod(
         this,
         'toPrecision',
         [precision ?? _i5.undefined],
       );
+
+  /// Returns the primitive value of the specified object.
   _i2.num valueOf() => _i4.callMethod(
         this,
         'valueOf',
         [],
       );
+
+  /// Converts a number to a string by using the current or specified locale.
+  ///  @param locales A locale string or array of locale strings that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
+  ///  @param options An object that contains one or more properties that specify comparison options.
   _i2.String _toLocaleString$1([
     _i2.Object? locales,
     _i10.NumberFormatOptions? options,
@@ -1295,6 +1544,10 @@ extension Number$Typings on Number {
           options ?? _i5.undefined,
         ],
       );
+
+  /// Converts a number to a string by using the current or specified locale.
+  ///  @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
+  ///  @param options An object that contains one or more properties that specify comparison options.
   _i2.String _toLocaleString$2([
     _i10.LocalesArgument? locales,
     _i10.NumberFormatOptions? options,
@@ -1307,12 +1560,20 @@ extension Number$Typings on Number {
           options ?? _i5.undefined,
         ],
       );
-  // HEYA toLocaleString
+
+  /// Overload accessor: $1, $2
   ({
+    /// Converts a number to a string by using the current or specified locale.
+    ///  @param locales A locale string or array of locale strings that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
+    ///  @param options An object that contains one or more properties that specify comparison options.
     _i2.String Function([
       _i2.Object? locales,
       _i10.NumberFormatOptions? options,
     ]) $1,
+
+    /// Converts a number to a string by using the current or specified locale.
+    ///  @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
+    ///  @param options An object that contains one or more properties that specify comparison options.
     _i2.String Function([
       _i10.LocalesArgument? locales,
       _i10.NumberFormatOptions? options,
@@ -1326,76 +1587,39 @@ extension Number$Typings on Number {
 @_i1.JS()
 @_i1.staticInterop
 class NumberConstructor {
-  /* #581
-  source: 
-
-    /** The largest number that can be represented in JavaScript. Equal to approximately 1.79E+308. */
-    readonly MAX_VALUE: number; */
   /// The largest number that can be represented in JavaScript. Equal to approximately 1.79E+308.
   static _i2.num get maxValue => _i4.getProperty(
         _i6.target2,
         'MAX_VALUE',
       );
-  /* #584
-  source: 
 
-    /** The closest number to zero that can be represented in JavaScript. Equal to approximately 5.00E-324. */
-    readonly MIN_VALUE: number; */
   /// The closest number to zero that can be represented in JavaScript. Equal to approximately 5.00E-324.
   static _i2.num get minValue => _i4.getProperty(
         _i6.target2,
         'MIN_VALUE',
       );
-  /* #590
-  source: 
 
-    /**
-     * A value that is not a number.
-     * In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
-     */
-    readonly NaN: number; */
   /// A value that is not a number.
   /// In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
   static _i2.num get naN => _i4.getProperty(
         _i6.target2,
         'NaN',
       );
-  /* #596
-  source: 
 
-    /**
-     * A value that is less than the largest negative number that can be represented in JavaScript.
-     * JavaScript displays NEGATIVE_INFINITY values as -infinity.
-     */
-    readonly NEGATIVE_INFINITY: number; */
   /// A value that is less than the largest negative number that can be represented in JavaScript.
   /// JavaScript displays NEGATIVE_INFINITY values as -infinity.
   static _i2.num get negativeInfinity => _i4.getProperty(
         _i6.target2,
         'NEGATIVE_INFINITY',
       );
-  /* #602
-  source: 
 
-    /**
-     * A value greater than the largest number that can be represented in JavaScript.
-     * JavaScript displays POSITIVE_INFINITY values as infinity.
-     */
-    readonly POSITIVE_INFINITY: number; */
   /// A value greater than the largest number that can be represented in JavaScript.
   /// JavaScript displays POSITIVE_INFINITY values as infinity.
   static _i2.num get positiveInfinity => _i4.getProperty(
         _i6.target2,
         'POSITIVE_INFINITY',
       );
-  /* #217
-  source: 
-    /**
-     * The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1
-     * that is representable as a Number value, which is approximately:
-     * 2.2204460492503130808472633361816 x 10‍−‍16.
-     */
-    readonly EPSILON: number; */
+
   /// The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1
   /// that is representable as a Number value, which is approximately:
   /// 2.2204460492503130808472633361816 x 10‍−‍16.
@@ -1403,15 +1627,7 @@ class NumberConstructor {
         _i6.target2,
         'EPSILON',
       );
-  /* #252
-  source: 
 
-    /**
-     * The value of the largest integer n such that n and n + 1 are both exactly representable as
-     * a Number value.
-     * The value of Number.MAX_SAFE_INTEGER is 9007199254740991 2^53 − 1.
-     */
-    readonly MAX_SAFE_INTEGER: number; */
   /// The value of the largest integer n such that n and n + 1 are both exactly representable as
   /// a Number value.
   /// The value of Number.MAX_SAFE_INTEGER is 9007199254740991 2^53 − 1.
@@ -1419,15 +1635,7 @@ class NumberConstructor {
         _i6.target2,
         'MAX_SAFE_INTEGER',
       );
-  /* #259
-  source: 
 
-    /**
-     * The value of the smallest integer n such that n and n − 1 are both exactly representable as
-     * a Number value.
-     * The value of Number.MIN_SAFE_INTEGER is −9007199254740991 (−(2^53 − 1)).
-     */
-    readonly MIN_SAFE_INTEGER: number; */
   /// The value of the smallest integer n such that n and n − 1 are both exactly representable as
   /// a Number value.
   /// The value of Number.MIN_SAFE_INTEGER is −9007199254740991 (−(2^53 − 1)).
@@ -1438,31 +1646,55 @@ class NumberConstructor {
 }
 
 extension NumberConstructor$Typings on NumberConstructor {
+  /// Returns true if passed value is finite.
+  ///  Unlike the global isFinite, Number.isFinite doesn't forcibly convert the parameter to a
+  ///  number. Only finite values of the type number, result in true.
+  ///  @param number A numeric value.
   _i2.bool isFinite(_i2.Object? number) => _i4.callMethod(
         this,
         'isFinite',
         [number],
       );
+
+  /// Returns true if the value passed is an integer, false otherwise.
+  ///  @param number A numeric value.
   _i2.bool isInteger(_i2.Object? number) => _i4.callMethod(
         this,
         'isInteger',
         [number],
       );
+
+  /// Returns a Boolean value that indicates whether a value is the reserved value NaN (not a
+  ///  number). Unlike the global isNaN(), Number.isNaN() doesn't forcefully convert the parameter
+  ///  to a number. Only values of the type number, that are also NaN, result in true.
+  ///  @param number A numeric value.
   _i2.bool isNaN(_i2.Object? number) => _i4.callMethod(
         this,
         'isNaN',
         [number],
       );
+
+  /// Returns true if the value passed is a safe integer.
+  ///  @param number A numeric value.
   _i2.bool isSafeInteger(_i2.Object? number) => _i4.callMethod(
         this,
         'isSafeInteger',
         [number],
       );
+
+  /// Converts a string to a floating-point number.
+  ///  @param string A string that contains a floating-point number.
   _i2.num parseFloat(_i2.String string) => _i4.callMethod(
         this,
         'parseFloat',
         [string],
       );
+
+  /// Converts A string to an integer.
+  ///  @param string A string to convert into a number.
+  ///  @param radix A value between 2 and 36 that specifies the base of the number in `string`.
+  ///  If this argument is not supplied, strings with a prefix of '0x' are considered hexadecimal.
+  ///  All other strings are considered decimal.
   _i2.num parseInt(
     _i2.String string, [
     _i2.num? radix,
@@ -1492,7 +1724,7 @@ class TemplateStringsArray implements _i3.ReadonlyArray<_i2.String> {
   });
 
   factory TemplateStringsArray({
-    required _i2.List /*LIST InteropStaticType.list,687499420,[Instance of 'InteropRef<InteropType>']*/ <
+    required _i2.List /*LIST InteropStaticType.list,187212470,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.String>
         raw,
     required _i2.num length,
@@ -1504,10 +1736,7 @@ class TemplateStringsArray implements _i3.ReadonlyArray<_i2.String> {
 }
 
 extension TemplateStringsArray$Typings on TemplateStringsArray {
-  /* #609
-  source: 
-    readonly raw: readonly string[]; */
-  _i2.List /*LIST InteropStaticType.list,687499420,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
+  _i2.List /*LIST InteropStaticType.list,187212470,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
       get raw => (_i4.getProperty(
             this,
             'raw',
@@ -1515,6 +1744,10 @@ extension TemplateStringsArray$Typings on TemplateStringsArray {
               .cast();
 }
 
+/// The type of `import.meta`.
+///
+/// If you need to declare that a given property exists on `import.meta`,
+/// this type may be augmented via interface merging.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1525,17 +1758,10 @@ class ImportMeta {
 }
 
 extension ImportMeta$Typings on ImportMeta {
-  /* #639
-  source: 
-    url: string; */
   _i2.String get url => _i4.getProperty(
         this,
         'url',
       );
-  /* #639
-  source: 
-    url: string; */
-  // Type InteropStaticType.string
   set url(_i2.String value) {
     _i4.setProperty(
       this,
@@ -1545,6 +1771,10 @@ extension ImportMeta$Typings on ImportMeta {
   }
 }
 
+/// The type for the optional second argument to `import()`.
+///
+/// If your host environment supports additional options, this type may be
+/// augmented via interface merging.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1556,17 +1786,10 @@ class ImportCallOptions {
 }
 
 extension ImportCallOptions$Typings on ImportCallOptions {
-  /* #628
-  source: 
-    assert?: ImportAssertions; */
   _i2.Object? get assert$ => _i4.getProperty(
         this,
         'assert',
       );
-  /* #628
-  source: 
-    assert?: ImportAssertions; */
-  // Type Instance of 'InteropInterface'
   set assert$(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -1576,103 +1799,96 @@ extension ImportCallOptions$Typings on ImportCallOptions {
   }
 }
 
+/// An intrinsic object that provides basic mathematics functionality and constants.
 @_i1.JS()
 @_i1.staticInterop
 class Math {}
 
 extension Math$Typings on Math {
-  /* #640
-  source: 
-    /** The mathematical constant e. This is Euler's number, the base of natural logarithms. */
-    readonly E: number; */
   /// The mathematical constant e. This is Euler's number, the base of natural logarithms.
   _i2.num get e => _i4.getProperty(
         this,
         'E',
       );
-  /* #642
-  source: 
-    /** The natural logarithm of 10. */
-    readonly LN10: number; */
+
   /// The natural logarithm of 10.
   _i2.num get ln10 => _i4.getProperty(
         this,
         'LN10',
       );
-  /* #644
-  source: 
-    /** The natural logarithm of 2. */
-    readonly LN2: number; */
+
   /// The natural logarithm of 2.
   _i2.num get ln2 => _i4.getProperty(
         this,
         'LN2',
       );
-  /* #646
-  source: 
-    /** The base-2 logarithm of e. */
-    readonly LOG2E: number; */
+
   /// The base-2 logarithm of e.
   _i2.num get log2e => _i4.getProperty(
         this,
         'LOG2E',
       );
-  /* #648
-  source: 
-    /** The base-10 logarithm of e. */
-    readonly LOG10E: number; */
+
   /// The base-10 logarithm of e.
   _i2.num get log10e => _i4.getProperty(
         this,
         'LOG10E',
       );
-  /* #650
-  source: 
-    /** Pi. This is the ratio of the circumference of a circle to its diameter. */
-    readonly PI: number; */
+
   /// Pi. This is the ratio of the circumference of a circle to its diameter.
   _i2.num get pi => _i4.getProperty(
         this,
         'PI',
       );
-  /* #652
-  source: 
-    /** The square root of 0.5, or, equivalently, one divided by the square root of 2. */
-    readonly SQRT1_2: number; */
+
   /// The square root of 0.5, or, equivalently, one divided by the square root of 2.
   _i2.num get sqrt12 => _i4.getProperty(
         this,
         'SQRT1_2',
       );
-  /* #654
-  source: 
-    /** The square root of 2. */
-    readonly SQRT2: number; */
+
   /// The square root of 2.
   _i2.num get sqrt2 => _i4.getProperty(
         this,
         'SQRT2',
       );
+
+  /// Returns the absolute value of a number (the value without regard to whether it is positive or negative).
+  ///  For example, the absolute value of -5 is the same as the absolute value of 5.
+  ///  @param x A numeric expression for which the absolute value is needed.
   _i2.num abs(_i2.num x) => _i4.callMethod(
         this,
         'abs',
         [x],
       );
+
+  /// Returns the arc cosine (or inverse cosine) of a number.
+  ///  @param x A numeric expression.
   _i2.num acos(_i2.num x) => _i4.callMethod(
         this,
         'acos',
         [x],
       );
+
+  /// Returns the arcsine of a number.
+  ///  @param x A numeric expression.
   _i2.num asin(_i2.num x) => _i4.callMethod(
         this,
         'asin',
         [x],
       );
+
+  /// Returns the arctangent of a number.
+  ///  @param x A numeric expression for which the arctangent is needed.
   _i2.num atan(_i2.num x) => _i4.callMethod(
         this,
         'atan',
         [x],
       );
+
+  /// Returns the angle (in radians) from the X axis to a point.
+  ///  @param y A numeric expression representing the cartesian y-coordinate.
+  ///  @param x A numeric expression representing the cartesian x-coordinate.
   _i2.num atan2(
     _i2.num y,
     _i2.num x,
@@ -1685,41 +1901,66 @@ extension Math$Typings on Math {
           x,
         ],
       );
+
+  /// Returns the smallest integer greater than or equal to its numeric argument.
+  ///  @param x A numeric expression.
   _i2.num ceil(_i2.num x) => _i4.callMethod(
         this,
         'ceil',
         [x],
       );
+
+  /// Returns the cosine of a number.
+  ///  @param x A numeric expression that contains an angle measured in radians.
   _i2.num cos(_i2.num x) => _i4.callMethod(
         this,
         'cos',
         [x],
       );
+
+  /// Returns e (the base of natural logarithms) raised to a power.
+  ///  @param x A numeric expression representing the power of e.
   _i2.num exp(_i2.num x) => _i4.callMethod(
         this,
         'exp',
         [x],
       );
+
+  /// Returns the greatest integer less than or equal to its numeric argument.
+  ///  @param x A numeric expression.
   _i2.num floor(_i2.num x) => _i4.callMethod(
         this,
         'floor',
         [x],
       );
+
+  /// Returns the natural logarithm (base e) of a number.
+  ///  @param x A numeric expression.
   _i2.num log(_i2.num x) => _i4.callMethod(
         this,
         'log',
         [x],
       );
+
+  /// Returns the larger of a set of supplied numeric expressions.
+  ///  @param values Numeric expressions to be evaluated.
   _i2.num max([_i2.Iterable<_i2.dynamic>? values]) => _i4.callMethod(
         this,
         'max',
         [...?values],
       );
+
+  /// Returns the smaller of a set of supplied numeric expressions.
+  ///  @param values Numeric expressions to be evaluated.
   _i2.num min([_i2.Iterable<_i2.dynamic>? values]) => _i4.callMethod(
         this,
         'min',
         [...?values],
       );
+
+  /// Returns the value of a base expression taken to a specified power.
+  ///  @param x The base value of the expression.
+  ///  @param y The exponent value of the expression.
   _i2.num pow(
     _i2.num x,
     _i2.num y,
@@ -1732,36 +1973,57 @@ extension Math$Typings on Math {
           y,
         ],
       );
+
+  /// Returns a pseudorandom number between 0 and 1.
   _i2.num random() => _i4.callMethod(
         this,
         'random',
         [],
       );
+
+  /// Returns a supplied numeric expression rounded to the nearest integer.
+  ///  @param x The value to be rounded to the nearest integer.
   _i2.num round(_i2.num x) => _i4.callMethod(
         this,
         'round',
         [x],
       );
+
+  /// Returns the sine of a number.
+  ///  @param x A numeric expression that contains an angle measured in radians.
   _i2.num sin(_i2.num x) => _i4.callMethod(
         this,
         'sin',
         [x],
       );
+
+  /// Returns the square root of a number.
+  ///  @param x A numeric expression.
   _i2.num sqrt(_i2.num x) => _i4.callMethod(
         this,
         'sqrt',
         [x],
       );
+
+  /// Returns the tangent of a number.
+  ///  @param x A numeric expression that contains an angle measured in radians.
   _i2.num tan(_i2.num x) => _i4.callMethod(
         this,
         'tan',
         [x],
       );
+
+  /// Returns the number of leading zero bits in the 32-bit binary representation of a number.
+  ///  @param x A numeric expression.
   _i2.num clz32(_i2.num x) => _i4.callMethod(
         this,
         'clz32',
         [x],
       );
+
+  /// Returns the result of 32-bit multiplication of two numbers.
+  ///  @param x First number
+  ///  @param y Second number
   _i2.num imul(
     _i2.num x,
     _i2.num y,
@@ -1774,76 +2036,129 @@ extension Math$Typings on Math {
           y,
         ],
       );
+
+  /// Returns the sign of the x, indicating whether x is positive, negative or zero.
+  ///  @param x The numeric expression to test
   _i2.num sign(_i2.num x) => _i4.callMethod(
         this,
         'sign',
         [x],
       );
+
+  /// Returns the base 10 logarithm of a number.
+  ///  @param x A numeric expression.
   _i2.num log10(_i2.num x) => _i4.callMethod(
         this,
         'log10',
         [x],
       );
+
+  /// Returns the base 2 logarithm of a number.
+  ///  @param x A numeric expression.
   _i2.num log2(_i2.num x) => _i4.callMethod(
         this,
         'log2',
         [x],
       );
+
+  /// Returns the natural logarithm of 1 + x.
+  ///  @param x A numeric expression.
   _i2.num log1p(_i2.num x) => _i4.callMethod(
         this,
         'log1p',
         [x],
       );
+
+  /// Returns the result of (e^x - 1), which is an implementation-dependent approximation to
+  ///  subtracting 1 from the exponential function of x (e raised to the power of x, where e
+  ///  is the base of the natural logarithms).
+  ///  @param x A numeric expression.
   _i2.num expm1(_i2.num x) => _i4.callMethod(
         this,
         'expm1',
         [x],
       );
+
+  /// Returns the hyperbolic cosine of a number.
+  ///  @param x A numeric expression that contains an angle measured in radians.
   _i2.num cosh(_i2.num x) => _i4.callMethod(
         this,
         'cosh',
         [x],
       );
+
+  /// Returns the hyperbolic sine of a number.
+  ///  @param x A numeric expression that contains an angle measured in radians.
   _i2.num sinh(_i2.num x) => _i4.callMethod(
         this,
         'sinh',
         [x],
       );
+
+  /// Returns the hyperbolic tangent of a number.
+  ///  @param x A numeric expression that contains an angle measured in radians.
   _i2.num tanh(_i2.num x) => _i4.callMethod(
         this,
         'tanh',
         [x],
       );
+
+  /// Returns the inverse hyperbolic cosine of a number.
+  ///  @param x A numeric expression that contains an angle measured in radians.
   _i2.num acosh(_i2.num x) => _i4.callMethod(
         this,
         'acosh',
         [x],
       );
+
+  /// Returns the inverse hyperbolic sine of a number.
+  ///  @param x A numeric expression that contains an angle measured in radians.
   _i2.num asinh(_i2.num x) => _i4.callMethod(
         this,
         'asinh',
         [x],
       );
+
+  /// Returns the inverse hyperbolic tangent of a number.
+  ///  @param x A numeric expression that contains an angle measured in radians.
   _i2.num atanh(_i2.num x) => _i4.callMethod(
         this,
         'atanh',
         [x],
       );
+
+  /// Returns the square root of the sum of squares of its arguments.
+  ///  @param values Values to compute the square root for.
+  ///      If no arguments are passed, the result is +0.
+  ///      If there is only one argument, the result is the absolute value.
+  ///      If any argument is +Infinity or -Infinity, the result is +Infinity.
+  ///      If any argument is NaN, the result is NaN.
+  ///      If all arguments are either +0 or −0, the result is +0.
   _i2.num hypot([_i2.Iterable<_i2.dynamic>? values]) => _i4.callMethod(
         this,
         'hypot',
         [...?values],
       );
+
+  /// Returns the integral part of the a numeric expression, x, removing any fractional digits.
+  ///  If x is already an integer, the result is x.
+  ///  @param x A numeric expression.
   _i2.num trunc(_i2.num x) => _i4.callMethod(
         this,
         'trunc',
         [x],
       );
+
+  /// Returns the nearest single precision float representation of a number.
+  ///  @param x A numeric expression.
   _i2.num fround(_i2.num x) => _i4.callMethod(
         this,
         'fround',
         [x],
       );
+
+  /// Returns an implementation-dependent approximation to the cube root of number.
+  ///  @param x A numeric expression.
   _i2.num cbrt(_i2.num x) => _i4.callMethod(
         this,
         'cbrt',
@@ -1856,11 +2171,22 @@ extension Math$Typings on Math {
 class DateConstructor {}
 
 extension DateConstructor$Typings on DateConstructor {
+  /// Parses a string containing a date, and returns the number of milliseconds between that date and midnight, January 1, 1970.
+  ///  @param s A date string
   _i2.num parse(_i2.String s) => _i4.callMethod(
         this,
         'parse',
         [s],
       );
+
+  /// Returns the number of milliseconds between midnight, January 1, 1970 Universal Coordinated Time (UTC) (or GMT) and the specified date.
+  ///  @param year The full year designation is required for cross-century date accuracy. If year is between 0 and 99 is used, then year is assumed to be 1900 + year.
+  ///  @param monthIndex The month as a number between 0 and 11 (January to December).
+  ///  @param date The date as a number between 1 and 31.
+  ///  @param hours Must be supplied if minutes is supplied. A number from 0 to 23 (midnight to 11pm) that specifies the hour.
+  ///  @param minutes Must be supplied if seconds is supplied. A number from 0 to 59 that specifies the minutes.
+  ///  @param seconds Must be supplied if milliseconds is supplied. A number from 0 to 59 that specifies the seconds.
+  ///  @param ms A number from 0 to 999 that specifies the milliseconds.
   _i2.num utc(
     _i2.num year,
     _i2.num monthIndex, [
@@ -1883,6 +2209,8 @@ extension DateConstructor$Typings on DateConstructor {
           ms ?? _i5.undefined,
         ],
       );
+
+  /// Returns the number of milliseconds elapsed since midnight, January 1, 1970 Universal Coordinated Time (UTC).
   _i2.num now() => _i4.callMethod(
         this,
         'now',
@@ -1927,24 +2255,11 @@ class RegExpMatchArray implements _i3.Array<_i2.String> {
 }
 
 extension RegExpMatchArray$Typings on RegExpMatchArray {
-  /* #945
-  source: 
-    /**
-     * The index of the search at which the result was found.
-     */
-    index?: number; */
   /// The index of the search at which the result was found.
   _i2.num? get index => _i4.getProperty(
         this,
         'index',
       );
-  /* #945
-  source: 
-    /**
-     * The index of the search at which the result was found.
-     */
-    index?: number; */
-  // Type InteropStaticType.number
   set index(_i2.num? value) {
     _i4.setProperty(
       this,
@@ -1953,24 +2268,11 @@ extension RegExpMatchArray$Typings on RegExpMatchArray {
     );
   }
 
-  /* #949
-  source: 
-    /**
-     * A copy of the search string.
-     */
-    input?: string; */
   /// A copy of the search string.
   _i2.String? get input => _i4.getProperty(
         this,
         'input',
       );
-  /* #949
-  source: 
-    /**
-     * A copy of the search string.
-     */
-    input?: string; */
-  // Type InteropStaticType.string
   set input(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -1979,32 +2281,15 @@ extension RegExpMatchArray$Typings on RegExpMatchArray {
     );
   }
 
-  /* #953
-  source: 
-    /**
-     * The first match. This will always be present because `null` will be returned if there are no matches.
-     */
-    0: string; */
   /// The first match. This will always be present because `null` will be returned if there are no matches.
   _i2.String get first => _i4.getProperty(
         this,
         '0',
       );
-  /* #20
-  source: 
-    groups?: {
-        [key: string]: string
-    } */
   _i2.Object? get groups => _i4.getProperty(
         this,
         'groups',
       );
-  /* #20
-  source: 
-    groups?: {
-        [key: string]: string
-    } */
-  // Type Instance of 'InteropInterface'
   set groups(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -2013,17 +2298,10 @@ extension RegExpMatchArray$Typings on RegExpMatchArray {
     );
   }
 
-  /* #20
-  source: 
-    indices?: RegExpIndicesArray; */
   _i11.RegExpIndicesArray? get indices => _i4.getProperty(
         this,
         'indices',
       );
-  /* #20
-  source: 
-    indices?: RegExpIndicesArray; */
-  // Type Instance of 'InteropInterface'
   set indices(_i11.RegExpIndicesArray? value) {
     _i4.setProperty(
       this,
@@ -2065,24 +2343,11 @@ class RegExpExecArray implements _i3.Array<_i2.String> {
 }
 
 extension RegExpExecArray$Typings on RegExpExecArray {
-  /* #960
-  source: 
-    /**
-     * The index of the search at which the result was found.
-     */
-    index: number; */
   /// The index of the search at which the result was found.
   _i2.num get index => _i4.getProperty(
         this,
         'index',
       );
-  /* #960
-  source: 
-    /**
-     * The index of the search at which the result was found.
-     */
-    index: number; */
-  // Type InteropStaticType.number
   set index(_i2.num value) {
     _i4.setProperty(
       this,
@@ -2091,24 +2356,11 @@ extension RegExpExecArray$Typings on RegExpExecArray {
     );
   }
 
-  /* #964
-  source: 
-    /**
-     * A copy of the search string.
-     */
-    input: string; */
   /// A copy of the search string.
   _i2.String get input => _i4.getProperty(
         this,
         'input',
       );
-  /* #964
-  source: 
-    /**
-     * A copy of the search string.
-     */
-    input: string; */
-  // Type InteropStaticType.string
   set input(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2117,32 +2369,15 @@ extension RegExpExecArray$Typings on RegExpExecArray {
     );
   }
 
-  /* #968
-  source: 
-    /**
-     * The first match. This will always be present because `null` will be returned if there are no matches.
-     */
-    0: string; */
   /// The first match. This will always be present because `null` will be returned if there are no matches.
   _i2.String get first => _i4.getProperty(
         this,
         '0',
       );
-  /* #26
-  source: 
-    groups?: {
-        [key: string]: string
-    } */
   _i2.Object? get groups => _i4.getProperty(
         this,
         'groups',
       );
-  /* #26
-  source: 
-    groups?: {
-        [key: string]: string
-    } */
-  // Type Instance of 'InteropInterface'
   set groups(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -2151,17 +2386,10 @@ extension RegExpExecArray$Typings on RegExpExecArray {
     );
   }
 
-  /* #24
-  source: 
-    indices?: RegExpIndicesArray; */
   _i11.RegExpIndicesArray? get indices => _i4.getProperty(
         this,
         'indices',
       );
-  /* #24
-  source: 
-    indices?: RegExpIndicesArray; */
-  // Type Instance of 'InteropInterface'
   set indices(_i11.RegExpIndicesArray? value) {
     _i4.setProperty(
       this,
@@ -2208,147 +2436,96 @@ class RegExp {
         ],
       );
 
-  /* #1012
-  source: 
-
-    // Non-standard extensions
-    /** @deprecated A legacy feature for browser compatibility */
-    $1: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$1 => _i4.getProperty(
         _i6.target3,
         '\$1',
       );
-  /* #1014
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $2: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$2 => _i4.getProperty(
         _i6.target3,
         '\$2',
       );
-  /* #1016
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $3: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$3 => _i4.getProperty(
         _i6.target3,
         '\$3',
       );
-  /* #1018
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $4: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$4 => _i4.getProperty(
         _i6.target3,
         '\$4',
       );
-  /* #1020
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $5: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$5 => _i4.getProperty(
         _i6.target3,
         '\$5',
       );
-  /* #1022
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $6: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$6 => _i4.getProperty(
         _i6.target3,
         '\$6',
       );
-  /* #1024
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $7: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$7 => _i4.getProperty(
         _i6.target3,
         '\$7',
       );
-  /* #1026
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $8: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$8 => _i4.getProperty(
         _i6.target3,
         '\$8',
       );
-  /* #1028
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $9: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$9 => _i4.getProperty(
         _i6.target3,
         '\$9',
       );
-  /* #1030
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    input: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get input => _i4.getProperty(
         _i6.target3,
         'input',
       );
-  /* #1032
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $_: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$$ => _i4.getProperty(
         _i6.target3,
         '\$_',
       );
-  /* #1034
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    lastMatch: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get lastMatch => _i4.getProperty(
         _i6.target3,
         'lastMatch',
       );
-  /* #1038
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    lastParen: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get lastParen => _i4.getProperty(
         _i6.target3,
         'lastParen',
       );
-  /* #1042
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    leftContext: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get leftContext => _i4.getProperty(
         _i6.target3,
         'leftContext',
       );
-  /* #1046
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    rightContext: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get rightContext => _i4.getProperty(
         _i6.target3,
         'rightContext',
       );
-  /* #1048
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    "$'": string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$ => _i4.getProperty(
         _i6.target3,
@@ -2363,59 +2540,33 @@ FieldExternal:
 external _i2.Object _declaredRegExp;
 
 extension RegExp$Typings on RegExp {
-  /* #985
-  source: 
-
-    /** Returns a copy of the text of the regular expression pattern. Read-only. The regExp argument is a Regular expression object. It can be a variable name or a literal. */
-    readonly source: string; */
   /// Returns a copy of the text of the regular expression pattern. Read-only. The regExp argument is a Regular expression object. It can be a variable name or a literal.
   _i2.String get source => _i4.getProperty(
         this,
         'source',
       );
-  /* #988
-  source: 
 
-    /** Returns a Boolean value indicating the state of the global flag (g) used with a regular expression. Default is false. Read-only. */
-    readonly global: boolean; */
   /// Returns a Boolean value indicating the state of the global flag (g) used with a regular expression. Default is false. Read-only.
   _i2.bool get global => _i4.getProperty(
         this,
         'global',
       );
-  /* #991
-  source: 
 
-    /** Returns a Boolean value indicating the state of the ignoreCase flag (i) used with a regular expression. Default is false. Read-only. */
-    readonly ignoreCase: boolean; */
   /// Returns a Boolean value indicating the state of the ignoreCase flag (i) used with a regular expression. Default is false. Read-only.
   _i2.bool get ignoreCase => _i4.getProperty(
         this,
         'ignoreCase',
       );
-  /* #994
-  source: 
 
-    /** Returns a Boolean value indicating the state of the multiline flag (m) used with a regular expression. Default is false. Read-only. */
-    readonly multiline: boolean; */
   /// Returns a Boolean value indicating the state of the multiline flag (m) used with a regular expression. Default is false. Read-only.
   _i2.bool get multiline => _i4.getProperty(
         this,
         'multiline',
       );
-  /* #996
-  source: 
-
-    lastIndex: number; */
   _i2.num get lastIndex => _i4.getProperty(
         this,
         'lastIndex',
       );
-  /* #996
-  source: 
-
-    lastIndex: number; */
-  // Type InteropStaticType.number
   set lastIndex(_i2.num value) {
     _i4.setProperty(
       this,
@@ -2424,21 +2575,6 @@ extension RegExp$Typings on RegExp {
     );
   }
 
-  /* #378
-  source: 
-    /**
-     * Returns a string indicating the flags of the regular expression in question. This field is read-only.
-     * The characters in this string are sequenced and concatenated in the following order:
-     *
-     *    - "g" for global
-     *    - "i" for ignoreCase
-     *    - "m" for multiline
-     *    - "u" for unicode
-     *    - "y" for sticky
-     *
-     * If no flags are set, the value is the empty string.
-     */
-    readonly flags: string; */
   /// Returns a string indicating the flags of the regular expression in question. This field is read-only.
   /// The characters in this string are sequenced and concatenated in the following order:
   ///
@@ -2453,70 +2589,52 @@ extension RegExp$Typings on RegExp {
         this,
         'flags',
       );
-  /* #384
-  source: 
 
-    /**
-     * Returns a Boolean value indicating the state of the sticky flag (y) used with a regular
-     * expression. Default is false. Read-only.
-     */
-    readonly sticky: boolean; */
   /// Returns a Boolean value indicating the state of the sticky flag (y) used with a regular
   /// expression. Default is false. Read-only.
   _i2.bool get sticky => _i4.getProperty(
         this,
         'sticky',
       );
-  /* #390
-  source: 
 
-    /**
-     * Returns a Boolean value indicating the state of the Unicode flag (u) used with a regular
-     * expression. Default is false. Read-only.
-     */
-    readonly unicode: boolean; */
   /// Returns a Boolean value indicating the state of the Unicode flag (u) used with a regular
   /// expression. Default is false. Read-only.
   _i2.bool get unicode => _i4.getProperty(
         this,
         'unicode',
       );
-  /* #36
-  source: 
-    /**
-     * Returns a Boolean value indicating the state of the dotAll flag (s) used with a regular expression.
-     * Default is false. Read-only.
-     */
-    readonly dotAll: boolean; */
+
   /// Returns a Boolean value indicating the state of the dotAll flag (s) used with a regular expression.
   /// Default is false. Read-only.
   _i2.bool get dotAll => _i4.getProperty(
         this,
         'dotAll',
       );
-  /* #38
-  source: 
-    /**
-     * Returns a Boolean value indicating the state of the hasIndices flag (d) used with with a regular expression.
-     * Default is false. Read-only.
-     */
-    readonly hasIndices: boolean; */
+
   /// Returns a Boolean value indicating the state of the hasIndices flag (d) used with with a regular expression.
   /// Default is false. Read-only.
   _i2.bool get hasIndices => _i4.getProperty(
         this,
         'hasIndices',
       );
+
+  /// Executes a search on a string using a regular expression pattern, and returns an array containing the results of that search.
+  ///  @param string The String object or string literal on which to perform the search.
   _i3.RegExpExecArray? exec(_i2.String string) => _i4.callMethod(
         this,
         'exec',
         [string],
       );
+
+  /// Returns a Boolean value that indicates whether or not a pattern exists in a searched string.
+  ///  @param string String on which to perform the search.
   _i2.bool test(_i2.String string) => _i4.callMethod(
         this,
         'test',
         [string],
       );
+
+  /// @deprecated A legacy feature for browser compatibility
   _i3.RegExp compile(
     _i2.String pattern, [
     _i2.String? flags,
@@ -2534,147 +2652,96 @@ extension RegExp$Typings on RegExp {
 @_i1.JS()
 @_i1.staticInterop
 class RegExpConstructor {
-  /* #1012
-  source: 
-
-    // Non-standard extensions
-    /** @deprecated A legacy feature for browser compatibility */
-    $1: string; */
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$1 => _i4.getProperty(
         _i6.target3,
         '\$1',
       );
-  /* #1014
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $2: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$2 => _i4.getProperty(
         _i6.target3,
         '\$2',
       );
-  /* #1016
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $3: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$3 => _i4.getProperty(
         _i6.target3,
         '\$3',
       );
-  /* #1018
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $4: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$4 => _i4.getProperty(
         _i6.target3,
         '\$4',
       );
-  /* #1020
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $5: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$5 => _i4.getProperty(
         _i6.target3,
         '\$5',
       );
-  /* #1022
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $6: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$6 => _i4.getProperty(
         _i6.target3,
         '\$6',
       );
-  /* #1024
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $7: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$7 => _i4.getProperty(
         _i6.target3,
         '\$7',
       );
-  /* #1026
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $8: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$8 => _i4.getProperty(
         _i6.target3,
         '\$8',
       );
-  /* #1028
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $9: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$9 => _i4.getProperty(
         _i6.target3,
         '\$9',
       );
-  /* #1030
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    input: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get input => _i4.getProperty(
         _i6.target3,
         'input',
       );
-  /* #1032
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $_: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$$ => _i4.getProperty(
         _i6.target3,
         '\$_',
       );
-  /* #1034
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    lastMatch: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get lastMatch => _i4.getProperty(
         _i6.target3,
         'lastMatch',
       );
-  /* #1038
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    lastParen: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get lastParen => _i4.getProperty(
         _i6.target3,
         'lastParen',
       );
-  /* #1042
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    leftContext: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get leftContext => _i4.getProperty(
         _i6.target3,
         'leftContext',
       );
-  /* #1046
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    rightContext: string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get rightContext => _i4.getProperty(
         _i6.target3,
         'rightContext',
       );
-  /* #1048
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    "$'": string; */
+
   /// @deprecated A legacy feature for browser compatibility
   static _i2.String get $$ => _i4.getProperty(
         _i6.target3,
@@ -2683,13 +2750,6 @@ class RegExpConstructor {
 }
 
 extension RegExpConstructor$Typings on RegExpConstructor {
-  /* #1012
-  source: 
-
-    // Non-standard extensions
-    /** @deprecated A legacy feature for browser compatibility */
-    $1: string; */
-  // Type InteropStaticType.string
   set $$1(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2698,11 +2758,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1014
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $2: string; */
-  // Type InteropStaticType.string
   set $$2(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2711,11 +2766,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1016
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $3: string; */
-  // Type InteropStaticType.string
   set $$3(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2724,11 +2774,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1018
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $4: string; */
-  // Type InteropStaticType.string
   set $$4(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2737,11 +2782,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1020
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $5: string; */
-  // Type InteropStaticType.string
   set $$5(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2750,11 +2790,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1022
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $6: string; */
-  // Type InteropStaticType.string
   set $$6(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2763,11 +2798,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1024
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $7: string; */
-  // Type InteropStaticType.string
   set $$7(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2776,11 +2806,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1026
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $8: string; */
-  // Type InteropStaticType.string
   set $$8(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2789,11 +2814,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1028
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $9: string; */
-  // Type InteropStaticType.string
   set $$9(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2802,11 +2822,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1030
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    input: string; */
-  // Type InteropStaticType.string
   set input(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2815,11 +2830,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1032
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    $_: string; */
-  // Type InteropStaticType.string
   set $$$1(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2828,11 +2838,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1034
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    lastMatch: string; */
-  // Type InteropStaticType.string
   set lastMatch(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2841,11 +2846,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1038
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    lastParen: string; */
-  // Type InteropStaticType.string
   set lastParen(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2854,11 +2854,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1042
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    leftContext: string; */
-  // Type InteropStaticType.string
   set leftContext(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2867,11 +2862,6 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     );
   }
 
-  /* #1046
-  source: 
-    /** @deprecated A legacy feature for browser compatibility */
-    rightContext: string; */
-  // Type InteropStaticType.string
   set rightContext(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2909,7 +2899,8 @@ extension RegExpConstructor$Typings on RegExpConstructor {
           flags ?? _i5.undefined,
         ],
       );
-  // HEYA call
+
+  /// Overload accessor: $1, $2, $3
   ({
     _i3.RegExp Function(_i2.Object pattern) $1,
     _i3.RegExp Function(
@@ -2950,17 +2941,10 @@ FieldExternal:
 external _i2.Object _declaredError;
 
 extension Error$Typings on Error {
-  /* #1054
-  source: 
-    name: string; */
   _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
-  /* #1054
-  source: 
-    name: string; */
-  // Type InteropStaticType.string
   set name(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2969,17 +2953,10 @@ extension Error$Typings on Error {
     );
   }
 
-  /* #1055
-  source: 
-    message: string; */
   _i2.String get message => _i4.getProperty(
         this,
         'message',
       );
-  /* #1055
-  source: 
-    message: string; */
-  // Type InteropStaticType.string
   set message(_i2.String value) {
     _i4.setProperty(
       this,
@@ -2988,17 +2965,10 @@ extension Error$Typings on Error {
     );
   }
 
-  /* #1056
-  source: 
-    stack?: string; */
   _i2.String? get stack => _i4.getProperty(
         this,
         'stack',
       );
-  /* #1056
-  source: 
-    stack?: string; */
-  // Type InteropStaticType.string
   set stack(_i2.String? value) {
     _i4.setProperty(
       this,
@@ -3007,17 +2977,10 @@ extension Error$Typings on Error {
     );
   }
 
-  /* #24
-  source: 
-    cause?: unknown; */
   _i2.Object? get cause => _i4.getProperty(
         this,
         'cause',
       );
-  /* #24
-  source: 
-    cause?: unknown; */
-  // Type InteropStaticType.nullableObj
   set cause(_i2.Object? value) {
     _i4.setProperty(
       this,
@@ -3292,11 +3255,16 @@ extension URIErrorConstructor$Typings on URIErrorConstructor {
       );
 }
 
+/// An intrinsic object that provides functions to convert JavaScript values to and from the JavaScript Object Notation (JSON) format.
 @_i1.JS('JSON')
 @_i1.staticInterop
 class Json {}
 
 extension Json$Typings on Json {
+  /// Converts a JavaScript Object Notation (JSON) string into an object.
+  ///  @param text A valid JSON string.
+  ///  @param reviver A function that transforms the results. This function is called for each member of the object.
+  ///  If a member contains nested objects, the nested objects are transformed before the parent object is.
   _i2.dynamic parse(
     _i2.String text, [
     _i2.dynamic Function(
@@ -3312,6 +3280,11 @@ extension Json$Typings on Json {
           reviver == null ? _i5.undefined : _i4.allowInterop(reviver),
         ],
       );
+
+  /// Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
+  ///  @param value A JavaScript value, usually an object or array, to be converted.
+  ///  @param replacer A function that transforms the results.
+  ///  @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
   _i2.String _stringify$1(
     _i2.dynamic value, [
     _i2.dynamic Function(
@@ -3329,9 +3302,14 @@ extension Json$Typings on Json {
           space ?? _i5.undefined,
         ],
       );
+
+  /// Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
+  ///  @param value A JavaScript value, usually an object or array, to be converted.
+  ///  @param replacer An array of strings and numbers that acts as an approved list for selecting the object properties that will be stringified.
+  ///  @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
   _i2.String _stringify$2(
     _i2.dynamic value, [
-    _i2.List /*LIST InteropStaticType.list,639901260,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,1055168579,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.Object>?
         replacer,
     _i2.Object? space,
@@ -3345,8 +3323,13 @@ extension Json$Typings on Json {
           space ?? _i5.undefined,
         ],
       );
-  // HEYA stringify
+
+  /// Overload accessor: $1, $2
   ({
+    /// Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
+    ///  @param value A JavaScript value, usually an object or array, to be converted.
+    ///  @param replacer A function that transforms the results.
+    ///  @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
     _i2.String Function(
       _i2.dynamic value, [
       _i2.dynamic Function(
@@ -3355,9 +3338,14 @@ extension Json$Typings on Json {
       )? replacer,
       _i2.Object? space,
     ]) $1,
+
+    /// Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
+    ///  @param value A JavaScript value, usually an object or array, to be converted.
+    ///  @param replacer An array of strings and numbers that acts as an approved list for selecting the object properties that will be stringified.
+    ///  @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
     _i2.String Function(
       _i2.dynamic value, [
-      _i2.List /*LIST InteropStaticType.list,639901260,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1055168579,[Instance of 'InteropRef<InteropType>']*/ <
               _i2.Object>?
           replacer,
       _i2.Object? space,
@@ -3373,40 +3361,48 @@ extension Json$Typings on Json {
 class ReadonlyArray<T> implements _IterableLike$<_i9.IterableIterator<T>> {}
 
 extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
-  /* #1171
-  source: 
-    /**
-     * Gets the length of the array. This is a number one higher than the highest element defined in an array.
-     */
-    readonly length: number; */
   /// Gets the length of the array. This is a number one higher than the highest element defined in an array.
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
+
+  /// Returns a string representation of an array.
   _i2.String toString$() => _i4.callMethod(
         this,
         'toString',
         [],
       );
+
+  /// Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
   _i2.String toLocaleString() => _i4.callMethod(
         this,
         'toLocaleString',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,2788347,[Instance of 'InteropRef<InteropType>']*/ <T>
+
+  /// Combines two or more arrays.
+  ///  @param items Additional items to add to the end of array1.
+  _i2.List /*LIST InteropStaticType.list,824987045,[Instance of 'InteropRef<InteropType>']*/ <T>
       concat([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
             this,
             'concat',
             [...?items],
           ) as _i2.List)
               .cast();
+
+  /// Adds all the elements of an array separated by the specified separator string.
+  ///  @param separator A string used to separate one element of an array from the next in the resulting String. If omitted, the array elements are separated with a comma.
   _i2.String join([_i2.String? separator]) => _i4.callMethod(
         this,
         'join',
         [separator ?? _i5.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,628873060,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns a section of an array.
+  ///  @param start The beginning of the specified portion of the array.
+  ///  @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+  _i2.List /*LIST InteropStaticType.list,220686778,[Instance of 'InteropRef<InteropType>']*/ <
       T> slice([
     _i2.num? start,
     _i2.num? end,
@@ -3420,6 +3416,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ],
       ) as _i2.List)
           .cast();
+
+  /// Returns the index of the first occurrence of a value in an array.
+  ///  @param searchElement The value to locate in the array.
+  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
   _i2.num indexOf(
     T searchElement, [
     _i2.num? fromIndex,
@@ -3432,6 +3432,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           fromIndex ?? _i5.undefined,
         ],
       );
+
+  /// Returns the index of the last occurrence of a specified value in an array.
+  ///  @param searchElement The value to locate in the array.
+  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at the last index in the array.
   _i2.num lastIndexOf(
     T searchElement, [
     _i2.num? fromIndex,
@@ -3444,11 +3448,18 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           fromIndex ?? _i5.undefined,
         ],
       );
+
+  /// Determines whether all the members of an array satisfy the specified test.
+  ///  @param predicate A function that accepts up to three arguments. The every method calls
+  ///  the predicate function for each element in the array until the predicate returns a value
+  ///  which is coercible to the Boolean value false, or until the end of the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i2.dynamic _every$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,303969441,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,325688750,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3461,11 +3472,18 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Determines whether all the members of an array satisfy the specified test.
+  ///  @param predicate A function that accepts up to three arguments. The every method calls
+  ///  the predicate function for each element in the array until the predicate returns a value
+  ///  which is coercible to the Boolean value false, or until the end of the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i2.bool _every$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,119390380,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,985939946,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3478,22 +3496,36 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA every
+
+  /// Overload accessor: $1, $2
   ({
+    /// Determines whether all the members of an array satisfy the specified test.
+    ///  @param predicate A function that accepts up to three arguments. The every method calls
+    ///  the predicate function for each element in the array until the predicate returns a value
+    ///  which is coercible to the Boolean value false, or until the end of the array.
+    ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+    ///  If thisArg is omitted, undefined is used as the this value.
     _i2.dynamic Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,303969441,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,325688750,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Determines whether all the members of an array satisfy the specified test.
+    ///  @param predicate A function that accepts up to three arguments. The every method calls
+    ///  the predicate function for each element in the array until the predicate returns a value
+    ///  which is coercible to the Boolean value false, or until the end of the array.
+    ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+    ///  If thisArg is omitted, undefined is used as the this value.
     _i2.bool Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,119390380,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,985939946,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3502,11 +3534,18 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         $1: _every$1,
         $2: _every$2,
       );
+
+  /// Determines whether the specified callback function returns true for any element of an array.
+  ///  @param predicate A function that accepts up to three arguments. The some method calls
+  ///  the predicate function for each element in the array until the predicate returns a value
+  ///  which is coercible to the Boolean value true, or until the end of the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i2.bool some(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,432710076,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,910754734,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3519,11 +3558,15 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Performs the specified action for each element in an array.
+  ///  @param callbackfn  A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
+  ///  @param thisArg  An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
   void forEach(
     void Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,954404109,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,904050022,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
@@ -3538,12 +3581,15 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,1035681839,[Instance of 'InteropRef<InteropType>']*/ <
+  /// Calls a defined callback function on each element of an array, and returns an array that contains the results.
+  ///  @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+  _i2.List /*LIST InteropStaticType.list,658316589,[Instance of 'InteropRef<InteropType>']*/ <
       U> map<U>(
     U Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,870490591,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,977441626,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
@@ -3557,12 +3603,16 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,870079740,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns the elements of an array that meet the condition specified in a callback function.
+  ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+  _i2.List /*LIST InteropStaticType.list,883889680,[Instance of 'InteropRef<InteropType>']*/ <
       S> _filter$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,206493142,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,102099671,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3576,12 +3626,16 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,966792697,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns the elements of an array that meet the condition specified in a callback function.
+  ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+  _i2.List /*LIST InteropStaticType.list,520848037,[Instance of 'InteropRef<InteropType>']*/ <
       T> _filter$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,1023450652,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1059509043,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3595,26 +3649,34 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ],
       ) as _i2.List)
           .cast();
-  // HEYA filter
+
+  /// Overload accessor: $1, $2
   ({
-    _i2.List /*LIST InteropStaticType.list,870079740,[Instance of 'InteropRef<InteropType>']*/ <
+    /// Returns the elements of an array that meet the condition specified in a callback function.
+    ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+    ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+    _i2.List /*LIST InteropStaticType.list,883889680,[Instance of 'InteropRef<InteropType>']*/ <
             S>
         Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,206493142,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,102099671,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i2.List /*LIST InteropStaticType.list,966792697,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Returns the elements of an array that meet the condition specified in a callback function.
+    ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+    ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+    _i2.List /*LIST InteropStaticType.list,520848037,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,1023450652,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,1059509043,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3623,12 +3685,16 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         $1: _filter$1,
         $2: _filter$2,
       );
+
+  /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
   T _reduce$1(
           T Function(
             T,
             T,
             _i2.num,
-            _i2.List /*LIST InteropStaticType.list,258339454,[Instance of 'InteropRef<InteropType>']*/ <
+            _i2.List /*LIST InteropStaticType.list,220119816,[Instance of 'InteropRef<InteropType>']*/ <
                 T>,
           ) callbackfn) =>
       _i4.callMethod(
@@ -3636,12 +3702,14 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'reduce',
         [_i4.allowInterop(callbackfn)],
       );
+
+  /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
   T _reduce$2(
     T Function(
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,759315263,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,113254734,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -3654,12 +3722,16 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           initialValue,
         ],
       );
+
+  /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
   U _reduce$3<U>(
     U Function(
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,548601778,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,385469353,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -3672,32 +3744,42 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           initialValue,
         ],
       );
-  // HEYA reduce
+
+  /// Overload accessor: $1, $2, $3
   ({
+    /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
     T Function(
         T Function(
           T,
           T,
           _i2.num,
-          _i2.List /*LIST InteropStaticType.list,258339454,[Instance of 'InteropRef<InteropType>']*/ <
+          _i2.List /*LIST InteropStaticType.list,220119816,[Instance of 'InteropRef<InteropType>']*/ <
               T>,
         ) callbackfn) $1,
+
+    /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     T Function(
       T Function(
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,759315263,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,113254734,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       T initialValue,
     ) $2,
+
+    /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
     U Function<U>(
       U Function(
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,548601778,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,385469353,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       U initialValue,
@@ -3707,12 +3789,16 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         $2: _reduce$2,
         $3: _reduce$3,
       );
+
+  /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
   T _reduceRight$1(
           T Function(
             T,
             T,
             _i2.num,
-            _i2.List /*LIST InteropStaticType.list,1059105546,[Instance of 'InteropRef<InteropType>']*/ <
+            _i2.List /*LIST InteropStaticType.list,657143129,[Instance of 'InteropRef<InteropType>']*/ <
                 T>,
           ) callbackfn) =>
       _i4.callMethod(
@@ -3720,12 +3806,14 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'reduceRight',
         [_i4.allowInterop(callbackfn)],
       );
+
+  /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
   T _reduceRight$2(
     T Function(
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,850410206,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,74303745,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -3738,12 +3826,16 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           initialValue,
         ],
       );
+
+  /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
   U _reduceRight$3<U>(
     U Function(
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,187298425,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,149823529,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -3756,32 +3848,42 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           initialValue,
         ],
       );
-  // HEYA reduceRight
+
+  /// Overload accessor: $1, $2, $3
   ({
+    /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
     T Function(
         T Function(
           T,
           T,
           _i2.num,
-          _i2.List /*LIST InteropStaticType.list,1059105546,[Instance of 'InteropRef<InteropType>']*/ <
+          _i2.List /*LIST InteropStaticType.list,657143129,[Instance of 'InteropRef<InteropType>']*/ <
               T>,
         ) callbackfn) $1,
+
+    /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     T Function(
       T Function(
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,850410206,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,74303745,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       T initialValue,
     ) $2,
+
+    /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
     U Function<U>(
       U Function(
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,187298425,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,149823529,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       U initialValue,
@@ -3791,11 +3893,19 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         $2: _reduceRight$2,
         $3: _reduceRight$3,
       );
+
+  /// Returns the value of the first element in the array where predicate is true, and undefined
+  ///  otherwise.
+  ///  @param predicate find calls predicate once for each element of the array, in ascending
+  ///  order, until it finds one where predicate returns true. If such an element is found, find
+  ///  immediately returns that element value. Otherwise, find returns undefined.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   S? _find$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,865534221,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,232907236,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3808,11 +3918,14 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Returns the value of the first element in the array where predicate is true, and undefined
+  /// otherwise.
   T? _find$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,758734683,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,66903613,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3825,22 +3938,33 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA find
+
+  /// Overload accessor: $1, $2
   ({
+    /// Returns the value of the first element in the array where predicate is true, and undefined
+    ///  otherwise.
+    ///  @param predicate find calls predicate once for each element of the array, in ascending
+    ///  order, until it finds one where predicate returns true. If such an element is found, find
+    ///  immediately returns that element value. Otherwise, find returns undefined.
+    ///  @param thisArg If provided, it will be used as the this value for each invocation of
+    ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,865534221,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,232907236,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Returns the value of the first element in the array where predicate is true, and undefined
+    /// otherwise.
     T? Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,758734683,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,66903613,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3849,11 +3973,19 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         $1: _find$1,
         $2: _find$2,
       );
+
+  /// Returns the index of the first element in the array where predicate is true, and -1
+  ///  otherwise.
+  ///  @param predicate find calls predicate once for each element of the array, in ascending
+  ///  order, until it finds one where predicate returns true. If such an element is found,
+  ///  findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   _i2.num findIndex(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,304912627,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,129304310,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3866,6 +3998,8 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Returns an iterable of key, value pairs for every entry in the array
   _i9.IterableIterator<
       (
         _i2.num,
@@ -3875,16 +4009,24 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         'entries',
         [],
       );
+
+  /// Returns an iterable of keys in the array
   _i9.IterableIterator<_i2.num> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
+
+  /// Returns an iterable of values in the array
   _i9.IterableIterator<T> values() => _i4.callMethod(
         this,
         'values',
         [],
       );
+
+  /// Determines whether an array includes a certain element, returning true or false as appropriate.
+  ///  @param searchElement The element to search for.
+  ///  @param fromIndex The position in this array at which to begin searching for searchElement.
   _i2.bool includes(
     T searchElement, [
     _i2.num? fromIndex,
@@ -3897,12 +4039,21 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           fromIndex ?? _i5.undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,578151944,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Calls a defined callback function on each element of an array. Then, flattens the result into
+  ///  a new array.
+  ///  This is identical to a map followed by flat with depth 1.
+  ///
+  ///  @param callback A function that accepts up to three arguments. The flatMap method calls the
+  ///  callback function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the callback function. If
+  ///  thisArg is omitted, undefined is used as the this value.
+  _i2.List /*LIST InteropStaticType.list,157059618,[Instance of 'InteropRef<InteropType>']*/ <
       U> flatMap<U, This>(
     _i2.Object Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,829108577,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,277602469,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callback, [
     This? thisArg,
@@ -3916,7 +4067,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,1072828502,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns a new array with all sub-array elements concatenated into it recursively up to the
+  ///  specified depth.
+  ///
+  ///  @param depth The maximum recursion depth
+  _i2.List /*LIST InteropStaticType.list,538646089,[Instance of 'InteropRef<InteropType>']*/ <
       _i13.FlatArray<A, D>> flat<A, D extends _i2.num>(
           [D? depth]) =>
       (_i4.callMethod(
@@ -3925,16 +4081,27 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         [depth ?? _i5.undefined],
       ) as _i2.List)
           .cast();
+
+  /// Returns the item located at the specified index.
+  ///  @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
   T? at(_i2.num index) => _i4.callMethod(
         this,
         'at',
         [index],
       );
+
+  /// Returns the value of the last element in the array where predicate is true, and undefined
+  ///  otherwise.
+  ///  @param predicate findLast calls predicate once for each element of the array, in descending
+  ///  order, until it finds one where predicate returns true. If such an element is found, findLast
+  ///  immediately returns that element value. Otherwise, findLast returns undefined.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   S? _findLast$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,784417830,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,777062452,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3947,11 +4114,14 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Returns the value of the last element in the array where predicate is true, and undefined
+  /// otherwise.
   T? _findLast$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,118434798,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,630682949,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -3964,22 +4134,33 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA findLast
+
+  /// Overload accessor: $1, $2
   ({
+    /// Returns the value of the last element in the array where predicate is true, and undefined
+    ///  otherwise.
+    ///  @param predicate findLast calls predicate once for each element of the array, in descending
+    ///  order, until it finds one where predicate returns true. If such an element is found, findLast
+    ///  immediately returns that element value. Otherwise, findLast returns undefined.
+    ///  @param thisArg If provided, it will be used as the this value for each invocation of
+    ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,784417830,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,777062452,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Returns the value of the last element in the array where predicate is true, and undefined
+    /// otherwise.
     T? Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,118434798,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,630682949,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -3988,11 +4169,19 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         $1: _findLast$1,
         $2: _findLast$2,
       );
+
+  /// Returns the index of the last element in the array where predicate is true, and -1
+  ///  otherwise.
+  ///  @param predicate findLastIndex calls predicate once for each element of the array, in descending
+  ///  order, until it finds one where predicate returns true. If such an element is found,
+  ///  findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   _i2.num findLastIndex(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,452686398,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,827070035,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4016,9 +4205,6 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
 class ConcatArray<T> {}
 
 extension ConcatArray$Typings<T> on ConcatArray<T> {
-  /* #1295
-  source: 
-    readonly length: number; */
   _i2.num get length => _i4.getProperty(
         this,
         'length',
@@ -4028,7 +4214,7 @@ extension ConcatArray$Typings<T> on ConcatArray<T> {
         'join',
         [separator ?? _i5.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,761280251,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List /*LIST InteropStaticType.list,136022474,[Instance of 'InteropRef<InteropType>']*/ <
       T> slice([
     _i2.num? start,
     _i2.num? end,
@@ -4071,18 +4257,26 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
         'isArray',
         [arg],
       );
+
+  /// Creates an array from an iterable object.
+  ///  @param iterable An iterable object to convert to an array.
   static _i2
-          .List /*LIST InteropStaticType.list,855773236,[Instance of 'InteropRef<InteropType>']*/ <T>
+          .List /*LIST InteropStaticType.list,942529547,[Instance of 'InteropRef<InteropType>']*/ <T>
       _from$1<T>(_i3.From iterable) => (_i4.callMethod(
             _i6.target11,
             'from',
             [iterable],
           ) as _i2.List)
               .cast();
+
+  /// Creates an array from an iterable object.
+  ///  @param arrayLike An array-like object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   static _i2
-          .List /*LIST InteropStaticType.list,963725960,[Instance of 'InteropRef<InteropType>']*/ <U>
+          .List /*LIST InteropStaticType.list,299033891,[Instance of 'InteropRef<InteropType>']*/ <U>
       _from$2<T, U>(
-    _i2.List /*LIST InteropClass#884072815(name: List),696351690,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),658896351,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     U Function(
@@ -4101,8 +4295,13 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
             ],
           ) as _i2.List)
               .cast();
+
+  /// Creates an array from an iterable object.
+  ///  @param iterable An iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   static _i2
-          .List /*LIST InteropStaticType.list,663669506,[Instance of 'InteropRef<InteropType>']*/ <U>
+          .List /*LIST InteropStaticType.list,706106832,[Instance of 'InteropRef<InteropType>']*/ <U>
       _from$3<T, U>(
     _i3.FromCommon iterable,
     U Function(
@@ -4121,15 +4320,23 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
             ],
           ) as _i2.List)
               .cast();
-  // HEYA from
+
+  /// Overload accessor: $1, $2, $3
   static ({
-    _i2.List /*LIST InteropStaticType.list,855773236,[Instance of 'InteropRef<InteropType>']*/ <
+    /// Creates an array from an iterable object.
+    ///  @param iterable An iterable object to convert to an array.
+    _i2.List /*LIST InteropStaticType.list,942529547,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>(_i3.From iterable) $1,
-    _i2.List /*LIST InteropStaticType.list,963725960,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Creates an array from an iterable object.
+    ///  @param arrayLike An array-like object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
+    _i2.List /*LIST InteropStaticType.list,299033891,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
-      _i2.List /*LIST InteropClass#884072815(name: List),696351690,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),658896351,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       U Function(
@@ -4138,7 +4345,12 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $2,
-    _i2.List /*LIST InteropStaticType.list,663669506,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Creates an array from an iterable object.
+    ///  @param iterable An iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
+    _i2.List /*LIST InteropStaticType.list,706106832,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
       _i3.FromCommon iterable,
@@ -4153,8 +4365,11 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
         $2: _from$2,
         $3: _from$3,
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   static _i2
-          .List /*LIST InteropStaticType.list,1013931824,[Instance of 'InteropRef<InteropType>']*/ <T>
+          .List /*LIST InteropStaticType.list,916270498,[Instance of 'InteropRef<InteropType>']*/ <T>
       of<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
             _i6.target11,
             'of',
@@ -4170,24 +4385,11 @@ FieldExternal:
 external _i2.Object _declaredArray;
 
 extension Array$Typings<T> on Array<T> {
-  /* #1305
-  source: 
-    /**
-     * Gets or sets the length of the array. This is a number one higher than the highest index in the array.
-     */
-    length: number; */
   /// Gets or sets the length of the array. This is a number one higher than the highest index in the array.
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
-  /* #1305
-  source: 
-    /**
-     * Gets or sets the length of the array. This is a number one higher than the highest index in the array.
-     */
-    length: number; */
-  // Type InteropStaticType.number
   set length(_i2.num value) {
     _i4.setProperty(
       this,
@@ -4196,51 +4398,81 @@ extension Array$Typings<T> on Array<T> {
     );
   }
 
+  /// Returns a string representation of an array.
   _i2.String toString$() => _i4.callMethod(
         this,
         'toString',
         [],
       );
+
+  /// Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
   _i2.String toLocaleString() => _i4.callMethod(
         this,
         'toLocaleString',
         [],
       );
+
+  /// Removes the last element from an array and returns it.
+  ///  If the array is empty, undefined is returned and the array is not modified.
   T? pop() => _i4.callMethod(
         this,
         'pop',
         [],
       );
+
+  /// Appends new elements to the end of an array, and returns the new length of the array.
+  ///  @param items New elements to add to the array.
   _i2.num push([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'push',
         [...?items],
       );
-  _i2.List /*LIST InteropStaticType.list,39417898,[Instance of 'InteropRef<InteropType>']*/ <T>
+
+  /// Combines two or more arrays.
+  ///  This method returns a new array without modifying any existing arrays.
+  ///  @param items Additional arrays and/or items to add to the end of the array.
+  _i2.List /*LIST InteropStaticType.list,515722818,[Instance of 'InteropRef<InteropType>']*/ <T>
       concat([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
             this,
             'concat',
             [...?items],
           ) as _i2.List)
               .cast();
+
+  /// Adds all the elements of an array into a string, separated by the specified separator string.
+  ///  @param separator A string used to separate one element of the array from the next in the resulting string. If omitted, the array elements are separated with a comma.
   _i2.String join([_i2.String? separator]) => _i4.callMethod(
         this,
         'join',
         [separator ?? _i5.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,411012969,[Instance of 'InteropRef<InteropType>']*/ <T>
+
+  /// Reverses the elements in an array in place.
+  ///  This method mutates the array and returns a reference to the same array.
+  _i2.List /*LIST InteropStaticType.list,45744285,[Instance of 'InteropRef<InteropType>']*/ <T>
       reverse() => (_i4.callMethod(
             this,
             'reverse',
             [],
           ) as _i2.List)
               .cast();
+
+  /// Removes the first element from an array and returns it.
+  ///  If the array is empty, undefined is returned and the array is not modified.
   T? shift() => _i4.callMethod(
         this,
         'shift',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,459618459,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns a copy of a section of an array.
+  ///  For both start and end, a negative index can be used to indicate an offset from the end of the array.
+  ///  For example, -2 refers to the second to last element of the array.
+  ///  @param start The beginning index of the specified portion of the array.
+  ///  If start is undefined, then the slice begins at index 0.
+  ///  @param end The end index of the specified portion of the array. This is exclusive of the element at the index 'end'.
+  ///  If end is undefined, then the slice extends to the end of the array.
+  _i2.List /*LIST InteropStaticType.list,186655851,[Instance of 'InteropRef<InteropType>']*/ <
       T> slice([
     _i2.num? start,
     _i2.num? end,
@@ -4254,6 +4486,15 @@ extension Array$Typings<T> on Array<T> {
         ],
       ) as _i2.List)
           .cast();
+
+  /// Sorts an array in place.
+  ///  This method mutates the array and returns a reference to the same array.
+  ///  @param compareFn Function used to determine the order of the elements. It is expected to return
+  ///  a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+  ///  value otherwise. If omitted, the elements are sorted in ascending, ASCII character order.
+  ///  ```ts
+  ///  [11,2,22,1].sort((a, b) => a - b)
+  ///  ```
   _i3.Array<_i2.dynamic> sort(
           [_i2.num Function(
             T,
@@ -4264,7 +4505,13 @@ extension Array$Typings<T> on Array<T> {
         'sort',
         [compareFn == null ? _i5.undefined : _i4.allowInterop(compareFn)],
       );
-  _i2.List /*LIST InteropStaticType.list,863171362,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+  ///  @param start The zero-based location in the array from which to start removing elements.
+  ///  @param deleteCount The number of elements to remove.
+  ///  @param items Elements to insert into the array in place of the deleted elements.
+  ///  @returns An array containing the elements that were deleted.
+  _i2.List /*LIST InteropStaticType.list,880795994,[Instance of 'InteropRef<InteropType>']*/ <
       T> splice(
     _i2.num start,
     _i2.num deleteCount, [
@@ -4280,11 +4527,18 @@ extension Array$Typings<T> on Array<T> {
         ],
       ) as _i2.List)
           .cast();
+
+  /// Inserts new elements at the start of an array, and returns the new length of the array.
+  ///  @param items Elements to insert at the start of the array.
   _i2.num unshift([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'unshift',
         [...?items],
       );
+
+  /// Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
+  ///  @param searchElement The value to locate in the array.
+  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
   _i2.num indexOf(
     T searchElement, [
     _i2.num? fromIndex,
@@ -4297,6 +4551,10 @@ extension Array$Typings<T> on Array<T> {
           fromIndex ?? _i5.undefined,
         ],
       );
+
+  /// Returns the index of the last occurrence of a specified value in an array, or -1 if it is not present.
+  ///  @param searchElement The value to locate in the array.
+  ///  @param fromIndex The array index at which to begin searching backward. If fromIndex is omitted, the search starts at the last index in the array.
   _i2.num lastIndexOf(
     T searchElement, [
     _i2.num? fromIndex,
@@ -4309,11 +4567,18 @@ extension Array$Typings<T> on Array<T> {
           fromIndex ?? _i5.undefined,
         ],
       );
+
+  /// Determines whether all the members of an array satisfy the specified test.
+  ///  @param predicate A function that accepts up to three arguments. The every method calls
+  ///  the predicate function for each element in the array until the predicate returns a value
+  ///  which is coercible to the Boolean value false, or until the end of the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i2.dynamic _every$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,165426599,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,874586234,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4326,11 +4591,18 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Determines whether all the members of an array satisfy the specified test.
+  ///  @param predicate A function that accepts up to three arguments. The every method calls
+  ///  the predicate function for each element in the array until the predicate returns a value
+  ///  which is coercible to the Boolean value false, or until the end of the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i2.bool _every$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,1072461274,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,171634597,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4343,22 +4615,36 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA every
+
+  /// Overload accessor: $1, $2
   ({
+    /// Determines whether all the members of an array satisfy the specified test.
+    ///  @param predicate A function that accepts up to three arguments. The every method calls
+    ///  the predicate function for each element in the array until the predicate returns a value
+    ///  which is coercible to the Boolean value false, or until the end of the array.
+    ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+    ///  If thisArg is omitted, undefined is used as the this value.
     _i2.dynamic Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,165426599,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,874586234,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Determines whether all the members of an array satisfy the specified test.
+    ///  @param predicate A function that accepts up to three arguments. The every method calls
+    ///  the predicate function for each element in the array until the predicate returns a value
+    ///  which is coercible to the Boolean value false, or until the end of the array.
+    ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+    ///  If thisArg is omitted, undefined is used as the this value.
     _i2.bool Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,1072461274,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,171634597,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4367,11 +4653,18 @@ extension Array$Typings<T> on Array<T> {
         $1: _every$1,
         $2: _every$2,
       );
+
+  /// Determines whether the specified callback function returns true for any element of an array.
+  ///  @param predicate A function that accepts up to three arguments. The some method calls
+  ///  the predicate function for each element in the array until the predicate returns a value
+  ///  which is coercible to the Boolean value true, or until the end of the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
+  ///  If thisArg is omitted, undefined is used as the this value.
   _i2.bool some(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,687243214,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,350440479,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4384,11 +4677,15 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Performs the specified action for each element in an array.
+  ///  @param callbackfn  A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
+  ///  @param thisArg  An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
   void forEach(
     void Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,777667971,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,923670804,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
@@ -4403,12 +4700,15 @@ extension Array$Typings<T> on Array<T> {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,246611359,[Instance of 'InteropRef<InteropType>']*/ <
+  /// Calls a defined callback function on each element of an array, and returns an array that contains the results.
+  ///  @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+  _i2.List /*LIST InteropStaticType.list,518271631,[Instance of 'InteropRef<InteropType>']*/ <
       U> map<U>(
     U Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,316235372,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,427933394,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
@@ -4422,12 +4722,16 @@ extension Array$Typings<T> on Array<T> {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,651075276,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns the elements of an array that meet the condition specified in a callback function.
+  ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+  _i2.List /*LIST InteropStaticType.list,947744006,[Instance of 'InteropRef<InteropType>']*/ <
       S> _filter$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,319148414,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,779591641,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4441,12 +4745,16 @@ extension Array$Typings<T> on Array<T> {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,67563495,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns the elements of an array that meet the condition specified in a callback function.
+  ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+  _i2.List /*LIST InteropStaticType.list,661672677,[Instance of 'InteropRef<InteropType>']*/ <
       T> _filter$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,465411887,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,936306708,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4460,26 +4768,34 @@ extension Array$Typings<T> on Array<T> {
         ],
       ) as _i2.List)
           .cast();
-  // HEYA filter
+
+  /// Overload accessor: $1, $2
   ({
-    _i2.List /*LIST InteropStaticType.list,651075276,[Instance of 'InteropRef<InteropType>']*/ <
+    /// Returns the elements of an array that meet the condition specified in a callback function.
+    ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+    ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+    _i2.List /*LIST InteropStaticType.list,947744006,[Instance of 'InteropRef<InteropType>']*/ <
             S>
         Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,319148414,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,779591641,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
-    _i2.List /*LIST InteropStaticType.list,67563495,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Returns the elements of an array that meet the condition specified in a callback function.
+    ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+    ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+    _i2.List /*LIST InteropStaticType.list,661672677,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,465411887,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,936306708,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4488,12 +4804,14 @@ extension Array$Typings<T> on Array<T> {
         $1: _filter$1,
         $2: _filter$2,
       );
+
+  /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
   T _reduce$1(
     T Function(
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,448931027,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,1024470638,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -4506,12 +4824,16 @@ extension Array$Typings<T> on Array<T> {
           initialValue,
         ],
       );
+
+  /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
   U _reduce$2<U>(
     U Function(
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,371167555,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,598572536,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -4524,24 +4846,30 @@ extension Array$Typings<T> on Array<T> {
           initialValue,
         ],
       );
-  // HEYA reduce
+
+  /// Overload accessor: $1, $2
   ({
+    /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     T Function(
       T Function(
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,448931027,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,1024470638,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       T initialValue,
     ) $1,
+
+    /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
     U Function<U>(
       U Function(
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,371167555,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,598572536,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       U initialValue,
@@ -4550,12 +4878,14 @@ extension Array$Typings<T> on Array<T> {
         $1: _reduce$1,
         $2: _reduce$2,
       );
+
+  /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
   T _reduceRight$1(
     T Function(
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,220739911,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,18480541,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     T initialValue,
@@ -4568,12 +4898,16 @@ extension Array$Typings<T> on Array<T> {
           initialValue,
         ],
       );
+
+  /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+  ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+  ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
   U _reduceRight$2<U>(
     U Function(
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,433892994,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,853616384,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callbackfn,
     U initialValue,
@@ -4586,24 +4920,30 @@ extension Array$Typings<T> on Array<T> {
           initialValue,
         ],
       );
-  // HEYA reduceRight
+
+  /// Overload accessor: $1, $2
   ({
+    /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     T Function(
       T Function(
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,220739911,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,18480541,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       T initialValue,
     ) $1,
+
+    /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+    ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+    ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
     U Function<U>(
       U Function(
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,433892994,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,853616384,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) callbackfn,
       U initialValue,
@@ -4612,11 +4952,19 @@ extension Array$Typings<T> on Array<T> {
         $1: _reduceRight$1,
         $2: _reduceRight$2,
       );
+
+  /// Returns the value of the first element in the array where predicate is true, and undefined
+  ///  otherwise.
+  ///  @param predicate find calls predicate once for each element of the array, in ascending
+  ///  order, until it finds one where predicate returns true. If such an element is found, find
+  ///  immediately returns that element value. Otherwise, find returns undefined.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   S? _find$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,400493210,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,480230156,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4629,11 +4977,14 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Returns the value of the first element in the array where predicate is true, and undefined
+  /// otherwise.
   T? _find$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,164415911,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,363013186,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4646,22 +4997,33 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA find
+
+  /// Overload accessor: $1, $2
   ({
+    /// Returns the value of the first element in the array where predicate is true, and undefined
+    ///  otherwise.
+    ///  @param predicate find calls predicate once for each element of the array, in ascending
+    ///  order, until it finds one where predicate returns true. If such an element is found, find
+    ///  immediately returns that element value. Otherwise, find returns undefined.
+    ///  @param thisArg If provided, it will be used as the this value for each invocation of
+    ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,400493210,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,480230156,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Returns the value of the first element in the array where predicate is true, and undefined
+    /// otherwise.
     T? Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,164415911,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,363013186,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4670,11 +5032,19 @@ extension Array$Typings<T> on Array<T> {
         $1: _find$1,
         $2: _find$2,
       );
+
+  /// Returns the index of the first element in the array where predicate is true, and -1
+  ///  otherwise.
+  ///  @param predicate find calls predicate once for each element of the array, in ascending
+  ///  order, until it finds one where predicate returns true. If such an element is found,
+  ///  findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   _i2.num findIndex(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,680041463,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,403608842,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4687,6 +5057,13 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Changes all array elements from `start` to `end` index to a static `value` and returns the modified array
+  ///  @param value value to fill array section with
+  ///  @param start index to start filling the array at. If start is negative, it is treated as
+  ///  length+start where length is the length of the array.
+  ///  @param end index to stop filling the array at. If end is negative, it is treated as
+  ///  length+end.
   _i3.Array<_i2.dynamic> fill(
     T value, [
     _i2.num? start,
@@ -4701,6 +5078,14 @@ extension Array$Typings<T> on Array<T> {
           end ?? _i5.undefined,
         ],
       );
+
+  /// Returns the this object after copying a section of the array identified by start and end
+  ///  to the same array starting at position target
+  ///  @param target If target is negative, it is treated as length+target where length is the
+  ///  length of the array.
+  ///  @param start If start is negative, it is treated as length+start. If end is negative, it
+  ///  is treated as length+end.
+  ///  @param end If not specified, length of the this object is used as its default value.
   _i3.Array<_i2.dynamic> copyWithin(
     _i2.num target,
     _i2.num start, [
@@ -4715,6 +5100,8 @@ extension Array$Typings<T> on Array<T> {
           end ?? _i5.undefined,
         ],
       );
+
+  /// Returns an iterable of key, value pairs for every entry in the array
   _i9.IterableIterator<
       (
         _i2.num,
@@ -4724,16 +5111,24 @@ extension Array$Typings<T> on Array<T> {
         'entries',
         [],
       );
+
+  /// Returns an iterable of keys in the array
   _i9.IterableIterator<_i2.num> keys() => _i4.callMethod(
         this,
         'keys',
         [],
       );
+
+  /// Returns an iterable of values in the array
   _i9.IterableIterator<T> values() => _i4.callMethod(
         this,
         'values',
         [],
       );
+
+  /// Determines whether an array includes a certain element, returning true or false as appropriate.
+  ///  @param searchElement The element to search for.
+  ///  @param fromIndex The position in this array at which to begin searching for searchElement.
   _i2.bool includes(
     T searchElement, [
     _i2.num? fromIndex,
@@ -4746,12 +5141,21 @@ extension Array$Typings<T> on Array<T> {
           fromIndex ?? _i5.undefined,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,319259968,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Calls a defined callback function on each element of an array. Then, flattens the result into
+  ///  a new array.
+  ///  This is identical to a map followed by flat with depth 1.
+  ///
+  ///  @param callback A function that accepts up to three arguments. The flatMap method calls the
+  ///  callback function one time for each element in the array.
+  ///  @param thisArg An object to which the this keyword can refer in the callback function. If
+  ///  thisArg is omitted, undefined is used as the this value.
+  _i2.List /*LIST InteropStaticType.list,97956352,[Instance of 'InteropRef<InteropType>']*/ <
       U> flatMap<U, This>(
     _i2.Object Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,510206974,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,151655542,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) callback, [
     This? thisArg,
@@ -4765,7 +5169,12 @@ extension Array$Typings<T> on Array<T> {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,914033142,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Returns a new array with all sub-array elements concatenated into it recursively up to the
+  ///  specified depth.
+  ///
+  ///  @param depth The maximum recursion depth
+  _i2.List /*LIST InteropStaticType.list,553092386,[Instance of 'InteropRef<InteropType>']*/ <
       _i13.FlatArray<A, D>> flat<A, D extends _i2.num>(
           [D? depth]) =>
       (_i4.callMethod(
@@ -4774,16 +5183,27 @@ extension Array$Typings<T> on Array<T> {
         [depth ?? _i5.undefined],
       ) as _i2.List)
           .cast();
+
+  /// Returns the item located at the specified index.
+  ///  @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
   T? at(_i2.num index) => _i4.callMethod(
         this,
         'at',
         [index],
       );
+
+  /// Returns the value of the last element in the array where predicate is true, and undefined
+  ///  otherwise.
+  ///  @param predicate findLast calls predicate once for each element of the array, in descending
+  ///  order, until it finds one where predicate returns true. If such an element is found, findLast
+  ///  immediately returns that element value. Otherwise, findLast returns undefined.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   S? _findLast$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,875278811,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,98368207,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4796,11 +5216,14 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Returns the value of the last element in the array where predicate is true, and undefined
+  /// otherwise.
   T? _findLast$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,1050862575,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,209178297,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4813,22 +5236,33 @@ extension Array$Typings<T> on Array<T> {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA findLast
+
+  /// Overload accessor: $1, $2
   ({
+    /// Returns the value of the last element in the array where predicate is true, and undefined
+    ///  otherwise.
+    ///  @param predicate findLast calls predicate once for each element of the array, in descending
+    ///  order, until it finds one where predicate returns true. If such an element is found, findLast
+    ///  immediately returns that element value. Otherwise, findLast returns undefined.
+    ///  @param thisArg If provided, it will be used as the this value for each invocation of
+    ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,875278811,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,98368207,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Returns the value of the last element in the array where predicate is true, and undefined
+    /// otherwise.
     T? Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,1050862575,[Instance of 'InteropRef<InteropType>']*/ <
+        _i2.List /*LIST InteropStaticType.list,209178297,[Instance of 'InteropRef<InteropType>']*/ <
             T>,
       ) predicate, [
       _i2.dynamic thisArg,
@@ -4837,11 +5271,19 @@ extension Array$Typings<T> on Array<T> {
         $1: _findLast$1,
         $2: _findLast$2,
       );
+
+  /// Returns the index of the last element in the array where predicate is true, and -1
+  ///  otherwise.
+  ///  @param predicate findLastIndex calls predicate once for each element of the array, in descending
+  ///  order, until it finds one where predicate returns true. If such an element is found,
+  ///  findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+  ///  @param thisArg If provided, it will be used as the this value for each invocation of
+  ///  predicate. If it is not provided, undefined is used instead.
   _i2.num findLastIndex(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,34501000,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropStaticType.list,915588412,[Instance of 'InteropRef<InteropType>']*/ <
           T>,
     ) predicate, [
     _i2.dynamic thisArg,
@@ -4880,16 +5322,24 @@ extension ArrayConstructor$Typings on ArrayConstructor {
         'isArray',
         [arg],
       );
-  _i2.List /*LIST InteropStaticType.list,855773236,[Instance of 'InteropRef<InteropType>']*/ <T>
+
+  /// Creates an array from an iterable object.
+  ///  @param iterable An iterable object to convert to an array.
+  _i2.List /*LIST InteropStaticType.list,942529547,[Instance of 'InteropRef<InteropType>']*/ <T>
       _from$1<T>(_i3.From iterable) => (_i4.callMethod(
             this,
             'from',
             [iterable],
           ) as _i2.List)
               .cast();
-  _i2.List /*LIST InteropStaticType.list,963725960,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Creates an array from an iterable object.
+  ///  @param arrayLike An array-like object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
+  _i2.List /*LIST InteropStaticType.list,299033891,[Instance of 'InteropRef<InteropType>']*/ <
       U> _from$2<T, U>(
-    _i2.List /*LIST InteropClass#884072815(name: List),696351690,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),658896351,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     U Function(
@@ -4908,7 +5358,12 @@ extension ArrayConstructor$Typings on ArrayConstructor {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,663669506,[Instance of 'InteropRef<InteropType>']*/ <
+
+  /// Creates an array from an iterable object.
+  ///  @param iterable An iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
+  _i2.List /*LIST InteropStaticType.list,706106832,[Instance of 'InteropRef<InteropType>']*/ <
       U> _from$3<T, U>(
     _i3.FromCommon iterable,
     U Function(
@@ -4927,15 +5382,23 @@ extension ArrayConstructor$Typings on ArrayConstructor {
         ],
       ) as _i2.List)
           .cast();
-  // HEYA from
+
+  /// Overload accessor: $1, $2, $3
   ({
-    _i2.List /*LIST InteropStaticType.list,855773236,[Instance of 'InteropRef<InteropType>']*/ <
+    /// Creates an array from an iterable object.
+    ///  @param iterable An iterable object to convert to an array.
+    _i2.List /*LIST InteropStaticType.list,942529547,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>(_i3.From iterable) $1,
-    _i2.List /*LIST InteropStaticType.list,963725960,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Creates an array from an iterable object.
+    ///  @param arrayLike An array-like object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
+    _i2.List /*LIST InteropStaticType.list,299033891,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
-      _i2.List /*LIST InteropClass#884072815(name: List),696351690,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),658896351,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       U Function(
@@ -4944,7 +5407,12 @@ extension ArrayConstructor$Typings on ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $2,
-    _i2.List /*LIST InteropStaticType.list,663669506,[Instance of 'InteropRef<InteropType>']*/ <
+
+    /// Creates an array from an iterable object.
+    ///  @param iterable An iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
+    _i2.List /*LIST InteropStaticType.list,706106832,[Instance of 'InteropRef<InteropType>']*/ <
             U>
         Function<T, U>(
       _i3.FromCommon iterable,
@@ -4959,33 +5427,37 @@ extension ArrayConstructor$Typings on ArrayConstructor {
         $2: _from$2,
         $3: _from$3,
       );
-  _i2.List /*LIST InteropStaticType.list,1013931824,[Instance of 'InteropRef<InteropType>']*/ <T>
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
+  _i2.List /*LIST InteropStaticType.list,916270498,[Instance of 'InteropRef<InteropType>']*/ <T>
       of<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
             this,
             'of',
             [...?items],
           ) as _i2.List)
               .cast();
-  _i2.List /*LIST InteropStaticType.list,557952835,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
+  _i2.List /*LIST InteropStaticType.list,818782368,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
       _call$1([_i2.num? arrayLength]) => (_i4.callMethod(
             this,
             '',
             [arrayLength ?? _i5.undefined],
           ) as _i2.List)
               .cast();
-  _i2.List /*LIST InteropStaticType.list,468571342,[Instance of 'InteropRef<InteropType>']*/ <T>
+  _i2.List /*LIST InteropStaticType.list,782553199,[Instance of 'InteropRef<InteropType>']*/ <T>
       _call$2<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
             this,
             '',
             [...?items],
           ) as _i2.List)
               .cast();
-  // HEYA call
+
+  /// Overload accessor: $1, $2
   ({
-    _i2.List /*LIST InteropStaticType.list,557952835,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,818782368,[Instance of 'InteropRef<InteropType>']*/ <
             _i2.dynamic>
         Function([_i2.num? arrayLength]) $1,
-    _i2.List /*LIST InteropStaticType.list,468571342,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropStaticType.list,782553199,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         Function<T>([_i2.Iterable<_i2.dynamic>? items]) $2,
   }) get call => (
@@ -5026,17 +5498,10 @@ class TypedPropertyDescriptor<T> {
 }
 
 extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
-  /* #1499
-  source: 
-    enumerable?: boolean; */
   _i2.bool? get enumerable => _i4.getProperty(
         this,
         'enumerable',
       );
-  /* #1499
-  source: 
-    enumerable?: boolean; */
-  // Type InteropStaticType.boolean
   set enumerable(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -5045,17 +5510,10 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
     );
   }
 
-  /* #1500
-  source: 
-    configurable?: boolean; */
   _i2.bool? get configurable => _i4.getProperty(
         this,
         'configurable',
       );
-  /* #1500
-  source: 
-    configurable?: boolean; */
-  // Type InteropStaticType.boolean
   set configurable(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -5064,17 +5522,10 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
     );
   }
 
-  /* #1501
-  source: 
-    writable?: boolean; */
   _i2.bool? get writable => _i4.getProperty(
         this,
         'writable',
       );
-  /* #1501
-  source: 
-    writable?: boolean; */
-  // Type InteropStaticType.boolean
   set writable(_i2.bool? value) {
     _i4.setProperty(
       this,
@@ -5083,17 +5534,10 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
     );
   }
 
-  /* #1502
-  source: 
-    value?: T; */
   T? get value => _i4.getProperty(
         this,
         'value',
       );
-  /* #1502
-  source: 
-    value?: T; */
-  // Type InteropLocalType(T)
   set value(T? value) {
     _i4.setProperty(
       this,
@@ -5102,17 +5546,10 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
     );
   }
 
-  /* #1503
-  source: 
-    get?: () => T; */
   T Function()? get get => _i4.getProperty(
         this,
         'get',
       );
-  /* #1503
-  source: 
-    get?: () => T; */
-  // Type InteropFunction#684240646(parent: InteropGetter#100477738(name: get), library: lib.es5.d.ts)
   set get(T Function()? value) {
     _i4.setProperty(
       this,
@@ -5121,17 +5558,10 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
     );
   }
 
-  /* #1504
-  source: 
-    set?: (value: T) => void; */
   void Function(T)? get set => _i4.getProperty(
         this,
         'set',
       );
-  /* #1504
-  source: 
-    set?: (value: T) => void; */
-  // Type InteropFunction#424527858(parent: InteropGetter#281540499(name: set), library: lib.es5.d.ts)
   set set(void Function(T)? value) {
     _i4.setProperty(
       this,
@@ -5146,6 +5576,10 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
 class PromiseLike<T> {}
 
 extension PromiseLike$Typings<T> on PromiseLike<T> {
+  /// Attaches callbacks for the resolution and/or rejection of the Promise.
+  ///  @param onfulfilled The callback to execute when the Promise is resolved.
+  ///  @param onrejected The callback to execute when the Promise is rejected.
+  ///  @returns A Promise for the completion of which ever callback is executed.
   _i2.Future<_i2.Object> then<TResult1, TResult2>([
     _i2.Object Function(T)? onfulfilled,
     _i2.Object Function(_i2.dynamic)? onrejected,
@@ -5160,11 +5594,16 @@ extension PromiseLike$Typings<T> on PromiseLike<T> {
       ));
 }
 
+/// Represents the completion of an asynchronous operation
 @_i1.JS()
 @_i1.staticInterop
 class Promise<T> {}
 
 extension Promise$Typings<T> on Promise<T> {
+  /// Attaches callbacks for the resolution and/or rejection of the Promise.
+  ///  @param onfulfilled The callback to execute when the Promise is resolved.
+  ///  @param onrejected The callback to execute when the Promise is rejected.
+  ///  @returns A Promise for the completion of which ever callback is executed.
   _i2.Future<_i2.Object> then<TResult1, TResult2>([
     _i2.Object Function(T)? onfulfilled,
     _i2.Object Function(_i2.dynamic)? onrejected,
@@ -5177,6 +5616,10 @@ extension Promise$Typings<T> on Promise<T> {
           onrejected == null ? _i5.undefined : _i4.allowInterop(onrejected),
         ],
       ));
+
+  /// Attaches a callback for only the rejection of the Promise.
+  ///  @param onrejected The callback to execute when the Promise is rejected.
+  ///  @returns A Promise for the completion of the callback.
   _i2.Future<_i2.Object> catch$<TResult>(
           [_i2.Object Function(_i2.dynamic)? onrejected]) =>
       _i4.promiseToFuture(_i4.callMethod(
@@ -5184,6 +5627,11 @@ extension Promise$Typings<T> on Promise<T> {
         'catch',
         [onrejected == null ? _i5.undefined : _i4.allowInterop(onrejected)],
       ));
+
+  /// Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+  ///  resolved value cannot be modified from the callback.
+  ///  @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+  ///  @returns A Promise for the completion of the callback.
   _i2.Future<T> finally$([void Function()? onfinally]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -5197,9 +5645,6 @@ extension Promise$Typings<T> on Promise<T> {
 class ArrayLike<T> {}
 
 extension ArrayLike$Typings<T> on ArrayLike<T> {
-  /* #1551
-  source: 
-    readonly length: number; */
   _i2.num get length => _i4.getProperty(
         this,
         'length',
@@ -5215,6 +5660,7 @@ extension ArrayLike$Typings<T> on ArrayLike<T> {
 @_i1.anonymous
 class IInline1 {}
 
+/// Marker for contextual 'this' type
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -5224,6 +5670,7 @@ class ThisType<T> {
   factory ThisType() => ThisType._();
 }
 
+/// Allowed ArrayBuffer types for the buffer of an ArrayBufferView and related Typed Arrays.
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -5243,7 +5690,6 @@ class ArrayBufferTypes {
       );
 }
 
-/* Closure: () => String from Function 'makeDoc':. */
 enum ArrayBufferTypesKeys {
   arrayBuffer(r'ArrayBuffer'),
   sharedArrayBuffer(r'SharedArrayBuffer');
@@ -5254,17 +5700,10 @@ enum ArrayBufferTypesKeys {
 }
 
 extension ArrayBufferTypes$Typings on ArrayBufferTypes {
-  /* #1677
-  source: 
-    ArrayBuffer: ArrayBuffer; */
   _i14.ByteBuffer get arrayBuffer => _i4.getProperty(
         this,
         'ArrayBuffer',
       );
-  /* #1677
-  source: 
-    ArrayBuffer: ArrayBuffer; */
-  // Type InteropStaticType.byteBuffer
   set arrayBuffer(_i14.ByteBuffer value) {
     _i4.setProperty(
       this,
@@ -5273,17 +5712,10 @@ extension ArrayBufferTypes$Typings on ArrayBufferTypes {
     );
   }
 
-  /* #43
-  source: 
-    SharedArrayBuffer: SharedArrayBuffer; */
   _i15.SharedArrayBuffer get sharedArrayBuffer => _i4.getProperty(
         this,
         'SharedArrayBuffer',
       );
-  /* #43
-  source: 
-    SharedArrayBuffer: SharedArrayBuffer; */
-  // Type Instance of 'InteropInterface'
   set sharedArrayBuffer(_i15.SharedArrayBuffer value) {
     _i4.setProperty(
       this,
@@ -5330,24 +5762,11 @@ class ArrayBufferView {
 }
 
 extension ArrayBufferView$Typings on ArrayBufferView {
-  /* #1692
-  source: 
-    /**
-     * The ArrayBuffer instance referenced by the array.
-     */
-    buffer: ArrayBufferLike; */
   /// The ArrayBuffer instance referenced by the array.
   _i3.ArrayBufferLike get buffer => _i4.getProperty(
         this,
         'buffer',
       );
-  /* #1692
-  source: 
-    /**
-     * The ArrayBuffer instance referenced by the array.
-     */
-    buffer: ArrayBufferLike; */
-  // Type InteropTypedef#106086637(name: ArrayBufferLike)
   set buffer(_i3.ArrayBufferLike value) {
     _i4.setProperty(
       this,
@@ -5356,26 +5775,11 @@ extension ArrayBufferView$Typings on ArrayBufferView {
     );
   }
 
-  /* #1697
-  source: 
-
-    /**
-     * The length in bytes of the array.
-     */
-    byteLength: number; */
   /// The length in bytes of the array.
   _i2.num get byteLength => _i4.getProperty(
         this,
         'byteLength',
       );
-  /* #1697
-  source: 
-
-    /**
-     * The length in bytes of the array.
-     */
-    byteLength: number; */
-  // Type InteropStaticType.number
   set byteLength(_i2.num value) {
     _i4.setProperty(
       this,
@@ -5384,26 +5788,11 @@ extension ArrayBufferView$Typings on ArrayBufferView {
     );
   }
 
-  /* #1702
-  source: 
-
-    /**
-     * The offset in bytes of the array.
-     */
-    byteOffset: number; */
   /// The offset in bytes of the array.
   _i2.num get byteOffset => _i4.getProperty(
         this,
         'byteOffset',
       );
-  /* #1702
-  source: 
-
-    /**
-     * The offset in bytes of the array.
-     */
-    byteOffset: number; */
-  // Type InteropStaticType.number
   set byteOffset(_i2.num value) {
     _i4.setProperty(
       this,
@@ -5422,25 +5811,26 @@ class DataViewConstructor {}
 class Int8ArrayConstructor {}
 
 extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
-  /* #2095
-  source: 
-
-    /**
-     * The size in bytes of each element in the array.
-     */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i14.Int8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Int8List _from$1<T>(
-    _i2.List /*LIST InteropClass#884072815(name: List),763352961,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),642783619,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5458,6 +5848,11 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Int8List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
@@ -5475,10 +5870,15 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA from
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Int8List Function<T>(
-      _i2.List /*LIST InteropClass#884072815(name: List),763352961,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),642783619,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5487,6 +5887,11 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Int8List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
@@ -5506,25 +5911,26 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
 class Uint8ArrayConstructor {}
 
 extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
-  /* #2378
-  source: 
-
-    /**
-     * The size in bytes of each element in the array.
-     */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i14.Uint8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint8List _from$1<T>(
-    _i2.List /*LIST InteropClass#884072815(name: List),163987936,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),255129807,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5542,6 +5948,11 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint8List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
@@ -5559,10 +5970,15 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA from
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint8List Function<T>(
-      _i2.List /*LIST InteropClass#884072815(name: List),163987936,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),255129807,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5571,6 +5987,11 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint8List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
@@ -5590,26 +6011,27 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
 class Uint8ClampedArrayConstructor {}
 
 extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
-  /* #2660
-  source: 
-
-    /**
-     * The size in bytes of each element in the array.
-     */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i14.Uint8ClampedList of([_i2.Iterable<_i2.dynamic>? items]) =>
       _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint8ClampedList _from$1<T>(
-    _i2.List /*LIST InteropClass#884072815(name: List),869760329,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),208899457,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5627,6 +6049,11 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint8ClampedList _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
@@ -5644,10 +6071,15 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA from
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint8ClampedList Function<T>(
-      _i2.List /*LIST InteropClass#884072815(name: List),869760329,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),208899457,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5656,6 +6088,11 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint8ClampedList Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
@@ -5675,25 +6112,26 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
 class Int16ArrayConstructor {}
 
 extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
-  /* #2940
-  source: 
-
-    /**
-     * The size in bytes of each element in the array.
-     */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i14.Int16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Int16List _from$1<T>(
-    _i2.List /*LIST InteropClass#884072815(name: List),835965002,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),536632229,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5711,6 +6149,11 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Int16List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
@@ -5728,10 +6171,15 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA from
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Int16List Function<T>(
-      _i2.List /*LIST InteropClass#884072815(name: List),835965002,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),536632229,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5740,6 +6188,11 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Int16List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
@@ -5759,25 +6212,26 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
 class Uint16ArrayConstructor {}
 
 extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
-  /* #3223
-  source: 
-
-    /**
-     * The size in bytes of each element in the array.
-     */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i14.Uint16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint16List _from$1<T>(
-    _i2.List /*LIST InteropClass#884072815(name: List),607020469,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),897042226,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5795,6 +6249,11 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint16List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
@@ -5812,10 +6271,15 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA from
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint16List Function<T>(
-      _i2.List /*LIST InteropClass#884072815(name: List),607020469,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),897042226,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5824,6 +6288,11 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint16List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
@@ -5843,25 +6312,26 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
 class Int32ArrayConstructor {}
 
 extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
-  /* #3505
-  source: 
-
-    /**
-     * The size in bytes of each element in the array.
-     */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i14.Int32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Int32List _from$1<T>(
-    _i2.List /*LIST InteropClass#884072815(name: List),72316044,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),449668323,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5879,6 +6349,11 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Int32List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
@@ -5896,10 +6371,15 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA from
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Int32List Function<T>(
-      _i2.List /*LIST InteropClass#884072815(name: List),72316044,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),449668323,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5908,6 +6388,11 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Int32List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
@@ -5927,25 +6412,26 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
 class Uint32ArrayConstructor {}
 
 extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
-  /* #3786
-  source: 
-
-    /**
-     * The size in bytes of each element in the array.
-     */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i14.Uint32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint32List _from$1<T>(
-    _i2.List /*LIST InteropClass#884072815(name: List),989638304,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),542192778,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -5963,6 +6449,11 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint32List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
@@ -5980,10 +6471,15 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA from
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint32List Function<T>(
-      _i2.List /*LIST InteropClass#884072815(name: List),989638304,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),542192778,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -5992,6 +6488,11 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint32List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
@@ -6011,25 +6512,26 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
 class Float32ArrayConstructor {}
 
 extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
-  /* #4068
-  source: 
-
-    /**
-     * The size in bytes of each element in the array.
-     */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i14.Float32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Float32List _from$1<T>(
-    _i2.List /*LIST InteropClass#884072815(name: List),471976890,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),197512509,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -6047,6 +6549,11 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Float32List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
@@ -6064,10 +6571,15 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA from
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Float32List Function<T>(
-      _i2.List /*LIST InteropClass#884072815(name: List),471976890,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),197512509,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -6076,6 +6588,11 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Float32List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
@@ -6095,25 +6612,26 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
 class Float64ArrayConstructor {}
 
 extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
-  /* #4342
-  source: 
-
-    /**
-     * The size in bytes of each element in the array.
-     */
-    readonly BYTES_PER_ELEMENT: number; */
   /// The size in bytes of each element in the array.
   _i2.num get bytesPerElement => _i4.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
+
+  /// Returns a new array from a set of elements.
+  ///  @param items A set of elements to include in the new array object.
   _i14.Float64List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Float64List _from$1<T>(
-    _i2.List /*LIST InteropClass#884072815(name: List),529342264,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List /*LIST InteropClass#925945977(name: List),969727103,[Instance of 'InteropRef<InteropType>']*/ <
             T>
         arrayLike,
     _i2.num Function(
@@ -6131,6 +6649,11 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
+
+  /// Creates an array from an array-like or iterable object.
+  ///  @param arrayLike An array-like or iterable object to convert to an array.
+  ///  @param mapfn A mapping function to call on every element of the array.
+  ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Float64List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
@@ -6148,10 +6671,15 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
           thisArg ?? _i5.undefined,
         ],
       );
-  // HEYA from
+
+  /// Overload accessor: $1, $2
   ({
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Float64List Function<T>(
-      _i2.List /*LIST InteropClass#884072815(name: List),529342264,[Instance of 'InteropRef<InteropType>']*/ <
+      _i2.List /*LIST InteropClass#925945977(name: List),969727103,[Instance of 'InteropRef<InteropType>']*/ <
               T>
           arrayLike,
       _i2.num Function(
@@ -6160,6 +6688,11 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
       ) mapfn, [
       _i2.dynamic thisArg,
     ]) $1,
+
+    /// Creates an array from an array-like or iterable object.
+    ///  @param arrayLike An array-like or iterable object to convert to an array.
+    ///  @param mapfn A mapping function to call on every element of the array.
+    ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Float64List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
@@ -6174,11 +6707,14 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
       );
 }
 
+/// Evaluates JavaScript code and executes it.
 _i2.dynamic eval(_i2.String x) => _i4.callMethod(
       _self,
       'eval',
       [x],
     );
+
+/// Converts a string to an integer.
 _i2.num parseInt(
   _i2.String string, [
   _i2.num? radix,
@@ -6191,46 +6727,64 @@ _i2.num parseInt(
         radix ?? _i5.undefined,
       ],
     );
+
+/// Converts a string to a floating-point number.
 _i2.num parseFloat(_i2.String string) => _i4.callMethod(
       _self,
       'parseFloat',
       [string],
     );
+
+/// Returns a Boolean value that indicates whether a value is the reserved value NaN (not a number).
 _i2.bool isNaN(_i2.num number) => _i4.callMethod(
       _self,
       'isNaN',
       [number],
     );
+
+/// Determines whether a supplied number is finite.
 _i2.bool isFinite(_i2.num number) => _i4.callMethod(
       _self,
       'isFinite',
       [number],
     );
+
+/// Gets the unencoded version of an encoded Uniform Resource Identifier (URI).
 _i2.String decodeURI(_i2.String encodedURI) => _i4.callMethod(
       _self,
       'decodeURI',
       [encodedURI],
     );
+
+/// Gets the unencoded version of an encoded component of a Uniform Resource Identifier (URI).
 _i2.String decodeURIComponent(_i2.String encodedURIComponent) => _i4.callMethod(
       _self,
       'decodeURIComponent',
       [encodedURIComponent],
     );
+
+/// Encodes a text string as a valid Uniform Resource Identifier (URI)
 _i2.String encodeURI(_i2.String uri) => _i4.callMethod(
       _self,
       'encodeURI',
       [uri],
     );
+
+/// Encodes a text string as a valid component of a Uniform Resource Identifier (URI).
 _i2.String encodeURIComponent(_i2.Object uriComponent) => _i4.callMethod(
       _self,
       'encodeURIComponent',
       [uriComponent],
     );
+
+/// Computes a new string in which certain characters have been replaced by a hexadecimal escape sequence.
 _i2.String escape(_i2.String string) => _i4.callMethod(
       _self,
       'escape',
       [string],
     );
+
+/// Computes a new string in which hexadecimal escape sequences are replaced with the character that it represents.
 _i2.String unescape(_i2.String string) => _i4.callMethod(
       _self,
       'unescape',

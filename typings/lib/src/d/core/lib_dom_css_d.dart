@@ -1,5 +1,5 @@
 @_i1.JS('CSS')
-library css; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop.css; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;

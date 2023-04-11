@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -29,17 +29,10 @@ class PromiseFulfilledResult<T> {
 }
 
 extension PromiseFulfilledResult$Typings<T> on PromiseFulfilledResult<T> {
-  /* #20
-  source: 
-    status: "fulfilled"; */
   _i2.String get status => _i3.getProperty(
         this,
         'status',
       );
-  /* #20
-  source: 
-    status: "fulfilled"; */
-  // Type Instance of 'InteropConstString'
   set status(_i2.String value) {
     _i3.setProperty(
       this,
@@ -48,17 +41,10 @@ extension PromiseFulfilledResult$Typings<T> on PromiseFulfilledResult<T> {
     );
   }
 
-  /* #21
-  source: 
-    value: T; */
   T get value => _i3.getProperty(
         this,
         'value',
       );
-  /* #21
-  source: 
-    value: T; */
-  // Type InteropLocalType(T)
   set value(T value) {
     _i3.setProperty(
       this,
@@ -88,17 +74,10 @@ class PromiseRejectedResult {
 }
 
 extension PromiseRejectedResult$Typings on PromiseRejectedResult {
-  /* #25
-  source: 
-    status: "rejected"; */
   _i2.String get status => _i3.getProperty(
         this,
         'status',
       );
-  /* #25
-  source: 
-    status: "rejected"; */
-  // Type Instance of 'InteropConstString'
   set status(_i2.String value) {
     _i3.setProperty(
       this,
@@ -107,17 +86,10 @@ extension PromiseRejectedResult$Typings on PromiseRejectedResult {
     );
   }
 
-  /* #26
-  source: 
-    reason: any; */
   _i2.dynamic get reason => _i3.getProperty(
         this,
         'reason',
       );
-  /* #26
-  source: 
-    reason: any; */
-  // Type InteropStaticType.dyn
   set reason(_i2.dynamic value) {
     _i3.setProperty(
       this,

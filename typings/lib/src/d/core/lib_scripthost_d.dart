@@ -1,5 +1,5 @@
 @_i1.JS()
-library; // ignore_for_file: no_leading_underscores_for_library_prefixes
+library typings.core.interop; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
@@ -17,151 +17,81 @@ external _i2.Object _self;
 class _WScriptAccessor {}
 
 extension WScriptAccessor$Typings on _WScriptAccessor {
-  /* #129
-  source: 
-
-    /**
-     * Exposes the write-only error output stream for the current script.
-     * Can be accessed only while using CScript.exe.
-     */
-    StdErr: TextStreamWriter; */
   /// Exposes the write-only error output stream for the current script.
   ///  Can be accessed only while using CScript.exe.
   _i3.TextStreamWriter get stdErr => _i4.getProperty(
         _i5.target627,
         'StdErr',
       );
-  /* #135
-  source: 
 
-    /**
-     * Exposes the write-only output stream for the current script.
-     * Can be accessed only while using CScript.exe.
-     */
-    StdOut: TextStreamWriter; */
   /// Exposes the write-only output stream for the current script.
   ///  Can be accessed only while using CScript.exe.
   _i3.TextStreamWriter get stdOut => _i4.getProperty(
         _i5.target627,
         'StdOut',
       );
-  /* #136
-  source: 
-    Arguments: { length: number; Item(n: number): string; }; */
   _i3.IInline615 get arguments => _i4.getProperty(
         _i5.target627,
         'Arguments',
       );
-  /* #141
-  source: 
 
-    /**
-     *  The full path of the currently running script.
-     */
-    ScriptFullName: string; */
   /// The full path of the currently running script.
   _i2.String get scriptFullName => _i4.getProperty(
         _i5.target627,
         'ScriptFullName',
       );
-  /* #151
-  source: 
 
-    /**
-     * The Windows Script Host build version number.
-     */
-    BuildVersion: number; */
   /// The Windows Script Host build version number.
   _i2.num get buildVersion => _i4.getProperty(
         _i5.target627,
         'BuildVersion',
       );
-  /* #156
-  source: 
 
-    /**
-     * Fully qualified path of the host executable.
-     */
-    FullName: string; */
   /// Fully qualified path of the host executable.
   _i2.String get fullName => _i4.getProperty(
         _i5.target627,
         'FullName',
       );
-  /* #161
-  source: 
 
-    /**
-     * Gets/sets the script mode - interactive(true) or batch(false).
-     */
-    Interactive: boolean; */
   /// Gets/sets the script mode - interactive(true) or batch(false).
   _i2.bool get interactive => _i4.getProperty(
         _i5.target627,
         'Interactive',
       );
-  /* #166
-  source: 
 
-    /**
-     * The name of the host executable (WScript.exe or CScript.exe).
-     */
-    Name: string; */
   /// The name of the host executable (WScript.exe or CScript.exe).
   _i2.String get name => _i4.getProperty(
         _i5.target627,
         'Name',
       );
-  /* #171
-  source: 
 
-    /**
-     * Path of the directory containing the host executable.
-     */
-    Path: string; */
   /// Path of the directory containing the host executable.
   _i2.String get path => _i4.getProperty(
         _i5.target627,
         'Path',
       );
-  /* #176
-  source: 
 
-    /**
-     * The filename of the currently running script.
-     */
-    ScriptName: string; */
   /// The filename of the currently running script.
   _i2.String get scriptName => _i4.getProperty(
         _i5.target627,
         'ScriptName',
       );
-  /* #182
-  source: 
 
-    /**
-     * Exposes the read-only input stream for the current script.
-     * Can be accessed only while using CScript.exe.
-     */
-    StdIn: TextStreamReader; */
   /// Exposes the read-only input stream for the current script.
   ///  Can be accessed only while using CScript.exe.
   _i3.TextStreamReader get stdIn => _i4.getProperty(
         _i5.target627,
         'StdIn',
       );
-  /* #187
-  source: 
 
-    /**
-     * Windows Script Host version
-     */
-    Version: string; */
   /// Windows Script Host version
   _i2.String get version => _i4.getProperty(
         _i5.target627,
         'Version',
       );
+
+  /// Outputs text to either a message box (under WScript.exe) or the command console window followed by
+  ///  a newline (under CScript.exe).
   void echo(_i2.dynamic s) {
     _i4.callMethod(
       _i5.target627,
@@ -170,11 +100,14 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     );
   }
 
+  /// Forces the script to stop immediately, with an optional exit code.
   _i2.num quit([_i2.num? exitCode]) => _i4.callMethod(
         _i5.target627,
         'Quit',
         [exitCode ?? _i6.undefined],
       );
+
+  /// Connects a COM object's event sources to functions named with a given prefix, in the form prefix_event.
   void connectObject(
     _i2.dynamic objEventSource,
     _i2.String strPrefix,
@@ -189,6 +122,9 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     );
   }
 
+  /// Creates a COM object.
+  ///  @param strProgiID
+  ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
   _i2.dynamic createObject(
     _i2.String strProgID, [
     _i2.String? strPrefix,
@@ -201,6 +137,8 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
           strPrefix ?? _i6.undefined,
         ],
       );
+
+  /// Disconnects a COM object from its event sources.
   void disconnectObject(_i2.dynamic obj) {
     _i4.callMethod(
       _i5.target627,
@@ -209,6 +147,11 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
     );
   }
 
+  /// Retrieves an existing object with the specified ProgID from memory, or creates a new one from a file.
+  ///  @param strPathname Fully qualified path to the file containing the object persisted to disk.
+  ///                        For objects in memory, pass a zero-length string.
+  ///  @param strProgID
+  ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
   _i2.dynamic getObject(
     _i2.String strPathname, [
     _i2.String? strProgID,
@@ -223,6 +166,9 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
           strPrefix ?? _i6.undefined,
         ],
       );
+
+  /// Suspends script execution for a specified length of time, then continues execution.
+  ///  @param intTime Interval (in milliseconds) to suspend script execution.
   void sleep(_i2.num intTime) {
     _i4.callMethod(
       _i5.target627,
@@ -271,24 +217,11 @@ extension ITextWriter$Typings on ITextWriter {
 class TextStreamBase {}
 
 extension TextStreamBase$Typings on TextStreamBase {
-  /* #41
-  source: 
-    /**
-     * The column number of the current character position in an input stream.
-     */
-    Column: number; */
   /// The column number of the current character position in an input stream.
   _i2.num get column => _i4.getProperty(
         this,
         'Column',
       );
-  /* #41
-  source: 
-    /**
-     * The column number of the current character position in an input stream.
-     */
-    Column: number; */
-  // Type InteropStaticType.number
   set column(_i2.num value) {
     _i4.setProperty(
       this,
@@ -297,26 +230,11 @@ extension TextStreamBase$Typings on TextStreamBase {
     );
   }
 
-  /* #46
-  source: 
-
-    /**
-     * The current line number in an input stream.
-     */
-    Line: number; */
   /// The current line number in an input stream.
   _i2.num get line => _i4.getProperty(
         this,
         'Line',
       );
-  /* #46
-  source: 
-
-    /**
-     * The current line number in an input stream.
-     */
-    Line: number; */
-  // Type InteropStaticType.number
   set line(_i2.num value) {
     _i4.setProperty(
       this,
@@ -325,6 +243,9 @@ extension TextStreamBase$Typings on TextStreamBase {
     );
   }
 
+  /// Closes a text stream.
+  ///  It is not necessary to close standard streams; they close automatically when the process ends. If
+  ///  you close a standard stream, be aware that any other pointers to that standard stream become invalid.
   void close() {
     _i4.callMethod(
       this,
@@ -339,6 +260,7 @@ extension TextStreamBase$Typings on TextStreamBase {
 class TextStreamWriter implements _i3.TextStreamBase {}
 
 extension TextStreamWriter$Typings on TextStreamWriter {
+  /// Sends a string to an output stream.
   void write(_i2.String s) {
     _i4.callMethod(
       this,
@@ -347,6 +269,7 @@ extension TextStreamWriter$Typings on TextStreamWriter {
     );
   }
 
+  /// Sends a specified number of blank lines (newline characters) to an output stream.
   void writeBlankLines(_i2.num intLines) {
     _i4.callMethod(
       this,
@@ -355,6 +278,7 @@ extension TextStreamWriter$Typings on TextStreamWriter {
     );
   }
 
+  /// Sends a string followed by a newline character to an output stream.
   void writeLine(_i2.String s) {
     _i4.callMethod(
       this,
@@ -369,26 +293,11 @@ extension TextStreamWriter$Typings on TextStreamWriter {
 class TextStreamReader implements _i3.TextStreamBase {}
 
 extension TextStreamReader$Typings on TextStreamReader {
-  /* #110
-  source: 
-
-    /**
-     * Indicates whether the stream pointer position is at the end of a line.
-     */
-    AtEndOfLine: boolean; */
   /// Indicates whether the stream pointer position is at the end of a line.
   _i2.bool get atEndOfLine => _i4.getProperty(
         this,
         'AtEndOfLine',
       );
-  /* #110
-  source: 
-
-    /**
-     * Indicates whether the stream pointer position is at the end of a line.
-     */
-    AtEndOfLine: boolean; */
-  // Type InteropStaticType.boolean
   set atEndOfLine(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -397,26 +306,11 @@ extension TextStreamReader$Typings on TextStreamReader {
     );
   }
 
-  /* #115
-  source: 
-
-    /**
-     * Indicates whether the stream pointer position is at the end of a stream.
-     */
-    AtEndOfStream: boolean; */
   /// Indicates whether the stream pointer position is at the end of a stream.
   _i2.bool get atEndOfStream => _i4.getProperty(
         this,
         'AtEndOfStream',
       );
-  /* #115
-  source: 
-
-    /**
-     * Indicates whether the stream pointer position is at the end of a stream.
-     */
-    AtEndOfStream: boolean; */
-  // Type InteropStaticType.boolean
   set atEndOfStream(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -425,21 +319,35 @@ extension TextStreamReader$Typings on TextStreamReader {
     );
   }
 
+  /// Returns a specified number of characters from an input stream, starting at the current pointer position.
+  ///  Does not return until the ENTER key is pressed.
+  ///  Can only be used on a stream in reading mode; causes an error in writing or appending mode.
   _i2.String read(_i2.num characters) => _i4.callMethod(
         this,
         'Read',
         [characters],
       );
+
+  /// Returns all characters from an input stream.
+  ///  Can only be used on a stream in reading mode; causes an error in writing or appending mode.
   _i2.String readAll() => _i4.callMethod(
         this,
         'ReadAll',
         [],
       );
+
+  /// Returns an entire line from an input stream.
+  ///  Although this method extracts the newline character, it does not add it to the returned string.
+  ///  Can only be used on a stream in reading mode; causes an error in writing or appending mode.
   _i2.String readLine() => _i4.callMethod(
         this,
         'ReadLine',
         [],
       );
+
+  /// Skips a specified number of characters when reading from an input text stream.
+  ///  Can only be used on a stream in reading mode; causes an error in writing or appending mode.
+  ///  @param characters Positive number of characters to skip forward. (Backward skipping is not supported.)
   void skip(_i2.num characters) {
     _i4.callMethod(
       this,
@@ -448,6 +356,8 @@ extension TextStreamReader$Typings on TextStreamReader {
     );
   }
 
+  /// Skips the next line when reading from an input text stream.
+  ///  Can only be used on a stream in reading mode, not writing or appending mode.
   void skipLine() {
     _i4.callMethod(
       this,
@@ -462,15 +372,10 @@ extension TextStreamReader$Typings on TextStreamReader {
 class IInline615 {}
 
 extension IInline615$Typings on IInline615 {
-  /* #136
-  source:  length: number; */
   _i2.num get length => _i4.getProperty(
         this,
         'length',
       );
-  /* #136
-  source:  length: number; */
-  // Type InteropStaticType.number
   set length(_i2.num value) {
     _i4.setProperty(
       this,
@@ -491,29 +396,12 @@ extension IInline615$Typings on IInline615 {
 class IInline614 {}
 
 extension IInline614$Typings on IInline614 {
-  /* #129
-  source: 
-
-    /**
-     * Exposes the write-only error output stream for the current script.
-     * Can be accessed only while using CScript.exe.
-     */
-    StdErr: TextStreamWriter; */
   /// Exposes the write-only error output stream for the current script.
   ///  Can be accessed only while using CScript.exe.
   _i3.TextStreamWriter get stdErr => _i4.getProperty(
         _i5.target627,
         'StdErr',
       );
-  /* #129
-  source: 
-
-    /**
-     * Exposes the write-only error output stream for the current script.
-     * Can be accessed only while using CScript.exe.
-     */
-    StdErr: TextStreamWriter; */
-  // Type Instance of 'InteropInterface'
   set stdErr(_i3.TextStreamWriter value) {
     _i4.setProperty(
       this,
@@ -522,29 +410,12 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #135
-  source: 
-
-    /**
-     * Exposes the write-only output stream for the current script.
-     * Can be accessed only while using CScript.exe.
-     */
-    StdOut: TextStreamWriter; */
   /// Exposes the write-only output stream for the current script.
   ///  Can be accessed only while using CScript.exe.
   _i3.TextStreamWriter get stdOut => _i4.getProperty(
         _i5.target627,
         'StdOut',
       );
-  /* #135
-  source: 
-
-    /**
-     * Exposes the write-only output stream for the current script.
-     * Can be accessed only while using CScript.exe.
-     */
-    StdOut: TextStreamWriter; */
-  // Type Instance of 'InteropInterface'
   set stdOut(_i3.TextStreamWriter value) {
     _i4.setProperty(
       this,
@@ -553,17 +424,10 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #136
-  source: 
-    Arguments: { length: number; Item(n: number): string; }; */
   _i3.IInline615 get arguments => _i4.getProperty(
         _i5.target627,
         'Arguments',
       );
-  /* #136
-  source: 
-    Arguments: { length: number; Item(n: number): string; }; */
-  // Type Instance of 'InteropInterface'
   set arguments(_i3.IInline615 value) {
     _i4.setProperty(
       this,
@@ -572,26 +436,11 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #141
-  source: 
-
-    /**
-     *  The full path of the currently running script.
-     */
-    ScriptFullName: string; */
   /// The full path of the currently running script.
   _i2.String get scriptFullName => _i4.getProperty(
         _i5.target627,
         'ScriptFullName',
       );
-  /* #141
-  source: 
-
-    /**
-     *  The full path of the currently running script.
-     */
-    ScriptFullName: string; */
-  // Type InteropStaticType.string
   set scriptFullName(_i2.String value) {
     _i4.setProperty(
       this,
@@ -600,26 +449,11 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #151
-  source: 
-
-    /**
-     * The Windows Script Host build version number.
-     */
-    BuildVersion: number; */
   /// The Windows Script Host build version number.
   _i2.num get buildVersion => _i4.getProperty(
         _i5.target627,
         'BuildVersion',
       );
-  /* #151
-  source: 
-
-    /**
-     * The Windows Script Host build version number.
-     */
-    BuildVersion: number; */
-  // Type InteropStaticType.number
   set buildVersion(_i2.num value) {
     _i4.setProperty(
       this,
@@ -628,26 +462,11 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #156
-  source: 
-
-    /**
-     * Fully qualified path of the host executable.
-     */
-    FullName: string; */
   /// Fully qualified path of the host executable.
   _i2.String get fullName => _i4.getProperty(
         _i5.target627,
         'FullName',
       );
-  /* #156
-  source: 
-
-    /**
-     * Fully qualified path of the host executable.
-     */
-    FullName: string; */
-  // Type InteropStaticType.string
   set fullName(_i2.String value) {
     _i4.setProperty(
       this,
@@ -656,26 +475,11 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #161
-  source: 
-
-    /**
-     * Gets/sets the script mode - interactive(true) or batch(false).
-     */
-    Interactive: boolean; */
   /// Gets/sets the script mode - interactive(true) or batch(false).
   _i2.bool get interactive => _i4.getProperty(
         _i5.target627,
         'Interactive',
       );
-  /* #161
-  source: 
-
-    /**
-     * Gets/sets the script mode - interactive(true) or batch(false).
-     */
-    Interactive: boolean; */
-  // Type InteropStaticType.boolean
   set interactive(_i2.bool value) {
     _i4.setProperty(
       this,
@@ -684,26 +488,11 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #166
-  source: 
-
-    /**
-     * The name of the host executable (WScript.exe or CScript.exe).
-     */
-    Name: string; */
   /// The name of the host executable (WScript.exe or CScript.exe).
   _i2.String get name => _i4.getProperty(
         _i5.target627,
         'Name',
       );
-  /* #166
-  source: 
-
-    /**
-     * The name of the host executable (WScript.exe or CScript.exe).
-     */
-    Name: string; */
-  // Type InteropStaticType.string
   set name(_i2.String value) {
     _i4.setProperty(
       this,
@@ -712,26 +501,11 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #171
-  source: 
-
-    /**
-     * Path of the directory containing the host executable.
-     */
-    Path: string; */
   /// Path of the directory containing the host executable.
   _i2.String get path => _i4.getProperty(
         _i5.target627,
         'Path',
       );
-  /* #171
-  source: 
-
-    /**
-     * Path of the directory containing the host executable.
-     */
-    Path: string; */
-  // Type InteropStaticType.string
   set path(_i2.String value) {
     _i4.setProperty(
       this,
@@ -740,26 +514,11 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #176
-  source: 
-
-    /**
-     * The filename of the currently running script.
-     */
-    ScriptName: string; */
   /// The filename of the currently running script.
   _i2.String get scriptName => _i4.getProperty(
         _i5.target627,
         'ScriptName',
       );
-  /* #176
-  source: 
-
-    /**
-     * The filename of the currently running script.
-     */
-    ScriptName: string; */
-  // Type InteropStaticType.string
   set scriptName(_i2.String value) {
     _i4.setProperty(
       this,
@@ -768,29 +527,12 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #182
-  source: 
-
-    /**
-     * Exposes the read-only input stream for the current script.
-     * Can be accessed only while using CScript.exe.
-     */
-    StdIn: TextStreamReader; */
   /// Exposes the read-only input stream for the current script.
   ///  Can be accessed only while using CScript.exe.
   _i3.TextStreamReader get stdIn => _i4.getProperty(
         _i5.target627,
         'StdIn',
       );
-  /* #182
-  source: 
-
-    /**
-     * Exposes the read-only input stream for the current script.
-     * Can be accessed only while using CScript.exe.
-     */
-    StdIn: TextStreamReader; */
-  // Type Instance of 'InteropInterface'
   set stdIn(_i3.TextStreamReader value) {
     _i4.setProperty(
       this,
@@ -799,26 +541,11 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
-  /* #187
-  source: 
-
-    /**
-     * Windows Script Host version
-     */
-    Version: string; */
   /// Windows Script Host version
   _i2.String get version => _i4.getProperty(
         _i5.target627,
         'Version',
       );
-  /* #187
-  source: 
-
-    /**
-     * Windows Script Host version
-     */
-    Version: string; */
-  // Type InteropStaticType.string
   set version(_i2.String value) {
     _i4.setProperty(
       this,
@@ -827,6 +554,8 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
+  /// Outputs text to either a message box (under WScript.exe) or the command console window followed by
+  ///  a newline (under CScript.exe).
   void echo(_i2.dynamic s) {
     _i4.callMethod(
       this,
@@ -835,11 +564,14 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
+  /// Forces the script to stop immediately, with an optional exit code.
   _i2.num quit([_i2.num? exitCode]) => _i4.callMethod(
         this,
         'Quit',
         [exitCode ?? _i6.undefined],
       );
+
+  /// Connects a COM object's event sources to functions named with a given prefix, in the form prefix_event.
   void connectObject(
     _i2.dynamic objEventSource,
     _i2.String strPrefix,
@@ -854,6 +586,9 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
+  /// Creates a COM object.
+  ///  @param strProgiID
+  ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
   _i2.dynamic createObject(
     _i2.String strProgID, [
     _i2.String? strPrefix,
@@ -866,6 +601,8 @@ extension IInline614$Typings on IInline614 {
           strPrefix ?? _i6.undefined,
         ],
       );
+
+  /// Disconnects a COM object from its event sources.
   void disconnectObject(_i2.dynamic obj) {
     _i4.callMethod(
       this,
@@ -874,6 +611,11 @@ extension IInline614$Typings on IInline614 {
     );
   }
 
+  /// Retrieves an existing object with the specified ProgID from memory, or creates a new one from a file.
+  ///  @param strPathname Fully qualified path to the file containing the object persisted to disk.
+  ///                        For objects in memory, pass a zero-length string.
+  ///  @param strProgID
+  ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
   _i2.dynamic getObject(
     _i2.String strPathname, [
     _i2.String? strProgID,
@@ -888,6 +630,9 @@ extension IInline614$Typings on IInline614 {
           strPrefix ?? _i6.undefined,
         ],
       );
+
+  /// Suspends script execution for a specified length of time, then continues execution.
+  ///  @param intTime Interval (in milliseconds) to suspend script execution.
   void sleep(_i2.num intTime) {
     _i4.callMethod(
       this,
@@ -897,6 +642,7 @@ extension IInline614$Typings on IInline614 {
   }
 }
 
+/// Represents an Automation SAFEARRAY
 @_i1.JS()
 @_i1.staticInterop
 class SafeArray<T> {
@@ -913,17 +659,10 @@ FieldExternal:
 external _i2.Object _declaredSafeArray;
 
 extension SafeArray$Typings<T> on SafeArray<T> {
-  /* #232
-  source: 
-    private SafeArray_typekey: SafeArray<T>; */
   _i3.SafeArray<T> get safeArrayTypekey => _i4.getProperty(
         this,
         'SafeArray_typekey',
       );
-  /* #232
-  source: 
-    private SafeArray_typekey: SafeArray<T>; */
-  // Type Instance of 'InteropInterface'
   set safeArrayTypekey(_i3.SafeArray<T> value) {
     _i4.setProperty(
       this,
@@ -933,6 +672,7 @@ extension SafeArray$Typings<T> on SafeArray<T> {
   }
 }
 
+/// Allows enumerating over a COM collection, which may not have indexed item access.
 @_i1.JS()
 @_i1.staticInterop
 class Enumerator<T> {
@@ -965,16 +705,23 @@ FieldExternal:
 external _i2.Object _declaredEnumerator;
 
 extension Enumerator$Typings<T> on Enumerator<T> {
+  /// Returns true if the current item is the last one in the collection, or the collection is empty,
+  ///  or the current item is undefined.
   _i2.bool atEnd() => _i4.callMethod(
         this,
         'atEnd',
         [],
       );
+
+  /// Returns the current item in the collection
   T item() => _i4.callMethod(
         this,
         'item',
         [],
       );
+
+  /// Resets the current item in the collection to the first item. If there are no items in the collection,
+  ///  the current item is set to undefined.
   void moveFirst() {
     _i4.callMethod(
       this,
@@ -983,6 +730,8 @@ extension Enumerator$Typings<T> on Enumerator<T> {
     );
   }
 
+  /// Moves the current item to the next item in the collection. If the enumerator is at the end of
+  ///  the collection or the collection is empty, the current item is set to undefined.
   void moveNext() {
     _i4.callMethod(
       this,
@@ -1008,6 +757,7 @@ extension IInline616$Typings<T> on IInline616<T> {
 @_i1.staticInterop
 class EnumeratorConstructor {}
 
+/// Enables reading from a COM safe array, which might have an alternate lower bound, or multiple dimensions.
 @_i1.JS()
 @_i1.staticInterop
 class VBArray<T> {
@@ -1024,11 +774,14 @@ FieldExternal:
 external _i2.Object _declaredVBArray;
 
 extension VBArray$Typings<T> on VBArray<T> {
+  /// Returns the number of dimensions (1-based).
   _i2.num dimensions() => _i4.callMethod(
         this,
         'dimensions',
         [],
       );
+
+  /// Takes an index for each dimension in the array, and returns the item at the corresponding location.
   T getItem(
     _i2.num dimension1Index, [
     _i2.Iterable<_i2.dynamic>? dimensionNIndexes,
@@ -1041,17 +794,27 @@ extension VBArray$Typings<T> on VBArray<T> {
           ...?dimensionNIndexes,
         ],
       );
+
+  /// Returns the smallest available index for a given dimension.
+  ///  @param dimension 1-based dimension (defaults to 1)
   _i2.num lbound([_i2.num? dimension]) => _i4.callMethod(
         this,
         'lbound',
         [dimension ?? _i6.undefined],
       );
+
+  /// Returns the largest available index for a given dimension.
+  ///  @param dimension 1-based dimension (defaults to 1)
   _i2.num ubound([_i2.num? dimension]) => _i4.callMethod(
         this,
         'ubound',
         [dimension ?? _i6.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,793723740,[Instance of 'InteropRef<InteropType>']*/ <T>
+
+  /// Returns a Javascript array with all the elements in the VBArray. If there are multiple dimensions,
+  ///  each successive dimension is appended to the end of the array.
+  ///  Example: [[1,2,3],[4,5,6]] becomes [1,2,3,4,5,6]
+  _i2.List /*LIST InteropStaticType.list,232733204,[Instance of 'InteropRef<InteropType>']*/ <T>
       toArray() => (_i4.callMethod(
             this,
             'toArray',
@@ -1064,6 +827,7 @@ extension VBArray$Typings<T> on VBArray<T> {
 @_i1.staticInterop
 class VBArrayConstructor {}
 
+/// Automation date (VT_DATE)
 @_i1.JS()
 @_i1.staticInterop
 class VarDate {
@@ -1080,17 +844,10 @@ FieldExternal:
 external _i2.Object _declaredVarDate;
 
 extension VarDate$Typings on VarDate {
-  /* #316
-  source: 
-    private VarDate_typekey: VarDate; */
   _i3.VarDate get varDateTypekey => _i4.getProperty(
         this,
         'VarDate_typekey',
       );
-  /* #316
-  source: 
-    private VarDate_typekey: VarDate; */
-  // Type Instance of 'InteropInterface'
   set varDateTypekey(_i3.VarDate value) {
     _i4.setProperty(
       this,
