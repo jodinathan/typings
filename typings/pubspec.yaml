@@ -1,29 +1,28 @@
 name: typings
 description: Use NPM packages in your projects through TypeScript interop
-version: 0.0.1
+version: 0.0.1-beta.1
 repository: https://github.com/jodinathan/typings/typings
-
-funding: https://www.paypal.com/donate?hosted_button_id=YNCG33GLM3494
+funding: 
+  - https://www.paypal.com/donate?hosted_button_id=YNCG33GLM3494
 
 environment:
   sdk: '>=3.0.0-277.0.dev <4.0.0'
 
-# Add regular dependencies here.
-#dependencies:
-  
+dependencies:
+  analyzer: ^5.10.0
+  build: ^2.3.1
+  js: ^0.6.7
+  source_gen: ^1.2.7
+  ts2dart: any
 
 dev_dependencies:
-  analyzer: ^5.10.0
   build_web_compilers: ^4.0.0
-  build: ^2.3.1
   build_runner: ^2.4.1
-  js: ^0.6.7
   lints: ^2.0.0
-  source_gen: ^1.2.7
   test: ^1.21.0
-  ts2dart:
-    path: ../ts2dart
 
 dependency_overrides:
+  ts2dart:
+    path: ../ts2dart
   code_builder:
    git: https://github.com/jodinathan/code_builder

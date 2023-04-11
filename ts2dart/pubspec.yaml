@@ -1,7 +1,9 @@
 name: ts2dart
-description: A sample command-line application.
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+description: Transpiles TypeScript declaration files (.d.ts) to Dart interop
+version: 0.0.1-beta.1
+repository: https://github.com/jodinathan/typings/ts2dart
+funding: 
+  - https://www.paypal.com/donate?hosted_button_id=YNCG33GLM3494
 
 environment:
   sdk: '>=3.0.0-277.0.dev <4.0.0'
@@ -31,8 +33,8 @@ dev_dependencies:
 
 dependency_overrides:
   code_builder:
-   path: ../../code_builder
-  dart_style:
-   git: https://github.com/dart-lang/dart_style
-  build_runner:
-   path: ../../build/build_runner
+   git: https://github.com/jodinathan/code_builder
+  # dart_style:
+  #  git: https://github.com/dart-lang/dart_style
+  # build_runner:
+  #  path: ../../build/build_runner
