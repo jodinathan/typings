@@ -55,16 +55,12 @@ FieldExternal:
 external _i2.Object _declaredAggregateError;
 
 extension AggregateError$Typings on AggregateError {
-  _i2.List /*LIST InteropStaticType.list,142674882,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
-      get errors => (_i4.getProperty(
-            this,
-            'errors',
-          ) as _i2.List)
-              .cast();
-  set errors(
-      _i2.List /*LIST InteropStaticType.list,142674882,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.dynamic>
-          value) {
+  _i2.List<_i2.dynamic> get errors => (_i4.getProperty(
+        this,
+        'errors',
+      ) as _i2.List)
+          .cast();
+  set errors(_i2.List<_i2.dynamic> value) {
     _i4.setProperty(
       this,
       'errors',

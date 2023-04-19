@@ -249,9 +249,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void table([
     _i2.dynamic tabularData,
-    _i2.List /*LIST InteropStaticType.list,480644257,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>?
-        properties,
+    _i2.List<_i2.String>? properties,
   ]) {
     _i4.callMethod(
       _i7.target1283,
@@ -684,12 +682,11 @@ extension NavigatorAccessor$Typings on _NavigatorAccessor {
         _i7.target1290,
         'language',
       );
-  _i2.List /*LIST InteropStaticType.list,875090875,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      get languages => (_i4.getProperty(
-            _i7.target1290,
-            'languages',
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i2.String> get languages => (_i4.getProperty(
+        _i7.target1290,
+        'languages',
+      ) as _i2.List)
+          .cast();
   _i2.Never call() => _i4.callMethod(
         _i7.target1290,
         '',
@@ -884,9 +881,7 @@ typedef KeyUsage = KeyUsageOptions;
 typedef KeyFormat = KeyFormatOptions;
 typedef NamedCurve = _i2.String;
 typedef BufferSource = _i2.Object;
-typedef PerformanceEntryList
-    = _i2.List /*LIST InteropStaticType.list,964945873,[Instance of 'InteropRef<InteropType>']*/ <
-        _i3.PerformanceEntry>;
+typedef PerformanceEntryList = _i2.List<_i3.PerformanceEntry>;
 
 enum Endings {
   transparent(r'transparent'),
@@ -1379,9 +1374,7 @@ extension Console$Typings on Console {
 
   void table([
     _i2.dynamic tabularData,
-    _i2.List /*LIST InteropStaticType.list,480644257,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>?
-        properties,
+    _i2.List<_i2.String>? properties,
   ]) {
     _i4.callMethod(
       this,
@@ -1555,13 +1548,12 @@ extension URLSearchParams$Typings on URLSearchParams {
   ///  ```ts
   ///  searchParams.getAll('name');
   ///  ```
-  _i2.List /*LIST InteropStaticType.list,513150745,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      getAll(_i2.String name) => (_i4.callMethod(
-            this,
-            'getAll',
-            [name],
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i2.String> getAll(_i2.String name) => (_i4.callMethod(
+        this,
+        'getAll',
+        [name],
+      ) as _i2.List)
+          .cast();
 
   /// Returns the first value associated to the given search parameter.
   ///
@@ -2632,13 +2624,12 @@ extension Event$Typings on Event {
   ///  listeners will be invoked), except for any nodes in shadow trees of which
   ///  the shadow root's mode is "closed" that are not reachable from event's
   ///  currentTarget.
-  _i2.List /*LIST InteropStaticType.list,169987846,[Instance of 'InteropRef<InteropType>']*/ <_i3.EventTarget>
-      composedPath() => (_i4.callMethod(
-            this,
-            'composedPath',
-            [],
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i3.EventTarget> composedPath() => (_i4.callMethod(
+        this,
+        'composedPath',
+        [],
+      ) as _i2.List)
+          .cast();
 
   /// If invoked when the cancelable attribute value is true, and while
   ///  executing a listener for the event with passive set to false, signals to
@@ -4093,9 +4084,7 @@ extension BlobPropertyBag$Typings on BlobPropertyBag {
 @_i1.staticInterop
 class Blob {
   factory Blob([
-    _i2.List /*LIST InteropStaticType.list,1032139415,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.BlobPart>?
-        blobParts,
+    _i2.List<_i3.BlobPart>? blobParts,
     _i3.BlobPropertyBag? options,
   ]) =>
       _i4.callConstructor(
@@ -4196,9 +4185,7 @@ extension FilePropertyBag$Typings on FilePropertyBag {
 @_i1.staticInterop
 class File implements _i3.Blob {
   factory File(
-    _i2.List /*LIST InteropStaticType.list,307941888,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.BlobPart>
-        fileBits,
+    _i2.List<_i3.BlobPart> fileBits,
     _i2.String fileName, [
     _i3.FilePropertyBag? options,
   ]) =>
@@ -5997,24 +5984,17 @@ extension MessageEvent$Typings<T> on MessageEvent<T> {
 class StructuredSerializeOptions {
   external factory StructuredSerializeOptions._({_i2.dynamic transfer});
 
-  factory StructuredSerializeOptions(
-          {_i2.List /*LIST InteropStaticType.list,918724438,[Instance of 'InteropRef<InteropType>']*/ <
-                  _i3.Transferable>?
-              transfer}) =>
+  factory StructuredSerializeOptions({_i2.List<_i3.Transferable>? transfer}) =>
       StructuredSerializeOptions._(transfer: transfer ?? _i6.undefined);
 }
 
 extension StructuredSerializeOptions$Typings on StructuredSerializeOptions {
-  _i2.List /*LIST InteropStaticType.list,918724438,[Instance of 'InteropRef<InteropType>']*/ <_i3.Transferable>?
-      get transfer => (_i4.getProperty(
-            this,
-            'transfer',
-          ) as _i2.List?)
-              ?.cast();
-  set transfer(
-      _i2.List /*LIST InteropStaticType.list,918724438,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.Transferable>?
-          value) {
+  _i2.List<_i3.Transferable>? get transfer => (_i4.getProperty(
+        this,
+        'transfer',
+      ) as _i2.List?)
+          ?.cast();
+  set transfer(_i2.List<_i3.Transferable>? value) {
     _i4.setProperty(
       this,
       'transfer',
@@ -6113,9 +6093,7 @@ extension MessagePort$Typings on MessagePort {
   ///  objects or port, or if message could not be cloned.
   void _postMessage$1(
     _i2.dynamic message,
-    _i2.List /*LIST InteropStaticType.list,779250404,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.Transferable>
-        transfer,
+    _i2.List<_i3.Transferable> transfer,
   ) {
     _i4.callMethod(
       this,
@@ -6157,9 +6135,7 @@ extension MessagePort$Typings on MessagePort {
     ///  objects or port, or if message could not be cloned.
     void Function(
       _i2.dynamic message,
-      _i2.List /*LIST InteropStaticType.list,779250404,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.Transferable>
-          transfer,
+      _i2.List<_i3.Transferable> transfer,
     ) $1,
 
     /// Posts a message through the channel. Objects listed in transfer are
@@ -6548,13 +6524,12 @@ extension FormData$Typings on FormData {
         'get',
         [name],
       );
-  _i2.List /*LIST InteropStaticType.list,339686982,[Instance of 'InteropRef<InteropType>']*/ <_i3.FormDataEntryValue>
-      getAll(_i2.String name) => (_i4.callMethod(
-            this,
-            'getAll',
-            [name],
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i3.FormDataEntryValue> getAll(_i2.String name) => (_i4.callMethod(
+        this,
+        'getAll',
+        [name],
+      ) as _i2.List)
+          .cast();
   _i2.bool has(_i2.String name) => _i4.callMethod(
         this,
         'has',
@@ -8263,14 +8238,10 @@ class JsonWebKey {
     _i2.String? e,
     _i2.bool? ext,
     _i2.String? k,
-    _i2.List /*LIST InteropStaticType.list,945262743,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>?
-        keyOps,
+    _i2.List<_i2.String>? keyOps,
     _i2.String? kty,
     _i2.String? n,
-    _i2.List /*LIST InteropStaticType.list,771134083,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.RsaOtherPrimesInfo>?
-        oth,
+    _i2.List<_i3.RsaOtherPrimesInfo>? oth,
     _i2.String? p,
     _i2.String? q,
     _i2.String? qi,
@@ -8397,16 +8368,12 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,945262743,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
-      get keyOps => (_i4.getProperty(
-            this,
-            'key_ops',
-          ) as _i2.List?)
-              ?.cast();
-  set keyOps(
-      _i2.List /*LIST InteropStaticType.list,945262743,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.String>?
-          value) {
+  _i2.List<_i2.String>? get keyOps => (_i4.getProperty(
+        this,
+        'key_ops',
+      ) as _i2.List?)
+          ?.cast();
+  set keyOps(_i2.List<_i2.String>? value) {
     _i4.setProperty(
       this,
       'key_ops',
@@ -8438,16 +8405,12 @@ extension JsonWebKey$Typings on JsonWebKey {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,771134083,[Instance of 'InteropRef<InteropType>']*/ <_i3.RsaOtherPrimesInfo>?
-      get oth => (_i4.getProperty(
-            this,
-            'oth',
-          ) as _i2.List?)
-              ?.cast();
-  set oth(
-      _i2.List /*LIST InteropStaticType.list,771134083,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.RsaOtherPrimesInfo>?
-          value) {
+  _i2.List<_i3.RsaOtherPrimesInfo>? get oth => (_i4.getProperty(
+        this,
+        'oth',
+      ) as _i2.List?)
+          ?.cast();
+  set oth(_i2.List<_i3.RsaOtherPrimesInfo>? value) {
     _i4.setProperty(
       this,
       'oth',
@@ -9503,14 +9466,13 @@ extension CryptoKey$Typings on CryptoKey {
         this,
         'type',
       ));
-  _i2.List /*LIST InteropStaticType.list,151359626,[Instance of 'InteropRef<InteropType>']*/ <_i3.KeyUsage>
-      get usages => (_i4.getProperty(
-            this,
-            'usages',
-          ) as _i2.List)
-              .cast()
-              .map((i) => KeyUsageOptions.values.byName(i))
-              .toList();
+  _i2.List<_i3.KeyUsage> get usages => (_i4.getProperty(
+        this,
+        'usages',
+      ) as _i2.List)
+          .cast()
+          .map((i) => KeyUsageOptions.values.byName(i))
+          .toList();
 }
 
 @_i1.JS()
@@ -9586,9 +9548,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
   _i2.Future<_i3.CryptoKeyPair> _generateKey$1(
     _i3.Algorithm algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,94224700,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.KeyUsage>
-        keyUsages,
+    _i2.List<_i3.KeyUsage> keyUsages,
   ) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -9602,9 +9562,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
   _i2.Future<_i3.CryptoKey> _generateKey$2(
     _i3.Algorithm algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,1058849468,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.KeyUsage>
-        keyUsages,
+    _i2.List<_i3.KeyUsage> keyUsages,
   ) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -9618,9 +9576,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
   _i2.Future<_i2.Object> _generateKey$3(
     _i3.AlgorithmIdentifier algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,714842533,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.KeyUsage>
-        keyUsages,
+    _i2.List<_i3.KeyUsage> keyUsages,
   ) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -9637,23 +9593,17 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i2.Future<_i3.CryptoKeyPair> Function(
       _i3.Algorithm algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,94224700,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.KeyUsage>
-          keyUsages,
+      _i2.List<_i3.KeyUsage> keyUsages,
     ) $1,
     _i2.Future<_i3.CryptoKey> Function(
       _i3.Algorithm algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,1058849468,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.KeyUsage>
-          keyUsages,
+      _i2.List<_i3.KeyUsage> keyUsages,
     ) $2,
     _i2.Future<_i2.Object> Function(
       _i3.AlgorithmIdentifier algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,714842533,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.KeyUsage>
-          keyUsages,
+      _i2.List<_i3.KeyUsage> keyUsages,
     ) $3,
   }) get generateKey => (
         $1: _generateKey$1,
@@ -9665,9 +9615,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i3.JsonWebKey keyData,
     _i2.Object algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,169243026,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.KeyUsage>
-        keyUsages,
+    _i2.List<_i3.KeyUsage> keyUsages,
   ) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -9685,9 +9633,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i3.BufferSource keyData,
     _i2.Object algorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,675339133,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.KeyUsage>
-        keyUsages,
+    _i2.List<_i3.KeyUsage> keyUsages,
   ) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -9708,18 +9654,14 @@ extension SubtleCrypto$Typings on SubtleCrypto {
       _i3.JsonWebKey keyData,
       _i2.Object algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,169243026,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.KeyUsage>
-          keyUsages,
+      _i2.List<_i3.KeyUsage> keyUsages,
     ) $1,
     _i2.Future<_i3.CryptoKey> Function(
       _i5.Exclude<_i3.KeyFormat, _i2.String> format,
       _i3.BufferSource keyData,
       _i2.Object algorithm,
       _i2.bool extractable,
-      _i2.List /*LIST InteropStaticType.list,675339133,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.KeyUsage>
-          keyUsages,
+      _i2.List<_i3.KeyUsage> keyUsages,
     ) $2,
   }) get importKey => (
         $1: _importKey$1,
@@ -9853,9 +9795,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i3.CryptoKey baseKey,
     _i2.Object derivedKeyType,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,706020108,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.KeyUsage>
-        keyUsages,
+    _i2.List<_i3.KeyUsage> keyUsages,
   ) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -9891,9 +9831,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
     _i2.Object unwrapAlgorithm,
     _i2.Object unwrappedKeyAlgorithm,
     _i2.bool extractable,
-    _i2.List /*LIST InteropStaticType.list,1002644047,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.KeyUsage>
-        keyUsages,
+    _i2.List<_i3.KeyUsage> keyUsages,
   ) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
@@ -10635,9 +10573,7 @@ extension Worker$Typings on Worker {
 
   void _postMessage$1(
     _i2.dynamic message,
-    _i2.List /*LIST InteropStaticType.list,401422692,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.Transferable>
-        transfer,
+    _i2.List<_i3.Transferable> transfer,
   ) {
     _i4.callMethod(
       this,
@@ -10667,9 +10603,7 @@ extension Worker$Typings on Worker {
   ({
     void Function(
       _i2.dynamic message,
-      _i2.List /*LIST InteropStaticType.list,401422692,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.Transferable>
-          transfer,
+      _i2.List<_i3.Transferable> transfer,
     ) $1,
     void Function(
       _i2.dynamic message, [
@@ -11884,12 +11818,11 @@ extension Navigator$Typings on Navigator {
         _i7.target1290,
         'language',
       );
-  _i2.List /*LIST InteropStaticType.list,875090875,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      get languages => (_i4.getProperty(
-            _i7.target1290,
-            'languages',
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i2.String> get languages => (_i4.getProperty(
+        _i7.target1290,
+        'languages',
+      ) as _i2.List)
+          .cast();
 }
 
 /// The location (URL) of the object it is linked to. Changes done on it are

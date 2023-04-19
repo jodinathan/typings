@@ -234,8 +234,7 @@ class Module {
 
   /// Given a `Module` and string, returns a copy of the contents of all custom sections in the
   /// module with the given string name.
-  static _i2.List /*LIST InteropStaticType.list,1069842366,[Instance of 'InteropRef<InteropType>']*/ <
-      _i9.ByteBuffer> customSections(
+  static _i2.List<_i9.ByteBuffer> customSections(
     _i4.Module moduleObject,
     _i2.String sectionName,
   ) =>
@@ -250,8 +249,7 @@ class Module {
           .cast();
 
   /// Given a `Module`, returns an array containing descriptions of all the declared exports.
-  static _i2.List /*LIST InteropStaticType.list,59637737,[Instance of 'InteropRef<InteropType>']*/ <
-      _i4.ModuleExportDescriptor> exports(
+  static _i2.List<_i4.ModuleExportDescriptor> exports(
           _i4.Module moduleObject) =>
       (_i6.callMethod(
         _declaredModule,
@@ -261,8 +259,7 @@ class Module {
           .cast();
 
   /// Given a `Module`, returns an array containing descriptions of all the declared imports.
-  static _i2.List /*LIST InteropStaticType.list,76926528,[Instance of 'InteropRef<InteropType>']*/ <
-      _i4.ModuleImportDescriptor> imports(
+  static _i2.List<_i4.ModuleImportDescriptor> imports(
           _i4.Module moduleObject) =>
       (_i6.callMethod(
         _declaredModule,

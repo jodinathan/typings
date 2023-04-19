@@ -606,9 +606,7 @@ class BigInt64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
 
   /// Creates an array from an array-like or iterable object.
   static _i7.BigInt64Array from<U>(
-    _i2.List /*LIST InteropClass#925945977(name: List),80514112,[Instance of 'InteropRef<InteropType>']*/ <
-            U>
-        arrayLike,
+    _i2.List<U> arrayLike,
     _i2.int Function(
       U,
       _i2.num,
@@ -1107,9 +1105,7 @@ extension BigInt64Array$Typings on BigInt64Array {
   ///  @param array A typed or untyped array of values to set.
   ///  @param offset The index in the current array at which the values are to be written.
   void set(
-    _i2.List /*LIST InteropClass#925945977(name: List),741983802,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.int>
-        array, [
+    _i2.List<_i2.int> array, [
     _i2.num? offset,
   ]) {
     _i4.callMethod(
@@ -1363,9 +1359,7 @@ extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
 
   /// Creates an array from an array-like or iterable object.
   _i7.BigInt64Array from<U>(
-    _i2.List /*LIST InteropClass#925945977(name: List),80514112,[Instance of 'InteropRef<InteropType>']*/ <
-            U>
-        arrayLike,
+    _i2.List<U> arrayLike,
     _i2.int Function(
       U,
       _i2.num,
@@ -1434,9 +1428,7 @@ class BigUint64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
 
   /// Creates an array from an array-like or iterable object.
   static _i7.BigUint64Array from<U>(
-    _i2.List /*LIST InteropClass#925945977(name: List),931256743,[Instance of 'InteropRef<InteropType>']*/ <
-            U>
-        arrayLike,
+    _i2.List<U> arrayLike,
     _i2.int Function(
       U,
       _i2.num,
@@ -1935,9 +1927,7 @@ extension BigUint64Array$Typings on BigUint64Array {
   ///  @param array A typed or untyped array of values to set.
   ///  @param offset The index in the current array at which the values are to be written.
   void set(
-    _i2.List /*LIST InteropClass#925945977(name: List),461731677,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.int>
-        array, [
+    _i2.List<_i2.int> array, [
     _i2.num? offset,
   ]) {
     _i4.callMethod(
@@ -2191,9 +2181,7 @@ extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
 
   /// Creates an array from an array-like or iterable object.
   _i7.BigUint64Array from<U>(
-    _i2.List /*LIST InteropClass#925945977(name: List),931256743,[Instance of 'InteropRef<InteropType>']*/ <
-            U>
-        arrayLike,
+    _i2.List<U> arrayLike,
     _i2.int Function(
       U,
       _i2.num,

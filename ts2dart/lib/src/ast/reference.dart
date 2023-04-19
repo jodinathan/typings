@@ -182,7 +182,7 @@ class InteropRef<T extends InteropType> {
                 when InteropStaticType.dynamicTypes.contains(d.delegate.type) =>
               '  /*dyn:${t.runtimeType} ${t.makeDoc()}  */',
             _ => ''
-          }}${symbol == 'List' ? '/*LIST ${type},${hashCode},$typeArgs*/' : ''}'
+          }}'
           ..url = url
           ..isNullable =
               acceptsNull && symbol != 'dynamic' && symbol != 'Object?';

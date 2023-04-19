@@ -893,8 +893,7 @@ class Collator {
         ],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,265748203,[Instance of 'InteropRef<InteropType>']*/ <
-      _i2.String> supportedLocalesOf(
+  static _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
     _i5.CollatorOptions? options,
   ]) =>
@@ -940,8 +939,7 @@ extension Collator$Typings on Collator {
 class IInline2 {}
 
 extension IInline2$Typings on IInline2 {
-  _i2.List /*LIST InteropStaticType.list,265748203,[Instance of 'InteropRef<InteropType>']*/ <
-      _i2.String> supportedLocalesOf(
+  _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
     _i5.CollatorOptions? options,
   ]) =>
@@ -1532,8 +1530,7 @@ class NumberFormat {
         ],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,480880716,[Instance of 'InteropRef<InteropType>']*/ <
-      _i2.String> supportedLocalesOf(
+  static _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
     _i5.NumberFormatOptions? options,
   ]) =>
@@ -1593,9 +1590,7 @@ extension NumberFormat$Typings on NumberFormat {
         $1: _resolvedOptions$1,
         $2: _resolvedOptions$2,
       );
-  _i2.List /*LIST InteropStaticType.list,235177363,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.NumberFormatPart> formatToParts(
-          [_i2.Object? number]) =>
+  _i2.List<_i5.NumberFormatPart> formatToParts([_i2.Object? number]) =>
       (_i4.callMethod(
         this,
         'formatToParts',
@@ -1609,8 +1604,7 @@ extension NumberFormat$Typings on NumberFormat {
 class IInline3 {}
 
 extension IInline3$Typings on IInline3 {
-  _i2.List /*LIST InteropStaticType.list,480880716,[Instance of 'InteropRef<InteropType>']*/ <
-      _i2.String> supportedLocalesOf(
+  _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
     _i5.NumberFormatOptions? options,
   ]) =>
@@ -2358,8 +2352,7 @@ class DateTimeFormat {
         ],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,947951341,[Instance of 'InteropRef<InteropType>']*/ <
-      _i2.String> supportedLocalesOf(
+  static _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
     _i5.DateTimeFormatOptions? options,
   ]) =>
@@ -2391,9 +2384,7 @@ extension DateTimeFormat$Typings on DateTimeFormat {
         'resolvedOptions',
         [],
       );
-  _i2.List /*LIST InteropStaticType.list,1059992424,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.DateTimeFormatPart> formatToParts(
-          [_i2.Object? date]) =>
+  _i2.List<_i5.DateTimeFormatPart> formatToParts([_i2.Object? date]) =>
       (_i4.callMethod(
         this,
         'formatToParts',
@@ -2412,8 +2403,7 @@ extension DateTimeFormat$Typings on DateTimeFormat {
           endDate,
         ],
       );
-  _i2.List /*LIST InteropStaticType.list,224434440,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.DateTimeRangeFormatPart> formatRangeToParts(
+  _i2.List<_i5.DateTimeRangeFormatPart> formatRangeToParts(
     _i2.Object startDate,
     _i2.Object endDate,
   ) =>
@@ -2433,8 +2423,7 @@ extension DateTimeFormat$Typings on DateTimeFormat {
 class IInline4 {}
 
 extension IInline4$Typings on IInline4 {
-  _i2.List /*LIST InteropStaticType.list,947951341,[Instance of 'InteropRef<InteropType>']*/ <
-      _i2.String> supportedLocalesOf(
+  _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
     _i5.DateTimeFormatOptions? options,
   ]) =>
@@ -2881,9 +2870,7 @@ class ResolvedPluralRulesOptions {
 
   factory ResolvedPluralRulesOptions({
     required _i2.String locale,
-    required _i2.List /*LIST InteropStaticType.list,974190119,[Instance of 'InteropRef<InteropType>']*/ <
-            _i5.LDMLPluralRule>
-        pluralCategories,
+    required _i2.List<_i5.LDMLPluralRule> pluralCategories,
     required _i5.PluralRuleType type,
     required _i2.num minimumIntegerDigits,
     required _i2.num minimumFractionDigits,
@@ -2916,18 +2903,14 @@ extension ResolvedPluralRulesOptions$Typings on ResolvedPluralRulesOptions {
     );
   }
 
-  _i2.List /*LIST InteropStaticType.list,974190119,[Instance of 'InteropRef<InteropType>']*/ <_i5.LDMLPluralRule>
-      get pluralCategories => (_i4.getProperty(
-            this,
-            'pluralCategories',
-          ) as _i2.List)
-              .cast()
-              .map((i) => LDMLPluralRuleOptions.values.byName(i))
-              .toList();
-  set pluralCategories(
-      _i2.List /*LIST InteropStaticType.list,974190119,[Instance of 'InteropRef<InteropType>']*/ <
-              _i5.LDMLPluralRule>
-          value) {
+  _i2.List<_i5.LDMLPluralRule> get pluralCategories => (_i4.getProperty(
+        this,
+        'pluralCategories',
+      ) as _i2.List)
+          .cast()
+          .map((i) => LDMLPluralRuleOptions.values.byName(i))
+          .toList();
+  set pluralCategories(_i2.List<_i5.LDMLPluralRule> value) {
     _i4.setProperty(
       this,
       'pluralCategories',
@@ -3024,8 +3007,7 @@ class PluralRules {
         ],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,135602518,[Instance of 'InteropRef<InteropType>']*/ <
-      _i2.String> supportedLocalesOf(
+  static _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
     _i5.IInline24? options,
   ]) =>
@@ -3087,8 +3069,7 @@ extension IInline24$Typings on IInline24 {
 class IInline23 {}
 
 extension IInline23$Typings on IInline23 {
-  _i2.List /*LIST InteropStaticType.list,135602518,[Instance of 'InteropRef<InteropType>']*/ <
-      _i2.String> supportedLocalesOf(
+  _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
     _i5.IInline24? options,
   ]) =>
@@ -3441,8 +3422,7 @@ class RelativeTimeFormat {
   ///   without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf).
-  static _i2.List /*LIST InteropStaticType.list,356640619,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.UnicodeBCP47LocaleIdentifier> supportedLocalesOf([
+  static _i2.List<_i5.UnicodeBCP47LocaleIdentifier> supportedLocalesOf([
     _i2.Object? locales,
     _i5.RelativeTimeFormatOptions? options,
   ]) =>
@@ -3508,8 +3488,7 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
   ///   @throws `RangeError` if `unit` was given something other than `unit` possible values
   ///
   ///   [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts).
-  _i2.List /*LIST InteropStaticType.list,687389974,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.RelativeTimeFormatPart> formatToParts(
+  _i2.List<_i5.RelativeTimeFormatPart> formatToParts(
     _i2.num value,
     _i5.RelativeTimeFormatUnit unit,
   ) =>
@@ -3554,8 +3533,7 @@ extension IInline29$Typings on IInline29 {
   ///   without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf).
-  _i2.List /*LIST InteropStaticType.list,356640619,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.UnicodeBCP47LocaleIdentifier> supportedLocalesOf([
+  _i2.List<_i5.UnicodeBCP47LocaleIdentifier> supportedLocalesOf([
     _i2.Object? locales,
     _i5.RelativeTimeFormatOptions? options,
   ]) =>
@@ -4065,8 +4043,7 @@ class DisplayNames {
   ///  @returns An array of strings representing a subset of the given locale tags that are supported in display names without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf).
-  static _i2.List /*LIST InteropStaticType.list,834262898,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.BCP47LanguageTag> supportedLocalesOf([
+  static _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf([
     _i5.LocalesArgument? locales,
     _i5.IInline32? options,
   ]) =>
@@ -4158,8 +4135,7 @@ extension IInline31$Typings on IInline31 {
   ///  @returns An array of strings representing a subset of the given locale tags that are supported in display names without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf).
-  _i2.List /*LIST InteropStaticType.list,834262898,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.BCP47LanguageTag> supportedLocalesOf([
+  _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf([
     _i5.LocalesArgument? locales,
     _i5.IInline32? options,
   ]) =>
@@ -4407,8 +4383,7 @@ class ListFormat {
   ///   formatting without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf).
-  static _i2.List /*LIST InteropStaticType.list,618333801,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.BCP47LanguageTag> supportedLocalesOf(
+  static _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf(
     _i2.Object locales, [
     _i7.Pick<_i5.ListFormatOptions, _i2.String>? options,
   ]) =>
@@ -4454,9 +4429,7 @@ extension ListFormat$Typings on ListFormat {
   ///  @returns {{ type: "element" | "literal", value: string; }[]} An Array of components which contains the formatted parts from the list.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts).
-  _i2.List /*LIST InteropStaticType.list,964130686,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.IInline33> formatToParts(
-          _i8.Iterable<_i2.String> list) =>
+  _i2.List<_i5.IInline33> formatToParts(_i8.Iterable<_i2.String> list) =>
       (_i4.callMethod(
         this,
         'formatToParts',
@@ -4495,8 +4468,7 @@ extension IInline34$Typings on IInline34 {
   ///   formatting without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf).
-  _i2.List /*LIST InteropStaticType.list,618333801,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.BCP47LanguageTag> supportedLocalesOf(
+  _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf(
     _i2.Object locales, [
     _i7.Pick<_i5.ListFormatOptions, _i2.String>? options,
   ]) =>
@@ -4594,8 +4566,7 @@ class Segmenter {
   ///   with some or all possible options.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
-  static _i2.List /*LIST InteropStaticType.list,537748673,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.BCP47LanguageTag> supportedLocalesOf(
+  static _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf(
     _i2.Object locales, [
     _i7.Pick<_i5.SegmenterOptions, _i2.String>? options,
   ]) =>
@@ -4791,8 +4762,7 @@ extension IInline35$Typings on IInline35 {
   ///   with some or all possible options.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
-  _i2.List /*LIST InteropStaticType.list,537748673,[Instance of 'InteropRef<InteropType>']*/ <
-      _i5.BCP47LanguageTag> supportedLocalesOf(
+  _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf(
     _i2.Object locales, [
     _i7.Pick<_i5.SegmenterOptions, _i2.String>? options,
   ]) =>

@@ -814,13 +814,12 @@ extension VBArray$Typings<T> on VBArray<T> {
   /// Returns a Javascript array with all the elements in the VBArray. If there are multiple dimensions,
   ///  each successive dimension is appended to the end of the array.
   ///  Example: [[1,2,3],[4,5,6]] becomes [1,2,3,4,5,6]
-  _i2.List /*LIST InteropStaticType.list,232733204,[Instance of 'InteropRef<InteropType>']*/ <T>
-      toArray() => (_i4.callMethod(
-            this,
-            'toArray',
-            [],
-          ) as _i2.List)
-              .cast();
+  _i2.List<T> toArray() => (_i4.callMethod(
+        this,
+        'toArray',
+        [],
+      ) as _i2.List)
+          .cast();
 }
 
 @_i1.JS()

@@ -330,9 +330,8 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  resolve, or rejected when any Promise is rejected.
   ///  @param values An iterable of Promises.
   ///  @returns A new Promise.
-  _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,935563580,[Instance of 'InteropRef<InteropType>']*/ <
-          _i7.Awaited<T>>> _all$1<T>(_i5.Iterable<_i2.Object> values) =>
+  _i2.Future<_i2.List<_i7.Awaited<T>>> _all$1<T>(
+          _i5.Iterable<_i2.Object> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'all',
@@ -356,10 +355,8 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     ///  resolve, or rejected when any Promise is rejected.
     ///  @param values An iterable of Promises.
     ///  @returns A new Promise.
-    _i2.Future<
-            _i2.List /*LIST InteropStaticType.list,935563580,[Instance of 'InteropRef<InteropType>']*/ <
-                _i7.Awaited<T>>>
-        Function<T>(_i5.Iterable<_i2.Object> values) $1,
+    _i2.Future<_i2.List<_i7.Awaited<T>>> Function<T>(
+        _i5.Iterable<_i2.Object> values) $1,
 
     /// Creates a Promise that is resolved with an array of results when all of the provided Promises
     ///  resolve, or rejected when any Promise is rejected.
@@ -487,16 +484,13 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  of the provided Promises resolve or reject.
   ///  @param values An array of Promises.
   ///  @returns A new Promise.
-  _i2.Future<
-      _i2.List /*LIST InteropStaticType.list,364999734,[Instance of 'InteropRef<InteropType>']*/ <
-          _i8
-              .PromiseSettledResult<_i7.Awaited<T>>>> _allSettled$2<T>(
-          _i5.Iterable<_i2.Object> values) =>
-      _i3.promiseToFuture(_i3.callMethod(
-        this,
-        'allSettled',
-        [values],
-      ));
+  _i2.Future<_i2.List<_i8.PromiseSettledResult<_i7.Awaited<T>>>>
+      _allSettled$2<T>(_i5.Iterable<_i2.Object> values) =>
+          _i3.promiseToFuture(_i3.callMethod(
+            this,
+            'allSettled',
+            [values],
+          ));
 
   /// Overload accessor: $1, $2
   ({
@@ -510,10 +504,8 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     ///  of the provided Promises resolve or reject.
     ///  @param values An array of Promises.
     ///  @returns A new Promise.
-    _i2.Future<
-            _i2.List /*LIST InteropStaticType.list,364999734,[Instance of 'InteropRef<InteropType>']*/ <
-                _i8.PromiseSettledResult<_i7.Awaited<T>>>>
-        Function<T>(_i5.Iterable<_i2.Object> values) $2,
+    _i2.Future<_i2.List<_i8.PromiseSettledResult<_i7.Awaited<T>>>> Function<T>(
+        _i5.Iterable<_i2.Object> values) $2,
   }) get allSettled => (
         $1: _allSettled$1,
         $2: _allSettled$2,

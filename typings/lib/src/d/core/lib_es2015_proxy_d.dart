@@ -57,9 +57,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   _i2.dynamic apply(
     T target,
     _i2.dynamic thisArg,
-    _i2.List /*LIST InteropStaticType.list,274130023,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.dynamic>
-        argArray,
+    _i2.List<_i2.dynamic> argArray,
   ) =>
       _i4.callMethod(
         this,
@@ -76,9 +74,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   ///  @param newTarget The constructor that was originally called.
   _i2.Object construct(
     T target,
-    _i2.List /*LIST InteropStaticType.list,445398433,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.dynamic>
-        argArray,
+    _i2.List<_i2.dynamic> argArray,
     _i2.Function newTarget,
   ) =>
       _i4.callMethod(
@@ -195,12 +191,11 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
 
   /// A trap for `Reflect.ownKeys()`.
   ///  @param target The original object which is being proxied.
-  _i2.List /*LIST InteropClass#925945977(name: List),240408065,[Instance of 'InteropRef<InteropType>']*/ <_i2.Object>
-      ownKeys(T target) => _i4.callMethod(
-            this,
-            'ownKeys',
-            [target],
-          );
+  _i2.List<_i2.Object> ownKeys(T target) => _i4.callMethod(
+        this,
+        'ownKeys',
+        [target],
+      );
 
   /// A trap for `Object.preventExtensions()`.
   ///  @param target The original object which is being proxied.

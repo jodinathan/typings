@@ -228,8 +228,7 @@ class Module {
         [bytes],
       );
 
-  static _i2.List /*LIST InteropStaticType.list,13017575,[Instance of 'InteropRef<InteropType>']*/ <
-      _i7.ByteBuffer> customSections(
+  static _i2.List<_i7.ByteBuffer> customSections(
     _i4.Module moduleObject,
     _i2.String sectionName,
   ) =>
@@ -242,8 +241,7 @@ class Module {
         ],
       ) as _i2.List)
           .cast();
-  static _i2.List /*LIST InteropStaticType.list,109677766,[Instance of 'InteropRef<InteropType>']*/ <
-      _i4.ModuleExportDescriptor> exports(
+  static _i2.List<_i4.ModuleExportDescriptor> exports(
           _i4.Module moduleObject) =>
       (_i5.callMethod(
         _i9.target624,
@@ -251,8 +249,7 @@ class Module {
         [moduleObject],
       ) as _i2.List)
           .cast();
-  static _i2.List /*LIST InteropStaticType.list,323713000,[Instance of 'InteropRef<InteropType>']*/ <
-      _i4.ModuleImportDescriptor> imports(
+  static _i2.List<_i4.ModuleImportDescriptor> imports(
           _i4.Module moduleObject) =>
       (_i5.callMethod(
         _i9.target624,
@@ -273,8 +270,7 @@ external _i2.Object _declaredModule;
 class IInline608 {}
 
 extension IInline608$Typings on IInline608 {
-  _i2.List /*LIST InteropStaticType.list,13017575,[Instance of 'InteropRef<InteropType>']*/ <
-      _i7.ByteBuffer> customSections(
+  _i2.List<_i7.ByteBuffer> customSections(
     _i4.Module moduleObject,
     _i2.String sectionName,
   ) =>
@@ -287,18 +283,14 @@ extension IInline608$Typings on IInline608 {
         ],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,109677766,[Instance of 'InteropRef<InteropType>']*/ <
-      _i4.ModuleExportDescriptor> exports(
-          _i4.Module moduleObject) =>
+  _i2.List<_i4.ModuleExportDescriptor> exports(_i4.Module moduleObject) =>
       (_i5.callMethod(
         this,
         'exports',
         [moduleObject],
       ) as _i2.List)
           .cast();
-  _i2.List /*LIST InteropStaticType.list,323713000,[Instance of 'InteropRef<InteropType>']*/ <
-      _i4.ModuleImportDescriptor> imports(
-          _i4.Module moduleObject) =>
+  _i2.List<_i4.ModuleImportDescriptor> imports(_i4.Module moduleObject) =>
       (_i5.callMethod(
         this,
         'imports',

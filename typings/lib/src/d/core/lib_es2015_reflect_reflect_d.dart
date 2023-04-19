@@ -12,11 +12,7 @@ external _i2.Object _self;
 
 /// Calls the function with the specified object as the this value
 /// and the elements of specified array as the arguments.
-R _apply$1<
-        T,
-        A extends _i2.List /*LIST InteropStaticType.list,104686246,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.dynamic>,
-        R>(
+R _apply$1<T, A extends _i2.List<_i2.dynamic>, R>(
   R Function(_i2.Iterable<_i2.dynamic>?) target,
   T thisArgument,
   _i3.Readonly<A> argumentsList,
@@ -36,9 +32,7 @@ R _apply$1<
 _i2.dynamic _apply$2(
   _i2.Function target,
   _i2.dynamic thisArgument,
-  _i2.List /*LIST InteropClass#925945977(name: List),959118293,[Instance of 'InteropRef<InteropType>']*/ <
-          _i2.dynamic>
-      argumentsList,
+  _i2.List<_i2.dynamic> argumentsList,
 ) =>
     _i4.callMethod(
       _self,
@@ -54,11 +48,7 @@ _i2.dynamic _apply$2(
 ({
   /// Calls the function with the specified object as the this value
   /// and the elements of specified array as the arguments.
-  R Function<
-      T,
-      A extends _i2.List /*LIST InteropStaticType.list,104686246,[Instance of 'InteropRef<InteropType>']*/ <
-          _i2.dynamic>,
-      R>(
+  R Function<T, A extends _i2.List<_i2.dynamic>, R>(
     R Function(_i2.Iterable<_i2.dynamic>?) target,
     T thisArgument,
     _i3.Readonly<A> argumentsList,
@@ -69,9 +59,7 @@ _i2.dynamic _apply$2(
   _i2.dynamic Function(
     _i2.Function target,
     _i2.dynamic thisArgument,
-    _i2.List /*LIST InteropClass#925945977(name: List),959118293,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.dynamic>
-        argumentsList,
+    _i2.List<_i2.dynamic> argumentsList,
   ) $2,
 }) get apply => (
       $1: _apply$1,
@@ -80,10 +68,7 @@ _i2.dynamic _apply$2(
 
 /// Constructs the target with the elements of specified array as the arguments
 /// and the specified constructor as the `new.target` value.
-R _construct$1<
-        A extends _i2.List /*LIST InteropStaticType.list,237310777,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.dynamic>,
-        R>(
+R _construct$1<A extends _i2.List<_i2.dynamic>, R>(
   R Function(_i2.Iterable<_i2.dynamic>?) target,
   _i3.Readonly<A> argumentsList, [
   _i2.dynamic Function(_i2.Iterable<_i2.dynamic>?)? newTarget,
@@ -102,9 +87,7 @@ R _construct$1<
 /// and the specified constructor as the `new.target` value.
 _i2.dynamic _construct$2(
   _i2.Function target,
-  _i2.List /*LIST InteropClass#925945977(name: List),341621920,[Instance of 'InteropRef<InteropType>']*/ <
-          _i2.dynamic>
-      argumentsList, [
+  _i2.List<_i2.dynamic> argumentsList, [
   _i2.Function? newTarget,
 ]) =>
     _i4.callMethod(
@@ -121,10 +104,7 @@ _i2.dynamic _construct$2(
 ({
   /// Constructs the target with the elements of specified array as the arguments
   /// and the specified constructor as the `new.target` value.
-  R Function<
-      A extends _i2.List /*LIST InteropStaticType.list,237310777,[Instance of 'InteropRef<InteropType>']*/ <
-          _i2.dynamic>,
-      R>(
+  R Function<A extends _i2.List<_i2.dynamic>, R>(
     R Function(_i2.Iterable<_i2.dynamic>?) target,
     _i3.Readonly<A> argumentsList, [
     _i2.dynamic Function(_i2.Iterable<_i2.dynamic>?)? newTarget,
@@ -134,9 +114,7 @@ _i2.dynamic _construct$2(
   /// and the specified constructor as the `new.target` value.
   _i2.dynamic Function(
     _i2.Function target,
-    _i2.List /*LIST InteropClass#925945977(name: List),341621920,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.dynamic>
-        argumentsList, [
+    _i2.List<_i2.dynamic> argumentsList, [
     _i2.Function? newTarget,
   ]) $2,
 }) get construct => (
@@ -237,13 +215,12 @@ _i2.bool isExtensible(_i2.Object target) => _i4.callMethod(
 
 /// Returns the string and symbol keys of the own properties of an object. The own properties of an object
 /// are those that are defined directly on that object, and are not inherited from the object's prototype.
-_i2.List /*LIST InteropStaticType.list,21545053,[Instance of 'InteropRef<InteropType>']*/ <_i2.Object>
-    ownKeys(_i2.Object target) => (_i4.callMethod(
-          _self,
-          'ownKeys',
-          [target],
-        ) as _i2.List)
-            .cast();
+_i2.List<_i2.Object> ownKeys(_i2.Object target) => (_i4.callMethod(
+      _self,
+      'ownKeys',
+      [target],
+    ) as _i2.List)
+        .cast();
 
 /// Prevents the addition of new properties to an object.
 _i2.bool preventExtensions(_i2.Object target) => _i4.callMethod(

@@ -1524,12 +1524,11 @@ extension List$Typings<T> on List<T> {
   ///  Be careful not to call this method while iterating over the collection.
   ///  @param {*} val
   ///  @return {List.<T>} This modified List.
-  _i3.List /*LIST InteropClass#30984743(name: List),992480331,[Instance of 'InteropRef<InteropType>']*/ <T>
-      add(T val) => _i5.callMethod(
-            this,
-            'add',
-            [val],
-          );
+  _i3.List<T> add(T val) => _i5.callMethod(
+        this,
+        'add',
+        [val],
+      );
 
   /// Adds a given value to the end of the List.
   ///
@@ -1548,12 +1547,11 @@ extension List$Typings<T> on List<T> {
   ///  Be careful not to call this method while iterating over the collection.
   ///  @param {Iterable.<T>|Array.<T>} coll the collection of items to add.
   ///  @return {List.<T>} This modified List.
-  _i3.List /*LIST InteropClass#30984743(name: List),4898705,[Instance of 'InteropRef<InteropType>']*/ <T>
-      addAll(_i2.Object coll) => _i5.callMethod(
-            this,
-            'addAll',
-            [coll],
-          );
+  _i3.List<T> addAll(_i2.Object coll) => _i5.callMethod(
+        this,
+        'addAll',
+        [coll],
+      );
 
   /// Clears the List.
   ///  This sets the #count to zero.
@@ -1711,12 +1709,11 @@ extension List$Typings<T> on List<T> {
   ///  @param {function(T)} func This function must not modify the collection.
   ///  @return {List.<T>} This List itself
   ///  @since 1.4
-  _i3.List /*LIST InteropClass#30984743(name: List),96194667,[Instance of 'InteropRef<InteropType>']*/ <T>
-      each(void Function(T) func) => _i5.callMethod(
-            this,
-            'each',
-            [_i5.allowInterop(func)],
-          );
+  _i3.List<T> each(void Function(T) func) => _i5.callMethod(
+        this,
+        'each',
+        [_i5.allowInterop(func)],
+      );
 
   /// Call the given function on each item in the collection and collect the results in a new List.
   ///
@@ -1724,12 +1721,11 @@ extension List$Typings<T> on List<T> {
   ///  @expose
   ///  @param {function(T):*} func This function must not modify the collection.
   ///  @return {List.<S>}
-  _i3.List /*LIST InteropClass#30984743(name: List),193250113,[Instance of 'InteropRef<InteropType>']*/ <S>
-      map<S>(S Function(T) func) => _i5.callMethod(
-            this,
-            'map',
-            [_i5.allowInterop(func)],
-          );
+  _i3.List<S> map<S>(S Function(T) func) => _i5.callMethod(
+        this,
+        'map',
+        [_i5.allowInterop(func)],
+      );
 
   /// Call the given predicate on each item in the collection and for each item that it returns true, collect the item in a new List.
   ///
@@ -1737,12 +1733,11 @@ extension List$Typings<T> on List<T> {
   ///  @expose
   ///  @param {function(T):boolean} pred This function must not have any side-effects.
   ///  @return {List.<T>}
-  _i3.List /*LIST InteropClass#30984743(name: List),772671741,[Instance of 'InteropRef<InteropType>']*/ <T>
-      filter(_i2.bool Function(T) pred) => _i5.callMethod(
-            this,
-            'filter',
-            [_i5.allowInterop(pred)],
-          );
+  _i3.List<T> filter(_i2.bool Function(T) pred) => _i5.callMethod(
+        this,
+        'filter',
+        [_i5.allowInterop(pred)],
+      );
 
   /// Insert a value before the index i.
   ///
@@ -1812,8 +1807,7 @@ extension List$Typings<T> on List<T> {
   ///  @param {number} from int The starting index of the range to remove, inclusive; negative values are treated as zero
   ///  @param {number} to int The ending index of the range to remove, inclusive; values greater than the length of the list are treated as referring to the last element
   ///  @return {List.<T>} This modified List
-  _i3.List /*LIST InteropClass#30984743(name: List),696289437,[Instance of 'InteropRef<InteropType>']*/ <
-      T> removeRange(
+  _i3.List<T> removeRange(
     _i2.num from,
     _i2.num to,
   ) =>
@@ -1831,12 +1825,11 @@ extension List$Typings<T> on List<T> {
   ///  so if they are objects they may continue to be shared with the original List.
   ///  @expose
   ///  @return {List.<T>} The new List with the same elements.
-  _i3.List /*LIST InteropClass#30984743(name: List),326785918,[Instance of 'InteropRef<InteropType>']*/ <T>
-      copy() => _i5.callMethod(
-            this,
-            'copy',
-            [],
-          );
+  _i3.List<T> copy() => _i5.callMethod(
+        this,
+        'copy',
+        [],
+      );
 
   /// Produces a JavaScript Array from the contents of this List.
   ///  @return {Array.<T>} A copy of the List in Array form.
@@ -1863,8 +1856,7 @@ extension List$Typings<T> on List<T> {
   ///  less than zero if the first value should come before the second value,
   ///  or greater than zero if the first value should come after the second value.
   ///  @return {List.<T>} This modified List.
-  _i3.List /*LIST InteropClass#30984743(name: List),558392947,[Instance of 'InteropRef<InteropType>']*/ <
-      T> sort(
+  _i3.List<T> sort(
           _i2.num Function(
             T,
             T,
@@ -1886,8 +1878,7 @@ extension List$Typings<T> on List<T> {
   ///  @param {number=} to int The optional index at which to end the sort, excluding that element;
   ///  defaults to the end of the list.
   ///  @return {List.<T>} This modified List.
-  _i3.List /*LIST InteropClass#30984743(name: List),817109044,[Instance of 'InteropRef<InteropType>']*/ <
-      T> sortRange(
+  _i3.List<T> sortRange(
     _i2.num Function(
       T,
       T,
@@ -1907,12 +1898,11 @@ extension List$Typings<T> on List<T> {
 
   /// Reverse the order of items in this List.
   ///  @return {List.<T>} This modified List.
-  _i3.List /*LIST InteropClass#30984743(name: List),435009803,[Instance of 'InteropRef<InteropType>']*/ <T>
-      reverse() => _i5.callMethod(
-            this,
-            'reverse',
-            [],
-          );
+  _i3.List<T> reverse() => _i5.callMethod(
+        this,
+        'reverse',
+        [],
+      );
 }
 
 /// <span style="color: red; font-weight: bold;">NOTE: For 2.0 the #constructor argument has changed.
@@ -2267,12 +2257,11 @@ extension Set$Typings<T> on Set<T> {
   ///  Because there is no ordering within a Set,
   ///  the values in the List may be in any order.
   ///  @return {List.<T>} A copy of the contents of this Set in List form.
-  _i3.List /*LIST InteropClass#30984743(name: List),978286952,[Instance of 'InteropRef<InteropType>']*/ <T>
-      toList() => _i5.callMethod(
-            this,
-            'toList',
-            [],
-          );
+  _i3.List<T> toList() => _i5.callMethod(
+        this,
+        'toList',
+        [],
+      );
 }
 
 /// (undocumented)
@@ -5625,15 +5614,11 @@ extension Geometry$Typings on Geometry {
   /// Gets or sets the List of PathFigures
   /// that describes the content of the
   /// path for Geometries of type Geometry.Path|Path.
-  _i3.List /*LIST InteropClass#30984743(name: List),637879716,[Instance of 'InteropRef<InteropType>']*/ <_i3.PathFigure>
-      get figures => _i5.getProperty(
-            this,
-            'figures',
-          );
-  set figures(
-      _i3.List /*LIST InteropClass#30984743(name: List),435715066,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.PathFigure>
-          value) {
+  _i3.List<_i3.PathFigure> get figures => _i5.getProperty(
+        this,
+        'figures',
+      );
+  set figures(_i3.List<_i3.PathFigure> value) {
     _i5.setProperty(
       this,
       'figures',
@@ -6021,15 +6006,11 @@ extension PathFigure$Typings on PathFigure {
   }
 
   /// Gets or sets the List of PathSegments that define this PathFigure.
-  _i3.List /*LIST InteropClass#30984743(name: List),449123424,[Instance of 'InteropRef<InteropType>']*/ <_i3.PathSegment>
-      get segments => _i5.getProperty(
-            this,
-            'segments',
-          );
-  set segments(
-      _i3.List /*LIST InteropClass#30984743(name: List),1033826441,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.PathSegment>
-          value) {
+  _i3.List<_i3.PathSegment> get segments => _i5.getProperty(
+        this,
+        'segments',
+      );
+  set segments(_i3.List<_i3.PathSegment> value) {
     _i5.setProperty(
       this,
       'segments',
@@ -8269,15 +8250,11 @@ extension Transaction$Typings on Transaction {
   /// The changes are stored in order of occurrence.
   ///
   /// You should not modify this list.
-  _i3.List /*LIST InteropClass#30984743(name: List),474600690,[Instance of 'InteropRef<InteropType>']*/ <_i3.ChangedEvent>
-      get changes => _i5.getProperty(
-            this,
-            'changes',
-          );
-  set changes(
-      _i3.List /*LIST InteropClass#30984743(name: List),1073523501,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.ChangedEvent>
-          value) {
+  _i3.List<_i3.ChangedEvent> get changes => _i5.getProperty(
+        this,
+        'changes',
+      );
+  set changes(_i3.List<_i3.ChangedEvent> value) {
     _i5.setProperty(
       this,
       'changes',
@@ -8532,15 +8509,11 @@ extension UndoManager$Typings on UndoManager {
   /// each representing a transaction with some number of ChangedEvents.
   ///
   /// You should not modify this List.
-  _i3.List /*LIST InteropClass#30984743(name: List),429784790,[Instance of 'InteropRef<InteropType>']*/ <_i3.Transaction>
-      get history => _i5.getProperty(
-            this,
-            'history',
-          );
-  set history(
-      _i3.List /*LIST InteropClass#30984743(name: List),17191076,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.Transaction>
-          value) {
+  _i3.List<_i3.Transaction> get history => _i5.getProperty(
+        this,
+        'history',
+      );
+  set history(_i3.List<_i3.Transaction> value) {
     _i5.setProperty(
       this,
       'history',
@@ -8649,15 +8622,11 @@ extension UndoManager$Typings on UndoManager {
   /// to #startTransaction.
   ///
   /// You should not modify this List.
-  _i3.List /*LIST InteropClass#30984743(name: List),218766951,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      get nestedTransactionNames => _i5.getProperty(
-            this,
-            'nestedTransactionNames',
-          );
-  set nestedTransactionNames(
-      _i3.List /*LIST InteropClass#30984743(name: List),827879245,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.String>
-          value) {
+  _i3.List<_i2.String> get nestedTransactionNames => _i5.getProperty(
+        this,
+        'nestedTransactionNames',
+      );
+  set nestedTransactionNames(_i3.List<_i2.String> value) {
     _i5.setProperty(
       this,
       'nestedTransactionNames',
@@ -9902,15 +9871,11 @@ extension ToolManager$Typings on ToolManager {
   ///   - #linkReshapingTool, a LinkReshapingTool
   ///   - #rotatingTool, a RotatingTool
   ///   - #resizingTool, a ResizingTool
-  _i3.List /*LIST InteropClass#30984743(name: List),849447176,[Instance of 'InteropRef<InteropType>']*/ <_i3.Tool>
-      get mouseDownTools => _i5.getProperty(
-            this,
-            'mouseDownTools',
-          );
-  set mouseDownTools(
-      _i3.List /*LIST InteropClass#30984743(name: List),333739499,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.Tool>
-          value) {
+  _i3.List<_i3.Tool> get mouseDownTools => _i5.getProperty(
+        this,
+        'mouseDownTools',
+      );
+  set mouseDownTools(_i3.List<_i3.Tool> value) {
     _i5.setProperty(
       this,
       'mouseDownTools',
@@ -9931,15 +9896,11 @@ extension ToolManager$Typings on ToolManager {
   ///   - #draggingTool, a DraggingTool
   ///   - #dragSelectingTool, a DragSelectingTool
   ///   - #panningTool, a PanningTool
-  _i3.List /*LIST InteropClass#30984743(name: List),313604818,[Instance of 'InteropRef<InteropType>']*/ <_i3.Tool>
-      get mouseMoveTools => _i5.getProperty(
-            this,
-            'mouseMoveTools',
-          );
-  set mouseMoveTools(
-      _i3.List /*LIST InteropClass#30984743(name: List),441480282,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.Tool>
-          value) {
+  _i3.List<_i3.Tool> get mouseMoveTools => _i5.getProperty(
+        this,
+        'mouseMoveTools',
+      );
+  set mouseMoveTools(_i3.List<_i3.Tool> value) {
     _i5.setProperty(
       this,
       'mouseMoveTools',
@@ -9960,15 +9921,11 @@ extension ToolManager$Typings on ToolManager {
   ///   - #textEditingTool, a TextEditingTool
   ///   - #clickCreatingTool, a ClickCreatingTool
   ///   - #clickSelectingTool, a ClickSelectingTool
-  _i3.List /*LIST InteropClass#30984743(name: List),434631213,[Instance of 'InteropRef<InteropType>']*/ <_i3.Tool>
-      get mouseUpTools => _i5.getProperty(
-            this,
-            'mouseUpTools',
-          );
-  set mouseUpTools(
-      _i3.List /*LIST InteropClass#30984743(name: List),1027633849,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.Tool>
-          value) {
+  _i3.List<_i3.Tool> get mouseUpTools => _i5.getProperty(
+        this,
+        'mouseUpTools',
+      );
+  set mouseUpTools(_i3.List<_i3.Tool> value) {
     _i5.setProperty(
       this,
       'mouseUpTools',
@@ -10547,9 +10504,7 @@ extension ToolManager$Typings on ToolManager {
   void replaceStandardTool(
     _i2.String name,
     _i3.Tool newtool,
-    _i3.List /*LIST InteropClass#30984743(name: List),520535666,[Instance of 'InteropRef<InteropType>']*/ <
-            _i3.Tool>
-        list,
+    _i3.List<_i3.Tool> list,
   ) {
     _i5.callMethod(
       this,
@@ -12806,15 +12761,11 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
 
   /// This read-only property returns the List of Points that was the original route of the Link that is being reshaped.
   /// This List should not be modified; its value is indeterminate until a reshaping has been activated.
-  _i3.List /*LIST InteropClass#30984743(name: List),1045159336,[Instance of 'InteropRef<InteropType>']*/ <_i3.Point>
-      get originalPoints => _i5.getProperty(
-            this,
-            'originalPoints',
-          );
-  set originalPoints(
-      _i3.List /*LIST InteropClass#30984743(name: List),353922297,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.Point>
-          value) {
+  _i3.List<_i3.Point> get originalPoints => _i5.getProperty(
+        this,
+        'originalPoints',
+      );
+  set originalPoints(_i3.List<_i3.Point> value) {
     _i5.setProperty(
       this,
       'originalPoints',
@@ -36912,15 +36863,11 @@ extension Link$Typings on Link {
   ///
   /// Ownership of the List and all of its Points that is provided to the setter
   /// is transferred to this Link.
-  _i3.List /*LIST InteropClass#30984743(name: List),476061554,[Instance of 'InteropRef<InteropType>']*/ <_i3.Point>
-      get points => _i5.getProperty(
-            this,
-            'points',
-          );
-  set points(
-      _i3.List /*LIST InteropClass#30984743(name: List),282683409,[Instance of 'InteropRef<InteropType>']*/ <
-              _i3.Point>
-          value) {
+  _i3.List<_i3.Point> get points => _i5.getProperty(
+        this,
+        'points',
+      );
+  set points(_i3.List<_i3.Point> value) {
     _i5.setProperty(
       this,
       'points',
@@ -38755,9 +38702,7 @@ extension LayoutNetwork$Typings on LayoutNetwork {
   ///  @param {boolean=} clean whether to delete artificial vertexes and edges, disconnected edges, and reflexive edges; default is true
   ///  @return {List.<LayoutNetwork>} a collection of LayoutNetworks,
   ///  sorted in order of decreasing vertex count.
-  _i3.List /*LIST InteropClass#30984743(name: List),961406848,[Instance of 'InteropRef<InteropType>']*/ <
-      _i3.LayoutNetwork> splitIntoSubNetworks(
-          [_i2.bool? clean]) =>
+  _i3.List<_i3.LayoutNetwork> splitIntoSubNetworks([_i2.bool? clean]) =>
       _i5.callMethod(
         this,
         'splitIntoSubNetworks',

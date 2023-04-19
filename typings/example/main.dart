@@ -494,10 +494,7 @@ void makeCore() {
       integrity: '',
       keepalive: true);
 
-  log([
-    'RequestInit:',
-    init,
-  js.Object.keys.$1(init)]);
+  log(['RequestInit:', init, js.Object.keys.$1(init)]);
 
   final headers = js.Headers();
 

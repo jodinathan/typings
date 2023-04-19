@@ -4085,9 +4085,7 @@ class FsEvent {
 
   factory FsEvent({
     required Kind kind,
-    required _i2.List /*LIST InteropStaticType.list,726256844,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>
-        paths,
+    required _i2.List<_i2.String> paths,
     _i4.FsEventFlag? flag,
   }) =>
       FsEvent._(
@@ -4112,16 +4110,12 @@ extension FsEvent$Typings on FsEvent {
   }
 
   /// An array of paths that are associated with the file system event.
-  _i2.List /*LIST InteropStaticType.list,726256844,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      get paths => (_i3.getProperty(
-            this,
-            'paths',
-          ) as _i2.List)
-              .cast();
-  set paths(
-      _i2.List /*LIST InteropStaticType.list,726256844,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.String>
-          value) {
+  _i2.List<_i2.String> get paths => (_i3.getProperty(
+        this,
+        'paths',
+      ) as _i2.List)
+          .cast();
+  set paths(_i2.List<_i2.String> value) {
     _i3.setProperty(
       this,
       'paths',
@@ -4730,9 +4724,7 @@ class CommandOptions {
   });
 
   factory CommandOptions({
-    _i2.List /*LIST InteropStaticType.list,846665806,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>?
-        args,
+    _i2.List<_i2.String>? args,
     _i2.Object? cwd,
     _i2.bool? clearEnv,
     _i9.Record<_i2.String, _i2.String>? env,
@@ -4761,16 +4753,12 @@ class CommandOptions {
 
 extension CommandOptions$Typings on CommandOptions {
   /// Arguments to pass to the process.
-  _i2.List /*LIST InteropStaticType.list,846665806,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
-      get args => (_i3.getProperty(
-            this,
-            'args',
-          ) as _i2.List?)
-              ?.cast();
-  set args(
-      _i2.List /*LIST InteropStaticType.list,846665806,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.String>?
-          value) {
+  _i2.List<_i2.String>? get args => (_i3.getProperty(
+        this,
+        'args',
+      ) as _i2.List?)
+          ?.cast();
+  set args(_i2.List<_i2.String>? value) {
     _i3.setProperty(
       this,
       'args',
@@ -7443,9 +7431,7 @@ class ConnectTlsOptions {
     required _i2.num port,
     _i2.String? hostname,
     _i2.String? certFile,
-    _i2.List /*LIST InteropStaticType.list,483281862,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>?
-        caCerts,
+    _i2.List<_i2.String>? caCerts,
   }) =>
       ConnectTlsOptions._(
         port: port,
@@ -7504,16 +7490,12 @@ extension ConnectTlsOptions$Typings on ConnectTlsOptions {
   ///  default root certificates to verify the peer's certificate.
   ///
   ///  Must be in PEM format.
-  _i2.List /*LIST InteropStaticType.list,483281862,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
-      get caCerts => (_i3.getProperty(
-            this,
-            'caCerts',
-          ) as _i2.List?)
-              ?.cast();
-  set caCerts(
-      _i2.List /*LIST InteropStaticType.list,483281862,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.String>?
-          value) {
+  _i2.List<_i2.String>? get caCerts => (_i3.getProperty(
+        this,
+        'caCerts',
+      ) as _i2.List?)
+          ?.cast();
+  set caCerts(_i2.List<_i2.String>? value) {
     _i3.setProperty(
       this,
       'caCerts',
@@ -7533,9 +7515,7 @@ class StartTlsOptions {
 
   factory StartTlsOptions({
     _i2.String? hostname,
-    _i2.List /*LIST InteropStaticType.list,1029853210,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>?
-        caCerts,
+    _i2.List<_i2.String>? caCerts,
   }) =>
       StartTlsOptions._(
         hostname: hostname ?? _i6.undefined,
@@ -7563,16 +7543,12 @@ extension StartTlsOptions$Typings on StartTlsOptions {
   ///  default root certificates to verify the peer's certificate.
   ///
   ///  Must be in PEM format.
-  _i2.List /*LIST InteropStaticType.list,1029853210,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>?
-      get caCerts => (_i3.getProperty(
-            this,
-            'caCerts',
-          ) as _i2.List?)
-              ?.cast();
-  set caCerts(
-      _i2.List /*LIST InteropStaticType.list,1029853210,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.String>?
-          value) {
+  _i2.List<_i2.String>? get caCerts => (_i3.getProperty(
+        this,
+        'caCerts',
+      ) as _i2.List?)
+          ?.cast();
+  set caCerts(_i2.List<_i2.String>? value) {
     _i3.setProperty(
       this,
       'caCerts',
@@ -7615,13 +7591,12 @@ _i2.String hostname() => _i3.callMethod(
 /// Requires `allow-sys` permission.
 ///
 /// On Windows there is no API available to retrieve this information and this method returns `[ 0, 0, 0 ]`.
-_i2.List /*LIST InteropStaticType.list,120236333,[Instance of 'InteropRef<InteropType>']*/ <_i2.num>
-    loadavg() => (_i3.callMethod(
-          _self,
-          'loadavg',
-          [],
-        ) as _i2.List)
-            .cast();
+_i2.List<_i2.num> loadavg() => (_i3.callMethod(
+      _self,
+      'loadavg',
+      [],
+    ) as _i2.List)
+        .cast();
 
 /// Returns an array of the network interface information.
 ///
@@ -7630,13 +7605,12 @@ _i2.List /*LIST InteropStaticType.list,120236333,[Instance of 'InteropRef<Intero
 /// ```
 ///
 /// Requires `allow-sys` permission.
-_i2.List /*LIST InteropStaticType.list,527409235,[Instance of 'InteropRef<InteropType>']*/ <_i4.NetworkInterfaceInfo>
-    networkInterfaces() => (_i3.callMethod(
-          _self,
-          'networkInterfaces',
-          [],
-        ) as _i2.List)
-            .cast();
+_i2.List<_i4.NetworkInterfaceInfo> networkInterfaces() => (_i3.callMethod(
+      _self,
+      'networkInterfaces',
+      [],
+    ) as _i2.List)
+        .cast();
 
 /// Displays the total amount of free and used physical and swap memory in the
 /// system, as well as the buffers and caches used by the kernel.
@@ -13536,9 +13510,7 @@ void kill(
 /// ```
 ///
 /// Requires `allow-net` permission.
-_i2.Future<
-    _i2.List /*LIST InteropStaticType.list,514463123,[Instance of 'InteropRef<InteropType>']*/ <
-        _i2.String>> _resolveDns$1(
+_i2.Future<_i2.List<_i2.String>> _resolveDns$1(
   _i2.String query,
   ResolveDns recordType, [
   _i4.ResolveDnsOptions? options,
@@ -13572,9 +13544,7 @@ _i2.Future<
 /// ```
 ///
 /// Requires `allow-net` permission.
-_i2.Future<
-    _i2.List /*LIST InteropStaticType.list,1051588199,[Instance of 'InteropRef<InteropType>']*/ <
-        _i4.CAARecord>> _resolveDns$2(
+_i2.Future<_i2.List<_i4.CAARecord>> _resolveDns$2(
   _i2.String query,
   _i2.String recordType, [
   _i4.ResolveDnsOptions? options,
@@ -13608,9 +13578,7 @@ _i2.Future<
 /// ```
 ///
 /// Requires `allow-net` permission.
-_i2.Future<
-    _i2.List /*LIST InteropStaticType.list,201398960,[Instance of 'InteropRef<InteropType>']*/ <
-        _i4.MXRecord>> _resolveDns$3(
+_i2.Future<_i2.List<_i4.MXRecord>> _resolveDns$3(
   _i2.String query,
   _i2.String recordType, [
   _i4.ResolveDnsOptions? options,
@@ -13644,9 +13612,7 @@ _i2.Future<
 /// ```
 ///
 /// Requires `allow-net` permission.
-_i2.Future<
-    _i2.List /*LIST InteropStaticType.list,555931409,[Instance of 'InteropRef<InteropType>']*/ <
-        _i4.NAPTRRecord>> _resolveDns$4(
+_i2.Future<_i2.List<_i4.NAPTRRecord>> _resolveDns$4(
   _i2.String query,
   _i2.String recordType, [
   _i4.ResolveDnsOptions? options,
@@ -13680,9 +13646,7 @@ _i2.Future<
 /// ```
 ///
 /// Requires `allow-net` permission.
-_i2.Future<
-    _i2.List /*LIST InteropStaticType.list,776467494,[Instance of 'InteropRef<InteropType>']*/ <
-        _i4.SOARecord>> _resolveDns$5(
+_i2.Future<_i2.List<_i4.SOARecord>> _resolveDns$5(
   _i2.String query,
   _i2.String recordType, [
   _i4.ResolveDnsOptions? options,
@@ -13716,9 +13680,7 @@ _i2.Future<
 /// ```
 ///
 /// Requires `allow-net` permission.
-_i2.Future<
-    _i2.List /*LIST InteropStaticType.list,1009292385,[Instance of 'InteropRef<InteropType>']*/ <
-        _i4.SRVRecord>> _resolveDns$6(
+_i2.Future<_i2.List<_i4.SRVRecord>> _resolveDns$6(
   _i2.String query,
   _i2.String recordType, [
   _i4.ResolveDnsOptions? options,
@@ -13752,10 +13714,7 @@ _i2.Future<
 /// ```
 ///
 /// Requires `allow-net` permission.
-_i2.Future<
-    _i2.List /*LIST InteropStaticType.list,866231267,[Instance of 'InteropRef<InteropType>']*/ <
-        _i2.List /*LIST InteropStaticType.list,236185893,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>>> _resolveDns$7(
+_i2.Future<_i2.List<_i2.List<_i2.String>>> _resolveDns$7(
   _i2.String query,
   _i2.String recordType, [
   _i4.ResolveDnsOptions? options,
@@ -13825,10 +13784,7 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<
-          _i2.List /*LIST InteropStaticType.list,514463123,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.String>>
-      Function(
+  _i2.Future<_i2.List<_i2.String>> Function(
     _i2.String query,
     ResolveDns recordType, [
     _i4.ResolveDnsOptions? options,
@@ -13853,10 +13809,7 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<
-          _i2.List /*LIST InteropStaticType.list,1051588199,[Instance of 'InteropRef<InteropType>']*/ <
-              _i4.CAARecord>>
-      Function(
+  _i2.Future<_i2.List<_i4.CAARecord>> Function(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
@@ -13881,10 +13834,7 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<
-          _i2.List /*LIST InteropStaticType.list,201398960,[Instance of 'InteropRef<InteropType>']*/ <
-              _i4.MXRecord>>
-      Function(
+  _i2.Future<_i2.List<_i4.MXRecord>> Function(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
@@ -13909,10 +13859,7 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<
-          _i2.List /*LIST InteropStaticType.list,555931409,[Instance of 'InteropRef<InteropType>']*/ <
-              _i4.NAPTRRecord>>
-      Function(
+  _i2.Future<_i2.List<_i4.NAPTRRecord>> Function(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
@@ -13937,10 +13884,7 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<
-          _i2.List /*LIST InteropStaticType.list,776467494,[Instance of 'InteropRef<InteropType>']*/ <
-              _i4.SOARecord>>
-      Function(
+  _i2.Future<_i2.List<_i4.SOARecord>> Function(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
@@ -13965,10 +13909,7 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<
-          _i2.List /*LIST InteropStaticType.list,1009292385,[Instance of 'InteropRef<InteropType>']*/ <
-              _i4.SRVRecord>>
-      Function(
+  _i2.Future<_i2.List<_i4.SRVRecord>> Function(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
@@ -13993,11 +13934,7 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<
-          _i2.List /*LIST InteropStaticType.list,866231267,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.List /*LIST InteropStaticType.list,236185893,[Instance of 'InteropRef<InteropType>']*/ <
-                  _i2.String>>>
-      Function(
+  _i2.Future<_i2.List<_i2.List<_i2.String>>> Function(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,

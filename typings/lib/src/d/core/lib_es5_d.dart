@@ -199,14 +199,13 @@ class Object {
   /// Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
   ///  on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
   ///  @param o Object that contains the own properties.
-  static _i2
-          .List /*LIST InteropStaticType.list,389460924,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      getOwnPropertyNames(_i2.dynamic o) => (_i4.callMethod(
-            _i6.target0,
-            'getOwnPropertyNames',
-            [o],
-          ) as _i2.List)
-              .cast();
+  static _i2.List<_i2.String> getOwnPropertyNames(_i2.dynamic o) =>
+      (_i4.callMethod(
+        _i6.target0,
+        'getOwnPropertyNames',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Creates an object that has the specified prototype or that has null prototype.
   ///  @param o Object to use as a prototype. May be null.
@@ -335,39 +334,31 @@ class Object {
 
   /// Returns the names of the enumerable string properties and methods of an object.
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2
-          .List /*LIST InteropStaticType.list,407538467,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      _keys$1(_i2.Object o) => (_i4.callMethod(
-            _i6.target0,
-            'keys',
-            [o],
-          ) as _i2.List)
-              .cast();
+  static _i2.List<_i2.String> _keys$1(_i2.Object o) => (_i4.callMethod(
+        _i6.target0,
+        'keys',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Returns the names of the enumerable string properties and methods of an object.
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2
-          .List /*LIST InteropStaticType.list,76127120,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      _keys$2(_i7.IInline8 o) => (_i4.callMethod(
-            _i6.target0,
-            'keys',
-            [o],
-          ) as _i2.List)
-              .cast();
+  static _i2.List<_i2.String> _keys$2(_i7.IInline8 o) => (_i4.callMethod(
+        _i6.target0,
+        'keys',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Overload accessor: $1, $2
   static ({
     /// Returns the names of the enumerable string properties and methods of an object.
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,407538467,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>
-        Function(_i2.Object o) $1,
+    _i2.List<_i2.String> Function(_i2.Object o) $1,
 
     /// Returns the names of the enumerable string properties and methods of an object.
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,76127120,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>
-        Function(_i7.IInline8 o) $2,
+    _i2.List<_i2.String> Function(_i7.IInline8 o) $2,
   }) get keys => (
         $1: _keys$1,
         $2: _keys$2,
@@ -443,14 +434,13 @@ class Object {
 
   /// Returns an array of all symbol properties found directly on object o.
   ///  @param o Object to retrieve the symbols from.
-  static _i2
-          .List /*LIST InteropStaticType.list,110529253,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
-      getOwnPropertySymbols(_i2.dynamic o) => (_i4.callMethod(
-            _i6.target0,
-            'getOwnPropertySymbols',
-            [o],
-          ) as _i2.List)
-              .cast();
+  static _i2.List<_i2.Symbol> getOwnPropertySymbols(_i2.dynamic o) =>
+      (_i4.callMethod(
+        _i6.target0,
+        'getOwnPropertySymbols',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Returns true if the values are the same value, false otherwise.
   ///  @param value1 The first value.
@@ -486,39 +476,31 @@ class Object {
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2
-          .List /*LIST InteropStaticType.list,996235581,[Instance of 'InteropRef<InteropType>']*/ <T>
-      _values$1<T>(_i2.Object o) => (_i4.callMethod(
-            _i6.target0,
-            'values',
-            [o],
-          ) as _i2.List)
-              .cast();
+  static _i2.List<T> _values$1<T>(_i2.Object o) => (_i4.callMethod(
+        _i6.target0,
+        'values',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2
-          .List /*LIST InteropStaticType.list,412346121,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
-      _values$2(_i8.IInline17 o) => (_i4.callMethod(
-            _i6.target0,
-            'values',
-            [o],
-          ) as _i2.List)
-              .cast();
+  static _i2.List<_i2.dynamic> _values$2(_i8.IInline17 o) => (_i4.callMethod(
+        _i6.target0,
+        'values',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Overload accessor: $1, $2
   static ({
     /// Returns an array of values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,996235581,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        Function<T>(_i2.Object o) $1,
+    _i2.List<T> Function<T>(_i2.Object o) $1,
 
     /// Returns an array of values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,412346121,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.dynamic>
-        Function(_i8.IInline17 o) $2,
+    _i2.List<_i2.dynamic> Function(_i8.IInline17 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
@@ -526,7 +508,7 @@ class Object {
 
   /// Returns an array of key/values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2.List /*LIST InteropStaticType.list,944979034,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List<
       (
         _i2.String,
         T,
@@ -539,7 +521,7 @@ class Object {
 
   /// Returns an array of key/values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2.List /*LIST InteropStaticType.list,1003670848,[Instance of 'InteropRef<InteropType>']*/ <
+  static _i2.List<
       (
         _i2.String,
         _i2.dynamic,
@@ -554,7 +536,7 @@ class Object {
   static ({
     /// Returns an array of key/values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,944979034,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List<
             (
               _i2.String,
               T,
@@ -563,7 +545,7 @@ class Object {
 
     /// Returns an array of key/values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,1003670848,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List<
             (
               _i2.String,
               _i2.dynamic,
@@ -600,10 +582,7 @@ class Object {
   /// Returns an object created by key-value entries for properties and methods
   ///  @param entries An iterable object that contains key-value entries for properties and methods.
   static _i2.dynamic _fromEntries$2(
-          _i9.Iterable<
-                  _i2.List /*LIST InteropStaticType.list,1026995401,[Instance of 'InteropRef<InteropType>']*/ <
-                      _i2.dynamic>>
-              entries) =>
+          _i9.Iterable<_i2.List<_i2.dynamic>> entries) =>
       _i4.callMethod(
         _i6.target0,
         'fromEntries',
@@ -624,11 +603,7 @@ class Object {
 
     /// Returns an object created by key-value entries for properties and methods
     ///  @param entries An iterable object that contains key-value entries for properties and methods.
-    _i2.dynamic Function(
-        _i9.Iterable<
-                _i2.List /*LIST InteropStaticType.list,1026995401,[Instance of 'InteropRef<InteropType>']*/ <
-                    _i2.dynamic>>
-            entries) $2,
+    _i2.dynamic Function(_i9.Iterable<_i2.List<_i2.dynamic>> entries) $2,
   }) get fromEntries => (
         $1: _fromEntries$1,
         $2: _fromEntries$2,
@@ -750,13 +725,12 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   /// Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
   ///  on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
   ///  @param o Object that contains the own properties.
-  _i2.List /*LIST InteropStaticType.list,389460924,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      getOwnPropertyNames(_i2.dynamic o) => (_i4.callMethod(
-            this,
-            'getOwnPropertyNames',
-            [o],
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i2.String> getOwnPropertyNames(_i2.dynamic o) => (_i4.callMethod(
+        this,
+        'getOwnPropertyNames',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Creates an object that has the specified prototype or that has null prototype.
   ///  @param o Object to use as a prototype. May be null.
@@ -885,37 +859,31 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns the names of the enumerable string properties and methods of an object.
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List /*LIST InteropStaticType.list,407538467,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      _keys$1(_i2.Object o) => (_i4.callMethod(
-            this,
-            'keys',
-            [o],
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i2.String> _keys$1(_i2.Object o) => (_i4.callMethod(
+        this,
+        'keys',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Returns the names of the enumerable string properties and methods of an object.
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List /*LIST InteropStaticType.list,76127120,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      _keys$2(_i7.IInline8 o) => (_i4.callMethod(
-            this,
-            'keys',
-            [o],
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i2.String> _keys$2(_i7.IInline8 o) => (_i4.callMethod(
+        this,
+        'keys',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Overload accessor: $1, $2
   ({
     /// Returns the names of the enumerable string properties and methods of an object.
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,407538467,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>
-        Function(_i2.Object o) $1,
+    _i2.List<_i2.String> Function(_i2.Object o) $1,
 
     /// Returns the names of the enumerable string properties and methods of an object.
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,76127120,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>
-        Function(_i7.IInline8 o) $2,
+    _i2.List<_i2.String> Function(_i7.IInline8 o) $2,
   }) get keys => (
         $1: _keys$1,
         $2: _keys$2,
@@ -991,13 +959,12 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an array of all symbol properties found directly on object o.
   ///  @param o Object to retrieve the symbols from.
-  _i2.List /*LIST InteropStaticType.list,110529253,[Instance of 'InteropRef<InteropType>']*/ <_i2.Symbol>
-      getOwnPropertySymbols(_i2.dynamic o) => (_i4.callMethod(
-            this,
-            'getOwnPropertySymbols',
-            [o],
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i2.Symbol> getOwnPropertySymbols(_i2.dynamic o) => (_i4.callMethod(
+        this,
+        'getOwnPropertySymbols',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Returns true if the values are the same value, false otherwise.
   ///  @param value1 The first value.
@@ -1033,37 +1000,31 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List /*LIST InteropStaticType.list,996235581,[Instance of 'InteropRef<InteropType>']*/ <T>
-      _values$1<T>(_i2.Object o) => (_i4.callMethod(
-            this,
-            'values',
-            [o],
-          ) as _i2.List)
-              .cast();
+  _i2.List<T> _values$1<T>(_i2.Object o) => (_i4.callMethod(
+        this,
+        'values',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List /*LIST InteropStaticType.list,412346121,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
-      _values$2(_i8.IInline17 o) => (_i4.callMethod(
-            this,
-            'values',
-            [o],
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i2.dynamic> _values$2(_i8.IInline17 o) => (_i4.callMethod(
+        this,
+        'values',
+        [o],
+      ) as _i2.List)
+          .cast();
 
   /// Overload accessor: $1, $2
   ({
     /// Returns an array of values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,996235581,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        Function<T>(_i2.Object o) $1,
+    _i2.List<T> Function<T>(_i2.Object o) $1,
 
     /// Returns an array of values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,412346121,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.dynamic>
-        Function(_i8.IInline17 o) $2,
+    _i2.List<_i2.dynamic> Function(_i8.IInline17 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
@@ -1071,7 +1032,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an array of key/values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List /*LIST InteropStaticType.list,944979034,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List<
       (
         _i2.String,
         T,
@@ -1084,7 +1045,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an array of key/values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List /*LIST InteropStaticType.list,1003670848,[Instance of 'InteropRef<InteropType>']*/ <
+  _i2.List<
       (
         _i2.String,
         _i2.dynamic,
@@ -1099,7 +1060,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   ({
     /// Returns an array of key/values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,944979034,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List<
             (
               _i2.String,
               T,
@@ -1108,7 +1069,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
     /// Returns an array of key/values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List /*LIST InteropStaticType.list,1003670848,[Instance of 'InteropRef<InteropType>']*/ <
+    _i2.List<
             (
               _i2.String,
               _i2.dynamic,
@@ -1144,11 +1105,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an object created by key-value entries for properties and methods
   ///  @param entries An iterable object that contains key-value entries for properties and methods.
-  _i2.dynamic _fromEntries$2(
-          _i9.Iterable<
-                  _i2.List /*LIST InteropStaticType.list,1026995401,[Instance of 'InteropRef<InteropType>']*/ <
-                      _i2.dynamic>>
-              entries) =>
+  _i2.dynamic _fromEntries$2(_i9.Iterable<_i2.List<_i2.dynamic>> entries) =>
       _i4.callMethod(
         this,
         'fromEntries',
@@ -1169,11 +1126,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
     /// Returns an object created by key-value entries for properties and methods
     ///  @param entries An iterable object that contains key-value entries for properties and methods.
-    _i2.dynamic Function(
-        _i9.Iterable<
-                _i2.List /*LIST InteropStaticType.list,1026995401,[Instance of 'InteropRef<InteropType>']*/ <
-                    _i2.dynamic>>
-            entries) $2,
+    _i2.dynamic Function(_i9.Iterable<_i2.List<_i2.dynamic>> entries) $2,
   }) get fromEntries => (
         $1: _fromEntries$1,
         $2: _fromEntries$2,
@@ -1724,9 +1677,7 @@ class TemplateStringsArray implements _i3.ReadonlyArray<_i2.String> {
   });
 
   factory TemplateStringsArray({
-    required _i2.List /*LIST InteropStaticType.list,187212470,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.String>
-        raw,
+    required _i2.List<_i2.String> raw,
     required _i2.num length,
   }) =>
       TemplateStringsArray._(
@@ -1736,12 +1687,11 @@ class TemplateStringsArray implements _i3.ReadonlyArray<_i2.String> {
 }
 
 extension TemplateStringsArray$Typings on TemplateStringsArray {
-  _i2.List /*LIST InteropStaticType.list,187212470,[Instance of 'InteropRef<InteropType>']*/ <_i2.String>
-      get raw => (_i4.getProperty(
-            this,
-            'raw',
-          ) as _i2.List)
-              .cast();
+  _i2.List<_i2.String> get raw => (_i4.getProperty(
+        this,
+        'raw',
+      ) as _i2.List)
+          .cast();
 }
 
 /// The type of `import.meta`.
@@ -3309,9 +3259,7 @@ extension Json$Typings on Json {
   ///  @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
   _i2.String _stringify$2(
     _i2.dynamic value, [
-    _i2.List /*LIST InteropStaticType.list,1055168579,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.Object>?
-        replacer,
+    _i2.List<_i2.Object>? replacer,
     _i2.Object? space,
   ]) =>
       _i4.callMethod(
@@ -3345,9 +3293,7 @@ extension Json$Typings on Json {
     ///  @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
     _i2.String Function(
       _i2.dynamic value, [
-      _i2.List /*LIST InteropStaticType.list,1055168579,[Instance of 'InteropRef<InteropType>']*/ <
-              _i2.Object>?
-          replacer,
+      _i2.List<_i2.Object>? replacer,
       _i2.Object? space,
     ]) $2,
   }) get stringify => (
@@ -3383,13 +3329,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
 
   /// Combines two or more arrays.
   ///  @param items Additional items to add to the end of array1.
-  _i2.List /*LIST InteropStaticType.list,824987045,[Instance of 'InteropRef<InteropType>']*/ <T>
-      concat([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
-            this,
-            'concat',
-            [...?items],
-          ) as _i2.List)
-              .cast();
+  _i2.List<T> concat([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
+        this,
+        'concat',
+        [...?items],
+      ) as _i2.List)
+          .cast();
 
   /// Adds all the elements of an array separated by the specified separator string.
   ///  @param separator A string used to separate one element of an array from the next in the resulting String. If omitted, the array elements are separated with a comma.
@@ -3402,8 +3347,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   /// Returns a section of an array.
   ///  @param start The beginning of the specified portion of the array.
   ///  @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
-  _i2.List /*LIST InteropStaticType.list,220686778,[Instance of 'InteropRef<InteropType>']*/ <
-      T> slice([
+  _i2.List<T> slice([
     _i2.num? start,
     _i2.num? end,
   ]) =>
@@ -3459,8 +3403,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,325688750,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -3483,8 +3426,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,985939946,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -3509,8 +3451,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,325688750,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
@@ -3525,8 +3466,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,985939946,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $2,
@@ -3545,8 +3485,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,910754734,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -3566,8 +3505,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     void Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,904050022,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) {
@@ -3584,13 +3522,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   /// Calls a defined callback function on each element of an array, and returns an array that contains the results.
   ///  @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
-  _i2.List /*LIST InteropStaticType.list,658316589,[Instance of 'InteropRef<InteropType>']*/ <
-      U> map<U>(
+  _i2.List<U> map<U>(
     U Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,977441626,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) =>
@@ -3607,13 +3543,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   /// Returns the elements of an array that meet the condition specified in a callback function.
   ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
-  _i2.List /*LIST InteropStaticType.list,883889680,[Instance of 'InteropRef<InteropType>']*/ <
-      S> _filter$1<S extends T>(
+  _i2.List<S> _filter$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,102099671,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -3630,13 +3564,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   /// Returns the elements of an array that meet the condition specified in a callback function.
   ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
-  _i2.List /*LIST InteropStaticType.list,520848037,[Instance of 'InteropRef<InteropType>']*/ <
-      T> _filter$2(
+  _i2.List<T> _filter$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,1059509043,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -3655,14 +3587,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     /// Returns the elements of an array that meet the condition specified in a callback function.
     ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
     ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
-    _i2.List /*LIST InteropStaticType.list,883889680,[Instance of 'InteropRef<InteropType>']*/ <
-            S>
-        Function<S extends T>(
+    _i2.List<S> Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,102099671,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
@@ -3670,14 +3599,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     /// Returns the elements of an array that meet the condition specified in a callback function.
     ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
     ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
-    _i2.List /*LIST InteropStaticType.list,520848037,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        Function(
+    _i2.List<T> Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,1059509043,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $2,
@@ -3694,8 +3620,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
             T,
             T,
             _i2.num,
-            _i2.List /*LIST InteropStaticType.list,220119816,[Instance of 'InteropRef<InteropType>']*/ <
-                T>,
+            _i2.List<T>,
           ) callbackfn) =>
       _i4.callMethod(
         this,
@@ -3709,8 +3634,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,113254734,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn,
     T initialValue,
   ) =>
@@ -3731,8 +3655,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,385469353,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn,
     U initialValue,
   ) =>
@@ -3755,8 +3678,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           T,
           T,
           _i2.num,
-          _i2.List /*LIST InteropStaticType.list,220119816,[Instance of 'InteropRef<InteropType>']*/ <
-              T>,
+          _i2.List<T>,
         ) callbackfn) $1,
 
     /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
@@ -3765,8 +3687,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,113254734,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) callbackfn,
       T initialValue,
     ) $2,
@@ -3779,8 +3700,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,385469353,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) callbackfn,
       U initialValue,
     ) $3,
@@ -3798,8 +3718,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
             T,
             T,
             _i2.num,
-            _i2.List /*LIST InteropStaticType.list,657143129,[Instance of 'InteropRef<InteropType>']*/ <
-                T>,
+            _i2.List<T>,
           ) callbackfn) =>
       _i4.callMethod(
         this,
@@ -3813,8 +3732,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,74303745,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn,
     T initialValue,
   ) =>
@@ -3835,8 +3753,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,149823529,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn,
     U initialValue,
   ) =>
@@ -3859,8 +3776,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
           T,
           T,
           _i2.num,
-          _i2.List /*LIST InteropStaticType.list,657143129,[Instance of 'InteropRef<InteropType>']*/ <
-              T>,
+          _i2.List<T>,
         ) callbackfn) $1,
 
     /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
@@ -3869,8 +3785,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,74303745,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) callbackfn,
       T initialValue,
     ) $2,
@@ -3883,8 +3798,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,149823529,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) callbackfn,
       U initialValue,
     ) $3,
@@ -3905,8 +3819,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,232907236,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -3925,8 +3838,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,66903613,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -3952,8 +3864,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,232907236,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
@@ -3964,8 +3875,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,66903613,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $2,
@@ -3985,8 +3895,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,129304310,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4048,13 +3957,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   ///  callback function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the callback function. If
   ///  thisArg is omitted, undefined is used as the this value.
-  _i2.List /*LIST InteropStaticType.list,157059618,[Instance of 'InteropRef<InteropType>']*/ <
-      U> flatMap<U, This>(
+  _i2.List<U> flatMap<U, This>(
     _i2.Object Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,277602469,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callback, [
     This? thisArg,
   ]) =>
@@ -4072,9 +3979,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   ///  specified depth.
   ///
   ///  @param depth The maximum recursion depth
-  _i2.List /*LIST InteropStaticType.list,538646089,[Instance of 'InteropRef<InteropType>']*/ <
-      _i13.FlatArray<A, D>> flat<A, D extends _i2.num>(
-          [D? depth]) =>
+  _i2.List<_i13.FlatArray<A, D>> flat<A, D extends _i2.num>([D? depth]) =>
       (_i4.callMethod(
         this,
         'flat',
@@ -4101,8 +4006,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,777062452,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4121,8 +4025,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,630682949,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4148,8 +4051,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,777062452,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
@@ -4160,8 +4062,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,630682949,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $2,
@@ -4181,8 +4082,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,827070035,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4214,8 +4114,7 @@ extension ConcatArray$Typings<T> on ConcatArray<T> {
         'join',
         [separator ?? _i5.undefined],
       );
-  _i2.List /*LIST InteropStaticType.list,136022474,[Instance of 'InteropRef<InteropType>']*/ <
-      T> slice([
+  _i2.List<T> slice([
     _i2.num? start,
     _i2.num? end,
   ]) =>
@@ -4260,49 +4159,41 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
 
   /// Creates an array from an iterable object.
   ///  @param iterable An iterable object to convert to an array.
-  static _i2
-          .List /*LIST InteropStaticType.list,942529547,[Instance of 'InteropRef<InteropType>']*/ <T>
-      _from$1<T>(_i3.From iterable) => (_i4.callMethod(
-            _i6.target11,
-            'from',
-            [iterable],
-          ) as _i2.List)
-              .cast();
+  static _i2.List<T> _from$1<T>(_i3.From iterable) => (_i4.callMethod(
+        _i6.target11,
+        'from',
+        [iterable],
+      ) as _i2.List)
+          .cast();
 
   /// Creates an array from an iterable object.
   ///  @param arrayLike An array-like object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  static _i2
-          .List /*LIST InteropStaticType.list,299033891,[Instance of 'InteropRef<InteropType>']*/ <U>
-      _from$2<T, U>(
-    _i2.List /*LIST InteropClass#925945977(name: List),658896351,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+  static _i2.List<U> _from$2<T, U>(
+    _i2.List<T> arrayLike,
     U Function(
       T,
       _i2.num,
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-          (_i4.callMethod(
-            _i6.target11,
-            'from',
-            [
-              arrayLike,
-              _i4.allowInterop(mapfn),
-              thisArg ?? _i5.undefined,
-            ],
-          ) as _i2.List)
-              .cast();
+      (_i4.callMethod(
+        _i6.target11,
+        'from',
+        [
+          arrayLike,
+          _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
+        ],
+      ) as _i2.List)
+          .cast();
 
   /// Creates an array from an iterable object.
   ///  @param iterable An iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  static _i2
-          .List /*LIST InteropStaticType.list,706106832,[Instance of 'InteropRef<InteropType>']*/ <U>
-      _from$3<T, U>(
+  static _i2.List<U> _from$3<T, U>(
     _i3.FromCommon iterable,
     U Function(
       T,
@@ -4310,35 +4201,29 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-          (_i4.callMethod(
-            _i6.target11,
-            'from',
-            [
-              iterable,
-              _i4.allowInterop(mapfn),
-              thisArg ?? _i5.undefined,
-            ],
-          ) as _i2.List)
-              .cast();
+      (_i4.callMethod(
+        _i6.target11,
+        'from',
+        [
+          iterable,
+          _i4.allowInterop(mapfn),
+          thisArg ?? _i5.undefined,
+        ],
+      ) as _i2.List)
+          .cast();
 
   /// Overload accessor: $1, $2, $3
   static ({
     /// Creates an array from an iterable object.
     ///  @param iterable An iterable object to convert to an array.
-    _i2.List /*LIST InteropStaticType.list,942529547,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        Function<T>(_i3.From iterable) $1,
+    _i2.List<T> Function<T>(_i3.From iterable) $1,
 
     /// Creates an array from an iterable object.
     ///  @param arrayLike An array-like object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i2.List /*LIST InteropStaticType.list,299033891,[Instance of 'InteropRef<InteropType>']*/ <
-            U>
-        Function<T, U>(
-      _i2.List /*LIST InteropClass#925945977(name: List),658896351,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+    _i2.List<U> Function<T, U>(
+      _i2.List<T> arrayLike,
       U Function(
         T,
         _i2.num,
@@ -4350,9 +4235,7 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
     ///  @param iterable An iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i2.List /*LIST InteropStaticType.list,706106832,[Instance of 'InteropRef<InteropType>']*/ <
-            U>
-        Function<T, U>(
+    _i2.List<U> Function<T, U>(
       _i3.FromCommon iterable,
       U Function(
         T,
@@ -4368,14 +4251,13 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  static _i2
-          .List /*LIST InteropStaticType.list,916270498,[Instance of 'InteropRef<InteropType>']*/ <T>
-      of<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
-            _i6.target11,
-            'of',
-            [...?items],
-          ) as _i2.List)
-              .cast();
+  static _i2.List<T> of<T>([_i2.Iterable<_i2.dynamic>? items]) =>
+      (_i4.callMethod(
+        _i6.target11,
+        'of',
+        [...?items],
+      ) as _i2.List)
+          .cast();
 }
 
 /*
@@ -4431,13 +4313,12 @@ extension Array$Typings<T> on Array<T> {
   /// Combines two or more arrays.
   ///  This method returns a new array without modifying any existing arrays.
   ///  @param items Additional arrays and/or items to add to the end of the array.
-  _i2.List /*LIST InteropStaticType.list,515722818,[Instance of 'InteropRef<InteropType>']*/ <T>
-      concat([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
-            this,
-            'concat',
-            [...?items],
-          ) as _i2.List)
-              .cast();
+  _i2.List<T> concat([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
+        this,
+        'concat',
+        [...?items],
+      ) as _i2.List)
+          .cast();
 
   /// Adds all the elements of an array into a string, separated by the specified separator string.
   ///  @param separator A string used to separate one element of the array from the next in the resulting string. If omitted, the array elements are separated with a comma.
@@ -4449,13 +4330,12 @@ extension Array$Typings<T> on Array<T> {
 
   /// Reverses the elements in an array in place.
   ///  This method mutates the array and returns a reference to the same array.
-  _i2.List /*LIST InteropStaticType.list,45744285,[Instance of 'InteropRef<InteropType>']*/ <T>
-      reverse() => (_i4.callMethod(
-            this,
-            'reverse',
-            [],
-          ) as _i2.List)
-              .cast();
+  _i2.List<T> reverse() => (_i4.callMethod(
+        this,
+        'reverse',
+        [],
+      ) as _i2.List)
+          .cast();
 
   /// Removes the first element from an array and returns it.
   ///  If the array is empty, undefined is returned and the array is not modified.
@@ -4472,8 +4352,7 @@ extension Array$Typings<T> on Array<T> {
   ///  If start is undefined, then the slice begins at index 0.
   ///  @param end The end index of the specified portion of the array. This is exclusive of the element at the index 'end'.
   ///  If end is undefined, then the slice extends to the end of the array.
-  _i2.List /*LIST InteropStaticType.list,186655851,[Instance of 'InteropRef<InteropType>']*/ <
-      T> slice([
+  _i2.List<T> slice([
     _i2.num? start,
     _i2.num? end,
   ]) =>
@@ -4511,8 +4390,7 @@ extension Array$Typings<T> on Array<T> {
   ///  @param deleteCount The number of elements to remove.
   ///  @param items Elements to insert into the array in place of the deleted elements.
   ///  @returns An array containing the elements that were deleted.
-  _i2.List /*LIST InteropStaticType.list,880795994,[Instance of 'InteropRef<InteropType>']*/ <
-      T> splice(
+  _i2.List<T> splice(
     _i2.num start,
     _i2.num deleteCount, [
     _i2.Iterable<_i2.dynamic>? items,
@@ -4578,8 +4456,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,874586234,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4602,8 +4479,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,171634597,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4628,8 +4504,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,874586234,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
@@ -4644,8 +4519,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,171634597,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $2,
@@ -4664,8 +4538,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,350440479,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4685,8 +4558,7 @@ extension Array$Typings<T> on Array<T> {
     void Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,923670804,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) {
@@ -4703,13 +4575,11 @@ extension Array$Typings<T> on Array<T> {
   /// Calls a defined callback function on each element of an array, and returns an array that contains the results.
   ///  @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
-  _i2.List /*LIST InteropStaticType.list,518271631,[Instance of 'InteropRef<InteropType>']*/ <
-      U> map<U>(
+  _i2.List<U> map<U>(
     U Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,427933394,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4726,13 +4596,11 @@ extension Array$Typings<T> on Array<T> {
   /// Returns the elements of an array that meet the condition specified in a callback function.
   ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
-  _i2.List /*LIST InteropStaticType.list,947744006,[Instance of 'InteropRef<InteropType>']*/ <
-      S> _filter$1<S extends T>(
+  _i2.List<S> _filter$1<S extends T>(
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,779591641,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4749,13 +4617,11 @@ extension Array$Typings<T> on Array<T> {
   /// Returns the elements of an array that meet the condition specified in a callback function.
   ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
-  _i2.List /*LIST InteropStaticType.list,661672677,[Instance of 'InteropRef<InteropType>']*/ <
-      T> _filter$2(
+  _i2.List<T> _filter$2(
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,936306708,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4774,14 +4640,11 @@ extension Array$Typings<T> on Array<T> {
     /// Returns the elements of an array that meet the condition specified in a callback function.
     ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
     ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
-    _i2.List /*LIST InteropStaticType.list,947744006,[Instance of 'InteropRef<InteropType>']*/ <
-            S>
-        Function<S extends T>(
+    _i2.List<S> Function<S extends T>(
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,779591641,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
@@ -4789,14 +4652,11 @@ extension Array$Typings<T> on Array<T> {
     /// Returns the elements of an array that meet the condition specified in a callback function.
     ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
     ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
-    _i2.List /*LIST InteropStaticType.list,661672677,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        Function(
+    _i2.List<T> Function(
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,936306708,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $2,
@@ -4811,8 +4671,7 @@ extension Array$Typings<T> on Array<T> {
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,1024470638,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn,
     T initialValue,
   ) =>
@@ -4833,8 +4692,7 @@ extension Array$Typings<T> on Array<T> {
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,598572536,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn,
     U initialValue,
   ) =>
@@ -4855,8 +4713,7 @@ extension Array$Typings<T> on Array<T> {
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,1024470638,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) callbackfn,
       T initialValue,
     ) $1,
@@ -4869,8 +4726,7 @@ extension Array$Typings<T> on Array<T> {
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,598572536,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) callbackfn,
       U initialValue,
     ) $2,
@@ -4885,8 +4741,7 @@ extension Array$Typings<T> on Array<T> {
       T,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,18480541,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn,
     T initialValue,
   ) =>
@@ -4907,8 +4762,7 @@ extension Array$Typings<T> on Array<T> {
       U,
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,853616384,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callbackfn,
     U initialValue,
   ) =>
@@ -4929,8 +4783,7 @@ extension Array$Typings<T> on Array<T> {
         T,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,18480541,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) callbackfn,
       T initialValue,
     ) $1,
@@ -4943,8 +4796,7 @@ extension Array$Typings<T> on Array<T> {
         U,
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,853616384,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) callbackfn,
       U initialValue,
     ) $2,
@@ -4964,8 +4816,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,480230156,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -4984,8 +4835,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,363013186,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -5011,8 +4861,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,480230156,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
@@ -5023,8 +4872,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,363013186,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $2,
@@ -5044,8 +4892,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,403608842,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -5150,13 +4997,11 @@ extension Array$Typings<T> on Array<T> {
   ///  callback function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the callback function. If
   ///  thisArg is omitted, undefined is used as the this value.
-  _i2.List /*LIST InteropStaticType.list,97956352,[Instance of 'InteropRef<InteropType>']*/ <
-      U> flatMap<U, This>(
+  _i2.List<U> flatMap<U, This>(
     _i2.Object Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,151655542,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) callback, [
     This? thisArg,
   ]) =>
@@ -5174,9 +5019,7 @@ extension Array$Typings<T> on Array<T> {
   ///  specified depth.
   ///
   ///  @param depth The maximum recursion depth
-  _i2.List /*LIST InteropStaticType.list,553092386,[Instance of 'InteropRef<InteropType>']*/ <
-      _i13.FlatArray<A, D>> flat<A, D extends _i2.num>(
-          [D? depth]) =>
+  _i2.List<_i13.FlatArray<A, D>> flat<A, D extends _i2.num>([D? depth]) =>
       (_i4.callMethod(
         this,
         'flat',
@@ -5203,8 +5046,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.dynamic Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,98368207,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -5223,8 +5065,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,209178297,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -5250,8 +5091,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.dynamic Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,98368207,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
@@ -5262,8 +5102,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.Object? Function(
         T,
         _i2.num,
-        _i2.List /*LIST InteropStaticType.list,209178297,[Instance of 'InteropRef<InteropType>']*/ <
-            T>,
+        _i2.List<T>,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $2,
@@ -5283,8 +5122,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.Object? Function(
       T,
       _i2.num,
-      _i2.List /*LIST InteropStaticType.list,915588412,[Instance of 'InteropRef<InteropType>']*/ <
-          T>,
+      _i2.List<T>,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
@@ -5325,23 +5163,19 @@ extension ArrayConstructor$Typings on ArrayConstructor {
 
   /// Creates an array from an iterable object.
   ///  @param iterable An iterable object to convert to an array.
-  _i2.List /*LIST InteropStaticType.list,942529547,[Instance of 'InteropRef<InteropType>']*/ <T>
-      _from$1<T>(_i3.From iterable) => (_i4.callMethod(
-            this,
-            'from',
-            [iterable],
-          ) as _i2.List)
-              .cast();
+  _i2.List<T> _from$1<T>(_i3.From iterable) => (_i4.callMethod(
+        this,
+        'from',
+        [iterable],
+      ) as _i2.List)
+          .cast();
 
   /// Creates an array from an iterable object.
   ///  @param arrayLike An array-like object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i2.List /*LIST InteropStaticType.list,299033891,[Instance of 'InteropRef<InteropType>']*/ <
-      U> _from$2<T, U>(
-    _i2.List /*LIST InteropClass#925945977(name: List),658896351,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+  _i2.List<U> _from$2<T, U>(
+    _i2.List<T> arrayLike,
     U Function(
       T,
       _i2.num,
@@ -5363,8 +5197,7 @@ extension ArrayConstructor$Typings on ArrayConstructor {
   ///  @param iterable An iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i2.List /*LIST InteropStaticType.list,706106832,[Instance of 'InteropRef<InteropType>']*/ <
-      U> _from$3<T, U>(
+  _i2.List<U> _from$3<T, U>(
     _i3.FromCommon iterable,
     U Function(
       T,
@@ -5387,20 +5220,14 @@ extension ArrayConstructor$Typings on ArrayConstructor {
   ({
     /// Creates an array from an iterable object.
     ///  @param iterable An iterable object to convert to an array.
-    _i2.List /*LIST InteropStaticType.list,942529547,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        Function<T>(_i3.From iterable) $1,
+    _i2.List<T> Function<T>(_i3.From iterable) $1,
 
     /// Creates an array from an iterable object.
     ///  @param arrayLike An array-like object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i2.List /*LIST InteropStaticType.list,299033891,[Instance of 'InteropRef<InteropType>']*/ <
-            U>
-        Function<T, U>(
-      _i2.List /*LIST InteropClass#925945977(name: List),658896351,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+    _i2.List<U> Function<T, U>(
+      _i2.List<T> arrayLike,
       U Function(
         T,
         _i2.num,
@@ -5412,9 +5239,7 @@ extension ArrayConstructor$Typings on ArrayConstructor {
     ///  @param iterable An iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i2.List /*LIST InteropStaticType.list,706106832,[Instance of 'InteropRef<InteropType>']*/ <
-            U>
-        Function<T, U>(
+    _i2.List<U> Function<T, U>(
       _i3.FromCommon iterable,
       U Function(
         T,
@@ -5430,36 +5255,29 @@ extension ArrayConstructor$Typings on ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i2.List /*LIST InteropStaticType.list,916270498,[Instance of 'InteropRef<InteropType>']*/ <T>
-      of<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
-            this,
-            'of',
-            [...?items],
-          ) as _i2.List)
-              .cast();
-  _i2.List /*LIST InteropStaticType.list,818782368,[Instance of 'InteropRef<InteropType>']*/ <_i2.dynamic>
-      _call$1([_i2.num? arrayLength]) => (_i4.callMethod(
-            this,
-            '',
-            [arrayLength ?? _i5.undefined],
-          ) as _i2.List)
-              .cast();
-  _i2.List /*LIST InteropStaticType.list,782553199,[Instance of 'InteropRef<InteropType>']*/ <T>
-      _call$2<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
-            this,
-            '',
-            [...?items],
-          ) as _i2.List)
-              .cast();
+  _i2.List<T> of<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
+        this,
+        'of',
+        [...?items],
+      ) as _i2.List)
+          .cast();
+  _i2.List<_i2.dynamic> _call$1([_i2.num? arrayLength]) => (_i4.callMethod(
+        this,
+        '',
+        [arrayLength ?? _i5.undefined],
+      ) as _i2.List)
+          .cast();
+  _i2.List<T> _call$2<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
+        this,
+        '',
+        [...?items],
+      ) as _i2.List)
+          .cast();
 
   /// Overload accessor: $1, $2
   ({
-    _i2.List /*LIST InteropStaticType.list,818782368,[Instance of 'InteropRef<InteropType>']*/ <
-            _i2.dynamic>
-        Function([_i2.num? arrayLength]) $1,
-    _i2.List /*LIST InteropStaticType.list,782553199,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        Function<T>([_i2.Iterable<_i2.dynamic>? items]) $2,
+    _i2.List<_i2.dynamic> Function([_i2.num? arrayLength]) $1,
+    _i2.List<T> Function<T>([_i2.Iterable<_i2.dynamic>? items]) $2,
   }) get call => (
         $1: _call$1,
         $2: _call$2,
@@ -5830,9 +5648,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Int8List _from$1<T>(
-    _i2.List /*LIST InteropClass#925945977(name: List),642783619,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+    _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
@@ -5878,9 +5694,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Int8List Function<T>(
-      _i2.List /*LIST InteropClass#925945977(name: List),642783619,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+      _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
@@ -5930,9 +5744,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint8List _from$1<T>(
-    _i2.List /*LIST InteropClass#925945977(name: List),255129807,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+    _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
@@ -5978,9 +5790,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint8List Function<T>(
-      _i2.List /*LIST InteropClass#925945977(name: List),255129807,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+      _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
@@ -6031,9 +5841,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint8ClampedList _from$1<T>(
-    _i2.List /*LIST InteropClass#925945977(name: List),208899457,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+    _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
@@ -6079,9 +5887,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint8ClampedList Function<T>(
-      _i2.List /*LIST InteropClass#925945977(name: List),208899457,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+      _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
@@ -6131,9 +5937,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Int16List _from$1<T>(
-    _i2.List /*LIST InteropClass#925945977(name: List),536632229,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+    _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
@@ -6179,9 +5983,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Int16List Function<T>(
-      _i2.List /*LIST InteropClass#925945977(name: List),536632229,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+      _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
@@ -6231,9 +6033,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint16List _from$1<T>(
-    _i2.List /*LIST InteropClass#925945977(name: List),897042226,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+    _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
@@ -6279,9 +6079,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint16List Function<T>(
-      _i2.List /*LIST InteropClass#925945977(name: List),897042226,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+      _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
@@ -6331,9 +6129,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Int32List _from$1<T>(
-    _i2.List /*LIST InteropClass#925945977(name: List),449668323,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+    _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
@@ -6379,9 +6175,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Int32List Function<T>(
-      _i2.List /*LIST InteropClass#925945977(name: List),449668323,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+      _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
@@ -6431,9 +6225,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Uint32List _from$1<T>(
-    _i2.List /*LIST InteropClass#925945977(name: List),542192778,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+    _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
@@ -6479,9 +6271,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Uint32List Function<T>(
-      _i2.List /*LIST InteropClass#925945977(name: List),542192778,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+      _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
@@ -6531,9 +6321,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Float32List _from$1<T>(
-    _i2.List /*LIST InteropClass#925945977(name: List),197512509,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+    _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
@@ -6579,9 +6367,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Float32List Function<T>(
-      _i2.List /*LIST InteropClass#925945977(name: List),197512509,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+      _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
@@ -6631,9 +6417,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i14.Float64List _from$1<T>(
-    _i2.List /*LIST InteropClass#925945977(name: List),969727103,[Instance of 'InteropRef<InteropType>']*/ <
-            T>
-        arrayLike,
+    _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
@@ -6679,9 +6463,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i14.Float64List Function<T>(
-      _i2.List /*LIST InteropClass#925945977(name: List),969727103,[Instance of 'InteropRef<InteropType>']*/ <
-              T>
-          arrayLike,
+      _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,

@@ -32,7 +32,7 @@ class Map<K, V>
       );
 
   factory Map.$3(
-          [_i2.List /*LIST InteropStaticType.list,343463115,[Instance of 'InteropRef<InteropType>']*/ <
+          [_i2.List<
                   (
                     K,
                     V,
@@ -248,7 +248,7 @@ class WeakMap<K extends _i2.Object, V> {
       );
 
   factory WeakMap.$2(
-          [_i2.List /*LIST InteropStaticType.list,641569679,[Instance of 'InteropRef<InteropType>']*/ <
+          [_i2.List<
                   (
                     K,
                     V,
@@ -337,11 +337,7 @@ class Set<T> implements _IterableLike$<_i3.IterableIterator<T>> {
         [],
       );
 
-  factory Set.$2(
-          [_i2.List /*LIST InteropStaticType.list,770078608,[Instance of 'InteropRef<InteropType>']*/ <
-                  T>?
-              values]) =>
-      _i4.callConstructor(
+  factory Set.$2([_i2.List<T>? values]) => _i4.callConstructor(
         _declaredSet,
         [values ?? _i5.undefined],
       );
@@ -509,11 +505,7 @@ class WeakSet<T extends _i2.Object> {
         [],
       );
 
-  factory WeakSet.$2(
-          [_i2.List /*LIST InteropStaticType.list,349272960,[Instance of 'InteropRef<InteropType>']*/ <
-                  T>?
-              values]) =>
-      _i4.callConstructor(
+  factory WeakSet.$2([_i2.List<T>? values]) => _i4.callConstructor(
         _declaredWeakSet,
         [values ?? _i5.undefined],
       );
