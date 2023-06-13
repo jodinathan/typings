@@ -1,5 +1,3 @@
-**This package is in Beta and should work only with Dart 3 onwards.**
-
 Use NPM packages in your projects with the power of sound Dart.
 
 This package reads and translates TypeScript declaration files (.d.ts) to Dart through interop and enables importing the JS file without having to include it in your HTML file.

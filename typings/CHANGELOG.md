@@ -1,3 +1,6 @@
+## 0.0.1+1
+- Remove Beta msg from README
+
 ## 0.0.1
 - Going stable with Dart 3
 
