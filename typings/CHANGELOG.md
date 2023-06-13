@@ -1,3 +1,6 @@
+## 0.0.1
+- Going stable with Dart 3
+
 ## 0.0.1-beta.3
 - Removed some logging from the generated files
 

@@ -1,12 +1,12 @@
 name: typings
 description: Use NPM packages in your projects through TypeScript interop
-version: 0.0.1-beta.3
+version: 0.0.1
 repository: https://github.com/jodinathan/typings/
 funding: 
   - https://www.paypal.com/donate?hosted_button_id=YNCG33GLM3494
 
 environment:
-  sdk: '>=3.0.0-277.0.dev <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   analyzer: ^5.10.0
