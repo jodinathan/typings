@@ -1,1 +1,1 @@
-export '/src/d/core/lib_es2015_reflect_reflect_d.dart';
+export '/src/d/core/lib.es2015.reflect.reflect.d.dart';

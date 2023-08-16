@@ -1,1 +1,1 @@
-export '/src/d/deno/0lib_deno_deno_errors_d.dart';
+export '/src/d/deno/0lib.deno.deno.errors.d.dart';

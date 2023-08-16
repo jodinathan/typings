@@ -28,8 +28,8 @@ class InteropModule {
   bool exportsDist;
   String? fileName;
 
-  late final InteropLibrary _lib = InteropLibrary(
-      fileName: '${fileName}_comon.d.ts', module: this);
+  late final InteropLibrary _lib =
+      InteropLibrary(fileName: '${fileName}_comon.d.ts', module: this);
 
   void saveSource({required String path, required String buffer}) =>
       File(project.srcDirFullPath(path)).writeAsStringSync(buffer, flush: true);
@@ -70,6 +70,7 @@ class InteropModule {
         final buffer = DartFormatter().format(built);
         //final buffer = codeLib.accept(emitter).toString();
 
+        logger.warning('GENERATE ${library.targetFileName}, ${library.namespace}, ${library.fileName}\n${'${library.fileName.replaceAll('.d.ts', '.${library.namespace.isEmpty ? '' : '${library.namespace}.'}d').toLowerCase()}.dart'}');
         saveSource(path: library.targetFileName, buffer: buffer);
         mainBuffer
             .writeln("export '/${project.srcDir(library.targetFileName)}';");

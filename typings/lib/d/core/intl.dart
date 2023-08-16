@@ -1,1 +1,1 @@
-export '/src/d/core/lib_es5_intl_d.dart';
+export '/src/d/core/lib.es5.intl.d.dart';

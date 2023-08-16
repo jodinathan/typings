@@ -631,6 +631,11 @@ function extract(files: string[]): void {
             isClass: true,
           });
         }
+      } else if (
+        ts.isExportDeclaration(node) ||
+        ts.isExportAssignment(node) ||
+        ts.isImportEqualsDeclaration(node)
+      ) {
       } else if (ts.isTypeAliasDeclaration(node)) {
         const name = node.name.text;
         const typedef: any = { name };
@@ -647,7 +652,7 @@ function extract(files: string[]): void {
           typedefs.push(addSource(node, typedef));
         });
       } else if (ts.isModuleDeclaration(node)) {
-        if (node.body) {
+        if (node.body && node.name.text != 'global') {
           let module: Library | undefined = modules.find(
             (it) => it.namespace == node.name.text
           );
@@ -671,7 +676,7 @@ function extract(files: string[]): void {
                 modules: [],
                 funcs: [],
                 vars: [],
-                enums: []
+                enums: [],
               },
             };
             modules.push(module);
@@ -682,7 +687,7 @@ function extract(files: string[]): void {
       } else if (ts.isEnumDeclaration(node)) {
         const en = addSource(node, {
           name: node.name.text,
-          doc: parseDoc(node)
+          doc: parseDoc(node),
         });
         const members: any[] = [];
 
@@ -690,10 +695,10 @@ function extract(files: string[]): void {
           const m = addSource(member, {
             name: member.name.getText(),
             doc: parseDoc(member),
-            value: member.initializer?.getText() ?? ''
-          })
+            value: member.initializer?.getText() ?? "",
+          });
 
-          members.push(m)
+          members.push(m);
         }
 
         en.members = members;
@@ -761,7 +766,7 @@ function extract(files: string[]): void {
         modules: [],
         funcs: [],
         vars: [],
-        enums: []
+        enums: [],
       },
     };
 

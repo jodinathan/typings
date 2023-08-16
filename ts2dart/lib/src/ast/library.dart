@@ -58,7 +58,7 @@ class InteropLibrary with InteropItem {
   final String? _targetFileName;
   String get targetFileName =>
       _targetFileName ??
-      '${fileName.replaceAll('.d.ts', '.${namespace.isEmpty ? '' : '${namespace}.'}d').toLowerCase().snakeCase}.dart';
+      '${fileName.replaceAll('.d.ts', '.${namespace.isEmpty ? '' : '${namespace}.'}d').toLowerCase()}.dart';
   String get fullPath => module.project.isExternal
       ? '/${module.project.srcDir(targetFileName)}'
       : targetFileName;

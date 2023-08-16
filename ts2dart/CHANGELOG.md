@@ -1,3 +1,6 @@
+## 0.0.2
+- Added option to use DefinitelyTyped
+
 ## 0.0.1
 - Going stable with Dart 3
 

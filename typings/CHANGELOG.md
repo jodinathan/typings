@@ -1,3 +1,6 @@
+## 0.0.2
+- Added InputMask (https://www.npmjs.com/package/inputmask)
+
 ## 0.0.1+1
 - Remove Beta msg from README
 

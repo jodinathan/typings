@@ -1,6 +1,6 @@
 name: ts2dart
 description: Transpiles TypeScript declaration files (.d.ts) to Dart interop
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/jodinathan/typings/
 funding: 
   - https://www.paypal.com/donate?hosted_button_id=YNCG33GLM3494

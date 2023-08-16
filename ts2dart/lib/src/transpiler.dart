@@ -39,6 +39,9 @@ final class Transpiler {
       jsonFile.deleteSync();
     }
 
+    logger.info('Compiling through NodeJS');
+    logger.info('Files: \n${fileArgs.map((f) => ' - $f').join('\n')}');
+
     // final p = await Process.run(
     //     'node', ['${Directory.current.path}/../ts_ast/bin/index.js', ...fileArgs],
     //     workingDirectory: dir());
@@ -46,8 +49,10 @@ final class Transpiler {
         ['${Directory.current.path}/../ts_ast/src/index.ts', ...fileArgs],
         workingDirectory: dir());
 
-    stdout.write(p.stdout);
-    stdout.write(p.stderr);
+    stdout.writeln(p.stdout);
+    stdout.writeln(p.stderr);
+
+    logger.info('Done compiling');
 
     assert(File(jsonPath).existsSync());
 
@@ -141,7 +146,34 @@ final class Transpiler {
       }
     }
 
-    final fileArgs = mainFiles.map((path) => dir('out/package/$path')).toList();
+    final fileArgs = <String>[];
+
+    for (final path in mainFiles) {
+      if (path.startsWith('https://')) {
+        final segs = File(path).uri.normalizePath().pathSegments.toList();
+        final fileName = segs.removeLast();
+        final dirPath = dir('out/temp/${segs.join('/')}');
+        final handle = Directory(dirPath);
+
+        if (!handle.existsSync()) {
+          handle.createSync(recursive: true);
+        }
+
+        final filePath = '$dirPath/$fileName';
+        final fileHandle = File(filePath);
+
+        if (!fileHandle.existsSync()) {
+          final request = await HttpClient().getUrl(Uri.parse(path));
+          final response = await request.close();
+
+          await response.pipe(fileHandle.openWrite());
+        }
+
+        fileArgs.add(filePath);
+      } else {
+        fileArgs.add('out/package/$path');
+      }
+    }
 
     return transpiller._createProject(fileArgs: fileArgs);
   }

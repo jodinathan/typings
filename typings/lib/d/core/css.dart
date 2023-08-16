@@ -1,1 +1,1 @@
-export '/src/d/core/lib_dom_css_d.dart';
+export '/src/d/core/lib.dom.css.d.dart';

@@ -1,1 +1,1 @@
-export '/src/d/core/lib_dom_webassembly_d.dart';
+export '/src/d/core/lib.dom.webassembly.d.dart';
