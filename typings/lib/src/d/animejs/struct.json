@@ -1,0 +1,3398 @@
+[
+  {
+    "_": -1,
+    "namespace": "anime",
+    "from": "mainLoop /Users/jonathanrezende/Projects/testes/typings/typings/work/animejs/out/temp/https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/animejs/index.d.ts",
+    "items": {
+      "structs": [
+        {
+          "_": 49,
+          "name": "AnimeCallBack",
+          "generics": [],
+          "doc": "",
+          "heritage": [],
+          "isInline": false,
+          "parent": "",
+          "source": "",
+          "indexes": [],
+          "ctors": [],
+          "members": [
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 50,
+              "source": "\n        begin?: AnimeCallbackFunction | undefined;",
+              "name": "begin",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeCallbackFunction",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 50,
+                    "source": " AnimeCallbackFunction"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 50,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 50,
+                "source": " AnimeCallbackFunction | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 51,
+              "source": "\n        change?: AnimeCallbackFunction | undefined;",
+              "name": "change",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeCallbackFunction",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 51,
+                    "source": " AnimeCallbackFunction"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 51,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 51,
+                "source": " AnimeCallbackFunction | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 52,
+              "source": "\n        update?: AnimeCallbackFunction | undefined;",
+              "name": "update",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeCallbackFunction",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 52,
+                    "source": " AnimeCallbackFunction"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 52,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 52,
+                "source": " AnimeCallbackFunction | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 53,
+              "source": "\n        complete?: AnimeCallbackFunction | undefined;",
+              "name": "complete",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeCallbackFunction",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 53,
+                    "source": " AnimeCallbackFunction"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 53,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 53,
+                "source": " AnimeCallbackFunction | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 54,
+              "source": "\n        loopBegin?: AnimeCallbackFunction | undefined;",
+              "name": "loopBegin",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeCallbackFunction",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 54,
+                    "source": " AnimeCallbackFunction"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 54,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 54,
+                "source": " AnimeCallbackFunction | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 55,
+              "source": "\n        loopComplete?: AnimeCallbackFunction | undefined;",
+              "name": "loopComplete",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeCallbackFunction",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 55,
+                    "source": " AnimeCallbackFunction"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 55,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 55,
+                "source": " AnimeCallbackFunction | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 56,
+              "source": "\n        changeBegin?: AnimeCallbackFunction | undefined;",
+              "name": "changeBegin",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeCallbackFunction",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 56,
+                    "source": " AnimeCallbackFunction"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 56,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 56,
+                "source": " AnimeCallbackFunction | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 57,
+              "source": "\n        changeComplete?: AnimeCallbackFunction | undefined;",
+              "name": "changeComplete",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeCallbackFunction",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 57,
+                    "source": " AnimeCallbackFunction"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 57,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 57,
+                "source": " AnimeCallbackFunction | undefined"
+              }
+            }
+          ],
+          "calls": [],
+          "isClass": false
+        },
+        {
+          "_": 60,
+          "name": "AnimeInstanceParams",
+          "generics": [],
+          "doc": "",
+          "heritage": [
+            [
+              {
+                "ref": "AnimeCallBack",
+                "targs": [],
+                "isNullable": false,
+                "_": 60,
+                "source": " AnimeCallBack"
+              }
+            ]
+          ],
+          "isInline": false,
+          "parent": "",
+          "source": "",
+          "indexes": [],
+          "ctors": [],
+          "members": [
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 61,
+              "source": "\n        loop?: number | boolean | undefined;",
+              "name": "loop",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 61,
+                    "source": " number"
+                  },
+                  {
+                    "core": "boolean",
+                    "isNullable": false,
+                    "_": 61,
+                    "source": " boolean"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 61,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 61,
+                "source": " number | boolean | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 62,
+              "source": "\n        autoplay?: boolean | undefined;",
+              "name": "autoplay",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "boolean",
+                    "isNullable": false,
+                    "_": 62,
+                    "source": " boolean"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 62,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 62,
+                "source": " boolean | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 63,
+              "source": "\n        direction?: DirectionOptions | string | undefined;",
+              "name": "direction",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "DirectionOptions",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 63,
+                    "source": " DirectionOptions"
+                  },
+                  {
+                    "core": "string",
+                    "isNullable": false,
+                    "_": 63,
+                    "source": " string"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 63,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 63,
+                "source": " DirectionOptions | string | undefined"
+              }
+            }
+          ],
+          "calls": [],
+          "isClass": false
+        },
+        {
+          "_": 66,
+          "name": "AnimeAnimParams",
+          "generics": [],
+          "doc": "",
+          "heritage": [
+            [
+              {
+                "ref": "AnimeCallBack",
+                "targs": [],
+                "isNullable": false,
+                "_": 66,
+                "source": " AnimeCallBack"
+              }
+            ]
+          ],
+          "isInline": false,
+          "parent": "",
+          "source": "",
+          "indexes": [
+            {
+              "key": {
+                "core": "string",
+                "isNullable": false,
+                "_": 78,
+                "source": " string"
+              },
+              "value": {
+                "core": "any",
+                "isNullable": false,
+                "_": 78,
+                "source": " any"
+              },
+              "doc": "",
+              "_": 78,
+              "source": "\n\n        [AnyAnimatedProperty: string]: any;",
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false
+            }
+          ],
+          "ctors": [],
+          "members": [
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 67,
+              "source": "\n        targets?: AnimeTarget | ReadonlyArray<AnimeTarget> | undefined;",
+              "name": "targets",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeTarget",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 67,
+                    "source": " AnimeTarget"
+                  },
+                  {
+                    "ref": "ReadonlyArray",
+                    "targs": [
+                      {
+                        "ref": "AnimeTarget",
+                        "targs": [],
+                        "isNullable": false,
+                        "_": 67,
+                        "source": "AnimeTarget"
+                      }
+                    ],
+                    "isNullable": false,
+                    "_": 67,
+                    "source": " ReadonlyArray<AnimeTarget>"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 67,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 67,
+                "source": " AnimeTarget | ReadonlyArray<AnimeTarget> | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 69,
+              "source": "\n\n        duration?: number | FunctionBasedParameter | undefined;",
+              "name": "duration",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 69,
+                    "source": " number"
+                  },
+                  {
+                    "ref": "FunctionBasedParameter",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 69,
+                    "source": " FunctionBasedParameter"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 69,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 69,
+                "source": " number | FunctionBasedParameter | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 70,
+              "source": "\n        delay?: number | FunctionBasedParameter | undefined;",
+              "name": "delay",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 70,
+                    "source": " number"
+                  },
+                  {
+                    "ref": "FunctionBasedParameter",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 70,
+                    "source": " FunctionBasedParameter"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 70,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 70,
+                "source": " number | FunctionBasedParameter | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 71,
+              "source": "\n        endDelay?: number | FunctionBasedParameter | undefined;",
+              "name": "endDelay",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 71,
+                    "source": " number"
+                  },
+                  {
+                    "ref": "FunctionBasedParameter",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 71,
+                    "source": " FunctionBasedParameter"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 71,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 71,
+                "source": " number | FunctionBasedParameter | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 72,
+              "source": "\n        elasticity?: number | FunctionBasedParameter | undefined;",
+              "name": "elasticity",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 72,
+                    "source": " number"
+                  },
+                  {
+                    "ref": "FunctionBasedParameter",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 72,
+                    "source": " FunctionBasedParameter"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 72,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 72,
+                "source": " number | FunctionBasedParameter | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 73,
+              "source": "\n        round?: number | boolean | FunctionBasedParameter | undefined;",
+              "name": "round",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 73,
+                    "source": " number"
+                  },
+                  {
+                    "core": "boolean",
+                    "isNullable": false,
+                    "_": 73,
+                    "source": " boolean"
+                  },
+                  {
+                    "ref": "FunctionBasedParameter",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 73,
+                    "source": " FunctionBasedParameter"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 73,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 73,
+                "source": " number | boolean | FunctionBasedParameter | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 74,
+              "source": "\n        keyframes?: ReadonlyArray<AnimeAnimParams> | undefined;",
+              "name": "keyframes",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "ReadonlyArray",
+                    "targs": [
+                      {
+                        "ref": "AnimeAnimParams",
+                        "targs": [],
+                        "isNullable": false,
+                        "_": 74,
+                        "source": "AnimeAnimParams"
+                      }
+                    ],
+                    "isNullable": false,
+                    "_": 74,
+                    "source": " ReadonlyArray<AnimeAnimParams>"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 74,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 74,
+                "source": " ReadonlyArray<AnimeAnimParams> | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 76,
+              "source": "\n\n        easing?: EasingOptions | string | CustomEasingFunction | ((el: HTMLElement) => string) | undefined;",
+              "name": "easing",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "EasingOptions",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 76,
+                    "source": " EasingOptions"
+                  },
+                  {
+                    "core": "string",
+                    "isNullable": false,
+                    "_": 76,
+                    "source": " string"
+                  },
+                  {
+                    "ref": "CustomEasingFunction",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 76,
+                    "source": " CustomEasingFunction"
+                  },
+                  {
+                    "ctor": false,
+                    "generics": [],
+                    "returns": {
+                      "core": "string",
+                      "isNullable": false,
+                      "_": 76,
+                      "source": " string"
+                    },
+                    "params": [
+                      {
+                        "name": "el",
+                        "type": {
+                          "ref": "HTMLElement",
+                          "targs": [],
+                          "isNullable": false,
+                          "_": 76,
+                          "source": " HTMLElement"
+                        },
+                        "varargs": false,
+                        "isNullable": false
+                      }
+                    ],
+                    "isNullable": false,
+                    "_": 76,
+                    "source": " ((el: HTMLElement) => string)"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 76,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 76,
+                "source": " EasingOptions | string | CustomEasingFunction | ((el: HTMLElement) => string) | undefined"
+              }
+            }
+          ],
+          "calls": [],
+          "isClass": false
+        },
+        {
+          "_": 81,
+          "name": "AnimeParams",
+          "generics": [],
+          "doc": "",
+          "heritage": [
+            [
+              {
+                "ref": "AnimeInstanceParams",
+                "targs": [],
+                "isNullable": false,
+                "_": 81,
+                "source": " AnimeInstanceParams"
+              },
+              {
+                "ref": "AnimeAnimParams",
+                "targs": [],
+                "isNullable": false,
+                "_": 81,
+                "source": " AnimeAnimParams"
+              }
+            ]
+          ],
+          "isInline": false,
+          "parent": "",
+          "source": "",
+          "indexes": [],
+          "ctors": [],
+          "members": [],
+          "calls": [],
+          "isClass": false
+        },
+        {
+          "_": 85,
+          "name": "Animatable",
+          "generics": [],
+          "doc": "",
+          "heritage": [],
+          "isInline": false,
+          "parent": "",
+          "source": "",
+          "indexes": [],
+          "ctors": [],
+          "members": [
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 86,
+              "source": "\n        id: number;",
+              "name": "id",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 86,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 87,
+              "source": "\n        target: HTMLElement;",
+              "name": "target",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "ref": "HTMLElement",
+                "targs": [],
+                "isNullable": false,
+                "_": 87,
+                "source": " HTMLElement"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 88,
+              "source": "\n        total: number;",
+              "name": "total",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 88,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 89,
+              "source": "\n        transforms: object;",
+              "name": "transforms",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "object",
+                "isNullable": false,
+                "_": 89,
+                "source": " object"
+              }
+            }
+          ],
+          "calls": [],
+          "isClass": false
+        },
+        {
+          "_": 92,
+          "name": "Animation",
+          "generics": [],
+          "doc": "",
+          "heritage": [],
+          "isInline": false,
+          "parent": "",
+          "source": "",
+          "indexes": [],
+          "ctors": [],
+          "members": [
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 93,
+              "source": "\n        animatable: Animatable;",
+              "name": "animatable",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "ref": "Animatable",
+                "targs": [],
+                "isNullable": false,
+                "_": 93,
+                "source": " Animatable"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 94,
+              "source": "\n        currentValue: string;",
+              "name": "currentValue",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "string",
+                "isNullable": false,
+                "_": 94,
+                "source": " string"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 95,
+              "source": "\n        delay: number;",
+              "name": "delay",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 95,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 96,
+              "source": "\n        duration: number;",
+              "name": "duration",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 96,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 97,
+              "source": "\n        endDelay: number;",
+              "name": "endDelay",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 97,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 98,
+              "source": "\n        property: string;",
+              "name": "property",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "string",
+                "isNullable": false,
+                "_": 98,
+                "source": " string"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 99,
+              "source": "\n        tweens: ReadonlyArray<object>;",
+              "name": "tweens",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "ref": "ReadonlyArray",
+                "targs": [
+                  {
+                    "core": "object",
+                    "isNullable": false,
+                    "_": 99,
+                    "source": "object"
+                  }
+                ],
+                "isNullable": false,
+                "_": 99,
+                "source": " ReadonlyArray<object>"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 100,
+              "source": "\n        type: string;",
+              "name": "type",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "string",
+                "isNullable": false,
+                "_": 100,
+                "source": " string"
+              }
+            }
+          ],
+          "calls": [],
+          "isClass": false
+        },
+        {
+          "_": 103,
+          "name": "AnimeInstance",
+          "generics": [],
+          "doc": "",
+          "heritage": [
+            [
+              {
+                "ref": "AnimeCallBack",
+                "targs": [],
+                "isNullable": false,
+                "_": 103,
+                "source": " AnimeCallBack"
+              }
+            ]
+          ],
+          "isInline": false,
+          "parent": "",
+          "source": "",
+          "indexes": [],
+          "ctors": [],
+          "members": [
+            {
+              "doc": "",
+              "isMethod": true,
+              "_": 104,
+              "source": "\n        play(): void;",
+              "name": "play",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "params": [],
+              "type": {
+                "core": "void",
+                "isNullable": false,
+                "_": 104,
+                "source": " void"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": true,
+              "_": 105,
+              "source": "\n        pause(): void;",
+              "name": "pause",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "params": [],
+              "type": {
+                "core": "void",
+                "isNullable": false,
+                "_": 105,
+                "source": " void"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": true,
+              "_": 106,
+              "source": "\n        restart(): void;",
+              "name": "restart",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "params": [],
+              "type": {
+                "core": "void",
+                "isNullable": false,
+                "_": 106,
+                "source": " void"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": true,
+              "_": 107,
+              "source": "\n        reverse(): void;",
+              "name": "reverse",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "params": [],
+              "type": {
+                "core": "void",
+                "isNullable": false,
+                "_": 107,
+                "source": " void"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": true,
+              "_": 108,
+              "source": "\n        seek(time: number): void;",
+              "name": "seek",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "params": [
+                {
+                  "name": "time",
+                  "type": {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 108,
+                    "source": " number"
+                  },
+                  "varargs": false,
+                  "isNullable": false
+                }
+              ],
+              "type": {
+                "core": "void",
+                "isNullable": false,
+                "_": 108,
+                "source": " void"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": true,
+              "_": 109,
+              "source": "\n        tick(time: number): void;",
+              "name": "tick",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "params": [
+                {
+                  "name": "time",
+                  "type": {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 109,
+                    "source": " number"
+                  },
+                  "varargs": false,
+                  "isNullable": false
+                }
+              ],
+              "type": {
+                "core": "void",
+                "isNullable": false,
+                "_": 109,
+                "source": " void"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 111,
+              "source": "\n\n        began: boolean;",
+              "name": "began",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "boolean",
+                "isNullable": false,
+                "_": 111,
+                "source": " boolean"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 112,
+              "source": "\n        paused: boolean;",
+              "name": "paused",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "boolean",
+                "isNullable": false,
+                "_": 112,
+                "source": " boolean"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 113,
+              "source": "\n        completed: boolean;",
+              "name": "completed",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "boolean",
+                "isNullable": false,
+                "_": 113,
+                "source": " boolean"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 114,
+              "source": "\n        finished: Promise<void>;",
+              "name": "finished",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "ref": "Promise",
+                "targs": [
+                  {
+                    "core": "void",
+                    "isNullable": false,
+                    "_": 114,
+                    "source": "void"
+                  }
+                ],
+                "isNullable": false,
+                "_": 114,
+                "source": " Promise<void>"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 116,
+              "source": "\n\n        autoplay: boolean;",
+              "name": "autoplay",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "boolean",
+                "isNullable": false,
+                "_": 116,
+                "source": " boolean"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 117,
+              "source": "\n        currentTime: number;",
+              "name": "currentTime",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 117,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 118,
+              "source": "\n        delay: number;",
+              "name": "delay",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 118,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 119,
+              "source": "\n        direction: string;",
+              "name": "direction",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "string",
+                "isNullable": false,
+                "_": 119,
+                "source": " string"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 120,
+              "source": "\n        duration: number;",
+              "name": "duration",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 120,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 121,
+              "source": "\n        loop: number | boolean;",
+              "name": "loop",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 121,
+                    "source": " number"
+                  },
+                  {
+                    "core": "boolean",
+                    "isNullable": false,
+                    "_": 121,
+                    "source": " boolean"
+                  }
+                ],
+                "isNullable": false,
+                "_": 121,
+                "source": " number | boolean"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 122,
+              "source": "\n        timelineOffset: number;",
+              "name": "timelineOffset",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 122,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 123,
+              "source": "\n        progress: number;",
+              "name": "progress",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 123,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 124,
+              "source": "\n        remaining: number;",
+              "name": "remaining",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 124,
+                "source": " number"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 125,
+              "source": "\n        reversed: boolean;",
+              "name": "reversed",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "boolean",
+                "isNullable": false,
+                "_": 125,
+                "source": " boolean"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 127,
+              "source": "\n\n        animatables: ReadonlyArray<Animatable>;",
+              "name": "animatables",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "ref": "ReadonlyArray",
+                "targs": [
+                  {
+                    "ref": "Animatable",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 127,
+                    "source": "Animatable"
+                  }
+                ],
+                "isNullable": false,
+                "_": 127,
+                "source": " ReadonlyArray<Animatable>"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 128,
+              "source": "\n        animations: ReadonlyArray<Animation>;",
+              "name": "animations",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "ref": "ReadonlyArray",
+                "targs": [
+                  {
+                    "ref": "Animation",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 128,
+                    "source": "Animation"
+                  }
+                ],
+                "isNullable": false,
+                "_": 128,
+                "source": " ReadonlyArray<Animation>"
+              }
+            }
+          ],
+          "calls": [],
+          "isClass": false
+        },
+        {
+          "_": 131,
+          "name": "AnimeTimelineAnimParams",
+          "generics": [],
+          "doc": "",
+          "heritage": [
+            [
+              {
+                "ref": "AnimeAnimParams",
+                "targs": [],
+                "isNullable": false,
+                "_": 131,
+                "source": " AnimeAnimParams"
+              }
+            ]
+          ],
+          "isInline": false,
+          "parent": "",
+          "source": "",
+          "indexes": [],
+          "ctors": [],
+          "members": [
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 132,
+              "source": "\n        timelineOffset: number | string | FunctionBasedParameter;",
+              "name": "timelineOffset",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 132,
+                    "source": " number"
+                  },
+                  {
+                    "core": "string",
+                    "isNullable": false,
+                    "_": 132,
+                    "source": " string"
+                  },
+                  {
+                    "ref": "FunctionBasedParameter",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 132,
+                    "source": " FunctionBasedParameter"
+                  }
+                ],
+                "isNullable": false,
+                "_": 132,
+                "source": " number | string | FunctionBasedParameter"
+              }
+            }
+          ],
+          "calls": [],
+          "isClass": false
+        },
+        {
+          "_": 135,
+          "name": "AnimeTimelineInstance",
+          "generics": [],
+          "doc": "",
+          "heritage": [
+            [
+              {
+                "ref": "AnimeInstance",
+                "targs": [],
+                "isNullable": false,
+                "_": 135,
+                "source": " AnimeInstance"
+              }
+            ]
+          ],
+          "isInline": false,
+          "parent": "",
+          "source": "",
+          "indexes": [],
+          "ctors": [],
+          "members": [
+            {
+              "doc": "",
+              "isMethod": true,
+              "_": 136,
+              "source": "\n        add(params: AnimeAnimParams, timelineOffset?: string | number): AnimeTimelineInstance;",
+              "name": "add",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "params": [
+                {
+                  "name": "params",
+                  "type": {
+                    "ref": "AnimeAnimParams",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 136,
+                    "source": " AnimeAnimParams"
+                  },
+                  "varargs": false,
+                  "isNullable": false
+                },
+                {
+                  "name": "timelineOffset",
+                  "type": {
+                    "union": [
+                      {
+                        "core": "string",
+                        "isNullable": false,
+                        "_": 136,
+                        "source": " string"
+                      },
+                      {
+                        "core": "number",
+                        "isNullable": false,
+                        "_": 136,
+                        "source": " number"
+                      }
+                    ],
+                    "isNullable": false,
+                    "_": 136,
+                    "source": " string | number"
+                  },
+                  "varargs": false,
+                  "isNullable": true
+                }
+              ],
+              "type": {
+                "ref": "AnimeTimelineInstance",
+                "targs": [],
+                "isNullable": false,
+                "_": 136,
+                "source": " AnimeTimelineInstance"
+              }
+            }
+          ],
+          "calls": [],
+          "isClass": false
+        },
+        {
+          "_": 139,
+          "name": "StaggerOptions",
+          "generics": [],
+          "doc": "",
+          "heritage": [],
+          "isInline": false,
+          "parent": "",
+          "source": "",
+          "indexes": [],
+          "ctors": [],
+          "members": [
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 140,
+              "source": "\n        start?: number | string | undefined;",
+              "name": "start",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 140,
+                    "source": " number"
+                  },
+                  {
+                    "core": "string",
+                    "isNullable": false,
+                    "_": 140,
+                    "source": " string"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 140,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 140,
+                "source": " number | string | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 141,
+              "source": "\n        direction?: 'normal' | 'reverse' | undefined;",
+              "name": "direction",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "'normal'",
+                    "isNullable": false,
+                    "_": 141,
+                    "source": " 'normal'"
+                  },
+                  {
+                    "core": "'reverse'",
+                    "isNullable": false,
+                    "_": 141,
+                    "source": " 'reverse'"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 141,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 141,
+                "source": " 'normal' | 'reverse' | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 142,
+              "source": "\n        easing?: CustomEasingFunction | string | EasingOptions | undefined;",
+              "name": "easing",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "CustomEasingFunction",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 142,
+                    "source": " CustomEasingFunction"
+                  },
+                  {
+                    "core": "string",
+                    "isNullable": false,
+                    "_": 142,
+                    "source": " string"
+                  },
+                  {
+                    "ref": "EasingOptions",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 142,
+                    "source": " EasingOptions"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 142,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 142,
+                "source": " CustomEasingFunction | string | EasingOptions | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 143,
+              "source": "\n        grid?: ReadonlyArray<number> | undefined;",
+              "name": "grid",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "ReadonlyArray",
+                    "targs": [
+                      {
+                        "core": "number",
+                        "isNullable": false,
+                        "_": 143,
+                        "source": "number"
+                      }
+                    ],
+                    "isNullable": false,
+                    "_": 143,
+                    "source": " ReadonlyArray<number>"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 143,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 143,
+                "source": " ReadonlyArray<number> | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 144,
+              "source": "\n        axis?: 'x' | 'y' | undefined;",
+              "name": "axis",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "'x'",
+                    "isNullable": false,
+                    "_": 144,
+                    "source": " 'x'"
+                  },
+                  {
+                    "core": "'y'",
+                    "isNullable": false,
+                    "_": 144,
+                    "source": " 'y'"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 144,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 144,
+                "source": " 'x' | 'y' | undefined"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 145,
+              "source": "\n        from?: 'first' | 'last' | 'center' | number | undefined;",
+              "name": "from",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": true,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "core": "'first'",
+                    "isNullable": false,
+                    "_": 145,
+                    "source": " 'first'"
+                  },
+                  {
+                    "core": "'last'",
+                    "isNullable": false,
+                    "_": 145,
+                    "source": " 'last'"
+                  },
+                  {
+                    "core": "'center'",
+                    "isNullable": false,
+                    "_": 145,
+                    "source": " 'center'"
+                  },
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 145,
+                    "source": " number"
+                  },
+                  {
+                    "core": "undefined",
+                    "isNullable": false,
+                    "_": 145,
+                    "source": " undefined"
+                  }
+                ],
+                "isNullable": false,
+                "_": 145,
+                "source": " 'first' | 'last' | 'center' | number | undefined"
+              }
+            }
+          ],
+          "calls": [],
+          "isClass": false
+        },
+        {
+          "isClass": false,
+          "_": -1,
+          "name": "IInline0",
+          "generics": [],
+          "doc": "",
+          "heritage": [],
+          "isInline": true,
+          "source": "",
+          "indexes": [
+            {
+              "key": {
+                "core": "string",
+                "isNullable": false,
+                "_": 152,
+                "source": " string"
+              },
+              "value": {
+                "ctor": false,
+                "generics": [],
+                "returns": {
+                  "core": "any",
+                  "isNullable": false,
+                  "_": 152,
+                  "source": " any"
+                },
+                "params": [
+                  {
+                    "name": "t",
+                    "type": {
+                      "core": "number",
+                      "isNullable": false,
+                      "_": 152,
+                      "source": " number"
+                    },
+                    "varargs": false,
+                    "isNullable": false
+                  }
+                ],
+                "isNullable": false,
+                "_": 152,
+                "source": " (t: number) => any"
+              },
+              "doc": "",
+              "_": 152,
+              "source": " [EasingFunction: string]: (t: number) => any",
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false
+            }
+          ],
+          "ctors": [],
+          "members": [],
+          "calls": []
+        },
+        {
+          "isClass": false,
+          "_": -1,
+          "name": "IInline1",
+          "generics": [],
+          "doc": "",
+          "heritage": [],
+          "isInline": true,
+          "source": "",
+          "indexes": [],
+          "ctors": [],
+          "members": [
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 156,
+              "source": "\n        el: HTMLElement | SVGElement,",
+              "name": "el",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "union": [
+                  {
+                    "ref": "HTMLElement",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 156,
+                    "source": " HTMLElement"
+                  },
+                  {
+                    "ref": "SVGElement",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 156,
+                    "source": " SVGElement"
+                  }
+                ],
+                "isNullable": false,
+                "_": 156,
+                "source": " HTMLElement | SVGElement"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 157,
+              "source": "\n        property: string,",
+              "name": "property",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "string",
+                "isNullable": false,
+                "_": 157,
+                "source": " string"
+              }
+            },
+            {
+              "doc": "",
+              "isMethod": false,
+              "_": 158,
+              "source": "\n        totalLength: number",
+              "name": "totalLength",
+              "generics": [],
+              "isGetter": false,
+              "isSetter": false,
+              "isNullable": false,
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false,
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 158,
+                "source": " number"
+              }
+            }
+          ],
+          "calls": []
+        },
+        {
+          "isClass": false,
+          "_": -1,
+          "name": "IInline2",
+          "generics": [],
+          "doc": "",
+          "heritage": [],
+          "isInline": true,
+          "source": "",
+          "indexes": [
+            {
+              "key": {
+                "core": "string",
+                "isNullable": false,
+                "_": 163,
+                "source": " string"
+              },
+              "value": {
+                "core": "any",
+                "isNullable": false,
+                "_": 163,
+                "source": " any"
+              },
+              "doc": "",
+              "_": 163,
+              "source": "[AnyAnimatedProperty: string]: any",
+              "isStatic": false,
+              "isReadonly": false,
+              "isPrivate": false
+            }
+          ],
+          "ctors": [],
+          "members": [],
+          "calls": []
+        }
+      ],
+      "typedefs": [
+        {
+          "name": "FunctionBasedParameter",
+          "generics": [],
+          "type": {
+            "ctor": false,
+            "generics": [],
+            "returns": {
+              "core": "number",
+              "isNullable": false,
+              "_": 8,
+              "source": " number"
+            },
+            "params": [
+              {
+                "name": "element",
+                "type": {
+                  "ref": "HTMLElement",
+                  "targs": [],
+                  "isNullable": false,
+                  "_": 8,
+                  "source": " HTMLElement"
+                },
+                "varargs": false,
+                "isNullable": false
+              },
+              {
+                "name": "index",
+                "type": {
+                  "core": "number",
+                  "isNullable": false,
+                  "_": 8,
+                  "source": " number"
+                },
+                "varargs": false,
+                "isNullable": false
+              },
+              {
+                "name": "length",
+                "type": {
+                  "core": "number",
+                  "isNullable": false,
+                  "_": 8,
+                  "source": " number"
+                },
+                "varargs": false,
+                "isNullable": false
+              }
+            ],
+            "isNullable": false,
+            "_": 8,
+            "source": " (element: HTMLElement, index: number, length: number) => number",
+            "parent": "FunctionBasedParameter"
+          },
+          "doc": "",
+          "_": 8,
+          "source": "// Type definitions for animejs 3.1\n// Project: http://animejs.com\n// Definitions by: Andrew Babin     <https://github.com/A-Babin>\n//                 southrock         <https://github.com/southrock>\n// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped\n// TypeScript Version: 2.4\n\ntype FunctionBasedParameter = (element: HTMLElement, index: number, length: number) => number;"
+        },
+        {
+          "name": "AnimeCallbackFunction",
+          "generics": [],
+          "type": {
+            "ctor": false,
+            "generics": [],
+            "returns": {
+              "core": "void",
+              "isNullable": false,
+              "_": 9,
+              "source": " void"
+            },
+            "params": [
+              {
+                "name": "anim",
+                "type": {
+                  "ref": "anime.AnimeInstance",
+                  "targs": [],
+                  "isNullable": false,
+                  "_": 9,
+                  "source": " anime.AnimeInstance"
+                },
+                "varargs": false,
+                "isNullable": false
+              }
+            ],
+            "isNullable": false,
+            "_": 9,
+            "source": " (anim: anime.AnimeInstance) => void",
+            "parent": "AnimeCallbackFunction"
+          },
+          "doc": "",
+          "_": 9,
+          "source": "\ntype AnimeCallbackFunction = (anim: anime.AnimeInstance) => void;"
+        },
+        {
+          "name": "CustomEasingFunction",
+          "generics": [],
+          "type": {
+            "ctor": false,
+            "generics": [],
+            "returns": {
+              "ctor": false,
+              "generics": [],
+              "returns": {
+                "core": "number",
+                "isNullable": false,
+                "_": 10,
+                "source": " number"
+              },
+              "params": [
+                {
+                  "name": "time",
+                  "type": {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 10,
+                    "source": " number"
+                  },
+                  "varargs": false,
+                  "isNullable": false
+                }
+              ],
+              "isNullable": false,
+              "_": 10,
+              "source": " ((time: number) => number)"
+            },
+            "params": [
+              {
+                "name": "el",
+                "type": {
+                  "ref": "HTMLElement",
+                  "targs": [],
+                  "isNullable": false,
+                  "_": 10,
+                  "source": " HTMLElement"
+                },
+                "varargs": false,
+                "isNullable": false
+              },
+              {
+                "name": "index",
+                "type": {
+                  "core": "number",
+                  "isNullable": false,
+                  "_": 10,
+                  "source": " number"
+                },
+                "varargs": false,
+                "isNullable": false
+              },
+              {
+                "name": "length",
+                "type": {
+                  "core": "number",
+                  "isNullable": false,
+                  "_": 10,
+                  "source": " number"
+                },
+                "varargs": false,
+                "isNullable": false
+              }
+            ],
+            "isNullable": false,
+            "_": 10,
+            "source": " (el: HTMLElement, index: number, length: number) => ((time: number) => number)",
+            "parent": "CustomEasingFunction"
+          },
+          "doc": "",
+          "_": 10,
+          "source": "\ntype CustomEasingFunction = (el: HTMLElement, index: number, length: number) => ((time: number) => number);"
+        },
+        {
+          "name": "AnimeTarget",
+          "generics": [],
+          "type": {
+            "union": [
+              {
+                "core": "string",
+                "isNullable": false,
+                "_": 12,
+                "source": " string"
+              },
+              {
+                "core": "object",
+                "isNullable": false,
+                "_": 12,
+                "source": " object"
+              },
+              {
+                "ref": "HTMLElement",
+                "targs": [],
+                "isNullable": false,
+                "_": 12,
+                "source": " HTMLElement"
+              },
+              {
+                "ref": "SVGElement",
+                "targs": [],
+                "isNullable": false,
+                "_": 12,
+                "source": " SVGElement"
+              },
+              {
+                "ref": "NodeList",
+                "targs": [],
+                "isNullable": false,
+                "_": 12,
+                "source": " NodeList"
+              },
+              {
+                "core": "null",
+                "isNullable": false,
+                "_": 12,
+                "source": " null"
+              }
+            ],
+            "isNullable": false,
+            "_": 12,
+            "source": " string | object | HTMLElement | SVGElement | NodeList | null",
+            "parent": "AnimeTarget"
+          },
+          "doc": "",
+          "_": 12,
+          "source": "\n// Allowing null is necessary because DOM queries may not return anything.\ntype AnimeTarget = string | object | HTMLElement | SVGElement | NodeList | null;"
+        },
+        {
+          "name": "EasingOptions",
+          "generics": [],
+          "type": {
+            "union": [
+              {
+                "core": "\"linear\"",
+                "isNullable": false,
+                "_": 16,
+                "source": " \"linear\""
+              },
+              {
+                "core": "\"easeInQuad\"",
+                "isNullable": false,
+                "_": 17,
+                "source": " \"easeInQuad\""
+              },
+              {
+                "core": "\"easeInCubic\"",
+                "isNullable": false,
+                "_": 18,
+                "source": " \"easeInCubic\""
+              },
+              {
+                "core": "\"easeInQuart\"",
+                "isNullable": false,
+                "_": 19,
+                "source": " \"easeInQuart\""
+              },
+              {
+                "core": "\"easeInQuint\"",
+                "isNullable": false,
+                "_": 20,
+                "source": " \"easeInQuint\""
+              },
+              {
+                "core": "\"easeInSine\"",
+                "isNullable": false,
+                "_": 21,
+                "source": " \"easeInSine\""
+              },
+              {
+                "core": "\"easeInExpo\"",
+                "isNullable": false,
+                "_": 22,
+                "source": " \"easeInExpo\""
+              },
+              {
+                "core": "\"easeInCirc\"",
+                "isNullable": false,
+                "_": 23,
+                "source": " \"easeInCirc\""
+              },
+              {
+                "core": "\"easeInBack\"",
+                "isNullable": false,
+                "_": 24,
+                "source": " \"easeInBack\""
+              },
+              {
+                "core": "\"easeInElastic\"",
+                "isNullable": false,
+                "_": 25,
+                "source": " \"easeInElastic\""
+              },
+              {
+                "core": "\"easeInBounce\"",
+                "isNullable": false,
+                "_": 26,
+                "source": " \"easeInBounce\""
+              },
+              {
+                "core": "\"easeOutQuad\"",
+                "isNullable": false,
+                "_": 27,
+                "source": " \"easeOutQuad\""
+              },
+              {
+                "core": "\"easeOutCubic\"",
+                "isNullable": false,
+                "_": 28,
+                "source": " \"easeOutCubic\""
+              },
+              {
+                "core": "\"easeOutQuart\"",
+                "isNullable": false,
+                "_": 29,
+                "source": " \"easeOutQuart\""
+              },
+              {
+                "core": "\"easeOutQuint\"",
+                "isNullable": false,
+                "_": 30,
+                "source": " \"easeOutQuint\""
+              },
+              {
+                "core": "\"easeOutSine\"",
+                "isNullable": false,
+                "_": 31,
+                "source": " \"easeOutSine\""
+              },
+              {
+                "core": "\"easeOutExpo\"",
+                "isNullable": false,
+                "_": 32,
+                "source": " \"easeOutExpo\""
+              },
+              {
+                "core": "\"easeOutCirc\"",
+                "isNullable": false,
+                "_": 33,
+                "source": " \"easeOutCirc\""
+              },
+              {
+                "core": "\"easeOutBack\"",
+                "isNullable": false,
+                "_": 34,
+                "source": " \"easeOutBack\""
+              },
+              {
+                "core": "\"easeOutElastic\"",
+                "isNullable": false,
+                "_": 35,
+                "source": " \"easeOutElastic\""
+              },
+              {
+                "core": "\"easeOutBounce\"",
+                "isNullable": false,
+                "_": 36,
+                "source": " \"easeOutBounce\""
+              },
+              {
+                "core": "\"easeInOutQuad\"",
+                "isNullable": false,
+                "_": 37,
+                "source": " \"easeInOutQuad\""
+              },
+              {
+                "core": "\"easeInOutCubic\"",
+                "isNullable": false,
+                "_": 38,
+                "source": " \"easeInOutCubic\""
+              },
+              {
+                "core": "\"easeInOutQuart\"",
+                "isNullable": false,
+                "_": 39,
+                "source": " \"easeInOutQuart\""
+              },
+              {
+                "core": "\"easeInOutQuint\"",
+                "isNullable": false,
+                "_": 40,
+                "source": " \"easeInOutQuint\""
+              },
+              {
+                "core": "\"easeInOutSine\"",
+                "isNullable": false,
+                "_": 41,
+                "source": " \"easeInOutSine\""
+              },
+              {
+                "core": "\"easeInOutExpo\"",
+                "isNullable": false,
+                "_": 42,
+                "source": " \"easeInOutExpo\""
+              },
+              {
+                "core": "\"easeInOutCirc\"",
+                "isNullable": false,
+                "_": 43,
+                "source": " \"easeInOutCirc\""
+              },
+              {
+                "core": "\"easeInOutBack\"",
+                "isNullable": false,
+                "_": 44,
+                "source": " \"easeInOutBack\""
+              },
+              {
+                "core": "\"easeInOutElastic\"",
+                "isNullable": false,
+                "_": 45,
+                "source": " \"easeInOutElastic\""
+              },
+              {
+                "core": "\"easeInOutBounce\"",
+                "isNullable": false,
+                "_": 46,
+                "source": " \"easeInOutBounce\""
+              }
+            ],
+            "isNullable": false,
+            "_": 16,
+            "source": "\n        | \"linear\"\n        | \"easeInQuad\"\n        | \"easeInCubic\"\n        | \"easeInQuart\"\n        | \"easeInQuint\"\n        | \"easeInSine\"\n        | \"easeInExpo\"\n        | \"easeInCirc\"\n        | \"easeInBack\"\n        | \"easeInElastic\"\n        | \"easeInBounce\"\n        | \"easeOutQuad\"\n        | \"easeOutCubic\"\n        | \"easeOutQuart\"\n        | \"easeOutQuint\"\n        | \"easeOutSine\"\n        | \"easeOutExpo\"\n        | \"easeOutCirc\"\n        | \"easeOutBack\"\n        | \"easeOutElastic\"\n        | \"easeOutBounce\"\n        | \"easeInOutQuad\"\n        | \"easeInOutCubic\"\n        | \"easeInOutQuart\"\n        | \"easeInOutQuint\"\n        | \"easeInOutSine\"\n        | \"easeInOutExpo\"\n        | \"easeInOutCirc\"\n        | \"easeInOutBack\"\n        | \"easeInOutElastic\"\n        | \"easeInOutBounce\"",
+            "parent": "EasingOptions"
+          },
+          "doc": "",
+          "_": 15,
+          "source": "\n    type EasingOptions =\n        | \"linear\"\n        | \"easeInQuad\"\n        | \"easeInCubic\"\n        | \"easeInQuart\"\n        | \"easeInQuint\"\n        | \"easeInSine\"\n        | \"easeInExpo\"\n        | \"easeInCirc\"\n        | \"easeInBack\"\n        | \"easeInElastic\"\n        | \"easeInBounce\"\n        | \"easeOutQuad\"\n        | \"easeOutCubic\"\n        | \"easeOutQuart\"\n        | \"easeOutQuint\"\n        | \"easeOutSine\"\n        | \"easeOutExpo\"\n        | \"easeOutCirc\"\n        | \"easeOutBack\"\n        | \"easeOutElastic\"\n        | \"easeOutBounce\"\n        | \"easeInOutQuad\"\n        | \"easeInOutCubic\"\n        | \"easeInOutQuart\"\n        | \"easeInOutQuint\"\n        | \"easeInOutSine\"\n        | \"easeInOutExpo\"\n        | \"easeInOutCirc\"\n        | \"easeInOutBack\"\n        | \"easeInOutElastic\"\n        | \"easeInOutBounce\";"
+        },
+        {
+          "name": "DirectionOptions",
+          "generics": [],
+          "type": {
+            "union": [
+              {
+                "core": "\"reverse\"",
+                "isNullable": false,
+                "_": 47,
+                "source": " \"reverse\""
+              },
+              {
+                "core": "\"alternate\"",
+                "isNullable": false,
+                "_": 47,
+                "source": " \"alternate\""
+              },
+              {
+                "core": "\"normal\"",
+                "isNullable": false,
+                "_": 47,
+                "source": " \"normal\""
+              }
+            ],
+            "isNullable": false,
+            "_": 47,
+            "source": " \"reverse\" | \"alternate\" | \"normal\"",
+            "parent": "DirectionOptions"
+          },
+          "doc": "",
+          "_": 47,
+          "source": "\n    type DirectionOptions = \"reverse\" | \"alternate\" | \"normal\";"
+        }
+      ],
+      "modules": [],
+      "funcs": [
+        {
+          "_": 153,
+          "name": "remove",
+          "type": {
+            "core": "void",
+            "isNullable": false,
+            "_": 153,
+            "source": " void"
+          },
+          "generics": [],
+          "doc": "",
+          "params": [
+            {
+              "name": "targets",
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeTarget",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 153,
+                    "source": " AnimeTarget"
+                  },
+                  {
+                    "ref": "ReadonlyArray",
+                    "targs": [
+                      {
+                        "ref": "AnimeTarget",
+                        "targs": [],
+                        "isNullable": false,
+                        "_": 153,
+                        "source": "AnimeTarget"
+                      }
+                    ],
+                    "isNullable": false,
+                    "_": 153,
+                    "source": " ReadonlyArray<AnimeTarget>"
+                  }
+                ],
+                "isNullable": false,
+                "_": 153,
+                "source": " AnimeTarget | ReadonlyArray<AnimeTarget>"
+              },
+              "varargs": false,
+              "isNullable": false
+            }
+          ],
+          "source": "\n    function remove(targets: AnimeTarget | ReadonlyArray<AnimeTarget>): void;"
+        },
+        {
+          "_": 154,
+          "name": "get",
+          "type": {
+            "union": [
+              {
+                "core": "string",
+                "isNullable": false,
+                "_": 154,
+                "source": " string"
+              },
+              {
+                "core": "number",
+                "isNullable": false,
+                "_": 154,
+                "source": " number"
+              }
+            ],
+            "isNullable": false,
+            "_": 154,
+            "source": " string | number"
+          },
+          "generics": [],
+          "doc": "",
+          "params": [
+            {
+              "name": "targets",
+              "type": {
+                "ref": "AnimeTarget",
+                "targs": [],
+                "isNullable": false,
+                "_": 154,
+                "source": " AnimeTarget"
+              },
+              "varargs": false,
+              "isNullable": false
+            },
+            {
+              "name": "prop",
+              "type": {
+                "core": "string",
+                "isNullable": false,
+                "_": 154,
+                "source": " string"
+              },
+              "varargs": false,
+              "isNullable": false
+            },
+            {
+              "name": "unit",
+              "type": {
+                "core": "string",
+                "isNullable": false,
+                "_": 154,
+                "source": " string"
+              },
+              "varargs": false,
+              "isNullable": true
+            }
+          ],
+          "source": "\n    function get(targets: AnimeTarget, prop: string, unit?: string): string | number;"
+        },
+        {
+          "_": 155,
+          "name": "path",
+          "type": {
+            "ctor": false,
+            "generics": [],
+            "returns": {
+              "ref": "IInline1",
+              "targs": [],
+              "isNullable": false,
+              "_": 155,
+              "source": " {\n        el: HTMLElement | SVGElement,\n        property: string,\n        totalLength: number\n    }"
+            },
+            "params": [
+              {
+                "name": "prop",
+                "type": {
+                  "core": "string",
+                  "isNullable": false,
+                  "_": 155,
+                  "source": " string"
+                },
+                "varargs": false,
+                "isNullable": false
+              }
+            ],
+            "isNullable": false,
+            "_": 155,
+            "source": " (prop: string) => {\n        el: HTMLElement | SVGElement,\n        property: string,\n        totalLength: number\n    }"
+          },
+          "generics": [],
+          "doc": "",
+          "params": [
+            {
+              "name": "path",
+              "type": {
+                "union": [
+                  {
+                    "core": "string",
+                    "isNullable": false,
+                    "_": 155,
+                    "source": " string"
+                  },
+                  {
+                    "ref": "HTMLElement",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 155,
+                    "source": " HTMLElement"
+                  },
+                  {
+                    "ref": "SVGElement",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 155,
+                    "source": " SVGElement"
+                  },
+                  {
+                    "core": "null",
+                    "isNullable": false,
+                    "_": 155,
+                    "source": " null"
+                  }
+                ],
+                "isNullable": false,
+                "_": 155,
+                "source": " string | HTMLElement | SVGElement | null"
+              },
+              "varargs": false,
+              "isNullable": false
+            },
+            {
+              "name": "percent",
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 155,
+                "source": " number"
+              },
+              "varargs": false,
+              "isNullable": true
+            }
+          ],
+          "source": "\n    function path(path: string | HTMLElement | SVGElement | null, percent?: number): (prop: string) => {\n        el: HTMLElement | SVGElement,\n        property: string,\n        totalLength: number\n    };"
+        },
+        {
+          "_": 160,
+          "name": "setDashoffset",
+          "type": {
+            "core": "number",
+            "isNullable": false,
+            "_": 160,
+            "source": " number"
+          },
+          "generics": [],
+          "doc": "",
+          "params": [
+            {
+              "name": "el",
+              "type": {
+                "union": [
+                  {
+                    "ref": "HTMLElement",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 160,
+                    "source": " HTMLElement"
+                  },
+                  {
+                    "ref": "SVGElement",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 160,
+                    "source": " SVGElement"
+                  },
+                  {
+                    "core": "null",
+                    "isNullable": false,
+                    "_": 160,
+                    "source": " null"
+                  }
+                ],
+                "isNullable": false,
+                "_": 160,
+                "source": " HTMLElement | SVGElement | null"
+              },
+              "varargs": false,
+              "isNullable": false
+            }
+          ],
+          "source": "\n    function setDashoffset(el: HTMLElement | SVGElement | null): number;"
+        },
+        {
+          "_": 161,
+          "name": "bezier",
+          "type": {
+            "ctor": false,
+            "generics": [],
+            "returns": {
+              "core": "number",
+              "isNullable": false,
+              "_": 161,
+              "source": " number"
+            },
+            "params": [
+              {
+                "name": "t",
+                "type": {
+                  "core": "number",
+                  "isNullable": false,
+                  "_": 161,
+                  "source": " number"
+                },
+                "varargs": false,
+                "isNullable": false
+              }
+            ],
+            "isNullable": false,
+            "_": 161,
+            "source": " (t: number) => number"
+          },
+          "generics": [],
+          "doc": "",
+          "params": [
+            {
+              "name": "x1",
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 161,
+                "source": " number"
+              },
+              "varargs": false,
+              "isNullable": false
+            },
+            {
+              "name": "y1",
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 161,
+                "source": " number"
+              },
+              "varargs": false,
+              "isNullable": false
+            },
+            {
+              "name": "x2",
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 161,
+                "source": " number"
+              },
+              "varargs": false,
+              "isNullable": false
+            },
+            {
+              "name": "y2",
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 161,
+                "source": " number"
+              },
+              "varargs": false,
+              "isNullable": false
+            }
+          ],
+          "source": "\n    function bezier(x1: number, y1: number, x2: number, y2: number): (t: number) => number;"
+        },
+        {
+          "_": 162,
+          "name": "stagger",
+          "type": {
+            "ref": "FunctionBasedParameter",
+            "targs": [],
+            "isNullable": false,
+            "_": 162,
+            "source": " FunctionBasedParameter"
+          },
+          "generics": [],
+          "doc": "",
+          "params": [
+            {
+              "name": "value",
+              "type": {
+                "union": [
+                  {
+                    "core": "number",
+                    "isNullable": false,
+                    "_": 162,
+                    "source": " number"
+                  },
+                  {
+                    "core": "string",
+                    "isNullable": false,
+                    "_": 162,
+                    "source": " string"
+                  },
+                  {
+                    "ref": "ReadonlyArray",
+                    "targs": [
+                      {
+                        "union": [
+                          {
+                            "core": "number",
+                            "isNullable": false,
+                            "_": 162,
+                            "source": "number"
+                          },
+                          {
+                            "core": "string",
+                            "isNullable": false,
+                            "_": 162,
+                            "source": " string"
+                          }
+                        ],
+                        "isNullable": false,
+                        "_": 162,
+                        "source": "number | string"
+                      }
+                    ],
+                    "isNullable": false,
+                    "_": 162,
+                    "source": " ReadonlyArray<number | string>"
+                  }
+                ],
+                "isNullable": false,
+                "_": 162,
+                "source": " number | string | ReadonlyArray<number | string>"
+              },
+              "varargs": false,
+              "isNullable": false
+            },
+            {
+              "name": "options",
+              "type": {
+                "ref": "StaggerOptions",
+                "targs": [],
+                "isNullable": false,
+                "_": 162,
+                "source": " StaggerOptions"
+              },
+              "varargs": false,
+              "isNullable": true
+            }
+          ],
+          "source": "\n    function stagger(value: number | string | ReadonlyArray<number | string>, options?: StaggerOptions): FunctionBasedParameter;"
+        },
+        {
+          "_": 163,
+          "name": "set",
+          "type": {
+            "core": "void",
+            "isNullable": false,
+            "_": 163,
+            "source": " void"
+          },
+          "generics": [],
+          "doc": "",
+          "params": [
+            {
+              "name": "targets",
+              "type": {
+                "ref": "AnimeTarget",
+                "targs": [],
+                "isNullable": false,
+                "_": 163,
+                "source": " AnimeTarget"
+              },
+              "varargs": false,
+              "isNullable": false
+            },
+            {
+              "name": "value",
+              "type": {
+                "ref": "IInline2",
+                "targs": [],
+                "isNullable": false,
+                "_": 163,
+                "source": " {[AnyAnimatedProperty: string]: any}"
+              },
+              "varargs": false,
+              "isNullable": false
+            }
+          ],
+          "source": "\n    function set(targets: AnimeTarget, value: {[AnyAnimatedProperty: string]: any}): void;"
+        },
+        {
+          "_": 165,
+          "name": "timeline",
+          "type": {
+            "ref": "AnimeTimelineInstance",
+            "targs": [],
+            "isNullable": false,
+            "_": 165,
+            "source": " AnimeTimelineInstance"
+          },
+          "generics": [],
+          "doc": "",
+          "params": [
+            {
+              "name": "params",
+              "type": {
+                "union": [
+                  {
+                    "ref": "AnimeParams",
+                    "targs": [],
+                    "isNullable": false,
+                    "_": 165,
+                    "source": " AnimeParams"
+                  },
+                  {
+                    "ref": "ReadonlyArray",
+                    "targs": [
+                      {
+                        "ref": "AnimeInstance",
+                        "targs": [],
+                        "isNullable": false,
+                        "_": 165,
+                        "source": "AnimeInstance"
+                      }
+                    ],
+                    "isNullable": false,
+                    "_": 165,
+                    "source": " ReadonlyArray<AnimeInstance>"
+                  }
+                ],
+                "isNullable": false,
+                "_": 165,
+                "source": " AnimeParams | ReadonlyArray<AnimeInstance>"
+              },
+              "varargs": false,
+              "isNullable": true
+            }
+          ],
+          "source": "\n    // Timeline\n    function timeline(params?: AnimeParams | ReadonlyArray<AnimeInstance>): AnimeTimelineInstance;"
+        },
+        {
+          "_": 166,
+          "name": "random",
+          "type": {
+            "core": "number",
+            "isNullable": false,
+            "_": 166,
+            "source": " number"
+          },
+          "generics": [],
+          "doc": "",
+          "params": [
+            {
+              "name": "min",
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 166,
+                "source": " number"
+              },
+              "varargs": false,
+              "isNullable": false
+            },
+            {
+              "name": "max",
+              "type": {
+                "core": "number",
+                "isNullable": false,
+                "_": 166,
+                "source": " number"
+              },
+              "varargs": false,
+              "isNullable": false
+            }
+          ],
+          "source": "\n    function random(min: number, max: number): number;"
+        },
+        {
+          "_": 169,
+          "name": "anime",
+          "type": {
+            "ref": "anime.AnimeInstance",
+            "targs": [],
+            "isNullable": false,
+            "_": 169,
+            "source": " anime.AnimeInstance"
+          },
+          "generics": [],
+          "doc": "",
+          "params": [
+            {
+              "name": "params",
+              "type": {
+                "ref": "anime.AnimeParams",
+                "targs": [],
+                "isNullable": false,
+                "_": 169,
+                "source": " anime.AnimeParams"
+              },
+              "varargs": false,
+              "isNullable": false
+            }
+          ],
+          "source": "\n\ndeclare function anime(params: anime.AnimeParams): anime.AnimeInstance;"
+        }
+      ],
+      "vars": [
+        {
+          "_": 149,
+          "name": "version",
+          "isReadonly": true,
+          "isStatic": false,
+          "isNullable": false,
+          "doc": "",
+          "type": {
+            "core": "string",
+            "isNullable": false,
+            "_": 149,
+            "source": " string"
+          },
+          "source": " version: string"
+        },
+        {
+          "_": 150,
+          "name": "speed",
+          "isReadonly": true,
+          "isStatic": false,
+          "isNullable": false,
+          "doc": "",
+          "type": {
+            "core": "number",
+            "isNullable": false,
+            "_": 150,
+            "source": " number"
+          },
+          "source": " speed: number"
+        },
+        {
+          "_": 151,
+          "name": "running",
+          "isReadonly": true,
+          "isStatic": false,
+          "isNullable": false,
+          "doc": "",
+          "type": {
+            "core": "array",
+            "targs": [
+              {
+                "ref": "AnimeInstance",
+                "targs": [],
+                "isNullable": false,
+                "_": 151,
+                "source": " AnimeInstance"
+              }
+            ],
+            "isNullable": false,
+            "_": 151,
+            "source": " AnimeInstance[]"
+          },
+          "source": " running: AnimeInstance[]"
+        },
+        {
+          "_": 152,
+          "name": "easings",
+          "isReadonly": true,
+          "isStatic": false,
+          "isNullable": false,
+          "doc": "",
+          "type": {
+            "ref": "IInline0",
+            "targs": [],
+            "isNullable": false,
+            "_": 152,
+            "source": " { [EasingFunction: string]: (t: number) => any }"
+          },
+          "source": " easings: { [EasingFunction: string]: (t: number) => any }"
+        }
+      ],
+      "enums": []
+    },
+    "name": "index.d.ts"
+  }
+]

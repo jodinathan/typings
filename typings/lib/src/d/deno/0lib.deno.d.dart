@@ -17,12 +17,12 @@ external _i2.Object _self;
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection21 implements _i3.Window, _GlobalThis {}
+class _Intersection28 implements _i3.Window, _GlobalThis {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection22 implements _i3.Window, _GlobalThis {}
+class _Intersection29 implements _i3.Window, _GlobalThis {}
 
 @_i1.JS()
 @_i1.staticInterop
@@ -96,12 +96,12 @@ extension ReadableStreamBYOBReadResultCommon$Typings<
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection23 implements _i3.Window, _GlobalThis {}
+class _Intersection30 implements _i3.Window, _GlobalThis {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection24 implements _i3.Window, _GlobalThis {}
+class _Intersection31 implements _i3.Window, _GlobalThis {}
 
 @_i1.JS()
 @_i1.staticInterop
@@ -110,16 +110,16 @@ class _CryptoAccessor {}
 
 extension CryptoAccessor$Typings on _CryptoAccessor {
   _i3.SubtleCrypto get subtle => _i4.getProperty(
-        _i7.target2035,
+        _i7.target2707,
         'subtle',
       );
   T getRandomValues<T extends _i2.Object>(T array) => _i4.callMethod(
-        _i7.target2035,
+        _i7.target2707,
         'getRandomValues',
         [array],
       );
   _i2.String randomUUID() => _i4.callMethod(
-        _i7.target2035,
+        _i7.target2707,
         'randomUUID',
         [],
       );
@@ -136,7 +136,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     _i2.Iterable<_i2.dynamic>? data,
   ]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'assert',
       [
         condition ?? _i6.undefined,
@@ -147,7 +147,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void clear() {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'clear',
       [],
     );
@@ -155,7 +155,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void count([_i2.String? label]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'count',
       [label ?? _i6.undefined],
     );
@@ -163,7 +163,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void countReset([_i2.String? label]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'countReset',
       [label ?? _i6.undefined],
     );
@@ -171,7 +171,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void debug([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'debug',
       [...?data],
     );
@@ -182,7 +182,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     _i2.dynamic options,
   ]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'dir',
       [
         item ?? _i6.undefined,
@@ -193,7 +193,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void dirxml([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'dirxml',
       [...?data],
     );
@@ -201,7 +201,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void error([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'error',
       [...?data],
     );
@@ -209,7 +209,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void group([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'group',
       [...?data],
     );
@@ -217,7 +217,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void groupCollapsed([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'groupCollapsed',
       [...?data],
     );
@@ -225,7 +225,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void groupEnd() {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'groupEnd',
       [],
     );
@@ -233,7 +233,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void info([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'info',
       [...?data],
     );
@@ -241,7 +241,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void log([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'log',
       [...?data],
     );
@@ -252,7 +252,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     _i2.List<_i2.String>? properties,
   ]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'table',
       [
         tabularData ?? _i6.undefined,
@@ -263,7 +263,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void time([_i2.String? label]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'time',
       [label ?? _i6.undefined],
     );
@@ -271,7 +271,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void timeEnd([_i2.String? label]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'timeEnd',
       [label ?? _i6.undefined],
     );
@@ -282,7 +282,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     _i2.Iterable<_i2.dynamic>? data,
   ]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'timeLog',
       [
         label ?? _i6.undefined,
@@ -293,7 +293,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void trace([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'trace',
       [...?data],
     );
@@ -301,7 +301,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void warn([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'warn',
       [...?data],
     );
@@ -310,7 +310,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
   /// This method is a noop, unless used in inspector
   void timeStamp([_i2.String? label]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'timeStamp',
       [label ?? _i6.undefined],
     );
@@ -319,7 +319,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
   /// This method is a noop, unless used in inspector
   void profile([_i2.String? label]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'profile',
       [label ?? _i6.undefined],
     );
@@ -328,7 +328,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
   /// This method is a noop, unless used in inspector
   void profileEnd([_i2.String? label]) {
     _i4.callMethod(
-      _i7.target2040,
+      _i7.target2712,
       'profileEnd',
       [label ?? _i6.undefined],
     );
@@ -343,14 +343,14 @@ class _PerformanceAccessor implements _i3.EventTarget {}
 extension PerformanceAccessor$Typings on _PerformanceAccessor {
   /// Returns a timestamp representing the start of the performance measurement.
   _i2.num get timeOrigin => _i4.getProperty(
-        _i7.target2041,
+        _i7.target2713,
         'timeOrigin',
       );
 
   /// Removes the stored timestamp with the associated name.
   void clearMarks([_i2.String? markName]) {
     _i4.callMethod(
-      _i7.target2041,
+      _i7.target2713,
       'clearMarks',
       [markName ?? _i6.undefined],
     );
@@ -359,14 +359,14 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
   /// Removes stored timestamp with the associated name.
   void clearMeasures([_i2.String? measureName]) {
     _i4.callMethod(
-      _i7.target2041,
+      _i7.target2713,
       'clearMeasures',
       [measureName ?? _i6.undefined],
     );
   }
 
   _i3.PerformanceEntryList getEntries() => (_i4.callMethod(
-        _i7.target2041,
+        _i7.target2713,
         'getEntries',
         [],
       ) as _i2.List)
@@ -376,7 +376,7 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
     _i2.String? type,
   ]) =>
       (_i4.callMethod(
-        _i7.target2041,
+        _i7.target2713,
         'getEntriesByName',
         [
           name,
@@ -385,7 +385,7 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
       ) as _i2.List)
           .cast();
   _i3.PerformanceEntryList getEntriesByType(_i2.String type) => (_i4.callMethod(
-        _i7.target2041,
+        _i7.target2713,
         'getEntriesByType',
         [type],
       ) as _i2.List)
@@ -397,7 +397,7 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
     _i3.PerformanceMarkOptions? options,
   ]) =>
       _i4.callMethod(
-        _i7.target2041,
+        _i7.target2713,
         'mark',
         [
           markName,
@@ -412,7 +412,7 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
     _i3.PerformanceMeasureOptions? options,
   ]) =>
       _i4.callMethod(
-        _i7.target2041,
+        _i7.target2713,
         'measure',
         [
           measureName,
@@ -428,7 +428,7 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
     _i2.String? endMark,
   ]) =>
       _i4.callMethod(
-        _i7.target2041,
+        _i7.target2713,
         'measure',
         [
           measureName,
@@ -469,19 +469,19 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
   ///
   ///  @tags allow-hrtime
   _i2.num now() => _i4.callMethod(
-        _i7.target2041,
+        _i7.target2713,
         'now',
         [],
       );
 
   /// Returns a JSON representation of the performance object.
   _i2.dynamic toJSON() => _i4.callMethod(
-        _i7.target2041,
+        _i7.target2713,
         'toJSON',
         [],
       );
   _i2.Never call() => _i4.callMethod(
-        _i7.target2041,
+        _i7.target2713,
         '',
         [],
       );
@@ -496,7 +496,7 @@ extension CachesAccessor$Typings on _CachesAccessor {
   /// Open a cache storage for the provided name.
   _i2.Future<_i3.Cache> open(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
-        _i7.target2042,
+        _i7.target2714,
         'open',
         [cacheName],
       ));
@@ -504,7 +504,7 @@ extension CachesAccessor$Typings on _CachesAccessor {
   /// Check if cache already exists for the provided name.
   _i2.Future<_i2.bool> has(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
-        _i7.target2042,
+        _i7.target2714,
         'has',
         [cacheName],
       ));
@@ -512,7 +512,7 @@ extension CachesAccessor$Typings on _CachesAccessor {
   /// Delete cache storage for the provided name.
   _i2.Future<_i2.bool> delete(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
-        _i7.target2042,
+        _i7.target2714,
         'delete',
         [cacheName],
       ));
@@ -536,14 +536,14 @@ class _LocalStorageAccessor {}
 extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
   /// Returns the number of key/value pairs currently present in the list associated with the object.
   _i2.num get length => _i4.getProperty(
-        _i7.target2046,
+        _i7.target2718,
         'length',
       );
 
   /// Empties the list associated with the object of all key/value pairs, if there are any.
   void clear() {
     _i4.callMethod(
-      _i7.target2045,
+      _i7.target2717,
       'clear',
       [],
     );
@@ -551,14 +551,14 @@ extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
 
   /// Returns the current value associated with the given key, or null if the given key does not exist in the list associated with the object.
   _i2.String? getItem(_i2.String key) => _i4.callMethod(
-        _i7.target2045,
+        _i7.target2717,
         'getItem',
         [key],
       );
 
   /// Returns the name of the nth key in the list, or null if n is greater than or equal to the number of key/value pairs in the object.
   _i2.String? key(_i2.num index) => _i4.callMethod(
-        _i7.target2045,
+        _i7.target2717,
         'key',
         [index],
       );
@@ -566,7 +566,7 @@ extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
   /// Removes the key/value pair with the given key from the list associated with the object, if a key/value pair with the given key exists.
   void removeItem(_i2.String key) {
     _i4.callMethod(
-      _i7.target2045,
+      _i7.target2717,
       'removeItem',
       [key],
     );
@@ -580,7 +580,7 @@ extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
     _i2.String value,
   ) {
     _i4.callMethod(
-      _i7.target2045,
+      _i7.target2717,
       'setItem',
       [
         key,
@@ -590,7 +590,7 @@ extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
   }
 
   _i3.Storage call() => _i4.callMethod(
-        _i7.target2045,
+        _i7.target2717,
         '',
         [],
       );
@@ -604,14 +604,14 @@ class _SessionStorageAccessor {}
 extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
   /// Returns the number of key/value pairs currently present in the list associated with the object.
   _i2.num get length => _i4.getProperty(
-        _i7.target2046,
+        _i7.target2718,
         'length',
       );
 
   /// Empties the list associated with the object of all key/value pairs, if there are any.
   void clear() {
     _i4.callMethod(
-      _i7.target2046,
+      _i7.target2718,
       'clear',
       [],
     );
@@ -619,14 +619,14 @@ extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
 
   /// Returns the current value associated with the given key, or null if the given key does not exist in the list associated with the object.
   _i2.String? getItem(_i2.String key) => _i4.callMethod(
-        _i7.target2046,
+        _i7.target2718,
         'getItem',
         [key],
       );
 
   /// Returns the name of the nth key in the list, or null if n is greater than or equal to the number of key/value pairs in the object.
   _i2.String? key(_i2.num index) => _i4.callMethod(
-        _i7.target2046,
+        _i7.target2718,
         'key',
         [index],
       );
@@ -634,7 +634,7 @@ extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
   /// Removes the key/value pair with the given key from the list associated with the object, if a key/value pair with the given key exists.
   void removeItem(_i2.String key) {
     _i4.callMethod(
-      _i7.target2046,
+      _i7.target2718,
       'removeItem',
       [key],
     );
@@ -648,7 +648,7 @@ extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
     _i2.String value,
   ) {
     _i4.callMethod(
-      _i7.target2046,
+      _i7.target2718,
       'setItem',
       [
         key,
@@ -658,7 +658,7 @@ extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
   }
 
   _i3.Storage call() => _i4.callMethod(
-        _i7.target2046,
+        _i7.target2718,
         '',
         [],
       );
@@ -671,24 +671,24 @@ class _NavigatorAccessor {}
 
 extension NavigatorAccessor$Typings on _NavigatorAccessor {
   _i2.num get hardwareConcurrency => _i4.getProperty(
-        _i7.target2047,
+        _i7.target2719,
         'hardwareConcurrency',
       );
   _i2.String get userAgent => _i4.getProperty(
-        _i7.target2047,
+        _i7.target2719,
         'userAgent',
       );
   _i2.String get language => _i4.getProperty(
-        _i7.target2047,
+        _i7.target2719,
         'language',
       );
   _i2.List<_i2.String> get languages => (_i4.getProperty(
-        _i7.target2047,
+        _i7.target2719,
         'languages',
       ) as _i2.List)
           .cast();
   _i2.Never call() => _i4.callMethod(
-        _i7.target2047,
+        _i7.target2719,
         '',
         [],
       );
@@ -706,7 +706,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///
   /// Always empty in Deno.
   _i3.DOMStringList get ancestorOrigins => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'ancestorOrigins',
       );
 
@@ -715,7 +715,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///
   ///  Cannot be set in Deno.
   _i2.String get hash => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'hash',
       );
 
@@ -724,7 +724,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///
   ///  Cannot be set in Deno.
   _i2.String get host => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'host',
       );
 
@@ -732,7 +732,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///
   ///  Cannot be set in Deno.
   _i2.String get hostname => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'hostname',
       );
 
@@ -740,13 +740,13 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///
   ///  Cannot be set in Deno.
   _i2.String get href => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'href',
       );
 
   /// Returns the Location object's URL's origin.
   _i2.String get origin => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'origin',
       );
 
@@ -754,7 +754,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///
   ///  Cannot be set in Deno.
   _i2.String get pathname => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'pathname',
       );
 
@@ -762,7 +762,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///
   ///  Cannot be set in Deno.
   _i2.String get port => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'port',
       );
 
@@ -770,7 +770,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///
   ///  Cannot be set in Deno.
   _i2.String get protocol => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'protocol',
       );
 
@@ -779,11 +779,11 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///
   ///  Cannot be set in Deno.
   _i2.String get search => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'search',
       );
   _i2.String toString$() => _i4.callMethod(
-        _i7.target2048,
+        _i7.target2720,
         'toString',
         [],
       );
@@ -793,7 +793,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///  Cannot be set in Deno.
   void assign(_i2.String url) {
     _i4.callMethod(
-      _i7.target2048,
+      _i7.target2720,
       'assign',
       [url],
     );
@@ -804,7 +804,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///  Disabled in Deno.
   void _reload$1() {
     _i4.callMethod(
-      _i7.target2048,
+      _i7.target2720,
       'reload',
       [],
     );
@@ -813,7 +813,7 @@ extension LocationAccessor$Typings on _LocationAccessor {
   /// @deprecated
   void _reload$2(_i2.bool forcedReload) {
     _i4.callMethod(
-      _i7.target2048,
+      _i7.target2720,
       'reload',
       [forcedReload],
     );
@@ -839,14 +839,14 @@ extension LocationAccessor$Typings on _LocationAccessor {
   ///  Disabled in Deno.
   void replace(_i2.String url) {
     _i4.callMethod(
-      _i7.target2048,
+      _i7.target2720,
       'replace',
       [url],
     );
   }
 
   _i2.Never call() => _i4.callMethod(
-        _i7.target2048,
+        _i7.target2720,
         '',
         [],
       );
@@ -3346,12 +3346,12 @@ class AbortSignal implements _i3.EventTarget {
       );
 
   static _i3.AbortSignal abort([_i2.dynamic reason]) => _i4.callMethod(
-        _i7.target2021,
+        _i7.target2693,
         'abort',
         [reason ?? _i6.undefined],
       );
   static _i3.AbortSignal timeout(_i2.num milliseconds) => _i4.callMethod(
-        _i7.target2021,
+        _i7.target2693,
         'timeout',
         [milliseconds],
       );
@@ -3639,15 +3639,15 @@ class FileReader implements _i3.EventTarget {
       );
 
   static _i2.num get done => _i4.getProperty(
-        _i7.target2022,
+        _i7.target2694,
         'DONE',
       );
   static _i2.num get empty => _i4.getProperty(
-        _i7.target2022,
+        _i7.target2694,
         'EMPTY',
       );
   static _i2.num get loading => _i4.getProperty(
-        _i7.target2022,
+        _i7.target2694,
         'LOADING',
       );
 }
@@ -4015,15 +4015,15 @@ extension FileReader$Typings on FileReader {
 @_i1.staticInterop
 class IInline20 {
   static _i2.num get done => _i4.getProperty(
-        _i7.target2022,
+        _i7.target2694,
         'DONE',
       );
   static _i2.num get empty => _i4.getProperty(
-        _i7.target2022,
+        _i7.target2694,
         'EMPTY',
       );
   static _i2.num get loading => _i4.getProperty(
-        _i7.target2022,
+        _i7.target2694,
         'LOADING',
       );
 }
@@ -8024,7 +8024,7 @@ external _i2.Object _declaredStorage;
 extension Storage$Typings on Storage {
   /// Returns the number of key/value pairs currently present in the list associated with the object.
   _i2.num get length => _i4.getProperty(
-        _i7.target2046,
+        _i7.target2718,
         'length',
       );
 
@@ -9854,7 +9854,7 @@ class Crypto {}
 
 extension Crypto$Typings on Crypto {
   _i3.SubtleCrypto get subtle => _i4.getProperty(
-        _i7.target2035,
+        _i7.target2707,
         'subtle',
       );
   T getRandomValues<T extends _i2.Object>(T array) => _i4.callMethod(
@@ -10846,7 +10846,7 @@ external _i2.Object _declaredPerformance;
 extension Performance$Typings on Performance {
   /// Returns a timestamp representing the start of the performance measurement.
   _i2.num get timeOrigin => _i4.getProperty(
-        _i7.target2041,
+        _i7.target2713,
         'timeOrigin',
       );
 
@@ -11358,11 +11358,11 @@ enum WindowEventMap<T$ extends _i3.Event> {
 class Window implements _i3.EventTarget {}
 
 extension Window$Typings on Window {
-  _Intersection21 get window => _i4.getProperty(
+  _Intersection28 get window => _i4.getProperty(
         this,
         'window',
       );
-  _Intersection22 get self => _i4.getProperty(
+  _Intersection29 get self => _i4.getProperty(
         this,
         'self',
       );
@@ -11807,19 +11807,19 @@ external _i2.Object _declaredNavigator;
 
 extension Navigator$Typings on Navigator {
   _i2.num get hardwareConcurrency => _i4.getProperty(
-        _i7.target2047,
+        _i7.target2719,
         'hardwareConcurrency',
       );
   _i2.String get userAgent => _i4.getProperty(
-        _i7.target2047,
+        _i7.target2719,
         'userAgent',
       );
   _i2.String get language => _i4.getProperty(
-        _i7.target2047,
+        _i7.target2719,
         'language',
       );
   _i2.List<_i2.String> get languages => (_i4.getProperty(
-        _i7.target2047,
+        _i7.target2719,
         'languages',
       ) as _i2.List)
           .cast();
@@ -11850,7 +11850,7 @@ extension Location$Typings on Location {
   ///
   /// Always empty in Deno.
   _i3.DOMStringList get ancestorOrigins => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'ancestorOrigins',
       );
 
@@ -11859,7 +11859,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get hash => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'hash',
       );
   set hash(_i2.String value) {
@@ -11875,7 +11875,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get host => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'host',
       );
   set host(_i2.String value) {
@@ -11890,7 +11890,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get hostname => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'hostname',
       );
   set hostname(_i2.String value) {
@@ -11905,7 +11905,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get href => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'href',
       );
   set href(_i2.String value) {
@@ -11918,7 +11918,7 @@ extension Location$Typings on Location {
 
   /// Returns the Location object's URL's origin.
   _i2.String get origin => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'origin',
       );
 
@@ -11926,7 +11926,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get pathname => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'pathname',
       );
   set pathname(_i2.String value) {
@@ -11941,7 +11941,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get port => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'port',
       );
   set port(_i2.String value) {
@@ -11956,7 +11956,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get protocol => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'protocol',
       );
   set protocol(_i2.String value) {
@@ -11972,7 +11972,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get search => _i4.getProperty(
-        _i7.target2048,
+        _i7.target2720,
         'search',
       );
   set search(_i2.String value) {

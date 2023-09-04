@@ -657,7 +657,11 @@ function extract(files: string[]): void {
             (it) => it.namespace == node.name.text
           );
 
-          if (lib.namespace == "" && !module) {
+          if (!module && node.name.text == lib.namespace) {
+            module = lib;
+          }
+
+          if (!module) {
             module = mainModules
               .find((it) =>
                 it.items.modules.some((it) => it.namespace == node.name.text)

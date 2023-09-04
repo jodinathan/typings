@@ -62,19 +62,19 @@ extension ProcessStatusCommon$Typings on ProcessStatusCommon {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection25
+class _Intersection32
     implements _i4.Reader, _i4.ReaderSync, _i4.Closer, _i4.IInline5 {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection26
+class _Intersection33
     implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline6 {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection27
+class _Intersection34
     implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline7 {}
 
 @_i1.JS()
@@ -96,7 +96,7 @@ extension EnvAccessor$Typings on _EnvAccessor {
   ///
   ///  @tags allow-env
   _i2.String? get(_i2.String key) => _i3.callMethod(
-        _i5.target2049,
+        _i5.target2721,
         'get',
         [key],
       );
@@ -116,7 +116,7 @@ extension EnvAccessor$Typings on _EnvAccessor {
     _i2.String value,
   ) {
     _i3.callMethod(
-      _i5.target2049,
+      _i5.target2721,
       'set',
       [
         key,
@@ -137,7 +137,7 @@ extension EnvAccessor$Typings on _EnvAccessor {
   ///  @tags allow-env
   void delete(_i2.String key) {
     _i3.callMethod(
-      _i5.target2049,
+      _i5.target2721,
       'delete',
       [key],
     );
@@ -154,7 +154,7 @@ extension EnvAccessor$Typings on _EnvAccessor {
   ///
   ///  @tags allow-env
   _i2.bool has(_i2.String key) => _i3.callMethod(
-        _i5.target2049,
+        _i5.target2721,
         'has',
         [key],
       );
@@ -174,7 +174,7 @@ extension EnvAccessor$Typings on _EnvAccessor {
   ///
   ///  @tags allow-env
   _i2.Object toObject() => _i3.callMethod(
-        _i5.target2049,
+        _i5.target2721,
         'toObject',
         [],
       );
@@ -217,7 +217,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i2.Future<_i4.PermissionStatus> query(_i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
-        _i5.target2050,
+        _i5.target2722,
         'query',
         [desc],
       ));
@@ -235,7 +235,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i4.PermissionStatus querySync(_i4.PermissionDescriptor desc) =>
       _i3.callMethod(
-        _i5.target2050,
+        _i5.target2722,
         'querySync',
         [desc],
       );
@@ -250,7 +250,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i2.Future<_i4.PermissionStatus> revoke(_i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
-        _i5.target2050,
+        _i5.target2722,
         'revoke',
         [desc],
       ));
@@ -265,7 +265,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i4.PermissionStatus revokeSync(_i4.PermissionDescriptor desc) =>
       _i3.callMethod(
-        _i5.target2050,
+        _i5.target2722,
         'revokeSync',
         [desc],
       );
@@ -285,7 +285,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i2.Future<_i4.PermissionStatus> request(_i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
-        _i5.target2050,
+        _i5.target2722,
         'request',
         [desc],
       ));
@@ -305,7 +305,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i4.PermissionStatus requestSync(_i4.PermissionDescriptor desc) =>
       _i3.callMethod(
-        _i5.target2050,
+        _i5.target2722,
         'requestSync',
         [desc],
       );
@@ -321,32 +321,32 @@ extension BuildAccessor$Typings on _BuildAccessor {
   ///  of `${arch}-${vendor}-${os}` and represent the specific build target that
   ///  the current runtime was built for.
   _i2.String get target => _i3.getProperty(
-        _i5.target2051,
+        _i5.target2723,
         'target',
       );
 
   /// Instruction set architecture that the Deno CLI was built for.
   Arch get arch => Arch.values.byName(_i3.getProperty(
-        _i5.target2051,
+        _i5.target2723,
         'arch',
       ));
 
   /// The operating system that the Deno CLI was built for. `"darwin"` is
   ///  also known as OSX or MacOS.
   Os get os => Os.values.byName(_i3.getProperty(
-        _i5.target2051,
+        _i5.target2723,
         'os',
       ));
 
   /// The computer vendor that the Deno CLI was built for.
   _i2.String get vendor => _i3.getProperty(
-        _i5.target2051,
+        _i5.target2723,
         'vendor',
       );
 
   /// Optional environment flags that were set for this build of Deno CLI.
   _i2.String? get env => _i3.getProperty(
-        _i5.target2051,
+        _i5.target2723,
         'env',
       );
 }
@@ -359,7 +359,7 @@ class _VersionAccessor {}
 extension VersionAccessor$Typings on _VersionAccessor {
   /// Deno CLI's version. For example: `"1.26.0"`.
   _i2.String get deno => _i3.getProperty(
-        _i5.target2052,
+        _i5.target2724,
         'deno',
       );
 
@@ -368,7 +368,7 @@ extension VersionAccessor$Typings on _VersionAccessor {
   ///  V8 is the underlying JavaScript runtime platform that Deno is built on
   ///  top of.
   _i2.String get v8 => _i3.getProperty(
-        _i5.target2052,
+        _i5.target2724,
         'v8',
       );
 
@@ -377,7 +377,7 @@ extension VersionAccessor$Typings on _VersionAccessor {
   ///  A version of the TypeScript type checker and language server is built-in
   ///  to the Deno CLI.
   _i2.String get typescript => _i3.getProperty(
-        _i5.target2052,
+        _i5.target2724,
         'typescript',
       );
 }
@@ -6012,7 +6012,7 @@ extension IInline12$Typings on IInline12 {
   ///  of `${arch}-${vendor}-${os}` and represent the specific build target that
   ///  the current runtime was built for.
   _i2.String get target => _i3.getProperty(
-        _i5.target2051,
+        _i5.target2723,
         'target',
       );
   set target(_i2.String value) {
@@ -6025,7 +6025,7 @@ extension IInline12$Typings on IInline12 {
 
   /// Instruction set architecture that the Deno CLI was built for.
   Arch get arch => Arch.values.byName(_i3.getProperty(
-        _i5.target2051,
+        _i5.target2723,
         'arch',
       ));
   set arch(Arch value) {
@@ -6039,7 +6039,7 @@ extension IInline12$Typings on IInline12 {
   /// The operating system that the Deno CLI was built for. `"darwin"` is
   ///  also known as OSX or MacOS.
   Os get os => Os.values.byName(_i3.getProperty(
-        _i5.target2051,
+        _i5.target2723,
         'os',
       ));
   set os(Os value) {
@@ -6052,7 +6052,7 @@ extension IInline12$Typings on IInline12 {
 
   /// The computer vendor that the Deno CLI was built for.
   _i2.String get vendor => _i3.getProperty(
-        _i5.target2051,
+        _i5.target2723,
         'vendor',
       );
   set vendor(_i2.String value) {
@@ -6065,7 +6065,7 @@ extension IInline12$Typings on IInline12 {
 
   /// Optional environment flags that were set for this build of Deno CLI.
   _i2.String? get env => _i3.getProperty(
-        _i5.target2051,
+        _i5.target2723,
         'env',
       );
   set env(_i2.String? value) {
@@ -6085,7 +6085,7 @@ class IInline13 {}
 extension IInline13$Typings on IInline13 {
   /// Deno CLI's version. For example: `"1.26.0"`.
   _i2.String get deno => _i3.getProperty(
-        _i5.target2052,
+        _i5.target2724,
         'deno',
       );
   set deno(_i2.String value) {
@@ -6101,7 +6101,7 @@ extension IInline13$Typings on IInline13 {
   ///  V8 is the underlying JavaScript runtime platform that Deno is built on
   ///  top of.
   _i2.String get v8 => _i3.getProperty(
-        _i5.target2052,
+        _i5.target2724,
         'v8',
       );
   set v8(_i2.String value) {
@@ -6117,7 +6117,7 @@ extension IInline13$Typings on IInline13 {
   ///  A version of the TypeScript type checker and language server is built-in
   ///  to the Deno CLI.
   _i2.String get typescript => _i3.getProperty(
-        _i5.target2052,
+        _i5.target2724,
         'typescript',
       );
   set typescript(_i2.String value) {

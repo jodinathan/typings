@@ -1,3 +1,6 @@
+## 0.0.3
+- Added AnimeJS (https://animejs.com)
+
 ## 0.0.2
 - Added InputMask (https://www.npmjs.com/package/inputmask)
 

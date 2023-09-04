@@ -1,3 +1,6 @@
+## 0.0.3
+- Handle namespace with the name of the lib as one namespace
+
 ## 0.0.2
 - Added option to use DefinitelyTyped
 

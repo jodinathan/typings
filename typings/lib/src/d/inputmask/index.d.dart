@@ -20,7 +20,7 @@ extension InputmaskAccessor$Typings on _InputmaskAccessor {
   /// Extends the default inputmask options.
   void extendDefaults(_i3.Options opts) {
     _i4.callMethod(
-      _i5.target1344,
+      _i5.target2016,
       'extendDefaults',
       [opts],
     );
@@ -29,7 +29,7 @@ extension InputmaskAccessor$Typings on _InputmaskAccessor {
   /// Extends the set of available definitions.
   void extendDefinitions(_i2.Object definitions) {
     _i4.callMethod(
-      _i5.target1344,
+      _i5.target2016,
       'extendDefinitions',
       [definitions],
     );
@@ -38,7 +38,7 @@ extension InputmaskAccessor$Typings on _InputmaskAccessor {
   /// Extends the set of available mask aliases.
   void extendAliases(_i2.Object aliases) {
     _i4.callMethod(
-      _i5.target1344,
+      _i5.target2016,
       'extendAliases',
       [aliases],
     );
@@ -54,7 +54,7 @@ extension InputmaskAccessor$Typings on _InputmaskAccessor {
     _i3.Options opts,
   ) =>
       _i4.callMethod(
-        _i5.target1344,
+        _i5.target2016,
         'format',
         [
           value,
@@ -71,7 +71,7 @@ extension InputmaskAccessor$Typings on _InputmaskAccessor {
     _i3.Options opts,
   ) =>
       _i4.callMethod(
-        _i5.target1344,
+        _i5.target2016,
         'isValid',
         [
           value,
@@ -82,7 +82,7 @@ extension InputmaskAccessor$Typings on _InputmaskAccessor {
   /// Remove the inputmask.
   void remove(_i2.Object selectorOrElement) {
     _i4.callMethod(
-      _i5.target1344,
+      _i5.target2016,
       'remove',
       [selectorOrElement],
     );
@@ -99,7 +99,7 @@ extension InputmaskAccessor$Typings on _InputmaskAccessor {
     _i2.String value,
   ) {
     _i4.callMethod(
-      _i5.target1344,
+      _i5.target2016,
       'setValue',
       [
         selectorOrElement,
@@ -117,7 +117,7 @@ extension InputmaskAccessor$Typings on _InputmaskAccessor {
     _i3.Options opts,
   ) =>
       _i4.callMethod(
-        _i5.target1344,
+        _i5.target2016,
         'unmask',
         [
           value,
@@ -125,7 +125,7 @@ extension InputmaskAccessor$Typings on _InputmaskAccessor {
         ],
       );
   _i3.Instance _call$1([_i3.Options? opts]) => _i4.callMethod(
-        _i5.target1344,
+        _i5.target2016,
         '',
         [opts ?? _i6.undefined],
       );
@@ -134,7 +134,7 @@ extension InputmaskAccessor$Typings on _InputmaskAccessor {
     _i3.Options? opts,
   ]) =>
       _i4.callMethod(
-        _i5.target1344,
+        _i5.target2016,
         '',
         [
           maskOrAlias,

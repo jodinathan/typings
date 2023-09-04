@@ -70,7 +70,8 @@ class InteropModule {
         final buffer = DartFormatter().format(built);
         //final buffer = codeLib.accept(emitter).toString();
 
-        logger.warning('GENERATE ${library.targetFileName}, ${library.namespace}, ${library.fileName}\n${'${library.fileName.replaceAll('.d.ts', '.${library.namespace.isEmpty ? '' : '${library.namespace}.'}d').toLowerCase()}.dart'}');
+        logger.warning(
+            'GENERATE ${library.targetFileName}, ${library.namespace}, ${library.fileName}\n${'${library.fileName.replaceAll('.d.ts', '.${library.namespace.isEmpty ? '' : '${library.namespace}.'}d').toLowerCase()}.dart'}');
         saveSource(path: library.targetFileName, buffer: buffer);
         mainBuffer
             .writeln("export '/${project.srcDir(library.targetFileName)}';");
@@ -94,9 +95,13 @@ class InteropModule {
   }
 
   InteropType? dig(Iterable<String> path) {
+    logger.warning('ModuleDig $path (${this.path})');
+
     if (this.path.isNotEmpty) {
       final fullPath = [...splittedPath, ...path];
       final type = project.dig(fullPath);
+
+      logger.warning('ModuleDigInner $path (${fullPath})');
 
       if (type != null) {
         return type;

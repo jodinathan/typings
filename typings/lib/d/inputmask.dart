@@ -1,13 +1,13 @@
-/// GoJS official website: https://gojs.net/latest/index.html
+/// 
 ///
 /// ## Example:
 /// ```dart
-/// import 'package:typings/d/gojs.dart' as go;
+/// import 'package:typings/d/inputmask.dart' as inp;
 ///
 ///
 /// void main() {
-///     // inserts the GoJS js file into the DOM
-///     await go.import();
+///     // inserts the InputMask js file into the DOM
+///     await inp.import();
 ///
 /// }
 /// ```

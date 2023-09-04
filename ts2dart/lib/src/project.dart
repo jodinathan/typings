@@ -116,11 +116,23 @@ class InteropProject {
     final typeName = list.removeLast();
     final positions = [for (var x = 0; x < list.length; x++) x];
 
+    logger.warning('ProjectDig $path',
+        {'list': list, 'typeName': typeName, 'positions': positions});
+
     for (final module in modules) {
+      logger.warning('ProjectDigModule $path', {
+        'module.splittedPath.length': module.splittedPath.length,
+        'positions.length': positions.length,
+        'positions': positions,
+        'module.splittedPath': module.splittedPath,
+        'list': list
+      });
+
       if (positions.length == module.splittedPath.length &&
           positions.every(
               (p) => list.elementAt(p) == module.splittedPath.elementAt(p))) {
         for (final lib in module.libraries) {
+          logger.warning('ProjectLibFind $typeName. ${lib.structs.map((c) => c.name).join(', ')}');
           final type = lib.findDeclared(typeName);
 
           if (type != null) {

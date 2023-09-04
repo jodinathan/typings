@@ -218,12 +218,12 @@ class InteropLibrary with InteropItem {
             final ret = switch (value) {
               String v when v.isEmpty => InteropConstString(name, name: name),
               String v => () {
-                final nval = num.tryParse(v);
+                  final nval = num.tryParse(v);
 
-                return (nval == null
-                    ? InteropConstString(value, name: name)
-                    : InteropConstNum(nval, name: name)) as InteropConstType;
-              }(),
+                  return (nval == null
+                      ? InteropConstString(value, name: name)
+                      : InteropConstNum(nval, name: name)) as InteropConstType;
+                }(),
               num v => InteropConstNum(v, name: name),
               _ => throw 'Unknown value type $value'
             };
