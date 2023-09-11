@@ -256,7 +256,7 @@ class InteropMethodHolder extends InteropMethod {
       if (built.length > 1) {
         yield Method((b) {
           b
-            ..name = name
+            ..name = usableName
             ..docs.add(
                 '  /// Overload accessor: ${overloadRecord.mapIndexed((i, el) => '\$${i + start}').join(', ')}')
             ..static = isStatic

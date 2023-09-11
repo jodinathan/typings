@@ -11,20 +11,6 @@ import '/src/d/core/lib.es5.d.dart' as _i7;
 
 @_i1.JS('anime')
 external _i2.Object _self;
-typedef FunctionBasedParameter = _i2.num Function(
-  _i3.HTMLElement,
-  _i2.num,
-  _i2.num,
-);
-typedef AnimeCallbackFunction = void Function(_i4.AnimeInstance);
-typedef CustomEasingFunction = _i2.num Function(_i2.num) Function(
-  _i3.HTMLElement,
-  _i2.num,
-  _i2.num,
-);
-typedef AnimeTarget = _i2.dynamic;
-typedef EasingOptions = EasingOptionsOptions;
-typedef DirectionOptions = DirectionOptionsOptions;
 
 enum Direction {
   normal(r'normal'),
@@ -91,6 +77,21 @@ enum DirectionOptionsOptions {
 
   final _i2.String value;
 }
+
+typedef FunctionBasedParameter = _i2.num Function(
+  _i3.HTMLElement,
+  _i2.num,
+  _i2.num,
+);
+typedef AnimeCallbackFunction = void Function(_i2.dynamic);
+typedef CustomEasingFunction = _i2.num Function(_i2.num) Function(
+  _i3.HTMLElement,
+  _i2.num,
+  _i2.num,
+);
+typedef AnimeTarget = _i2.dynamic;
+typedef EasingOptions = _i4.EasingOptionsOptions;
+typedef DirectionOptions = _i4.DirectionOptionsOptions;
 
 @_i1.JS()
 @_i1.staticInterop
@@ -1030,10 +1031,10 @@ class StaggerOptions {
 
   factory StaggerOptions({
     _i2.dynamic start,
-    Direction? direction,
+    _i4.Direction? direction,
     _i2.dynamic easing,
     _i7.ReadonlyArray<_i2.num>? grid,
-    Axis? axis,
+    _i4.Axis? axis,
     _i2.dynamic from,
   }) =>
       StaggerOptions._(
@@ -1059,14 +1060,14 @@ extension StaggerOptions$Typings on StaggerOptions {
     );
   }
 
-  Direction? get direction => switch (_i6.getProperty(
+  _i4.Direction? get direction => switch (_i6.getProperty(
         this,
         'direction',
       )) {
-        _i2.String name => Direction.values.byName(name),
+        _i2.String name => _i4.Direction.values.byName(name),
         _ => null
       };
-  set direction(Direction? value) {
+  set direction(_i4.Direction? value) {
     _i6.setProperty(
       this,
       'direction',
@@ -1098,14 +1099,14 @@ extension StaggerOptions$Typings on StaggerOptions {
     );
   }
 
-  Axis? get axis => switch (_i6.getProperty(
+  _i4.Axis? get axis => switch (_i6.getProperty(
         this,
         'axis',
       )) {
-        _i2.String name => Axis.values.byName(name),
+        _i2.String name => _i4.Axis.values.byName(name),
         _ => null
       };
-  set axis(Axis? value) {
+  set axis(_i4.Axis? value) {
     _i6.setProperty(
       this,
       'axis',
@@ -1267,10 +1268,10 @@ _i2.num random(
         max,
       ],
     );
-_i4.AnimeInstance anime(_i4.AnimeParams params) => _i6.callMethod(
+_i2.dynamic anime([_i2.dynamic params]) => _i6.callMethod(
       _self,
       'anime',
-      [params],
+      [params ?? _i5.undefined],
     );
 
 @_i1.JS()

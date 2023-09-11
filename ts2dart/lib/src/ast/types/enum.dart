@@ -54,6 +54,7 @@ class InteropDynamicEnum extends InteropNamedDeclaration
   }
 
   static const interfaceTypeParamName = 'T\$';
+  static const valueVarName = 'value';
 
   static Expression argumentToInterop(
       {required Expression argument,
@@ -119,9 +120,9 @@ class InteropDynamicEnum extends InteropNamedDeclaration
     return ref().property('values').property('byName').call([argument]);
   }
 
-  @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) =>
-      refer(usableName);
+  // @override
+  // Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) =>
+  //     refer(usableName);
 
   @override
   bool isSame(InteropType other) =>
@@ -215,7 +216,7 @@ class InteropDynamicEnum extends InteropNamedDeclaration
           ..name = usableName
           ..fields.add(Field((b) {
             b
-              ..name = 'value'
+              ..name = valueVarName
               ..type = ref
               ..modifier = FieldModifier.final$;
           }))
@@ -224,13 +225,14 @@ class InteropDynamicEnum extends InteropNamedDeclaration
               ..constant = true
               ..requiredParameters.add(Parameter((b) {
                 b
-                  ..name = 'value'
+                  ..name = valueVarName
                   ..toThis = true;
               }));
           }))
           ..values.addAll(values.map((value) => EnumValue((b) {
+                final madeName = value.makeKeyword();
                 b
-                  ..name = value.makeKeyword()
+                  ..name = madeName == 'value' ? 'pValue' : madeName
                   ..arguments.add(value.literal());
 
                 if (value is InteropConstrainedConstType && tp != null) {

@@ -14,875 +14,6 @@ import 'dart:typed_data' as _i9;
 @_i1.JS('self')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _Intersection28 implements _i3.Window, _GlobalThis {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _Intersection29 implements _i3.Window, _GlobalThis {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class EventListenerOrEventListenerObjectCommon {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class ReadableStreamDefaultReadResultCommon {}
-
-extension ReadableStreamDefaultReadResultCommon$Typings
-    on ReadableStreamDefaultReadResultCommon {
-  _i2.bool get done => _i4.getProperty(
-        this,
-        'done',
-      );
-  set done(_i2.bool value) {
-    _i4.setProperty(
-      this,
-      'done',
-      value,
-    );
-  }
-
-  _i2.dynamic get value => _i4.getProperty(
-        this,
-        'value',
-      );
-  set value(_i2.dynamic value) {
-    _i4.setProperty(
-      this,
-      'value',
-      value,
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class ReadableStreamBYOBReadResultCommon<V extends _i5.ArrayBufferView> {}
-
-extension ReadableStreamBYOBReadResultCommon$Typings<
-    V extends _i5.ArrayBufferView> on ReadableStreamBYOBReadResultCommon<V> {
-  _i2.bool get done => _i4.getProperty(
-        this,
-        'done',
-      );
-  set done(_i2.bool value) {
-    _i4.setProperty(
-      this,
-      'done',
-      value,
-    );
-  }
-
-  V? get value => _i4.getProperty(
-        this,
-        'value',
-      );
-  set value(V? value) {
-    _i4.setProperty(
-      this,
-      'value',
-      value ?? _i6.undefined,
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _Intersection30 implements _i3.Window, _GlobalThis {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _Intersection31 implements _i3.Window, _GlobalThis {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _CryptoAccessor {}
-
-extension CryptoAccessor$Typings on _CryptoAccessor {
-  _i3.SubtleCrypto get subtle => _i4.getProperty(
-        _i7.target2707,
-        'subtle',
-      );
-  T getRandomValues<T extends _i2.Object>(T array) => _i4.callMethod(
-        _i7.target2707,
-        'getRandomValues',
-        [array],
-      );
-  _i2.String randomUUID() => _i4.callMethod(
-        _i7.target2707,
-        'randomUUID',
-        [],
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _ConsoleAccessor {}
-
-extension ConsoleAccessor$Typings on _ConsoleAccessor {
-  void assert$([
-    _i2.bool? condition,
-    _i2.Iterable<_i2.dynamic>? data,
-  ]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'assert',
-      [
-        condition ?? _i6.undefined,
-        ...?data,
-      ],
-    );
-  }
-
-  void clear() {
-    _i4.callMethod(
-      _i7.target2712,
-      'clear',
-      [],
-    );
-  }
-
-  void count([_i2.String? label]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'count',
-      [label ?? _i6.undefined],
-    );
-  }
-
-  void countReset([_i2.String? label]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'countReset',
-      [label ?? _i6.undefined],
-    );
-  }
-
-  void debug([_i2.Iterable<_i2.dynamic>? data]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'debug',
-      [...?data],
-    );
-  }
-
-  void dir([
-    _i2.dynamic item,
-    _i2.dynamic options,
-  ]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'dir',
-      [
-        item ?? _i6.undefined,
-        options ?? _i6.undefined,
-      ],
-    );
-  }
-
-  void dirxml([_i2.Iterable<_i2.dynamic>? data]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'dirxml',
-      [...?data],
-    );
-  }
-
-  void error([_i2.Iterable<_i2.dynamic>? data]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'error',
-      [...?data],
-    );
-  }
-
-  void group([_i2.Iterable<_i2.dynamic>? data]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'group',
-      [...?data],
-    );
-  }
-
-  void groupCollapsed([_i2.Iterable<_i2.dynamic>? data]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'groupCollapsed',
-      [...?data],
-    );
-  }
-
-  void groupEnd() {
-    _i4.callMethod(
-      _i7.target2712,
-      'groupEnd',
-      [],
-    );
-  }
-
-  void info([_i2.Iterable<_i2.dynamic>? data]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'info',
-      [...?data],
-    );
-  }
-
-  void log([_i2.Iterable<_i2.dynamic>? data]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'log',
-      [...?data],
-    );
-  }
-
-  void table([
-    _i2.dynamic tabularData,
-    _i2.List<_i2.String>? properties,
-  ]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'table',
-      [
-        tabularData ?? _i6.undefined,
-        properties ?? _i6.undefined,
-      ],
-    );
-  }
-
-  void time([_i2.String? label]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'time',
-      [label ?? _i6.undefined],
-    );
-  }
-
-  void timeEnd([_i2.String? label]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'timeEnd',
-      [label ?? _i6.undefined],
-    );
-  }
-
-  void timeLog([
-    _i2.String? label,
-    _i2.Iterable<_i2.dynamic>? data,
-  ]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'timeLog',
-      [
-        label ?? _i6.undefined,
-        ...?data,
-      ],
-    );
-  }
-
-  void trace([_i2.Iterable<_i2.dynamic>? data]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'trace',
-      [...?data],
-    );
-  }
-
-  void warn([_i2.Iterable<_i2.dynamic>? data]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'warn',
-      [...?data],
-    );
-  }
-
-  /// This method is a noop, unless used in inspector
-  void timeStamp([_i2.String? label]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'timeStamp',
-      [label ?? _i6.undefined],
-    );
-  }
-
-  /// This method is a noop, unless used in inspector
-  void profile([_i2.String? label]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'profile',
-      [label ?? _i6.undefined],
-    );
-  }
-
-  /// This method is a noop, unless used in inspector
-  void profileEnd([_i2.String? label]) {
-    _i4.callMethod(
-      _i7.target2712,
-      'profileEnd',
-      [label ?? _i6.undefined],
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _PerformanceAccessor implements _i3.EventTarget {}
-
-extension PerformanceAccessor$Typings on _PerformanceAccessor {
-  /// Returns a timestamp representing the start of the performance measurement.
-  _i2.num get timeOrigin => _i4.getProperty(
-        _i7.target2713,
-        'timeOrigin',
-      );
-
-  /// Removes the stored timestamp with the associated name.
-  void clearMarks([_i2.String? markName]) {
-    _i4.callMethod(
-      _i7.target2713,
-      'clearMarks',
-      [markName ?? _i6.undefined],
-    );
-  }
-
-  /// Removes stored timestamp with the associated name.
-  void clearMeasures([_i2.String? measureName]) {
-    _i4.callMethod(
-      _i7.target2713,
-      'clearMeasures',
-      [measureName ?? _i6.undefined],
-    );
-  }
-
-  _i3.PerformanceEntryList getEntries() => (_i4.callMethod(
-        _i7.target2713,
-        'getEntries',
-        [],
-      ) as _i2.List)
-          .cast();
-  _i3.PerformanceEntryList getEntriesByName(
-    _i2.String name, [
-    _i2.String? type,
-  ]) =>
-      (_i4.callMethod(
-        _i7.target2713,
-        'getEntriesByName',
-        [
-          name,
-          type ?? _i6.undefined,
-        ],
-      ) as _i2.List)
-          .cast();
-  _i3.PerformanceEntryList getEntriesByType(_i2.String type) => (_i4.callMethod(
-        _i7.target2713,
-        'getEntriesByType',
-        [type],
-      ) as _i2.List)
-          .cast();
-
-  /// Stores a timestamp with the associated name (a "mark").
-  _i3.PerformanceMark mark(
-    _i2.String markName, [
-    _i3.PerformanceMarkOptions? options,
-  ]) =>
-      _i4.callMethod(
-        _i7.target2713,
-        'mark',
-        [
-          markName,
-          options ?? _i6.undefined,
-        ],
-      );
-
-  /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
-  ///  associated name (a "measure").
-  _i3.PerformanceMeasure _measure$1(
-    _i2.String measureName, [
-    _i3.PerformanceMeasureOptions? options,
-  ]) =>
-      _i4.callMethod(
-        _i7.target2713,
-        'measure',
-        [
-          measureName,
-          options ?? _i6.undefined,
-        ],
-      );
-
-  /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
-  ///  associated name (a "measure").
-  _i3.PerformanceMeasure _measure$2(
-    _i2.String measureName, [
-    _i2.String? startMark,
-    _i2.String? endMark,
-  ]) =>
-      _i4.callMethod(
-        _i7.target2713,
-        'measure',
-        [
-          measureName,
-          startMark ?? _i6.undefined,
-          endMark ?? _i6.undefined,
-        ],
-      );
-
-  /// Overload accessor: $1, $2
-  ({
-    /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
-    ///  associated name (a "measure").
-    _i3.PerformanceMeasure Function(
-      _i2.String measureName, [
-      _i3.PerformanceMeasureOptions? options,
-    ]) $1,
-
-    /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
-    ///  associated name (a "measure").
-    _i3.PerformanceMeasure Function(
-      _i2.String measureName, [
-      _i2.String? startMark,
-      _i2.String? endMark,
-    ]) $2,
-  }) get measure => (
-        $1: _measure$1,
-        $2: _measure$2,
-      );
-
-  /// Returns a current time from Deno's start in milliseconds.
-  ///
-  ///  Use the permission flag `--allow-hrtime` return a precise value.
-  ///
-  ///  ```ts
-  ///  const t = performance.now();
-  ///  console.log(`${t} ms since start!`);
-  ///  ```
-  ///
-  ///  @tags allow-hrtime
-  _i2.num now() => _i4.callMethod(
-        _i7.target2713,
-        'now',
-        [],
-      );
-
-  /// Returns a JSON representation of the performance object.
-  _i2.dynamic toJSON() => _i4.callMethod(
-        _i7.target2713,
-        'toJSON',
-        [],
-      );
-  _i2.Never call() => _i4.callMethod(
-        _i7.target2713,
-        '',
-        [],
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _CachesAccessor {}
-
-extension CachesAccessor$Typings on _CachesAccessor {
-  /// Open a cache storage for the provided name.
-  _i2.Future<_i3.Cache> open(_i2.String cacheName) =>
-      _i4.promiseToFuture(_i4.callMethod(
-        _i7.target2714,
-        'open',
-        [cacheName],
-      ));
-
-  /// Check if cache already exists for the provided name.
-  _i2.Future<_i2.bool> has(_i2.String cacheName) =>
-      _i4.promiseToFuture(_i4.callMethod(
-        _i7.target2714,
-        'has',
-        [cacheName],
-      ));
-
-  /// Delete cache storage for the provided name.
-  _i2.Future<_i2.bool> delete(_i2.String cacheName) =>
-      _i4.promiseToFuture(_i4.callMethod(
-        _i7.target2714,
-        'delete',
-        [cacheName],
-      ));
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _WindowAccessor implements _i3.Window, _GlobalThis {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _SelfAccessor implements _i3.Window, _GlobalThis {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _LocalStorageAccessor {}
-
-extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
-  /// Returns the number of key/value pairs currently present in the list associated with the object.
-  _i2.num get length => _i4.getProperty(
-        _i7.target2718,
-        'length',
-      );
-
-  /// Empties the list associated with the object of all key/value pairs, if there are any.
-  void clear() {
-    _i4.callMethod(
-      _i7.target2717,
-      'clear',
-      [],
-    );
-  }
-
-  /// Returns the current value associated with the given key, or null if the given key does not exist in the list associated with the object.
-  _i2.String? getItem(_i2.String key) => _i4.callMethod(
-        _i7.target2717,
-        'getItem',
-        [key],
-      );
-
-  /// Returns the name of the nth key in the list, or null if n is greater than or equal to the number of key/value pairs in the object.
-  _i2.String? key(_i2.num index) => _i4.callMethod(
-        _i7.target2717,
-        'key',
-        [index],
-      );
-
-  /// Removes the key/value pair with the given key from the list associated with the object, if a key/value pair with the given key exists.
-  void removeItem(_i2.String key) {
-    _i4.callMethod(
-      _i7.target2717,
-      'removeItem',
-      [key],
-    );
-  }
-
-  /// Sets the value of the pair identified by key to value, creating a new key/value pair if none existed for key previously.
-  ///
-  ///  Throws a "QuotaExceededError" DOMException exception if the new value couldn't be set. (Setting could fail if, e.g., the user has disabled storage for the site, or if the quota has been exceeded.)
-  void setItem(
-    _i2.String key,
-    _i2.String value,
-  ) {
-    _i4.callMethod(
-      _i7.target2717,
-      'setItem',
-      [
-        key,
-        value,
-      ],
-    );
-  }
-
-  _i3.Storage call() => _i4.callMethod(
-        _i7.target2717,
-        '',
-        [],
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _SessionStorageAccessor {}
-
-extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
-  /// Returns the number of key/value pairs currently present in the list associated with the object.
-  _i2.num get length => _i4.getProperty(
-        _i7.target2718,
-        'length',
-      );
-
-  /// Empties the list associated with the object of all key/value pairs, if there are any.
-  void clear() {
-    _i4.callMethod(
-      _i7.target2718,
-      'clear',
-      [],
-    );
-  }
-
-  /// Returns the current value associated with the given key, or null if the given key does not exist in the list associated with the object.
-  _i2.String? getItem(_i2.String key) => _i4.callMethod(
-        _i7.target2718,
-        'getItem',
-        [key],
-      );
-
-  /// Returns the name of the nth key in the list, or null if n is greater than or equal to the number of key/value pairs in the object.
-  _i2.String? key(_i2.num index) => _i4.callMethod(
-        _i7.target2718,
-        'key',
-        [index],
-      );
-
-  /// Removes the key/value pair with the given key from the list associated with the object, if a key/value pair with the given key exists.
-  void removeItem(_i2.String key) {
-    _i4.callMethod(
-      _i7.target2718,
-      'removeItem',
-      [key],
-    );
-  }
-
-  /// Sets the value of the pair identified by key to value, creating a new key/value pair if none existed for key previously.
-  ///
-  ///  Throws a "QuotaExceededError" DOMException exception if the new value couldn't be set. (Setting could fail if, e.g., the user has disabled storage for the site, or if the quota has been exceeded.)
-  void setItem(
-    _i2.String key,
-    _i2.String value,
-  ) {
-    _i4.callMethod(
-      _i7.target2718,
-      'setItem',
-      [
-        key,
-        value,
-      ],
-    );
-  }
-
-  _i3.Storage call() => _i4.callMethod(
-        _i7.target2718,
-        '',
-        [],
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _NavigatorAccessor {}
-
-extension NavigatorAccessor$Typings on _NavigatorAccessor {
-  _i2.num get hardwareConcurrency => _i4.getProperty(
-        _i7.target2719,
-        'hardwareConcurrency',
-      );
-  _i2.String get userAgent => _i4.getProperty(
-        _i7.target2719,
-        'userAgent',
-      );
-  _i2.String get language => _i4.getProperty(
-        _i7.target2719,
-        'language',
-      );
-  _i2.List<_i2.String> get languages => (_i4.getProperty(
-        _i7.target2719,
-        'languages',
-      ) as _i2.List)
-          .cast();
-  _i2.Never call() => _i4.callMethod(
-        _i7.target2719,
-        '',
-        [],
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _LocationAccessor {}
-
-extension LocationAccessor$Typings on _LocationAccessor {
-  /// Returns a DOMStringList object listing the origins of the ancestor
-  /// browsing contexts, from the parent browsing context to the top-level
-  /// browsing context.
-  ///
-  /// Always empty in Deno.
-  _i3.DOMStringList get ancestorOrigins => _i4.getProperty(
-        _i7.target2720,
-        'ancestorOrigins',
-      );
-
-  /// Returns the Location object's URL's fragment (includes leading "#" if
-  ///  non-empty).
-  ///
-  ///  Cannot be set in Deno.
-  _i2.String get hash => _i4.getProperty(
-        _i7.target2720,
-        'hash',
-      );
-
-  /// Returns the Location object's URL's host and port (if different from the
-  ///  default port for the scheme).
-  ///
-  ///  Cannot be set in Deno.
-  _i2.String get host => _i4.getProperty(
-        _i7.target2720,
-        'host',
-      );
-
-  /// Returns the Location object's URL's host.
-  ///
-  ///  Cannot be set in Deno.
-  _i2.String get hostname => _i4.getProperty(
-        _i7.target2720,
-        'hostname',
-      );
-
-  /// Returns the Location object's URL.
-  ///
-  ///  Cannot be set in Deno.
-  _i2.String get href => _i4.getProperty(
-        _i7.target2720,
-        'href',
-      );
-
-  /// Returns the Location object's URL's origin.
-  _i2.String get origin => _i4.getProperty(
-        _i7.target2720,
-        'origin',
-      );
-
-  /// Returns the Location object's URL's path.
-  ///
-  ///  Cannot be set in Deno.
-  _i2.String get pathname => _i4.getProperty(
-        _i7.target2720,
-        'pathname',
-      );
-
-  /// Returns the Location object's URL's port.
-  ///
-  ///  Cannot be set in Deno.
-  _i2.String get port => _i4.getProperty(
-        _i7.target2720,
-        'port',
-      );
-
-  /// Returns the Location object's URL's scheme.
-  ///
-  ///  Cannot be set in Deno.
-  _i2.String get protocol => _i4.getProperty(
-        _i7.target2720,
-        'protocol',
-      );
-
-  /// Returns the Location object's URL's query (includes leading "?" if
-  ///  non-empty).
-  ///
-  ///  Cannot be set in Deno.
-  _i2.String get search => _i4.getProperty(
-        _i7.target2720,
-        'search',
-      );
-  _i2.String toString$() => _i4.callMethod(
-        _i7.target2720,
-        'toString',
-        [],
-      );
-
-  /// Navigates to the given URL.
-  ///
-  ///  Cannot be set in Deno.
-  void assign(_i2.String url) {
-    _i4.callMethod(
-      _i7.target2720,
-      'assign',
-      [url],
-    );
-  }
-
-  /// Reloads the current page.
-  ///
-  ///  Disabled in Deno.
-  void _reload$1() {
-    _i4.callMethod(
-      _i7.target2720,
-      'reload',
-      [],
-    );
-  }
-
-  /// @deprecated
-  void _reload$2(_i2.bool forcedReload) {
-    _i4.callMethod(
-      _i7.target2720,
-      'reload',
-      [forcedReload],
-    );
-  }
-
-  /// Overload accessor: $1, $2
-  ({
-    /// Reloads the current page.
-    ///
-    ///  Disabled in Deno.
-    void Function() $1,
-
-    /// @deprecated
-    void Function(_i2.bool forcedReload) $2,
-  }) get reload => (
-        $1: _reload$1,
-        $2: _reload$2,
-      );
-
-  /// Removes the current page from the session history and navigates to the
-  ///  given URL.
-  ///
-  ///  Disabled in Deno.
-  void replace(_i2.String url) {
-    _i4.callMethod(
-      _i7.target2720,
-      'replace',
-      [url],
-    );
-  }
-
-  _i2.Never call() => _i4.callMethod(
-        _i7.target2720,
-        '',
-        [],
-      );
-}
-
-typedef URLPatternInput = _i2.Object;
-typedef EventListenerOrEventListenerObject
-    = _i3.EventListenerOrEventListenerObjectCommon;
-typedef BlobPart = _i2.Object;
-typedef ReadableStreamDefaultReadResult<T>
-    = _i3.ReadableStreamDefaultReadResultCommon;
-typedef ReadableStreamBYOBReadResult<V extends _i5.ArrayBufferView>
-    = _i3.ReadableStreamBYOBReadResultCommon<_i5.ArrayBufferView>;
-typedef Transferable = _i2.Object;
-typedef PostMessageOptions = _i3.StructuredSerializeOptions;
-typedef FormDataEntryValue = _i2.Object;
-typedef HeadersInit = _i2.Object;
-typedef RequestInfo = _i2.Object;
-typedef RequestCache = RequestCacheOptions;
-typedef RequestCredentials = RequestCredentialsOptions;
-typedef RequestMode = RequestModeOptions;
-typedef RequestRedirect = RequestRedirectOptions;
-typedef ReferrerPolicy = ReferrerPolicyOptions;
-typedef BodyInit = _i2.Object;
-typedef RequestDestination = RequestDestinationOptions;
-typedef ResponseType = ResponseTypeOptions;
-typedef BinaryType = BinaryTypeOptions;
-typedef AlgorithmIdentifier = _i2.Object;
-typedef HashAlgorithmIdentifier = _i3.AlgorithmIdentifier;
-typedef KeyType = KeyTypeOptions;
-typedef KeyUsage = KeyUsageOptions;
-typedef KeyFormat = KeyFormatOptions;
-typedef NamedCurve = _i2.String;
-typedef BufferSource = _i2.Object;
-typedef PerformanceEntryList = _i2.List<_i3.PerformanceEntry>;
-
 enum Endings {
   transparent(r'transparent'),
   native(r'native');
@@ -1043,6 +174,875 @@ enum KeyFormatOptions {
 
   final _i2.String value;
 }
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _Intersection28 implements _i3.Window, _GlobalThis {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _Intersection29 implements _i3.Window, _GlobalThis {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class EventListenerOrEventListenerObjectCommon {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class ReadableStreamDefaultReadResultCommon {}
+
+extension ReadableStreamDefaultReadResultCommon$Typings
+    on ReadableStreamDefaultReadResultCommon {
+  _i2.bool get done => _i4.getProperty(
+        this,
+        'done',
+      );
+  set done(_i2.bool value) {
+    _i4.setProperty(
+      this,
+      'done',
+      value,
+    );
+  }
+
+  _i2.dynamic get value => _i4.getProperty(
+        this,
+        'value',
+      );
+  set value(_i2.dynamic value) {
+    _i4.setProperty(
+      this,
+      'value',
+      value,
+    );
+  }
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class ReadableStreamBYOBReadResultCommon<V extends _i5.ArrayBufferView> {}
+
+extension ReadableStreamBYOBReadResultCommon$Typings<
+    V extends _i5.ArrayBufferView> on ReadableStreamBYOBReadResultCommon<V> {
+  _i2.bool get done => _i4.getProperty(
+        this,
+        'done',
+      );
+  set done(_i2.bool value) {
+    _i4.setProperty(
+      this,
+      'done',
+      value,
+    );
+  }
+
+  V? get value => _i4.getProperty(
+        this,
+        'value',
+      );
+  set value(V? value) {
+    _i4.setProperty(
+      this,
+      'value',
+      value ?? _i6.undefined,
+    );
+  }
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _Intersection30 implements _i3.Window, _GlobalThis {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _Intersection31 implements _i3.Window, _GlobalThis {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _CryptoAccessor {}
+
+extension CryptoAccessor$Typings on _CryptoAccessor {
+  _i3.SubtleCrypto get subtle => _i4.getProperty(
+        _i7.target2706,
+        'subtle',
+      );
+  T getRandomValues<T extends _i2.Object>(T array) => _i4.callMethod(
+        _i7.target2706,
+        'getRandomValues',
+        [array],
+      );
+  _i2.String randomUUID() => _i4.callMethod(
+        _i7.target2706,
+        'randomUUID',
+        [],
+      );
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _ConsoleAccessor {}
+
+extension ConsoleAccessor$Typings on _ConsoleAccessor {
+  void assert$([
+    _i2.bool? condition,
+    _i2.Iterable<_i2.dynamic>? data,
+  ]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'assert',
+      [
+        condition ?? _i6.undefined,
+        ...?data,
+      ],
+    );
+  }
+
+  void clear() {
+    _i4.callMethod(
+      _i7.target2711,
+      'clear',
+      [],
+    );
+  }
+
+  void count([_i2.String? label]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'count',
+      [label ?? _i6.undefined],
+    );
+  }
+
+  void countReset([_i2.String? label]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'countReset',
+      [label ?? _i6.undefined],
+    );
+  }
+
+  void debug([_i2.Iterable<_i2.dynamic>? data]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'debug',
+      [...?data],
+    );
+  }
+
+  void dir([
+    _i2.dynamic item,
+    _i2.dynamic options,
+  ]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'dir',
+      [
+        item ?? _i6.undefined,
+        options ?? _i6.undefined,
+      ],
+    );
+  }
+
+  void dirxml([_i2.Iterable<_i2.dynamic>? data]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'dirxml',
+      [...?data],
+    );
+  }
+
+  void error([_i2.Iterable<_i2.dynamic>? data]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'error',
+      [...?data],
+    );
+  }
+
+  void group([_i2.Iterable<_i2.dynamic>? data]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'group',
+      [...?data],
+    );
+  }
+
+  void groupCollapsed([_i2.Iterable<_i2.dynamic>? data]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'groupCollapsed',
+      [...?data],
+    );
+  }
+
+  void groupEnd() {
+    _i4.callMethod(
+      _i7.target2711,
+      'groupEnd',
+      [],
+    );
+  }
+
+  void info([_i2.Iterable<_i2.dynamic>? data]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'info',
+      [...?data],
+    );
+  }
+
+  void log([_i2.Iterable<_i2.dynamic>? data]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'log',
+      [...?data],
+    );
+  }
+
+  void table([
+    _i2.dynamic tabularData,
+    _i2.List<_i2.String>? properties,
+  ]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'table',
+      [
+        tabularData ?? _i6.undefined,
+        properties ?? _i6.undefined,
+      ],
+    );
+  }
+
+  void time([_i2.String? label]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'time',
+      [label ?? _i6.undefined],
+    );
+  }
+
+  void timeEnd([_i2.String? label]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'timeEnd',
+      [label ?? _i6.undefined],
+    );
+  }
+
+  void timeLog([
+    _i2.String? label,
+    _i2.Iterable<_i2.dynamic>? data,
+  ]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'timeLog',
+      [
+        label ?? _i6.undefined,
+        ...?data,
+      ],
+    );
+  }
+
+  void trace([_i2.Iterable<_i2.dynamic>? data]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'trace',
+      [...?data],
+    );
+  }
+
+  void warn([_i2.Iterable<_i2.dynamic>? data]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'warn',
+      [...?data],
+    );
+  }
+
+  /// This method is a noop, unless used in inspector
+  void timeStamp([_i2.String? label]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'timeStamp',
+      [label ?? _i6.undefined],
+    );
+  }
+
+  /// This method is a noop, unless used in inspector
+  void profile([_i2.String? label]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'profile',
+      [label ?? _i6.undefined],
+    );
+  }
+
+  /// This method is a noop, unless used in inspector
+  void profileEnd([_i2.String? label]) {
+    _i4.callMethod(
+      _i7.target2711,
+      'profileEnd',
+      [label ?? _i6.undefined],
+    );
+  }
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _PerformanceAccessor implements _i3.EventTarget {}
+
+extension PerformanceAccessor$Typings on _PerformanceAccessor {
+  /// Returns a timestamp representing the start of the performance measurement.
+  _i2.num get timeOrigin => _i4.getProperty(
+        _i7.target2712,
+        'timeOrigin',
+      );
+
+  /// Removes the stored timestamp with the associated name.
+  void clearMarks([_i2.String? markName]) {
+    _i4.callMethod(
+      _i7.target2712,
+      'clearMarks',
+      [markName ?? _i6.undefined],
+    );
+  }
+
+  /// Removes stored timestamp with the associated name.
+  void clearMeasures([_i2.String? measureName]) {
+    _i4.callMethod(
+      _i7.target2712,
+      'clearMeasures',
+      [measureName ?? _i6.undefined],
+    );
+  }
+
+  _i3.PerformanceEntryList getEntries() => (_i4.callMethod(
+        _i7.target2712,
+        'getEntries',
+        [],
+      ) as _i2.List)
+          .cast();
+  _i3.PerformanceEntryList getEntriesByName(
+    _i2.String name, [
+    _i2.String? type,
+  ]) =>
+      (_i4.callMethod(
+        _i7.target2712,
+        'getEntriesByName',
+        [
+          name,
+          type ?? _i6.undefined,
+        ],
+      ) as _i2.List)
+          .cast();
+  _i3.PerformanceEntryList getEntriesByType(_i2.String type) => (_i4.callMethod(
+        _i7.target2712,
+        'getEntriesByType',
+        [type],
+      ) as _i2.List)
+          .cast();
+
+  /// Stores a timestamp with the associated name (a "mark").
+  _i3.PerformanceMark mark(
+    _i2.String markName, [
+    _i3.PerformanceMarkOptions? options,
+  ]) =>
+      _i4.callMethod(
+        _i7.target2712,
+        'mark',
+        [
+          markName,
+          options ?? _i6.undefined,
+        ],
+      );
+
+  /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+  ///  associated name (a "measure").
+  _i3.PerformanceMeasure _measure$1(
+    _i2.String measureName, [
+    _i3.PerformanceMeasureOptions? options,
+  ]) =>
+      _i4.callMethod(
+        _i7.target2712,
+        'measure',
+        [
+          measureName,
+          options ?? _i6.undefined,
+        ],
+      );
+
+  /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+  ///  associated name (a "measure").
+  _i3.PerformanceMeasure _measure$2(
+    _i2.String measureName, [
+    _i2.String? startMark,
+    _i2.String? endMark,
+  ]) =>
+      _i4.callMethod(
+        _i7.target2712,
+        'measure',
+        [
+          measureName,
+          startMark ?? _i6.undefined,
+          endMark ?? _i6.undefined,
+        ],
+      );
+
+  /// Overload accessor: $1, $2
+  ({
+    /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+    ///  associated name (a "measure").
+    _i3.PerformanceMeasure Function(
+      _i2.String measureName, [
+      _i3.PerformanceMeasureOptions? options,
+    ]) $1,
+
+    /// Stores the `DOMHighResTimeStamp` duration between two marks along with the
+    ///  associated name (a "measure").
+    _i3.PerformanceMeasure Function(
+      _i2.String measureName, [
+      _i2.String? startMark,
+      _i2.String? endMark,
+    ]) $2,
+  }) get measure => (
+        $1: _measure$1,
+        $2: _measure$2,
+      );
+
+  /// Returns a current time from Deno's start in milliseconds.
+  ///
+  ///  Use the permission flag `--allow-hrtime` return a precise value.
+  ///
+  ///  ```ts
+  ///  const t = performance.now();
+  ///  console.log(`${t} ms since start!`);
+  ///  ```
+  ///
+  ///  @tags allow-hrtime
+  _i2.num now() => _i4.callMethod(
+        _i7.target2712,
+        'now',
+        [],
+      );
+
+  /// Returns a JSON representation of the performance object.
+  _i2.dynamic toJSON() => _i4.callMethod(
+        _i7.target2712,
+        'toJSON',
+        [],
+      );
+  _i2.Never call() => _i4.callMethod(
+        _i7.target2712,
+        '',
+        [],
+      );
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _CachesAccessor {}
+
+extension CachesAccessor$Typings on _CachesAccessor {
+  /// Open a cache storage for the provided name.
+  _i2.Future<_i3.Cache> open(_i2.String cacheName) =>
+      _i4.promiseToFuture(_i4.callMethod(
+        _i7.target2713,
+        'open',
+        [cacheName],
+      ));
+
+  /// Check if cache already exists for the provided name.
+  _i2.Future<_i2.bool> has(_i2.String cacheName) =>
+      _i4.promiseToFuture(_i4.callMethod(
+        _i7.target2713,
+        'has',
+        [cacheName],
+      ));
+
+  /// Delete cache storage for the provided name.
+  _i2.Future<_i2.bool> delete(_i2.String cacheName) =>
+      _i4.promiseToFuture(_i4.callMethod(
+        _i7.target2713,
+        'delete',
+        [cacheName],
+      ));
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _WindowAccessor implements _i3.Window, _GlobalThis {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _SelfAccessor implements _i3.Window, _GlobalThis {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _LocalStorageAccessor {}
+
+extension LocalStorageAccessor$Typings on _LocalStorageAccessor {
+  /// Returns the number of key/value pairs currently present in the list associated with the object.
+  _i2.num get length => _i4.getProperty(
+        _i7.target2717,
+        'length',
+      );
+
+  /// Empties the list associated with the object of all key/value pairs, if there are any.
+  void clear() {
+    _i4.callMethod(
+      _i7.target2716,
+      'clear',
+      [],
+    );
+  }
+
+  /// Returns the current value associated with the given key, or null if the given key does not exist in the list associated with the object.
+  _i2.String? getItem(_i2.String key) => _i4.callMethod(
+        _i7.target2716,
+        'getItem',
+        [key],
+      );
+
+  /// Returns the name of the nth key in the list, or null if n is greater than or equal to the number of key/value pairs in the object.
+  _i2.String? key(_i2.num index) => _i4.callMethod(
+        _i7.target2716,
+        'key',
+        [index],
+      );
+
+  /// Removes the key/value pair with the given key from the list associated with the object, if a key/value pair with the given key exists.
+  void removeItem(_i2.String key) {
+    _i4.callMethod(
+      _i7.target2716,
+      'removeItem',
+      [key],
+    );
+  }
+
+  /// Sets the value of the pair identified by key to value, creating a new key/value pair if none existed for key previously.
+  ///
+  ///  Throws a "QuotaExceededError" DOMException exception if the new value couldn't be set. (Setting could fail if, e.g., the user has disabled storage for the site, or if the quota has been exceeded.)
+  void setItem(
+    _i2.String key,
+    _i2.String value,
+  ) {
+    _i4.callMethod(
+      _i7.target2716,
+      'setItem',
+      [
+        key,
+        value,
+      ],
+    );
+  }
+
+  _i3.Storage call() => _i4.callMethod(
+        _i7.target2716,
+        '',
+        [],
+      );
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _SessionStorageAccessor {}
+
+extension SessionStorageAccessor$Typings on _SessionStorageAccessor {
+  /// Returns the number of key/value pairs currently present in the list associated with the object.
+  _i2.num get length => _i4.getProperty(
+        _i7.target2717,
+        'length',
+      );
+
+  /// Empties the list associated with the object of all key/value pairs, if there are any.
+  void clear() {
+    _i4.callMethod(
+      _i7.target2717,
+      'clear',
+      [],
+    );
+  }
+
+  /// Returns the current value associated with the given key, or null if the given key does not exist in the list associated with the object.
+  _i2.String? getItem(_i2.String key) => _i4.callMethod(
+        _i7.target2717,
+        'getItem',
+        [key],
+      );
+
+  /// Returns the name of the nth key in the list, or null if n is greater than or equal to the number of key/value pairs in the object.
+  _i2.String? key(_i2.num index) => _i4.callMethod(
+        _i7.target2717,
+        'key',
+        [index],
+      );
+
+  /// Removes the key/value pair with the given key from the list associated with the object, if a key/value pair with the given key exists.
+  void removeItem(_i2.String key) {
+    _i4.callMethod(
+      _i7.target2717,
+      'removeItem',
+      [key],
+    );
+  }
+
+  /// Sets the value of the pair identified by key to value, creating a new key/value pair if none existed for key previously.
+  ///
+  ///  Throws a "QuotaExceededError" DOMException exception if the new value couldn't be set. (Setting could fail if, e.g., the user has disabled storage for the site, or if the quota has been exceeded.)
+  void setItem(
+    _i2.String key,
+    _i2.String value,
+  ) {
+    _i4.callMethod(
+      _i7.target2717,
+      'setItem',
+      [
+        key,
+        value,
+      ],
+    );
+  }
+
+  _i3.Storage call() => _i4.callMethod(
+        _i7.target2717,
+        '',
+        [],
+      );
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _NavigatorAccessor {}
+
+extension NavigatorAccessor$Typings on _NavigatorAccessor {
+  _i2.num get hardwareConcurrency => _i4.getProperty(
+        _i7.target2718,
+        'hardwareConcurrency',
+      );
+  _i2.String get userAgent => _i4.getProperty(
+        _i7.target2718,
+        'userAgent',
+      );
+  _i2.String get language => _i4.getProperty(
+        _i7.target2718,
+        'language',
+      );
+  _i2.List<_i2.String> get languages => (_i4.getProperty(
+        _i7.target2718,
+        'languages',
+      ) as _i2.List)
+          .cast();
+  _i2.Never call() => _i4.callMethod(
+        _i7.target2718,
+        '',
+        [],
+      );
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _LocationAccessor {}
+
+extension LocationAccessor$Typings on _LocationAccessor {
+  /// Returns a DOMStringList object listing the origins of the ancestor
+  /// browsing contexts, from the parent browsing context to the top-level
+  /// browsing context.
+  ///
+  /// Always empty in Deno.
+  _i3.DOMStringList get ancestorOrigins => _i4.getProperty(
+        _i7.target2719,
+        'ancestorOrigins',
+      );
+
+  /// Returns the Location object's URL's fragment (includes leading "#" if
+  ///  non-empty).
+  ///
+  ///  Cannot be set in Deno.
+  _i2.String get hash => _i4.getProperty(
+        _i7.target2719,
+        'hash',
+      );
+
+  /// Returns the Location object's URL's host and port (if different from the
+  ///  default port for the scheme).
+  ///
+  ///  Cannot be set in Deno.
+  _i2.String get host => _i4.getProperty(
+        _i7.target2719,
+        'host',
+      );
+
+  /// Returns the Location object's URL's host.
+  ///
+  ///  Cannot be set in Deno.
+  _i2.String get hostname => _i4.getProperty(
+        _i7.target2719,
+        'hostname',
+      );
+
+  /// Returns the Location object's URL.
+  ///
+  ///  Cannot be set in Deno.
+  _i2.String get href => _i4.getProperty(
+        _i7.target2719,
+        'href',
+      );
+
+  /// Returns the Location object's URL's origin.
+  _i2.String get origin => _i4.getProperty(
+        _i7.target2719,
+        'origin',
+      );
+
+  /// Returns the Location object's URL's path.
+  ///
+  ///  Cannot be set in Deno.
+  _i2.String get pathname => _i4.getProperty(
+        _i7.target2719,
+        'pathname',
+      );
+
+  /// Returns the Location object's URL's port.
+  ///
+  ///  Cannot be set in Deno.
+  _i2.String get port => _i4.getProperty(
+        _i7.target2719,
+        'port',
+      );
+
+  /// Returns the Location object's URL's scheme.
+  ///
+  ///  Cannot be set in Deno.
+  _i2.String get protocol => _i4.getProperty(
+        _i7.target2719,
+        'protocol',
+      );
+
+  /// Returns the Location object's URL's query (includes leading "?" if
+  ///  non-empty).
+  ///
+  ///  Cannot be set in Deno.
+  _i2.String get search => _i4.getProperty(
+        _i7.target2719,
+        'search',
+      );
+  _i2.String toString$() => _i4.callMethod(
+        _i7.target2719,
+        'toString',
+        [],
+      );
+
+  /// Navigates to the given URL.
+  ///
+  ///  Cannot be set in Deno.
+  void assign(_i2.String url) {
+    _i4.callMethod(
+      _i7.target2719,
+      'assign',
+      [url],
+    );
+  }
+
+  /// Reloads the current page.
+  ///
+  ///  Disabled in Deno.
+  void _reload$1() {
+    _i4.callMethod(
+      _i7.target2719,
+      'reload',
+      [],
+    );
+  }
+
+  /// @deprecated
+  void _reload$2(_i2.bool forcedReload) {
+    _i4.callMethod(
+      _i7.target2719,
+      'reload',
+      [forcedReload],
+    );
+  }
+
+  /// Overload accessor: $1, $2
+  ({
+    /// Reloads the current page.
+    ///
+    ///  Disabled in Deno.
+    void Function() $1,
+
+    /// @deprecated
+    void Function(_i2.bool forcedReload) $2,
+  }) get reload => (
+        $1: _reload$1,
+        $2: _reload$2,
+      );
+
+  /// Removes the current page from the session history and navigates to the
+  ///  given URL.
+  ///
+  ///  Disabled in Deno.
+  void replace(_i2.String url) {
+    _i4.callMethod(
+      _i7.target2719,
+      'replace',
+      [url],
+    );
+  }
+
+  _i2.Never call() => _i4.callMethod(
+        _i7.target2719,
+        '',
+        [],
+      );
+}
+
+typedef URLPatternInput = _i2.Object;
+typedef EventListenerOrEventListenerObject
+    = _i3.EventListenerOrEventListenerObjectCommon;
+typedef BlobPart = _i2.Object;
+typedef ReadableStreamDefaultReadResult<T>
+    = _i3.ReadableStreamDefaultReadResultCommon;
+typedef ReadableStreamBYOBReadResult<V extends _i5.ArrayBufferView>
+    = _i3.ReadableStreamBYOBReadResultCommon<_i5.ArrayBufferView>;
+typedef Transferable = _i2.Object;
+typedef PostMessageOptions = _i3.StructuredSerializeOptions;
+typedef FormDataEntryValue = _i2.Object;
+typedef HeadersInit = _i2.Object;
+typedef RequestInfo = _i2.Object;
+typedef RequestCache = _i3.RequestCacheOptions;
+typedef RequestCredentials = _i3.RequestCredentialsOptions;
+typedef RequestMode = _i3.RequestModeOptions;
+typedef RequestRedirect = _i3.RequestRedirectOptions;
+typedef ReferrerPolicy = _i3.ReferrerPolicyOptions;
+typedef BodyInit = _i2.Object;
+typedef RequestDestination = _i3.RequestDestinationOptions;
+typedef ResponseType = _i3.ResponseTypeOptions;
+typedef BinaryType = _i3.BinaryTypeOptions;
+typedef AlgorithmIdentifier = _i2.Object;
+typedef HashAlgorithmIdentifier = _i3.AlgorithmIdentifier;
+typedef KeyType = _i3.KeyTypeOptions;
+typedef KeyUsage = _i3.KeyUsageOptions;
+typedef KeyFormat = _i3.KeyFormatOptions;
+typedef NamedCurve = _i2.String;
+typedef BufferSource = _i2.Object;
+typedef PerformanceEntryList = _i2.List<_i3.PerformanceEntry>;
 
 /// The type of `import.meta`.
 ///
@@ -3346,12 +3346,12 @@ class AbortSignal implements _i3.EventTarget {
       );
 
   static _i3.AbortSignal abort([_i2.dynamic reason]) => _i4.callMethod(
-        _i7.target2693,
+        _i7.target2692,
         'abort',
         [reason ?? _i6.undefined],
       );
   static _i3.AbortSignal timeout(_i2.num milliseconds) => _i4.callMethod(
-        _i7.target2693,
+        _i7.target2692,
         'timeout',
         [milliseconds],
       );
@@ -3409,7 +3409,7 @@ extension AbortSignal$Typings on AbortSignal {
   ///
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
-  void _addEventListener$1<K extends AbortSignalEventMapKeys>(
+  void _addEventListener$1<K extends _i3.AbortSignalEventMapKeys>(
     K type,
     _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
@@ -3489,7 +3489,7 @@ extension AbortSignal$Typings on AbortSignal {
     ///
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
-    void Function<K extends AbortSignalEventMapKeys>(
+    void Function<K extends _i3.AbortSignalEventMapKeys>(
       K type,
       _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
@@ -3530,7 +3530,7 @@ extension AbortSignal$Typings on AbortSignal {
 
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
-  void _removeEventListener$1<K extends AbortSignalEventMapKeys>(
+  void _removeEventListener$1<K extends _i3.AbortSignalEventMapKeys>(
     K type,
     _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
@@ -3568,7 +3568,7 @@ extension AbortSignal$Typings on AbortSignal {
   ({
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
-    void Function<K extends AbortSignalEventMapKeys>(
+    void Function<K extends _i3.AbortSignalEventMapKeys>(
       K type,
       _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
@@ -3639,15 +3639,15 @@ class FileReader implements _i3.EventTarget {
       );
 
   static _i2.num get done => _i4.getProperty(
-        _i7.target2694,
+        _i7.target2693,
         'DONE',
       );
   static _i2.num get empty => _i4.getProperty(
-        _i7.target2694,
+        _i7.target2693,
         'EMPTY',
       );
   static _i2.num get loading => _i4.getProperty(
-        _i7.target2694,
+        _i7.target2693,
         'LOADING',
       );
 }
@@ -3834,7 +3834,7 @@ extension FileReader$Typings on FileReader {
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$ extends _i3.Event>(
-    FileReaderEventMap<K$> type,
+    _i3.FileReaderEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -3914,7 +3914,7 @@ extension FileReader$Typings on FileReader {
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
     void Function<K$ extends _i3.Event>(
-      FileReaderEventMap<K$> type,
+      _i3.FileReaderEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -3955,7 +3955,7 @@ extension FileReader$Typings on FileReader {
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
   void _removeEventListener$1<K$ extends _i3.Event>(
-    FileReaderEventMap<K$> type,
+    _i3.FileReaderEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -3993,7 +3993,7 @@ extension FileReader$Typings on FileReader {
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
     void Function<K$ extends _i3.Event>(
-      FileReaderEventMap<K$> type,
+      _i3.FileReaderEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -4015,15 +4015,15 @@ extension FileReader$Typings on FileReader {
 @_i1.staticInterop
 class IInline20 {
   static _i2.num get done => _i4.getProperty(
-        _i7.target2694,
+        _i7.target2693,
         'DONE',
       );
   static _i2.num get empty => _i4.getProperty(
-        _i7.target2694,
+        _i7.target2693,
         'EMPTY',
       );
   static _i2.num get loading => _i4.getProperty(
-        _i7.target2694,
+        _i7.target2693,
         'LOADING',
       );
 }
@@ -4039,7 +4039,7 @@ class BlobPropertyBag {
 
   factory BlobPropertyBag({
     _i2.String? type,
-    Endings? endings,
+    _i3.Endings? endings,
   }) =>
       BlobPropertyBag._(
         type: type ?? _i6.undefined,
@@ -4060,14 +4060,14 @@ extension BlobPropertyBag$Typings on BlobPropertyBag {
     );
   }
 
-  Endings? get endings => switch (_i4.getProperty(
+  _i3.Endings? get endings => switch (_i4.getProperty(
         this,
         'endings',
       )) {
-        _i2.String name => Endings.values.byName(name),
+        _i2.String name => _i3.Endings.values.byName(name),
         _ => null
       };
-  set endings(Endings? value) {
+  set endings(_i3.Endings? value) {
     _i4.setProperty(
       this,
       'endings',
@@ -4156,7 +4156,7 @@ class FilePropertyBag implements _i3.BlobPropertyBag {
   factory FilePropertyBag({
     _i2.num? lastModified,
     _i2.String? type,
-    Endings? endings,
+    _i3.Endings? endings,
   }) =>
       FilePropertyBag._(
         lastModified: lastModified ?? _i6.undefined,
@@ -6187,7 +6187,7 @@ extension MessagePort$Typings on MessagePort {
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$ extends _i3.Event>(
-    MessagePortEventMap<K$> type,
+    _i3.MessagePortEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -6267,7 +6267,7 @@ extension MessagePort$Typings on MessagePort {
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
     void Function<K$ extends _i3.Event>(
-      MessagePortEventMap<K$> type,
+      _i3.MessagePortEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -6308,7 +6308,7 @@ extension MessagePort$Typings on MessagePort {
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
   void _removeEventListener$1<K$ extends _i3.Event>(
-    MessagePortEventMap<K$> type,
+    _i3.MessagePortEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -6346,7 +6346,7 @@ extension MessagePort$Typings on MessagePort {
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
     void Function<K$ extends _i3.Event>(
-      MessagePortEventMap<K$> type,
+      _i3.MessagePortEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -6860,7 +6860,7 @@ extension RequestInit$Typings on RequestInit {
         this,
         'cache',
       )) {
-        _i2.String name => RequestCacheOptions.values.byName(name),
+        _i2.String name => _i3.RequestCacheOptions.values.byName(name),
         _ => null
       };
   set cache(_i3.RequestCache? value) {
@@ -6878,7 +6878,7 @@ extension RequestInit$Typings on RequestInit {
         this,
         'credentials',
       )) {
-        _i2.String name => RequestCredentialsOptions.values.byName(name),
+        _i2.String name => _i3.RequestCredentialsOptions.values.byName(name),
         _ => null
       };
   set credentials(_i3.RequestCredentials? value) {
@@ -6949,7 +6949,7 @@ extension RequestInit$Typings on RequestInit {
         this,
         'mode',
       )) {
-        _i2.String name => RequestModeOptions.values.byName(name),
+        _i2.String name => _i3.RequestModeOptions.values.byName(name),
         _ => null
       };
   set mode(_i3.RequestMode? value) {
@@ -6967,7 +6967,7 @@ extension RequestInit$Typings on RequestInit {
         this,
         'redirect',
       )) {
-        _i2.String name => RequestRedirectOptions.values.byName(name),
+        _i2.String name => _i3.RequestRedirectOptions.values.byName(name),
         _ => null
       };
   set redirect(_i3.RequestRedirect? value) {
@@ -6997,7 +6997,7 @@ extension RequestInit$Typings on RequestInit {
         this,
         'referrerPolicy',
       )) {
-        _i2.String name => ReferrerPolicyOptions.values.byName(name),
+        _i2.String name => _i3.ReferrerPolicyOptions.values.byName(name),
         _ => null
       };
   set referrerPolicy(_i3.ReferrerPolicy? value) {
@@ -7063,7 +7063,7 @@ extension Request$Typings on Request {
   /// indicating how the request will interact with the browser's cache when
   /// fetching.
   _i3.RequestCache get cache =>
-      RequestCacheOptions.values.byName(_i4.getProperty(
+      _i3.RequestCacheOptions.values.byName(_i4.getProperty(
         this,
         'cache',
       ));
@@ -7072,14 +7072,14 @@ extension Request$Typings on Request {
   /// indicating whether credentials will be sent with the request always, never,
   /// or only when sent to a same-origin URL.
   _i3.RequestCredentials get credentials =>
-      RequestCredentialsOptions.values.byName(_i4.getProperty(
+      _i3.RequestCredentialsOptions.values.byName(_i4.getProperty(
         this,
         'credentials',
       ));
 
   /// Returns the kind of resource requested by request, e.g., "document" or "script".
   _i3.RequestDestination get destination =>
-      RequestDestinationOptions.values.byName(_i4.getProperty(
+      _i3.RequestDestinationOptions.values.byName(_i4.getProperty(
         this,
         'destination',
       ));
@@ -7130,7 +7130,8 @@ extension Request$Typings on Request {
   /// Returns the mode associated with request, which is a string indicating
   /// whether the request will use CORS, or will be restricted to same-origin
   /// URLs.
-  _i3.RequestMode get mode => RequestModeOptions.values.byName(_i4.getProperty(
+  _i3.RequestMode get mode =>
+      _i3.RequestModeOptions.values.byName(_i4.getProperty(
         this,
         'mode',
       ));
@@ -7139,7 +7140,7 @@ extension Request$Typings on Request {
   /// indicating how redirects for the request will be handled during fetching. A
   /// request will follow redirects by default.
   _i3.RequestRedirect get redirect =>
-      RequestRedirectOptions.values.byName(_i4.getProperty(
+      _i3.RequestRedirectOptions.values.byName(_i4.getProperty(
         this,
         'redirect',
       ));
@@ -7157,7 +7158,7 @@ extension Request$Typings on Request {
   /// Returns the referrer policy associated with request. This is used during
   /// fetching to compute the value of the request's referrer.
   _i3.ReferrerPolicy get referrerPolicy =>
-      ReferrerPolicyOptions.values.byName(_i4.getProperty(
+      _i3.ReferrerPolicyOptions.values.byName(_i4.getProperty(
         this,
         'referrerPolicy',
       ));
@@ -7371,7 +7372,7 @@ extension Response$Typings on Response {
         'statusText',
       );
   _i3.ResponseType get type =>
-      ResponseTypeOptions.values.byName(_i4.getProperty(
+      _i3.ResponseTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
@@ -7686,7 +7687,7 @@ extension WebSocket$Typings on WebSocket {
   ///
   ///  Can be set, to change how binary data is returned. The default is "blob".
   _i3.BinaryType get binaryType =>
-      BinaryTypeOptions.values.byName(_i4.getProperty(
+      _i3.BinaryTypeOptions.values.byName(_i4.getProperty(
         this,
         'binaryType',
       ));
@@ -7825,7 +7826,7 @@ extension WebSocket$Typings on WebSocket {
   ///
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
-  void _addEventListener$1<K extends WebSocketEventMapKeys>(
+  void _addEventListener$1<K extends _i3.WebSocketEventMapKeys>(
     K type,
     _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
@@ -7905,7 +7906,7 @@ extension WebSocket$Typings on WebSocket {
     ///
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
-    void Function<K extends WebSocketEventMapKeys>(
+    void Function<K extends _i3.WebSocketEventMapKeys>(
       K type,
       _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
@@ -7946,7 +7947,7 @@ extension WebSocket$Typings on WebSocket {
 
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
-  void _removeEventListener$1<K extends WebSocketEventMapKeys>(
+  void _removeEventListener$1<K extends _i3.WebSocketEventMapKeys>(
     K type,
     _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
@@ -7984,7 +7985,7 @@ extension WebSocket$Typings on WebSocket {
   ({
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
-    void Function<K extends WebSocketEventMapKeys>(
+    void Function<K extends _i3.WebSocketEventMapKeys>(
       K type,
       _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
@@ -8024,7 +8025,7 @@ external _i2.Object _declaredStorage;
 extension Storage$Typings on Storage {
   /// Returns the number of key/value pairs currently present in the list associated with the object.
   _i2.num get length => _i4.getProperty(
-        _i7.target2718,
+        _i7.target2717,
         'length',
       );
 
@@ -9462,7 +9463,7 @@ extension CryptoKey$Typings on CryptoKey {
         this,
         'extractable',
       );
-  _i3.KeyType get type => KeyTypeOptions.values.byName(_i4.getProperty(
+  _i3.KeyType get type => _i3.KeyTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
@@ -9471,7 +9472,7 @@ extension CryptoKey$Typings on CryptoKey {
         'usages',
       ) as _i2.List)
           .cast()
-          .map((i) => KeyUsageOptions.values.byName(i))
+          .map((i) => _i3.KeyUsageOptions.values.byName(i))
           .toList();
 }
 
@@ -9854,7 +9855,7 @@ class Crypto {}
 
 extension Crypto$Typings on Crypto {
   _i3.SubtleCrypto get subtle => _i4.getProperty(
-        _i7.target2707,
+        _i7.target2706,
         'subtle',
       );
   T getRandomValues<T extends _i2.Object>(T array) => _i4.callMethod(
@@ -9974,7 +9975,7 @@ extension BroadcastChannel$Typings on BroadcastChannel {
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$ extends _i3.Event>(
-    BroadcastChannelEventMap<K$> type,
+    _i3.BroadcastChannelEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -10054,7 +10055,7 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
     void Function<K$ extends _i3.Event>(
-      BroadcastChannelEventMap<K$> type,
+      _i3.BroadcastChannelEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -10095,7 +10096,7 @@ extension BroadcastChannel$Typings on BroadcastChannel {
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
   void _removeEventListener$1<K$ extends _i3.Event>(
-    BroadcastChannelEventMap<K$> type,
+    _i3.BroadcastChannelEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -10133,7 +10134,7 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
     void Function<K$ extends _i3.Event>(
-      BroadcastChannelEventMap<K$> type,
+      _i3.BroadcastChannelEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -10473,7 +10474,7 @@ class WorkerOptions {
   });
 
   factory WorkerOptions({
-    Type? type,
+    _i3.Type? type,
     _i2.String? name,
   }) =>
       WorkerOptions._(
@@ -10483,14 +10484,14 @@ class WorkerOptions {
 }
 
 extension WorkerOptions$Typings on WorkerOptions {
-  Type? get type => switch (_i4.getProperty(
+  _i3.Type? get type => switch (_i4.getProperty(
         this,
         'type',
       )) {
-        _i2.String name => Type.values.byName(name),
+        _i2.String name => _i3.Type.values.byName(name),
         _ => null
       };
-  set type(Type? value) {
+  set type(_i3.Type? value) {
     _i4.setProperty(
       this,
       'type',
@@ -10638,7 +10639,7 @@ extension Worker$Typings on Worker {
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$ extends _i3.Event>(
-    WorkerEventMap<K$> type,
+    _i3.WorkerEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -10718,7 +10719,7 @@ extension Worker$Typings on Worker {
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
     void Function<K$ extends _i3.Event>(
-      WorkerEventMap<K$> type,
+      _i3.WorkerEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -10759,7 +10760,7 @@ extension Worker$Typings on Worker {
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
   void _removeEventListener$1<K$ extends _i3.Event>(
-    WorkerEventMap<K$> type,
+    _i3.WorkerEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -10797,7 +10798,7 @@ extension Worker$Typings on Worker {
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
     void Function<K$ extends _i3.Event>(
-      WorkerEventMap<K$> type,
+      _i3.WorkerEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -10846,7 +10847,7 @@ external _i2.Object _declaredPerformance;
 extension Performance$Typings on Performance {
   /// Returns a timestamp representing the start of the performance measurement.
   _i2.num get timeOrigin => _i4.getProperty(
-        _i7.target2713,
+        _i7.target2712,
         'timeOrigin',
       );
 
@@ -11613,7 +11614,7 @@ extension Window$Typings on Window {
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$ extends _i3.Event>(
-    WindowEventMap<K$> type,
+    _i3.WindowEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -11693,7 +11694,7 @@ extension Window$Typings on Window {
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
     void Function<K$ extends _i3.Event>(
-      WindowEventMap<K$> type,
+      _i3.WindowEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -11734,7 +11735,7 @@ extension Window$Typings on Window {
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
   void _removeEventListener$1<K$ extends _i3.Event>(
-    WindowEventMap<K$> type,
+    _i3.WindowEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -11772,7 +11773,7 @@ extension Window$Typings on Window {
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
     void Function<K$ extends _i3.Event>(
-      WindowEventMap<K$> type,
+      _i3.WindowEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -11807,19 +11808,19 @@ external _i2.Object _declaredNavigator;
 
 extension Navigator$Typings on Navigator {
   _i2.num get hardwareConcurrency => _i4.getProperty(
-        _i7.target2719,
+        _i7.target2718,
         'hardwareConcurrency',
       );
   _i2.String get userAgent => _i4.getProperty(
-        _i7.target2719,
+        _i7.target2718,
         'userAgent',
       );
   _i2.String get language => _i4.getProperty(
-        _i7.target2719,
+        _i7.target2718,
         'language',
       );
   _i2.List<_i2.String> get languages => (_i4.getProperty(
-        _i7.target2719,
+        _i7.target2718,
         'languages',
       ) as _i2.List)
           .cast();
@@ -11850,7 +11851,7 @@ extension Location$Typings on Location {
   ///
   /// Always empty in Deno.
   _i3.DOMStringList get ancestorOrigins => _i4.getProperty(
-        _i7.target2720,
+        _i7.target2719,
         'ancestorOrigins',
       );
 
@@ -11859,7 +11860,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get hash => _i4.getProperty(
-        _i7.target2720,
+        _i7.target2719,
         'hash',
       );
   set hash(_i2.String value) {
@@ -11875,7 +11876,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get host => _i4.getProperty(
-        _i7.target2720,
+        _i7.target2719,
         'host',
       );
   set host(_i2.String value) {
@@ -11890,7 +11891,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get hostname => _i4.getProperty(
-        _i7.target2720,
+        _i7.target2719,
         'hostname',
       );
   set hostname(_i2.String value) {
@@ -11905,7 +11906,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get href => _i4.getProperty(
-        _i7.target2720,
+        _i7.target2719,
         'href',
       );
   set href(_i2.String value) {
@@ -11918,7 +11919,7 @@ extension Location$Typings on Location {
 
   /// Returns the Location object's URL's origin.
   _i2.String get origin => _i4.getProperty(
-        _i7.target2720,
+        _i7.target2719,
         'origin',
       );
 
@@ -11926,7 +11927,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get pathname => _i4.getProperty(
-        _i7.target2720,
+        _i7.target2719,
         'pathname',
       );
   set pathname(_i2.String value) {
@@ -11941,7 +11942,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get port => _i4.getProperty(
-        _i7.target2720,
+        _i7.target2719,
         'port',
       );
   set port(_i2.String value) {
@@ -11956,7 +11957,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get protocol => _i4.getProperty(
-        _i7.target2720,
+        _i7.target2719,
         'protocol',
       );
   set protocol(_i2.String value) {
@@ -11972,7 +11973,7 @@ extension Location$Typings on Location {
   ///
   ///  Cannot be set in Deno.
   _i2.String get search => _i4.getProperty(
-        _i7.target2720,
+        _i7.target2719,
         'search',
       );
   set search(_i2.String value) {
@@ -12291,7 +12292,7 @@ _i2.String? prompt([
 /// dispatchEvent(new Event('unload'));
 /// ```
 void _addEventListener$1<K$ extends _i3.Event>(
-  WindowEventMap<K$> type,
+  _i3.WindowEventMap<K$> type,
   _i2.dynamic Function(K$) listener, [
   _i2.Object? options,
 ]) {
@@ -12341,7 +12342,7 @@ void _addEventListener$2(
   /// dispatchEvent(new Event('unload'));
   /// ```
   void Function<K$ extends _i3.Event>(
-    WindowEventMap<K$> type,
+    _i3.WindowEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) $1,
@@ -12372,7 +12373,7 @@ void _addEventListener$2(
 /// removeEventListener('load', listener);
 /// ```
 void _removeEventListener$1<K$ extends _i3.Event>(
-  WindowEventMap<K$> type,
+  _i3.WindowEventMap<K$> type,
   _i2.dynamic Function(K$) listener, [
   _i2.Object? options,
 ]) {
@@ -12420,7 +12421,7 @@ void _removeEventListener$2(
   /// removeEventListener('load', listener);
   /// ```
   void Function<K$ extends _i3.Event>(
-    WindowEventMap<K$> type,
+    _i3.WindowEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) $1,

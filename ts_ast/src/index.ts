@@ -81,6 +81,8 @@ function extract(files: string[]): void {
         ret = {
           union: type.types.map((type) => parseType(type)),
         };
+      } else if (ts.isNamedTupleMember(type)) {
+        ret = parseType(type.type) ?? anyType;
       } else if (
         //ts.isConstructorTypeNode(type)
         ts.isConditionalTypeNode(type)
@@ -159,11 +161,16 @@ function extract(files: string[]): void {
           };
         } else {
           namedListen?.(ref);
+          const tn = type.typeName;
 
-          ret = {
-            ref,
-            targs: parseTypeArguments(type.typeArguments),
-          };
+          if (ts.isQualifiedName(tn)) {
+            ret = anyType;
+          } else {
+            ret = {
+              ref,
+              targs: parseTypeArguments(type.typeArguments),
+            };
+          }
         }
       } else if (ts.isParenthesizedTypeNode(type) || ts.isRestTypeNode(type)) {
         ret = parseType(type.type);

@@ -3,8 +3,8 @@ library typings.deno.interop.web_assembly; // ignore_for_file: no_leading_unders
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import '/src/d/core/lib.es5.d.dart' as _i3;
-import '0lib.deno.webassembly.d.dart' as _i4;
+import '0lib.deno.webassembly.d.dart' as _i3;
+import '/src/d/core/lib.es5.d.dart' as _i4;
 import '/src/d/core/lib.es2022.error.d.dart' as _i5;
 import 'dart:js_util' as _i6;
 import '/d/core.dart' as _i7;
@@ -13,14 +13,6 @@ import 'dart:typed_data' as _i9;
 
 @_i1.JS('WebAssembly')
 external _i2.Object _self;
-typedef ImportExportKind = ImportExportKindOptions;
-typedef TableKind = _i2.String;
-typedef ValueType = ValueTypeOptions;
-typedef ExportValue = _i2.Object;
-typedef Exports = _i3.Record<_i2.String, _i4.ExportValue>;
-typedef ImportValue = _i2.Object;
-typedef ModuleImports = _i3.Record<_i2.String, _i4.ImportValue>;
-typedef Imports = _i3.Record<_i2.String, _i4.ModuleImports>;
 
 enum ImportExportKindOptions {
   function(r'function'),
@@ -44,12 +36,21 @@ enum ValueTypeOptions {
   final _i2.String value;
 }
 
+typedef ImportExportKind = _i3.ImportExportKindOptions;
+typedef TableKind = _i2.String;
+typedef ValueType = _i3.ValueTypeOptions;
+typedef ExportValue = _i2.Object;
+typedef Exports = _i4.Record<_i2.String, _i3.ExportValue>;
+typedef ImportValue = _i2.Object;
+typedef ModuleImports = _i4.Record<_i2.String, _i3.ImportValue>;
+typedef Imports = _i4.Record<_i2.String, _i3.ModuleImports>;
+
 /// The `WebAssembly.CompileError` object indicates an error during WebAssembly decoding or validation.
 ///
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError)
 @_i1.JS()
 @_i1.staticInterop
-class CompileError implements _i3.Error {
+class CompileError implements _i4.Error {
   factory CompileError([
     _i2.String? message,
     _i5.ErrorOptions? options,
@@ -78,7 +79,7 @@ external _i2.Object _declaredCompileError;
 @_i1.staticInterop
 class Global {
   factory Global(
-    _i4.GlobalDescriptor descriptor, [
+    _i3.GlobalDescriptor descriptor, [
     _i2.dynamic v,
   ]) =>
       _i6.callConstructor(
@@ -128,8 +129,8 @@ extension Global$Typings on Global {
 @_i1.staticInterop
 class Instance {
   factory Instance(
-    _i4.Module module, [
-    _i4.Imports? importObject,
+    _i3.Module module, [
+    _i3.Imports? importObject,
   ]) =>
       _i6.callConstructor(
         _declaredInstance,
@@ -150,7 +151,7 @@ extension Instance$Typings on Instance {
   /// Returns an object containing as its members all the functions exported from the
   /// WebAssembly module instance, to allow them to be accessed and used by JavaScript.
   /// Read-only.
-  _i4.Exports get exports => _i6.getProperty(
+  _i3.Exports get exports => _i6.getProperty(
         this,
         'exports',
       );
@@ -162,7 +163,7 @@ extension Instance$Typings on Instance {
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError)
 @_i1.JS()
 @_i1.staticInterop
-class LinkError implements _i3.Error {
+class LinkError implements _i4.Error {
   factory LinkError([
     _i2.String? message,
     _i5.ErrorOptions? options,
@@ -192,7 +193,7 @@ external _i2.Object _declaredLinkError;
 @_i1.JS()
 @_i1.staticInterop
 class Memory {
-  factory Memory(_i4.MemoryDescriptor descriptor) => _i6.callConstructor(
+  factory Memory(_i3.MemoryDescriptor descriptor) => _i6.callConstructor(
         _declaredMemory,
         [descriptor],
       );
@@ -235,7 +236,7 @@ class Module {
   /// Given a `Module` and string, returns a copy of the contents of all custom sections in the
   /// module with the given string name.
   static _i2.List<_i9.ByteBuffer> customSections(
-    _i4.Module moduleObject,
+    _i3.Module moduleObject,
     _i2.String sectionName,
   ) =>
       (_i6.callMethod(
@@ -249,8 +250,8 @@ class Module {
           .cast();
 
   /// Given a `Module`, returns an array containing descriptions of all the declared exports.
-  static _i2.List<_i4.ModuleExportDescriptor> exports(
-          _i4.Module moduleObject) =>
+  static _i2.List<_i3.ModuleExportDescriptor> exports(
+          _i3.Module moduleObject) =>
       (_i6.callMethod(
         _declaredModule,
         'exports',
@@ -259,8 +260,8 @@ class Module {
           .cast();
 
   /// Given a `Module`, returns an array containing descriptions of all the declared imports.
-  static _i2.List<_i4.ModuleImportDescriptor> imports(
-          _i4.Module moduleObject) =>
+  static _i2.List<_i3.ModuleImportDescriptor> imports(
+          _i3.Module moduleObject) =>
       (_i6.callMethod(
         _declaredModule,
         'imports',
@@ -281,7 +282,7 @@ external _i2.Object _declaredModule;
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError)
 @_i1.JS()
 @_i1.staticInterop
-class RuntimeError implements _i3.Error {
+class RuntimeError implements _i4.Error {
   factory RuntimeError([
     _i2.String? message,
     _i5.ErrorOptions? options,
@@ -310,7 +311,7 @@ external _i2.Object _declaredRuntimeError;
 @_i1.JS()
 @_i1.staticInterop
 class Table {
-  factory Table(_i4.TableDescriptor descriptor) => _i6.callConstructor(
+  factory Table(_i3.TableDescriptor descriptor) => _i6.callConstructor(
         _declaredTable,
         [descriptor],
       );
@@ -372,7 +373,7 @@ class GlobalDescriptor {
 
   factory GlobalDescriptor({
     _i2.bool? mutable,
-    required _i4.ValueType value,
+    required _i3.ValueType value,
   }) =>
       GlobalDescriptor._(
         mutable: mutable ?? _i7.undefined,
@@ -393,11 +394,11 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
     );
   }
 
-  _i4.ValueType get value => ValueTypeOptions.values.byName(_i6.getProperty(
+  _i3.ValueType get value => _i3.ValueTypeOptions.values.byName(_i6.getProperty(
         this,
         'value',
       ));
-  set value(_i4.ValueType value) {
+  set value(_i3.ValueType value) {
     _i6.setProperty(
       this,
       'value',
@@ -480,7 +481,7 @@ class ModuleExportDescriptor {
   });
 
   factory ModuleExportDescriptor({
-    required _i4.ImportExportKind kind,
+    required _i3.ImportExportKind kind,
     required _i2.String name,
   }) =>
       ModuleExportDescriptor._(
@@ -490,12 +491,12 @@ class ModuleExportDescriptor {
 }
 
 extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
-  _i4.ImportExportKind get kind =>
-      ImportExportKindOptions.values.byName(_i6.getProperty(
+  _i3.ImportExportKind get kind =>
+      _i3.ImportExportKindOptions.values.byName(_i6.getProperty(
         this,
         'kind',
       ));
-  set kind(_i4.ImportExportKind value) {
+  set kind(_i3.ImportExportKind value) {
     _i6.setProperty(
       this,
       'kind',
@@ -529,7 +530,7 @@ class ModuleImportDescriptor {
   });
 
   factory ModuleImportDescriptor({
-    required _i4.ImportExportKind kind,
+    required _i3.ImportExportKind kind,
     required _i2.String module,
     required _i2.String name,
   }) =>
@@ -541,12 +542,12 @@ class ModuleImportDescriptor {
 }
 
 extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
-  _i4.ImportExportKind get kind =>
-      ImportExportKindOptions.values.byName(_i6.getProperty(
+  _i3.ImportExportKind get kind =>
+      _i3.ImportExportKindOptions.values.byName(_i6.getProperty(
         this,
         'kind',
       ));
-  set kind(_i4.ImportExportKind value) {
+  set kind(_i3.ImportExportKind value) {
     _i6.setProperty(
       this,
       'kind',
@@ -592,7 +593,7 @@ class TableDescriptor {
   });
 
   factory TableDescriptor({
-    required _i4.TableKind element,
+    required _i3.TableKind element,
     required _i2.num initial,
     _i2.num? maximum,
   }) =>
@@ -604,11 +605,11 @@ class TableDescriptor {
 }
 
 extension TableDescriptor$Typings on TableDescriptor {
-  _i4.TableKind get element => _i6.getProperty(
+  _i3.TableKind get element => _i6.getProperty(
         this,
         'element',
       );
-  set element(_i4.TableKind value) {
+  set element(_i3.TableKind value) {
     _i6.setProperty(
       this,
       'element',
@@ -652,8 +653,8 @@ class WebAssemblyInstantiatedSource {
   });
 
   factory WebAssemblyInstantiatedSource({
-    required _i4.Instance instance,
-    required _i4.Module module,
+    required _i3.Instance instance,
+    required _i3.Module module,
   }) =>
       WebAssemblyInstantiatedSource._(
         instance: instance,
@@ -663,11 +664,11 @@ class WebAssemblyInstantiatedSource {
 
 extension WebAssemblyInstantiatedSource$Typings
     on WebAssemblyInstantiatedSource {
-  _i4.Instance get instance => _i6.getProperty(
+  _i3.Instance get instance => _i6.getProperty(
         this,
         'instance',
       );
-  set instance(_i4.Instance value) {
+  set instance(_i3.Instance value) {
     _i6.setProperty(
       this,
       'instance',
@@ -677,11 +678,11 @@ extension WebAssemblyInstantiatedSource$Typings
 
   /// A `WebAssembly.Module` object representing the compiled WebAssembly module.
   ///  This `Module` can be instantiated again, or shared via postMessage().
-  _i4.Module get module => _i6.getProperty(
+  _i3.Module get module => _i6.getProperty(
         this,
         'module',
       );
-  set module(_i4.Module value) {
+  set module(_i3.Module value) {
     _i6.setProperty(
       this,
       'module',
@@ -696,7 +697,7 @@ extension WebAssemblyInstantiatedSource$Typings
 /// function should be used).
 ///
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile)
-_i2.Future<_i4.Module> compile(_i8.BufferSource bytes) =>
+_i2.Future<_i3.Module> compile(_i8.BufferSource bytes) =>
     _i6.promiseToFuture(_i6.callMethod(
       _self,
       'compile',
@@ -709,7 +710,7 @@ _i2.Future<_i4.Module> compile(_i8.BufferSource bytes) =>
 /// `WebAssembly.instantiateStreaming()` function should be used).
 ///
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming)
-_i2.Future<_i4.Module> compileStreaming(_i2.Object source) =>
+_i2.Future<_i3.Module> compileStreaming(_i2.Object source) =>
     _i6.promiseToFuture(_i6.callMethod(
       _self,
       'compileStreaming',
@@ -733,9 +734,9 @@ _i2.Future<_i4.Module> compileStreaming(_i2.Object source) =>
 /// if the Module has already been compiled.
 ///
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-_i2.Future<_i4.WebAssemblyInstantiatedSource> _instantiate$1(
+_i2.Future<_i3.WebAssemblyInstantiatedSource> _instantiate$1(
   _i8.BufferSource bytes, [
-  _i4.Imports? importObject,
+  _i3.Imports? importObject,
 ]) =>
     _i6.promiseToFuture(_i6.callMethod(
       _self,
@@ -763,9 +764,9 @@ _i2.Future<_i4.WebAssemblyInstantiatedSource> _instantiate$1(
 /// if the Module has already been compiled.
 ///
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-_i2.Future<_i4.Instance> _instantiate$2(
-  _i4.Module moduleObject, [
-  _i4.Imports? importObject,
+_i2.Future<_i3.Instance> _instantiate$2(
+  _i3.Module moduleObject, [
+  _i3.Imports? importObject,
 ]) =>
     _i6.promiseToFuture(_i6.callMethod(
       _self,
@@ -795,9 +796,9 @@ _i2.Future<_i4.Instance> _instantiate$2(
   /// if the Module has already been compiled.
   ///
   /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-  _i2.Future<_i4.WebAssemblyInstantiatedSource> Function(
+  _i2.Future<_i3.WebAssemblyInstantiatedSource> Function(
     _i8.BufferSource bytes, [
-    _i4.Imports? importObject,
+    _i3.Imports? importObject,
   ]) $1,
 
   /// The WebAssembly.instantiate() function allows you to compile and instantiate
@@ -817,9 +818,9 @@ _i2.Future<_i4.Instance> _instantiate$2(
   /// if the Module has already been compiled.
   ///
   /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-  _i2.Future<_i4.Instance> Function(
-    _i4.Module moduleObject, [
-    _i4.Imports? importObject,
+  _i2.Future<_i3.Instance> Function(
+    _i3.Module moduleObject, [
+    _i3.Imports? importObject,
   ]) $2,
 }) get instantiate => (
       $1: _instantiate$1,
@@ -831,9 +832,9 @@ _i2.Future<_i4.Instance> _instantiate$2(
 /// efficient, optimized way to load wasm code.
 ///
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming)
-_i2.Future<_i4.WebAssemblyInstantiatedSource> instantiateStreaming(
+_i2.Future<_i3.WebAssemblyInstantiatedSource> instantiateStreaming(
   _i2.Object response, [
-  _i4.Imports? importObject,
+  _i3.Imports? importObject,
 ]) =>
     _i6.promiseToFuture(_i6.callMethod(
       _self,

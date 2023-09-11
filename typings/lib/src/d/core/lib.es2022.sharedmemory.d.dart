@@ -4,6 +4,7 @@ library typings.core.interop; // ignore_for_file: no_leading_underscores_for_lib
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'dart:js_util' as _i3;
+import 'lib.es2022.sharedmemory.d.dart' as _i4;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -62,11 +63,11 @@ extension IInline38$Typings on IInline38 {
     );
   }
 
-  Value get value => Value.values.byName(_i3.getProperty(
+  _i4.Value get value => _i4.Value.values.byName(_i3.getProperty(
         this,
         'value',
       ));
-  set value(Value value) {
+  set value(_i4.Value value) {
     _i3.setProperty(
       this,
       'value',
@@ -93,12 +94,12 @@ extension IInline39$Typings on IInline39 {
     );
   }
 
-  _i2.Future<IInline39ValueOptions> get value =>
+  _i2.Future<_i4.IInline39ValueOptions> get value =>
       _i3.promiseToFuture(_i3.getProperty(
         this,
         'value',
       ));
-  set value(_i2.Future<IInline39ValueOptions> value) {
+  set value(_i2.Future<_i4.IInline39ValueOptions> value) {
     _i3.setProperty(
       this,
       'value',
@@ -125,11 +126,11 @@ extension IInline40$Typings on IInline40 {
     );
   }
 
-  ValueOptions get value => ValueOptions.values.byName(_i3.getProperty(
+  _i4.ValueOptions get value => _i4.ValueOptions.values.byName(_i3.getProperty(
         this,
         'value',
       ));
-  set value(ValueOptions value) {
+  set value(_i4.ValueOptions value) {
     _i3.setProperty(
       this,
       'value',
@@ -156,12 +157,12 @@ extension IInline41$Typings on IInline41 {
     );
   }
 
-  _i2.Future<IInline41ValueOptions> get value =>
+  _i2.Future<_i4.IInline41ValueOptions> get value =>
       _i3.promiseToFuture(_i3.getProperty(
         this,
         'value',
       ));
-  set value(_i2.Future<IInline41ValueOptions> value) {
+  set value(_i2.Future<_i4.IInline41ValueOptions> value) {
     _i3.setProperty(
       this,
       'value',

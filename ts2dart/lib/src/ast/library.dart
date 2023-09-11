@@ -43,7 +43,13 @@ class InteropTypeException implements Exception {
 class InteropLibrary with InteropItem {
   InteropLibrary(
       {required this.fileName, required this.module, String? targetFileName})
-      : _targetFileName = targetFileName;
+      : _targetFileName = targetFileName {
+    // logger.warning('CreatingLibrary ${{
+    //   'fileName': fileName,
+    //   'targetFileName': targetFileName,
+    //   'module': module.path
+    // }}');
+  }
 
   static final dartCore = InteropLibrary(
       fileName: 'dart:core',
@@ -80,7 +86,7 @@ class InteropLibrary with InteropItem {
       addAnonymousFlag: true,
       source: 'globalThis');
   List<InteropNamedType> get structs =>
-      [...classes, ...typedefs, ...enums, ...interfaces];
+      [...enums, ...classes, ...typedefs, ...interfaces];
   Iterable<InteropType> usedTypes() => {
         ...interfaces.expand((cl) => cl.usedTypes()),
         ...classes.expand((cl) => cl.usedTypes()),
@@ -641,10 +647,25 @@ class InteropLibrary with InteropItem {
         return found;
       }
 
+      if (spl.length == 1) {
+        final typeName = spl.first;
+
+        for (final module in module.project.modules) {
+          for (final lib in module.libraries) {
+            //logger.warning('ProjectLibFind $typeName. ${lib.structs.map((c) => c.name).join(', ')}');
+            final type = lib.findDeclared(typeName);
+
+            if (type != null) {
+              return type;
+            }
+          }
+        }
+      }
+
       throw 'Couldnt find typing from name "$name". \n\nMap $map';
     }
 
-    logger.severe('Unknown type $map');
+    logger.severe('Unknown type ${map.pretty()}');
     return InteropStaticType.dyn;
   }
 

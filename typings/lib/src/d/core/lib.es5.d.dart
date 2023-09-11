@@ -10,12 +10,11 @@ import 'core_comon.d.dart' as _i6;
 import 'lib.es2015.core.d.dart' as _i7;
 import 'lib.es2017.object.d.dart' as _i8;
 import 'lib.es2015.iterable.d.dart' as _i9;
-import 'lib.es5.intl.d.dart' as _i10;
-import 'lib.es2022.regexp.d.dart' as _i11;
-import 'lib.es2022.error.d.dart' as _i12;
-import 'lib.es2019.array.d.dart' as _i13;
-import 'dart:typed_data' as _i14;
-import 'lib.es2017.sharedmemory.d.dart' as _i15;
+import 'lib.es2022.regexp.d.dart' as _i10;
+import 'lib.es2022.error.d.dart' as _i11;
+import 'lib.es2019.array.d.dart' as _i12;
+import 'dart:typed_data' as _i13;
+import 'lib.es2017.sharedmemory.d.dart' as _i14;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -1487,7 +1486,7 @@ extension Number$Typings on Number {
   ///  @param options An object that contains one or more properties that specify comparison options.
   _i2.String _toLocaleString$1([
     _i2.Object? locales,
-    _i10.NumberFormatOptions? options,
+    _i2.dynamic options,
   ]) =>
       _i4.callMethod(
         this,
@@ -1502,14 +1501,14 @@ extension Number$Typings on Number {
   ///  @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
   ///  @param options An object that contains one or more properties that specify comparison options.
   _i2.String _toLocaleString$2([
-    _i10.LocalesArgument? locales,
-    _i10.NumberFormatOptions? options,
+    _i2.dynamic locales,
+    _i2.dynamic options,
   ]) =>
       _i4.callMethod(
         this,
         'toLocaleString',
         [
-          locales ?? _i5.undefined ?? _i5.undefined,
+          locales ?? _i5.undefined,
           options ?? _i5.undefined,
         ],
       );
@@ -1521,15 +1520,15 @@ extension Number$Typings on Number {
     ///  @param options An object that contains one or more properties that specify comparison options.
     _i2.String Function([
       _i2.Object? locales,
-      _i10.NumberFormatOptions? options,
+      _i2.dynamic options,
     ]) $1,
 
     /// Converts a number to a string by using the current or specified locale.
     ///  @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
     ///  @param options An object that contains one or more properties that specify comparison options.
     _i2.String Function([
-      _i10.LocalesArgument? locales,
-      _i10.NumberFormatOptions? options,
+      _i2.dynamic locales,
+      _i2.dynamic options,
     ]) $2,
   }) get toLocaleString => (
         $1: _toLocaleString$1,
@@ -2191,7 +2190,7 @@ class RegExpMatchArray implements _i3.Array<_i2.String> {
     _i2.String? input,
     required _i2.String first,
     _i2.Object? groups,
-    _i11.RegExpIndicesArray? indices,
+    _i10.RegExpIndicesArray? indices,
     required _i2.num length,
   }) =>
       RegExpMatchArray._(
@@ -2248,11 +2247,11 @@ extension RegExpMatchArray$Typings on RegExpMatchArray {
     );
   }
 
-  _i11.RegExpIndicesArray? get indices => _i4.getProperty(
+  _i10.RegExpIndicesArray? get indices => _i4.getProperty(
         this,
         'indices',
       );
-  set indices(_i11.RegExpIndicesArray? value) {
+  set indices(_i10.RegExpIndicesArray? value) {
     _i4.setProperty(
       this,
       'indices',
@@ -2279,7 +2278,7 @@ class RegExpExecArray implements _i3.Array<_i2.String> {
     required _i2.String input,
     required _i2.String first,
     _i2.Object? groups,
-    _i11.RegExpIndicesArray? indices,
+    _i10.RegExpIndicesArray? indices,
     required _i2.num length,
   }) =>
       RegExpExecArray._(
@@ -2336,11 +2335,11 @@ extension RegExpExecArray$Typings on RegExpExecArray {
     );
   }
 
-  _i11.RegExpIndicesArray? get indices => _i4.getProperty(
+  _i10.RegExpIndicesArray? get indices => _i4.getProperty(
         this,
         'indices',
       );
-  set indices(_i11.RegExpIndicesArray? value) {
+  set indices(_i10.RegExpIndicesArray? value) {
     _i4.setProperty(
       this,
       'indices',
@@ -2873,7 +2872,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
 class Error {
   factory Error([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callConstructor(
         _declaredError,
@@ -2947,7 +2946,7 @@ class ErrorConstructor {}
 extension ErrorConstructor$Typings on ErrorConstructor {
   _i3.Error call([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -2964,7 +2963,7 @@ extension ErrorConstructor$Typings on ErrorConstructor {
 class EvalError implements _i3.Error {
   factory EvalError([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callConstructor(
         _declaredEvalError,
@@ -2988,7 +2987,7 @@ class EvalErrorConstructor implements _i3.ErrorConstructor {}
 extension EvalErrorConstructor$Typings on EvalErrorConstructor {
   _i3.EvalError call([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -3005,7 +3004,7 @@ extension EvalErrorConstructor$Typings on EvalErrorConstructor {
 class RangeError implements _i3.Error {
   factory RangeError([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callConstructor(
         _declaredRangeError,
@@ -3029,7 +3028,7 @@ class RangeErrorConstructor implements _i3.ErrorConstructor {}
 extension RangeErrorConstructor$Typings on RangeErrorConstructor {
   _i3.RangeError call([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -3046,7 +3045,7 @@ extension RangeErrorConstructor$Typings on RangeErrorConstructor {
 class ReferenceError implements _i3.Error {
   factory ReferenceError([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callConstructor(
         _declaredReferenceError,
@@ -3070,7 +3069,7 @@ class ReferenceErrorConstructor implements _i3.ErrorConstructor {}
 extension ReferenceErrorConstructor$Typings on ReferenceErrorConstructor {
   _i3.ReferenceError call([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -3087,7 +3086,7 @@ extension ReferenceErrorConstructor$Typings on ReferenceErrorConstructor {
 class SyntaxError implements _i3.Error {
   factory SyntaxError([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callConstructor(
         _declaredSyntaxError,
@@ -3111,7 +3110,7 @@ class SyntaxErrorConstructor implements _i3.ErrorConstructor {}
 extension SyntaxErrorConstructor$Typings on SyntaxErrorConstructor {
   _i3.SyntaxError call([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -3128,7 +3127,7 @@ extension SyntaxErrorConstructor$Typings on SyntaxErrorConstructor {
 class TypeError implements _i3.Error {
   factory TypeError([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callConstructor(
         _declaredTypeError,
@@ -3152,7 +3151,7 @@ class TypeErrorConstructor implements _i3.ErrorConstructor {}
 extension TypeErrorConstructor$Typings on TypeErrorConstructor {
   _i3.TypeError call([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -3169,7 +3168,7 @@ extension TypeErrorConstructor$Typings on TypeErrorConstructor {
 class URIError implements _i3.Error {
   factory URIError([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callConstructor(
         _declaredURIError,
@@ -3193,7 +3192,7 @@ class URIErrorConstructor implements _i3.ErrorConstructor {}
 extension URIErrorConstructor$Typings on URIErrorConstructor {
   _i3.URIError call([
     _i2.String? message,
-    _i12.ErrorOptions? options,
+    _i11.ErrorOptions? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -3979,7 +3978,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   ///  specified depth.
   ///
   ///  @param depth The maximum recursion depth
-  _i2.List<_i13.FlatArray<A, D>> flat<A, D extends _i2.num>([D? depth]) =>
+  _i2.List<_i12.FlatArray<A, D>> flat<A, D extends _i2.num>([D? depth]) =>
       (_i4.callMethod(
         this,
         'flat',
@@ -5019,7 +5018,7 @@ extension Array$Typings<T> on Array<T> {
   ///  specified depth.
   ///
   ///  @param depth The maximum recursion depth
-  _i2.List<_i13.FlatArray<A, D>> flat<A, D extends _i2.num>([D? depth]) =>
+  _i2.List<_i12.FlatArray<A, D>> flat<A, D extends _i2.num>([D? depth]) =>
       (_i4.callMethod(
         this,
         'flat',
@@ -5499,8 +5498,8 @@ class ArrayBufferTypes {
   });
 
   factory ArrayBufferTypes({
-    required _i14.ByteBuffer arrayBuffer,
-    required _i15.SharedArrayBuffer sharedArrayBuffer,
+    required _i13.ByteBuffer arrayBuffer,
+    required _i14.SharedArrayBuffer sharedArrayBuffer,
   }) =>
       ArrayBufferTypes._(
         arrayBuffer: arrayBuffer,
@@ -5518,11 +5517,11 @@ enum ArrayBufferTypesKeys {
 }
 
 extension ArrayBufferTypes$Typings on ArrayBufferTypes {
-  _i14.ByteBuffer get arrayBuffer => _i4.getProperty(
+  _i13.ByteBuffer get arrayBuffer => _i4.getProperty(
         this,
         'ArrayBuffer',
       );
-  set arrayBuffer(_i14.ByteBuffer value) {
+  set arrayBuffer(_i13.ByteBuffer value) {
     _i4.setProperty(
       this,
       'ArrayBuffer',
@@ -5530,11 +5529,11 @@ extension ArrayBufferTypes$Typings on ArrayBufferTypes {
     );
   }
 
-  _i15.SharedArrayBuffer get sharedArrayBuffer => _i4.getProperty(
+  _i14.SharedArrayBuffer get sharedArrayBuffer => _i4.getProperty(
         this,
         'SharedArrayBuffer',
       );
-  set sharedArrayBuffer(_i15.SharedArrayBuffer value) {
+  set sharedArrayBuffer(_i14.SharedArrayBuffer value) {
     _i4.setProperty(
       this,
       'SharedArrayBuffer',
@@ -5656,7 +5655,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i14.Int8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Int8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -5666,7 +5665,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Int8List _from$1<T>(
+  _i13.Int8List _from$1<T>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
@@ -5688,7 +5687,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Int8List _from$2(
+  _i13.Int8List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5712,7 +5711,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Int8List Function<T>(
+    _i13.Int8List Function<T>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
@@ -5725,7 +5724,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Int8List Function(
+    _i13.Int8List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5752,7 +5751,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i14.Uint8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Uint8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -5762,7 +5761,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Uint8List _from$1<T>(
+  _i13.Uint8List _from$1<T>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
@@ -5784,7 +5783,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Uint8List _from$2(
+  _i13.Uint8List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5808,7 +5807,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Uint8List Function<T>(
+    _i13.Uint8List Function<T>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
@@ -5821,7 +5820,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Uint8List Function(
+    _i13.Uint8List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5848,7 +5847,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i14.Uint8ClampedList of([_i2.Iterable<_i2.dynamic>? items]) =>
+  _i13.Uint8ClampedList of([_i2.Iterable<_i2.dynamic>? items]) =>
       _i4.callMethod(
         this,
         'of',
@@ -5859,7 +5858,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Uint8ClampedList _from$1<T>(
+  _i13.Uint8ClampedList _from$1<T>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
@@ -5881,7 +5880,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Uint8ClampedList _from$2(
+  _i13.Uint8ClampedList _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -5905,7 +5904,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Uint8ClampedList Function<T>(
+    _i13.Uint8ClampedList Function<T>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
@@ -5918,7 +5917,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Uint8ClampedList Function(
+    _i13.Uint8ClampedList Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -5945,7 +5944,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i14.Int16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Int16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -5955,7 +5954,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Int16List _from$1<T>(
+  _i13.Int16List _from$1<T>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
@@ -5977,7 +5976,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Int16List _from$2(
+  _i13.Int16List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -6001,7 +6000,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Int16List Function<T>(
+    _i13.Int16List Function<T>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
@@ -6014,7 +6013,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Int16List Function(
+    _i13.Int16List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -6041,7 +6040,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i14.Uint16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Uint16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -6051,7 +6050,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Uint16List _from$1<T>(
+  _i13.Uint16List _from$1<T>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
@@ -6073,7 +6072,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Uint16List _from$2(
+  _i13.Uint16List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -6097,7 +6096,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Uint16List Function<T>(
+    _i13.Uint16List Function<T>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
@@ -6110,7 +6109,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Uint16List Function(
+    _i13.Uint16List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -6137,7 +6136,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i14.Int32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Int32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -6147,7 +6146,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Int32List _from$1<T>(
+  _i13.Int32List _from$1<T>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
@@ -6169,7 +6168,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Int32List _from$2(
+  _i13.Int32List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -6193,7 +6192,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Int32List Function<T>(
+    _i13.Int32List Function<T>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
@@ -6206,7 +6205,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Int32List Function(
+    _i13.Int32List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -6233,7 +6232,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i14.Uint32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Uint32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -6243,7 +6242,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Uint32List _from$1<T>(
+  _i13.Uint32List _from$1<T>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
@@ -6265,7 +6264,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Uint32List _from$2(
+  _i13.Uint32List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -6289,7 +6288,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Uint32List Function<T>(
+    _i13.Uint32List Function<T>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
@@ -6302,7 +6301,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Uint32List Function(
+    _i13.Uint32List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -6329,7 +6328,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i14.Float32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Float32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -6339,7 +6338,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Float32List _from$1<T>(
+  _i13.Float32List _from$1<T>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
@@ -6361,7 +6360,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Float32List _from$2(
+  _i13.Float32List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -6385,7 +6384,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Float32List Function<T>(
+    _i13.Float32List Function<T>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
@@ -6398,7 +6397,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Float32List Function(
+    _i13.Float32List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
@@ -6425,7 +6424,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i14.Float64List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Float64List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -6435,7 +6434,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Float64List _from$1<T>(
+  _i13.Float64List _from$1<T>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
@@ -6457,7 +6456,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i14.Float64List _from$2(
+  _i13.Float64List _from$2(
     _i9.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
@@ -6481,7 +6480,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Float64List Function<T>(
+    _i13.Float64List Function<T>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
@@ -6494,7 +6493,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i14.Float64List Function(
+    _i13.Float64List Function(
       _i9.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,

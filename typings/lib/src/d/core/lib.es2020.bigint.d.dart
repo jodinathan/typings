@@ -3,13 +3,12 @@ library typings.core.interop; // ignore_for_file: no_leading_underscores_for_lib
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import '/d/core.dart' as _i3;
-import 'dart:js_util' as _i4;
-import 'core_comon.d.dart' as _i5;
-import 'lib.es5.intl.d.dart' as _i6;
-import 'lib.es2020.bigint.d.dart' as _i7;
-import 'lib.es2015.iterable.d.dart' as _i8;
-import 'lib.es5.d.dart' as _i9;
+import 'lib.es2020.bigint.d.dart' as _i3;
+import '/d/core.dart' as _i4;
+import 'dart:js_util' as _i5;
+import 'core_comon.d.dart' as _i6;
+import 'lib.es2015.iterable.d.dart' as _i7;
+import 'lib.es5.d.dart' as _i8;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -185,110 +184,110 @@ class BigIntToLocaleStringOptions {
     _i2.String? currency,
     _i2.String? currencyDisplay,
     _i2.bool? useGrouping,
-    MinimumIntegerDigits? minimumIntegerDigits,
-    MinimumFractionDigits? minimumFractionDigits,
-    MaximumFractionDigits? maximumFractionDigits,
-    MinimumSignificantDigits? minimumSignificantDigits,
-    MaximumSignificantDigits? maximumSignificantDigits,
+    _i3.MinimumIntegerDigits? minimumIntegerDigits,
+    _i3.MinimumFractionDigits? minimumFractionDigits,
+    _i3.MaximumFractionDigits? maximumFractionDigits,
+    _i3.MinimumSignificantDigits? minimumSignificantDigits,
+    _i3.MaximumSignificantDigits? maximumSignificantDigits,
     _i2.String? notation,
     _i2.String? compactDisplay,
   }) =>
       BigIntToLocaleStringOptions._(
-        localeMatcher: localeMatcher ?? _i3.undefined,
-        style: style ?? _i3.undefined,
-        numberingSystem: numberingSystem ?? _i3.undefined,
-        unit: unit ?? _i3.undefined,
-        unitDisplay: unitDisplay ?? _i3.undefined,
-        currency: currency ?? _i3.undefined,
-        currencyDisplay: currencyDisplay ?? _i3.undefined,
-        useGrouping: useGrouping ?? _i3.undefined,
-        minimumIntegerDigits: minimumIntegerDigits?.name ?? _i3.undefined,
-        minimumFractionDigits: minimumFractionDigits?.name ?? _i3.undefined,
-        maximumFractionDigits: maximumFractionDigits?.name ?? _i3.undefined,
+        localeMatcher: localeMatcher ?? _i4.undefined,
+        style: style ?? _i4.undefined,
+        numberingSystem: numberingSystem ?? _i4.undefined,
+        unit: unit ?? _i4.undefined,
+        unitDisplay: unitDisplay ?? _i4.undefined,
+        currency: currency ?? _i4.undefined,
+        currencyDisplay: currencyDisplay ?? _i4.undefined,
+        useGrouping: useGrouping ?? _i4.undefined,
+        minimumIntegerDigits: minimumIntegerDigits?.name ?? _i4.undefined,
+        minimumFractionDigits: minimumFractionDigits?.name ?? _i4.undefined,
+        maximumFractionDigits: maximumFractionDigits?.name ?? _i4.undefined,
         minimumSignificantDigits:
-            minimumSignificantDigits?.name ?? _i3.undefined,
+            minimumSignificantDigits?.name ?? _i4.undefined,
         maximumSignificantDigits:
-            maximumSignificantDigits?.name ?? _i3.undefined,
-        notation: notation ?? _i3.undefined,
-        compactDisplay: compactDisplay ?? _i3.undefined,
+            maximumSignificantDigits?.name ?? _i4.undefined,
+        notation: notation ?? _i4.undefined,
+        compactDisplay: compactDisplay ?? _i4.undefined,
       );
 }
 
 extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
   /// The locale matching algorithm to use.The default is "best fit". For information about this option, see the {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation Intl page}.
-  _i2.String? get localeMatcher => _i4.getProperty(
+  _i2.String? get localeMatcher => _i5.getProperty(
         this,
         'localeMatcher',
       );
   set localeMatcher(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// The formatting style to use , the default is "decimal".
-  _i2.String? get style => _i4.getProperty(
+  _i2.String? get style => _i5.getProperty(
         this,
         'style',
       );
   set style(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'style',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get numberingSystem => _i4.getProperty(
+  _i2.String? get numberingSystem => _i5.getProperty(
         this,
         'numberingSystem',
       );
   set numberingSystem(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'numberingSystem',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// The unit to use in unit formatting, Possible values are core unit identifiers, defined in UTS #35, Part 2, Section 6. A subset of units from the full list was selected for use in ECMAScript. Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the style is "unit", the unit property must be provided.
-  _i2.String? get unit => _i4.getProperty(
+  _i2.String? get unit => _i5.getProperty(
         this,
         'unit',
       );
   set unit(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'unit',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// The unit formatting style to use in unit formatting, the defaults is "short".
-  _i2.String? get unitDisplay => _i4.getProperty(
+  _i2.String? get unitDisplay => _i5.getProperty(
         this,
         'unitDisplay',
       );
   set unitDisplay(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'unitDisplay',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as "USD" for the US dollar, "EUR" for the euro, or "CNY" for the Chinese RMB — see the Current currency & funds code list. There is no default value; if the style is "currency", the currency property must be provided. It is only used when [[Style]] has the value "currency".
-  _i2.String? get currency => _i4.getProperty(
+  _i2.String? get currency => _i5.getProperty(
         this,
         'currency',
       );
   set currency(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'currency',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
@@ -299,110 +298,112 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
   ///  "code" to use the ISO currency code,
   ///
   ///  "name" to use a localized currency name such as "dollar"
-  _i2.String? get currencyDisplay => _i4.getProperty(
+  _i2.String? get currencyDisplay => _i5.getProperty(
         this,
         'currencyDisplay',
       );
   set currencyDisplay(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'currencyDisplay',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators. The default is true.
-  _i2.bool? get useGrouping => _i4.getProperty(
+  _i2.bool? get useGrouping => _i5.getProperty(
         this,
         'useGrouping',
       );
   set useGrouping(_i2.bool? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'useGrouping',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// The minimum number of integer digits to use. Possible values are from 1 to 21; the default is 1.
-  MinimumIntegerDigits? get minimumIntegerDigits => switch (_i4.getProperty(
+  _i3.MinimumIntegerDigits? get minimumIntegerDigits => switch (_i5.getProperty(
         this,
         'minimumIntegerDigits',
       )) {
-        _i2.String name => MinimumIntegerDigits.values.byName(name),
+        _i2.String name => _i3.MinimumIntegerDigits.values.byName(name),
         _ => null
       };
-  set minimumIntegerDigits(MinimumIntegerDigits? value) {
-    _i4.setProperty(
+  set minimumIntegerDigits(_i3.MinimumIntegerDigits? value) {
+    _i5.setProperty(
       this,
       'minimumIntegerDigits',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
   /// The minimum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number and percent formatting is 0; the default for currency formatting is the number of minor unit digits provided by the {@link http://www.currency-iso.org/en/home/tables/table-a1.html ISO 4217 currency codes list} (2 if the list doesn't provide that information).
-  MinimumFractionDigits? get minimumFractionDigits => switch (_i4.getProperty(
+  _i3.MinimumFractionDigits? get minimumFractionDigits =>
+      switch (_i5.getProperty(
         this,
         'minimumFractionDigits',
       )) {
-        _i2.String name => MinimumFractionDigits.values.byName(name),
+        _i2.String name => _i3.MinimumFractionDigits.values.byName(name),
         _ => null
       };
-  set minimumFractionDigits(MinimumFractionDigits? value) {
-    _i4.setProperty(
+  set minimumFractionDigits(_i3.MinimumFractionDigits? value) {
+    _i5.setProperty(
       this,
       'minimumFractionDigits',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
   /// The maximum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number formatting is the larger of minimumFractionDigits and 3; the default for currency formatting is the larger of minimumFractionDigits and the number of minor unit digits provided by the {@link http://www.currency-iso.org/en/home/tables/table-a1.html ISO 4217 currency codes list} (2 if the list doesn't provide that information); the default for percent formatting is the larger of minimumFractionDigits and 0.
-  MaximumFractionDigits? get maximumFractionDigits => switch (_i4.getProperty(
+  _i3.MaximumFractionDigits? get maximumFractionDigits =>
+      switch (_i5.getProperty(
         this,
         'maximumFractionDigits',
       )) {
-        _i2.String name => MaximumFractionDigits.values.byName(name),
+        _i2.String name => _i3.MaximumFractionDigits.values.byName(name),
         _ => null
       };
-  set maximumFractionDigits(MaximumFractionDigits? value) {
-    _i4.setProperty(
+  set maximumFractionDigits(_i3.MaximumFractionDigits? value) {
+    _i5.setProperty(
       this,
       'maximumFractionDigits',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
   /// The minimum number of significant digits to use. Possible values are from 1 to 21; the default is 1.
-  MinimumSignificantDigits? get minimumSignificantDigits =>
-      switch (_i4.getProperty(
+  _i3.MinimumSignificantDigits? get minimumSignificantDigits =>
+      switch (_i5.getProperty(
         this,
         'minimumSignificantDigits',
       )) {
-        _i2.String name => MinimumSignificantDigits.values.byName(name),
+        _i2.String name => _i3.MinimumSignificantDigits.values.byName(name),
         _ => null
       };
-  set minimumSignificantDigits(MinimumSignificantDigits? value) {
-    _i4.setProperty(
+  set minimumSignificantDigits(_i3.MinimumSignificantDigits? value) {
+    _i5.setProperty(
       this,
       'minimumSignificantDigits',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
   /// The maximum number of significant digits to use. Possible values are from 1 to 21; the default is 21.
-  MaximumSignificantDigits? get maximumSignificantDigits =>
-      switch (_i4.getProperty(
+  _i3.MaximumSignificantDigits? get maximumSignificantDigits =>
+      switch (_i5.getProperty(
         this,
         'maximumSignificantDigits',
       )) {
-        _i2.String name => MaximumSignificantDigits.values.byName(name),
+        _i2.String name => _i3.MaximumSignificantDigits.values.byName(name),
         _ => null
       };
-  set maximumSignificantDigits(MaximumSignificantDigits? value) {
-    _i4.setProperty(
+  set maximumSignificantDigits(_i3.MaximumSignificantDigits? value) {
+    _i5.setProperty(
       this,
       'maximumSignificantDigits',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
@@ -415,28 +416,28 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
   ///      "engineering" return the exponent of ten when divisible by three
   ///
   ///      "compact" string representing exponent, defaults is using the "short" form
-  _i2.String? get notation => _i4.getProperty(
+  _i2.String? get notation => _i5.getProperty(
         this,
         'notation',
       );
   set notation(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'notation',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// used only when notation is "compact"
-  _i2.String? get compactDisplay => _i4.getProperty(
+  _i2.String? get compactDisplay => _i5.getProperty(
         this,
         'compactDisplay',
       );
   set compactDisplay(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'compactDisplay',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 }
@@ -452,8 +453,8 @@ class BigInt {
     _i2.num bits,
     _i2.int int$,
   ) =>
-      _i4.callMethod(
-        _i5.target29,
+      _i5.callMethod(
+        _i6.target29,
         'asIntN',
         [
           bits,
@@ -469,8 +470,8 @@ class BigInt {
     _i2.num bits,
     _i2.int int$,
   ) =>
-      _i4.callMethod(
-        _i5.target29,
+      _i5.callMethod(
+        _i6.target29,
         'asUintN',
         [
           bits,
@@ -482,28 +483,28 @@ class BigInt {
 extension BigInt$Typings on BigInt {
   /// Returns a string representation of an object.
   ///  @param radix Specifies a radix for converting numeric values to strings.
-  _i2.String toString$([_i2.num? radix]) => _i4.callMethod(
+  _i2.String toString$([_i2.num? radix]) => _i5.callMethod(
         this,
         'toString',
-        [radix ?? _i3.undefined],
+        [radix ?? _i4.undefined],
       );
 
   /// Returns a string representation appropriate to the host environment's current locale.
   _i2.String toLocaleString([
-    _i6.LocalesArgument? locales,
-    _i7.BigIntToLocaleStringOptions? options,
+    _i2.dynamic locales,
+    _i3.BigIntToLocaleStringOptions? options,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'toLocaleString',
         [
-          locales ?? _i3.undefined ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 
   /// Returns the primitive value of the specified object.
-  _i2.int valueOf() => _i4.callMethod(
+  _i2.int valueOf() => _i5.callMethod(
         this,
         'valueOf',
         [],
@@ -523,7 +524,7 @@ extension BigIntConstructor$Typings on BigIntConstructor {
     _i2.num bits,
     _i2.int int$,
   ) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'asIntN',
         [
@@ -540,7 +541,7 @@ extension BigIntConstructor$Typings on BigIntConstructor {
     _i2.num bits,
     _i2.int int$,
   ) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'asUintN',
         [
@@ -548,7 +549,7 @@ extension BigIntConstructor$Typings on BigIntConstructor {
           int$,
         ],
       );
-  _i2.int call(_i2.Object value) => _i4.callMethod(
+  _i2.int call(_i2.Object value) => _i5.callMethod(
         this,
         '',
         [value],
@@ -559,53 +560,53 @@ extension BigIntConstructor$Typings on BigIntConstructor {
 /// requested number of bytes could not be allocated, an exception is raised.
 @_i1.JS()
 @_i1.staticInterop
-class BigInt64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
-  factory BigInt64Array.$1() => _i4.callConstructor(
+class BigInt64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
+  factory BigInt64Array.$1() => _i5.callConstructor(
         _declaredBigInt64Array,
         [],
       );
 
-  factory BigInt64Array.$2([_i2.num? length]) => _i4.callConstructor(
+  factory BigInt64Array.$2([_i2.num? length]) => _i5.callConstructor(
         _declaredBigInt64Array,
-        [length ?? _i3.undefined],
+        [length ?? _i4.undefined],
       );
 
-  factory BigInt64Array.$3(_i8.Iterable<_i2.int> array) => _i4.callConstructor(
+  factory BigInt64Array.$3(_i7.Iterable<_i2.int> array) => _i5.callConstructor(
         _declaredBigInt64Array,
         [array],
       );
 
   factory BigInt64Array.$4(
-    _i9.ArrayBufferLike buffer, [
+    _i8.ArrayBufferLike buffer, [
     _i2.num? byteOffset,
     _i2.num? length,
   ]) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredBigInt64Array,
         [
           buffer,
-          byteOffset ?? _i3.undefined,
-          length ?? _i3.undefined,
+          byteOffset ?? _i4.undefined,
+          length ?? _i4.undefined,
         ],
       );
 
   /// The size in bytes of each element in the array.
-  static _i2.num get bytesPerElement => _i4.getProperty(
-        _i5.target30,
+  static _i2.num get bytesPerElement => _i5.getProperty(
+        _i6.target30,
         'BYTES_PER_ELEMENT',
       );
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  static _i7.BigInt64Array of([_i2.Iterable<_i2.dynamic>? items]) =>
-      _i4.callMethod(
-        _i5.target30,
+  static _i3.BigInt64Array of([_i2.Iterable<_i2.dynamic>? items]) =>
+      _i5.callMethod(
+        _i6.target30,
         'of',
         [...?items],
       );
 
   /// Creates an array from an array-like or iterable object.
-  static _i7.BigInt64Array from<U>(
+  static _i3.BigInt64Array from<U>(
     _i2.List<U> arrayLike,
     _i2.int Function(
       U,
@@ -613,13 +614,13 @@ class BigInt64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
-        _i5.target30,
+      _i5.callMethod(
+        _i6.target30,
         'from',
         [
           arrayLike,
-          _i4.allowInterop(mapfn),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(mapfn),
+          thisArg ?? _i4.undefined,
         ],
       );
 }
@@ -632,31 +633,31 @@ external _i2.Object _declaredBigInt64Array;
 
 extension BigInt64Array$Typings on BigInt64Array {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i4.getProperty(
+  _i2.num get bytesPerElement => _i5.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
 
   /// The ArrayBuffer instance referenced by the array.
-  _i9.ArrayBufferLike get buffer => _i4.getProperty(
+  _i8.ArrayBufferLike get buffer => _i5.getProperty(
         this,
         'buffer',
       );
 
   /// The length in bytes of the array.
-  _i2.num get byteLength => _i4.getProperty(
+  _i2.num get byteLength => _i5.getProperty(
         this,
         'byteLength',
       );
 
   /// The offset in bytes of the array.
-  _i2.num get byteOffset => _i4.getProperty(
+  _i2.num get byteOffset => _i5.getProperty(
         this,
         'byteOffset',
       );
 
   /// The length of the array.
-  _i2.num get length => _i4.getProperty(
+  _i2.num get length => _i5.getProperty(
         this,
         'length',
       );
@@ -668,27 +669,27 @@ extension BigInt64Array$Typings on BigInt64Array {
   ///  @param start If start is negative, it is treated as length+start. If end is negative, it
   ///  is treated as length+end. If start is omitted, `0` is used.
   ///  @param end If not specified, length of the this object is used as its default value.
-  _i7.BigInt64Array copyWithin(
+  _i3.BigInt64Array copyWithin(
     _i2.num target, [
     _i2.num? start,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'copyWithin',
         [
           target,
-          start ?? _i3.undefined,
-          end ?? _i3.undefined,
+          start ?? _i4.undefined,
+          end ?? _i4.undefined,
         ],
       );
 
   /// Yields index, value pairs for every entry in the array.
-  _i8.IterableIterator<
+  _i7.IterableIterator<
       (
         _i2.num,
         _i2.int,
-      )> entries() => _i4.callMethod(
+      )> entries() => _i5.callMethod(
         this,
         'entries',
         [],
@@ -704,16 +705,16 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.bool Function(
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'every',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -723,18 +724,18 @@ extension BigInt64Array$Typings on BigInt64Array {
   ///  length+start where length is the length of the array.
   ///  @param end index to stop filling the array at. If end is negative, it is treated as
   ///  length+end.
-  _i7.BigInt64Array fill(
+  _i3.BigInt64Array fill(
     _i2.int value, [
     _i2.num? start,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'fill',
         [
           value,
-          start ?? _i3.undefined,
-          end ?? _i3.undefined,
+          start ?? _i4.undefined,
+          end ?? _i4.undefined,
         ],
       );
 
@@ -743,20 +744,20 @@ extension BigInt64Array$Typings on BigInt64Array {
   ///  the predicate function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the predicate function.
   ///  If thisArg is omitted, undefined is used as the this value.
-  _i7.BigInt64Array filter(
+  _i3.BigInt64Array filter(
     _i2.dynamic Function(
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'filter',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -771,16 +772,16 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.bool Function(
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'find',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -795,16 +796,16 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.bool Function(
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'findIndex',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -817,16 +818,16 @@ extension BigInt64Array$Typings on BigInt64Array {
     void Function(
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) {
-    _i4.callMethod(
+    _i5.callMethod(
       this,
       'forEach',
       [
-        _i4.allowInterop(callbackfn),
-        thisArg ?? _i3.undefined,
+        _i5.allowInterop(callbackfn),
+        thisArg ?? _i4.undefined,
       ],
     );
   }
@@ -838,12 +839,12 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.int searchElement, [
     _i2.num? fromIndex,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'includes',
         [
           searchElement,
-          fromIndex ?? _i3.undefined,
+          fromIndex ?? _i4.undefined,
         ],
       );
 
@@ -855,26 +856,26 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.int searchElement, [
     _i2.num? fromIndex,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'indexOf',
         [
           searchElement,
-          fromIndex ?? _i3.undefined,
+          fromIndex ?? _i4.undefined,
         ],
       );
 
   /// Adds all the elements of an array separated by the specified separator string.
   ///  @param separator A string used to separate one element of an array from the next in the
   ///  resulting String. If omitted, the array elements are separated with a comma.
-  _i2.String join([_i2.String? separator]) => _i4.callMethod(
+  _i2.String join([_i2.String? separator]) => _i5.callMethod(
         this,
         'join',
-        [separator ?? _i3.undefined],
+        [separator ?? _i4.undefined],
       );
 
   /// Yields each index in the array.
-  _i8.IterableIterator<_i2.num> keys() => _i4.callMethod(
+  _i7.IterableIterator<_i2.num> keys() => _i5.callMethod(
         this,
         'keys',
         [],
@@ -888,12 +889,12 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.int searchElement, [
     _i2.num? fromIndex,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'lastIndexOf',
         [
           searchElement,
-          fromIndex ?? _i3.undefined,
+          fromIndex ?? _i4.undefined,
         ],
       );
 
@@ -903,20 +904,20 @@ extension BigInt64Array$Typings on BigInt64Array {
   ///  callbackfn function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the callbackfn function.
   ///  If thisArg is omitted, undefined is used as the this value.
-  _i7.BigInt64Array map(
+  _i3.BigInt64Array map(
     _i2.int Function(
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'map',
         [
-          _i4.allowInterop(callbackfn),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(callbackfn),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -933,12 +934,12 @@ extension BigInt64Array$Typings on BigInt64Array {
             _i2.int,
             _i2.int,
             _i2.num,
-            _i7.BigInt64Array,
+            _i3.BigInt64Array,
           ) callbackfn) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'reduce',
-        [_i4.allowInterop(callbackfn)],
+        [_i5.allowInterop(callbackfn)],
       );
 
   /// Calls the specified callback function for all the elements in an array. The return value of
@@ -954,15 +955,15 @@ extension BigInt64Array$Typings on BigInt64Array {
       U,
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) callbackfn,
     U initialValue,
   ) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'reduce',
         [
-          _i4.allowInterop(callbackfn),
+          _i5.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -982,7 +983,7 @@ extension BigInt64Array$Typings on BigInt64Array {
           _i2.int,
           _i2.int,
           _i2.num,
-          _i7.BigInt64Array,
+          _i3.BigInt64Array,
         ) callbackfn) $1,
 
     /// Calls the specified callback function for all the elements in an array. The return value of
@@ -998,7 +999,7 @@ extension BigInt64Array$Typings on BigInt64Array {
         U,
         _i2.int,
         _i2.num,
-        _i7.BigInt64Array,
+        _i3.BigInt64Array,
       ) callbackfn,
       U initialValue,
     ) $2,
@@ -1020,12 +1021,12 @@ extension BigInt64Array$Typings on BigInt64Array {
             _i2.int,
             _i2.int,
             _i2.num,
-            _i7.BigInt64Array,
+            _i3.BigInt64Array,
           ) callbackfn) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'reduceRight',
-        [_i4.allowInterop(callbackfn)],
+        [_i5.allowInterop(callbackfn)],
       );
 
   /// Calls the specified callback function for all the elements in an array, in descending order.
@@ -1041,15 +1042,15 @@ extension BigInt64Array$Typings on BigInt64Array {
       U,
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) callbackfn,
     U initialValue,
   ) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'reduceRight',
         [
-          _i4.allowInterop(callbackfn),
+          _i5.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -1069,7 +1070,7 @@ extension BigInt64Array$Typings on BigInt64Array {
           _i2.int,
           _i2.int,
           _i2.num,
-          _i7.BigInt64Array,
+          _i3.BigInt64Array,
         ) callbackfn) $1,
 
     /// Calls the specified callback function for all the elements in an array, in descending order.
@@ -1085,7 +1086,7 @@ extension BigInt64Array$Typings on BigInt64Array {
         U,
         _i2.int,
         _i2.num,
-        _i7.BigInt64Array,
+        _i3.BigInt64Array,
       ) callbackfn,
       U initialValue,
     ) $2,
@@ -1095,7 +1096,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       );
 
   /// Reverses the elements in the array.
-  _i7.BigInt64Array reverse() => _i4.callMethod(
+  _i3.BigInt64Array reverse() => _i5.callMethod(
         this,
         'reverse',
         [],
@@ -1108,12 +1109,12 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.List<_i2.int> array, [
     _i2.num? offset,
   ]) {
-    _i4.callMethod(
+    _i5.callMethod(
       this,
       'set',
       [
         array,
-        offset ?? _i3.undefined,
+        offset ?? _i4.undefined,
       ],
     );
   }
@@ -1121,16 +1122,16 @@ extension BigInt64Array$Typings on BigInt64Array {
   /// Returns a section of an array.
   ///  @param start The beginning of the specified portion of the array.
   ///  @param end The end of the specified portion of the array.
-  _i7.BigInt64Array slice([
+  _i3.BigInt64Array slice([
     _i2.num? start,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'slice',
         [
-          start ?? _i3.undefined,
-          end ?? _i3.undefined,
+          start ?? _i4.undefined,
+          end ?? _i4.undefined,
         ],
       );
 
@@ -1144,72 +1145,72 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.bool Function(
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'some',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
   /// Sorts the array.
   ///  @param compareFn The function used to determine the order of the elements. If omitted, the elements are sorted in ascending order.
-  _i7.BigInt64Array sort(
+  _i3.BigInt64Array sort(
           [_i2.Object Function(
             _i2.int,
             _i2.int,
           )? compareFn]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'sort',
-        [compareFn == null ? _i3.undefined : _i4.allowInterop(compareFn)],
+        [compareFn == null ? _i4.undefined : _i5.allowInterop(compareFn)],
       );
 
   /// Gets a new BigInt64Array view of the ArrayBuffer store for this array, referencing the elements
   ///  at begin, inclusive, up to end, exclusive.
   ///  @param begin The index of the beginning of the array.
   ///  @param end The index of the end of the array.
-  _i7.BigInt64Array subarray([
+  _i3.BigInt64Array subarray([
     _i2.num? begin,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'subarray',
         [
-          begin ?? _i3.undefined,
-          end ?? _i3.undefined,
+          begin ?? _i4.undefined,
+          end ?? _i4.undefined,
         ],
       );
 
   /// Converts the array to a string by using the current locale.
-  _i2.String toLocaleString() => _i4.callMethod(
+  _i2.String toLocaleString() => _i5.callMethod(
         this,
         'toLocaleString',
         [],
       );
 
   /// Returns a string representation of the array.
-  _i2.String toString$() => _i4.callMethod(
+  _i2.String toString$() => _i5.callMethod(
         this,
         'toString',
         [],
       );
 
   /// Returns the primitive value of the specified object.
-  _i7.BigInt64Array valueOf() => _i4.callMethod(
+  _i3.BigInt64Array valueOf() => _i5.callMethod(
         this,
         'valueOf',
         [],
       );
 
   /// Yields each value in the array.
-  _i8.IterableIterator<_i2.int> values() => _i4.callMethod(
+  _i7.IterableIterator<_i2.int> values() => _i5.callMethod(
         this,
         'values',
         [],
@@ -1217,7 +1218,7 @@ extension BigInt64Array$Typings on BigInt64Array {
 
   /// Returns the item located at the specified index.
   ///  @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
-  _i2.int? at(_i2.num index) => _i4.callMethod(
+  _i2.int? at(_i2.num index) => _i5.callMethod(
         this,
         'at',
         [index],
@@ -1234,16 +1235,16 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.dynamic Function(
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'findLast',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -1253,16 +1254,16 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.Object? Function(
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'findLast',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -1279,7 +1280,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i2.dynamic Function(
         _i2.int,
         _i2.num,
-        _i7.BigInt64Array,
+        _i3.BigInt64Array,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
@@ -1290,7 +1291,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i2.Object? Function(
         _i2.int,
         _i2.num,
-        _i7.BigInt64Array,
+        _i3.BigInt64Array,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $2,
@@ -1310,19 +1311,19 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.Object? Function(
       _i2.int,
       _i2.num,
-      _i7.BigInt64Array,
+      _i3.BigInt64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'findLastIndex',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
-  _i2.int operator [](_i2.num index) => _i4.getProperty(
+  _i2.int operator [](_i2.num index) => _i5.getProperty(
         this,
         index,
       );
@@ -1330,7 +1331,7 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.num index,
     _i2.int value,
   ) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       index,
       value,
@@ -1342,8 +1343,8 @@ extension BigInt64Array$Typings on BigInt64Array {
 @_i1.staticInterop
 class BigInt64ArrayConstructor {
   /// The size in bytes of each element in the array.
-  static _i2.num get bytesPerElement => _i4.getProperty(
-        _i5.target30,
+  static _i2.num get bytesPerElement => _i5.getProperty(
+        _i6.target30,
         'BYTES_PER_ELEMENT',
       );
 }
@@ -1351,14 +1352,14 @@ class BigInt64ArrayConstructor {
 extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i7.BigInt64Array of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i3.BigInt64Array of([_i2.Iterable<_i2.dynamic>? items]) => _i5.callMethod(
         this,
         'of',
         [...?items],
       );
 
   /// Creates an array from an array-like or iterable object.
-  _i7.BigInt64Array from<U>(
+  _i3.BigInt64Array from<U>(
     _i2.List<U> arrayLike,
     _i2.int Function(
       U,
@@ -1366,13 +1367,13 @@ extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i4.allowInterop(mapfn),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(mapfn),
+          thisArg ?? _i4.undefined,
         ],
       );
 }
@@ -1381,53 +1382,53 @@ extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
 /// requested number of bytes could not be allocated, an exception is raised.
 @_i1.JS()
 @_i1.staticInterop
-class BigUint64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
-  factory BigUint64Array.$1() => _i4.callConstructor(
+class BigUint64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
+  factory BigUint64Array.$1() => _i5.callConstructor(
         _declaredBigUint64Array,
         [],
       );
 
-  factory BigUint64Array.$2([_i2.num? length]) => _i4.callConstructor(
+  factory BigUint64Array.$2([_i2.num? length]) => _i5.callConstructor(
         _declaredBigUint64Array,
-        [length ?? _i3.undefined],
+        [length ?? _i4.undefined],
       );
 
-  factory BigUint64Array.$3(_i8.Iterable<_i2.int> array) => _i4.callConstructor(
+  factory BigUint64Array.$3(_i7.Iterable<_i2.int> array) => _i5.callConstructor(
         _declaredBigUint64Array,
         [array],
       );
 
   factory BigUint64Array.$4(
-    _i9.ArrayBufferLike buffer, [
+    _i8.ArrayBufferLike buffer, [
     _i2.num? byteOffset,
     _i2.num? length,
   ]) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredBigUint64Array,
         [
           buffer,
-          byteOffset ?? _i3.undefined,
-          length ?? _i3.undefined,
+          byteOffset ?? _i4.undefined,
+          length ?? _i4.undefined,
         ],
       );
 
   /// The size in bytes of each element in the array.
-  static _i2.num get bytesPerElement => _i4.getProperty(
-        _i5.target31,
+  static _i2.num get bytesPerElement => _i5.getProperty(
+        _i6.target31,
         'BYTES_PER_ELEMENT',
       );
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  static _i7.BigUint64Array of([_i2.Iterable<_i2.dynamic>? items]) =>
-      _i4.callMethod(
-        _i5.target31,
+  static _i3.BigUint64Array of([_i2.Iterable<_i2.dynamic>? items]) =>
+      _i5.callMethod(
+        _i6.target31,
         'of',
         [...?items],
       );
 
   /// Creates an array from an array-like or iterable object.
-  static _i7.BigUint64Array from<U>(
+  static _i3.BigUint64Array from<U>(
     _i2.List<U> arrayLike,
     _i2.int Function(
       U,
@@ -1435,13 +1436,13 @@ class BigUint64Array implements _IterableLike$<_i8.IterableIterator<_i2.int>> {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
-        _i5.target31,
+      _i5.callMethod(
+        _i6.target31,
         'from',
         [
           arrayLike,
-          _i4.allowInterop(mapfn),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(mapfn),
+          thisArg ?? _i4.undefined,
         ],
       );
 }
@@ -1454,31 +1455,31 @@ external _i2.Object _declaredBigUint64Array;
 
 extension BigUint64Array$Typings on BigUint64Array {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i4.getProperty(
+  _i2.num get bytesPerElement => _i5.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
 
   /// The ArrayBuffer instance referenced by the array.
-  _i9.ArrayBufferLike get buffer => _i4.getProperty(
+  _i8.ArrayBufferLike get buffer => _i5.getProperty(
         this,
         'buffer',
       );
 
   /// The length in bytes of the array.
-  _i2.num get byteLength => _i4.getProperty(
+  _i2.num get byteLength => _i5.getProperty(
         this,
         'byteLength',
       );
 
   /// The offset in bytes of the array.
-  _i2.num get byteOffset => _i4.getProperty(
+  _i2.num get byteOffset => _i5.getProperty(
         this,
         'byteOffset',
       );
 
   /// The length of the array.
-  _i2.num get length => _i4.getProperty(
+  _i2.num get length => _i5.getProperty(
         this,
         'length',
       );
@@ -1490,27 +1491,27 @@ extension BigUint64Array$Typings on BigUint64Array {
   ///  @param start If start is negative, it is treated as length+start. If end is negative, it
   ///  is treated as length+end. If start is omitted, `0` is used.
   ///  @param end If not specified, length of the this object is used as its default value.
-  _i7.BigUint64Array copyWithin(
+  _i3.BigUint64Array copyWithin(
     _i2.num target, [
     _i2.num? start,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'copyWithin',
         [
           target,
-          start ?? _i3.undefined,
-          end ?? _i3.undefined,
+          start ?? _i4.undefined,
+          end ?? _i4.undefined,
         ],
       );
 
   /// Yields index, value pairs for every entry in the array.
-  _i8.IterableIterator<
+  _i7.IterableIterator<
       (
         _i2.num,
         _i2.int,
-      )> entries() => _i4.callMethod(
+      )> entries() => _i5.callMethod(
         this,
         'entries',
         [],
@@ -1526,16 +1527,16 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.bool Function(
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'every',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -1545,18 +1546,18 @@ extension BigUint64Array$Typings on BigUint64Array {
   ///  length+start where length is the length of the array.
   ///  @param end index to stop filling the array at. If end is negative, it is treated as
   ///  length+end.
-  _i7.BigUint64Array fill(
+  _i3.BigUint64Array fill(
     _i2.int value, [
     _i2.num? start,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'fill',
         [
           value,
-          start ?? _i3.undefined,
-          end ?? _i3.undefined,
+          start ?? _i4.undefined,
+          end ?? _i4.undefined,
         ],
       );
 
@@ -1565,20 +1566,20 @@ extension BigUint64Array$Typings on BigUint64Array {
   ///  the predicate function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the predicate function.
   ///  If thisArg is omitted, undefined is used as the this value.
-  _i7.BigUint64Array filter(
+  _i3.BigUint64Array filter(
     _i2.dynamic Function(
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'filter',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -1593,16 +1594,16 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.bool Function(
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'find',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -1617,16 +1618,16 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.bool Function(
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'findIndex',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -1639,16 +1640,16 @@ extension BigUint64Array$Typings on BigUint64Array {
     void Function(
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) {
-    _i4.callMethod(
+    _i5.callMethod(
       this,
       'forEach',
       [
-        _i4.allowInterop(callbackfn),
-        thisArg ?? _i3.undefined,
+        _i5.allowInterop(callbackfn),
+        thisArg ?? _i4.undefined,
       ],
     );
   }
@@ -1660,12 +1661,12 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.int searchElement, [
     _i2.num? fromIndex,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'includes',
         [
           searchElement,
-          fromIndex ?? _i3.undefined,
+          fromIndex ?? _i4.undefined,
         ],
       );
 
@@ -1677,26 +1678,26 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.int searchElement, [
     _i2.num? fromIndex,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'indexOf',
         [
           searchElement,
-          fromIndex ?? _i3.undefined,
+          fromIndex ?? _i4.undefined,
         ],
       );
 
   /// Adds all the elements of an array separated by the specified separator string.
   ///  @param separator A string used to separate one element of an array from the next in the
   ///  resulting String. If omitted, the array elements are separated with a comma.
-  _i2.String join([_i2.String? separator]) => _i4.callMethod(
+  _i2.String join([_i2.String? separator]) => _i5.callMethod(
         this,
         'join',
-        [separator ?? _i3.undefined],
+        [separator ?? _i4.undefined],
       );
 
   /// Yields each index in the array.
-  _i8.IterableIterator<_i2.num> keys() => _i4.callMethod(
+  _i7.IterableIterator<_i2.num> keys() => _i5.callMethod(
         this,
         'keys',
         [],
@@ -1710,12 +1711,12 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.int searchElement, [
     _i2.num? fromIndex,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'lastIndexOf',
         [
           searchElement,
-          fromIndex ?? _i3.undefined,
+          fromIndex ?? _i4.undefined,
         ],
       );
 
@@ -1725,20 +1726,20 @@ extension BigUint64Array$Typings on BigUint64Array {
   ///  callbackfn function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the callbackfn function.
   ///  If thisArg is omitted, undefined is used as the this value.
-  _i7.BigUint64Array map(
+  _i3.BigUint64Array map(
     _i2.int Function(
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) callbackfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'map',
         [
-          _i4.allowInterop(callbackfn),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(callbackfn),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -1755,12 +1756,12 @@ extension BigUint64Array$Typings on BigUint64Array {
             _i2.int,
             _i2.int,
             _i2.num,
-            _i7.BigUint64Array,
+            _i3.BigUint64Array,
           ) callbackfn) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'reduce',
-        [_i4.allowInterop(callbackfn)],
+        [_i5.allowInterop(callbackfn)],
       );
 
   /// Calls the specified callback function for all the elements in an array. The return value of
@@ -1776,15 +1777,15 @@ extension BigUint64Array$Typings on BigUint64Array {
       U,
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) callbackfn,
     U initialValue,
   ) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'reduce',
         [
-          _i4.allowInterop(callbackfn),
+          _i5.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -1804,7 +1805,7 @@ extension BigUint64Array$Typings on BigUint64Array {
           _i2.int,
           _i2.int,
           _i2.num,
-          _i7.BigUint64Array,
+          _i3.BigUint64Array,
         ) callbackfn) $1,
 
     /// Calls the specified callback function for all the elements in an array. The return value of
@@ -1820,7 +1821,7 @@ extension BigUint64Array$Typings on BigUint64Array {
         U,
         _i2.int,
         _i2.num,
-        _i7.BigUint64Array,
+        _i3.BigUint64Array,
       ) callbackfn,
       U initialValue,
     ) $2,
@@ -1842,12 +1843,12 @@ extension BigUint64Array$Typings on BigUint64Array {
             _i2.int,
             _i2.int,
             _i2.num,
-            _i7.BigUint64Array,
+            _i3.BigUint64Array,
           ) callbackfn) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'reduceRight',
-        [_i4.allowInterop(callbackfn)],
+        [_i5.allowInterop(callbackfn)],
       );
 
   /// Calls the specified callback function for all the elements in an array, in descending order.
@@ -1863,15 +1864,15 @@ extension BigUint64Array$Typings on BigUint64Array {
       U,
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) callbackfn,
     U initialValue,
   ) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'reduceRight',
         [
-          _i4.allowInterop(callbackfn),
+          _i5.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -1891,7 +1892,7 @@ extension BigUint64Array$Typings on BigUint64Array {
           _i2.int,
           _i2.int,
           _i2.num,
-          _i7.BigUint64Array,
+          _i3.BigUint64Array,
         ) callbackfn) $1,
 
     /// Calls the specified callback function for all the elements in an array, in descending order.
@@ -1907,7 +1908,7 @@ extension BigUint64Array$Typings on BigUint64Array {
         U,
         _i2.int,
         _i2.num,
-        _i7.BigUint64Array,
+        _i3.BigUint64Array,
       ) callbackfn,
       U initialValue,
     ) $2,
@@ -1917,7 +1918,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       );
 
   /// Reverses the elements in the array.
-  _i7.BigUint64Array reverse() => _i4.callMethod(
+  _i3.BigUint64Array reverse() => _i5.callMethod(
         this,
         'reverse',
         [],
@@ -1930,12 +1931,12 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.List<_i2.int> array, [
     _i2.num? offset,
   ]) {
-    _i4.callMethod(
+    _i5.callMethod(
       this,
       'set',
       [
         array,
-        offset ?? _i3.undefined,
+        offset ?? _i4.undefined,
       ],
     );
   }
@@ -1943,16 +1944,16 @@ extension BigUint64Array$Typings on BigUint64Array {
   /// Returns a section of an array.
   ///  @param start The beginning of the specified portion of the array.
   ///  @param end The end of the specified portion of the array.
-  _i7.BigUint64Array slice([
+  _i3.BigUint64Array slice([
     _i2.num? start,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'slice',
         [
-          start ?? _i3.undefined,
-          end ?? _i3.undefined,
+          start ?? _i4.undefined,
+          end ?? _i4.undefined,
         ],
       );
 
@@ -1966,72 +1967,72 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.bool Function(
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'some',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
   /// Sorts the array.
   ///  @param compareFn The function used to determine the order of the elements. If omitted, the elements are sorted in ascending order.
-  _i7.BigUint64Array sort(
+  _i3.BigUint64Array sort(
           [_i2.Object Function(
             _i2.int,
             _i2.int,
           )? compareFn]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'sort',
-        [compareFn == null ? _i3.undefined : _i4.allowInterop(compareFn)],
+        [compareFn == null ? _i4.undefined : _i5.allowInterop(compareFn)],
       );
 
   /// Gets a new BigUint64Array view of the ArrayBuffer store for this array, referencing the elements
   ///  at begin, inclusive, up to end, exclusive.
   ///  @param begin The index of the beginning of the array.
   ///  @param end The index of the end of the array.
-  _i7.BigUint64Array subarray([
+  _i3.BigUint64Array subarray([
     _i2.num? begin,
     _i2.num? end,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'subarray',
         [
-          begin ?? _i3.undefined,
-          end ?? _i3.undefined,
+          begin ?? _i4.undefined,
+          end ?? _i4.undefined,
         ],
       );
 
   /// Converts the array to a string by using the current locale.
-  _i2.String toLocaleString() => _i4.callMethod(
+  _i2.String toLocaleString() => _i5.callMethod(
         this,
         'toLocaleString',
         [],
       );
 
   /// Returns a string representation of the array.
-  _i2.String toString$() => _i4.callMethod(
+  _i2.String toString$() => _i5.callMethod(
         this,
         'toString',
         [],
       );
 
   /// Returns the primitive value of the specified object.
-  _i7.BigUint64Array valueOf() => _i4.callMethod(
+  _i3.BigUint64Array valueOf() => _i5.callMethod(
         this,
         'valueOf',
         [],
       );
 
   /// Yields each value in the array.
-  _i8.IterableIterator<_i2.int> values() => _i4.callMethod(
+  _i7.IterableIterator<_i2.int> values() => _i5.callMethod(
         this,
         'values',
         [],
@@ -2039,7 +2040,7 @@ extension BigUint64Array$Typings on BigUint64Array {
 
   /// Returns the item located at the specified index.
   ///  @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
-  _i2.int? at(_i2.num index) => _i4.callMethod(
+  _i2.int? at(_i2.num index) => _i5.callMethod(
         this,
         'at',
         [index],
@@ -2056,16 +2057,16 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.dynamic Function(
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'findLast',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -2075,16 +2076,16 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.Object? Function(
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'findLast',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
 
@@ -2101,7 +2102,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i2.dynamic Function(
         _i2.int,
         _i2.num,
-        _i7.BigUint64Array,
+        _i3.BigUint64Array,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $1,
@@ -2112,7 +2113,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i2.Object? Function(
         _i2.int,
         _i2.num,
-        _i7.BigUint64Array,
+        _i3.BigUint64Array,
       ) predicate, [
       _i2.dynamic thisArg,
     ]) $2,
@@ -2132,19 +2133,19 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.Object? Function(
       _i2.int,
       _i2.num,
-      _i7.BigUint64Array,
+      _i3.BigUint64Array,
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'findLastIndex',
         [
-          _i4.allowInterop(predicate),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(predicate),
+          thisArg ?? _i4.undefined,
         ],
       );
-  _i2.int operator [](_i2.num index) => _i4.getProperty(
+  _i2.int operator [](_i2.num index) => _i5.getProperty(
         this,
         index,
       );
@@ -2152,7 +2153,7 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.num index,
     _i2.int value,
   ) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       index,
       value,
@@ -2164,8 +2165,8 @@ extension BigUint64Array$Typings on BigUint64Array {
 @_i1.staticInterop
 class BigUint64ArrayConstructor {
   /// The size in bytes of each element in the array.
-  static _i2.num get bytesPerElement => _i4.getProperty(
-        _i5.target31,
+  static _i2.num get bytesPerElement => _i5.getProperty(
+        _i6.target31,
         'BYTES_PER_ELEMENT',
       );
 }
@@ -2173,14 +2174,14 @@ class BigUint64ArrayConstructor {
 extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i7.BigUint64Array of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i3.BigUint64Array of([_i2.Iterable<_i2.dynamic>? items]) => _i5.callMethod(
         this,
         'of',
         [...?items],
       );
 
   /// Creates an array from an array-like or iterable object.
-  _i7.BigUint64Array from<U>(
+  _i3.BigUint64Array from<U>(
     _i2.List<U> arrayLike,
     _i2.int Function(
       U,
@@ -2188,13 +2189,13 @@ extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i4.allowInterop(mapfn),
-          thisArg ?? _i3.undefined,
+          _i5.allowInterop(mapfn),
+          thisArg ?? _i4.undefined,
         ],
       );
 }

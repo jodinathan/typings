@@ -2376,11 +2376,10 @@
               {
                 "name": "anim",
                 "type": {
-                  "ref": "anime.AnimeInstance",
-                  "targs": [],
-                  "isNullable": false,
-                  "_": 9,
-                  "source": " anime.AnimeInstance"
+                  "core": "any",
+                  "isNullable": true,
+                  "_": 169,
+                  "source": " anime.AnimeParams"
                 },
                 "varargs": false,
                 "isNullable": false
@@ -3294,11 +3293,10 @@
           "_": 169,
           "name": "anime",
           "type": {
-            "ref": "anime.AnimeInstance",
-            "targs": [],
-            "isNullable": false,
+            "core": "any",
+            "isNullable": true,
             "_": 169,
-            "source": " anime.AnimeInstance"
+            "source": " anime.AnimeParams"
           },
           "generics": [],
           "doc": "",
@@ -3306,9 +3304,8 @@
             {
               "name": "params",
               "type": {
-                "ref": "anime.AnimeParams",
-                "targs": [],
-                "isNullable": false,
+                "core": "any",
+                "isNullable": true,
                 "_": 169,
                 "source": " anime.AnimeParams"
               },

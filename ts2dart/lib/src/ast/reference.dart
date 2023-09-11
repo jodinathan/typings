@@ -36,6 +36,8 @@ mixin InteropItem {
     'return',
     'throw',
     'null',
+    'enum',
+    'with',
     // Object
     'runtimeType',
     'hashCode',

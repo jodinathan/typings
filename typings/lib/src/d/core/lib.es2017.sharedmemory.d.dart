@@ -13,6 +13,26 @@ import 'lib.es2020.bigint.d.dart' as _i8;
 @_i1.JS('self')
 external _i2.Object _self;
 
+enum Wait {
+  ok(r'ok'),
+  notEqual(r'not-equal'),
+  timedOut(r'timed-out');
+
+  const Wait(this.value);
+
+  final _i2.String value;
+}
+
+enum WaitOptions {
+  ok(r'ok'),
+  notEqual(r'not-equal'),
+  timedOut(r'timed-out');
+
+  const WaitOptions(this.value);
+
+  final _i2.String value;
+}
+
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -73,26 +93,6 @@ extension WaitAsyncCommon$Typings on WaitAsyncCommon {
       value,
     );
   }
-}
-
-enum Wait {
-  ok(r'ok'),
-  notEqual(r'not-equal'),
-  timedOut(r'timed-out');
-
-  const Wait(this.value);
-
-  final _i2.String value;
-}
-
-enum WaitOptions {
-  ok(r'ok'),
-  notEqual(r'not-equal'),
-  timedOut(r'timed-out');
-
-  const WaitOptions(this.value);
-
-  final _i2.String value;
 }
 
 @_i1.JS()
@@ -626,13 +626,13 @@ extension Atomics$Typings on Atomics {
   ///  agent is put to sleep causing execution to suspend until the timeout expires (returning
   ///  `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
   ///  `"not-equal"`.
-  Wait _wait$1(
+  _i4.Wait _wait$1(
     _i7.Int32List typedArray,
     _i2.num index,
     _i2.num value, [
     _i2.num? timeout,
   ]) =>
-      Wait.values.byName(_i3.callMethod(
+      _i4.Wait.values.byName(_i3.callMethod(
         this,
         'wait',
         [
@@ -647,13 +647,13 @@ extension Atomics$Typings on Atomics {
   ///  agent is put to sleep causing execution to suspend until the timeout expires (returning
   ///  `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
   ///  `"not-equal"`.
-  WaitOptions _wait$2(
+  _i4.WaitOptions _wait$2(
     _i8.BigInt64Array typedArray,
     _i2.num index,
     _i2.int value, [
     _i2.num? timeout,
   ]) =>
-      WaitOptions.values.byName(_i3.callMethod(
+      _i4.WaitOptions.values.byName(_i3.callMethod(
         this,
         'wait',
         [
@@ -670,7 +670,7 @@ extension Atomics$Typings on Atomics {
     ///  agent is put to sleep causing execution to suspend until the timeout expires (returning
     ///  `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
     ///  `"not-equal"`.
-    Wait Function(
+    _i4.Wait Function(
       _i7.Int32List typedArray,
       _i2.num index,
       _i2.num value, [
@@ -681,7 +681,7 @@ extension Atomics$Typings on Atomics {
     ///  agent is put to sleep causing execution to suspend until the timeout expires (returning
     ///  `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
     ///  `"not-equal"`.
-    WaitOptions Function(
+    _i4.WaitOptions Function(
       _i8.BigInt64Array typedArray,
       _i2.num index,
       _i2.int value, [

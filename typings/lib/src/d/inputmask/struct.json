@@ -5317,9 +5317,8 @@
           "isNullable": false,
           "doc": "",
           "type": {
-            "ref": "Inputmask.Static",
-            "targs": [],
-            "isNullable": false,
+            "core": "any",
+            "isNullable": true,
             "_": 761,
             "source": " Inputmask.Static"
           },

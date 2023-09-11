@@ -37,6 +37,8 @@ class InteropTuple extends InteropType with InteropDiamondType {
   @override
   Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) {
     return RecordType((b) {
+      b.isNullable = nullable;
+
       for (final type in types) {
         b.parameters.add(type.ref());
       }

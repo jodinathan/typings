@@ -12,44 +12,6 @@ import '/d/core.dart' as _i7;
 @_i1.JS('go')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class CreateLinearGradient {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class CreateRadialGradient {}
-
-typedef MarginLike = _i2.Object;
-typedef DiagramEventHandler = void Function(_i3.DiagramEvent);
-typedef DiagramEventName = DiagramEventNameOptions;
-typedef ChangedEventHandler = void Function(_i3.ChangedEvent);
-typedef EasingFunction = _i2.num Function(
-  _i2.num,
-  _i2.num,
-  _i2.num,
-  _i2.num,
-);
-typedef DiagramInitOptions = _i4.Partial<_i2.Object>;
-typedef DiagramEvents = _i2.dynamic;
-typedef ConstructorType<
-        T extends _i4.InstanceType<T> Function(_i2.Iterable<_i2.dynamic>?)>
-    = _i4.InstanceType<T> Function(_i2.Iterable<_i2.dynamic>?);
-typedef MakeAllow<CT extends _i3.ConstructorType<CT>, C, E> = _i2.dynamic;
-typedef BrushLike = _i2.dynamic;
-typedef Key = _i2.dynamic;
-typedef TargetConversion = _i2.dynamic Function(
-  _i2.dynamic,
-  _i2.dynamic,
-)?;
-typedef BackConversion = _i2.dynamic Function(
-  _i2.dynamic,
-  _i2.dynamic,
-  _i3.Model,
-)?;
-
 enum Renderer {
   default$(r'default'),
   svg(r'svg'),
@@ -182,6 +144,44 @@ enum DiagramEventNameOptions {
 
   final _i2.String value;
 }
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class CreateLinearGradient {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class CreateRadialGradient {}
+
+typedef MarginLike = _i2.Object;
+typedef DiagramEventHandler = void Function(_i3.DiagramEvent);
+typedef DiagramEventName = _i3.DiagramEventNameOptions;
+typedef ChangedEventHandler = void Function(_i3.ChangedEvent);
+typedef EasingFunction = _i2.num Function(
+  _i2.num,
+  _i2.num,
+  _i2.num,
+  _i2.num,
+);
+typedef DiagramInitOptions = _i4.Partial<_i2.Object>;
+typedef DiagramEvents = _i2.dynamic;
+typedef ConstructorType<
+        T extends _i4.InstanceType<T> Function(_i2.Iterable<_i2.dynamic>?)>
+    = _i4.InstanceType<T> Function(_i2.Iterable<_i2.dynamic>?);
+typedef MakeAllow<CT extends _i3.ConstructorType<CT>, C, E> = _i2.dynamic;
+typedef BrushLike = _i2.dynamic;
+typedef Key = _i2.dynamic;
+typedef TargetConversion = _i2.dynamic Function(
+  _i2.dynamic,
+  _i2.dynamic,
+)?;
+typedef BackConversion = _i2.dynamic Function(
+  _i2.dynamic,
+  _i2.dynamic,
+  _i3.Model,
+)?;
 
 /// (undocumented)
 @_i1.JS()
@@ -17700,11 +17700,11 @@ extension Diagram$Typings on Diagram {
   ///
   /// For more information, see the intro page on the
   /// <a href="../../intro/SVGContext.html">SVG drawing context</a>.
-  Renderer get renderer => Renderer.values.byName(_i5.getProperty(
+  _i3.Renderer get renderer => _i3.Renderer.values.byName(_i5.getProperty(
         this,
         'renderer',
       ));
-  set renderer(Renderer value) {
+  set renderer(_i3.Renderer value) {
     _i5.setProperty(
       this,
       'renderer',
@@ -21141,8 +21141,8 @@ extension Diagram$Typings on Diagram {
   ///  @see #scrollToRect
   ///  @see #centerRect
   void scroll(
-    Scroll unit,
-    ScrollOptions dir, [
+    _i3.Scroll unit,
+    _i3.ScrollOptions dir, [
     _i2.num? dist,
   ]) {
     _i5.callMethod(
@@ -24227,7 +24227,7 @@ class GraphObject {
   /// See <a href="../../intro/buildingObjects.html">the Introduction page on building objects</a>
   /// for usage information and examples of GraphObject.make.
   static T _make$1<T extends _i3.Adornment>(
-    Make cls, [
+    _i3.Make cls, [
     _i2.Iterable<_i2.dynamic>? initializers,
   ]) =>
       _i5.callMethod(
@@ -24363,7 +24363,7 @@ class GraphObject {
   /// See <a href="../../intro/buildingObjects.html">the Introduction page on building objects</a>
   /// for usage information and examples of GraphObject.make.
   static T _make$2<T extends _i3.Panel>(
-    MakeOptions cls, [
+    _i3.MakeOptions cls, [
     _i2.Iterable<_i2.dynamic>? initializers,
   ]) =>
       _i5.callMethod(
@@ -24773,7 +24773,7 @@ class GraphObject {
     /// See <a href="../../intro/buildingObjects.html">the Introduction page on building objects</a>
     /// for usage information and examples of GraphObject.make.
     T Function<T extends _i3.Adornment>(
-      Make cls, [
+      _i3.Make cls, [
       _i2.Iterable<_i2.dynamic>? initializers,
     ]) $1,
 
@@ -24901,7 +24901,7 @@ class GraphObject {
     /// See <a href="../../intro/buildingObjects.html">the Introduction page on building objects</a>
     /// for usage information and examples of GraphObject.make.
     T Function<T extends _i3.Panel>(
-      MakeOptions cls, [
+      _i3.MakeOptions cls, [
       _i2.Iterable<_i2.dynamic>? initializers,
     ]) $2,
 
@@ -30815,11 +30815,11 @@ extension Shape$Typings on Shape {
   /// The value must be one of "butt", "round", or "square". The default is "butt".
   ///
   /// For more information, see <a href="https://www.w3.org/TR/2dcontext/#dom-context-2d-linecap">Stroke Line Cap (w3.org)</a>.
-  StrokeCap get strokeCap => StrokeCap.values.byName(_i5.getProperty(
+  _i3.StrokeCap get strokeCap => _i3.StrokeCap.values.byName(_i5.getProperty(
         this,
         'strokeCap',
       ));
-  set strokeCap(StrokeCap value) {
+  set strokeCap(_i3.StrokeCap value) {
     _i5.setProperty(
       this,
       'strokeCap',
@@ -30831,11 +30831,11 @@ extension Shape$Typings on Shape {
   /// The value must be one of "miter", "bevel", or "round". The default is "miter".
   ///
   /// For more information, see <a href="https://www.w3.org/TR/2dcontext/#dom-context-2d-linejoin">Stroke Line Join (w3.org)</a>.
-  StrokeJoin get strokeJoin => StrokeJoin.values.byName(_i5.getProperty(
+  _i3.StrokeJoin get strokeJoin => _i3.StrokeJoin.values.byName(_i5.getProperty(
         this,
         'strokeJoin',
       ));
-  set strokeJoin(StrokeJoin value) {
+  set strokeJoin(_i3.StrokeJoin value) {
     _i5.setProperty(
       this,
       'strokeJoin',
@@ -31516,11 +31516,11 @@ extension TextBlock$Typings on TextBlock {
   /// In left-to-right writing systems, `"start"` and `"left"` are synonymous, as are `"end"` and `"right"`.
   ///
   /// The default is `"start"`.
-  TextAlign get textAlign => TextAlign.values.byName(_i5.getProperty(
+  _i3.TextAlign get textAlign => _i3.TextAlign.values.byName(_i5.getProperty(
         this,
         'textAlign',
       ));
-  set textAlign(TextAlign value) {
+  set textAlign(_i3.TextAlign value) {
     _i5.setProperty(
       this,
       'textAlign',

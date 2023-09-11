@@ -3,39 +3,15 @@ library typings.core.interop.intl; // ignore_for_file: no_leading_underscores_fo
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import '/d/core.dart' as _i3;
-import 'dart:js_util' as _i4;
-import 'lib.es5.intl.d.dart' as _i5;
+import 'lib.es5.intl.d.dart' as _i3;
+import '/d/core.dart' as _i4;
+import 'dart:js_util' as _i5;
 import 'null_comon.intl.d.dart' as _i6;
 import 'lib.es5.d.dart' as _i7;
 import 'lib.es2015.iterable.d.dart' as _i8;
 
 @_i1.JS('Intl')
 external _i2.Object _self;
-typedef DateTimeFormatPartTypes = DateTimeFormatPartTypesRegistryKeys;
-typedef LDMLPluralRule = LDMLPluralRuleOptions;
-typedef PluralRuleType = PluralRuleTypeOptions;
-typedef ES2018NumberFormatPartType = ES2018NumberFormatPartTypeOptions;
-typedef ES2020NumberFormatPartType = ES2020NumberFormatPartTypeOptions;
-typedef NumberFormatPartTypes = _i2.Object;
-typedef UnicodeBCP47LocaleIdentifier = _i2.String;
-typedef RelativeTimeFormatUnit = RelativeTimeFormatUnitOptions;
-typedef RelativeTimeFormatUnitSingular = RelativeTimeFormatUnitSingularOptions;
-typedef RelativeTimeFormatLocaleMatcher
-    = RelativeTimeFormatLocaleMatcherOptions;
-typedef RelativeTimeFormatNumeric = RelativeTimeFormatNumericOptions;
-typedef RelativeTimeFormatStyle = RelativeTimeFormatStyleOptions;
-typedef BCP47LanguageTag = _i2.String;
-typedef LocalesArgument = _i2.dynamic;
-typedef RelativeTimeFormatPart = _i2.Object;
-typedef LocaleHourCycleKey = LocaleHourCycleKeyOptions;
-typedef LocaleCollationCaseFirst = LocaleCollationCaseFirstOptions;
-typedef DisplayNamesFallback = DisplayNamesFallbackOptions;
-typedef DisplayNamesType = DisplayNamesTypeOptions;
-typedef DisplayNamesLanguageDisplay = DisplayNamesLanguageDisplayOptions;
-typedef ListFormatLocaleMatcher = ListFormatLocaleMatcherOptions;
-typedef ListFormatType = ListFormatTypeOptions;
-typedef ListFormatStyle = ListFormatStyleOptions;
 
 enum Usage {
   sort(r'sort'),
@@ -729,6 +705,32 @@ enum SupportedValuesOf {
   final _i2.String value;
 }
 
+typedef DateTimeFormatPartTypes = _i3.DateTimeFormatPartTypesRegistryKeys;
+typedef LDMLPluralRule = _i3.LDMLPluralRuleOptions;
+typedef PluralRuleType = _i3.PluralRuleTypeOptions;
+typedef ES2018NumberFormatPartType = _i3.ES2018NumberFormatPartTypeOptions;
+typedef ES2020NumberFormatPartType = _i3.ES2020NumberFormatPartTypeOptions;
+typedef NumberFormatPartTypes = _i2.Object;
+typedef UnicodeBCP47LocaleIdentifier = _i2.String;
+typedef RelativeTimeFormatUnit = _i3.RelativeTimeFormatUnitOptions;
+typedef RelativeTimeFormatUnitSingular
+    = _i3.RelativeTimeFormatUnitSingularOptions;
+typedef RelativeTimeFormatLocaleMatcher
+    = _i3.RelativeTimeFormatLocaleMatcherOptions;
+typedef RelativeTimeFormatNumeric = _i3.RelativeTimeFormatNumericOptions;
+typedef RelativeTimeFormatStyle = _i3.RelativeTimeFormatStyleOptions;
+typedef BCP47LanguageTag = _i2.String;
+typedef LocalesArgument = _i2.dynamic;
+typedef RelativeTimeFormatPart = _i2.Object;
+typedef LocaleHourCycleKey = _i3.LocaleHourCycleKeyOptions;
+typedef LocaleCollationCaseFirst = _i3.LocaleCollationCaseFirstOptions;
+typedef DisplayNamesFallback = _i3.DisplayNamesFallbackOptions;
+typedef DisplayNamesType = _i3.DisplayNamesTypeOptions;
+typedef DisplayNamesLanguageDisplay = _i3.DisplayNamesLanguageDisplayOptions;
+typedef ListFormatLocaleMatcher = _i3.ListFormatLocaleMatcherOptions;
+typedef ListFormatType = _i3.ListFormatTypeOptions;
+typedef ListFormatStyle = _i3.ListFormatStyleOptions;
+
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -744,122 +746,122 @@ class CollatorOptions {
   });
 
   factory CollatorOptions({
-    Usage? usage,
-    LocaleMatcher? localeMatcher,
+    _i3.Usage? usage,
+    _i3.LocaleMatcher? localeMatcher,
     _i2.bool? numeric,
-    CaseFirst? caseFirst,
-    Sensitivity? sensitivity,
-    Collation? collation,
+    _i3.CaseFirst? caseFirst,
+    _i3.Sensitivity? sensitivity,
+    _i3.Collation? collation,
     _i2.bool? ignorePunctuation,
   }) =>
       CollatorOptions._(
-        usage: usage?.name ?? _i3.undefined,
-        localeMatcher: localeMatcher?.name ?? _i3.undefined,
-        numeric: numeric ?? _i3.undefined,
-        caseFirst: caseFirst?.name ?? _i3.undefined,
-        sensitivity: sensitivity?.name ?? _i3.undefined,
-        collation: collation?.name ?? _i3.undefined,
-        ignorePunctuation: ignorePunctuation ?? _i3.undefined,
+        usage: usage?.name ?? _i4.undefined,
+        localeMatcher: localeMatcher?.name ?? _i4.undefined,
+        numeric: numeric ?? _i4.undefined,
+        caseFirst: caseFirst?.name ?? _i4.undefined,
+        sensitivity: sensitivity?.name ?? _i4.undefined,
+        collation: collation?.name ?? _i4.undefined,
+        ignorePunctuation: ignorePunctuation ?? _i4.undefined,
       );
 }
 
 extension CollatorOptions$Typings on CollatorOptions {
-  Usage? get usage => switch (_i4.getProperty(
+  _i3.Usage? get usage => switch (_i5.getProperty(
         this,
         'usage',
       )) {
-        _i2.String name => Usage.values.byName(name),
+        _i2.String name => _i3.Usage.values.byName(name),
         _ => null
       };
-  set usage(Usage? value) {
-    _i4.setProperty(
+  set usage(_i3.Usage? value) {
+    _i5.setProperty(
       this,
       'usage',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  LocaleMatcher? get localeMatcher => switch (_i4.getProperty(
+  _i3.LocaleMatcher? get localeMatcher => switch (_i5.getProperty(
         this,
         'localeMatcher',
       )) {
-        _i2.String name => LocaleMatcher.values.byName(name),
+        _i2.String name => _i3.LocaleMatcher.values.byName(name),
         _ => null
       };
-  set localeMatcher(LocaleMatcher? value) {
-    _i4.setProperty(
+  set localeMatcher(_i3.LocaleMatcher? value) {
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  _i2.bool? get numeric => _i4.getProperty(
+  _i2.bool? get numeric => _i5.getProperty(
         this,
         'numeric',
       );
   set numeric(_i2.bool? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'numeric',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  CaseFirst? get caseFirst => switch (_i4.getProperty(
+  _i3.CaseFirst? get caseFirst => switch (_i5.getProperty(
         this,
         'caseFirst',
       )) {
-        _i2.String name => CaseFirst.values.byName(name),
+        _i2.String name => _i3.CaseFirst.values.byName(name),
         _ => null
       };
-  set caseFirst(CaseFirst? value) {
-    _i4.setProperty(
+  set caseFirst(_i3.CaseFirst? value) {
+    _i5.setProperty(
       this,
       'caseFirst',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Sensitivity? get sensitivity => switch (_i4.getProperty(
+  _i3.Sensitivity? get sensitivity => switch (_i5.getProperty(
         this,
         'sensitivity',
       )) {
-        _i2.String name => Sensitivity.values.byName(name),
+        _i2.String name => _i3.Sensitivity.values.byName(name),
         _ => null
       };
-  set sensitivity(Sensitivity? value) {
-    _i4.setProperty(
+  set sensitivity(_i3.Sensitivity? value) {
+    _i5.setProperty(
       this,
       'sensitivity',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Collation? get collation => switch (_i4.getProperty(
+  _i3.Collation? get collation => switch (_i5.getProperty(
         this,
         'collation',
       )) {
-        _i2.String name => Collation.values.byName(name),
+        _i2.String name => _i3.Collation.values.byName(name),
         _ => null
       };
-  set collation(Collation? value) {
-    _i4.setProperty(
+  set collation(_i3.Collation? value) {
+    _i5.setProperty(
       this,
       'collation',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  _i2.bool? get ignorePunctuation => _i4.getProperty(
+  _i2.bool? get ignorePunctuation => _i5.getProperty(
         this,
         'ignorePunctuation',
       );
   set ignorePunctuation(_i2.bool? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'ignorePunctuation',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 }
@@ -899,84 +901,84 @@ class ResolvedCollatorOptions {
 }
 
 extension ResolvedCollatorOptions$Typings on ResolvedCollatorOptions {
-  _i2.String get locale => _i4.getProperty(
+  _i2.String get locale => _i5.getProperty(
         this,
         'locale',
       );
   set locale(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'locale',
       value,
     );
   }
 
-  _i2.String get usage => _i4.getProperty(
+  _i2.String get usage => _i5.getProperty(
         this,
         'usage',
       );
   set usage(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'usage',
       value,
     );
   }
 
-  _i2.String get sensitivity => _i4.getProperty(
+  _i2.String get sensitivity => _i5.getProperty(
         this,
         'sensitivity',
       );
   set sensitivity(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'sensitivity',
       value,
     );
   }
 
-  _i2.bool get ignorePunctuation => _i4.getProperty(
+  _i2.bool get ignorePunctuation => _i5.getProperty(
         this,
         'ignorePunctuation',
       );
   set ignorePunctuation(_i2.bool value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'ignorePunctuation',
       value,
     );
   }
 
-  _i2.String get collation => _i4.getProperty(
+  _i2.String get collation => _i5.getProperty(
         this,
         'collation',
       );
   set collation(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'collation',
       value,
     );
   }
 
-  _i2.String get caseFirst => _i4.getProperty(
+  _i2.String get caseFirst => _i5.getProperty(
         this,
         'caseFirst',
       );
   set caseFirst(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'caseFirst',
       value,
     );
   }
 
-  _i2.bool get numeric => _i4.getProperty(
+  _i2.bool get numeric => _i5.getProperty(
         this,
         'numeric',
       );
   set numeric(_i2.bool value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'numeric',
       value,
@@ -989,26 +991,26 @@ extension ResolvedCollatorOptions$Typings on ResolvedCollatorOptions {
 class Collator {
   factory Collator([
     _i2.Object? locales,
-    _i5.CollatorOptions? options,
+    _i3.CollatorOptions? options,
   ]) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredCollator,
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 
   static _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
-    _i5.CollatorOptions? options,
+    _i3.CollatorOptions? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         _i6.target12,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -1025,7 +1027,7 @@ extension Collator$Typings on Collator {
     _i2.String x,
     _i2.String y,
   ) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'compare',
         [
@@ -1033,7 +1035,7 @@ extension Collator$Typings on Collator {
           y,
         ],
       );
-  _i5.ResolvedCollatorOptions resolvedOptions() => _i4.callMethod(
+  _i3.ResolvedCollatorOptions resolvedOptions() => _i5.callMethod(
         this,
         'resolvedOptions',
         [],
@@ -1047,27 +1049,27 @@ class IInline3 {}
 extension IInline3$Typings on IInline3 {
   _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
-    _i5.CollatorOptions? options,
+    _i3.CollatorOptions? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         this,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
-  _i5.Collator call([
+  _i3.Collator call([
     _i2.Object? locales,
-    _i5.CollatorOptions? options,
+    _i3.CollatorOptions? options,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         '',
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 }
@@ -1106,235 +1108,235 @@ class NumberFormatOptions {
     _i2.num? maximumFractionDigits,
     _i2.num? minimumSignificantDigits,
     _i2.num? maximumSignificantDigits,
-    CompactDisplay? compactDisplay,
-    Notation? notation,
-    SignDisplay? signDisplay,
+    _i3.CompactDisplay? compactDisplay,
+    _i3.Notation? notation,
+    _i3.SignDisplay? signDisplay,
     _i2.String? unit,
-    UnitDisplay? unitDisplay,
+    _i3.UnitDisplay? unitDisplay,
     _i2.String? currencyDisplay,
   }) =>
       NumberFormatOptions._(
-        localeMatcher: localeMatcher ?? _i3.undefined,
-        style: style ?? _i3.undefined,
-        currency: currency ?? _i3.undefined,
-        currencySign: currencySign ?? _i3.undefined,
-        useGrouping: useGrouping ?? _i3.undefined,
-        minimumIntegerDigits: minimumIntegerDigits ?? _i3.undefined,
-        minimumFractionDigits: minimumFractionDigits ?? _i3.undefined,
-        maximumFractionDigits: maximumFractionDigits ?? _i3.undefined,
-        minimumSignificantDigits: minimumSignificantDigits ?? _i3.undefined,
-        maximumSignificantDigits: maximumSignificantDigits ?? _i3.undefined,
-        compactDisplay: compactDisplay?.name ?? _i3.undefined,
-        notation: notation?.name ?? _i3.undefined,
-        signDisplay: signDisplay?.name ?? _i3.undefined,
-        unit: unit ?? _i3.undefined,
-        unitDisplay: unitDisplay?.name ?? _i3.undefined,
-        currencyDisplay: currencyDisplay ?? _i3.undefined,
+        localeMatcher: localeMatcher ?? _i4.undefined,
+        style: style ?? _i4.undefined,
+        currency: currency ?? _i4.undefined,
+        currencySign: currencySign ?? _i4.undefined,
+        useGrouping: useGrouping ?? _i4.undefined,
+        minimumIntegerDigits: minimumIntegerDigits ?? _i4.undefined,
+        minimumFractionDigits: minimumFractionDigits ?? _i4.undefined,
+        maximumFractionDigits: maximumFractionDigits ?? _i4.undefined,
+        minimumSignificantDigits: minimumSignificantDigits ?? _i4.undefined,
+        maximumSignificantDigits: maximumSignificantDigits ?? _i4.undefined,
+        compactDisplay: compactDisplay?.name ?? _i4.undefined,
+        notation: notation?.name ?? _i4.undefined,
+        signDisplay: signDisplay?.name ?? _i4.undefined,
+        unit: unit ?? _i4.undefined,
+        unitDisplay: unitDisplay?.name ?? _i4.undefined,
+        currencyDisplay: currencyDisplay ?? _i4.undefined,
       );
 }
 
 extension NumberFormatOptions$Typings on NumberFormatOptions {
-  _i2.String? get localeMatcher => _i4.getProperty(
+  _i2.String? get localeMatcher => _i5.getProperty(
         this,
         'localeMatcher',
       );
   set localeMatcher(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get style => _i4.getProperty(
+  _i2.String? get style => _i5.getProperty(
         this,
         'style',
       );
   set style(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'style',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get currency => _i4.getProperty(
+  _i2.String? get currency => _i5.getProperty(
         this,
         'currency',
       );
   set currency(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'currency',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get currencySign => _i4.getProperty(
+  _i2.String? get currencySign => _i5.getProperty(
         this,
         'currencySign',
       );
   set currencySign(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'currencySign',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.bool? get useGrouping => _i4.getProperty(
+  _i2.bool? get useGrouping => _i5.getProperty(
         this,
         'useGrouping',
       );
   set useGrouping(_i2.bool? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'useGrouping',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get minimumIntegerDigits => _i4.getProperty(
+  _i2.num? get minimumIntegerDigits => _i5.getProperty(
         this,
         'minimumIntegerDigits',
       );
   set minimumIntegerDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumIntegerDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get minimumFractionDigits => _i4.getProperty(
+  _i2.num? get minimumFractionDigits => _i5.getProperty(
         this,
         'minimumFractionDigits',
       );
   set minimumFractionDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumFractionDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get maximumFractionDigits => _i4.getProperty(
+  _i2.num? get maximumFractionDigits => _i5.getProperty(
         this,
         'maximumFractionDigits',
       );
   set maximumFractionDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'maximumFractionDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get minimumSignificantDigits => _i4.getProperty(
+  _i2.num? get minimumSignificantDigits => _i5.getProperty(
         this,
         'minimumSignificantDigits',
       );
   set minimumSignificantDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumSignificantDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get maximumSignificantDigits => _i4.getProperty(
+  _i2.num? get maximumSignificantDigits => _i5.getProperty(
         this,
         'maximumSignificantDigits',
       );
   set maximumSignificantDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'maximumSignificantDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  CompactDisplay? get compactDisplay => switch (_i4.getProperty(
+  _i3.CompactDisplay? get compactDisplay => switch (_i5.getProperty(
         this,
         'compactDisplay',
       )) {
-        _i2.String name => CompactDisplay.values.byName(name),
+        _i2.String name => _i3.CompactDisplay.values.byName(name),
         _ => null
       };
-  set compactDisplay(CompactDisplay? value) {
-    _i4.setProperty(
+  set compactDisplay(_i3.CompactDisplay? value) {
+    _i5.setProperty(
       this,
       'compactDisplay',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Notation? get notation => switch (_i4.getProperty(
+  _i3.Notation? get notation => switch (_i5.getProperty(
         this,
         'notation',
       )) {
-        _i2.String name => Notation.values.byName(name),
+        _i2.String name => _i3.Notation.values.byName(name),
         _ => null
       };
-  set notation(Notation? value) {
-    _i4.setProperty(
+  set notation(_i3.Notation? value) {
+    _i5.setProperty(
       this,
       'notation',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  SignDisplay? get signDisplay => switch (_i4.getProperty(
+  _i3.SignDisplay? get signDisplay => switch (_i5.getProperty(
         this,
         'signDisplay',
       )) {
-        _i2.String name => SignDisplay.values.byName(name),
+        _i2.String name => _i3.SignDisplay.values.byName(name),
         _ => null
       };
-  set signDisplay(SignDisplay? value) {
-    _i4.setProperty(
+  set signDisplay(_i3.SignDisplay? value) {
+    _i5.setProperty(
       this,
       'signDisplay',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  _i2.String? get unit => _i4.getProperty(
+  _i2.String? get unit => _i5.getProperty(
         this,
         'unit',
       );
   set unit(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'unit',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  UnitDisplay? get unitDisplay => switch (_i4.getProperty(
+  _i3.UnitDisplay? get unitDisplay => switch (_i5.getProperty(
         this,
         'unitDisplay',
       )) {
-        _i2.String name => UnitDisplay.values.byName(name),
+        _i2.String name => _i3.UnitDisplay.values.byName(name),
         _ => null
       };
-  set unitDisplay(UnitDisplay? value) {
-    _i4.setProperty(
+  set unitDisplay(_i3.UnitDisplay? value) {
+    _i5.setProperty(
       this,
       'unitDisplay',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  _i2.String? get currencyDisplay => _i4.getProperty(
+  _i2.String? get currencyDisplay => _i5.getProperty(
         this,
         'currencyDisplay',
       );
   set currencyDisplay(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'currencyDisplay',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 }
@@ -1374,11 +1376,11 @@ class ResolvedNumberFormatOptions {
     _i2.num? minimumSignificantDigits,
     _i2.num? maximumSignificantDigits,
     required _i2.bool useGrouping,
-    CompactDisplayOptions? compactDisplay,
-    NotationOptions? notation,
-    SignDisplayOptions? signDisplay,
+    _i3.CompactDisplayOptions? compactDisplay,
+    _i3.NotationOptions? notation,
+    _i3.SignDisplayOptions? signDisplay,
     _i2.String? unit,
-    UnitDisplayOptions? unitDisplay,
+    _i3.UnitDisplayOptions? unitDisplay,
     _i2.String? currencyDisplay,
     _i2.String? currencySign,
   }) =>
@@ -1386,237 +1388,237 @@ class ResolvedNumberFormatOptions {
         locale: locale,
         numberingSystem: numberingSystem,
         style: style,
-        currency: currency ?? _i3.undefined,
+        currency: currency ?? _i4.undefined,
         minimumIntegerDigits: minimumIntegerDigits,
         minimumFractionDigits: minimumFractionDigits,
         maximumFractionDigits: maximumFractionDigits,
-        minimumSignificantDigits: minimumSignificantDigits ?? _i3.undefined,
-        maximumSignificantDigits: maximumSignificantDigits ?? _i3.undefined,
+        minimumSignificantDigits: minimumSignificantDigits ?? _i4.undefined,
+        maximumSignificantDigits: maximumSignificantDigits ?? _i4.undefined,
         useGrouping: useGrouping,
-        compactDisplay: compactDisplay?.name ?? _i3.undefined,
-        notation: notation?.name ?? _i3.undefined,
-        signDisplay: signDisplay?.name ?? _i3.undefined,
-        unit: unit ?? _i3.undefined,
-        unitDisplay: unitDisplay?.name ?? _i3.undefined,
-        currencyDisplay: currencyDisplay ?? _i3.undefined,
-        currencySign: currencySign ?? _i3.undefined,
+        compactDisplay: compactDisplay?.name ?? _i4.undefined,
+        notation: notation?.name ?? _i4.undefined,
+        signDisplay: signDisplay?.name ?? _i4.undefined,
+        unit: unit ?? _i4.undefined,
+        unitDisplay: unitDisplay?.name ?? _i4.undefined,
+        currencyDisplay: currencyDisplay ?? _i4.undefined,
+        currencySign: currencySign ?? _i4.undefined,
       );
 }
 
 extension ResolvedNumberFormatOptions$Typings on ResolvedNumberFormatOptions {
-  _i2.String get locale => _i4.getProperty(
+  _i2.String get locale => _i5.getProperty(
         this,
         'locale',
       );
   set locale(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'locale',
       value,
     );
   }
 
-  _i2.String get numberingSystem => _i4.getProperty(
+  _i2.String get numberingSystem => _i5.getProperty(
         this,
         'numberingSystem',
       );
   set numberingSystem(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'numberingSystem',
       value,
     );
   }
 
-  _i2.String get style => _i4.getProperty(
+  _i2.String get style => _i5.getProperty(
         this,
         'style',
       );
   set style(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'style',
       value,
     );
   }
 
-  _i2.String? get currency => _i4.getProperty(
+  _i2.String? get currency => _i5.getProperty(
         this,
         'currency',
       );
   set currency(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'currency',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num get minimumIntegerDigits => _i4.getProperty(
+  _i2.num get minimumIntegerDigits => _i5.getProperty(
         this,
         'minimumIntegerDigits',
       );
   set minimumIntegerDigits(_i2.num value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumIntegerDigits',
       value,
     );
   }
 
-  _i2.num get minimumFractionDigits => _i4.getProperty(
+  _i2.num get minimumFractionDigits => _i5.getProperty(
         this,
         'minimumFractionDigits',
       );
   set minimumFractionDigits(_i2.num value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumFractionDigits',
       value,
     );
   }
 
-  _i2.num get maximumFractionDigits => _i4.getProperty(
+  _i2.num get maximumFractionDigits => _i5.getProperty(
         this,
         'maximumFractionDigits',
       );
   set maximumFractionDigits(_i2.num value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'maximumFractionDigits',
       value,
     );
   }
 
-  _i2.num? get minimumSignificantDigits => _i4.getProperty(
+  _i2.num? get minimumSignificantDigits => _i5.getProperty(
         this,
         'minimumSignificantDigits',
       );
   set minimumSignificantDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumSignificantDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get maximumSignificantDigits => _i4.getProperty(
+  _i2.num? get maximumSignificantDigits => _i5.getProperty(
         this,
         'maximumSignificantDigits',
       );
   set maximumSignificantDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'maximumSignificantDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.bool get useGrouping => _i4.getProperty(
+  _i2.bool get useGrouping => _i5.getProperty(
         this,
         'useGrouping',
       );
   set useGrouping(_i2.bool value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'useGrouping',
       value,
     );
   }
 
-  CompactDisplayOptions? get compactDisplay => switch (_i4.getProperty(
+  _i3.CompactDisplayOptions? get compactDisplay => switch (_i5.getProperty(
         this,
         'compactDisplay',
       )) {
-        _i2.String name => CompactDisplayOptions.values.byName(name),
+        _i2.String name => _i3.CompactDisplayOptions.values.byName(name),
         _ => null
       };
-  set compactDisplay(CompactDisplayOptions? value) {
-    _i4.setProperty(
+  set compactDisplay(_i3.CompactDisplayOptions? value) {
+    _i5.setProperty(
       this,
       'compactDisplay',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  NotationOptions? get notation => switch (_i4.getProperty(
+  _i3.NotationOptions? get notation => switch (_i5.getProperty(
         this,
         'notation',
       )) {
-        _i2.String name => NotationOptions.values.byName(name),
+        _i2.String name => _i3.NotationOptions.values.byName(name),
         _ => null
       };
-  set notation(NotationOptions? value) {
-    _i4.setProperty(
+  set notation(_i3.NotationOptions? value) {
+    _i5.setProperty(
       this,
       'notation',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  SignDisplayOptions? get signDisplay => switch (_i4.getProperty(
+  _i3.SignDisplayOptions? get signDisplay => switch (_i5.getProperty(
         this,
         'signDisplay',
       )) {
-        _i2.String name => SignDisplayOptions.values.byName(name),
+        _i2.String name => _i3.SignDisplayOptions.values.byName(name),
         _ => null
       };
-  set signDisplay(SignDisplayOptions? value) {
-    _i4.setProperty(
+  set signDisplay(_i3.SignDisplayOptions? value) {
+    _i5.setProperty(
       this,
       'signDisplay',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  _i2.String? get unit => _i4.getProperty(
+  _i2.String? get unit => _i5.getProperty(
         this,
         'unit',
       );
   set unit(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'unit',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  UnitDisplayOptions? get unitDisplay => switch (_i4.getProperty(
+  _i3.UnitDisplayOptions? get unitDisplay => switch (_i5.getProperty(
         this,
         'unitDisplay',
       )) {
-        _i2.String name => UnitDisplayOptions.values.byName(name),
+        _i2.String name => _i3.UnitDisplayOptions.values.byName(name),
         _ => null
       };
-  set unitDisplay(UnitDisplayOptions? value) {
-    _i4.setProperty(
+  set unitDisplay(_i3.UnitDisplayOptions? value) {
+    _i5.setProperty(
       this,
       'unitDisplay',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  _i2.String? get currencyDisplay => _i4.getProperty(
+  _i2.String? get currencyDisplay => _i5.getProperty(
         this,
         'currencyDisplay',
       );
   set currencyDisplay(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'currencyDisplay',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get currencySign => _i4.getProperty(
+  _i2.String? get currencySign => _i5.getProperty(
         this,
         'currencySign',
       );
   set currencySign(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'currencySign',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 }
@@ -1626,26 +1628,26 @@ extension ResolvedNumberFormatOptions$Typings on ResolvedNumberFormatOptions {
 class NumberFormat {
   factory NumberFormat([
     _i2.Object? locales,
-    _i5.NumberFormatOptions? options,
+    _i3.NumberFormatOptions? options,
   ]) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredNumberFormat,
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 
   static _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
-    _i5.NumberFormatOptions? options,
+    _i3.NumberFormatOptions? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         _i6.target13,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -1658,12 +1660,12 @@ FieldExternal:
 external _i2.Object _declaredNumberFormat;
 
 extension NumberFormat$Typings on NumberFormat {
-  _i2.String _format$1(_i2.num value) => _i4.callMethod(
+  _i2.String _format$1(_i2.num value) => _i5.callMethod(
         this,
         'format',
         [value],
       );
-  _i2.String _format$2(_i2.Object value) => _i4.callMethod(
+  _i2.String _format$2(_i2.Object value) => _i5.callMethod(
         this,
         'format',
         [value],
@@ -1677,12 +1679,12 @@ extension NumberFormat$Typings on NumberFormat {
         $1: _format$1,
         $2: _format$2,
       );
-  _i5.ResolvedNumberFormatOptions _resolvedOptions$1() => _i4.callMethod(
+  _i3.ResolvedNumberFormatOptions _resolvedOptions$1() => _i5.callMethod(
         this,
         'resolvedOptions',
         [],
       );
-  _i5.ResolvedNumberFormatOptions _resolvedOptions$2() => _i4.callMethod(
+  _i3.ResolvedNumberFormatOptions _resolvedOptions$2() => _i5.callMethod(
         this,
         'resolvedOptions',
         [],
@@ -1690,17 +1692,17 @@ extension NumberFormat$Typings on NumberFormat {
 
   /// Overload accessor: $1, $2
   ({
-    _i5.ResolvedNumberFormatOptions Function() $1,
-    _i5.ResolvedNumberFormatOptions Function() $2,
+    _i3.ResolvedNumberFormatOptions Function() $1,
+    _i3.ResolvedNumberFormatOptions Function() $2,
   }) get resolvedOptions => (
         $1: _resolvedOptions$1,
         $2: _resolvedOptions$2,
       );
-  _i2.List<_i5.NumberFormatPart> formatToParts([_i2.Object? number]) =>
-      (_i4.callMethod(
+  _i2.List<_i3.NumberFormatPart> formatToParts([_i2.Object? number]) =>
+      (_i5.callMethod(
         this,
         'formatToParts',
-        [number ?? _i3.undefined],
+        [number ?? _i4.undefined],
       ) as _i2.List)
           .cast();
 }
@@ -1712,27 +1714,27 @@ class IInline4 {}
 extension IInline4$Typings on IInline4 {
   _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
-    _i5.NumberFormatOptions? options,
+    _i3.NumberFormatOptions? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         this,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
-  _i5.NumberFormat call([
+  _i3.NumberFormat call([
     _i2.Object? locales,
-    _i5.NumberFormatOptions? options,
+    _i3.NumberFormatOptions? options,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         '',
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 }
@@ -1765,337 +1767,338 @@ class DateTimeFormatOptions {
   });
 
   factory DateTimeFormatOptions({
-    LocaleMatcherOptions? localeMatcher,
-    Weekday? weekday,
-    Era? era,
-    Year? year,
-    Month? month,
-    Day? day,
-    Hour? hour,
-    Minute? minute,
-    Second? second,
-    TimeZoneName? timeZoneName,
-    FormatMatcher? formatMatcher,
+    _i3.LocaleMatcherOptions? localeMatcher,
+    _i3.Weekday? weekday,
+    _i3.Era? era,
+    _i3.Year? year,
+    _i3.Month? month,
+    _i3.Day? day,
+    _i3.Hour? hour,
+    _i3.Minute? minute,
+    _i3.Second? second,
+    _i3.TimeZoneName? timeZoneName,
+    _i3.FormatMatcher? formatMatcher,
     _i2.bool? hour12,
     _i2.String? timeZone,
     _i2.String? calendar,
-    DayPeriod? dayPeriod,
+    _i3.DayPeriod? dayPeriod,
     _i2.String? numberingSystem,
-    DateStyle? dateStyle,
-    TimeStyle? timeStyle,
-    HourCycle? hourCycle,
-    FractionalSecondDigits? fractionalSecondDigits,
+    _i3.DateStyle? dateStyle,
+    _i3.TimeStyle? timeStyle,
+    _i3.HourCycle? hourCycle,
+    _i3.FractionalSecondDigits? fractionalSecondDigits,
   }) =>
       DateTimeFormatOptions._(
-        localeMatcher: localeMatcher?.name ?? _i3.undefined,
-        weekday: weekday?.name ?? _i3.undefined,
-        era: era?.name ?? _i3.undefined,
-        year: year?.name ?? _i3.undefined,
-        month: month?.name ?? _i3.undefined,
-        day: day?.name ?? _i3.undefined,
-        hour: hour?.name ?? _i3.undefined,
-        minute: minute?.name ?? _i3.undefined,
-        second: second?.name ?? _i3.undefined,
-        timeZoneName: timeZoneName?.name ?? _i3.undefined,
-        formatMatcher: formatMatcher?.name ?? _i3.undefined,
-        hour12: hour12 ?? _i3.undefined,
-        timeZone: timeZone ?? _i3.undefined,
-        calendar: calendar ?? _i3.undefined,
-        dayPeriod: dayPeriod?.name ?? _i3.undefined,
-        numberingSystem: numberingSystem ?? _i3.undefined,
-        dateStyle: dateStyle?.name ?? _i3.undefined,
-        timeStyle: timeStyle?.name ?? _i3.undefined,
-        hourCycle: hourCycle?.name ?? _i3.undefined,
-        fractionalSecondDigits: fractionalSecondDigits?.name ?? _i3.undefined,
+        localeMatcher: localeMatcher?.name ?? _i4.undefined,
+        weekday: weekday?.name ?? _i4.undefined,
+        era: era?.name ?? _i4.undefined,
+        year: year?.name ?? _i4.undefined,
+        month: month?.name ?? _i4.undefined,
+        day: day?.name ?? _i4.undefined,
+        hour: hour?.name ?? _i4.undefined,
+        minute: minute?.name ?? _i4.undefined,
+        second: second?.name ?? _i4.undefined,
+        timeZoneName: timeZoneName?.name ?? _i4.undefined,
+        formatMatcher: formatMatcher?.name ?? _i4.undefined,
+        hour12: hour12 ?? _i4.undefined,
+        timeZone: timeZone ?? _i4.undefined,
+        calendar: calendar ?? _i4.undefined,
+        dayPeriod: dayPeriod?.name ?? _i4.undefined,
+        numberingSystem: numberingSystem ?? _i4.undefined,
+        dateStyle: dateStyle?.name ?? _i4.undefined,
+        timeStyle: timeStyle?.name ?? _i4.undefined,
+        hourCycle: hourCycle?.name ?? _i4.undefined,
+        fractionalSecondDigits: fractionalSecondDigits?.name ?? _i4.undefined,
       );
 }
 
 extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
-  LocaleMatcherOptions? get localeMatcher => switch (_i4.getProperty(
+  _i3.LocaleMatcherOptions? get localeMatcher => switch (_i5.getProperty(
         this,
         'localeMatcher',
       )) {
-        _i2.String name => LocaleMatcherOptions.values.byName(name),
+        _i2.String name => _i3.LocaleMatcherOptions.values.byName(name),
         _ => null
       };
-  set localeMatcher(LocaleMatcherOptions? value) {
-    _i4.setProperty(
+  set localeMatcher(_i3.LocaleMatcherOptions? value) {
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Weekday? get weekday => switch (_i4.getProperty(
+  _i3.Weekday? get weekday => switch (_i5.getProperty(
         this,
         'weekday',
       )) {
-        _i2.String name => Weekday.values.byName(name),
+        _i2.String name => _i3.Weekday.values.byName(name),
         _ => null
       };
-  set weekday(Weekday? value) {
-    _i4.setProperty(
+  set weekday(_i3.Weekday? value) {
+    _i5.setProperty(
       this,
       'weekday',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Era? get era => switch (_i4.getProperty(
+  _i3.Era? get era => switch (_i5.getProperty(
         this,
         'era',
       )) {
-        _i2.String name => Era.values.byName(name),
+        _i2.String name => _i3.Era.values.byName(name),
         _ => null
       };
-  set era(Era? value) {
-    _i4.setProperty(
+  set era(_i3.Era? value) {
+    _i5.setProperty(
       this,
       'era',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Year? get year => switch (_i4.getProperty(
+  _i3.Year? get year => switch (_i5.getProperty(
         this,
         'year',
       )) {
-        _i2.String name => Year.values.byName(name),
+        _i2.String name => _i3.Year.values.byName(name),
         _ => null
       };
-  set year(Year? value) {
-    _i4.setProperty(
+  set year(_i3.Year? value) {
+    _i5.setProperty(
       this,
       'year',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Month? get month => switch (_i4.getProperty(
+  _i3.Month? get month => switch (_i5.getProperty(
         this,
         'month',
       )) {
-        _i2.String name => Month.values.byName(name),
+        _i2.String name => _i3.Month.values.byName(name),
         _ => null
       };
-  set month(Month? value) {
-    _i4.setProperty(
+  set month(_i3.Month? value) {
+    _i5.setProperty(
       this,
       'month',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Day? get day => switch (_i4.getProperty(
+  _i3.Day? get day => switch (_i5.getProperty(
         this,
         'day',
       )) {
-        _i2.String name => Day.values.byName(name),
+        _i2.String name => _i3.Day.values.byName(name),
         _ => null
       };
-  set day(Day? value) {
-    _i4.setProperty(
+  set day(_i3.Day? value) {
+    _i5.setProperty(
       this,
       'day',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Hour? get hour => switch (_i4.getProperty(
+  _i3.Hour? get hour => switch (_i5.getProperty(
         this,
         'hour',
       )) {
-        _i2.String name => Hour.values.byName(name),
+        _i2.String name => _i3.Hour.values.byName(name),
         _ => null
       };
-  set hour(Hour? value) {
-    _i4.setProperty(
+  set hour(_i3.Hour? value) {
+    _i5.setProperty(
       this,
       'hour',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Minute? get minute => switch (_i4.getProperty(
+  _i3.Minute? get minute => switch (_i5.getProperty(
         this,
         'minute',
       )) {
-        _i2.String name => Minute.values.byName(name),
+        _i2.String name => _i3.Minute.values.byName(name),
         _ => null
       };
-  set minute(Minute? value) {
-    _i4.setProperty(
+  set minute(_i3.Minute? value) {
+    _i5.setProperty(
       this,
       'minute',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  Second? get second => switch (_i4.getProperty(
+  _i3.Second? get second => switch (_i5.getProperty(
         this,
         'second',
       )) {
-        _i2.String name => Second.values.byName(name),
+        _i2.String name => _i3.Second.values.byName(name),
         _ => null
       };
-  set second(Second? value) {
-    _i4.setProperty(
+  set second(_i3.Second? value) {
+    _i5.setProperty(
       this,
       'second',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  TimeZoneName? get timeZoneName => switch (_i4.getProperty(
+  _i3.TimeZoneName? get timeZoneName => switch (_i5.getProperty(
         this,
         'timeZoneName',
       )) {
-        _i2.String name => TimeZoneName.values.byName(name),
+        _i2.String name => _i3.TimeZoneName.values.byName(name),
         _ => null
       };
-  set timeZoneName(TimeZoneName? value) {
-    _i4.setProperty(
+  set timeZoneName(_i3.TimeZoneName? value) {
+    _i5.setProperty(
       this,
       'timeZoneName',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  FormatMatcher? get formatMatcher => switch (_i4.getProperty(
+  _i3.FormatMatcher? get formatMatcher => switch (_i5.getProperty(
         this,
         'formatMatcher',
       )) {
-        _i2.String name => FormatMatcher.values.byName(name),
+        _i2.String name => _i3.FormatMatcher.values.byName(name),
         _ => null
       };
-  set formatMatcher(FormatMatcher? value) {
-    _i4.setProperty(
+  set formatMatcher(_i3.FormatMatcher? value) {
+    _i5.setProperty(
       this,
       'formatMatcher',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  _i2.bool? get hour12 => _i4.getProperty(
+  _i2.bool? get hour12 => _i5.getProperty(
         this,
         'hour12',
       );
   set hour12(_i2.bool? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'hour12',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get timeZone => _i4.getProperty(
+  _i2.String? get timeZone => _i5.getProperty(
         this,
         'timeZone',
       );
   set timeZone(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'timeZone',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get calendar => _i4.getProperty(
+  _i2.String? get calendar => _i5.getProperty(
         this,
         'calendar',
       );
   set calendar(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'calendar',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  DayPeriod? get dayPeriod => switch (_i4.getProperty(
+  _i3.DayPeriod? get dayPeriod => switch (_i5.getProperty(
         this,
         'dayPeriod',
       )) {
-        _i2.String name => DayPeriod.values.byName(name),
+        _i2.String name => _i3.DayPeriod.values.byName(name),
         _ => null
       };
-  set dayPeriod(DayPeriod? value) {
-    _i4.setProperty(
+  set dayPeriod(_i3.DayPeriod? value) {
+    _i5.setProperty(
       this,
       'dayPeriod',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  _i2.String? get numberingSystem => _i4.getProperty(
+  _i2.String? get numberingSystem => _i5.getProperty(
         this,
         'numberingSystem',
       );
   set numberingSystem(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'numberingSystem',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  DateStyle? get dateStyle => switch (_i4.getProperty(
+  _i3.DateStyle? get dateStyle => switch (_i5.getProperty(
         this,
         'dateStyle',
       )) {
-        _i2.String name => DateStyle.values.byName(name),
+        _i2.String name => _i3.DateStyle.values.byName(name),
         _ => null
       };
-  set dateStyle(DateStyle? value) {
-    _i4.setProperty(
+  set dateStyle(_i3.DateStyle? value) {
+    _i5.setProperty(
       this,
       'dateStyle',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  TimeStyle? get timeStyle => switch (_i4.getProperty(
+  _i3.TimeStyle? get timeStyle => switch (_i5.getProperty(
         this,
         'timeStyle',
       )) {
-        _i2.String name => TimeStyle.values.byName(name),
+        _i2.String name => _i3.TimeStyle.values.byName(name),
         _ => null
       };
-  set timeStyle(TimeStyle? value) {
-    _i4.setProperty(
+  set timeStyle(_i3.TimeStyle? value) {
+    _i5.setProperty(
       this,
       'timeStyle',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  HourCycle? get hourCycle => switch (_i4.getProperty(
+  _i3.HourCycle? get hourCycle => switch (_i5.getProperty(
         this,
         'hourCycle',
       )) {
-        _i2.String name => HourCycle.values.byName(name),
+        _i2.String name => _i3.HourCycle.values.byName(name),
         _ => null
       };
-  set hourCycle(HourCycle? value) {
-    _i4.setProperty(
+  set hourCycle(_i3.HourCycle? value) {
+    _i5.setProperty(
       this,
       'hourCycle',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  FractionalSecondDigits? get fractionalSecondDigits => switch (_i4.getProperty(
+  _i3.FractionalSecondDigits? get fractionalSecondDigits =>
+      switch (_i5.getProperty(
         this,
         'fractionalSecondDigits',
       )) {
-        _i2.String name => FractionalSecondDigits.values.byName(name),
+        _i2.String name => _i3.FractionalSecondDigits.values.byName(name),
         _ => null
       };
-  set fractionalSecondDigits(FractionalSecondDigits? value) {
-    _i4.setProperty(
+  set fractionalSecondDigits(_i3.FractionalSecondDigits? value) {
+    _i5.setProperty(
       this,
       'fractionalSecondDigits',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 }
@@ -2142,303 +2145,306 @@ class ResolvedDateTimeFormatOptions {
     _i2.String? minute,
     _i2.String? second,
     _i2.String? timeZoneName,
-    ResolvedDateTimeFormatOptionsFormatMatcherOptions? formatMatcher,
-    ResolvedDateTimeFormatOptionsDateStyleOptions? dateStyle,
-    ResolvedDateTimeFormatOptionsTimeStyleOptions? timeStyle,
-    HourCycleOptions? hourCycle,
-    ResolvedDateTimeFormatOptionsDayPeriodOptions? dayPeriod,
-    FractionalSecondDigitsOptions? fractionalSecondDigits,
+    _i3.ResolvedDateTimeFormatOptionsFormatMatcherOptions? formatMatcher,
+    _i3.ResolvedDateTimeFormatOptionsDateStyleOptions? dateStyle,
+    _i3.ResolvedDateTimeFormatOptionsTimeStyleOptions? timeStyle,
+    _i3.HourCycleOptions? hourCycle,
+    _i3.ResolvedDateTimeFormatOptionsDayPeriodOptions? dayPeriod,
+    _i3.FractionalSecondDigitsOptions? fractionalSecondDigits,
   }) =>
       ResolvedDateTimeFormatOptions._(
         locale: locale,
         calendar: calendar,
         numberingSystem: numberingSystem,
         timeZone: timeZone,
-        hour12: hour12 ?? _i3.undefined,
-        weekday: weekday ?? _i3.undefined,
-        era: era ?? _i3.undefined,
-        year: year ?? _i3.undefined,
-        month: month ?? _i3.undefined,
-        day: day ?? _i3.undefined,
-        hour: hour ?? _i3.undefined,
-        minute: minute ?? _i3.undefined,
-        second: second ?? _i3.undefined,
-        timeZoneName: timeZoneName ?? _i3.undefined,
-        formatMatcher: formatMatcher?.name ?? _i3.undefined,
-        dateStyle: dateStyle?.name ?? _i3.undefined,
-        timeStyle: timeStyle?.name ?? _i3.undefined,
-        hourCycle: hourCycle?.name ?? _i3.undefined,
-        dayPeriod: dayPeriod?.name ?? _i3.undefined,
-        fractionalSecondDigits: fractionalSecondDigits?.name ?? _i3.undefined,
+        hour12: hour12 ?? _i4.undefined,
+        weekday: weekday ?? _i4.undefined,
+        era: era ?? _i4.undefined,
+        year: year ?? _i4.undefined,
+        month: month ?? _i4.undefined,
+        day: day ?? _i4.undefined,
+        hour: hour ?? _i4.undefined,
+        minute: minute ?? _i4.undefined,
+        second: second ?? _i4.undefined,
+        timeZoneName: timeZoneName ?? _i4.undefined,
+        formatMatcher: formatMatcher?.name ?? _i4.undefined,
+        dateStyle: dateStyle?.name ?? _i4.undefined,
+        timeStyle: timeStyle?.name ?? _i4.undefined,
+        hourCycle: hourCycle?.name ?? _i4.undefined,
+        dayPeriod: dayPeriod?.name ?? _i4.undefined,
+        fractionalSecondDigits: fractionalSecondDigits?.name ?? _i4.undefined,
       );
 }
 
 extension ResolvedDateTimeFormatOptions$Typings
     on ResolvedDateTimeFormatOptions {
-  _i2.String get locale => _i4.getProperty(
+  _i2.String get locale => _i5.getProperty(
         this,
         'locale',
       );
   set locale(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'locale',
       value,
     );
   }
 
-  _i2.String get calendar => _i4.getProperty(
+  _i2.String get calendar => _i5.getProperty(
         this,
         'calendar',
       );
   set calendar(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'calendar',
       value,
     );
   }
 
-  _i2.String get numberingSystem => _i4.getProperty(
+  _i2.String get numberingSystem => _i5.getProperty(
         this,
         'numberingSystem',
       );
   set numberingSystem(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'numberingSystem',
       value,
     );
   }
 
-  _i2.String get timeZone => _i4.getProperty(
+  _i2.String get timeZone => _i5.getProperty(
         this,
         'timeZone',
       );
   set timeZone(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'timeZone',
       value,
     );
   }
 
-  _i2.bool? get hour12 => _i4.getProperty(
+  _i2.bool? get hour12 => _i5.getProperty(
         this,
         'hour12',
       );
   set hour12(_i2.bool? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'hour12',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get weekday => _i4.getProperty(
+  _i2.String? get weekday => _i5.getProperty(
         this,
         'weekday',
       );
   set weekday(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'weekday',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get era => _i4.getProperty(
+  _i2.String? get era => _i5.getProperty(
         this,
         'era',
       );
   set era(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'era',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get year => _i4.getProperty(
+  _i2.String? get year => _i5.getProperty(
         this,
         'year',
       );
   set year(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'year',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get month => _i4.getProperty(
+  _i2.String? get month => _i5.getProperty(
         this,
         'month',
       );
   set month(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'month',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get day => _i4.getProperty(
+  _i2.String? get day => _i5.getProperty(
         this,
         'day',
       );
   set day(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'day',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get hour => _i4.getProperty(
+  _i2.String? get hour => _i5.getProperty(
         this,
         'hour',
       );
   set hour(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'hour',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get minute => _i4.getProperty(
+  _i2.String? get minute => _i5.getProperty(
         this,
         'minute',
       );
   set minute(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minute',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get second => _i4.getProperty(
+  _i2.String? get second => _i5.getProperty(
         this,
         'second',
       );
   set second(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'second',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.String? get timeZoneName => _i4.getProperty(
+  _i2.String? get timeZoneName => _i5.getProperty(
         this,
         'timeZoneName',
       );
   set timeZoneName(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'timeZoneName',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  ResolvedDateTimeFormatOptionsFormatMatcherOptions? get formatMatcher =>
-      switch (_i4.getProperty(
+  _i3.ResolvedDateTimeFormatOptionsFormatMatcherOptions? get formatMatcher =>
+      switch (_i5.getProperty(
         this,
         'formatMatcher',
       )) {
-        _i2.String name =>
-          ResolvedDateTimeFormatOptionsFormatMatcherOptions.values.byName(name),
+        _i2.String name => _i3
+            .ResolvedDateTimeFormatOptionsFormatMatcherOptions.values
+            .byName(name),
         _ => null
       };
-  set formatMatcher(ResolvedDateTimeFormatOptionsFormatMatcherOptions? value) {
-    _i4.setProperty(
+  set formatMatcher(
+      _i3.ResolvedDateTimeFormatOptionsFormatMatcherOptions? value) {
+    _i5.setProperty(
       this,
       'formatMatcher',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  ResolvedDateTimeFormatOptionsDateStyleOptions? get dateStyle =>
-      switch (_i4.getProperty(
+  _i3.ResolvedDateTimeFormatOptionsDateStyleOptions? get dateStyle =>
+      switch (_i5.getProperty(
         this,
         'dateStyle',
       )) {
         _i2.String name =>
-          ResolvedDateTimeFormatOptionsDateStyleOptions.values.byName(name),
+          _i3.ResolvedDateTimeFormatOptionsDateStyleOptions.values.byName(name),
         _ => null
       };
-  set dateStyle(ResolvedDateTimeFormatOptionsDateStyleOptions? value) {
-    _i4.setProperty(
+  set dateStyle(_i3.ResolvedDateTimeFormatOptionsDateStyleOptions? value) {
+    _i5.setProperty(
       this,
       'dateStyle',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  ResolvedDateTimeFormatOptionsTimeStyleOptions? get timeStyle =>
-      switch (_i4.getProperty(
+  _i3.ResolvedDateTimeFormatOptionsTimeStyleOptions? get timeStyle =>
+      switch (_i5.getProperty(
         this,
         'timeStyle',
       )) {
         _i2.String name =>
-          ResolvedDateTimeFormatOptionsTimeStyleOptions.values.byName(name),
+          _i3.ResolvedDateTimeFormatOptionsTimeStyleOptions.values.byName(name),
         _ => null
       };
-  set timeStyle(ResolvedDateTimeFormatOptionsTimeStyleOptions? value) {
-    _i4.setProperty(
+  set timeStyle(_i3.ResolvedDateTimeFormatOptionsTimeStyleOptions? value) {
+    _i5.setProperty(
       this,
       'timeStyle',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  HourCycleOptions? get hourCycle => switch (_i4.getProperty(
+  _i3.HourCycleOptions? get hourCycle => switch (_i5.getProperty(
         this,
         'hourCycle',
       )) {
-        _i2.String name => HourCycleOptions.values.byName(name),
+        _i2.String name => _i3.HourCycleOptions.values.byName(name),
         _ => null
       };
-  set hourCycle(HourCycleOptions? value) {
-    _i4.setProperty(
+  set hourCycle(_i3.HourCycleOptions? value) {
+    _i5.setProperty(
       this,
       'hourCycle',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  ResolvedDateTimeFormatOptionsDayPeriodOptions? get dayPeriod =>
-      switch (_i4.getProperty(
+  _i3.ResolvedDateTimeFormatOptionsDayPeriodOptions? get dayPeriod =>
+      switch (_i5.getProperty(
         this,
         'dayPeriod',
       )) {
         _i2.String name =>
-          ResolvedDateTimeFormatOptionsDayPeriodOptions.values.byName(name),
+          _i3.ResolvedDateTimeFormatOptionsDayPeriodOptions.values.byName(name),
         _ => null
       };
-  set dayPeriod(ResolvedDateTimeFormatOptionsDayPeriodOptions? value) {
-    _i4.setProperty(
+  set dayPeriod(_i3.ResolvedDateTimeFormatOptionsDayPeriodOptions? value) {
+    _i5.setProperty(
       this,
       'dayPeriod',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  FractionalSecondDigitsOptions? get fractionalSecondDigits =>
-      switch (_i4.getProperty(
+  _i3.FractionalSecondDigitsOptions? get fractionalSecondDigits =>
+      switch (_i5.getProperty(
         this,
         'fractionalSecondDigits',
       )) {
-        _i2.String name => FractionalSecondDigitsOptions.values.byName(name),
+        _i2.String name =>
+          _i3.FractionalSecondDigitsOptions.values.byName(name),
         _ => null
       };
-  set fractionalSecondDigits(FractionalSecondDigitsOptions? value) {
-    _i4.setProperty(
+  set fractionalSecondDigits(_i3.FractionalSecondDigitsOptions? value) {
+    _i5.setProperty(
       this,
       'fractionalSecondDigits',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 }
@@ -2448,26 +2454,26 @@ extension ResolvedDateTimeFormatOptions$Typings
 class DateTimeFormat {
   factory DateTimeFormat([
     _i2.Object? locales,
-    _i5.DateTimeFormatOptions? options,
+    _i3.DateTimeFormatOptions? options,
   ]) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredDateTimeFormat,
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 
   static _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
-    _i5.DateTimeFormatOptions? options,
+    _i3.DateTimeFormatOptions? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         _i6.target14,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -2480,28 +2486,28 @@ FieldExternal:
 external _i2.Object _declaredDateTimeFormat;
 
 extension DateTimeFormat$Typings on DateTimeFormat {
-  _i2.String format([_i2.Object? date]) => _i4.callMethod(
+  _i2.String format([_i2.Object? date]) => _i5.callMethod(
         this,
         'format',
-        [date ?? _i3.undefined],
+        [date ?? _i4.undefined],
       );
-  _i5.ResolvedDateTimeFormatOptions resolvedOptions() => _i4.callMethod(
+  _i3.ResolvedDateTimeFormatOptions resolvedOptions() => _i5.callMethod(
         this,
         'resolvedOptions',
         [],
       );
-  _i2.List<_i5.DateTimeFormatPart> formatToParts([_i2.Object? date]) =>
-      (_i4.callMethod(
+  _i2.List<_i3.DateTimeFormatPart> formatToParts([_i2.Object? date]) =>
+      (_i5.callMethod(
         this,
         'formatToParts',
-        [date ?? _i3.undefined],
+        [date ?? _i4.undefined],
       ) as _i2.List)
           .cast();
   _i2.String formatRange(
     _i2.Object startDate,
     _i2.Object endDate,
   ) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'formatRange',
         [
@@ -2509,11 +2515,11 @@ extension DateTimeFormat$Typings on DateTimeFormat {
           endDate,
         ],
       );
-  _i2.List<_i5.DateTimeRangeFormatPart> formatRangeToParts(
+  _i2.List<_i3.DateTimeRangeFormatPart> formatRangeToParts(
     _i2.Object startDate,
     _i2.Object endDate,
   ) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         this,
         'formatRangeToParts',
         [
@@ -2531,27 +2537,27 @@ class IInline5 {}
 extension IInline5$Typings on IInline5 {
   _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
-    _i5.DateTimeFormatOptions? options,
+    _i3.DateTimeFormatOptions? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         this,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
-  _i5.DateTimeFormat call([
+  _i3.DateTimeFormat call([
     _i2.Object? locales,
-    _i5.DateTimeFormatOptions? options,
+    _i3.DateTimeFormatOptions? options,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         '',
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 }
@@ -2630,156 +2636,156 @@ enum DateTimeFormatPartTypesRegistryKeys {
 
 extension DateTimeFormatPartTypesRegistry$Typings
     on DateTimeFormatPartTypesRegistry {
-  _i2.dynamic get day => _i4.getProperty(
+  _i2.dynamic get day => _i5.getProperty(
         this,
         'day',
       );
   set day(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'day',
       value,
     );
   }
 
-  _i2.dynamic get dayPeriod => _i4.getProperty(
+  _i2.dynamic get dayPeriod => _i5.getProperty(
         this,
         'dayPeriod',
       );
   set dayPeriod(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'dayPeriod',
       value,
     );
   }
 
-  _i2.dynamic get era => _i4.getProperty(
+  _i2.dynamic get era => _i5.getProperty(
         this,
         'era',
       );
   set era(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'era',
       value,
     );
   }
 
-  _i2.dynamic get hour => _i4.getProperty(
+  _i2.dynamic get hour => _i5.getProperty(
         this,
         'hour',
       );
   set hour(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'hour',
       value,
     );
   }
 
-  _i2.dynamic get literal => _i4.getProperty(
+  _i2.dynamic get literal => _i5.getProperty(
         this,
         'literal',
       );
   set literal(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'literal',
       value,
     );
   }
 
-  _i2.dynamic get minute => _i4.getProperty(
+  _i2.dynamic get minute => _i5.getProperty(
         this,
         'minute',
       );
   set minute(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minute',
       value,
     );
   }
 
-  _i2.dynamic get month => _i4.getProperty(
+  _i2.dynamic get month => _i5.getProperty(
         this,
         'month',
       );
   set month(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'month',
       value,
     );
   }
 
-  _i2.dynamic get second => _i4.getProperty(
+  _i2.dynamic get second => _i5.getProperty(
         this,
         'second',
       );
   set second(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'second',
       value,
     );
   }
 
-  _i2.dynamic get timeZoneName => _i4.getProperty(
+  _i2.dynamic get timeZoneName => _i5.getProperty(
         this,
         'timeZoneName',
       );
   set timeZoneName(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'timeZoneName',
       value,
     );
   }
 
-  _i2.dynamic get weekday => _i4.getProperty(
+  _i2.dynamic get weekday => _i5.getProperty(
         this,
         'weekday',
       );
   set weekday(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'weekday',
       value,
     );
   }
 
-  _i2.dynamic get year => _i4.getProperty(
+  _i2.dynamic get year => _i5.getProperty(
         this,
         'year',
       );
   set year(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'year',
       value,
     );
   }
 
-  _i2.dynamic get unknown => _i4.getProperty(
+  _i2.dynamic get unknown => _i5.getProperty(
         this,
         'unknown',
       );
   set unknown(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'unknown',
       value,
     );
   }
 
-  _i2.dynamic get fractionalSecond => _i4.getProperty(
+  _i2.dynamic get fractionalSecond => _i5.getProperty(
         this,
         'fractionalSecond',
       );
   set fractionalSecond(_i2.dynamic value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'fractionalSecond',
       value,
@@ -2797,7 +2803,7 @@ class DateTimeFormatPart {
   });
 
   factory DateTimeFormatPart({
-    required _i5.DateTimeFormatPartTypes type,
+    required _i3.DateTimeFormatPartTypes type,
     required _i2.String value,
   }) =>
       DateTimeFormatPart._(
@@ -2807,25 +2813,25 @@ class DateTimeFormatPart {
 }
 
 extension DateTimeFormatPart$Typings on DateTimeFormatPart {
-  _i5.DateTimeFormatPartTypes get type =>
-      DateTimeFormatPartTypesRegistryKeys.values.byName(_i4.getProperty(
+  _i3.DateTimeFormatPartTypes get type =>
+      _i3.DateTimeFormatPartTypesRegistryKeys.values.byName(_i5.getProperty(
         this,
         'type',
       ));
-  set type(_i5.DateTimeFormatPartTypes value) {
-    _i4.setProperty(
+  set type(_i3.DateTimeFormatPartTypes value) {
+    _i5.setProperty(
       this,
       'type',
       value.name,
     );
   }
 
-  _i2.String get value => _i4.getProperty(
+  _i2.String get value => _i5.getProperty(
         this,
         'value',
       );
   set value(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'value',
       value,
@@ -2848,8 +2854,8 @@ class PluralRulesOptions {
   });
 
   factory PluralRulesOptions({
-    PluralRulesOptionsLocaleMatcherOptions? localeMatcher,
-    _i5.PluralRuleType? type,
+    _i3.PluralRulesOptionsLocaleMatcherOptions? localeMatcher,
+    _i3.PluralRuleType? type,
     _i2.num? minimumIntegerDigits,
     _i2.num? minimumFractionDigits,
     _i2.num? maximumFractionDigits,
@@ -2857,106 +2863,106 @@ class PluralRulesOptions {
     _i2.num? maximumSignificantDigits,
   }) =>
       PluralRulesOptions._(
-        localeMatcher: localeMatcher?.name ?? _i3.undefined,
-        type: type?.name ?? _i3.undefined ?? _i3.undefined,
-        minimumIntegerDigits: minimumIntegerDigits ?? _i3.undefined,
-        minimumFractionDigits: minimumFractionDigits ?? _i3.undefined,
-        maximumFractionDigits: maximumFractionDigits ?? _i3.undefined,
-        minimumSignificantDigits: minimumSignificantDigits ?? _i3.undefined,
-        maximumSignificantDigits: maximumSignificantDigits ?? _i3.undefined,
+        localeMatcher: localeMatcher?.name ?? _i4.undefined,
+        type: type?.name ?? _i4.undefined ?? _i4.undefined,
+        minimumIntegerDigits: minimumIntegerDigits ?? _i4.undefined,
+        minimumFractionDigits: minimumFractionDigits ?? _i4.undefined,
+        maximumFractionDigits: maximumFractionDigits ?? _i4.undefined,
+        minimumSignificantDigits: minimumSignificantDigits ?? _i4.undefined,
+        maximumSignificantDigits: maximumSignificantDigits ?? _i4.undefined,
       );
 }
 
 extension PluralRulesOptions$Typings on PluralRulesOptions {
-  PluralRulesOptionsLocaleMatcherOptions? get localeMatcher =>
-      switch (_i4.getProperty(
+  _i3.PluralRulesOptionsLocaleMatcherOptions? get localeMatcher =>
+      switch (_i5.getProperty(
         this,
         'localeMatcher',
       )) {
         _i2.String name =>
-          PluralRulesOptionsLocaleMatcherOptions.values.byName(name),
+          _i3.PluralRulesOptionsLocaleMatcherOptions.values.byName(name),
         _ => null
       };
-  set localeMatcher(PluralRulesOptionsLocaleMatcherOptions? value) {
-    _i4.setProperty(
+  set localeMatcher(_i3.PluralRulesOptionsLocaleMatcherOptions? value) {
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
-  _i5.PluralRuleType? get type => switch (_i4.getProperty(
+  _i3.PluralRuleType? get type => switch (_i5.getProperty(
         this,
         'type',
       )) {
-        _i2.String name => PluralRuleTypeOptions.values.byName(name),
+        _i2.String name => _i3.PluralRuleTypeOptions.values.byName(name),
         _ => null
       };
-  set type(_i5.PluralRuleType? value) {
-    _i4.setProperty(
+  set type(_i3.PluralRuleType? value) {
+    _i5.setProperty(
       this,
       'type',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 
-  _i2.num? get minimumIntegerDigits => _i4.getProperty(
+  _i2.num? get minimumIntegerDigits => _i5.getProperty(
         this,
         'minimumIntegerDigits',
       );
   set minimumIntegerDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumIntegerDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get minimumFractionDigits => _i4.getProperty(
+  _i2.num? get minimumFractionDigits => _i5.getProperty(
         this,
         'minimumFractionDigits',
       );
   set minimumFractionDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumFractionDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get maximumFractionDigits => _i4.getProperty(
+  _i2.num? get maximumFractionDigits => _i5.getProperty(
         this,
         'maximumFractionDigits',
       );
   set maximumFractionDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'maximumFractionDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get minimumSignificantDigits => _i4.getProperty(
+  _i2.num? get minimumSignificantDigits => _i5.getProperty(
         this,
         'minimumSignificantDigits',
       );
   set minimumSignificantDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumSignificantDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get maximumSignificantDigits => _i4.getProperty(
+  _i2.num? get maximumSignificantDigits => _i5.getProperty(
         this,
         'maximumSignificantDigits',
       );
   set maximumSignificantDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'maximumSignificantDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 }
@@ -2978,8 +2984,8 @@ class ResolvedPluralRulesOptions {
 
   factory ResolvedPluralRulesOptions({
     required _i2.String locale,
-    required _i2.List<_i5.LDMLPluralRule> pluralCategories,
-    required _i5.PluralRuleType type,
+    required _i2.List<_i3.LDMLPluralRule> pluralCategories,
+    required _i3.PluralRuleType type,
     required _i2.num minimumIntegerDigits,
     required _i2.num minimumFractionDigits,
     required _i2.num maximumFractionDigits,
@@ -2993,109 +2999,109 @@ class ResolvedPluralRulesOptions {
         minimumIntegerDigits: minimumIntegerDigits,
         minimumFractionDigits: minimumFractionDigits,
         maximumFractionDigits: maximumFractionDigits,
-        minimumSignificantDigits: minimumSignificantDigits ?? _i3.undefined,
-        maximumSignificantDigits: maximumSignificantDigits ?? _i3.undefined,
+        minimumSignificantDigits: minimumSignificantDigits ?? _i4.undefined,
+        maximumSignificantDigits: maximumSignificantDigits ?? _i4.undefined,
       );
 }
 
 extension ResolvedPluralRulesOptions$Typings on ResolvedPluralRulesOptions {
-  _i2.String get locale => _i4.getProperty(
+  _i2.String get locale => _i5.getProperty(
         this,
         'locale',
       );
   set locale(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'locale',
       value,
     );
   }
 
-  _i2.List<_i5.LDMLPluralRule> get pluralCategories => (_i4.getProperty(
+  _i2.List<_i3.LDMLPluralRule> get pluralCategories => (_i5.getProperty(
         this,
         'pluralCategories',
       ) as _i2.List)
           .cast()
-          .map((i) => LDMLPluralRuleOptions.values.byName(i))
+          .map((i) => _i3.LDMLPluralRuleOptions.values.byName(i))
           .toList();
-  set pluralCategories(_i2.List<_i5.LDMLPluralRule> value) {
-    _i4.setProperty(
+  set pluralCategories(_i2.List<_i3.LDMLPluralRule> value) {
+    _i5.setProperty(
       this,
       'pluralCategories',
       value.map((i) => i.name).toList(),
     );
   }
 
-  _i5.PluralRuleType get type =>
-      PluralRuleTypeOptions.values.byName(_i4.getProperty(
+  _i3.PluralRuleType get type =>
+      _i3.PluralRuleTypeOptions.values.byName(_i5.getProperty(
         this,
         'type',
       ));
-  set type(_i5.PluralRuleType value) {
-    _i4.setProperty(
+  set type(_i3.PluralRuleType value) {
+    _i5.setProperty(
       this,
       'type',
       value.name,
     );
   }
 
-  _i2.num get minimumIntegerDigits => _i4.getProperty(
+  _i2.num get minimumIntegerDigits => _i5.getProperty(
         this,
         'minimumIntegerDigits',
       );
   set minimumIntegerDigits(_i2.num value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumIntegerDigits',
       value,
     );
   }
 
-  _i2.num get minimumFractionDigits => _i4.getProperty(
+  _i2.num get minimumFractionDigits => _i5.getProperty(
         this,
         'minimumFractionDigits',
       );
   set minimumFractionDigits(_i2.num value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumFractionDigits',
       value,
     );
   }
 
-  _i2.num get maximumFractionDigits => _i4.getProperty(
+  _i2.num get maximumFractionDigits => _i5.getProperty(
         this,
         'maximumFractionDigits',
       );
   set maximumFractionDigits(_i2.num value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'maximumFractionDigits',
       value,
     );
   }
 
-  _i2.num? get minimumSignificantDigits => _i4.getProperty(
+  _i2.num? get minimumSignificantDigits => _i5.getProperty(
         this,
         'minimumSignificantDigits',
       );
   set minimumSignificantDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'minimumSignificantDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
-  _i2.num? get maximumSignificantDigits => _i4.getProperty(
+  _i2.num? get maximumSignificantDigits => _i5.getProperty(
         this,
         'maximumSignificantDigits',
       );
   set maximumSignificantDigits(_i2.num? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'maximumSignificantDigits',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 }
@@ -3105,26 +3111,26 @@ extension ResolvedPluralRulesOptions$Typings on ResolvedPluralRulesOptions {
 class PluralRules {
   factory PluralRules([
     _i2.Object? locales,
-    _i5.PluralRulesOptions? options,
+    _i3.PluralRulesOptions? options,
   ]) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredPluralRules,
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 
   static _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
-    _i5.IInline25? options,
+    _i3.IInline25? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         _i6.target15,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -3137,13 +3143,13 @@ FieldExternal:
 external _i2.Object _declaredPluralRules;
 
 extension PluralRules$Typings on PluralRules {
-  _i5.ResolvedPluralRulesOptions resolvedOptions() => _i4.callMethod(
+  _i3.ResolvedPluralRulesOptions resolvedOptions() => _i5.callMethod(
         this,
         'resolvedOptions',
         [],
       );
-  _i5.LDMLPluralRule select(_i2.num n) =>
-      LDMLPluralRuleOptions.values.byName(_i4.callMethod(
+  _i3.LDMLPluralRule select(_i2.num n) =>
+      _i3.LDMLPluralRuleOptions.values.byName(_i5.callMethod(
         this,
         'select',
         [n],
@@ -3156,18 +3162,20 @@ extension PluralRules$Typings on PluralRules {
 class IInline25 {}
 
 extension IInline25$Typings on IInline25 {
-  IInline25LocaleMatcherOptions? get localeMatcher => switch (_i4.getProperty(
+  _i3.IInline25LocaleMatcherOptions? get localeMatcher =>
+      switch (_i5.getProperty(
         this,
         'localeMatcher',
       )) {
-        _i2.String name => IInline25LocaleMatcherOptions.values.byName(name),
+        _i2.String name =>
+          _i3.IInline25LocaleMatcherOptions.values.byName(name),
         _ => null
       };
-  set localeMatcher(IInline25LocaleMatcherOptions? value) {
-    _i4.setProperty(
+  set localeMatcher(_i3.IInline25LocaleMatcherOptions? value) {
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 }
@@ -3179,27 +3187,27 @@ class IInline24 {}
 extension IInline24$Typings on IInline24 {
   _i2.List<_i2.String> supportedLocalesOf(
     _i2.Object locales, [
-    _i5.IInline25? options,
+    _i3.IInline25? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         this,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
-  _i5.PluralRules call([
+  _i3.PluralRules call([
     _i2.Object? locales,
-    _i5.PluralRulesOptions? options,
+    _i3.PluralRulesOptions? options,
   ]) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         '',
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 }
@@ -3214,7 +3222,7 @@ class NumberFormatPart {
   });
 
   factory NumberFormatPart({
-    required _i5.NumberFormatPartTypes type,
+    required _i3.NumberFormatPartTypes type,
     required _i2.String value,
   }) =>
       NumberFormatPart._(
@@ -3224,24 +3232,24 @@ class NumberFormatPart {
 }
 
 extension NumberFormatPart$Typings on NumberFormatPart {
-  _i5.NumberFormatPartTypes get type => _i4.getProperty(
+  _i3.NumberFormatPartTypes get type => _i5.getProperty(
         this,
         'type',
       );
-  set type(_i5.NumberFormatPartTypes value) {
-    _i4.setProperty(
+  set type(_i3.NumberFormatPartTypes value) {
+    _i5.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.String get value => _i4.getProperty(
+  _i2.String get value => _i5.getProperty(
         this,
         'value',
       );
   set value(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'value',
       value,
@@ -3268,65 +3276,67 @@ class RelativeTimeFormatOptions {
   });
 
   factory RelativeTimeFormatOptions({
-    _i5.RelativeTimeFormatLocaleMatcher? localeMatcher,
-    _i5.RelativeTimeFormatNumeric? numeric,
-    _i5.RelativeTimeFormatStyle? style,
+    _i3.RelativeTimeFormatLocaleMatcher? localeMatcher,
+    _i3.RelativeTimeFormatNumeric? numeric,
+    _i3.RelativeTimeFormatStyle? style,
   }) =>
       RelativeTimeFormatOptions._(
-        localeMatcher: localeMatcher?.name ?? _i3.undefined ?? _i3.undefined,
-        numeric: numeric?.name ?? _i3.undefined ?? _i3.undefined,
-        style: style?.name ?? _i3.undefined ?? _i3.undefined,
+        localeMatcher: localeMatcher?.name ?? _i4.undefined ?? _i4.undefined,
+        numeric: numeric?.name ?? _i4.undefined ?? _i4.undefined,
+        style: style?.name ?? _i4.undefined ?? _i4.undefined,
       );
 }
 
 extension RelativeTimeFormatOptions$Typings on RelativeTimeFormatOptions {
   /// The locale matching algorithm to use. For information about this option, see [Intl page](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
-  _i5.RelativeTimeFormatLocaleMatcher? get localeMatcher =>
-      switch (_i4.getProperty(
+  _i3.RelativeTimeFormatLocaleMatcher? get localeMatcher =>
+      switch (_i5.getProperty(
         this,
         'localeMatcher',
       )) {
         _i2.String name =>
-          RelativeTimeFormatLocaleMatcherOptions.values.byName(name),
+          _i3.RelativeTimeFormatLocaleMatcherOptions.values.byName(name),
         _ => null
       };
-  set localeMatcher(_i5.RelativeTimeFormatLocaleMatcher? value) {
-    _i4.setProperty(
+  set localeMatcher(_i3.RelativeTimeFormatLocaleMatcher? value) {
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 
   /// The format of output message.
-  _i5.RelativeTimeFormatNumeric? get numeric => switch (_i4.getProperty(
+  _i3.RelativeTimeFormatNumeric? get numeric => switch (_i5.getProperty(
         this,
         'numeric',
       )) {
-        _i2.String name => RelativeTimeFormatNumericOptions.values.byName(name),
+        _i2.String name =>
+          _i3.RelativeTimeFormatNumericOptions.values.byName(name),
         _ => null
       };
-  set numeric(_i5.RelativeTimeFormatNumeric? value) {
-    _i4.setProperty(
+  set numeric(_i3.RelativeTimeFormatNumeric? value) {
+    _i5.setProperty(
       this,
       'numeric',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 
   /// The length of the internationalized message.
-  _i5.RelativeTimeFormatStyle? get style => switch (_i4.getProperty(
+  _i3.RelativeTimeFormatStyle? get style => switch (_i5.getProperty(
         this,
         'style',
       )) {
-        _i2.String name => RelativeTimeFormatStyleOptions.values.byName(name),
+        _i2.String name =>
+          _i3.RelativeTimeFormatStyleOptions.values.byName(name),
         _ => null
       };
-  set style(_i5.RelativeTimeFormatStyle? value) {
-    _i4.setProperty(
+  set style(_i3.RelativeTimeFormatStyle? value) {
+    _i5.setProperty(
       this,
       'style',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 }
@@ -3353,9 +3363,9 @@ class ResolvedRelativeTimeFormatOptions {
   });
 
   factory ResolvedRelativeTimeFormatOptions({
-    required _i5.UnicodeBCP47LocaleIdentifier locale,
-    required _i5.RelativeTimeFormatStyle style,
-    required _i5.RelativeTimeFormatNumeric numeric,
+    required _i3.UnicodeBCP47LocaleIdentifier locale,
+    required _i3.RelativeTimeFormatStyle style,
+    required _i3.RelativeTimeFormatNumeric numeric,
     required _i2.String numberingSystem,
   }) =>
       ResolvedRelativeTimeFormatOptions._(
@@ -3368,50 +3378,50 @@ class ResolvedRelativeTimeFormatOptions {
 
 extension ResolvedRelativeTimeFormatOptions$Typings
     on ResolvedRelativeTimeFormatOptions {
-  _i5.UnicodeBCP47LocaleIdentifier get locale => _i4.getProperty(
+  _i3.UnicodeBCP47LocaleIdentifier get locale => _i5.getProperty(
         this,
         'locale',
       );
-  set locale(_i5.UnicodeBCP47LocaleIdentifier value) {
-    _i4.setProperty(
+  set locale(_i3.UnicodeBCP47LocaleIdentifier value) {
+    _i5.setProperty(
       this,
       'locale',
       value,
     );
   }
 
-  _i5.RelativeTimeFormatStyle get style =>
-      RelativeTimeFormatStyleOptions.values.byName(_i4.getProperty(
+  _i3.RelativeTimeFormatStyle get style =>
+      _i3.RelativeTimeFormatStyleOptions.values.byName(_i5.getProperty(
         this,
         'style',
       ));
-  set style(_i5.RelativeTimeFormatStyle value) {
-    _i4.setProperty(
+  set style(_i3.RelativeTimeFormatStyle value) {
+    _i5.setProperty(
       this,
       'style',
       value.name,
     );
   }
 
-  _i5.RelativeTimeFormatNumeric get numeric =>
-      RelativeTimeFormatNumericOptions.values.byName(_i4.getProperty(
+  _i3.RelativeTimeFormatNumeric get numeric =>
+      _i3.RelativeTimeFormatNumericOptions.values.byName(_i5.getProperty(
         this,
         'numeric',
       ));
-  set numeric(_i5.RelativeTimeFormatNumeric value) {
-    _i4.setProperty(
+  set numeric(_i3.RelativeTimeFormatNumeric value) {
+    _i5.setProperty(
       this,
       'numeric',
       value.name,
     );
   }
 
-  _i2.String get numberingSystem => _i4.getProperty(
+  _i2.String get numberingSystem => _i5.getProperty(
         this,
         'numberingSystem',
       );
   set numberingSystem(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'numberingSystem',
       value,
@@ -3425,24 +3435,24 @@ extension ResolvedRelativeTimeFormatOptions$Typings
 class IInline28 {}
 
 extension IInline28$Typings on IInline28 {
-  _i2.String get type => _i4.getProperty(
+  _i2.String get type => _i5.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.String get value => _i4.getProperty(
+  _i2.String get value => _i5.getProperty(
         this,
         'value',
       );
   set value(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'value',
       value,
@@ -3456,38 +3466,38 @@ extension IInline28$Typings on IInline28 {
 class IInline29 {}
 
 extension IInline29$Typings on IInline29 {
-  _i7.Exclude<_i5.NumberFormatPartTypes, _i2.String> get type =>
-      _i4.getProperty(
+  _i7.Exclude<_i3.NumberFormatPartTypes, _i2.String> get type =>
+      _i5.getProperty(
         this,
         'type',
       );
-  set type(_i7.Exclude<_i5.NumberFormatPartTypes, _i2.String> value) {
-    _i4.setProperty(
+  set type(_i7.Exclude<_i3.NumberFormatPartTypes, _i2.String> value) {
+    _i5.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.String get value => _i4.getProperty(
+  _i2.String get value => _i5.getProperty(
         this,
         'value',
       );
   set value(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'value',
       value,
     );
   }
 
-  _i5.RelativeTimeFormatUnitSingular get unit =>
-      RelativeTimeFormatUnitSingularOptions.values.byName(_i4.getProperty(
+  _i3.RelativeTimeFormatUnitSingular get unit =>
+      _i3.RelativeTimeFormatUnitSingularOptions.values.byName(_i5.getProperty(
         this,
         'unit',
       ));
-  set unit(_i5.RelativeTimeFormatUnitSingular value) {
-    _i4.setProperty(
+  set unit(_i3.RelativeTimeFormatUnitSingular value) {
+    _i5.setProperty(
       this,
       'unit',
       value.name,
@@ -3504,13 +3514,13 @@ extension IInline29$Typings on IInline29 {
 class RelativeTimeFormat {
   factory RelativeTimeFormat([
     _i2.Object? locales,
-    _i5.RelativeTimeFormatOptions? options,
+    _i3.RelativeTimeFormatOptions? options,
   ]) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredRelativeTimeFormat,
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 
@@ -3530,16 +3540,16 @@ class RelativeTimeFormat {
   ///   without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf).
-  static _i2.List<_i5.UnicodeBCP47LocaleIdentifier> supportedLocalesOf([
+  static _i2.List<_i3.UnicodeBCP47LocaleIdentifier> supportedLocalesOf([
     _i2.Object? locales,
-    _i5.RelativeTimeFormatOptions? options,
+    _i3.RelativeTimeFormatOptions? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         _i6.target16,
         'supportedLocalesOf',
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -3576,9 +3586,9 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format).
   _i2.String format(
     _i2.num value,
-    _i5.RelativeTimeFormatUnit unit,
+    _i3.RelativeTimeFormatUnit unit,
   ) =>
-      _i4.callMethod(
+      _i5.callMethod(
         this,
         'format',
         [
@@ -3596,11 +3606,11 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
   ///   @throws `RangeError` if `unit` was given something other than `unit` possible values
   ///
   ///   [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts).
-  _i2.List<_i5.RelativeTimeFormatPart> formatToParts(
+  _i2.List<_i3.RelativeTimeFormatPart> formatToParts(
     _i2.num value,
-    _i5.RelativeTimeFormatUnit unit,
+    _i3.RelativeTimeFormatUnit unit,
   ) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         this,
         'formatToParts',
         [
@@ -3613,7 +3623,7 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
   /// Provides access to the locale and options computed during initialization of this `Intl.RelativeTimeFormat` object.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions).
-  _i5.ResolvedRelativeTimeFormatOptions resolvedOptions() => _i4.callMethod(
+  _i3.ResolvedRelativeTimeFormatOptions resolvedOptions() => _i5.callMethod(
         this,
         'resolvedOptions',
         [],
@@ -3641,16 +3651,16 @@ extension IInline30$Typings on IInline30 {
   ///   without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf).
-  _i2.List<_i5.UnicodeBCP47LocaleIdentifier> supportedLocalesOf([
+  _i2.List<_i3.UnicodeBCP47LocaleIdentifier> supportedLocalesOf([
     _i2.Object? locales,
-    _i5.RelativeTimeFormatOptions? options,
+    _i3.RelativeTimeFormatOptions? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         this,
         'supportedLocalesOf',
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -3676,9 +3686,9 @@ class LocaleOptions {
   factory LocaleOptions({
     _i2.String? baseName,
     _i2.String? calendar,
-    _i5.LocaleCollationCaseFirst? caseFirst,
+    _i3.LocaleCollationCaseFirst? caseFirst,
     _i2.String? collation,
-    _i5.LocaleHourCycleKey? hourCycle,
+    _i3.LocaleHourCycleKey? hourCycle,
     _i2.String? language,
     _i2.String? numberingSystem,
     _i2.bool? numeric,
@@ -3686,153 +3696,154 @@ class LocaleOptions {
     _i2.String? script,
   }) =>
       LocaleOptions._(
-        baseName: baseName ?? _i3.undefined,
-        calendar: calendar ?? _i3.undefined,
-        caseFirst: caseFirst?.name ?? _i3.undefined ?? _i3.undefined,
-        collation: collation ?? _i3.undefined,
-        hourCycle: hourCycle?.name ?? _i3.undefined ?? _i3.undefined,
-        language: language ?? _i3.undefined,
-        numberingSystem: numberingSystem ?? _i3.undefined,
-        numeric: numeric ?? _i3.undefined,
-        region: region ?? _i3.undefined,
-        script: script ?? _i3.undefined,
+        baseName: baseName ?? _i4.undefined,
+        calendar: calendar ?? _i4.undefined,
+        caseFirst: caseFirst?.name ?? _i4.undefined ?? _i4.undefined,
+        collation: collation ?? _i4.undefined,
+        hourCycle: hourCycle?.name ?? _i4.undefined ?? _i4.undefined,
+        language: language ?? _i4.undefined,
+        numberingSystem: numberingSystem ?? _i4.undefined,
+        numeric: numeric ?? _i4.undefined,
+        region: region ?? _i4.undefined,
+        script: script ?? _i4.undefined,
       );
 }
 
 extension LocaleOptions$Typings on LocaleOptions {
   /// A string containing the language, and the script and region if available.
-  _i2.String? get baseName => _i4.getProperty(
+  _i2.String? get baseName => _i5.getProperty(
         this,
         'baseName',
       );
   set baseName(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'baseName',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// The part of the Locale that indicates the locale's calendar era.
-  _i2.String? get calendar => _i4.getProperty(
+  _i2.String? get calendar => _i5.getProperty(
         this,
         'calendar',
       );
   set calendar(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'calendar',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// Flag that defines whether case is taken into account for the locale's collation rules.
-  _i5.LocaleCollationCaseFirst? get caseFirst => switch (_i4.getProperty(
+  _i3.LocaleCollationCaseFirst? get caseFirst => switch (_i5.getProperty(
         this,
         'caseFirst',
       )) {
-        _i2.String name => LocaleCollationCaseFirstOptions.values.byName(name),
+        _i2.String name =>
+          _i3.LocaleCollationCaseFirstOptions.values.byName(name),
         _ => null
       };
-  set caseFirst(_i5.LocaleCollationCaseFirst? value) {
-    _i4.setProperty(
+  set caseFirst(_i3.LocaleCollationCaseFirst? value) {
+    _i5.setProperty(
       this,
       'caseFirst',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 
   /// The collation type used for sorting
-  _i2.String? get collation => _i4.getProperty(
+  _i2.String? get collation => _i5.getProperty(
         this,
         'collation',
       );
   set collation(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'collation',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// The time keeping format convention used by the locale.
-  _i5.LocaleHourCycleKey? get hourCycle => switch (_i4.getProperty(
+  _i3.LocaleHourCycleKey? get hourCycle => switch (_i5.getProperty(
         this,
         'hourCycle',
       )) {
-        _i2.String name => LocaleHourCycleKeyOptions.values.byName(name),
+        _i2.String name => _i3.LocaleHourCycleKeyOptions.values.byName(name),
         _ => null
       };
-  set hourCycle(_i5.LocaleHourCycleKey? value) {
-    _i4.setProperty(
+  set hourCycle(_i3.LocaleHourCycleKey? value) {
+    _i5.setProperty(
       this,
       'hourCycle',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 
   /// The primary language subtag associated with the locale.
-  _i2.String? get language => _i4.getProperty(
+  _i2.String? get language => _i5.getProperty(
         this,
         'language',
       );
   set language(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'language',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// The numeral system used by the locale.
-  _i2.String? get numberingSystem => _i4.getProperty(
+  _i2.String? get numberingSystem => _i5.getProperty(
         this,
         'numberingSystem',
       );
   set numberingSystem(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'numberingSystem',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// Flag that defines whether the locale has special collation handling for numeric characters.
-  _i2.bool? get numeric => _i4.getProperty(
+  _i2.bool? get numeric => _i5.getProperty(
         this,
         'numeric',
       );
   set numeric(_i2.bool? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'numeric',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// The region of the world (usually a country) associated with the locale. Possible values are region codes as defined by ISO 3166-1.
-  _i2.String? get region => _i4.getProperty(
+  _i2.String? get region => _i5.getProperty(
         this,
         'region',
       );
   set region(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'region',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 
   /// The script used for writing the particular language used in the locale. Possible values are script codes as defined by ISO 15924.
-  _i2.String? get script => _i4.getProperty(
+  _i2.String? get script => _i5.getProperty(
         this,
         'script',
       );
   set script(_i2.String? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'script',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 }
@@ -3841,16 +3852,16 @@ extension LocaleOptions$Typings on LocaleOptions {
 /// objects
 @_i1.JS()
 @_i1.staticInterop
-class Locale implements _i5.LocaleOptions {
+class Locale implements _i3.LocaleOptions {
   factory Locale(
     _i2.Object tag, [
-    _i5.LocaleOptions? options,
+    _i3.LocaleOptions? options,
   ]) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredLocale,
         [
           tag,
-          options ?? _i3.undefined,
+          options ?? _i4.undefined,
         ],
       );
 }
@@ -3863,12 +3874,12 @@ external _i2.Object _declaredLocale;
 
 extension Locale$Typings on Locale {
   /// A string containing the language, and the script and region if available.
-  _i2.String get baseName => _i4.getProperty(
+  _i2.String get baseName => _i5.getProperty(
         this,
         'baseName',
       );
   set baseName(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'baseName',
       value,
@@ -3876,12 +3887,12 @@ extension Locale$Typings on Locale {
   }
 
   /// The primary language subtag associated with the locale.
-  _i2.String get language => _i4.getProperty(
+  _i2.String get language => _i5.getProperty(
         this,
         'language',
       );
   set language(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'language',
       value,
@@ -3889,21 +3900,21 @@ extension Locale$Typings on Locale {
   }
 
   /// Gets the most likely values for the language, script, and region of the locale based on existing values.
-  _i5.Locale maximize() => _i4.callMethod(
+  _i3.Locale maximize() => _i5.callMethod(
         this,
         'maximize',
         [],
       );
 
   /// Attempts to remove information about the locale that would be added by calling `Locale.maximize()`.
-  _i5.Locale minimize() => _i4.callMethod(
+  _i3.Locale minimize() => _i5.callMethod(
         this,
         'minimize',
         [],
       );
 
   /// Returns the locale's full locale identifier string.
-  _i5.BCP47LanguageTag toString$() => _i4.callMethod(
+  _i3.BCP47LanguageTag toString$() => _i5.callMethod(
         this,
         'toString',
         [],
@@ -3927,97 +3938,98 @@ class DisplayNamesOptions {
   });
 
   factory DisplayNamesOptions({
-    _i5.RelativeTimeFormatLocaleMatcher? localeMatcher,
-    _i5.RelativeTimeFormatStyle? style,
-    required _i5.DisplayNamesType type,
-    _i5.DisplayNamesLanguageDisplay? languageDisplay,
-    _i5.DisplayNamesFallback? fallback,
+    _i3.RelativeTimeFormatLocaleMatcher? localeMatcher,
+    _i3.RelativeTimeFormatStyle? style,
+    required _i3.DisplayNamesType type,
+    _i3.DisplayNamesLanguageDisplay? languageDisplay,
+    _i3.DisplayNamesFallback? fallback,
   }) =>
       DisplayNamesOptions._(
-        localeMatcher: localeMatcher?.name ?? _i3.undefined ?? _i3.undefined,
-        style: style?.name ?? _i3.undefined ?? _i3.undefined,
+        localeMatcher: localeMatcher?.name ?? _i4.undefined ?? _i4.undefined,
+        style: style?.name ?? _i4.undefined ?? _i4.undefined,
         type: type.name,
         languageDisplay:
-            languageDisplay?.name ?? _i3.undefined ?? _i3.undefined,
-        fallback: fallback?.name ?? _i3.undefined ?? _i3.undefined,
+            languageDisplay?.name ?? _i4.undefined ?? _i4.undefined,
+        fallback: fallback?.name ?? _i4.undefined ?? _i4.undefined,
       );
 }
 
 extension DisplayNamesOptions$Typings on DisplayNamesOptions {
-  _i5.RelativeTimeFormatLocaleMatcher? get localeMatcher =>
-      switch (_i4.getProperty(
+  _i3.RelativeTimeFormatLocaleMatcher? get localeMatcher =>
+      switch (_i5.getProperty(
         this,
         'localeMatcher',
       )) {
         _i2.String name =>
-          RelativeTimeFormatLocaleMatcherOptions.values.byName(name),
+          _i3.RelativeTimeFormatLocaleMatcherOptions.values.byName(name),
         _ => null
       };
-  set localeMatcher(_i5.RelativeTimeFormatLocaleMatcher? value) {
-    _i4.setProperty(
+  set localeMatcher(_i3.RelativeTimeFormatLocaleMatcher? value) {
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 
-  _i5.RelativeTimeFormatStyle? get style => switch (_i4.getProperty(
+  _i3.RelativeTimeFormatStyle? get style => switch (_i5.getProperty(
         this,
         'style',
       )) {
-        _i2.String name => RelativeTimeFormatStyleOptions.values.byName(name),
+        _i2.String name =>
+          _i3.RelativeTimeFormatStyleOptions.values.byName(name),
         _ => null
       };
-  set style(_i5.RelativeTimeFormatStyle? value) {
-    _i4.setProperty(
+  set style(_i3.RelativeTimeFormatStyle? value) {
+    _i5.setProperty(
       this,
       'style',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 
-  _i5.DisplayNamesType get type =>
-      DisplayNamesTypeOptions.values.byName(_i4.getProperty(
+  _i3.DisplayNamesType get type =>
+      _i3.DisplayNamesTypeOptions.values.byName(_i5.getProperty(
         this,
         'type',
       ));
-  set type(_i5.DisplayNamesType value) {
-    _i4.setProperty(
+  set type(_i3.DisplayNamesType value) {
+    _i5.setProperty(
       this,
       'type',
       value.name,
     );
   }
 
-  _i5.DisplayNamesLanguageDisplay? get languageDisplay =>
-      switch (_i4.getProperty(
+  _i3.DisplayNamesLanguageDisplay? get languageDisplay =>
+      switch (_i5.getProperty(
         this,
         'languageDisplay',
       )) {
         _i2.String name =>
-          DisplayNamesLanguageDisplayOptions.values.byName(name),
+          _i3.DisplayNamesLanguageDisplayOptions.values.byName(name),
         _ => null
       };
-  set languageDisplay(_i5.DisplayNamesLanguageDisplay? value) {
-    _i4.setProperty(
+  set languageDisplay(_i3.DisplayNamesLanguageDisplay? value) {
+    _i5.setProperty(
       this,
       'languageDisplay',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 
-  _i5.DisplayNamesFallback? get fallback => switch (_i4.getProperty(
+  _i3.DisplayNamesFallback? get fallback => switch (_i5.getProperty(
         this,
         'fallback',
       )) {
-        _i2.String name => DisplayNamesFallbackOptions.values.byName(name),
+        _i2.String name => _i3.DisplayNamesFallbackOptions.values.byName(name),
         _ => null
       };
-  set fallback(_i5.DisplayNamesFallback? value) {
-    _i4.setProperty(
+  set fallback(_i3.DisplayNamesFallback? value) {
+    _i5.setProperty(
       this,
       'fallback',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 }
@@ -4035,11 +4047,11 @@ class ResolvedDisplayNamesOptions {
   });
 
   factory ResolvedDisplayNamesOptions({
-    required _i5.UnicodeBCP47LocaleIdentifier locale,
-    required _i5.RelativeTimeFormatStyle style,
-    required _i5.DisplayNamesType type,
-    required _i5.DisplayNamesFallback fallback,
-    _i5.DisplayNamesLanguageDisplay? languageDisplay,
+    required _i3.UnicodeBCP47LocaleIdentifier locale,
+    required _i3.RelativeTimeFormatStyle style,
+    required _i3.DisplayNamesType type,
+    required _i3.DisplayNamesFallback fallback,
+    _i3.DisplayNamesLanguageDisplay? languageDisplay,
   }) =>
       ResolvedDisplayNamesOptions._(
         locale: locale,
@@ -4047,76 +4059,76 @@ class ResolvedDisplayNamesOptions {
         type: type.name,
         fallback: fallback.name,
         languageDisplay:
-            languageDisplay?.name ?? _i3.undefined ?? _i3.undefined,
+            languageDisplay?.name ?? _i4.undefined ?? _i4.undefined,
       );
 }
 
 extension ResolvedDisplayNamesOptions$Typings on ResolvedDisplayNamesOptions {
-  _i5.UnicodeBCP47LocaleIdentifier get locale => _i4.getProperty(
+  _i3.UnicodeBCP47LocaleIdentifier get locale => _i5.getProperty(
         this,
         'locale',
       );
-  set locale(_i5.UnicodeBCP47LocaleIdentifier value) {
-    _i4.setProperty(
+  set locale(_i3.UnicodeBCP47LocaleIdentifier value) {
+    _i5.setProperty(
       this,
       'locale',
       value,
     );
   }
 
-  _i5.RelativeTimeFormatStyle get style =>
-      RelativeTimeFormatStyleOptions.values.byName(_i4.getProperty(
+  _i3.RelativeTimeFormatStyle get style =>
+      _i3.RelativeTimeFormatStyleOptions.values.byName(_i5.getProperty(
         this,
         'style',
       ));
-  set style(_i5.RelativeTimeFormatStyle value) {
-    _i4.setProperty(
+  set style(_i3.RelativeTimeFormatStyle value) {
+    _i5.setProperty(
       this,
       'style',
       value.name,
     );
   }
 
-  _i5.DisplayNamesType get type =>
-      DisplayNamesTypeOptions.values.byName(_i4.getProperty(
+  _i3.DisplayNamesType get type =>
+      _i3.DisplayNamesTypeOptions.values.byName(_i5.getProperty(
         this,
         'type',
       ));
-  set type(_i5.DisplayNamesType value) {
-    _i4.setProperty(
+  set type(_i3.DisplayNamesType value) {
+    _i5.setProperty(
       this,
       'type',
       value.name,
     );
   }
 
-  _i5.DisplayNamesFallback get fallback =>
-      DisplayNamesFallbackOptions.values.byName(_i4.getProperty(
+  _i3.DisplayNamesFallback get fallback =>
+      _i3.DisplayNamesFallbackOptions.values.byName(_i5.getProperty(
         this,
         'fallback',
       ));
-  set fallback(_i5.DisplayNamesFallback value) {
-    _i4.setProperty(
+  set fallback(_i3.DisplayNamesFallback value) {
+    _i5.setProperty(
       this,
       'fallback',
       value.name,
     );
   }
 
-  _i5.DisplayNamesLanguageDisplay? get languageDisplay =>
-      switch (_i4.getProperty(
+  _i3.DisplayNamesLanguageDisplay? get languageDisplay =>
+      switch (_i5.getProperty(
         this,
         'languageDisplay',
       )) {
         _i2.String name =>
-          DisplayNamesLanguageDisplayOptions.values.byName(name),
+          _i3.DisplayNamesLanguageDisplayOptions.values.byName(name),
         _ => null
       };
-  set languageDisplay(_i5.DisplayNamesLanguageDisplay? value) {
-    _i4.setProperty(
+  set languageDisplay(_i3.DisplayNamesLanguageDisplay? value) {
+    _i5.setProperty(
       this,
       'languageDisplay',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 }
@@ -4129,13 +4141,13 @@ extension ResolvedDisplayNamesOptions$Typings on ResolvedDisplayNamesOptions {
 @_i1.staticInterop
 class DisplayNames {
   factory DisplayNames(
-    _i5.LocalesArgument locales,
-    _i5.DisplayNamesOptions options,
+    _i3.LocalesArgument locales,
+    _i3.DisplayNamesOptions options,
   ) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredDisplayNames,
         [
-          locales ?? _i3.undefined,
+          locales ?? _i4.undefined,
           options,
         ],
       );
@@ -4151,16 +4163,16 @@ class DisplayNames {
   ///  @returns An array of strings representing a subset of the given locale tags that are supported in display names without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf).
-  static _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf([
-    _i5.LocalesArgument? locales,
-    _i5.IInline33? options,
+  static _i2.List<_i3.BCP47LanguageTag> supportedLocalesOf([
+    _i3.LocalesArgument? locales,
+    _i3.IInline33? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         _i6.target18,
         'supportedLocalesOf',
         [
-          locales ?? _i3.undefined ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -4186,7 +4198,7 @@ extension DisplayNames$Typings on DisplayNames {
   ///   - If the type is `"currency"`, code should be a [3-letter ISO 4217 currency code](https://www.iso.org/iso-4217-currency-codes.html).
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of).
-  _i2.String? of(_i2.String code) => _i4.callMethod(
+  _i2.String? of(_i2.String code) => _i5.callMethod(
         this,
         'of',
         [code],
@@ -4196,7 +4208,7 @@ extension DisplayNames$Typings on DisplayNames {
   ///  [`Intl/DisplayNames`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames) object.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions).
-  _i5.ResolvedDisplayNamesOptions resolvedOptions() => _i4.callMethod(
+  _i3.ResolvedDisplayNamesOptions resolvedOptions() => _i5.callMethod(
         this,
         'resolvedOptions',
         [],
@@ -4209,20 +4221,20 @@ extension DisplayNames$Typings on DisplayNames {
 class IInline33 {}
 
 extension IInline33$Typings on IInline33 {
-  _i5.RelativeTimeFormatLocaleMatcher? get localeMatcher =>
-      switch (_i4.getProperty(
+  _i3.RelativeTimeFormatLocaleMatcher? get localeMatcher =>
+      switch (_i5.getProperty(
         this,
         'localeMatcher',
       )) {
         _i2.String name =>
-          RelativeTimeFormatLocaleMatcherOptions.values.byName(name),
+          _i3.RelativeTimeFormatLocaleMatcherOptions.values.byName(name),
         _ => null
       };
-  set localeMatcher(_i5.RelativeTimeFormatLocaleMatcher? value) {
-    _i4.setProperty(
+  set localeMatcher(_i3.RelativeTimeFormatLocaleMatcher? value) {
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 }
@@ -4243,16 +4255,16 @@ extension IInline32$Typings on IInline32 {
   ///  @returns An array of strings representing a subset of the given locale tags that are supported in display names without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf).
-  _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf([
-    _i5.LocalesArgument? locales,
-    _i5.IInline33? options,
+  _i2.List<_i3.BCP47LanguageTag> supportedLocalesOf([
+    _i3.LocalesArgument? locales,
+    _i3.IInline33? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         this,
         'supportedLocalesOf',
         [
-          locales ?? _i3.undefined ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -4261,7 +4273,7 @@ extension IInline32$Typings on IInline32 {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class DateTimeRangeFormatPart implements _i5.DateTimeFormatPart {
+class DateTimeRangeFormatPart implements _i3.DateTimeFormatPart {
   external factory DateTimeRangeFormatPart._({
     _i2.dynamic source,
     _i2.dynamic type,
@@ -4269,8 +4281,8 @@ class DateTimeRangeFormatPart implements _i5.DateTimeFormatPart {
   });
 
   factory DateTimeRangeFormatPart({
-    required Source source,
-    required _i5.DateTimeFormatPartTypes type,
+    required _i3.Source source,
+    required _i3.DateTimeFormatPartTypes type,
     required _i2.String value,
   }) =>
       DateTimeRangeFormatPart._(
@@ -4281,12 +4293,12 @@ class DateTimeRangeFormatPart implements _i5.DateTimeFormatPart {
 }
 
 extension DateTimeRangeFormatPart$Typings on DateTimeRangeFormatPart {
-  Source get source => Source.values.byName(_i4.getProperty(
+  _i3.Source get source => _i3.Source.values.byName(_i5.getProperty(
         this,
         'source',
       ));
-  set source(Source value) {
-    _i4.setProperty(
+  set source(_i3.Source value) {
+    _i5.setProperty(
       this,
       'source',
       value.name,
@@ -4308,63 +4320,64 @@ class ListFormatOptions {
   });
 
   factory ListFormatOptions({
-    _i5.ListFormatLocaleMatcher? localeMatcher,
-    _i5.ListFormatType? type,
-    _i5.ListFormatStyle? style,
+    _i3.ListFormatLocaleMatcher? localeMatcher,
+    _i3.ListFormatType? type,
+    _i3.ListFormatStyle? style,
   }) =>
       ListFormatOptions._(
-        localeMatcher: localeMatcher?.name ?? _i3.undefined ?? _i3.undefined,
-        type: type?.name ?? _i3.undefined ?? _i3.undefined,
-        style: style?.name ?? _i3.undefined ?? _i3.undefined,
+        localeMatcher: localeMatcher?.name ?? _i4.undefined ?? _i4.undefined,
+        type: type?.name ?? _i4.undefined ?? _i4.undefined,
+        style: style?.name ?? _i4.undefined ?? _i4.undefined,
       );
 }
 
 extension ListFormatOptions$Typings on ListFormatOptions {
   /// The locale matching algorithm to use. For information about this option, see [Intl page](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
-  _i5.ListFormatLocaleMatcher? get localeMatcher => switch (_i4.getProperty(
+  _i3.ListFormatLocaleMatcher? get localeMatcher => switch (_i5.getProperty(
         this,
         'localeMatcher',
       )) {
-        _i2.String name => ListFormatLocaleMatcherOptions.values.byName(name),
+        _i2.String name =>
+          _i3.ListFormatLocaleMatcherOptions.values.byName(name),
         _ => null
       };
-  set localeMatcher(_i5.ListFormatLocaleMatcher? value) {
-    _i4.setProperty(
+  set localeMatcher(_i3.ListFormatLocaleMatcher? value) {
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 
   /// The format of output message.
-  _i5.ListFormatType? get type => switch (_i4.getProperty(
+  _i3.ListFormatType? get type => switch (_i5.getProperty(
         this,
         'type',
       )) {
-        _i2.String name => ListFormatTypeOptions.values.byName(name),
+        _i2.String name => _i3.ListFormatTypeOptions.values.byName(name),
         _ => null
       };
-  set type(_i5.ListFormatType? value) {
-    _i4.setProperty(
+  set type(_i3.ListFormatType? value) {
+    _i5.setProperty(
       this,
       'type',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 
   /// The length of the internationalized message.
-  _i5.ListFormatStyle? get style => switch (_i4.getProperty(
+  _i3.ListFormatStyle? get style => switch (_i5.getProperty(
         this,
         'style',
       )) {
-        _i2.String name => ListFormatStyleOptions.values.byName(name),
+        _i2.String name => _i3.ListFormatStyleOptions.values.byName(name),
         _ => null
       };
-  set style(_i5.ListFormatStyle? value) {
-    _i4.setProperty(
+  set style(_i3.ListFormatStyle? value) {
+    _i5.setProperty(
       this,
       'style',
-      value?.name ?? _i3.undefined ?? _i3.undefined,
+      value?.name ?? _i4.undefined ?? _i4.undefined,
     );
   }
 }
@@ -4381,8 +4394,8 @@ class ResolvedListFormatOptions {
 
   factory ResolvedListFormatOptions({
     required _i2.String locale,
-    required _i5.ListFormatStyle style,
-    required _i5.ListFormatType type,
+    required _i3.ListFormatStyle style,
+    required _i3.ListFormatType type,
   }) =>
       ResolvedListFormatOptions._(
         locale: locale,
@@ -4392,38 +4405,38 @@ class ResolvedListFormatOptions {
 }
 
 extension ResolvedListFormatOptions$Typings on ResolvedListFormatOptions {
-  _i2.String get locale => _i4.getProperty(
+  _i2.String get locale => _i5.getProperty(
         this,
         'locale',
       );
   set locale(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'locale',
       value,
     );
   }
 
-  _i5.ListFormatStyle get style =>
-      ListFormatStyleOptions.values.byName(_i4.getProperty(
+  _i3.ListFormatStyle get style =>
+      _i3.ListFormatStyleOptions.values.byName(_i5.getProperty(
         this,
         'style',
       ));
-  set style(_i5.ListFormatStyle value) {
-    _i4.setProperty(
+  set style(_i3.ListFormatStyle value) {
+    _i5.setProperty(
       this,
       'style',
       value.name,
     );
   }
 
-  _i5.ListFormatType get type =>
-      ListFormatTypeOptions.values.byName(_i4.getProperty(
+  _i3.ListFormatType get type =>
+      _i3.ListFormatTypeOptions.values.byName(_i5.getProperty(
         this,
         'type',
       ));
-  set type(_i5.ListFormatType value) {
-    _i4.setProperty(
+  set type(_i3.ListFormatType value) {
+    _i5.setProperty(
       this,
       'type',
       value.name,
@@ -4437,24 +4450,24 @@ extension ResolvedListFormatOptions$Typings on ResolvedListFormatOptions {
 class IInline34 {}
 
 extension IInline34$Typings on IInline34 {
-  Type get type => Type.values.byName(_i4.getProperty(
+  _i3.Type get type => _i3.Type.values.byName(_i5.getProperty(
         this,
         'type',
       ));
-  set type(Type value) {
-    _i4.setProperty(
+  set type(_i3.Type value) {
+    _i5.setProperty(
       this,
       'type',
       value.name,
     );
   }
 
-  _i2.String get value => _i4.getProperty(
+  _i2.String get value => _i5.getProperty(
         this,
         'value',
       );
   set value(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'value',
       value,
@@ -4467,13 +4480,13 @@ extension IInline34$Typings on IInline34 {
 class ListFormat {
   factory ListFormat([
     _i2.Object? locales,
-    _i5.ListFormatOptions? options,
+    _i3.ListFormatOptions? options,
   ]) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredListFormat,
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 
@@ -4491,16 +4504,16 @@ class ListFormat {
   ///   formatting without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf).
-  static _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf(
+  static _i2.List<_i3.BCP47LanguageTag> supportedLocalesOf(
     _i2.Object locales, [
-    _i7.Pick<_i5.ListFormatOptions, _i2.String>? options,
+    _i7.Pick<_i3.ListFormatOptions, _i2.String>? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         _i6.target19,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined ?? _i3.undefined,
+          options ?? _i4.undefined ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -4522,7 +4535,7 @@ extension ListFormat$Typings on ListFormat {
   ///  @returns {string} A language-specific formatted string representing the elements of the list.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format).
-  _i2.String format(_i8.Iterable<_i2.String> list) => _i4.callMethod(
+  _i2.String format(_i8.Iterable<_i2.String> list) => _i5.callMethod(
         this,
         'format',
         [list],
@@ -4537,8 +4550,8 @@ extension ListFormat$Typings on ListFormat {
   ///  @returns {{ type: "element" | "literal", value: string; }[]} An Array of components which contains the formatted parts from the list.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts).
-  _i2.List<_i5.IInline34> formatToParts(_i8.Iterable<_i2.String> list) =>
-      (_i4.callMethod(
+  _i2.List<_i3.IInline34> formatToParts(_i8.Iterable<_i2.String> list) =>
+      (_i5.callMethod(
         this,
         'formatToParts',
         [list],
@@ -4550,7 +4563,7 @@ extension ListFormat$Typings on ListFormat {
   ///  `Intl.ListFormat` object.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions).
-  _i5.ResolvedListFormatOptions resolvedOptions() => _i4.callMethod(
+  _i3.ResolvedListFormatOptions resolvedOptions() => _i5.callMethod(
         this,
         'resolvedOptions',
         [],
@@ -4576,16 +4589,16 @@ extension IInline35$Typings on IInline35 {
   ///   formatting without having to fall back to the runtime's default locale.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf).
-  _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf(
+  _i2.List<_i3.BCP47LanguageTag> supportedLocalesOf(
     _i2.Object locales, [
-    _i7.Pick<_i5.ListFormatOptions, _i2.String>? options,
+    _i7.Pick<_i3.ListFormatOptions, _i2.String>? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         this,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined ?? _i3.undefined,
+          options ?? _i4.undefined ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -4604,47 +4617,47 @@ class SegmenterOptions {
   });
 
   factory SegmenterOptions({
-    SegmenterOptionsLocaleMatcherOptions? localeMatcher,
-    Granularity? granularity,
+    _i3.SegmenterOptionsLocaleMatcherOptions? localeMatcher,
+    _i3.Granularity? granularity,
   }) =>
       SegmenterOptions._(
-        localeMatcher: localeMatcher?.name ?? _i3.undefined,
-        granularity: granularity?.name ?? _i3.undefined,
+        localeMatcher: localeMatcher?.name ?? _i4.undefined,
+        granularity: granularity?.name ?? _i4.undefined,
       );
 }
 
 extension SegmenterOptions$Typings on SegmenterOptions {
   /// The locale matching algorithm to use. For information about this option, see [Intl page](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
-  SegmenterOptionsLocaleMatcherOptions? get localeMatcher =>
-      switch (_i4.getProperty(
+  _i3.SegmenterOptionsLocaleMatcherOptions? get localeMatcher =>
+      switch (_i5.getProperty(
         this,
         'localeMatcher',
       )) {
         _i2.String name =>
-          SegmenterOptionsLocaleMatcherOptions.values.byName(name),
+          _i3.SegmenterOptionsLocaleMatcherOptions.values.byName(name),
         _ => null
       };
-  set localeMatcher(SegmenterOptionsLocaleMatcherOptions? value) {
-    _i4.setProperty(
+  set localeMatcher(_i3.SegmenterOptionsLocaleMatcherOptions? value) {
+    _i5.setProperty(
       this,
       'localeMatcher',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 
   /// The type of input to be split
-  Granularity? get granularity => switch (_i4.getProperty(
+  _i3.Granularity? get granularity => switch (_i5.getProperty(
         this,
         'granularity',
       )) {
-        _i2.String name => Granularity.values.byName(name),
+        _i2.String name => _i3.Granularity.values.byName(name),
         _ => null
       };
-  set granularity(Granularity? value) {
-    _i4.setProperty(
+  set granularity(_i3.Granularity? value) {
+    _i5.setProperty(
       this,
       'granularity',
-      value?.name ?? _i3.undefined,
+      value?.name ?? _i4.undefined,
     );
   }
 }
@@ -4654,13 +4667,13 @@ extension SegmenterOptions$Typings on SegmenterOptions {
 class Segmenter {
   factory Segmenter([
     _i2.Object? locales,
-    _i5.SegmenterOptions? options,
+    _i3.SegmenterOptions? options,
   ]) =>
-      _i4.callConstructor(
+      _i5.callConstructor(
         _declaredSegmenter,
         [
-          locales ?? _i3.undefined,
-          options ?? _i3.undefined,
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
         ],
       );
 
@@ -4674,16 +4687,16 @@ class Segmenter {
   ///   with some or all possible options.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
-  static _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf(
+  static _i2.List<_i3.BCP47LanguageTag> supportedLocalesOf(
     _i2.Object locales, [
-    _i7.Pick<_i5.SegmenterOptions, _i2.String>? options,
+    _i7.Pick<_i3.SegmenterOptions, _i2.String>? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         _i6.target20,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined ?? _i3.undefined,
+          options ?? _i4.undefined ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -4701,12 +4714,12 @@ extension Segmenter$Typings on Segmenter {
   ///  @param input - The text to be segmented as a `string`.
   ///
   ///  @returns A new iterable Segments object containing the segments of the input string, using the segmenter's locale and granularity.
-  _i5.Segments segment(_i2.String input) => _i4.callMethod(
+  _i3.Segments segment(_i2.String input) => _i5.callMethod(
         this,
         'segment',
         [input],
       );
-  _i5.ResolvedSegmenterOptions resolvedOptions() => _i4.callMethod(
+  _i3.ResolvedSegmenterOptions resolvedOptions() => _i5.callMethod(
         this,
         'resolvedOptions',
         [],
@@ -4724,7 +4737,7 @@ class ResolvedSegmenterOptions {
 
   factory ResolvedSegmenterOptions({
     required _i2.String locale,
-    required GranularityOptions granularity,
+    required _i3.GranularityOptions granularity,
   }) =>
       ResolvedSegmenterOptions._(
         locale: locale,
@@ -4733,25 +4746,25 @@ class ResolvedSegmenterOptions {
 }
 
 extension ResolvedSegmenterOptions$Typings on ResolvedSegmenterOptions {
-  _i2.String get locale => _i4.getProperty(
+  _i2.String get locale => _i5.getProperty(
         this,
         'locale',
       );
   set locale(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'locale',
       value,
     );
   }
 
-  GranularityOptions get granularity =>
-      GranularityOptions.values.byName(_i4.getProperty(
+  _i3.GranularityOptions get granularity =>
+      _i3.GranularityOptions.values.byName(_i5.getProperty(
         this,
         'granularity',
       ));
-  set granularity(GranularityOptions value) {
-    _i4.setProperty(
+  set granularity(_i3.GranularityOptions value) {
+    _i5.setProperty(
       this,
       'granularity',
       value.name,
@@ -4762,16 +4775,16 @@ extension ResolvedSegmenterOptions$Typings on ResolvedSegmenterOptions {
 @_i1.JS()
 @_i1.staticInterop
 class Segments
-    implements _IterableLike$<_i8.IterableIterator<_i5.SegmentData>> {}
+    implements _IterableLike$<_i8.IterableIterator<_i3.SegmentData>> {}
 
 extension Segments$Typings on Segments {
   /// Returns an object describing the segment in the original string that includes the code unit at a specified index.
   ///
   ///  @param codeUnitIndex - A number specifying the index of the code unit in the original input string. If the value is omitted, it defaults to `0`.
-  _i5.SegmentData containing([_i2.num? codeUnitIndex]) => _i4.callMethod(
+  _i3.SegmentData containing([_i2.num? codeUnitIndex]) => _i5.callMethod(
         this,
         'containing',
-        [codeUnitIndex ?? _i3.undefined],
+        [codeUnitIndex ?? _i4.undefined],
       );
 }
 
@@ -4796,18 +4809,18 @@ class SegmentData {
         segment: segment,
         index: index,
         input: input,
-        isWordLike: isWordLike ?? _i3.undefined,
+        isWordLike: isWordLike ?? _i4.undefined,
       );
 }
 
 extension SegmentData$Typings on SegmentData {
   /// A string containing the segment extracted from the original input string.
-  _i2.String get segment => _i4.getProperty(
+  _i2.String get segment => _i5.getProperty(
         this,
         'segment',
       );
   set segment(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'segment',
       value,
@@ -4815,12 +4828,12 @@ extension SegmentData$Typings on SegmentData {
   }
 
   /// The code unit index in the original input string at which the segment begins.
-  _i2.num get index => _i4.getProperty(
+  _i2.num get index => _i5.getProperty(
         this,
         'index',
       );
   set index(_i2.num value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'index',
       value,
@@ -4828,12 +4841,12 @@ extension SegmentData$Typings on SegmentData {
   }
 
   /// The complete input string that was segmented.
-  _i2.String get input => _i4.getProperty(
+  _i2.String get input => _i5.getProperty(
         this,
         'input',
       );
   set input(_i2.String value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'input',
       value,
@@ -4842,15 +4855,15 @@ extension SegmentData$Typings on SegmentData {
 
   /// A boolean value only if granularity is "word"; otherwise, undefined.
   ///  If granularity is "word", then isWordLike is true when the segment is word-like (i.e., consists of letters/numbers/ideographs/etc.); otherwise, false.
-  _i2.bool? get isWordLike => _i4.getProperty(
+  _i2.bool? get isWordLike => _i5.getProperty(
         this,
         'isWordLike',
       );
   set isWordLike(_i2.bool? value) {
-    _i4.setProperty(
+    _i5.setProperty(
       this,
       'isWordLike',
-      value ?? _i3.undefined,
+      value ?? _i4.undefined,
     );
   }
 }
@@ -4870,16 +4883,16 @@ extension IInline36$Typings on IInline36 {
   ///   with some or all possible options.
   ///
   ///  [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
-  _i2.List<_i5.BCP47LanguageTag> supportedLocalesOf(
+  _i2.List<_i3.BCP47LanguageTag> supportedLocalesOf(
     _i2.Object locales, [
-    _i7.Pick<_i5.SegmenterOptions, _i2.String>? options,
+    _i7.Pick<_i3.SegmenterOptions, _i2.String>? options,
   ]) =>
-      (_i4.callMethod(
+      (_i5.callMethod(
         this,
         'supportedLocalesOf',
         [
           locales,
-          options ?? _i3.undefined ?? _i3.undefined,
+          options ?? _i4.undefined ?? _i4.undefined,
         ],
       ) as _i2.List)
           .cast();
@@ -4887,8 +4900,8 @@ extension IInline36$Typings on IInline36 {
 
 /// Returns a sorted array of the supported collation, calendar, currency, numbering system, timezones, and units by the implementation.
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf)
-_i2.List<_i2.String> supportedValuesOf(SupportedValuesOf key) =>
-    (_i4.callMethod(
+_i2.List<_i2.String> supportedValuesOf(_i3.SupportedValuesOf key) =>
+    (_i5.callMethod(
       _self,
       'supportedValuesOf',
       [key.name],

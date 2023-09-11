@@ -10,17 +10,6 @@ import '/d/core.dart' as _i6;
 
 @_i1.JS('Inputmask')
 external _i2.Object _self;
-typedef Range = _i2.Object;
-typedef PositionCaretOnClick = PositionCaretOnClickOptions;
-typedef InputMode = InputModeOptions;
-typedef Casing = CasingOptions;
-typedef DefinitionValidator = _i2.Object Function(
-  _i2.String,
-  _i2.dynamic,
-  _i2.num,
-  _i2.bool,
-  _i3.Options,
-);
 
 enum InputType {
   text(r'text'),
@@ -68,6 +57,18 @@ enum CasingOptions {
 
   final _i2.String value;
 }
+
+typedef Range = _i2.Object;
+typedef PositionCaretOnClick = _i3.PositionCaretOnClickOptions;
+typedef InputMode = _i3.InputModeOptions;
+typedef Casing = _i3.CasingOptions;
+typedef DefinitionValidator = _i2.Object Function(
+  _i2.String,
+  _i2.dynamic,
+  _i2.num,
+  _i2.bool,
+  _i3.Options,
+);
 
 @_i1.JS()
 @_i1.staticInterop
@@ -380,7 +381,7 @@ class Options {
     _i2.bool? setMaxOnOverflow,
     _i2.num? step,
     _i2.bool? unmaskAsNumber,
-    InputType? inputType,
+    _i3.InputType? inputType,
     _i2.num Function(_i2.num)? roundingFN,
     _i2.Object? shortcuts,
     _i2.String? inputFormat,
@@ -1288,7 +1289,7 @@ extension Options$Typings on Options {
         this,
         'positionCaretOnClick',
       )) {
-        _i2.String name => PositionCaretOnClickOptions.values.byName(name),
+        _i2.String name => _i3.PositionCaretOnClickOptions.values.byName(name),
         _ => null
       };
   set positionCaretOnClick(_i3.PositionCaretOnClick? value) {
@@ -1306,7 +1307,7 @@ extension Options$Typings on Options {
         this,
         'casing',
       )) {
-        _i2.String name => CasingOptions.values.byName(name),
+        _i2.String name => _i3.CasingOptions.values.byName(name),
         _ => null
       };
   set casing(_i3.Casing? value) {
@@ -1325,7 +1326,7 @@ extension Options$Typings on Options {
         this,
         'inputmode',
       )) {
-        _i2.String name => InputModeOptions.values.byName(name),
+        _i2.String name => _i3.InputModeOptions.values.byName(name),
         _ => null
       };
   set inputmode(_i3.InputMode? value) {
@@ -1577,14 +1578,14 @@ extension Options$Typings on Options {
   ///  * `number` - radixpoint should be a . as the default for a number in js
   ///
   ///  @default "text"
-  InputType? get inputType => switch (_i4.getProperty(
+  _i3.InputType? get inputType => switch (_i4.getProperty(
         this,
         'inputType',
       )) {
-        _i2.String name => InputType.values.byName(name),
+        _i2.String name => _i3.InputType.values.byName(name),
         _ => null
       };
-  set inputType(InputType? value) {
+  set inputType(_i3.InputType? value) {
     _i4.setProperty(
       this,
       'inputType',
@@ -1910,7 +1911,7 @@ extension Definition$Typings on Definition {
         this,
         'casing',
       )) {
-        _i2.String name => CasingOptions.values.byName(name),
+        _i2.String name => _i3.CasingOptions.values.byName(name),
         _ => null
       };
   set casing(_i3.Casing? value) {

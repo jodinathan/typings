@@ -16,383 +16,6 @@ import '/src/d/core/lib.es2015.iterable.d.dart' as _i11;
 @_i1.JS('Deno')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class ProcessStatusCommon {}
-
-extension ProcessStatusCommon$Typings on ProcessStatusCommon {
-  _i2.bool get success => _i3.getProperty(
-        this,
-        'success',
-      );
-  set success(_i2.bool value) {
-    _i3.setProperty(
-      this,
-      'success',
-      value,
-    );
-  }
-
-  _i2.dynamic get code => _i3.getProperty(
-        this,
-        'code',
-      );
-  set code(_i2.dynamic value) {
-    _i3.setProperty(
-      this,
-      'code',
-      value,
-    );
-  }
-
-  _i2.dynamic get signal => _i3.getProperty(
-        this,
-        'signal',
-      );
-  set signal(_i2.dynamic value) {
-    _i3.setProperty(
-      this,
-      'signal',
-      value,
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _Intersection32
-    implements _i4.Reader, _i4.ReaderSync, _i4.Closer, _i4.IInline5 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _Intersection33
-    implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline6 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _Intersection34
-    implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline7 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _EnvAccessor {}
-
-extension EnvAccessor$Typings on _EnvAccessor {
-  /// Retrieve the value of an environment variable.
-  ///
-  ///  Returns `undefined` if the supplied environment variable is not defined.
-  ///
-  ///  ```ts
-  ///  console.log(Deno.env.get("HOME"));  // e.g. outputs "/home/alice"
-  ///  console.log(Deno.env.get("MADE_UP_VAR"));  // outputs "undefined"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  _i2.String? get(_i2.String key) => _i3.callMethod(
-        _i5.target2721,
-        'get',
-        [key],
-      );
-
-  /// Set the value of an environment variable.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("SOME_VAR", "Value");
-  ///  Deno.env.get("SOME_VAR");  // outputs "Value"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  void set(
-    _i2.String key,
-    _i2.String value,
-  ) {
-    _i3.callMethod(
-      _i5.target2721,
-      'set',
-      [
-        key,
-        value,
-      ],
-    );
-  }
-
-  /// Delete the value of an environment variable.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("SOME_VAR", "Value");
-  ///  Deno.env.delete("SOME_VAR");  // outputs "undefined"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  void delete(_i2.String key) {
-    _i3.callMethod(
-      _i5.target2721,
-      'delete',
-      [key],
-    );
-  }
-
-  /// Check whether an environment variable is present or not.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("SOME_VAR", "Value");
-  ///  Deno.env.has("SOME_VAR");  // outputs true
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  _i2.bool has(_i2.String key) => _i3.callMethod(
-        _i5.target2721,
-        'has',
-        [key],
-      );
-
-  /// Returns a snapshot of the environment variables at invocation as a
-  ///  simple object of keys and values.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("TEST_VAR", "A");
-  ///  const myEnv = Deno.env.toObject();
-  ///  console.log(myEnv.SHELL);
-  ///  Deno.env.set("TEST_VAR", "B");
-  ///  console.log(myEnv.TEST_VAR);  // outputs "A"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  _i2.Object toObject() => _i3.callMethod(
-        _i5.target2721,
-        'toObject',
-        [],
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _StdinAccessor
-    implements _i4.Reader, _i4.ReaderSync, _i4.Closer, _i4.IInline5 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _StdoutAccessor
-    implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline6 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _StderrAccessor
-    implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline7 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _PermissionsAccessor {}
-
-extension PermissionsAccessor$Typings on _PermissionsAccessor {
-  /// Resolves to the current status of a permission.
-  ///
-  ///  Note, if the permission is already granted, `request()` will not prompt
-  ///  the user again, therefore `query()` is only necessary if you are going
-  ///  to react differently existing permissions without wanting to modify them
-  ///  or prompt the user to modify them.
-  ///
-  ///  ```ts
-  ///  const status = await Deno.permissions.query({ name: "read", path: "/etc" });
-  ///  console.log(status.state);
-  ///  ```
-  _i2.Future<_i4.PermissionStatus> query(_i4.PermissionDescriptor desc) =>
-      _i3.promiseToFuture(_i3.callMethod(
-        _i5.target2722,
-        'query',
-        [desc],
-      ));
-
-  /// Returns the current status of a permission.
-  ///
-  ///  Note, if the permission is already granted, `request()` will not prompt
-  ///  the user again, therefore `querySync()` is only necessary if you are going
-  ///  to react differently existing permissions without wanting to modify them
-  ///  or prompt the user to modify them.
-  ///
-  ///  ```ts
-  ///  const status = Deno.permissions.querySync({ name: "read", path: "/etc" });
-  ///  console.log(status.state);
-  ///  ```
-  _i4.PermissionStatus querySync(_i4.PermissionDescriptor desc) =>
-      _i3.callMethod(
-        _i5.target2722,
-        'querySync',
-        [desc],
-      );
-
-  /// Revokes a permission, and resolves to the state of the permission.
-  ///
-  ///  ```ts
-  ///  import { assert } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  ///  const status = await Deno.permissions.revoke({ name: "run" });
-  ///  assert(status.state !== "granted")
-  ///  ```
-  _i2.Future<_i4.PermissionStatus> revoke(_i4.PermissionDescriptor desc) =>
-      _i3.promiseToFuture(_i3.callMethod(
-        _i5.target2722,
-        'revoke',
-        [desc],
-      ));
-
-  /// Revokes a permission, and returns the state of the permission.
-  ///
-  ///  ```ts
-  ///  import { assert } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  ///  const status = Deno.permissions.revokeSync({ name: "run" });
-  ///  assert(status.state !== "granted")
-  ///  ```
-  _i4.PermissionStatus revokeSync(_i4.PermissionDescriptor desc) =>
-      _i3.callMethod(
-        _i5.target2722,
-        'revokeSync',
-        [desc],
-      );
-
-  /// Requests the permission, and resolves to the state of the permission.
-  ///
-  ///  If the permission is already granted, the user will not be prompted to
-  ///  grant the permission again.
-  ///
-  ///  ```ts
-  ///  const status = await Deno.permissions.request({ name: "env" });
-  ///  if (status.state === "granted") {
-  ///    console.log("'env' permission is granted.");
-  ///  } else {
-  ///    console.log("'env' permission is denied.");
-  ///  }
-  ///  ```
-  _i2.Future<_i4.PermissionStatus> request(_i4.PermissionDescriptor desc) =>
-      _i3.promiseToFuture(_i3.callMethod(
-        _i5.target2722,
-        'request',
-        [desc],
-      ));
-
-  /// Requests the permission, and returns the state of the permission.
-  ///
-  ///  If the permission is already granted, the user will not be prompted to
-  ///  grant the permission again.
-  ///
-  ///  ```ts
-  ///  const status = Deno.permissions.requestSync({ name: "env" });
-  ///  if (status.state === "granted") {
-  ///    console.log("'env' permission is granted.");
-  ///  } else {
-  ///    console.log("'env' permission is denied.");
-  ///  }
-  ///  ```
-  _i4.PermissionStatus requestSync(_i4.PermissionDescriptor desc) =>
-      _i3.callMethod(
-        _i5.target2722,
-        'requestSync',
-        [desc],
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _BuildAccessor {}
-
-extension BuildAccessor$Typings on _BuildAccessor {
-  /// The [LLVM](https://llvm.org/) target triple, which is the combination
-  ///  of `${arch}-${vendor}-${os}` and represent the specific build target that
-  ///  the current runtime was built for.
-  _i2.String get target => _i3.getProperty(
-        _i5.target2723,
-        'target',
-      );
-
-  /// Instruction set architecture that the Deno CLI was built for.
-  Arch get arch => Arch.values.byName(_i3.getProperty(
-        _i5.target2723,
-        'arch',
-      ));
-
-  /// The operating system that the Deno CLI was built for. `"darwin"` is
-  ///  also known as OSX or MacOS.
-  Os get os => Os.values.byName(_i3.getProperty(
-        _i5.target2723,
-        'os',
-      ));
-
-  /// The computer vendor that the Deno CLI was built for.
-  _i2.String get vendor => _i3.getProperty(
-        _i5.target2723,
-        'vendor',
-      );
-
-  /// Optional environment flags that were set for this build of Deno CLI.
-  _i2.String? get env => _i3.getProperty(
-        _i5.target2723,
-        'env',
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _VersionAccessor {}
-
-extension VersionAccessor$Typings on _VersionAccessor {
-  /// Deno CLI's version. For example: `"1.26.0"`.
-  _i2.String get deno => _i3.getProperty(
-        _i5.target2724,
-        'deno',
-      );
-
-  /// The V8 version used by Deno. For example: `"10.7.100.0"`.
-  ///
-  ///  V8 is the underlying JavaScript runtime platform that Deno is built on
-  ///  top of.
-  _i2.String get v8 => _i3.getProperty(
-        _i5.target2724,
-        'v8',
-      );
-
-  /// The TypeScript version used by Deno. For example: `"4.8.3"`.
-  ///
-  ///  A version of the TypeScript type checker and language server is built-in
-  ///  to the Deno CLI.
-  _i2.String get typescript => _i3.getProperty(
-        _i5.target2724,
-        'typescript',
-      );
-}
-
-typedef PermissionOptions = _i2.Object;
-typedef FsEventFlag = _i2.String;
-typedef ProcessStatus = _i4.ProcessStatusCommon;
-typedef Signal = SignalOptions;
-typedef PermissionName = PermissionNameOptions;
-typedef PermissionState = PermissionStateOptions;
-typedef PermissionDescriptor = _i2.Object;
-typedef RecordType = RecordTypeOptions;
-typedef Addr = _i2.Object;
-typedef TlsListener = _i4.Listener<_i4.TlsConn>;
-
 enum SeekMode {
   start(0),
   current(1),
@@ -658,6 +281,383 @@ enum ResolveDns {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
+class ProcessStatusCommon {}
+
+extension ProcessStatusCommon$Typings on ProcessStatusCommon {
+  _i2.bool get success => _i3.getProperty(
+        this,
+        'success',
+      );
+  set success(_i2.bool value) {
+    _i3.setProperty(
+      this,
+      'success',
+      value,
+    );
+  }
+
+  _i2.dynamic get code => _i3.getProperty(
+        this,
+        'code',
+      );
+  set code(_i2.dynamic value) {
+    _i3.setProperty(
+      this,
+      'code',
+      value,
+    );
+  }
+
+  _i2.dynamic get signal => _i3.getProperty(
+        this,
+        'signal',
+      );
+  set signal(_i2.dynamic value) {
+    _i3.setProperty(
+      this,
+      'signal',
+      value,
+    );
+  }
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _Intersection32
+    implements _i4.Reader, _i4.ReaderSync, _i4.Closer, _i4.IInline5 {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _Intersection33
+    implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline6 {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _Intersection34
+    implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline7 {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _EnvAccessor {}
+
+extension EnvAccessor$Typings on _EnvAccessor {
+  /// Retrieve the value of an environment variable.
+  ///
+  ///  Returns `undefined` if the supplied environment variable is not defined.
+  ///
+  ///  ```ts
+  ///  console.log(Deno.env.get("HOME"));  // e.g. outputs "/home/alice"
+  ///  console.log(Deno.env.get("MADE_UP_VAR"));  // outputs "undefined"
+  ///  ```
+  ///
+  ///  Requires `allow-env` permission.
+  ///
+  ///  @tags allow-env
+  _i2.String? get(_i2.String key) => _i3.callMethod(
+        _i5.target2720,
+        'get',
+        [key],
+      );
+
+  /// Set the value of an environment variable.
+  ///
+  ///  ```ts
+  ///  Deno.env.set("SOME_VAR", "Value");
+  ///  Deno.env.get("SOME_VAR");  // outputs "Value"
+  ///  ```
+  ///
+  ///  Requires `allow-env` permission.
+  ///
+  ///  @tags allow-env
+  void set(
+    _i2.String key,
+    _i2.String value,
+  ) {
+    _i3.callMethod(
+      _i5.target2720,
+      'set',
+      [
+        key,
+        value,
+      ],
+    );
+  }
+
+  /// Delete the value of an environment variable.
+  ///
+  ///  ```ts
+  ///  Deno.env.set("SOME_VAR", "Value");
+  ///  Deno.env.delete("SOME_VAR");  // outputs "undefined"
+  ///  ```
+  ///
+  ///  Requires `allow-env` permission.
+  ///
+  ///  @tags allow-env
+  void delete(_i2.String key) {
+    _i3.callMethod(
+      _i5.target2720,
+      'delete',
+      [key],
+    );
+  }
+
+  /// Check whether an environment variable is present or not.
+  ///
+  ///  ```ts
+  ///  Deno.env.set("SOME_VAR", "Value");
+  ///  Deno.env.has("SOME_VAR");  // outputs true
+  ///  ```
+  ///
+  ///  Requires `allow-env` permission.
+  ///
+  ///  @tags allow-env
+  _i2.bool has(_i2.String key) => _i3.callMethod(
+        _i5.target2720,
+        'has',
+        [key],
+      );
+
+  /// Returns a snapshot of the environment variables at invocation as a
+  ///  simple object of keys and values.
+  ///
+  ///  ```ts
+  ///  Deno.env.set("TEST_VAR", "A");
+  ///  const myEnv = Deno.env.toObject();
+  ///  console.log(myEnv.SHELL);
+  ///  Deno.env.set("TEST_VAR", "B");
+  ///  console.log(myEnv.TEST_VAR);  // outputs "A"
+  ///  ```
+  ///
+  ///  Requires `allow-env` permission.
+  ///
+  ///  @tags allow-env
+  _i2.Object toObject() => _i3.callMethod(
+        _i5.target2720,
+        'toObject',
+        [],
+      );
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _StdinAccessor
+    implements _i4.Reader, _i4.ReaderSync, _i4.Closer, _i4.IInline5 {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _StdoutAccessor
+    implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline6 {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _StderrAccessor
+    implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline7 {}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _PermissionsAccessor {}
+
+extension PermissionsAccessor$Typings on _PermissionsAccessor {
+  /// Resolves to the current status of a permission.
+  ///
+  ///  Note, if the permission is already granted, `request()` will not prompt
+  ///  the user again, therefore `query()` is only necessary if you are going
+  ///  to react differently existing permissions without wanting to modify them
+  ///  or prompt the user to modify them.
+  ///
+  ///  ```ts
+  ///  const status = await Deno.permissions.query({ name: "read", path: "/etc" });
+  ///  console.log(status.state);
+  ///  ```
+  _i2.Future<_i4.PermissionStatus> query(_i4.PermissionDescriptor desc) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        _i5.target2721,
+        'query',
+        [desc],
+      ));
+
+  /// Returns the current status of a permission.
+  ///
+  ///  Note, if the permission is already granted, `request()` will not prompt
+  ///  the user again, therefore `querySync()` is only necessary if you are going
+  ///  to react differently existing permissions without wanting to modify them
+  ///  or prompt the user to modify them.
+  ///
+  ///  ```ts
+  ///  const status = Deno.permissions.querySync({ name: "read", path: "/etc" });
+  ///  console.log(status.state);
+  ///  ```
+  _i4.PermissionStatus querySync(_i4.PermissionDescriptor desc) =>
+      _i3.callMethod(
+        _i5.target2721,
+        'querySync',
+        [desc],
+      );
+
+  /// Revokes a permission, and resolves to the state of the permission.
+  ///
+  ///  ```ts
+  ///  import { assert } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  ///  const status = await Deno.permissions.revoke({ name: "run" });
+  ///  assert(status.state !== "granted")
+  ///  ```
+  _i2.Future<_i4.PermissionStatus> revoke(_i4.PermissionDescriptor desc) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        _i5.target2721,
+        'revoke',
+        [desc],
+      ));
+
+  /// Revokes a permission, and returns the state of the permission.
+  ///
+  ///  ```ts
+  ///  import { assert } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  ///  const status = Deno.permissions.revokeSync({ name: "run" });
+  ///  assert(status.state !== "granted")
+  ///  ```
+  _i4.PermissionStatus revokeSync(_i4.PermissionDescriptor desc) =>
+      _i3.callMethod(
+        _i5.target2721,
+        'revokeSync',
+        [desc],
+      );
+
+  /// Requests the permission, and resolves to the state of the permission.
+  ///
+  ///  If the permission is already granted, the user will not be prompted to
+  ///  grant the permission again.
+  ///
+  ///  ```ts
+  ///  const status = await Deno.permissions.request({ name: "env" });
+  ///  if (status.state === "granted") {
+  ///    console.log("'env' permission is granted.");
+  ///  } else {
+  ///    console.log("'env' permission is denied.");
+  ///  }
+  ///  ```
+  _i2.Future<_i4.PermissionStatus> request(_i4.PermissionDescriptor desc) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        _i5.target2721,
+        'request',
+        [desc],
+      ));
+
+  /// Requests the permission, and returns the state of the permission.
+  ///
+  ///  If the permission is already granted, the user will not be prompted to
+  ///  grant the permission again.
+  ///
+  ///  ```ts
+  ///  const status = Deno.permissions.requestSync({ name: "env" });
+  ///  if (status.state === "granted") {
+  ///    console.log("'env' permission is granted.");
+  ///  } else {
+  ///    console.log("'env' permission is denied.");
+  ///  }
+  ///  ```
+  _i4.PermissionStatus requestSync(_i4.PermissionDescriptor desc) =>
+      _i3.callMethod(
+        _i5.target2721,
+        'requestSync',
+        [desc],
+      );
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _BuildAccessor {}
+
+extension BuildAccessor$Typings on _BuildAccessor {
+  /// The [LLVM](https://llvm.org/) target triple, which is the combination
+  ///  of `${arch}-${vendor}-${os}` and represent the specific build target that
+  ///  the current runtime was built for.
+  _i2.String get target => _i3.getProperty(
+        _i5.target2722,
+        'target',
+      );
+
+  /// Instruction set architecture that the Deno CLI was built for.
+  _i4.Arch get arch => _i4.Arch.values.byName(_i3.getProperty(
+        _i5.target2722,
+        'arch',
+      ));
+
+  /// The operating system that the Deno CLI was built for. `"darwin"` is
+  ///  also known as OSX or MacOS.
+  _i4.Os get os => _i4.Os.values.byName(_i3.getProperty(
+        _i5.target2722,
+        'os',
+      ));
+
+  /// The computer vendor that the Deno CLI was built for.
+  _i2.String get vendor => _i3.getProperty(
+        _i5.target2722,
+        'vendor',
+      );
+
+  /// Optional environment flags that were set for this build of Deno CLI.
+  _i2.String? get env => _i3.getProperty(
+        _i5.target2722,
+        'env',
+      );
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class _VersionAccessor {}
+
+extension VersionAccessor$Typings on _VersionAccessor {
+  /// Deno CLI's version. For example: `"1.26.0"`.
+  _i2.String get deno => _i3.getProperty(
+        _i5.target2723,
+        'deno',
+      );
+
+  /// The V8 version used by Deno. For example: `"10.7.100.0"`.
+  ///
+  ///  V8 is the underlying JavaScript runtime platform that Deno is built on
+  ///  top of.
+  _i2.String get v8 => _i3.getProperty(
+        _i5.target2723,
+        'v8',
+      );
+
+  /// The TypeScript version used by Deno. For example: `"4.8.3"`.
+  ///
+  ///  A version of the TypeScript type checker and language server is built-in
+  ///  to the Deno CLI.
+  _i2.String get typescript => _i3.getProperty(
+        _i5.target2723,
+        'typescript',
+      );
+}
+
+typedef PermissionOptions = _i2.Object;
+typedef FsEventFlag = _i2.String;
+typedef ProcessStatus = _i4.ProcessStatusCommon;
+typedef Signal = _i4.SignalOptions;
+typedef PermissionName = _i4.PermissionNameOptions;
+typedef PermissionState = _i4.PermissionStateOptions;
+typedef PermissionDescriptor = _i2.Object;
+typedef RecordType = _i4.RecordTypeOptions;
+typedef Addr = _i2.Object;
+typedef TlsListener = _i4.Listener<_i4.TlsConn>;
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
 class MemoryUsage {
   external factory MemoryUsage._({
     _i2.dynamic rss,
@@ -754,7 +754,7 @@ class NetworkInterfaceInfo {
 
   factory NetworkInterfaceInfo({
     required _i2.String name,
-    required Family family,
+    required _i4.Family family,
     required _i2.String address,
     required _i2.String netmask,
     _i2.num? scopeid,
@@ -787,11 +787,11 @@ extension NetworkInterfaceInfo$Typings on NetworkInterfaceInfo {
   }
 
   /// The IP protocol version.
-  Family get family => Family.values.byName(_i3.getProperty(
+  _i4.Family get family => _i4.Family.values.byName(_i3.getProperty(
         this,
         'family',
       ));
-  set family(Family value) {
+  set family(_i4.Family value) {
     _i3.setProperty(
       this,
       'family',
@@ -2178,7 +2178,7 @@ extension Seeker$Typings on Seeker {
   ///  It resolves with the updated offset.
   _i2.Future<_i2.num> seek(
     _i2.Object offset,
-    SeekMode whence,
+    _i4.SeekMode whence,
   ) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
@@ -2209,7 +2209,7 @@ extension SeekerSync$Typings on SeekerSync {
   ///  It returns the updated offset.
   _i2.num seekSync(
     _i2.num offset,
-    SeekMode whence,
+    _i4.SeekMode whence,
   ) =>
       _i3.callMethod(
         this,
@@ -2552,7 +2552,7 @@ extension FsFile$Typings on FsFile {
   ///  ```
   _i2.Future<_i2.num> seek(
     _i2.Object offset,
-    SeekMode whence,
+    _i4.SeekMode whence,
   ) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
@@ -2602,7 +2602,7 @@ extension FsFile$Typings on FsFile {
   ///  ```
   _i2.num seekSync(
     _i2.Object offset,
-    SeekMode whence,
+    _i4.SeekMode whence,
   ) =>
       _i3.callMethod(
         this,
@@ -4084,7 +4084,7 @@ class FsEvent {
   });
 
   factory FsEvent({
-    required Kind kind,
+    required _i4.Kind kind,
     required _i2.List<_i2.String> paths,
     _i4.FsEventFlag? flag,
   }) =>
@@ -4097,11 +4097,11 @@ class FsEvent {
 
 extension FsEvent$Typings on FsEvent {
   /// The kind/type of the file system event.
-  Kind get kind => Kind.values.byName(_i3.getProperty(
+  _i4.Kind get kind => _i4.Kind.values.byName(_i3.getProperty(
         this,
         'kind',
       ));
-  set kind(Kind value) {
+  set kind(_i4.Kind value) {
     _i3.setProperty(
       this,
       'kind',
@@ -4731,9 +4731,9 @@ class CommandOptions {
     _i2.num? uid,
     _i2.num? gid,
     _i8.AbortSignal? signal,
-    Stdin? stdin,
-    Stdout? stdout,
-    Stderr? stderr,
+    _i4.Stdin? stdin,
+    _i4.Stdout? stdout,
+    _i4.Stderr? stderr,
     _i2.bool? windowsRawArguments,
   }) =>
       CommandOptions._(
@@ -4860,14 +4860,14 @@ extension CommandOptions$Typings on CommandOptions {
   ///
   ///  Defaults to `"inherit"` for `output` & `outputSync`,
   ///  and `"inherit"` for `spawn`.
-  Stdin? get stdin => switch (_i3.getProperty(
+  _i4.Stdin? get stdin => switch (_i3.getProperty(
         this,
         'stdin',
       )) {
-        _i2.String name => Stdin.values.byName(name),
+        _i2.String name => _i4.Stdin.values.byName(name),
         _ => null
       };
-  set stdin(Stdin? value) {
+  set stdin(_i4.Stdin? value) {
     _i3.setProperty(
       this,
       'stdin',
@@ -4879,14 +4879,14 @@ extension CommandOptions$Typings on CommandOptions {
   ///
   ///  Defaults to `"piped"` for `output` & `outputSync`,
   ///  and `"inherit"` for `spawn`.
-  Stdout? get stdout => switch (_i3.getProperty(
+  _i4.Stdout? get stdout => switch (_i3.getProperty(
         this,
         'stdout',
       )) {
-        _i2.String name => Stdout.values.byName(name),
+        _i2.String name => _i4.Stdout.values.byName(name),
         _ => null
       };
-  set stdout(Stdout? value) {
+  set stdout(_i4.Stdout? value) {
     _i3.setProperty(
       this,
       'stdout',
@@ -4898,14 +4898,14 @@ extension CommandOptions$Typings on CommandOptions {
   ///
   ///  Defaults to `"piped"` for `output` & `outputSync`,
   ///  and `"inherit"` for `spawn`.
-  Stderr? get stderr => switch (_i3.getProperty(
+  _i4.Stderr? get stderr => switch (_i3.getProperty(
         this,
         'stderr',
       )) {
-        _i2.String name => Stderr.values.byName(name),
+        _i2.String name => _i4.Stderr.values.byName(name),
         _ => null
       };
-  set stderr(Stderr? value) {
+  set stderr(_i4.Stderr? value) {
     _i3.setProperty(
       this,
       'stderr',
@@ -4985,7 +4985,7 @@ extension CommandStatus$Typings on CommandStatus {
         this,
         'signal',
       )) {
-        _i2.String name => SignalOptions.values.byName(name),
+        _i2.String name => _i4.SignalOptions.values.byName(name),
         _ => null
       };
   set signal(_i4.Signal? value) {
@@ -5518,7 +5518,7 @@ class SysPermissionDescriptor {
 
   factory SysPermissionDescriptor({
     required _i2.String name,
-    KindOptions? kind,
+    _i4.KindOptions? kind,
   }) =>
       SysPermissionDescriptor._(
         name: name,
@@ -5540,14 +5540,14 @@ extension SysPermissionDescriptor$Typings on SysPermissionDescriptor {
   }
 
   /// The specific information to scope the permission to.
-  KindOptions? get kind => switch (_i3.getProperty(
+  _i4.KindOptions? get kind => switch (_i3.getProperty(
         this,
         'kind',
       )) {
-        _i2.String name => KindOptions.values.byName(name),
+        _i2.String name => _i4.KindOptions.values.byName(name),
         _ => null
       };
-  set kind(KindOptions? value) {
+  set kind(_i4.KindOptions? value) {
     _i3.setProperty(
       this,
       'kind',
@@ -5666,7 +5666,7 @@ extension PermissionStatus$Typings on PermissionStatus {
   }
 
   _i4.PermissionState get state =>
-      PermissionStateOptions.values.byName(_i3.getProperty(
+      _i4.PermissionStateOptions.values.byName(_i3.getProperty(
         this,
         'state',
       ));
@@ -5695,7 +5695,7 @@ extension PermissionStatus$Typings on PermissionStatus {
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$>(
-    PermissionStatusEventMap<K$> type,
+    _i4.PermissionStatusEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -5775,7 +5775,7 @@ extension PermissionStatus$Typings on PermissionStatus {
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
     void Function<K$>(
-      PermissionStatusEventMap<K$> type,
+      _i4.PermissionStatusEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -5816,7 +5816,7 @@ extension PermissionStatus$Typings on PermissionStatus {
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
   void _removeEventListener$1<K$>(
-    PermissionStatusEventMap<K$> type,
+    _i4.PermissionStatusEventMap<K$> type,
     _i2.dynamic Function(K$) listener, [
     _i2.Object? options,
   ]) {
@@ -5854,7 +5854,7 @@ extension PermissionStatus$Typings on PermissionStatus {
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
     void Function<K$>(
-      PermissionStatusEventMap<K$> type,
+      _i4.PermissionStatusEventMap<K$> type,
       _i2.dynamic Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
@@ -6012,7 +6012,7 @@ extension IInline12$Typings on IInline12 {
   ///  of `${arch}-${vendor}-${os}` and represent the specific build target that
   ///  the current runtime was built for.
   _i2.String get target => _i3.getProperty(
-        _i5.target2723,
+        _i5.target2722,
         'target',
       );
   set target(_i2.String value) {
@@ -6024,11 +6024,11 @@ extension IInline12$Typings on IInline12 {
   }
 
   /// Instruction set architecture that the Deno CLI was built for.
-  Arch get arch => Arch.values.byName(_i3.getProperty(
-        _i5.target2723,
+  _i4.Arch get arch => _i4.Arch.values.byName(_i3.getProperty(
+        _i5.target2722,
         'arch',
       ));
-  set arch(Arch value) {
+  set arch(_i4.Arch value) {
     _i3.setProperty(
       this,
       'arch',
@@ -6038,11 +6038,11 @@ extension IInline12$Typings on IInline12 {
 
   /// The operating system that the Deno CLI was built for. `"darwin"` is
   ///  also known as OSX or MacOS.
-  Os get os => Os.values.byName(_i3.getProperty(
-        _i5.target2723,
+  _i4.Os get os => _i4.Os.values.byName(_i3.getProperty(
+        _i5.target2722,
         'os',
       ));
-  set os(Os value) {
+  set os(_i4.Os value) {
     _i3.setProperty(
       this,
       'os',
@@ -6052,7 +6052,7 @@ extension IInline12$Typings on IInline12 {
 
   /// The computer vendor that the Deno CLI was built for.
   _i2.String get vendor => _i3.getProperty(
-        _i5.target2723,
+        _i5.target2722,
         'vendor',
       );
   set vendor(_i2.String value) {
@@ -6065,7 +6065,7 @@ extension IInline12$Typings on IInline12 {
 
   /// Optional environment flags that were set for this build of Deno CLI.
   _i2.String? get env => _i3.getProperty(
-        _i5.target2723,
+        _i5.target2722,
         'env',
       );
   set env(_i2.String? value) {
@@ -6085,7 +6085,7 @@ class IInline13 {}
 extension IInline13$Typings on IInline13 {
   /// Deno CLI's version. For example: `"1.26.0"`.
   _i2.String get deno => _i3.getProperty(
-        _i5.target2724,
+        _i5.target2723,
         'deno',
       );
   set deno(_i2.String value) {
@@ -6101,7 +6101,7 @@ extension IInline13$Typings on IInline13 {
   ///  V8 is the underlying JavaScript runtime platform that Deno is built on
   ///  top of.
   _i2.String get v8 => _i3.getProperty(
-        _i5.target2724,
+        _i5.target2723,
         'v8',
       );
   set v8(_i2.String value) {
@@ -6117,7 +6117,7 @@ extension IInline13$Typings on IInline13 {
   ///  A version of the TypeScript type checker and language server is built-in
   ///  to the Deno CLI.
   _i2.String get typescript => _i3.getProperty(
-        _i5.target2724,
+        _i5.target2723,
         'typescript',
       );
   set typescript(_i2.String value) {
@@ -6137,18 +6137,18 @@ extension IInline13$Typings on IInline13 {
 class SymlinkOptions {
   external factory SymlinkOptions._({_i2.dynamic type});
 
-  factory SymlinkOptions({required Type type}) =>
+  factory SymlinkOptions({required _i4.Type type}) =>
       SymlinkOptions._(type: type.name);
 }
 
 extension SymlinkOptions$Typings on SymlinkOptions {
   /// If the symbolic link should be either a file or directory. This option
   ///  only applies to Windows and is ignored on other operating systems.
-  Type get type => Type.values.byName(_i3.getProperty(
+  _i4.Type get type => _i4.Type.values.byName(_i3.getProperty(
         this,
         'type',
       ));
-  set type(Type value) {
+  set type(_i4.Type value) {
     _i3.setProperty(
       this,
       'type',
@@ -6862,7 +6862,7 @@ class NetAddr {
   });
 
   factory NetAddr({
-    required Transport transport,
+    required _i4.Transport transport,
     required _i2.String hostname,
     required _i2.num port,
   }) =>
@@ -6874,11 +6874,11 @@ class NetAddr {
 }
 
 extension NetAddr$Typings on NetAddr {
-  Transport get transport => Transport.values.byName(_i3.getProperty(
+  _i4.Transport get transport => _i4.Transport.values.byName(_i3.getProperty(
         this,
         'transport',
       ));
-  set transport(Transport value) {
+  set transport(_i4.Transport value) {
     _i3.setProperty(
       this,
       'transport',
@@ -6921,7 +6921,7 @@ class UnixAddr {
   });
 
   factory UnixAddr({
-    required TransportOptions transport,
+    required _i4.TransportOptions transport,
     required _i2.String path,
   }) =>
       UnixAddr._(
@@ -6931,12 +6931,12 @@ class UnixAddr {
 }
 
 extension UnixAddr$Typings on UnixAddr {
-  TransportOptions get transport =>
-      TransportOptions.values.byName(_i3.getProperty(
+  _i4.TransportOptions get transport =>
+      _i4.TransportOptions.values.byName(_i3.getProperty(
         this,
         'transport',
       ));
-  set transport(TransportOptions value) {
+  set transport(_i4.TransportOptions value) {
     _i3.setProperty(
       this,
       'transport',
@@ -8401,7 +8401,7 @@ void _test$4(
 /// );
 /// ```
 void _test$5(
-  _i9.Omit<_i4.TestDefinition, TestOptions> options,
+  _i9.Omit<_i4.TestDefinition, _i4.TestOptions> options,
   _i2.Object Function(_i4.TestContext) fn,
 ) {
   _i3.callMethod(
@@ -8556,7 +8556,7 @@ void _test$5(
 /// ```
 void _test$6(
   _i2.String name,
-  _i9.Omit<_i4.TestDefinition, Test> options,
+  _i9.Omit<_i4.TestDefinition, _i4.Test> options,
   _i2.Object Function(_i4.TestContext) fn,
 ) {
   _i3.callMethod(
@@ -9287,7 +9287,7 @@ void _test$6(
   /// );
   /// ```
   void Function(
-    _i9.Omit<_i4.TestDefinition, TestOptions> options,
+    _i9.Omit<_i4.TestDefinition, _i4.TestOptions> options,
     _i2.Object Function(_i4.TestContext) fn,
   ) $5,
 
@@ -9433,7 +9433,7 @@ void _test$6(
   /// ```
   void Function(
     _i2.String name,
-    _i9.Omit<_i4.TestDefinition, Test> options,
+    _i9.Omit<_i4.TestDefinition, _i4.Test> options,
     _i2.Object Function(_i4.TestContext) fn,
   ) $6,
 }) get test => (
@@ -10230,7 +10230,7 @@ void _bench$4(
 /// );
 /// ```
 void _bench$5(
-  _i9.Omit<_i4.BenchDefinition, BenchOptions> options,
+  _i9.Omit<_i4.BenchDefinition, _i4.BenchOptions> options,
   _i2.Object Function() fn,
 ) {
   _i3.callMethod(
@@ -10393,7 +10393,7 @@ void _bench$5(
 /// ```
 void _bench$6(
   _i2.String name,
-  _i9.Omit<_i4.BenchDefinition, Bench> options,
+  _i9.Omit<_i4.BenchDefinition, _i4.Bench> options,
   _i2.Object Function() fn,
 ) {
   _i3.callMethod(
@@ -11164,7 +11164,7 @@ void _bench$6(
   /// );
   /// ```
   void Function(
-    _i9.Omit<_i4.BenchDefinition, BenchOptions> options,
+    _i9.Omit<_i4.BenchDefinition, _i4.BenchOptions> options,
     _i2.Object Function() fn,
   ) $5,
 
@@ -11318,7 +11318,7 @@ void _bench$6(
   /// ```
   void Function(
     _i2.String name,
-    _i9.Omit<_i4.BenchDefinition, Bench> options,
+    _i9.Omit<_i4.BenchDefinition, _i4.Bench> options,
     _i2.Object Function() fn,
   ) $6,
 }) get bench => (
@@ -11749,7 +11749,7 @@ _i2.num writeSync(
 _i2.Future<_i2.num> seek(
   _i2.num rid,
   _i2.Object offset,
-  SeekMode whence,
+  _i4.SeekMode whence,
 ) =>
     _i3.promiseToFuture(_i3.callMethod(
       _self,
@@ -11802,7 +11802,7 @@ _i2.Future<_i2.num> seek(
 _i2.num seekSync(
   _i2.num rid,
   _i2.num offset,
-  SeekMode whence,
+  _i4.SeekMode whence,
 ) =>
     _i3.callMethod(
       _self,
@@ -13512,7 +13512,7 @@ void kill(
 /// Requires `allow-net` permission.
 _i2.Future<_i2.List<_i2.String>> _resolveDns$1(
   _i2.String query,
-  ResolveDns recordType, [
+  _i4.ResolveDns recordType, [
   _i4.ResolveDnsOptions? options,
 ]) =>
     _i3.promiseToFuture(_i3.callMethod(
@@ -13786,7 +13786,7 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// Requires `allow-net` permission.
   _i2.Future<_i2.List<_i2.String>> Function(
     _i2.String query,
-    ResolveDns recordType, [
+    _i4.ResolveDns recordType, [
     _i4.ResolveDnsOptions? options,
   ]) $1,
 

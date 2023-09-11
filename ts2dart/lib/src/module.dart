@@ -94,28 +94,45 @@ class InteropModule {
         buffer: mainBuffer.toString());
   }
 
-  InteropType? dig(Iterable<String> path) {
-    logger.warning('ModuleDig $path (${this.path})');
+  InteropType? dig(Iterable<String> path, {bool directFind = true}) {
+    //logger.warning('ModuleDig $path (${this.path})');
 
     if (this.path.isNotEmpty) {
       final fullPath = [...splittedPath, ...path];
       final type = project.dig(fullPath);
 
-      logger.warning('ModuleDigInner $path (${fullPath})');
+      //logger.warning('ModuleDigInner $path (${fullPath})');
 
       if (type != null) {
         return type;
       }
     }
 
-    final type = project.dig(path);
+    if (directFind) {
+      final type = project.dig(path);
 
-    return type;
+      return type;
+    }
+
+    return null;
   }
 
   InteropType? findDeclared(String name) {
+    // logger.warning('FindDeclared $name -> ${{
+    //   'fileName': fileName,
+    //   'path': path
+    // }.pretty()}');
     for (final library in libraries) {
       final outter = library.findDeclared(name);
+
+      // if (fileName != 'core') {
+      //   logger.warning('FindDeclaredOutter $name -> ${{
+      //     'fileName': library.fileName,
+      //     'namespace': library.namespace,
+      //     'outter': outter != null,
+      //     'structs': library.structs.map((s) => ' - ${s.name}').join('\n')
+      //   }.pretty()}');
+      // }
 
       if (outter != null) {
         return outter;
