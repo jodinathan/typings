@@ -27,8 +27,12 @@ external vscode.Module get module;
 @JS()
 @anonymous
 class ModuleExports {
-  external factory ModuleExports(
+  external factory ModuleExports._(
       {void Function(vscode.ExtensionContext context)? activate});
+
+  factory ModuleExports(
+          {void Function(vscode.ExtensionContext context)? activate}) =>
+      ModuleExports._(activate: activate == null ? null : allowInterop(activate));
 }
 
 @JS()

@@ -86,3 +86,4 @@ Refer to the wiki for guidance and few rules to add packages.
  - [Core/DOM](https://pub.dev/documentation/typings/latest/d_core_core/d_core_core-library.html)
  - [Deno](https://pub.dev/documentation/typings/latest/d_deno_deno/d_deno_deno-library.html)
  - [GoJS](https://pub.dev/documentation/typings/latest/d_gojs_gojs/d_gojs_gojs-library.html)
+ - VSCode

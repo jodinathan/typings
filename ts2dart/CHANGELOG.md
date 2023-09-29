@@ -1,3 +1,8 @@
+## 0.0.4
+- Fixed error when using nested namespaces
+- Fixed properties with `Inline`  classes
+- Callbacks now expects optional parameters when nullable
+
 ## 0.0.3
 - Handle namespace with the name of the lib as one namespace
 

@@ -1,3 +1,7 @@
+## 0.0.4
+- Added Visual Studio Code extension bindings (vscode)
+- Many fixes in ts2dart
+
 ## 0.0.3
 - Added AnimeJS (https://animejs.com)
 
