@@ -29,7 +29,7 @@ typedef PkgJsUtils = ({
 final PkgJs pkgJs = (
   package: 'package:js/js.dart',
   js: ({String? name}) => refer('JS', pkgJs.package).call(
-      [if (name case String name when name.isNotEmpty) literalString(name)]),
+      [if (name case String name) literalString(name)]),
   anonymous: () => refer('anonymous', pkgJs.package),
   staticInterop: () => refer('staticInterop', pkgJs.package)
 );

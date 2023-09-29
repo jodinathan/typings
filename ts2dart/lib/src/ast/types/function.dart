@@ -69,14 +69,22 @@ class InteropFunction extends InteropType
       params.every((p) => other.params.any((op) => p.isSame(op)));
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) {
+  Reference ref(
+      {SymbolSwap? symbolSwap, bool nullable = false, bool solid = false}) {
     return FunctionType((b) {
       b
         ..isNullable = nullable
-        ..returnType = returns.ref(symbolSwap: symbolSwap)
-        ..requiredParameters.addAll([
-          for (final param in params) param.ref.ref(symbolSwap: symbolSwap)
-        ]);
+        ..returnType = returns.ref(symbolSwap: symbolSwap, solid: true);
+
+      for (final param in params) {
+        final ref = param.ref.ref(symbolSwap: symbolSwap, solid: true);
+
+        if (param.ref.acceptsNull && b.requiredParameters.isEmpty) {
+          b.optionalParameters.add(ref);
+        } else {
+          b.requiredParameters.add(ref);
+        }
+      }
 
       b.types.addAll(typeParams.map((tp) => tp.ref()));
     });

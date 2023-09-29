@@ -20,7 +20,10 @@ abstract class InteropConstType<T> with InteropType {
   String makeKeyword();
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) =>
+  Reference ref(
+          {SymbolSwap? symbolSwap,
+          bool nullable = false,
+          bool solid = false}) =>
       static.ref(symbolSwap: symbolSwap);
 
   Expression literal();

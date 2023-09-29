@@ -20,7 +20,11 @@ class InteropRecord with InteropType {
       params.every((t) => other.params.any((ot) => ot.name == t.name));
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) {
+  Reference ref({
+    SymbolSwap? symbolSwap,
+    bool nullable = false,
+    bool solid = false
+  }) {
     return RecordType((b) {
       for (final param in params) {
         b.namedParameters[param.name] = param.ref.ref();

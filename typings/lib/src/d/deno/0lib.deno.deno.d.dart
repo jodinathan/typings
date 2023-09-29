@@ -1,4 +1,4 @@
-@_i1.JS('Deno')
+@_i1.JS()
 library typings.deno.interop.deno; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
@@ -6395,11 +6395,11 @@ extension ResolveDnsOptions$Typings on ResolveDnsOptions {
   ///
   ///  If not specified, defaults to the system configuration. For example
   ///  `/etc/resolv.conf` on Unix-like systems.
-  _i4.IInline14? get nameServer => _i3.getProperty(
+  _i2.dynamic get nameServer => _i3.getProperty(
         this,
         'nameServer',
       );
-  set nameServer(_i4.IInline14? value) {
+  set nameServer(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'nameServer',

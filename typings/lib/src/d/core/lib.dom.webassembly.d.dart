@@ -1,4 +1,4 @@
-@_i1.JS('WebAssembly')
+@_i1.JS()
 library typings.core.interop.web_assembly; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;

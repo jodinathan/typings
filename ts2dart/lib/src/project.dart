@@ -50,7 +50,10 @@ class ExternalInteropType extends InteropType {
       other.packagePath == packagePath;
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) =>
+  Reference ref(
+          {SymbolSwap? symbolSwap,
+          bool nullable = false,
+          bool solid = false}) =>
       refer(name, packagePath);
 
   @override

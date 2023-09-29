@@ -1,4 +1,4 @@
-@_i1.JS('Inputmask')
+@_i1.JS()
 library typings.inputmask.interop.inputmask; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
@@ -297,7 +297,7 @@ class Options {
     void Function(
       _i5.KeyboardEvent,
       _i2.List<_i2.String>,
-      _i3.IInline1,
+      _i2.dynamic,
       _i3.Options,
     )? onKeyDown,
     _i2.String Function(
@@ -356,7 +356,7 @@ class Options {
       _i2.bool,
       _i3.Options,
       _i2.dynamic,
-      _i3.IInline2,
+      _i2.dynamic,
       _i2.bool,
     )? preValidation,
     _i2.String? staticDefinitionSymbol,
@@ -788,7 +788,7 @@ extension Options$Typings on Options {
   void Function(
     _i5.KeyboardEvent,
     _i2.List<_i2.String>,
-    _i3.IInline1,
+    _i2.dynamic,
     _i3.Options,
   )? get onKeyDown => _i4.getProperty(
         this,
@@ -798,7 +798,7 @@ extension Options$Typings on Options {
       void Function(
         _i5.KeyboardEvent,
         _i2.List<_i2.String>,
-        _i3.IInline1,
+        _i2.dynamic,
         _i3.Options,
       )? value) {
     _i4.setProperty(
@@ -1186,7 +1186,7 @@ extension Options$Typings on Options {
     _i2.bool,
     _i3.Options,
     _i2.dynamic,
-    _i3.IInline2,
+    _i2.dynamic,
     _i2.bool,
   )? get preValidation => _i4.getProperty(
         this,
@@ -1200,7 +1200,7 @@ extension Options$Typings on Options {
         _i2.bool,
         _i3.Options,
         _i2.dynamic,
-        _i3.IInline2,
+        _i2.dynamic,
         _i2.bool,
       )? value) {
     _i4.setProperty(
@@ -1483,11 +1483,11 @@ extension Options$Typings on Options {
   /// Define your negationSymbol.
   ///
   ///  @default { front: "-", back: "" }
-  _i3.IInline3? get negationSymbol => _i4.getProperty(
+  _i2.dynamic get negationSymbol => _i4.getProperty(
         this,
         'negationSymbol',
       );
-  set negationSymbol(_i3.IInline3? value) {
+  set negationSymbol(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'negationSymbol',

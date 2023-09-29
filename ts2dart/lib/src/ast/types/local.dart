@@ -11,7 +11,10 @@ class InteropLocalType with InteropType {
   int lineNumber;
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) =>
+  Reference ref(
+          {SymbolSwap? symbolSwap,
+          bool nullable = false,
+          bool solid = false}) =>
       refer(symbol);
 
   @override

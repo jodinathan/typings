@@ -36,7 +36,7 @@ mixin WithInteropTypeParams {
 }
 
 abstract mixin class InteropType {
-  Reference ref({SymbolSwap? symbolSwap, bool nullable});
+  Reference ref({SymbolSwap? symbolSwap, bool nullable, bool solid});
 
   bool isSame(InteropType other);
   bool get nullable => false;

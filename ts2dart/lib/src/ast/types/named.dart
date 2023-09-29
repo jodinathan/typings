@@ -56,7 +56,8 @@ abstract class InteropNamedDeclaration extends InteropType
   bool get isPrivate => false;
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) => refer(
+  Reference ref({SymbolSwap? symbolSwap, bool nullable = false,
+  bool solid = false}) => refer(
       usableName, escopedReference && !isPrivate ? library.fullPath : null);
 
   bool nameExists(String name) {

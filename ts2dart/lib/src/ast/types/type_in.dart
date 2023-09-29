@@ -25,7 +25,8 @@ class InteropTypeIn extends InteropType with InteropDiamondType {
       other is InteropTypeIn && constraint.isSame(other.constraint);
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) {
+  Reference ref(
+      {SymbolSwap? symbolSwap, bool nullable = false, bool solid = false}) {
     return InteropStaticType.dyn.ref();
   }
 

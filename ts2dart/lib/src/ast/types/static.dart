@@ -243,7 +243,10 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
   bool get isBasic => basicTypes.contains(this);
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) =>
+  Reference ref(
+          {SymbolSwap? symbolSwap,
+          bool nullable = false,
+          bool solid = false}) =>
       refer(symbol, package);
 
   @override

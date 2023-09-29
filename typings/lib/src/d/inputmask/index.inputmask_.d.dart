@@ -1,4 +1,4 @@
-@_i1.JS('Inputmask_')
+@_i1.JS()
 library typings.inputmask.interop.inputmask; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;

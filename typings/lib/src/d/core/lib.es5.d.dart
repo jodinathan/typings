@@ -40,7 +40,7 @@ typedef OmitThisParameter<T> = _i2.dynamic;
 typedef PromiseConstructorLike = _i2.Future<T> Function<T>(
     void Function(
       void Function(_i2.Object),
-      void Function(_i2.dynamic),
+      void Function([_i2.dynamic]),
     ));
 typedef Awaited<T> = _i2.dynamic;
 typedef Partial<T> = _i2.dynamic;
@@ -53,14 +53,15 @@ typedef Extract<T, U> = _i2.dynamic;
 typedef Omit<T, K extends _i2.dynamic>
     = _i3.Pick<T, _i3.Exclude<_i2.dynamic, K>>;
 typedef NonNullable<T> = _Intersection0;
-typedef Parameters<T extends _i2.dynamic Function(_i2.Iterable<_i2.dynamic>?)>
+typedef Parameters<T extends _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])>
     = _i2.dynamic;
 typedef ConstructorParameters<
-        T extends _i2.dynamic Function(_i2.Iterable<_i2.dynamic>?)>
+        T extends _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])>
     = _i2.dynamic;
-typedef ReturnType<T extends _i2.dynamic Function(_i2.Iterable<_i2.dynamic>?)>
+typedef ReturnType<T extends _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])>
     = _i2.dynamic;
-typedef InstanceType<T extends _i2.dynamic Function(_i2.Iterable<_i2.dynamic>?)>
+typedef InstanceType<
+        T extends _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])>
     = _i2.dynamic;
 typedef Uppercase<S extends _i2.String> = _i2.Never;
 typedef Lowercase<S extends _i2.String> = _i2.Never;

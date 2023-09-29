@@ -6,7 +6,10 @@ mixin InteropDelegateType on InteropType, InteropDiamondType {
   InteropRef get delegate;
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) =>
+  Reference ref(
+          {SymbolSwap? symbolSwap,
+          bool nullable = false,
+          bool solid = false}) =>
       delegate.ref(symbolSwap: symbolSwap);
 
   bool get delegatesFromInterop => true;

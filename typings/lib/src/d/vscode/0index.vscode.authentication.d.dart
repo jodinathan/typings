@@ -1,4 +1,4 @@
-@_i1.JS('vscode.authentication')
+@_i1.JS()
 library typings.vscode.interop.vscode_authentication; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;

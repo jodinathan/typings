@@ -11445,11 +11445,11 @@ extension Window$Typings on Window {
         this,
         'closed',
       );
-  void Function(_i2.String?) get alert => _i4.getProperty(
+  void Function([_i2.String?]) get alert => _i4.getProperty(
         this,
         'alert',
       );
-  set alert(void Function(_i2.String?) value) {
+  set alert(void Function([_i2.String?]) value) {
     _i4.setProperty(
       this,
       'alert',
@@ -11457,11 +11457,11 @@ extension Window$Typings on Window {
     );
   }
 
-  _i2.bool Function(_i2.String?) get confirm => _i4.getProperty(
+  _i2.bool Function([_i2.String?]) get confirm => _i4.getProperty(
         this,
         'confirm',
       );
-  set confirm(_i2.bool Function(_i2.String?) value) {
+  set confirm(_i2.bool Function([_i2.String?]) value) {
     _i4.setProperty(
       this,
       'confirm',
@@ -11469,18 +11469,18 @@ extension Window$Typings on Window {
     );
   }
 
-  _i2.String? Function(
+  _i2.String? Function([
     _i2.String?,
     _i2.String?,
-  ) get prompt => _i4.getProperty(
+  ]) get prompt => _i4.getProperty(
         this,
         'prompt',
       );
   set prompt(
-      _i2.String? Function(
+      _i2.String? Function([
         _i2.String?,
         _i2.String?,
-      ) value) {
+      ]) value) {
     _i4.setProperty(
       this,
       'prompt',
@@ -12143,7 +12143,7 @@ _i2.Future<_i3.Response> fetch(
 /// setTimeout(() => { console.log('hello'); }, 500);
 /// ```
 _i2.num setTimeout(
-  void Function(_i2.Iterable<_i2.dynamic>?) cb, [
+  void Function([_i2.Iterable<_i2.dynamic>?]) cb, [
   _i2.num? delay,
   _i2.Iterable<_i2.dynamic>? args,
 ]) =>
@@ -12164,7 +12164,7 @@ _i2.num setTimeout(
 /// setInterval(() => { console.log('hello'); }, 500);
 /// ```
 _i2.num setInterval(
-  void Function(_i2.Iterable<_i2.dynamic>?) cb, [
+  void Function([_i2.Iterable<_i2.dynamic>?]) cb, [
   _i2.num? delay,
   _i2.Iterable<_i2.dynamic>? args,
 ]) =>

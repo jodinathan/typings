@@ -17,3 +17,22 @@ import 'package:typings/annotations.dart';
   'core'
 ])
 export 'vscode/vscode.dart';
+
+import 'package:typings/d/vscode.dart' as vscode;
+import 'package:js/js.dart';
+
+@JS()
+external vscode.Module get module;
+
+@JS()
+@anonymous
+class ModuleExports {
+  external factory ModuleExports(
+      {void Function(vscode.ExtensionContext context)? activate});
+}
+
+@JS()
+@anonymous
+class Module {
+  external set exports(ModuleExports value);
+}

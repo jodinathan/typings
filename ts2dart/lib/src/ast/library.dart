@@ -147,7 +147,7 @@ class InteropLibrary with InteropItem {
           ..name =
               'typings.${module.project.dirName.snakeCase}.interop${namespace.isEmpty ? '' : '.${namespace.snakeCase}'}'
           ..annotations
-              .add(pkgJs.js(name: namespace.isEmpty ? null : namespace))
+              .add(pkgJs.js())
           ..body.addAll([
             Field((b) {
               b

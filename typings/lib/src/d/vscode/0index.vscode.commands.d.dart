@@ -1,4 +1,4 @@
-@_i1.JS('vscode.commands')
+@_i1.JS()
 library typings.vscode.interop.vscode_commands; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
@@ -18,7 +18,7 @@ external _i2.Object _self;
 /// will cause an error.
 _i3.Disposable registerCommand(
   _i2.String command,
-  _i2.dynamic Function(_i2.Iterable<_i2.dynamic>?) callback, [
+  _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?]) callback, [
   _i2.dynamic thisArg,
 ]) =>
     _i4.callMethod(

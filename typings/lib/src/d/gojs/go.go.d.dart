@@ -1,4 +1,4 @@
-@_i1.JS('go')
+@_i1.JS()
 library typings.gojs.interop.go; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
@@ -168,8 +168,8 @@ typedef EasingFunction = _i2.num Function(
 typedef DiagramInitOptions = _i4.Partial<_i2.Object>;
 typedef DiagramEvents = _i2.dynamic;
 typedef ConstructorType<
-        T extends _i4.InstanceType<T> Function(_i2.Iterable<_i2.dynamic>?)>
-    = _i4.InstanceType<T> Function(_i2.Iterable<_i2.dynamic>?);
+        T extends _i4.InstanceType<T> Function([_i2.Iterable<_i2.dynamic>?])>
+    = _i4.InstanceType<T> Function([_i2.Iterable<_i2.dynamic>?]);
 typedef MakeAllow<CT extends _i3.ConstructorType<CT>, C, E> = _i2.dynamic;
 typedef BrushLike = _i2.dynamic;
 typedef Key = _i2.dynamic;
@@ -11662,23 +11662,23 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
   /// The function, if supplied, must not add or remove any links or nodes or port objects,
   /// nor may it change the validity of any potential link connection.
   void Function(
-    _i3.Node?,
-    _i3.GraphObject?,
     _i3.Node,
     _i3.GraphObject,
-    _i2.bool,
-  )? get portTargeted => _i5.getProperty(
+    _i2.bool, [
+    _i3.Node?,
+    _i3.GraphObject?,
+  ])? get portTargeted => _i5.getProperty(
         this,
         'portTargeted',
       );
   set portTargeted(
       void Function(
-        _i3.Node?,
-        _i3.GraphObject?,
         _i3.Node,
         _i3.GraphObject,
-        _i2.bool,
-      )? value) {
+        _i2.bool, [
+        _i3.Node?,
+        _i3.GraphObject?,
+      ])? value) {
     _i5.setProperty(
       this,
       'portTargeted',
@@ -16600,11 +16600,11 @@ extension AnimationTrigger$Typings on AnimationTrigger {
   /// * **duration**: a `number`, corresponding to Animation#duration.
   /// * **finished**: a `Function`, corresponding to Animation#finished.
   /// * **easing**: an `EasingFunction`, corresponding to Animation#easing.
-  _i3.IInline1 get animationSettings => _i5.getProperty(
+  _i2.dynamic get animationSettings => _i5.getProperty(
         this,
         'animationSettings',
       );
-  set animationSettings(_i3.IInline1 value) {
+  set animationSettings(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'animationSettings',
@@ -20391,7 +20391,7 @@ extension Diagram$Typings on Diagram {
   ///  the "initial" content, such as with a Node that represents a "Loading" bar.
   ///  @param {function(Diagram=)|null=} func an optional function of actions to perform as part of another diagram initialization.
   ///  @since 1.1
-  void delayInitialization([void Function(_i3.Diagram?)? func]) {
+  void delayInitialization([void Function([_i3.Diagram?])? func]) {
     _i5.callMethod(
       this,
       'delayInitialization',
@@ -43855,11 +43855,11 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
   ///
   /// The new value must be either null or an Object with a method named "random" taking zero arguments
   /// and returning a random number between zero (inclusive) and one (exclusive).
-  _i3.IInline12? get randomNumberGenerator => _i5.getProperty(
+  _i2.dynamic get randomNumberGenerator => _i5.getProperty(
         this,
         'randomNumberGenerator',
       );
-  set randomNumberGenerator(_i3.IInline12? value) {
+  set randomNumberGenerator(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'randomNumberGenerator',

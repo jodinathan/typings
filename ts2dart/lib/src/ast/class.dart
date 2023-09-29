@@ -292,6 +292,15 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   }
 
   @override
+  Reference ref(
+          {SymbolSwap? symbolSwap,
+          bool nullable = false,
+          bool solid = false}) =>
+      solid && isInline
+          ? InteropStaticType.dyn.ref()
+          : super.ref(symbolSwap: symbolSwap, nullable: nullable);
+
+  @override
   void cache() {
     final constructors = buildableCtors();
 

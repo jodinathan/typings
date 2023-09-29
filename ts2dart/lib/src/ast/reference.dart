@@ -146,16 +146,20 @@ class InteropRef<T extends InteropType> {
         typeArgs: typeArgs);
   }
 
-  Reference ref({SymbolSwap? symbolSwap, bool forceOptional = false}) {
+  Reference ref(
+      {SymbolSwap? symbolSwap,
+      bool forceOptional = false,
+      bool solid = false}) {
     final acceptsNull = this.acceptsNull || forceOptional;
 
     if (this.type case InteropDelegateType t) {
       if (t.passthrough) {
-        return copyWith(t.delegate.type)
-            .ref(symbolSwap: symbolSwap, forceOptional: acceptsNull);
+        return copyWith(t.delegate.type).ref(
+            symbolSwap: symbolSwap, forceOptional: acceptsNull, solid: solid);
       }
 
-      return t.delegate.ref(symbolSwap: symbolSwap, forceOptional: acceptsNull);
+      return t.delegate.ref(
+          symbolSwap: symbolSwap, forceOptional: acceptsNull, solid: solid);
     }
 
     final type = this.type.realType;
@@ -169,63 +173,66 @@ class InteropRef<T extends InteropType> {
       }
     }
 
-    return switch (type.ref(nullable: acceptsNull, symbolSwap: symbolSwap)) {
+    return switch (
+        type.ref(nullable: acceptsNull, symbolSwap: symbolSwap, solid: solid)) {
       RecordType ref => ref,
       FunctionType ref => ref,
       Reference ref => TypeReference((b) {
-        final Reference(:url, :symbol) = ref;
+          final Reference(:url, :symbol) = ref;
 
-        assert(symbol != null,
-            'Cant use null symbol in type references. Url: $url. Type $type');
+          assert(symbol != null,
+              'Cant use null symbol in type references. Url: $url. Type $type');
 
-        b
-          ..symbol = '$symbol${switch (this.type) {
-            InteropDiamondType t && InteropDelegateType d
-                when InteropStaticType.dynamicTypes.contains(d.delegate.type) =>
-              '  /*dyn:${t.runtimeType} ${t.makeDoc()}  */',
-            _ => ''
-          }}'
-          ..url = url
-          ..isNullable =
-              acceptsNull && symbol != 'dynamic' && symbol != 'Object?';
+          b
+            ..symbol = '$symbol${switch (this.type) {
+              InteropDiamondType t && InteropDelegateType d
+                  when InteropStaticType.dynamicTypes
+                      .contains(d.delegate.type) =>
+                '  /*dyn:${t.runtimeType} ${t.makeDoc()}  */',
+              _ => ''
+            }}'
+            ..url = url
+            ..isNullable =
+                acceptsNull && symbol != 'dynamic' && symbol != 'Object?';
 
-        if (type case WithInteropTypeParams withParams) {
-          final Iterable<InteropTypeParam> typeParams = switch (type) {
-            InteropSourceType type => type.typeParams,
-            _ => []
-          };
-          final ta = typeArgs.sublist(
-              0,
-              typeArgs.length >= withParams.typeParamsLength
-                  ? withParams.typeParamsLength
-                  : typeArgs.length);
-
-          for (var index = 0; index < withParams.typeParamsLength; index++) {
-            final tp = typeParams.elementAtOrNull(index);
-            final def = tp?.def ?? tp?.constraint;
-            var t = ta.length > index
-                ? ta.elementAt(index)
-                : InteropStaticType.dyn.asRef;
-            final realType = t.type.realType;
-
-            if (def != null &&
-                InteropStaticType.dynamicTypes.contains(realType)) {
-              t = def;
-            }
-
-            final toAdd = switch (realType) {
-              InteropLocalType local when symbolSwap is SymbolSwap => symbolSwap
-                      .firstWhereOrNull((it) => it.symbol == local.symbol)
-                      ?.reference
-                      .ref() ??
-                  t.ref(),
-              _ => t.ref()
+          if (type case WithInteropTypeParams withParams) {
+            final Iterable<InteropTypeParam> typeParams = switch (type) {
+              InteropSourceType type => type.typeParams,
+              _ => []
             };
+            final ta = typeArgs.sublist(
+                0,
+                typeArgs.length >= withParams.typeParamsLength
+                    ? withParams.typeParamsLength
+                    : typeArgs.length);
 
-            b.types.add(toAdd);
+            for (var index = 0; index < withParams.typeParamsLength; index++) {
+              final tp = typeParams.elementAtOrNull(index);
+              final def = tp?.def ?? tp?.constraint;
+              var t = ta.length > index
+                  ? ta.elementAt(index)
+                  : InteropStaticType.dyn.asRef;
+              final realType = t.type.realType;
+
+              if (def != null &&
+                  InteropStaticType.dynamicTypes.contains(realType)) {
+                t = def;
+              }
+
+              final toAdd = switch (realType) {
+                InteropLocalType local when symbolSwap is SymbolSwap =>
+                  symbolSwap
+                          .firstWhereOrNull((it) => it.symbol == local.symbol)
+                          ?.reference
+                          .ref() ??
+                      t.ref(),
+                _ => t.ref(solid: solid)
+              };
+
+              b.types.add(toAdd);
+            }
           }
-        }
-      })
+        })
     };
   }
 

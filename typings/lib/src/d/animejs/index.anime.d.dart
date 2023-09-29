@@ -1,4 +1,4 @@
-@_i1.JS('anime')
+@_i1.JS()
 library typings.animejs.interop.anime; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
@@ -83,7 +83,7 @@ typedef FunctionBasedParameter = _i2.num Function(
   _i2.num,
   _i2.num,
 );
-typedef AnimeCallbackFunction = void Function(_i2.dynamic);
+typedef AnimeCallbackFunction = void Function([_i2.dynamic]);
 typedef CustomEasingFunction = _i2.num Function(_i2.num) Function(
   _i3.HTMLElement,
   _i2.num,
@@ -1192,7 +1192,7 @@ _i2.Object get(
         unit ?? _i5.undefined,
       ],
     );
-_i4.IInline1 Function(_i2.String) path([
+_i2.dynamic Function(_i2.String) path([
   _i2.dynamic path,
   _i2.num? percent,
 ]) =>

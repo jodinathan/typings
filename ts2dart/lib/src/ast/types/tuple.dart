@@ -35,7 +35,8 @@ class InteropTuple extends InteropType with InteropDiamondType {
       types.every((t) => other.types.any((ot) => ot.isSame(t)));
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false}) {
+  Reference ref({SymbolSwap? symbolSwap, bool nullable = false,
+  bool solid = false}) {
     return RecordType((b) {
       b.isNullable = nullable;
 

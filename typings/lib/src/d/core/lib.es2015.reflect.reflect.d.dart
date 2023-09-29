@@ -1,4 +1,4 @@
-@_i1.JS('Reflect')
+@_i1.JS()
 library typings.core.interop.reflect; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
@@ -13,7 +13,7 @@ external _i2.Object _self;
 /// Calls the function with the specified object as the this value
 /// and the elements of specified array as the arguments.
 R _apply$1<T, A extends _i2.List<_i2.dynamic>, R>(
-  R Function(_i2.Iterable<_i2.dynamic>?) target,
+  R Function([_i2.Iterable<_i2.dynamic>?]) target,
   T thisArgument,
   _i3.Readonly<A> argumentsList,
 ) =>
@@ -49,7 +49,7 @@ _i2.dynamic _apply$2(
   /// Calls the function with the specified object as the this value
   /// and the elements of specified array as the arguments.
   R Function<T, A extends _i2.List<_i2.dynamic>, R>(
-    R Function(_i2.Iterable<_i2.dynamic>?) target,
+    R Function([_i2.Iterable<_i2.dynamic>?]) target,
     T thisArgument,
     _i3.Readonly<A> argumentsList,
   ) $1,
@@ -69,9 +69,9 @@ _i2.dynamic _apply$2(
 /// Constructs the target with the elements of specified array as the arguments
 /// and the specified constructor as the `new.target` value.
 R _construct$1<A extends _i2.List<_i2.dynamic>, R>(
-  R Function(_i2.Iterable<_i2.dynamic>?) target,
+  R Function([_i2.Iterable<_i2.dynamic>?]) target,
   _i3.Readonly<A> argumentsList, [
-  _i2.dynamic Function(_i2.Iterable<_i2.dynamic>?)? newTarget,
+  _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])? newTarget,
 ]) =>
     _i4.callMethod(
       _self,
@@ -105,9 +105,9 @@ _i2.dynamic _construct$2(
   /// Constructs the target with the elements of specified array as the arguments
   /// and the specified constructor as the `new.target` value.
   R Function<A extends _i2.List<_i2.dynamic>, R>(
-    R Function(_i2.Iterable<_i2.dynamic>?) target,
+    R Function([_i2.Iterable<_i2.dynamic>?]) target,
     _i3.Readonly<A> argumentsList, [
-    _i2.dynamic Function(_i2.Iterable<_i2.dynamic>?)? newTarget,
+    _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])? newTarget,
   ]) $1,
 
   /// Constructs the target with the elements of specified array as the arguments

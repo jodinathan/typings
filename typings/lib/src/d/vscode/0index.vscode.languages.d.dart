@@ -1,4 +1,4 @@
-@_i1.JS('vscode.languages')
+@_i1.JS()
 library typings.vscode.interop.vscode_languages; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;

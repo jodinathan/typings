@@ -30,7 +30,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
         _i5.target669,
         'StdOut',
       );
-  _i3.IInline658 get arguments => _i4.getProperty(
+  _i2.dynamic get arguments => _i4.getProperty(
         _i5.target669,
         'Arguments',
       );
@@ -424,11 +424,11 @@ extension IInline657$Typings on IInline657 {
     );
   }
 
-  _i3.IInline658 get arguments => _i4.getProperty(
+  _i2.dynamic get arguments => _i4.getProperty(
         _i5.target669,
         'Arguments',
       );
-  set arguments(_i3.IInline658 value) {
+  set arguments(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'Arguments',

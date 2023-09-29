@@ -1,4 +1,4 @@
-@_i1.JS('vscode.window')
+@_i1.JS()
 library typings.vscode.interop.vscode_window; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
@@ -3787,7 +3787,7 @@ class IInline51 {}
 
 extension IInline51$Typings on IInline51 {
   /// Content settings for the webview created for this view.
-  _i11.IInline52? get webviewOptions => _i4.getProperty(
+  _i2.dynamic get webviewOptions => _i4.getProperty(
         this,
         'webviewOptions',
       );
@@ -4520,7 +4520,7 @@ _i6.Thenable<R> withScmProgress<R>(
 _i6.Thenable<R> withProgress<R>(
   _i3.ProgressOptions options,
   _i6.Thenable<R> Function(
-    _i3.Progress<_i11.IInline50>,
+    _i3.Progress<_i2.dynamic>,
     _i3.CancellationToken,
   ) task,
 ) =>

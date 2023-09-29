@@ -1,4 +1,4 @@
-@_i1.JS('vscode')
+@_i1.JS()
 library typings.vscode.interop.vscode; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;
@@ -5434,11 +5434,11 @@ extension CodeAction$Typings on CodeAction {
   ///  - If the user has a [keybinding](https://code.visualstudio.com/docs/editor/refactoring#_keybindings-for-code-actions)
   ///  that auto applies a code action and only a disabled code actions are returned, the editor will show the user an
   ///  error message with `reason` in the editor.
-  _i3.IInline11 get disabled => _i5.getProperty(
+  _i2.dynamic get disabled => _i5.getProperty(
         this,
         'disabled',
       );
-  set disabled(_i3.IInline11 value) {
+  set disabled(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'disabled',
@@ -5598,7 +5598,7 @@ extension CodeActionProviderMetadata$Typings on CodeActionProviderMetadata {
   /// - Any code actions of `kind` are returned by the provider.
   ///
   /// At most one documentation entry will be shown per provider.
-  _i7.ReadonlyArray<_i3.IInline12>? get documentation => _i5.getProperty(
+  _i7.ReadonlyArray<_i2.dynamic>? get documentation => _i5.getProperty(
         this,
         'documentation',
       );
@@ -11600,11 +11600,11 @@ extension IInline26$Typings on IInline26 {
   ///  the editor (scope and lineStart are ignored).
   ///  Use the autoClosingPairs property in the language configuration file instead.
   ///  @deprecated
-  _i3.IInline27? get docComment => _i5.getProperty(
+  _i2.dynamic get docComment => _i5.getProperty(
         this,
         'docComment',
       );
-  set docComment(_i3.IInline27? value) {
+  set docComment(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'docComment',
@@ -11663,12 +11663,12 @@ extension IInline29$Typings on IInline29 {
 class IInline28 {}
 
 extension IInline28$Typings on IInline28 {
-  _i2.List<_i3.IInline29> get autoClosingPairs => (_i5.getProperty(
+  _i2.List<_i2.dynamic> get autoClosingPairs => (_i5.getProperty(
         this,
         'autoClosingPairs',
       ) as _i2.List)
           .cast();
-  set autoClosingPairs(_i2.List<_i3.IInline29> value) {
+  set autoClosingPairs(_i2.List<_i2.dynamic> value) {
     _i5.setProperty(
       this,
       'autoClosingPairs',
@@ -11801,11 +11801,11 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
   /// **Deprecated** Do not use.
   ///
   ///  @deprecated Will be replaced by a better API soon.
-  _i3.IInline26? get electricCharacterSupport => _i5.getProperty(
+  _i2.dynamic get electricCharacterSupport => _i5.getProperty(
         this,
         '__electricCharacterSupport',
       );
-  set electricCharacterSupport(_i3.IInline26? value) {
+  set electricCharacterSupport(_i2.dynamic value) {
     _i5.setProperty(
       this,
       '__electricCharacterSupport',
@@ -11816,11 +11816,11 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
   /// **Deprecated** Do not use.
   ///
   ///  @deprecated * Use the autoClosingPairs property in the language configuration file instead.
-  _i3.IInline28? get characterPairSupport => _i5.getProperty(
+  _i2.dynamic get characterPairSupport => _i5.getProperty(
         this,
         '__characterPairSupport',
       );
-  set characterPairSupport(_i3.IInline28? value) {
+  set characterPairSupport(_i2.dynamic value) {
     _i5.setProperty(
       this,
       '__characterPairSupport',
@@ -13942,7 +13942,7 @@ extension ExtensionContext$Typings on ExtensionContext {
   /// extension is deactivated the disposables will be disposed.
   ///
   /// *Note* that asynchronous dispose-functions aren't awaited.
-  _i2.List<_i3.IInline32> get subscriptions => (_i5.getProperty(
+  _i2.List<_i2.dynamic> get subscriptions => (_i5.getProperty(
         this,
         'subscriptions',
       ) as _i2.List)
@@ -20814,7 +20814,7 @@ extension FileWillRenameEvent$Typings on FileWillRenameEvent {
       );
 
   /// The files that are going to be renamed.
-  _i7.ReadonlyArray<_i3.IInline62> get files => _i5.getProperty(
+  _i7.ReadonlyArray<_i2.dynamic> get files => _i5.getProperty(
         this,
         'files',
       );
@@ -20917,7 +20917,7 @@ class FileRenameEvent {
 
 extension FileRenameEvent$Typings on FileRenameEvent {
   /// The files that got renamed.
-  _i7.ReadonlyArray<_i3.IInline63> get files => _i5.getProperty(
+  _i7.ReadonlyArray<_i2.dynamic> get files => _i5.getProperty(
         this,
         'files',
       );
@@ -21165,7 +21165,7 @@ class NotebookRendererMessaging {}
 
 extension NotebookRendererMessaging$Typings on NotebookRendererMessaging {
   /// An event that fires when a message is received from a renderer.
-  _i3.Event<_i3.IInline68> get onDidReceiveMessage => _i5.getProperty(
+  _i3.Event<_i2.dynamic> get onDidReceiveMessage => _i5.getProperty(
         this,
         'onDidReceiveMessage',
       );
@@ -21696,7 +21696,7 @@ extension NotebookCellExecutionSummary$Typings on NotebookCellExecutionSummary {
       );
 
   /// The times at which execution started and ended, as unix timestamps
-  _i3.IInline73? get timing => _i5.getProperty(
+  _i2.dynamic get timing => _i5.getProperty(
         this,
         'timing',
       );
@@ -22427,7 +22427,7 @@ extension NotebookController$Typings on NotebookController {
   ///
   /// _Note_ that controller selection is persisted (by the controllers {@link NotebookController.idid}) and restored as soon as a
   /// controller is re-created or as a notebook is {@link workspace.onDidOpenNotebookDocumentopened}.
-  _i3.Event<_i3.IInline81> get onDidChangeSelectedNotebooks => _i5.getProperty(
+  _i3.Event<_i2.dynamic> get onDidChangeSelectedNotebooks => _i5.getProperty(
         this,
         'onDidChangeSelectedNotebooks',
       );
@@ -25505,11 +25505,11 @@ extension TestController$Typings on TestController {
   ///
   ///  @param item An unresolved test item for which children are being
   ///  requested, or `undefined` to resolve the controller's initial {@link TestController.items items}.
-  _i2.Object Function(_i3.TestItem?)? get resolveHandler => _i5.getProperty(
+  _i2.Object Function([_i3.TestItem?])? get resolveHandler => _i5.getProperty(
         this,
         'resolveHandler',
       );
-  set resolveHandler(_i2.Object Function(_i3.TestItem?)? value) {
+  set resolveHandler(_i2.Object Function([_i3.TestItem?])? value) {
     _i5.setProperty(
       this,
       'resolveHandler',

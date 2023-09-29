@@ -1,4 +1,4 @@
-@_i1.JS('vscode.l10n')
+@_i1.JS()
 library typings.vscode.interop.vscode_l10n; // ignore_for_file: no_leading_underscores_for_library_prefixes
 
 import 'package:js/js.dart' as _i1;

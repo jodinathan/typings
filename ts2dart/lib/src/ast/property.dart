@@ -68,7 +68,7 @@ final class InteropGetter extends InteropProperty {
           type: MethodType.getter,
           updates: (b) {
             b
-              ..returns = reference.ref()
+              ..returns = reference.ref(solid: true)
               ..lambda = true
               ..body = reference
                   .fromInterop(pkgJsUtils.getProperty(
@@ -115,7 +115,7 @@ final class InteropSetter extends InteropProperty {
             final paramValue = Parameter((b) {
               b
                 ..name = 'value'
-                ..type = reference.ref();
+                ..type = reference.ref(solid: true);
             });
 
             b
