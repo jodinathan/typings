@@ -644,7 +644,7 @@ class OnDidChangeCustomDocument {}
 
 typedef GlobPattern = _i2.Object;
 typedef DocumentSelector = _i2.Object;
-typedef ProviderResult<T> = _i2.dynamic;
+typedef ProviderResult<T extends _i2.Object?> = _i2.Object?;
 typedef DefinitionLink = _i3.LocationLink;
 typedef Definition = _i2.Object;
 typedef Declaration = _i2.Object;
@@ -666,17 +666,17 @@ typedef DebugAdapterDescriptor = _i2.Object;
 @_i1.anonymous
 class Command {
   external factory Command._({
-    _i2.dynamic title,
-    _i2.dynamic command,
-    _i2.dynamic tooltip,
-    _i2.dynamic arguments,
+    _i2.Object? title,
+    _i2.Object? command,
+    _i2.Object? tooltip,
+    _i2.Object? arguments,
   });
 
   factory Command({
     required _i2.String title,
     required _i2.String command,
     _i2.String? tooltip,
-    _i2.List<_i2.dynamic>? arguments,
+    _i2.List<_i2.Object?>? arguments,
   }) =>
       Command._(
         title: title,
@@ -729,12 +729,12 @@ extension Command$Typings on Command {
 
   /// Arguments that the command handler should be
   ///  invoked with.
-  _i2.List<_i2.dynamic>? get arguments => (_i5.getProperty(
+  _i2.List<_i2.Object?>? get arguments => (_i5.getProperty(
         this,
         'arguments',
       ) as _i2.List?)
           ?.cast();
-  set arguments(_i2.List<_i2.dynamic>? value) {
+  set arguments(_i2.List<_i2.Object?>? value) {
     _i5.setProperty(
       this,
       'arguments',
@@ -752,12 +752,12 @@ extension Command$Typings on Command {
 @_i1.anonymous
 class TextLine {
   external factory TextLine._({
-    _i2.dynamic lineNumber,
-    _i2.dynamic text,
-    _i2.dynamic range,
-    _i2.dynamic rangeIncludingLineBreak,
-    _i2.dynamic firstNonWhitespaceCharacterIndex,
-    _i2.dynamic isEmptyOrWhitespace,
+    _i2.Object? lineNumber,
+    _i2.Object? text,
+    _i2.Object? range,
+    _i2.Object? rangeIncludingLineBreak,
+    _i2.Object? firstNonWhitespaceCharacterIndex,
+    _i2.Object? isEmptyOrWhitespace,
   });
 
   factory TextLine({
@@ -1623,9 +1623,9 @@ extension Selection$Typings on Selection {
 @_i1.anonymous
 class TextEditorSelectionChangeEvent {
   external factory TextEditorSelectionChangeEvent._({
-    _i2.dynamic textEditor,
-    _i2.dynamic selections,
-    _i2.dynamic kind,
+    _i2.Object? textEditor,
+    _i2.Object? selections,
+    _i2.Object? kind,
   });
 
   factory TextEditorSelectionChangeEvent({
@@ -1673,8 +1673,8 @@ extension TextEditorSelectionChangeEvent$Typings
 @_i1.anonymous
 class TextEditorVisibleRangesChangeEvent {
   external factory TextEditorVisibleRangesChangeEvent._({
-    _i2.dynamic textEditor,
-    _i2.dynamic visibleRanges,
+    _i2.Object? textEditor,
+    _i2.Object? visibleRanges,
   });
 
   factory TextEditorVisibleRangesChangeEvent({
@@ -1709,8 +1709,8 @@ extension TextEditorVisibleRangesChangeEvent$Typings
 @_i1.anonymous
 class TextEditorOptionsChangeEvent {
   external factory TextEditorOptionsChangeEvent._({
-    _i2.dynamic textEditor,
-    _i2.dynamic options,
+    _i2.Object? textEditor,
+    _i2.Object? options,
   });
 
   factory TextEditorOptionsChangeEvent({
@@ -1743,8 +1743,8 @@ extension TextEditorOptionsChangeEvent$Typings on TextEditorOptionsChangeEvent {
 @_i1.anonymous
 class TextEditorViewColumnChangeEvent {
   external factory TextEditorViewColumnChangeEvent._({
-    _i2.dynamic textEditor,
-    _i2.dynamic viewColumn,
+    _i2.Object? textEditor,
+    _i2.Object? viewColumn,
   });
 
   factory TextEditorViewColumnChangeEvent({
@@ -1778,10 +1778,10 @@ extension TextEditorViewColumnChangeEvent$Typings
 @_i1.anonymous
 class TextEditorOptions {
   external factory TextEditorOptions._({
-    _i2.dynamic tabSize,
-    _i2.dynamic insertSpaces,
-    _i2.dynamic cursorStyle,
-    _i2.dynamic lineNumbers,
+    _i2.Object? tabSize,
+    _i2.Object? insertSpaces,
+    _i2.Object? cursorStyle,
+    _i2.Object? lineNumbers,
   });
 
   factory TextEditorOptions({
@@ -1901,10 +1901,10 @@ extension TextEditorDecorationType$Typings on TextEditorDecorationType {
 @_i1.anonymous
 class TextDocumentShowOptions {
   external factory TextDocumentShowOptions._({
-    _i2.dynamic viewColumn,
-    _i2.dynamic preserveFocus,
-    _i2.dynamic preview,
-    _i2.dynamic selection,
+    _i2.Object? viewColumn,
+    _i2.Object? preserveFocus,
+    _i2.Object? preview,
+    _i2.Object? selection,
   });
 
   factory TextDocumentShowOptions({
@@ -1991,8 +1991,8 @@ extension TextDocumentShowOptions$Typings on TextDocumentShowOptions {
 @_i1.anonymous
 class NotebookEditorSelectionChangeEvent {
   external factory NotebookEditorSelectionChangeEvent._({
-    _i2.dynamic notebookEditor,
-    _i2.dynamic selections,
+    _i2.Object? notebookEditor,
+    _i2.Object? selections,
   });
 
   factory NotebookEditorSelectionChangeEvent({
@@ -2027,8 +2027,8 @@ extension NotebookEditorSelectionChangeEvent$Typings
 @_i1.anonymous
 class NotebookEditorVisibleRangesChangeEvent {
   external factory NotebookEditorVisibleRangesChangeEvent._({
-    _i2.dynamic notebookEditor,
-    _i2.dynamic visibleRanges,
+    _i2.Object? notebookEditor,
+    _i2.Object? visibleRanges,
   });
 
   factory NotebookEditorVisibleRangesChangeEvent({
@@ -2063,10 +2063,10 @@ extension NotebookEditorVisibleRangesChangeEvent$Typings
 @_i1.anonymous
 class NotebookDocumentShowOptions {
   external factory NotebookDocumentShowOptions._({
-    _i2.dynamic viewColumn,
-    _i2.dynamic preserveFocus,
-    _i2.dynamic preview,
-    _i2.dynamic selections,
+    _i2.Object? viewColumn,
+    _i2.Object? preserveFocus,
+    _i2.Object? preview,
+    _i2.Object? selections,
   });
 
   factory NotebookDocumentShowOptions({
@@ -2196,29 +2196,29 @@ extension ThemeIcon$Typings on ThemeIcon {
 @_i1.anonymous
 class ThemableDecorationRenderOptions {
   external factory ThemableDecorationRenderOptions._({
-    _i2.dynamic backgroundColor,
-    _i2.dynamic outline,
-    _i2.dynamic outlineColor,
-    _i2.dynamic outlineStyle,
-    _i2.dynamic outlineWidth,
-    _i2.dynamic border,
-    _i2.dynamic borderColor,
-    _i2.dynamic borderRadius,
-    _i2.dynamic borderSpacing,
-    _i2.dynamic borderStyle,
-    _i2.dynamic borderWidth,
-    _i2.dynamic fontStyle,
-    _i2.dynamic fontWeight,
-    _i2.dynamic textDecoration,
-    _i2.dynamic cursor,
-    _i2.dynamic color,
-    _i2.dynamic opacity,
-    _i2.dynamic letterSpacing,
-    _i2.dynamic gutterIconPath,
-    _i2.dynamic gutterIconSize,
-    _i2.dynamic overviewRulerColor,
-    _i2.dynamic before,
-    _i2.dynamic after,
+    _i2.Object? backgroundColor,
+    _i2.Object? outline,
+    _i2.Object? outlineColor,
+    _i2.Object? outlineStyle,
+    _i2.Object? outlineWidth,
+    _i2.Object? border,
+    _i2.Object? borderColor,
+    _i2.Object? borderRadius,
+    _i2.Object? borderSpacing,
+    _i2.Object? borderStyle,
+    _i2.Object? borderWidth,
+    _i2.Object? fontStyle,
+    _i2.Object? fontWeight,
+    _i2.Object? textDecoration,
+    _i2.Object? cursor,
+    _i2.Object? color,
+    _i2.Object? opacity,
+    _i2.Object? letterSpacing,
+    _i2.Object? gutterIconPath,
+    _i2.Object? gutterIconSize,
+    _i2.Object? overviewRulerColor,
+    _i2.Object? before,
+    _i2.Object? after,
   });
 
   factory ThemableDecorationRenderOptions({
@@ -2591,18 +2591,18 @@ extension ThemableDecorationRenderOptions$Typings
 @_i1.anonymous
 class ThemableDecorationAttachmentRenderOptions {
   external factory ThemableDecorationAttachmentRenderOptions._({
-    _i2.dynamic contentText,
-    _i2.dynamic contentIconPath,
-    _i2.dynamic border,
-    _i2.dynamic borderColor,
-    _i2.dynamic fontStyle,
-    _i2.dynamic fontWeight,
-    _i2.dynamic textDecoration,
-    _i2.dynamic color,
-    _i2.dynamic backgroundColor,
-    _i2.dynamic margin,
-    _i2.dynamic width,
-    _i2.dynamic height,
+    _i2.Object? contentText,
+    _i2.Object? contentIconPath,
+    _i2.Object? border,
+    _i2.Object? borderColor,
+    _i2.Object? fontStyle,
+    _i2.Object? fontWeight,
+    _i2.Object? textDecoration,
+    _i2.Object? color,
+    _i2.Object? backgroundColor,
+    _i2.Object? margin,
+    _i2.Object? width,
+    _i2.Object? height,
   });
 
   factory ThemableDecorationAttachmentRenderOptions({
@@ -2801,34 +2801,34 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
 @_i1.anonymous
 class DecorationRenderOptions implements _i3.ThemableDecorationRenderOptions {
   external factory DecorationRenderOptions._({
-    _i2.dynamic isWholeLine,
-    _i2.dynamic rangeBehavior,
-    _i2.dynamic overviewRulerLane,
-    _i2.dynamic light,
-    _i2.dynamic dark,
-    _i2.dynamic backgroundColor,
-    _i2.dynamic outline,
-    _i2.dynamic outlineColor,
-    _i2.dynamic outlineStyle,
-    _i2.dynamic outlineWidth,
-    _i2.dynamic border,
-    _i2.dynamic borderColor,
-    _i2.dynamic borderRadius,
-    _i2.dynamic borderSpacing,
-    _i2.dynamic borderStyle,
-    _i2.dynamic borderWidth,
-    _i2.dynamic fontStyle,
-    _i2.dynamic fontWeight,
-    _i2.dynamic textDecoration,
-    _i2.dynamic cursor,
-    _i2.dynamic color,
-    _i2.dynamic opacity,
-    _i2.dynamic letterSpacing,
-    _i2.dynamic gutterIconPath,
-    _i2.dynamic gutterIconSize,
-    _i2.dynamic overviewRulerColor,
-    _i2.dynamic before,
-    _i2.dynamic after,
+    _i2.Object? isWholeLine,
+    _i2.Object? rangeBehavior,
+    _i2.Object? overviewRulerLane,
+    _i2.Object? light,
+    _i2.Object? dark,
+    _i2.Object? backgroundColor,
+    _i2.Object? outline,
+    _i2.Object? outlineColor,
+    _i2.Object? outlineStyle,
+    _i2.Object? outlineWidth,
+    _i2.Object? border,
+    _i2.Object? borderColor,
+    _i2.Object? borderRadius,
+    _i2.Object? borderSpacing,
+    _i2.Object? borderStyle,
+    _i2.Object? borderWidth,
+    _i2.Object? fontStyle,
+    _i2.Object? fontWeight,
+    _i2.Object? textDecoration,
+    _i2.Object? cursor,
+    _i2.Object? color,
+    _i2.Object? opacity,
+    _i2.Object? letterSpacing,
+    _i2.Object? gutterIconPath,
+    _i2.Object? gutterIconSize,
+    _i2.Object? overviewRulerColor,
+    _i2.Object? before,
+    _i2.Object? after,
   });
 
   factory DecorationRenderOptions({
@@ -2974,9 +2974,9 @@ extension DecorationRenderOptions$Typings on DecorationRenderOptions {
 @_i1.anonymous
 class DecorationOptions {
   external factory DecorationOptions._({
-    _i2.dynamic range,
-    _i2.dynamic hoverMessage,
-    _i2.dynamic renderOptions,
+    _i2.Object? range,
+    _i2.Object? hoverMessage,
+    _i2.Object? renderOptions,
   });
 
   factory DecorationOptions({
@@ -3038,8 +3038,8 @@ extension DecorationOptions$Typings on DecorationOptions {
 @_i1.anonymous
 class ThemableDecorationInstanceRenderOptions {
   external factory ThemableDecorationInstanceRenderOptions._({
-    _i2.dynamic before,
-    _i2.dynamic after,
+    _i2.Object? before,
+    _i2.Object? after,
   });
 
   factory ThemableDecorationInstanceRenderOptions({
@@ -3087,10 +3087,10 @@ extension ThemableDecorationInstanceRenderOptions$Typings
 class DecorationInstanceRenderOptions
     implements _i3.ThemableDecorationInstanceRenderOptions {
   external factory DecorationInstanceRenderOptions._({
-    _i2.dynamic light,
-    _i2.dynamic dark,
-    _i2.dynamic before,
-    _i2.dynamic after,
+    _i2.Object? light,
+    _i2.Object? dark,
+    _i2.Object? before,
+    _i2.Object? after,
   });
 
   factory DecorationInstanceRenderOptions({
@@ -3600,7 +3600,7 @@ class Uri {
   /// so that is true: `joinPath(Uri.file('file:///c:/root'), '../../other').fsPath === 'c:/other'`
   static _i3.Uri joinPath(
     _i3.Uri base, [
-    _i2.Iterable<_i2.dynamic>? pathSegments,
+    _i2.Iterable<_i2.Object?>? pathSegments,
   ]) =>
       _i5.callMethod(
         _declaredUri,
@@ -3723,7 +3723,7 @@ extension Uri$Typings on Uri {
   /// Returns a JSON representation of this Uri.
   ///
   ///  @return An object.
-  _i2.dynamic toJSON() => _i5.callMethod(
+  _i2.Object? toJSON() => _i5.callMethod(
         this,
         'toJSON',
         [],
@@ -3741,13 +3741,13 @@ extension Uri$Typings on Uri {
 @_i1.anonymous
 class CancellationToken {
   external factory CancellationToken._({
-    _i2.dynamic isCancellationRequested,
-    _i2.dynamic onCancellationRequested,
+    _i2.Object? isCancellationRequested,
+    _i2.Object? onCancellationRequested,
   });
 
   factory CancellationToken({
     required _i2.bool isCancellationRequested,
-    required _i3.Event<_i2.dynamic> onCancellationRequested,
+    required _i3.Event<_i2.Object?> onCancellationRequested,
   }) =>
       CancellationToken._(
         isCancellationRequested: isCancellationRequested,
@@ -3770,11 +3770,11 @@ extension CancellationToken$Typings on CancellationToken {
   }
 
   /// An {@link Event} which fires upon cancellation.
-  _i3.Event<_i2.dynamic> get onCancellationRequested => _i5.getProperty(
+  _i3.Event<_i2.Object?> get onCancellationRequested => _i5.getProperty(
         this,
         'onCancellationRequested',
       );
-  set onCancellationRequested(_i3.Event<_i2.dynamic> value) {
+  set onCancellationRequested(_i3.Event<_i2.Object?> value) {
     _i5.setProperty(
       this,
       'onCancellationRequested',
@@ -3847,11 +3847,11 @@ external _i2.Object _declaredCancellationError;
 class IInline7 {}
 
 extension IInline7$Typings on IInline7 {
-  _i2.dynamic Function() get dispose => _i5.getProperty(
+  _i2.Object? Function() get dispose => _i5.getProperty(
         this,
         'dispose',
       );
-  set dispose(_i2.dynamic Function() value) {
+  set dispose(_i2.Object? Function() value) {
     _i5.setProperty(
       this,
       'dispose',
@@ -3865,7 +3865,7 @@ extension IInline7$Typings on IInline7 {
 @_i1.JS()
 @_i1.staticInterop
 class Disposable {
-  factory Disposable(_i2.dynamic Function() callOnDispose) =>
+  factory Disposable(_i2.Object? Function() callOnDispose) =>
       _i5.callConstructor(
         _declaredDisposable,
         [_i5.allowInterop(callOnDispose)],
@@ -3873,7 +3873,7 @@ class Disposable {
 
   /// Combine many disposable-likes into one. You can use this method when having objects with
   /// a dispose function which aren't instances of `Disposable`.
-  static _i3.Disposable from([_i2.Iterable<_i2.dynamic>? disposableLikes]) =>
+  static _i3.Disposable from([_i2.Iterable<_i2.Object?>? disposableLikes]) =>
       _i5.callMethod(
         _declaredDisposable,
         'from',
@@ -3889,7 +3889,7 @@ external _i2.Object _declaredDisposable;
 
 extension Disposable$Typings on Disposable {
   /// Dispose this object.
-  _i2.dynamic dispose() => _i5.callMethod(
+  _i2.Object? dispose() => _i5.callMethod(
         this,
         'dispose',
         [],
@@ -3903,16 +3903,16 @@ extension Disposable$Typings on Disposable {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class Event<T> {
+class Event<T extends _i2.Object?> {
   external factory Event._();
 
   factory Event() => Event._();
 }
 
-extension Event$Typings<T> on Event<T> {
+extension Event$Typings<T extends _i2.Object?> on Event<T> {
   _i3.Disposable call(
-    _i2.dynamic Function(T) listener, [
-    _i2.dynamic thisArgs,
+    _i2.Object? Function(T) listener, [
+    _i2.Object? thisArgs,
     _i2.List<_i3.Disposable>? disposables,
   ]) =>
       _i5.callMethod(
@@ -3934,9 +3934,9 @@ extension Event$Typings<T> on Event<T> {
 /// API to other extensions.
 @_i1.JS()
 @_i1.staticInterop
-class EventEmitter<T> {}
+class EventEmitter<T extends _i2.Object?> {}
 
-extension EventEmitter$Typings<T> on EventEmitter<T> {
+extension EventEmitter$Typings<T extends _i2.Object?> on EventEmitter<T> {
   /// The event listeners can subscribe to.
   _i3.Event<T> get event => _i5.getProperty(
         this,
@@ -3982,12 +3982,12 @@ extension EventEmitter$Typings<T> on EventEmitter<T> {
 @_i1.anonymous
 class FileSystemWatcher implements _i3.Disposable {
   external factory FileSystemWatcher._({
-    _i2.dynamic ignoreCreateEvents,
-    _i2.dynamic ignoreChangeEvents,
-    _i2.dynamic ignoreDeleteEvents,
-    _i2.dynamic onDidCreate,
-    _i2.dynamic onDidChange,
-    _i2.dynamic onDidDelete,
+    _i2.Object? ignoreCreateEvents,
+    _i2.Object? ignoreChangeEvents,
+    _i2.Object? ignoreDeleteEvents,
+    _i2.Object? onDidCreate,
+    _i2.Object? onDidChange,
+    _i2.Object? onDidDelete,
   });
 
   factory FileSystemWatcher({
@@ -4138,14 +4138,14 @@ extension IInline8$Typings on IInline8 {
 @_i1.anonymous
 class QuickPickItem {
   external factory QuickPickItem._({
-    _i2.dynamic label,
-    _i2.dynamic kind,
-    _i2.dynamic iconPath,
-    _i2.dynamic description,
-    _i2.dynamic detail,
-    _i2.dynamic picked,
-    _i2.dynamic alwaysShow,
-    _i2.dynamic buttons,
+    _i2.Object? label,
+    _i2.Object? kind,
+    _i2.Object? iconPath,
+    _i2.Object? description,
+    _i2.Object? detail,
+    _i2.Object? picked,
+    _i2.Object? alwaysShow,
+    _i2.Object? buttons,
   });
 
   factory QuickPickItem({
@@ -4389,7 +4389,7 @@ extension QuickPickOptions$Typings on QuickPickOptions {
   }
 
   /// An optional function that is invoked whenever an item is selected.
-  _i2.dynamic onDidSelectItem(_i2.Object item) => _i5.callMethod(
+  _i2.Object? onDidSelectItem(_i2.Object item) => _i5.callMethod(
         this,
         'onDidSelectItem',
         [item],
@@ -4402,8 +4402,8 @@ extension QuickPickOptions$Typings on QuickPickOptions {
 @_i1.anonymous
 class WorkspaceFolderPickOptions {
   external factory WorkspaceFolderPickOptions._({
-    _i2.dynamic placeHolder,
-    _i2.dynamic ignoreFocusOut,
+    _i2.Object? placeHolder,
+    _i2.Object? ignoreFocusOut,
   });
 
   factory WorkspaceFolderPickOptions({
@@ -4456,13 +4456,13 @@ extension WorkspaceFolderPickOptions$Typings on WorkspaceFolderPickOptions {
 @_i1.anonymous
 class OpenDialogOptions {
   external factory OpenDialogOptions._({
-    _i2.dynamic defaultUri,
-    _i2.dynamic openLabel,
-    _i2.dynamic canSelectFiles,
-    _i2.dynamic canSelectFolders,
-    _i2.dynamic canSelectMany,
-    _i2.dynamic filters,
-    _i2.dynamic title,
+    _i2.Object? defaultUri,
+    _i2.Object? openLabel,
+    _i2.Object? canSelectFiles,
+    _i2.Object? canSelectFolders,
+    _i2.Object? canSelectMany,
+    _i2.Object? filters,
+    _i2.Object? title,
   });
 
   factory OpenDialogOptions({
@@ -4594,10 +4594,10 @@ extension OpenDialogOptions$Typings on OpenDialogOptions {
 @_i1.anonymous
 class SaveDialogOptions {
   external factory SaveDialogOptions._({
-    _i2.dynamic defaultUri,
-    _i2.dynamic saveLabel,
-    _i2.dynamic filters,
-    _i2.dynamic title,
+    _i2.Object? defaultUri,
+    _i2.Object? saveLabel,
+    _i2.Object? filters,
+    _i2.Object? title,
   });
 
   factory SaveDialogOptions({
@@ -4685,8 +4685,8 @@ extension SaveDialogOptions$Typings on SaveDialogOptions {
 @_i1.anonymous
 class MessageItem {
   external factory MessageItem._({
-    _i2.dynamic title,
-    _i2.dynamic isCloseAffordance,
+    _i2.Object? title,
+    _i2.Object? isCloseAffordance,
   });
 
   factory MessageItem({
@@ -4737,8 +4737,8 @@ extension MessageItem$Typings on MessageItem {
 @_i1.anonymous
 class MessageOptions {
   external factory MessageOptions._({
-    _i2.dynamic modal,
-    _i2.dynamic detail,
+    _i2.Object? modal,
+    _i2.Object? detail,
   });
 
   factory MessageOptions({
@@ -4786,8 +4786,8 @@ extension MessageOptions$Typings on MessageOptions {
 @_i1.anonymous
 class InputBoxValidationMessage {
   external factory InputBoxValidationMessage._({
-    _i2.dynamic message,
-    _i2.dynamic severity,
+    _i2.Object? message,
+    _i2.Object? severity,
   });
 
   factory InputBoxValidationMessage({
@@ -4936,7 +4936,7 @@ extension InputBoxOptions$Typings on InputBoxOptions {
   ///  @param value The current value of the input box.
   ///  @return Either a human-readable string which is presented as an error message or an {@link InputBoxValidationMessage}
   ///   which can provide a specific message severity. Return `undefined`, `null`, or the empty string when 'value' is valid.
-  _i2.dynamic validateInput(_i2.String value) => _i5.callMethod(
+  _i2.Object? validateInput(_i2.String value) => _i5.callMethod(
         this,
         'validateInput',
         [value],
@@ -5031,10 +5031,10 @@ extension RelativePattern$Typings on RelativePattern {
 @_i1.anonymous
 class DocumentFilter {
   external factory DocumentFilter._({
-    _i2.dynamic language,
-    _i2.dynamic notebookType,
-    _i2.dynamic scheme,
-    _i2.dynamic pattern,
+    _i2.Object? language,
+    _i2.Object? notebookType,
+    _i2.Object? scheme,
+    _i2.Object? pattern,
   });
 
   factory DocumentFilter({
@@ -5252,9 +5252,9 @@ extension CodeActionKind$Typings on CodeActionKind {
 @_i1.anonymous
 class CodeActionContext {
   external factory CodeActionContext._({
-    _i2.dynamic triggerKind,
-    _i2.dynamic diagnostics,
-    _i2.dynamic only,
+    _i2.Object? triggerKind,
+    _i2.Object? diagnostics,
+    _i2.Object? only,
   });
 
   factory CodeActionContext({
@@ -5434,11 +5434,11 @@ extension CodeAction$Typings on CodeAction {
   ///  - If the user has a [keybinding](https://code.visualstudio.com/docs/editor/refactoring#_keybindings-for-code-actions)
   ///  that auto applies a code action and only a disabled code actions are returned, the editor will show the user an
   ///  error message with `reason` in the editor.
-  _i2.dynamic get disabled => _i5.getProperty(
+  _i2.Object? get disabled => _i5.getProperty(
         this,
         'disabled',
       );
-  set disabled(_i2.dynamic value) {
+  set disabled(_i2.Object? value) {
     _i5.setProperty(
       this,
       'disabled',
@@ -5559,8 +5559,8 @@ extension IInline12$Typings on IInline12 {
 @_i1.anonymous
 class CodeActionProviderMetadata {
   external factory CodeActionProviderMetadata._({
-    _i2.dynamic providedCodeActionKinds,
-    _i2.dynamic documentation,
+    _i2.Object? providedCodeActionKinds,
+    _i2.Object? documentation,
   });
 
   factory CodeActionProviderMetadata({
@@ -5598,7 +5598,7 @@ extension CodeActionProviderMetadata$Typings on CodeActionProviderMetadata {
   /// - Any code actions of `kind` are returned by the provider.
   ///
   /// At most one documentation entry will be shown per provider.
-  _i7.ReadonlyArray<_i2.dynamic>? get documentation => _i5.getProperty(
+  _i7.ReadonlyArray<_i2.Object?>? get documentation => _i5.getProperty(
         this,
         'documentation',
       );
@@ -6337,8 +6337,8 @@ extension InlineValueEvaluatableExpression$Typings
 @_i1.anonymous
 class InlineValueContext {
   external factory InlineValueContext._({
-    _i2.dynamic frameId,
-    _i2.dynamic stoppedLocation,
+    _i2.Object? frameId,
+    _i2.Object? stoppedLocation,
   });
 
   factory InlineValueContext({
@@ -6783,7 +6783,7 @@ extension DocumentSymbolProvider$Typings on DocumentSymbolProvider {
 @_i1.staticInterop
 @_i1.anonymous
 class DocumentSymbolProviderMetadata {
-  external factory DocumentSymbolProviderMetadata._({_i2.dynamic label});
+  external factory DocumentSymbolProviderMetadata._({_i2.Object? label});
 
   factory DocumentSymbolProviderMetadata({_i2.String? label}) =>
       DocumentSymbolProviderMetadata._(label: label ?? _i4.undefined);
@@ -6871,7 +6871,7 @@ extension WorkspaceSymbolProvider$Typings<T extends _i3.SymbolInformation>
 @_i1.staticInterop
 @_i1.anonymous
 class ReferenceContext {
-  external factory ReferenceContext._({_i2.dynamic includeDeclaration});
+  external factory ReferenceContext._({_i2.Object? includeDeclaration});
 
   factory ReferenceContext({required _i2.bool includeDeclaration}) =>
       ReferenceContext._(includeDeclaration: includeDeclaration);
@@ -7289,10 +7289,10 @@ extension IInline19$Typings on IInline19 {
 @_i1.anonymous
 class WorkspaceEditEntryMetadata {
   external factory WorkspaceEditEntryMetadata._({
-    _i2.dynamic needsConfirmation,
-    _i2.dynamic label,
-    _i2.dynamic description,
-    _i2.dynamic iconPath,
+    _i2.Object? needsConfirmation,
+    _i2.Object? label,
+    _i2.Object? description,
+    _i2.Object? iconPath,
   });
 
   factory WorkspaceEditEntryMetadata({
@@ -7368,7 +7368,7 @@ extension WorkspaceEditEntryMetadata$Typings on WorkspaceEditEntryMetadata {
 @_i1.staticInterop
 @_i1.anonymous
 class WorkspaceEditMetadata {
-  external factory WorkspaceEditMetadata._({_i2.dynamic isRefactoring});
+  external factory WorkspaceEditMetadata._({_i2.Object? isRefactoring});
 
   factory WorkspaceEditMetadata({_i2.bool? isRefactoring}) =>
       WorkspaceEditMetadata._(isRefactoring: isRefactoring ?? _i4.undefined);
@@ -8804,10 +8804,10 @@ extension SignatureHelp$Typings on SignatureHelp {
 @_i1.anonymous
 class SignatureHelpContext {
   external factory SignatureHelpContext._({
-    _i2.dynamic triggerKind,
-    _i2.dynamic triggerCharacter,
-    _i2.dynamic isRetrigger,
-    _i2.dynamic activeSignatureHelp,
+    _i2.Object? triggerKind,
+    _i2.Object? triggerCharacter,
+    _i2.Object? isRetrigger,
+    _i2.Object? activeSignatureHelp,
   });
 
   factory SignatureHelpContext({
@@ -8900,8 +8900,8 @@ extension SignatureHelpProvider$Typings on SignatureHelpProvider {
 @_i1.anonymous
 class SignatureHelpProviderMetadata {
   external factory SignatureHelpProviderMetadata._({
-    _i2.dynamic triggerCharacters,
-    _i2.dynamic retriggerCharacters,
+    _i2.Object? triggerCharacters,
+    _i2.Object? retriggerCharacters,
   });
 
   factory SignatureHelpProviderMetadata({
@@ -8940,9 +8940,9 @@ extension SignatureHelpProviderMetadata$Typings
 @_i1.anonymous
 class CompletionItemLabel {
   external factory CompletionItemLabel._({
-    _i2.dynamic label,
-    _i2.dynamic detail,
-    _i2.dynamic description,
+    _i2.Object? label,
+    _i2.Object? detail,
+    _i2.Object? description,
   });
 
   factory CompletionItemLabel({
@@ -9375,8 +9375,8 @@ extension CompletionList$Typings<T extends _i3.CompletionItem>
 @_i1.anonymous
 class CompletionContext {
   external factory CompletionContext._({
-    _i2.dynamic triggerKind,
-    _i2.dynamic triggerCharacter,
+    _i2.Object? triggerKind,
+    _i2.Object? triggerCharacter,
   });
 
   factory CompletionContext({
@@ -9560,8 +9560,8 @@ extension InlineCompletionList$Typings on InlineCompletionList {
 @_i1.anonymous
 class InlineCompletionContext {
   external factory InlineCompletionContext._({
-    _i2.dynamic triggerKind,
-    _i2.dynamic selectedCompletionInfo,
+    _i2.Object? triggerKind,
+    _i2.Object? selectedCompletionInfo,
   });
 
   factory InlineCompletionContext({
@@ -9602,8 +9602,8 @@ extension InlineCompletionContext$Typings on InlineCompletionContext {
 @_i1.anonymous
 class SelectedCompletionInfo {
   external factory SelectedCompletionInfo._({
-    _i2.dynamic range,
-    _i2.dynamic text,
+    _i2.Object? range,
+    _i2.Object? text,
   });
 
   factory SelectedCompletionInfo({
@@ -10105,11 +10105,11 @@ extension InlayHintLabelPart$Typings on InlayHintLabelPart {
   ///
   ///  *Note* that this property can be set late during
   ///  {@link InlayHintsProvider.resolveInlayHint resolving} of inlay hints.
-  _i2.dynamic get tooltip => _i5.getProperty(
+  _i2.Object? get tooltip => _i5.getProperty(
         this,
         'tooltip',
       );
-  set tooltip(_i2.dynamic value) {
+  set tooltip(_i2.Object? value) {
     _i5.setProperty(
       this,
       'tooltip',
@@ -10217,11 +10217,11 @@ extension InlayHint$Typings on InlayHint {
   ///
   ///  *Note* that this property can be set late during
   ///  {@link InlayHintsProvider.resolveInlayHint resolving} of inlay hints.
-  _i2.dynamic get tooltip => _i5.getProperty(
+  _i2.Object? get tooltip => _i5.getProperty(
         this,
         'tooltip',
       );
-  set tooltip(_i2.dynamic value) {
+  set tooltip(_i2.Object? value) {
     _i5.setProperty(
       this,
       'tooltip',
@@ -11243,8 +11243,8 @@ extension DocumentDropEditProvider$Typings on DocumentDropEditProvider {
 @_i1.anonymous
 class CommentRule {
   external factory CommentRule._({
-    _i2.dynamic lineComment,
-    _i2.dynamic blockComment,
+    _i2.Object? lineComment,
+    _i2.Object? blockComment,
   });
 
   factory CommentRule({
@@ -11301,10 +11301,10 @@ extension CommentRule$Typings on CommentRule {
 @_i1.anonymous
 class IndentationRule {
   external factory IndentationRule._({
-    _i2.dynamic decreaseIndentPattern,
-    _i2.dynamic increaseIndentPattern,
-    _i2.dynamic indentNextLinePattern,
-    _i2.dynamic unIndentedLinePattern,
+    _i2.Object? decreaseIndentPattern,
+    _i2.Object? increaseIndentPattern,
+    _i2.Object? indentNextLinePattern,
+    _i2.Object? unIndentedLinePattern,
   });
 
   factory IndentationRule({
@@ -11381,9 +11381,9 @@ extension IndentationRule$Typings on IndentationRule {
 @_i1.anonymous
 class EnterAction {
   external factory EnterAction._({
-    _i2.dynamic indentAction,
-    _i2.dynamic appendText,
-    _i2.dynamic removeText,
+    _i2.Object? indentAction,
+    _i2.Object? appendText,
+    _i2.Object? removeText,
   });
 
   factory EnterAction({
@@ -11446,10 +11446,10 @@ extension EnterAction$Typings on EnterAction {
 @_i1.anonymous
 class OnEnterRule {
   external factory OnEnterRule._({
-    _i2.dynamic beforeText,
-    _i2.dynamic afterText,
-    _i2.dynamic previousLineText,
-    _i2.dynamic action,
+    _i2.Object? beforeText,
+    _i2.Object? afterText,
+    _i2.Object? previousLineText,
+    _i2.Object? action,
   });
 
   factory OnEnterRule({
@@ -11584,11 +11584,11 @@ extension IInline26$Typings on IInline26 {
   /// This property is deprecated and will be **ignored** from
   ///  the editor.
   ///  @deprecated
-  _i2.dynamic get brackets => _i5.getProperty(
+  _i2.Object? get brackets => _i5.getProperty(
         this,
         'brackets',
       );
-  set brackets(_i2.dynamic value) {
+  set brackets(_i2.Object? value) {
     _i5.setProperty(
       this,
       'brackets',
@@ -11600,11 +11600,11 @@ extension IInline26$Typings on IInline26 {
   ///  the editor (scope and lineStart are ignored).
   ///  Use the autoClosingPairs property in the language configuration file instead.
   ///  @deprecated
-  _i2.dynamic get docComment => _i5.getProperty(
+  _i2.Object? get docComment => _i5.getProperty(
         this,
         'docComment',
       );
-  set docComment(_i2.dynamic value) {
+  set docComment(_i2.Object? value) {
     _i5.setProperty(
       this,
       'docComment',
@@ -11663,12 +11663,12 @@ extension IInline29$Typings on IInline29 {
 class IInline28 {}
 
 extension IInline28$Typings on IInline28 {
-  _i2.List<_i2.dynamic> get autoClosingPairs => (_i5.getProperty(
+  _i2.List<_i2.Object?> get autoClosingPairs => (_i5.getProperty(
         this,
         'autoClosingPairs',
       ) as _i2.List)
           .cast();
-  set autoClosingPairs(_i2.List<_i2.dynamic> value) {
+  set autoClosingPairs(_i2.List<_i2.Object?> value) {
     _i5.setProperty(
       this,
       'autoClosingPairs',
@@ -11684,13 +11684,13 @@ extension IInline28$Typings on IInline28 {
 @_i1.anonymous
 class LanguageConfiguration {
   external factory LanguageConfiguration._({
-    _i2.dynamic comments,
-    _i2.dynamic brackets,
-    _i2.dynamic wordPattern,
-    _i2.dynamic indentationRules,
-    _i2.dynamic onEnterRules,
-    _i2.dynamic electricCharacterSupport,
-    _i2.dynamic characterPairSupport,
+    _i2.Object? comments,
+    _i2.Object? brackets,
+    _i2.Object? wordPattern,
+    _i2.Object? indentationRules,
+    _i2.Object? onEnterRules,
+    _i2.Object? electricCharacterSupport,
+    _i2.Object? characterPairSupport,
   });
 
   factory LanguageConfiguration({
@@ -11801,11 +11801,11 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
   /// **Deprecated** Do not use.
   ///
   ///  @deprecated Will be replaced by a better API soon.
-  _i2.dynamic get electricCharacterSupport => _i5.getProperty(
+  _i2.Object? get electricCharacterSupport => _i5.getProperty(
         this,
         '__electricCharacterSupport',
       );
-  set electricCharacterSupport(_i2.dynamic value) {
+  set electricCharacterSupport(_i2.Object? value) {
     _i5.setProperty(
       this,
       '__electricCharacterSupport',
@@ -11816,11 +11816,11 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
   /// **Deprecated** Do not use.
   ///
   ///  @deprecated * Use the autoClosingPairs property in the language configuration file instead.
-  _i2.dynamic get characterPairSupport => _i5.getProperty(
+  _i2.Object? get characterPairSupport => _i5.getProperty(
         this,
         '__characterPairSupport',
       );
-  set characterPairSupport(_i2.dynamic value) {
+  set characterPairSupport(_i2.Object? value) {
     _i5.setProperty(
       this,
       '__characterPairSupport',
@@ -11832,9 +11832,9 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline30<T> {}
+class IInline30<T extends _i2.Object?> {}
 
-extension IInline30$Typings<T> on IInline30<T> {
+extension IInline30$Typings<T extends _i2.Object?> on IInline30<T> {
   _i2.String get key => _i5.getProperty(
         this,
         'key',
@@ -12028,7 +12028,7 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
   ///  @param section Configuration name, supports _dotted_ names.
   ///  @param defaultValue A value should be returned when no value could be found, is `undefined`.
   ///  @return The value `section` denotes or the default.
-  T get<T>(
+  T get<T extends _i2.Object?>(
     _i2.String section,
     T defaultValue,
   ) =>
@@ -12063,7 +12063,9 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
   ///
   ///  @param section Configuration name, supports _dotted_ names.
   ///  @return Information about a configuration setting or `undefined`.
-  _i3.IInline30<_i2.dynamic>? inspect<T>(_i2.String section) => _i5.callMethod(
+  _i3.IInline30<_i2.Object?>? inspect<T extends _i2.Object?>(
+          _i2.String section) =>
+      _i5.callMethod(
         this,
         'inspect',
         [section],
@@ -12098,8 +12100,8 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
   /// 	- configuration to workspace folder when {@link WorkspaceConfiguration} is not scoped to a resource.
   _i6.Thenable<void> update(
     _i2.String section,
-    _i2.dynamic value, [
-    _i2.dynamic configurationTarget,
+    _i2.Object? value, [
+    _i2.Object? configurationTarget,
     _i2.bool? overrideInLanguage,
   ]) =>
       _i5.callMethod(
@@ -12112,7 +12114,7 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
           overrideInLanguage ?? _i4.undefined,
         ],
       );
-  _i2.dynamic operator [](_i2.String index) => _i5.getProperty(
+  _i2.Object? operator [](_i2.String index) => _i5.getProperty(
         this,
         index,
       );
@@ -12177,10 +12179,10 @@ extension Location$Typings on Location {
 @_i1.anonymous
 class LocationLink {
   external factory LocationLink._({
-    _i2.dynamic originSelectionRange,
-    _i2.dynamic targetUri,
-    _i2.dynamic targetRange,
-    _i2.dynamic targetSelectionRange,
+    _i2.Object? originSelectionRange,
+    _i2.Object? targetUri,
+    _i2.Object? targetRange,
+    _i2.Object? targetSelectionRange,
   });
 
   factory LocationLink({
@@ -12259,7 +12261,7 @@ extension LocationLink$Typings on LocationLink {
 @_i1.staticInterop
 @_i1.anonymous
 class DiagnosticChangeEvent {
-  external factory DiagnosticChangeEvent._({_i2.dynamic uris});
+  external factory DiagnosticChangeEvent._({_i2.Object? uris});
 
   factory DiagnosticChangeEvent({required _i2.List<_i3.Uri> uris}) =>
       DiagnosticChangeEvent._(uris: uris);
@@ -12614,12 +12616,12 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
   ///  @param callback Function to execute for each entry.
   ///  @param thisArg The `this` context used when invoking the handler function.
   void forEach(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i3.Uri,
       _i2.List<_i3.Diagnostic>,
       _i3.DiagnosticCollection,
     ) callback, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i5.callMethod(
       this,
@@ -12961,7 +12963,7 @@ extension LogOutputChannel$Typings on LogOutputChannel {
   ///  @param message trace message to log
   void trace(
     _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? args,
+    _i2.Iterable<_i2.Object?>? args,
   ]) {
     _i5.callMethod(
       this,
@@ -12980,7 +12982,7 @@ extension LogOutputChannel$Typings on LogOutputChannel {
   ///  @param message debug message to log
   void debug(
     _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? args,
+    _i2.Iterable<_i2.Object?>? args,
   ]) {
     _i5.callMethod(
       this,
@@ -12999,7 +13001,7 @@ extension LogOutputChannel$Typings on LogOutputChannel {
   ///  @param message info message to log
   void info(
     _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? args,
+    _i2.Iterable<_i2.Object?>? args,
   ]) {
     _i5.callMethod(
       this,
@@ -13018,7 +13020,7 @@ extension LogOutputChannel$Typings on LogOutputChannel {
   ///  @param message warning message to log
   void warn(
     _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? args,
+    _i2.Iterable<_i2.Object?>? args,
   ]) {
     _i5.callMethod(
       this,
@@ -13037,7 +13039,7 @@ extension LogOutputChannel$Typings on LogOutputChannel {
   ///  @param error Error or error message to log
   void error(
     _i2.Object error, [
-    _i2.Iterable<_i2.dynamic>? args,
+    _i2.Iterable<_i2.Object?>? args,
   ]) {
     _i5.callMethod(
       this,
@@ -13056,8 +13058,8 @@ extension LogOutputChannel$Typings on LogOutputChannel {
 @_i1.anonymous
 class AccessibilityInformation {
   external factory AccessibilityInformation._({
-    _i2.dynamic label,
-    _i2.dynamic role,
+    _i2.Object? label,
+    _i2.Object? role,
   });
 
   factory AccessibilityInformation({
@@ -13151,11 +13153,11 @@ extension StatusBarItem$Typings on StatusBarItem {
   }
 
   /// The tooltip text when you hover over this entry.
-  _i2.dynamic get tooltip => _i5.getProperty(
+  _i2.Object? get tooltip => _i5.getProperty(
         this,
         'tooltip',
       );
-  set tooltip(_i2.dynamic value) {
+  set tooltip(_i2.Object? value) {
     _i5.setProperty(
       this,
       'tooltip',
@@ -13164,11 +13166,11 @@ extension StatusBarItem$Typings on StatusBarItem {
   }
 
   /// The foreground color for this entry.
-  _i2.dynamic get color => _i5.getProperty(
+  _i2.Object? get color => _i5.getProperty(
         this,
         'color',
       );
-  set color(_i2.dynamic value) {
+  set color(_i2.Object? value) {
     _i5.setProperty(
       this,
       'color',
@@ -13204,11 +13206,11 @@ extension StatusBarItem$Typings on StatusBarItem {
   ///
   ///  Note that if this is a {@linkcode Command} object, only the {@linkcode Command.command command} and {@linkcode Command.arguments arguments}
   ///  are used by the editor.
-  _i2.dynamic get command => _i5.getProperty(
+  _i2.Object? get command => _i5.getProperty(
         this,
         'command',
       );
-  set command(_i2.dynamic value) {
+  set command(_i2.Object? value) {
     _i5.setProperty(
       this,
       'command',
@@ -13261,9 +13263,9 @@ extension StatusBarItem$Typings on StatusBarItem {
 /// Defines a generalized way of reporting progress updates.
 @_i1.JS()
 @_i1.staticInterop
-class Progress<T> {}
+class Progress<T extends _i2.Object?> {}
 
-extension Progress$Typings<T> on Progress<T> {
+extension Progress$Typings<T extends _i2.Object?> on Progress<T> {
   /// Report a progress update.
   ///  @param value A progress item, like a message and/or an
   ///  report on how much work finished
@@ -13382,8 +13384,8 @@ extension Terminal$Typings on Terminal {
 @_i1.anonymous
 class TerminalEditorLocationOptions {
   external factory TerminalEditorLocationOptions._({
-    _i2.dynamic viewColumn,
-    _i2.dynamic preserveFocus,
+    _i2.Object? viewColumn,
+    _i2.Object? preserveFocus,
   });
 
   factory TerminalEditorLocationOptions({
@@ -13434,7 +13436,7 @@ extension TerminalEditorLocationOptions$Typings
 @_i1.staticInterop
 @_i1.anonymous
 class TerminalSplitLocationOptions {
-  external factory TerminalSplitLocationOptions._({_i2.dynamic parentTerminal});
+  external factory TerminalSplitLocationOptions._({_i2.Object? parentTerminal});
 
   factory TerminalSplitLocationOptions(
           {required _i3.Terminal parentTerminal}) =>
@@ -13462,7 +13464,7 @@ extension TerminalSplitLocationOptions$Typings on TerminalSplitLocationOptions {
 @_i1.staticInterop
 @_i1.anonymous
 class TerminalState {
-  external factory TerminalState._({_i2.dynamic isInteractedWith});
+  external factory TerminalState._({_i2.Object? isInteractedWith});
 
   factory TerminalState({required _i2.bool isInteractedWith}) =>
       TerminalState._(isInteractedWith: isInteractedWith);
@@ -13493,8 +13495,8 @@ extension TerminalState$Typings on TerminalState {
 @_i1.anonymous
 class TerminalLinkContext {
   external factory TerminalLinkContext._({
-    _i2.dynamic line,
-    _i2.dynamic terminal,
+    _i2.Object? line,
+    _i2.Object? terminal,
   });
 
   factory TerminalLinkContext({
@@ -13782,11 +13784,11 @@ extension FileDecorationProvider$Typings on FileDecorationProvider {
   ///  *Note* that this event should be used to propagate information about children.
   ///
   ///  @see {@link EventEmitter}
-  _i3.Event<_i2.dynamic>? get onDidChangeFileDecorations => _i5.getProperty(
+  _i3.Event<_i2.Object?>? get onDidChangeFileDecorations => _i5.getProperty(
         this,
         'onDidChangeFileDecorations',
       );
-  set onDidChangeFileDecorations(_i3.Event<_i2.dynamic>? value) {
+  set onDidChangeFileDecorations(_i3.Event<_i2.Object?>? value) {
     _i5.setProperty(
       this,
       'onDidChangeFileDecorations',
@@ -13822,9 +13824,9 @@ extension FileDecorationProvider$Typings on FileDecorationProvider {
 /// To get an instance of an `Extension` use {@link extensions.getExtensiongetExtension}.
 @_i1.JS()
 @_i1.staticInterop
-class Extension<T> {}
+class Extension<T extends _i2.Object?> {}
 
-extension Extension$Typings<T> on Extension<T> {
+extension Extension$Typings<T extends _i2.Object?> on Extension<T> {
   /// The canonical extension identifier in the form of: `publisher.name`.
   _i2.String get id => _i5.getProperty(
         this,
@@ -13851,7 +13853,7 @@ extension Extension$Typings<T> on Extension<T> {
       );
 
   /// The parsed contents of the extension's package.json.
-  _i2.dynamic get packageJSON => _i5.getProperty(
+  _i2.Object? get packageJSON => _i5.getProperty(
         this,
         'packageJSON',
       );
@@ -13896,7 +13898,7 @@ extension Extension$Typings<T> on Extension<T> {
 class IInline32 {}
 
 extension IInline32$Typings on IInline32 {
-  _i2.dynamic dispose() => _i5.callMethod(
+  _i2.Object? dispose() => _i5.callMethod(
         this,
         'dispose',
         [],
@@ -13942,7 +13944,7 @@ extension ExtensionContext$Typings on ExtensionContext {
   /// extension is deactivated the disposables will be disposed.
   ///
   /// *Note* that asynchronous dispose-functions aren't awaited.
-  _i2.List<_i2.dynamic> get subscriptions => (_i5.getProperty(
+  _i2.List<_i2.Object?> get subscriptions => (_i5.getProperty(
         this,
         'subscriptions',
       ) as _i2.List)
@@ -14059,7 +14061,7 @@ extension ExtensionContext$Typings on ExtensionContext {
       ));
 
   /// The current `Extension` instance.
-  _i3.Extension<_i2.dynamic> get extension => _i5.getProperty(
+  _i3.Extension<_i2.Object?> get extension => _i5.getProperty(
         this,
         'extension',
       );
@@ -14101,7 +14103,7 @@ extension Memento$Typings on Memento {
   ///  @param defaultValue A value that should be returned when there is no
   ///  value (`undefined`) with the given key.
   ///  @return The stored value or the defaultValue.
-  T get<T>(
+  T get<T extends _i2.Object?>(
     _i2.String key,
     T defaultValue,
   ) =>
@@ -14123,7 +14125,7 @@ extension Memento$Typings on Memento {
   ///  @param value A value. MUST not contain cyclic references.
   _i6.Thenable<void> update(
     _i2.String key,
-    _i2.dynamic value,
+    _i2.Object? value,
   ) =>
       _i5.callMethod(
         this,
@@ -14140,7 +14142,7 @@ extension Memento$Typings on Memento {
 @_i1.staticInterop
 @_i1.anonymous
 class SecretStorageChangeEvent {
-  external factory SecretStorageChangeEvent._({_i2.dynamic key});
+  external factory SecretStorageChangeEvent._({_i2.Object? key});
 
   factory SecretStorageChangeEvent({required _i2.String key}) =>
       SecretStorageChangeEvent._(key: key);
@@ -14214,7 +14216,7 @@ extension SecretStorage$Typings on SecretStorage {
 @_i1.staticInterop
 @_i1.anonymous
 class ColorTheme {
-  external factory ColorTheme._({_i2.dynamic kind});
+  external factory ColorTheme._({_i2.Object? kind});
 
   factory ColorTheme({required _i3.ColorThemeKind kind}) =>
       ColorTheme._(kind: kind.name);
@@ -14235,13 +14237,13 @@ extension ColorTheme$Typings on ColorTheme {
 @_i1.anonymous
 class TaskPresentationOptions {
   external factory TaskPresentationOptions._({
-    _i2.dynamic reveal,
-    _i2.dynamic echo,
-    _i2.dynamic focus,
-    _i2.dynamic panel,
-    _i2.dynamic showReuseMessage,
-    _i2.dynamic clear,
-    _i2.dynamic close,
+    _i2.Object? reveal,
+    _i2.Object? echo,
+    _i2.Object? focus,
+    _i2.Object? panel,
+    _i2.Object? showReuseMessage,
+    _i2.Object? clear,
+    _i2.Object? close,
   });
 
   factory TaskPresentationOptions({
@@ -14482,13 +14484,13 @@ extension TaskDefinition$Typings on TaskDefinition {
         this,
         'type',
       );
-  _i2.dynamic operator [](_i2.String index) => _i5.getProperty(
+  _i2.Object? operator [](_i2.String index) => _i5.getProperty(
         this,
         index,
       );
   void operator []=(
     _i2.String index,
-    _i2.dynamic value,
+    _i2.Object? value,
   ) {
     _i5.setProperty(
       this,
@@ -14504,8 +14506,8 @@ extension TaskDefinition$Typings on TaskDefinition {
 @_i1.anonymous
 class ProcessExecutionOptions {
   external factory ProcessExecutionOptions._({
-    _i2.dynamic cwd,
-    _i2.dynamic env,
+    _i2.Object? cwd,
+    _i2.Object? env,
   });
 
   factory ProcessExecutionOptions({
@@ -14674,9 +14676,9 @@ extension IInline35$Typings on IInline35 {
 @_i1.anonymous
 class ShellQuotingOptions {
   external factory ShellQuotingOptions._({
-    _i2.dynamic escape,
-    _i2.dynamic strong,
-    _i2.dynamic weak,
+    _i2.Object? escape,
+    _i2.Object? strong,
+    _i2.Object? weak,
   });
 
   factory ShellQuotingOptions({
@@ -14740,11 +14742,11 @@ extension ShellQuotingOptions$Typings on ShellQuotingOptions {
 @_i1.anonymous
 class ShellExecutionOptions {
   external factory ShellExecutionOptions._({
-    _i2.dynamic executable,
-    _i2.dynamic shellArgs,
-    _i2.dynamic shellQuoting,
-    _i2.dynamic cwd,
-    _i2.dynamic env,
+    _i2.Object? executable,
+    _i2.Object? shellArgs,
+    _i2.Object? shellQuoting,
+    _i2.Object? cwd,
+    _i2.Object? env,
   });
 
   factory ShellExecutionOptions({
@@ -14843,8 +14845,8 @@ extension ShellExecutionOptions$Typings on ShellExecutionOptions {
 @_i1.anonymous
 class ShellQuotedString {
   external factory ShellQuotedString._({
-    _i2.dynamic value,
-    _i2.dynamic quoting,
+    _i2.Object? value,
+    _i2.Object? quoting,
   });
 
   factory ShellQuotedString({
@@ -15007,7 +15009,7 @@ external _i2.Object _declaredCustomExecution;
 @_i1.staticInterop
 @_i1.anonymous
 class RunOptions {
-  external factory RunOptions._({_i2.dynamic reevaluateOnRerun});
+  external factory RunOptions._({_i2.Object? reevaluateOnRerun});
 
   factory RunOptions({_i2.bool? reevaluateOnRerun}) =>
       RunOptions._(reevaluateOnRerun: reevaluateOnRerun ?? _i4.undefined);
@@ -15097,7 +15099,7 @@ extension Task$Typings on Task {
   }
 
   /// The task's scope.
-  _i2.dynamic get scope => _i5.getProperty(
+  _i2.Object? get scope => _i5.getProperty(
         this,
         'scope',
       );
@@ -15313,7 +15315,7 @@ extension TaskExecution$Typings on TaskExecution {
 @_i1.staticInterop
 @_i1.anonymous
 class TaskStartEvent {
-  external factory TaskStartEvent._({_i2.dynamic execution});
+  external factory TaskStartEvent._({_i2.Object? execution});
 
   factory TaskStartEvent({required _i3.TaskExecution execution}) =>
       TaskStartEvent._(execution: execution);
@@ -15334,7 +15336,7 @@ extension TaskStartEvent$Typings on TaskStartEvent {
 @_i1.staticInterop
 @_i1.anonymous
 class TaskEndEvent {
-  external factory TaskEndEvent._({_i2.dynamic execution});
+  external factory TaskEndEvent._({_i2.Object? execution});
 
   factory TaskEndEvent({required _i3.TaskExecution execution}) =>
       TaskEndEvent._(execution: execution);
@@ -15355,8 +15357,8 @@ extension TaskEndEvent$Typings on TaskEndEvent {
 @_i1.anonymous
 class TaskProcessStartEvent {
   external factory TaskProcessStartEvent._({
-    _i2.dynamic execution,
-    _i2.dynamic processId,
+    _i2.Object? execution,
+    _i2.Object? processId,
   });
 
   factory TaskProcessStartEvent({
@@ -15390,8 +15392,8 @@ extension TaskProcessStartEvent$Typings on TaskProcessStartEvent {
 @_i1.anonymous
 class TaskProcessEndEvent {
   external factory TaskProcessEndEvent._({
-    _i2.dynamic execution,
-    _i2.dynamic exitCode,
+    _i2.Object? execution,
+    _i2.Object? exitCode,
   });
 
   factory TaskProcessEndEvent({
@@ -15423,8 +15425,8 @@ extension TaskProcessEndEvent$Typings on TaskProcessEndEvent {
 @_i1.anonymous
 class TaskFilter {
   external factory TaskFilter._({
-    _i2.dynamic version,
-    _i2.dynamic type,
+    _i2.Object? version,
+    _i2.Object? type,
   });
 
   factory TaskFilter({
@@ -15472,11 +15474,11 @@ extension TaskFilter$Typings on TaskFilter {
 @_i1.anonymous
 class FileStat {
   external factory FileStat._({
-    _i2.dynamic type,
-    _i2.dynamic ctime,
-    _i2.dynamic mtime,
-    _i2.dynamic size,
-    _i2.dynamic permissions,
+    _i2.Object? type,
+    _i2.Object? ctime,
+    _i2.Object? mtime,
+    _i2.Object? size,
+    _i2.Object? permissions,
   });
 
   factory FileStat({
@@ -15664,8 +15666,8 @@ extension FileSystemError$Typings on FileSystemError {
 @_i1.anonymous
 class FileChangeEvent {
   external factory FileChangeEvent._({
-    _i2.dynamic type,
-    _i2.dynamic uri,
+    _i2.Object? type,
+    _i2.Object? uri,
   });
 
   factory FileChangeEvent({
@@ -16190,8 +16192,8 @@ extension FileSystem$Typings on FileSystem {
 @_i1.anonymous
 class WebviewPortMapping {
   external factory WebviewPortMapping._({
-    _i2.dynamic webviewPort,
-    _i2.dynamic extensionHostPort,
+    _i2.Object? webviewPort,
+    _i2.Object? extensionHostPort,
   });
 
   factory WebviewPortMapping({
@@ -16224,11 +16226,11 @@ extension WebviewPortMapping$Typings on WebviewPortMapping {
 @_i1.anonymous
 class WebviewOptions {
   external factory WebviewOptions._({
-    _i2.dynamic enableScripts,
-    _i2.dynamic enableForms,
-    _i2.dynamic enableCommandUris,
-    _i2.dynamic localResourceRoots,
-    _i2.dynamic portMapping,
+    _i2.Object? enableScripts,
+    _i2.Object? enableForms,
+    _i2.Object? enableCommandUris,
+    _i2.Object? localResourceRoots,
+    _i2.Object? portMapping,
   });
 
   factory WebviewOptions({
@@ -16363,7 +16365,7 @@ extension Webview$Typings on Webview {
   /// Webview content can post strings or json serializable objects back to an extension. They cannot
   /// post `Blob`, `File`, `ImageData` and other DOM specific objects since the extension that receives the
   /// message does not run in a browser environment.
-  _i3.Event<_i2.dynamic> get onDidReceiveMessage => _i5.getProperty(
+  _i3.Event<_i2.Object?> get onDidReceiveMessage => _i5.getProperty(
         this,
         'onDidReceiveMessage',
       );
@@ -16409,7 +16411,7 @@ extension Webview$Typings on Webview {
   ///
   ///    If you want confirm that a message as actually received, you can try having your webview posting a
   ///    confirmation message back to your extension.
-  _i6.Thenable<_i2.bool> postMessage(_i2.dynamic message) => _i5.callMethod(
+  _i6.Thenable<_i2.bool> postMessage(_i2.Object? message) => _i5.callMethod(
         this,
         'postMessage',
         [message],
@@ -16437,8 +16439,8 @@ extension Webview$Typings on Webview {
 @_i1.anonymous
 class WebviewPanelOptions {
   external factory WebviewPanelOptions._({
-    _i2.dynamic enableFindWidget,
-    _i2.dynamic retainContextWhenHidden,
+    _i2.Object? enableFindWidget,
+    _i2.Object? retainContextWhenHidden,
   });
 
   factory WebviewPanelOptions({
@@ -16612,7 +16614,7 @@ extension WebviewPanel$Typings on WebviewPanel {
   ///  This closes the panel if it showing and disposes of the resources owned by the webview.
   ///  Webview panels are also disposed when the user closes the webview panel. Both cases
   ///  fire the `onDispose` event.
-  _i2.dynamic dispose() => _i5.callMethod(
+  _i2.Object? dispose() => _i5.callMethod(
         this,
         'dispose',
         [],
@@ -16625,7 +16627,7 @@ extension WebviewPanel$Typings on WebviewPanel {
 @_i1.anonymous
 class WebviewPanelOnDidChangeViewStateEvent {
   external factory WebviewPanelOnDidChangeViewStateEvent._(
-      {_i2.dynamic webviewPanel});
+      {_i2.Object? webviewPanel});
 
   factory WebviewPanelOnDidChangeViewStateEvent(
           {required _i3.WebviewPanel webviewPanel}) =>
@@ -16672,9 +16674,10 @@ extension WebviewPanelOnDidChangeViewStateEvent$Typings
 /// The extension can then restore the old `WebviewPanel` from this state.
 @_i1.JS()
 @_i1.staticInterop
-class WebviewPanelSerializer<T> {}
+class WebviewPanelSerializer<T extends _i2.Object?> {}
 
-extension WebviewPanelSerializer$Typings<T> on WebviewPanelSerializer<T> {
+extension WebviewPanelSerializer$Typings<T extends _i2.Object?>
+    on WebviewPanelSerializer<T> {
   /// Restore a webview panel from its serialized `state`.
   ///
   ///  Called when a serialized webview first becomes visible.
@@ -16808,14 +16811,15 @@ extension WebviewView$Typings on WebviewView {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class WebviewViewResolveContext<T> {
-  external factory WebviewViewResolveContext._({_i2.dynamic state});
+class WebviewViewResolveContext<T extends _i2.Object?> {
+  external factory WebviewViewResolveContext._({_i2.Object? state});
 
   factory WebviewViewResolveContext({T? state}) =>
       WebviewViewResolveContext._(state: state ?? _i4.undefined);
 }
 
-extension WebviewViewResolveContext$Typings<T> on WebviewViewResolveContext<T> {
+extension WebviewViewResolveContext$Typings<T extends _i2.Object?>
+    on WebviewViewResolveContext<T> {
   /// Persisted state from the webview content.
   ///
   /// To save resources, the editor normally deallocates webview documents (the iframe content) that are not visible.
@@ -17003,7 +17007,7 @@ extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
 @_i1.staticInterop
 @_i1.anonymous
 class CustomDocumentContentChangeEvent<T extends _i3.CustomDocument> {
-  external factory CustomDocumentContentChangeEvent._({_i2.dynamic document});
+  external factory CustomDocumentContentChangeEvent._({_i2.Object? document});
 
   factory CustomDocumentContentChangeEvent({required T document}) =>
       CustomDocumentContentChangeEvent._(document: document);
@@ -17050,7 +17054,7 @@ extension CustomDocumentBackup$Typings on CustomDocumentBackup {
 @_i1.staticInterop
 @_i1.anonymous
 class CustomDocumentBackupContext {
-  external factory CustomDocumentBackupContext._({_i2.dynamic destination});
+  external factory CustomDocumentBackupContext._({_i2.Object? destination});
 
   factory CustomDocumentBackupContext({required _i3.Uri destination}) =>
       CustomDocumentBackupContext._(destination: destination);
@@ -17076,8 +17080,8 @@ extension CustomDocumentBackupContext$Typings on CustomDocumentBackupContext {
 @_i1.anonymous
 class CustomDocumentOpenContext {
   external factory CustomDocumentOpenContext._({
-    _i2.dynamic backupId,
-    _i2.dynamic untitledDocumentData,
+    _i2.Object? backupId,
+    _i2.Object? untitledDocumentData,
   });
 
   factory CustomDocumentOpenContext({
@@ -17361,7 +17365,7 @@ extension Clipboard$Typings on Clipboard {
 @_i1.staticInterop
 @_i1.anonymous
 class WindowState {
-  external factory WindowState._({_i2.dynamic focused});
+  external factory WindowState._({_i2.Object? focused});
 
   factory WindowState({required _i2.bool focused}) =>
       WindowState._(focused: focused);
@@ -17395,13 +17399,13 @@ extension UriHandler$Typings on UriHandler {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class TreeViewOptions<T> {
+class TreeViewOptions<T extends _i2.Object?> {
   external factory TreeViewOptions._({
-    _i2.dynamic treeDataProvider,
-    _i2.dynamic showCollapseAll,
-    _i2.dynamic canSelectMany,
-    _i2.dynamic dragAndDropController,
-    _i2.dynamic manageCheckboxStateManually,
+    _i2.Object? treeDataProvider,
+    _i2.Object? showCollapseAll,
+    _i2.Object? canSelectMany,
+    _i2.Object? dragAndDropController,
+    _i2.Object? manageCheckboxStateManually,
   });
 
   factory TreeViewOptions({
@@ -17421,7 +17425,7 @@ class TreeViewOptions<T> {
       );
 }
 
-extension TreeViewOptions$Typings<T> on TreeViewOptions<T> {
+extension TreeViewOptions$Typings<T extends _i2.Object?> on TreeViewOptions<T> {
   /// A data provider that provides tree data.
   _i3.TreeDataProvider<T> get treeDataProvider => _i5.getProperty(
         this,
@@ -17528,14 +17532,15 @@ extension TreeViewOptions$Typings<T> on TreeViewOptions<T> {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class TreeViewExpansionEvent<T> {
-  external factory TreeViewExpansionEvent._({_i2.dynamic element});
+class TreeViewExpansionEvent<T extends _i2.Object?> {
+  external factory TreeViewExpansionEvent._({_i2.Object? element});
 
   factory TreeViewExpansionEvent({required T element}) =>
       TreeViewExpansionEvent._(element: element);
 }
 
-extension TreeViewExpansionEvent$Typings<T> on TreeViewExpansionEvent<T> {
+extension TreeViewExpansionEvent$Typings<T extends _i2.Object?>
+    on TreeViewExpansionEvent<T> {
   /// Element that is expanded or collapsed.
   T get element => _i5.getProperty(
         this,
@@ -17547,14 +17552,14 @@ extension TreeViewExpansionEvent$Typings<T> on TreeViewExpansionEvent<T> {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class TreeViewSelectionChangeEvent<T> {
-  external factory TreeViewSelectionChangeEvent._({_i2.dynamic selection});
+class TreeViewSelectionChangeEvent<T extends _i2.Object?> {
+  external factory TreeViewSelectionChangeEvent._({_i2.Object? selection});
 
   factory TreeViewSelectionChangeEvent({required _i2.List<T> selection}) =>
       TreeViewSelectionChangeEvent._(selection: selection);
 }
 
-extension TreeViewSelectionChangeEvent$Typings<T>
+extension TreeViewSelectionChangeEvent$Typings<T extends _i2.Object?>
     on TreeViewSelectionChangeEvent<T> {
   /// Selected elements.
   _i2.List<T> get selection => (_i5.getProperty(
@@ -17569,7 +17574,7 @@ extension TreeViewSelectionChangeEvent$Typings<T>
 @_i1.staticInterop
 @_i1.anonymous
 class TreeViewVisibilityChangeEvent {
-  external factory TreeViewVisibilityChangeEvent._({_i2.dynamic visible});
+  external factory TreeViewVisibilityChangeEvent._({_i2.Object? visible});
 
   factory TreeViewVisibilityChangeEvent({required _i2.bool visible}) =>
       TreeViewVisibilityChangeEvent._(visible: visible);
@@ -17618,7 +17623,7 @@ extension DataTransferFile$Typings on DataTransferFile {
 @_i1.JS()
 @_i1.staticInterop
 class DataTransferItem {
-  factory DataTransferItem(_i2.dynamic value) => _i5.callConstructor(
+  factory DataTransferItem(_i2.Object? value) => _i5.callConstructor(
         _declaredDataTransferItem,
         [value],
       );
@@ -17635,7 +17640,7 @@ extension DataTransferItem$Typings on DataTransferItem {
   ///
   /// You can use `value` to share data across operations. The original object can be retrieved so long as the extension that
   /// created the `DataTransferItem` runs in the same extension host.
-  _i2.dynamic get value => _i5.getProperty(
+  _i2.Object? get value => _i5.getProperty(
         this,
         'value',
       );
@@ -17726,7 +17731,7 @@ extension DataTransfer$Typings on DataTransfer {
       _i2.String,
       _i3.DataTransfer,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i5.callMethod(
       this,
@@ -17742,9 +17747,10 @@ extension DataTransfer$Typings on DataTransfer {
 /// Provides support for drag and drop in `TreeView`.
 @_i1.JS()
 @_i1.staticInterop
-class TreeDragAndDropController<T> {}
+class TreeDragAndDropController<T extends _i2.Object?> {}
 
-extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
+extension TreeDragAndDropController$Typings<T extends _i2.Object?>
+    on TreeDragAndDropController<T> {
   /// The mime types that the {@link TreeDragAndDropController.handleDrop`handleDrop`} method of this `DragAndDropController` supports.
   /// This could be well-defined, existing, mime types, and also mime types defined by the extension.
   ///
@@ -17834,8 +17840,8 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
 @_i1.anonymous
 class ViewBadge {
   external factory ViewBadge._({
-    _i2.dynamic tooltip,
-    _i2.dynamic value,
+    _i2.Object? tooltip,
+    _i2.Object? value,
   });
 
   factory ViewBadge({
@@ -17866,8 +17872,8 @@ extension ViewBadge$Typings on ViewBadge {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class TreeCheckboxChangeEvent<T> {
-  external factory TreeCheckboxChangeEvent._({_i2.dynamic items});
+class TreeCheckboxChangeEvent<T extends _i2.Object?> {
+  external factory TreeCheckboxChangeEvent._({_i2.Object? items});
 
   factory TreeCheckboxChangeEvent(
           {required _i7.ReadonlyArray<
@@ -17879,7 +17885,8 @@ class TreeCheckboxChangeEvent<T> {
       TreeCheckboxChangeEvent._(items: items);
 }
 
-extension TreeCheckboxChangeEvent$Typings<T> on TreeCheckboxChangeEvent<T> {
+extension TreeCheckboxChangeEvent$Typings<T extends _i2.Object?>
+    on TreeCheckboxChangeEvent<T> {
   /// The items that were checked or unchecked.
   _i7.ReadonlyArray<
       (
@@ -17937,9 +17944,9 @@ extension IInline54$Typings on IInline54 {
 /// Represents a Tree view
 @_i1.JS()
 @_i1.staticInterop
-class TreeView<T> implements _i3.Disposable {}
+class TreeView<T extends _i2.Object?> implements _i3.Disposable {}
 
-extension TreeView$Typings<T> on TreeView<T> {
+extension TreeView$Typings<T extends _i2.Object?> on TreeView<T> {
   /// Event that is fired when an element is expanded
   _i3.Event<_i3.TreeViewExpansionEvent<T>> get onDidExpandElement =>
       _i5.getProperty(
@@ -18071,17 +18078,18 @@ extension TreeView$Typings<T> on TreeView<T> {
 /// A data provider that provides tree data
 @_i1.JS()
 @_i1.staticInterop
-class TreeDataProvider<T> {}
+class TreeDataProvider<T extends _i2.Object?> {}
 
-extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
+extension TreeDataProvider$Typings<T extends _i2.Object?>
+    on TreeDataProvider<T> {
   /// An optional event to signal that an element or root has changed.
   ///  This will trigger the view to update the changed element/root and its children recursively (if shown).
   ///  To signal that root has changed, do not pass any argument or pass `undefined` or `null`.
-  _i3.Event<_i2.dynamic>? get onDidChangeTreeData => _i5.getProperty(
+  _i3.Event<_i2.Object?>? get onDidChangeTreeData => _i5.getProperty(
         this,
         'onDidChangeTreeData',
       );
-  set onDidChangeTreeData(_i3.Event<_i2.dynamic>? value) {
+  set onDidChangeTreeData(_i3.Event<_i2.Object?>? value) {
     _i5.setProperty(
       this,
       'onDidChangeTreeData',
@@ -18323,11 +18331,11 @@ extension TreeItem$Typings on TreeItem {
   }
 
   /// The tooltip text when you hover over this item.
-  _i2.dynamic get tooltip => _i5.getProperty(
+  _i2.Object? get tooltip => _i5.getProperty(
         this,
         'tooltip',
       );
-  set tooltip(_i2.dynamic value) {
+  set tooltip(_i2.Object? value) {
     _i5.setProperty(
       this,
       'tooltip',
@@ -18430,8 +18438,8 @@ extension TreeItem$Typings on TreeItem {
 @_i1.anonymous
 class TreeItemLabel {
   external factory TreeItemLabel._({
-    _i2.dynamic label,
-    _i2.dynamic highlights,
+    _i2.Object? label,
+    _i2.Object? highlights,
   });
 
   factory TreeItemLabel({
@@ -18538,18 +18546,18 @@ extension IInline58$Typings on IInline58 {
 @_i1.anonymous
 class TerminalOptions {
   external factory TerminalOptions._({
-    _i2.dynamic name,
-    _i2.dynamic shellPath,
-    _i2.dynamic shellArgs,
-    _i2.dynamic cwd,
-    _i2.dynamic env,
-    _i2.dynamic strictEnv,
-    _i2.dynamic hideFromUser,
-    _i2.dynamic message,
-    _i2.dynamic iconPath,
-    _i2.dynamic color,
-    _i2.dynamic location,
-    _i2.dynamic isTransient,
+    _i2.Object? name,
+    _i2.Object? shellPath,
+    _i2.Object? shellArgs,
+    _i2.Object? cwd,
+    _i2.Object? env,
+    _i2.Object? strictEnv,
+    _i2.Object? hideFromUser,
+    _i2.Object? message,
+    _i2.Object? iconPath,
+    _i2.Object? color,
+    _i2.Object? location,
+    _i2.Object? isTransient,
   });
 
   factory TerminalOptions({
@@ -18791,12 +18799,12 @@ extension IInline59$Typings on IInline59 {
 @_i1.anonymous
 class ExtensionTerminalOptions {
   external factory ExtensionTerminalOptions._({
-    _i2.dynamic name,
-    _i2.dynamic pty,
-    _i2.dynamic iconPath,
-    _i2.dynamic color,
-    _i2.dynamic location,
-    _i2.dynamic isTransient,
+    _i2.Object? name,
+    _i2.Object? pty,
+    _i2.Object? iconPath,
+    _i2.Object? color,
+    _i2.Object? location,
+    _i2.Object? isTransient,
   });
 
   factory ExtensionTerminalOptions({
@@ -19122,8 +19130,8 @@ extension Pseudoterminal$Typings on Pseudoterminal {
 @_i1.anonymous
 class TerminalDimensions {
   external factory TerminalDimensions._({
-    _i2.dynamic columns,
-    _i2.dynamic rows,
+    _i2.Object? columns,
+    _i2.Object? rows,
   });
 
   factory TerminalDimensions({
@@ -19156,8 +19164,8 @@ extension TerminalDimensions$Typings on TerminalDimensions {
 @_i1.anonymous
 class TerminalExitStatus {
   external factory TerminalExitStatus._({
-    _i2.dynamic code,
-    _i2.dynamic reason,
+    _i2.Object? code,
+    _i2.Object? reason,
   });
 
   factory TerminalExitStatus({
@@ -19195,8 +19203,8 @@ extension TerminalExitStatus$Typings on TerminalExitStatus {
 @_i1.anonymous
 class EnvironmentVariableMutatorOptions {
   external factory EnvironmentVariableMutatorOptions._({
-    _i2.dynamic applyAtProcessCreation,
-    _i2.dynamic applyAtShellIntegration,
+    _i2.Object? applyAtProcessCreation,
+    _i2.Object? applyAtShellIntegration,
   });
 
   factory EnvironmentVariableMutatorOptions({
@@ -19246,9 +19254,9 @@ extension EnvironmentVariableMutatorOptions$Typings
 @_i1.anonymous
 class EnvironmentVariableMutator {
   external factory EnvironmentVariableMutator._({
-    _i2.dynamic type,
-    _i2.dynamic value,
-    _i2.dynamic options,
+    _i2.Object? type,
+    _i2.Object? value,
+    _i2.Object? options,
   });
 
   factory EnvironmentVariableMutator({
@@ -19316,11 +19324,11 @@ extension EnvironmentVariableCollection$Typings
 
   /// A description for the environment variable collection, this will be used to describe the
   ///  changes in the UI.
-  _i2.dynamic get description => _i5.getProperty(
+  _i2.Object? get description => _i5.getProperty(
         this,
         'description',
       );
-  set description(_i2.dynamic value) {
+  set description(_i2.Object? value) {
     _i5.setProperty(
       this,
       'description',
@@ -19417,12 +19425,12 @@ extension EnvironmentVariableCollection$Typings
   ///  @param callback Function to execute for each entry.
   ///  @param thisArg The `this` context used when invoking the handler function.
   void forEach(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i2.String,
       _i3.EnvironmentVariableMutator,
       _i3.EnvironmentVariableCollection,
     ) callback, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i5.callMethod(
       this,
@@ -19491,7 +19499,7 @@ extension GlobalEnvironmentVariableCollection$Typings
 @_i1.staticInterop
 @_i1.anonymous
 class EnvironmentVariableScope {
-  external factory EnvironmentVariableScope._({_i2.dynamic workspaceFolder});
+  external factory EnvironmentVariableScope._({_i2.Object? workspaceFolder});
 
   factory EnvironmentVariableScope({_i3.WorkspaceFolder? workspaceFolder}) =>
       EnvironmentVariableScope._(
@@ -19538,9 +19546,9 @@ extension IInline60$Typings on IInline60 {
 @_i1.anonymous
 class ProgressOptions {
   external factory ProgressOptions._({
-    _i2.dynamic location,
-    _i2.dynamic title,
-    _i2.dynamic cancellable,
+    _i2.Object? location,
+    _i2.Object? title,
+    _i2.Object? cancellable,
   });
 
   factory ProgressOptions({
@@ -19773,29 +19781,29 @@ extension QuickInput$Typings on QuickInput {
 @_i1.anonymous
 class QuickPick<T extends _i3.QuickPickItem> implements _i3.QuickInput {
   external factory QuickPick._({
-    _i2.dynamic value,
-    _i2.dynamic placeholder,
-    _i2.dynamic onDidChangeValue,
-    _i2.dynamic onDidAccept,
-    _i2.dynamic buttons,
-    _i2.dynamic onDidTriggerButton,
-    _i2.dynamic onDidTriggerItemButton,
-    _i2.dynamic items,
-    _i2.dynamic canSelectMany,
-    _i2.dynamic matchOnDescription,
-    _i2.dynamic matchOnDetail,
-    _i2.dynamic keepScrollPosition,
-    _i2.dynamic activeItems,
-    _i2.dynamic onDidChangeActive,
-    _i2.dynamic selectedItems,
-    _i2.dynamic onDidChangeSelection,
-    _i2.dynamic title,
-    _i2.dynamic step,
-    _i2.dynamic totalSteps,
-    _i2.dynamic enabled,
-    _i2.dynamic busy,
-    _i2.dynamic ignoreFocusOut,
-    _i2.dynamic onDidHide,
+    _i2.Object? value,
+    _i2.Object? placeholder,
+    _i2.Object? onDidChangeValue,
+    _i2.Object? onDidAccept,
+    _i2.Object? buttons,
+    _i2.Object? onDidTriggerButton,
+    _i2.Object? onDidTriggerItemButton,
+    _i2.Object? items,
+    _i2.Object? canSelectMany,
+    _i2.Object? matchOnDescription,
+    _i2.Object? matchOnDetail,
+    _i2.Object? keepScrollPosition,
+    _i2.Object? activeItems,
+    _i2.Object? onDidChangeActive,
+    _i2.Object? selectedItems,
+    _i2.Object? onDidChangeSelection,
+    _i2.Object? title,
+    _i2.Object? step,
+    _i2.Object? totalSteps,
+    _i2.Object? enabled,
+    _i2.Object? busy,
+    _i2.Object? ignoreFocusOut,
+    _i2.Object? onDidHide,
   });
 
   factory QuickPick({
@@ -20034,23 +20042,23 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
 @_i1.anonymous
 class InputBox implements _i3.QuickInput {
   external factory InputBox._({
-    _i2.dynamic value,
-    _i2.dynamic valueSelection,
-    _i2.dynamic placeholder,
-    _i2.dynamic password,
-    _i2.dynamic onDidChangeValue,
-    _i2.dynamic onDidAccept,
-    _i2.dynamic buttons,
-    _i2.dynamic onDidTriggerButton,
-    _i2.dynamic prompt,
-    _i2.dynamic validationMessage,
-    _i2.dynamic title,
-    _i2.dynamic step,
-    _i2.dynamic totalSteps,
-    _i2.dynamic enabled,
-    _i2.dynamic busy,
-    _i2.dynamic ignoreFocusOut,
-    _i2.dynamic onDidHide,
+    _i2.Object? value,
+    _i2.Object? valueSelection,
+    _i2.Object? placeholder,
+    _i2.Object? password,
+    _i2.Object? onDidChangeValue,
+    _i2.Object? onDidAccept,
+    _i2.Object? buttons,
+    _i2.Object? onDidTriggerButton,
+    _i2.Object? prompt,
+    _i2.Object? validationMessage,
+    _i2.Object? title,
+    _i2.Object? step,
+    _i2.Object? totalSteps,
+    _i2.Object? enabled,
+    _i2.Object? busy,
+    _i2.Object? ignoreFocusOut,
+    _i2.Object? onDidHide,
   });
 
   factory InputBox({
@@ -20066,7 +20074,7 @@ class InputBox implements _i3.QuickInput {
     required _i2.List<_i3.QuickInputButton> buttons,
     required _i3.Event<_i3.QuickInputButton> onDidTriggerButton,
     _i2.String? prompt,
-    _i2.dynamic validationMessage,
+    _i2.Object? validationMessage,
     _i2.String? title,
     _i2.num? step,
     _i2.num? totalSteps,
@@ -20220,11 +20228,11 @@ extension InputBox$Typings on InputBox {
   /// An optional validation message indicating a problem with the current input value.
   ///  By returning a string, the InputBox will use a default {@link InputBoxValidationSeverity} of Error.
   ///  Returning undefined clears the validation message.
-  _i2.dynamic get validationMessage => _i5.getProperty(
+  _i2.Object? get validationMessage => _i5.getProperty(
         this,
         'validationMessage',
       );
-  set validationMessage(_i2.dynamic value) {
+  set validationMessage(_i2.Object? value) {
     _i5.setProperty(
       this,
       'validationMessage',
@@ -20270,8 +20278,8 @@ extension IInline61$Typings on IInline61 {
 @_i1.anonymous
 class QuickInputButton {
   external factory QuickInputButton._({
-    _i2.dynamic iconPath,
-    _i2.dynamic tooltip,
+    _i2.Object? iconPath,
+    _i2.Object? tooltip,
   });
 
   factory QuickInputButton({
@@ -20330,8 +20338,8 @@ external _i2.Object _declaredQuickInputButtons;
 @_i1.anonymous
 class QuickPickItemButtonEvent<T extends _i3.QuickPickItem> {
   external factory QuickPickItemButtonEvent._({
-    _i2.dynamic button,
-    _i2.dynamic item,
+    _i2.Object? button,
+    _i2.Object? item,
   });
 
   factory QuickPickItemButtonEvent({
@@ -20365,10 +20373,10 @@ extension QuickPickItemButtonEvent$Typings<T extends _i3.QuickPickItem>
 @_i1.anonymous
 class TextDocumentContentChangeEvent {
   external factory TextDocumentContentChangeEvent._({
-    _i2.dynamic range,
-    _i2.dynamic rangeOffset,
-    _i2.dynamic rangeLength,
-    _i2.dynamic text,
+    _i2.Object? range,
+    _i2.Object? rangeOffset,
+    _i2.Object? rangeLength,
+    _i2.Object? text,
   });
 
   factory TextDocumentContentChangeEvent({
@@ -20418,9 +20426,9 @@ extension TextDocumentContentChangeEvent$Typings
 @_i1.anonymous
 class TextDocumentChangeEvent {
   external factory TextDocumentChangeEvent._({
-    _i2.dynamic document,
-    _i2.dynamic contentChanges,
-    _i2.dynamic reason,
+    _i2.Object? document,
+    _i2.Object? contentChanges,
+    _i2.Object? reason,
   });
 
   factory TextDocumentChangeEvent({
@@ -20515,7 +20523,7 @@ extension TextDocumentWillSaveEvent$Typings on TextDocumentWillSaveEvent {
   ///  *Note:* This function can only be called during event dispatch.
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$2(_i6.Thenable<_i2.dynamic> thenable) {
+  void _waitUntil$2(_i6.Thenable<_i2.Object?> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -20550,7 +20558,7 @@ extension TextDocumentWillSaveEvent$Typings on TextDocumentWillSaveEvent {
     ///  *Note:* This function can only be called during event dispatch.
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i2.dynamic> thenable) $2,
+    void Function(_i6.Thenable<_i2.Object?> thenable) $2,
   }) get waitUntil => (
         $1: _waitUntil$1,
         $2: _waitUntil$2,
@@ -20609,7 +20617,7 @@ extension FileWillCreateEvent$Typings on FileWillCreateEvent {
   ///  *Note:* This function can only be called during event dispatch.
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$2(_i6.Thenable<_i2.dynamic> thenable) {
+  void _waitUntil$2(_i6.Thenable<_i2.Object?> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -20642,7 +20650,7 @@ extension FileWillCreateEvent$Typings on FileWillCreateEvent {
     ///  *Note:* This function can only be called during event dispatch.
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i2.dynamic> thenable) $2,
+    void Function(_i6.Thenable<_i2.Object?> thenable) $2,
   }) get waitUntil => (
         $1: _waitUntil$1,
         $2: _waitUntil$2,
@@ -20654,7 +20662,7 @@ extension FileWillCreateEvent$Typings on FileWillCreateEvent {
 @_i1.staticInterop
 @_i1.anonymous
 class FileCreateEvent {
-  external factory FileCreateEvent._({_i2.dynamic files});
+  external factory FileCreateEvent._({_i2.Object? files});
 
   factory FileCreateEvent({required _i2.List<_i3.Uri> files}) =>
       FileCreateEvent._(files: files);
@@ -20721,7 +20729,7 @@ extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
   ///  *Note:* This function can only be called during event dispatch.
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$2(_i6.Thenable<_i2.dynamic> thenable) {
+  void _waitUntil$2(_i6.Thenable<_i2.Object?> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -20754,7 +20762,7 @@ extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
     ///  *Note:* This function can only be called during event dispatch.
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i2.dynamic> thenable) $2,
+    void Function(_i6.Thenable<_i2.Object?> thenable) $2,
   }) get waitUntil => (
         $1: _waitUntil$1,
         $2: _waitUntil$2,
@@ -20766,7 +20774,7 @@ extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
 @_i1.staticInterop
 @_i1.anonymous
 class FileDeleteEvent {
-  external factory FileDeleteEvent._({_i2.dynamic files});
+  external factory FileDeleteEvent._({_i2.Object? files});
 
   factory FileDeleteEvent({required _i2.List<_i3.Uri> files}) =>
       FileDeleteEvent._(files: files);
@@ -20814,7 +20822,7 @@ extension FileWillRenameEvent$Typings on FileWillRenameEvent {
       );
 
   /// The files that are going to be renamed.
-  _i7.ReadonlyArray<_i2.dynamic> get files => _i5.getProperty(
+  _i7.ReadonlyArray<_i2.Object?> get files => _i5.getProperty(
         this,
         'files',
       );
@@ -20848,7 +20856,7 @@ extension FileWillRenameEvent$Typings on FileWillRenameEvent {
   ///  *Note:* This function can only be called during event dispatch.
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$2(_i6.Thenable<_i2.dynamic> thenable) {
+  void _waitUntil$2(_i6.Thenable<_i2.Object?> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -20881,7 +20889,7 @@ extension FileWillRenameEvent$Typings on FileWillRenameEvent {
     ///  *Note:* This function can only be called during event dispatch.
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i2.dynamic> thenable) $2,
+    void Function(_i6.Thenable<_i2.Object?> thenable) $2,
   }) get waitUntil => (
         $1: _waitUntil$1,
         $2: _waitUntil$2,
@@ -20909,7 +20917,7 @@ extension IInline63$Typings on IInline63 {
 @_i1.staticInterop
 @_i1.anonymous
 class FileRenameEvent {
-  external factory FileRenameEvent._({_i2.dynamic files});
+  external factory FileRenameEvent._({_i2.Object? files});
 
   factory FileRenameEvent({required _i7.ReadonlyArray<_i3.IInline63> files}) =>
       FileRenameEvent._(files: files);
@@ -20917,7 +20925,7 @@ class FileRenameEvent {
 
 extension FileRenameEvent$Typings on FileRenameEvent {
   /// The files that got renamed.
-  _i7.ReadonlyArray<_i2.dynamic> get files => _i5.getProperty(
+  _i7.ReadonlyArray<_i2.Object?> get files => _i5.getProperty(
         this,
         'files',
       );
@@ -20929,8 +20937,8 @@ extension FileRenameEvent$Typings on FileRenameEvent {
 @_i1.anonymous
 class WorkspaceFoldersChangeEvent {
   external factory WorkspaceFoldersChangeEvent._({
-    _i2.dynamic added,
-    _i2.dynamic removed,
+    _i2.Object? added,
+    _i2.Object? removed,
   });
 
   factory WorkspaceFoldersChangeEvent({
@@ -20966,9 +20974,9 @@ extension WorkspaceFoldersChangeEvent$Typings on WorkspaceFoldersChangeEvent {
 @_i1.anonymous
 class WorkspaceFolder {
   external factory WorkspaceFolder._({
-    _i2.dynamic uri,
-    _i2.dynamic name,
-    _i2.dynamic index,
+    _i2.Object? uri,
+    _i2.Object? name,
+    _i2.Object? index,
   });
 
   factory WorkspaceFolder({
@@ -21152,7 +21160,7 @@ extension IInline68$Typings on IInline68 {
         this,
         'editor',
       );
-  _i2.dynamic get message => _i5.getProperty(
+  _i2.Object? get message => _i5.getProperty(
         this,
         'message',
       );
@@ -21165,7 +21173,7 @@ class NotebookRendererMessaging {}
 
 extension NotebookRendererMessaging$Typings on NotebookRendererMessaging {
   /// An event that fires when a message is received from a renderer.
-  _i3.Event<_i2.dynamic> get onDidReceiveMessage => _i5.getProperty(
+  _i3.Event<_i2.Object?> get onDidReceiveMessage => _i5.getProperty(
         this,
         'onDidReceiveMessage',
       );
@@ -21178,7 +21186,7 @@ extension NotebookRendererMessaging$Typings on NotebookRendererMessaging {
   ///  @returns a boolean indicating whether the message was successfully
   ///  delivered to any renderer.
   _i6.Thenable<_i2.bool> postMessage(
-    _i2.dynamic message, [
+    _i2.Object? message, [
     _i3.NotebookEditor? editor,
   ]) =>
       _i5.callMethod(
@@ -21200,13 +21208,13 @@ extension NotebookRendererMessaging$Typings on NotebookRendererMessaging {
 @_i1.anonymous
 class NotebookCell {
   external factory NotebookCell._({
-    _i2.dynamic index,
-    _i2.dynamic notebook,
-    _i2.dynamic kind,
-    _i2.dynamic document,
-    _i2.dynamic metadata,
-    _i2.dynamic outputs,
-    _i2.dynamic executionSummary,
+    _i2.Object? index,
+    _i2.Object? notebook,
+    _i2.Object? kind,
+    _i2.Object? document,
+    _i2.Object? metadata,
+    _i2.Object? outputs,
+    _i2.Object? executionSummary,
   });
 
   factory NotebookCell({
@@ -21377,11 +21385,11 @@ extension NotebookDocument$Typings on NotebookDocument {
 @_i1.anonymous
 class NotebookDocumentCellChange {
   external factory NotebookDocumentCellChange._({
-    _i2.dynamic cell,
-    _i2.dynamic document,
-    _i2.dynamic metadata,
-    _i2.dynamic outputs,
-    _i2.dynamic executionSummary,
+    _i2.Object? cell,
+    _i2.Object? document,
+    _i2.Object? metadata,
+    _i2.Object? outputs,
+    _i2.Object? executionSummary,
   });
 
   factory NotebookDocumentCellChange({
@@ -21442,9 +21450,9 @@ extension NotebookDocumentCellChange$Typings on NotebookDocumentCellChange {
 @_i1.anonymous
 class NotebookDocumentContentChange {
   external factory NotebookDocumentContentChange._({
-    _i2.dynamic range,
-    _i2.dynamic addedCells,
-    _i2.dynamic removedCells,
+    _i2.Object? range,
+    _i2.Object? addedCells,
+    _i2.Object? removedCells,
   });
 
   factory NotebookDocumentContentChange({
@@ -21491,10 +21499,10 @@ extension NotebookDocumentContentChange$Typings
 @_i1.anonymous
 class NotebookDocumentChangeEvent {
   external factory NotebookDocumentChangeEvent._({
-    _i2.dynamic notebook,
-    _i2.dynamic metadata,
-    _i2.dynamic contentChanges,
-    _i2.dynamic cellChanges,
+    _i2.Object? notebook,
+    _i2.Object? metadata,
+    _i2.Object? contentChanges,
+    _i2.Object? cellChanges,
   });
 
   factory NotebookDocumentChangeEvent({
@@ -21601,7 +21609,7 @@ extension NotebookDocumentWillSaveEvent$Typings
   ///  *Note:* This function can only be called during event dispatch.
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$2(_i6.Thenable<_i2.dynamic> thenable) {
+  void _waitUntil$2(_i6.Thenable<_i2.Object?> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -21636,7 +21644,7 @@ extension NotebookDocumentWillSaveEvent$Typings
     ///  *Note:* This function can only be called during event dispatch.
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i2.dynamic> thenable) $2,
+    void Function(_i6.Thenable<_i2.Object?> thenable) $2,
   }) get waitUntil => (
         $1: _waitUntil$1,
         $2: _waitUntil$2,
@@ -21665,9 +21673,9 @@ extension IInline73$Typings on IInline73 {
 @_i1.anonymous
 class NotebookCellExecutionSummary {
   external factory NotebookCellExecutionSummary._({
-    _i2.dynamic executionOrder,
-    _i2.dynamic success,
-    _i2.dynamic timing,
+    _i2.Object? executionOrder,
+    _i2.Object? success,
+    _i2.Object? timing,
   });
 
   factory NotebookCellExecutionSummary({
@@ -21696,7 +21704,7 @@ extension NotebookCellExecutionSummary$Typings on NotebookCellExecutionSummary {
       );
 
   /// The times at which execution started and ended, as unix timestamps
-  _i2.dynamic get timing => _i5.getProperty(
+  _i2.Object? get timing => _i5.getProperty(
         this,
         'timing',
       );
@@ -21827,7 +21835,7 @@ class NotebookCellOutputItem {
   /// an object that can be stringified. This function will throw an error
   /// when the passed value cannot be JSON-stringified.
   static _i3.NotebookCellOutputItem json(
-    _i2.dynamic value, [
+    _i2.Object? value, [
     _i2.String? mime,
   ]) =>
       _i5.callMethod(
@@ -22180,9 +22188,9 @@ extension NotebookSerializer$Typings on NotebookSerializer {
 @_i1.anonymous
 class NotebookDocumentContentOptions {
   external factory NotebookDocumentContentOptions._({
-    _i2.dynamic transientOutputs,
-    _i2.dynamic transientCellMetadata,
-    _i2.dynamic transientDocumentMetadata,
+    _i2.Object? transientOutputs,
+    _i2.Object? transientCellMetadata,
+    _i2.Object? transientDocumentMetadata,
   });
 
   factory NotebookDocumentContentOptions({
@@ -22427,7 +22435,7 @@ extension NotebookController$Typings on NotebookController {
   ///
   /// _Note_ that controller selection is persisted (by the controllers {@link NotebookController.idid}) and restored as soon as a
   /// controller is re-created or as a notebook is {@link workspace.onDidOpenNotebookDocumentopened}.
-  _i3.Event<_i2.dynamic> get onDidChangeSelectedNotebooks => _i5.getProperty(
+  _i3.Event<_i2.Object?> get onDidChangeSelectedNotebooks => _i5.getProperty(
         this,
         'onDidChangeSelectedNotebooks',
       );
@@ -22791,10 +22799,10 @@ extension NotebookCellStatusBarItemProvider$Typings
 @_i1.anonymous
 class SourceControlInputBox {
   external factory SourceControlInputBox._({
-    _i2.dynamic value,
-    _i2.dynamic placeholder,
-    _i2.dynamic enabled,
-    _i2.dynamic visible,
+    _i2.Object? value,
+    _i2.Object? placeholder,
+    _i2.Object? enabled,
+    _i2.Object? visible,
   });
 
   factory SourceControlInputBox({
@@ -22896,7 +22904,7 @@ extension QuickDiffProvider$Typings on QuickDiffProvider {
 @_i1.anonymous
 class SourceControlResourceThemableDecorations {
   external factory SourceControlResourceThemableDecorations._(
-      {_i2.dynamic iconPath});
+      {_i2.Object? iconPath});
 
   factory SourceControlResourceThemableDecorations({_i2.Object? iconPath}) =>
       SourceControlResourceThemableDecorations._(
@@ -22921,12 +22929,12 @@ extension SourceControlResourceThemableDecorations$Typings
 class SourceControlResourceDecorations
     implements _i3.SourceControlResourceThemableDecorations {
   external factory SourceControlResourceDecorations._({
-    _i2.dynamic strikeThrough,
-    _i2.dynamic faded,
-    _i2.dynamic tooltip,
-    _i2.dynamic light,
-    _i2.dynamic dark,
-    _i2.dynamic iconPath,
+    _i2.Object? strikeThrough,
+    _i2.Object? faded,
+    _i2.Object? tooltip,
+    _i2.Object? light,
+    _i2.Object? dark,
+    _i2.Object? iconPath,
   });
 
   factory SourceControlResourceDecorations({
@@ -22990,10 +22998,10 @@ extension SourceControlResourceDecorations$Typings
 @_i1.anonymous
 class SourceControlResourceState {
   external factory SourceControlResourceState._({
-    _i2.dynamic resourceUri,
-    _i2.dynamic command,
-    _i2.dynamic decorations,
-    _i2.dynamic contextValue,
+    _i2.Object? resourceUri,
+    _i2.Object? command,
+    _i2.Object? decorations,
+    _i2.Object? contextValue,
   });
 
   factory SourceControlResourceState({
@@ -23328,13 +23336,13 @@ extension DebugConfiguration$Typings on DebugConfiguration {
     );
   }
 
-  _i2.dynamic operator [](_i2.String index) => _i5.getProperty(
+  _i2.Object? operator [](_i2.String index) => _i5.getProperty(
         this,
         index,
       );
   void operator []=(
     _i2.String index,
-    _i2.dynamic value,
+    _i2.Object? value,
   ) {
     _i5.setProperty(
       this,
@@ -23398,9 +23406,9 @@ extension DebugSession$Typings on DebugSession {
       );
 
   /// Send a custom request to the debug adapter.
-  _i6.Thenable<_i2.dynamic> customRequest(
+  _i6.Thenable<_i2.Object?> customRequest(
     _i2.String command, [
-    _i2.dynamic args,
+    _i2.Object? args,
   ]) =>
       _i5.callMethod(
         this,
@@ -23431,15 +23439,15 @@ extension DebugSession$Typings on DebugSession {
 @_i1.anonymous
 class DebugSessionCustomEvent {
   external factory DebugSessionCustomEvent._({
-    _i2.dynamic session,
-    _i2.dynamic event,
-    _i2.dynamic body,
+    _i2.Object? session,
+    _i2.Object? event,
+    _i2.Object? body,
   });
 
   factory DebugSessionCustomEvent({
     required _i3.DebugSession session,
     required _i2.String event,
-    required _i2.dynamic body,
+    required _i2.Object? body,
   }) =>
       DebugSessionCustomEvent._(
         session: session,
@@ -23462,7 +23470,7 @@ extension DebugSessionCustomEvent$Typings on DebugSessionCustomEvent {
       );
 
   /// Event specific information.
-  _i2.dynamic get body => _i5.getProperty(
+  _i2.Object? get body => _i5.getProperty(
         this,
         'body',
       );
@@ -23604,8 +23612,8 @@ extension DebugAdapterExecutable$Typings on DebugAdapterExecutable {
 @_i1.anonymous
 class DebugAdapterExecutableOptions {
   external factory DebugAdapterExecutableOptions._({
-    _i2.dynamic env,
-    _i2.dynamic cwd,
+    _i2.Object? env,
+    _i2.Object? cwd,
   });
 
   factory DebugAdapterExecutableOptions({
@@ -23804,7 +23812,7 @@ extension DebugAdapterTracker$Typings on DebugAdapterTracker {
   }
 
   /// The debug adapter is about to receive a Debug Adapter Protocol message from the editor.
-  void onWillReceiveMessage(_i2.dynamic message) {
+  void onWillReceiveMessage(_i2.Object? message) {
     _i5.callMethod(
       this,
       'onWillReceiveMessage',
@@ -23813,7 +23821,7 @@ extension DebugAdapterTracker$Typings on DebugAdapterTracker {
   }
 
   /// The debug adapter has sent a Debug Adapter Protocol message to the editor.
-  void onDidSendMessage(_i2.dynamic message) {
+  void onDidSendMessage(_i2.Object? message) {
     _i5.callMethod(
       this,
       'onDidSendMessage',
@@ -23910,9 +23918,9 @@ extension DebugConsole$Typings on DebugConsole {
 @_i1.anonymous
 class BreakpointsChangeEvent {
   external factory BreakpointsChangeEvent._({
-    _i2.dynamic added,
-    _i2.dynamic removed,
-    _i2.dynamic changed,
+    _i2.Object? added,
+    _i2.Object? removed,
+    _i2.Object? changed,
   });
 
   factory BreakpointsChangeEvent({
@@ -24089,15 +24097,15 @@ extension FunctionBreakpoint$Typings on FunctionBreakpoint {
 @_i1.anonymous
 class DebugSessionOptions {
   external factory DebugSessionOptions._({
-    _i2.dynamic parentSession,
-    _i2.dynamic lifecycleManagedByParent,
-    _i2.dynamic consoleMode,
-    _i2.dynamic noDebug,
-    _i2.dynamic compact,
-    _i2.dynamic suppressSaveBeforeStart,
-    _i2.dynamic suppressDebugToolbar,
-    _i2.dynamic suppressDebugStatusbar,
-    _i2.dynamic suppressDebugView,
+    _i2.Object? parentSession,
+    _i2.Object? lifecycleManagedByParent,
+    _i2.Object? consoleMode,
+    _i2.Object? noDebug,
+    _i2.Object? compact,
+    _i2.Object? suppressSaveBeforeStart,
+    _i2.Object? suppressDebugToolbar,
+    _i2.Object? suppressDebugStatusbar,
+    _i2.Object? suppressDebugView,
   });
 
   factory DebugSessionOptions({
@@ -24398,8 +24406,8 @@ extension CommentThread$Typings on CommentThread {
 @_i1.anonymous
 class CommentAuthorInformation {
   external factory CommentAuthorInformation._({
-    _i2.dynamic name,
-    _i2.dynamic iconPath,
+    _i2.Object? name,
+    _i2.Object? iconPath,
   });
 
   factory CommentAuthorInformation({
@@ -24446,10 +24454,10 @@ extension CommentAuthorInformation$Typings on CommentAuthorInformation {
 @_i1.anonymous
 class CommentReaction {
   external factory CommentReaction._({
-    _i2.dynamic label,
-    _i2.dynamic iconPath,
-    _i2.dynamic count,
-    _i2.dynamic authorHasReacted,
+    _i2.Object? label,
+    _i2.Object? iconPath,
+    _i2.Object? count,
+    _i2.Object? authorHasReacted,
   });
 
   factory CommentReaction({
@@ -24498,13 +24506,13 @@ extension CommentReaction$Typings on CommentReaction {
 @_i1.anonymous
 class Comment {
   external factory Comment._({
-    _i2.dynamic body,
-    _i2.dynamic mode,
-    _i2.dynamic author,
-    _i2.dynamic contextValue,
-    _i2.dynamic reactions,
-    _i2.dynamic label,
-    _i2.dynamic timestamp,
+    _i2.Object? body,
+    _i2.Object? mode,
+    _i2.Object? author,
+    _i2.Object? contextValue,
+    _i2.Object? reactions,
+    _i2.Object? label,
+    _i2.Object? timestamp,
   });
 
   factory Comment({
@@ -24644,8 +24652,8 @@ extension Comment$Typings on Comment {
 @_i1.anonymous
 class CommentReply {
   external factory CommentReply._({
-    _i2.dynamic thread,
-    _i2.dynamic text,
+    _i2.Object? thread,
+    _i2.Object? text,
   });
 
   factory CommentReply({
@@ -24713,8 +24721,8 @@ extension CommentingRangeProvider$Typings on CommentingRangeProvider {
 @_i1.anonymous
 class CommentOptions {
   external factory CommentOptions._({
-    _i2.dynamic prompt,
-    _i2.dynamic placeHolder,
+    _i2.Object? prompt,
+    _i2.Object? placeHolder,
   });
 
   factory CommentOptions({
@@ -24862,10 +24870,10 @@ extension CommentController$Typings on CommentController {
 @_i1.anonymous
 class AuthenticationSession {
   external factory AuthenticationSession._({
-    _i2.dynamic id,
-    _i2.dynamic accessToken,
-    _i2.dynamic account,
-    _i2.dynamic scopes,
+    _i2.Object? id,
+    _i2.Object? accessToken,
+    _i2.Object? account,
+    _i2.Object? scopes,
   });
 
   factory AuthenticationSession({
@@ -24916,8 +24924,8 @@ extension AuthenticationSession$Typings on AuthenticationSession {
 @_i1.anonymous
 class AuthenticationSessionAccountInformation {
   external factory AuthenticationSessionAccountInformation._({
-    _i2.dynamic id,
-    _i2.dynamic label,
+    _i2.Object? id,
+    _i2.Object? label,
   });
 
   factory AuthenticationSessionAccountInformation({
@@ -24950,7 +24958,7 @@ extension AuthenticationSessionAccountInformation$Typings
 @_i1.staticInterop
 @_i1.anonymous
 class AuthenticationForceNewSessionOptions {
-  external factory AuthenticationForceNewSessionOptions._({_i2.dynamic detail});
+  external factory AuthenticationForceNewSessionOptions._({_i2.Object? detail});
 
   factory AuthenticationForceNewSessionOptions({_i2.String? detail}) =>
       AuthenticationForceNewSessionOptions._(detail: detail ?? _i4.undefined);
@@ -24979,10 +24987,10 @@ extension AuthenticationForceNewSessionOptions$Typings
 @_i1.anonymous
 class AuthenticationGetSessionOptions {
   external factory AuthenticationGetSessionOptions._({
-    _i2.dynamic clearSessionPreference,
-    _i2.dynamic createIfNone,
-    _i2.dynamic forceNewSession,
-    _i2.dynamic silent,
+    _i2.Object? clearSessionPreference,
+    _i2.Object? createIfNone,
+    _i2.Object? forceNewSession,
+    _i2.Object? silent,
   });
 
   factory AuthenticationGetSessionOptions({
@@ -25099,8 +25107,8 @@ extension AuthenticationGetSessionOptions$Typings
 @_i1.anonymous
 class AuthenticationProviderInformation {
   external factory AuthenticationProviderInformation._({
-    _i2.dynamic id,
-    _i2.dynamic label,
+    _i2.Object? id,
+    _i2.Object? label,
   });
 
   factory AuthenticationProviderInformation({
@@ -25133,7 +25141,7 @@ extension AuthenticationProviderInformation$Typings
 @_i1.staticInterop
 @_i1.anonymous
 class AuthenticationSessionsChangeEvent {
-  external factory AuthenticationSessionsChangeEvent._({_i2.dynamic provider});
+  external factory AuthenticationSessionsChangeEvent._({_i2.Object? provider});
 
   factory AuthenticationSessionsChangeEvent(
           {required _i3.AuthenticationProviderInformation provider}) =>
@@ -25155,7 +25163,7 @@ extension AuthenticationSessionsChangeEvent$Typings
 @_i1.anonymous
 class AuthenticationProviderOptions {
   external factory AuthenticationProviderOptions._(
-      {_i2.dynamic supportsMultipleAccounts});
+      {_i2.Object? supportsMultipleAccounts});
 
   factory AuthenticationProviderOptions({_i2.bool? supportsMultipleAccounts}) =>
       AuthenticationProviderOptions._(
@@ -25178,9 +25186,9 @@ extension AuthenticationProviderOptions$Typings
 @_i1.anonymous
 class AuthenticationProviderAuthenticationSessionsChangeEvent {
   external factory AuthenticationProviderAuthenticationSessionsChangeEvent._({
-    _i2.dynamic added,
-    _i2.dynamic removed,
-    _i2.dynamic changed,
+    _i2.Object? added,
+    _i2.Object? removed,
+    _i2.Object? changed,
   });
 
   factory AuthenticationProviderAuthenticationSessionsChangeEvent({
@@ -25931,7 +25939,7 @@ extension TestItemCollection$Typings on TestItemCollection {
       _i3.TestItem,
       _i3.TestItemCollection,
     ) callback, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i5.callMethod(
       this,
@@ -25983,18 +25991,18 @@ extension TestItemCollection$Typings on TestItemCollection {
 @_i1.anonymous
 class TestItem {
   external factory TestItem._({
-    _i2.dynamic id,
-    _i2.dynamic uri,
-    _i2.dynamic children,
-    _i2.dynamic parent,
-    _i2.dynamic tags,
-    _i2.dynamic canResolveChildren,
-    _i2.dynamic busy,
-    _i2.dynamic label,
-    _i2.dynamic description,
-    _i2.dynamic sortText,
-    _i2.dynamic range,
-    _i2.dynamic error,
+    _i2.Object? id,
+    _i2.Object? uri,
+    _i2.Object? children,
+    _i2.Object? parent,
+    _i2.Object? tags,
+    _i2.Object? canResolveChildren,
+    _i2.Object? busy,
+    _i2.Object? label,
+    _i2.Object? description,
+    _i2.Object? sortText,
+    _i2.Object? range,
+    _i2.Object? error,
   });
 
   factory TestItem({
@@ -26009,7 +26017,7 @@ class TestItem {
     _i2.String? description,
     _i2.String? sortText,
     _i3.Range? range,
-    _i2.dynamic error,
+    _i2.Object? error,
   }) =>
       TestItem._(
         id: id,
@@ -26168,11 +26176,11 @@ extension TestItem$Typings on TestItem {
   ///
   ///  Note that this is not a test result and should only be used to represent errors in
   ///  test discovery, such as syntax errors.
-  _i2.dynamic get error => _i5.getProperty(
+  _i2.Object? get error => _i5.getProperty(
         this,
         'error',
       );
-  set error(_i2.dynamic value) {
+  set error(_i2.Object? value) {
     _i5.setProperty(
       this,
       'error',
@@ -26497,13 +26505,13 @@ external _i2.Object _declaredTabInputTerminal;
 @_i1.anonymous
 class Tab {
   external factory Tab._({
-    _i2.dynamic label,
-    _i2.dynamic group,
-    _i2.dynamic input,
-    _i2.dynamic isActive,
-    _i2.dynamic isDirty,
-    _i2.dynamic isPinned,
-    _i2.dynamic isPreview,
+    _i2.Object? label,
+    _i2.Object? group,
+    _i2.Object? input,
+    _i2.Object? isActive,
+    _i2.Object? isDirty,
+    _i2.Object? isPinned,
+    _i2.Object? isPreview,
   });
 
   factory Tab({
@@ -26578,9 +26586,9 @@ extension Tab$Typings on Tab {
 @_i1.anonymous
 class TabChangeEvent {
   external factory TabChangeEvent._({
-    _i2.dynamic opened,
-    _i2.dynamic closed,
-    _i2.dynamic changed,
+    _i2.Object? opened,
+    _i2.Object? closed,
+    _i2.Object? changed,
   });
 
   factory TabChangeEvent({
@@ -26625,9 +26633,9 @@ extension TabChangeEvent$Typings on TabChangeEvent {
 @_i1.anonymous
 class TabGroupChangeEvent {
   external factory TabGroupChangeEvent._({
-    _i2.dynamic opened,
-    _i2.dynamic closed,
-    _i2.dynamic changed,
+    _i2.Object? opened,
+    _i2.Object? closed,
+    _i2.Object? changed,
   });
 
   factory TabGroupChangeEvent({
@@ -26672,10 +26680,10 @@ extension TabGroupChangeEvent$Typings on TabGroupChangeEvent {
 @_i1.anonymous
 class TabGroup {
   external factory TabGroup._({
-    _i2.dynamic isActive,
-    _i2.dynamic viewColumn,
-    _i2.dynamic activeTab,
-    _i2.dynamic tabs,
+    _i2.Object? isActive,
+    _i2.Object? viewColumn,
+    _i2.Object? activeTab,
+    _i2.Object? tabs,
   });
 
   factory TabGroup({
@@ -26829,7 +26837,7 @@ extension TabGroups$Typings on TabGroups {
 /// This is to be used when you can guarantee no identifiable information is contained in the value and the cleaning is improperly redacting it.
 @_i1.JS()
 @_i1.staticInterop
-class TelemetryTrustedValue<T> {
+class TelemetryTrustedValue<T extends _i2.Object?> {
   factory TelemetryTrustedValue(T value) => _i5.callConstructor(
         _declaredTelemetryTrustedValue,
         [value],
@@ -26842,7 +26850,8 @@ FieldExternal:
 @_i1.JS('TelemetryTrustedValue')
 external _i2.Object _declaredTelemetryTrustedValue;
 
-extension TelemetryTrustedValue$Typings<T> on TelemetryTrustedValue<T> {
+extension TelemetryTrustedValue$Typings<T extends _i2.Object?>
+    on TelemetryTrustedValue<T> {
   T get value => _i5.getProperty(
         this,
         'value',
@@ -27007,7 +27016,7 @@ extension TelemetrySender$Typings on TelemetrySender {
   ///  @param data A serializable key value pair that is being logged
   void sendEventData(
     _i2.String eventName, [
-    _i7.Record<_i2.String, _i2.dynamic>? data,
+    _i7.Record<_i2.String, _i2.Object?>? data,
   ]) {
     _i5.callMethod(
       this,
@@ -27025,7 +27034,7 @@ extension TelemetrySender$Typings on TelemetrySender {
   ///  @param data Any additional data to be collected with the exception
   void sendErrorData(
     _i7.Error error, [
-    _i7.Record<_i2.String, _i2.dynamic>? data,
+    _i7.Record<_i2.String, _i2.Object?>? data,
   ]) {
     _i5.callMethod(
       this,
@@ -27052,15 +27061,15 @@ extension TelemetrySender$Typings on TelemetrySender {
 @_i1.anonymous
 class TelemetryLoggerOptions {
   external factory TelemetryLoggerOptions._({
-    _i2.dynamic ignoreBuiltInCommonProperties,
-    _i2.dynamic ignoreUnhandledErrors,
-    _i2.dynamic additionalCommonProperties,
+    _i2.Object? ignoreBuiltInCommonProperties,
+    _i2.Object? ignoreUnhandledErrors,
+    _i2.Object? additionalCommonProperties,
   });
 
   factory TelemetryLoggerOptions({
     _i2.bool? ignoreBuiltInCommonProperties,
     _i2.bool? ignoreUnhandledErrors,
-    _i7.Record<_i2.String, _i2.dynamic>? additionalCommonProperties,
+    _i7.Record<_i2.String, _i2.Object?>? additionalCommonProperties,
   }) =>
       TelemetryLoggerOptions._(
         ignoreBuiltInCommonProperties:
@@ -27087,7 +27096,7 @@ extension TelemetryLoggerOptions$Typings on TelemetryLoggerOptions {
       );
 
   /// Any additional common properties which should be injected into the data object.
-  _i7.Record<_i2.String, _i2.dynamic>? get additionalCommonProperties =>
+  _i7.Record<_i2.String, _i2.Object?>? get additionalCommonProperties =>
       _i5.getProperty(
         this,
         'additionalCommonProperties',
@@ -27097,7 +27106,7 @@ extension TelemetryLoggerOptions$Typings on TelemetryLoggerOptions {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

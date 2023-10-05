@@ -13,13 +13,16 @@ external _i2.Object _self;
 
 @_i1.JS()
 @_i1.staticInterop
-class AsyncGenerator<T, TReturn, TNext>
+class AsyncGenerator<T extends _i2.Object?, TReturn extends _i2.Object?,
+        TNext extends _i2.Object?>
     implements _i3.AsyncIterator<T, TReturn, TNext> {}
 
-extension AsyncGenerator$Typings<T, TReturn, TNext>
-    on AsyncGenerator<T, TReturn, TNext> {
+extension AsyncGenerator$Typings<
+    T extends _i2.Object?,
+    TReturn extends _i2.Object?,
+    TNext extends _i2.Object?> on AsyncGenerator<T, TReturn, TNext> {
   _i2.Future<_i4.IteratorResult<T, TReturn>> next(
-          [_i2.Iterable<_i2.dynamic>? args]) =>
+          [_i2.Iterable<_i2.Object?>? args]) =>
       _i5.promiseToFuture(_i5.callMethod(
         this,
         'next',
@@ -31,7 +34,7 @@ extension AsyncGenerator$Typings<T, TReturn, TNext>
         'return',
         [value],
       ));
-  _i2.Future<_i4.IteratorResult<T, TReturn>> throw$(_i2.dynamic e) =>
+  _i2.Future<_i4.IteratorResult<T, TReturn>> throw$(_i2.Object? e) =>
       _i5.promiseToFuture(_i5.callMethod(
         this,
         'throw',
@@ -55,8 +58,8 @@ extension AsyncGeneratorFunction$Typings on AsyncGeneratorFunction {
         this,
         'name',
       );
-  _i6.AsyncGenerator<_i2.Object?, _i2.dynamic, _i2.Object?> call(
-          [_i2.Iterable<_i2.dynamic>? args]) =>
+  _i6.AsyncGenerator<_i2.Object?, _i2.Object?, _i2.Object?> call(
+          [_i2.Iterable<_i2.Object?>? args]) =>
       _i5.callMethod(
         this,
         '',
@@ -81,7 +84,7 @@ extension AsyncGeneratorFunctionConstructor$Typings
         this,
         'name',
       );
-  _i6.AsyncGeneratorFunction call([_i2.Iterable<_i2.dynamic>? args]) =>
+  _i6.AsyncGeneratorFunction call([_i2.Iterable<_i2.Object?>? args]) =>
       _i5.callMethod(
         this,
         '',
@@ -92,7 +95,7 @@ extension AsyncGeneratorFunctionConstructor$Typings
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

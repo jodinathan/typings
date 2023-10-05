@@ -133,7 +133,7 @@ extension UriAccessor$Typings on _UriAccessor {
   /// so that is true: `joinPath(Uri.file('file:///c:/root'), '../../other').fsPath === 'c:/other'`
   _i5.Uri joinPath(
     _i5.Uri base, [
-    _i2.Iterable<_i2.dynamic>? pathSegments,
+    _i2.Iterable<_i2.Object?>? pathSegments,
   ]) =>
       _i3.callMethod(
         _i4.target3457,
@@ -193,7 +193,7 @@ extension UriAccessor$Typings on _UriAccessor {
   /// Returns a JSON representation of this Uri.
   ///
   ///  @return An object.
-  _i2.dynamic toJSON() => _i3.callMethod(
+  _i2.Object? toJSON() => _i3.callMethod(
         _i4.target3457,
         'toJSON',
         [],
@@ -289,7 +289,7 @@ _i2.String _t$1(_i7.IInline85 options) => _i3.callMethod(
 /// value will be returned (with injected args values for any templated values).
 _i2.String _t$2(
   _i2.String message, [
-  _i2.Iterable<_i2.dynamic>? args,
+  _i2.Iterable<_i2.Object?>? args,
 ]) =>
     _i3.callMethod(
       _self,
@@ -308,7 +308,7 @@ _i2.String _t$2(
 /// value will be returned (with injected args values for any templated values).
 _i2.String _t$3(
   _i2.String message,
-  _i8.Record<_i2.String, _i2.dynamic> args,
+  _i8.Record<_i2.String, _i2.Object?> args,
 ) =>
     _i3.callMethod(
       _self,
@@ -337,7 +337,7 @@ _i2.String _t$3(
   /// value will be returned (with injected args values for any templated values).
   _i2.String Function(
     _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? args,
+    _i2.Iterable<_i2.Object?>? args,
   ]) $2,
 
   /// Marks a string for localization. If a localized bundle is available for the language specified by
@@ -348,7 +348,7 @@ _i2.String _t$3(
   /// value will be returned (with injected args values for any templated values).
   _i2.String Function(
     _i2.String message,
-    _i8.Record<_i2.String, _i2.dynamic> args,
+    _i8.Record<_i2.String, _i2.Object?> args,
   ) $3,
 }) get t => (
       $1: _t$1,
@@ -359,7 +359,7 @@ _i2.String _t$3(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

@@ -3787,7 +3787,7 @@ class IInline51 {}
 
 extension IInline51$Typings on IInline51 {
   /// Content settings for the webview created for this view.
-  _i2.dynamic get webviewOptions => _i4.getProperty(
+  _i2.Object? get webviewOptions => _i4.getProperty(
         this,
         'webviewOptions',
       );
@@ -3945,7 +3945,7 @@ _i3.TextEditorDecorationType createTextEditorDecorationType(
 /// Show an information message.
 _i6.Thenable<T?> _showInformationMessage$1<T extends _i2.String>(
   _i2.String message, [
-  _i2.Iterable<_i2.dynamic>? items,
+  _i2.Iterable<_i2.Object?>? items,
 ]) =>
     _i4.callMethod(
       _self,
@@ -3962,7 +3962,7 @@ _i6.Thenable<T?> _showInformationMessage$1<T extends _i2.String>(
 _i6.Thenable<T?> _showInformationMessage$2<T extends _i2.String>(
   _i2.String message,
   _i3.MessageOptions options, [
-  _i2.Iterable<_i2.dynamic>? items,
+  _i2.Iterable<_i2.Object?>? items,
 ]) =>
     _i4.callMethod(
       _self,
@@ -3980,7 +3980,7 @@ _i6.Thenable<T?> _showInformationMessage$2<T extends _i2.String>(
 _i6.Thenable<T?> _showInformationMessage$3<T extends _i3.MessageItem>(
   _i2.String message,
   _i3.MessageOptions options, [
-  _i2.Iterable<_i2.dynamic>? items,
+  _i2.Iterable<_i2.Object?>? items,
 ]) =>
     _i4.callMethod(
       _self,
@@ -3999,7 +3999,7 @@ _i6.Thenable<T?> _showInformationMessage$3<T extends _i3.MessageItem>(
   /// Show an information message.
   _i6.Thenable<T?> Function<T extends _i2.String>(
     _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? items,
+    _i2.Iterable<_i2.Object?>? items,
   ]) $1,
 
   /// Show an information message to users. Optionally provide an array of items which will be presented as
@@ -4008,7 +4008,7 @@ _i6.Thenable<T?> _showInformationMessage$3<T extends _i3.MessageItem>(
   _i6.Thenable<T?> Function<T extends _i2.String>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.dynamic>? items,
+    _i2.Iterable<_i2.Object?>? items,
   ]) $2,
 
   /// Show an information message to users. Optionally provide an array of items which will be presented as
@@ -4017,7 +4017,7 @@ _i6.Thenable<T?> _showInformationMessage$3<T extends _i3.MessageItem>(
   _i6.Thenable<T?> Function<T extends _i3.MessageItem>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.dynamic>? items,
+    _i2.Iterable<_i2.Object?>? items,
   ]) $3,
 }) get showInformationMessage => (
       $1: _showInformationMessage$1,
@@ -4028,7 +4028,7 @@ _i6.Thenable<T?> _showInformationMessage$3<T extends _i3.MessageItem>(
 /// Show a warning message.
 _i6.Thenable<T?> _showWarningMessage$1<T extends _i2.String>(
   _i2.String message, [
-  _i2.Iterable<_i2.dynamic>? items,
+  _i2.Iterable<_i2.Object?>? items,
 ]) =>
     _i4.callMethod(
       _self,
@@ -4043,7 +4043,7 @@ _i6.Thenable<T?> _showWarningMessage$1<T extends _i2.String>(
 _i6.Thenable<T?> _showWarningMessage$2<T extends _i2.String>(
   _i2.String message,
   _i3.MessageOptions options, [
-  _i2.Iterable<_i2.dynamic>? items,
+  _i2.Iterable<_i2.Object?>? items,
 ]) =>
     _i4.callMethod(
       _self,
@@ -4059,7 +4059,7 @@ _i6.Thenable<T?> _showWarningMessage$2<T extends _i2.String>(
 _i6.Thenable<T?> _showWarningMessage$3<T extends _i3.MessageItem>(
   _i2.String message,
   _i3.MessageOptions options, [
-  _i2.Iterable<_i2.dynamic>? items,
+  _i2.Iterable<_i2.Object?>? items,
 ]) =>
     _i4.callMethod(
       _self,
@@ -4076,21 +4076,21 @@ _i6.Thenable<T?> _showWarningMessage$3<T extends _i3.MessageItem>(
   /// Show a warning message.
   _i6.Thenable<T?> Function<T extends _i2.String>(
     _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? items,
+    _i2.Iterable<_i2.Object?>? items,
   ]) $1,
 
   /// Show a warning message.
   _i6.Thenable<T?> Function<T extends _i2.String>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.dynamic>? items,
+    _i2.Iterable<_i2.Object?>? items,
   ]) $2,
 
   /// Show a warning message.
   _i6.Thenable<T?> Function<T extends _i3.MessageItem>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.dynamic>? items,
+    _i2.Iterable<_i2.Object?>? items,
   ]) $3,
 }) get showWarningMessage => (
       $1: _showWarningMessage$1,
@@ -4101,7 +4101,7 @@ _i6.Thenable<T?> _showWarningMessage$3<T extends _i3.MessageItem>(
 /// Show an error message.
 _i6.Thenable<T?> _showErrorMessage$1<T extends _i2.String>(
   _i2.String message, [
-  _i2.Iterable<_i2.dynamic>? items,
+  _i2.Iterable<_i2.Object?>? items,
 ]) =>
     _i4.callMethod(
       _self,
@@ -4116,7 +4116,7 @@ _i6.Thenable<T?> _showErrorMessage$1<T extends _i2.String>(
 _i6.Thenable<T?> _showErrorMessage$2<T extends _i2.String>(
   _i2.String message,
   _i3.MessageOptions options, [
-  _i2.Iterable<_i2.dynamic>? items,
+  _i2.Iterable<_i2.Object?>? items,
 ]) =>
     _i4.callMethod(
       _self,
@@ -4132,7 +4132,7 @@ _i6.Thenable<T?> _showErrorMessage$2<T extends _i2.String>(
 _i6.Thenable<T?> _showErrorMessage$3<T extends _i3.MessageItem>(
   _i2.String message,
   _i3.MessageOptions options, [
-  _i2.Iterable<_i2.dynamic>? items,
+  _i2.Iterable<_i2.Object?>? items,
 ]) =>
     _i4.callMethod(
       _self,
@@ -4149,21 +4149,21 @@ _i6.Thenable<T?> _showErrorMessage$3<T extends _i3.MessageItem>(
   /// Show an error message.
   _i6.Thenable<T?> Function<T extends _i2.String>(
     _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? items,
+    _i2.Iterable<_i2.Object?>? items,
   ]) $1,
 
   /// Show an error message.
   _i6.Thenable<T?> Function<T extends _i2.String>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.dynamic>? items,
+    _i2.Iterable<_i2.Object?>? items,
   ]) $2,
 
   /// Show an error message.
   _i6.Thenable<T?> Function<T extends _i3.MessageItem>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.dynamic>? items,
+    _i2.Iterable<_i2.Object?>? items,
   ]) $3,
 }) get showErrorMessage => (
       $1: _showErrorMessage$1,
@@ -4463,7 +4463,7 @@ _i3.Disposable _setStatusBarMessage$1(
 /// longer used.
 _i3.Disposable _setStatusBarMessage$2(
   _i2.String text,
-  _i6.Thenable<_i2.dynamic> hideWhenDone,
+  _i6.Thenable<_i2.Object?> hideWhenDone,
 ) =>
     _i4.callMethod(
       _self,
@@ -4497,7 +4497,7 @@ _i3.Disposable _setStatusBarMessage$2(
   /// longer used.
   _i3.Disposable Function(
     _i2.String text,
-    _i6.Thenable<_i2.dynamic> hideWhenDone,
+    _i6.Thenable<_i2.Object?> hideWhenDone,
   ) $2,
 }) get setStatusBarMessage => (
       $1: _setStatusBarMessage$1,
@@ -4506,7 +4506,7 @@ _i3.Disposable _setStatusBarMessage$2(
 
 /// Show progress in the Source Control viewlet while running the given callback and while
 /// its returned promise isn't resolve or rejected.
-_i6.Thenable<R> withScmProgress<R>(
+_i6.Thenable<R> withScmProgress<R extends _i2.Object?>(
         _i6.Thenable<R> Function(_i3.Progress<_i2.num>) task) =>
     _i4.callMethod(
       _self,
@@ -4517,10 +4517,10 @@ _i6.Thenable<R> withScmProgress<R>(
 /// Show progress in the editor. Progress is shown while running the given callback
 /// and while the promise it returned isn't resolved nor rejected. The location at which
 /// progress should show (and other details) is defined via the passed {@linkcode ProgressOptions}.
-_i6.Thenable<R> withProgress<R>(
+_i6.Thenable<R> withProgress<R extends _i2.Object?>(
   _i3.ProgressOptions options,
   _i6.Thenable<R> Function(
-    _i3.Progress<_i2.dynamic>,
+    _i3.Progress<_i2.Object?>,
     _i3.CancellationToken,
   ) task,
 ) =>
@@ -4655,7 +4655,7 @@ _i3.Terminal _createTerminal$3([
 /// This will allow you to contribute data to the {@link TreeView} and update if the data changes.
 ///
 /// **Note:** To get access to the {@link TreeView} and perform operations on it, use {@link window.createTreeViewcreateTreeView}.
-_i3.Disposable registerTreeDataProvider<T>(
+_i3.Disposable registerTreeDataProvider<T extends _i2.Object?>(
   _i2.String viewId,
   _i3.TreeDataProvider<T> treeDataProvider,
 ) =>
@@ -4669,7 +4669,7 @@ _i3.Disposable registerTreeDataProvider<T>(
     );
 
 /// Create a {@link TreeView} for the view contributed using the extension point `views`.
-_i3.TreeView<T> createTreeView<T>(
+_i3.TreeView<T> createTreeView<T extends _i2.Object?>(
   _i2.String viewId,
   _i3.TreeViewOptions<T> options,
 ) =>
@@ -4795,7 +4795,7 @@ _i3.Disposable registerFileDecorationProvider(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

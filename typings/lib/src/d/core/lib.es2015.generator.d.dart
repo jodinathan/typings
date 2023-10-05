@@ -12,13 +12,15 @@ external _i2.Object _self;
 
 @_i1.JS()
 @_i1.staticInterop
-class Generator<T, TReturn, TNext>
+class Generator<T extends _i2.Object?, TReturn extends _i2.Object?,
+        TNext extends _i2.Object?>
     implements
         _i3.Iterator<T, TReturn, TNext>,
         _IterableLike$<_i4.Generator<T, TReturn, TNext>> {}
 
-extension Generator$Typings<T, TReturn, TNext> on Generator<T, TReturn, TNext> {
-  _i3.IteratorResult<T, TReturn> next([_i2.Iterable<_i2.dynamic>? args]) =>
+extension Generator$Typings<T extends _i2.Object?, TReturn extends _i2.Object?,
+    TNext extends _i2.Object?> on Generator<T, TReturn, TNext> {
+  _i3.IteratorResult<T, TReturn> next([_i2.Iterable<_i2.Object?>? args]) =>
       _i5.callMethod(
         this,
         'next',
@@ -29,7 +31,7 @@ extension Generator$Typings<T, TReturn, TNext> on Generator<T, TReturn, TNext> {
         'return',
         [value],
       );
-  _i3.IteratorResult<T, TReturn> throw$(_i2.dynamic e) => _i5.callMethod(
+  _i3.IteratorResult<T, TReturn> throw$(_i2.Object? e) => _i5.callMethod(
         this,
         'throw',
         [e],
@@ -52,8 +54,8 @@ extension GeneratorFunction$Typings on GeneratorFunction {
         this,
         'name',
       );
-  _i4.Generator<_i2.Object?, _i2.dynamic, _i2.Object?> call(
-          [_i2.Iterable<_i2.dynamic>? args]) =>
+  _i4.Generator<_i2.Object?, _i2.Object?, _i2.Object?> call(
+          [_i2.Iterable<_i2.Object?>? args]) =>
       _i5.callMethod(
         this,
         '',
@@ -77,7 +79,7 @@ extension GeneratorFunctionConstructor$Typings on GeneratorFunctionConstructor {
         this,
         'name',
       );
-  _i4.GeneratorFunction call([_i2.Iterable<_i2.dynamic>? args]) =>
+  _i4.GeneratorFunction call([_i2.Iterable<_i2.Object?>? args]) =>
       _i5.callMethod(
         this,
         '',
@@ -88,7 +90,7 @@ extension GeneratorFunctionConstructor$Typings on GeneratorFunctionConstructor {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

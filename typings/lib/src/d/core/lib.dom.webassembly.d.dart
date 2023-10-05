@@ -90,7 +90,7 @@ extension IInline646$Typings on IInline646 {
 class Global {
   factory Global(
     _i3.GlobalDescriptor descriptor, [
-    _i2.dynamic v,
+    _i2.Object? v,
   ]) =>
       _i5.callConstructor(
         _declaredGlobal,
@@ -109,11 +109,11 @@ external _i2.Object _declaredGlobal;
 
 extension Global$Typings on Global {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/value)
-  _i2.dynamic get value => _i5.getProperty(
+  _i2.Object? get value => _i5.getProperty(
         this,
         'value',
       );
-  set value(_i2.dynamic value) {
+  set value(_i2.Object? value) {
     _i5.setProperty(
       this,
       'value',
@@ -122,7 +122,7 @@ extension Global$Typings on Global {
   }
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/valueOf)
-  _i2.dynamic valueOf() => _i5.callMethod(
+  _i2.Object? valueOf() => _i5.callMethod(
         this,
         'valueOf',
         [],
@@ -353,7 +353,7 @@ extension IInline652$Typings on IInline652 {
 class Table {
   factory Table(
     _i3.TableDescriptor descriptor, [
-    _i2.dynamic value,
+    _i2.Object? value,
   ]) =>
       _i5.callConstructor(
         _declaredTable,
@@ -378,7 +378,7 @@ extension Table$Typings on Table {
       );
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get)
-  _i2.dynamic get(_i2.num index) => _i5.callMethod(
+  _i2.Object? get(_i2.num index) => _i5.callMethod(
         this,
         'get',
         [index],
@@ -387,7 +387,7 @@ extension Table$Typings on Table {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow)
   _i2.num grow(
     _i2.num delta, [
-    _i2.dynamic value,
+    _i2.Object? value,
   ]) =>
       _i5.callMethod(
         this,
@@ -401,7 +401,7 @@ extension Table$Typings on Table {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set)
   void set(
     _i2.num index, [
-    _i2.dynamic value,
+    _i2.Object? value,
   ]) {
     _i5.callMethod(
       this,
@@ -423,8 +423,8 @@ class IInline653 {}
 @_i1.anonymous
 class GlobalDescriptor {
   external factory GlobalDescriptor._({
-    _i2.dynamic mutable,
-    _i2.dynamic value,
+    _i2.Object? mutable,
+    _i2.Object? value,
   });
 
   factory GlobalDescriptor({
@@ -468,9 +468,9 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
 @_i1.anonymous
 class MemoryDescriptor {
   external factory MemoryDescriptor._({
-    _i2.dynamic initial,
-    _i2.dynamic maximum,
-    _i2.dynamic shared,
+    _i2.Object? initial,
+    _i2.Object? maximum,
+    _i2.Object? shared,
   });
 
   factory MemoryDescriptor({
@@ -528,8 +528,8 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
 @_i1.anonymous
 class ModuleExportDescriptor {
   external factory ModuleExportDescriptor._({
-    _i2.dynamic kind,
-    _i2.dynamic name,
+    _i2.Object? kind,
+    _i2.Object? name,
   });
 
   factory ModuleExportDescriptor({
@@ -574,9 +574,9 @@ extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
 @_i1.anonymous
 class ModuleImportDescriptor {
   external factory ModuleImportDescriptor._({
-    _i2.dynamic kind,
-    _i2.dynamic module,
-    _i2.dynamic name,
+    _i2.Object? kind,
+    _i2.Object? module,
+    _i2.Object? name,
   });
 
   factory ModuleImportDescriptor({
@@ -635,9 +635,9 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
 @_i1.anonymous
 class TableDescriptor {
   external factory TableDescriptor._({
-    _i2.dynamic element,
-    _i2.dynamic initial,
-    _i2.dynamic maximum,
+    _i2.Object? element,
+    _i2.Object? initial,
+    _i2.Object? maximum,
   });
 
   factory TableDescriptor({
@@ -696,8 +696,8 @@ extension TableDescriptor$Typings on TableDescriptor {
 @_i1.anonymous
 class WebAssemblyInstantiatedSource {
   external factory WebAssemblyInstantiatedSource._({
-    _i2.dynamic instance,
-    _i2.dynamic module,
+    _i2.Object? instance,
+    _i2.Object? module,
   });
 
   factory WebAssemblyInstantiatedSource({
@@ -823,7 +823,7 @@ _i2.bool validate(_i8.BufferSource bytes) => _i5.callMethod(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

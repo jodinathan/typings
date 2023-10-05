@@ -21,8 +21,8 @@ class RegExpIndicesArray
               _i2.num,
             )> {
   external factory RegExpIndicesArray._({
-    _i2.dynamic groups,
-    _i2.dynamic length,
+    _i2.Object? groups,
+    _i2.Object? length,
   });
 
   factory RegExpIndicesArray({
@@ -52,7 +52,7 @@ extension RegExpIndicesArray$Typings on RegExpIndicesArray {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

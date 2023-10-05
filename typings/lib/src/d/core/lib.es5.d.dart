@@ -35,39 +35,39 @@ class FromCommon {}
 class _Intersection0 implements _i3.IInline1 {}
 
 typedef PropertyKey = _i2.Object;
-typedef ThisParameterType<T> = _i2.dynamic;
-typedef OmitThisParameter<T> = _i2.dynamic;
-typedef PromiseConstructorLike = _i2.Future<T> Function<T>(
+typedef ThisParameterType<T extends _i2.Object?> = _i2.Object?;
+typedef OmitThisParameter<T extends _i2.Object?> = _i2.Object?;
+typedef PromiseConstructorLike = _i2.Future<T> Function<T extends _i2.Object?>(
     void Function(
       void Function(_i2.Object),
-      void Function([_i2.dynamic]),
+      void Function([_i2.Object?]),
     ));
-typedef Awaited<T> = _i2.dynamic;
-typedef Partial<T> = _i2.dynamic;
-typedef Required<T> = _i2.dynamic;
-typedef Readonly<T> = _i2.dynamic;
-typedef Pick<T, K extends _i2.dynamic> = _i2.dynamic;
-typedef Record<K extends _i2.dynamic, T> = _i2.dynamic;
-typedef Exclude<T, U> = _i2.dynamic;
-typedef Extract<T, U> = _i2.dynamic;
-typedef Omit<T, K extends _i2.dynamic>
-    = _i3.Pick<T, _i3.Exclude<_i2.dynamic, K>>;
-typedef NonNullable<T> = _Intersection0;
-typedef Parameters<T extends _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])>
-    = _i2.dynamic;
+typedef Awaited<T extends _i2.Object?> = _i2.Object?;
+typedef Partial<T extends _i2.Object?> = _i2.Object?;
+typedef Required<T extends _i2.Object?> = _i2.Object?;
+typedef Readonly<T extends _i2.Object?> = _i2.Object?;
+typedef Pick<T extends _i2.Object?, K extends _i2.Object?> = _i2.Object?;
+typedef Record<K extends _i2.Object?, T extends _i2.Object?> = _i2.Object?;
+typedef Exclude<T extends _i2.Object?, U extends _i2.Object?> = _i2.Object?;
+typedef Extract<T extends _i2.Object?, U extends _i2.Object?> = _i2.Object?;
+typedef Omit<T extends _i2.Object?, K extends _i2.Object?>
+    = _i3.Pick<T, _i3.Exclude<_i2.Object?, K>>;
+typedef NonNullable<T extends _i2.Object?> = _Intersection0;
+typedef Parameters<T extends _i2.Object? Function([_i2.Iterable<_i2.Object?>?])>
+    = _i2.Object?;
 typedef ConstructorParameters<
-        T extends _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])>
-    = _i2.dynamic;
-typedef ReturnType<T extends _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])>
-    = _i2.dynamic;
+        T extends _i2.Object? Function([_i2.Iterable<_i2.Object?>?])>
+    = _i2.Object?;
+typedef ReturnType<T extends _i2.Object? Function([_i2.Iterable<_i2.Object?>?])>
+    = _i2.Object?;
 typedef InstanceType<
-        T extends _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])>
-    = _i2.dynamic;
+        T extends _i2.Object? Function([_i2.Iterable<_i2.Object?>?])>
+    = _i2.Object?;
 typedef Uppercase<S extends _i2.String> = _i2.Never;
 typedef Lowercase<S extends _i2.String> = _i2.Never;
 typedef Capitalize<S extends _i2.String> = _i2.Never;
 typedef Uncapitalize<S extends _i2.String> = _i2.Never;
-typedef ArrayBufferLike = _i2.dynamic;
+typedef ArrayBufferLike = _i2.Object?;
 
 @_i1.JS()
 @_i1.staticInterop
@@ -124,11 +124,11 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
     );
   }
 
-  _i2.dynamic get value => _i4.getProperty(
+  _i2.Object? get value => _i4.getProperty(
         this,
         'value',
       );
-  set value(_i2.dynamic value) {
+  set value(_i2.Object? value) {
     _i4.setProperty(
       this,
       'value',
@@ -148,12 +148,12 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
     );
   }
 
-  _i2.dynamic get() => _i4.callMethod(
+  _i2.Object? get() => _i4.callMethod(
         this,
         'get',
         [],
       );
-  void set(_i2.dynamic v) {
+  void set(_i2.Object? v) {
     _i4.callMethod(
       this,
       'set',
@@ -166,14 +166,14 @@ extension PropertyDescriptor$Typings on PropertyDescriptor {
 @_i1.JS()
 @_i1.staticInterop
 class Object {
-  factory Object([_i2.dynamic value]) => _i4.callConstructor(
+  factory Object([_i2.Object? value]) => _i4.callConstructor(
         _declaredObject,
         [value ?? _i5.undefined],
       );
 
   /// Returns the prototype of an object.
   ///  @param o The object that references the prototype.
-  static _i2.dynamic getPrototypeOf(_i2.dynamic o) => _i4.callMethod(
+  static _i2.Object? getPrototypeOf(_i2.Object? o) => _i4.callMethod(
         _i6.target0,
         'getPrototypeOf',
         [o],
@@ -184,7 +184,7 @@ class Object {
   ///  @param o Object that contains the property.
   ///  @param p Name of the property.
   static _i3.PropertyDescriptor? getOwnPropertyDescriptor(
-    _i2.dynamic o,
+    _i2.Object? o,
     _i3.PropertyKey p,
   ) =>
       _i4.callMethod(
@@ -199,7 +199,7 @@ class Object {
   /// Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
   ///  on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
   ///  @param o Object that contains the own properties.
-  static _i2.List<_i2.String> getOwnPropertyNames(_i2.dynamic o) =>
+  static _i2.List<_i2.String> getOwnPropertyNames(_i2.Object? o) =>
       (_i4.callMethod(
         _i6.target0,
         'getOwnPropertyNames',
@@ -209,7 +209,7 @@ class Object {
 
   /// Creates an object that has the specified prototype or that has null prototype.
   ///  @param o Object to use as a prototype. May be null.
-  static _i2.dynamic _create$1([_i2.Object? o]) => _i4.callMethod(
+  static _i2.Object? _create$1([_i2.Object? o]) => _i4.callMethod(
         _i6.target0,
         'create',
         [o ?? _i5.undefined],
@@ -218,7 +218,7 @@ class Object {
   /// Creates an object that has the specified prototype, and that optionally contains specified properties.
   ///  @param o Object to use as a prototype. May be null
   ///  @param properties JavaScript object that contains one or more property descriptors.
-  static _i2.dynamic _create$2(
+  static _i2.Object? _create$2(
     _i2.Object? o,
     _i2.Object properties,
   ) =>
@@ -235,12 +235,12 @@ class Object {
   static ({
     /// Creates an object that has the specified prototype or that has null prototype.
     ///  @param o Object to use as a prototype. May be null.
-    _i2.dynamic Function([_i2.Object? o]) $1,
+    _i2.Object? Function([_i2.Object? o]) $1,
 
     /// Creates an object that has the specified prototype, and that optionally contains specified properties.
     ///  @param o Object to use as a prototype. May be null
     ///  @param properties JavaScript object that contains one or more property descriptors.
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i2.Object? o,
       _i2.Object properties,
     ) $2,
@@ -253,7 +253,7 @@ class Object {
   ///  @param o Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object.
   ///  @param p The property name.
   ///  @param attributes Descriptor for the property. It can be for a data property or an accessor property.
-  static T defineProperty<T>(
+  static T defineProperty<T extends _i2.Object?>(
     T o,
     _i3.PropertyKey p,
     _i2.Object attributes,
@@ -271,7 +271,7 @@ class Object {
   /// Adds one or more properties to an object, and/or modifies attributes of existing properties.
   ///  @param o Object on which to add or modify the properties. This can be a native JavaScript object or a DOM object.
   ///  @param properties JavaScript object that contains one or more descriptor objects. Each descriptor object describes a data property or an accessor property.
-  static T defineProperties<T>(
+  static T defineProperties<T extends _i2.Object?>(
     T o,
     _i2.Object properties,
   ) =>
@@ -286,7 +286,7 @@ class Object {
 
   /// Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
   ///  @param o Object on which to lock the attributes.
-  static T seal<T>(T o) => _i4.callMethod(
+  static T seal<T extends _i2.Object?>(T o) => _i4.callMethod(
         _i6.target0,
         'seal',
         [o],
@@ -302,7 +302,7 @@ class Object {
 
   /// Prevents the addition of new properties to an object.
   ///  @param o Object to make non-extensible.
-  static T preventExtensions<T>(T o) => _i4.callMethod(
+  static T preventExtensions<T extends _i2.Object?>(T o) => _i4.callMethod(
         _i6.target0,
         'preventExtensions',
         [o],
@@ -310,7 +310,7 @@ class Object {
 
   /// Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
   ///  @param o Object to test.
-  static _i2.bool isSealed(_i2.dynamic o) => _i4.callMethod(
+  static _i2.bool isSealed(_i2.Object? o) => _i4.callMethod(
         _i6.target0,
         'isSealed',
         [o],
@@ -318,7 +318,7 @@ class Object {
 
   /// Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
   ///  @param o Object to test.
-  static _i2.bool isFrozen(_i2.dynamic o) => _i4.callMethod(
+  static _i2.bool isFrozen(_i2.Object? o) => _i4.callMethod(
         _i6.target0,
         'isFrozen',
         [o],
@@ -326,7 +326,7 @@ class Object {
 
   /// Returns a value that indicates whether new properties can be added to an object.
   ///  @param o Object to test.
-  static _i2.bool isExtensible(_i2.dynamic o) => _i4.callMethod(
+  static _i2.bool isExtensible(_i2.Object? o) => _i4.callMethod(
         _i6.target0,
         'isExtensible',
         [o],
@@ -368,9 +368,9 @@ class Object {
   ///  target object. Returns the target object.
   ///  @param target The target object to copy to.
   ///  @param sources One or more source objects from which to copy properties
-  static _i2.dynamic _assign$1(
+  static _i2.Object? _assign$1(
     _i2.Object target, [
-    _i2.Iterable<_i2.dynamic>? sources,
+    _i2.Iterable<_i2.Object?>? sources,
   ]) =>
       _i4.callMethod(
         _i6.target0,
@@ -387,7 +387,8 @@ class Object {
   ///  @param source1 The first source object from which to copy properties.
   ///  @param source2 The second source object from which to copy properties.
   ///  @param source3 The third source object from which to copy properties.
-  static _i2.Object _assign$2<T extends _i7.IInline8, U, V, W>(
+  static _i2.Object _assign$2<T extends _i7.IInline8, U extends _i2.Object?,
+          V extends _i2.Object?, W extends _i2.Object?>(
     T target,
     U source1,
     V source2,
@@ -410,9 +411,9 @@ class Object {
     ///  target object. Returns the target object.
     ///  @param target The target object to copy to.
     ///  @param sources One or more source objects from which to copy properties
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i2.Object target, [
-      _i2.Iterable<_i2.dynamic>? sources,
+      _i2.Iterable<_i2.Object?>? sources,
     ]) $1,
 
     /// Copy the values of all of the enumerable own properties from one or more source objects to a
@@ -421,7 +422,8 @@ class Object {
     ///  @param source1 The first source object from which to copy properties.
     ///  @param source2 The second source object from which to copy properties.
     ///  @param source3 The third source object from which to copy properties.
-    _i2.Object Function<T extends _i7.IInline8, U, V, W>(
+    _i2.Object Function<T extends _i7.IInline8, U extends _i2.Object?,
+        V extends _i2.Object?, W extends _i2.Object?>(
       T target,
       U source1,
       V source2,
@@ -434,7 +436,7 @@ class Object {
 
   /// Returns an array of all symbol properties found directly on object o.
   ///  @param o Object to retrieve the symbols from.
-  static _i2.List<_i2.Symbol> getOwnPropertySymbols(_i2.dynamic o) =>
+  static _i2.List<_i2.Symbol> getOwnPropertySymbols(_i2.Object? o) =>
       (_i4.callMethod(
         _i6.target0,
         'getOwnPropertySymbols',
@@ -446,8 +448,8 @@ class Object {
   ///  @param value1 The first value.
   ///  @param value2 The second value.
   static _i2.bool is$(
-    _i2.dynamic value1,
-    _i2.dynamic value2,
+    _i2.Object? value1,
+    _i2.Object? value2,
   ) =>
       _i4.callMethod(
         _i6.target0,
@@ -461,8 +463,8 @@ class Object {
   /// Sets the prototype of a specified object o to object proto or null. Returns the object o.
   ///  @param o The object to change its prototype.
   ///  @param proto The value of the new prototype or null.
-  static _i2.dynamic setPrototypeOf(
-    _i2.dynamic o, [
+  static _i2.Object? setPrototypeOf(
+    _i2.Object? o, [
     _i2.Object? proto,
   ]) =>
       _i4.callMethod(
@@ -476,7 +478,8 @@ class Object {
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2.List<T> _values$1<T>(_i2.Object o) => (_i4.callMethod(
+  static _i2.List<T> _values$1<T extends _i2.Object?>(_i2.Object o) =>
+      (_i4.callMethod(
         _i6.target0,
         'values',
         [o],
@@ -485,7 +488,7 @@ class Object {
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2.List<_i2.dynamic> _values$2(_i8.IInline18 o) => (_i4.callMethod(
+  static _i2.List<_i2.Object?> _values$2(_i8.IInline18 o) => (_i4.callMethod(
         _i6.target0,
         'values',
         [o],
@@ -496,11 +499,11 @@ class Object {
   static ({
     /// Returns an array of values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List<T> Function<T>(_i2.Object o) $1,
+    _i2.List<T> Function<T extends _i2.Object?>(_i2.Object o) $1,
 
     /// Returns an array of values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List<_i2.dynamic> Function(_i8.IInline18 o) $2,
+    _i2.List<_i2.Object?> Function(_i8.IInline18 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
@@ -512,7 +515,7 @@ class Object {
       (
         _i2.String,
         T,
-      )> _entries$1<T>(_i2.Object o) => (_i4.callMethod(
+      )> _entries$1<T extends _i2.Object?>(_i2.Object o) => (_i4.callMethod(
         _i6.target0,
         'entries',
         [o],
@@ -524,7 +527,7 @@ class Object {
   static _i2.List<
       (
         _i2.String,
-        _i2.dynamic,
+        _i2.Object?,
       )> _entries$2(_i8.IInline20 o) => (_i4.callMethod(
         _i6.target0,
         'entries',
@@ -541,14 +544,14 @@ class Object {
               _i2.String,
               T,
             )>
-        Function<T>(_i2.Object o) $1,
+        Function<T extends _i2.Object?>(_i2.Object o) $1,
 
     /// Returns an array of key/values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
     _i2.List<
             (
               _i2.String,
-              _i2.dynamic,
+              _i2.Object?,
             )>
         Function(_i8.IInline20 o) $2,
   }) get entries => (
@@ -558,7 +561,8 @@ class Object {
 
   /// Returns an object containing all own property descriptors of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2.Object getOwnPropertyDescriptors<T>(T o) => _i4.callMethod(
+  static _i2.Object getOwnPropertyDescriptors<T extends _i2.Object?>(T o) =>
+      _i4.callMethod(
         _i6.target0,
         'getOwnPropertyDescriptors',
         [o],
@@ -566,7 +570,7 @@ class Object {
 
   /// Returns an object created by key-value entries for properties and methods
   ///  @param entries An iterable object that contains key-value entries for properties and methods.
-  static _i2.Object _fromEntries$1<T>(
+  static _i2.Object _fromEntries$1<T extends _i2.Object?>(
           _i9.Iterable<
                   (
                     _i3.PropertyKey,
@@ -581,8 +585,8 @@ class Object {
 
   /// Returns an object created by key-value entries for properties and methods
   ///  @param entries An iterable object that contains key-value entries for properties and methods.
-  static _i2.dynamic _fromEntries$2(
-          _i9.Iterable<_i2.List<_i2.dynamic>> entries) =>
+  static _i2.Object? _fromEntries$2(
+          _i9.Iterable<_i2.List<_i2.Object?>> entries) =>
       _i4.callMethod(
         _i6.target0,
         'fromEntries',
@@ -593,7 +597,7 @@ class Object {
   static ({
     /// Returns an object created by key-value entries for properties and methods
     ///  @param entries An iterable object that contains key-value entries for properties and methods.
-    _i2.Object Function<T>(
+    _i2.Object Function<T extends _i2.Object?>(
         _i9.Iterable<
                 (
                   _i3.PropertyKey,
@@ -603,7 +607,7 @@ class Object {
 
     /// Returns an object created by key-value entries for properties and methods
     ///  @param entries An iterable object that contains key-value entries for properties and methods.
-    _i2.dynamic Function(_i9.Iterable<_i2.List<_i2.dynamic>> entries) $2,
+    _i2.Object? Function(_i9.Iterable<_i2.List<_i2.Object?>> entries) $2,
   }) get fromEntries => (
         $1: _fromEntries$1,
         $2: _fromEntries$2,
@@ -699,7 +703,7 @@ class ObjectConstructor {}
 extension ObjectConstructor$Typings on ObjectConstructor {
   /// Returns the prototype of an object.
   ///  @param o The object that references the prototype.
-  _i2.dynamic getPrototypeOf(_i2.dynamic o) => _i4.callMethod(
+  _i2.Object? getPrototypeOf(_i2.Object? o) => _i4.callMethod(
         this,
         'getPrototypeOf',
         [o],
@@ -710,7 +714,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   ///  @param o Object that contains the property.
   ///  @param p Name of the property.
   _i3.PropertyDescriptor? getOwnPropertyDescriptor(
-    _i2.dynamic o,
+    _i2.Object? o,
     _i3.PropertyKey p,
   ) =>
       _i4.callMethod(
@@ -725,7 +729,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   /// Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
   ///  on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
   ///  @param o Object that contains the own properties.
-  _i2.List<_i2.String> getOwnPropertyNames(_i2.dynamic o) => (_i4.callMethod(
+  _i2.List<_i2.String> getOwnPropertyNames(_i2.Object? o) => (_i4.callMethod(
         this,
         'getOwnPropertyNames',
         [o],
@@ -734,7 +738,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Creates an object that has the specified prototype or that has null prototype.
   ///  @param o Object to use as a prototype. May be null.
-  _i2.dynamic _create$1([_i2.Object? o]) => _i4.callMethod(
+  _i2.Object? _create$1([_i2.Object? o]) => _i4.callMethod(
         this,
         'create',
         [o ?? _i5.undefined],
@@ -743,7 +747,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   /// Creates an object that has the specified prototype, and that optionally contains specified properties.
   ///  @param o Object to use as a prototype. May be null
   ///  @param properties JavaScript object that contains one or more property descriptors.
-  _i2.dynamic _create$2(
+  _i2.Object? _create$2(
     _i2.Object? o,
     _i2.Object properties,
   ) =>
@@ -760,12 +764,12 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   ({
     /// Creates an object that has the specified prototype or that has null prototype.
     ///  @param o Object to use as a prototype. May be null.
-    _i2.dynamic Function([_i2.Object? o]) $1,
+    _i2.Object? Function([_i2.Object? o]) $1,
 
     /// Creates an object that has the specified prototype, and that optionally contains specified properties.
     ///  @param o Object to use as a prototype. May be null
     ///  @param properties JavaScript object that contains one or more property descriptors.
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i2.Object? o,
       _i2.Object properties,
     ) $2,
@@ -778,7 +782,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   ///  @param o Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object.
   ///  @param p The property name.
   ///  @param attributes Descriptor for the property. It can be for a data property or an accessor property.
-  T defineProperty<T>(
+  T defineProperty<T extends _i2.Object?>(
     T o,
     _i3.PropertyKey p,
     _i2.Object attributes,
@@ -796,7 +800,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   /// Adds one or more properties to an object, and/or modifies attributes of existing properties.
   ///  @param o Object on which to add or modify the properties. This can be a native JavaScript object or a DOM object.
   ///  @param properties JavaScript object that contains one or more descriptor objects. Each descriptor object describes a data property or an accessor property.
-  T defineProperties<T>(
+  T defineProperties<T extends _i2.Object?>(
     T o,
     _i2.Object properties,
   ) =>
@@ -811,7 +815,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
   ///  @param o Object on which to lock the attributes.
-  T seal<T>(T o) => _i4.callMethod(
+  T seal<T extends _i2.Object?>(T o) => _i4.callMethod(
         this,
         'seal',
         [o],
@@ -827,7 +831,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Prevents the addition of new properties to an object.
   ///  @param o Object to make non-extensible.
-  T preventExtensions<T>(T o) => _i4.callMethod(
+  T preventExtensions<T extends _i2.Object?>(T o) => _i4.callMethod(
         this,
         'preventExtensions',
         [o],
@@ -835,7 +839,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
   ///  @param o Object to test.
-  _i2.bool isSealed(_i2.dynamic o) => _i4.callMethod(
+  _i2.bool isSealed(_i2.Object? o) => _i4.callMethod(
         this,
         'isSealed',
         [o],
@@ -843,7 +847,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
   ///  @param o Object to test.
-  _i2.bool isFrozen(_i2.dynamic o) => _i4.callMethod(
+  _i2.bool isFrozen(_i2.Object? o) => _i4.callMethod(
         this,
         'isFrozen',
         [o],
@@ -851,7 +855,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns a value that indicates whether new properties can be added to an object.
   ///  @param o Object to test.
-  _i2.bool isExtensible(_i2.dynamic o) => _i4.callMethod(
+  _i2.bool isExtensible(_i2.Object? o) => _i4.callMethod(
         this,
         'isExtensible',
         [o],
@@ -893,9 +897,9 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   ///  target object. Returns the target object.
   ///  @param target The target object to copy to.
   ///  @param sources One or more source objects from which to copy properties
-  _i2.dynamic _assign$1(
+  _i2.Object? _assign$1(
     _i2.Object target, [
-    _i2.Iterable<_i2.dynamic>? sources,
+    _i2.Iterable<_i2.Object?>? sources,
   ]) =>
       _i4.callMethod(
         this,
@@ -912,7 +916,8 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   ///  @param source1 The first source object from which to copy properties.
   ///  @param source2 The second source object from which to copy properties.
   ///  @param source3 The third source object from which to copy properties.
-  _i2.Object _assign$2<T extends _i7.IInline8, U, V, W>(
+  _i2.Object _assign$2<T extends _i7.IInline8, U extends _i2.Object?,
+          V extends _i2.Object?, W extends _i2.Object?>(
     T target,
     U source1,
     V source2,
@@ -935,9 +940,9 @@ extension ObjectConstructor$Typings on ObjectConstructor {
     ///  target object. Returns the target object.
     ///  @param target The target object to copy to.
     ///  @param sources One or more source objects from which to copy properties
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i2.Object target, [
-      _i2.Iterable<_i2.dynamic>? sources,
+      _i2.Iterable<_i2.Object?>? sources,
     ]) $1,
 
     /// Copy the values of all of the enumerable own properties from one or more source objects to a
@@ -946,7 +951,8 @@ extension ObjectConstructor$Typings on ObjectConstructor {
     ///  @param source1 The first source object from which to copy properties.
     ///  @param source2 The second source object from which to copy properties.
     ///  @param source3 The third source object from which to copy properties.
-    _i2.Object Function<T extends _i7.IInline8, U, V, W>(
+    _i2.Object Function<T extends _i7.IInline8, U extends _i2.Object?,
+        V extends _i2.Object?, W extends _i2.Object?>(
       T target,
       U source1,
       V source2,
@@ -959,7 +965,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an array of all symbol properties found directly on object o.
   ///  @param o Object to retrieve the symbols from.
-  _i2.List<_i2.Symbol> getOwnPropertySymbols(_i2.dynamic o) => (_i4.callMethod(
+  _i2.List<_i2.Symbol> getOwnPropertySymbols(_i2.Object? o) => (_i4.callMethod(
         this,
         'getOwnPropertySymbols',
         [o],
@@ -970,8 +976,8 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   ///  @param value1 The first value.
   ///  @param value2 The second value.
   _i2.bool is$(
-    _i2.dynamic value1,
-    _i2.dynamic value2,
+    _i2.Object? value1,
+    _i2.Object? value2,
   ) =>
       _i4.callMethod(
         this,
@@ -985,8 +991,8 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   /// Sets the prototype of a specified object o to object proto or null. Returns the object o.
   ///  @param o The object to change its prototype.
   ///  @param proto The value of the new prototype or null.
-  _i2.dynamic setPrototypeOf(
-    _i2.dynamic o, [
+  _i2.Object? setPrototypeOf(
+    _i2.Object? o, [
     _i2.Object? proto,
   ]) =>
       _i4.callMethod(
@@ -1000,7 +1006,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List<T> _values$1<T>(_i2.Object o) => (_i4.callMethod(
+  _i2.List<T> _values$1<T extends _i2.Object?>(_i2.Object o) => (_i4.callMethod(
         this,
         'values',
         [o],
@@ -1009,7 +1015,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List<_i2.dynamic> _values$2(_i8.IInline18 o) => (_i4.callMethod(
+  _i2.List<_i2.Object?> _values$2(_i8.IInline18 o) => (_i4.callMethod(
         this,
         'values',
         [o],
@@ -1020,11 +1026,11 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   ({
     /// Returns an array of values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List<T> Function<T>(_i2.Object o) $1,
+    _i2.List<T> Function<T extends _i2.Object?>(_i2.Object o) $1,
 
     /// Returns an array of values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List<_i2.dynamic> Function(_i8.IInline18 o) $2,
+    _i2.List<_i2.Object?> Function(_i8.IInline18 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
@@ -1036,7 +1042,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
       (
         _i2.String,
         T,
-      )> _entries$1<T>(_i2.Object o) => (_i4.callMethod(
+      )> _entries$1<T extends _i2.Object?>(_i2.Object o) => (_i4.callMethod(
         this,
         'entries',
         [o],
@@ -1048,7 +1054,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   _i2.List<
       (
         _i2.String,
-        _i2.dynamic,
+        _i2.Object?,
       )> _entries$2(_i8.IInline20 o) => (_i4.callMethod(
         this,
         'entries',
@@ -1065,14 +1071,14 @@ extension ObjectConstructor$Typings on ObjectConstructor {
               _i2.String,
               T,
             )>
-        Function<T>(_i2.Object o) $1,
+        Function<T extends _i2.Object?>(_i2.Object o) $1,
 
     /// Returns an array of key/values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
     _i2.List<
             (
               _i2.String,
-              _i2.dynamic,
+              _i2.Object?,
             )>
         Function(_i8.IInline20 o) $2,
   }) get entries => (
@@ -1082,7 +1088,8 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an object containing all own property descriptors of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.Object getOwnPropertyDescriptors<T>(T o) => _i4.callMethod(
+  _i2.Object getOwnPropertyDescriptors<T extends _i2.Object?>(T o) =>
+      _i4.callMethod(
         this,
         'getOwnPropertyDescriptors',
         [o],
@@ -1090,7 +1097,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an object created by key-value entries for properties and methods
   ///  @param entries An iterable object that contains key-value entries for properties and methods.
-  _i2.Object _fromEntries$1<T>(
+  _i2.Object _fromEntries$1<T extends _i2.Object?>(
           _i9.Iterable<
                   (
                     _i3.PropertyKey,
@@ -1105,7 +1112,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an object created by key-value entries for properties and methods
   ///  @param entries An iterable object that contains key-value entries for properties and methods.
-  _i2.dynamic _fromEntries$2(_i9.Iterable<_i2.List<_i2.dynamic>> entries) =>
+  _i2.Object? _fromEntries$2(_i9.Iterable<_i2.List<_i2.Object?>> entries) =>
       _i4.callMethod(
         this,
         'fromEntries',
@@ -1116,7 +1123,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   ({
     /// Returns an object created by key-value entries for properties and methods
     ///  @param entries An iterable object that contains key-value entries for properties and methods.
-    _i2.Object Function<T>(
+    _i2.Object Function<T extends _i2.Object?>(
         _i9.Iterable<
                 (
                   _i3.PropertyKey,
@@ -1126,7 +1133,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
     /// Returns an object created by key-value entries for properties and methods
     ///  @param entries An iterable object that contains key-value entries for properties and methods.
-    _i2.dynamic Function(_i9.Iterable<_i2.List<_i2.dynamic>> entries) $2,
+    _i2.Object? Function(_i9.Iterable<_i2.List<_i2.Object?>> entries) $2,
   }) get fromEntries => (
         $1: _fromEntries$1,
         $2: _fromEntries$2,
@@ -1147,12 +1154,12 @@ extension ObjectConstructor$Typings on ObjectConstructor {
           v,
         ],
       );
-  _i2.dynamic _call$1() => _i4.callMethod(
+  _i2.Object? _call$1() => _i4.callMethod(
         this,
         '',
         [],
       );
-  _i2.dynamic _call$2(_i2.dynamic value) => _i4.callMethod(
+  _i2.Object? _call$2(_i2.Object? value) => _i4.callMethod(
         this,
         '',
         [value],
@@ -1160,8 +1167,8 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Overload accessor: $1, $2
   ({
-    _i2.dynamic Function() $1,
-    _i2.dynamic Function(_i2.dynamic value) $2,
+    _i2.Object? Function() $1,
+    _i2.Object? Function(_i2.Object? value) $2,
   }) get call => (
         $1: _call$1,
         $2: _call$2,
@@ -1173,7 +1180,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 class FunctionConstructor {}
 
 extension FunctionConstructor$Typings on FunctionConstructor {
-  _i2.Function call([_i2.Iterable<_i2.dynamic>? args]) => _i4.callMethod(
+  _i2.Function call([_i2.Iterable<_i2.Object?>? args]) => _i4.callMethod(
         this,
         '',
         [...?args],
@@ -1182,7 +1189,7 @@ extension FunctionConstructor$Typings on FunctionConstructor {
 
 @_i1.JS()
 @_i1.staticInterop
-class IArguments implements _IterableLike$<_i9.IterableIterator<_i2.dynamic>> {}
+class IArguments implements _IterableLike$<_i9.IterableIterator<_i2.Object?>> {}
 
 extension IArguments$Typings on IArguments {
   _i2.num get length => _i4.getProperty(
@@ -1209,13 +1216,13 @@ extension IArguments$Typings on IArguments {
     );
   }
 
-  _i2.dynamic operator [](_i2.num index) => _i4.getProperty(
+  _i2.Object? operator [](_i2.num index) => _i4.getProperty(
         this,
         index,
       );
   void operator []=(
     _i2.num index,
-    _i2.dynamic value,
+    _i2.Object? value,
   ) {
     _i4.setProperty(
       this,
@@ -1230,7 +1237,7 @@ extension IArguments$Typings on IArguments {
 class StringConstructor {}
 
 extension StringConstructor$Typings on StringConstructor {
-  _i2.String fromCharCode([_i2.Iterable<_i2.dynamic>? codes]) => _i4.callMethod(
+  _i2.String fromCharCode([_i2.Iterable<_i2.Object?>? codes]) => _i4.callMethod(
         this,
         'fromCharCode',
         [...?codes],
@@ -1238,7 +1245,7 @@ extension StringConstructor$Typings on StringConstructor {
 
   /// Return the String value whose elements are, in order, the elements in the List elements.
   ///  If length is 0, the empty string is returned.
-  _i2.String fromCodePoint([_i2.Iterable<_i2.dynamic>? codePoints]) =>
+  _i2.String fromCodePoint([_i2.Iterable<_i2.Object?>? codePoints]) =>
       _i4.callMethod(
         this,
         'fromCodePoint',
@@ -1254,7 +1261,7 @@ extension StringConstructor$Typings on StringConstructor {
   ///  @param substitutions A set of substitution values.
   _i2.String raw(
     _i7.IInline10 template, [
-    _i2.Iterable<_i2.dynamic>? substitutions,
+    _i2.Iterable<_i2.Object?>? substitutions,
   ]) =>
       _i4.callMethod(
         this,
@@ -1264,7 +1271,7 @@ extension StringConstructor$Typings on StringConstructor {
           ...?substitutions,
         ],
       );
-  _i2.String call([_i2.dynamic value]) => _i4.callMethod(
+  _i2.String call([_i2.Object? value]) => _i4.callMethod(
         this,
         '',
         [value ?? _i5.undefined],
@@ -1274,7 +1281,7 @@ extension StringConstructor$Typings on StringConstructor {
 @_i1.JS()
 @_i1.staticInterop
 class Boolean {
-  factory Boolean([_i2.dynamic value]) => _i4.callConstructor(
+  factory Boolean([_i2.Object? value]) => _i4.callConstructor(
         _declaredBoolean,
         [value ?? _i5.undefined],
       );
@@ -1300,7 +1307,7 @@ extension Boolean$Typings on Boolean {
 class BooleanConstructor {}
 
 extension BooleanConstructor$Typings on BooleanConstructor {
-  _i2.bool call<T>([T? value]) => _i4.callMethod(
+  _i2.bool call<T extends _i2.Object?>([T? value]) => _i4.callMethod(
         this,
         '',
         [value ?? _i5.undefined],
@@ -1311,7 +1318,7 @@ extension BooleanConstructor$Typings on BooleanConstructor {
 @_i1.JS()
 @_i1.staticInterop
 class Number {
-  factory Number([_i2.dynamic value]) => _i4.callConstructor(
+  factory Number([_i2.Object? value]) => _i4.callConstructor(
         _declaredNumber,
         [value ?? _i5.undefined],
       );
@@ -1487,7 +1494,7 @@ extension Number$Typings on Number {
   ///  @param options An object that contains one or more properties that specify comparison options.
   _i2.String _toLocaleString$1([
     _i2.Object? locales,
-    _i2.dynamic options,
+    _i2.Object? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -1502,8 +1509,8 @@ extension Number$Typings on Number {
   ///  @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
   ///  @param options An object that contains one or more properties that specify comparison options.
   _i2.String _toLocaleString$2([
-    _i2.dynamic locales,
-    _i2.dynamic options,
+    _i2.Object? locales,
+    _i2.Object? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -1521,15 +1528,15 @@ extension Number$Typings on Number {
     ///  @param options An object that contains one or more properties that specify comparison options.
     _i2.String Function([
       _i2.Object? locales,
-      _i2.dynamic options,
+      _i2.Object? options,
     ]) $1,
 
     /// Converts a number to a string by using the current or specified locale.
     ///  @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
     ///  @param options An object that contains one or more properties that specify comparison options.
     _i2.String Function([
-      _i2.dynamic locales,
-      _i2.dynamic options,
+      _i2.Object? locales,
+      _i2.Object? options,
     ]) $2,
   }) get toLocaleString => (
         $1: _toLocaleString$1,
@@ -1660,7 +1667,7 @@ extension NumberConstructor$Typings on NumberConstructor {
           radix ?? _i5.undefined,
         ],
       );
-  _i2.num call([_i2.dynamic value]) => _i4.callMethod(
+  _i2.num call([_i2.Object? value]) => _i4.callMethod(
         this,
         '',
         [value ?? _i5.undefined],
@@ -1672,8 +1679,8 @@ extension NumberConstructor$Typings on NumberConstructor {
 @_i1.anonymous
 class TemplateStringsArray implements _i3.ReadonlyArray<_i2.String> {
   external factory TemplateStringsArray._({
-    _i2.dynamic raw,
-    _i2.dynamic length,
+    _i2.Object? raw,
+    _i2.Object? length,
   });
 
   factory TemplateStringsArray({
@@ -1702,7 +1709,7 @@ extension TemplateStringsArray$Typings on TemplateStringsArray {
 @_i1.staticInterop
 @_i1.anonymous
 class ImportMeta {
-  external factory ImportMeta._({_i2.dynamic url});
+  external factory ImportMeta._({_i2.Object? url});
 
   factory ImportMeta({required _i2.String url}) => ImportMeta._(url: url);
 }
@@ -1729,7 +1736,7 @@ extension ImportMeta$Typings on ImportMeta {
 @_i1.staticInterop
 @_i1.anonymous
 class ImportCallOptions {
-  external factory ImportCallOptions._({_i2.dynamic assert$});
+  external factory ImportCallOptions._({_i2.Object? assert$});
 
   factory ImportCallOptions({_i2.Object? assert$}) =>
       ImportCallOptions._(assert$: assert$ ?? _i5.undefined);
@@ -1894,7 +1901,7 @@ extension Math$Typings on Math {
 
   /// Returns the larger of a set of supplied numeric expressions.
   ///  @param values Numeric expressions to be evaluated.
-  _i2.num max([_i2.Iterable<_i2.dynamic>? values]) => _i4.callMethod(
+  _i2.num max([_i2.Iterable<_i2.Object?>? values]) => _i4.callMethod(
         this,
         'max',
         [...?values],
@@ -1902,7 +1909,7 @@ extension Math$Typings on Math {
 
   /// Returns the smaller of a set of supplied numeric expressions.
   ///  @param values Numeric expressions to be evaluated.
-  _i2.num min([_i2.Iterable<_i2.dynamic>? values]) => _i4.callMethod(
+  _i2.num min([_i2.Iterable<_i2.Object?>? values]) => _i4.callMethod(
         this,
         'min',
         [...?values],
@@ -2084,7 +2091,7 @@ extension Math$Typings on Math {
   ///      If any argument is +Infinity or -Infinity, the result is +Infinity.
   ///      If any argument is NaN, the result is NaN.
   ///      If all arguments are either +0 or −0, the result is +0.
-  _i2.num hypot([_i2.Iterable<_i2.dynamic>? values]) => _i4.callMethod(
+  _i2.num hypot([_i2.Iterable<_i2.Object?>? values]) => _i4.callMethod(
         this,
         'hypot',
         [...?values],
@@ -2178,12 +2185,12 @@ extension DateConstructor$Typings on DateConstructor {
 @_i1.anonymous
 class RegExpMatchArray implements _i3.Array<_i2.String> {
   external factory RegExpMatchArray._({
-    _i2.dynamic index,
-    _i2.dynamic input,
-    _i2.dynamic first,
-    _i2.dynamic groups,
-    _i2.dynamic indices,
-    _i2.dynamic length,
+    _i2.Object? index,
+    _i2.Object? input,
+    _i2.Object? first,
+    _i2.Object? groups,
+    _i2.Object? indices,
+    _i2.Object? length,
   });
 
   factory RegExpMatchArray({
@@ -2266,12 +2273,12 @@ extension RegExpMatchArray$Typings on RegExpMatchArray {
 @_i1.anonymous
 class RegExpExecArray implements _i3.Array<_i2.String> {
   external factory RegExpExecArray._({
-    _i2.dynamic index,
-    _i2.dynamic input,
-    _i2.dynamic first,
-    _i2.dynamic groups,
-    _i2.dynamic indices,
-    _i2.dynamic length,
+    _i2.Object? index,
+    _i2.Object? input,
+    _i2.Object? first,
+    _i2.Object? groups,
+    _i2.Object? indices,
+    _i2.Object? length,
   });
 
   factory RegExpExecArray({
@@ -3215,11 +3222,11 @@ extension Json$Typings on Json {
   ///  @param text A valid JSON string.
   ///  @param reviver A function that transforms the results. This function is called for each member of the object.
   ///  If a member contains nested objects, the nested objects are transformed before the parent object is.
-  _i2.dynamic parse(
+  _i2.Object? parse(
     _i2.String text, [
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i2.String,
-      _i2.dynamic,
+      _i2.Object?,
     )? reviver,
   ]) =>
       _i4.callMethod(
@@ -3236,10 +3243,10 @@ extension Json$Typings on Json {
   ///  @param replacer A function that transforms the results.
   ///  @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
   _i2.String _stringify$1(
-    _i2.dynamic value, [
-    _i2.dynamic Function(
+    _i2.Object? value, [
+    _i2.Object? Function(
       _i2.String,
-      _i2.dynamic,
+      _i2.Object?,
     )? replacer,
     _i2.Object? space,
   ]) =>
@@ -3258,7 +3265,7 @@ extension Json$Typings on Json {
   ///  @param replacer An array of strings and numbers that acts as an approved list for selecting the object properties that will be stringified.
   ///  @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
   _i2.String _stringify$2(
-    _i2.dynamic value, [
+    _i2.Object? value, [
     _i2.List<_i2.Object>? replacer,
     _i2.Object? space,
   ]) =>
@@ -3279,10 +3286,10 @@ extension Json$Typings on Json {
     ///  @param replacer A function that transforms the results.
     ///  @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
     _i2.String Function(
-      _i2.dynamic value, [
-      _i2.dynamic Function(
+      _i2.Object? value, [
+      _i2.Object? Function(
         _i2.String,
-        _i2.dynamic,
+        _i2.Object?,
       )? replacer,
       _i2.Object? space,
     ]) $1,
@@ -3292,7 +3299,7 @@ extension Json$Typings on Json {
     ///  @param replacer An array of strings and numbers that acts as an approved list for selecting the object properties that will be stringified.
     ///  @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
     _i2.String Function(
-      _i2.dynamic value, [
+      _i2.Object? value, [
       _i2.List<_i2.Object>? replacer,
       _i2.Object? space,
     ]) $2,
@@ -3304,9 +3311,10 @@ extension Json$Typings on Json {
 
 @_i1.JS()
 @_i1.staticInterop
-class ReadonlyArray<T> implements _IterableLike$<_i9.IterableIterator<T>> {}
+class ReadonlyArray<T extends _i2.Object?>
+    implements _IterableLike$<_i9.IterableIterator<T>> {}
 
-extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
+extension ReadonlyArray$Typings<T extends _i2.Object?> on ReadonlyArray<T> {
   /// Gets the length of the array. This is a number one higher than the highest element defined in an array.
   _i2.num get length => _i4.getProperty(
         this,
@@ -3329,7 +3337,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
 
   /// Combines two or more arrays.
   ///  @param items Additional items to add to the end of array1.
-  _i2.List<T> concat([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
+  _i2.List<T> concat([_i2.Iterable<_i2.Object?>? items]) => (_i4.callMethod(
         this,
         'concat',
         [...?items],
@@ -3399,13 +3407,13 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   ///  which is coercible to the Boolean value false, or until the end of the array.
   ///  @param thisArg An object to which the this keyword can refer in the predicate function.
   ///  If thisArg is omitted, undefined is used as the this value.
-  _i2.dynamic _every$1<S extends T>(
-    _i2.dynamic Function(
+  _i2.Object? _every$1<S extends T>(
+    _i2.Object? Function(
       T,
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -3428,7 +3436,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -3447,13 +3455,13 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ///  which is coercible to the Boolean value false, or until the end of the array.
     ///  @param thisArg An object to which the this keyword can refer in the predicate function.
     ///  If thisArg is omitted, undefined is used as the this value.
-    _i2.dynamic Function<S extends T>(
-      _i2.dynamic Function(
+    _i2.Object? Function<S extends T>(
+      _i2.Object? Function(
         T,
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Determines whether all the members of an array satisfy the specified test.
@@ -3468,7 +3476,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get every => (
         $1: _every$1,
@@ -3487,7 +3495,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -3507,7 +3515,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.num,
       _i2.List<T>,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i4.callMethod(
       this,
@@ -3522,13 +3530,13 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   /// Calls a defined callback function on each element of an array, and returns an array that contains the results.
   ///  @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
-  _i2.List<U> map<U>(
+  _i2.List<U> map<U extends _i2.Object?>(
     U Function(
       T,
       _i2.num,
       _i2.List<T>,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       (_i4.callMethod(
         this,
@@ -3544,12 +3552,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
   _i2.List<S> _filter$1<S extends T>(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       T,
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       (_i4.callMethod(
         this,
@@ -3570,7 +3578,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       (_i4.callMethod(
         this,
@@ -3588,12 +3596,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
     ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
     _i2.List<S> Function<S extends T>(
-      _i2.dynamic Function(
+      _i2.Object? Function(
         T,
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Returns the elements of an array that meet the condition specified in a callback function.
@@ -3605,7 +3613,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get filter => (
         $1: _filter$1,
@@ -3650,7 +3658,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
   ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
   ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
-  U _reduce$3<U>(
+  U _reduce$3<U extends _i2.Object?>(
     U Function(
       U,
       T,
@@ -3695,7 +3703,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
     ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
-    U Function<U>(
+    U Function<U extends _i2.Object?>(
       U Function(
         U,
         T,
@@ -3748,7 +3756,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
   ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
   ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
-  U _reduceRight$3<U>(
+  U _reduceRight$3<U extends _i2.Object?>(
     U Function(
       U,
       T,
@@ -3793,7 +3801,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
     ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
-    U Function<U>(
+    U Function<U extends _i2.Object?>(
       U Function(
         U,
         T,
@@ -3816,12 +3824,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   ///  @param thisArg If provided, it will be used as the this value for each invocation of
   ///  predicate. If it is not provided, undefined is used instead.
   S? _find$1<S extends T>(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       T,
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -3840,7 +3848,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -3861,12 +3869,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ///  @param thisArg If provided, it will be used as the this value for each invocation of
     ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends T>(
-      _i2.dynamic Function(
+      _i2.Object? Function(
         T,
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Returns the value of the first element in the array where predicate is true, and undefined
@@ -3877,7 +3885,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get find => (
         $1: _find$1,
@@ -3897,7 +3905,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -3957,7 +3965,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   ///  callback function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the callback function. If
   ///  thisArg is omitted, undefined is used as the this value.
-  _i2.List<U> flatMap<U, This>(
+  _i2.List<U> flatMap<U extends _i2.Object?, This extends _i2.Object?>(
     _i2.Object Function(
       T,
       _i2.num,
@@ -3979,7 +3987,8 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   ///  specified depth.
   ///
   ///  @param depth The maximum recursion depth
-  _i2.List<_i12.FlatArray<A, D>> flat<A, D extends _i2.num>([D? depth]) =>
+  _i2.List<_i12.FlatArray<A, D>> flat<A extends _i2.Object?, D extends _i2.num>(
+          [D? depth]) =>
       (_i4.callMethod(
         this,
         'flat',
@@ -4003,12 +4012,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   ///  @param thisArg If provided, it will be used as the this value for each invocation of
   ///  predicate. If it is not provided, undefined is used instead.
   S? _findLast$1<S extends T>(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       T,
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -4027,7 +4036,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -4048,12 +4057,12 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ///  @param thisArg If provided, it will be used as the this value for each invocation of
     ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends T>(
-      _i2.dynamic Function(
+      _i2.Object? Function(
         T,
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Returns the value of the last element in the array where predicate is true, and undefined
@@ -4064,7 +4073,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get findLast => (
         $1: _findLast$1,
@@ -4084,7 +4093,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -4102,9 +4111,9 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
 
 @_i1.JS()
 @_i1.staticInterop
-class ConcatArray<T> {}
+class ConcatArray<T extends _i2.Object?> {}
 
-extension ConcatArray$Typings<T> on ConcatArray<T> {
+extension ConcatArray$Typings<T extends _i2.Object?> on ConcatArray<T> {
   _i2.num get length => _i4.getProperty(
         this,
         'length',
@@ -4135,7 +4144,8 @@ extension ConcatArray$Typings<T> on ConcatArray<T> {
 
 @_i1.JS()
 @_i1.staticInterop
-class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
+class Array<T extends _i2.Object?>
+    implements _IterableLike$<_i9.IterableIterator<T>> {
   factory Array.$1() => _i4.callConstructor(
         _declaredArray,
         [],
@@ -4146,12 +4156,12 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
         [arrayLength ?? _i5.undefined],
       );
 
-  factory Array.$3([_i2.Iterable<_i2.dynamic>? items]) => _i4.callConstructor(
+  factory Array.$3([_i2.Iterable<_i2.Object?>? items]) => _i4.callConstructor(
         _declaredArray,
         [items ?? _i5.undefined],
       );
 
-  static _i2.dynamic isArray(_i2.dynamic arg) => _i4.callMethod(
+  static _i2.Object? isArray(_i2.Object? arg) => _i4.callMethod(
         _i6.target11,
         'isArray',
         [arg],
@@ -4159,7 +4169,8 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
 
   /// Creates an array from an iterable object.
   ///  @param iterable An iterable object to convert to an array.
-  static _i2.List<T> _from$1<T>(_i3.From iterable) => (_i4.callMethod(
+  static _i2.List<T> _from$1<T extends _i2.Object?>(_i3.From iterable) =>
+      (_i4.callMethod(
         _i6.target11,
         'from',
         [iterable],
@@ -4170,13 +4181,13 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
   ///  @param arrayLike An array-like object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  static _i2.List<U> _from$2<T, U>(
+  static _i2.List<U> _from$2<T extends _i2.Object?, U extends _i2.Object?>(
     _i2.List<T> arrayLike,
     U Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       (_i4.callMethod(
         _i6.target11,
@@ -4193,13 +4204,13 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
   ///  @param iterable An iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  static _i2.List<U> _from$3<T, U>(
+  static _i2.List<U> _from$3<T extends _i2.Object?, U extends _i2.Object?>(
     _i3.FromCommon iterable,
     U Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       (_i4.callMethod(
         _i6.target11,
@@ -4216,32 +4227,32 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
   static ({
     /// Creates an array from an iterable object.
     ///  @param iterable An iterable object to convert to an array.
-    _i2.List<T> Function<T>(_i3.From iterable) $1,
+    _i2.List<T> Function<T extends _i2.Object?>(_i3.From iterable) $1,
 
     /// Creates an array from an iterable object.
     ///  @param arrayLike An array-like object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i2.List<U> Function<T, U>(
+    _i2.List<U> Function<T extends _i2.Object?, U extends _i2.Object?>(
       _i2.List<T> arrayLike,
       U Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
 
     /// Creates an array from an iterable object.
     ///  @param iterable An iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i2.List<U> Function<T, U>(
+    _i2.List<U> Function<T extends _i2.Object?, U extends _i2.Object?>(
       _i3.FromCommon iterable,
       U Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $3,
   }) get from => (
         $1: _from$1,
@@ -4251,7 +4262,8 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  static _i2.List<T> of<T>([_i2.Iterable<_i2.dynamic>? items]) =>
+  static _i2.List<T> of<T extends _i2.Object?>(
+          [_i2.Iterable<_i2.Object?>? items]) =>
       (_i4.callMethod(
         _i6.target11,
         'of',
@@ -4266,7 +4278,7 @@ FieldExternal:
 @_i1.JS('Array')
 external _i2.Object _declaredArray;
 
-extension Array$Typings<T> on Array<T> {
+extension Array$Typings<T extends _i2.Object?> on Array<T> {
   /// Gets or sets the length of the array. This is a number one higher than the highest index in the array.
   _i2.num get length => _i4.getProperty(
         this,
@@ -4304,7 +4316,7 @@ extension Array$Typings<T> on Array<T> {
 
   /// Appends new elements to the end of an array, and returns the new length of the array.
   ///  @param items New elements to add to the array.
-  _i2.num push([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i2.num push([_i2.Iterable<_i2.Object?>? items]) => _i4.callMethod(
         this,
         'push',
         [...?items],
@@ -4313,7 +4325,7 @@ extension Array$Typings<T> on Array<T> {
   /// Combines two or more arrays.
   ///  This method returns a new array without modifying any existing arrays.
   ///  @param items Additional arrays and/or items to add to the end of the array.
-  _i2.List<T> concat([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
+  _i2.List<T> concat([_i2.Iterable<_i2.Object?>? items]) => (_i4.callMethod(
         this,
         'concat',
         [...?items],
@@ -4374,7 +4386,7 @@ extension Array$Typings<T> on Array<T> {
   ///  ```ts
   ///  [11,2,22,1].sort((a, b) => a - b)
   ///  ```
-  _i3.Array<_i2.dynamic> sort(
+  _i3.Array<_i2.Object?> sort(
           [_i2.num Function(
             T,
             T,
@@ -4393,7 +4405,7 @@ extension Array$Typings<T> on Array<T> {
   _i2.List<T> splice(
     _i2.num start,
     _i2.num deleteCount, [
-    _i2.Iterable<_i2.dynamic>? items,
+    _i2.Iterable<_i2.Object?>? items,
   ]) =>
       (_i4.callMethod(
         this,
@@ -4408,7 +4420,7 @@ extension Array$Typings<T> on Array<T> {
 
   /// Inserts new elements at the start of an array, and returns the new length of the array.
   ///  @param items Elements to insert at the start of the array.
-  _i2.num unshift([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i2.num unshift([_i2.Iterable<_i2.Object?>? items]) => _i4.callMethod(
         this,
         'unshift',
         [...?items],
@@ -4452,13 +4464,13 @@ extension Array$Typings<T> on Array<T> {
   ///  which is coercible to the Boolean value false, or until the end of the array.
   ///  @param thisArg An object to which the this keyword can refer in the predicate function.
   ///  If thisArg is omitted, undefined is used as the this value.
-  _i2.dynamic _every$1<S extends T>(
-    _i2.dynamic Function(
+  _i2.Object? _every$1<S extends T>(
+    _i2.Object? Function(
       T,
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -4481,7 +4493,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -4500,13 +4512,13 @@ extension Array$Typings<T> on Array<T> {
     ///  which is coercible to the Boolean value false, or until the end of the array.
     ///  @param thisArg An object to which the this keyword can refer in the predicate function.
     ///  If thisArg is omitted, undefined is used as the this value.
-    _i2.dynamic Function<S extends T>(
-      _i2.dynamic Function(
+    _i2.Object? Function<S extends T>(
+      _i2.Object? Function(
         T,
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Determines whether all the members of an array satisfy the specified test.
@@ -4521,7 +4533,7 @@ extension Array$Typings<T> on Array<T> {
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get every => (
         $1: _every$1,
@@ -4540,7 +4552,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -4560,7 +4572,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.num,
       _i2.List<T>,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i4.callMethod(
       this,
@@ -4575,13 +4587,13 @@ extension Array$Typings<T> on Array<T> {
   /// Calls a defined callback function on each element of an array, and returns an array that contains the results.
   ///  @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
-  _i2.List<U> map<U>(
+  _i2.List<U> map<U extends _i2.Object?>(
     U Function(
       T,
       _i2.num,
       _i2.List<T>,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       (_i4.callMethod(
         this,
@@ -4597,12 +4609,12 @@ extension Array$Typings<T> on Array<T> {
   ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
   _i2.List<S> _filter$1<S extends T>(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       T,
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       (_i4.callMethod(
         this,
@@ -4623,7 +4635,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       (_i4.callMethod(
         this,
@@ -4641,12 +4653,12 @@ extension Array$Typings<T> on Array<T> {
     ///  @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
     ///  @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
     _i2.List<S> Function<S extends T>(
-      _i2.dynamic Function(
+      _i2.Object? Function(
         T,
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Returns the elements of an array that meet the condition specified in a callback function.
@@ -4658,7 +4670,7 @@ extension Array$Typings<T> on Array<T> {
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get filter => (
         $1: _filter$1,
@@ -4687,7 +4699,7 @@ extension Array$Typings<T> on Array<T> {
   /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
   ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
   ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
-  U _reduce$2<U>(
+  U _reduce$2<U extends _i2.Object?>(
     U Function(
       U,
       T,
@@ -4721,7 +4733,7 @@ extension Array$Typings<T> on Array<T> {
     /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     ///  @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
     ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
-    U Function<U>(
+    U Function<U extends _i2.Object?>(
       U Function(
         U,
         T,
@@ -4757,7 +4769,7 @@ extension Array$Typings<T> on Array<T> {
   /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
   ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
   ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
-  U _reduceRight$2<U>(
+  U _reduceRight$2<U extends _i2.Object?>(
     U Function(
       U,
       T,
@@ -4791,7 +4803,7 @@ extension Array$Typings<T> on Array<T> {
     /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     ///  @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
     ///  @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
-    U Function<U>(
+    U Function<U extends _i2.Object?>(
       U Function(
         U,
         T,
@@ -4813,12 +4825,12 @@ extension Array$Typings<T> on Array<T> {
   ///  @param thisArg If provided, it will be used as the this value for each invocation of
   ///  predicate. If it is not provided, undefined is used instead.
   S? _find$1<S extends T>(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       T,
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -4837,7 +4849,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -4858,12 +4870,12 @@ extension Array$Typings<T> on Array<T> {
     ///  @param thisArg If provided, it will be used as the this value for each invocation of
     ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends T>(
-      _i2.dynamic Function(
+      _i2.Object? Function(
         T,
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Returns the value of the first element in the array where predicate is true, and undefined
@@ -4874,7 +4886,7 @@ extension Array$Typings<T> on Array<T> {
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get find => (
         $1: _find$1,
@@ -4894,7 +4906,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -4911,7 +4923,7 @@ extension Array$Typings<T> on Array<T> {
   ///  length+start where length is the length of the array.
   ///  @param end index to stop filling the array at. If end is negative, it is treated as
   ///  length+end.
-  _i3.Array<_i2.dynamic> fill(
+  _i3.Array<_i2.Object?> fill(
     T value, [
     _i2.num? start,
     _i2.num? end,
@@ -4933,7 +4945,7 @@ extension Array$Typings<T> on Array<T> {
   ///  @param start If start is negative, it is treated as length+start. If end is negative, it
   ///  is treated as length+end. If start is omitted, `0` is used.
   ///  @param end If not specified, length of the this object is used as its default value.
-  _i3.Array<_i2.dynamic> copyWithin(
+  _i3.Array<_i2.Object?> copyWithin(
     _i2.num target, [
     _i2.num? start,
     _i2.num? end,
@@ -4997,7 +5009,7 @@ extension Array$Typings<T> on Array<T> {
   ///  callback function one time for each element in the array.
   ///  @param thisArg An object to which the this keyword can refer in the callback function. If
   ///  thisArg is omitted, undefined is used as the this value.
-  _i2.List<U> flatMap<U, This>(
+  _i2.List<U> flatMap<U extends _i2.Object?, This extends _i2.Object?>(
     _i2.Object Function(
       T,
       _i2.num,
@@ -5019,7 +5031,8 @@ extension Array$Typings<T> on Array<T> {
   ///  specified depth.
   ///
   ///  @param depth The maximum recursion depth
-  _i2.List<_i12.FlatArray<A, D>> flat<A, D extends _i2.num>([D? depth]) =>
+  _i2.List<_i12.FlatArray<A, D>> flat<A extends _i2.Object?, D extends _i2.num>(
+          [D? depth]) =>
       (_i4.callMethod(
         this,
         'flat',
@@ -5043,12 +5056,12 @@ extension Array$Typings<T> on Array<T> {
   ///  @param thisArg If provided, it will be used as the this value for each invocation of
   ///  predicate. If it is not provided, undefined is used instead.
   S? _findLast$1<S extends T>(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       T,
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -5067,7 +5080,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -5088,12 +5101,12 @@ extension Array$Typings<T> on Array<T> {
     ///  @param thisArg If provided, it will be used as the this value for each invocation of
     ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends T>(
-      _i2.dynamic Function(
+      _i2.Object? Function(
         T,
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Returns the value of the last element in the array where predicate is true, and undefined
@@ -5104,7 +5117,7 @@ extension Array$Typings<T> on Array<T> {
         _i2.num,
         _i2.List<T>,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get findLast => (
         $1: _findLast$1,
@@ -5124,7 +5137,7 @@ extension Array$Typings<T> on Array<T> {
       _i2.num,
       _i2.List<T>,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -5155,7 +5168,7 @@ extension Array$Typings<T> on Array<T> {
 class ArrayConstructor {}
 
 extension ArrayConstructor$Typings on ArrayConstructor {
-  _i2.dynamic isArray(_i2.dynamic arg) => _i4.callMethod(
+  _i2.Object? isArray(_i2.Object? arg) => _i4.callMethod(
         this,
         'isArray',
         [arg],
@@ -5163,7 +5176,8 @@ extension ArrayConstructor$Typings on ArrayConstructor {
 
   /// Creates an array from an iterable object.
   ///  @param iterable An iterable object to convert to an array.
-  _i2.List<T> _from$1<T>(_i3.From iterable) => (_i4.callMethod(
+  _i2.List<T> _from$1<T extends _i2.Object?>(_i3.From iterable) =>
+      (_i4.callMethod(
         this,
         'from',
         [iterable],
@@ -5174,13 +5188,13 @@ extension ArrayConstructor$Typings on ArrayConstructor {
   ///  @param arrayLike An array-like object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i2.List<U> _from$2<T, U>(
+  _i2.List<U> _from$2<T extends _i2.Object?, U extends _i2.Object?>(
     _i2.List<T> arrayLike,
     U Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       (_i4.callMethod(
         this,
@@ -5197,13 +5211,13 @@ extension ArrayConstructor$Typings on ArrayConstructor {
   ///  @param iterable An iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i2.List<U> _from$3<T, U>(
+  _i2.List<U> _from$3<T extends _i2.Object?, U extends _i2.Object?>(
     _i3.FromCommon iterable,
     U Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       (_i4.callMethod(
         this,
@@ -5220,32 +5234,32 @@ extension ArrayConstructor$Typings on ArrayConstructor {
   ({
     /// Creates an array from an iterable object.
     ///  @param iterable An iterable object to convert to an array.
-    _i2.List<T> Function<T>(_i3.From iterable) $1,
+    _i2.List<T> Function<T extends _i2.Object?>(_i3.From iterable) $1,
 
     /// Creates an array from an iterable object.
     ///  @param arrayLike An array-like object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i2.List<U> Function<T, U>(
+    _i2.List<U> Function<T extends _i2.Object?, U extends _i2.Object?>(
       _i2.List<T> arrayLike,
       U Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
 
     /// Creates an array from an iterable object.
     ///  @param iterable An iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i2.List<U> Function<T, U>(
+    _i2.List<U> Function<T extends _i2.Object?, U extends _i2.Object?>(
       _i3.FromCommon iterable,
       U Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $3,
   }) get from => (
         $1: _from$1,
@@ -5255,19 +5269,22 @@ extension ArrayConstructor$Typings on ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i2.List<T> of<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
+  _i2.List<T> of<T extends _i2.Object?>([_i2.Iterable<_i2.Object?>? items]) =>
+      (_i4.callMethod(
         this,
         'of',
         [...?items],
       ) as _i2.List)
           .cast();
-  _i2.List<_i2.dynamic> _call$1([_i2.num? arrayLength]) => (_i4.callMethod(
+  _i2.List<_i2.Object?> _call$1([_i2.num? arrayLength]) => (_i4.callMethod(
         this,
         '',
         [arrayLength ?? _i5.undefined],
       ) as _i2.List)
           .cast();
-  _i2.List<T> _call$2<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i4.callMethod(
+  _i2.List<T> _call$2<T extends _i2.Object?>(
+          [_i2.Iterable<_i2.Object?>? items]) =>
+      (_i4.callMethod(
         this,
         '',
         [...?items],
@@ -5276,8 +5293,9 @@ extension ArrayConstructor$Typings on ArrayConstructor {
 
   /// Overload accessor: $1, $2
   ({
-    _i2.List<_i2.dynamic> Function([_i2.num? arrayLength]) $1,
-    _i2.List<T> Function<T>([_i2.Iterable<_i2.dynamic>? items]) $2,
+    _i2.List<_i2.Object?> Function([_i2.num? arrayLength]) $1,
+    _i2.List<T> Function<T extends _i2.Object?>(
+        [_i2.Iterable<_i2.Object?>? items]) $2,
   }) get call => (
         $1: _call$1,
         $2: _call$2,
@@ -5287,14 +5305,14 @@ extension ArrayConstructor$Typings on ArrayConstructor {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class TypedPropertyDescriptor<T> {
+class TypedPropertyDescriptor<T extends _i2.Object?> {
   external factory TypedPropertyDescriptor._({
-    _i2.dynamic enumerable,
-    _i2.dynamic configurable,
-    _i2.dynamic writable,
-    _i2.dynamic value,
-    _i2.dynamic get,
-    _i2.dynamic set,
+    _i2.Object? enumerable,
+    _i2.Object? configurable,
+    _i2.Object? writable,
+    _i2.Object? value,
+    _i2.Object? get,
+    _i2.Object? set,
   });
 
   factory TypedPropertyDescriptor({
@@ -5315,7 +5333,8 @@ class TypedPropertyDescriptor<T> {
       );
 }
 
-extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
+extension TypedPropertyDescriptor$Typings<T extends _i2.Object?>
+    on TypedPropertyDescriptor<T> {
   _i2.bool? get enumerable => _i4.getProperty(
         this,
         'enumerable',
@@ -5391,55 +5410,61 @@ extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
 
 @_i1.JS()
 @_i1.staticInterop
-class PromiseLike<T> {}
+class PromiseLike<T extends _i2.Object?> {}
 
-extension PromiseLike$Typings<T> on PromiseLike<T> {
+extension PromiseLike$Typings<T extends _i2.Object?> on PromiseLike<T> {
   /// Attaches callbacks for the resolution and/or rejection of the Promise.
   ///  @param onfulfilled The callback to execute when the Promise is resolved.
   ///  @param onrejected The callback to execute when the Promise is rejected.
   ///  @returns A Promise for the completion of which ever callback is executed.
-  _i2.Future<_i2.Object> then<TResult1, TResult2>([
+  _i2.Future<_i2.Object>
+      then<TResult1 extends _i2.Object?, TResult2 extends _i2.Object?>([
     _i2.Object Function(T)? onfulfilled,
-    _i2.Object Function(_i2.dynamic)? onrejected,
+    _i2.Object Function(_i2.Object?)? onrejected,
   ]) =>
-      _i4.promiseToFuture(_i4.callMethod(
-        this,
-        'then',
-        [
-          onfulfilled == null ? _i5.undefined : _i4.allowInterop(onfulfilled),
-          onrejected == null ? _i5.undefined : _i4.allowInterop(onrejected),
-        ],
-      ));
+          _i4.promiseToFuture(_i4.callMethod(
+            this,
+            'then',
+            [
+              onfulfilled == null
+                  ? _i5.undefined
+                  : _i4.allowInterop(onfulfilled),
+              onrejected == null ? _i5.undefined : _i4.allowInterop(onrejected),
+            ],
+          ));
 }
 
 /// Represents the completion of an asynchronous operation
 @_i1.JS()
 @_i1.staticInterop
-class Promise<T> {}
+class Promise<T extends _i2.Object?> {}
 
-extension Promise$Typings<T> on Promise<T> {
+extension Promise$Typings<T extends _i2.Object?> on Promise<T> {
   /// Attaches callbacks for the resolution and/or rejection of the Promise.
   ///  @param onfulfilled The callback to execute when the Promise is resolved.
   ///  @param onrejected The callback to execute when the Promise is rejected.
   ///  @returns A Promise for the completion of which ever callback is executed.
-  _i2.Future<_i2.Object> then<TResult1, TResult2>([
+  _i2.Future<_i2.Object>
+      then<TResult1 extends _i2.Object?, TResult2 extends _i2.Object?>([
     _i2.Object Function(T)? onfulfilled,
-    _i2.Object Function(_i2.dynamic)? onrejected,
+    _i2.Object Function(_i2.Object?)? onrejected,
   ]) =>
-      _i4.promiseToFuture(_i4.callMethod(
-        this,
-        'then',
-        [
-          onfulfilled == null ? _i5.undefined : _i4.allowInterop(onfulfilled),
-          onrejected == null ? _i5.undefined : _i4.allowInterop(onrejected),
-        ],
-      ));
+          _i4.promiseToFuture(_i4.callMethod(
+            this,
+            'then',
+            [
+              onfulfilled == null
+                  ? _i5.undefined
+                  : _i4.allowInterop(onfulfilled),
+              onrejected == null ? _i5.undefined : _i4.allowInterop(onrejected),
+            ],
+          ));
 
   /// Attaches a callback for only the rejection of the Promise.
   ///  @param onrejected The callback to execute when the Promise is rejected.
   ///  @returns A Promise for the completion of the callback.
-  _i2.Future<_i2.Object> catch$<TResult>(
-          [_i2.Object Function(_i2.dynamic)? onrejected]) =>
+  _i2.Future<_i2.Object> catch$<TResult extends _i2.Object?>(
+          [_i2.Object Function(_i2.Object?)? onrejected]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'catch',
@@ -5460,9 +5485,9 @@ extension Promise$Typings<T> on Promise<T> {
 
 @_i1.JS()
 @_i1.staticInterop
-class ArrayLike<T> {}
+class ArrayLike<T extends _i2.Object?> {}
 
-extension ArrayLike$Typings<T> on ArrayLike<T> {
+extension ArrayLike$Typings<T extends _i2.Object?> on ArrayLike<T> {
   _i2.num get length => _i4.getProperty(
         this,
         'length',
@@ -5482,7 +5507,7 @@ class IInline1 {}
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class ThisType<T> {
+class ThisType<T extends _i2.Object?> {
   external factory ThisType._();
 
   factory ThisType() => ThisType._();
@@ -5494,8 +5519,8 @@ class ThisType<T> {
 @_i1.anonymous
 class ArrayBufferTypes {
   external factory ArrayBufferTypes._({
-    _i2.dynamic arrayBuffer,
-    _i2.dynamic sharedArrayBuffer,
+    _i2.Object? arrayBuffer,
+    _i2.Object? sharedArrayBuffer,
   });
 
   factory ArrayBufferTypes({
@@ -5548,7 +5573,7 @@ extension ArrayBufferTypes$Typings on ArrayBufferTypes {
 class ArrayBufferConstructor {}
 
 extension ArrayBufferConstructor$Typings on ArrayBufferConstructor {
-  _i3.ArrayBufferView? isView(_i2.dynamic arg) => _i4.isTruthy(_i4.callMethod(
+  _i3.ArrayBufferView? isView(_i2.Object? arg) => _i4.isTruthy(_i4.callMethod(
         this,
         'isView',
         [arg],
@@ -5562,9 +5587,9 @@ extension ArrayBufferConstructor$Typings on ArrayBufferConstructor {
 @_i1.anonymous
 class ArrayBufferView {
   external factory ArrayBufferView._({
-    _i2.dynamic buffer,
-    _i2.dynamic byteLength,
-    _i2.dynamic byteOffset,
+    _i2.Object? buffer,
+    _i2.Object? byteLength,
+    _i2.Object? byteOffset,
   });
 
   factory ArrayBufferView({
@@ -5656,7 +5681,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i13.Int8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Int8List of([_i2.Iterable<_i2.Object?>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -5666,13 +5691,13 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i13.Int8List _from$1<T>(
+  _i13.Int8List _from$1<T extends _i2.Object?>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -5694,7 +5719,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
       _i2.num,
       _i2.num,
     )? mapfn,
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -5712,13 +5737,13 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i13.Int8List Function<T>(
+    _i13.Int8List Function<T extends _i2.Object?>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Creates an array from an array-like or iterable object.
@@ -5731,7 +5756,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
         _i2.num,
         _i2.num,
       )? mapfn,
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get from => (
         $1: _from$1,
@@ -5752,7 +5777,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i13.Uint8List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Uint8List of([_i2.Iterable<_i2.Object?>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -5762,13 +5787,13 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i13.Uint8List _from$1<T>(
+  _i13.Uint8List _from$1<T extends _i2.Object?>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -5790,7 +5815,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
       _i2.num,
       _i2.num,
     )? mapfn,
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -5808,13 +5833,13 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i13.Uint8List Function<T>(
+    _i13.Uint8List Function<T extends _i2.Object?>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Creates an array from an array-like or iterable object.
@@ -5827,7 +5852,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
         _i2.num,
         _i2.num,
       )? mapfn,
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get from => (
         $1: _from$1,
@@ -5848,7 +5873,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i13.Uint8ClampedList of([_i2.Iterable<_i2.dynamic>? items]) =>
+  _i13.Uint8ClampedList of([_i2.Iterable<_i2.Object?>? items]) =>
       _i4.callMethod(
         this,
         'of',
@@ -5859,13 +5884,13 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i13.Uint8ClampedList _from$1<T>(
+  _i13.Uint8ClampedList _from$1<T extends _i2.Object?>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -5887,7 +5912,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
       _i2.num,
       _i2.num,
     )? mapfn,
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -5905,13 +5930,13 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i13.Uint8ClampedList Function<T>(
+    _i13.Uint8ClampedList Function<T extends _i2.Object?>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Creates an array from an array-like or iterable object.
@@ -5924,7 +5949,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
         _i2.num,
         _i2.num,
       )? mapfn,
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get from => (
         $1: _from$1,
@@ -5945,7 +5970,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i13.Int16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Int16List of([_i2.Iterable<_i2.Object?>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -5955,13 +5980,13 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i13.Int16List _from$1<T>(
+  _i13.Int16List _from$1<T extends _i2.Object?>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -5983,7 +6008,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
       _i2.num,
       _i2.num,
     )? mapfn,
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6001,13 +6026,13 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i13.Int16List Function<T>(
+    _i13.Int16List Function<T extends _i2.Object?>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Creates an array from an array-like or iterable object.
@@ -6020,7 +6045,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
         _i2.num,
         _i2.num,
       )? mapfn,
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get from => (
         $1: _from$1,
@@ -6041,7 +6066,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i13.Uint16List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Uint16List of([_i2.Iterable<_i2.Object?>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -6051,13 +6076,13 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i13.Uint16List _from$1<T>(
+  _i13.Uint16List _from$1<T extends _i2.Object?>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6079,7 +6104,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
       _i2.num,
       _i2.num,
     )? mapfn,
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6097,13 +6122,13 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i13.Uint16List Function<T>(
+    _i13.Uint16List Function<T extends _i2.Object?>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Creates an array from an array-like or iterable object.
@@ -6116,7 +6141,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
         _i2.num,
         _i2.num,
       )? mapfn,
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get from => (
         $1: _from$1,
@@ -6137,7 +6162,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i13.Int32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Int32List of([_i2.Iterable<_i2.Object?>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -6147,13 +6172,13 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i13.Int32List _from$1<T>(
+  _i13.Int32List _from$1<T extends _i2.Object?>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6175,7 +6200,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
       _i2.num,
       _i2.num,
     )? mapfn,
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6193,13 +6218,13 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i13.Int32List Function<T>(
+    _i13.Int32List Function<T extends _i2.Object?>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Creates an array from an array-like or iterable object.
@@ -6212,7 +6237,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
         _i2.num,
         _i2.num,
       )? mapfn,
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get from => (
         $1: _from$1,
@@ -6233,7 +6258,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i13.Uint32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Uint32List of([_i2.Iterable<_i2.Object?>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -6243,13 +6268,13 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i13.Uint32List _from$1<T>(
+  _i13.Uint32List _from$1<T extends _i2.Object?>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6271,7 +6296,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
       _i2.num,
       _i2.num,
     )? mapfn,
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6289,13 +6314,13 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i13.Uint32List Function<T>(
+    _i13.Uint32List Function<T extends _i2.Object?>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Creates an array from an array-like or iterable object.
@@ -6308,7 +6333,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
         _i2.num,
         _i2.num,
       )? mapfn,
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get from => (
         $1: _from$1,
@@ -6329,7 +6354,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i13.Float32List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Float32List of([_i2.Iterable<_i2.Object?>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -6339,13 +6364,13 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i13.Float32List _from$1<T>(
+  _i13.Float32List _from$1<T extends _i2.Object?>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6367,7 +6392,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
       _i2.num,
       _i2.num,
     )? mapfn,
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6385,13 +6410,13 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i13.Float32List Function<T>(
+    _i13.Float32List Function<T extends _i2.Object?>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Creates an array from an array-like or iterable object.
@@ -6404,7 +6429,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
         _i2.num,
         _i2.num,
       )? mapfn,
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get from => (
         $1: _from$1,
@@ -6425,7 +6450,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i13.Float64List of([_i2.Iterable<_i2.dynamic>? items]) => _i4.callMethod(
+  _i13.Float64List of([_i2.Iterable<_i2.Object?>? items]) => _i4.callMethod(
         this,
         'of',
         [...?items],
@@ -6435,13 +6460,13 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
   ///  @param arrayLike An array-like or iterable object to convert to an array.
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
-  _i13.Float64List _from$1<T>(
+  _i13.Float64List _from$1<T extends _i2.Object?>(
     _i2.List<T> arrayLike,
     _i2.num Function(
       T,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6463,7 +6488,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
       _i2.num,
       _i2.num,
     )? mapfn,
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i4.callMethod(
         this,
@@ -6481,13 +6506,13 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
     ///  @param arrayLike An array-like or iterable object to convert to an array.
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
-    _i13.Float64List Function<T>(
+    _i13.Float64List Function<T extends _i2.Object?>(
       _i2.List<T> arrayLike,
       _i2.num Function(
         T,
         _i2.num,
       ) mapfn, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Creates an array from an array-like or iterable object.
@@ -6500,7 +6525,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
         _i2.num,
         _i2.num,
       )? mapfn,
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get from => (
         $1: _from$1,
@@ -6509,7 +6534,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
 }
 
 /// Evaluates JavaScript code and executes it.
-_i2.dynamic eval(_i2.String x) => _i4.callMethod(
+_i2.Object? eval(_i2.String x) => _i4.callMethod(
       _self,
       'eval',
       [x],
@@ -6595,7 +6620,7 @@ _i2.String unescape(_i2.String string) => _i4.callMethod(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

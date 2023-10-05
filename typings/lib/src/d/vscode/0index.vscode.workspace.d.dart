@@ -160,7 +160,7 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   /// so that is true: `joinPath(Uri.file('file:///c:/root'), '../../other').fsPath === 'c:/other'`
   _i7.Uri joinPath(
     _i7.Uri base, [
-    _i2.Iterable<_i2.dynamic>? pathSegments,
+    _i2.Iterable<_i2.Object?>? pathSegments,
   ]) =>
       _i3.callMethod(
         _i4.target3426,
@@ -220,7 +220,7 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   /// Returns a JSON representation of this Uri.
   ///
   ///  @return An object.
-  _i2.dynamic toJSON() => _i3.callMethod(
+  _i2.Object? toJSON() => _i3.callMethod(
         _i4.target3426,
         'toJSON',
         [],
@@ -4145,7 +4145,7 @@ _i2.String asRelativePath(
 _i2.bool updateWorkspaceFolders(
   _i2.num start, [
   _i2.num? deleteCount,
-  _i2.Iterable<_i2.dynamic>? workspaceFoldersToAdd,
+  _i2.Iterable<_i2.Object?>? workspaceFoldersToAdd,
 ]) =>
     _i3.callMethod(
       _self,
@@ -4643,7 +4643,7 @@ _i7.Disposable registerFileSystemProvider(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

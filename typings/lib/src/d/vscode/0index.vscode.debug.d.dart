@@ -61,9 +61,9 @@ extension ActiveDebugSessionAccessor$Typings on _ActiveDebugSessionAccessor {
       );
 
   /// Send a custom request to the debug adapter.
-  _i6.Thenable<_i2.dynamic> customRequest(
+  _i6.Thenable<_i2.Object?> customRequest(
     _i2.String command, [
-    _i2.dynamic args,
+    _i2.Object? args,
   ]) =>
       _i3.callMethod(
         _i4.target3448,
@@ -1231,7 +1231,7 @@ _i5.Uri asDebugSourceUri(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

@@ -54,10 +54,10 @@ class ProxyHandler<T extends _i2.Object> {}
 extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   /// A trap method for a function call.
   ///  @param target The original callable object which is being proxied.
-  _i2.dynamic apply(
+  _i2.Object? apply(
     T target,
-    _i2.dynamic thisArg,
-    _i2.List<_i2.dynamic> argArray,
+    _i2.Object? thisArg,
+    _i2.List<_i2.Object?> argArray,
   ) =>
       _i4.callMethod(
         this,
@@ -74,7 +74,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   ///  @param newTarget The constructor that was originally called.
   _i2.Object construct(
     T target,
-    _i2.List<_i2.dynamic> argArray,
+    _i2.List<_i2.Object?> argArray,
     _i2.Function newTarget,
   ) =>
       _i4.callMethod(
@@ -126,10 +126,10 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   ///  @param target The original object which is being proxied.
   ///  @param p The name or `Symbol` of the property to get.
   ///  @param receiver The proxy or an object that inherits from the proxy.
-  _i2.dynamic get(
+  _i2.Object? get(
     T target,
     _i2.Object p,
-    _i2.dynamic receiver,
+    _i2.Object? receiver,
   ) =>
       _i4.callMethod(
         this,
@@ -213,8 +213,8 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   _i2.bool set(
     T target,
     _i2.Object p,
-    _i2.dynamic newValue,
-    _i2.dynamic receiver,
+    _i2.Object? newValue,
+    _i2.Object? receiver,
   ) =>
       _i4.callMethod(
         this,
@@ -300,7 +300,7 @@ extension ProxyConstructor$Typings on ProxyConstructor {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

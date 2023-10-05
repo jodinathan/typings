@@ -18,8 +18,8 @@ external _i2.Object _self;
 /// will cause an error.
 _i3.Disposable registerCommand(
   _i2.String command,
-  _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?]) callback, [
-  _i2.dynamic thisArg,
+  _i2.Object? Function([_i2.Iterable<_i2.Object?>?]) callback, [
+  _i2.Object? thisArg,
 ]) =>
     _i4.callMethod(
       _self,
@@ -44,9 +44,9 @@ _i3.Disposable registerTextEditorCommand(
   void Function(
     _i3.TextEditor,
     _i3.TextEditorEdit,
-    _i2.Iterable<_i2.dynamic>?,
+    _i2.Iterable<_i2.Object?>?,
   ) callback, [
-  _i2.dynamic thisArg,
+  _i2.Object? thisArg,
 ]) =>
     _i4.callMethod(
       _self,
@@ -65,9 +65,9 @@ _i3.Disposable registerTextEditorCommand(
 /// `number`, `undefined`, and `null`, as well as {@linkcode Position}, {@linkcode Range}, {@linkcode Uri} and {@linkcode Location}.
 /// * *Note 2:* There are no restrictions when executing commands that have been contributed
 /// by extensions.
-_i6.Thenable<T> executeCommand<T>(
+_i6.Thenable<T> executeCommand<T extends _i2.Object?>(
   _i2.String command, [
-  _i2.Iterable<_i2.dynamic>? rest,
+  _i2.Iterable<_i2.Object?>? rest,
 ]) =>
     _i4.callMethod(
       _self,
@@ -90,7 +90,7 @@ _i6.Thenable<_i2.List<_i2.String>> getCommands([_i2.bool? filterInternal]) =>
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

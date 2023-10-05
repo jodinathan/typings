@@ -296,11 +296,11 @@ extension ProcessStatusCommon$Typings on ProcessStatusCommon {
     );
   }
 
-  _i2.dynamic get code => _i3.getProperty(
+  _i2.Object? get code => _i3.getProperty(
         this,
         'code',
       );
-  set code(_i2.dynamic value) {
+  set code(_i2.Object? value) {
     _i3.setProperty(
       this,
       'code',
@@ -308,11 +308,11 @@ extension ProcessStatusCommon$Typings on ProcessStatusCommon {
     );
   }
 
-  _i2.dynamic get signal => _i3.getProperty(
+  _i2.Object? get signal => _i3.getProperty(
         this,
         'signal',
       );
-  set signal(_i2.dynamic value) {
+  set signal(_i2.Object? value) {
     _i3.setProperty(
       this,
       'signal',
@@ -660,10 +660,10 @@ typedef TlsListener = _i4.Listener<_i4.TlsConn>;
 @_i1.anonymous
 class MemoryUsage {
   external factory MemoryUsage._({
-    _i2.dynamic rss,
-    _i2.dynamic heapTotal,
-    _i2.dynamic heapUsed,
-    _i2.dynamic external$,
+    _i2.Object? rss,
+    _i2.Object? heapTotal,
+    _i2.Object? heapUsed,
+    _i2.Object? external$,
   });
 
   factory MemoryUsage({
@@ -743,13 +743,13 @@ extension MemoryUsage$Typings on MemoryUsage {
 @_i1.anonymous
 class NetworkInterfaceInfo {
   external factory NetworkInterfaceInfo._({
-    _i2.dynamic name,
-    _i2.dynamic family,
-    _i2.dynamic address,
-    _i2.dynamic netmask,
-    _i2.dynamic scopeid,
-    _i2.dynamic cidr,
-    _i2.dynamic mac,
+    _i2.Object? name,
+    _i2.Object? family,
+    _i2.Object? address,
+    _i2.Object? netmask,
+    _i2.Object? scopeid,
+    _i2.Object? cidr,
+    _i2.Object? mac,
   });
 
   factory NetworkInterfaceInfo({
@@ -871,13 +871,13 @@ extension NetworkInterfaceInfo$Typings on NetworkInterfaceInfo {
 @_i1.anonymous
 class SystemMemoryInfo {
   external factory SystemMemoryInfo._({
-    _i2.dynamic total,
-    _i2.dynamic free,
-    _i2.dynamic available,
-    _i2.dynamic buffers,
-    _i2.dynamic cached,
-    _i2.dynamic swapTotal,
-    _i2.dynamic swapFree,
+    _i2.Object? total,
+    _i2.Object? free,
+    _i2.Object? available,
+    _i2.Object? buffers,
+    _i2.Object? cached,
+    _i2.Object? swapTotal,
+    _i2.Object? swapFree,
   });
 
   factory SystemMemoryInfo({
@@ -1003,14 +1003,14 @@ extension SystemMemoryInfo$Typings on SystemMemoryInfo {
 @_i1.anonymous
 class PermissionOptionsObject {
   external factory PermissionOptionsObject._({
-    _i2.dynamic env,
-    _i2.dynamic sys,
-    _i2.dynamic hrtime,
-    _i2.dynamic net,
-    _i2.dynamic ffi,
-    _i2.dynamic read,
-    _i2.dynamic run,
-    _i2.dynamic write,
+    _i2.Object? env,
+    _i2.Object? sys,
+    _i2.Object? hrtime,
+    _i2.Object? net,
+    _i2.Object? ffi,
+    _i2.Object? read,
+    _i2.Object? run,
+    _i2.Object? write,
   });
 
   factory PermissionOptionsObject({
@@ -1466,12 +1466,12 @@ extension TestContext$Typings on TestContext {
 @_i1.anonymous
 class TestStepDefinition {
   external factory TestStepDefinition._({
-    _i2.dynamic fn,
-    _i2.dynamic name,
-    _i2.dynamic ignore,
-    _i2.dynamic sanitizeOps,
-    _i2.dynamic sanitizeResources,
-    _i2.dynamic sanitizeExit,
+    _i2.Object? fn,
+    _i2.Object? name,
+    _i2.Object? ignore,
+    _i2.Object? sanitizeOps,
+    _i2.Object? sanitizeResources,
+    _i2.Object? sanitizeExit,
   });
 
   factory TestStepDefinition({
@@ -1595,14 +1595,14 @@ extension TestStepDefinition$Typings on TestStepDefinition {
 @_i1.anonymous
 class TestDefinition {
   external factory TestDefinition._({
-    _i2.dynamic fn,
-    _i2.dynamic name,
-    _i2.dynamic ignore,
-    _i2.dynamic only,
-    _i2.dynamic sanitizeOps,
-    _i2.dynamic sanitizeResources,
-    _i2.dynamic sanitizeExit,
-    _i2.dynamic permissions,
+    _i2.Object? fn,
+    _i2.Object? name,
+    _i2.Object? ignore,
+    _i2.Object? only,
+    _i2.Object? sanitizeOps,
+    _i2.Object? sanitizeResources,
+    _i2.Object? sanitizeExit,
+    _i2.Object? permissions,
   });
 
   factory TestDefinition({
@@ -1761,14 +1761,14 @@ extension TestDefinition$Typings on TestDefinition {
 @_i1.anonymous
 class BenchDefinition {
   external factory BenchDefinition._({
-    _i2.dynamic fn,
-    _i2.dynamic name,
-    _i2.dynamic ignore,
-    _i2.dynamic group,
-    _i2.dynamic baseline,
-    _i2.dynamic only,
-    _i2.dynamic sanitizeExit,
-    _i2.dynamic permissions,
+    _i2.Object? fn,
+    _i2.Object? name,
+    _i2.Object? ignore,
+    _i2.Object? group,
+    _i2.Object? baseline,
+    _i2.Object? only,
+    _i2.Object? sanitizeExit,
+    _i2.Object? permissions,
   });
 
   factory BenchDefinition({
@@ -2697,7 +2697,7 @@ extension IInline4$Typings on IInline4 {
 @_i1.staticInterop
 @_i1.anonymous
 class SetRawOptions {
-  external factory SetRawOptions._({_i2.dynamic cbreak});
+  external factory SetRawOptions._({_i2.Object? cbreak});
 
   factory SetRawOptions({required _i2.bool cbreak}) =>
       SetRawOptions._(cbreak: cbreak);
@@ -2812,13 +2812,13 @@ extension IInline7$Typings on IInline7 {
 @_i1.anonymous
 class OpenOptions {
   external factory OpenOptions._({
-    _i2.dynamic read,
-    _i2.dynamic write,
-    _i2.dynamic append,
-    _i2.dynamic truncate,
-    _i2.dynamic create,
-    _i2.dynamic createNew,
-    _i2.dynamic mode,
+    _i2.Object? read,
+    _i2.Object? write,
+    _i2.Object? append,
+    _i2.Object? truncate,
+    _i2.Object? create,
+    _i2.Object? createNew,
+    _i2.Object? mode,
   });
 
   factory OpenOptions({
@@ -2971,7 +2971,7 @@ extension OpenOptions$Typings on OpenOptions {
 @_i1.staticInterop
 @_i1.anonymous
 class ReadFileOptions {
-  external factory ReadFileOptions._({_i2.dynamic signal});
+  external factory ReadFileOptions._({_i2.Object? signal});
 
   factory ReadFileOptions({_i8.AbortSignal? signal}) =>
       ReadFileOptions._(signal: signal ?? _i6.undefined);
@@ -3178,8 +3178,8 @@ extension Buffer$Typings on Buffer {
 @_i1.anonymous
 class MkdirOptions {
   external factory MkdirOptions._({
-    _i2.dynamic recursive,
-    _i2.dynamic mode,
+    _i2.Object? recursive,
+    _i2.Object? mode,
   });
 
   factory MkdirOptions({
@@ -3240,9 +3240,9 @@ extension MkdirOptions$Typings on MkdirOptions {
 @_i1.anonymous
 class MakeTempOptions {
   external factory MakeTempOptions._({
-    _i2.dynamic dir,
-    _i2.dynamic prefix,
-    _i2.dynamic suffix,
+    _i2.Object? dir,
+    _i2.Object? prefix,
+    _i2.Object? suffix,
   });
 
   factory MakeTempOptions({
@@ -3311,7 +3311,7 @@ extension MakeTempOptions$Typings on MakeTempOptions {
 @_i1.staticInterop
 @_i1.anonymous
 class RemoveOptions {
-  external factory RemoveOptions._({_i2.dynamic recursive});
+  external factory RemoveOptions._({_i2.Object? recursive});
 
   factory RemoveOptions({_i2.bool? recursive}) =>
       RemoveOptions._(recursive: recursive ?? _i6.undefined);
@@ -3343,22 +3343,22 @@ extension RemoveOptions$Typings on RemoveOptions {
 @_i1.anonymous
 class FileInfo {
   external factory FileInfo._({
-    _i2.dynamic isFile,
-    _i2.dynamic isDirectory,
-    _i2.dynamic isSymlink,
-    _i2.dynamic size,
-    _i2.dynamic mtime,
-    _i2.dynamic atime,
-    _i2.dynamic birthtime,
-    _i2.dynamic dev,
-    _i2.dynamic ino,
-    _i2.dynamic mode,
-    _i2.dynamic nlink,
-    _i2.dynamic uid,
-    _i2.dynamic gid,
-    _i2.dynamic rdev,
-    _i2.dynamic blksize,
-    _i2.dynamic blocks,
+    _i2.Object? isFile,
+    _i2.Object? isDirectory,
+    _i2.Object? isSymlink,
+    _i2.Object? size,
+    _i2.Object? mtime,
+    _i2.Object? atime,
+    _i2.Object? birthtime,
+    _i2.Object? dev,
+    _i2.Object? ino,
+    _i2.Object? mode,
+    _i2.Object? nlink,
+    _i2.Object? uid,
+    _i2.Object? gid,
+    _i2.Object? rdev,
+    _i2.Object? blksize,
+    _i2.Object? blocks,
   });
 
   factory FileInfo({
@@ -3642,10 +3642,10 @@ extension FileInfo$Typings on FileInfo {
 @_i1.anonymous
 class DirEntry {
   external factory DirEntry._({
-    _i2.dynamic name,
-    _i2.dynamic isFile,
-    _i2.dynamic isDirectory,
-    _i2.dynamic isSymlink,
+    _i2.Object? name,
+    _i2.Object? isFile,
+    _i2.Object? isDirectory,
+    _i2.Object? isSymlink,
   });
 
   factory DirEntry({
@@ -3726,11 +3726,11 @@ extension DirEntry$Typings on DirEntry {
 @_i1.anonymous
 class WriteFileOptions {
   external factory WriteFileOptions._({
-    _i2.dynamic append,
-    _i2.dynamic create,
-    _i2.dynamic createNew,
-    _i2.dynamic mode,
-    _i2.dynamic signal,
+    _i2.Object? append,
+    _i2.Object? create,
+    _i2.Object? createNew,
+    _i2.Object? mode,
+    _i2.Object? signal,
   });
 
   factory WriteFileOptions({
@@ -3833,17 +3833,17 @@ extension WriteFileOptions$Typings on WriteFileOptions {
 @_i1.anonymous
 class OpMetrics {
   external factory OpMetrics._({
-    _i2.dynamic opsDispatched,
-    _i2.dynamic opsDispatchedSync,
-    _i2.dynamic opsDispatchedAsync,
-    _i2.dynamic opsDispatchedAsyncUnref,
-    _i2.dynamic opsCompleted,
-    _i2.dynamic opsCompletedSync,
-    _i2.dynamic opsCompletedAsync,
-    _i2.dynamic opsCompletedAsyncUnref,
-    _i2.dynamic bytesSentControl,
-    _i2.dynamic bytesSentData,
-    _i2.dynamic bytesReceived,
+    _i2.Object? opsDispatched,
+    _i2.Object? opsDispatchedSync,
+    _i2.Object? opsDispatchedAsync,
+    _i2.Object? opsDispatchedAsyncUnref,
+    _i2.Object? opsCompleted,
+    _i2.Object? opsCompletedSync,
+    _i2.Object? opsCompletedAsync,
+    _i2.Object? opsCompletedAsyncUnref,
+    _i2.Object? bytesSentControl,
+    _i2.Object? bytesSentData,
+    _i2.Object? bytesReceived,
   });
 
   factory OpMetrics({
@@ -4013,18 +4013,18 @@ extension OpMetrics$Typings on OpMetrics {
 @_i1.anonymous
 class Metrics implements _i4.OpMetrics {
   external factory Metrics._({
-    _i2.dynamic ops,
-    _i2.dynamic opsDispatched,
-    _i2.dynamic opsDispatchedSync,
-    _i2.dynamic opsDispatchedAsync,
-    _i2.dynamic opsDispatchedAsyncUnref,
-    _i2.dynamic opsCompleted,
-    _i2.dynamic opsCompletedSync,
-    _i2.dynamic opsCompletedAsync,
-    _i2.dynamic opsCompletedAsyncUnref,
-    _i2.dynamic bytesSentControl,
-    _i2.dynamic bytesSentData,
-    _i2.dynamic bytesReceived,
+    _i2.Object? ops,
+    _i2.Object? opsDispatched,
+    _i2.Object? opsDispatchedSync,
+    _i2.Object? opsDispatchedAsync,
+    _i2.Object? opsDispatchedAsyncUnref,
+    _i2.Object? opsCompleted,
+    _i2.Object? opsCompletedSync,
+    _i2.Object? opsCompletedAsync,
+    _i2.Object? opsCompletedAsyncUnref,
+    _i2.Object? bytesSentControl,
+    _i2.Object? bytesSentData,
+    _i2.Object? bytesReceived,
   });
 
   factory Metrics({
@@ -4078,9 +4078,9 @@ extension Metrics$Typings on Metrics {
 @_i1.anonymous
 class FsEvent {
   external factory FsEvent._({
-    _i2.dynamic kind,
-    _i2.dynamic paths,
-    _i2.dynamic flag,
+    _i2.Object? kind,
+    _i2.Object? paths,
+    _i2.Object? flag,
   });
 
   factory FsEvent({
@@ -4163,8 +4163,8 @@ extension FsWatcher$Typings on FsWatcher {
   /// Stops watching the file system and closes the watcher resource.
   ///
   ///  @deprecated Will be removed in the future.
-  _i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.dynamic>> return$(
-          [_i2.dynamic value]) =>
+  _i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.Object?>> return$(
+          [_i2.Object? value]) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'return',
@@ -4197,12 +4197,12 @@ extension IInline9$Typings on IInline9 {
 @_i1.anonymous
 class RunOptions {
   external factory RunOptions._({
-    _i2.dynamic cmd,
-    _i2.dynamic cwd,
-    _i2.dynamic env,
-    _i2.dynamic stdout,
-    _i2.dynamic stderr,
-    _i2.dynamic stdin,
+    _i2.Object? cmd,
+    _i2.Object? cwd,
+    _i2.Object? env,
+    _i2.Object? stdout,
+    _i2.Object? stderr,
+    _i2.Object? stdin,
   });
 
   factory RunOptions({
@@ -4370,11 +4370,11 @@ extension IInline10$Typings on IInline10 {
     );
   }
 
-  _i2.dynamic get signal => _i3.getProperty(
+  _i2.Object? get signal => _i3.getProperty(
         this,
         'signal',
       );
-  set signal(_i2.dynamic value) {
+  set signal(_i2.Object? value) {
     _i3.setProperty(
       this,
       'signal',
@@ -4447,21 +4447,21 @@ extension Process$Typings<T extends _i4.RunOptions> on Process<T> {
 
   /// A reference to the sub-processes `stdin`, which allows interacting with
   /// the sub-process at a low level.
-  _i2.dynamic get stdin => _i3.getProperty(
+  _i2.Object? get stdin => _i3.getProperty(
         this,
         'stdin',
       );
 
   /// A reference to the sub-processes `stdout`, which allows interacting with
   /// the sub-process at a low level.
-  _i2.dynamic get stdout => _i3.getProperty(
+  _i2.Object? get stdout => _i3.getProperty(
         this,
         'stdout',
       );
 
   /// A reference to the sub-processes `stderr`, which allows interacting with
   /// the sub-process at a low level.
-  _i2.dynamic get stderr => _i3.getProperty(
+  _i2.Object? get stderr => _i3.getProperty(
         this,
         'stderr',
       );
@@ -4710,17 +4710,17 @@ extension ChildProcess$Typings on ChildProcess {
 @_i1.anonymous
 class CommandOptions {
   external factory CommandOptions._({
-    _i2.dynamic args,
-    _i2.dynamic cwd,
-    _i2.dynamic clearEnv,
-    _i2.dynamic env,
-    _i2.dynamic uid,
-    _i2.dynamic gid,
-    _i2.dynamic signal,
-    _i2.dynamic stdin,
-    _i2.dynamic stdout,
-    _i2.dynamic stderr,
-    _i2.dynamic windowsRawArguments,
+    _i2.Object? args,
+    _i2.Object? cwd,
+    _i2.Object? clearEnv,
+    _i2.Object? env,
+    _i2.Object? uid,
+    _i2.Object? gid,
+    _i2.Object? signal,
+    _i2.Object? stdin,
+    _i2.Object? stdout,
+    _i2.Object? stderr,
+    _i2.Object? windowsRawArguments,
   });
 
   factory CommandOptions({
@@ -4935,9 +4935,9 @@ extension CommandOptions$Typings on CommandOptions {
 @_i1.anonymous
 class CommandStatus {
   external factory CommandStatus._({
-    _i2.dynamic success,
-    _i2.dynamic code,
-    _i2.dynamic signal,
+    _i2.Object? success,
+    _i2.Object? code,
+    _i2.Object? signal,
   });
 
   factory CommandStatus({
@@ -5005,11 +5005,11 @@ extension CommandStatus$Typings on CommandStatus {
 @_i1.anonymous
 class CommandOutput implements _i4.CommandStatus {
   external factory CommandOutput._({
-    _i2.dynamic stdout,
-    _i2.dynamic stderr,
-    _i2.dynamic success,
-    _i2.dynamic code,
-    _i2.dynamic signal,
+    _i2.Object? stdout,
+    _i2.Object? stderr,
+    _i2.Object? success,
+    _i2.Object? code,
+    _i2.Object? signal,
   });
 
   factory CommandOutput({
@@ -5048,16 +5048,16 @@ extension CommandOutput$Typings on CommandOutput {
 @_i1.anonymous
 class InspectOptions {
   external factory InspectOptions._({
-    _i2.dynamic colors,
-    _i2.dynamic compact,
-    _i2.dynamic depth,
-    _i2.dynamic iterableLimit,
-    _i2.dynamic showProxy,
-    _i2.dynamic sorted,
-    _i2.dynamic trailingComma,
-    _i2.dynamic getters,
-    _i2.dynamic showHidden,
-    _i2.dynamic strAbbreviateSize,
+    _i2.Object? colors,
+    _i2.Object? compact,
+    _i2.Object? depth,
+    _i2.Object? iterableLimit,
+    _i2.Object? showProxy,
+    _i2.Object? sorted,
+    _i2.Object? trailingComma,
+    _i2.Object? getters,
+    _i2.Object? showHidden,
+    _i2.Object? strAbbreviateSize,
   });
 
   factory InspectOptions({
@@ -5249,8 +5249,8 @@ extension InspectOptions$Typings on InspectOptions {
 @_i1.anonymous
 class RunPermissionDescriptor {
   external factory RunPermissionDescriptor._({
-    _i2.dynamic name,
-    _i2.dynamic command,
+    _i2.Object? name,
+    _i2.Object? command,
   });
 
   factory RunPermissionDescriptor({
@@ -5303,8 +5303,8 @@ extension RunPermissionDescriptor$Typings on RunPermissionDescriptor {
 @_i1.anonymous
 class ReadPermissionDescriptor {
   external factory ReadPermissionDescriptor._({
-    _i2.dynamic name,
-    _i2.dynamic path,
+    _i2.Object? name,
+    _i2.Object? path,
   });
 
   factory ReadPermissionDescriptor({
@@ -5357,8 +5357,8 @@ extension ReadPermissionDescriptor$Typings on ReadPermissionDescriptor {
 @_i1.anonymous
 class WritePermissionDescriptor {
   external factory WritePermissionDescriptor._({
-    _i2.dynamic name,
-    _i2.dynamic path,
+    _i2.Object? name,
+    _i2.Object? path,
   });
 
   factory WritePermissionDescriptor({
@@ -5408,8 +5408,8 @@ extension WritePermissionDescriptor$Typings on WritePermissionDescriptor {
 @_i1.anonymous
 class NetPermissionDescriptor {
   external factory NetPermissionDescriptor._({
-    _i2.dynamic name,
-    _i2.dynamic host,
+    _i2.Object? name,
+    _i2.Object? host,
   });
 
   factory NetPermissionDescriptor({
@@ -5462,8 +5462,8 @@ extension NetPermissionDescriptor$Typings on NetPermissionDescriptor {
 @_i1.anonymous
 class EnvPermissionDescriptor {
   external factory EnvPermissionDescriptor._({
-    _i2.dynamic name,
-    _i2.dynamic variable,
+    _i2.Object? name,
+    _i2.Object? variable,
   });
 
   factory EnvPermissionDescriptor({
@@ -5512,8 +5512,8 @@ extension EnvPermissionDescriptor$Typings on EnvPermissionDescriptor {
 @_i1.anonymous
 class SysPermissionDescriptor {
   external factory SysPermissionDescriptor._({
-    _i2.dynamic name,
-    _i2.dynamic kind,
+    _i2.Object? name,
+    _i2.Object? kind,
   });
 
   factory SysPermissionDescriptor({
@@ -5566,8 +5566,8 @@ extension SysPermissionDescriptor$Typings on SysPermissionDescriptor {
 @_i1.anonymous
 class FfiPermissionDescriptor {
   external factory FfiPermissionDescriptor._({
-    _i2.dynamic name,
-    _i2.dynamic path,
+    _i2.Object? name,
+    _i2.Object? path,
   });
 
   factory FfiPermissionDescriptor({
@@ -5616,7 +5616,7 @@ extension FfiPermissionDescriptor$Typings on FfiPermissionDescriptor {
 @_i1.staticInterop
 @_i1.anonymous
 class HrtimePermissionDescriptor {
-  external factory HrtimePermissionDescriptor._({_i2.dynamic name});
+  external factory HrtimePermissionDescriptor._({_i2.Object? name});
 
   factory HrtimePermissionDescriptor({required _i2.String name}) =>
       HrtimePermissionDescriptor._(name: name);
@@ -5638,7 +5638,7 @@ extension HrtimePermissionDescriptor$Typings on HrtimePermissionDescriptor {
 
 /// The interface which defines what event types are supported by
 /// {@linkcode PermissionStatus} instances.
-enum PermissionStatusEventMap<T$> {
+enum PermissionStatusEventMap<T$ extends _i2.Object?> {
   change<_i8.Event>(r'change');
 
   const PermissionStatusEventMap(this.value);
@@ -5653,11 +5653,11 @@ enum PermissionStatusEventMap<T$> {
 class PermissionStatus implements _i8.EventTarget {}
 
 extension PermissionStatus$Typings on PermissionStatus {
-  _i2.dynamic Function(_i8.Event)? get onchange => _i3.getProperty(
+  _i2.Object? Function(_i8.Event)? get onchange => _i3.getProperty(
         this,
         'onchange',
       );
-  set onchange(_i2.dynamic Function(_i8.Event)? value) {
+  set onchange(_i2.Object? Function(_i8.Event)? value) {
     _i3.setProperty(
       this,
       'onchange',
@@ -5696,7 +5696,7 @@ extension PermissionStatus$Typings on PermissionStatus {
   /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K$>(
     _i4.PermissionStatusEventMap<K$> type,
-    _i2.dynamic Function(K$) listener, [
+    _i2.Object? Function(K$) listener, [
     _i2.Object? options,
   ]) {
     _i3.callMethod(
@@ -5776,7 +5776,7 @@ extension PermissionStatus$Typings on PermissionStatus {
     /// appended if it has the same type, callback, and capture.
     void Function<K$>(
       _i4.PermissionStatusEventMap<K$> type,
-      _i2.dynamic Function(K$) listener, [
+      _i2.Object? Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -5817,7 +5817,7 @@ extension PermissionStatus$Typings on PermissionStatus {
   /// type, callback, and options.
   void _removeEventListener$1<K$>(
     _i4.PermissionStatusEventMap<K$> type,
-    _i2.dynamic Function(K$) listener, [
+    _i2.Object? Function(K$) listener, [
     _i2.Object? options,
   ]) {
     _i3.callMethod(
@@ -5855,7 +5855,7 @@ extension PermissionStatus$Typings on PermissionStatus {
     /// type, callback, and options.
     void Function<K$>(
       _i4.PermissionStatusEventMap<K$> type,
-      _i2.dynamic Function(K$) listener, [
+      _i2.Object? Function(K$) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -6135,7 +6135,7 @@ extension IInline13$Typings on IInline13 {
 @_i1.staticInterop
 @_i1.anonymous
 class SymlinkOptions {
-  external factory SymlinkOptions._({_i2.dynamic type});
+  external factory SymlinkOptions._({_i2.Object? type});
 
   factory SymlinkOptions({required _i4.Type type}) =>
       SymlinkOptions._(type: type.name);
@@ -6233,8 +6233,8 @@ extension HttpConn$Typings on HttpConn {
 @_i1.anonymous
 class WebSocketUpgrade {
   external factory WebSocketUpgrade._({
-    _i2.dynamic response,
-    _i2.dynamic socket,
+    _i2.Object? response,
+    _i2.Object? socket,
   });
 
   factory WebSocketUpgrade({
@@ -6285,8 +6285,8 @@ extension WebSocketUpgrade$Typings on WebSocketUpgrade {
 @_i1.anonymous
 class UpgradeWebSocketOptions {
   external factory UpgradeWebSocketOptions._({
-    _i2.dynamic protocol,
-    _i2.dynamic idleTimeout,
+    _i2.Object? protocol,
+    _i2.Object? idleTimeout,
   });
 
   factory UpgradeWebSocketOptions({
@@ -6376,8 +6376,8 @@ extension IInline14$Typings on IInline14 {
 @_i1.anonymous
 class ResolveDnsOptions {
   external factory ResolveDnsOptions._({
-    _i2.dynamic nameServer,
-    _i2.dynamic signal,
+    _i2.Object? nameServer,
+    _i2.Object? signal,
   });
 
   factory ResolveDnsOptions({
@@ -6395,11 +6395,11 @@ extension ResolveDnsOptions$Typings on ResolveDnsOptions {
   ///
   ///  If not specified, defaults to the system configuration. For example
   ///  `/etc/resolv.conf` on Unix-like systems.
-  _i2.dynamic get nameServer => _i3.getProperty(
+  _i2.Object? get nameServer => _i3.getProperty(
         this,
         'nameServer',
       );
-  set nameServer(_i2.dynamic value) {
+  set nameServer(_i2.Object? value) {
     _i3.setProperty(
       this,
       'nameServer',
@@ -6430,9 +6430,9 @@ extension ResolveDnsOptions$Typings on ResolveDnsOptions {
 @_i1.anonymous
 class CAARecord {
   external factory CAARecord._({
-    _i2.dynamic critical,
-    _i2.dynamic tag,
-    _i2.dynamic value,
+    _i2.Object? critical,
+    _i2.Object? tag,
+    _i2.Object? value,
   });
 
   factory CAARecord({
@@ -6502,8 +6502,8 @@ extension CAARecord$Typings on CAARecord {
 @_i1.anonymous
 class MXRecord {
   external factory MXRecord._({
-    _i2.dynamic preference,
-    _i2.dynamic exchange,
+    _i2.Object? preference,
+    _i2.Object? exchange,
   });
 
   factory MXRecord({
@@ -6552,12 +6552,12 @@ extension MXRecord$Typings on MXRecord {
 @_i1.anonymous
 class NAPTRRecord {
   external factory NAPTRRecord._({
-    _i2.dynamic order,
-    _i2.dynamic preference,
-    _i2.dynamic flags,
-    _i2.dynamic services,
-    _i2.dynamic regexp,
-    _i2.dynamic replacement,
+    _i2.Object? order,
+    _i2.Object? preference,
+    _i2.Object? flags,
+    _i2.Object? services,
+    _i2.Object? regexp,
+    _i2.Object? replacement,
   });
 
   factory NAPTRRecord({
@@ -6659,13 +6659,13 @@ extension NAPTRRecord$Typings on NAPTRRecord {
 @_i1.anonymous
 class SOARecord {
   external factory SOARecord._({
-    _i2.dynamic mname,
-    _i2.dynamic rname,
-    _i2.dynamic serial,
-    _i2.dynamic refresh,
-    _i2.dynamic retry,
-    _i2.dynamic expire,
-    _i2.dynamic minimum,
+    _i2.Object? mname,
+    _i2.Object? rname,
+    _i2.Object? serial,
+    _i2.Object? refresh,
+    _i2.Object? retry,
+    _i2.Object? expire,
+    _i2.Object? minimum,
   });
 
   factory SOARecord({
@@ -6781,10 +6781,10 @@ extension SOARecord$Typings on SOARecord {
 @_i1.anonymous
 class SRVRecord {
   external factory SRVRecord._({
-    _i2.dynamic priority,
-    _i2.dynamic weight,
-    _i2.dynamic port,
-    _i2.dynamic target,
+    _i2.Object? priority,
+    _i2.Object? weight,
+    _i2.Object? port,
+    _i2.Object? target,
   });
 
   factory SRVRecord({
@@ -6856,9 +6856,9 @@ extension SRVRecord$Typings on SRVRecord {
 @_i1.anonymous
 class NetAddr {
   external factory NetAddr._({
-    _i2.dynamic transport,
-    _i2.dynamic hostname,
-    _i2.dynamic port,
+    _i2.Object? transport,
+    _i2.Object? hostname,
+    _i2.Object? port,
   });
 
   factory NetAddr({
@@ -6916,8 +6916,8 @@ extension NetAddr$Typings on NetAddr {
 @_i1.anonymous
 class UnixAddr {
   external factory UnixAddr._({
-    _i2.dynamic transport,
-    _i2.dynamic path,
+    _i2.Object? transport,
+    _i2.Object? path,
   });
 
   factory UnixAddr({
@@ -7109,8 +7109,8 @@ extension TlsConn$Typings on TlsConn {
 @_i1.anonymous
 class ListenOptions {
   external factory ListenOptions._({
-    _i2.dynamic port,
-    _i2.dynamic hostname,
+    _i2.Object? port,
+    _i2.Object? hostname,
   });
 
   factory ListenOptions({
@@ -7163,8 +7163,8 @@ extension ListenOptions$Typings on ListenOptions {
 @_i1.anonymous
 class TcpListenOptions implements _i4.ListenOptions {
   external factory TcpListenOptions._({
-    _i2.dynamic port,
-    _i2.dynamic hostname,
+    _i2.Object? port,
+    _i2.Object? hostname,
   });
 
   factory TcpListenOptions({
@@ -7201,11 +7201,11 @@ extension IInline44$Typings on IInline44 {
 @_i1.anonymous
 class ListenTlsOptions implements _i4.TcpListenOptions {
   external factory ListenTlsOptions._({
-    _i2.dynamic key,
-    _i2.dynamic cert,
-    _i2.dynamic certFile,
-    _i2.dynamic keyFile,
-    _i2.dynamic transport,
+    _i2.Object? key,
+    _i2.Object? cert,
+    _i2.Object? certFile,
+    _i2.Object? keyFile,
+    _i2.Object? transport,
   });
 
   factory ListenTlsOptions({
@@ -7302,9 +7302,9 @@ extension ListenTlsOptions$Typings on ListenTlsOptions {
 @_i1.anonymous
 class ConnectOptions {
   external factory ConnectOptions._({
-    _i2.dynamic port,
-    _i2.dynamic hostname,
-    _i2.dynamic transport,
+    _i2.Object? port,
+    _i2.Object? hostname,
+    _i2.Object? transport,
   });
 
   factory ConnectOptions({
@@ -7393,11 +7393,11 @@ extension TcpConn$Typings on TcpConn {
 @_i1.anonymous
 class UnixConn implements _i4.Conn {
   external factory UnixConn._({
-    _i2.dynamic localAddr,
-    _i2.dynamic remoteAddr,
-    _i2.dynamic rid,
-    _i2.dynamic readable,
-    _i2.dynamic writable,
+    _i2.Object? localAddr,
+    _i2.Object? remoteAddr,
+    _i2.Object? rid,
+    _i2.Object? readable,
+    _i2.Object? writable,
   });
 
   factory UnixConn({
@@ -7421,10 +7421,10 @@ class UnixConn implements _i4.Conn {
 @_i1.anonymous
 class ConnectTlsOptions {
   external factory ConnectTlsOptions._({
-    _i2.dynamic port,
-    _i2.dynamic hostname,
-    _i2.dynamic certFile,
-    _i2.dynamic caCerts,
+    _i2.Object? port,
+    _i2.Object? hostname,
+    _i2.Object? certFile,
+    _i2.Object? caCerts,
   });
 
   factory ConnectTlsOptions({
@@ -7509,8 +7509,8 @@ extension ConnectTlsOptions$Typings on ConnectTlsOptions {
 @_i1.anonymous
 class StartTlsOptions {
   external factory StartTlsOptions._({
-    _i2.dynamic hostname,
-    _i2.dynamic caCerts,
+    _i2.Object? hostname,
+    _i2.Object? caCerts,
   });
 
   factory StartTlsOptions({
@@ -14141,7 +14141,7 @@ _i2.Future<void> shutdown(_i2.num rid) => _i3.promiseToFuture(_i3.callMethod(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

@@ -13,8 +13,10 @@ class InteropTypeParam {
   Reference ref() => TypeReference((b) {
         b
           ..symbol = symbol
-          ..bound =
-              switch (constraint) { InteropRef ref => ref.ref(), _ => null };
+          ..bound = switch (constraint) {
+            InteropRef ref => ref.ref(),
+            _ => InteropStaticType.dyn.ref()
+          };
       });
 
   InteropTypeParam copyWith(

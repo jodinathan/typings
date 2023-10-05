@@ -13,7 +13,7 @@ external _i2.Object _self;
 @_i1.staticInterop
 @_i1.anonymous
 class ErrorOptions {
-  external factory ErrorOptions._({_i2.dynamic cause});
+  external factory ErrorOptions._({_i2.Object? cause});
 
   factory ErrorOptions({_i2.Object? cause}) =>
       ErrorOptions._(cause: cause ?? _i3.undefined);
@@ -36,7 +36,7 @@ extension ErrorOptions$Typings on ErrorOptions {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

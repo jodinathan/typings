@@ -51,11 +51,11 @@ extension WaitAsync$Typings on WaitAsync {
     );
   }
 
-  _i2.dynamic get value => _i3.getProperty(
+  _i2.Object? get value => _i3.getProperty(
         this,
         'value',
       );
-  set value(_i2.dynamic value) {
+  set value(_i2.Object? value) {
     _i3.setProperty(
       this,
       'value',
@@ -82,11 +82,11 @@ extension WaitAsyncCommon$Typings on WaitAsyncCommon {
     );
   }
 
-  _i2.dynamic get value => _i3.getProperty(
+  _i2.Object? get value => _i3.getProperty(
         this,
         'value',
       );
-  set value(_i2.dynamic value) {
+  set value(_i2.Object? value) {
     _i3.setProperty(
       this,
       'value',
@@ -902,7 +902,7 @@ extension Atomics$Typings on Atomics {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

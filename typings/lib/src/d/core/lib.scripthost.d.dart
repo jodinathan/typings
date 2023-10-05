@@ -30,7 +30,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
         _i5.target669,
         'StdOut',
       );
-  _i2.dynamic get arguments => _i4.getProperty(
+  _i2.Object? get arguments => _i4.getProperty(
         _i5.target669,
         'Arguments',
       );
@@ -92,7 +92,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
 
   /// Outputs text to either a message box (under WScript.exe) or the command console window followed by
   ///  a newline (under CScript.exe).
-  void echo(_i2.dynamic s) {
+  void echo(_i2.Object? s) {
     _i4.callMethod(
       _i5.target669,
       'Echo',
@@ -109,7 +109,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
 
   /// Connects a COM object's event sources to functions named with a given prefix, in the form prefix_event.
   void connectObject(
-    _i2.dynamic objEventSource,
+    _i2.Object? objEventSource,
     _i2.String strPrefix,
   ) {
     _i4.callMethod(
@@ -125,7 +125,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
   /// Creates a COM object.
   ///  @param strProgiID
   ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
-  _i2.dynamic createObject(
+  _i2.Object? createObject(
     _i2.String strProgID, [
     _i2.String? strPrefix,
   ]) =>
@@ -139,7 +139,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
       );
 
   /// Disconnects a COM object from its event sources.
-  void disconnectObject(_i2.dynamic obj) {
+  void disconnectObject(_i2.Object? obj) {
     _i4.callMethod(
       _i5.target669,
       'DisconnectObject',
@@ -152,7 +152,7 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
   ///                        For objects in memory, pass a zero-length string.
   ///  @param strProgID
   ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
-  _i2.dynamic getObject(
+  _i2.Object? getObject(
     _i2.String strPathname, [
     _i2.String? strProgID,
     _i2.String? strPrefix,
@@ -424,11 +424,11 @@ extension IInline657$Typings on IInline657 {
     );
   }
 
-  _i2.dynamic get arguments => _i4.getProperty(
+  _i2.Object? get arguments => _i4.getProperty(
         _i5.target669,
         'Arguments',
       );
-  set arguments(_i2.dynamic value) {
+  set arguments(_i2.Object? value) {
     _i4.setProperty(
       this,
       'Arguments',
@@ -556,7 +556,7 @@ extension IInline657$Typings on IInline657 {
 
   /// Outputs text to either a message box (under WScript.exe) or the command console window followed by
   ///  a newline (under CScript.exe).
-  void echo(_i2.dynamic s) {
+  void echo(_i2.Object? s) {
     _i4.callMethod(
       this,
       'Echo',
@@ -573,7 +573,7 @@ extension IInline657$Typings on IInline657 {
 
   /// Connects a COM object's event sources to functions named with a given prefix, in the form prefix_event.
   void connectObject(
-    _i2.dynamic objEventSource,
+    _i2.Object? objEventSource,
     _i2.String strPrefix,
   ) {
     _i4.callMethod(
@@ -589,7 +589,7 @@ extension IInline657$Typings on IInline657 {
   /// Creates a COM object.
   ///  @param strProgiID
   ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
-  _i2.dynamic createObject(
+  _i2.Object? createObject(
     _i2.String strProgID, [
     _i2.String? strPrefix,
   ]) =>
@@ -603,7 +603,7 @@ extension IInline657$Typings on IInline657 {
       );
 
   /// Disconnects a COM object from its event sources.
-  void disconnectObject(_i2.dynamic obj) {
+  void disconnectObject(_i2.Object? obj) {
     _i4.callMethod(
       this,
       'DisconnectObject',
@@ -616,7 +616,7 @@ extension IInline657$Typings on IInline657 {
   ///                        For objects in memory, pass a zero-length string.
   ///  @param strProgID
   ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
-  _i2.dynamic getObject(
+  _i2.Object? getObject(
     _i2.String strPathname, [
     _i2.String? strProgID,
     _i2.String? strPrefix,
@@ -645,7 +645,7 @@ extension IInline657$Typings on IInline657 {
 /// Represents an Automation SAFEARRAY
 @_i1.JS()
 @_i1.staticInterop
-class SafeArray<T> {
+class SafeArray<T extends _i2.Object?> {
   factory SafeArray() => _i4.callConstructor(
         _declaredSafeArray,
         [],
@@ -658,7 +658,7 @@ FieldExternal:
 @_i1.JS('SafeArray')
 external _i2.Object _declaredSafeArray;
 
-extension SafeArray$Typings<T> on SafeArray<T> {
+extension SafeArray$Typings<T extends _i2.Object?> on SafeArray<T> {
   _i3.SafeArray<T> get safeArrayTypekey => _i4.getProperty(
         this,
         'SafeArray_typekey',
@@ -675,7 +675,7 @@ extension SafeArray$Typings<T> on SafeArray<T> {
 /// Allows enumerating over a COM collection, which may not have indexed item access.
 @_i1.JS()
 @_i1.staticInterop
-class Enumerator<T> {
+class Enumerator<T extends _i2.Object?> {
   factory Enumerator.$1() => _i4.callConstructor(
         _declaredEnumerator,
         [],
@@ -686,13 +686,13 @@ class Enumerator<T> {
         [safearray],
       );
 
-  factory Enumerator.$3(_i3.IInline659<_i2.dynamic> collection) =>
+  factory Enumerator.$3(_i3.IInline659<_i2.Object?> collection) =>
       _i4.callConstructor(
         _declaredEnumerator,
         [collection],
       );
 
-  factory Enumerator.$4(_i2.dynamic collection) => _i4.callConstructor(
+  factory Enumerator.$4(_i2.Object? collection) => _i4.callConstructor(
         _declaredEnumerator,
         [collection],
       );
@@ -704,7 +704,7 @@ FieldExternal:
 @_i1.JS('Enumerator')
 external _i2.Object _declaredEnumerator;
 
-extension Enumerator$Typings<T> on Enumerator<T> {
+extension Enumerator$Typings<T extends _i2.Object?> on Enumerator<T> {
   /// Returns true if the current item is the last one in the collection, or the collection is empty,
   ///  or the current item is undefined.
   _i2.bool atEnd() => _i4.callMethod(
@@ -743,10 +743,10 @@ extension Enumerator$Typings<T> on Enumerator<T> {
 
 @_i1.JS()
 @_i1.staticInterop
-class IInline659<T> {}
+class IInline659<T extends _i2.Object?> {}
 
-extension IInline659$Typings<T> on IInline659<T> {
-  T item(_i2.dynamic index) => _i4.callMethod(
+extension IInline659$Typings<T extends _i2.Object?> on IInline659<T> {
+  T item(_i2.Object? index) => _i4.callMethod(
         this,
         'Item',
         [index],
@@ -760,7 +760,7 @@ class EnumeratorConstructor {}
 /// Enables reading from a COM safe array, which might have an alternate lower bound, or multiple dimensions.
 @_i1.JS()
 @_i1.staticInterop
-class VBArray<T> {
+class VBArray<T extends _i2.Object?> {
   factory VBArray(_i3.SafeArray<T> safeArray) => _i4.callConstructor(
         _declaredVBArray,
         [safeArray],
@@ -773,7 +773,7 @@ FieldExternal:
 @_i1.JS('VBArray')
 external _i2.Object _declaredVBArray;
 
-extension VBArray$Typings<T> on VBArray<T> {
+extension VBArray$Typings<T extends _i2.Object?> on VBArray<T> {
   /// Returns the number of dimensions (1-based).
   _i2.num dimensions() => _i4.callMethod(
         this,
@@ -784,7 +784,7 @@ extension VBArray$Typings<T> on VBArray<T> {
   /// Takes an index for each dimension in the array, and returns the item at the corresponding location.
   T getItem(
     _i2.num dimension1Index, [
-    _i2.Iterable<_i2.dynamic>? dimensionNIndexes,
+    _i2.Iterable<_i2.Object?>? dimensionNIndexes,
   ]) =>
       _i4.callMethod(
         this,
@@ -859,7 +859,7 @@ extension VarDate$Typings on VarDate {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

@@ -368,7 +368,7 @@ _i9.LanguageStatusItem createLanguageStatusItem(
 _i9.Disposable registerCompletionItemProvider(
   _i9.DocumentSelector selector,
   _i9.CompletionItemProvider<_i9.CompletionItem> provider, [
-  _i2.Iterable<_i2.dynamic>? triggerCharacters,
+  _i2.Iterable<_i2.Object?>? triggerCharacters,
 ]) =>
     _i3.callMethod(
       _self,
@@ -745,7 +745,7 @@ _i9.Disposable registerOnTypeFormattingEditProvider(
   _i9.DocumentSelector selector,
   _i9.OnTypeFormattingEditProvider provider,
   _i2.String firstTriggerCharacter, [
-  _i2.Iterable<_i2.dynamic>? moreTriggerCharacter,
+  _i2.Iterable<_i2.Object?>? moreTriggerCharacter,
 ]) =>
     _i3.callMethod(
       _self,
@@ -766,7 +766,7 @@ _i9.Disposable registerOnTypeFormattingEditProvider(
 _i9.Disposable _registerSignatureHelpProvider$1(
   _i9.DocumentSelector selector,
   _i9.SignatureHelpProvider provider, [
-  _i2.Iterable<_i2.dynamic>? triggerCharacters,
+  _i2.Iterable<_i2.Object?>? triggerCharacters,
 ]) =>
     _i3.callMethod(
       _self,
@@ -808,7 +808,7 @@ _i9.Disposable _registerSignatureHelpProvider$2(
   _i9.Disposable Function(
     _i9.DocumentSelector selector,
     _i9.SignatureHelpProvider provider, [
-    _i2.Iterable<_i2.dynamic>? triggerCharacters,
+    _i2.Iterable<_i2.Object?>? triggerCharacters,
   ]) $1,
 
   /// Register a signature help provider.
@@ -997,7 +997,7 @@ _i9.Disposable setLanguageConfiguration(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

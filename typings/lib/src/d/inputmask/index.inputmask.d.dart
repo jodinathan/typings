@@ -64,7 +64,7 @@ typedef InputMode = _i3.InputModeOptions;
 typedef Casing = _i3.CasingOptions;
 typedef DefinitionValidator = _i2.Object Function(
   _i2.String,
-  _i2.dynamic,
+  _i2.Object?,
   _i2.num,
   _i2.bool,
   _i3.Options,
@@ -199,78 +199,78 @@ extension IInline3$Typings on IInline3 {
 @_i1.anonymous
 class Options {
   external factory Options._({
-    _i2.dynamic placeholder,
-    _i2.dynamic optionalmarker,
-    _i2.dynamic quantifiermarker,
-    _i2.dynamic groupmarker,
-    _i2.dynamic alternatormarker,
-    _i2.dynamic escapeChar,
-    _i2.dynamic mask,
-    _i2.dynamic regex,
-    _i2.dynamic oncomplete,
-    _i2.dynamic onincomplete,
-    _i2.dynamic oncleared,
-    _i2.dynamic repeat,
-    _i2.dynamic greedy,
-    _i2.dynamic autoUnmask,
-    _i2.dynamic removeMaskOnSubmit,
-    _i2.dynamic clearMaskOnLostFocus,
-    _i2.dynamic insertMode,
-    _i2.dynamic insertModeVisual,
-    _i2.dynamic clearIncomplete,
-    _i2.dynamic alias,
-    _i2.dynamic onKeyDown,
-    _i2.dynamic onBeforeMask,
-    _i2.dynamic onBeforePaste,
-    _i2.dynamic onBeforeWrite,
-    _i2.dynamic onUnMask,
-    _i2.dynamic showMaskOnFocus,
-    _i2.dynamic showMaskOnHover,
-    _i2.dynamic onKeyValidation,
-    _i2.dynamic skipOptionalPartCharacter,
-    _i2.dynamic numericInput,
-    _i2.dynamic rightAlign,
-    _i2.dynamic undoOnEscape,
-    _i2.dynamic radixPoint,
-    _i2.dynamic groupSeparator,
-    _i2.dynamic keepStatic,
-    _i2.dynamic positionCaretOnTab,
-    _i2.dynamic tabThrough,
-    _i2.dynamic supportsInputType,
-    _i2.dynamic ignorables,
-    _i2.dynamic isComplete,
-    _i2.dynamic postValidation,
-    _i2.dynamic preValidation,
-    _i2.dynamic staticDefinitionSymbol,
-    _i2.dynamic jitMasking,
-    _i2.dynamic nullable,
-    _i2.dynamic noValuePatching,
-    _i2.dynamic positionCaretOnClick,
-    _i2.dynamic casing,
-    _i2.dynamic inputmode,
-    _i2.dynamic importDataAttributes,
-    _i2.dynamic shiftPositions,
-    _i2.dynamic usePrototypeDefinitions,
-    _i2.dynamic min,
-    _i2.dynamic max,
-    _i2.dynamic digits,
-    _i2.dynamic digitsOptional,
-    _i2.dynamic enforceDigitsOnBlur,
-    _i2.dynamic allowMinus,
-    _i2.dynamic negationSymbol,
-    _i2.dynamic prefix,
-    _i2.dynamic suffix,
-    _i2.dynamic setMaxOnOverflow,
-    _i2.dynamic step,
-    _i2.dynamic unmaskAsNumber,
-    _i2.dynamic inputType,
-    _i2.dynamic roundingFN,
-    _i2.dynamic shortcuts,
-    _i2.dynamic inputFormat,
-    _i2.dynamic outputFormat,
-    _i2.dynamic displayFormat,
-    _i2.dynamic definitions,
-    _i2.dynamic prefillYear,
+    _i2.Object? placeholder,
+    _i2.Object? optionalmarker,
+    _i2.Object? quantifiermarker,
+    _i2.Object? groupmarker,
+    _i2.Object? alternatormarker,
+    _i2.Object? escapeChar,
+    _i2.Object? mask,
+    _i2.Object? regex,
+    _i2.Object? oncomplete,
+    _i2.Object? onincomplete,
+    _i2.Object? oncleared,
+    _i2.Object? repeat,
+    _i2.Object? greedy,
+    _i2.Object? autoUnmask,
+    _i2.Object? removeMaskOnSubmit,
+    _i2.Object? clearMaskOnLostFocus,
+    _i2.Object? insertMode,
+    _i2.Object? insertModeVisual,
+    _i2.Object? clearIncomplete,
+    _i2.Object? alias,
+    _i2.Object? onKeyDown,
+    _i2.Object? onBeforeMask,
+    _i2.Object? onBeforePaste,
+    _i2.Object? onBeforeWrite,
+    _i2.Object? onUnMask,
+    _i2.Object? showMaskOnFocus,
+    _i2.Object? showMaskOnHover,
+    _i2.Object? onKeyValidation,
+    _i2.Object? skipOptionalPartCharacter,
+    _i2.Object? numericInput,
+    _i2.Object? rightAlign,
+    _i2.Object? undoOnEscape,
+    _i2.Object? radixPoint,
+    _i2.Object? groupSeparator,
+    _i2.Object? keepStatic,
+    _i2.Object? positionCaretOnTab,
+    _i2.Object? tabThrough,
+    _i2.Object? supportsInputType,
+    _i2.Object? ignorables,
+    _i2.Object? isComplete,
+    _i2.Object? postValidation,
+    _i2.Object? preValidation,
+    _i2.Object? staticDefinitionSymbol,
+    _i2.Object? jitMasking,
+    _i2.Object? nullable,
+    _i2.Object? noValuePatching,
+    _i2.Object? positionCaretOnClick,
+    _i2.Object? casing,
+    _i2.Object? inputmode,
+    _i2.Object? importDataAttributes,
+    _i2.Object? shiftPositions,
+    _i2.Object? usePrototypeDefinitions,
+    _i2.Object? min,
+    _i2.Object? max,
+    _i2.Object? digits,
+    _i2.Object? digitsOptional,
+    _i2.Object? enforceDigitsOnBlur,
+    _i2.Object? allowMinus,
+    _i2.Object? negationSymbol,
+    _i2.Object? prefix,
+    _i2.Object? suffix,
+    _i2.Object? setMaxOnOverflow,
+    _i2.Object? step,
+    _i2.Object? unmaskAsNumber,
+    _i2.Object? inputType,
+    _i2.Object? roundingFN,
+    _i2.Object? shortcuts,
+    _i2.Object? inputFormat,
+    _i2.Object? outputFormat,
+    _i2.Object? displayFormat,
+    _i2.Object? definitions,
+    _i2.Object? prefillYear,
   });
 
   factory Options({
@@ -280,12 +280,12 @@ class Options {
     _i3.Range? groupmarker,
     _i2.String? alternatormarker,
     _i2.String? escapeChar,
-    _i2.dynamic mask,
+    _i2.Object? mask,
     _i2.String? regex,
     void Function()? oncomplete,
     void Function()? onincomplete,
     void Function()? oncleared,
-    _i2.dynamic repeat,
+    _i2.Object? repeat,
     _i2.bool? greedy,
     _i2.bool? autoUnmask,
     _i2.bool? removeMaskOnSubmit,
@@ -297,7 +297,7 @@ class Options {
     void Function(
       _i5.KeyboardEvent,
       _i2.List<_i2.String>,
-      _i2.dynamic,
+      _i2.Object?,
       _i3.Options,
     )? onKeyDown,
     _i2.String Function(
@@ -345,7 +345,7 @@ class Options {
       _i2.String,
       _i2.bool,
       _i3.Options,
-      _i2.dynamic,
+      _i2.Object?,
       _i2.bool,
       _i2.bool,
     )? postValidation,
@@ -355,8 +355,8 @@ class Options {
       _i2.String,
       _i2.bool,
       _i3.Options,
-      _i2.dynamic,
-      _i2.dynamic,
+      _i2.Object?,
+      _i2.Object?,
       _i2.bool,
     )? preValidation,
     _i2.String? staticDefinitionSymbol,
@@ -369,9 +369,9 @@ class Options {
     _i2.bool? importDataAttributes,
     _i2.bool? shiftPositions,
     _i2.bool? usePrototypeDefinitions,
-    _i2.dynamic min,
-    _i2.dynamic max,
-    _i2.dynamic digits,
+    _i2.Object? min,
+    _i2.Object? max,
+    _i2.Object? digits,
     _i2.bool? digitsOptional,
     _i2.bool? enforceDigitsOnBlur,
     _i2.bool? allowMinus,
@@ -580,11 +580,11 @@ extension Options$Typings on Options {
   }
 
   /// The mask to use.
-  _i2.dynamic get mask => _i4.getProperty(
+  _i2.Object? get mask => _i4.getProperty(
         this,
         'mask',
       );
-  set mask(_i2.dynamic value) {
+  set mask(_i2.Object? value) {
     _i4.setProperty(
       this,
       'mask',
@@ -649,11 +649,11 @@ extension Options$Typings on Options {
   ///  `*` ~ forever, otherwise specify an integer
   ///
   ///  @default 0
-  _i2.dynamic get repeat => _i4.getProperty(
+  _i2.Object? get repeat => _i4.getProperty(
         this,
         'repeat',
       );
-  set repeat(_i2.dynamic value) {
+  set repeat(_i2.Object? value) {
     _i4.setProperty(
       this,
       'repeat',
@@ -788,7 +788,7 @@ extension Options$Typings on Options {
   void Function(
     _i5.KeyboardEvent,
     _i2.List<_i2.String>,
-    _i2.dynamic,
+    _i2.Object?,
     _i3.Options,
   )? get onKeyDown => _i4.getProperty(
         this,
@@ -798,7 +798,7 @@ extension Options$Typings on Options {
       void Function(
         _i5.KeyboardEvent,
         _i2.List<_i2.String>,
-        _i2.dynamic,
+        _i2.Object?,
         _i3.Options,
       )? value) {
     _i4.setProperty(
@@ -1148,7 +1148,7 @@ extension Options$Typings on Options {
     _i2.String,
     _i2.bool,
     _i3.Options,
-    _i2.dynamic,
+    _i2.Object?,
     _i2.bool,
     _i2.bool,
   )? get postValidation => _i4.getProperty(
@@ -1162,7 +1162,7 @@ extension Options$Typings on Options {
         _i2.String,
         _i2.bool,
         _i3.Options,
-        _i2.dynamic,
+        _i2.Object?,
         _i2.bool,
         _i2.bool,
       )? value) {
@@ -1185,8 +1185,8 @@ extension Options$Typings on Options {
     _i2.String,
     _i2.bool,
     _i3.Options,
-    _i2.dynamic,
-    _i2.dynamic,
+    _i2.Object?,
+    _i2.Object?,
     _i2.bool,
   )? get preValidation => _i4.getProperty(
         this,
@@ -1199,8 +1199,8 @@ extension Options$Typings on Options {
         _i2.String,
         _i2.bool,
         _i3.Options,
-        _i2.dynamic,
-        _i2.dynamic,
+        _i2.Object?,
+        _i2.Object?,
         _i2.bool,
       )? value) {
     _i4.setProperty(
@@ -1389,11 +1389,11 @@ extension Options$Typings on Options {
   }
 
   /// Minimum value. This needs to be in the same format as the `inputFormat` when used with the datetime alias.
-  _i2.dynamic get min => _i4.getProperty(
+  _i2.Object? get min => _i4.getProperty(
         this,
         'min',
       );
-  set min(_i2.dynamic value) {
+  set min(_i2.Object? value) {
     _i4.setProperty(
       this,
       'min',
@@ -1402,11 +1402,11 @@ extension Options$Typings on Options {
   }
 
   /// Maximum value. This needs to be in the same format as the `inputFormat` when used with the datetime alias.
-  _i2.dynamic get max => _i4.getProperty(
+  _i2.Object? get max => _i4.getProperty(
         this,
         'max',
       );
-  set max(_i2.dynamic value) {
+  set max(_i2.Object? value) {
     _i4.setProperty(
       this,
       'max',
@@ -1423,11 +1423,11 @@ extension Options$Typings on Options {
   ///  * Quantifier syntax like `2,4`. When the quantifier syntax is used, the `digitsOptional` option is ignored
   ///
   ///  @default "*"
-  _i2.dynamic get digits => _i4.getProperty(
+  _i2.Object? get digits => _i4.getProperty(
         this,
         'digits',
       );
-  set digits(_i2.dynamic value) {
+  set digits(_i2.Object? value) {
     _i4.setProperty(
       this,
       'digits',
@@ -1483,11 +1483,11 @@ extension Options$Typings on Options {
   /// Define your negationSymbol.
   ///
   ///  @default { front: "-", back: "" }
-  _i2.dynamic get negationSymbol => _i4.getProperty(
+  _i2.Object? get negationSymbol => _i4.getProperty(
         this,
         'negationSymbol',
       );
-  set negationSymbol(_i2.dynamic value) {
+  set negationSymbol(_i2.Object? value) {
     _i4.setProperty(
       this,
       'negationSymbol',
@@ -1750,7 +1750,7 @@ extension Instance$Typings on Instance {
 
   /// The metadata of the actual mask provided in the mask definitions can be obtained by calling getmetadata. If
   ///  only a mask is provided the mask definition will be returned by the getmetadata.
-  _i2.dynamic getmetadata() => _i4.callMethod(
+  _i2.Object? getmetadata() => _i4.callMethod(
         this,
         'getmetadata',
         [],
@@ -1790,7 +1790,7 @@ extension Instance$Typings on Instance {
   /// Get an option on an existing inputmask.
   ///
   ///  @param key Name of option to retrieve.
-  _i2.dynamic _option$1(_i2.String key) => _i4.callMethod(
+  _i2.Object? _option$1(_i2.String key) => _i4.callMethod(
         this,
         'option',
         [key],
@@ -1819,7 +1819,7 @@ extension Instance$Typings on Instance {
     /// Get an option on an existing inputmask.
     ///
     ///  @param key Name of option to retrieve.
-    _i2.dynamic Function(_i2.String key) $1,
+    _i2.Object? Function(_i2.String key) $1,
 
     /// Set an option on an existing inputmask. The option method is intented for adding extra options like
     ///  callbacks, etc at a later time to the mask.
@@ -1871,11 +1871,11 @@ extension Instance$Typings on Instance {
 @_i1.anonymous
 class Definition {
   external factory Definition._({
-    _i2.dynamic validator,
-    _i2.dynamic casing,
-    _i2.dynamic cardinality,
-    _i2.dynamic placeholder,
-    _i2.dynamic definitionSymbol,
+    _i2.Object? validator,
+    _i2.Object? casing,
+    _i2.Object? cardinality,
+    _i2.Object? placeholder,
+    _i2.Object? definitionSymbol,
   });
 
   factory Definition({
@@ -1964,10 +1964,10 @@ extension Definition$Typings on Definition {
 @_i1.anonymous
 class InsertPosition {
   external factory InsertPosition._({
-    _i2.dynamic pos,
-    _i2.dynamic c,
-    _i2.dynamic fromIsValid,
-    _i2.dynamic strict,
+    _i2.Object? pos,
+    _i2.Object? c,
+    _i2.Object? fromIsValid,
+    _i2.Object? strict,
   });
 
   factory InsertPosition({
@@ -2074,22 +2074,22 @@ extension IInline6$Typings on IInline6 {
 @_i1.anonymous
 class CommandObject {
   external factory CommandObject._({
-    _i2.dynamic pos,
-    _i2.dynamic c,
-    _i2.dynamic caret,
-    _i2.dynamic remove,
-    _i2.dynamic insert,
-    _i2.dynamic refreshFromBuffer,
-    _i2.dynamic rewritePosition,
+    _i2.Object? pos,
+    _i2.Object? c,
+    _i2.Object? caret,
+    _i2.Object? remove,
+    _i2.Object? insert,
+    _i2.Object? refreshFromBuffer,
+    _i2.Object? rewritePosition,
   });
 
   factory CommandObject({
     _i2.num? pos,
     _i2.String? c,
     _i2.num? caret,
-    _i2.dynamic remove,
-    _i2.dynamic insert,
-    _i2.dynamic refreshFromBuffer,
+    _i2.Object? remove,
+    _i2.Object? insert,
+    _i2.Object? refreshFromBuffer,
     _i2.num? rewritePosition,
   }) =>
       CommandObject._(
@@ -2144,11 +2144,11 @@ extension CommandObject$Typings on CommandObject {
   }
 
   /// Position(s) to remove.
-  _i2.dynamic get remove => _i4.getProperty(
+  _i2.Object? get remove => _i4.getProperty(
         this,
         'remove',
       );
-  set remove(_i2.dynamic value) {
+  set remove(_i2.Object? value) {
     _i4.setProperty(
       this,
       'remove',
@@ -2157,11 +2157,11 @@ extension CommandObject$Typings on CommandObject {
   }
 
   /// Position(s) to add.
-  _i2.dynamic get insert => _i4.getProperty(
+  _i2.Object? get insert => _i4.getProperty(
         this,
         'insert',
       );
-  set insert(_i2.dynamic value) {
+  set insert(_i2.Object? value) {
     _i4.setProperty(
       this,
       'insert',
@@ -2171,11 +2171,11 @@ extension CommandObject$Typings on CommandObject {
 
   /// * `true` => refresh validPositions from the complete buffer .
   ///  * `{ start: , end: }` => refresh from start to end.
-  _i2.dynamic get refreshFromBuffer => _i4.getProperty(
+  _i2.Object? get refreshFromBuffer => _i4.getProperty(
         this,
         'refreshFromBuffer',
       );
-  set refreshFromBuffer(_i2.dynamic value) {
+  set refreshFromBuffer(_i2.Object? value) {
     _i4.setProperty(
       this,
       'refreshFromBuffer',
@@ -2343,7 +2343,7 @@ extension Static$Typings on Static {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

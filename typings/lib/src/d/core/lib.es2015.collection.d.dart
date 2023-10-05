@@ -13,7 +13,7 @@ external _i2.Object _self;
 
 @_i1.JS()
 @_i1.staticInterop
-class Map<K, V>
+class Map<K extends _i2.Object?, V extends _i2.Object?>
     implements
         _IterableLike$<
             _i3.IterableIterator<
@@ -70,7 +70,8 @@ FieldExternal:
 @_i1.JS('Map')
 external _i2.Object _declaredMap;
 
-extension Map$Typings<K, V> on Map<K, V> {
+extension Map$Typings<K extends _i2.Object?, V extends _i2.Object?>
+    on Map<K, V> {
   _i2.num get size => _i4.getProperty(
         this,
         'size',
@@ -97,7 +98,7 @@ extension Map$Typings<K, V> on Map<K, V> {
       K,
       _i6.Map<K, V>,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i4.callMethod(
       this,
@@ -125,7 +126,7 @@ extension Map$Typings<K, V> on Map<K, V> {
       );
 
   /// Adds a new element with a specified key and value to the Map. If an element with the same key already exists, the element will be updated.
-  _i6.Map<_i2.dynamic, _i2.dynamic> set(
+  _i6.Map<_i2.Object?, _i2.Object?> set(
     K key,
     V value,
   ) =>
@@ -170,7 +171,7 @@ class MapConstructor {}
 
 @_i1.JS()
 @_i1.staticInterop
-class ReadonlyMap<K, V>
+class ReadonlyMap<K extends _i2.Object?, V extends _i2.Object?>
     implements
         _IterableLike$<
             _i3.IterableIterator<
@@ -179,7 +180,8 @@ class ReadonlyMap<K, V>
                   V,
                 )>> {}
 
-extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
+extension ReadonlyMap$Typings<K extends _i2.Object?, V extends _i2.Object?>
+    on ReadonlyMap<K, V> {
   _i2.num get size => _i4.getProperty(
         this,
         'size',
@@ -190,7 +192,7 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
       K,
       _i6.ReadonlyMap<K, V>,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i4.callMethod(
       this,
@@ -241,7 +243,7 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
 
 @_i1.JS()
 @_i1.staticInterop
-class WeakMap<K extends _i2.Object, V> {
+class WeakMap<K extends _i2.Object, V extends _i2.Object?> {
   factory WeakMap.$1() => _i4.callConstructor(
         _declaredWeakMap,
         [],
@@ -286,7 +288,8 @@ FieldExternal:
 @_i1.JS('WeakMap')
 external _i2.Object _declaredWeakMap;
 
-extension WeakMap$Typings<K extends _i2.Object, V> on WeakMap<K, V> {
+extension WeakMap$Typings<K extends _i2.Object, V extends _i2.Object?>
+    on WeakMap<K, V> {
   /// Removes the specified element from the WeakMap.
   ///  @returns true if the element was successfully removed, or false if it was not present.
   _i2.bool delete(K key) => _i4.callMethod(
@@ -311,7 +314,7 @@ extension WeakMap$Typings<K extends _i2.Object, V> on WeakMap<K, V> {
 
   /// Adds a new element with a specified key and value.
   ///  @param key Must be an object.
-  _i6.WeakMap<_i2.Object, _i2.dynamic> set(
+  _i6.WeakMap<_i2.Object, _i2.Object?> set(
     K key,
     V value,
   ) =>
@@ -331,7 +334,8 @@ class WeakMapConstructor {}
 
 @_i1.JS()
 @_i1.staticInterop
-class Set<T> implements _IterableLike$<_i3.IterableIterator<T>> {
+class Set<T extends _i2.Object?>
+    implements _IterableLike$<_i3.IterableIterator<T>> {
   factory Set.$1() => _i4.callConstructor(
         _declaredSet,
         [],
@@ -354,14 +358,14 @@ FieldExternal:
 @_i1.JS('Set')
 external _i2.Object _declaredSet;
 
-extension Set$Typings<T> on Set<T> {
+extension Set$Typings<T extends _i2.Object?> on Set<T> {
   _i2.num get size => _i4.getProperty(
         this,
         'size',
       );
 
   /// Appends a new element with a specified value to the end of the Set.
-  _i6.Set<_i2.dynamic> add(T value) => _i4.callMethod(
+  _i6.Set<_i2.Object?> add(T value) => _i4.callMethod(
         this,
         'add',
         [value],
@@ -389,7 +393,7 @@ extension Set$Typings<T> on Set<T> {
       T,
       _i6.Set<T>,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i4.callMethod(
       this,
@@ -440,9 +444,10 @@ class SetConstructor {}
 
 @_i1.JS()
 @_i1.staticInterop
-class ReadonlySet<T> implements _IterableLike$<_i3.IterableIterator<T>> {}
+class ReadonlySet<T extends _i2.Object?>
+    implements _IterableLike$<_i3.IterableIterator<T>> {}
 
-extension ReadonlySet$Typings<T> on ReadonlySet<T> {
+extension ReadonlySet$Typings<T extends _i2.Object?> on ReadonlySet<T> {
   _i2.num get size => _i4.getProperty(
         this,
         'size',
@@ -453,7 +458,7 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
       T,
       _i6.ReadonlySet<T>,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i4.callMethod(
       this,
@@ -553,7 +558,7 @@ class WeakSetConstructor {}
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

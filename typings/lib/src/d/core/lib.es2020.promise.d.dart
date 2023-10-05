@@ -7,15 +7,15 @@ import 'dart:js_util' as _i3;
 
 @_i1.JS('self')
 external _i2.Object _self;
-typedef PromiseSettledResult<T> = _i2.Object;
+typedef PromiseSettledResult<T extends _i2.Object?> = _i2.Object;
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class PromiseFulfilledResult<T> {
+class PromiseFulfilledResult<T extends _i2.Object?> {
   external factory PromiseFulfilledResult._({
-    _i2.dynamic status,
-    _i2.dynamic value,
+    _i2.Object? status,
+    _i2.Object? value,
   });
 
   factory PromiseFulfilledResult({
@@ -28,7 +28,8 @@ class PromiseFulfilledResult<T> {
       );
 }
 
-extension PromiseFulfilledResult$Typings<T> on PromiseFulfilledResult<T> {
+extension PromiseFulfilledResult$Typings<T extends _i2.Object?>
+    on PromiseFulfilledResult<T> {
   _i2.String get status => _i3.getProperty(
         this,
         'status',
@@ -59,13 +60,13 @@ extension PromiseFulfilledResult$Typings<T> on PromiseFulfilledResult<T> {
 @_i1.anonymous
 class PromiseRejectedResult {
   external factory PromiseRejectedResult._({
-    _i2.dynamic status,
-    _i2.dynamic reason,
+    _i2.Object? status,
+    _i2.Object? reason,
   });
 
   factory PromiseRejectedResult({
     required _i2.String status,
-    required _i2.dynamic reason,
+    required _i2.Object? reason,
   }) =>
       PromiseRejectedResult._(
         status: status,
@@ -86,11 +87,11 @@ extension PromiseRejectedResult$Typings on PromiseRejectedResult {
     );
   }
 
-  _i2.dynamic get reason => _i3.getProperty(
+  _i2.Object? get reason => _i3.getProperty(
         this,
         'reason',
       );
-  set reason(_i2.dynamic value) {
+  set reason(_i2.Object? value) {
     _i3.setProperty(
       this,
       'reason',
@@ -102,7 +103,7 @@ extension PromiseRejectedResult$Typings on PromiseRejectedResult {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

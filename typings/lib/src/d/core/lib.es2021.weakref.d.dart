@@ -40,7 +40,7 @@ class WeakRefConstructor {}
 
 @_i1.JS()
 @_i1.staticInterop
-class FinalizationRegistry<T> {
+class FinalizationRegistry<T extends _i2.Object?> {
   factory FinalizationRegistry(void Function(T) cleanupCallback) =>
       _i3.callConstructor(
         _declaredFinalizationRegistry,
@@ -54,7 +54,8 @@ FieldExternal:
 @_i1.JS('FinalizationRegistry')
 external _i2.Object _declaredFinalizationRegistry;
 
-extension FinalizationRegistry$Typings<T> on FinalizationRegistry<T> {
+extension FinalizationRegistry$Typings<T extends _i2.Object?>
+    on FinalizationRegistry<T> {
   /// Registers an object with the registry.
   ///  @param target The target object to register.
   ///  @param heldValue The value to pass to the finalizer for this object. This cannot be the
@@ -97,7 +98,7 @@ class FinalizationRegistryConstructor {}
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

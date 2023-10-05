@@ -158,21 +158,21 @@ enum MaximumSignificantDigits {
 @_i1.anonymous
 class BigIntToLocaleStringOptions {
   external factory BigIntToLocaleStringOptions._({
-    _i2.dynamic localeMatcher,
-    _i2.dynamic style,
-    _i2.dynamic numberingSystem,
-    _i2.dynamic unit,
-    _i2.dynamic unitDisplay,
-    _i2.dynamic currency,
-    _i2.dynamic currencyDisplay,
-    _i2.dynamic useGrouping,
-    _i2.dynamic minimumIntegerDigits,
-    _i2.dynamic minimumFractionDigits,
-    _i2.dynamic maximumFractionDigits,
-    _i2.dynamic minimumSignificantDigits,
-    _i2.dynamic maximumSignificantDigits,
-    _i2.dynamic notation,
-    _i2.dynamic compactDisplay,
+    _i2.Object? localeMatcher,
+    _i2.Object? style,
+    _i2.Object? numberingSystem,
+    _i2.Object? unit,
+    _i2.Object? unitDisplay,
+    _i2.Object? currency,
+    _i2.Object? currencyDisplay,
+    _i2.Object? useGrouping,
+    _i2.Object? minimumIntegerDigits,
+    _i2.Object? minimumFractionDigits,
+    _i2.Object? maximumFractionDigits,
+    _i2.Object? minimumSignificantDigits,
+    _i2.Object? maximumSignificantDigits,
+    _i2.Object? notation,
+    _i2.Object? compactDisplay,
   });
 
   factory BigIntToLocaleStringOptions({
@@ -491,7 +491,7 @@ extension BigInt$Typings on BigInt {
 
   /// Returns a string representation appropriate to the host environment's current locale.
   _i2.String toLocaleString([
-    _i2.dynamic locales,
+    _i2.Object? locales,
     _i3.BigIntToLocaleStringOptions? options,
   ]) =>
       _i5.callMethod(
@@ -598,7 +598,7 @@ class BigInt64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  static _i3.BigInt64Array of([_i2.Iterable<_i2.dynamic>? items]) =>
+  static _i3.BigInt64Array of([_i2.Iterable<_i2.Object?>? items]) =>
       _i5.callMethod(
         _i6.target30,
         'of',
@@ -606,13 +606,13 @@ class BigInt64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
       );
 
   /// Creates an array from an array-like or iterable object.
-  static _i3.BigInt64Array from<U>(
+  static _i3.BigInt64Array from<U extends _i2.Object?>(
     _i2.List<U> arrayLike,
     _i2.int Function(
       U,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         _i6.target30,
@@ -707,7 +707,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i2.num,
       _i3.BigInt64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -745,12 +745,12 @@ extension BigInt64Array$Typings on BigInt64Array {
   ///  @param thisArg An object to which the this keyword can refer in the predicate function.
   ///  If thisArg is omitted, undefined is used as the this value.
   _i3.BigInt64Array filter(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i2.int,
       _i2.num,
       _i3.BigInt64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -774,7 +774,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i2.num,
       _i3.BigInt64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -798,7 +798,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i2.num,
       _i3.BigInt64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -820,7 +820,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i2.num,
       _i3.BigInt64Array,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i5.callMethod(
       this,
@@ -910,7 +910,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i2.num,
       _i3.BigInt64Array,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -950,7 +950,7 @@ extension BigInt64Array$Typings on BigInt64Array {
   ///  @param initialValue If initialValue is specified, it is used as the initial value to start
   ///  the accumulation. The first call to the callbackfn function provides this value as an argument
   ///  instead of an array value.
-  U _reduce$2<U>(
+  U _reduce$2<U extends _i2.Object?>(
     U Function(
       U,
       _i2.int,
@@ -994,7 +994,7 @@ extension BigInt64Array$Typings on BigInt64Array {
     ///  @param initialValue If initialValue is specified, it is used as the initial value to start
     ///  the accumulation. The first call to the callbackfn function provides this value as an argument
     ///  instead of an array value.
-    U Function<U>(
+    U Function<U extends _i2.Object?>(
       U Function(
         U,
         _i2.int,
@@ -1037,7 +1037,7 @@ extension BigInt64Array$Typings on BigInt64Array {
   ///  @param initialValue If initialValue is specified, it is used as the initial value to start
   ///  the accumulation. The first call to the callbackfn function provides this value as an argument
   ///  instead of an array value.
-  U _reduceRight$2<U>(
+  U _reduceRight$2<U extends _i2.Object?>(
     U Function(
       U,
       _i2.int,
@@ -1081,7 +1081,7 @@ extension BigInt64Array$Typings on BigInt64Array {
     ///  @param initialValue If initialValue is specified, it is used as the initial value to start
     ///  the accumulation. The first call to the callbackfn function provides this value as an argument
     ///  instead of an array value.
-    U Function<U>(
+    U Function<U extends _i2.Object?>(
       U Function(
         U,
         _i2.int,
@@ -1147,7 +1147,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i2.num,
       _i3.BigInt64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -1232,12 +1232,12 @@ extension BigInt64Array$Typings on BigInt64Array {
   ///  @param thisArg If provided, it will be used as the this value for each invocation of
   ///  predicate. If it is not provided, undefined is used instead.
   S? _findLast$1<S extends _i2.int>(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i2.int,
       _i2.num,
       _i3.BigInt64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -1256,7 +1256,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i2.num,
       _i3.BigInt64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -1277,12 +1277,12 @@ extension BigInt64Array$Typings on BigInt64Array {
     ///  @param thisArg If provided, it will be used as the this value for each invocation of
     ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends _i2.int>(
-      _i2.dynamic Function(
+      _i2.Object? Function(
         _i2.int,
         _i2.num,
         _i3.BigInt64Array,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Returns the value of the last element in the array where predicate is true, and undefined
@@ -1293,7 +1293,7 @@ extension BigInt64Array$Typings on BigInt64Array {
         _i2.num,
         _i3.BigInt64Array,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get findLast => (
         $1: _findLast$1,
@@ -1313,7 +1313,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i2.num,
       _i3.BigInt64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -1352,20 +1352,20 @@ class BigInt64ArrayConstructor {
 extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i3.BigInt64Array of([_i2.Iterable<_i2.dynamic>? items]) => _i5.callMethod(
+  _i3.BigInt64Array of([_i2.Iterable<_i2.Object?>? items]) => _i5.callMethod(
         this,
         'of',
         [...?items],
       );
 
   /// Creates an array from an array-like or iterable object.
-  _i3.BigInt64Array from<U>(
+  _i3.BigInt64Array from<U extends _i2.Object?>(
     _i2.List<U> arrayLike,
     _i2.int Function(
       U,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -1420,7 +1420,7 @@ class BigUint64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
 
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  static _i3.BigUint64Array of([_i2.Iterable<_i2.dynamic>? items]) =>
+  static _i3.BigUint64Array of([_i2.Iterable<_i2.Object?>? items]) =>
       _i5.callMethod(
         _i6.target31,
         'of',
@@ -1428,13 +1428,13 @@ class BigUint64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
       );
 
   /// Creates an array from an array-like or iterable object.
-  static _i3.BigUint64Array from<U>(
+  static _i3.BigUint64Array from<U extends _i2.Object?>(
     _i2.List<U> arrayLike,
     _i2.int Function(
       U,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         _i6.target31,
@@ -1529,7 +1529,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i2.num,
       _i3.BigUint64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -1567,12 +1567,12 @@ extension BigUint64Array$Typings on BigUint64Array {
   ///  @param thisArg An object to which the this keyword can refer in the predicate function.
   ///  If thisArg is omitted, undefined is used as the this value.
   _i3.BigUint64Array filter(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i2.int,
       _i2.num,
       _i3.BigUint64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -1596,7 +1596,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i2.num,
       _i3.BigUint64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -1620,7 +1620,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i2.num,
       _i3.BigUint64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -1642,7 +1642,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i2.num,
       _i3.BigUint64Array,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) {
     _i5.callMethod(
       this,
@@ -1732,7 +1732,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i2.num,
       _i3.BigUint64Array,
     ) callbackfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -1772,7 +1772,7 @@ extension BigUint64Array$Typings on BigUint64Array {
   ///  @param initialValue If initialValue is specified, it is used as the initial value to start
   ///  the accumulation. The first call to the callbackfn function provides this value as an argument
   ///  instead of an array value.
-  U _reduce$2<U>(
+  U _reduce$2<U extends _i2.Object?>(
     U Function(
       U,
       _i2.int,
@@ -1816,7 +1816,7 @@ extension BigUint64Array$Typings on BigUint64Array {
     ///  @param initialValue If initialValue is specified, it is used as the initial value to start
     ///  the accumulation. The first call to the callbackfn function provides this value as an argument
     ///  instead of an array value.
-    U Function<U>(
+    U Function<U extends _i2.Object?>(
       U Function(
         U,
         _i2.int,
@@ -1859,7 +1859,7 @@ extension BigUint64Array$Typings on BigUint64Array {
   ///  @param initialValue If initialValue is specified, it is used as the initial value to start
   ///  the accumulation. The first call to the callbackfn function provides this value as an argument
   ///  instead of an array value.
-  U _reduceRight$2<U>(
+  U _reduceRight$2<U extends _i2.Object?>(
     U Function(
       U,
       _i2.int,
@@ -1903,7 +1903,7 @@ extension BigUint64Array$Typings on BigUint64Array {
     ///  @param initialValue If initialValue is specified, it is used as the initial value to start
     ///  the accumulation. The first call to the callbackfn function provides this value as an argument
     ///  instead of an array value.
-    U Function<U>(
+    U Function<U extends _i2.Object?>(
       U Function(
         U,
         _i2.int,
@@ -1969,7 +1969,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i2.num,
       _i3.BigUint64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -2054,12 +2054,12 @@ extension BigUint64Array$Typings on BigUint64Array {
   ///  @param thisArg If provided, it will be used as the this value for each invocation of
   ///  predicate. If it is not provided, undefined is used instead.
   S? _findLast$1<S extends _i2.int>(
-    _i2.dynamic Function(
+    _i2.Object? Function(
       _i2.int,
       _i2.num,
       _i3.BigUint64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -2078,7 +2078,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i2.num,
       _i3.BigUint64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -2099,12 +2099,12 @@ extension BigUint64Array$Typings on BigUint64Array {
     ///  @param thisArg If provided, it will be used as the this value for each invocation of
     ///  predicate. If it is not provided, undefined is used instead.
     S? Function<S extends _i2.int>(
-      _i2.dynamic Function(
+      _i2.Object? Function(
         _i2.int,
         _i2.num,
         _i3.BigUint64Array,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $1,
 
     /// Returns the value of the last element in the array where predicate is true, and undefined
@@ -2115,7 +2115,7 @@ extension BigUint64Array$Typings on BigUint64Array {
         _i2.num,
         _i3.BigUint64Array,
       ) predicate, [
-      _i2.dynamic thisArg,
+      _i2.Object? thisArg,
     ]) $2,
   }) get findLast => (
         $1: _findLast$1,
@@ -2135,7 +2135,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i2.num,
       _i3.BigUint64Array,
     ) predicate, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -2174,20 +2174,20 @@ class BigUint64ArrayConstructor {
 extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
   /// Returns a new array from a set of elements.
   ///  @param items A set of elements to include in the new array object.
-  _i3.BigUint64Array of([_i2.Iterable<_i2.dynamic>? items]) => _i5.callMethod(
+  _i3.BigUint64Array of([_i2.Iterable<_i2.Object?>? items]) => _i5.callMethod(
         this,
         'of',
         [...?items],
       );
 
   /// Creates an array from an array-like or iterable object.
-  _i3.BigUint64Array from<U>(
+  _i3.BigUint64Array from<U extends _i2.Object?>(
     _i2.List<U> arrayLike,
     _i2.int Function(
       U,
       _i2.num,
     ) mapfn, [
-    _i2.dynamic thisArg,
+    _i2.Object? thisArg,
   ]) =>
       _i5.callMethod(
         this,
@@ -2203,7 +2203,7 @@ extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

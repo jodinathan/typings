@@ -31,11 +31,11 @@ extension IteratorResultCommon$Typings on IteratorResultCommon {
     );
   }
 
-  _i2.dynamic get value => _i3.getProperty(
+  _i2.Object? get value => _i3.getProperty(
         this,
         'value',
       );
-  set value(_i2.dynamic value) {
+  set value(_i2.Object? value) {
     _i3.setProperty(
       this,
       'value',
@@ -44,7 +44,8 @@ extension IteratorResultCommon$Typings on IteratorResultCommon {
   }
 }
 
-typedef IteratorResult<T, TReturn> = _i5.IteratorResultCommon;
+typedef IteratorResult<T extends _i2.Object?, TReturn extends _i2.Object?>
+    = _i5.IteratorResultCommon;
 
 @_i1.JS()
 @_i1.staticInterop
@@ -193,10 +194,10 @@ extension SymbolConstructor$Typings on SymbolConstructor {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IteratorYieldResult<TYield> {
+class IteratorYieldResult<TYield extends _i2.Object?> {
   external factory IteratorYieldResult._({
-    _i2.dynamic done,
-    _i2.dynamic value,
+    _i2.Object? done,
+    _i2.Object? value,
   });
 
   factory IteratorYieldResult({
@@ -209,7 +210,8 @@ class IteratorYieldResult<TYield> {
       );
 }
 
-extension IteratorYieldResult$Typings<TYield> on IteratorYieldResult<TYield> {
+extension IteratorYieldResult$Typings<TYield extends _i2.Object?>
+    on IteratorYieldResult<TYield> {
   _i2.bool? get done => _i3.getProperty(
         this,
         'done',
@@ -238,10 +240,10 @@ extension IteratorYieldResult$Typings<TYield> on IteratorYieldResult<TYield> {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IteratorReturnResult<TReturn> {
+class IteratorReturnResult<TReturn extends _i2.Object?> {
   external factory IteratorReturnResult._({
-    _i2.dynamic done,
-    _i2.dynamic value,
+    _i2.Object? done,
+    _i2.Object? value,
   });
 
   factory IteratorReturnResult({
@@ -254,7 +256,7 @@ class IteratorReturnResult<TReturn> {
       );
 }
 
-extension IteratorReturnResult$Typings<TReturn>
+extension IteratorReturnResult$Typings<TReturn extends _i2.Object?>
     on IteratorReturnResult<TReturn> {
   _i2.bool get done => _i3.getProperty(
         this,
@@ -283,10 +285,12 @@ extension IteratorReturnResult$Typings<TReturn>
 
 @_i1.JS()
 @_i1.staticInterop
-class Iterator<T, TReturn, TNext> {}
+class Iterator<T extends _i2.Object?, TReturn extends _i2.Object?,
+    TNext extends _i2.Object?> {}
 
-extension Iterator$Typings<T, TReturn, TNext> on Iterator<T, TReturn, TNext> {
-  _i5.IteratorResult<T, TReturn> next([_i2.Iterable<_i2.dynamic>? args]) =>
+extension Iterator$Typings<T extends _i2.Object?, TReturn extends _i2.Object?,
+    TNext extends _i2.Object?> on Iterator<T, TReturn, TNext> {
+  _i5.IteratorResult<T, TReturn> next([_i2.Iterable<_i2.Object?>? args]) =>
       _i3.callMethod(
         this,
         'next',
@@ -297,7 +301,7 @@ extension Iterator$Typings<T, TReturn, TNext> on Iterator<T, TReturn, TNext> {
         'return',
         [value ?? _i4.undefined],
       );
-  _i5.IteratorResult<T, TReturn> throw$([_i2.dynamic e]) => _i3.callMethod(
+  _i5.IteratorResult<T, TReturn> throw$([_i2.Object? e]) => _i3.callMethod(
         this,
         'throw',
         [e ?? _i4.undefined],
@@ -306,19 +310,20 @@ extension Iterator$Typings<T, TReturn, TNext> on Iterator<T, TReturn, TNext> {
 
 @_i1.JS()
 @_i1.staticInterop
-class Iterable<T>
-    implements _IterableLike$<_i5.Iterator<T, _i2.dynamic, _i2.dynamic>> {}
+class Iterable<T extends _i2.Object?>
+    implements _IterableLike$<_i5.Iterator<T, _i2.Object?, _i2.Object?>> {}
 
-extension Iterable$Typings<T> on Iterable<T> {}
+extension Iterable$Typings<T extends _i2.Object?> on Iterable<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
-class IterableIterator<T>
+class IterableIterator<T extends _i2.Object?>
     implements
-        _i5.Iterator<T, _i2.dynamic, _i2.dynamic>,
+        _i5.Iterator<T, _i2.Object?, _i2.Object?>,
         _IterableLike$<_i5.IterableIterator<T>> {}
 
-extension IterableIterator$Typings<T> on IterableIterator<T> {}
+extension IterableIterator$Typings<T extends _i2.Object?>
+    on IterableIterator<T> {}
 
 /// Represents the completion of an asynchronous operation
 @_i1.JS()
@@ -330,7 +335,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  resolve, or rejected when any Promise is rejected.
   ///  @param values An iterable of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i2.List<_i7.Awaited<T>>> _all$1<T>(
+  _i2.Future<_i2.List<_i7.Awaited<T>>> _all$1<T extends _i2.Object?>(
           _i5.Iterable<_i2.Object> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
@@ -342,7 +347,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  resolve, or rejected when any Promise is rejected.
   ///  @param values An array of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i2.dynamic> _all$2<T extends _i2.Object>(T values) =>
+  _i2.Future<_i2.Object?> _all$2<T extends _i2.Object>(T values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'all',
@@ -355,14 +360,14 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     ///  resolve, or rejected when any Promise is rejected.
     ///  @param values An iterable of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i2.List<_i7.Awaited<T>>> Function<T>(
+    _i2.Future<_i2.List<_i7.Awaited<T>>> Function<T extends _i2.Object?>(
         _i5.Iterable<_i2.Object> values) $1,
 
     /// Creates a Promise that is resolved with an array of results when all of the provided Promises
     ///  resolve, or rejected when any Promise is rejected.
     ///  @param values An array of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i2.dynamic> Function<T extends _i2.Object>(T values) $2,
+    _i2.Future<_i2.Object?> Function<T extends _i2.Object>(T values) $2,
   }) get all => (
         $1: _all$1,
         $2: _all$2,
@@ -372,7 +377,8 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  or rejected.
   ///  @param values An iterable of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i7.Awaited<T>> _race$1<T>(_i5.Iterable<_i2.Object> values) =>
+  _i2.Future<_i7.Awaited<T>> _race$1<T extends _i2.Object?>(
+          _i5.Iterable<_i2.Object> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'race',
@@ -383,7 +389,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  or rejected.
   ///  @param values An array of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i7.Awaited<_i2.dynamic>> _race$2<T extends _i2.Object>(
+  _i2.Future<_i7.Awaited<_i2.Object?>> _race$2<T extends _i2.Object>(
           T values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
@@ -397,13 +403,14 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     ///  or rejected.
     ///  @param values An iterable of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i7.Awaited<T>> Function<T>(_i5.Iterable<_i2.Object> values) $1,
+    _i2.Future<_i7.Awaited<T>> Function<T extends _i2.Object?>(
+        _i5.Iterable<_i2.Object> values) $1,
 
     /// Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
     ///  or rejected.
     ///  @param values An array of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i7.Awaited<_i2.dynamic>> Function<T extends _i2.Object>(
+    _i2.Future<_i7.Awaited<_i2.Object?>> Function<T extends _i2.Object>(
         T values) $2,
   }) get race => (
         $1: _race$1,
@@ -413,7 +420,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   /// Creates a new rejected promise for the provided reason.
   ///  @param reason The reason the promise was rejected.
   ///  @returns A new rejected Promise.
-  _i2.Future<T> reject<T>([_i2.dynamic reason]) =>
+  _i2.Future<T> reject<T extends _i2.Object?>([_i2.Object? reason]) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'reject',
@@ -431,7 +438,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   /// Creates a new resolved promise for the provided value.
   ///  @param value A promise.
   ///  @returns A promise whose internal state matches the provided promise.
-  _i2.Future<_i7.Awaited<T>> _resolve$2<T>(T value) =>
+  _i2.Future<_i7.Awaited<T>> _resolve$2<T extends _i2.Object?>(T value) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'resolve',
@@ -441,7 +448,8 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   /// Creates a new resolved promise for the provided value.
   ///  @param value A promise.
   ///  @returns A promise whose internal state matches the provided promise.
-  _i2.Future<_i7.Awaited<T>> _resolve$3<T>(_i2.Object value) =>
+  _i2.Future<_i7.Awaited<T>> _resolve$3<T extends _i2.Object?>(
+          _i2.Object value) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'resolve',
@@ -457,12 +465,13 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     /// Creates a new resolved promise for the provided value.
     ///  @param value A promise.
     ///  @returns A promise whose internal state matches the provided promise.
-    _i2.Future<_i7.Awaited<T>> Function<T>(T value) $2,
+    _i2.Future<_i7.Awaited<T>> Function<T extends _i2.Object?>(T value) $2,
 
     /// Creates a new resolved promise for the provided value.
     ///  @param value A promise.
     ///  @returns A promise whose internal state matches the provided promise.
-    _i2.Future<_i7.Awaited<T>> Function<T>(_i2.Object value) $3,
+    _i2.Future<_i7.Awaited<T>> Function<T extends _i2.Object?>(
+        _i2.Object value) $3,
   }) get resolve => (
         $1: _resolve$1,
         $2: _resolve$2,
@@ -473,7 +482,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  of the provided Promises resolve or reject.
   ///  @param values An array of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i2.dynamic> _allSettled$1<T extends _i2.Object>(T values) =>
+  _i2.Future<_i2.Object?> _allSettled$1<T extends _i2.Object>(T values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'allSettled',
@@ -485,7 +494,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  @param values An array of Promises.
   ///  @returns A new Promise.
   _i2.Future<_i2.List<_i8.PromiseSettledResult<_i7.Awaited<T>>>>
-      _allSettled$2<T>(_i5.Iterable<_i2.Object> values) =>
+      _allSettled$2<T extends _i2.Object?>(_i5.Iterable<_i2.Object> values) =>
           _i3.promiseToFuture(_i3.callMethod(
             this,
             'allSettled',
@@ -498,14 +507,14 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     ///  of the provided Promises resolve or reject.
     ///  @param values An array of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i2.dynamic> Function<T extends _i2.Object>(T values) $1,
+    _i2.Future<_i2.Object?> Function<T extends _i2.Object>(T values) $1,
 
     /// Creates a Promise that is resolved with an array of results when all
     ///  of the provided Promises resolve or reject.
     ///  @param values An array of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i2.List<_i8.PromiseSettledResult<_i7.Awaited<T>>>> Function<T>(
-        _i5.Iterable<_i2.Object> values) $2,
+    _i2.Future<_i2.List<_i8.PromiseSettledResult<_i7.Awaited<T>>>>
+        Function<T extends _i2.Object?>(_i5.Iterable<_i2.Object> values) $2,
   }) get allSettled => (
         $1: _allSettled$1,
         $2: _allSettled$2,
@@ -514,7 +523,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
   ///  @param values An array or iterable of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i7.Awaited<_i2.dynamic>> _any$1<T extends _i2.Object>(T values) =>
+  _i2.Future<_i7.Awaited<_i2.Object?>> _any$1<T extends _i2.Object>(T values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'any',
@@ -524,7 +533,8 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
   ///  @param values An array or iterable of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i7.Awaited<T>> _any$2<T>(_i5.Iterable<_i2.Object> values) =>
+  _i2.Future<_i7.Awaited<T>> _any$2<T extends _i2.Object?>(
+          _i5.Iterable<_i2.Object> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'any',
@@ -536,13 +546,14 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
     ///  @param values An array or iterable of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i7.Awaited<_i2.dynamic>> Function<T extends _i2.Object>(
+    _i2.Future<_i7.Awaited<_i2.Object?>> Function<T extends _i2.Object>(
         T values) $1,
 
     /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
     ///  @param values An array or iterable of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i7.Awaited<T>> Function<T>(_i5.Iterable<_i2.Object> values) $2,
+    _i2.Future<_i7.Awaited<T>> Function<T extends _i2.Object?>(
+        _i5.Iterable<_i2.Object> values) $2,
   }) get any => (
         $1: _any$1,
         $2: _any$2,
@@ -552,7 +563,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

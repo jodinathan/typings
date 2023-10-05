@@ -6,7 +6,7 @@ import 'dart:core' as _i2;
 
 @_i1.JS('self')
 external _i2.Object _self;
-typedef FlatArray<Arr, Depth extends _i2.num> = _i2.dynamic;
+typedef FlatArray<Arr extends _i2.Object?, Depth extends _i2.num> = _i2.Object?;
 
 enum IInline26 {
   done(r'done'),
@@ -20,7 +20,7 @@ enum IInline26 {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

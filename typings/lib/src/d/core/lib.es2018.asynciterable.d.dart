@@ -13,12 +13,15 @@ external _i2.Object _self;
 
 @_i1.JS()
 @_i1.staticInterop
-class AsyncIterator<T, TReturn, TNext> {}
+class AsyncIterator<T extends _i2.Object?, TReturn extends _i2.Object?,
+    TNext extends _i2.Object?> {}
 
-extension AsyncIterator$Typings<T, TReturn, TNext>
-    on AsyncIterator<T, TReturn, TNext> {
+extension AsyncIterator$Typings<
+    T extends _i2.Object?,
+    TReturn extends _i2.Object?,
+    TNext extends _i2.Object?> on AsyncIterator<T, TReturn, TNext> {
   _i2.Future<_i3.IteratorResult<T, TReturn>> next(
-          [_i2.Iterable<_i2.dynamic>? args]) =>
+          [_i2.Iterable<_i2.Object?>? args]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'next',
@@ -30,7 +33,7 @@ extension AsyncIterator$Typings<T, TReturn, TNext>
         'return',
         [value ?? _i5.undefined],
       ));
-  _i2.Future<_i3.IteratorResult<T, TReturn>> throw$([_i2.dynamic e]) =>
+  _i2.Future<_i3.IteratorResult<T, TReturn>> throw$([_i2.Object? e]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'throw',
@@ -40,21 +43,22 @@ extension AsyncIterator$Typings<T, TReturn, TNext>
 
 @_i1.JS()
 @_i1.staticInterop
-class AsyncIterable<T> {}
+class AsyncIterable<T extends _i2.Object?> {}
 
-extension AsyncIterable$Typings<T> on AsyncIterable<T> {}
+extension AsyncIterable$Typings<T extends _i2.Object?> on AsyncIterable<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
-class AsyncIterableIterator<T>
-    implements _i6.AsyncIterator<T, _i2.dynamic, _i2.dynamic> {}
+class AsyncIterableIterator<T extends _i2.Object?>
+    implements _i6.AsyncIterator<T, _i2.Object?, _i2.Object?> {}
 
-extension AsyncIterableIterator$Typings<T> on AsyncIterableIterator<T> {}
+extension AsyncIterableIterator$Typings<T extends _i2.Object?>
+    on AsyncIterableIterator<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

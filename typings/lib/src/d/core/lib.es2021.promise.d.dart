@@ -22,7 +22,7 @@ class AggregateError implements _i3.Error {
       );
 
   factory AggregateError.$2(
-    _i5.Iterable<_i2.dynamic> errors, [
+    _i5.Iterable<_i2.Object?> errors, [
     _i2.String? message,
   ]) =>
       _i4.callConstructor(
@@ -34,7 +34,7 @@ class AggregateError implements _i3.Error {
       );
 
   factory AggregateError.$3(
-    _i5.Iterable<_i2.dynamic> errors, [
+    _i5.Iterable<_i2.Object?> errors, [
     _i2.String? message,
     _i7.ErrorOptions? options,
   ]) =>
@@ -55,12 +55,12 @@ FieldExternal:
 external _i2.Object _declaredAggregateError;
 
 extension AggregateError$Typings on AggregateError {
-  _i2.List<_i2.dynamic> get errors => (_i4.getProperty(
+  _i2.List<_i2.Object?> get errors => (_i4.getProperty(
         this,
         'errors',
       ) as _i2.List)
           .cast();
-  set errors(_i2.List<_i2.dynamic> value) {
+  set errors(_i2.List<_i2.Object?> value) {
     _i4.setProperty(
       this,
       'errors',
@@ -75,7 +75,7 @@ class AggregateErrorConstructor {}
 
 extension AggregateErrorConstructor$Typings on AggregateErrorConstructor {
   _i8.AggregateError _call$1(
-    _i5.Iterable<_i2.dynamic> errors, [
+    _i5.Iterable<_i2.Object?> errors, [
     _i2.String? message,
   ]) =>
       _i4.callMethod(
@@ -87,7 +87,7 @@ extension AggregateErrorConstructor$Typings on AggregateErrorConstructor {
         ],
       );
   _i8.AggregateError _call$2(
-    _i5.Iterable<_i2.dynamic> errors, [
+    _i5.Iterable<_i2.Object?> errors, [
     _i2.String? message,
     _i7.ErrorOptions? options,
   ]) =>
@@ -104,11 +104,11 @@ extension AggregateErrorConstructor$Typings on AggregateErrorConstructor {
   /// Overload accessor: $1, $2
   ({
     _i8.AggregateError Function(
-      _i5.Iterable<_i2.dynamic> errors, [
+      _i5.Iterable<_i2.Object?> errors, [
       _i2.String? message,
     ]) $1,
     _i8.AggregateError Function(
-      _i5.Iterable<_i2.dynamic> errors, [
+      _i5.Iterable<_i2.Object?> errors, [
       _i2.String? message,
       _i7.ErrorOptions? options,
     ]) $2,
@@ -121,7 +121,7 @@ extension AggregateErrorConstructor$Typings on AggregateErrorConstructor {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

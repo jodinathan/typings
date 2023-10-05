@@ -83,13 +83,13 @@ typedef FunctionBasedParameter = _i2.num Function(
   _i2.num,
   _i2.num,
 );
-typedef AnimeCallbackFunction = void Function([_i2.dynamic]);
+typedef AnimeCallbackFunction = void Function([_i2.Object?]);
 typedef CustomEasingFunction = _i2.num Function(_i2.num) Function(
   _i3.HTMLElement,
   _i2.num,
   _i2.num,
 );
-typedef AnimeTarget = _i2.dynamic;
+typedef AnimeTarget = _i2.Object?;
 typedef EasingOptions = _i4.EasingOptionsOptions;
 typedef DirectionOptions = _i4.DirectionOptionsOptions;
 
@@ -98,14 +98,14 @@ typedef DirectionOptions = _i4.DirectionOptionsOptions;
 @_i1.anonymous
 class AnimeCallBack {
   external factory AnimeCallBack._({
-    _i2.dynamic begin,
-    _i2.dynamic change,
-    _i2.dynamic update,
-    _i2.dynamic complete,
-    _i2.dynamic loopBegin,
-    _i2.dynamic loopComplete,
-    _i2.dynamic changeBegin,
-    _i2.dynamic changeComplete,
+    _i2.Object? begin,
+    _i2.Object? change,
+    _i2.Object? update,
+    _i2.Object? complete,
+    _i2.Object? loopBegin,
+    _i2.Object? loopComplete,
+    _i2.Object? changeBegin,
+    _i2.Object? changeComplete,
   });
 
   factory AnimeCallBack({
@@ -239,23 +239,23 @@ extension AnimeCallBack$Typings on AnimeCallBack {
 @_i1.anonymous
 class AnimeInstanceParams implements _i4.AnimeCallBack {
   external factory AnimeInstanceParams._({
-    _i2.dynamic loop,
-    _i2.dynamic autoplay,
-    _i2.dynamic direction,
-    _i2.dynamic begin,
-    _i2.dynamic change,
-    _i2.dynamic update,
-    _i2.dynamic complete,
-    _i2.dynamic loopBegin,
-    _i2.dynamic loopComplete,
-    _i2.dynamic changeBegin,
-    _i2.dynamic changeComplete,
+    _i2.Object? loop,
+    _i2.Object? autoplay,
+    _i2.Object? direction,
+    _i2.Object? begin,
+    _i2.Object? change,
+    _i2.Object? update,
+    _i2.Object? complete,
+    _i2.Object? loopBegin,
+    _i2.Object? loopComplete,
+    _i2.Object? changeBegin,
+    _i2.Object? changeComplete,
   });
 
   factory AnimeInstanceParams({
-    _i2.dynamic loop,
+    _i2.Object? loop,
     _i2.bool? autoplay,
-    _i2.dynamic direction,
+    _i2.Object? direction,
     _i4.AnimeCallbackFunction? begin,
     _i4.AnimeCallbackFunction? change,
     _i4.AnimeCallbackFunction? update,
@@ -287,11 +287,11 @@ class AnimeInstanceParams implements _i4.AnimeCallBack {
 }
 
 extension AnimeInstanceParams$Typings on AnimeInstanceParams {
-  _i2.dynamic get loop => _i6.getProperty(
+  _i2.Object? get loop => _i6.getProperty(
         this,
         'loop',
       );
-  set loop(_i2.dynamic value) {
+  set loop(_i2.Object? value) {
     _i6.setProperty(
       this,
       'loop',
@@ -311,11 +311,11 @@ extension AnimeInstanceParams$Typings on AnimeInstanceParams {
     );
   }
 
-  _i2.dynamic get direction => _i6.getProperty(
+  _i2.Object? get direction => _i6.getProperty(
         this,
         'direction',
       );
-  set direction(_i2.dynamic value) {
+  set direction(_i2.Object? value) {
     _i6.setProperty(
       this,
       'direction',
@@ -329,11 +329,11 @@ extension AnimeInstanceParams$Typings on AnimeInstanceParams {
 class AnimeAnimParams implements _i4.AnimeCallBack {}
 
 extension AnimeAnimParams$Typings on AnimeAnimParams {
-  _i2.dynamic get targets => _i6.getProperty(
+  _i2.Object? get targets => _i6.getProperty(
         this,
         'targets',
       );
-  set targets(_i2.dynamic value) {
+  set targets(_i2.Object? value) {
     _i6.setProperty(
       this,
       'targets',
@@ -341,11 +341,11 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     );
   }
 
-  _i2.dynamic get duration => _i6.getProperty(
+  _i2.Object? get duration => _i6.getProperty(
         this,
         'duration',
       );
-  set duration(_i2.dynamic value) {
+  set duration(_i2.Object? value) {
     _i6.setProperty(
       this,
       'duration',
@@ -353,11 +353,11 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     );
   }
 
-  _i2.dynamic get delay => _i6.getProperty(
+  _i2.Object? get delay => _i6.getProperty(
         this,
         'delay',
       );
-  set delay(_i2.dynamic value) {
+  set delay(_i2.Object? value) {
     _i6.setProperty(
       this,
       'delay',
@@ -365,11 +365,11 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     );
   }
 
-  _i2.dynamic get endDelay => _i6.getProperty(
+  _i2.Object? get endDelay => _i6.getProperty(
         this,
         'endDelay',
       );
-  set endDelay(_i2.dynamic value) {
+  set endDelay(_i2.Object? value) {
     _i6.setProperty(
       this,
       'endDelay',
@@ -377,11 +377,11 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     );
   }
 
-  _i2.dynamic get elasticity => _i6.getProperty(
+  _i2.Object? get elasticity => _i6.getProperty(
         this,
         'elasticity',
       );
-  set elasticity(_i2.dynamic value) {
+  set elasticity(_i2.Object? value) {
     _i6.setProperty(
       this,
       'elasticity',
@@ -389,11 +389,11 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     );
   }
 
-  _i2.dynamic get round => _i6.getProperty(
+  _i2.Object? get round => _i6.getProperty(
         this,
         'round',
       );
-  set round(_i2.dynamic value) {
+  set round(_i2.Object? value) {
     _i6.setProperty(
       this,
       'round',
@@ -413,11 +413,11 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     );
   }
 
-  _i2.dynamic get easing => _i6.getProperty(
+  _i2.Object? get easing => _i6.getProperty(
         this,
         'easing',
       );
-  set easing(_i2.dynamic value) {
+  set easing(_i2.Object? value) {
     _i6.setProperty(
       this,
       'easing',
@@ -425,13 +425,13 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     );
   }
 
-  _i2.dynamic operator [](_i2.String index) => _i6.getProperty(
+  _i2.Object? operator [](_i2.String index) => _i6.getProperty(
         this,
         index,
       );
   void operator []=(
     _i2.String index,
-    _i2.dynamic value,
+    _i2.Object? value,
   ) {
     _i6.setProperty(
       this,
@@ -446,31 +446,31 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
 @_i1.anonymous
 class AnimeParams implements _i4.AnimeInstanceParams, _i4.AnimeAnimParams {
   external factory AnimeParams._({
-    _i2.dynamic loop,
-    _i2.dynamic autoplay,
-    _i2.dynamic direction,
-    _i2.dynamic targets,
-    _i2.dynamic duration,
-    _i2.dynamic delay,
-    _i2.dynamic endDelay,
-    _i2.dynamic elasticity,
-    _i2.dynamic round,
-    _i2.dynamic keyframes,
-    _i2.dynamic easing,
+    _i2.Object? loop,
+    _i2.Object? autoplay,
+    _i2.Object? direction,
+    _i2.Object? targets,
+    _i2.Object? duration,
+    _i2.Object? delay,
+    _i2.Object? endDelay,
+    _i2.Object? elasticity,
+    _i2.Object? round,
+    _i2.Object? keyframes,
+    _i2.Object? easing,
   });
 
   factory AnimeParams({
-    _i2.dynamic loop,
+    _i2.Object? loop,
     _i2.bool? autoplay,
-    _i2.dynamic direction,
-    _i2.dynamic targets,
-    _i2.dynamic duration,
-    _i2.dynamic delay,
-    _i2.dynamic endDelay,
-    _i2.dynamic elasticity,
-    _i2.dynamic round,
+    _i2.Object? direction,
+    _i2.Object? targets,
+    _i2.Object? duration,
+    _i2.Object? delay,
+    _i2.Object? endDelay,
+    _i2.Object? elasticity,
+    _i2.Object? round,
     _i7.ReadonlyArray<_i4.AnimeAnimParams>? keyframes,
-    _i2.dynamic easing,
+    _i2.Object? easing,
   }) =>
       AnimeParams._(
         loop: loop ?? _i5.undefined,
@@ -492,10 +492,10 @@ class AnimeParams implements _i4.AnimeInstanceParams, _i4.AnimeAnimParams {
 @_i1.anonymous
 class Animatable {
   external factory Animatable._({
-    _i2.dynamic id,
-    _i2.dynamic target,
-    _i2.dynamic total,
-    _i2.dynamic transforms,
+    _i2.Object? id,
+    _i2.Object? target,
+    _i2.Object? total,
+    _i2.Object? transforms,
   });
 
   factory Animatable({
@@ -567,14 +567,14 @@ extension Animatable$Typings on Animatable {
 @_i1.anonymous
 class Animation {
   external factory Animation._({
-    _i2.dynamic animatable,
-    _i2.dynamic currentValue,
-    _i2.dynamic delay,
-    _i2.dynamic duration,
-    _i2.dynamic endDelay,
-    _i2.dynamic property,
-    _i2.dynamic tweens,
-    _i2.dynamic type,
+    _i2.Object? animatable,
+    _i2.Object? currentValue,
+    _i2.Object? delay,
+    _i2.Object? duration,
+    _i2.Object? endDelay,
+    _i2.Object? property,
+    _i2.Object? tweens,
+    _i2.Object? type,
   });
 
   factory Animation({
@@ -948,27 +948,27 @@ extension AnimeInstance$Typings on AnimeInstance {
 @_i1.anonymous
 class AnimeTimelineAnimParams implements _i4.AnimeAnimParams {
   external factory AnimeTimelineAnimParams._({
-    _i2.dynamic timelineOffset,
-    _i2.dynamic targets,
-    _i2.dynamic duration,
-    _i2.dynamic delay,
-    _i2.dynamic endDelay,
-    _i2.dynamic elasticity,
-    _i2.dynamic round,
-    _i2.dynamic keyframes,
-    _i2.dynamic easing,
+    _i2.Object? timelineOffset,
+    _i2.Object? targets,
+    _i2.Object? duration,
+    _i2.Object? delay,
+    _i2.Object? endDelay,
+    _i2.Object? elasticity,
+    _i2.Object? round,
+    _i2.Object? keyframes,
+    _i2.Object? easing,
   });
 
   factory AnimeTimelineAnimParams({
     required _i2.Object timelineOffset,
-    _i2.dynamic targets,
-    _i2.dynamic duration,
-    _i2.dynamic delay,
-    _i2.dynamic endDelay,
-    _i2.dynamic elasticity,
-    _i2.dynamic round,
+    _i2.Object? targets,
+    _i2.Object? duration,
+    _i2.Object? delay,
+    _i2.Object? endDelay,
+    _i2.Object? elasticity,
+    _i2.Object? round,
     _i7.ReadonlyArray<_i4.AnimeAnimParams>? keyframes,
-    _i2.dynamic easing,
+    _i2.Object? easing,
   }) =>
       AnimeTimelineAnimParams._(
         timelineOffset: timelineOffset,
@@ -1021,21 +1021,21 @@ extension AnimeTimelineInstance$Typings on AnimeTimelineInstance {
 @_i1.anonymous
 class StaggerOptions {
   external factory StaggerOptions._({
-    _i2.dynamic start,
-    _i2.dynamic direction,
-    _i2.dynamic easing,
-    _i2.dynamic grid,
-    _i2.dynamic axis,
-    _i2.dynamic from,
+    _i2.Object? start,
+    _i2.Object? direction,
+    _i2.Object? easing,
+    _i2.Object? grid,
+    _i2.Object? axis,
+    _i2.Object? from,
   });
 
   factory StaggerOptions({
-    _i2.dynamic start,
+    _i2.Object? start,
     _i4.Direction? direction,
-    _i2.dynamic easing,
+    _i2.Object? easing,
     _i7.ReadonlyArray<_i2.num>? grid,
     _i4.Axis? axis,
-    _i2.dynamic from,
+    _i2.Object? from,
   }) =>
       StaggerOptions._(
         start: start ?? _i5.undefined,
@@ -1048,11 +1048,11 @@ class StaggerOptions {
 }
 
 extension StaggerOptions$Typings on StaggerOptions {
-  _i2.dynamic get start => _i6.getProperty(
+  _i2.Object? get start => _i6.getProperty(
         this,
         'start',
       );
-  set start(_i2.dynamic value) {
+  set start(_i2.Object? value) {
     _i6.setProperty(
       this,
       'start',
@@ -1075,11 +1075,11 @@ extension StaggerOptions$Typings on StaggerOptions {
     );
   }
 
-  _i2.dynamic get easing => _i6.getProperty(
+  _i2.Object? get easing => _i6.getProperty(
         this,
         'easing',
       );
-  set easing(_i2.dynamic value) {
+  set easing(_i2.Object? value) {
     _i6.setProperty(
       this,
       'easing',
@@ -1114,11 +1114,11 @@ extension StaggerOptions$Typings on StaggerOptions {
     );
   }
 
-  _i2.dynamic get from => _i6.getProperty(
+  _i2.Object? get from => _i6.getProperty(
         this,
         'from',
       );
-  set from(_i2.dynamic value) {
+  set from(_i2.Object? value) {
     _i6.setProperty(
       this,
       'from',
@@ -1192,8 +1192,8 @@ _i2.Object get(
         unit ?? _i5.undefined,
       ],
     );
-_i2.dynamic Function(_i2.String) path([
-  _i2.dynamic path,
+_i2.Object? Function(_i2.String) path([
+  _i2.Object? path,
   _i2.num? percent,
 ]) =>
     _i6.callMethod(
@@ -1268,7 +1268,7 @@ _i2.num random(
         max,
       ],
     );
-_i2.dynamic anime([_i2.dynamic params]) => _i6.callMethod(
+_i2.Object? anime([_i2.Object? params]) => _i6.callMethod(
       _self,
       'anime',
       [params ?? _i5.undefined],
@@ -1277,7 +1277,7 @@ _i2.dynamic anime([_i2.dynamic params]) => _i6.callMethod(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

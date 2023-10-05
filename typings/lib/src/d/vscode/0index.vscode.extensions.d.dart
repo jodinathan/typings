@@ -212,7 +212,8 @@ extension OnDidChangeAccessor$Typings on _OnDidChangeAccessor {
 }
 
 /// Get an extension by its full identifier in the form of: `publisher.name`.
-_i8.Extension<T>? getExtension<T>(_i2.String extensionId) => _i3.callMethod(
+_i8.Extension<T>? getExtension<T extends _i2.Object?>(_i2.String extensionId) =>
+    _i3.callMethod(
       _self,
       'getExtension',
       [extensionId],
@@ -221,7 +222,7 @@ _i8.Extension<T>? getExtension<T>(_i2.String extensionId) => _i3.callMethod(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

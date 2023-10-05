@@ -7,7 +7,7 @@ import 'dart:js_util' as _i3;
 
 @_i1.JS('self')
 external _i2.Object _self;
-void importScripts([_i2.Iterable<_i2.dynamic>? urls]) {
+void importScripts([_i2.Iterable<_i2.Object?>? urls]) {
   _i3.callMethod(
     _self,
     'importScripts',
@@ -18,7 +18,7 @@ void importScripts([_i2.Iterable<_i2.dynamic>? urls]) {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

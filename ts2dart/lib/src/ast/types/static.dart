@@ -31,17 +31,17 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
   }),
   boolean(symbol: 'bool', mappings: {'boolean', 'true', 'false'}),
   date(symbol: 'DateTime', mappings: {'Date'}),
-  dyn(symbol: 'dynamic', mappings: {
+  dyn(symbol: dynamicTypeName, mappings: {
     'any',
     'unrestricted double',
     'unrestricted float',
     // https://github.com/w3c/css-houdini-drafts/issues/1041
     'CSSPercentishArray'
   }),
-  nul(symbol: 'dynamic', mappings: {
+  nul(symbol: dynamicTypeName, mappings: {
     'null',
   }),
-  undefined(symbol: 'dynamic', mappings: {
+  undefined(symbol: dynamicTypeName, mappings: {
     'undefined',
   }),
   siimbol(symbol: 'Symbol', mappings: {'symbol'}),
@@ -111,6 +111,8 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
       this.typeParamsLength = 0,
       this.makeToInterop = _toInterop,
       this.makeFromInterop = _fromInterop});
+
+  static const dynamicTypeName = 'Object?';
 
   static Reference undefinedRef = refer('undefined', '/d/core.dart');
 

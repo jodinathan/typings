@@ -12,8 +12,9 @@ external _i2.Object _self;
 
 /// Calls the function with the specified object as the this value
 /// and the elements of specified array as the arguments.
-R _apply$1<T, A extends _i2.List<_i2.dynamic>, R>(
-  R Function([_i2.Iterable<_i2.dynamic>?]) target,
+R _apply$1<T extends _i2.Object?, A extends _i2.List<_i2.Object?>,
+        R extends _i2.Object?>(
+  R Function([_i2.Iterable<_i2.Object?>?]) target,
   T thisArgument,
   _i3.Readonly<A> argumentsList,
 ) =>
@@ -29,10 +30,10 @@ R _apply$1<T, A extends _i2.List<_i2.dynamic>, R>(
 
 /// Calls the function with the specified object as the this value
 /// and the elements of specified array as the arguments.
-_i2.dynamic _apply$2(
+_i2.Object? _apply$2(
   _i2.Function target,
-  _i2.dynamic thisArgument,
-  _i2.List<_i2.dynamic> argumentsList,
+  _i2.Object? thisArgument,
+  _i2.List<_i2.Object?> argumentsList,
 ) =>
     _i4.callMethod(
       _self,
@@ -48,18 +49,19 @@ _i2.dynamic _apply$2(
 ({
   /// Calls the function with the specified object as the this value
   /// and the elements of specified array as the arguments.
-  R Function<T, A extends _i2.List<_i2.dynamic>, R>(
-    R Function([_i2.Iterable<_i2.dynamic>?]) target,
+  R Function<T extends _i2.Object?, A extends _i2.List<_i2.Object?>,
+      R extends _i2.Object?>(
+    R Function([_i2.Iterable<_i2.Object?>?]) target,
     T thisArgument,
     _i3.Readonly<A> argumentsList,
   ) $1,
 
   /// Calls the function with the specified object as the this value
   /// and the elements of specified array as the arguments.
-  _i2.dynamic Function(
+  _i2.Object? Function(
     _i2.Function target,
-    _i2.dynamic thisArgument,
-    _i2.List<_i2.dynamic> argumentsList,
+    _i2.Object? thisArgument,
+    _i2.List<_i2.Object?> argumentsList,
   ) $2,
 }) get apply => (
       $1: _apply$1,
@@ -68,10 +70,10 @@ _i2.dynamic _apply$2(
 
 /// Constructs the target with the elements of specified array as the arguments
 /// and the specified constructor as the `new.target` value.
-R _construct$1<A extends _i2.List<_i2.dynamic>, R>(
-  R Function([_i2.Iterable<_i2.dynamic>?]) target,
+R _construct$1<A extends _i2.List<_i2.Object?>, R extends _i2.Object?>(
+  R Function([_i2.Iterable<_i2.Object?>?]) target,
   _i3.Readonly<A> argumentsList, [
-  _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])? newTarget,
+  _i2.Object? Function([_i2.Iterable<_i2.Object?>?])? newTarget,
 ]) =>
     _i4.callMethod(
       _self,
@@ -85,9 +87,9 @@ R _construct$1<A extends _i2.List<_i2.dynamic>, R>(
 
 /// Constructs the target with the elements of specified array as the arguments
 /// and the specified constructor as the `new.target` value.
-_i2.dynamic _construct$2(
+_i2.Object? _construct$2(
   _i2.Function target,
-  _i2.List<_i2.dynamic> argumentsList, [
+  _i2.List<_i2.Object?> argumentsList, [
   _i2.Function? newTarget,
 ]) =>
     _i4.callMethod(
@@ -104,17 +106,17 @@ _i2.dynamic _construct$2(
 ({
   /// Constructs the target with the elements of specified array as the arguments
   /// and the specified constructor as the `new.target` value.
-  R Function<A extends _i2.List<_i2.dynamic>, R>(
-    R Function([_i2.Iterable<_i2.dynamic>?]) target,
+  R Function<A extends _i2.List<_i2.Object?>, R extends _i2.Object?>(
+    R Function([_i2.Iterable<_i2.Object?>?]) target,
     _i3.Readonly<A> argumentsList, [
-    _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])? newTarget,
+    _i2.Object? Function([_i2.Iterable<_i2.Object?>?])? newTarget,
   ]) $1,
 
   /// Constructs the target with the elements of specified array as the arguments
   /// and the specified constructor as the `new.target` value.
-  _i2.dynamic Function(
+  _i2.Object? Function(
     _i2.Function target,
-    _i2.List<_i2.dynamic> argumentsList, [
+    _i2.List<_i2.Object?> argumentsList, [
     _i2.Function? newTarget,
   ]) $2,
 }) get construct => (
@@ -154,7 +156,7 @@ _i2.bool deleteProperty(
     );
 
 /// Gets the property of target, equivalent to `target[propertyKey]` when `receiver === target`.
-_i2.dynamic get<T extends _i2.Object, P extends _i3.PropertyKey>(
+_i2.Object? get<T extends _i2.Object, P extends _i3.PropertyKey>(
   T target,
   P propertyKey, [
   _i2.Object? receiver,
@@ -171,7 +173,7 @@ _i2.dynamic get<T extends _i2.Object, P extends _i3.PropertyKey>(
 
 /// Gets the own property descriptor of the specified object.
 /// An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
-_i3.TypedPropertyDescriptor<_i2.dynamic>?
+_i3.TypedPropertyDescriptor<_i2.Object?>?
     getOwnPropertyDescriptor<T extends _i2.Object, P extends _i3.PropertyKey>(
   T target,
   P propertyKey,
@@ -233,8 +235,8 @@ _i2.bool preventExtensions(_i2.Object target) => _i4.callMethod(
 _i2.bool _set$1<T extends _i2.Object, P extends _i3.PropertyKey>(
   T target,
   P propertyKey, [
-  _i2.dynamic value,
-  _i2.dynamic receiver,
+  _i2.Object? value,
+  _i2.Object? receiver,
 ]) =>
     _i4.callMethod(
       _self,
@@ -251,8 +253,8 @@ _i2.bool _set$1<T extends _i2.Object, P extends _i3.PropertyKey>(
 _i2.bool _set$2(
   _i2.Object target,
   _i3.PropertyKey propertyKey,
-  _i2.dynamic value, [
-  _i2.dynamic receiver,
+  _i2.Object? value, [
+  _i2.Object? receiver,
 ]) =>
     _i4.callMethod(
       _self,
@@ -271,16 +273,16 @@ _i2.bool _set$2(
   _i2.bool Function<T extends _i2.Object, P extends _i3.PropertyKey>(
     T target,
     P propertyKey, [
-    _i2.dynamic value,
-    _i2.dynamic receiver,
+    _i2.Object? value,
+    _i2.Object? receiver,
   ]) $1,
 
   /// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
   _i2.bool Function(
     _i2.Object target,
     _i3.PropertyKey propertyKey,
-    _i2.dynamic value, [
-    _i2.dynamic receiver,
+    _i2.Object? value, [
+    _i2.Object? receiver,
   ]) $2,
 }) get set => (
       $1: _set$1,
@@ -304,7 +306,7 @@ _i2.bool setPrototypeOf(
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop

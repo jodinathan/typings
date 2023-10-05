@@ -16,16 +16,16 @@ external _i2.Object _self;
 /// we recommend the use of native promises which are available in this editor.
 @_i1.JS()
 @_i1.staticInterop
-class Thenable<T> {}
+class Thenable<T extends _i2.Object?> {}
 
-extension Thenable$Typings<T> on Thenable<T> {
+extension Thenable$Typings<T extends _i2.Object?> on Thenable<T> {
   /// Attaches callbacks for the resolution and/or rejection of the Promise.
   ///  @param onfulfilled The callback to execute when the Promise is resolved.
   ///  @param onrejected The callback to execute when the Promise is rejected.
   ///  @returns A Promise for the completion of which ever callback is executed.
-  _i3.Thenable<TResult> _then$1<TResult>([
+  _i3.Thenable<TResult> _then$1<TResult extends _i2.Object?>([
     _i2.Object Function(T)? onfulfilled,
-    _i2.Object Function(_i2.dynamic)? onrejected,
+    _i2.Object Function(_i2.Object?)? onrejected,
   ]) =>
       _i4.callMethod(
         this,
@@ -37,9 +37,9 @@ extension Thenable$Typings<T> on Thenable<T> {
       );
 
   /// Attaches callbacks for the resolution and/or rejection of the Promise.
-  _i3.Thenable<TResult> _then$2<TResult>([
+  _i3.Thenable<TResult> _then$2<TResult extends _i2.Object?>([
     _i2.Object Function(T)? onfulfilled,
-    void Function(_i2.dynamic)? onrejected,
+    void Function(_i2.Object?)? onrejected,
   ]) =>
       _i4.callMethod(
         this,
@@ -56,15 +56,15 @@ extension Thenable$Typings<T> on Thenable<T> {
     ///  @param onfulfilled The callback to execute when the Promise is resolved.
     ///  @param onrejected The callback to execute when the Promise is rejected.
     ///  @returns A Promise for the completion of which ever callback is executed.
-    _i3.Thenable<TResult> Function<TResult>([
+    _i3.Thenable<TResult> Function<TResult extends _i2.Object?>([
       _i2.Object Function(T)? onfulfilled,
-      _i2.Object Function(_i2.dynamic)? onrejected,
+      _i2.Object Function(_i2.Object?)? onrejected,
     ]) $1,
 
     /// Attaches callbacks for the resolution and/or rejection of the Promise.
-    _i3.Thenable<TResult> Function<TResult>([
+    _i3.Thenable<TResult> Function<TResult extends _i2.Object?>([
       _i2.Object Function(T)? onfulfilled,
-      void Function(_i2.dynamic)? onrejected,
+      void Function(_i2.Object?)? onrejected,
     ]) $2,
   }) get then => (
         $1: _then$1,
@@ -75,7 +75,7 @@ extension Thenable$Typings<T> on Thenable<T> {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T> {}
+class _IterableLike$<T extends _i2.Object?> {}
 
 @_i1.JS()
 @_i1.staticInterop
