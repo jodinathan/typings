@@ -50,29 +50,22 @@ final class InteropGetter extends InteropProperty {
       isExternal: isExternal)
     ..reference = reference;
 
-  Field buildExternal() => Field((b) {
-        b
-          ..name = usableName
-          ..type = reference.ref()
-          ..docs.addAll(['/*', 'FieldExternal: $source', '*/'])
-          ..annotations.addAll([
-            pkgJs.js(name: name != usableName ? name : null),
-          ])
-          ..external = true;
-      });
+  Iterable<Method> buildExternal() => build(target: cl.library.self);
 
   @override
-  Iterable<Method> build() {
+  Iterable<Method> build({Reference? target}) {
+    final t = target ??= makeThis();
+
     return [
       _makeProperty(
           type: MethodType.getter,
           updates: (b) {
             b
-              ..returns = reference.ref(solid: true)
+              ..returns = reference.ref(solid: true, useFuture: true)
               ..lambda = true
               ..body = reference
-                  .fromInterop(pkgJsUtils.getProperty(
-                      [makeThis(), InteropProperty.literalJSName(name)]))
+                  .fromInterop(pkgJsUtils
+                      .getProperty([t, InteropProperty.literalJSName(name)]))
                   .code;
           }),
     ];
@@ -107,7 +100,9 @@ final class InteropSetter extends InteropProperty {
     ..reference = reference;
 
   @override
-  Iterable<Method> build() {
+  Iterable<Method> build({Reference? target}) {
+    final t = target ??= makeThis();
+
     return [
       _makeProperty(
           type: MethodType.setter,
@@ -123,7 +118,7 @@ final class InteropSetter extends InteropProperty {
               ..external = false
               ..requiredParameters.add(paramValue)
               ..body = pkgJsUtils.setProperty([
-                makeThis(),
+                t,
                 InteropProperty.literalJSName(name),
                 reference.toInterop(refer(paramValue.name))
               ]).statement;

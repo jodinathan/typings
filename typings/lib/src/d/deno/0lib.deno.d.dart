@@ -10,6 +10,8 @@ import '/d/core.dart' as _i6;
 import 'deno_comon.d.dart' as _i7;
 import '/src/d/core/lib.es2015.iterable.d.dart' as _i8;
 import 'dart:typed_data' as _i9;
+import '0lib.deno.deno.d.dart' as _i10;
+import '0lib.deno.webassembly.d.dart' as _i11;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -209,11 +211,11 @@ extension ReadableStreamDefaultReadResultCommon$Typings
     );
   }
 
-  _i2.Object? get value => _i4.getProperty(
+  _i2.dynamic get value => _i4.getProperty(
         this,
         'value',
       );
-  set value(_i2.Object? value) {
+  set value(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'value',
@@ -294,7 +296,7 @@ class _ConsoleAccessor {}
 extension ConsoleAccessor$Typings on _ConsoleAccessor {
   void assert$([
     _i2.bool? condition,
-    _i2.Iterable<_i2.Object?>? data,
+    _i2.Iterable<_i2.dynamic>? data,
   ]) {
     _i4.callMethod(
       _i7.target2711,
@@ -330,7 +332,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
-  void debug([_i2.Iterable<_i2.Object?>? data]) {
+  void debug([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       _i7.target2711,
       'debug',
@@ -339,8 +341,8 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
   }
 
   void dir([
-    _i2.Object? item,
-    _i2.Object? options,
+    _i2.dynamic item,
+    _i2.dynamic options,
   ]) {
     _i4.callMethod(
       _i7.target2711,
@@ -352,7 +354,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
-  void dirxml([_i2.Iterable<_i2.Object?>? data]) {
+  void dirxml([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       _i7.target2711,
       'dirxml',
@@ -360,7 +362,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
-  void error([_i2.Iterable<_i2.Object?>? data]) {
+  void error([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       _i7.target2711,
       'error',
@@ -368,7 +370,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
-  void group([_i2.Iterable<_i2.Object?>? data]) {
+  void group([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       _i7.target2711,
       'group',
@@ -376,7 +378,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
-  void groupCollapsed([_i2.Iterable<_i2.Object?>? data]) {
+  void groupCollapsed([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       _i7.target2711,
       'groupCollapsed',
@@ -392,7 +394,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
-  void info([_i2.Iterable<_i2.Object?>? data]) {
+  void info([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       _i7.target2711,
       'info',
@@ -400,7 +402,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
-  void log([_i2.Iterable<_i2.Object?>? data]) {
+  void log([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       _i7.target2711,
       'log',
@@ -409,7 +411,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
   }
 
   void table([
-    _i2.Object? tabularData,
+    _i2.dynamic tabularData,
     _i2.List<_i2.String>? properties,
   ]) {
     _i4.callMethod(
@@ -440,7 +442,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
 
   void timeLog([
     _i2.String? label,
-    _i2.Iterable<_i2.Object?>? data,
+    _i2.Iterable<_i2.dynamic>? data,
   ]) {
     _i4.callMethod(
       _i7.target2711,
@@ -452,7 +454,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
-  void trace([_i2.Iterable<_i2.Object?>? data]) {
+  void trace([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       _i7.target2711,
       'trace',
@@ -460,7 +462,7 @@ extension ConsoleAccessor$Typings on _ConsoleAccessor {
     );
   }
 
-  void warn([_i2.Iterable<_i2.Object?>? data]) {
+  void warn([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       _i7.target2711,
       'warn',
@@ -636,7 +638,7 @@ extension PerformanceAccessor$Typings on _PerformanceAccessor {
       );
 
   /// Returns a JSON representation of the performance object.
-  _i2.Object? toJSON() => _i4.callMethod(
+  _i2.dynamic toJSON() => _i4.callMethod(
         _i7.target2712,
         'toJSON',
         [],
@@ -655,7 +657,7 @@ class _CachesAccessor {}
 
 extension CachesAccessor$Typings on _CachesAccessor {
   /// Open a cache storage for the provided name.
-  _i2.Future<_i3.Cache> open(_i2.String cacheName) =>
+  _i2.Future<_i2.Future<_i3.Cache>> open(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         _i7.target2713,
         'open',
@@ -663,7 +665,7 @@ extension CachesAccessor$Typings on _CachesAccessor {
       ));
 
   /// Check if cache already exists for the provided name.
-  _i2.Future<_i2.bool> has(_i2.String cacheName) =>
+  _i2.Future<_i2.Future<_i2.bool>> has(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         _i7.target2713,
         'has',
@@ -671,7 +673,7 @@ extension CachesAccessor$Typings on _CachesAccessor {
       ));
 
   /// Delete cache storage for the provided name.
-  _i2.Future<_i2.bool> delete(_i2.String cacheName) =>
+  _i2.Future<_i2.Future<_i2.bool>> delete(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         _i7.target2713,
         'delete',
@@ -1017,7 +1019,7 @@ typedef URLPatternInput = _i2.Object;
 typedef EventListenerOrEventListenerObject
     = _i3.EventListenerOrEventListenerObjectCommon;
 typedef BlobPart = _i2.Object;
-typedef ReadableStreamDefaultReadResult<T extends _i2.Object?>
+typedef ReadableStreamDefaultReadResult<T>
     = _i3.ReadableStreamDefaultReadResultCommon;
 typedef ReadableStreamBYOBReadResult<V extends _i5.ArrayBufferView>
     = _i3.ReadableStreamBYOBReadResultCommon<_i5.ArrayBufferView>;
@@ -1125,12 +1127,12 @@ extension ImportMeta$Typings on ImportMeta {
 @_i1.anonymous
 class PerformanceMarkOptions {
   external factory PerformanceMarkOptions._({
-    _i2.Object? detail,
-    _i2.Object? startTime,
+    _i2.dynamic detail,
+    _i2.dynamic startTime,
   });
 
   factory PerformanceMarkOptions({
-    _i2.Object? detail,
+    _i2.dynamic detail,
     _i2.num? startTime,
   }) =>
       PerformanceMarkOptions._(
@@ -1141,11 +1143,11 @@ class PerformanceMarkOptions {
 
 extension PerformanceMarkOptions$Typings on PerformanceMarkOptions {
   /// Metadata to be included in the mark.
-  _i2.Object? get detail => _i4.getProperty(
+  _i2.dynamic get detail => _i4.getProperty(
         this,
         'detail',
       );
-  set detail(_i2.Object? value) {
+  set detail(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'detail',
@@ -1176,14 +1178,14 @@ extension PerformanceMarkOptions$Typings on PerformanceMarkOptions {
 @_i1.anonymous
 class PerformanceMeasureOptions {
   external factory PerformanceMeasureOptions._({
-    _i2.Object? detail,
-    _i2.Object? start,
-    _i2.Object? duration,
-    _i2.Object? end,
+    _i2.dynamic detail,
+    _i2.dynamic start,
+    _i2.dynamic duration,
+    _i2.dynamic end,
   });
 
   factory PerformanceMeasureOptions({
-    _i2.Object? detail,
+    _i2.dynamic detail,
     _i2.Object? start,
     _i2.num? duration,
     _i2.Object? end,
@@ -1198,11 +1200,11 @@ class PerformanceMeasureOptions {
 
 extension PerformanceMeasureOptions$Typings on PerformanceMeasureOptions {
   /// Metadata to be included in the measure.
-  _i2.Object? get detail => _i4.getProperty(
+  _i2.dynamic get detail => _i4.getProperty(
         this,
         'detail',
       );
-  set detail(_i2.Object? value) {
+  set detail(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'detail',
@@ -1258,7 +1260,7 @@ class Console {}
 extension Console$Typings on Console {
   void assert$([
     _i2.bool? condition,
-    _i2.Iterable<_i2.Object?>? data,
+    _i2.Iterable<_i2.dynamic>? data,
   ]) {
     _i4.callMethod(
       this,
@@ -1294,7 +1296,7 @@ extension Console$Typings on Console {
     );
   }
 
-  void debug([_i2.Iterable<_i2.Object?>? data]) {
+  void debug([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       this,
       'debug',
@@ -1303,8 +1305,8 @@ extension Console$Typings on Console {
   }
 
   void dir([
-    _i2.Object? item,
-    _i2.Object? options,
+    _i2.dynamic item,
+    _i2.dynamic options,
   ]) {
     _i4.callMethod(
       this,
@@ -1316,7 +1318,7 @@ extension Console$Typings on Console {
     );
   }
 
-  void dirxml([_i2.Iterable<_i2.Object?>? data]) {
+  void dirxml([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       this,
       'dirxml',
@@ -1324,7 +1326,7 @@ extension Console$Typings on Console {
     );
   }
 
-  void error([_i2.Iterable<_i2.Object?>? data]) {
+  void error([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       this,
       'error',
@@ -1332,7 +1334,7 @@ extension Console$Typings on Console {
     );
   }
 
-  void group([_i2.Iterable<_i2.Object?>? data]) {
+  void group([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       this,
       'group',
@@ -1340,7 +1342,7 @@ extension Console$Typings on Console {
     );
   }
 
-  void groupCollapsed([_i2.Iterable<_i2.Object?>? data]) {
+  void groupCollapsed([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       this,
       'groupCollapsed',
@@ -1356,7 +1358,7 @@ extension Console$Typings on Console {
     );
   }
 
-  void info([_i2.Iterable<_i2.Object?>? data]) {
+  void info([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       this,
       'info',
@@ -1364,7 +1366,7 @@ extension Console$Typings on Console {
     );
   }
 
-  void log([_i2.Iterable<_i2.Object?>? data]) {
+  void log([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       this,
       'log',
@@ -1373,7 +1375,7 @@ extension Console$Typings on Console {
   }
 
   void table([
-    _i2.Object? tabularData,
+    _i2.dynamic tabularData,
     _i2.List<_i2.String>? properties,
   ]) {
     _i4.callMethod(
@@ -1404,7 +1406,7 @@ extension Console$Typings on Console {
 
   void timeLog([
     _i2.String? label,
-    _i2.Iterable<_i2.Object?>? data,
+    _i2.Iterable<_i2.dynamic>? data,
   ]) {
     _i4.callMethod(
       this,
@@ -1416,7 +1418,7 @@ extension Console$Typings on Console {
     );
   }
 
-  void trace([_i2.Iterable<_i2.Object?>? data]) {
+  void trace([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       this,
       'trace',
@@ -1424,7 +1426,7 @@ extension Console$Typings on Console {
     );
   }
 
-  void warn([_i2.Iterable<_i2.Object?>? data]) {
+  void warn([_i2.Iterable<_i2.dynamic>? data]) {
     _i4.callMethod(
       this,
       'warn',
@@ -1482,11 +1484,10 @@ class URLSearchParams
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('URLSearchParams')
-external _i2.Object _declaredURLSearchParams;
+_i2.Object get _declaredURLSearchParams => _i4.getProperty(
+      _self,
+      'URLSearchParams',
+    );
 
 extension URLSearchParams$Typings on URLSearchParams {
   /// Contains the number of search parameters
@@ -1631,7 +1632,7 @@ extension URLSearchParams$Typings on URLSearchParams {
       _i2.String,
       _i3.URLSearchParams,
     ) callbackfn, [
-    _i2.Object? thisArg,
+    _i2.dynamic thisArg,
   ]) {
     _i4.callMethod(
       this,
@@ -1735,11 +1736,10 @@ class Url {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('URL')
-external _i2.Object _declaredUrl;
+_i2.Object get _declaredUrl => _i4.getProperty(
+      _self,
+      'URL',
+    );
 
 extension Url$Typings on Url {
   _i2.String get hash => _i4.getProperty(
@@ -1887,15 +1887,15 @@ extension Url$Typings on Url {
 @_i1.anonymous
 class URLPatternInit {
   external factory URLPatternInit._({
-    _i2.Object? protocol,
-    _i2.Object? username,
-    _i2.Object? password,
-    _i2.Object? hostname,
-    _i2.Object? port,
-    _i2.Object? pathname,
-    _i2.Object? search,
-    _i2.Object? hash,
-    _i2.Object? baseURL,
+    _i2.dynamic protocol,
+    _i2.dynamic username,
+    _i2.dynamic password,
+    _i2.dynamic hostname,
+    _i2.dynamic port,
+    _i2.dynamic pathname,
+    _i2.dynamic search,
+    _i2.dynamic hash,
+    _i2.dynamic baseURL,
   });
 
   factory URLPatternInit({
@@ -2037,8 +2037,8 @@ extension URLPatternInit$Typings on URLPatternInit {
 @_i1.anonymous
 class URLPatternComponentResult {
   external factory URLPatternComponentResult._({
-    _i2.Object? input,
-    _i2.Object? groups,
+    _i2.dynamic input,
+    _i2.dynamic groups,
   });
 
   factory URLPatternComponentResult({
@@ -2083,15 +2083,15 @@ extension URLPatternComponentResult$Typings on URLPatternComponentResult {
 @_i1.anonymous
 class URLPatternResult {
   external factory URLPatternResult._({
-    _i2.Object? inputs,
-    _i2.Object? protocol,
-    _i2.Object? username,
-    _i2.Object? password,
-    _i2.Object? hostname,
-    _i2.Object? port,
-    _i2.Object? pathname,
-    _i2.Object? search,
-    _i2.Object? hash,
+    _i2.dynamic inputs,
+    _i2.dynamic protocol,
+    _i2.dynamic username,
+    _i2.dynamic password,
+    _i2.dynamic hostname,
+    _i2.dynamic port,
+    _i2.dynamic pathname,
+    _i2.dynamic search,
+    _i2.dynamic hash,
   });
 
   factory URLPatternResult({
@@ -2279,11 +2279,10 @@ class URLPattern {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('URLPattern')
-external _i2.Object _declaredURLPattern;
+_i2.Object get _declaredURLPattern => _i4.getProperty(
+      _self,
+      'URLPattern',
+    );
 
 extension URLPattern$Typings on URLPattern {
   /// The pattern string for the `protocol`.
@@ -2416,11 +2415,10 @@ class DOMException implements _i5.Error {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('DOMException')
-external _i2.Object _declaredDOMException;
+_i2.Object get _declaredDOMException => _i4.getProperty(
+      _self,
+      'DOMException',
+    );
 
 extension DOMException$Typings on DOMException {
   _i2.String get name => _i4.getProperty(
@@ -2442,9 +2440,9 @@ extension DOMException$Typings on DOMException {
 @_i1.anonymous
 class EventInit {
   external factory EventInit._({
-    _i2.Object? bubbles,
-    _i2.Object? cancelable,
-    _i2.Object? composed,
+    _i2.dynamic bubbles,
+    _i2.dynamic cancelable,
+    _i2.dynamic composed,
   });
 
   factory EventInit({
@@ -2514,11 +2512,10 @@ class Event {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Event')
-external _i2.Object _declaredEvent;
+_i2.Object get _declaredEvent => _i4.getProperty(
+      _self,
+      'Event',
+    );
 
 extension Event$Typings on Event {
   /// Returns true or false depending on how event was initialized. True if
@@ -2773,10 +2770,10 @@ extension EventListenerObject$Typings on EventListenerObject {
 @_i1.anonymous
 class AddEventListenerOptions implements _i3.EventListenerOptions {
   external factory AddEventListenerOptions._({
-    _i2.Object? once,
-    _i2.Object? passive,
-    _i2.Object? signal,
-    _i2.Object? capture,
+    _i2.dynamic once,
+    _i2.dynamic passive,
+    _i2.dynamic signal,
+    _i2.dynamic capture,
   });
 
   factory AddEventListenerOptions({
@@ -2835,7 +2832,7 @@ extension AddEventListenerOptions$Typings on AddEventListenerOptions {
 @_i1.staticInterop
 @_i1.anonymous
 class EventListenerOptions {
-  external factory EventListenerOptions._({_i2.Object? capture});
+  external factory EventListenerOptions._({_i2.dynamic capture});
 
   factory EventListenerOptions({_i2.bool? capture}) =>
       EventListenerOptions._(capture: capture ?? _i6.undefined);
@@ -2860,12 +2857,12 @@ extension EventListenerOptions$Typings on EventListenerOptions {
 @_i1.anonymous
 class ProgressEventInit implements _i3.EventInit {
   external factory ProgressEventInit._({
-    _i2.Object? lengthComputable,
-    _i2.Object? loaded,
-    _i2.Object? total,
-    _i2.Object? bubbles,
-    _i2.Object? cancelable,
-    _i2.Object? composed,
+    _i2.dynamic lengthComputable,
+    _i2.dynamic loaded,
+    _i2.dynamic total,
+    _i2.dynamic bubbles,
+    _i2.dynamic cancelable,
+    _i2.dynamic composed,
   });
 
   factory ProgressEventInit({
@@ -2943,11 +2940,10 @@ class ProgressEvent<T extends _i3.EventTarget> implements _i3.Event {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ProgressEvent')
-external _i2.Object _declaredProgressEvent;
+_i2.Object get _declaredProgressEvent => _i4.getProperty(
+      _self,
+      'ProgressEvent',
+    );
 
 extension ProgressEvent$Typings<T extends _i3.EventTarget> on ProgressEvent<T> {
   _i2.bool get lengthComputable => _i4.getProperty(
@@ -2975,8 +2971,8 @@ extension ProgressEvent$Typings<T extends _i3.EventTarget> on ProgressEvent<T> {
 @_i1.anonymous
 class TextDecoderOptions {
   external factory TextDecoderOptions._({
-    _i2.Object? fatal,
-    _i2.Object? ignoreBOM,
+    _i2.dynamic fatal,
+    _i2.dynamic ignoreBOM,
   });
 
   factory TextDecoderOptions({
@@ -3019,7 +3015,7 @@ extension TextDecoderOptions$Typings on TextDecoderOptions {
 @_i1.staticInterop
 @_i1.anonymous
 class TextDecodeOptions {
-  external factory TextDecodeOptions._({_i2.Object? stream});
+  external factory TextDecodeOptions._({_i2.dynamic stream});
 
   factory TextDecodeOptions({_i2.bool? stream}) =>
       TextDecodeOptions._(stream: stream ?? _i6.undefined);
@@ -3055,11 +3051,10 @@ class TextDecoder {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TextDecoder')
-external _i2.Object _declaredTextDecoder;
+_i2.Object get _declaredTextDecoder => _i4.getProperty(
+      _self,
+      'TextDecoder',
+    );
 
 extension TextDecoder$Typings on TextDecoder {
   /// Returns encoding's name, lowercased.
@@ -3104,8 +3099,8 @@ class IInline15 {}
 @_i1.anonymous
 class TextEncoderEncodeIntoResult {
   external factory TextEncoderEncodeIntoResult._({
-    _i2.Object? read,
-    _i2.Object? written,
+    _i2.dynamic read,
+    _i2.dynamic written,
   });
 
   factory TextEncoderEncodeIntoResult({
@@ -3153,11 +3148,10 @@ class TextEncoder {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TextEncoder')
-external _i2.Object _declaredTextEncoder;
+_i2.Object get _declaredTextEncoder => _i4.getProperty(
+      _self,
+      'TextEncoder',
+    );
 
 extension TextEncoder$Typings on TextEncoder {
   /// Returns "utf-8".
@@ -3206,11 +3200,10 @@ class TextDecoderStream {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TextDecoderStream')
-external _i2.Object _declaredTextDecoderStream;
+_i2.Object get _declaredTextDecoderStream => _i4.getProperty(
+      _self,
+      'TextDecoderStream',
+    );
 
 extension TextDecoderStream$Typings on TextDecoderStream {
   /// Returns encoding's name, lowercased.
@@ -3253,11 +3246,10 @@ class TextEncoderStream {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TextEncoderStream')
-external _i2.Object _declaredTextEncoderStream;
+_i2.Object get _declaredTextEncoderStream => _i4.getProperty(
+      _self,
+      'TextEncoderStream',
+    );
 
 extension TextEncoderStream$Typings on TextEncoderStream {
   /// Returns "utf-8".
@@ -3294,7 +3286,7 @@ extension AbortController$Typings on AbortController {
 
   /// Invoking this method will set this object's AbortSignal's aborted flag and
   ///  signal to any observers that the associated activity is to be aborted.
-  void abort([_i2.Object? reason]) {
+  void abort([_i2.dynamic reason]) {
     _i4.callMethod(
       this,
       'abort',
@@ -3307,7 +3299,7 @@ extension AbortController$Typings on AbortController {
 @_i1.staticInterop
 @_i1.anonymous
 class AbortSignalEventMap {
-  external factory AbortSignalEventMap._({_i2.Object? abort});
+  external factory AbortSignalEventMap._({_i2.dynamic abort});
 
   factory AbortSignalEventMap({required _i3.Event abort}) =>
       AbortSignalEventMap._(abort: abort);
@@ -3345,7 +3337,7 @@ class AbortSignal implements _i3.EventTarget {
         [],
       );
 
-  static _i3.AbortSignal abort([_i2.Object? reason]) => _i4.callMethod(
+  static _i3.AbortSignal abort([_i2.dynamic reason]) => _i4.callMethod(
         _i7.target2692,
         'abort',
         [reason ?? _i6.undefined],
@@ -3357,11 +3349,10 @@ class AbortSignal implements _i3.EventTarget {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('AbortSignal')
-external _i2.Object _declaredAbortSignal;
+_i2.Object get _declaredAbortSignal => _i4.getProperty(
+      _self,
+      'AbortSignal',
+    );
 
 extension AbortSignal$Typings on AbortSignal {
   /// Returns true if this AbortSignal's AbortController has signaled to abort,
@@ -3370,15 +3361,15 @@ extension AbortSignal$Typings on AbortSignal {
         this,
         'aborted',
       );
-  _i2.Object? get reason => _i4.getProperty(
+  _i2.dynamic get reason => _i4.getProperty(
         this,
         'reason',
       );
-  _i2.Object? Function(_i3.Event)? get onabort => _i4.getProperty(
+  _i2.dynamic Function(_i3.Event)? get onabort => _i4.getProperty(
         this,
         'onabort',
       );
-  set onabort(_i2.Object? Function(_i3.Event)? value) {
+  set onabort(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
       'onabort',
@@ -3411,7 +3402,7 @@ extension AbortSignal$Typings on AbortSignal {
   /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K extends _i3.AbortSignalEventMapKeys>(
     K type,
-    _i2.Object? Function(_i2.Object?) listener, [
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
@@ -3491,7 +3482,7 @@ extension AbortSignal$Typings on AbortSignal {
     /// appended if it has the same type, callback, and capture.
     void Function<K extends _i3.AbortSignalEventMapKeys>(
       K type,
-      _i2.Object? Function(_i2.Object?) listener, [
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -3532,7 +3523,7 @@ extension AbortSignal$Typings on AbortSignal {
   /// type, callback, and options.
   void _removeEventListener$1<K extends _i3.AbortSignalEventMapKeys>(
     K type,
-    _i2.Object? Function(_i2.Object?) listener, [
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
@@ -3570,7 +3561,7 @@ extension AbortSignal$Typings on AbortSignal {
     /// type, callback, and options.
     void Function<K extends _i3.AbortSignalEventMapKeys>(
       K type,
-      _i2.Object? Function(_i2.Object?) listener, [
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -3602,7 +3593,7 @@ extension AbortSignal$Typings on AbortSignal {
 class IInline19 {}
 
 extension IInline19$Typings on IInline19 {
-  _i3.AbortSignal abort([_i2.Object? reason]) => _i4.callMethod(
+  _i3.AbortSignal abort([_i2.dynamic reason]) => _i4.callMethod(
         this,
         'abort',
         [reason ?? _i6.undefined],
@@ -3612,19 +3603,6 @@ extension IInline19$Typings on IInline19 {
         'timeout',
         [milliseconds],
       );
-}
-
-enum FileReaderEventMap<T$ extends _i3.Event> {
-  abort<_i3.ProgressEvent<_i3.FileReader>>(r'abort'),
-  error<_i3.ProgressEvent<_i3.FileReader>>(r'error'),
-  load<_i3.ProgressEvent<_i3.FileReader>>(r'load'),
-  loadend<_i3.ProgressEvent<_i3.FileReader>>(r'loadend'),
-  loadstart<_i3.ProgressEvent<_i3.FileReader>>(r'loadstart'),
-  progress<_i3.ProgressEvent<_i3.FileReader>>(r'progress');
-
-  const FileReaderEventMap(this.value);
-
-  final _i2.String value;
 }
 
 /// Lets web applications asynchronously read the contents of files (or raw data
@@ -3652,23 +3630,22 @@ class FileReader implements _i3.EventTarget {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('FileReader')
-external _i2.Object _declaredFileReader;
+_i2.Object get _declaredFileReader => _i4.getProperty(
+      _self,
+      'FileReader',
+    );
 
 extension FileReader$Typings on FileReader {
   _i3.DOMException? get error => _i4.getProperty(
         this,
         'error',
       );
-  _i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? get onabort =>
+  _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onabort =>
       _i4.getProperty(
         this,
         'onabort',
       );
-  set onabort(_i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
+  set onabort(_i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
       'onabort',
@@ -3676,12 +3653,12 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  _i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? get onerror =>
+  _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onerror =>
       _i4.getProperty(
         this,
         'onerror',
       );
-  set onerror(_i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
+  set onerror(_i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
       'onerror',
@@ -3689,12 +3666,12 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  _i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? get onload =>
+  _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onload =>
       _i4.getProperty(
         this,
         'onload',
       );
-  set onload(_i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
+  set onload(_i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
       'onload',
@@ -3702,13 +3679,13 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  _i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? get onloadend =>
+  _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onloadend =>
       _i4.getProperty(
         this,
         'onloadend',
       );
   set onloadend(
-      _i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
+      _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
       'onloadend',
@@ -3716,13 +3693,13 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  _i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? get onloadstart =>
+  _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onloadstart =>
       _i4.getProperty(
         this,
         'onloadstart',
       );
   set onloadstart(
-      _i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
+      _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
       'onloadstart',
@@ -3730,13 +3707,13 @@ extension FileReader$Typings on FileReader {
     );
   }
 
-  _i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? get onprogress =>
+  _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? get onprogress =>
       _i4.getProperty(
         this,
         'onprogress',
       );
   set onprogress(
-      _i2.Object? Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
+      _i2.dynamic Function(_i3.ProgressEvent<_i3.FileReader>)? value) {
     _i4.setProperty(
       this,
       'onprogress',
@@ -3748,7 +3725,7 @@ extension FileReader$Typings on FileReader {
         this,
         'readyState',
       );
-  _i2.Object? get result => _i4.getProperty(
+  _i2.dynamic get result => _i4.getProperty(
         this,
         'result',
       );
@@ -3833,16 +3810,16 @@ extension FileReader$Typings on FileReader {
   ///
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
-  void _addEventListener$1<K$ extends _i3.Event>(
-    _i3.FileReaderEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _addEventListener$1<K extends _i3.FileReaderEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
       this,
       'addEventListener',
       [
-        type.name,
+        type,
         _i4.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -3913,9 +3890,9 @@ extension FileReader$Typings on FileReader {
     ///
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
-    void Function<K$ extends _i3.Event>(
-      _i3.FileReaderEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i3.FileReaderEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -3954,16 +3931,16 @@ extension FileReader$Typings on FileReader {
 
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
-  void _removeEventListener$1<K$ extends _i3.Event>(
-    _i3.FileReaderEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _removeEventListener$1<K extends _i3.FileReaderEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
       this,
       'removeEventListener',
       [
-        type.name,
+        type,
         _i4.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -3992,9 +3969,9 @@ extension FileReader$Typings on FileReader {
   ({
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
-    void Function<K$ extends _i3.Event>(
-      _i3.FileReaderEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i3.FileReaderEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -4033,8 +4010,8 @@ class IInline20 {
 @_i1.anonymous
 class BlobPropertyBag {
   external factory BlobPropertyBag._({
-    _i2.Object? type,
-    _i2.Object? endings,
+    _i2.dynamic type,
+    _i2.dynamic endings,
   });
 
   factory BlobPropertyBag({
@@ -4096,11 +4073,10 @@ class Blob {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Blob')
-external _i2.Object _declaredBlob;
+_i2.Object get _declaredBlob => _i4.getProperty(
+      _self,
+      'Blob',
+    );
 
 extension Blob$Typings on Blob {
   _i2.num get size => _i4.getProperty(
@@ -4111,7 +4087,7 @@ extension Blob$Typings on Blob {
         this,
         'type',
       );
-  _i2.Future<_i9.ByteBuffer> arrayBuffer() =>
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> arrayBuffer() =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'arrayBuffer',
@@ -4136,7 +4112,8 @@ extension Blob$Typings on Blob {
         'stream',
         [],
       );
-  _i2.Future<_i2.String> text() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i2.String>> text() =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'text',
         [],
@@ -4148,9 +4125,9 @@ extension Blob$Typings on Blob {
 @_i1.anonymous
 class FilePropertyBag implements _i3.BlobPropertyBag {
   external factory FilePropertyBag._({
-    _i2.Object? lastModified,
-    _i2.Object? type,
-    _i2.Object? endings,
+    _i2.dynamic lastModified,
+    _i2.dynamic type,
+    _i2.dynamic endings,
   });
 
   factory FilePropertyBag({
@@ -4199,11 +4176,10 @@ class File implements _i3.Blob {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('File')
-external _i2.Object _declaredFile;
+_i2.Object get _declaredFile => _i4.getProperty(
+      _self,
+      'File',
+    );
 
 extension File$Typings on File {
   _i2.num get lastModified => _i4.getProperty(
@@ -4221,13 +4197,13 @@ extension File$Typings on File {
 @_i1.anonymous
 class ReadableStreamDefaultReadDoneResult {
   external factory ReadableStreamDefaultReadDoneResult._({
-    _i2.Object? done,
-    _i2.Object? value,
+    _i2.dynamic done,
+    _i2.dynamic value,
   });
 
   factory ReadableStreamDefaultReadDoneResult({
     required _i2.bool done,
-    _i2.Object? value,
+    _i2.dynamic value,
   }) =>
       ReadableStreamDefaultReadDoneResult._(
         done: done,
@@ -4249,11 +4225,11 @@ extension ReadableStreamDefaultReadDoneResult$Typings
     );
   }
 
-  _i2.Object? get value => _i4.getProperty(
+  _i2.dynamic get value => _i4.getProperty(
         this,
         'value',
       );
-  set value(_i2.Object? value) {
+  set value(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'value',
@@ -4265,10 +4241,10 @@ extension ReadableStreamDefaultReadDoneResult$Typings
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class ReadableStreamDefaultReadValueResult<T extends _i2.Object?> {
+class ReadableStreamDefaultReadValueResult<T> {
   external factory ReadableStreamDefaultReadValueResult._({
-    _i2.Object? done,
-    _i2.Object? value,
+    _i2.dynamic done,
+    _i2.dynamic value,
   });
 
   factory ReadableStreamDefaultReadValueResult({
@@ -4281,7 +4257,7 @@ class ReadableStreamDefaultReadValueResult<T extends _i2.Object?> {
       );
 }
 
-extension ReadableStreamDefaultReadValueResult$Typings<T extends _i2.Object?>
+extension ReadableStreamDefaultReadValueResult$Typings<T>
     on ReadableStreamDefaultReadValueResult<T> {
   _i2.bool get done => _i4.getProperty(
         this,
@@ -4310,7 +4286,7 @@ extension ReadableStreamDefaultReadValueResult$Typings<T extends _i2.Object?>
 
 @_i1.JS()
 @_i1.staticInterop
-class ReadableStreamDefaultReader<R extends _i2.Object?> {
+class ReadableStreamDefaultReader<R> {
   factory ReadableStreamDefaultReader(_i3.ReadableStream<R> stream) =>
       _i4.callConstructor(
         _declaredReadableStreamDefaultReader,
@@ -4318,25 +4294,25 @@ class ReadableStreamDefaultReader<R extends _i2.Object?> {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ReadableStreamDefaultReader')
-external _i2.Object _declaredReadableStreamDefaultReader;
+_i2.Object get _declaredReadableStreamDefaultReader => _i4.getProperty(
+      _self,
+      'ReadableStreamDefaultReader',
+    );
 
-extension ReadableStreamDefaultReader$Typings<R extends _i2.Object?>
+extension ReadableStreamDefaultReader$Typings<R>
     on ReadableStreamDefaultReader<R> {
-  _i2.Future<void> get closed => _i4.promiseToFuture(_i4.getProperty(
+  _i2.Future<_i2.Future<void>> get closed =>
+      _i4.promiseToFuture(_i4.getProperty(
         this,
         'closed',
       ));
-  _i2.Future<void> cancel([_i2.Object? reason]) =>
+  _i2.Future<_i2.Future<void>> cancel([_i2.dynamic reason]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'cancel',
         [reason ?? _i6.undefined],
       ));
-  _i2.Future<_i3.ReadableStreamDefaultReadResult<R>> read() =>
+  _i2.Future<_i2.Future<_i3.ReadableStreamDefaultReadResult<R>>> read() =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'read',
@@ -4353,15 +4329,15 @@ extension ReadableStreamDefaultReader$Typings<R extends _i2.Object?>
 
 @_i1.JS()
 @_i1.staticInterop
-class IInline21<R extends _i2.Object?> {}
+class IInline21<R> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 class ReadableStreamBYOBReadDoneResult<V extends _i5.ArrayBufferView> {
   external factory ReadableStreamBYOBReadDoneResult._({
-    _i2.Object? done,
-    _i2.Object? value,
+    _i2.dynamic done,
+    _i2.dynamic value,
   });
 
   factory ReadableStreamBYOBReadDoneResult({
@@ -4406,8 +4382,8 @@ extension ReadableStreamBYOBReadDoneResult$Typings<
 @_i1.anonymous
 class ReadableStreamBYOBReadValueResult<V extends _i5.ArrayBufferView> {
   external factory ReadableStreamBYOBReadValueResult._({
-    _i2.Object? done,
-    _i2.Object? value,
+    _i2.dynamic done,
+    _i2.dynamic value,
   });
 
   factory ReadableStreamBYOBReadValueResult({
@@ -4457,24 +4433,24 @@ class ReadableStreamBYOBReader {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ReadableStreamBYOBReader')
-external _i2.Object _declaredReadableStreamBYOBReader;
+_i2.Object get _declaredReadableStreamBYOBReader => _i4.getProperty(
+      _self,
+      'ReadableStreamBYOBReader',
+    );
 
 extension ReadableStreamBYOBReader$Typings on ReadableStreamBYOBReader {
-  _i2.Future<void> get closed => _i4.promiseToFuture(_i4.getProperty(
+  _i2.Future<_i2.Future<void>> get closed =>
+      _i4.promiseToFuture(_i4.getProperty(
         this,
         'closed',
       ));
-  _i2.Future<void> cancel([_i2.Object? reason]) =>
+  _i2.Future<_i2.Future<void>> cancel([_i2.dynamic reason]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'cancel',
         [reason ?? _i6.undefined],
       ));
-  _i2.Future<_i3.ReadableStreamBYOBReadResult<V>>
+  _i2.Future<_i2.Future<_i3.ReadableStreamBYOBReadResult<V>>>
       read<V extends _i5.ArrayBufferView>(V view) =>
           _i4.promiseToFuture(_i4.callMethod(
             this,
@@ -4545,11 +4521,11 @@ extension ReadableByteStreamControllerCallback$Typings
 @_i1.anonymous
 class UnderlyingByteSource {
   external factory UnderlyingByteSource._({
-    _i2.Object? autoAllocateChunkSize,
-    _i2.Object? cancel,
-    _i2.Object? pull,
-    _i2.Object? start,
-    _i2.Object? type,
+    _i2.dynamic autoAllocateChunkSize,
+    _i2.dynamic cancel,
+    _i2.dynamic pull,
+    _i2.dynamic start,
+    _i2.dynamic type,
   });
 
   factory UnderlyingByteSource({
@@ -4633,20 +4609,20 @@ extension UnderlyingByteSource$Typings on UnderlyingByteSource {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class UnderlyingSink<W extends _i2.Object?> {
+class UnderlyingSink<W> {
   external factory UnderlyingSink._({
-    _i2.Object? abort,
-    _i2.Object? close,
-    _i2.Object? start,
-    _i2.Object? type,
-    _i2.Object? write,
+    _i2.dynamic abort,
+    _i2.dynamic close,
+    _i2.dynamic start,
+    _i2.dynamic type,
+    _i2.dynamic write,
   });
 
   factory UnderlyingSink({
     _i3.WritableStreamErrorCallback? abort,
     _i3.WritableStreamDefaultControllerCloseCallback? close,
     _i3.WritableStreamDefaultControllerStartCallback? start,
-    _i2.Object? type,
+    _i2.dynamic type,
     _i3.WritableStreamDefaultControllerWriteCallback<W>? write,
   }) =>
       UnderlyingSink._(
@@ -4658,7 +4634,7 @@ class UnderlyingSink<W extends _i2.Object?> {
       );
 }
 
-extension UnderlyingSink$Typings<W extends _i2.Object?> on UnderlyingSink<W> {
+extension UnderlyingSink$Typings<W> on UnderlyingSink<W> {
   _i3.WritableStreamErrorCallback? get abort => _i4.getProperty(
         this,
         'abort',
@@ -4697,11 +4673,11 @@ extension UnderlyingSink$Typings<W extends _i2.Object?> on UnderlyingSink<W> {
     );
   }
 
-  _i2.Object? get type => _i4.getProperty(
+  _i2.dynamic get type => _i4.getProperty(
         this,
         'type',
       );
-  set type(_i2.Object? value) {
+  set type(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'type',
@@ -4726,19 +4702,19 @@ extension UnderlyingSink$Typings<W extends _i2.Object?> on UnderlyingSink<W> {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class UnderlyingSource<R extends _i2.Object?> {
+class UnderlyingSource<R> {
   external factory UnderlyingSource._({
-    _i2.Object? cancel,
-    _i2.Object? pull,
-    _i2.Object? start,
-    _i2.Object? type,
+    _i2.dynamic cancel,
+    _i2.dynamic pull,
+    _i2.dynamic start,
+    _i2.dynamic type,
   });
 
   factory UnderlyingSource({
     _i3.ReadableStreamErrorCallback? cancel,
     _i3.ReadableStreamDefaultControllerCallback<R>? pull,
     _i3.ReadableStreamDefaultControllerCallback<R>? start,
-    _i2.Object? type,
+    _i2.dynamic type,
   }) =>
       UnderlyingSource._(
         cancel: cancel ?? _i6.undefined,
@@ -4748,8 +4724,7 @@ class UnderlyingSource<R extends _i2.Object?> {
       );
 }
 
-extension UnderlyingSource$Typings<R extends _i2.Object?>
-    on UnderlyingSource<R> {
+extension UnderlyingSource$Typings<R> on UnderlyingSource<R> {
   _i3.ReadableStreamErrorCallback? get cancel => _i4.getProperty(
         this,
         'cancel',
@@ -4786,11 +4761,11 @@ extension UnderlyingSource$Typings<R extends _i2.Object?>
     );
   }
 
-  _i2.Object? get type => _i4.getProperty(
+  _i2.dynamic get type => _i4.getProperty(
         this,
         'type',
       );
-  set type(_i2.Object? value) {
+  set type(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'type',
@@ -4809,7 +4784,7 @@ class ReadableStreamErrorCallback {
 }
 
 extension ReadableStreamErrorCallback$Typings on ReadableStreamErrorCallback {
-  _i2.Object call(_i2.Object? reason) => _i4.callMethod(
+  _i2.Object call(_i2.dynamic reason) => _i4.callMethod(
         this,
         '',
         [reason],
@@ -4819,14 +4794,14 @@ extension ReadableStreamErrorCallback$Typings on ReadableStreamErrorCallback {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class ReadableStreamDefaultControllerCallback<R extends _i2.Object?> {
+class ReadableStreamDefaultControllerCallback<R> {
   external factory ReadableStreamDefaultControllerCallback._();
 
   factory ReadableStreamDefaultControllerCallback() =>
       ReadableStreamDefaultControllerCallback._();
 }
 
-extension ReadableStreamDefaultControllerCallback$Typings<R extends _i2.Object?>
+extension ReadableStreamDefaultControllerCallback$Typings<R>
     on ReadableStreamDefaultControllerCallback<R> {
   _i2.Object call(_i3.ReadableStreamDefaultController<R> controller) =>
       _i4.callMethod(
@@ -4838,20 +4813,19 @@ extension ReadableStreamDefaultControllerCallback$Typings<R extends _i2.Object?>
 
 @_i1.JS()
 @_i1.staticInterop
-class ReadableStreamDefaultController<R extends _i2.Object?> {
+class ReadableStreamDefaultController<R> {
   factory ReadableStreamDefaultController() => _i4.callConstructor(
         _declaredReadableStreamDefaultController,
         [],
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ReadableStreamDefaultController')
-external _i2.Object _declaredReadableStreamDefaultController;
+_i2.Object get _declaredReadableStreamDefaultController => _i4.getProperty(
+      _self,
+      'ReadableStreamDefaultController',
+    );
 
-extension ReadableStreamDefaultController$Typings<R extends _i2.Object?>
+extension ReadableStreamDefaultController$Typings<R>
     on ReadableStreamDefaultController<R> {
   _i2.num? get desiredSize => _i4.getProperty(
         this,
@@ -4873,7 +4847,7 @@ extension ReadableStreamDefaultController$Typings<R extends _i2.Object?>
     );
   }
 
-  void error([_i2.Object? error]) {
+  void error([_i2.dynamic error]) {
     _i4.callMethod(
       this,
       'error',
@@ -4895,11 +4869,10 @@ class ReadableByteStreamController {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ReadableByteStreamController')
-external _i2.Object _declaredReadableByteStreamController;
+_i2.Object get _declaredReadableByteStreamController => _i4.getProperty(
+      _self,
+      'ReadableByteStreamController',
+    );
 
 extension ReadableByteStreamController$Typings on ReadableByteStreamController {
   _i3.ReadableStreamBYOBRequest? get byobRequest => _i4.getProperty(
@@ -4926,7 +4899,7 @@ extension ReadableByteStreamController$Typings on ReadableByteStreamController {
     );
   }
 
-  void error([_i2.Object? error]) {
+  void error([_i2.dynamic error]) {
     _i4.callMethod(
       this,
       'error',
@@ -4944,10 +4917,10 @@ class IInline24 {}
 @_i1.anonymous
 class PipeOptions {
   external factory PipeOptions._({
-    _i2.Object? preventAbort,
-    _i2.Object? preventCancel,
-    _i2.Object? preventClose,
-    _i2.Object? signal,
+    _i2.dynamic preventAbort,
+    _i2.dynamic preventCancel,
+    _i2.dynamic preventClose,
+    _i2.dynamic signal,
   });
 
   factory PipeOptions({
@@ -5017,13 +4990,13 @@ extension PipeOptions$Typings on PipeOptions {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class QueuingStrategySizeCallback<T extends _i2.Object?> {
+class QueuingStrategySizeCallback<T> {
   external factory QueuingStrategySizeCallback._();
 
   factory QueuingStrategySizeCallback() => QueuingStrategySizeCallback._();
 }
 
-extension QueuingStrategySizeCallback$Typings<T extends _i2.Object?>
+extension QueuingStrategySizeCallback$Typings<T>
     on QueuingStrategySizeCallback<T> {
   _i2.num call(T chunk) => _i4.callMethod(
         this,
@@ -5035,10 +5008,10 @@ extension QueuingStrategySizeCallback$Typings<T extends _i2.Object?>
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class QueuingStrategy<T extends _i2.Object?> {
+class QueuingStrategy<T> {
   external factory QueuingStrategy._({
-    _i2.Object? highWaterMark,
-    _i2.Object? size,
+    _i2.dynamic highWaterMark,
+    _i2.dynamic size,
   });
 
   factory QueuingStrategy({
@@ -5051,7 +5024,7 @@ class QueuingStrategy<T extends _i2.Object?> {
       );
 }
 
-extension QueuingStrategy$Typings<T extends _i2.Object?> on QueuingStrategy<T> {
+extension QueuingStrategy$Typings<T> on QueuingStrategy<T> {
   _i2.num? get highWaterMark => _i4.getProperty(
         this,
         'highWaterMark',
@@ -5081,18 +5054,17 @@ extension QueuingStrategy$Typings<T extends _i2.Object?> on QueuingStrategy<T> {
 /// that can be used when constructing streams.
 @_i1.JS()
 @_i1.staticInterop
-class CountQueuingStrategy implements _i3.QueuingStrategy<_i2.Object?> {
+class CountQueuingStrategy implements _i3.QueuingStrategy<_i2.dynamic> {
   factory CountQueuingStrategy(_i3.IInline26 options) => _i4.callConstructor(
         _declaredCountQueuingStrategy,
         [options],
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CountQueuingStrategy')
-external _i2.Object _declaredCountQueuingStrategy;
+_i2.Object get _declaredCountQueuingStrategy => _i4.getProperty(
+      _self,
+      'CountQueuingStrategy',
+    );
 
 extension CountQueuingStrategy$Typings on CountQueuingStrategy {
   _i2.num get highWaterMark => _i4.getProperty(
@@ -5107,7 +5079,7 @@ extension CountQueuingStrategy$Typings on CountQueuingStrategy {
     );
   }
 
-  _i2.num size(_i2.Object? chunk) => _i4.callMethod(
+  _i2.num size(_i2.dynamic chunk) => _i4.callMethod(
         this,
         'size',
         [chunk],
@@ -5148,11 +5120,10 @@ class ByteLengthQueuingStrategy
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ByteLengthQueuingStrategy')
-external _i2.Object _declaredByteLengthQueuingStrategy;
+_i2.Object get _declaredByteLengthQueuingStrategy => _i4.getProperty(
+      _self,
+      'ByteLengthQueuingStrategy',
+    );
 
 extension ByteLengthQueuingStrategy$Typings on ByteLengthQueuingStrategy {
   _i2.num get highWaterMark => _i4.getProperty(
@@ -5222,11 +5193,11 @@ extension IInline29$Typings on IInline29 {
 class IInline30 {}
 
 extension IInline30$Typings on IInline30 {
-  _i2.Object? get mode => _i4.getProperty(
+  _i2.dynamic get mode => _i4.getProperty(
         this,
         'mode',
       );
-  set mode(_i2.Object? value) {
+  set mode(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'mode',
@@ -5238,10 +5209,9 @@ extension IInline30$Typings on IInline30 {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline31<R extends _i2.Object?, T extends _i2.Object?> {}
+class IInline31<R, T> {}
 
-extension IInline31$Typings<R extends _i2.Object?, T extends _i2.Object?>
-    on IInline31<R, T> {
+extension IInline31$Typings<R, T> on IInline31<R, T> {
   _i3.WritableStream<R> get writable => _i4.getProperty(
         this,
         'writable',
@@ -5291,7 +5261,7 @@ extension IInline32$Typings on IInline32 {
 /// property of a Response object.
 @_i1.JS()
 @_i1.staticInterop
-class ReadableStream<R extends _i2.Object?> {
+class ReadableStream<R> {
   factory ReadableStream.$1() => _i4.callConstructor(
         _declaredReadableStream,
         [],
@@ -5322,18 +5292,17 @@ class ReadableStream<R extends _i2.Object?> {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ReadableStream')
-external _i2.Object _declaredReadableStream;
+_i2.Object get _declaredReadableStream => _i4.getProperty(
+      _self,
+      'ReadableStream',
+    );
 
-extension ReadableStream$Typings<R extends _i2.Object?> on ReadableStream<R> {
+extension ReadableStream$Typings<R> on ReadableStream<R> {
   _i2.bool get locked => _i4.getProperty(
         this,
         'locked',
       );
-  _i2.Future<void> cancel([_i2.Object? reason]) =>
+  _i2.Future<_i2.Future<void>> cancel([_i2.dynamic reason]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'cancel',
@@ -5360,8 +5329,8 @@ extension ReadableStream$Typings<R extends _i2.Object?> on ReadableStream<R> {
         $1: _getReader$1,
         $2: _getReader$2,
       );
-  _i3.ReadableStream<T> pipeThrough<T extends _i2.Object?>(
-    _i3.IInline31<_i2.Object?, _i2.Object?> transform, [
+  _i3.ReadableStream<T> pipeThrough<T>(
+    _i3.IInline31<_i2.dynamic, _i2.dynamic> transform, [
     _i3.PipeOptions? options,
   ]) =>
       _i4.callMethod(
@@ -5372,7 +5341,7 @@ extension ReadableStream$Typings<R extends _i2.Object?> on ReadableStream<R> {
           options ?? _i6.undefined,
         ],
       );
-  _i2.Future<void> pipeTo(
+  _i2.Future<_i2.Future<void>> pipeTo(
     _i3.WritableStream<R> dest, [
     _i3.PipeOptions? options,
   ]) =>
@@ -5412,11 +5381,11 @@ extension IInline34$Typings on IInline34 {
     );
   }
 
-  _i2.Object? get size => _i4.getProperty(
+  _i2.dynamic get size => _i4.getProperty(
         this,
         'size',
       );
-  set size(_i2.Object? value) {
+  set size(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'size',
@@ -5471,15 +5440,15 @@ extension WritableStreamDefaultControllerStartCallback$Typings
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class WritableStreamDefaultControllerWriteCallback<W extends _i2.Object?> {
+class WritableStreamDefaultControllerWriteCallback<W> {
   external factory WritableStreamDefaultControllerWriteCallback._();
 
   factory WritableStreamDefaultControllerWriteCallback() =>
       WritableStreamDefaultControllerWriteCallback._();
 }
 
-extension WritableStreamDefaultControllerWriteCallback$Typings<
-    W extends _i2.Object?> on WritableStreamDefaultControllerWriteCallback<W> {
+extension WritableStreamDefaultControllerWriteCallback$Typings<W>
+    on WritableStreamDefaultControllerWriteCallback<W> {
   _i2.Object call(
     W chunk,
     _i3.WritableStreamDefaultController controller,
@@ -5504,7 +5473,7 @@ class WritableStreamErrorCallback {
 }
 
 extension WritableStreamErrorCallback$Typings on WritableStreamErrorCallback {
-  _i2.Object call(_i2.Object? reason) => _i4.callMethod(
+  _i2.Object call(_i2.dynamic reason) => _i4.callMethod(
         this,
         '',
         [reason],
@@ -5516,7 +5485,7 @@ extension WritableStreamErrorCallback$Typings on WritableStreamErrorCallback {
 /// built-in backpressure and queuing.
 @_i1.JS()
 @_i1.staticInterop
-class WritableStream<W extends _i2.Object?> {
+class WritableStream<W> {
   factory WritableStream([
     _i3.UnderlyingSink<W>? underlyingSink,
     _i3.QueuingStrategy<W>? strategy,
@@ -5530,24 +5499,23 @@ class WritableStream<W extends _i2.Object?> {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('WritableStream')
-external _i2.Object _declaredWritableStream;
+_i2.Object get _declaredWritableStream => _i4.getProperty(
+      _self,
+      'WritableStream',
+    );
 
-extension WritableStream$Typings<W extends _i2.Object?> on WritableStream<W> {
+extension WritableStream$Typings<W> on WritableStream<W> {
   _i2.bool get locked => _i4.getProperty(
         this,
         'locked',
       );
-  _i2.Future<void> abort([_i2.Object? reason]) =>
+  _i2.Future<_i2.Future<void>> abort([_i2.dynamic reason]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'abort',
         [reason ?? _i6.undefined],
       ));
-  _i2.Future<void> close() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<void>> close() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'close',
         [],
@@ -5561,7 +5529,7 @@ extension WritableStream$Typings<W extends _i2.Object?> on WritableStream<W> {
 
 @_i1.JS()
 @_i1.staticInterop
-class IInline35<W extends _i2.Object?> {}
+class IInline35<W> {}
 
 /// This Streams API interface represents a controller allowing control of a
 /// WritableStream's state. When constructing a WritableStream, the underlying
@@ -5585,7 +5553,7 @@ extension WritableStreamDefaultController$Typings
     );
   }
 
-  void error([_i2.Object? error]) {
+  void error([_i2.dynamic error]) {
     _i4.callMethod(
       this,
       'error',
@@ -5600,22 +5568,22 @@ extension WritableStreamDefaultController$Typings
 /// sink.
 @_i1.JS()
 @_i1.staticInterop
-class WritableStreamDefaultWriter<W extends _i2.Object?> {
+class WritableStreamDefaultWriter<W> {
   factory WritableStreamDefaultWriter() => _i4.callConstructor(
         _declaredWritableStreamDefaultWriter,
         [],
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('WritableStreamDefaultWriter')
-external _i2.Object _declaredWritableStreamDefaultWriter;
+_i2.Object get _declaredWritableStreamDefaultWriter => _i4.getProperty(
+      _self,
+      'WritableStreamDefaultWriter',
+    );
 
-extension WritableStreamDefaultWriter$Typings<W extends _i2.Object?>
+extension WritableStreamDefaultWriter$Typings<W>
     on WritableStreamDefaultWriter<W> {
-  _i2.Future<void> get closed => _i4.promiseToFuture(_i4.getProperty(
+  _i2.Future<_i2.Future<void>> get closed =>
+      _i4.promiseToFuture(_i4.getProperty(
         this,
         'closed',
       ));
@@ -5623,17 +5591,17 @@ extension WritableStreamDefaultWriter$Typings<W extends _i2.Object?>
         this,
         'desiredSize',
       );
-  _i2.Future<void> get ready => _i4.promiseToFuture(_i4.getProperty(
+  _i2.Future<_i2.Future<void>> get ready => _i4.promiseToFuture(_i4.getProperty(
         this,
         'ready',
       ));
-  _i2.Future<void> abort([_i2.Object? reason]) =>
+  _i2.Future<_i2.Future<void>> abort([_i2.dynamic reason]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'abort',
         [reason ?? _i6.undefined],
       ));
-  _i2.Future<void> close() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<void>> close() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'close',
         [],
@@ -5646,7 +5614,8 @@ extension WritableStreamDefaultWriter$Typings<W extends _i2.Object?>
     );
   }
 
-  _i2.Future<void> write(W chunk) => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<void>> write(W chunk) =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'write',
         [chunk],
@@ -5659,7 +5628,7 @@ class IInline36 {}
 
 @_i1.JS()
 @_i1.staticInterop
-class TransformStream<I extends _i2.Object?, O extends _i2.Object?> {
+class TransformStream<I, O> {
   factory TransformStream([
     _i3.Transformer<I, O>? transformer,
     _i3.QueuingStrategy<I>? writableStrategy,
@@ -5675,14 +5644,12 @@ class TransformStream<I extends _i2.Object?, O extends _i2.Object?> {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TransformStream')
-external _i2.Object _declaredTransformStream;
+_i2.Object get _declaredTransformStream => _i4.getProperty(
+      _self,
+      'TransformStream',
+    );
 
-extension TransformStream$Typings<I extends _i2.Object?, O extends _i2.Object?>
-    on TransformStream<I, O> {
+extension TransformStream$Typings<I, O> on TransformStream<I, O> {
   _i3.ReadableStream<O> get readable => _i4.getProperty(
         this,
         'readable',
@@ -5695,13 +5662,13 @@ extension TransformStream$Typings<I extends _i2.Object?, O extends _i2.Object?>
 
 @_i1.JS()
 @_i1.staticInterop
-class IInline37<I extends _i2.Object?, O extends _i2.Object?> {}
+class IInline37<I, O> {}
 
 @_i1.JS()
 @_i1.staticInterop
-class TransformStreamDefaultController<O extends _i2.Object?> {}
+class TransformStreamDefaultController<O> {}
 
-extension TransformStreamDefaultController$Typings<O extends _i2.Object?>
+extension TransformStreamDefaultController$Typings<O>
     on TransformStreamDefaultController<O> {
   _i2.num? get desiredSize => _i4.getProperty(
         this,
@@ -5715,7 +5682,7 @@ extension TransformStreamDefaultController$Typings<O extends _i2.Object?>
     );
   }
 
-  void error([_i2.Object? reason]) {
+  void error([_i2.dynamic reason]) {
     _i4.callMethod(
       this,
       'error',
@@ -5735,21 +5702,21 @@ extension TransformStreamDefaultController$Typings<O extends _i2.Object?>
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class Transformer<I extends _i2.Object?, O extends _i2.Object?> {
+class Transformer<I, O> {
   external factory Transformer._({
-    _i2.Object? flush,
-    _i2.Object? readableType,
-    _i2.Object? start,
-    _i2.Object? transform,
-    _i2.Object? writableType,
+    _i2.dynamic flush,
+    _i2.dynamic readableType,
+    _i2.dynamic start,
+    _i2.dynamic transform,
+    _i2.dynamic writableType,
   });
 
   factory Transformer({
     _i3.TransformStreamDefaultControllerCallback<O>? flush,
-    _i2.Object? readableType,
+    _i2.dynamic readableType,
     _i3.TransformStreamDefaultControllerCallback<O>? start,
     _i3.TransformStreamDefaultControllerTransformCallback<I, O>? transform,
-    _i2.Object? writableType,
+    _i2.dynamic writableType,
   }) =>
       Transformer._(
         flush: flush ?? _i6.undefined,
@@ -5760,8 +5727,7 @@ class Transformer<I extends _i2.Object?, O extends _i2.Object?> {
       );
 }
 
-extension Transformer$Typings<I extends _i2.Object?, O extends _i2.Object?>
-    on Transformer<I, O> {
+extension Transformer$Typings<I, O> on Transformer<I, O> {
   _i3.TransformStreamDefaultControllerCallback<O>? get flush => _i4.getProperty(
         this,
         'flush',
@@ -5774,11 +5740,11 @@ extension Transformer$Typings<I extends _i2.Object?, O extends _i2.Object?>
     );
   }
 
-  _i2.Object? get readableType => _i4.getProperty(
+  _i2.dynamic get readableType => _i4.getProperty(
         this,
         'readableType',
       );
-  set readableType(_i2.Object? value) {
+  set readableType(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'readableType',
@@ -5812,11 +5778,11 @@ extension Transformer$Typings<I extends _i2.Object?, O extends _i2.Object?>
     );
   }
 
-  _i2.Object? get writableType => _i4.getProperty(
+  _i2.dynamic get writableType => _i4.getProperty(
         this,
         'writableType',
       );
-  set writableType(_i2.Object? value) {
+  set writableType(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'writableType',
@@ -5828,15 +5794,15 @@ extension Transformer$Typings<I extends _i2.Object?, O extends _i2.Object?>
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class TransformStreamDefaultControllerCallback<O extends _i2.Object?> {
+class TransformStreamDefaultControllerCallback<O> {
   external factory TransformStreamDefaultControllerCallback._();
 
   factory TransformStreamDefaultControllerCallback() =>
       TransformStreamDefaultControllerCallback._();
 }
 
-extension TransformStreamDefaultControllerCallback$Typings<
-    O extends _i2.Object?> on TransformStreamDefaultControllerCallback<O> {
+extension TransformStreamDefaultControllerCallback$Typings<O>
+    on TransformStreamDefaultControllerCallback<O> {
   _i2.Object call(_i3.TransformStreamDefaultController<O> controller) =>
       _i4.callMethod(
         this,
@@ -5848,16 +5814,14 @@ extension TransformStreamDefaultControllerCallback$Typings<
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class TransformStreamDefaultControllerTransformCallback<I extends _i2.Object?,
-    O extends _i2.Object?> {
+class TransformStreamDefaultControllerTransformCallback<I, O> {
   external factory TransformStreamDefaultControllerTransformCallback._();
 
   factory TransformStreamDefaultControllerTransformCallback() =>
       TransformStreamDefaultControllerTransformCallback._();
 }
 
-extension TransformStreamDefaultControllerTransformCallback$Typings<
-        I extends _i2.Object?, O extends _i2.Object?>
+extension TransformStreamDefaultControllerTransformCallback$Typings<I, O>
     on TransformStreamDefaultControllerTransformCallback<I, O> {
   _i2.Object call(
     I chunk,
@@ -5876,14 +5840,14 @@ extension TransformStreamDefaultControllerTransformCallback$Typings<
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class MessageEventInit<T extends _i2.Object?> implements _i3.EventInit {
+class MessageEventInit<T> implements _i3.EventInit {
   external factory MessageEventInit._({
-    _i2.Object? data,
-    _i2.Object? origin,
-    _i2.Object? lastEventId,
-    _i2.Object? bubbles,
-    _i2.Object? cancelable,
-    _i2.Object? composed,
+    _i2.dynamic data,
+    _i2.dynamic origin,
+    _i2.dynamic lastEventId,
+    _i2.dynamic bubbles,
+    _i2.dynamic cancelable,
+    _i2.dynamic composed,
   });
 
   factory MessageEventInit({
@@ -5904,8 +5868,7 @@ class MessageEventInit<T extends _i2.Object?> implements _i3.EventInit {
       );
 }
 
-extension MessageEventInit$Typings<T extends _i2.Object?>
-    on MessageEventInit<T> {
+extension MessageEventInit$Typings<T> on MessageEventInit<T> {
   T? get data => _i4.getProperty(
         this,
         'data',
@@ -5945,10 +5908,10 @@ extension MessageEventInit$Typings<T extends _i2.Object?>
 
 @_i1.JS()
 @_i1.staticInterop
-class MessageEvent<T extends _i2.Object?> implements _i3.Event {
+class MessageEvent<T> implements _i3.Event {
   factory MessageEvent(
     _i2.String type, [
-    _i3.MessageEventInit<_i2.Object?>? eventInitDict,
+    _i3.MessageEventInit<_i2.dynamic>? eventInitDict,
   ]) =>
       _i4.callConstructor(
         _declaredMessageEvent,
@@ -5959,13 +5922,12 @@ class MessageEvent<T extends _i2.Object?> implements _i3.Event {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('MessageEvent')
-external _i2.Object _declaredMessageEvent;
+_i2.Object get _declaredMessageEvent => _i4.getProperty(
+      _self,
+      'MessageEvent',
+    );
 
-extension MessageEvent$Typings<T extends _i2.Object?> on MessageEvent<T> {
+extension MessageEvent$Typings<T> on MessageEvent<T> {
   /// Returns the data of the message.
   T get data => _i4.getProperty(
         this,
@@ -5989,7 +5951,7 @@ extension MessageEvent$Typings<T extends _i2.Object?> on MessageEvent<T> {
 @_i1.staticInterop
 @_i1.anonymous
 class StructuredSerializeOptions {
-  external factory StructuredSerializeOptions._({_i2.Object? transfer});
+  external factory StructuredSerializeOptions._({_i2.dynamic transfer});
 
   factory StructuredSerializeOptions({_i2.List<_i3.Transferable>? transfer}) =>
       StructuredSerializeOptions._(transfer: transfer ?? _i6.undefined);
@@ -6022,11 +5984,10 @@ class MessageChannel {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('MessageChannel')
-external _i2.Object _declaredMessageChannel;
+_i2.Object get _declaredMessageChannel => _i4.getProperty(
+      _self,
+      'MessageChannel',
+    );
 
 extension MessageChannel$Typings on MessageChannel {
   _i3.MessagePort get port1 => _i4.getProperty(
@@ -6039,15 +6000,6 @@ extension MessageChannel$Typings on MessageChannel {
       );
 }
 
-enum MessagePortEventMap<T$ extends _i3.Event> {
-  message<_i3.MessageEvent<_i2.Object?>>(r'message'),
-  messageerror<_i3.MessageEvent<_i2.Object?>>(r'messageerror');
-
-  const MessagePortEventMap(this.value);
-
-  final _i2.String value;
-}
-
 /// The MessagePort interface of the Channel Messaging API represents one of the
 /// two ports of a MessageChannel, allowing messages to be sent from one port and
 /// listening out for them arriving at the other.
@@ -6056,12 +6008,12 @@ enum MessagePortEventMap<T$ extends _i3.Event> {
 class MessagePort implements _i3.EventTarget {}
 
 extension MessagePort$Typings on MessagePort {
-  _i2.Object? Function(_i3.MessageEvent<_i2.Object?>)? get onmessage =>
+  _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? get onmessage =>
       _i4.getProperty(
         this,
         'onmessage',
       );
-  set onmessage(_i2.Object? Function(_i3.MessageEvent<_i2.Object?>)? value) {
+  set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
       'onmessage',
@@ -6069,13 +6021,13 @@ extension MessagePort$Typings on MessagePort {
     );
   }
 
-  _i2.Object? Function(_i3.MessageEvent<_i2.Object?>)? get onmessageerror =>
+  _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? get onmessageerror =>
       _i4.getProperty(
         this,
         'onmessageerror',
       );
   set onmessageerror(
-      _i2.Object? Function(_i3.MessageEvent<_i2.Object?>)? value) {
+      _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
       'onmessageerror',
@@ -6099,7 +6051,7 @@ extension MessagePort$Typings on MessagePort {
   ///  Throws a "DataCloneError" DOMException if transfer contains duplicate
   ///  objects or port, or if message could not be cloned.
   void _postMessage$1(
-    _i2.Object? message,
+    _i2.dynamic message,
     _i2.List<_i3.Transferable> transfer,
   ) {
     _i4.callMethod(
@@ -6119,7 +6071,7 @@ extension MessagePort$Typings on MessagePort {
   /// Throws a "DataCloneError" DOMException if transfer contains duplicate
   /// objects or port, or if message could not be cloned.
   void _postMessage$2(
-    _i2.Object? message, [
+    _i2.dynamic message, [
     _i3.StructuredSerializeOptions? options,
   ]) {
     _i4.callMethod(
@@ -6141,7 +6093,7 @@ extension MessagePort$Typings on MessagePort {
     ///  Throws a "DataCloneError" DOMException if transfer contains duplicate
     ///  objects or port, or if message could not be cloned.
     void Function(
-      _i2.Object? message,
+      _i2.dynamic message,
       _i2.List<_i3.Transferable> transfer,
     ) $1,
 
@@ -6152,7 +6104,7 @@ extension MessagePort$Typings on MessagePort {
     /// Throws a "DataCloneError" DOMException if transfer contains duplicate
     /// objects or port, or if message could not be cloned.
     void Function(
-      _i2.Object? message, [
+      _i2.dynamic message, [
       _i3.StructuredSerializeOptions? options,
     ]) $2,
   }) get postMessage => (
@@ -6193,16 +6145,16 @@ extension MessagePort$Typings on MessagePort {
   ///
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
-  void _addEventListener$1<K$ extends _i3.Event>(
-    _i3.MessagePortEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _addEventListener$1<K extends _i3.MessagePortEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
       this,
       'addEventListener',
       [
-        type.name,
+        type,
         _i4.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -6273,9 +6225,9 @@ extension MessagePort$Typings on MessagePort {
     ///
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
-    void Function<K$ extends _i3.Event>(
-      _i3.MessagePortEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i3.MessagePortEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -6314,16 +6266,16 @@ extension MessagePort$Typings on MessagePort {
 
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
-  void _removeEventListener$1<K$ extends _i3.Event>(
-    _i3.MessagePortEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _removeEventListener$1<K extends _i3.MessagePortEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
       this,
       'removeEventListener',
       [
-        type.name,
+        type,
         _i4.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -6352,9 +6304,9 @@ extension MessagePort$Typings on MessagePort {
   ({
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
-    void Function<K$ extends _i3.Event>(
-      _i3.MessagePortEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i3.MessagePortEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -6381,11 +6333,10 @@ class CompressionStream {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CompressionStream')
-external _i2.Object _declaredCompressionStream;
+_i2.Object get _declaredCompressionStream => _i4.getProperty(
+      _self,
+      'CompressionStream',
+    );
 
 extension CompressionStream$Typings on CompressionStream {
   _i3.ReadableStream<_i9.Uint8List> get readable => _i4.getProperty(
@@ -6408,11 +6359,10 @@ class DecompressionStream {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('DecompressionStream')
-external _i2.Object _declaredDecompressionStream;
+_i2.Object get _declaredDecompressionStream => _i4.getProperty(
+      _self,
+      'DecompressionStream',
+    );
 
 extension DecompressionStream$Typings on DecompressionStream {
   _i3.ReadableStream<_i9.Uint8List> get readable => _i4.getProperty(
@@ -6427,7 +6377,7 @@ extension DecompressionStream$Typings on DecompressionStream {
 
 @_i1.JS()
 @_i1.staticInterop
-class DomIterable<K extends _i2.Object?, V extends _i2.Object?>
+class DomIterable<K, V>
     implements
         _IterableLike$<
             _i8.IterableIterator<
@@ -6436,8 +6386,7 @@ class DomIterable<K extends _i2.Object?, V extends _i2.Object?>
                   V,
                 )>> {}
 
-extension DomIterable$Typings<K extends _i2.Object?, V extends _i2.Object?>
-    on DomIterable<K, V> {
+extension DomIterable$Typings<K, V> on DomIterable<K, V> {
   _i8.IterableIterator<K> keys() => _i4.callMethod(
         this,
         'keys',
@@ -6461,9 +6410,9 @@ extension DomIterable$Typings<K extends _i2.Object?, V extends _i2.Object?>
     void Function(
       V,
       K,
-      _i3.DomIterable<_i2.Object?, _i2.Object?>,
+      _i3.DomIterable<_i2.dynamic, _i2.dynamic>,
     ) callback, [
-    _i2.Object? thisArg,
+    _i2.dynamic thisArg,
   ]) {
     _i4.callMethod(
       this,
@@ -6496,11 +6445,10 @@ class FormData
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('FormData')
-external _i2.Object _declaredFormData;
+_i2.Object get _declaredFormData => _i4.getProperty(
+      _self,
+      'FormData',
+    );
 
 extension FormData$Typings on FormData {
   void append(
@@ -6584,7 +6532,7 @@ extension FormData$Typings on FormData {
       _i2.String,
       _i3.FormData,
     ) callback, [
-    _i2.Object? thisArg,
+    _i2.dynamic thisArg,
   ]) {
     _i4.callMethod(
       this,
@@ -6621,7 +6569,7 @@ extension Body$Typings on Body {
 
   /// Takes a `Response` stream and reads it to completion. It returns a promise
   ///  that resolves with an `ArrayBuffer`.
-  _i2.Future<_i9.ByteBuffer> arrayBuffer() =>
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> arrayBuffer() =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'arrayBuffer',
@@ -6630,7 +6578,7 @@ extension Body$Typings on Body {
 
   /// Takes a `Response` stream and reads it to completion. It returns a promise
   ///  that resolves with a `Blob`.
-  _i2.Future<_i3.Blob> blob() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i3.Blob>> blob() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'blob',
         [],
@@ -6638,7 +6586,8 @@ extension Body$Typings on Body {
 
   /// Takes a `Response` stream and reads it to completion. It returns a promise
   ///  that resolves with a `FormData` object.
-  _i2.Future<_i3.FormData> formData() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i3.FormData>> formData() =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'formData',
         [],
@@ -6646,7 +6595,8 @@ extension Body$Typings on Body {
 
   /// Takes a `Response` stream and reads it to completion. It returns a promise
   ///  that resolves with the result of parsing the body text as JSON.
-  _i2.Future<_i2.Object?> json() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i2.dynamic>> json() =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'json',
         [],
@@ -6654,7 +6604,8 @@ extension Body$Typings on Body {
 
   /// Takes a `Response` stream and reads it to completion. It returns a promise
   ///  that resolves with a `USVString` (text).
-  _i2.Future<_i2.String> text() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i2.String>> text() =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'text',
         [],
@@ -6685,11 +6636,10 @@ class Headers
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Headers')
-external _i2.Object _declaredHeaders;
+_i2.Object get _declaredHeaders => _i4.getProperty(
+      _self,
+      'Headers',
+    );
 
 extension Headers$Typings on Headers {
   /// Appends a new value onto an existing header inside a `Headers` object, or
@@ -6783,7 +6733,7 @@ extension Headers$Typings on Headers {
       _i2.String,
       _i3.Headers,
     ) callbackfn, [
-    _i2.Object? thisArg,
+    _i2.dynamic thisArg,
   ]) {
     _i4.callMethod(
       this,
@@ -6801,19 +6751,19 @@ extension Headers$Typings on Headers {
 @_i1.anonymous
 class RequestInit {
   external factory RequestInit._({
-    _i2.Object? body,
-    _i2.Object? cache,
-    _i2.Object? credentials,
-    _i2.Object? headers,
-    _i2.Object? integrity,
-    _i2.Object? keepalive,
-    _i2.Object? method,
-    _i2.Object? mode,
-    _i2.Object? redirect,
-    _i2.Object? referrer,
-    _i2.Object? referrerPolicy,
-    _i2.Object? signal,
-    _i2.Object? window,
+    _i2.dynamic body,
+    _i2.dynamic cache,
+    _i2.dynamic credentials,
+    _i2.dynamic headers,
+    _i2.dynamic integrity,
+    _i2.dynamic keepalive,
+    _i2.dynamic method,
+    _i2.dynamic mode,
+    _i2.dynamic redirect,
+    _i2.dynamic referrer,
+    _i2.dynamic referrerPolicy,
+    _i2.dynamic signal,
+    _i2.dynamic window,
   });
 
   factory RequestInit({
@@ -6829,7 +6779,7 @@ class RequestInit {
     _i2.String? referrer,
     _i3.ReferrerPolicy? referrerPolicy,
     _i3.AbortSignal? signal,
-    _i2.Object? window,
+    _i2.dynamic window,
   }) =>
       RequestInit._(
         body: body ?? _i6.undefined ?? _i6.undefined,
@@ -7030,11 +6980,11 @@ extension RequestInit$Typings on RequestInit {
   }
 
   /// Can only be null. Used to disassociate request from any Window.
-  _i2.Object? get window => _i4.getProperty(
+  _i2.dynamic get window => _i4.getProperty(
         this,
         'window',
       );
-  set window(_i2.Object? value) {
+  set window(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'window',
@@ -7060,11 +7010,10 @@ class Request implements _i3.Body {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Request')
-external _i2.Object _declaredRequest;
+_i2.Object get _declaredRequest => _i4.getProperty(
+      _self,
+      'Request',
+    );
 
 extension Request$Typings on Request {
   /// Returns the cache mode associated with request, which is a string
@@ -7205,7 +7154,7 @@ extension Request$Typings on Request {
 
   /// Takes a `Request` stream and reads it to completion. It returns a promise
   ///  that resolves with an `ArrayBuffer`.
-  _i2.Future<_i9.ByteBuffer> arrayBuffer() =>
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> arrayBuffer() =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'arrayBuffer',
@@ -7214,7 +7163,7 @@ extension Request$Typings on Request {
 
   /// Takes a `Request` stream and reads it to completion. It returns a promise
   ///  that resolves with a `Blob`.
-  _i2.Future<_i3.Blob> blob() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i3.Blob>> blob() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'blob',
         [],
@@ -7222,7 +7171,8 @@ extension Request$Typings on Request {
 
   /// Takes a `Request` stream and reads it to completion. It returns a promise
   ///  that resolves with a `FormData` object.
-  _i2.Future<_i3.FormData> formData() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i3.FormData>> formData() =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'formData',
         [],
@@ -7230,7 +7180,8 @@ extension Request$Typings on Request {
 
   /// Takes a `Request` stream and reads it to completion. It returns a promise
   ///  that resolves with the result of parsing the body text as JSON.
-  _i2.Future<_i2.Object?> json() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i2.dynamic>> json() =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'json',
         [],
@@ -7238,7 +7189,8 @@ extension Request$Typings on Request {
 
   /// Takes a `Request` stream and reads it to completion. It returns a promise
   ///  that resolves with a `USVString` (text).
-  _i2.Future<_i2.String> text() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i2.String>> text() =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'text',
         [],
@@ -7250,9 +7202,9 @@ extension Request$Typings on Request {
 @_i1.anonymous
 class ResponseInit {
   external factory ResponseInit._({
-    _i2.Object? headers,
-    _i2.Object? status,
-    _i2.Object? statusText,
+    _i2.dynamic headers,
+    _i2.dynamic status,
+    _i2.dynamic statusText,
   });
 
   factory ResponseInit({
@@ -7352,11 +7304,10 @@ class Response implements _i3.Body {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Response')
-external _i2.Object _declaredResponse;
+_i2.Object get _declaredResponse => _i4.getProperty(
+      _self,
+      'Response',
+    );
 
 extension Response$Typings on Response {
   _i3.Headers get headers => _i4.getProperty(
@@ -7409,7 +7360,7 @@ extension Response$Typings on Response {
 
   /// Takes a `Response` stream and reads it to completion. It returns a promise
   ///  that resolves with an `ArrayBuffer`.
-  _i2.Future<_i9.ByteBuffer> arrayBuffer() =>
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> arrayBuffer() =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'arrayBuffer',
@@ -7418,7 +7369,7 @@ extension Response$Typings on Response {
 
   /// Takes a `Response` stream and reads it to completion. It returns a promise
   ///  that resolves with a `Blob`.
-  _i2.Future<_i3.Blob> blob() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i3.Blob>> blob() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'blob',
         [],
@@ -7426,7 +7377,8 @@ extension Response$Typings on Response {
 
   /// Takes a `Response` stream and reads it to completion. It returns a promise
   ///  that resolves with a `FormData` object.
-  _i2.Future<_i3.FormData> formData() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i3.FormData>> formData() =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'formData',
         [],
@@ -7434,7 +7386,8 @@ extension Response$Typings on Response {
 
   /// Takes a `Response` stream and reads it to completion. It returns a promise
   ///  that resolves with the result of parsing the body text as JSON.
-  _i2.Future<_i2.Object?> json() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i2.dynamic>> json() =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'json',
         [],
@@ -7442,7 +7395,8 @@ extension Response$Typings on Response {
 
   /// Takes a `Response` stream and reads it to completion. It returns a promise
   ///  that resolves with a `USVString` (text).
-  _i2.Future<_i2.String> text() => _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.Future<_i2.String>> text() =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'text',
         [],
@@ -7454,12 +7408,12 @@ extension Response$Typings on Response {
 @_i1.anonymous
 class CloseEventInit implements _i3.EventInit {
   external factory CloseEventInit._({
-    _i2.Object? code,
-    _i2.Object? reason,
-    _i2.Object? wasClean,
-    _i2.Object? bubbles,
-    _i2.Object? cancelable,
-    _i2.Object? composed,
+    _i2.dynamic code,
+    _i2.dynamic reason,
+    _i2.dynamic wasClean,
+    _i2.dynamic bubbles,
+    _i2.dynamic cancelable,
+    _i2.dynamic composed,
   });
 
   factory CloseEventInit({
@@ -7534,11 +7488,10 @@ class CloseEvent implements _i3.Event {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CloseEvent')
-external _i2.Object _declaredCloseEvent;
+_i2.Object get _declaredCloseEvent => _i4.getProperty(
+      _self,
+      'CloseEvent',
+    );
 
 extension CloseEvent$Typings on CloseEvent {
   /// Returns the WebSocket connection close code provided by the server.
@@ -7565,16 +7518,16 @@ extension CloseEvent$Typings on CloseEvent {
 @_i1.anonymous
 class WebSocketEventMap {
   external factory WebSocketEventMap._({
-    _i2.Object? close,
-    _i2.Object? error,
-    _i2.Object? message,
-    _i2.Object? open,
+    _i2.dynamic close,
+    _i2.dynamic error,
+    _i2.dynamic message,
+    _i2.dynamic open,
   });
 
   factory WebSocketEventMap({
     required _i3.CloseEvent close,
     required _i3.Event error,
-    required _i3.MessageEvent<_i2.Object?> message,
+    required _i3.MessageEvent<_i2.dynamic> message,
     required _i3.Event open,
   }) =>
       WebSocketEventMap._(
@@ -7621,11 +7574,11 @@ extension WebSocketEventMap$Typings on WebSocketEventMap {
     );
   }
 
-  _i3.MessageEvent<_i2.Object?> get message => _i4.getProperty(
+  _i3.MessageEvent<_i2.dynamic> get message => _i4.getProperty(
         this,
         'message',
       );
-  set message(_i3.MessageEvent<_i2.Object?> value) {
+  set message(_i3.MessageEvent<_i2.dynamic> value) {
     _i4.setProperty(
       this,
       'message',
@@ -7684,11 +7637,10 @@ class WebSocket implements _i3.EventTarget {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('WebSocket')
-external _i2.Object _declaredWebSocket;
+_i2.Object get _declaredWebSocket => _i4.getProperty(
+      _self,
+      'WebSocket',
+    );
 
 extension WebSocket$Typings on WebSocket {
   /// Returns a string that indicates how binary data from the WebSocket object is exposed to scripts:
@@ -7720,11 +7672,11 @@ extension WebSocket$Typings on WebSocket {
         this,
         'extensions',
       );
-  _i2.Object? Function(_i3.CloseEvent)? get onclose => _i4.getProperty(
+  _i2.dynamic Function(_i3.CloseEvent)? get onclose => _i4.getProperty(
         this,
         'onclose',
       );
-  set onclose(_i2.Object? Function(_i3.CloseEvent)? value) {
+  set onclose(_i2.dynamic Function(_i3.CloseEvent)? value) {
     _i4.setProperty(
       this,
       'onclose',
@@ -7732,11 +7684,11 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
-  _i2.Object? Function(_i2.Object)? get onerror => _i4.getProperty(
+  _i2.dynamic Function(_i2.Object)? get onerror => _i4.getProperty(
         this,
         'onerror',
       );
-  set onerror(_i2.Object? Function(_i2.Object)? value) {
+  set onerror(_i2.dynamic Function(_i2.Object)? value) {
     _i4.setProperty(
       this,
       'onerror',
@@ -7744,12 +7696,12 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
-  _i2.Object? Function(_i3.MessageEvent<_i2.Object?>)? get onmessage =>
+  _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? get onmessage =>
       _i4.getProperty(
         this,
         'onmessage',
       );
-  set onmessage(_i2.Object? Function(_i3.MessageEvent<_i2.Object?>)? value) {
+  set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
       'onmessage',
@@ -7757,11 +7709,11 @@ extension WebSocket$Typings on WebSocket {
     );
   }
 
-  _i2.Object? Function(_i3.Event)? get onopen => _i4.getProperty(
+  _i2.dynamic Function(_i3.Event)? get onopen => _i4.getProperty(
         this,
         'onopen',
       );
-  set onopen(_i2.Object? Function(_i3.Event)? value) {
+  set onopen(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
       'onopen',
@@ -7836,7 +7788,7 @@ extension WebSocket$Typings on WebSocket {
   /// appended if it has the same type, callback, and capture.
   void _addEventListener$1<K extends _i3.WebSocketEventMapKeys>(
     K type,
-    _i2.Object? Function(_i2.Object?) listener, [
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
@@ -7916,7 +7868,7 @@ extension WebSocket$Typings on WebSocket {
     /// appended if it has the same type, callback, and capture.
     void Function<K extends _i3.WebSocketEventMapKeys>(
       K type,
-      _i2.Object? Function(_i2.Object?) listener, [
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -7957,7 +7909,7 @@ extension WebSocket$Typings on WebSocket {
   /// type, callback, and options.
   void _removeEventListener$1<K extends _i3.WebSocketEventMapKeys>(
     K type,
-    _i2.Object? Function(_i2.Object?) listener, [
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
@@ -7995,7 +7947,7 @@ extension WebSocket$Typings on WebSocket {
     /// type, callback, and options.
     void Function<K extends _i3.WebSocketEventMapKeys>(
       K type,
-      _i2.Object? Function(_i2.Object?) listener, [
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -8024,11 +7976,10 @@ class Storage {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Storage')
-external _i2.Object _declaredStorage;
+_i2.Object get _declaredStorage => _i4.getProperty(
+      _self,
+      'Storage',
+    );
 
 extension Storage$Typings on Storage {
   /// Returns the number of key/value pairs currently present in the list associated with the object.
@@ -8086,13 +8037,13 @@ extension Storage$Typings on Storage {
     );
   }
 
-  _i2.Object? operator [](_i2.String index) => _i4.getProperty(
+  _i2.dynamic operator [](_i2.String index) => _i4.getProperty(
         this,
         index,
       );
   void operator []=(
     _i2.String index,
-    _i2.Object? value,
+    _i2.dynamic value,
   ) {
     _i4.setProperty(
       this,
@@ -8110,7 +8061,7 @@ class IInline39 {}
 @_i1.staticInterop
 @_i1.anonymous
 class Algorithm {
-  external factory Algorithm._({_i2.Object? name});
+  external factory Algorithm._({_i2.dynamic name});
 
   factory Algorithm({required _i2.String name}) => Algorithm._(name: name);
 }
@@ -8133,7 +8084,7 @@ extension Algorithm$Typings on Algorithm {
 @_i1.staticInterop
 @_i1.anonymous
 class KeyAlgorithm {
-  external factory KeyAlgorithm._({_i2.Object? name});
+  external factory KeyAlgorithm._({_i2.dynamic name});
 
   factory KeyAlgorithm({required _i2.String name}) =>
       KeyAlgorithm._(name: name);
@@ -8158,9 +8109,9 @@ extension KeyAlgorithm$Typings on KeyAlgorithm {
 @_i1.anonymous
 class RsaOtherPrimesInfo {
   external factory RsaOtherPrimesInfo._({
-    _i2.Object? d,
-    _i2.Object? r,
-    _i2.Object? t,
+    _i2.dynamic d,
+    _i2.dynamic r,
+    _i2.dynamic t,
   });
 
   factory RsaOtherPrimesInfo({
@@ -8218,24 +8169,24 @@ extension RsaOtherPrimesInfo$Typings on RsaOtherPrimesInfo {
 @_i1.anonymous
 class JsonWebKey {
   external factory JsonWebKey._({
-    _i2.Object? alg,
-    _i2.Object? crv,
-    _i2.Object? d,
-    _i2.Object? dp,
-    _i2.Object? dq,
-    _i2.Object? e,
-    _i2.Object? ext,
-    _i2.Object? k,
-    _i2.Object? keyOps,
-    _i2.Object? kty,
-    _i2.Object? n,
-    _i2.Object? oth,
-    _i2.Object? p,
-    _i2.Object? q,
-    _i2.Object? qi,
-    _i2.Object? use,
-    _i2.Object? x,
-    _i2.Object? y,
+    _i2.dynamic alg,
+    _i2.dynamic crv,
+    _i2.dynamic d,
+    _i2.dynamic dp,
+    _i2.dynamic dq,
+    _i2.dynamic e,
+    _i2.dynamic ext,
+    _i2.dynamic k,
+    _i2.dynamic keyOps,
+    _i2.dynamic kty,
+    _i2.dynamic n,
+    _i2.dynamic oth,
+    _i2.dynamic p,
+    _i2.dynamic q,
+    _i2.dynamic qi,
+    _i2.dynamic use,
+    _i2.dynamic x,
+    _i2.dynamic y,
   });
 
   factory JsonWebKey({
@@ -8505,8 +8456,8 @@ extension JsonWebKey$Typings on JsonWebKey {
 @_i1.anonymous
 class AesCbcParams implements _i3.Algorithm {
   external factory AesCbcParams._({
-    _i2.Object? iv,
-    _i2.Object? name,
+    _i2.dynamic iv,
+    _i2.dynamic name,
   });
 
   factory AesCbcParams({
@@ -8538,10 +8489,10 @@ extension AesCbcParams$Typings on AesCbcParams {
 @_i1.anonymous
 class AesGcmParams implements _i3.Algorithm {
   external factory AesGcmParams._({
-    _i2.Object? iv,
-    _i2.Object? additionalData,
-    _i2.Object? tagLength,
-    _i2.Object? name,
+    _i2.dynamic iv,
+    _i2.dynamic additionalData,
+    _i2.dynamic tagLength,
+    _i2.dynamic name,
   });
 
   factory AesGcmParams({
@@ -8601,9 +8552,9 @@ extension AesGcmParams$Typings on AesGcmParams {
 @_i1.anonymous
 class AesCtrParams implements _i3.Algorithm {
   external factory AesCtrParams._({
-    _i2.Object? counter,
-    _i2.Object? length,
-    _i2.Object? name,
+    _i2.dynamic counter,
+    _i2.dynamic length,
+    _i2.dynamic name,
   });
 
   factory AesCtrParams({
@@ -8649,9 +8600,9 @@ extension AesCtrParams$Typings on AesCtrParams {
 @_i1.anonymous
 class HmacKeyGenParams implements _i3.Algorithm {
   external factory HmacKeyGenParams._({
-    _i2.Object? hash,
-    _i2.Object? length,
-    _i2.Object? name,
+    _i2.dynamic hash,
+    _i2.dynamic length,
+    _i2.dynamic name,
   });
 
   factory HmacKeyGenParams({
@@ -8697,8 +8648,8 @@ extension HmacKeyGenParams$Typings on HmacKeyGenParams {
 @_i1.anonymous
 class EcKeyGenParams implements _i3.Algorithm {
   external factory EcKeyGenParams._({
-    _i2.Object? namedCurve,
-    _i2.Object? name,
+    _i2.dynamic namedCurve,
+    _i2.dynamic name,
   });
 
   factory EcKeyGenParams({
@@ -8730,8 +8681,8 @@ extension EcKeyGenParams$Typings on EcKeyGenParams {
 @_i1.anonymous
 class EcKeyImportParams implements _i3.Algorithm {
   external factory EcKeyImportParams._({
-    _i2.Object? namedCurve,
-    _i2.Object? name,
+    _i2.dynamic namedCurve,
+    _i2.dynamic name,
   });
 
   factory EcKeyImportParams({
@@ -8763,8 +8714,8 @@ extension EcKeyImportParams$Typings on EcKeyImportParams {
 @_i1.anonymous
 class EcdsaParams implements _i3.Algorithm {
   external factory EcdsaParams._({
-    _i2.Object? hash,
-    _i2.Object? name,
+    _i2.dynamic hash,
+    _i2.dynamic name,
   });
 
   factory EcdsaParams({
@@ -8796,8 +8747,8 @@ extension EcdsaParams$Typings on EcdsaParams {
 @_i1.anonymous
 class RsaHashedImportParams implements _i3.Algorithm {
   external factory RsaHashedImportParams._({
-    _i2.Object? hash,
-    _i2.Object? name,
+    _i2.dynamic hash,
+    _i2.dynamic name,
   });
 
   factory RsaHashedImportParams({
@@ -8829,9 +8780,9 @@ extension RsaHashedImportParams$Typings on RsaHashedImportParams {
 @_i1.anonymous
 class RsaHashedKeyGenParams implements _i3.RsaKeyGenParams {
   external factory RsaHashedKeyGenParams._({
-    _i2.Object? hash,
-    _i2.Object? modulusLength,
-    _i2.Object? publicExponent,
+    _i2.dynamic hash,
+    _i2.dynamic modulusLength,
+    _i2.dynamic publicExponent,
   });
 
   factory RsaHashedKeyGenParams({
@@ -8865,9 +8816,9 @@ extension RsaHashedKeyGenParams$Typings on RsaHashedKeyGenParams {
 @_i1.anonymous
 class RsaKeyGenParams implements _i3.Algorithm {
   external factory RsaKeyGenParams._({
-    _i2.Object? modulusLength,
-    _i2.Object? publicExponent,
-    _i2.Object? name,
+    _i2.dynamic modulusLength,
+    _i2.dynamic publicExponent,
+    _i2.dynamic name,
   });
 
   factory RsaKeyGenParams({
@@ -8913,8 +8864,8 @@ extension RsaKeyGenParams$Typings on RsaKeyGenParams {
 @_i1.anonymous
 class RsaPssParams implements _i3.Algorithm {
   external factory RsaPssParams._({
-    _i2.Object? saltLength,
-    _i2.Object? name,
+    _i2.dynamic saltLength,
+    _i2.dynamic name,
   });
 
   factory RsaPssParams({
@@ -8946,8 +8897,8 @@ extension RsaPssParams$Typings on RsaPssParams {
 @_i1.anonymous
 class RsaOaepParams implements _i3.Algorithm {
   external factory RsaOaepParams._({
-    _i2.Object? label,
-    _i2.Object? name,
+    _i2.dynamic label,
+    _i2.dynamic name,
   });
 
   factory RsaOaepParams({
@@ -8979,9 +8930,9 @@ extension RsaOaepParams$Typings on RsaOaepParams {
 @_i1.anonymous
 class HmacImportParams implements _i3.Algorithm {
   external factory HmacImportParams._({
-    _i2.Object? hash,
-    _i2.Object? length,
-    _i2.Object? name,
+    _i2.dynamic hash,
+    _i2.dynamic length,
+    _i2.dynamic name,
   });
 
   factory HmacImportParams({
@@ -9027,8 +8978,8 @@ extension HmacImportParams$Typings on HmacImportParams {
 @_i1.anonymous
 class EcKeyAlgorithm implements _i3.KeyAlgorithm {
   external factory EcKeyAlgorithm._({
-    _i2.Object? namedCurve,
-    _i2.Object? name,
+    _i2.dynamic namedCurve,
+    _i2.dynamic name,
   });
 
   factory EcKeyAlgorithm({
@@ -9060,9 +9011,9 @@ extension EcKeyAlgorithm$Typings on EcKeyAlgorithm {
 @_i1.anonymous
 class HmacKeyAlgorithm implements _i3.KeyAlgorithm {
   external factory HmacKeyAlgorithm._({
-    _i2.Object? hash,
-    _i2.Object? length,
-    _i2.Object? name,
+    _i2.dynamic hash,
+    _i2.dynamic length,
+    _i2.dynamic name,
   });
 
   factory HmacKeyAlgorithm({
@@ -9108,9 +9059,9 @@ extension HmacKeyAlgorithm$Typings on HmacKeyAlgorithm {
 @_i1.anonymous
 class RsaHashedKeyAlgorithm implements _i3.RsaKeyAlgorithm {
   external factory RsaHashedKeyAlgorithm._({
-    _i2.Object? hash,
-    _i2.Object? modulusLength,
-    _i2.Object? publicExponent,
+    _i2.dynamic hash,
+    _i2.dynamic modulusLength,
+    _i2.dynamic publicExponent,
   });
 
   factory RsaHashedKeyAlgorithm({
@@ -9144,9 +9095,9 @@ extension RsaHashedKeyAlgorithm$Typings on RsaHashedKeyAlgorithm {
 @_i1.anonymous
 class RsaKeyAlgorithm implements _i3.KeyAlgorithm {
   external factory RsaKeyAlgorithm._({
-    _i2.Object? modulusLength,
-    _i2.Object? publicExponent,
-    _i2.Object? name,
+    _i2.dynamic modulusLength,
+    _i2.dynamic publicExponent,
+    _i2.dynamic name,
   });
 
   factory RsaKeyAlgorithm({
@@ -9192,10 +9143,10 @@ extension RsaKeyAlgorithm$Typings on RsaKeyAlgorithm {
 @_i1.anonymous
 class HkdfParams implements _i3.Algorithm {
   external factory HkdfParams._({
-    _i2.Object? hash,
-    _i2.Object? info,
-    _i2.Object? salt,
-    _i2.Object? name,
+    _i2.dynamic hash,
+    _i2.dynamic info,
+    _i2.dynamic salt,
+    _i2.dynamic name,
   });
 
   factory HkdfParams({
@@ -9255,10 +9206,10 @@ extension HkdfParams$Typings on HkdfParams {
 @_i1.anonymous
 class Pbkdf2Params implements _i3.Algorithm {
   external factory Pbkdf2Params._({
-    _i2.Object? hash,
-    _i2.Object? iterations,
-    _i2.Object? salt,
-    _i2.Object? name,
+    _i2.dynamic hash,
+    _i2.dynamic iterations,
+    _i2.dynamic salt,
+    _i2.dynamic name,
   });
 
   factory Pbkdf2Params({
@@ -9318,8 +9269,8 @@ extension Pbkdf2Params$Typings on Pbkdf2Params {
 @_i1.anonymous
 class AesDerivedKeyParams implements _i3.Algorithm {
   external factory AesDerivedKeyParams._({
-    _i2.Object? length,
-    _i2.Object? name,
+    _i2.dynamic length,
+    _i2.dynamic name,
   });
 
   factory AesDerivedKeyParams({
@@ -9351,8 +9302,8 @@ extension AesDerivedKeyParams$Typings on AesDerivedKeyParams {
 @_i1.anonymous
 class EcdhKeyDeriveParams implements _i3.Algorithm {
   external factory EcdhKeyDeriveParams._({
-    _i2.Object? public,
-    _i2.Object? name,
+    _i2.dynamic public,
+    _i2.dynamic name,
   });
 
   factory EcdhKeyDeriveParams({
@@ -9384,8 +9335,8 @@ extension EcdhKeyDeriveParams$Typings on EcdhKeyDeriveParams {
 @_i1.anonymous
 class AesKeyGenParams implements _i3.Algorithm {
   external factory AesKeyGenParams._({
-    _i2.Object? length,
-    _i2.Object? name,
+    _i2.dynamic length,
+    _i2.dynamic name,
   });
 
   factory AesKeyGenParams({
@@ -9417,8 +9368,8 @@ extension AesKeyGenParams$Typings on AesKeyGenParams {
 @_i1.anonymous
 class AesKeyAlgorithm implements _i3.KeyAlgorithm {
   external factory AesKeyAlgorithm._({
-    _i2.Object? length,
-    _i2.Object? name,
+    _i2.dynamic length,
+    _i2.dynamic name,
   });
 
   factory AesKeyAlgorithm({
@@ -9456,11 +9407,10 @@ class CryptoKey {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CryptoKey')
-external _i2.Object _declaredCryptoKey;
+_i2.Object get _declaredCryptoKey => _i4.getProperty(
+      _self,
+      'CryptoKey',
+    );
 
 extension CryptoKey$Typings on CryptoKey {
   _i3.KeyAlgorithm get algorithm => _i4.getProperty(
@@ -9499,11 +9449,10 @@ class CryptoKeyPair {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CryptoKeyPair')
-external _i2.Object _declaredCryptoKeyPair;
+_i2.Object get _declaredCryptoKeyPair => _i4.getProperty(
+      _self,
+      'CryptoKeyPair',
+    );
 
 extension CryptoKeyPair$Typings on CryptoKeyPair {
   _i3.CryptoKey get privateKey => _i4.getProperty(
@@ -9547,14 +9496,13 @@ class SubtleCrypto {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('SubtleCrypto')
-external _i2.Object _declaredSubtleCrypto;
+_i2.Object get _declaredSubtleCrypto => _i4.getProperty(
+      _self,
+      'SubtleCrypto',
+    );
 
 extension SubtleCrypto$Typings on SubtleCrypto {
-  _i2.Future<_i3.CryptoKeyPair> _generateKey$1(
+  _i2.Future<_i2.Future<_i3.CryptoKeyPair>> _generateKey$1(
     _i3.Algorithm algorithm,
     _i2.bool extractable,
     _i2.List<_i3.KeyUsage> keyUsages,
@@ -9568,7 +9516,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           keyUsages.map((i) => i.name).toList(),
         ],
       ));
-  _i2.Future<_i3.CryptoKey> _generateKey$2(
+  _i2.Future<_i2.Future<_i3.CryptoKey>> _generateKey$2(
     _i3.Algorithm algorithm,
     _i2.bool extractable,
     _i2.List<_i3.KeyUsage> keyUsages,
@@ -9582,7 +9530,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           keyUsages.map((i) => i.name).toList(),
         ],
       ));
-  _i2.Future<_i2.Object> _generateKey$3(
+  _i2.Future<_i2.Future<_i2.Object>> _generateKey$3(
     _i3.AlgorithmIdentifier algorithm,
     _i2.bool extractable,
     _i2.List<_i3.KeyUsage> keyUsages,
@@ -9599,17 +9547,17 @@ extension SubtleCrypto$Typings on SubtleCrypto {
 
   /// Overload accessor: $1, $2, $3
   ({
-    _i2.Future<_i3.CryptoKeyPair> Function(
+    _i2.Future<_i2.Future<_i3.CryptoKeyPair>> Function(
       _i3.Algorithm algorithm,
       _i2.bool extractable,
       _i2.List<_i3.KeyUsage> keyUsages,
     ) $1,
-    _i2.Future<_i3.CryptoKey> Function(
+    _i2.Future<_i2.Future<_i3.CryptoKey>> Function(
       _i3.Algorithm algorithm,
       _i2.bool extractable,
       _i2.List<_i3.KeyUsage> keyUsages,
     ) $2,
-    _i2.Future<_i2.Object> Function(
+    _i2.Future<_i2.Future<_i2.Object>> Function(
       _i3.AlgorithmIdentifier algorithm,
       _i2.bool extractable,
       _i2.List<_i3.KeyUsage> keyUsages,
@@ -9619,7 +9567,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
         $2: _generateKey$2,
         $3: _generateKey$3,
       );
-  _i2.Future<_i3.CryptoKey> _importKey$1(
+  _i2.Future<_i2.Future<_i3.CryptoKey>> _importKey$1(
     _i2.String format,
     _i3.JsonWebKey keyData,
     _i2.Object algorithm,
@@ -9637,7 +9585,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           keyUsages.map((i) => i.name).toList(),
         ],
       ));
-  _i2.Future<_i3.CryptoKey> _importKey$2(
+  _i2.Future<_i2.Future<_i3.CryptoKey>> _importKey$2(
     _i5.Exclude<_i3.KeyFormat, _i2.String> format,
     _i3.BufferSource keyData,
     _i2.Object algorithm,
@@ -9658,14 +9606,14 @@ extension SubtleCrypto$Typings on SubtleCrypto {
 
   /// Overload accessor: $1, $2
   ({
-    _i2.Future<_i3.CryptoKey> Function(
+    _i2.Future<_i2.Future<_i3.CryptoKey>> Function(
       _i2.String format,
       _i3.JsonWebKey keyData,
       _i2.Object algorithm,
       _i2.bool extractable,
       _i2.List<_i3.KeyUsage> keyUsages,
     ) $1,
-    _i2.Future<_i3.CryptoKey> Function(
+    _i2.Future<_i2.Future<_i3.CryptoKey>> Function(
       _i5.Exclude<_i3.KeyFormat, _i2.String> format,
       _i3.BufferSource keyData,
       _i2.Object algorithm,
@@ -9676,7 +9624,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
         $1: _importKey$1,
         $2: _importKey$2,
       );
-  _i2.Future<_i3.JsonWebKey> _exportKey$1(
+  _i2.Future<_i2.Future<_i3.JsonWebKey>> _exportKey$1(
     _i2.String format,
     _i3.CryptoKey key,
   ) =>
@@ -9688,7 +9636,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           key,
         ],
       ));
-  _i2.Future<_i9.ByteBuffer> _exportKey$2(
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> _exportKey$2(
     _i5.Exclude<_i3.KeyFormat, _i2.String> format,
     _i3.CryptoKey key,
   ) =>
@@ -9703,11 +9651,11 @@ extension SubtleCrypto$Typings on SubtleCrypto {
 
   /// Overload accessor: $1, $2
   ({
-    _i2.Future<_i3.JsonWebKey> Function(
+    _i2.Future<_i2.Future<_i3.JsonWebKey>> Function(
       _i2.String format,
       _i3.CryptoKey key,
     ) $1,
-    _i2.Future<_i9.ByteBuffer> Function(
+    _i2.Future<_i2.Future<_i9.ByteBuffer>> Function(
       _i5.Exclude<_i3.KeyFormat, _i2.String> format,
       _i3.CryptoKey key,
     ) $2,
@@ -9715,7 +9663,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
         $1: _exportKey$1,
         $2: _exportKey$2,
       );
-  _i2.Future<_i9.ByteBuffer> sign(
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> sign(
     _i2.Object algorithm,
     _i3.CryptoKey key,
     _i3.BufferSource data,
@@ -9729,7 +9677,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           data,
         ],
       ));
-  _i2.Future<_i2.bool> verify(
+  _i2.Future<_i2.Future<_i2.bool>> verify(
     _i2.Object algorithm,
     _i3.CryptoKey key,
     _i3.BufferSource signature,
@@ -9745,7 +9693,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           data,
         ],
       ));
-  _i2.Future<_i9.ByteBuffer> digest(
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> digest(
     _i3.AlgorithmIdentifier algorithm,
     _i3.BufferSource data,
   ) =>
@@ -9757,7 +9705,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           data,
         ],
       ));
-  _i2.Future<_i9.ByteBuffer> encrypt(
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> encrypt(
     _i2.Object algorithm,
     _i3.CryptoKey key,
     _i3.BufferSource data,
@@ -9771,7 +9719,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           data,
         ],
       ));
-  _i2.Future<_i9.ByteBuffer> decrypt(
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> decrypt(
     _i2.Object algorithm,
     _i3.CryptoKey key,
     _i3.BufferSource data,
@@ -9785,7 +9733,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           data,
         ],
       ));
-  _i2.Future<_i9.ByteBuffer> deriveBits(
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> deriveBits(
     _i2.Object algorithm,
     _i3.CryptoKey baseKey,
     _i2.num length,
@@ -9799,7 +9747,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           length,
         ],
       ));
-  _i2.Future<_i3.CryptoKey> deriveKey(
+  _i2.Future<_i2.Future<_i3.CryptoKey>> deriveKey(
     _i2.Object algorithm,
     _i3.CryptoKey baseKey,
     _i2.Object derivedKeyType,
@@ -9817,7 +9765,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           keyUsages.map((i) => i.name).toList(),
         ],
       ));
-  _i2.Future<_i9.ByteBuffer> wrapKey(
+  _i2.Future<_i2.Future<_i9.ByteBuffer>> wrapKey(
     _i3.KeyFormat format,
     _i3.CryptoKey key,
     _i3.CryptoKey wrappingKey,
@@ -9833,7 +9781,7 @@ extension SubtleCrypto$Typings on SubtleCrypto {
           wrapAlgorithm,
         ],
       ));
-  _i2.Future<_i3.CryptoKey> unwrapKey(
+  _i2.Future<_i2.Future<_i3.CryptoKey>> unwrapKey(
     _i3.KeyFormat format,
     _i3.BufferSource wrappedKey,
     _i3.CryptoKey unwrappingKey,
@@ -9882,15 +9830,6 @@ extension Crypto$Typings on Crypto {
 @_i1.staticInterop
 class IInline42 {}
 
-enum BroadcastChannelEventMap<T$ extends _i3.Event> {
-  message<_i3.MessageEvent<_i2.Object?>>(r'message'),
-  messageerror<_i3.MessageEvent<_i2.Object?>>(r'messageerror');
-
-  const BroadcastChannelEventMap(this.value);
-
-  final _i2.String value;
-}
-
 @_i1.JS()
 @_i1.staticInterop
 class BroadcastChannel implements _i3.EventTarget {
@@ -9900,11 +9839,10 @@ class BroadcastChannel implements _i3.EventTarget {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('BroadcastChannel')
-external _i2.Object _declaredBroadcastChannel;
+_i2.Object get _declaredBroadcastChannel => _i4.getProperty(
+      _self,
+      'BroadcastChannel',
+    );
 
 extension BroadcastChannel$Typings on BroadcastChannel {
   /// Returns the channel name (as passed to the constructor).
@@ -9912,12 +9850,12 @@ extension BroadcastChannel$Typings on BroadcastChannel {
         this,
         'name',
       );
-  _i2.Object? Function(_i3.MessageEvent<_i2.Object?>)? get onmessage =>
+  _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? get onmessage =>
       _i4.getProperty(
         this,
         'onmessage',
       );
-  set onmessage(_i2.Object? Function(_i3.MessageEvent<_i2.Object?>)? value) {
+  set onmessage(_i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
       'onmessage',
@@ -9925,13 +9863,13 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     );
   }
 
-  _i2.Object? Function(_i3.MessageEvent<_i2.Object?>)? get onmessageerror =>
+  _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? get onmessageerror =>
       _i4.getProperty(
         this,
         'onmessageerror',
       );
   set onmessageerror(
-      _i2.Object? Function(_i3.MessageEvent<_i2.Object?>)? value) {
+      _i2.dynamic Function(_i3.MessageEvent<_i2.dynamic>)? value) {
     _i4.setProperty(
       this,
       'onmessageerror',
@@ -9951,7 +9889,7 @@ extension BroadcastChannel$Typings on BroadcastChannel {
   /// Sends the given message to other BroadcastChannel objects set up for
   ///  this channel. Messages can be structured objects, e.g. nested objects
   ///  and arrays.
-  void postMessage(_i2.Object? message) {
+  void postMessage(_i2.dynamic message) {
     _i4.callMethod(
       this,
       'postMessage',
@@ -9982,16 +9920,16 @@ extension BroadcastChannel$Typings on BroadcastChannel {
   ///
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
-  void _addEventListener$1<K$ extends _i3.Event>(
-    _i3.BroadcastChannelEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _addEventListener$1<K extends _i3.BroadcastChannelEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
       this,
       'addEventListener',
       [
-        type.name,
+        type,
         _i4.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -10062,9 +10000,9 @@ extension BroadcastChannel$Typings on BroadcastChannel {
     ///
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
-    void Function<K$ extends _i3.Event>(
-      _i3.BroadcastChannelEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i3.BroadcastChannelEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -10103,16 +10041,16 @@ extension BroadcastChannel$Typings on BroadcastChannel {
 
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
-  void _removeEventListener$1<K$ extends _i3.Event>(
-    _i3.BroadcastChannelEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _removeEventListener$1<K extends _i3.BroadcastChannelEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
       this,
       'removeEventListener',
       [
-        type.name,
+        type,
         _i4.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -10141,9 +10079,9 @@ extension BroadcastChannel$Typings on BroadcastChannel {
   ({
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
-    void Function<K$ extends _i3.Event>(
-      _i3.BroadcastChannelEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i3.BroadcastChannelEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -10228,14 +10166,14 @@ extension DOMStringList$Typings on DOMStringList {
 @_i1.anonymous
 class ErrorEventInit implements _i3.EventInit {
   external factory ErrorEventInit._({
-    _i2.Object? message,
-    _i2.Object? filename,
-    _i2.Object? lineno,
-    _i2.Object? colno,
-    _i2.Object? error,
-    _i2.Object? bubbles,
-    _i2.Object? cancelable,
-    _i2.Object? composed,
+    _i2.dynamic message,
+    _i2.dynamic filename,
+    _i2.dynamic lineno,
+    _i2.dynamic colno,
+    _i2.dynamic error,
+    _i2.dynamic bubbles,
+    _i2.dynamic cancelable,
+    _i2.dynamic composed,
   });
 
   factory ErrorEventInit({
@@ -10243,7 +10181,7 @@ class ErrorEventInit implements _i3.EventInit {
     _i2.String? filename,
     _i2.num? lineno,
     _i2.num? colno,
-    _i2.Object? error,
+    _i2.dynamic error,
     _i2.bool? bubbles,
     _i2.bool? cancelable,
     _i2.bool? composed,
@@ -10309,11 +10247,11 @@ extension ErrorEventInit$Typings on ErrorEventInit {
     );
   }
 
-  _i2.Object? get error => _i4.getProperty(
+  _i2.dynamic get error => _i4.getProperty(
         this,
         'error',
       );
-  set error(_i2.Object? value) {
+  set error(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'error',
@@ -10338,11 +10276,10 @@ class ErrorEvent implements _i3.Event {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ErrorEvent')
-external _i2.Object _declaredErrorEvent;
+_i2.Object get _declaredErrorEvent => _i4.getProperty(
+      _self,
+      'ErrorEvent',
+    );
 
 extension ErrorEvent$Typings on ErrorEvent {
   _i2.String get message => _i4.getProperty(
@@ -10361,7 +10298,7 @@ extension ErrorEvent$Typings on ErrorEvent {
         this,
         'colno',
       );
-  _i2.Object? get error => _i4.getProperty(
+  _i2.dynamic get error => _i4.getProperty(
         this,
         'error',
       );
@@ -10372,16 +10309,16 @@ extension ErrorEvent$Typings on ErrorEvent {
 @_i1.anonymous
 class PromiseRejectionEventInit implements _i3.EventInit {
   external factory PromiseRejectionEventInit._({
-    _i2.Object? promise,
-    _i2.Object? reason,
-    _i2.Object? bubbles,
-    _i2.Object? cancelable,
-    _i2.Object? composed,
+    _i2.dynamic promise,
+    _i2.dynamic reason,
+    _i2.dynamic bubbles,
+    _i2.dynamic cancelable,
+    _i2.dynamic composed,
   });
 
   factory PromiseRejectionEventInit({
-    required _i2.Future<_i2.Object?> promise,
-    _i2.Object? reason,
+    required _i2.Future<_i2.dynamic> promise,
+    _i2.dynamic reason,
     _i2.bool? bubbles,
     _i2.bool? cancelable,
     _i2.bool? composed,
@@ -10396,11 +10333,12 @@ class PromiseRejectionEventInit implements _i3.EventInit {
 }
 
 extension PromiseRejectionEventInit$Typings on PromiseRejectionEventInit {
-  _i2.Future<_i2.Object?> get promise => _i4.promiseToFuture(_i4.getProperty(
+  _i2.Future<_i2.Future<_i2.dynamic>> get promise =>
+      _i4.promiseToFuture(_i4.getProperty(
         this,
         'promise',
       ));
-  set promise(_i2.Future<_i2.Object?> value) {
+  set promise(_i2.Future<_i2.dynamic> value) {
     _i4.setProperty(
       this,
       'promise',
@@ -10408,11 +10346,11 @@ extension PromiseRejectionEventInit$Typings on PromiseRejectionEventInit {
     );
   }
 
-  _i2.Object? get reason => _i4.getProperty(
+  _i2.dynamic get reason => _i4.getProperty(
         this,
         'reason',
       );
-  set reason(_i2.Object? value) {
+  set reason(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'reason',
@@ -10437,39 +10375,21 @@ class PromiseRejectionEvent implements _i3.Event {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('PromiseRejectionEvent')
-external _i2.Object _declaredPromiseRejectionEvent;
+_i2.Object get _declaredPromiseRejectionEvent => _i4.getProperty(
+      _self,
+      'PromiseRejectionEvent',
+    );
 
 extension PromiseRejectionEvent$Typings on PromiseRejectionEvent {
-  _i2.Future<_i2.Object?> get promise => _i4.promiseToFuture(_i4.getProperty(
+  _i2.Future<_i2.Future<_i2.dynamic>> get promise =>
+      _i4.promiseToFuture(_i4.getProperty(
         this,
         'promise',
       ));
-  _i2.Object? get reason => _i4.getProperty(
+  _i2.dynamic get reason => _i4.getProperty(
         this,
         'reason',
       );
-}
-
-enum AbstractWorkerEventMap<T$ extends _i3.Event> {
-  error<_i3.ErrorEvent>(r'error');
-
-  const AbstractWorkerEventMap(this.value);
-
-  final _i2.String value;
-}
-
-enum WorkerEventMap<T$ extends _i3.Event> {
-  message<_i3.MessageEvent<_i2.Object?>>(r'message'),
-  messageerror<_i3.MessageEvent<_i2.Object?>>(r'messageerror'),
-  error<_i3.ErrorEvent>(r'error');
-
-  const WorkerEventMap(this.value);
-
-  final _i2.String value;
 }
 
 @_i1.JS()
@@ -10477,8 +10397,8 @@ enum WorkerEventMap<T$ extends _i3.Event> {
 @_i1.anonymous
 class WorkerOptions {
   external factory WorkerOptions._({
-    _i2.Object? type,
-    _i2.Object? name,
+    _i2.dynamic type,
+    _i2.dynamic name,
   });
 
   factory WorkerOptions({
@@ -10536,11 +10456,10 @@ class Worker implements _i3.EventTarget {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Worker')
-external _i2.Object _declaredWorker;
+_i2.Object get _declaredWorker => _i4.getProperty(
+      _self,
+      'Worker',
+    );
 
 extension Worker$Typings on Worker {
   void Function(_i3.ErrorEvent) get onerror => _i4.getProperty(
@@ -10555,11 +10474,11 @@ extension Worker$Typings on Worker {
     );
   }
 
-  void Function(_i3.MessageEvent<_i2.Object?>) get onmessage => _i4.getProperty(
+  void Function(_i3.MessageEvent<_i2.dynamic>) get onmessage => _i4.getProperty(
         this,
         'onmessage',
       );
-  set onmessage(void Function(_i3.MessageEvent<_i2.Object?>) value) {
+  set onmessage(void Function(_i3.MessageEvent<_i2.dynamic>) value) {
     _i4.setProperty(
       this,
       'onmessage',
@@ -10567,12 +10486,12 @@ extension Worker$Typings on Worker {
     );
   }
 
-  void Function(_i3.MessageEvent<_i2.Object?>) get onmessageerror =>
+  void Function(_i3.MessageEvent<_i2.dynamic>) get onmessageerror =>
       _i4.getProperty(
         this,
         'onmessageerror',
       );
-  set onmessageerror(void Function(_i3.MessageEvent<_i2.Object?>) value) {
+  set onmessageerror(void Function(_i3.MessageEvent<_i2.dynamic>) value) {
     _i4.setProperty(
       this,
       'onmessageerror',
@@ -10581,7 +10500,7 @@ extension Worker$Typings on Worker {
   }
 
   void _postMessage$1(
-    _i2.Object? message,
+    _i2.dynamic message,
     _i2.List<_i3.Transferable> transfer,
   ) {
     _i4.callMethod(
@@ -10595,7 +10514,7 @@ extension Worker$Typings on Worker {
   }
 
   void _postMessage$2(
-    _i2.Object? message, [
+    _i2.dynamic message, [
     _i3.StructuredSerializeOptions? options,
   ]) {
     _i4.callMethod(
@@ -10611,11 +10530,11 @@ extension Worker$Typings on Worker {
   /// Overload accessor: $1, $2
   ({
     void Function(
-      _i2.Object? message,
+      _i2.dynamic message,
       _i2.List<_i3.Transferable> transfer,
     ) $1,
     void Function(
-      _i2.Object? message, [
+      _i2.dynamic message, [
       _i3.StructuredSerializeOptions? options,
     ]) $2,
   }) get postMessage => (
@@ -10646,16 +10565,16 @@ extension Worker$Typings on Worker {
   ///
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
-  void _addEventListener$1<K$ extends _i3.Event>(
-    _i3.WorkerEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _addEventListener$1<K extends _i3.WorkerEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
       this,
       'addEventListener',
       [
-        type.name,
+        type,
         _i4.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -10726,9 +10645,9 @@ extension Worker$Typings on Worker {
     ///
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
-    void Function<K$ extends _i3.Event>(
-      _i3.WorkerEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i3.WorkerEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -10767,16 +10686,16 @@ extension Worker$Typings on Worker {
 
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
-  void _removeEventListener$1<K$ extends _i3.Event>(
-    _i3.WorkerEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _removeEventListener$1<K extends _i3.WorkerEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
       this,
       'removeEventListener',
       [
-        type.name,
+        type,
         _i4.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -10805,9 +10724,9 @@ extension Worker$Typings on Worker {
   ({
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
-    void Function<K$ extends _i3.Event>(
-      _i3.WorkerEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i3.WorkerEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -10846,11 +10765,10 @@ class Performance implements _i3.EventTarget {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Performance')
-external _i2.Object _declaredPerformance;
+_i2.Object get _declaredPerformance => _i4.getProperty(
+      _self,
+      'Performance',
+    );
 
 extension Performance$Typings on Performance {
   /// Returns a timestamp representing the start of the performance measurement.
@@ -10987,7 +10905,7 @@ extension Performance$Typings on Performance {
       );
 
   /// Returns a JSON representation of the performance object.
-  _i2.Object? toJSON() => _i4.callMethod(
+  _i2.dynamic toJSON() => _i4.callMethod(
         this,
         'toJSON',
         [],
@@ -11019,7 +10937,7 @@ extension PerformanceEntry$Typings on PerformanceEntry {
         this,
         'startTime',
       );
-  _i2.Object? toJSON() => _i4.callMethod(
+  _i2.dynamic toJSON() => _i4.callMethod(
         this,
         'toJSON',
         [],
@@ -11046,14 +10964,13 @@ class PerformanceMark implements _i3.PerformanceEntry {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('PerformanceMark')
-external _i2.Object _declaredPerformanceMark;
+_i2.Object get _declaredPerformanceMark => _i4.getProperty(
+      _self,
+      'PerformanceMark',
+    );
 
 extension PerformanceMark$Typings on PerformanceMark {
-  _i2.Object? get detail => _i4.getProperty(
+  _i2.dynamic get detail => _i4.getProperty(
         this,
         'detail',
       );
@@ -11072,7 +10989,7 @@ extension PerformanceMark$Typings on PerformanceMark {
 class PerformanceMeasure implements _i3.PerformanceEntry {}
 
 extension PerformanceMeasure$Typings on PerformanceMeasure {
-  _i2.Object? get detail => _i4.getProperty(
+  _i2.dynamic get detail => _i4.getProperty(
         this,
         'detail',
       );
@@ -11085,12 +11002,12 @@ extension PerformanceMeasure$Typings on PerformanceMeasure {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class CustomEventInit<T extends _i2.Object?> implements _i3.EventInit {
+class CustomEventInit<T> implements _i3.EventInit {
   external factory CustomEventInit._({
-    _i2.Object? detail,
-    _i2.Object? bubbles,
-    _i2.Object? cancelable,
-    _i2.Object? composed,
+    _i2.dynamic detail,
+    _i2.dynamic bubbles,
+    _i2.dynamic cancelable,
+    _i2.dynamic composed,
   });
 
   factory CustomEventInit({
@@ -11107,7 +11024,7 @@ class CustomEventInit<T extends _i2.Object?> implements _i3.EventInit {
       );
 }
 
-extension CustomEventInit$Typings<T extends _i2.Object?> on CustomEventInit<T> {
+extension CustomEventInit$Typings<T> on CustomEventInit<T> {
   T? get detail => _i4.getProperty(
         this,
         'detail',
@@ -11123,7 +11040,7 @@ extension CustomEventInit$Typings<T extends _i2.Object?> on CustomEventInit<T> {
 
 @_i1.JS()
 @_i1.staticInterop
-class CustomEvent<T extends _i2.Object?> implements _i3.Event {
+class CustomEvent<T> implements _i3.Event {
   factory CustomEvent(
     _i2.String typeArg, [
     _i3.CustomEventInit<T>? eventInitDict,
@@ -11137,13 +11054,12 @@ class CustomEvent<T extends _i2.Object?> implements _i3.Event {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CustomEvent')
-external _i2.Object _declaredCustomEvent;
+_i2.Object get _declaredCustomEvent => _i4.getProperty(
+      _self,
+      'CustomEvent',
+    );
 
-extension CustomEvent$Typings<T extends _i2.Object?> on CustomEvent<T> {
+extension CustomEvent$Typings<T> on CustomEvent<T> {
   /// Returns any custom data event was created with. Typically used for
   /// synthetic events.
   T get detail => _i4.getProperty(
@@ -11182,15 +11098,14 @@ class CacheStorage {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CacheStorage')
-external _i2.Object _declaredCacheStorage;
+_i2.Object get _declaredCacheStorage => _i4.getProperty(
+      _self,
+      'CacheStorage',
+    );
 
 extension CacheStorage$Typings on CacheStorage {
   /// Open a cache storage for the provided name.
-  _i2.Future<_i3.Cache> open(_i2.String cacheName) =>
+  _i2.Future<_i2.Future<_i3.Cache>> open(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'open',
@@ -11198,7 +11113,7 @@ extension CacheStorage$Typings on CacheStorage {
       ));
 
   /// Check if cache already exists for the provided name.
-  _i2.Future<_i2.bool> has(_i2.String cacheName) =>
+  _i2.Future<_i2.Future<_i2.bool>> has(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'has',
@@ -11206,7 +11121,7 @@ extension CacheStorage$Typings on CacheStorage {
       ));
 
   /// Delete cache storage for the provided name.
-  _i2.Future<_i2.bool> delete(_i2.String cacheName) =>
+  _i2.Future<_i2.Future<_i2.bool>> delete(_i2.String cacheName) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'delete',
@@ -11223,11 +11138,10 @@ class Cache {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Cache')
-external _i2.Object _declaredCache;
+_i2.Object get _declaredCache => _i4.getProperty(
+      _self,
+      'Cache',
+    );
 
 extension Cache$Typings on Cache {
   /// Put the provided request/response into the cache.
@@ -11235,7 +11149,7 @@ extension Cache$Typings on Cache {
   ///  How is the API different from browsers?
   ///  1. You cannot match cache objects using by relative paths.
   ///  2. You cannot pass options like `ignoreVary`, `ignoreMethod`, `ignoreSearch`.
-  _i2.Future<void> put(
+  _i2.Future<_i2.Future<void>> put(
     _i2.Object request,
     _i3.Response response,
   ) =>
@@ -11253,7 +11167,7 @@ extension Cache$Typings on Cache {
   ///  How is the API different from browsers?
   ///  1. You cannot match cache objects using by relative paths.
   ///  2. You cannot pass options like `ignoreVary`, `ignoreMethod`, `ignoreSearch`.
-  _i2.Future<_i3.Response?> match(
+  _i2.Future<_i2.Future<_i3.Response?>> match(
     _i2.Object request, [
     _i3.CacheQueryOptions? options,
   ]) =>
@@ -11271,7 +11185,7 @@ extension Cache$Typings on Cache {
   ///  How is the API different from browsers?
   ///  1. You cannot delete cache objects using by relative paths.
   ///  2. You cannot pass options like `ignoreVary`, `ignoreMethod`, `ignoreSearch`.
-  _i2.Future<_i2.bool> delete(
+  _i2.Future<_i2.Future<_i2.bool>> delete(
     _i2.Object request, [
     _i3.CacheQueryOptions? options,
   ]) =>
@@ -11298,9 +11212,9 @@ class IInline46 {}
 @_i1.anonymous
 class CacheQueryOptions {
   external factory CacheQueryOptions._({
-    _i2.Object? ignoreMethod,
-    _i2.Object? ignoreSearch,
-    _i2.Object? ignoreVary,
+    _i2.dynamic ignoreMethod,
+    _i2.dynamic ignoreSearch,
+    _i2.dynamic ignoreVary,
   });
 
   factory CacheQueryOptions({
@@ -11353,15 +11267,6 @@ extension CacheQueryOptions$Typings on CacheQueryOptions {
   }
 }
 
-enum WindowEventMap<T$ extends _i3.Event> {
-  error<_i3.ErrorEvent>(r'error'),
-  unhandledrejection<_i3.PromiseRejectionEvent>(r'unhandledrejection');
-
-  const WindowEventMap(this.value);
-
-  final _i2.String value;
-}
-
 @_i1.JS()
 @_i1.staticInterop
 class Window implements _i3.EventTarget {}
@@ -11375,11 +11280,11 @@ extension Window$Typings on Window {
         this,
         'self',
       );
-  _i2.Object? Function(_i3.ErrorEvent)? get onerror => _i4.getProperty(
+  _i2.dynamic Function(_i3.ErrorEvent)? get onerror => _i4.getProperty(
         this,
         'onerror',
       );
-  set onerror(_i2.Object? Function(_i3.ErrorEvent)? value) {
+  set onerror(_i2.dynamic Function(_i3.ErrorEvent)? value) {
     _i4.setProperty(
       this,
       'onerror',
@@ -11387,11 +11292,11 @@ extension Window$Typings on Window {
     );
   }
 
-  _i2.Object? Function(_i3.Event)? get onload => _i4.getProperty(
+  _i2.dynamic Function(_i3.Event)? get onload => _i4.getProperty(
         this,
         'onload',
       );
-  set onload(_i2.Object? Function(_i3.Event)? value) {
+  set onload(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
       'onload',
@@ -11399,11 +11304,11 @@ extension Window$Typings on Window {
     );
   }
 
-  _i2.Object? Function(_i3.Event)? get onbeforeunload => _i4.getProperty(
+  _i2.dynamic Function(_i3.Event)? get onbeforeunload => _i4.getProperty(
         this,
         'onbeforeunload',
       );
-  set onbeforeunload(_i2.Object? Function(_i3.Event)? value) {
+  set onbeforeunload(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
       'onbeforeunload',
@@ -11411,11 +11316,11 @@ extension Window$Typings on Window {
     );
   }
 
-  _i2.Object? Function(_i3.Event)? get onunload => _i4.getProperty(
+  _i2.dynamic Function(_i3.Event)? get onunload => _i4.getProperty(
         this,
         'onunload',
       );
-  set onunload(_i2.Object? Function(_i3.Event)? value) {
+  set onunload(_i2.dynamic Function(_i3.Event)? value) {
     _i4.setProperty(
       this,
       'onunload',
@@ -11423,13 +11328,13 @@ extension Window$Typings on Window {
     );
   }
 
-  _i2.Object? Function(_i3.PromiseRejectionEvent)? get onunhandledrejection =>
+  _i2.dynamic Function(_i3.PromiseRejectionEvent)? get onunhandledrejection =>
       _i4.getProperty(
         this,
         'onunhandledrejection',
       );
   set onunhandledrejection(
-      _i2.Object? Function(_i3.PromiseRejectionEvent)? value) {
+      _i2.dynamic Function(_i3.PromiseRejectionEvent)? value) {
     _i4.setProperty(
       this,
       'onunhandledrejection',
@@ -11496,11 +11401,11 @@ extension Window$Typings on Window {
     );
   }
 
-  _i2.Object? get deno => _i4.getProperty(
+  _i2.dynamic get deno => _i4.getProperty(
         this,
         'Deno',
       );
-  set deno(_i2.Object? value) {
+  set deno(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'Deno',
@@ -11508,11 +11413,11 @@ extension Window$Typings on Window {
     );
   }
 
-  _i2.Object? get navigator$ => _i4.getProperty(
+  _i2.dynamic get navigator$ => _i4.getProperty(
         this,
         'Navigator',
       );
-  set navigator$1(_i2.Object? value) {
+  set navigator$1(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'Navigator',
@@ -11532,11 +11437,11 @@ extension Window$Typings on Window {
     );
   }
 
-  _i2.Object? get location$ => _i4.getProperty(
+  _i2.dynamic get location$ => _i4.getProperty(
         this,
         'Location',
       );
-  set location$1(_i2.Object? value) {
+  set location$1(_i2.dynamic value) {
     _i4.setProperty(
       this,
       'Location',
@@ -11621,16 +11526,16 @@ extension Window$Typings on Window {
   ///
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
-  void _addEventListener$1<K$ extends _i3.Event>(
-    _i3.WindowEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _addEventListener$1<K extends _i3.WindowEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
       this,
       'addEventListener',
       [
-        type.name,
+        type,
         _i4.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -11701,9 +11606,9 @@ extension Window$Typings on Window {
     ///
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
-    void Function<K$ extends _i3.Event>(
-      _i3.WindowEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i3.WindowEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -11742,16 +11647,16 @@ extension Window$Typings on Window {
 
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
-  void _removeEventListener$1<K$ extends _i3.Event>(
-    _i3.WindowEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _removeEventListener$1<K extends _i3.WindowEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i4.callMethod(
       this,
       'removeEventListener',
       [
-        type.name,
+        type,
         _i4.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -11780,9 +11685,9 @@ extension Window$Typings on Window {
   ({
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
-    void Function<K$ extends _i3.Event>(
-      _i3.WindowEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i3.WindowEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -11808,11 +11713,10 @@ class Navigator {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Navigator')
-external _i2.Object _declaredNavigator;
+_i2.Object get _declaredNavigator => _i4.getProperty(
+      _self,
+      'Navigator',
+    );
 
 extension Navigator$Typings on Navigator {
   _i2.num get hardwareConcurrency => _i4.getProperty(
@@ -11846,11 +11750,10 @@ class Location {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Location')
-external _i2.Object _declaredLocation;
+_i2.Object get _declaredLocation => _i4.getProperty(
+      _self,
+      'Location',
+    );
 
 extension Location$Typings on Location {
   /// Returns a DOMStringList object listing the origins of the ancestor
@@ -12087,8 +11990,8 @@ _i2.String btoa(_i2.String s) => _i4.callMethod(
 ///
 /// Throws a `DataCloneError` if any part of the input value is not
 /// serializable.
-_i2.Object? structuredClone(
-  _i2.Object? value, [
+_i2.dynamic structuredClone(
+  _i2.dynamic value, [
   _i3.StructuredSerializeOptions? options,
 ]) =>
     _i4.callMethod(
@@ -12114,7 +12017,7 @@ _i2.Object? structuredClone(
 /// reportError(new Error("foo")); // Will not be reported.
 /// ```
 /// In Deno, this error will terminate the process if not intercepted like above.
-void reportError(_i2.Object? error) {
+void reportError(_i2.dynamic error) {
   _i4.callMethod(
     _self,
     'reportError',
@@ -12131,7 +12034,7 @@ void reportError(_i2.Object? error) {
 /// console.log(response.statusText); // e.g. "OK"
 /// const jsonData = await response.json();
 /// ```
-_i2.Future<_i3.Response> fetch(
+_i2.Future<_i2.Future<_i3.Response>> fetch(
   _i2.Object input, [
   _i3.RequestInit? init,
 ]) =>
@@ -12151,15 +12054,38 @@ _i2.Future<_i3.Response> fetch(
 /// setTimeout(() => { console.log('hello'); }, 500);
 /// ```
 _i2.num setTimeout(
-  void Function([_i2.Iterable<_i2.Object?>?]) cb, [
+  void Function([_i2.Iterable<_i2.dynamic>?]) cb, [
   _i2.num? delay,
-  _i2.Iterable<_i2.Object?>? args,
+  _i2.Iterable<_i2.dynamic>? args,
 ]) =>
     _i4.callMethod(
       _self,
       'setTimeout',
       [
-        _i4.allowInterop(cb),
+        _i4.allowInterop(([
+          a0,
+          a1,
+          a2,
+          a3,
+          a4,
+          a5,
+          a6,
+          a7,
+          a8,
+          a9,
+        ]) =>
+            cb([
+              a0,
+              a1,
+              a2,
+              a3,
+              a4,
+              a5,
+              a6,
+              a7,
+              a8,
+              a9,
+            ])),
         delay ?? _i6.undefined,
         ...?args,
       ],
@@ -12172,15 +12098,38 @@ _i2.num setTimeout(
 /// setInterval(() => { console.log('hello'); }, 500);
 /// ```
 _i2.num setInterval(
-  void Function([_i2.Iterable<_i2.Object?>?]) cb, [
+  void Function([_i2.Iterable<_i2.dynamic>?]) cb, [
   _i2.num? delay,
-  _i2.Iterable<_i2.Object?>? args,
+  _i2.Iterable<_i2.dynamic>? args,
 ]) =>
     _i4.callMethod(
       _self,
       'setInterval',
       [
-        _i4.allowInterop(cb),
+        _i4.allowInterop(([
+          a0,
+          a1,
+          a2,
+          a3,
+          a4,
+          a5,
+          a6,
+          a7,
+          a8,
+          a9,
+        ]) =>
+            cb([
+              a0,
+              a1,
+              a2,
+              a3,
+              a4,
+              a5,
+              a6,
+              a7,
+              a8,
+              a9,
+            ])),
         delay ?? _i6.undefined,
         ...?args,
       ],
@@ -12299,16 +12248,16 @@ _i2.String? prompt([
 /// ...
 /// dispatchEvent(new Event('unload'));
 /// ```
-void _addEventListener$1<K$ extends _i3.Event>(
-  _i3.WindowEventMap<K$> type,
-  _i2.Object? Function(K$) listener, [
+void _addEventListener$1<K extends _i3.WindowEventMap>(
+  K type,
+  _i2.dynamic Function(_i2.dynamic) listener, [
   _i2.Object? options,
 ]) {
   _i4.callMethod(
     _self,
     'addEventListener',
     [
-      type.name,
+      type,
       _i4.allowInterop(listener),
       options ?? _i6.undefined,
     ],
@@ -12349,9 +12298,9 @@ void _addEventListener$2(
   /// ...
   /// dispatchEvent(new Event('unload'));
   /// ```
-  void Function<K$ extends _i3.Event>(
-    _i3.WindowEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void Function<K extends _i3.WindowEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) $1,
 
@@ -12380,16 +12329,16 @@ void _addEventListener$2(
 /// addEventListener('load', listener);
 /// removeEventListener('load', listener);
 /// ```
-void _removeEventListener$1<K$ extends _i3.Event>(
-  _i3.WindowEventMap<K$> type,
-  _i2.Object? Function(K$) listener, [
+void _removeEventListener$1<K extends _i3.WindowEventMap>(
+  K type,
+  _i2.dynamic Function(_i2.dynamic) listener, [
   _i2.Object? options,
 ]) {
   _i4.callMethod(
     _self,
     'removeEventListener',
     [
-      type.name,
+      type,
       _i4.allowInterop(listener),
       options ?? _i6.undefined,
     ],
@@ -12428,9 +12377,9 @@ void _removeEventListener$2(
   /// addEventListener('load', listener);
   /// removeEventListener('load', listener);
   /// ```
-  void Function<K$ extends _i3.Event>(
-    _i3.WindowEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void Function<K extends _i3.WindowEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) $1,
 
@@ -12450,44 +12399,235 @@ void _removeEventListener$2(
       $1: _removeEventListener$1,
       $2: _removeEventListener$2,
     );
+_i2.dynamic get textDecoder => _i4.getProperty(
+      _self,
+      'TextDecoder',
+    );
+_i2.dynamic get textEncoder => _i4.getProperty(
+      _self,
+      'TextEncoder',
+    );
+_i2.dynamic get textDecoderStream => _i4.getProperty(
+      _self,
+      'TextDecoderStream',
+    );
+_i2.dynamic get textEncoderStream => _i4.getProperty(
+      _self,
+      'TextEncoderStream',
+    );
+
+/// A signal object that allows you to communicate with a DOM request (such as a
+/// Fetch) and abort it if required via an AbortController object.
+_i2.dynamic get abortSignal => _i4.getProperty(
+      _self,
+      'AbortSignal',
+    );
+
+/// Lets web applications asynchronously read the contents of files (or raw data
+/// buffers) stored on the user's computer, using File or Blob objects to specify
+/// the file or data to read.
+_i2.dynamic get fileReader => _i4.getProperty(
+      _self,
+      'FileReader',
+    );
+_i2.dynamic<_i2.dynamic> get readableStreamDefaultReader => _i4.getProperty(
+      _self,
+      'ReadableStreamDefaultReader',
+    );
+_i2.dynamic get readableStreamBYOBReader => _i4.getProperty(
+      _self,
+      'ReadableStreamBYOBReader',
+    );
+_i2.dynamic get readableStreamDefaultController => _i4.getProperty(
+      _self,
+      'ReadableStreamDefaultController',
+    );
+_i2.dynamic get readableByteStreamController => _i4.getProperty(
+      _self,
+      'ReadableByteStreamController',
+    );
+
+/// This Streams API interface provides a built-in byte length queuing strategy
+/// that can be used when constructing streams.
+_i2.dynamic get countQueuingStrategy => _i4.getProperty(
+      _self,
+      'CountQueuingStrategy',
+    );
+_i2.dynamic get byteLengthQueuingStrategy => _i4.getProperty(
+      _self,
+      'ByteLengthQueuingStrategy',
+    );
+
+/// This Streams API interface represents a readable stream of byte data. The
+/// Fetch API offers a concrete instance of a ReadableStream through the body
+/// property of a Response object.
+_i2.dynamic get readableStream => _i4.getProperty(
+      _self,
+      'ReadableStream',
+    );
+
+/// This Streams API interface provides a standard abstraction for writing
+/// streaming data to a destination, known as a sink. This object comes with
+/// built-in backpressure and queuing.
+_i2.dynamic<_i2.dynamic> get writableStream => _i4.getProperty(
+      _self,
+      'WritableStream',
+    );
+
+/// This Streams API interface represents a controller allowing control of a
+/// WritableStream's state. When constructing a WritableStream, the underlying
+/// sink is given a corresponding WritableStreamDefaultController instance to
+/// manipulate.
+_i3.WritableStreamDefaultController get writableStreamDefaultController =>
+    _i4.getProperty(
+      _self,
+      'WritableStreamDefaultController',
+    );
+
+/// This Streams API interface is the object returned by
+/// WritableStream.getWriter() and once created locks the < writer to the
+/// WritableStream ensuring that no other streams can write to the underlying
+/// sink.
+_i2.dynamic get writableStreamDefaultWriter => _i4.getProperty(
+      _self,
+      'WritableStreamDefaultWriter',
+    );
+_i2.dynamic<_i2.dynamic, _i2.dynamic> get transformStream => _i4.getProperty(
+      _self,
+      'TransformStream',
+    );
+_i3.TransformStreamDefaultController<_i2.dynamic>
+    get transformStreamDefaultController => _i4.getProperty(
+          _self,
+          'TransformStreamDefaultController',
+        );
+
+/// Provides a way to easily construct a set of key/value pairs representing
+/// form fields and their values, which can then be easily sent using the
+/// XMLHttpRequest.send() method. It uses the same format a form would use if the
+/// encoding type were set to "multipart/form-data".
+_i2.dynamic get formData => _i4.getProperty(
+      _self,
+      'FormData',
+    );
+
+/// This Web Storage API interface provides access to a particular domain's
+/// session or local storage. It allows, for example, the addition, modification,
+/// or deletion of stored data items.
+_i2.dynamic get storage => _i4.getProperty(
+      _self,
+      'Storage',
+    );
+_i3.Crypto get crypto => _i4.getProperty(
+      _self,
+      'crypto',
+    );
+
+/// The CryptoKey dictionary of the Web Crypto API represents a cryptographic
+/// key.
+_i2.dynamic get cryptoKey => _i4.getProperty(
+      _self,
+      'CryptoKey',
+    );
+
+/// The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for
+/// an asymmetric cryptography algorithm, also known as a public-key algorithm.
+_i2.dynamic get cryptoKeyPair => _i4.getProperty(
+      _self,
+      'CryptoKeyPair',
+    );
+
+/// This Web Crypto API interface provides a number of low-level cryptographic
+/// functions. It is accessed via the Crypto.subtle properties available in a
+/// window context (via Window.crypto).
+_i2.dynamic get subtleCrypto => _i4.getProperty(
+      _self,
+      'SubtleCrypto',
+    );
+_i2.dynamic get broadcastChannel => _i4.getProperty(
+      _self,
+      'BroadcastChannel',
+    );
+_i3.Console get console => _i4.getProperty(
+      _self,
+      'console',
+    );
+_i3.Performance get performance => _i4.getProperty(
+      _self,
+      'performance',
+    );
+_i3.CacheStorage get caches => _i4.getProperty(
+      _self,
+      'caches',
+    );
+_i2.dynamic get cache => _i4.getProperty(
+      _self,
+      'Cache',
+    );
+_i2.dynamic get cacheStorage => _i4.getProperty(
+      _self,
+      'CacheStorage',
+    );
+_Intersection30 get window => _i4.getProperty(
+      _self,
+      'window',
+    );
+_Intersection31 get self => _i4.getProperty(
+      _self,
+      'self',
+    );
+_i2.dynamic Function(_i3.ErrorEvent)? get onerror => _i4.getProperty(
+      _self,
+      'onerror',
+    );
+_i2.dynamic Function(_i3.Event)? get onload => _i4.getProperty(
+      _self,
+      'onload',
+    );
+_i2.dynamic Function(_i3.Event)? get onbeforeunload => _i4.getProperty(
+      _self,
+      'onbeforeunload',
+    );
+_i2.dynamic Function(_i3.Event)? get onunload => _i4.getProperty(
+      _self,
+      'onunload',
+    );
+_i2.dynamic Function(_i3.PromiseRejectionEvent)? get onunhandledrejection =>
+    _i4.getProperty(
+      _self,
+      'onunhandledrejection',
+    );
+_i3.Storage get localStorage => _i4.getProperty(
+      _self,
+      'localStorage',
+    );
+_i3.Storage get sessionStorage => _i4.getProperty(
+      _self,
+      'sessionStorage',
+    );
+_i3.Navigator get navigator => _i4.getProperty(
+      _self,
+      'navigator',
+    );
+_i3.Location get location => _i4.getProperty(
+      _self,
+      'location',
+    );
+_i10.$ModuleDeno get deno => _i4.getProperty(
+      _self,
+      'Deno',
+    );
+_i11.$ModuleWebAssembly get webAssembly => _i4.getProperty(
+      _self,
+      'WebAssembly',
+    );
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _CryptoAccessor crypto;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _ConsoleAccessor console;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _PerformanceAccessor performance;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _CachesAccessor caches;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _WindowAccessor window;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _SelfAccessor self;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _LocalStorageAccessor localStorage;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _SessionStorageAccessor sessionStorage;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _NavigatorAccessor navigator;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _LocationAccessor location;

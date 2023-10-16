@@ -1,23 +1,23 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:js/js.dart' as _i1;
-import 'dart:core' as _i2; /*
-FieldExternal: DeclaredVar
-*/
+import 'dart:core' as _i2;
+import 'dart:js_util' as _i3;
 
-@_i1.JS('onDidStartTask')
-external _i2.Object target3396;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidEndTask')
-external _i2.Object target3397;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidStartTaskProcess')
-external _i2.Object target3398;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidEndTaskProcess')
-external _i2.Object target3399;
+@_i1.JS('vscode.tasks')
+external _i2.Object _self;
+_i2.Object get target3396 => _i3.getProperty(
+      _self,
+      'onDidStartTask',
+    );
+_i2.Object get target3397 => _i3.getProperty(
+      _self,
+      'onDidEndTask',
+    );
+_i2.Object get target3398 => _i3.getProperty(
+      _self,
+      'onDidStartTaskProcess',
+    );
+_i2.Object get target3399 => _i3.getProperty(
+      _self,
+      'onDidEndTaskProcess',
+    );

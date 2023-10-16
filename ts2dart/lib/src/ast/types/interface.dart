@@ -71,21 +71,27 @@ class InteropInterface extends InteropType
         }
       }
 
-      _delegate ??= metadata.simulatesAny
-          ? InteropStaticType.obj.asRef
-          : InteropRef(isMetadataEnumMap()
-              ? InteropDynamicEnum(
-                  name: name,
-                  library: library,
-                  lineNumber: lineNumber,
-                  source: source)
-              : InteropClass(
-                  name: name,
-                  library: library,
-                  lineNumber: lineNumber,
-                  source: source,
-                  isInline: metadata.isInline)
-            ..parse(metadata.map));
+      if (_delegate == null) {
+        if (metadata.simulatesAny) {
+          _delegate = InteropStaticType.obj.asRef;
+        } else {
+          if (isMetadataEnumMap()) {
+            _delegate = InteropRef(InteropDynamicEnum(
+                name: name,
+                library: library,
+                lineNumber: lineNumber,
+                source: source));
+          } else {
+            _delegate = InteropRef(InteropClass(
+                name: name,
+                library: library,
+                lineNumber: lineNumber,
+                source: source,
+                isInline: metadata.isInline)
+              ..parse(metadata.map));
+          }
+        }
+      }
     }
 
     return delegate;

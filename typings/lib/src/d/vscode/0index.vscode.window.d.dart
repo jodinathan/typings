@@ -3787,7 +3787,7 @@ class IInline51 {}
 
 extension IInline51$Typings on IInline51 {
   /// Content settings for the webview created for this view.
-  _i2.Object? get webviewOptions => _i4.getProperty(
+  _i2.dynamic get webviewOptions => _i4.getProperty(
         this,
         'webviewOptions',
       );
@@ -3823,583 +3823,727 @@ extension IInline53$Typings on IInline53 {
       );
 }
 
-/// Show the given document in a text editor. A {@link ViewColumncolumn} can be provided
-/// to control where the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
-/// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
-/// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
-/// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-_i6.Thenable<_i3.TextEditor> _showTextDocument$1(
-  _i3.TextDocument document, [
-  _i3.TextDocumentShowOptions? options,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showTextDocument',
-      [
-        document,
-        options ?? _i7.undefined,
-      ],
-    );
+@_i1.JS('vscode.window')
+@_i1.staticInterop
+class $ModuleWindow {}
 
-/// Show the given document in a text editor. A {@link ViewColumncolumn} can be provided
-/// to control where the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
-/// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
-/// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
-/// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-_i6.Thenable<_i3.TextEditor> _showTextDocument$2(
-  _i3.Uri uri, [
-  _i3.TextDocumentShowOptions? options,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showTextDocument',
-      [
-        uri,
-        options ?? _i7.undefined,
-      ],
-    );
+extension $ModuleWindow$Typings on $ModuleWindow {
+  /// Represents the grid widget within the main editor area
+  _i3.TabGroups get tabGroups => _i4.getProperty(
+        this,
+        'tabGroups',
+      );
 
-/// Show the given document in a text editor. A {@link ViewColumncolumn} can be provided
-/// to control where the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
-/// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
-/// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
-/// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-_i6.Thenable<_i3.TextEditor> _showTextDocument$3(
-  _i3.TextDocument document, [
-  _i3.ViewColumn? column,
-  _i2.bool? preserveFocus,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showTextDocument',
-      [
-        document,
-        column?.name ?? _i7.undefined,
-        preserveFocus ?? _i7.undefined,
-      ],
-    );
+  /// The currently active editor or `undefined`. The active editor is the one
+  /// that currently has focus or, when none has focus, the one that has changed
+  /// input most recently.
+  _i3.TextEditor? get activeTextEditor => _i4.getProperty(
+        this,
+        'activeTextEditor',
+      );
 
-/// Overload accessor: $1, $2, $3
-({
+  /// The currently visible editors or an empty array.
+  _i2.List<_i3.TextEditor> get visibleTextEditors => (_i4.getProperty(
+        this,
+        'visibleTextEditors',
+      ) as _i2.List)
+          .cast();
+
+  /// An {@link Event} which fires when the {@link window.activeTextEditoractive editor}
+  /// has changed. *Note* that the event also fires when the active editor changes
+  /// to `undefined`.
+  _i9.Event get onDidChangeActiveTextEditor => _i4.getProperty(
+        this,
+        'onDidChangeActiveTextEditor',
+      );
+
+  /// An {@link Event} which fires when the array of {@link window.visibleTextEditorsvisible editors}
+  /// has changed.
+  _i9.Event get onDidChangeVisibleTextEditors => _i4.getProperty(
+        this,
+        'onDidChangeVisibleTextEditors',
+      );
+
+  /// An {@link Event} which fires when the selection in an editor has changed.
+  _i9.Event get onDidChangeTextEditorSelection => _i4.getProperty(
+        this,
+        'onDidChangeTextEditorSelection',
+      );
+
+  /// An {@link Event} which fires when the visible ranges of an editor has changed.
+  _i9.Event get onDidChangeTextEditorVisibleRanges => _i4.getProperty(
+        this,
+        'onDidChangeTextEditorVisibleRanges',
+      );
+
+  /// An {@link Event} which fires when the options of an editor have changed.
+  _i9.Event get onDidChangeTextEditorOptions => _i4.getProperty(
+        this,
+        'onDidChangeTextEditorOptions',
+      );
+
+  /// An {@link Event} which fires when the view column of an editor has changed.
+  _i9.Event get onDidChangeTextEditorViewColumn => _i4.getProperty(
+        this,
+        'onDidChangeTextEditorViewColumn',
+      );
+
+  /// The currently visible {@link NotebookEditornotebook editors} or an empty array.
+  _i2.List<_i3.NotebookEditor> get visibleNotebookEditors => (_i4.getProperty(
+        this,
+        'visibleNotebookEditors',
+      ) as _i2.List)
+          .cast();
+
+  /// An {@link Event} which fires when the {@link window.visibleNotebookEditorsvisible notebook editors}
+  /// has changed.
+  _i9.Event get onDidChangeVisibleNotebookEditors => _i4.getProperty(
+        this,
+        'onDidChangeVisibleNotebookEditors',
+      );
+
+  /// The currently active {@link NotebookEditornotebook editor} or `undefined`. The active editor is the one
+  /// that currently has focus or, when none has focus, the one that has changed
+  /// input most recently.
+  _i3.NotebookEditor? get activeNotebookEditor => _i4.getProperty(
+        this,
+        'activeNotebookEditor',
+      );
+
+  /// An {@link Event} which fires when the {@link window.activeNotebookEditoractive notebook editor}
+  /// has changed. *Note* that the event also fires when the active editor changes
+  /// to `undefined`.
+  _i9.Event get onDidChangeActiveNotebookEditor => _i4.getProperty(
+        this,
+        'onDidChangeActiveNotebookEditor',
+      );
+
+  /// An {@link Event} which fires when the {@link NotebookEditor.selectionsnotebook editor selections}
+  /// have changed.
+  _i9.Event get onDidChangeNotebookEditorSelection => _i4.getProperty(
+        this,
+        'onDidChangeNotebookEditorSelection',
+      );
+
+  /// An {@link Event} which fires when the {@link NotebookEditor.visibleRangesnotebook editor visible ranges}
+  /// have changed.
+  _i9.Event get onDidChangeNotebookEditorVisibleRanges => _i4.getProperty(
+        this,
+        'onDidChangeNotebookEditorVisibleRanges',
+      );
+
+  /// The currently opened terminals or an empty array.
+  _i2.List<_i3.Terminal> get terminals => (_i4.getProperty(
+        this,
+        'terminals',
+      ) as _i2.List)
+          .cast();
+
+  /// The currently active terminal or `undefined`. The active terminal is the one that
+  /// currently has focus or most recently had focus.
+  _i3.Terminal? get activeTerminal => _i4.getProperty(
+        this,
+        'activeTerminal',
+      );
+
+  /// An {@link Event} which fires when the {@link window.activeTerminalactive terminal}
+  /// has changed. *Note* that the event also fires when the active terminal changes
+  /// to `undefined`.
+  _i9.Event get onDidChangeActiveTerminal => _i4.getProperty(
+        this,
+        'onDidChangeActiveTerminal',
+      );
+
+  /// An {@link Event} which fires when a terminal has been created, either through the
+  /// {@link window.createTerminalcreateTerminal} API or commands.
+  _i9.Event get onDidOpenTerminal => _i4.getProperty(
+        this,
+        'onDidOpenTerminal',
+      );
+
+  /// An {@link Event} which fires when a terminal is disposed.
+  _i9.Event get onDidCloseTerminal => _i4.getProperty(
+        this,
+        'onDidCloseTerminal',
+      );
+
+  /// An {@link Event} which fires when a {@link Terminal.stateterminal's state} has changed.
+  _i9.Event get onDidChangeTerminalState => _i4.getProperty(
+        this,
+        'onDidChangeTerminalState',
+      );
+
+  /// Represents the current window's state.
+  _i3.WindowState get state => _i4.getProperty(
+        this,
+        'state',
+      );
+
+  /// An {@link Event} which fires when the focus state of the current window
+  /// changes. The value of the event represents whether the window is focused.
+  _i9.Event get onDidChangeWindowState => _i4.getProperty(
+        this,
+        'onDidChangeWindowState',
+      );
+
+  /// The currently active color theme as configured in the settings. The active
+  /// theme can be changed via the `workbench.colorTheme` setting.
+  _i3.ColorTheme get activeColorTheme => _i4.getProperty(
+        this,
+        'activeColorTheme',
+      );
+
+  /// An {@link Event} which fires when the active color theme is changed or has changes.
+  _i9.Event get onDidChangeActiveColorTheme => _i4.getProperty(
+        this,
+        'onDidChangeActiveColorTheme',
+      );
+
   /// Show the given document in a text editor. A {@link ViewColumncolumn} can be provided
   /// to control where the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
   /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
   /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
   /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-  _i6.Thenable<_i3.TextEditor> Function(
+  _i6.Thenable<_i3.TextEditor> _showTextDocument$1(
     _i3.TextDocument document, [
     _i3.TextDocumentShowOptions? options,
-  ]) $1,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showTextDocument',
+        [
+          document,
+          options ?? _i7.undefined,
+        ],
+      );
 
   /// Show the given document in a text editor. A {@link ViewColumncolumn} can be provided
   /// to control where the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
   /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
   /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
   /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-  _i6.Thenable<_i3.TextEditor> Function(
+  _i6.Thenable<_i3.TextEditor> _showTextDocument$2(
     _i3.Uri uri, [
     _i3.TextDocumentShowOptions? options,
-  ]) $2,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showTextDocument',
+        [
+          uri,
+          options ?? _i7.undefined,
+        ],
+      );
 
   /// Show the given document in a text editor. A {@link ViewColumncolumn} can be provided
   /// to control where the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
   /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
   /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
   /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-  _i6.Thenable<_i3.TextEditor> Function(
+  _i6.Thenable<_i3.TextEditor> _showTextDocument$3(
     _i3.TextDocument document, [
     _i3.ViewColumn? column,
     _i2.bool? preserveFocus,
-  ]) $3,
-}) get showTextDocument => (
-      $1: _showTextDocument$1,
-      $2: _showTextDocument$2,
-      $3: _showTextDocument$3,
-    );
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showTextDocument',
+        [
+          document,
+          column?.name ?? _i7.undefined,
+          preserveFocus ?? _i7.undefined,
+        ],
+      );
 
-/// Show the given {@link NotebookDocument} in a {@link NotebookEditornotebook editor}.
-_i6.Thenable<_i3.NotebookEditor> showNotebookDocument(
-  _i3.NotebookDocument document, [
-  _i3.NotebookDocumentShowOptions? options,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showNotebookDocument',
-      [
-        document,
-        options ?? _i7.undefined,
-      ],
-    );
+  /// Overload accessor: $1, $2, $3
+  ({
+    /// Show the given document in a text editor. A {@link ViewColumncolumn} can be provided
+    /// to control where the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
+    /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
+    /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
+    /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
+    _i6.Thenable<_i3.TextEditor> Function(
+      _i3.TextDocument document, [
+      _i3.TextDocumentShowOptions? options,
+    ]) $1,
 
-/// Create a TextEditorDecorationType that can be used to add decorations to text editors.
-_i3.TextEditorDecorationType createTextEditorDecorationType(
-        _i3.DecorationRenderOptions options) =>
-    _i4.callMethod(
-      _self,
-      'createTextEditorDecorationType',
-      [options],
-    );
+    /// Show the given document in a text editor. A {@link ViewColumncolumn} can be provided
+    /// to control where the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
+    /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
+    /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
+    /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
+    _i6.Thenable<_i3.TextEditor> Function(
+      _i3.Uri uri, [
+      _i3.TextDocumentShowOptions? options,
+    ]) $2,
 
-/// Show an information message to users. Optionally provide an array of items which will be presented as
-/// clickable buttons.
-/// Show an information message.
-_i6.Thenable<T?> _showInformationMessage$1<T extends _i2.String>(
-  _i2.String message, [
-  _i2.Iterable<_i2.Object?>? items,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showInformationMessage',
-      [
-        message,
-        ...?items,
-      ],
-    );
+    /// Show the given document in a text editor. A {@link ViewColumncolumn} can be provided
+    /// to control where the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
+    /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
+    /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
+    /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
+    _i6.Thenable<_i3.TextEditor> Function(
+      _i3.TextDocument document, [
+      _i3.ViewColumn? column,
+      _i2.bool? preserveFocus,
+    ]) $3,
+  }) get showTextDocument => (
+        $1: _showTextDocument$1,
+        $2: _showTextDocument$2,
+        $3: _showTextDocument$3,
+      );
 
-/// Show an information message to users. Optionally provide an array of items which will be presented as
-/// clickable buttons.
-/// Show an information message.
-_i6.Thenable<T?> _showInformationMessage$2<T extends _i2.String>(
-  _i2.String message,
-  _i3.MessageOptions options, [
-  _i2.Iterable<_i2.Object?>? items,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showInformationMessage',
-      [
-        message,
-        options,
-        ...?items,
-      ],
-    );
+  /// Show the given {@link NotebookDocument} in a {@link NotebookEditornotebook editor}.
+  _i6.Thenable<_i3.NotebookEditor> showNotebookDocument(
+    _i3.NotebookDocument document, [
+    _i3.NotebookDocumentShowOptions? options,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showNotebookDocument',
+        [
+          document,
+          options ?? _i7.undefined,
+        ],
+      );
 
-/// Show an information message to users. Optionally provide an array of items which will be presented as
-/// clickable buttons.
-/// Show an information message.
-_i6.Thenable<T?> _showInformationMessage$3<T extends _i3.MessageItem>(
-  _i2.String message,
-  _i3.MessageOptions options, [
-  _i2.Iterable<_i2.Object?>? items,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showInformationMessage',
-      [
-        message,
-        options,
-        ...?items,
-      ],
-    );
-
-/// Overload accessor: $1, $2, $3
-({
-  /// Show an information message to users. Optionally provide an array of items which will be presented as
-  /// clickable buttons.
-  /// Show an information message.
-  _i6.Thenable<T?> Function<T extends _i2.String>(
-    _i2.String message, [
-    _i2.Iterable<_i2.Object?>? items,
-  ]) $1,
+  /// Create a TextEditorDecorationType that can be used to add decorations to text editors.
+  _i3.TextEditorDecorationType createTextEditorDecorationType(
+          _i3.DecorationRenderOptions options) =>
+      _i4.callMethod(
+        this,
+        'createTextEditorDecorationType',
+        [options],
+      );
 
   /// Show an information message to users. Optionally provide an array of items which will be presented as
   /// clickable buttons.
   /// Show an information message.
-  _i6.Thenable<T?> Function<T extends _i2.String>(
-    _i2.String message,
-    _i3.MessageOptions options, [
-    _i2.Iterable<_i2.Object?>? items,
-  ]) $2,
+  _i6.Thenable<T?> _showInformationMessage$1<T extends _i2.String>(
+    _i2.String message, [
+    _i2.Iterable<_i2.dynamic>? items,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showInformationMessage',
+        [
+          message,
+          ...?items,
+        ],
+      );
 
   /// Show an information message to users. Optionally provide an array of items which will be presented as
   /// clickable buttons.
   /// Show an information message.
-  _i6.Thenable<T?> Function<T extends _i3.MessageItem>(
+  _i6.Thenable<T?> _showInformationMessage$2<T extends _i2.String>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.Object?>? items,
-  ]) $3,
-}) get showInformationMessage => (
-      $1: _showInformationMessage$1,
-      $2: _showInformationMessage$2,
-      $3: _showInformationMessage$3,
-    );
+    _i2.Iterable<_i2.dynamic>? items,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showInformationMessage',
+        [
+          message,
+          options,
+          ...?items,
+        ],
+      );
 
-/// Show a warning message.
-_i6.Thenable<T?> _showWarningMessage$1<T extends _i2.String>(
-  _i2.String message, [
-  _i2.Iterable<_i2.Object?>? items,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showWarningMessage',
-      [
-        message,
-        ...?items,
-      ],
-    );
+  /// Show an information message to users. Optionally provide an array of items which will be presented as
+  /// clickable buttons.
+  /// Show an information message.
+  _i6.Thenable<T?> _showInformationMessage$3<T extends _i3.MessageItem>(
+    _i2.String message,
+    _i3.MessageOptions options, [
+    _i2.Iterable<_i2.dynamic>? items,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showInformationMessage',
+        [
+          message,
+          options,
+          ...?items,
+        ],
+      );
 
-/// Show a warning message.
-_i6.Thenable<T?> _showWarningMessage$2<T extends _i2.String>(
-  _i2.String message,
-  _i3.MessageOptions options, [
-  _i2.Iterable<_i2.Object?>? items,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showWarningMessage',
-      [
-        message,
-        options,
-        ...?items,
-      ],
-    );
+  /// Overload accessor: $1, $2, $3
+  ({
+    /// Show an information message to users. Optionally provide an array of items which will be presented as
+    /// clickable buttons.
+    /// Show an information message.
+    _i6.Thenable<T?> Function<T extends _i2.String>(
+      _i2.String message, [
+      _i2.Iterable<_i2.dynamic>? items,
+    ]) $1,
 
-/// Show a warning message.
-_i6.Thenable<T?> _showWarningMessage$3<T extends _i3.MessageItem>(
-  _i2.String message,
-  _i3.MessageOptions options, [
-  _i2.Iterable<_i2.Object?>? items,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showWarningMessage',
-      [
-        message,
-        options,
-        ...?items,
-      ],
-    );
+    /// Show an information message to users. Optionally provide an array of items which will be presented as
+    /// clickable buttons.
+    /// Show an information message.
+    _i6.Thenable<T?> Function<T extends _i2.String>(
+      _i2.String message,
+      _i3.MessageOptions options, [
+      _i2.Iterable<_i2.dynamic>? items,
+    ]) $2,
 
-/// Overload accessor: $1, $2, $3
-({
+    /// Show an information message to users. Optionally provide an array of items which will be presented as
+    /// clickable buttons.
+    /// Show an information message.
+    _i6.Thenable<T?> Function<T extends _i3.MessageItem>(
+      _i2.String message,
+      _i3.MessageOptions options, [
+      _i2.Iterable<_i2.dynamic>? items,
+    ]) $3,
+  }) get showInformationMessage => (
+        $1: _showInformationMessage$1,
+        $2: _showInformationMessage$2,
+        $3: _showInformationMessage$3,
+      );
+
   /// Show a warning message.
-  _i6.Thenable<T?> Function<T extends _i2.String>(
+  _i6.Thenable<T?> _showWarningMessage$1<T extends _i2.String>(
     _i2.String message, [
-    _i2.Iterable<_i2.Object?>? items,
-  ]) $1,
+    _i2.Iterable<_i2.dynamic>? items,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showWarningMessage',
+        [
+          message,
+          ...?items,
+        ],
+      );
 
   /// Show a warning message.
-  _i6.Thenable<T?> Function<T extends _i2.String>(
+  _i6.Thenable<T?> _showWarningMessage$2<T extends _i2.String>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.Object?>? items,
-  ]) $2,
+    _i2.Iterable<_i2.dynamic>? items,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showWarningMessage',
+        [
+          message,
+          options,
+          ...?items,
+        ],
+      );
 
   /// Show a warning message.
-  _i6.Thenable<T?> Function<T extends _i3.MessageItem>(
+  _i6.Thenable<T?> _showWarningMessage$3<T extends _i3.MessageItem>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.Object?>? items,
-  ]) $3,
-}) get showWarningMessage => (
-      $1: _showWarningMessage$1,
-      $2: _showWarningMessage$2,
-      $3: _showWarningMessage$3,
-    );
+    _i2.Iterable<_i2.dynamic>? items,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showWarningMessage',
+        [
+          message,
+          options,
+          ...?items,
+        ],
+      );
 
-/// Show an error message.
-_i6.Thenable<T?> _showErrorMessage$1<T extends _i2.String>(
-  _i2.String message, [
-  _i2.Iterable<_i2.Object?>? items,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showErrorMessage',
-      [
-        message,
-        ...?items,
-      ],
-    );
+  /// Overload accessor: $1, $2, $3
+  ({
+    /// Show a warning message.
+    _i6.Thenable<T?> Function<T extends _i2.String>(
+      _i2.String message, [
+      _i2.Iterable<_i2.dynamic>? items,
+    ]) $1,
 
-/// Show an error message.
-_i6.Thenable<T?> _showErrorMessage$2<T extends _i2.String>(
-  _i2.String message,
-  _i3.MessageOptions options, [
-  _i2.Iterable<_i2.Object?>? items,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showErrorMessage',
-      [
-        message,
-        options,
-        ...?items,
-      ],
-    );
+    /// Show a warning message.
+    _i6.Thenable<T?> Function<T extends _i2.String>(
+      _i2.String message,
+      _i3.MessageOptions options, [
+      _i2.Iterable<_i2.dynamic>? items,
+    ]) $2,
 
-/// Show an error message.
-_i6.Thenable<T?> _showErrorMessage$3<T extends _i3.MessageItem>(
-  _i2.String message,
-  _i3.MessageOptions options, [
-  _i2.Iterable<_i2.Object?>? items,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showErrorMessage',
-      [
-        message,
-        options,
-        ...?items,
-      ],
-    );
+    /// Show a warning message.
+    _i6.Thenable<T?> Function<T extends _i3.MessageItem>(
+      _i2.String message,
+      _i3.MessageOptions options, [
+      _i2.Iterable<_i2.dynamic>? items,
+    ]) $3,
+  }) get showWarningMessage => (
+        $1: _showWarningMessage$1,
+        $2: _showWarningMessage$2,
+        $3: _showWarningMessage$3,
+      );
 
-/// Overload accessor: $1, $2, $3
-({
   /// Show an error message.
-  _i6.Thenable<T?> Function<T extends _i2.String>(
+  _i6.Thenable<T?> _showErrorMessage$1<T extends _i2.String>(
     _i2.String message, [
-    _i2.Iterable<_i2.Object?>? items,
-  ]) $1,
+    _i2.Iterable<_i2.dynamic>? items,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showErrorMessage',
+        [
+          message,
+          ...?items,
+        ],
+      );
 
   /// Show an error message.
-  _i6.Thenable<T?> Function<T extends _i2.String>(
+  _i6.Thenable<T?> _showErrorMessage$2<T extends _i2.String>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.Object?>? items,
-  ]) $2,
+    _i2.Iterable<_i2.dynamic>? items,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showErrorMessage',
+        [
+          message,
+          options,
+          ...?items,
+        ],
+      );
 
   /// Show an error message.
-  _i6.Thenable<T?> Function<T extends _i3.MessageItem>(
+  _i6.Thenable<T?> _showErrorMessage$3<T extends _i3.MessageItem>(
     _i2.String message,
     _i3.MessageOptions options, [
-    _i2.Iterable<_i2.Object?>? items,
-  ]) $3,
-}) get showErrorMessage => (
-      $1: _showErrorMessage$1,
-      $2: _showErrorMessage$2,
-      $3: _showErrorMessage$3,
-    );
+    _i2.Iterable<_i2.dynamic>? items,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showErrorMessage',
+        [
+          message,
+          options,
+          ...?items,
+        ],
+      );
 
-/// Shows a selection list allowing multiple selections.
-/// Shows a selection list.
-_i6.Thenable<_i2.List<_i2.String>?> _showQuickPick$1(
-  _i2.Object items,
-  _i2.Object options, [
-  _i3.CancellationToken? token,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showQuickPick',
-      [
-        items,
-        options,
-        token ?? _i7.undefined,
-      ],
-    );
+  /// Overload accessor: $1, $2, $3
+  ({
+    /// Show an error message.
+    _i6.Thenable<T?> Function<T extends _i2.String>(
+      _i2.String message, [
+      _i2.Iterable<_i2.dynamic>? items,
+    ]) $1,
 
-/// Shows a selection list allowing multiple selections.
-/// Shows a selection list.
-_i6.Thenable<_i2.String?> _showQuickPick$2(
-  _i2.Object items, [
-  _i3.QuickPickOptions? options,
-  _i3.CancellationToken? token,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showQuickPick',
-      [
-        items,
-        options ?? _i7.undefined,
-        token ?? _i7.undefined,
-      ],
-    );
+    /// Show an error message.
+    _i6.Thenable<T?> Function<T extends _i2.String>(
+      _i2.String message,
+      _i3.MessageOptions options, [
+      _i2.Iterable<_i2.dynamic>? items,
+    ]) $2,
 
-/// Shows a selection list allowing multiple selections.
-/// Shows a selection list.
-_i6.Thenable<_i2.List<T>?> _showQuickPick$3<T extends _i3.QuickPickItem>(
-  _i2.Object items,
-  _i2.Object options, [
-  _i3.CancellationToken? token,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showQuickPick',
-      [
-        items,
-        options,
-        token ?? _i7.undefined,
-      ],
-    );
+    /// Show an error message.
+    _i6.Thenable<T?> Function<T extends _i3.MessageItem>(
+      _i2.String message,
+      _i3.MessageOptions options, [
+      _i2.Iterable<_i2.dynamic>? items,
+    ]) $3,
+  }) get showErrorMessage => (
+        $1: _showErrorMessage$1,
+        $2: _showErrorMessage$2,
+        $3: _showErrorMessage$3,
+      );
 
-/// Shows a selection list allowing multiple selections.
-/// Shows a selection list.
-_i6.Thenable<T?> _showQuickPick$4<T extends _i3.QuickPickItem>(
-  _i2.Object items, [
-  _i3.QuickPickOptions? options,
-  _i3.CancellationToken? token,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showQuickPick',
-      [
-        items,
-        options ?? _i7.undefined,
-        token ?? _i7.undefined,
-      ],
-    );
-
-/// Overload accessor: $1, $2, $3, $4
-({
   /// Shows a selection list allowing multiple selections.
   /// Shows a selection list.
-  _i6.Thenable<_i2.List<_i2.String>?> Function(
+  _i6.Thenable<_i2.List<_i2.String>?> _showQuickPick$1(
     _i2.Object items,
     _i2.Object options, [
     _i3.CancellationToken? token,
-  ]) $1,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showQuickPick',
+        [
+          items,
+          options,
+          token ?? _i7.undefined,
+        ],
+      );
 
   /// Shows a selection list allowing multiple selections.
   /// Shows a selection list.
-  _i6.Thenable<_i2.String?> Function(
+  _i6.Thenable<_i2.String?> _showQuickPick$2(
     _i2.Object items, [
     _i3.QuickPickOptions? options,
     _i3.CancellationToken? token,
-  ]) $2,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showQuickPick',
+        [
+          items,
+          options ?? _i7.undefined,
+          token ?? _i7.undefined,
+        ],
+      );
 
   /// Shows a selection list allowing multiple selections.
   /// Shows a selection list.
-  _i6.Thenable<_i2.List<T>?> Function<T extends _i3.QuickPickItem>(
+  _i6.Thenable<_i2.List<T>?> _showQuickPick$3<T extends _i3.QuickPickItem>(
     _i2.Object items,
     _i2.Object options, [
     _i3.CancellationToken? token,
-  ]) $3,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showQuickPick',
+        [
+          items,
+          options,
+          token ?? _i7.undefined,
+        ],
+      );
 
   /// Shows a selection list allowing multiple selections.
   /// Shows a selection list.
-  _i6.Thenable<T?> Function<T extends _i3.QuickPickItem>(
+  _i6.Thenable<T?> _showQuickPick$4<T extends _i3.QuickPickItem>(
     _i2.Object items, [
     _i3.QuickPickOptions? options,
     _i3.CancellationToken? token,
-  ]) $4,
-}) get showQuickPick => (
-      $1: _showQuickPick$1,
-      $2: _showQuickPick$2,
-      $3: _showQuickPick$3,
-      $4: _showQuickPick$4,
-    );
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showQuickPick',
+        [
+          items,
+          options ?? _i7.undefined,
+          token ?? _i7.undefined,
+        ],
+      );
 
-/// Shows a selection list of {@link workspace.workspaceFoldersworkspace folders} to pick from.
-/// Returns `undefined` if no folder is open.
-_i6.Thenable<_i3.WorkspaceFolder?> showWorkspaceFolderPick(
-        [_i3.WorkspaceFolderPickOptions? options]) =>
-    _i4.callMethod(
-      _self,
-      'showWorkspaceFolderPick',
-      [options ?? _i7.undefined],
-    );
+  /// Overload accessor: $1, $2, $3, $4
+  ({
+    /// Shows a selection list allowing multiple selections.
+    /// Shows a selection list.
+    _i6.Thenable<_i2.List<_i2.String>?> Function(
+      _i2.Object items,
+      _i2.Object options, [
+      _i3.CancellationToken? token,
+    ]) $1,
 
-/// Shows a file open dialog to the user which allows to select a file
-/// for opening-purposes.
-_i6.Thenable<_i2.List<_i3.Uri>?> showOpenDialog(
-        [_i3.OpenDialogOptions? options]) =>
-    _i4.callMethod(
-      _self,
-      'showOpenDialog',
-      [options ?? _i7.undefined],
-    );
+    /// Shows a selection list allowing multiple selections.
+    /// Shows a selection list.
+    _i6.Thenable<_i2.String?> Function(
+      _i2.Object items, [
+      _i3.QuickPickOptions? options,
+      _i3.CancellationToken? token,
+    ]) $2,
 
-/// Shows a file save dialog to the user which allows to select a file
-/// for saving-purposes.
-_i6.Thenable<_i3.Uri?> showSaveDialog([_i3.SaveDialogOptions? options]) =>
-    _i4.callMethod(
-      _self,
-      'showSaveDialog',
-      [options ?? _i7.undefined],
-    );
+    /// Shows a selection list allowing multiple selections.
+    /// Shows a selection list.
+    _i6.Thenable<_i2.List<T>?> Function<T extends _i3.QuickPickItem>(
+      _i2.Object items,
+      _i2.Object options, [
+      _i3.CancellationToken? token,
+    ]) $3,
 
-/// Opens an input box to ask the user for input.
-///
-/// The returned value will be `undefined` if the input box was canceled (e.g. pressing ESC). Otherwise the
-/// returned value will be the string typed by the user or an empty string if the user did not type
-/// anything but dismissed the input box with OK.
-_i6.Thenable<_i2.String?> showInputBox([
-  _i3.InputBoxOptions? options,
-  _i3.CancellationToken? token,
-]) =>
-    _i4.callMethod(
-      _self,
-      'showInputBox',
-      [
-        options ?? _i7.undefined,
-        token ?? _i7.undefined,
-      ],
-    );
+    /// Shows a selection list allowing multiple selections.
+    /// Shows a selection list.
+    _i6.Thenable<T?> Function<T extends _i3.QuickPickItem>(
+      _i2.Object items, [
+      _i3.QuickPickOptions? options,
+      _i3.CancellationToken? token,
+    ]) $4,
+  }) get showQuickPick => (
+        $1: _showQuickPick$1,
+        $2: _showQuickPick$2,
+        $3: _showQuickPick$3,
+        $4: _showQuickPick$4,
+      );
 
-/// Creates a {@link QuickPick} to let the user pick an item from a list
-/// of items of type T.
-///
-/// Note that in many cases the more convenient {@link window.showQuickPick}
-/// is easier to use. {@link window.createQuickPick} should be used
-/// when {@link window.showQuickPick} does not offer the required flexibility.
-_i3.QuickPick<T> createQuickPick<T extends _i3.QuickPickItem>() =>
-    _i4.callMethod(
-      _self,
-      'createQuickPick',
-      [],
-    );
+  /// Shows a selection list of {@link workspace.workspaceFoldersworkspace folders} to pick from.
+  /// Returns `undefined` if no folder is open.
+  _i6.Thenable<_i3.WorkspaceFolder?> showWorkspaceFolderPick(
+          [_i3.WorkspaceFolderPickOptions? options]) =>
+      _i4.callMethod(
+        this,
+        'showWorkspaceFolderPick',
+        [options ?? _i7.undefined],
+      );
 
-/// Creates a {@link InputBox} to let the user enter some text input.
-///
-/// Note that in many cases the more convenient {@link window.showInputBox}
-/// is easier to use. {@link window.createInputBox} should be used
-/// when {@link window.showInputBox} does not offer the required flexibility.
-_i3.InputBox createInputBox() => _i4.callMethod(
-      _self,
-      'createInputBox',
-      [],
-    );
+  /// Shows a file open dialog to the user which allows to select a file
+  /// for opening-purposes.
+  _i6.Thenable<_i2.List<_i3.Uri>?> showOpenDialog(
+          [_i3.OpenDialogOptions? options]) =>
+      _i4.callMethod(
+        this,
+        'showOpenDialog',
+        [options ?? _i7.undefined],
+      );
 
-/// Creates a new {@link OutputChanneloutput channel} with the given name and language id
-/// If language id is not provided, then **Log** is used as default language id.
-///
-/// You can access the visible or active output channel as a {@link TextDocumenttext document} from {@link window.visibleTextEditorsvisible editors} or {@link window.activeTextEditoractive editor}
-/// and use the language id to contribute language features like syntax coloring, code lens etc.,
-/// Creates a new {@link LogOutputChannellog output channel} with the given name.
-_i3.OutputChannel _createOutputChannel$1(
-  _i2.String name, [
-  _i2.String? languageId,
-]) =>
-    _i4.callMethod(
-      _self,
-      'createOutputChannel',
-      [
-        name,
-        languageId ?? _i7.undefined,
-      ],
-    );
+  /// Shows a file save dialog to the user which allows to select a file
+  /// for saving-purposes.
+  _i6.Thenable<_i3.Uri?> showSaveDialog([_i3.SaveDialogOptions? options]) =>
+      _i4.callMethod(
+        this,
+        'showSaveDialog',
+        [options ?? _i7.undefined],
+      );
 
-/// Creates a new {@link OutputChanneloutput channel} with the given name and language id
-/// If language id is not provided, then **Log** is used as default language id.
-///
-/// You can access the visible or active output channel as a {@link TextDocumenttext document} from {@link window.visibleTextEditorsvisible editors} or {@link window.activeTextEditoractive editor}
-/// and use the language id to contribute language features like syntax coloring, code lens etc.,
-/// Creates a new {@link LogOutputChannellog output channel} with the given name.
-_i3.LogOutputChannel _createOutputChannel$2(
-  _i2.String name,
-  _i11.IInline48 options,
-) =>
-    _i4.callMethod(
-      _self,
-      'createOutputChannel',
-      [
-        name,
-        options,
-      ],
-    );
+  /// Opens an input box to ask the user for input.
+  ///
+  /// The returned value will be `undefined` if the input box was canceled (e.g. pressing ESC). Otherwise the
+  /// returned value will be the string typed by the user or an empty string if the user did not type
+  /// anything but dismissed the input box with OK.
+  _i6.Thenable<_i2.String?> showInputBox([
+    _i3.InputBoxOptions? options,
+    _i3.CancellationToken? token,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'showInputBox',
+        [
+          options ?? _i7.undefined,
+          token ?? _i7.undefined,
+        ],
+      );
 
-/// Overload accessor: $1, $2
-({
+  /// Creates a {@link QuickPick} to let the user pick an item from a list
+  /// of items of type T.
+  ///
+  /// Note that in many cases the more convenient {@link window.showQuickPick}
+  /// is easier to use. {@link window.createQuickPick} should be used
+  /// when {@link window.showQuickPick} does not offer the required flexibility.
+  _i3.QuickPick<T> createQuickPick<T extends _i3.QuickPickItem>() =>
+      _i4.callMethod(
+        this,
+        'createQuickPick',
+        [],
+      );
+
+  /// Creates a {@link InputBox} to let the user enter some text input.
+  ///
+  /// Note that in many cases the more convenient {@link window.showInputBox}
+  /// is easier to use. {@link window.createInputBox} should be used
+  /// when {@link window.showInputBox} does not offer the required flexibility.
+  _i3.InputBox createInputBox() => _i4.callMethod(
+        this,
+        'createInputBox',
+        [],
+      );
+
   /// Creates a new {@link OutputChanneloutput channel} with the given name and language id
   /// If language id is not provided, then **Log** is used as default language id.
   ///
   /// You can access the visible or active output channel as a {@link TextDocumenttext document} from {@link window.visibleTextEditorsvisible editors} or {@link window.activeTextEditoractive editor}
   /// and use the language id to contribute language features like syntax coloring, code lens etc.,
   /// Creates a new {@link LogOutputChannellog output channel} with the given name.
-  _i3.OutputChannel Function(
+  _i3.OutputChannel _createOutputChannel$1(
     _i2.String name, [
     _i2.String? languageId,
-  ]) $1,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'createOutputChannel',
+        [
+          name,
+          languageId ?? _i7.undefined,
+        ],
+      );
 
   /// Creates a new {@link OutputChanneloutput channel} with the given name and language id
   /// If language id is not provided, then **Log** is used as default language id.
@@ -4407,75 +4551,65 @@ _i3.LogOutputChannel _createOutputChannel$2(
   /// You can access the visible or active output channel as a {@link TextDocumenttext document} from {@link window.visibleTextEditorsvisible editors} or {@link window.activeTextEditoractive editor}
   /// and use the language id to contribute language features like syntax coloring, code lens etc.,
   /// Creates a new {@link LogOutputChannellog output channel} with the given name.
-  _i3.LogOutputChannel Function(
+  _i3.LogOutputChannel _createOutputChannel$2(
     _i2.String name,
     _i11.IInline48 options,
-  ) $2,
-}) get createOutputChannel => (
-      $1: _createOutputChannel$1,
-      $2: _createOutputChannel$2,
-    );
+  ) =>
+      _i4.callMethod(
+        this,
+        'createOutputChannel',
+        [
+          name,
+          options,
+        ],
+      );
 
-/// Create and show a new webview panel.
-_i3.WebviewPanel createWebviewPanel(
-  _i2.String viewType,
-  _i2.String title,
-  _i2.Object showOptions, [
-  _i2.Object? options,
-]) =>
-    _i4.callMethod(
-      _self,
-      'createWebviewPanel',
-      [
-        viewType,
-        title,
-        showOptions,
-        options ?? _i7.undefined,
-      ],
-    );
+  /// Overload accessor: $1, $2
+  ({
+    /// Creates a new {@link OutputChanneloutput channel} with the given name and language id
+    /// If language id is not provided, then **Log** is used as default language id.
+    ///
+    /// You can access the visible or active output channel as a {@link TextDocumenttext document} from {@link window.visibleTextEditorsvisible editors} or {@link window.activeTextEditoractive editor}
+    /// and use the language id to contribute language features like syntax coloring, code lens etc.,
+    /// Creates a new {@link LogOutputChannellog output channel} with the given name.
+    _i3.OutputChannel Function(
+      _i2.String name, [
+      _i2.String? languageId,
+    ]) $1,
 
-/// Set a message to the status bar. This is a short hand for the more powerful
-/// status bar {@link window.createStatusBarItemitems}.
-/// Set a message to the status bar. This is a short hand for the more powerful
-/// status bar {@link window.createStatusBarItemitems}.
-///
-/// *Note* that status bar messages stack and that they must be disposed when no
-/// longer used.
-_i3.Disposable _setStatusBarMessage$1(
-  _i2.String text,
-  _i2.num hideAfterTimeout,
-) =>
-    _i4.callMethod(
-      _self,
-      'setStatusBarMessage',
-      [
-        text,
-        hideAfterTimeout,
-      ],
-    );
+    /// Creates a new {@link OutputChanneloutput channel} with the given name and language id
+    /// If language id is not provided, then **Log** is used as default language id.
+    ///
+    /// You can access the visible or active output channel as a {@link TextDocumenttext document} from {@link window.visibleTextEditorsvisible editors} or {@link window.activeTextEditoractive editor}
+    /// and use the language id to contribute language features like syntax coloring, code lens etc.,
+    /// Creates a new {@link LogOutputChannellog output channel} with the given name.
+    _i3.LogOutputChannel Function(
+      _i2.String name,
+      _i11.IInline48 options,
+    ) $2,
+  }) get createOutputChannel => (
+        $1: _createOutputChannel$1,
+        $2: _createOutputChannel$2,
+      );
 
-/// Set a message to the status bar. This is a short hand for the more powerful
-/// status bar {@link window.createStatusBarItemitems}.
-/// Set a message to the status bar. This is a short hand for the more powerful
-/// status bar {@link window.createStatusBarItemitems}.
-///
-/// *Note* that status bar messages stack and that they must be disposed when no
-/// longer used.
-_i3.Disposable _setStatusBarMessage$2(
-  _i2.String text,
-  _i6.Thenable<_i2.Object?> hideWhenDone,
-) =>
-    _i4.callMethod(
-      _self,
-      'setStatusBarMessage',
-      [
-        text,
-        hideWhenDone,
-      ],
-    );
+  /// Create and show a new webview panel.
+  _i3.WebviewPanel createWebviewPanel(
+    _i2.String viewType,
+    _i2.String title,
+    _i2.Object showOptions, [
+    _i2.Object? options,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'createWebviewPanel',
+        [
+          viewType,
+          title,
+          showOptions,
+          options ?? _i7.undefined,
+        ],
+      );
 
-/// Overload accessor: $1, $2
-({
   /// Set a message to the status bar. This is a short hand for the more powerful
   /// status bar {@link window.createStatusBarItemitems}.
   /// Set a message to the status bar. This is a short hand for the more powerful
@@ -4483,10 +4617,18 @@ _i3.Disposable _setStatusBarMessage$2(
   ///
   /// *Note* that status bar messages stack and that they must be disposed when no
   /// longer used.
-  _i3.Disposable Function(
+  _i3.Disposable _setStatusBarMessage$1(
     _i2.String text,
     _i2.num hideAfterTimeout,
-  ) $1,
+  ) =>
+      _i4.callMethod(
+        this,
+        'setStatusBarMessage',
+        [
+          text,
+          hideAfterTimeout,
+        ],
+      );
 
   /// Set a message to the status bar. This is a short hand for the more powerful
   /// status bar {@link window.createStatusBarItemitems}.
@@ -4495,385 +4637,344 @@ _i3.Disposable _setStatusBarMessage$2(
   ///
   /// *Note* that status bar messages stack and that they must be disposed when no
   /// longer used.
-  _i3.Disposable Function(
+  _i3.Disposable _setStatusBarMessage$2(
     _i2.String text,
-    _i6.Thenable<_i2.Object?> hideWhenDone,
-  ) $2,
-}) get setStatusBarMessage => (
-      $1: _setStatusBarMessage$1,
-      $2: _setStatusBarMessage$2,
-    );
+    _i6.Thenable<_i2.dynamic> hideWhenDone,
+  ) =>
+      _i4.callMethod(
+        this,
+        'setStatusBarMessage',
+        [
+          text,
+          hideWhenDone,
+        ],
+      );
 
-/// Show progress in the Source Control viewlet while running the given callback and while
-/// its returned promise isn't resolve or rejected.
-_i6.Thenable<R> withScmProgress<R extends _i2.Object?>(
-        _i6.Thenable<R> Function(_i3.Progress<_i2.num>) task) =>
-    _i4.callMethod(
-      _self,
-      'withScmProgress',
-      [_i4.allowInterop(task)],
-    );
+  /// Overload accessor: $1, $2
+  ({
+    /// Set a message to the status bar. This is a short hand for the more powerful
+    /// status bar {@link window.createStatusBarItemitems}.
+    /// Set a message to the status bar. This is a short hand for the more powerful
+    /// status bar {@link window.createStatusBarItemitems}.
+    ///
+    /// *Note* that status bar messages stack and that they must be disposed when no
+    /// longer used.
+    _i3.Disposable Function(
+      _i2.String text,
+      _i2.num hideAfterTimeout,
+    ) $1,
 
-/// Show progress in the editor. Progress is shown while running the given callback
-/// and while the promise it returned isn't resolved nor rejected. The location at which
-/// progress should show (and other details) is defined via the passed {@linkcode ProgressOptions}.
-_i6.Thenable<R> withProgress<R extends _i2.Object?>(
-  _i3.ProgressOptions options,
-  _i6.Thenable<R> Function(
-    _i3.Progress<_i2.Object?>,
-    _i3.CancellationToken,
-  ) task,
-) =>
-    _i4.callMethod(
-      _self,
-      'withProgress',
-      [
-        options,
-        _i4.allowInterop(task),
-      ],
-    );
+    /// Set a message to the status bar. This is a short hand for the more powerful
+    /// status bar {@link window.createStatusBarItemitems}.
+    /// Set a message to the status bar. This is a short hand for the more powerful
+    /// status bar {@link window.createStatusBarItemitems}.
+    ///
+    /// *Note* that status bar messages stack and that they must be disposed when no
+    /// longer used.
+    _i3.Disposable Function(
+      _i2.String text,
+      _i6.Thenable<_i2.dynamic> hideWhenDone,
+    ) $2,
+  }) get setStatusBarMessage => (
+        $1: _setStatusBarMessage$1,
+        $2: _setStatusBarMessage$2,
+      );
 
-/// Creates a status bar {@link StatusBarItemitem}.
-_i3.StatusBarItem _createStatusBarItem$1([
-  _i3.StatusBarAlignment? alignment,
-  _i2.num? priority,
-]) =>
-    _i4.callMethod(
-      _self,
-      'createStatusBarItem',
-      [
-        alignment?.name ?? _i7.undefined,
-        priority ?? _i7.undefined,
-      ],
-    );
+  /// Show progress in the Source Control viewlet while running the given callback and while
+  /// its returned promise isn't resolve or rejected.
+  _i6.Thenable<R> withScmProgress<R>(
+          _i6.Thenable<R> Function(_i3.Progress<_i2.num>) task) =>
+      _i4.callMethod(
+        this,
+        'withScmProgress',
+        [_i4.allowInterop(task)],
+      );
 
-/// Creates a status bar {@link StatusBarItemitem}.
-_i3.StatusBarItem _createStatusBarItem$2(
-  _i2.String id, [
-  _i3.StatusBarAlignment? alignment,
-  _i2.num? priority,
-]) =>
-    _i4.callMethod(
-      _self,
-      'createStatusBarItem',
-      [
-        id,
-        alignment?.name ?? _i7.undefined,
-        priority ?? _i7.undefined,
-      ],
-    );
+  /// Show progress in the editor. Progress is shown while running the given callback
+  /// and while the promise it returned isn't resolved nor rejected. The location at which
+  /// progress should show (and other details) is defined via the passed {@linkcode ProgressOptions}.
+  _i6.Thenable<R> withProgress<R>(
+    _i3.ProgressOptions options,
+    _i6.Thenable<R> Function(
+      _i3.Progress<_i2.dynamic>,
+      _i3.CancellationToken,
+    ) task,
+  ) =>
+      _i4.callMethod(
+        this,
+        'withProgress',
+        [
+          options,
+          _i4.allowInterop(task),
+        ],
+      );
 
-/// Overload accessor: $1, $2
-({
   /// Creates a status bar {@link StatusBarItemitem}.
-  _i3.StatusBarItem Function([
+  _i3.StatusBarItem _createStatusBarItem$1([
     _i3.StatusBarAlignment? alignment,
     _i2.num? priority,
-  ]) $1,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'createStatusBarItem',
+        [
+          alignment?.name ?? _i7.undefined,
+          priority ?? _i7.undefined,
+        ],
+      );
 
   /// Creates a status bar {@link StatusBarItemitem}.
-  _i3.StatusBarItem Function(
+  _i3.StatusBarItem _createStatusBarItem$2(
     _i2.String id, [
     _i3.StatusBarAlignment? alignment,
     _i2.num? priority,
-  ]) $2,
-}) get createStatusBarItem => (
-      $1: _createStatusBarItem$1,
-      $2: _createStatusBarItem$2,
-    );
+  ]) =>
+      _i4.callMethod(
+        this,
+        'createStatusBarItem',
+        [
+          id,
+          alignment?.name ?? _i7.undefined,
+          priority ?? _i7.undefined,
+        ],
+      );
 
-/// Creates a {@link Terminal} with a backing shell process. The cwd of the terminal will be the workspace
-/// directory if it exists.
-/// Creates a {@link Terminal} with a backing shell process.
-/// Creates a {@link Terminal} where an extension controls its input and output.
-_i3.Terminal _createTerminal$1(_i3.TerminalOptions options) => _i4.callMethod(
-      _self,
-      'createTerminal',
-      [options],
-    );
+  /// Overload accessor: $1, $2
+  ({
+    /// Creates a status bar {@link StatusBarItemitem}.
+    _i3.StatusBarItem Function([
+      _i3.StatusBarAlignment? alignment,
+      _i2.num? priority,
+    ]) $1,
 
-/// Creates a {@link Terminal} with a backing shell process. The cwd of the terminal will be the workspace
-/// directory if it exists.
-/// Creates a {@link Terminal} with a backing shell process.
-/// Creates a {@link Terminal} where an extension controls its input and output.
-_i3.Terminal _createTerminal$2(_i3.ExtensionTerminalOptions options) =>
-    _i4.callMethod(
-      _self,
-      'createTerminal',
-      [options],
-    );
-
-/// Creates a {@link Terminal} with a backing shell process. The cwd of the terminal will be the workspace
-/// directory if it exists.
-/// Creates a {@link Terminal} with a backing shell process.
-/// Creates a {@link Terminal} where an extension controls its input and output.
-_i3.Terminal _createTerminal$3([
-  _i2.String? name,
-  _i2.String? shellPath,
-  _i2.Object? shellArgs,
-]) =>
-    _i4.callMethod(
-      _self,
-      'createTerminal',
-      [
-        name ?? _i7.undefined,
-        shellPath ?? _i7.undefined,
-        shellArgs ?? _i7.undefined,
-      ],
-    );
-
-/// Overload accessor: $1, $2, $3
-({
-  /// Creates a {@link Terminal} with a backing shell process. The cwd of the terminal will be the workspace
-  /// directory if it exists.
-  /// Creates a {@link Terminal} with a backing shell process.
-  /// Creates a {@link Terminal} where an extension controls its input and output.
-  _i3.Terminal Function(_i3.TerminalOptions options) $1,
+    /// Creates a status bar {@link StatusBarItemitem}.
+    _i3.StatusBarItem Function(
+      _i2.String id, [
+      _i3.StatusBarAlignment? alignment,
+      _i2.num? priority,
+    ]) $2,
+  }) get createStatusBarItem => (
+        $1: _createStatusBarItem$1,
+        $2: _createStatusBarItem$2,
+      );
 
   /// Creates a {@link Terminal} with a backing shell process. The cwd of the terminal will be the workspace
   /// directory if it exists.
   /// Creates a {@link Terminal} with a backing shell process.
   /// Creates a {@link Terminal} where an extension controls its input and output.
-  _i3.Terminal Function(_i3.ExtensionTerminalOptions options) $2,
+  _i3.Terminal _createTerminal$1(_i3.TerminalOptions options) => _i4.callMethod(
+        this,
+        'createTerminal',
+        [options],
+      );
 
   /// Creates a {@link Terminal} with a backing shell process. The cwd of the terminal will be the workspace
   /// directory if it exists.
   /// Creates a {@link Terminal} with a backing shell process.
   /// Creates a {@link Terminal} where an extension controls its input and output.
-  _i3.Terminal Function([
+  _i3.Terminal _createTerminal$2(_i3.ExtensionTerminalOptions options) =>
+      _i4.callMethod(
+        this,
+        'createTerminal',
+        [options],
+      );
+
+  /// Creates a {@link Terminal} with a backing shell process. The cwd of the terminal will be the workspace
+  /// directory if it exists.
+  /// Creates a {@link Terminal} with a backing shell process.
+  /// Creates a {@link Terminal} where an extension controls its input and output.
+  _i3.Terminal _createTerminal$3([
     _i2.String? name,
     _i2.String? shellPath,
     _i2.Object? shellArgs,
-  ]) $3,
-}) get createTerminal => (
-      $1: _createTerminal$1,
-      $2: _createTerminal$2,
-      $3: _createTerminal$3,
-    );
+  ]) =>
+      _i4.callMethod(
+        this,
+        'createTerminal',
+        [
+          name ?? _i7.undefined,
+          shellPath ?? _i7.undefined,
+          shellArgs ?? _i7.undefined,
+        ],
+      );
 
-/// Register a {@link TreeDataProvider} for the view contributed using the extension point `views`.
-/// This will allow you to contribute data to the {@link TreeView} and update if the data changes.
-///
-/// **Note:** To get access to the {@link TreeView} and perform operations on it, use {@link window.createTreeViewcreateTreeView}.
-_i3.Disposable registerTreeDataProvider<T extends _i2.Object?>(
-  _i2.String viewId,
-  _i3.TreeDataProvider<T> treeDataProvider,
-) =>
-    _i4.callMethod(
-      _self,
-      'registerTreeDataProvider',
-      [
-        viewId,
-        treeDataProvider,
-      ],
-    );
+  /// Overload accessor: $1, $2, $3
+  ({
+    /// Creates a {@link Terminal} with a backing shell process. The cwd of the terminal will be the workspace
+    /// directory if it exists.
+    /// Creates a {@link Terminal} with a backing shell process.
+    /// Creates a {@link Terminal} where an extension controls its input and output.
+    _i3.Terminal Function(_i3.TerminalOptions options) $1,
 
-/// Create a {@link TreeView} for the view contributed using the extension point `views`.
-_i3.TreeView<T> createTreeView<T extends _i2.Object?>(
-  _i2.String viewId,
-  _i3.TreeViewOptions<T> options,
-) =>
-    _i4.callMethod(
-      _self,
-      'createTreeView',
-      [
-        viewId,
-        options,
-      ],
-    );
+    /// Creates a {@link Terminal} with a backing shell process. The cwd of the terminal will be the workspace
+    /// directory if it exists.
+    /// Creates a {@link Terminal} with a backing shell process.
+    /// Creates a {@link Terminal} where an extension controls its input and output.
+    _i3.Terminal Function(_i3.ExtensionTerminalOptions options) $2,
 
-/// Registers a {@link UriHandleruri handler} capable of handling system-wide {@link Uriuris}.
-/// In case there are multiple windows open, the topmost window will handle the uri.
-/// A uri handler is scoped to the extension it is contributed from; it will only
-/// be able to handle uris which are directed to the extension itself. A uri must respect
-/// the following rules:
-///
-/// - The uri-scheme must be `vscode.env.uriScheme`;
-/// - The uri-authority must be the extension id (e.g. `my.extension`);
-/// - The uri-path, -query and -fragment parts are arbitrary.
-///
-/// For example, if the `my.extension` extension registers a uri handler, it will only
-/// be allowed to handle uris with the prefix `product-name://my.extension`.
-///
-/// An extension can only register a single uri handler in its entire activation lifetime.
-///
-/// * *Note:* There is an activation event `onUri` that fires when a uri directed for
-/// the current extension is about to be handled.
-_i3.Disposable registerUriHandler(_i3.UriHandler handler) => _i4.callMethod(
-      _self,
-      'registerUriHandler',
-      [handler],
-    );
+    /// Creates a {@link Terminal} with a backing shell process. The cwd of the terminal will be the workspace
+    /// directory if it exists.
+    /// Creates a {@link Terminal} with a backing shell process.
+    /// Creates a {@link Terminal} where an extension controls its input and output.
+    _i3.Terminal Function([
+      _i2.String? name,
+      _i2.String? shellPath,
+      _i2.Object? shellArgs,
+    ]) $3,
+  }) get createTerminal => (
+        $1: _createTerminal$1,
+        $2: _createTerminal$2,
+        $3: _createTerminal$3,
+      );
 
-/// Registers a webview panel serializer.
-///
-/// Extensions that support reviving should have an `"onWebviewPanel:viewType"` activation event and
-/// make sure that `registerWebviewPanelSerializer` is called during activation.
-///
-/// Only a single serializer may be registered at a time for a given `viewType`.
-_i3.Disposable registerWebviewPanelSerializer(
-  _i2.String viewType,
-  _i3.WebviewPanelSerializer<_i2.Object?> serializer,
-) =>
-    _i4.callMethod(
-      _self,
-      'registerWebviewPanelSerializer',
-      [
-        viewType,
-        serializer,
-      ],
-    );
+  /// Register a {@link TreeDataProvider} for the view contributed using the extension point `views`.
+  /// This will allow you to contribute data to the {@link TreeView} and update if the data changes.
+  ///
+  /// **Note:** To get access to the {@link TreeView} and perform operations on it, use {@link window.createTreeViewcreateTreeView}.
+  _i3.Disposable registerTreeDataProvider<T>(
+    _i2.String viewId,
+    _i3.TreeDataProvider<T> treeDataProvider,
+  ) =>
+      _i4.callMethod(
+        this,
+        'registerTreeDataProvider',
+        [
+          viewId,
+          treeDataProvider,
+        ],
+      );
 
-/// Register a new provider for webview views.
-_i3.Disposable registerWebviewViewProvider(
-  _i2.String viewId,
-  _i3.WebviewViewProvider provider, [
-  _i11.IInline51? options,
-]) =>
-    _i4.callMethod(
-      _self,
-      'registerWebviewViewProvider',
-      [
-        viewId,
-        provider,
-        options ?? _i7.undefined,
-      ],
-    );
+  /// Create a {@link TreeView} for the view contributed using the extension point `views`.
+  _i3.TreeView<T> createTreeView<T>(
+    _i2.String viewId,
+    _i3.TreeViewOptions<T> options,
+  ) =>
+      _i4.callMethod(
+        this,
+        'createTreeView',
+        [
+          viewId,
+          options,
+        ],
+      );
 
-/// Register a provider for custom editors for the `viewType` contributed by the `customEditors` extension point.
-///
-/// When a custom editor is opened, an `onCustomEditor:viewType` activation event is fired. Your extension
-/// must register a {@linkcode CustomTextEditorProvider}, {@linkcode CustomReadonlyEditorProvider},
-/// {@linkcode CustomEditorProvider}for `viewType` as part of activation.
-_i3.Disposable registerCustomEditorProvider(
-  _i2.String viewType,
-  _i2.Object provider, [
-  _i11.IInline53? options,
-]) =>
-    _i4.callMethod(
-      _self,
-      'registerCustomEditorProvider',
-      [
-        viewType,
-        provider,
-        options ?? _i7.undefined,
-      ],
-    );
+  /// Registers a {@link UriHandleruri handler} capable of handling system-wide {@link Uriuris}.
+  /// In case there are multiple windows open, the topmost window will handle the uri.
+  /// A uri handler is scoped to the extension it is contributed from; it will only
+  /// be able to handle uris which are directed to the extension itself. A uri must respect
+  /// the following rules:
+  ///
+  /// - The uri-scheme must be `vscode.env.uriScheme`;
+  /// - The uri-authority must be the extension id (e.g. `my.extension`);
+  /// - The uri-path, -query and -fragment parts are arbitrary.
+  ///
+  /// For example, if the `my.extension` extension registers a uri handler, it will only
+  /// be allowed to handle uris with the prefix `product-name://my.extension`.
+  ///
+  /// An extension can only register a single uri handler in its entire activation lifetime.
+  ///
+  /// * *Note:* There is an activation event `onUri` that fires when a uri directed for
+  /// the current extension is about to be handled.
+  _i3.Disposable registerUriHandler(_i3.UriHandler handler) => _i4.callMethod(
+        this,
+        'registerUriHandler',
+        [handler],
+      );
 
-/// Register provider that enables the detection and handling of links within the terminal.
-_i3.Disposable registerTerminalLinkProvider(
-        _i3.TerminalLinkProvider<_i3.TerminalLink> provider) =>
-    _i4.callMethod(
-      _self,
-      'registerTerminalLinkProvider',
-      [provider],
-    );
+  /// Registers a webview panel serializer.
+  ///
+  /// Extensions that support reviving should have an `"onWebviewPanel:viewType"` activation event and
+  /// make sure that `registerWebviewPanelSerializer` is called during activation.
+  ///
+  /// Only a single serializer may be registered at a time for a given `viewType`.
+  _i3.Disposable registerWebviewPanelSerializer(
+    _i2.String viewType,
+    _i3.WebviewPanelSerializer<_i2.Object?> serializer,
+  ) =>
+      _i4.callMethod(
+        this,
+        'registerWebviewPanelSerializer',
+        [
+          viewType,
+          serializer,
+        ],
+      );
 
-/// Registers a provider for a contributed terminal profile.
-_i3.Disposable registerTerminalProfileProvider(
-  _i2.String id,
-  _i3.TerminalProfileProvider provider,
-) =>
-    _i4.callMethod(
-      _self,
-      'registerTerminalProfileProvider',
-      [
-        id,
-        provider,
-      ],
-    );
+  /// Register a new provider for webview views.
+  _i3.Disposable registerWebviewViewProvider(
+    _i2.String viewId,
+    _i3.WebviewViewProvider provider, [
+    _i11.IInline51? options,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'registerWebviewViewProvider',
+        [
+          viewId,
+          provider,
+          options ?? _i7.undefined,
+        ],
+      );
 
-/// Register a file decoration provider.
-_i3.Disposable registerFileDecorationProvider(
-        _i3.FileDecorationProvider provider) =>
-    _i4.callMethod(
-      _self,
-      'registerFileDecorationProvider',
-      [provider],
-    );
+  /// Register a provider for custom editors for the `viewType` contributed by the `customEditors` extension point.
+  ///
+  /// When a custom editor is opened, an `onCustomEditor:viewType` activation event is fired. Your extension
+  /// must register a {@linkcode CustomTextEditorProvider}, {@linkcode CustomReadonlyEditorProvider},
+  /// {@linkcode CustomEditorProvider}for `viewType` as part of activation.
+  _i3.Disposable registerCustomEditorProvider(
+    _i2.String viewType,
+    _i2.Object provider, [
+    _i11.IInline53? options,
+  ]) =>
+      _i4.callMethod(
+        this,
+        'registerCustomEditorProvider',
+        [
+          viewType,
+          provider,
+          options ?? _i7.undefined,
+        ],
+      );
+
+  /// Register provider that enables the detection and handling of links within the terminal.
+  _i3.Disposable registerTerminalLinkProvider(
+          _i3.TerminalLinkProvider<_i3.TerminalLink> provider) =>
+      _i4.callMethod(
+        this,
+        'registerTerminalLinkProvider',
+        [provider],
+      );
+
+  /// Registers a provider for a contributed terminal profile.
+  _i3.Disposable registerTerminalProfileProvider(
+    _i2.String id,
+    _i3.TerminalProfileProvider provider,
+  ) =>
+      _i4.callMethod(
+        this,
+        'registerTerminalProfileProvider',
+        [
+          id,
+          provider,
+        ],
+      );
+
+  /// Register a file decoration provider.
+  _i3.Disposable registerFileDecorationProvider(
+          _i3.FileDecorationProvider provider) =>
+      _i4.callMethod(
+        this,
+        'registerFileDecorationProvider',
+        [provider],
+      );
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _TabGroupsAccessor tabGroups;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _ActiveTextEditorAccessor activeTextEditor;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeActiveTextEditorAccessor onDidChangeActiveTextEditor;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeVisibleTextEditorsAccessor
-    onDidChangeVisibleTextEditors;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeTextEditorSelectionAccessor
-    onDidChangeTextEditorSelection;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeTextEditorVisibleRangesAccessor
-    onDidChangeTextEditorVisibleRanges;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeTextEditorOptionsAccessor
-    onDidChangeTextEditorOptions;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeTextEditorViewColumnAccessor
-    onDidChangeTextEditorViewColumn;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeVisibleNotebookEditorsAccessor
-    onDidChangeVisibleNotebookEditors;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _ActiveNotebookEditorAccessor activeNotebookEditor;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeActiveNotebookEditorAccessor
-    onDidChangeActiveNotebookEditor;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeNotebookEditorSelectionAccessor
-    onDidChangeNotebookEditorSelection;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeNotebookEditorVisibleRangesAccessor
-    onDidChangeNotebookEditorVisibleRanges;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _ActiveTerminalAccessor activeTerminal;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeActiveTerminalAccessor onDidChangeActiveTerminal;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidOpenTerminalAccessor onDidOpenTerminal;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidCloseTerminalAccessor onDidCloseTerminal;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeTerminalStateAccessor onDidChangeTerminalState;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _StateAccessor state;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeWindowStateAccessor onDidChangeWindowState;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _ActiveColorThemeAccessor activeColorTheme;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeActiveColorThemeAccessor onDidChangeActiveColorTheme;

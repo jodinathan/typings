@@ -11,7 +11,7 @@ Future<void> main(List<String> arguments) async {
 
   final libPath = '${Directory.current.path}/../typings/lib/';
 
-  if (1 > 0) {
+  if (1 < 0) {
     await Transpiler.fromNpm(
         package: 'typescript',
         version: 'latest',
@@ -70,7 +70,7 @@ Future<void> main(List<String> arguments) async {
         ]);
   }
 
-  if (1 > 0) {
+  if (1 < 0) {
     await Transpiler.fromUrls(
         package: 'deno',
         version: 'v1.32.3',
@@ -101,6 +101,21 @@ Future<void> main(List<String> arguments) async {
         },
         files: [
           'release/go.d.ts',
+        ]);
+  }
+
+  if (1 > 0) {
+    await Transpiler.fromUrls(
+        package: 'vscode',
+        version: '1.82.0',
+        targetMainFile: 'vscode',
+        dirName: 'vscode',
+        targetPath: libPath,
+        uses: [
+          'core'
+        ],
+        urls: [
+          'https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/vscode/index.d.ts'
         ]);
   }
 }

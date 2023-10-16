@@ -61,7 +61,7 @@ class InteropIntersection extends InteropType
         };
 
         if (cl is InteropClass) {
-          newClass.inheritance.add(InteropRef(cl));
+          newClass.inheritance.add(InteropRef<InteropClass>(cl));
         }
       }
 

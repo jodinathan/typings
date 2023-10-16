@@ -9,24 +9,30 @@ import 'dart:js_util' as _i4;
 @_i1.JS('vscode.comments')
 external _i2.Object _self;
 
-/// Creates a new {@link CommentControllercomment controller} instance.
-_i3.CommentController createCommentController(
-  _i2.String id,
-  _i2.String label,
-) =>
-    _i4.callMethod(
-      _self,
-      'createCommentController',
-      [
-        id,
-        label,
-      ],
-    );
+@_i1.JS('vscode.comments')
+@_i1.staticInterop
+class $ModuleComments {}
+
+extension $ModuleComments$Typings on $ModuleComments {
+  /// Creates a new {@link CommentControllercomment controller} instance.
+  _i3.CommentController createCommentController(
+    _i2.String id,
+    _i2.String label,
+  ) =>
+      _i4.callMethod(
+        this,
+        'createCommentController',
+        [
+          id,
+          label,
+        ],
+      );
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

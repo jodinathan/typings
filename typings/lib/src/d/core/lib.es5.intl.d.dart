@@ -720,7 +720,7 @@ typedef RelativeTimeFormatLocaleMatcher
 typedef RelativeTimeFormatNumeric = _i3.RelativeTimeFormatNumericOptions;
 typedef RelativeTimeFormatStyle = _i3.RelativeTimeFormatStyleOptions;
 typedef BCP47LanguageTag = _i2.String;
-typedef LocalesArgument = _i2.Object?;
+typedef LocalesArgument = _i2.dynamic;
 typedef RelativeTimeFormatPart = _i2.Object;
 typedef LocaleHourCycleKey = _i3.LocaleHourCycleKeyOptions;
 typedef LocaleCollationCaseFirst = _i3.LocaleCollationCaseFirstOptions;
@@ -736,13 +736,13 @@ typedef ListFormatStyle = _i3.ListFormatStyleOptions;
 @_i1.anonymous
 class CollatorOptions {
   external factory CollatorOptions._({
-    _i2.Object? usage,
-    _i2.Object? localeMatcher,
-    _i2.Object? numeric,
-    _i2.Object? caseFirst,
-    _i2.Object? sensitivity,
-    _i2.Object? collation,
-    _i2.Object? ignorePunctuation,
+    _i2.dynamic usage,
+    _i2.dynamic localeMatcher,
+    _i2.dynamic numeric,
+    _i2.dynamic caseFirst,
+    _i2.dynamic sensitivity,
+    _i2.dynamic collation,
+    _i2.dynamic ignorePunctuation,
   });
 
   factory CollatorOptions({
@@ -871,13 +871,13 @@ extension CollatorOptions$Typings on CollatorOptions {
 @_i1.anonymous
 class ResolvedCollatorOptions {
   external factory ResolvedCollatorOptions._({
-    _i2.Object? locale,
-    _i2.Object? usage,
-    _i2.Object? sensitivity,
-    _i2.Object? ignorePunctuation,
-    _i2.Object? collation,
-    _i2.Object? caseFirst,
-    _i2.Object? numeric,
+    _i2.dynamic locale,
+    _i2.dynamic usage,
+    _i2.dynamic sensitivity,
+    _i2.dynamic ignorePunctuation,
+    _i2.dynamic collation,
+    _i2.dynamic caseFirst,
+    _i2.dynamic numeric,
   });
 
   factory ResolvedCollatorOptions({
@@ -1016,11 +1016,10 @@ class Collator {
           .cast();
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Collator')
-external _i2.Object _declaredCollator;
+_i2.Object get _declaredCollator => _i5.getProperty(
+      _self,
+      'Collator',
+    );
 
 extension Collator$Typings on Collator {
   _i2.num compare(
@@ -1079,22 +1078,22 @@ extension IInline3$Typings on IInline3 {
 @_i1.anonymous
 class NumberFormatOptions {
   external factory NumberFormatOptions._({
-    _i2.Object? localeMatcher,
-    _i2.Object? style,
-    _i2.Object? currency,
-    _i2.Object? currencySign,
-    _i2.Object? useGrouping,
-    _i2.Object? minimumIntegerDigits,
-    _i2.Object? minimumFractionDigits,
-    _i2.Object? maximumFractionDigits,
-    _i2.Object? minimumSignificantDigits,
-    _i2.Object? maximumSignificantDigits,
-    _i2.Object? compactDisplay,
-    _i2.Object? notation,
-    _i2.Object? signDisplay,
-    _i2.Object? unit,
-    _i2.Object? unitDisplay,
-    _i2.Object? currencyDisplay,
+    _i2.dynamic localeMatcher,
+    _i2.dynamic style,
+    _i2.dynamic currency,
+    _i2.dynamic currencySign,
+    _i2.dynamic useGrouping,
+    _i2.dynamic minimumIntegerDigits,
+    _i2.dynamic minimumFractionDigits,
+    _i2.dynamic maximumFractionDigits,
+    _i2.dynamic minimumSignificantDigits,
+    _i2.dynamic maximumSignificantDigits,
+    _i2.dynamic compactDisplay,
+    _i2.dynamic notation,
+    _i2.dynamic signDisplay,
+    _i2.dynamic unit,
+    _i2.dynamic unitDisplay,
+    _i2.dynamic currencyDisplay,
   });
 
   factory NumberFormatOptions({
@@ -1346,23 +1345,23 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
 @_i1.anonymous
 class ResolvedNumberFormatOptions {
   external factory ResolvedNumberFormatOptions._({
-    _i2.Object? locale,
-    _i2.Object? numberingSystem,
-    _i2.Object? style,
-    _i2.Object? currency,
-    _i2.Object? minimumIntegerDigits,
-    _i2.Object? minimumFractionDigits,
-    _i2.Object? maximumFractionDigits,
-    _i2.Object? minimumSignificantDigits,
-    _i2.Object? maximumSignificantDigits,
-    _i2.Object? useGrouping,
-    _i2.Object? compactDisplay,
-    _i2.Object? notation,
-    _i2.Object? signDisplay,
-    _i2.Object? unit,
-    _i2.Object? unitDisplay,
-    _i2.Object? currencyDisplay,
-    _i2.Object? currencySign,
+    _i2.dynamic locale,
+    _i2.dynamic numberingSystem,
+    _i2.dynamic style,
+    _i2.dynamic currency,
+    _i2.dynamic minimumIntegerDigits,
+    _i2.dynamic minimumFractionDigits,
+    _i2.dynamic maximumFractionDigits,
+    _i2.dynamic minimumSignificantDigits,
+    _i2.dynamic maximumSignificantDigits,
+    _i2.dynamic useGrouping,
+    _i2.dynamic compactDisplay,
+    _i2.dynamic notation,
+    _i2.dynamic signDisplay,
+    _i2.dynamic unit,
+    _i2.dynamic unitDisplay,
+    _i2.dynamic currencyDisplay,
+    _i2.dynamic currencySign,
   });
 
   factory ResolvedNumberFormatOptions({
@@ -1653,11 +1652,10 @@ class NumberFormat {
           .cast();
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('NumberFormat')
-external _i2.Object _declaredNumberFormat;
+_i2.Object get _declaredNumberFormat => _i5.getProperty(
+      _self,
+      'NumberFormat',
+    );
 
 extension NumberFormat$Typings on NumberFormat {
   _i2.String _format$1(_i2.num value) => _i5.callMethod(
@@ -1744,26 +1742,26 @@ extension IInline4$Typings on IInline4 {
 @_i1.anonymous
 class DateTimeFormatOptions {
   external factory DateTimeFormatOptions._({
-    _i2.Object? localeMatcher,
-    _i2.Object? weekday,
-    _i2.Object? era,
-    _i2.Object? year,
-    _i2.Object? month,
-    _i2.Object? day,
-    _i2.Object? hour,
-    _i2.Object? minute,
-    _i2.Object? second,
-    _i2.Object? timeZoneName,
-    _i2.Object? formatMatcher,
-    _i2.Object? hour12,
-    _i2.Object? timeZone,
-    _i2.Object? calendar,
-    _i2.Object? dayPeriod,
-    _i2.Object? numberingSystem,
-    _i2.Object? dateStyle,
-    _i2.Object? timeStyle,
-    _i2.Object? hourCycle,
-    _i2.Object? fractionalSecondDigits,
+    _i2.dynamic localeMatcher,
+    _i2.dynamic weekday,
+    _i2.dynamic era,
+    _i2.dynamic year,
+    _i2.dynamic month,
+    _i2.dynamic day,
+    _i2.dynamic hour,
+    _i2.dynamic minute,
+    _i2.dynamic second,
+    _i2.dynamic timeZoneName,
+    _i2.dynamic formatMatcher,
+    _i2.dynamic hour12,
+    _i2.dynamic timeZone,
+    _i2.dynamic calendar,
+    _i2.dynamic dayPeriod,
+    _i2.dynamic numberingSystem,
+    _i2.dynamic dateStyle,
+    _i2.dynamic timeStyle,
+    _i2.dynamic hourCycle,
+    _i2.dynamic fractionalSecondDigits,
   });
 
   factory DateTimeFormatOptions({
@@ -2108,26 +2106,26 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
 @_i1.anonymous
 class ResolvedDateTimeFormatOptions {
   external factory ResolvedDateTimeFormatOptions._({
-    _i2.Object? locale,
-    _i2.Object? calendar,
-    _i2.Object? numberingSystem,
-    _i2.Object? timeZone,
-    _i2.Object? hour12,
-    _i2.Object? weekday,
-    _i2.Object? era,
-    _i2.Object? year,
-    _i2.Object? month,
-    _i2.Object? day,
-    _i2.Object? hour,
-    _i2.Object? minute,
-    _i2.Object? second,
-    _i2.Object? timeZoneName,
-    _i2.Object? formatMatcher,
-    _i2.Object? dateStyle,
-    _i2.Object? timeStyle,
-    _i2.Object? hourCycle,
-    _i2.Object? dayPeriod,
-    _i2.Object? fractionalSecondDigits,
+    _i2.dynamic locale,
+    _i2.dynamic calendar,
+    _i2.dynamic numberingSystem,
+    _i2.dynamic timeZone,
+    _i2.dynamic hour12,
+    _i2.dynamic weekday,
+    _i2.dynamic era,
+    _i2.dynamic year,
+    _i2.dynamic month,
+    _i2.dynamic day,
+    _i2.dynamic hour,
+    _i2.dynamic minute,
+    _i2.dynamic second,
+    _i2.dynamic timeZoneName,
+    _i2.dynamic formatMatcher,
+    _i2.dynamic dateStyle,
+    _i2.dynamic timeStyle,
+    _i2.dynamic hourCycle,
+    _i2.dynamic dayPeriod,
+    _i2.dynamic fractionalSecondDigits,
   });
 
   factory ResolvedDateTimeFormatOptions({
@@ -2479,11 +2477,10 @@ class DateTimeFormat {
           .cast();
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('DateTimeFormat')
-external _i2.Object _declaredDateTimeFormat;
+_i2.Object get _declaredDateTimeFormat => _i5.getProperty(
+      _self,
+      'DateTimeFormat',
+    );
 
 extension DateTimeFormat$Typings on DateTimeFormat {
   _i2.String format([_i2.Object? date]) => _i5.callMethod(
@@ -2567,35 +2564,35 @@ extension IInline5$Typings on IInline5 {
 @_i1.anonymous
 class DateTimeFormatPartTypesRegistry {
   external factory DateTimeFormatPartTypesRegistry._({
-    _i2.Object? day,
-    _i2.Object? dayPeriod,
-    _i2.Object? era,
-    _i2.Object? hour,
-    _i2.Object? literal,
-    _i2.Object? minute,
-    _i2.Object? month,
-    _i2.Object? second,
-    _i2.Object? timeZoneName,
-    _i2.Object? weekday,
-    _i2.Object? year,
-    _i2.Object? unknown,
-    _i2.Object? fractionalSecond,
+    _i2.dynamic day,
+    _i2.dynamic dayPeriod,
+    _i2.dynamic era,
+    _i2.dynamic hour,
+    _i2.dynamic literal,
+    _i2.dynamic minute,
+    _i2.dynamic month,
+    _i2.dynamic second,
+    _i2.dynamic timeZoneName,
+    _i2.dynamic weekday,
+    _i2.dynamic year,
+    _i2.dynamic unknown,
+    _i2.dynamic fractionalSecond,
   });
 
   factory DateTimeFormatPartTypesRegistry({
-    required _i2.Object? day,
-    required _i2.Object? dayPeriod,
-    required _i2.Object? era,
-    required _i2.Object? hour,
-    required _i2.Object? literal,
-    required _i2.Object? minute,
-    required _i2.Object? month,
-    required _i2.Object? second,
-    required _i2.Object? timeZoneName,
-    required _i2.Object? weekday,
-    required _i2.Object? year,
-    required _i2.Object? unknown,
-    required _i2.Object? fractionalSecond,
+    required _i2.dynamic day,
+    required _i2.dynamic dayPeriod,
+    required _i2.dynamic era,
+    required _i2.dynamic hour,
+    required _i2.dynamic literal,
+    required _i2.dynamic minute,
+    required _i2.dynamic month,
+    required _i2.dynamic second,
+    required _i2.dynamic timeZoneName,
+    required _i2.dynamic weekday,
+    required _i2.dynamic year,
+    required _i2.dynamic unknown,
+    required _i2.dynamic fractionalSecond,
   }) =>
       DateTimeFormatPartTypesRegistry._(
         day: day,
@@ -2636,11 +2633,11 @@ enum DateTimeFormatPartTypesRegistryKeys {
 
 extension DateTimeFormatPartTypesRegistry$Typings
     on DateTimeFormatPartTypesRegistry {
-  _i2.Object? get day => _i5.getProperty(
+  _i2.dynamic get day => _i5.getProperty(
         this,
         'day',
       );
-  set day(_i2.Object? value) {
+  set day(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'day',
@@ -2648,11 +2645,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get dayPeriod => _i5.getProperty(
+  _i2.dynamic get dayPeriod => _i5.getProperty(
         this,
         'dayPeriod',
       );
-  set dayPeriod(_i2.Object? value) {
+  set dayPeriod(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'dayPeriod',
@@ -2660,11 +2657,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get era => _i5.getProperty(
+  _i2.dynamic get era => _i5.getProperty(
         this,
         'era',
       );
-  set era(_i2.Object? value) {
+  set era(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'era',
@@ -2672,11 +2669,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get hour => _i5.getProperty(
+  _i2.dynamic get hour => _i5.getProperty(
         this,
         'hour',
       );
-  set hour(_i2.Object? value) {
+  set hour(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'hour',
@@ -2684,11 +2681,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get literal => _i5.getProperty(
+  _i2.dynamic get literal => _i5.getProperty(
         this,
         'literal',
       );
-  set literal(_i2.Object? value) {
+  set literal(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'literal',
@@ -2696,11 +2693,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get minute => _i5.getProperty(
+  _i2.dynamic get minute => _i5.getProperty(
         this,
         'minute',
       );
-  set minute(_i2.Object? value) {
+  set minute(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'minute',
@@ -2708,11 +2705,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get month => _i5.getProperty(
+  _i2.dynamic get month => _i5.getProperty(
         this,
         'month',
       );
-  set month(_i2.Object? value) {
+  set month(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'month',
@@ -2720,11 +2717,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get second => _i5.getProperty(
+  _i2.dynamic get second => _i5.getProperty(
         this,
         'second',
       );
-  set second(_i2.Object? value) {
+  set second(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'second',
@@ -2732,11 +2729,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get timeZoneName => _i5.getProperty(
+  _i2.dynamic get timeZoneName => _i5.getProperty(
         this,
         'timeZoneName',
       );
-  set timeZoneName(_i2.Object? value) {
+  set timeZoneName(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'timeZoneName',
@@ -2744,11 +2741,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get weekday => _i5.getProperty(
+  _i2.dynamic get weekday => _i5.getProperty(
         this,
         'weekday',
       );
-  set weekday(_i2.Object? value) {
+  set weekday(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'weekday',
@@ -2756,11 +2753,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get year => _i5.getProperty(
+  _i2.dynamic get year => _i5.getProperty(
         this,
         'year',
       );
-  set year(_i2.Object? value) {
+  set year(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'year',
@@ -2768,11 +2765,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get unknown => _i5.getProperty(
+  _i2.dynamic get unknown => _i5.getProperty(
         this,
         'unknown',
       );
-  set unknown(_i2.Object? value) {
+  set unknown(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'unknown',
@@ -2780,11 +2777,11 @@ extension DateTimeFormatPartTypesRegistry$Typings
     );
   }
 
-  _i2.Object? get fractionalSecond => _i5.getProperty(
+  _i2.dynamic get fractionalSecond => _i5.getProperty(
         this,
         'fractionalSecond',
       );
-  set fractionalSecond(_i2.Object? value) {
+  set fractionalSecond(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'fractionalSecond',
@@ -2798,8 +2795,8 @@ extension DateTimeFormatPartTypesRegistry$Typings
 @_i1.anonymous
 class DateTimeFormatPart {
   external factory DateTimeFormatPart._({
-    _i2.Object? type,
-    _i2.Object? value,
+    _i2.dynamic type,
+    _i2.dynamic value,
   });
 
   factory DateTimeFormatPart({
@@ -2844,13 +2841,13 @@ extension DateTimeFormatPart$Typings on DateTimeFormatPart {
 @_i1.anonymous
 class PluralRulesOptions {
   external factory PluralRulesOptions._({
-    _i2.Object? localeMatcher,
-    _i2.Object? type,
-    _i2.Object? minimumIntegerDigits,
-    _i2.Object? minimumFractionDigits,
-    _i2.Object? maximumFractionDigits,
-    _i2.Object? minimumSignificantDigits,
-    _i2.Object? maximumSignificantDigits,
+    _i2.dynamic localeMatcher,
+    _i2.dynamic type,
+    _i2.dynamic minimumIntegerDigits,
+    _i2.dynamic minimumFractionDigits,
+    _i2.dynamic maximumFractionDigits,
+    _i2.dynamic minimumSignificantDigits,
+    _i2.dynamic maximumSignificantDigits,
   });
 
   factory PluralRulesOptions({
@@ -2972,14 +2969,14 @@ extension PluralRulesOptions$Typings on PluralRulesOptions {
 @_i1.anonymous
 class ResolvedPluralRulesOptions {
   external factory ResolvedPluralRulesOptions._({
-    _i2.Object? locale,
-    _i2.Object? pluralCategories,
-    _i2.Object? type,
-    _i2.Object? minimumIntegerDigits,
-    _i2.Object? minimumFractionDigits,
-    _i2.Object? maximumFractionDigits,
-    _i2.Object? minimumSignificantDigits,
-    _i2.Object? maximumSignificantDigits,
+    _i2.dynamic locale,
+    _i2.dynamic pluralCategories,
+    _i2.dynamic type,
+    _i2.dynamic minimumIntegerDigits,
+    _i2.dynamic minimumFractionDigits,
+    _i2.dynamic maximumFractionDigits,
+    _i2.dynamic minimumSignificantDigits,
+    _i2.dynamic maximumSignificantDigits,
   });
 
   factory ResolvedPluralRulesOptions({
@@ -3136,11 +3133,10 @@ class PluralRules {
           .cast();
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('PluralRules')
-external _i2.Object _declaredPluralRules;
+_i2.Object get _declaredPluralRules => _i5.getProperty(
+      _self,
+      'PluralRules',
+    );
 
 extension PluralRules$Typings on PluralRules {
   _i3.ResolvedPluralRulesOptions resolvedOptions() => _i5.callMethod(
@@ -3217,8 +3213,8 @@ extension IInline24$Typings on IInline24 {
 @_i1.anonymous
 class NumberFormatPart {
   external factory NumberFormatPart._({
-    _i2.Object? type,
-    _i2.Object? value,
+    _i2.dynamic type,
+    _i2.dynamic value,
   });
 
   factory NumberFormatPart({
@@ -3270,9 +3266,9 @@ extension NumberFormatPart$Typings on NumberFormatPart {
 @_i1.anonymous
 class RelativeTimeFormatOptions {
   external factory RelativeTimeFormatOptions._({
-    _i2.Object? localeMatcher,
-    _i2.Object? numeric,
-    _i2.Object? style,
+    _i2.dynamic localeMatcher,
+    _i2.dynamic numeric,
+    _i2.dynamic style,
   });
 
   factory RelativeTimeFormatOptions({
@@ -3356,10 +3352,10 @@ extension RelativeTimeFormatOptions$Typings on RelativeTimeFormatOptions {
 @_i1.anonymous
 class ResolvedRelativeTimeFormatOptions {
   external factory ResolvedRelativeTimeFormatOptions._({
-    _i2.Object? locale,
-    _i2.Object? style,
-    _i2.Object? numeric,
-    _i2.Object? numberingSystem,
+    _i2.dynamic locale,
+    _i2.dynamic style,
+    _i2.dynamic numeric,
+    _i2.dynamic numberingSystem,
   });
 
   factory ResolvedRelativeTimeFormatOptions({
@@ -3555,11 +3551,10 @@ class RelativeTimeFormat {
           .cast();
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('RelativeTimeFormat')
-external _i2.Object _declaredRelativeTimeFormat;
+_i2.Object get _declaredRelativeTimeFormat => _i5.getProperty(
+      _self,
+      'RelativeTimeFormat',
+    );
 
 extension RelativeTimeFormat$Typings on RelativeTimeFormat {
   /// Formats a value and a unit according to the locale
@@ -3671,16 +3666,16 @@ extension IInline30$Typings on IInline30 {
 @_i1.anonymous
 class LocaleOptions {
   external factory LocaleOptions._({
-    _i2.Object? baseName,
-    _i2.Object? calendar,
-    _i2.Object? caseFirst,
-    _i2.Object? collation,
-    _i2.Object? hourCycle,
-    _i2.Object? language,
-    _i2.Object? numberingSystem,
-    _i2.Object? numeric,
-    _i2.Object? region,
-    _i2.Object? script,
+    _i2.dynamic baseName,
+    _i2.dynamic calendar,
+    _i2.dynamic caseFirst,
+    _i2.dynamic collation,
+    _i2.dynamic hourCycle,
+    _i2.dynamic language,
+    _i2.dynamic numberingSystem,
+    _i2.dynamic numeric,
+    _i2.dynamic region,
+    _i2.dynamic script,
   });
 
   factory LocaleOptions({
@@ -3866,11 +3861,10 @@ class Locale implements _i3.LocaleOptions {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Locale')
-external _i2.Object _declaredLocale;
+_i2.Object get _declaredLocale => _i5.getProperty(
+      _self,
+      'Locale',
+    );
 
 extension Locale$Typings on Locale {
   /// A string containing the language, and the script and region if available.
@@ -3930,11 +3924,11 @@ class IInline31 {}
 @_i1.anonymous
 class DisplayNamesOptions {
   external factory DisplayNamesOptions._({
-    _i2.Object? localeMatcher,
-    _i2.Object? style,
-    _i2.Object? type,
-    _i2.Object? languageDisplay,
-    _i2.Object? fallback,
+    _i2.dynamic localeMatcher,
+    _i2.dynamic style,
+    _i2.dynamic type,
+    _i2.dynamic languageDisplay,
+    _i2.dynamic fallback,
   });
 
   factory DisplayNamesOptions({
@@ -4039,11 +4033,11 @@ extension DisplayNamesOptions$Typings on DisplayNamesOptions {
 @_i1.anonymous
 class ResolvedDisplayNamesOptions {
   external factory ResolvedDisplayNamesOptions._({
-    _i2.Object? locale,
-    _i2.Object? style,
-    _i2.Object? type,
-    _i2.Object? fallback,
-    _i2.Object? languageDisplay,
+    _i2.dynamic locale,
+    _i2.dynamic style,
+    _i2.dynamic type,
+    _i2.dynamic fallback,
+    _i2.dynamic languageDisplay,
   });
 
   factory ResolvedDisplayNamesOptions({
@@ -4178,11 +4172,10 @@ class DisplayNames {
           .cast();
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('DisplayNames')
-external _i2.Object _declaredDisplayNames;
+_i2.Object get _declaredDisplayNames => _i5.getProperty(
+      _self,
+      'DisplayNames',
+    );
 
 extension DisplayNames$Typings on DisplayNames {
   /// Receives a code and returns a string based on the locale and options provided when instantiating
@@ -4275,9 +4268,9 @@ extension IInline32$Typings on IInline32 {
 @_i1.anonymous
 class DateTimeRangeFormatPart implements _i3.DateTimeFormatPart {
   external factory DateTimeRangeFormatPart._({
-    _i2.Object? source,
-    _i2.Object? type,
-    _i2.Object? value,
+    _i2.dynamic source,
+    _i2.dynamic type,
+    _i2.dynamic value,
   });
 
   factory DateTimeRangeFormatPart({
@@ -4314,9 +4307,9 @@ extension DateTimeRangeFormatPart$Typings on DateTimeRangeFormatPart {
 @_i1.anonymous
 class ListFormatOptions {
   external factory ListFormatOptions._({
-    _i2.Object? localeMatcher,
-    _i2.Object? type,
-    _i2.Object? style,
+    _i2.dynamic localeMatcher,
+    _i2.dynamic type,
+    _i2.dynamic style,
   });
 
   factory ListFormatOptions({
@@ -4387,9 +4380,9 @@ extension ListFormatOptions$Typings on ListFormatOptions {
 @_i1.anonymous
 class ResolvedListFormatOptions {
   external factory ResolvedListFormatOptions._({
-    _i2.Object? locale,
-    _i2.Object? style,
-    _i2.Object? type,
+    _i2.dynamic locale,
+    _i2.dynamic style,
+    _i2.dynamic type,
   });
 
   factory ResolvedListFormatOptions({
@@ -4519,11 +4512,10 @@ class ListFormat {
           .cast();
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ListFormat')
-external _i2.Object _declaredListFormat;
+_i2.Object get _declaredListFormat => _i5.getProperty(
+      _self,
+      'ListFormat',
+    );
 
 extension ListFormat$Typings on ListFormat {
   /// Returns a string with a language-specific representation of the list.
@@ -4612,8 +4604,8 @@ extension IInline35$Typings on IInline35 {
 @_i1.anonymous
 class SegmenterOptions {
   external factory SegmenterOptions._({
-    _i2.Object? localeMatcher,
-    _i2.Object? granularity,
+    _i2.dynamic localeMatcher,
+    _i2.dynamic granularity,
   });
 
   factory SegmenterOptions({
@@ -4702,11 +4694,10 @@ class Segmenter {
           .cast();
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Segmenter')
-external _i2.Object _declaredSegmenter;
+_i2.Object get _declaredSegmenter => _i5.getProperty(
+      _self,
+      'Segmenter',
+    );
 
 extension Segmenter$Typings on Segmenter {
   /// Returns `Segments` object containing the segments of the input string, using the segmenter's locale and granularity.
@@ -4731,8 +4722,8 @@ extension Segmenter$Typings on Segmenter {
 @_i1.anonymous
 class ResolvedSegmenterOptions {
   external factory ResolvedSegmenterOptions._({
-    _i2.Object? locale,
-    _i2.Object? granularity,
+    _i2.dynamic locale,
+    _i2.dynamic granularity,
   });
 
   factory ResolvedSegmenterOptions({
@@ -4793,10 +4784,10 @@ extension Segments$Typings on Segments {
 @_i1.anonymous
 class SegmentData {
   external factory SegmentData._({
-    _i2.Object? segment,
-    _i2.Object? index,
-    _i2.Object? input,
-    _i2.Object? isWordLike,
+    _i2.dynamic segment,
+    _i2.dynamic index,
+    _i2.dynamic input,
+    _i2.dynamic isWordLike,
   });
 
   factory SegmentData({
@@ -4898,20 +4889,76 @@ extension IInline36$Typings on IInline36 {
           .cast();
 }
 
-/// Returns a sorted array of the supported collation, calendar, currency, numbering system, timezones, and units by the implementation.
-/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf)
-_i2.List<_i2.String> supportedValuesOf(_i3.SupportedValuesOf key) =>
-    (_i5.callMethod(
-      _self,
-      'supportedValuesOf',
-      [key.name],
-    ) as _i2.List)
-        .cast();
+@_i1.JS('Intl')
+@_i1.staticInterop
+class $ModuleIntl {}
+
+extension $ModuleIntl$Typings on $ModuleIntl {
+  _i2.dynamic get collator => _i5.getProperty(
+        this,
+        'Collator',
+      );
+  _i2.dynamic get numberFormat => _i5.getProperty(
+        this,
+        'NumberFormat',
+      );
+  _i2.dynamic get dateTimeFormat => _i5.getProperty(
+        this,
+        'DateTimeFormat',
+      );
+  _i2.dynamic get pluralRules => _i5.getProperty(
+        this,
+        'PluralRules',
+      );
+
+  /// The [`Intl.RelativeTimeFormat`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat)
+  /// object is a constructor for objects that enable language-sensitive relative time formatting.
+  ///
+  /// [Compatibility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat#Browser_compatibility).
+  _i2.dynamic get relativeTimeFormat => _i5.getProperty(
+        this,
+        'RelativeTimeFormat',
+      );
+
+  /// Constructor creates [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
+  /// objects
+  _i2.dynamic get locale => _i5.getProperty(
+        this,
+        'Locale',
+      );
+
+  /// The [`Intl.DisplayNames()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)
+  /// object enables the consistent translation of language, region and script display names.
+  ///
+  /// [Compatibility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames#browser_compatibility).
+  _i2.dynamic get displayNames => _i5.getProperty(
+        this,
+        'DisplayNames',
+      );
+  _i2.dynamic get listFormat => _i5.getProperty(
+        this,
+        'ListFormat',
+      );
+  _i2.dynamic get segmenter => _i5.getProperty(
+        this,
+        'Segmenter',
+      );
+
+  /// Returns a sorted array of the supported collation, calendar, currency, numbering system, timezones, and units by the implementation.
+  /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf)
+  _i2.List<_i2.String> supportedValuesOf(_i3.SupportedValuesOf key) =>
+      (_i5.callMethod(
+        this,
+        'supportedValuesOf',
+        [key.name],
+      ) as _i2.List)
+          .cast();
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

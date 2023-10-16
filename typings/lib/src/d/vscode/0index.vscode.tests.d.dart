@@ -9,24 +9,30 @@ import 'dart:js_util' as _i4;
 @_i1.JS('vscode.tests')
 external _i2.Object _self;
 
-/// Creates a new test controller.
-_i3.TestController createTestController(
-  _i2.String id,
-  _i2.String label,
-) =>
-    _i4.callMethod(
-      _self,
-      'createTestController',
-      [
-        id,
-        label,
-      ],
-    );
+@_i1.JS('vscode.tests')
+@_i1.staticInterop
+class $ModuleTests {}
+
+extension $ModuleTests$Typings on $ModuleTests {
+  /// Creates a new test controller.
+  _i3.TestController createTestController(
+    _i2.String id,
+    _i2.String label,
+  ) =>
+      _i4.callMethod(
+        this,
+        'createTestController',
+        [
+          id,
+          label,
+        ],
+      );
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

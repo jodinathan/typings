@@ -21,13 +21,12 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   InteropClass(
       {required String name,
       required InteropLibrary library,
-      bool addAnonymousFlag = false,
+      this.addAnonymousFlag = false,
       required int lineNumber,
       required this.source,
       required this.isInline,
       bool isPrivate = false})
       : _isPrivate = isPrivate,
-        _addAnonymousFlag = addAnonymousFlag,
         super(
             name: name,
             library: library,
@@ -66,7 +65,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   bool get isInterface => _isInterface;
   bool isInline;
 
-  final bool _addAnonymousFlag;
+  bool addAnonymousFlag;
   bool get isAnonymous =>
       isInterface && constructors.isEmpty && methods.isEmpty;
 
@@ -106,6 +105,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   bool get isPrivate => _isPrivate || (isInline && _inlineIsPrivate);
 
   void makePrivate() => _isPrivate = true;
+
+  void makePublic() => _isPrivate = false;
 
   @override
   Iterable<InteropType> crawlTypes() sync* {
@@ -351,7 +352,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
       b
         ..name = usableName
         ..types.addAll(generics)
-        ..implements.addAll(inheritance.map((i) => i.ref()))
+        ..implements.addAll(
+            inheritance.where((i) => !i.type.isPromiseLike).map((i) => i.ref()))
         ..constructors
             .addAll(constructors.mapIndexed((index, c) => Constructor((b) {
                   c.params.bindCodeParams(
@@ -378,9 +380,9 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
         ..annotations.addAll([
           if (!isConst) ...[
             pkgJs.js(
-                name: name != usableName && !_addAnonymousFlag ? name : null),
+                name: name != usableName && !addAnonymousFlag ? name : null),
             pkgJs.staticInterop(),
-            if (isAnonymous || _addAnonymousFlag) pkgJs.anonymous()
+            if (isAnonymous || addAnonymousFlag) pkgJs.anonymous()
           ]
         ]);
 
@@ -503,7 +505,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
     ].where((p) => !p.isStatic);
 
     if (_asVar case InteropGetter v) {
-      yield v.buildExternal();
+      yield* v.buildExternal();
     }
 
     if (members.isNotEmpty) {
@@ -592,8 +594,12 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           if (getter case InteropGetter g
               when _properties
                   .any((p) => p.type == g.type && g.name == p.name)) {
+            logger.warning('Skipping multiple property $name.${member.name}');
             continue;
           }
+
+          logger.warning(
+              'Memba ${name}: ${member.name} - ${getter?.hasBadName()}');
 
           _properties.addAll([
             if (getter case InteropGetter g when !g.hasBadName()) getter,

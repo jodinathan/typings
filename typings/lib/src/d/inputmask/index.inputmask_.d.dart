@@ -7,10 +7,14 @@ import 'dart:core' as _i2;
 @_i1.JS('Inputmask_')
 external _i2.Object _self;
 
+@_i1.JS('Inputmask_')
+@_i1.staticInterop
+class $ModuleInputmask {}
+
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

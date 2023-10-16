@@ -471,7 +471,7 @@ class InteropMethod extends InteropNamedDeclaration
 
         b
           ..name = usableName
-          ..returns = returnRef.ref()
+          ..returns = returnRef.ref(useFuture: true)
           ..types.addAll(generics)
           ..lambda = lambda && addBody
           ..external = isExternal ?? this.isExternal

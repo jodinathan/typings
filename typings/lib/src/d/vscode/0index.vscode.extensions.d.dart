@@ -211,24 +211,39 @@ extension OnDidChangeAccessor$Typings on _OnDidChangeAccessor {
       );
 }
 
-/// Get an extension by its full identifier in the form of: `publisher.name`.
-_i8.Extension<T>? getExtension<T extends _i2.Object?>(_i2.String extensionId) =>
-    _i3.callMethod(
-      _self,
-      'getExtension',
-      [extensionId],
-    );
+@_i1.JS('vscode.extensions')
+@_i1.staticInterop
+class $ModuleExtensions {}
+
+extension $ModuleExtensions$Typings on $ModuleExtensions {
+  /// All extensions currently known to the system.
+  _i2.List<_i8.Extension<_i2.dynamic>> get all => (_i3.getProperty(
+        this,
+        'all',
+      ) as _i2.List)
+          .cast();
+
+  /// An event which fires when `extensions.all` changes. This can happen when extensions are
+  /// installed, uninstalled, enabled or disabled.
+  _i5.Event get onDidChange => _i3.getProperty(
+        this,
+        'onDidChange',
+      );
+
+  /// Get an extension by its full identifier in the form of: `publisher.name`.
+  _i8.Extension<T>? getExtension<T>(_i2.String extensionId) => _i3.callMethod(
+        this,
+        'getExtension',
+        [extensionId],
+      );
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeAccessor onDidChange;

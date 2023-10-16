@@ -112,7 +112,7 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
       this.makeToInterop = _toInterop,
       this.makeFromInterop = _fromInterop});
 
-  static const dynamicTypeName = 'Object?';
+  static const dynamicTypeName = 'dynamic';
 
   static Reference undefinedRef = refer('undefined', '/d/core.dart');
 

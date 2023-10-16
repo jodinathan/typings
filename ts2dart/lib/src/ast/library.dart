@@ -74,9 +74,9 @@ class InteropLibrary with InteropItem {
   final List<InteropDynamicEnum> enums = [];
   final List<InteropInterface> interfaces = [];
   final List<InteropGetter> globalAccessors = [];
-  final List<InteropProperty> globalProperties = [];
   final InteropModule module;
   final globalName = 'globalThis';
+  bool get globalIsModule => namespace.isNotEmpty;
   late final global = InteropClass(
       name: globalName,
       library: this,
@@ -104,8 +104,8 @@ class InteropLibrary with InteropItem {
       isInline: false)
     ..usableName = '_IterableLike\$'
     ..typeParams.add(InteropTypeParam(symbol: 'T'));
-  final _selfName = '_self';
-  late final self = refer(_selfName);
+  final selfName = '_self';
+  late final self = refer(selfName);
   String get namespace => module.path;
 
   final buildingSpecs = <Spec>[];
@@ -131,6 +131,15 @@ class InteropLibrary with InteropItem {
     }
   }
 
+  Field selfField() => Field((b) {
+        b
+          ..name = selfName
+          ..external = true
+          ..type = InteropStaticType.obj.ref()
+          ..annotations
+              .add(pkgJs.js(name: namespace.isEmpty ? 'self' : namespace));
+      });
+
   @override
   Iterable<Spec> build() {
     return [
@@ -143,23 +152,25 @@ class InteropLibrary with InteropItem {
           }
         }
 
+        if (globalIsModule) {
+          logger.warning(
+              'ClassglobalIsModule ${global.methods.map((m) => '${m.name}: ${m.isExternal}').join(', ')}');
+        }
+
         b
           ..name =
               'typings.${module.project.dirName.snakeCase}.interop${namespace.isEmpty ? '' : '.${namespace.snakeCase}'}'
-          ..annotations
-              .add(pkgJs.js())
+          ..annotations.add(pkgJs.js())
           ..body.addAll([
-            Field((b) {
-              b
-                ..name = _selfName
-                ..external = true
-                ..type = InteropStaticType.obj.ref()
-                ..annotations.add(
-                    pkgJs.js(name: namespace.isEmpty ? 'self' : namespace));
-            }),
+            selfField(),
             ...buildingSpecs,
-            ...global.methods.expand((e) => e.buildExternal()),
-            //...global.build(),
+            if (!globalIsModule) ...[
+              ...global.methods.expand((e) => e.buildExternal()),
+              ...global.properties
+                  .whereType<InteropGetter>()
+                  .expand((e) => e.buildExternal()),
+            ],
+            if (globalIsModule) ...global.build(),
             ...iterableLike.build(),
             Class((b) {
               b
@@ -168,9 +179,6 @@ class InteropLibrary with InteropItem {
                 ..annotations.addAll(
                     [pkgJs.js(), pkgJs.staticInterop(), pkgJs.anonymous()]);
             }),
-            ...globalProperties
-                .whereType<InteropGetter>()
-                .map((e) => e.buildExternal()),
             ...globalAccessors.map((getter) => Field((b) {
                   b
                     ..name = getter.usableName
@@ -309,10 +317,12 @@ class InteropLibrary with InteropItem {
             fn: () => td.parse((map as Map).cast()));
       }
 
+      final gname = namespace.split('.').last;
+      final gmodule = '\$Module${gname.pascalCase}';
+      final isModule = globalIsModule;
       final funcs = rawFuncs.cast<Map<String, dynamic>>().toList();
       final vars = rawVars.cast<Map<String, dynamic>>().toList();
-
-      global.parse({
+      final globalMap = {
         "_": -1,
         "name": globalName,
         "generics": [],
@@ -323,13 +333,37 @@ class InteropLibrary with InteropItem {
         "calls": [],
         "ctors": [],
         "members": [
-          ...vars.map((v) =>
-              {...v, 'isMethod': false, 'isExternal': true, 'isStatic': false}),
-          ...funcs.map((v) =>
-              {...v, 'isMethod': true, 'isExternal': true, 'isStatic': false})
+          ...vars.map((v) => {
+                ...v,
+                'isMethod': false,
+                'isExternal': !isModule,
+                'isStatic': false
+              }),
+          ...funcs.map((v) => {
+                ...v,
+                'isMethod': true,
+                'isExternal': !isModule,
+                'isStatic': false
+              })
         ],
         "isClass": false
-      });
+      };
+
+      if (isModule) {
+        globalMap['isClass'] = true;
+        globalMap['isInline'] = false;
+      }
+
+      global.parse(globalMap);
+
+      if (isModule) {
+        global
+          ..name = namespace
+          ..isInline = false
+          ..usableName = gmodule
+          ..addAnonymousFlag = false
+          ..makePublic();
+      }
 
       return;
     }
@@ -465,7 +499,7 @@ class InteropLibrary with InteropItem {
             return t == swap;
           });
         } else {
-          swap = InteropClass(
+          final swapClass = swap = InteropClass(
               name: v.name,
               library: this,
               source: 'To expose static and ctors',
@@ -477,17 +511,17 @@ class InteropLibrary with InteropItem {
             ..inheritance.addAll(cl.inheritance);
           sameTypeCtor = cl.constructors.firstOrNull;
 
-          globalAccessors.add(InteropGetter(
-              name: v.name,
-              cl: cl,
-              lineNumber: v.lineNumber,
-              isStatic: false,
-              library: this,
-              source: 'Exposed global accessor',
-              isExternal: false)
-            ..reference = InteropRef(swap));
+          // globalAccessors.add(InteropGetter(
+          //     name: v.name,
+          //     cl: cl,
+          //     lineNumber: v.lineNumber,
+          //     isStatic: false,
+          //     library: this,
+          //     source: 'Exposed global accessor',
+          //     isExternal: false)
+          //   ..reference = InteropRef(swapClass));
 
-          classes.add(swap);
+          classes.add(swapClass);
         }
 
         if (removeGlobalInline && cl.isInline) {
@@ -553,6 +587,29 @@ class InteropLibrary with InteropItem {
           if (!cl.typeParams.any((t) => t.symbol == tp.symbol)) {
             cl.typeParams.add(tp.copyWith());
           }
+        }
+      }
+    }
+
+    final submodules = module.submodules;
+
+    logger.warning(
+        'GlobalClassglobalIsModule ${global.name} ${submodules.length}');
+
+    if (submodules.isNotEmpty) {
+      for (final submodule in submodules) {
+        logger.warning(
+            'GlobalSubModule ${global.name} ${submodule.libraries.length}');
+        for (final lib in submodule.libraries) {
+          global.addProperty(InteropGetter(
+              name: lib.namespace.split('.').last,
+              cl: global,
+              lineNumber: -2,
+              isStatic: false,
+              library: this,
+              source: 'submodule of ${global.name}',
+              isExternal: false)
+            ..reference = InteropRef(lib.global));
         }
       }
     }

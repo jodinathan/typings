@@ -6,21 +6,23 @@ import 'dart:core' as _i2;
 import 'lib.es2015.iterable.d.dart' as _i3;
 import 'lib.es2015.generator.d.dart' as _i4;
 import 'dart:js_util' as _i5;
+import 'lib.es5.intl.d.dart' as _i6;
+import 'lib.es2015.reflect.reflect.d.dart' as _i7;
+import 'lib.dom.css.d.dart' as _i8;
+import 'lib.dom.webassembly.d.dart' as _i9;
 
 @_i1.JS('self')
 external _i2.Object _self;
 
 @_i1.JS()
 @_i1.staticInterop
-class Generator<T extends _i2.Object?, TReturn extends _i2.Object?,
-        TNext extends _i2.Object?>
+class Generator<T, TReturn, TNext>
     implements
         _i3.Iterator<T, TReturn, TNext>,
         _IterableLike$<_i4.Generator<T, TReturn, TNext>> {}
 
-extension Generator$Typings<T extends _i2.Object?, TReturn extends _i2.Object?,
-    TNext extends _i2.Object?> on Generator<T, TReturn, TNext> {
-  _i3.IteratorResult<T, TReturn> next([_i2.Iterable<_i2.Object?>? args]) =>
+extension Generator$Typings<T, TReturn, TNext> on Generator<T, TReturn, TNext> {
+  _i3.IteratorResult<T, TReturn> next([_i2.Iterable<_i2.dynamic>? args]) =>
       _i5.callMethod(
         this,
         'next',
@@ -31,7 +33,7 @@ extension Generator$Typings<T extends _i2.Object?, TReturn extends _i2.Object?,
         'return',
         [value],
       );
-  _i3.IteratorResult<T, TReturn> throw$(_i2.Object? e) => _i5.callMethod(
+  _i3.IteratorResult<T, TReturn> throw$(_i2.dynamic e) => _i5.callMethod(
         this,
         'throw',
         [e],
@@ -54,8 +56,8 @@ extension GeneratorFunction$Typings on GeneratorFunction {
         this,
         'name',
       );
-  _i4.Generator<_i2.Object?, _i2.Object?, _i2.Object?> call(
-          [_i2.Iterable<_i2.Object?>? args]) =>
+  _i4.Generator<_i2.Object?, _i2.dynamic, _i2.Object?> call(
+          [_i2.Iterable<_i2.dynamic>? args]) =>
       _i5.callMethod(
         this,
         '',
@@ -79,7 +81,7 @@ extension GeneratorFunctionConstructor$Typings on GeneratorFunctionConstructor {
         this,
         'name',
       );
-  _i4.GeneratorFunction call([_i2.Iterable<_i2.Object?>? args]) =>
+  _i4.GeneratorFunction call([_i2.Iterable<_i2.dynamic>? args]) =>
       _i5.callMethod(
         this,
         '',
@@ -87,10 +89,27 @@ extension GeneratorFunctionConstructor$Typings on GeneratorFunctionConstructor {
       );
 }
 
+_i6.$ModuleIntl get intl => _i5.getProperty(
+      _self,
+      'Intl',
+    );
+_i7.$ModuleReflect get reflect => _i5.getProperty(
+      _self,
+      'Reflect',
+    );
+_i8.$ModuleCss get css => _i5.getProperty(
+      _self,
+      'CSS',
+    );
+_i9.$ModuleWebAssembly get webAssembly => _i5.getProperty(
+      _self,
+      'WebAssembly',
+    );
+
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

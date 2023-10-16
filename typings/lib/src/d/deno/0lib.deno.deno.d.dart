@@ -12,6 +12,7 @@ import '0lib.deno.d.dart' as _i8;
 import '/src/d/core/lib.es5.d.dart' as _i9;
 import '/src/d/core/lib.es2018.asynciterable.d.dart' as _i10;
 import '/src/d/core/lib.es2015.iterable.d.dart' as _i11;
+import '0lib.deno.deno.errors.d.dart' as _i12;
 
 @_i1.JS('Deno')
 external _i2.Object _self;
@@ -296,11 +297,11 @@ extension ProcessStatusCommon$Typings on ProcessStatusCommon {
     );
   }
 
-  _i2.Object? get code => _i3.getProperty(
+  _i2.dynamic get code => _i3.getProperty(
         this,
         'code',
       );
-  set code(_i2.Object? value) {
+  set code(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'code',
@@ -308,11 +309,11 @@ extension ProcessStatusCommon$Typings on ProcessStatusCommon {
     );
   }
 
-  _i2.Object? get signal => _i3.getProperty(
+  _i2.dynamic get signal => _i3.getProperty(
         this,
         'signal',
       );
-  set signal(_i2.Object? value) {
+  set signal(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'signal',
@@ -477,7 +478,8 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  const status = await Deno.permissions.query({ name: "read", path: "/etc" });
   ///  console.log(status.state);
   ///  ```
-  _i2.Future<_i4.PermissionStatus> query(_i4.PermissionDescriptor desc) =>
+  _i2.Future<_i2.Future<_i4.PermissionStatus>> query(
+          _i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
         _i5.target2721,
         'query',
@@ -510,7 +512,8 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  const status = await Deno.permissions.revoke({ name: "run" });
   ///  assert(status.state !== "granted")
   ///  ```
-  _i2.Future<_i4.PermissionStatus> revoke(_i4.PermissionDescriptor desc) =>
+  _i2.Future<_i2.Future<_i4.PermissionStatus>> revoke(
+          _i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
         _i5.target2721,
         'revoke',
@@ -545,7 +548,8 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///    console.log("'env' permission is denied.");
   ///  }
   ///  ```
-  _i2.Future<_i4.PermissionStatus> request(_i4.PermissionDescriptor desc) =>
+  _i2.Future<_i2.Future<_i4.PermissionStatus>> request(
+          _i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
         _i5.target2721,
         'request',
@@ -660,10 +664,10 @@ typedef TlsListener = _i4.Listener<_i4.TlsConn>;
 @_i1.anonymous
 class MemoryUsage {
   external factory MemoryUsage._({
-    _i2.Object? rss,
-    _i2.Object? heapTotal,
-    _i2.Object? heapUsed,
-    _i2.Object? external$,
+    _i2.dynamic rss,
+    _i2.dynamic heapTotal,
+    _i2.dynamic heapUsed,
+    _i2.dynamic external$,
   });
 
   factory MemoryUsage({
@@ -743,13 +747,13 @@ extension MemoryUsage$Typings on MemoryUsage {
 @_i1.anonymous
 class NetworkInterfaceInfo {
   external factory NetworkInterfaceInfo._({
-    _i2.Object? name,
-    _i2.Object? family,
-    _i2.Object? address,
-    _i2.Object? netmask,
-    _i2.Object? scopeid,
-    _i2.Object? cidr,
-    _i2.Object? mac,
+    _i2.dynamic name,
+    _i2.dynamic family,
+    _i2.dynamic address,
+    _i2.dynamic netmask,
+    _i2.dynamic scopeid,
+    _i2.dynamic cidr,
+    _i2.dynamic mac,
   });
 
   factory NetworkInterfaceInfo({
@@ -871,13 +875,13 @@ extension NetworkInterfaceInfo$Typings on NetworkInterfaceInfo {
 @_i1.anonymous
 class SystemMemoryInfo {
   external factory SystemMemoryInfo._({
-    _i2.Object? total,
-    _i2.Object? free,
-    _i2.Object? available,
-    _i2.Object? buffers,
-    _i2.Object? cached,
-    _i2.Object? swapTotal,
-    _i2.Object? swapFree,
+    _i2.dynamic total,
+    _i2.dynamic free,
+    _i2.dynamic available,
+    _i2.dynamic buffers,
+    _i2.dynamic cached,
+    _i2.dynamic swapTotal,
+    _i2.dynamic swapFree,
   });
 
   factory SystemMemoryInfo({
@@ -1003,14 +1007,14 @@ extension SystemMemoryInfo$Typings on SystemMemoryInfo {
 @_i1.anonymous
 class PermissionOptionsObject {
   external factory PermissionOptionsObject._({
-    _i2.Object? env,
-    _i2.Object? sys,
-    _i2.Object? hrtime,
-    _i2.Object? net,
-    _i2.Object? ffi,
-    _i2.Object? read,
-    _i2.Object? run,
-    _i2.Object? write,
+    _i2.dynamic env,
+    _i2.dynamic sys,
+    _i2.dynamic hrtime,
+    _i2.dynamic net,
+    _i2.dynamic ffi,
+    _i2.dynamic read,
+    _i2.dynamic run,
+    _i2.dynamic write,
   });
 
   factory PermissionOptionsObject({
@@ -1319,7 +1323,7 @@ extension TestContext$Typings on TestContext {
   ///    }
   ///  });
   ///  ```
-  _i2.Future<_i2.bool> _step$1(_i4.TestStepDefinition definition) =>
+  _i2.Future<_i2.Future<_i2.bool>> _step$1(_i4.TestStepDefinition definition) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'step',
@@ -1342,7 +1346,8 @@ extension TestContext$Typings on TestContext {
   ///    console.log("after the step");
   ///  });
   ///  ```
-  _i2.Future<_i2.bool> _step$2(_i2.Object Function(_i4.TestContext) fn) =>
+  _i2.Future<_i2.Future<_i2.bool>> _step$2(
+          _i2.Object Function(_i4.TestContext) fn) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'step',
@@ -1371,7 +1376,7 @@ extension TestContext$Typings on TestContext {
   ///    }
   ///  );
   ///  ```
-  _i2.Future<_i2.bool> _step$3(
+  _i2.Future<_i2.Future<_i2.bool>> _step$3(
     _i2.String name,
     _i2.Object Function(_i4.TestContext) fn,
   ) =>
@@ -1408,7 +1413,8 @@ extension TestContext$Typings on TestContext {
     ///    }
     ///  });
     ///  ```
-    _i2.Future<_i2.bool> Function(_i4.TestStepDefinition definition) $1,
+    _i2.Future<_i2.Future<_i2.bool>> Function(
+        _i4.TestStepDefinition definition) $1,
 
     /// Run a sub step of the parent test or step. Returns a promise
     ///  that resolves to a boolean signifying if the step completed successfully.
@@ -1426,7 +1432,8 @@ extension TestContext$Typings on TestContext {
     ///    console.log("after the step");
     ///  });
     ///  ```
-    _i2.Future<_i2.bool> Function(_i2.Object Function(_i4.TestContext) fn) $2,
+    _i2.Future<_i2.Future<_i2.bool>> Function(
+        _i2.Object Function(_i4.TestContext) fn) $2,
 
     /// Run a sub step of the parent test or step. Returns a promise
     ///  that resolves to a boolean signifying if the step completed successfully.
@@ -1450,7 +1457,7 @@ extension TestContext$Typings on TestContext {
     ///    }
     ///  );
     ///  ```
-    _i2.Future<_i2.bool> Function(
+    _i2.Future<_i2.Future<_i2.bool>> Function(
       _i2.String name,
       _i2.Object Function(_i4.TestContext) fn,
     ) $3,
@@ -1466,12 +1473,12 @@ extension TestContext$Typings on TestContext {
 @_i1.anonymous
 class TestStepDefinition {
   external factory TestStepDefinition._({
-    _i2.Object? fn,
-    _i2.Object? name,
-    _i2.Object? ignore,
-    _i2.Object? sanitizeOps,
-    _i2.Object? sanitizeResources,
-    _i2.Object? sanitizeExit,
+    _i2.dynamic fn,
+    _i2.dynamic name,
+    _i2.dynamic ignore,
+    _i2.dynamic sanitizeOps,
+    _i2.dynamic sanitizeResources,
+    _i2.dynamic sanitizeExit,
   });
 
   factory TestStepDefinition({
@@ -1595,14 +1602,14 @@ extension TestStepDefinition$Typings on TestStepDefinition {
 @_i1.anonymous
 class TestDefinition {
   external factory TestDefinition._({
-    _i2.Object? fn,
-    _i2.Object? name,
-    _i2.Object? ignore,
-    _i2.Object? only,
-    _i2.Object? sanitizeOps,
-    _i2.Object? sanitizeResources,
-    _i2.Object? sanitizeExit,
-    _i2.Object? permissions,
+    _i2.dynamic fn,
+    _i2.dynamic name,
+    _i2.dynamic ignore,
+    _i2.dynamic only,
+    _i2.dynamic sanitizeOps,
+    _i2.dynamic sanitizeResources,
+    _i2.dynamic sanitizeExit,
+    _i2.dynamic permissions,
   });
 
   factory TestDefinition({
@@ -1761,14 +1768,14 @@ extension TestDefinition$Typings on TestDefinition {
 @_i1.anonymous
 class BenchDefinition {
   external factory BenchDefinition._({
-    _i2.Object? fn,
-    _i2.Object? name,
-    _i2.Object? ignore,
-    _i2.Object? group,
-    _i2.Object? baseline,
-    _i2.Object? only,
-    _i2.Object? sanitizeExit,
-    _i2.Object? permissions,
+    _i2.dynamic fn,
+    _i2.dynamic name,
+    _i2.dynamic ignore,
+    _i2.dynamic group,
+    _i2.dynamic baseline,
+    _i2.dynamic only,
+    _i2.dynamic sanitizeExit,
+    _i2.dynamic permissions,
   });
 
   factory BenchDefinition({
@@ -2050,7 +2057,7 @@ extension Reader$Typings on Reader {
   ///  from
   ///  [`std/streams/iterate_reader.ts`](https://deno.land/std/streams/iterate_reader.ts)
   ///  to turn a `Reader` into an {@linkcode AsyncIterator}.
-  _i2.Future<_i2.num?> read(_i7.Uint8List p) =>
+  _i2.Future<_i2.Future<_i2.num?>> read(_i7.Uint8List p) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'read',
@@ -2111,7 +2118,7 @@ extension Writer$Typings on Writer {
   ///  slice data, even temporarily.
   ///
   ///  Implementations should not retain a reference to `p`.
-  _i2.Future<_i2.num> write(_i7.Uint8List p) =>
+  _i2.Future<_i2.Future<_i2.num>> write(_i7.Uint8List p) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'write',
@@ -2176,7 +2183,7 @@ extension Seeker$Typings on Seeker {
   ///  operations on the underlying object is implementation-dependent.
   ///
   ///  It resolves with the updated offset.
-  _i2.Future<_i2.num> seek(
+  _i2.Future<_i2.Future<_i2.num>> seek(
     _i2.Object offset,
     _i4.SeekMode whence,
   ) =>
@@ -2310,11 +2317,10 @@ class FsFile
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('FsFile')
-external _i2.Object _declaredFsFile;
+_i2.Object get _declaredFsFile => _i3.getProperty(
+      _self,
+      'FsFile',
+    );
 
 extension FsFile$Typings on FsFile {
   /// The resource ID associated with the file instance. The resource ID
@@ -2375,7 +2381,7 @@ extension FsFile$Typings on FsFile {
   ///  ```
   ///
   ///  @category I/O
-  _i2.Future<_i2.num> write(_i7.Uint8List p) =>
+  _i2.Future<_i2.Future<_i2.num>> write(_i7.Uint8List p) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'write',
@@ -2424,7 +2430,7 @@ extension FsFile$Typings on FsFile {
   ///  const text = new TextDecoder().decode(buf); // "hello w"
   ///  file.close();
   ///  ```
-  _i2.Future<void> truncate([_i2.num? len]) =>
+  _i2.Future<_i2.Future<void>> truncate([_i2.num? len]) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'truncate',
@@ -2481,7 +2487,7 @@ extension FsFile$Typings on FsFile {
   ///  const text = new TextDecoder().decode(buf);  // "hello world"
   ///  file.close();
   ///  ```
-  _i2.Future<_i2.num?> read(_i7.Uint8List p) =>
+  _i2.Future<_i2.Future<_i2.num?>> read(_i7.Uint8List p) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'read',
@@ -2550,7 +2556,7 @@ extension FsFile$Typings on FsFile {
   ///  // Seek backwards 2 bytes from the end of the file
   ///  console.log(await file.seek(-2, Deno.SeekMode.End)); // "9" (e.g. 11-2)
   ///  ```
-  _i2.Future<_i2.num> seek(
+  _i2.Future<_i2.Future<_i2.num>> seek(
     _i2.Object offset,
     _i4.SeekMode whence,
   ) =>
@@ -2623,7 +2629,8 @@ extension FsFile$Typings on FsFile {
   ///  assert(fileInfo.isFile);
   ///  file.close();
   ///  ```
-  _i2.Future<_i4.FileInfo> stat() => _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<_i2.Future<_i4.FileInfo>> stat() =>
+      _i3.promiseToFuture(_i3.callMethod(
         this,
         'stat',
         [],
@@ -2697,7 +2704,7 @@ extension IInline4$Typings on IInline4 {
 @_i1.staticInterop
 @_i1.anonymous
 class SetRawOptions {
-  external factory SetRawOptions._({_i2.Object? cbreak});
+  external factory SetRawOptions._({_i2.dynamic cbreak});
 
   factory SetRawOptions({required _i2.bool cbreak}) =>
       SetRawOptions._(cbreak: cbreak);
@@ -2812,13 +2819,13 @@ extension IInline7$Typings on IInline7 {
 @_i1.anonymous
 class OpenOptions {
   external factory OpenOptions._({
-    _i2.Object? read,
-    _i2.Object? write,
-    _i2.Object? append,
-    _i2.Object? truncate,
-    _i2.Object? create,
-    _i2.Object? createNew,
-    _i2.Object? mode,
+    _i2.dynamic read,
+    _i2.dynamic write,
+    _i2.dynamic append,
+    _i2.dynamic truncate,
+    _i2.dynamic create,
+    _i2.dynamic createNew,
+    _i2.dynamic mode,
   });
 
   factory OpenOptions({
@@ -2971,7 +2978,7 @@ extension OpenOptions$Typings on OpenOptions {
 @_i1.staticInterop
 @_i1.anonymous
 class ReadFileOptions {
-  external factory ReadFileOptions._({_i2.Object? signal});
+  external factory ReadFileOptions._({_i2.dynamic signal});
 
   factory ReadFileOptions({_i8.AbortSignal? signal}) =>
       ReadFileOptions._(signal: signal ?? _i6.undefined);
@@ -3023,11 +3030,10 @@ class Buffer implements _i4.Reader, _i4.ReaderSync, _i4.Writer, _i4.WriterSync {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Buffer')
-external _i2.Object _declaredBuffer;
+_i2.Object get _declaredBuffer => _i3.getProperty(
+      _self,
+      'Buffer',
+    );
 
 extension Buffer$Typings on Buffer {
   /// A read only number of bytes of the unread portion of the buffer.
@@ -3100,7 +3106,7 @@ extension Buffer$Typings on Buffer {
   ///
   ///  NOTE: This methods reads bytes synchronously; it's provided for
   ///  compatibility with `Reader` interfaces.
-  _i2.Future<_i2.num?> read(_i7.Uint8List p) =>
+  _i2.Future<_i2.Future<_i2.num?>> read(_i7.Uint8List p) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'read',
@@ -3123,7 +3129,7 @@ extension Buffer$Typings on Buffer {
 
   /// NOTE: This methods writes bytes synchronously; it's provided for
   ///  compatibility with `Writer` interface.
-  _i2.Future<_i2.num> write(_i7.Uint8List p) =>
+  _i2.Future<_i2.Future<_i2.num>> write(_i7.Uint8List p) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'write',
@@ -3151,7 +3157,7 @@ extension Buffer$Typings on Buffer {
   ///
   ///  Based on Go Lang's
   ///  [Buffer.ReadFrom](https://golang.org/pkg/bytes/#Buffer.ReadFrom).
-  _i2.Future<_i2.num> readFrom(_i4.Reader r) =>
+  _i2.Future<_i2.Future<_i2.num>> readFrom(_i4.Reader r) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'readFrom',
@@ -3178,8 +3184,8 @@ extension Buffer$Typings on Buffer {
 @_i1.anonymous
 class MkdirOptions {
   external factory MkdirOptions._({
-    _i2.Object? recursive,
-    _i2.Object? mode,
+    _i2.dynamic recursive,
+    _i2.dynamic mode,
   });
 
   factory MkdirOptions({
@@ -3240,9 +3246,9 @@ extension MkdirOptions$Typings on MkdirOptions {
 @_i1.anonymous
 class MakeTempOptions {
   external factory MakeTempOptions._({
-    _i2.Object? dir,
-    _i2.Object? prefix,
-    _i2.Object? suffix,
+    _i2.dynamic dir,
+    _i2.dynamic prefix,
+    _i2.dynamic suffix,
   });
 
   factory MakeTempOptions({
@@ -3311,7 +3317,7 @@ extension MakeTempOptions$Typings on MakeTempOptions {
 @_i1.staticInterop
 @_i1.anonymous
 class RemoveOptions {
-  external factory RemoveOptions._({_i2.Object? recursive});
+  external factory RemoveOptions._({_i2.dynamic recursive});
 
   factory RemoveOptions({_i2.bool? recursive}) =>
       RemoveOptions._(recursive: recursive ?? _i6.undefined);
@@ -3343,22 +3349,22 @@ extension RemoveOptions$Typings on RemoveOptions {
 @_i1.anonymous
 class FileInfo {
   external factory FileInfo._({
-    _i2.Object? isFile,
-    _i2.Object? isDirectory,
-    _i2.Object? isSymlink,
-    _i2.Object? size,
-    _i2.Object? mtime,
-    _i2.Object? atime,
-    _i2.Object? birthtime,
-    _i2.Object? dev,
-    _i2.Object? ino,
-    _i2.Object? mode,
-    _i2.Object? nlink,
-    _i2.Object? uid,
-    _i2.Object? gid,
-    _i2.Object? rdev,
-    _i2.Object? blksize,
-    _i2.Object? blocks,
+    _i2.dynamic isFile,
+    _i2.dynamic isDirectory,
+    _i2.dynamic isSymlink,
+    _i2.dynamic size,
+    _i2.dynamic mtime,
+    _i2.dynamic atime,
+    _i2.dynamic birthtime,
+    _i2.dynamic dev,
+    _i2.dynamic ino,
+    _i2.dynamic mode,
+    _i2.dynamic nlink,
+    _i2.dynamic uid,
+    _i2.dynamic gid,
+    _i2.dynamic rdev,
+    _i2.dynamic blksize,
+    _i2.dynamic blocks,
   });
 
   factory FileInfo({
@@ -3642,10 +3648,10 @@ extension FileInfo$Typings on FileInfo {
 @_i1.anonymous
 class DirEntry {
   external factory DirEntry._({
-    _i2.Object? name,
-    _i2.Object? isFile,
-    _i2.Object? isDirectory,
-    _i2.Object? isSymlink,
+    _i2.dynamic name,
+    _i2.dynamic isFile,
+    _i2.dynamic isDirectory,
+    _i2.dynamic isSymlink,
   });
 
   factory DirEntry({
@@ -3726,11 +3732,11 @@ extension DirEntry$Typings on DirEntry {
 @_i1.anonymous
 class WriteFileOptions {
   external factory WriteFileOptions._({
-    _i2.Object? append,
-    _i2.Object? create,
-    _i2.Object? createNew,
-    _i2.Object? mode,
-    _i2.Object? signal,
+    _i2.dynamic append,
+    _i2.dynamic create,
+    _i2.dynamic createNew,
+    _i2.dynamic mode,
+    _i2.dynamic signal,
   });
 
   factory WriteFileOptions({
@@ -3833,17 +3839,17 @@ extension WriteFileOptions$Typings on WriteFileOptions {
 @_i1.anonymous
 class OpMetrics {
   external factory OpMetrics._({
-    _i2.Object? opsDispatched,
-    _i2.Object? opsDispatchedSync,
-    _i2.Object? opsDispatchedAsync,
-    _i2.Object? opsDispatchedAsyncUnref,
-    _i2.Object? opsCompleted,
-    _i2.Object? opsCompletedSync,
-    _i2.Object? opsCompletedAsync,
-    _i2.Object? opsCompletedAsyncUnref,
-    _i2.Object? bytesSentControl,
-    _i2.Object? bytesSentData,
-    _i2.Object? bytesReceived,
+    _i2.dynamic opsDispatched,
+    _i2.dynamic opsDispatchedSync,
+    _i2.dynamic opsDispatchedAsync,
+    _i2.dynamic opsDispatchedAsyncUnref,
+    _i2.dynamic opsCompleted,
+    _i2.dynamic opsCompletedSync,
+    _i2.dynamic opsCompletedAsync,
+    _i2.dynamic opsCompletedAsyncUnref,
+    _i2.dynamic bytesSentControl,
+    _i2.dynamic bytesSentData,
+    _i2.dynamic bytesReceived,
   });
 
   factory OpMetrics({
@@ -4013,18 +4019,18 @@ extension OpMetrics$Typings on OpMetrics {
 @_i1.anonymous
 class Metrics implements _i4.OpMetrics {
   external factory Metrics._({
-    _i2.Object? ops,
-    _i2.Object? opsDispatched,
-    _i2.Object? opsDispatchedSync,
-    _i2.Object? opsDispatchedAsync,
-    _i2.Object? opsDispatchedAsyncUnref,
-    _i2.Object? opsCompleted,
-    _i2.Object? opsCompletedSync,
-    _i2.Object? opsCompletedAsync,
-    _i2.Object? opsCompletedAsyncUnref,
-    _i2.Object? bytesSentControl,
-    _i2.Object? bytesSentData,
-    _i2.Object? bytesReceived,
+    _i2.dynamic ops,
+    _i2.dynamic opsDispatched,
+    _i2.dynamic opsDispatchedSync,
+    _i2.dynamic opsDispatchedAsync,
+    _i2.dynamic opsDispatchedAsyncUnref,
+    _i2.dynamic opsCompleted,
+    _i2.dynamic opsCompletedSync,
+    _i2.dynamic opsCompletedAsync,
+    _i2.dynamic opsCompletedAsyncUnref,
+    _i2.dynamic bytesSentControl,
+    _i2.dynamic bytesSentData,
+    _i2.dynamic bytesReceived,
   });
 
   factory Metrics({
@@ -4078,9 +4084,9 @@ extension Metrics$Typings on Metrics {
 @_i1.anonymous
 class FsEvent {
   external factory FsEvent._({
-    _i2.Object? kind,
-    _i2.Object? paths,
-    _i2.Object? flag,
+    _i2.dynamic kind,
+    _i2.dynamic paths,
+    _i2.dynamic flag,
   });
 
   factory FsEvent({
@@ -4163,8 +4169,8 @@ extension FsWatcher$Typings on FsWatcher {
   /// Stops watching the file system and closes the watcher resource.
   ///
   ///  @deprecated Will be removed in the future.
-  _i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.Object?>> return$(
-          [_i2.Object? value]) =>
+  _i2.Future<_i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.dynamic>>> return$(
+          [_i2.dynamic value]) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'return',
@@ -4197,12 +4203,12 @@ extension IInline9$Typings on IInline9 {
 @_i1.anonymous
 class RunOptions {
   external factory RunOptions._({
-    _i2.Object? cmd,
-    _i2.Object? cwd,
-    _i2.Object? env,
-    _i2.Object? stdout,
-    _i2.Object? stderr,
-    _i2.Object? stdin,
+    _i2.dynamic cmd,
+    _i2.dynamic cwd,
+    _i2.dynamic env,
+    _i2.dynamic stdout,
+    _i2.dynamic stderr,
+    _i2.dynamic stdin,
   });
 
   factory RunOptions({
@@ -4370,11 +4376,11 @@ extension IInline10$Typings on IInline10 {
     );
   }
 
-  _i2.Object? get signal => _i3.getProperty(
+  _i2.dynamic get signal => _i3.getProperty(
         this,
         'signal',
       );
-  set signal(_i2.Object? value) {
+  set signal(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'signal',
@@ -4447,21 +4453,21 @@ extension Process$Typings<T extends _i4.RunOptions> on Process<T> {
 
   /// A reference to the sub-processes `stdin`, which allows interacting with
   /// the sub-process at a low level.
-  _i2.Object? get stdin => _i3.getProperty(
+  _i2.dynamic get stdin => _i3.getProperty(
         this,
         'stdin',
       );
 
   /// A reference to the sub-processes `stdout`, which allows interacting with
   /// the sub-process at a low level.
-  _i2.Object? get stdout => _i3.getProperty(
+  _i2.dynamic get stdout => _i3.getProperty(
         this,
         'stdout',
       );
 
   /// A reference to the sub-processes `stderr`, which allows interacting with
   /// the sub-process at a low level.
-  _i2.Object? get stderr => _i3.getProperty(
+  _i2.dynamic get stderr => _i3.getProperty(
         this,
         'stderr',
       );
@@ -4488,7 +4494,8 @@ extension Process$Typings<T extends _i4.RunOptions> on Process<T> {
   ///  ]);
   ///  p.close();
   ///  ```
-  _i2.Future<_i4.ProcessStatus> status() => _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<_i2.Future<_i4.ProcessStatus>> status() =>
+      _i3.promiseToFuture(_i3.callMethod(
         this,
         'status',
         [],
@@ -4499,7 +4506,8 @@ extension Process$Typings<T extends _i4.RunOptions> on Process<T> {
   ///  You must set `stdout` to `"piped"` when creating the process.
   ///
   ///  This calls `close()` on stdout after its done.
-  _i2.Future<_i7.Uint8List> output() => _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<_i2.Future<_i7.Uint8List>> output() =>
+      _i3.promiseToFuture(_i3.callMethod(
         this,
         'output',
         [],
@@ -4510,7 +4518,7 @@ extension Process$Typings<T extends _i4.RunOptions> on Process<T> {
   ///  You must set `stderr` to `"piped"` when creating the process.
   ///
   ///  This calls `close()` on stderr after its done.
-  _i2.Future<_i7.Uint8List> stderrOutput() =>
+  _i2.Future<_i2.Future<_i7.Uint8List>> stderrOutput() =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'stderrOutput',
@@ -4566,11 +4574,10 @@ class Command {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Command')
-external _i2.Object _declaredCommand;
+_i2.Object get _declaredCommand => _i3.getProperty(
+      _self,
+      'Command',
+    );
 
 extension Command$Typings on Command {
   /// Executes the {@linkcode Deno.Command}, waiting for it to finish and
@@ -4582,7 +4589,8 @@ extension Command$Typings on Command {
   ///
   ///  If options `stdout` or `stderr` are not set to `"piped"`, accessing the
   ///  corresponding field on {@linkcode Deno.CommandOutput} will throw a `TypeError`.
-  _i2.Future<_i4.CommandOutput> output() => _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<_i2.Future<_i4.CommandOutput>> output() =>
+      _i3.promiseToFuture(_i3.callMethod(
         this,
         'output',
         [],
@@ -4658,7 +4666,7 @@ extension ChildProcess$Typings on ChildProcess {
       );
 
   /// Get the status of the child.
-  _i2.Future<_i4.CommandStatus> get status =>
+  _i2.Future<_i2.Future<_i4.CommandStatus>> get status =>
       _i3.promiseToFuture(_i3.getProperty(
         this,
         'status',
@@ -4666,7 +4674,8 @@ extension ChildProcess$Typings on ChildProcess {
 
   /// Waits for the child to exit completely, returning all its output and
   ///  status.
-  _i2.Future<_i4.CommandOutput> output() => _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<_i2.Future<_i4.CommandOutput>> output() =>
+      _i3.promiseToFuture(_i3.callMethod(
         this,
         'output',
         [],
@@ -4710,17 +4719,17 @@ extension ChildProcess$Typings on ChildProcess {
 @_i1.anonymous
 class CommandOptions {
   external factory CommandOptions._({
-    _i2.Object? args,
-    _i2.Object? cwd,
-    _i2.Object? clearEnv,
-    _i2.Object? env,
-    _i2.Object? uid,
-    _i2.Object? gid,
-    _i2.Object? signal,
-    _i2.Object? stdin,
-    _i2.Object? stdout,
-    _i2.Object? stderr,
-    _i2.Object? windowsRawArguments,
+    _i2.dynamic args,
+    _i2.dynamic cwd,
+    _i2.dynamic clearEnv,
+    _i2.dynamic env,
+    _i2.dynamic uid,
+    _i2.dynamic gid,
+    _i2.dynamic signal,
+    _i2.dynamic stdin,
+    _i2.dynamic stdout,
+    _i2.dynamic stderr,
+    _i2.dynamic windowsRawArguments,
   });
 
   factory CommandOptions({
@@ -4935,9 +4944,9 @@ extension CommandOptions$Typings on CommandOptions {
 @_i1.anonymous
 class CommandStatus {
   external factory CommandStatus._({
-    _i2.Object? success,
-    _i2.Object? code,
-    _i2.Object? signal,
+    _i2.dynamic success,
+    _i2.dynamic code,
+    _i2.dynamic signal,
   });
 
   factory CommandStatus({
@@ -5005,11 +5014,11 @@ extension CommandStatus$Typings on CommandStatus {
 @_i1.anonymous
 class CommandOutput implements _i4.CommandStatus {
   external factory CommandOutput._({
-    _i2.Object? stdout,
-    _i2.Object? stderr,
-    _i2.Object? success,
-    _i2.Object? code,
-    _i2.Object? signal,
+    _i2.dynamic stdout,
+    _i2.dynamic stderr,
+    _i2.dynamic success,
+    _i2.dynamic code,
+    _i2.dynamic signal,
   });
 
   factory CommandOutput({
@@ -5048,16 +5057,16 @@ extension CommandOutput$Typings on CommandOutput {
 @_i1.anonymous
 class InspectOptions {
   external factory InspectOptions._({
-    _i2.Object? colors,
-    _i2.Object? compact,
-    _i2.Object? depth,
-    _i2.Object? iterableLimit,
-    _i2.Object? showProxy,
-    _i2.Object? sorted,
-    _i2.Object? trailingComma,
-    _i2.Object? getters,
-    _i2.Object? showHidden,
-    _i2.Object? strAbbreviateSize,
+    _i2.dynamic colors,
+    _i2.dynamic compact,
+    _i2.dynamic depth,
+    _i2.dynamic iterableLimit,
+    _i2.dynamic showProxy,
+    _i2.dynamic sorted,
+    _i2.dynamic trailingComma,
+    _i2.dynamic getters,
+    _i2.dynamic showHidden,
+    _i2.dynamic strAbbreviateSize,
   });
 
   factory InspectOptions({
@@ -5249,8 +5258,8 @@ extension InspectOptions$Typings on InspectOptions {
 @_i1.anonymous
 class RunPermissionDescriptor {
   external factory RunPermissionDescriptor._({
-    _i2.Object? name,
-    _i2.Object? command,
+    _i2.dynamic name,
+    _i2.dynamic command,
   });
 
   factory RunPermissionDescriptor({
@@ -5303,8 +5312,8 @@ extension RunPermissionDescriptor$Typings on RunPermissionDescriptor {
 @_i1.anonymous
 class ReadPermissionDescriptor {
   external factory ReadPermissionDescriptor._({
-    _i2.Object? name,
-    _i2.Object? path,
+    _i2.dynamic name,
+    _i2.dynamic path,
   });
 
   factory ReadPermissionDescriptor({
@@ -5357,8 +5366,8 @@ extension ReadPermissionDescriptor$Typings on ReadPermissionDescriptor {
 @_i1.anonymous
 class WritePermissionDescriptor {
   external factory WritePermissionDescriptor._({
-    _i2.Object? name,
-    _i2.Object? path,
+    _i2.dynamic name,
+    _i2.dynamic path,
   });
 
   factory WritePermissionDescriptor({
@@ -5408,8 +5417,8 @@ extension WritePermissionDescriptor$Typings on WritePermissionDescriptor {
 @_i1.anonymous
 class NetPermissionDescriptor {
   external factory NetPermissionDescriptor._({
-    _i2.Object? name,
-    _i2.Object? host,
+    _i2.dynamic name,
+    _i2.dynamic host,
   });
 
   factory NetPermissionDescriptor({
@@ -5462,8 +5471,8 @@ extension NetPermissionDescriptor$Typings on NetPermissionDescriptor {
 @_i1.anonymous
 class EnvPermissionDescriptor {
   external factory EnvPermissionDescriptor._({
-    _i2.Object? name,
-    _i2.Object? variable,
+    _i2.dynamic name,
+    _i2.dynamic variable,
   });
 
   factory EnvPermissionDescriptor({
@@ -5512,8 +5521,8 @@ extension EnvPermissionDescriptor$Typings on EnvPermissionDescriptor {
 @_i1.anonymous
 class SysPermissionDescriptor {
   external factory SysPermissionDescriptor._({
-    _i2.Object? name,
-    _i2.Object? kind,
+    _i2.dynamic name,
+    _i2.dynamic kind,
   });
 
   factory SysPermissionDescriptor({
@@ -5566,8 +5575,8 @@ extension SysPermissionDescriptor$Typings on SysPermissionDescriptor {
 @_i1.anonymous
 class FfiPermissionDescriptor {
   external factory FfiPermissionDescriptor._({
-    _i2.Object? name,
-    _i2.Object? path,
+    _i2.dynamic name,
+    _i2.dynamic path,
   });
 
   factory FfiPermissionDescriptor({
@@ -5616,7 +5625,7 @@ extension FfiPermissionDescriptor$Typings on FfiPermissionDescriptor {
 @_i1.staticInterop
 @_i1.anonymous
 class HrtimePermissionDescriptor {
-  external factory HrtimePermissionDescriptor._({_i2.Object? name});
+  external factory HrtimePermissionDescriptor._({_i2.dynamic name});
 
   factory HrtimePermissionDescriptor({required _i2.String name}) =>
       HrtimePermissionDescriptor._(name: name);
@@ -5636,16 +5645,6 @@ extension HrtimePermissionDescriptor$Typings on HrtimePermissionDescriptor {
   }
 }
 
-/// The interface which defines what event types are supported by
-/// {@linkcode PermissionStatus} instances.
-enum PermissionStatusEventMap<T$ extends _i2.Object?> {
-  change<_i8.Event>(r'change');
-
-  const PermissionStatusEventMap(this.value);
-
-  final _i2.String value;
-}
-
 /// An {@linkcode EventTarget} returned from the {@linkcode Deno.permissions}
 /// API which can provide updates to any state changes of the permission.
 @_i1.JS()
@@ -5653,11 +5652,11 @@ enum PermissionStatusEventMap<T$ extends _i2.Object?> {
 class PermissionStatus implements _i8.EventTarget {}
 
 extension PermissionStatus$Typings on PermissionStatus {
-  _i2.Object? Function(_i8.Event)? get onchange => _i3.getProperty(
+  _i2.dynamic Function(_i8.Event)? get onchange => _i3.getProperty(
         this,
         'onchange',
       );
-  set onchange(_i2.Object? Function(_i8.Event)? value) {
+  set onchange(_i2.dynamic Function(_i8.Event)? value) {
     _i3.setProperty(
       this,
       'onchange',
@@ -5694,16 +5693,16 @@ extension PermissionStatus$Typings on PermissionStatus {
   ///
   /// The event listener is appended to target's event listener list and is not
   /// appended if it has the same type, callback, and capture.
-  void _addEventListener$1<K$>(
-    _i4.PermissionStatusEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _addEventListener$1<K extends _i4.PermissionStatusEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i3.callMethod(
       this,
       'addEventListener',
       [
-        type.name,
+        type,
         _i3.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -5774,9 +5773,9 @@ extension PermissionStatus$Typings on PermissionStatus {
     ///
     /// The event listener is appended to target's event listener list and is not
     /// appended if it has the same type, callback, and capture.
-    void Function<K$>(
-      _i4.PermissionStatusEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i4.PermissionStatusEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -5815,16 +5814,16 @@ extension PermissionStatus$Typings on PermissionStatus {
 
   /// Removes the event listener in target's event listener list with the same
   /// type, callback, and options.
-  void _removeEventListener$1<K$>(
-    _i4.PermissionStatusEventMap<K$> type,
-    _i2.Object? Function(K$) listener, [
+  void _removeEventListener$1<K extends _i4.PermissionStatusEventMap>(
+    K type,
+    _i2.dynamic Function(_i2.dynamic) listener, [
     _i2.Object? options,
   ]) {
     _i3.callMethod(
       this,
       'removeEventListener',
       [
-        type.name,
+        type,
         _i3.allowInterop(listener),
         options ?? _i6.undefined,
       ],
@@ -5853,9 +5852,9 @@ extension PermissionStatus$Typings on PermissionStatus {
   ({
     /// Removes the event listener in target's event listener list with the same
     /// type, callback, and options.
-    void Function<K$>(
-      _i4.PermissionStatusEventMap<K$> type,
-      _i2.Object? Function(K$) listener, [
+    void Function<K extends _i4.PermissionStatusEventMap>(
+      K type,
+      _i2.dynamic Function(_i2.dynamic) listener, [
       _i2.Object? options,
     ]) $1,
 
@@ -5906,7 +5905,8 @@ extension Permissions$Typings on Permissions {
   ///  const status = await Deno.permissions.query({ name: "read", path: "/etc" });
   ///  console.log(status.state);
   ///  ```
-  _i2.Future<_i4.PermissionStatus> query(_i4.PermissionDescriptor desc) =>
+  _i2.Future<_i2.Future<_i4.PermissionStatus>> query(
+          _i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'query',
@@ -5939,7 +5939,8 @@ extension Permissions$Typings on Permissions {
   ///  const status = await Deno.permissions.revoke({ name: "run" });
   ///  assert(status.state !== "granted")
   ///  ```
-  _i2.Future<_i4.PermissionStatus> revoke(_i4.PermissionDescriptor desc) =>
+  _i2.Future<_i2.Future<_i4.PermissionStatus>> revoke(
+          _i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'revoke',
@@ -5974,7 +5975,8 @@ extension Permissions$Typings on Permissions {
   ///    console.log("'env' permission is denied.");
   ///  }
   ///  ```
-  _i2.Future<_i4.PermissionStatus> request(_i4.PermissionDescriptor desc) =>
+  _i2.Future<_i2.Future<_i4.PermissionStatus>> request(
+          _i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'request',
@@ -6135,7 +6137,7 @@ extension IInline13$Typings on IInline13 {
 @_i1.staticInterop
 @_i1.anonymous
 class SymlinkOptions {
-  external factory SymlinkOptions._({_i2.Object? type});
+  external factory SymlinkOptions._({_i2.dynamic type});
 
   factory SymlinkOptions({required _i4.Type type}) =>
       SymlinkOptions._(type: type.name);
@@ -6178,7 +6180,7 @@ extension RequestEvent$Typings on RequestEvent {
   ///  When the response is successfully processed then the promise returned
   ///  will be resolved. If there are any issues with sending the response,
   ///  the promise will be rejected.
-  _i2.Future<void> respondWith(_i2.Object r) =>
+  _i2.Future<_i2.Future<void>> respondWith(_i2.Object r) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'respondWith',
@@ -6204,7 +6206,7 @@ extension HttpConn$Typings on HttpConn {
   /// An alternative to the async iterable interface which provides promises
   ///  which resolve with either a {@linkcode RequestEvent} when there is
   ///  another request or `null` when the client has closed the connection.
-  _i2.Future<_i4.RequestEvent?> nextRequest() =>
+  _i2.Future<_i2.Future<_i4.RequestEvent?>> nextRequest() =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'nextRequest',
@@ -6233,8 +6235,8 @@ extension HttpConn$Typings on HttpConn {
 @_i1.anonymous
 class WebSocketUpgrade {
   external factory WebSocketUpgrade._({
-    _i2.Object? response,
-    _i2.Object? socket,
+    _i2.dynamic response,
+    _i2.dynamic socket,
   });
 
   factory WebSocketUpgrade({
@@ -6285,8 +6287,8 @@ extension WebSocketUpgrade$Typings on WebSocketUpgrade {
 @_i1.anonymous
 class UpgradeWebSocketOptions {
   external factory UpgradeWebSocketOptions._({
-    _i2.Object? protocol,
-    _i2.Object? idleTimeout,
+    _i2.dynamic protocol,
+    _i2.dynamic idleTimeout,
   });
 
   factory UpgradeWebSocketOptions({
@@ -6376,8 +6378,8 @@ extension IInline14$Typings on IInline14 {
 @_i1.anonymous
 class ResolveDnsOptions {
   external factory ResolveDnsOptions._({
-    _i2.Object? nameServer,
-    _i2.Object? signal,
+    _i2.dynamic nameServer,
+    _i2.dynamic signal,
   });
 
   factory ResolveDnsOptions({
@@ -6395,11 +6397,11 @@ extension ResolveDnsOptions$Typings on ResolveDnsOptions {
   ///
   ///  If not specified, defaults to the system configuration. For example
   ///  `/etc/resolv.conf` on Unix-like systems.
-  _i2.Object? get nameServer => _i3.getProperty(
+  _i2.dynamic get nameServer => _i3.getProperty(
         this,
         'nameServer',
       );
-  set nameServer(_i2.Object? value) {
+  set nameServer(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'nameServer',
@@ -6430,9 +6432,9 @@ extension ResolveDnsOptions$Typings on ResolveDnsOptions {
 @_i1.anonymous
 class CAARecord {
   external factory CAARecord._({
-    _i2.Object? critical,
-    _i2.Object? tag,
-    _i2.Object? value,
+    _i2.dynamic critical,
+    _i2.dynamic tag,
+    _i2.dynamic value,
   });
 
   factory CAARecord({
@@ -6502,8 +6504,8 @@ extension CAARecord$Typings on CAARecord {
 @_i1.anonymous
 class MXRecord {
   external factory MXRecord._({
-    _i2.Object? preference,
-    _i2.Object? exchange,
+    _i2.dynamic preference,
+    _i2.dynamic exchange,
   });
 
   factory MXRecord({
@@ -6552,12 +6554,12 @@ extension MXRecord$Typings on MXRecord {
 @_i1.anonymous
 class NAPTRRecord {
   external factory NAPTRRecord._({
-    _i2.Object? order,
-    _i2.Object? preference,
-    _i2.Object? flags,
-    _i2.Object? services,
-    _i2.Object? regexp,
-    _i2.Object? replacement,
+    _i2.dynamic order,
+    _i2.dynamic preference,
+    _i2.dynamic flags,
+    _i2.dynamic services,
+    _i2.dynamic regexp,
+    _i2.dynamic replacement,
   });
 
   factory NAPTRRecord({
@@ -6659,13 +6661,13 @@ extension NAPTRRecord$Typings on NAPTRRecord {
 @_i1.anonymous
 class SOARecord {
   external factory SOARecord._({
-    _i2.Object? mname,
-    _i2.Object? rname,
-    _i2.Object? serial,
-    _i2.Object? refresh,
-    _i2.Object? retry,
-    _i2.Object? expire,
-    _i2.Object? minimum,
+    _i2.dynamic mname,
+    _i2.dynamic rname,
+    _i2.dynamic serial,
+    _i2.dynamic refresh,
+    _i2.dynamic retry,
+    _i2.dynamic expire,
+    _i2.dynamic minimum,
   });
 
   factory SOARecord({
@@ -6781,10 +6783,10 @@ extension SOARecord$Typings on SOARecord {
 @_i1.anonymous
 class SRVRecord {
   external factory SRVRecord._({
-    _i2.Object? priority,
-    _i2.Object? weight,
-    _i2.Object? port,
-    _i2.Object? target,
+    _i2.dynamic priority,
+    _i2.dynamic weight,
+    _i2.dynamic port,
+    _i2.dynamic target,
   });
 
   factory SRVRecord({
@@ -6856,9 +6858,9 @@ extension SRVRecord$Typings on SRVRecord {
 @_i1.anonymous
 class NetAddr {
   external factory NetAddr._({
-    _i2.Object? transport,
-    _i2.Object? hostname,
-    _i2.Object? port,
+    _i2.dynamic transport,
+    _i2.dynamic hostname,
+    _i2.dynamic port,
   });
 
   factory NetAddr({
@@ -6916,8 +6918,8 @@ extension NetAddr$Typings on NetAddr {
 @_i1.anonymous
 class UnixAddr {
   external factory UnixAddr._({
-    _i2.Object? transport,
-    _i2.Object? path,
+    _i2.dynamic transport,
+    _i2.dynamic path,
   });
 
   factory UnixAddr({
@@ -6976,7 +6978,7 @@ extension Listener$Typings<T extends _i4.Conn> on Listener<T> {
       );
 
   /// Waits for and resolves to the next connection to the `Listener`.
-  _i2.Future<T> accept() => _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<_i2.Future<T>> accept() => _i3.promiseToFuture(_i3.callMethod(
         this,
         'accept',
         [],
@@ -7047,7 +7049,8 @@ extension Conn$Typings on Conn {
 
   /// Shuts down (`shutdown(2)`) the write side of the connection. Most
   ///  callers should just use `close()`.
-  _i2.Future<void> closeWrite() => _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<_i2.Future<void>> closeWrite() =>
+      _i3.promiseToFuture(_i3.callMethod(
         this,
         'closeWrite',
         [],
@@ -7096,7 +7099,7 @@ extension TlsConn$Typings on TlsConn {
   /// Runs the client or server handshake protocol to completion if that has
   ///  not happened yet. Calling this method is optional; the TLS handshake
   ///  will be completed automatically as soon as data is sent or received.
-  _i2.Future<_i4.TlsHandshakeInfo> handshake() =>
+  _i2.Future<_i2.Future<_i4.TlsHandshakeInfo>> handshake() =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'handshake',
@@ -7109,8 +7112,8 @@ extension TlsConn$Typings on TlsConn {
 @_i1.anonymous
 class ListenOptions {
   external factory ListenOptions._({
-    _i2.Object? port,
-    _i2.Object? hostname,
+    _i2.dynamic port,
+    _i2.dynamic hostname,
   });
 
   factory ListenOptions({
@@ -7163,8 +7166,8 @@ extension ListenOptions$Typings on ListenOptions {
 @_i1.anonymous
 class TcpListenOptions implements _i4.ListenOptions {
   external factory TcpListenOptions._({
-    _i2.Object? port,
-    _i2.Object? hostname,
+    _i2.dynamic port,
+    _i2.dynamic hostname,
   });
 
   factory TcpListenOptions({
@@ -7201,11 +7204,11 @@ extension IInline44$Typings on IInline44 {
 @_i1.anonymous
 class ListenTlsOptions implements _i4.TcpListenOptions {
   external factory ListenTlsOptions._({
-    _i2.Object? key,
-    _i2.Object? cert,
-    _i2.Object? certFile,
-    _i2.Object? keyFile,
-    _i2.Object? transport,
+    _i2.dynamic key,
+    _i2.dynamic cert,
+    _i2.dynamic certFile,
+    _i2.dynamic keyFile,
+    _i2.dynamic transport,
   });
 
   factory ListenTlsOptions({
@@ -7302,9 +7305,9 @@ extension ListenTlsOptions$Typings on ListenTlsOptions {
 @_i1.anonymous
 class ConnectOptions {
   external factory ConnectOptions._({
-    _i2.Object? port,
-    _i2.Object? hostname,
-    _i2.Object? transport,
+    _i2.dynamic port,
+    _i2.dynamic hostname,
+    _i2.dynamic transport,
   });
 
   factory ConnectOptions({
@@ -7393,11 +7396,11 @@ extension TcpConn$Typings on TcpConn {
 @_i1.anonymous
 class UnixConn implements _i4.Conn {
   external factory UnixConn._({
-    _i2.Object? localAddr,
-    _i2.Object? remoteAddr,
-    _i2.Object? rid,
-    _i2.Object? readable,
-    _i2.Object? writable,
+    _i2.dynamic localAddr,
+    _i2.dynamic remoteAddr,
+    _i2.dynamic rid,
+    _i2.dynamic readable,
+    _i2.dynamic writable,
   });
 
   factory UnixConn({
@@ -7421,10 +7424,10 @@ class UnixConn implements _i4.Conn {
 @_i1.anonymous
 class ConnectTlsOptions {
   external factory ConnectTlsOptions._({
-    _i2.Object? port,
-    _i2.Object? hostname,
-    _i2.Object? certFile,
-    _i2.Object? caCerts,
+    _i2.dynamic port,
+    _i2.dynamic hostname,
+    _i2.dynamic certFile,
+    _i2.dynamic caCerts,
   });
 
   factory ConnectTlsOptions({
@@ -7509,8 +7512,8 @@ extension ConnectTlsOptions$Typings on ConnectTlsOptions {
 @_i1.anonymous
 class StartTlsOptions {
   external factory StartTlsOptions._({
-    _i2.Object? hostname,
-    _i2.Object? caCerts,
+    _i2.dynamic hostname,
+    _i2.dynamic caCerts,
   });
 
   factory StartTlsOptions({
@@ -7557,1162 +7560,341 @@ extension StartTlsOptions$Typings on StartTlsOptions {
   }
 }
 
-/// Returns an object describing the memory usage of the Deno process and the
-/// V8 subsystem measured in bytes.
-_i4.MemoryUsage memoryUsage() => _i3.callMethod(
-      _self,
-      'memoryUsage',
-      [],
-    );
+@_i1.JS('Deno')
+@_i1.staticInterop
+class $ModuleDeno {}
 
-/// Get the `hostname` of the machine the Deno process is running on.
-///
-/// ```ts
-/// console.log(Deno.hostname());
-/// ```
-///
-/// Requires `allow-sys` permission.
-_i2.String hostname() => _i3.callMethod(
-      _self,
-      'hostname',
-      [],
-    );
-
-/// Returns an array containing the 1, 5, and 15 minute load averages. The
-/// load average is a measure of CPU and IO utilization of the last one, five,
-/// and 15 minute periods expressed as a fractional number.  Zero means there
-/// is no load. On Windows, the three values are always the same and represent
-/// the current load, not the 1, 5 and 15 minute load averages.
-///
-/// ```ts
-/// console.log(Deno.loadavg());  // e.g. [ 0.71, 0.44, 0.44 ]
-/// ```
-///
-/// Requires `allow-sys` permission.
-///
-/// On Windows there is no API available to retrieve this information and this method returns `[ 0, 0, 0 ]`.
-_i2.List<_i2.num> loadavg() => (_i3.callMethod(
-      _self,
-      'loadavg',
-      [],
-    ) as _i2.List)
-        .cast();
-
-/// Returns an array of the network interface information.
-///
-/// ```ts
-/// console.log(Deno.networkInterfaces());
-/// ```
-///
-/// Requires `allow-sys` permission.
-_i2.List<_i4.NetworkInterfaceInfo> networkInterfaces() => (_i3.callMethod(
-      _self,
-      'networkInterfaces',
-      [],
-    ) as _i2.List)
-        .cast();
-
-/// Displays the total amount of free and used physical and swap memory in the
-/// system, as well as the buffers and caches used by the kernel.
-///
-/// This is similar to the `free` command in Linux
-///
-/// ```ts
-/// console.log(Deno.systemMemoryInfo());
-/// ```
-///
-/// Requires `allow-sys` permission.
-_i4.SystemMemoryInfo systemMemoryInfo() => _i3.callMethod(
-      _self,
-      'systemMemoryInfo',
-      [],
-    );
-
-/// Returns the release version of the Operating System.
-///
-/// ```ts
-/// console.log(Deno.osRelease());
-/// ```
-///
-/// Requires `allow-sys` permission.
-/// Under consideration to possibly move to Deno.build or Deno.versions and if
-/// it should depend sys-info, which may not be desirable.
-_i2.String osRelease() => _i3.callMethod(
-      _self,
-      'osRelease',
-      [],
-    );
-
-/// Returns the Operating System uptime in number of seconds.
-///
-/// ```ts
-/// console.log(Deno.osUptime());
-/// ```
-///
-/// Requires `allow-sys` permission.
-_i2.num osUptime() => _i3.callMethod(
-      _self,
-      'osUptime',
-      [],
-    );
-
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test({
-///  name: "example test",
-///  fn() {
-///    assertEquals("world", "world");
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example ignored test",
-///  ignore: Deno.build.os === "windows",
-///  fn() {
-///    // This test is ignored only on Windows machines
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example async test",
-///  async fn() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  }
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", () => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", async () => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(function myTestName() {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test(async function myOtherTestName() {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", { permissions: { read: true } }, (): void => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  {
-///    name: "My test description",
-///    permissions: { read: true },
-///  },
-///  () => {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  {
-///    name: "My async test description",
-///    permissions: { read: false },
-///  },
-///  async () => {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  { permissions: { read: true } },
-///  function myTestName() {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  { permissions: { read: false } },
-///  async function myOtherTestName() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-void _test$1(_i4.TestDefinition t) {
-  _i3.callMethod(
-    _self,
-    'test',
-    [t],
-  );
-}
-
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test({
-///  name: "example test",
-///  fn() {
-///    assertEquals("world", "world");
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example ignored test",
-///  ignore: Deno.build.os === "windows",
-///  fn() {
-///    // This test is ignored only on Windows machines
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example async test",
-///  async fn() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  }
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", () => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", async () => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(function myTestName() {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test(async function myOtherTestName() {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", { permissions: { read: true } }, (): void => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  {
-///    name: "My test description",
-///    permissions: { read: true },
-///  },
-///  () => {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  {
-///    name: "My async test description",
-///    permissions: { read: false },
-///  },
-///  async () => {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  { permissions: { read: true } },
-///  function myTestName() {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  { permissions: { read: false } },
-///  async function myOtherTestName() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-void _test$2(_i2.Object Function(_i4.TestContext) fn) {
-  _i3.callMethod(
-    _self,
-    'test',
-    [_i3.allowInterop(fn)],
-  );
-}
-
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test({
-///  name: "example test",
-///  fn() {
-///    assertEquals("world", "world");
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example ignored test",
-///  ignore: Deno.build.os === "windows",
-///  fn() {
-///    // This test is ignored only on Windows machines
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example async test",
-///  async fn() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  }
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", () => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", async () => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(function myTestName() {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test(async function myOtherTestName() {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", { permissions: { read: true } }, (): void => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  {
-///    name: "My test description",
-///    permissions: { read: true },
-///  },
-///  () => {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  {
-///    name: "My async test description",
-///    permissions: { read: false },
-///  },
-///  async () => {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  { permissions: { read: true } },
-///  function myTestName() {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  { permissions: { read: false } },
-///  async function myOtherTestName() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-void _test$3(
-  _i2.String name,
-  _i2.Object Function(_i4.TestContext) fn,
-) {
-  _i3.callMethod(
-    _self,
-    'test',
-    [
-      name,
-      _i3.allowInterop(fn),
-    ],
-  );
-}
-
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test({
-///  name: "example test",
-///  fn() {
-///    assertEquals("world", "world");
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example ignored test",
-///  ignore: Deno.build.os === "windows",
-///  fn() {
-///    // This test is ignored only on Windows machines
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example async test",
-///  async fn() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  }
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", () => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", async () => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(function myTestName() {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test(async function myOtherTestName() {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", { permissions: { read: true } }, (): void => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  {
-///    name: "My test description",
-///    permissions: { read: true },
-///  },
-///  () => {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  {
-///    name: "My async test description",
-///    permissions: { read: false },
-///  },
-///  async () => {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  { permissions: { read: true } },
-///  function myTestName() {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  { permissions: { read: false } },
-///  async function myOtherTestName() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-void _test$4(
-  _i9.Omit<_i4.TestDefinition, _i2.String> options,
-  _i2.Object Function(_i4.TestContext) fn,
-) {
-  _i3.callMethod(
-    _self,
-    'test',
-    [
-      options,
-      _i3.allowInterop(fn),
-    ],
-  );
-}
-
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test({
-///  name: "example test",
-///  fn() {
-///    assertEquals("world", "world");
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example ignored test",
-///  ignore: Deno.build.os === "windows",
-///  fn() {
-///    // This test is ignored only on Windows machines
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example async test",
-///  async fn() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  }
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", () => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", async () => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(function myTestName() {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test(async function myOtherTestName() {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", { permissions: { read: true } }, (): void => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  {
-///    name: "My test description",
-///    permissions: { read: true },
-///  },
-///  () => {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  {
-///    name: "My async test description",
-///    permissions: { read: false },
-///  },
-///  async () => {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  { permissions: { read: true } },
-///  function myTestName() {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  { permissions: { read: false } },
-///  async function myOtherTestName() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-void _test$5(
-  _i9.Omit<_i4.TestDefinition, _i4.TestOptions> options,
-  _i2.Object Function(_i4.TestContext) fn,
-) {
-  _i3.callMethod(
-    _self,
-    'test',
-    [
-      options,
-      _i3.allowInterop(fn),
-    ],
-  );
-}
-
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test({
-///  name: "example test",
-///  fn() {
-///    assertEquals("world", "world");
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example ignored test",
-///  ignore: Deno.build.os === "windows",
-///  fn() {
-///    // This test is ignored only on Windows machines
-///  },
-/// });
-///
-/// Deno.test({
-///  name: "example async test",
-///  async fn() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  }
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", () => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", async () => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(function myTestName() {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test(async function myOtherTestName() {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test("My test description", { permissions: { read: true } }, (): void => {
-///  assertEquals("hello", "hello");
-/// });
-///
-/// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
-///  const decoder = new TextDecoder("utf-8");
-///  const data = await Deno.readFile("hello_world.txt");
-///  assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  {
-///    name: "My test description",
-///    permissions: { read: true },
-///  },
-///  () => {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  {
-///    name: "My async test description",
-///    permissions: { read: false },
-///  },
-///  async () => {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-/// Register a test which will be run when `deno test` is used on the command
-/// line and the containing module looks like a test module.
-///
-/// `fn` can be async if required. Declared function must have a name.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.test(
-///  { permissions: { read: true } },
-///  function myTestName() {
-///    assertEquals("hello", "hello");
-///  },
-/// );
-///
-/// Deno.test(
-///  { permissions: { read: false } },
-///  async function myOtherTestName() {
-///    const decoder = new TextDecoder("utf-8");
-///    const data = await Deno.readFile("hello_world.txt");
-///    assertEquals(decoder.decode(data), "Hello world");
-///  },
-/// );
-/// ```
-void _test$6(
-  _i2.String name,
-  _i9.Omit<_i4.TestDefinition, _i4.Test> options,
-  _i2.Object Function(_i4.TestContext) fn,
-) {
-  _i3.callMethod(
-    _self,
-    'test',
-    [
-      name,
-      options,
-      _i3.allowInterop(fn),
-    ],
-  );
-}
-
-/// Overload accessor: $1, $2, $3, $4, $5, $6
-({
-  /// Register a test which will be run when `deno test` is used on the command
-  /// line and the containing module looks like a test module.
-  ///
-  /// `fn` can be async if required.
+extension $ModuleDeno$Typings on $ModuleDeno {
+  /// The current process ID of this instance of the Deno CLI.
   ///
   /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.test({
-  ///  name: "example test",
-  ///  fn() {
-  ///    assertEquals("world", "world");
-  ///  },
-  /// });
-  ///
-  /// Deno.test({
-  ///  name: "example ignored test",
-  ///  ignore: Deno.build.os === "windows",
-  ///  fn() {
-  ///    // This test is ignored only on Windows machines
-  ///  },
-  /// });
-  ///
-  /// Deno.test({
-  ///  name: "example async test",
-  ///  async fn() {
-  ///    const decoder = new TextDecoder("utf-8");
-  ///    const data = await Deno.readFile("hello_world.txt");
-  ///    assertEquals(decoder.decode(data), "Hello world");
-  ///  }
-  /// });
+  /// console.log(Deno.pid);
   /// ```
-  /// Register a test which will be run when `deno test` is used on the command
-  /// line and the containing module looks like a test module.
-  ///
-  /// `fn` can be async if required.
+  _i2.num get pid => _i3.getProperty(
+        this,
+        'pid',
+      );
+
+  /// The process ID of parent process of this instance of the Deno CLI.
   ///
   /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.test("My test description", () => {
-  ///  assertEquals("hello", "hello");
-  /// });
-  ///
-  /// Deno.test("My async test description", async () => {
-  ///  const decoder = new TextDecoder("utf-8");
-  ///  const data = await Deno.readFile("hello_world.txt");
-  ///  assertEquals(decoder.decode(data), "Hello world");
-  /// });
+  /// console.log(Deno.ppid);
   /// ```
-  /// Register a test which will be run when `deno test` is used on the command
-  /// line and the containing module looks like a test module.
+  _i2.num get ppid => _i3.getProperty(
+        this,
+        'ppid',
+      );
+
+  /// Reflects the `NO_COLOR` environment variable at program start.
   ///
-  /// `fn` can be async if required. Declared function must have a name.
+  /// When the value is `true`, the Deno CLI will attempt to not send color codes
+  /// to `stderr` or `stdout` and other command line programs should also attempt
+  /// to respect this value.
+  ///
+  /// See: https://no-color.org/
+  _i2.bool get noColor => _i3.getProperty(
+        this,
+        'noColor',
+      );
+
+  /// An interface containing methods to interact with the process environment
+  /// variables.
+  _i4.Env get env => _i3.getProperty(
+        this,
+        'env',
+      );
+
+  /// The Deno abstraction for reading and writing files.
+  _i2.dynamic get file => _i3.getProperty(
+        this,
+        'File',
+      );
+
+  /// A reference to `stdin` which can be used to read directly from `stdin`.
+  /// It implements the Deno specific {@linkcode Reader}, {@linkcode ReaderSync},
+  /// and {@linkcode Closer} interfaces as well as provides a
+  /// {@linkcode ReadableStream} interface.
+  ///
+  /// ### Reading chunks from the readable stream
   ///
   /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.test(function myTestName() {
-  ///  assertEquals("hello", "hello");
-  /// });
-  ///
-  /// Deno.test(async function myOtherTestName() {
-  ///  const decoder = new TextDecoder("utf-8");
-  ///  const data = await Deno.readFile("hello_world.txt");
-  ///  assertEquals(decoder.decode(data), "Hello world");
-  /// });
+  /// const decoder = new TextDecoder();
+  /// for await (const chunk of Deno.stdin.readable) {
+  ///  const text = decoder.decode(chunk);
+  ///  // do something with the text
+  /// }
   /// ```
-  /// Register a test which will be run when `deno test` is used on the command
-  /// line and the containing module looks like a test module.
+  _Intersection32 get stdin => _i3.getProperty(
+        this,
+        'stdin',
+      );
+
+  /// A reference to `stdout` which can be used to write directly to `stdout`.
+  /// It implements the Deno specific {@linkcode Writer}, {@linkcode WriterSync},
+  /// and {@linkcode Closer} interfaces as well as provides a
+  /// {@linkcode WritableStream} interface.
   ///
-  /// `fn` can be async if required.
+  /// These are low level constructs, and the {@linkcode console} interface is a
+  /// more straight forward way to interact with `stdout` and `stderr`.
+  _Intersection33 get stdout => _i3.getProperty(
+        this,
+        'stdout',
+      );
+
+  /// A reference to `stderr` which can be used to write directly to `stderr`.
+  /// It implements the Deno specific {@linkcode Writer}, {@linkcode WriterSync},
+  /// and {@linkcode Closer} interfaces as well as provides a
+  /// {@linkcode WritableStream} interface.
+  ///
+  /// These are low level constructs, and the {@linkcode console} interface is a
+  /// more straight forward way to interact with `stdout` and `stderr`.
+  _Intersection34 get stderr => _i3.getProperty(
+        this,
+        'stderr',
+      );
+
+  /// Deno's permission management API.
+  ///
+  /// It is a singleton instance of the {@linkcode Permissions} object and is
+  /// based on the web platform
+  /// [Permissions API](https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API),
+  /// though some proposed parts of the API which are useful in a server side
+  /// runtime context were removed or abandoned in the web platform specification
+  /// which is why it was chosen to locate it in the {@linkcode Deno} namespace
+  /// instead.
+  ///
+  /// By default, if the `stdin`/`stdout` is TTY for the Deno CLI (meaning it can
+  /// send and receive text), then the CLI will prompt the user to grant
+  /// permission when an un-granted permission is requested. This behavior can
+  /// be changed by using the `--no-prompt` command at startup. When prompting
+  /// the CLI will request the narrowest permission possible, potentially making
+  /// it annoying to the user. The permissions APIs allow the code author to
+  /// request a wider set of permissions at one time in order to provide a better
+  /// user experience.
+  ///
+  /// Requesting already granted permissions will not prompt the user and will
+  /// return that the permission was granted.
+  ///
+  /// ### Querying
   ///
   /// ```ts
-  /// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.test("My test description", { permissions: { read: true } }, (): void => {
-  ///  assertEquals("hello", "hello");
-  /// });
-  ///
-  /// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
-  ///  const decoder = new TextDecoder("utf-8");
-  ///  const data = await Deno.readFile("hello_world.txt");
-  ///  assertEquals(decoder.decode(data), "Hello world");
-  /// });
+  /// const status = await Deno.permissions.query({ name: "read", path: "/etc" });
+  /// console.log(status.state);
   /// ```
-  /// Register a test which will be run when `deno test` is used on the command
-  /// line and the containing module looks like a test module.
-  ///
-  /// `fn` can be async if required.
   ///
   /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.test(
-  ///  {
-  ///    name: "My test description",
-  ///    permissions: { read: true },
-  ///  },
-  ///  () => {
-  ///    assertEquals("hello", "hello");
-  ///  },
-  /// );
-  ///
-  /// Deno.test(
-  ///  {
-  ///    name: "My async test description",
-  ///    permissions: { read: false },
-  ///  },
-  ///  async () => {
-  ///    const decoder = new TextDecoder("utf-8");
-  ///    const data = await Deno.readFile("hello_world.txt");
-  ///    assertEquals(decoder.decode(data), "Hello world");
-  ///  },
-  /// );
+  /// const status = Deno.permissions.querySync({ name: "read", path: "/etc" });
+  /// console.log(status.state);
   /// ```
-  /// Register a test which will be run when `deno test` is used on the command
-  /// line and the containing module looks like a test module.
   ///
-  /// `fn` can be async if required. Declared function must have a name.
+  /// ### Revoking
   ///
   /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  /// import { assert } from "https://deno.land/std/testing/asserts.ts";
   ///
-  /// Deno.test(
-  ///  { permissions: { read: true } },
-  ///  function myTestName() {
-  ///    assertEquals("hello", "hello");
-  ///  },
-  /// );
-  ///
-  /// Deno.test(
-  ///  { permissions: { read: false } },
-  ///  async function myOtherTestName() {
-  ///    const decoder = new TextDecoder("utf-8");
-  ///    const data = await Deno.readFile("hello_world.txt");
-  ///    assertEquals(decoder.decode(data), "Hello world");
-  ///  },
-  /// );
+  /// const status = await Deno.permissions.revoke({ name: "run" });
+  /// assert(status.state !== "granted")
   /// ```
-  void Function(_i4.TestDefinition t) $1,
+  ///
+  /// ```ts
+  /// import { assert } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// const status = Deno.permissions.revokeSync({ name: "run" });
+  /// assert(status.state !== "granted")
+  /// ```
+  ///
+  /// ### Requesting
+  ///
+  /// ```ts
+  /// const status = await Deno.permissions.request({ name: "env" });
+  /// if (status.state === "granted") {
+  ///  console.log("'env' permission is granted.");
+  /// } else {
+  ///  console.log("'env' permission is denied.");
+  /// }
+  /// ```
+  ///
+  /// ```ts
+  /// const status = Deno.permissions.requestSync({ name: "env" });
+  /// if (status.state === "granted") {
+  ///  console.log("'env' permission is granted.");
+  /// } else {
+  ///  console.log("'env' permission is denied.");
+  /// }
+  /// ```
+  _i4.Permissions get permissions => _i3.getProperty(
+        this,
+        'permissions',
+      );
+
+  /// Information related to the build of the current Deno runtime.
+  ///
+  /// Users are discouraged from code branching based on this information, as
+  /// assumptions about what is available in what build environment might change
+  /// over time. Developers should specifically sniff out the features they
+  /// intend to use.
+  ///
+  /// The intended use for the information is for logging and debugging purposes.
+  _i2.dynamic get build => _i3.getProperty(
+        this,
+        'build',
+      );
+
+  /// Version information related to the current Deno CLI runtime environment.
+  ///
+  /// Users are discouraged from code branching based on this information, as
+  /// assumptions about what is available in what build environment might change
+  /// over time. Developers should specifically sniff out the features they
+  /// intend to use.
+  ///
+  /// The intended use for the information is for logging and debugging purposes.
+  _i2.dynamic get version => _i3.getProperty(
+        this,
+        'version',
+      );
+
+  /// Returns the script arguments to the program.
+  ///
+  /// Give the following command line invocation of Deno:
+  ///
+  /// ```sh
+  /// deno run --allow-read https://deno.land/std/examples/cat.ts /etc/passwd
+  /// ```
+  ///
+  /// Then `Deno.args` will contain:
+  ///
+  /// ```ts
+  /// [ "/etc/passwd" ]
+  /// ```
+  ///
+  /// If you are looking for a structured way to parse arguments, there is the
+  /// [`std/flags`](https://deno.land/std/flags) module as part of the Deno
+  /// standard library.
+  _i2.List<_i2.String> get args => (_i3.getProperty(
+        this,
+        'args',
+      ) as _i2.List)
+          .cast();
+
+  /// A symbol which can be used as a key for a custom method which will be
+  /// called when `Deno.inspect()` is called, or when the object is logged to
+  /// the console.
+  _i2.Symbol get customInspect => _i3.getProperty(
+        this,
+        'customInspect',
+      );
+
+  /// The URL of the entrypoint module entered from the command-line. It
+  /// requires read permission to the CWD.
+  ///
+  /// Also see {@linkcode ImportMeta} for other related information.
+  _i2.String get mainModule => _i3.getProperty(
+        this,
+        'mainModule',
+      );
+  _i12.$ModuleErrors get errors => _i3.getProperty(
+        this,
+        'errors',
+      );
+
+  /// Returns an object describing the memory usage of the Deno process and the
+  /// V8 subsystem measured in bytes.
+  _i4.MemoryUsage memoryUsage() => _i3.callMethod(
+        this,
+        'memoryUsage',
+        [],
+      );
+
+  /// Get the `hostname` of the machine the Deno process is running on.
+  ///
+  /// ```ts
+  /// console.log(Deno.hostname());
+  /// ```
+  ///
+  /// Requires `allow-sys` permission.
+  _i2.String hostname() => _i3.callMethod(
+        this,
+        'hostname',
+        [],
+      );
+
+  /// Returns an array containing the 1, 5, and 15 minute load averages. The
+  /// load average is a measure of CPU and IO utilization of the last one, five,
+  /// and 15 minute periods expressed as a fractional number.  Zero means there
+  /// is no load. On Windows, the three values are always the same and represent
+  /// the current load, not the 1, 5 and 15 minute load averages.
+  ///
+  /// ```ts
+  /// console.log(Deno.loadavg());  // e.g. [ 0.71, 0.44, 0.44 ]
+  /// ```
+  ///
+  /// Requires `allow-sys` permission.
+  ///
+  /// On Windows there is no API available to retrieve this information and this method returns `[ 0, 0, 0 ]`.
+  _i2.List<_i2.num> loadavg() => (_i3.callMethod(
+        this,
+        'loadavg',
+        [],
+      ) as _i2.List)
+          .cast();
+
+  /// Returns an array of the network interface information.
+  ///
+  /// ```ts
+  /// console.log(Deno.networkInterfaces());
+  /// ```
+  ///
+  /// Requires `allow-sys` permission.
+  _i2.List<_i4.NetworkInterfaceInfo> networkInterfaces() => (_i3.callMethod(
+        this,
+        'networkInterfaces',
+        [],
+      ) as _i2.List)
+          .cast();
+
+  /// Displays the total amount of free and used physical and swap memory in the
+  /// system, as well as the buffers and caches used by the kernel.
+  ///
+  /// This is similar to the `free` command in Linux
+  ///
+  /// ```ts
+  /// console.log(Deno.systemMemoryInfo());
+  /// ```
+  ///
+  /// Requires `allow-sys` permission.
+  _i4.SystemMemoryInfo systemMemoryInfo() => _i3.callMethod(
+        this,
+        'systemMemoryInfo',
+        [],
+      );
+
+  /// Returns the release version of the Operating System.
+  ///
+  /// ```ts
+  /// console.log(Deno.osRelease());
+  /// ```
+  ///
+  /// Requires `allow-sys` permission.
+  /// Under consideration to possibly move to Deno.build or Deno.versions and if
+  /// it should depend sys-info, which may not be desirable.
+  _i2.String osRelease() => _i3.callMethod(
+        this,
+        'osRelease',
+        [],
+      );
+
+  /// Returns the Operating System uptime in number of seconds.
+  ///
+  /// ```ts
+  /// console.log(Deno.osUptime());
+  /// ```
+  ///
+  /// Requires `allow-sys` permission.
+  _i2.num osUptime() => _i3.callMethod(
+        this,
+        'osUptime',
+        [],
+      );
 
   /// Register a test which will be run when `deno test` is used on the command
   /// line and the containing module looks like a test module.
@@ -8854,7 +8036,13 @@ void _test$6(
   ///  },
   /// );
   /// ```
-  void Function(_i2.Object Function(_i4.TestContext) fn) $2,
+  void _test$1(_i4.TestDefinition t) {
+    _i3.callMethod(
+      this,
+      'test',
+      [t],
+    );
+  }
 
   /// Register a test which will be run when `deno test` is used on the command
   /// line and the containing module looks like a test module.
@@ -8996,10 +8184,167 @@ void _test$6(
   ///  },
   /// );
   /// ```
-  void Function(
+  void _test$2(_i2.Object Function(_i4.TestContext) fn) {
+    _i3.callMethod(
+      this,
+      'test',
+      [_i3.allowInterop(fn)],
+    );
+  }
+
+  /// Register a test which will be run when `deno test` is used on the command
+  /// line and the containing module looks like a test module.
+  ///
+  /// `fn` can be async if required.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.test({
+  ///  name: "example test",
+  ///  fn() {
+  ///    assertEquals("world", "world");
+  ///  },
+  /// });
+  ///
+  /// Deno.test({
+  ///  name: "example ignored test",
+  ///  ignore: Deno.build.os === "windows",
+  ///  fn() {
+  ///    // This test is ignored only on Windows machines
+  ///  },
+  /// });
+  ///
+  /// Deno.test({
+  ///  name: "example async test",
+  ///  async fn() {
+  ///    const decoder = new TextDecoder("utf-8");
+  ///    const data = await Deno.readFile("hello_world.txt");
+  ///    assertEquals(decoder.decode(data), "Hello world");
+  ///  }
+  /// });
+  /// ```
+  /// Register a test which will be run when `deno test` is used on the command
+  /// line and the containing module looks like a test module.
+  ///
+  /// `fn` can be async if required.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.test("My test description", () => {
+  ///  assertEquals("hello", "hello");
+  /// });
+  ///
+  /// Deno.test("My async test description", async () => {
+  ///  const decoder = new TextDecoder("utf-8");
+  ///  const data = await Deno.readFile("hello_world.txt");
+  ///  assertEquals(decoder.decode(data), "Hello world");
+  /// });
+  /// ```
+  /// Register a test which will be run when `deno test` is used on the command
+  /// line and the containing module looks like a test module.
+  ///
+  /// `fn` can be async if required. Declared function must have a name.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.test(function myTestName() {
+  ///  assertEquals("hello", "hello");
+  /// });
+  ///
+  /// Deno.test(async function myOtherTestName() {
+  ///  const decoder = new TextDecoder("utf-8");
+  ///  const data = await Deno.readFile("hello_world.txt");
+  ///  assertEquals(decoder.decode(data), "Hello world");
+  /// });
+  /// ```
+  /// Register a test which will be run when `deno test` is used on the command
+  /// line and the containing module looks like a test module.
+  ///
+  /// `fn` can be async if required.
+  ///
+  /// ```ts
+  /// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.test("My test description", { permissions: { read: true } }, (): void => {
+  ///  assertEquals("hello", "hello");
+  /// });
+  ///
+  /// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
+  ///  const decoder = new TextDecoder("utf-8");
+  ///  const data = await Deno.readFile("hello_world.txt");
+  ///  assertEquals(decoder.decode(data), "Hello world");
+  /// });
+  /// ```
+  /// Register a test which will be run when `deno test` is used on the command
+  /// line and the containing module looks like a test module.
+  ///
+  /// `fn` can be async if required.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.test(
+  ///  {
+  ///    name: "My test description",
+  ///    permissions: { read: true },
+  ///  },
+  ///  () => {
+  ///    assertEquals("hello", "hello");
+  ///  },
+  /// );
+  ///
+  /// Deno.test(
+  ///  {
+  ///    name: "My async test description",
+  ///    permissions: { read: false },
+  ///  },
+  ///  async () => {
+  ///    const decoder = new TextDecoder("utf-8");
+  ///    const data = await Deno.readFile("hello_world.txt");
+  ///    assertEquals(decoder.decode(data), "Hello world");
+  ///  },
+  /// );
+  /// ```
+  /// Register a test which will be run when `deno test` is used on the command
+  /// line and the containing module looks like a test module.
+  ///
+  /// `fn` can be async if required. Declared function must have a name.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.test(
+  ///  { permissions: { read: true } },
+  ///  function myTestName() {
+  ///    assertEquals("hello", "hello");
+  ///  },
+  /// );
+  ///
+  /// Deno.test(
+  ///  { permissions: { read: false } },
+  ///  async function myOtherTestName() {
+  ///    const decoder = new TextDecoder("utf-8");
+  ///    const data = await Deno.readFile("hello_world.txt");
+  ///    assertEquals(decoder.decode(data), "Hello world");
+  ///  },
+  /// );
+  /// ```
+  void _test$3(
     _i2.String name,
     _i2.Object Function(_i4.TestContext) fn,
-  ) $3,
+  ) {
+    _i3.callMethod(
+      this,
+      'test',
+      [
+        name,
+        _i3.allowInterop(fn),
+      ],
+    );
+  }
 
   /// Register a test which will be run when `deno test` is used on the command
   /// line and the containing module looks like a test module.
@@ -9141,10 +8486,19 @@ void _test$6(
   ///  },
   /// );
   /// ```
-  void Function(
+  void _test$4(
     _i9.Omit<_i4.TestDefinition, _i2.String> options,
     _i2.Object Function(_i4.TestContext) fn,
-  ) $4,
+  ) {
+    _i3.callMethod(
+      this,
+      'test',
+      [
+        options,
+        _i3.allowInterop(fn),
+      ],
+    );
+  }
 
   /// Register a test which will be run when `deno test` is used on the command
   /// line and the containing module looks like a test module.
@@ -9286,10 +8640,19 @@ void _test$6(
   ///  },
   /// );
   /// ```
-  void Function(
+  void _test$5(
     _i9.Omit<_i4.TestDefinition, _i4.TestOptions> options,
     _i2.Object Function(_i4.TestContext) fn,
-  ) $5,
+  ) {
+    _i3.callMethod(
+      this,
+      'test',
+      [
+        options,
+        _i3.allowInterop(fn),
+      ],
+    );
+  }
 
   /// Register a test which will be run when `deno test` is used on the command
   /// line and the containing module looks like a test module.
@@ -9431,1133 +8794,896 @@ void _test$6(
   ///  },
   /// );
   /// ```
-  void Function(
+  void _test$6(
     _i2.String name,
     _i9.Omit<_i4.TestDefinition, _i4.Test> options,
     _i2.Object Function(_i4.TestContext) fn,
-  ) $6,
-}) get test => (
-      $1: _test$1,
-      $2: _test$2,
-      $3: _test$3,
-      $4: _test$4,
-      $5: _test$5,
-      $6: _test$6,
+  ) {
+    _i3.callMethod(
+      this,
+      'test',
+      [
+        name,
+        options,
+        _i3.allowInterop(fn),
+      ],
     );
+  }
 
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench({
-///   name: "example test",
-///   fn() {
-///     assertEquals("world", "world");
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example ignored test",
-///   ignore: Deno.build.os === "windows",
-///   fn() {
-///     // This test is ignored only on Windows machines
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example async test",
-///   async fn() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench("My test description", () => {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench("My async test description", async () => {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(function myTestName() {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench(async function myOtherTestName() {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   "My test description",
-///   { permissions: { read: true } },
-///   () => {
-///    assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   "My async test description",
-///   { permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { name: "My test description", permissions: { read: true } },
-///   () => {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { name: "My async test description", permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { permissions: { read: true } },
-///   function myTestName() {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { permissions: { read: false } },
-///   async function myOtherTestName() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-void _bench$1(_i4.BenchDefinition t) {
-  _i3.callMethod(
-    _self,
-    'bench',
-    [t],
-  );
-}
+  /// Overload accessor: $1, $2, $3, $4, $5, $6
+  ({
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test({
+    ///  name: "example test",
+    ///  fn() {
+    ///    assertEquals("world", "world");
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example ignored test",
+    ///  ignore: Deno.build.os === "windows",
+    ///  fn() {
+    ///    // This test is ignored only on Windows machines
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example async test",
+    ///  async fn() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  }
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", () => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", async () => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(function myTestName() {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test(async function myOtherTestName() {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", { permissions: { read: true } }, (): void => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My test description",
+    ///    permissions: { read: true },
+    ///  },
+    ///  () => {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My async test description",
+    ///    permissions: { read: false },
+    ///  },
+    ///  async () => {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: true } },
+    ///  function myTestName() {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: false } },
+    ///  async function myOtherTestName() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    void Function(_i4.TestDefinition t) $1,
 
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench({
-///   name: "example test",
-///   fn() {
-///     assertEquals("world", "world");
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example ignored test",
-///   ignore: Deno.build.os === "windows",
-///   fn() {
-///     // This test is ignored only on Windows machines
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example async test",
-///   async fn() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench("My test description", () => {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench("My async test description", async () => {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(function myTestName() {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench(async function myOtherTestName() {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   "My test description",
-///   { permissions: { read: true } },
-///   () => {
-///    assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   "My async test description",
-///   { permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { name: "My test description", permissions: { read: true } },
-///   () => {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { name: "My async test description", permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { permissions: { read: true } },
-///   function myTestName() {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { permissions: { read: false } },
-///   async function myOtherTestName() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-void _bench$2(_i2.Object Function() fn) {
-  _i3.callMethod(
-    _self,
-    'bench',
-    [_i3.allowInterop(fn)],
-  );
-}
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test({
+    ///  name: "example test",
+    ///  fn() {
+    ///    assertEquals("world", "world");
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example ignored test",
+    ///  ignore: Deno.build.os === "windows",
+    ///  fn() {
+    ///    // This test is ignored only on Windows machines
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example async test",
+    ///  async fn() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  }
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", () => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", async () => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(function myTestName() {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test(async function myOtherTestName() {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", { permissions: { read: true } }, (): void => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My test description",
+    ///    permissions: { read: true },
+    ///  },
+    ///  () => {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My async test description",
+    ///    permissions: { read: false },
+    ///  },
+    ///  async () => {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: true } },
+    ///  function myTestName() {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: false } },
+    ///  async function myOtherTestName() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    void Function(_i2.Object Function(_i4.TestContext) fn) $2,
 
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench({
-///   name: "example test",
-///   fn() {
-///     assertEquals("world", "world");
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example ignored test",
-///   ignore: Deno.build.os === "windows",
-///   fn() {
-///     // This test is ignored only on Windows machines
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example async test",
-///   async fn() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench("My test description", () => {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench("My async test description", async () => {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(function myTestName() {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench(async function myOtherTestName() {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   "My test description",
-///   { permissions: { read: true } },
-///   () => {
-///    assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   "My async test description",
-///   { permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { name: "My test description", permissions: { read: true } },
-///   () => {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { name: "My async test description", permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { permissions: { read: true } },
-///   function myTestName() {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { permissions: { read: false } },
-///   async function myOtherTestName() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-void _bench$3(
-  _i2.String name,
-  _i2.Object Function() fn,
-) {
-  _i3.callMethod(
-    _self,
-    'bench',
-    [
-      name,
-      _i3.allowInterop(fn),
-    ],
-  );
-}
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test({
+    ///  name: "example test",
+    ///  fn() {
+    ///    assertEquals("world", "world");
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example ignored test",
+    ///  ignore: Deno.build.os === "windows",
+    ///  fn() {
+    ///    // This test is ignored only on Windows machines
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example async test",
+    ///  async fn() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  }
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", () => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", async () => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(function myTestName() {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test(async function myOtherTestName() {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", { permissions: { read: true } }, (): void => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My test description",
+    ///    permissions: { read: true },
+    ///  },
+    ///  () => {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My async test description",
+    ///    permissions: { read: false },
+    ///  },
+    ///  async () => {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: true } },
+    ///  function myTestName() {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: false } },
+    ///  async function myOtherTestName() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    void Function(
+      _i2.String name,
+      _i2.Object Function(_i4.TestContext) fn,
+    ) $3,
 
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench({
-///   name: "example test",
-///   fn() {
-///     assertEquals("world", "world");
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example ignored test",
-///   ignore: Deno.build.os === "windows",
-///   fn() {
-///     // This test is ignored only on Windows machines
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example async test",
-///   async fn() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench("My test description", () => {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench("My async test description", async () => {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(function myTestName() {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench(async function myOtherTestName() {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   "My test description",
-///   { permissions: { read: true } },
-///   () => {
-///    assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   "My async test description",
-///   { permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { name: "My test description", permissions: { read: true } },
-///   () => {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { name: "My async test description", permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { permissions: { read: true } },
-///   function myTestName() {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { permissions: { read: false } },
-///   async function myOtherTestName() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-void _bench$4(
-  _i9.Omit<_i4.BenchDefinition, _i2.String> options,
-  _i2.Object Function() fn,
-) {
-  _i3.callMethod(
-    _self,
-    'bench',
-    [
-      options,
-      _i3.allowInterop(fn),
-    ],
-  );
-}
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test({
+    ///  name: "example test",
+    ///  fn() {
+    ///    assertEquals("world", "world");
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example ignored test",
+    ///  ignore: Deno.build.os === "windows",
+    ///  fn() {
+    ///    // This test is ignored only on Windows machines
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example async test",
+    ///  async fn() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  }
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", () => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", async () => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(function myTestName() {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test(async function myOtherTestName() {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", { permissions: { read: true } }, (): void => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My test description",
+    ///    permissions: { read: true },
+    ///  },
+    ///  () => {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My async test description",
+    ///    permissions: { read: false },
+    ///  },
+    ///  async () => {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: true } },
+    ///  function myTestName() {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: false } },
+    ///  async function myOtherTestName() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    void Function(
+      _i9.Omit<_i4.TestDefinition, _i2.String> options,
+      _i2.Object Function(_i4.TestContext) fn,
+    ) $4,
 
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench({
-///   name: "example test",
-///   fn() {
-///     assertEquals("world", "world");
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example ignored test",
-///   ignore: Deno.build.os === "windows",
-///   fn() {
-///     // This test is ignored only on Windows machines
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example async test",
-///   async fn() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench("My test description", () => {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench("My async test description", async () => {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(function myTestName() {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench(async function myOtherTestName() {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   "My test description",
-///   { permissions: { read: true } },
-///   () => {
-///    assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   "My async test description",
-///   { permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { name: "My test description", permissions: { read: true } },
-///   () => {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { name: "My async test description", permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { permissions: { read: true } },
-///   function myTestName() {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { permissions: { read: false } },
-///   async function myOtherTestName() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-void _bench$5(
-  _i9.Omit<_i4.BenchDefinition, _i4.BenchOptions> options,
-  _i2.Object Function() fn,
-) {
-  _i3.callMethod(
-    _self,
-    'bench',
-    [
-      options,
-      _i3.allowInterop(fn),
-    ],
-  );
-}
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test({
+    ///  name: "example test",
+    ///  fn() {
+    ///    assertEquals("world", "world");
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example ignored test",
+    ///  ignore: Deno.build.os === "windows",
+    ///  fn() {
+    ///    // This test is ignored only on Windows machines
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example async test",
+    ///  async fn() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  }
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", () => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", async () => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(function myTestName() {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test(async function myOtherTestName() {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", { permissions: { read: true } }, (): void => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My test description",
+    ///    permissions: { read: true },
+    ///  },
+    ///  () => {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My async test description",
+    ///    permissions: { read: false },
+    ///  },
+    ///  async () => {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: true } },
+    ///  function myTestName() {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: false } },
+    ///  async function myOtherTestName() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    void Function(
+      _i9.Omit<_i4.TestDefinition, _i4.TestOptions> options,
+      _i2.Object Function(_i4.TestContext) fn,
+    ) $5,
 
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench({
-///   name: "example test",
-///   fn() {
-///     assertEquals("world", "world");
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example ignored test",
-///   ignore: Deno.build.os === "windows",
-///   fn() {
-///     // This test is ignored only on Windows machines
-///   },
-/// });
-///
-/// Deno.bench({
-///   name: "example async test",
-///   async fn() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench("My test description", () => {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench("My async test description", async () => {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(function myTestName() {
-///   assertEquals("hello", "hello");
-/// });
-///
-/// Deno.bench(async function myOtherTestName() {
-///   const decoder = new TextDecoder("utf-8");
-///   const data = await Deno.readFile("hello_world.txt");
-///   assertEquals(decoder.decode(data), "Hello world");
-/// });
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   "My test description",
-///   { permissions: { read: true } },
-///   () => {
-///    assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   "My async test description",
-///   { permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { name: "My test description", permissions: { read: true } },
-///   () => {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { name: "My async test description", permissions: { read: false } },
-///   async () => {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-/// Register a benchmark test which will be run when `deno bench` is used on
-/// the command line and the containing module looks like a bench module.
-///
-/// If the test function (`fn`) returns a promise or is async, the test runner
-/// will await resolution to consider the test complete.
-///
-/// ```ts
-/// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-///
-/// Deno.bench(
-///   { permissions: { read: true } },
-///   function myTestName() {
-///     assertEquals("hello", "hello");
-///   }
-/// );
-///
-/// Deno.bench(
-///   { permissions: { read: false } },
-///   async function myOtherTestName() {
-///     const decoder = new TextDecoder("utf-8");
-///     const data = await Deno.readFile("hello_world.txt");
-///     assertEquals(decoder.decode(data), "Hello world");
-///   }
-/// );
-/// ```
-void _bench$6(
-  _i2.String name,
-  _i9.Omit<_i4.BenchDefinition, _i4.Bench> options,
-  _i2.Object Function() fn,
-) {
-  _i3.callMethod(
-    _self,
-    'bench',
-    [
-      name,
-      options,
-      _i3.allowInterop(fn),
-    ],
-  );
-}
-
-/// Overload accessor: $1, $2, $3, $4, $5, $6
-({
-  /// Register a benchmark test which will be run when `deno bench` is used on
-  /// the command line and the containing module looks like a bench module.
-  ///
-  /// If the test function (`fn`) returns a promise or is async, the test runner
-  /// will await resolution to consider the test complete.
-  ///
-  /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.bench({
-  ///   name: "example test",
-  ///   fn() {
-  ///     assertEquals("world", "world");
-  ///   },
-  /// });
-  ///
-  /// Deno.bench({
-  ///   name: "example ignored test",
-  ///   ignore: Deno.build.os === "windows",
-  ///   fn() {
-  ///     // This test is ignored only on Windows machines
-  ///   },
-  /// });
-  ///
-  /// Deno.bench({
-  ///   name: "example async test",
-  ///   async fn() {
-  ///     const decoder = new TextDecoder("utf-8");
-  ///     const data = await Deno.readFile("hello_world.txt");
-  ///     assertEquals(decoder.decode(data), "Hello world");
-  ///   }
-  /// });
-  /// ```
-  /// Register a benchmark test which will be run when `deno bench` is used on
-  /// the command line and the containing module looks like a bench module.
-  ///
-  /// If the test function (`fn`) returns a promise or is async, the test runner
-  /// will await resolution to consider the test complete.
-  ///
-  /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.bench("My test description", () => {
-  ///   assertEquals("hello", "hello");
-  /// });
-  ///
-  /// Deno.bench("My async test description", async () => {
-  ///   const decoder = new TextDecoder("utf-8");
-  ///   const data = await Deno.readFile("hello_world.txt");
-  ///   assertEquals(decoder.decode(data), "Hello world");
-  /// });
-  /// ```
-  /// Register a benchmark test which will be run when `deno bench` is used on
-  /// the command line and the containing module looks like a bench module.
-  ///
-  /// If the test function (`fn`) returns a promise or is async, the test runner
-  /// will await resolution to consider the test complete.
-  ///
-  /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.bench(function myTestName() {
-  ///   assertEquals("hello", "hello");
-  /// });
-  ///
-  /// Deno.bench(async function myOtherTestName() {
-  ///   const decoder = new TextDecoder("utf-8");
-  ///   const data = await Deno.readFile("hello_world.txt");
-  ///   assertEquals(decoder.decode(data), "Hello world");
-  /// });
-  /// ```
-  /// Register a benchmark test which will be run when `deno bench` is used on
-  /// the command line and the containing module looks like a bench module.
-  ///
-  /// If the test function (`fn`) returns a promise or is async, the test runner
-  /// will await resolution to consider the test complete.
-  ///
-  /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.bench(
-  ///   "My test description",
-  ///   { permissions: { read: true } },
-  ///   () => {
-  ///    assertEquals("hello", "hello");
-  ///   }
-  /// );
-  ///
-  /// Deno.bench(
-  ///   "My async test description",
-  ///   { permissions: { read: false } },
-  ///   async () => {
-  ///     const decoder = new TextDecoder("utf-8");
-  ///     const data = await Deno.readFile("hello_world.txt");
-  ///     assertEquals(decoder.decode(data), "Hello world");
-  ///   }
-  /// );
-  /// ```
-  /// Register a benchmark test which will be run when `deno bench` is used on
-  /// the command line and the containing module looks like a bench module.
-  ///
-  /// If the test function (`fn`) returns a promise or is async, the test runner
-  /// will await resolution to consider the test complete.
-  ///
-  /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.bench(
-  ///   { name: "My test description", permissions: { read: true } },
-  ///   () => {
-  ///     assertEquals("hello", "hello");
-  ///   }
-  /// );
-  ///
-  /// Deno.bench(
-  ///   { name: "My async test description", permissions: { read: false } },
-  ///   async () => {
-  ///     const decoder = new TextDecoder("utf-8");
-  ///     const data = await Deno.readFile("hello_world.txt");
-  ///     assertEquals(decoder.decode(data), "Hello world");
-  ///   }
-  /// );
-  /// ```
-  /// Register a benchmark test which will be run when `deno bench` is used on
-  /// the command line and the containing module looks like a bench module.
-  ///
-  /// If the test function (`fn`) returns a promise or is async, the test runner
-  /// will await resolution to consider the test complete.
-  ///
-  /// ```ts
-  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  /// Deno.bench(
-  ///   { permissions: { read: true } },
-  ///   function myTestName() {
-  ///     assertEquals("hello", "hello");
-  ///   }
-  /// );
-  ///
-  /// Deno.bench(
-  ///   { permissions: { read: false } },
-  ///   async function myOtherTestName() {
-  ///     const decoder = new TextDecoder("utf-8");
-  ///     const data = await Deno.readFile("hello_world.txt");
-  ///     assertEquals(decoder.decode(data), "Hello world");
-  ///   }
-  /// );
-  /// ```
-  void Function(_i4.BenchDefinition t) $1,
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test({
+    ///  name: "example test",
+    ///  fn() {
+    ///    assertEquals("world", "world");
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example ignored test",
+    ///  ignore: Deno.build.os === "windows",
+    ///  fn() {
+    ///    // This test is ignored only on Windows machines
+    ///  },
+    /// });
+    ///
+    /// Deno.test({
+    ///  name: "example async test",
+    ///  async fn() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  }
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", () => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", async () => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(function myTestName() {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test(async function myOtherTestName() {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import {assert, fail, assertEquals} from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test("My test description", { permissions: { read: true } }, (): void => {
+    ///  assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.test("My async test description", { permissions: { read: false } }, async (): Promise<void> => {
+    ///  const decoder = new TextDecoder("utf-8");
+    ///  const data = await Deno.readFile("hello_world.txt");
+    ///  assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My test description",
+    ///    permissions: { read: true },
+    ///  },
+    ///  () => {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  {
+    ///    name: "My async test description",
+    ///    permissions: { read: false },
+    ///  },
+    ///  async () => {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    /// Register a test which will be run when `deno test` is used on the command
+    /// line and the containing module looks like a test module.
+    ///
+    /// `fn` can be async if required. Declared function must have a name.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: true } },
+    ///  function myTestName() {
+    ///    assertEquals("hello", "hello");
+    ///  },
+    /// );
+    ///
+    /// Deno.test(
+    ///  { permissions: { read: false } },
+    ///  async function myOtherTestName() {
+    ///    const decoder = new TextDecoder("utf-8");
+    ///    const data = await Deno.readFile("hello_world.txt");
+    ///    assertEquals(decoder.decode(data), "Hello world");
+    ///  },
+    /// );
+    /// ```
+    void Function(
+      _i2.String name,
+      _i9.Omit<_i4.TestDefinition, _i4.Test> options,
+      _i2.Object Function(_i4.TestContext) fn,
+    ) $6,
+  }) get test => (
+        $1: _test$1,
+        $2: _test$2,
+        $3: _test$3,
+        $4: _test$4,
+        $5: _test$5,
+        $6: _test$6,
+      );
 
   /// Register a benchmark test which will be run when `deno bench` is used on
   /// the command line and the containing module looks like a bench module.
@@ -10707,7 +9833,13 @@ void _bench$6(
   ///   }
   /// );
   /// ```
-  void Function(_i2.Object Function() fn) $2,
+  void _bench$1(_i4.BenchDefinition t) {
+    _i3.callMethod(
+      this,
+      'bench',
+      [t],
+    );
+  }
 
   /// Register a benchmark test which will be run when `deno bench` is used on
   /// the command line and the containing module looks like a bench module.
@@ -10857,10 +9989,175 @@ void _bench$6(
   ///   }
   /// );
   /// ```
-  void Function(
+  void _bench$2(_i2.Object Function() fn) {
+    _i3.callMethod(
+      this,
+      'bench',
+      [_i3.allowInterop(fn)],
+    );
+  }
+
+  /// Register a benchmark test which will be run when `deno bench` is used on
+  /// the command line and the containing module looks like a bench module.
+  ///
+  /// If the test function (`fn`) returns a promise or is async, the test runner
+  /// will await resolution to consider the test complete.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.bench({
+  ///   name: "example test",
+  ///   fn() {
+  ///     assertEquals("world", "world");
+  ///   },
+  /// });
+  ///
+  /// Deno.bench({
+  ///   name: "example ignored test",
+  ///   ignore: Deno.build.os === "windows",
+  ///   fn() {
+  ///     // This test is ignored only on Windows machines
+  ///   },
+  /// });
+  ///
+  /// Deno.bench({
+  ///   name: "example async test",
+  ///   async fn() {
+  ///     const decoder = new TextDecoder("utf-8");
+  ///     const data = await Deno.readFile("hello_world.txt");
+  ///     assertEquals(decoder.decode(data), "Hello world");
+  ///   }
+  /// });
+  /// ```
+  /// Register a benchmark test which will be run when `deno bench` is used on
+  /// the command line and the containing module looks like a bench module.
+  ///
+  /// If the test function (`fn`) returns a promise or is async, the test runner
+  /// will await resolution to consider the test complete.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.bench("My test description", () => {
+  ///   assertEquals("hello", "hello");
+  /// });
+  ///
+  /// Deno.bench("My async test description", async () => {
+  ///   const decoder = new TextDecoder("utf-8");
+  ///   const data = await Deno.readFile("hello_world.txt");
+  ///   assertEquals(decoder.decode(data), "Hello world");
+  /// });
+  /// ```
+  /// Register a benchmark test which will be run when `deno bench` is used on
+  /// the command line and the containing module looks like a bench module.
+  ///
+  /// If the test function (`fn`) returns a promise or is async, the test runner
+  /// will await resolution to consider the test complete.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.bench(function myTestName() {
+  ///   assertEquals("hello", "hello");
+  /// });
+  ///
+  /// Deno.bench(async function myOtherTestName() {
+  ///   const decoder = new TextDecoder("utf-8");
+  ///   const data = await Deno.readFile("hello_world.txt");
+  ///   assertEquals(decoder.decode(data), "Hello world");
+  /// });
+  /// ```
+  /// Register a benchmark test which will be run when `deno bench` is used on
+  /// the command line and the containing module looks like a bench module.
+  ///
+  /// If the test function (`fn`) returns a promise or is async, the test runner
+  /// will await resolution to consider the test complete.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.bench(
+  ///   "My test description",
+  ///   { permissions: { read: true } },
+  ///   () => {
+  ///    assertEquals("hello", "hello");
+  ///   }
+  /// );
+  ///
+  /// Deno.bench(
+  ///   "My async test description",
+  ///   { permissions: { read: false } },
+  ///   async () => {
+  ///     const decoder = new TextDecoder("utf-8");
+  ///     const data = await Deno.readFile("hello_world.txt");
+  ///     assertEquals(decoder.decode(data), "Hello world");
+  ///   }
+  /// );
+  /// ```
+  /// Register a benchmark test which will be run when `deno bench` is used on
+  /// the command line and the containing module looks like a bench module.
+  ///
+  /// If the test function (`fn`) returns a promise or is async, the test runner
+  /// will await resolution to consider the test complete.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.bench(
+  ///   { name: "My test description", permissions: { read: true } },
+  ///   () => {
+  ///     assertEquals("hello", "hello");
+  ///   }
+  /// );
+  ///
+  /// Deno.bench(
+  ///   { name: "My async test description", permissions: { read: false } },
+  ///   async () => {
+  ///     const decoder = new TextDecoder("utf-8");
+  ///     const data = await Deno.readFile("hello_world.txt");
+  ///     assertEquals(decoder.decode(data), "Hello world");
+  ///   }
+  /// );
+  /// ```
+  /// Register a benchmark test which will be run when `deno bench` is used on
+  /// the command line and the containing module looks like a bench module.
+  ///
+  /// If the test function (`fn`) returns a promise or is async, the test runner
+  /// will await resolution to consider the test complete.
+  ///
+  /// ```ts
+  /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// Deno.bench(
+  ///   { permissions: { read: true } },
+  ///   function myTestName() {
+  ///     assertEquals("hello", "hello");
+  ///   }
+  /// );
+  ///
+  /// Deno.bench(
+  ///   { permissions: { read: false } },
+  ///   async function myOtherTestName() {
+  ///     const decoder = new TextDecoder("utf-8");
+  ///     const data = await Deno.readFile("hello_world.txt");
+  ///     assertEquals(decoder.decode(data), "Hello world");
+  ///   }
+  /// );
+  /// ```
+  void _bench$3(
     _i2.String name,
     _i2.Object Function() fn,
-  ) $3,
+  ) {
+    _i3.callMethod(
+      this,
+      'bench',
+      [
+        name,
+        _i3.allowInterop(fn),
+      ],
+    );
+  }
 
   /// Register a benchmark test which will be run when `deno bench` is used on
   /// the command line and the containing module looks like a bench module.
@@ -11010,10 +10307,19 @@ void _bench$6(
   ///   }
   /// );
   /// ```
-  void Function(
+  void _bench$4(
     _i9.Omit<_i4.BenchDefinition, _i2.String> options,
     _i2.Object Function() fn,
-  ) $4,
+  ) {
+    _i3.callMethod(
+      this,
+      'bench',
+      [
+        options,
+        _i3.allowInterop(fn),
+      ],
+    );
+  }
 
   /// Register a benchmark test which will be run when `deno bench` is used on
   /// the command line and the containing module looks like a bench module.
@@ -11163,10 +10469,19 @@ void _bench$6(
   ///   }
   /// );
   /// ```
-  void Function(
+  void _bench$5(
     _i9.Omit<_i4.BenchDefinition, _i4.BenchOptions> options,
     _i2.Object Function() fn,
-  ) $5,
+  ) {
+    _i3.callMethod(
+      this,
+      'bench',
+      [
+        options,
+        _i3.allowInterop(fn),
+      ],
+    );
+  }
 
   /// Register a benchmark test which will be run when `deno bench` is used on
   /// the command line and the containing module looks like a bench module.
@@ -11316,2455 +10631,3110 @@ void _bench$6(
   ///   }
   /// );
   /// ```
-  void Function(
+  void _bench$6(
     _i2.String name,
     _i9.Omit<_i4.BenchDefinition, _i4.Bench> options,
     _i2.Object Function() fn,
-  ) $6,
-}) get bench => (
-      $1: _bench$1,
-      $2: _bench$2,
-      $3: _bench$3,
-      $4: _bench$4,
-      $5: _bench$5,
-      $6: _bench$6,
+  ) {
+    _i3.callMethod(
+      this,
+      'bench',
+      [
+        name,
+        options,
+        _i3.allowInterop(fn),
+      ],
     );
+  }
 
-/// Exit the Deno process with optional exit code.
-///
-/// If no exit code is supplied then Deno will exit with return code of `0`.
-///
-/// In worker contexts this is an alias to `self.close();`.
-///
-/// ```ts
-/// Deno.exit(5);
-/// ```
-_i2.Never exit([_i2.num? code]) => _i3.callMethod(
-      _self,
-      'exit',
-      [code ?? _i6.undefined],
+  /// Overload accessor: $1, $2, $3, $4, $5, $6
+  ({
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench({
+    ///   name: "example test",
+    ///   fn() {
+    ///     assertEquals("world", "world");
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example ignored test",
+    ///   ignore: Deno.build.os === "windows",
+    ///   fn() {
+    ///     // This test is ignored only on Windows machines
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example async test",
+    ///   async fn() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench("My test description", () => {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench("My async test description", async () => {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(function myTestName() {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench(async function myOtherTestName() {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   "My test description",
+    ///   { permissions: { read: true } },
+    ///   () => {
+    ///    assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   "My async test description",
+    ///   { permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { name: "My test description", permissions: { read: true } },
+    ///   () => {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { name: "My async test description", permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: true } },
+    ///   function myTestName() {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: false } },
+    ///   async function myOtherTestName() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    void Function(_i4.BenchDefinition t) $1,
+
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench({
+    ///   name: "example test",
+    ///   fn() {
+    ///     assertEquals("world", "world");
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example ignored test",
+    ///   ignore: Deno.build.os === "windows",
+    ///   fn() {
+    ///     // This test is ignored only on Windows machines
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example async test",
+    ///   async fn() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench("My test description", () => {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench("My async test description", async () => {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(function myTestName() {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench(async function myOtherTestName() {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   "My test description",
+    ///   { permissions: { read: true } },
+    ///   () => {
+    ///    assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   "My async test description",
+    ///   { permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { name: "My test description", permissions: { read: true } },
+    ///   () => {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { name: "My async test description", permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: true } },
+    ///   function myTestName() {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: false } },
+    ///   async function myOtherTestName() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    void Function(_i2.Object Function() fn) $2,
+
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench({
+    ///   name: "example test",
+    ///   fn() {
+    ///     assertEquals("world", "world");
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example ignored test",
+    ///   ignore: Deno.build.os === "windows",
+    ///   fn() {
+    ///     // This test is ignored only on Windows machines
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example async test",
+    ///   async fn() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench("My test description", () => {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench("My async test description", async () => {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(function myTestName() {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench(async function myOtherTestName() {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   "My test description",
+    ///   { permissions: { read: true } },
+    ///   () => {
+    ///    assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   "My async test description",
+    ///   { permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { name: "My test description", permissions: { read: true } },
+    ///   () => {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { name: "My async test description", permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: true } },
+    ///   function myTestName() {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: false } },
+    ///   async function myOtherTestName() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    void Function(
+      _i2.String name,
+      _i2.Object Function() fn,
+    ) $3,
+
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench({
+    ///   name: "example test",
+    ///   fn() {
+    ///     assertEquals("world", "world");
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example ignored test",
+    ///   ignore: Deno.build.os === "windows",
+    ///   fn() {
+    ///     // This test is ignored only on Windows machines
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example async test",
+    ///   async fn() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench("My test description", () => {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench("My async test description", async () => {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(function myTestName() {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench(async function myOtherTestName() {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   "My test description",
+    ///   { permissions: { read: true } },
+    ///   () => {
+    ///    assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   "My async test description",
+    ///   { permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { name: "My test description", permissions: { read: true } },
+    ///   () => {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { name: "My async test description", permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: true } },
+    ///   function myTestName() {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: false } },
+    ///   async function myOtherTestName() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    void Function(
+      _i9.Omit<_i4.BenchDefinition, _i2.String> options,
+      _i2.Object Function() fn,
+    ) $4,
+
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench({
+    ///   name: "example test",
+    ///   fn() {
+    ///     assertEquals("world", "world");
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example ignored test",
+    ///   ignore: Deno.build.os === "windows",
+    ///   fn() {
+    ///     // This test is ignored only on Windows machines
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example async test",
+    ///   async fn() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench("My test description", () => {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench("My async test description", async () => {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(function myTestName() {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench(async function myOtherTestName() {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   "My test description",
+    ///   { permissions: { read: true } },
+    ///   () => {
+    ///    assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   "My async test description",
+    ///   { permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { name: "My test description", permissions: { read: true } },
+    ///   () => {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { name: "My async test description", permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: true } },
+    ///   function myTestName() {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: false } },
+    ///   async function myOtherTestName() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    void Function(
+      _i9.Omit<_i4.BenchDefinition, _i4.BenchOptions> options,
+      _i2.Object Function() fn,
+    ) $5,
+
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench({
+    ///   name: "example test",
+    ///   fn() {
+    ///     assertEquals("world", "world");
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example ignored test",
+    ///   ignore: Deno.build.os === "windows",
+    ///   fn() {
+    ///     // This test is ignored only on Windows machines
+    ///   },
+    /// });
+    ///
+    /// Deno.bench({
+    ///   name: "example async test",
+    ///   async fn() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench("My test description", () => {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench("My async test description", async () => {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(function myTestName() {
+    ///   assertEquals("hello", "hello");
+    /// });
+    ///
+    /// Deno.bench(async function myOtherTestName() {
+    ///   const decoder = new TextDecoder("utf-8");
+    ///   const data = await Deno.readFile("hello_world.txt");
+    ///   assertEquals(decoder.decode(data), "Hello world");
+    /// });
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   "My test description",
+    ///   { permissions: { read: true } },
+    ///   () => {
+    ///    assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   "My async test description",
+    ///   { permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { name: "My test description", permissions: { read: true } },
+    ///   () => {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { name: "My async test description", permissions: { read: false } },
+    ///   async () => {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    /// Register a benchmark test which will be run when `deno bench` is used on
+    /// the command line and the containing module looks like a bench module.
+    ///
+    /// If the test function (`fn`) returns a promise or is async, the test runner
+    /// will await resolution to consider the test complete.
+    ///
+    /// ```ts
+    /// import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: true } },
+    ///   function myTestName() {
+    ///     assertEquals("hello", "hello");
+    ///   }
+    /// );
+    ///
+    /// Deno.bench(
+    ///   { permissions: { read: false } },
+    ///   async function myOtherTestName() {
+    ///     const decoder = new TextDecoder("utf-8");
+    ///     const data = await Deno.readFile("hello_world.txt");
+    ///     assertEquals(decoder.decode(data), "Hello world");
+    ///   }
+    /// );
+    /// ```
+    void Function(
+      _i2.String name,
+      _i9.Omit<_i4.BenchDefinition, _i4.Bench> options,
+      _i2.Object Function() fn,
+    ) $6,
+  }) get bench => (
+        $1: _bench$1,
+        $2: _bench$2,
+        $3: _bench$3,
+        $4: _bench$4,
+        $5: _bench$5,
+        $6: _bench$6,
+      );
+
+  /// Exit the Deno process with optional exit code.
+  ///
+  /// If no exit code is supplied then Deno will exit with return code of `0`.
+  ///
+  /// In worker contexts this is an alias to `self.close();`.
+  ///
+  /// ```ts
+  /// Deno.exit(5);
+  /// ```
+  _i2.Never exit([_i2.num? code]) => _i3.callMethod(
+        this,
+        'exit',
+        [code ?? _i6.undefined],
+      );
+
+  /// Returns the path to the current deno executable.
+  ///
+  /// ```ts
+  /// console.log(Deno.execPath());  // e.g. "/home/alice/.local/bin/deno"
+  /// ```
+  ///
+  /// Requires `allow-read` permission.
+  _i2.String execPath() => _i3.callMethod(
+        this,
+        'execPath',
+        [],
+      );
+
+  /// Change the current working directory to the specified path.
+  ///
+  /// ```ts
+  /// Deno.chdir("/home/userA");
+  /// Deno.chdir("../userB");
+  /// Deno.chdir("C:\\Program Files (x86)\\Java");
+  /// ```
+  ///
+  /// Throws {@linkcode Deno.errors.NotFound} if directory not found.
+  ///
+  /// Throws {@linkcode Deno.errors.PermissionDenied} if the user does not have
+  /// operating system file access rights.
+  ///
+  /// Requires `allow-read` permission.
+  void chdir(_i2.Object directory) {
+    _i3.callMethod(
+      this,
+      'chdir',
+      [directory],
     );
+  }
 
-/// Returns the path to the current deno executable.
-///
-/// ```ts
-/// console.log(Deno.execPath());  // e.g. "/home/alice/.local/bin/deno"
-/// ```
-///
-/// Requires `allow-read` permission.
-_i2.String execPath() => _i3.callMethod(
-      _self,
-      'execPath',
-      [],
-    );
+  /// Return a string representing the current working directory.
+  ///
+  /// If the current directory can be reached via multiple paths (due to symbolic
+  /// links), `cwd()` may return any one of them.
+  ///
+  /// ```ts
+  /// const currentWorkingDirectory = Deno.cwd();
+  /// ```
+  ///
+  /// Throws {@linkcode Deno.errors.NotFound} if directory not available.
+  ///
+  /// Requires `allow-read` permission.
+  _i2.String cwd() => _i3.callMethod(
+        this,
+        'cwd',
+        [],
+      );
 
-/// Change the current working directory to the specified path.
-///
-/// ```ts
-/// Deno.chdir("/home/userA");
-/// Deno.chdir("../userB");
-/// Deno.chdir("C:\\Program Files (x86)\\Java");
-/// ```
-///
-/// Throws {@linkcode Deno.errors.NotFound} if directory not found.
-///
-/// Throws {@linkcode Deno.errors.PermissionDenied} if the user does not have
-/// operating system file access rights.
-///
-/// Requires `allow-read` permission.
-void chdir(_i2.Object directory) {
-  _i3.callMethod(
-    _self,
-    'chdir',
-    [directory],
-  );
-}
+  /// Creates `newpath` as a hard link to `oldpath`.
+  ///
+  /// ```ts
+  /// await Deno.link("old/name", "new/name");
+  /// ```
+  ///
+  /// Requires `allow-read` and `allow-write` permissions.
+  _i2.Future<_i2.Future<void>> link(
+    _i2.String oldpath,
+    _i2.String newpath,
+  ) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'link',
+        [
+          oldpath,
+          newpath,
+        ],
+      ));
 
-/// Return a string representing the current working directory.
-///
-/// If the current directory can be reached via multiple paths (due to symbolic
-/// links), `cwd()` may return any one of them.
-///
-/// ```ts
-/// const currentWorkingDirectory = Deno.cwd();
-/// ```
-///
-/// Throws {@linkcode Deno.errors.NotFound} if directory not available.
-///
-/// Requires `allow-read` permission.
-_i2.String cwd() => _i3.callMethod(
-      _self,
-      'cwd',
-      [],
-    );
-
-/// Creates `newpath` as a hard link to `oldpath`.
-///
-/// ```ts
-/// await Deno.link("old/name", "new/name");
-/// ```
-///
-/// Requires `allow-read` and `allow-write` permissions.
-_i2.Future<void> link(
-  _i2.String oldpath,
-  _i2.String newpath,
-) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'link',
+  /// Synchronously creates `newpath` as a hard link to `oldpath`.
+  ///
+  /// ```ts
+  /// Deno.linkSync("old/name", "new/name");
+  /// ```
+  ///
+  /// Requires `allow-read` and `allow-write` permissions.
+  void linkSync(
+    _i2.String oldpath,
+    _i2.String newpath,
+  ) {
+    _i3.callMethod(
+      this,
+      'linkSync',
       [
         oldpath,
         newpath,
       ],
-    ));
+    );
+  }
 
-/// Synchronously creates `newpath` as a hard link to `oldpath`.
-///
-/// ```ts
-/// Deno.linkSync("old/name", "new/name");
-/// ```
-///
-/// Requires `allow-read` and `allow-write` permissions.
-void linkSync(
-  _i2.String oldpath,
-  _i2.String newpath,
-) {
-  _i3.callMethod(
-    _self,
-    'linkSync',
-    [
-      oldpath,
-      newpath,
-    ],
-  );
-}
+  /// Copies from `src` to `dst` until either EOF (`null`) is read from `src` or
+  /// an error occurs. It resolves to the number of bytes copied or rejects with
+  /// the first error encountered while copying.
+  _i2.Future<_i2.Future<_i2.num>> copy(
+    _i4.Reader src,
+    _i4.Writer dst, [
+    _i4.IInline1? options,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'copy',
+        [
+          src,
+          dst,
+          options ?? _i6.undefined,
+        ],
+      ));
 
-/// Copies from `src` to `dst` until either EOF (`null`) is read from `src` or
-/// an error occurs. It resolves to the number of bytes copied or rejects with
-/// the first error encountered while copying.
-_i2.Future<_i2.num> copy(
-  _i4.Reader src,
-  _i4.Writer dst, [
-  _i4.IInline1? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'copy',
-      [
-        src,
-        dst,
-        options ?? _i6.undefined,
-      ],
-    ));
+  /// Turns a Reader, `r`, into an async iterator.
+  _i10.AsyncIterableIterator<_i7.Uint8List> iter(
+    _i4.Reader r, [
+    _i4.IInline2? options,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'iter',
+        [
+          r,
+          options ?? _i6.undefined,
+        ],
+      );
 
-/// Turns a Reader, `r`, into an async iterator.
-_i10.AsyncIterableIterator<_i7.Uint8List> iter(
-  _i4.Reader r, [
-  _i4.IInline2? options,
-]) =>
+  /// Turns a ReaderSync, `r`, into an iterator.
+  _i11.IterableIterator<_i7.Uint8List> iterSync(
+    _i4.ReaderSync r, [
+    _i4.IInline3? options,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'iterSync',
+        [
+          r,
+          options ?? _i6.undefined,
+        ],
+      );
+
+  /// Open a file and resolve to an instance of {@linkcode Deno.FsFile}. The
+  /// file does not need to previously exist if using the `create` or `createNew`
+  /// open options. It is the caller's responsibility to close the file when
+  /// finished with it.
+  ///
+  /// ```ts
+  /// const file = await Deno.open("/foo/bar.txt", { read: true, write: true });
+  /// // Do work with file
+  /// file.close();
+  /// ```
+  ///
+  /// Requires `allow-read` and/or `allow-write` permissions depending on
+  /// options.
+  _i2.Future<_i2.Future<_i4.FsFile>> open(
+    _i2.Object path, [
+    _i4.OpenOptions? options,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'open',
+        [
+          path,
+          options ?? _i6.undefined,
+        ],
+      ));
+
+  /// Synchronously open a file and return an instance of
+  /// {@linkcode Deno.FsFile}. The file does not need to previously exist if
+  /// using the `create` or `createNew` open options. It is the caller's
+  /// responsibility to close the file when finished with it.
+  ///
+  /// ```ts
+  /// const file = Deno.openSync("/foo/bar.txt", { read: true, write: true });
+  /// // Do work with file
+  /// file.close();
+  /// ```
+  ///
+  /// Requires `allow-read` and/or `allow-write` permissions depending on
+  /// options.
+  _i4.FsFile openSync(
+    _i2.Object path, [
+    _i4.OpenOptions? options,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'openSync',
+        [
+          path,
+          options ?? _i6.undefined,
+        ],
+      );
+
+  /// Creates a file if none exists or truncates an existing file and resolves to
+  /// an instance of {@linkcode Deno.FsFile}.
+  ///
+  /// ```ts
+  /// const file = await Deno.create("/foo/bar.txt");
+  /// ```
+  ///
+  /// Requires `allow-read` and `allow-write` permissions.
+  _i2.Future<_i2.Future<_i4.FsFile>> create(_i2.Object path) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'create',
+        [path],
+      ));
+
+  /// Creates a file if none exists or truncates an existing file and returns
+  /// an instance of {@linkcode Deno.FsFile}.
+  ///
+  /// ```ts
+  /// const file = Deno.createSync("/foo/bar.txt");
+  /// ```
+  ///
+  /// Requires `allow-read` and `allow-write` permissions.
+  _i4.FsFile createSync(_i2.Object path) => _i3.callMethod(
+        this,
+        'createSync',
+        [path],
+      );
+
+  /// Read from a resource ID (`rid`) into an array buffer (`buffer`).
+  ///
+  /// Resolves to either the number of bytes read during the operation or EOF
+  /// (`null`) if there was nothing more to read.
+  ///
+  /// It is possible for a read to successfully return with `0` bytes. This does
+  /// not indicate EOF.
+  ///
+  /// This function is one of the lowest level APIs and most users should not
+  /// work with this directly, but rather use
+  /// [`readAll()`](https://deno.land/std/streams/read_all.ts?s=readAll) from
+  /// [`std/streams/read_all.ts`](https://deno.land/std/streams/read_all.ts)
+  /// instead.
+  ///
+  /// **It is not guaranteed that the full buffer will be read in a single call.**
+  ///
+  /// ```ts
+  /// // if "/foo/bar.txt" contains the text "hello world":
+  /// const file = await Deno.open("/foo/bar.txt");
+  /// const buf = new Uint8Array(100);
+  /// const numberOfBytesRead = await Deno.read(file.rid, buf); // 11 bytes
+  /// const text = new TextDecoder().decode(buf);  // "hello world"
+  /// Deno.close(file.rid);
+  /// ```
+  _i2.Future<_i2.Future<_i2.num?>> read(
+    _i2.num rid,
+    _i7.Uint8List buffer,
+  ) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'read',
+        [
+          rid,
+          buffer,
+        ],
+      ));
+
+  /// Synchronously read from a resource ID (`rid`) into an array buffer
+  /// (`buffer`).
+  ///
+  /// Returns either the number of bytes read during the operation or EOF
+  /// (`null`) if there was nothing more to read.
+  ///
+  /// It is possible for a read to successfully return with `0` bytes. This does
+  /// not indicate EOF.
+  ///
+  /// This function is one of the lowest level APIs and most users should not
+  /// work with this directly, but rather use
+  /// [`readAllSync()`](https://deno.land/std/streams/read_all.ts?s=readAllSync)
+  /// from
+  /// [`std/streams/read_all.ts`](https://deno.land/std/streams/read_all.ts)
+  /// instead.
+  ///
+  /// **It is not guaranteed that the full buffer will be read in a single
+  /// call.**
+  ///
+  /// ```ts
+  /// // if "/foo/bar.txt" contains the text "hello world":
+  /// const file = Deno.openSync("/foo/bar.txt");
+  /// const buf = new Uint8Array(100);
+  /// const numberOfBytesRead = Deno.readSync(file.rid, buf); // 11 bytes
+  /// const text = new TextDecoder().decode(buf);  // "hello world"
+  /// Deno.close(file.rid);
+  /// ```
+  _i2.num? readSync(
+    _i2.num rid,
+    _i7.Uint8List buffer,
+  ) =>
+      _i3.callMethod(
+        this,
+        'readSync',
+        [
+          rid,
+          buffer,
+        ],
+      );
+
+  /// Write to the resource ID (`rid`) the contents of the array buffer (`data`).
+  ///
+  /// Resolves to the number of bytes written. This function is one of the lowest
+  /// level APIs and most users should not work with this directly, but rather use
+  /// [`writeAll()`](https://deno.land/std/streams/write_all.ts?s=writeAll) from
+  /// [`std/streams/write_all.ts`](https://deno.land/std/streams/write_all.ts)
+  /// instead.
+  ///
+  /// **It is not guaranteed that the full buffer will be written in a single
+  /// call.**
+  ///
+  /// ```ts
+  /// const encoder = new TextEncoder();
+  /// const data = encoder.encode("Hello world");
+  /// const file = await Deno.open("/foo/bar.txt", { write: true });
+  /// const bytesWritten = await Deno.write(file.rid, data); // 11
+  /// Deno.close(file.rid);
+  /// ```
+  _i2.Future<_i2.Future<_i2.num>> write(
+    _i2.num rid,
+    _i7.Uint8List data,
+  ) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'write',
+        [
+          rid,
+          data,
+        ],
+      ));
+
+  /// Synchronously write to the resource ID (`rid`) the contents of the array
+  /// buffer (`data`).
+  ///
+  /// Returns the number of bytes written. This function is one of the lowest
+  /// level APIs and most users should not work with this directly, but rather
+  /// use
+  /// [`writeAllSync()`](https://deno.land/std/streams/write_all.ts?s=writeAllSync)
+  /// from
+  /// [`std/streams/write_all.ts`](https://deno.land/std/streams/write_all.ts)
+  /// instead.
+  ///
+  /// **It is not guaranteed that the full buffer will be written in a single
+  /// call.**
+  ///
+  /// ```ts
+  /// const encoder = new TextEncoder();
+  /// const data = encoder.encode("Hello world");
+  /// const file = Deno.openSync("/foo/bar.txt", { write: true });
+  /// const bytesWritten = Deno.writeSync(file.rid, data); // 11
+  /// Deno.close(file.rid);
+  /// ```
+  _i2.num writeSync(
+    _i2.num rid,
+    _i7.Uint8List data,
+  ) =>
+      _i3.callMethod(
+        this,
+        'writeSync',
+        [
+          rid,
+          data,
+        ],
+      );
+
+  /// Seek a resource ID (`rid`) to the given `offset` under mode given by `whence`.
+  /// The call resolves to the new position within the resource (bytes from the start).
+  ///
+  /// ```ts
+  /// // Given file.rid pointing to file with "Hello world", which is 11 bytes long:
+  /// const file = await Deno.open(
+  ///  "hello.txt",
+  ///  { read: true, write: true, truncate: true, create: true },
+  /// );
+  /// await Deno.write(file.rid, new TextEncoder().encode("Hello world"));
+  ///
+  /// // advance cursor 6 bytes
+  /// const cursorPosition = await Deno.seek(file.rid, 6, Deno.SeekMode.Start);
+  /// console.log(cursorPosition);  // 6
+  /// const buf = new Uint8Array(100);
+  /// await file.read(buf);
+  /// console.log(new TextDecoder().decode(buf)); // "world"
+  /// file.close();
+  /// ```
+  ///
+  /// The seek modes work as follows:
+  ///
+  /// ```ts
+  /// // Given file.rid pointing to file with "Hello world", which is 11 bytes long:
+  /// const file = await Deno.open(
+  ///  "hello.txt",
+  ///  { read: true, write: true, truncate: true, create: true },
+  /// );
+  /// await Deno.write(file.rid, new TextEncoder().encode("Hello world"));
+  ///
+  /// // Seek 6 bytes from the start of the file
+  /// console.log(await Deno.seek(file.rid, 6, Deno.SeekMode.Start)); // "6"
+  /// // Seek 2 more bytes from the current position
+  /// console.log(await Deno.seek(file.rid, 2, Deno.SeekMode.Current)); // "8"
+  /// // Seek backwards 2 bytes from the end of the file
+  /// console.log(await Deno.seek(file.rid, -2, Deno.SeekMode.End)); // "9" (e.g. 11-2)
+  /// file.close();
+  /// ```
+  _i2.Future<_i2.Future<_i2.num>> seek(
+    _i2.num rid,
+    _i2.Object offset,
+    _i4.SeekMode whence,
+  ) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'seek',
+        [
+          rid,
+          offset,
+          whence.name,
+        ],
+      ));
+
+  /// Synchronously seek a resource ID (`rid`) to the given `offset` under mode
+  /// given by `whence`. The new position within the resource (bytes from the
+  /// start) is returned.
+  ///
+  /// ```ts
+  /// const file = Deno.openSync(
+  ///  "hello.txt",
+  ///  { read: true, write: true, truncate: true, create: true },
+  /// );
+  /// Deno.writeSync(file.rid, new TextEncoder().encode("Hello world"));
+  ///
+  /// // advance cursor 6 bytes
+  /// const cursorPosition = Deno.seekSync(file.rid, 6, Deno.SeekMode.Start);
+  /// console.log(cursorPosition);  // 6
+  /// const buf = new Uint8Array(100);
+  /// file.readSync(buf);
+  /// console.log(new TextDecoder().decode(buf)); // "world"
+  /// file.close();
+  /// ```
+  ///
+  /// The seek modes work as follows:
+  ///
+  /// ```ts
+  /// // Given file.rid pointing to file with "Hello world", which is 11 bytes long:
+  /// const file = Deno.openSync(
+  ///  "hello.txt",
+  ///  { read: true, write: true, truncate: true, create: true },
+  /// );
+  /// Deno.writeSync(file.rid, new TextEncoder().encode("Hello world"));
+  ///
+  /// // Seek 6 bytes from the start of the file
+  /// console.log(Deno.seekSync(file.rid, 6, Deno.SeekMode.Start)); // "6"
+  /// // Seek 2 more bytes from the current position
+  /// console.log(Deno.seekSync(file.rid, 2, Deno.SeekMode.Current)); // "8"
+  /// // Seek backwards 2 bytes from the end of the file
+  /// console.log(Deno.seekSync(file.rid, -2, Deno.SeekMode.End)); // "9" (e.g. 11-2)
+  /// file.close();
+  /// ```
+  _i2.num seekSync(
+    _i2.num rid,
+    _i2.num offset,
+    _i4.SeekMode whence,
+  ) =>
+      _i3.callMethod(
+        this,
+        'seekSync',
+        [
+          rid,
+          offset,
+          whence.name,
+        ],
+      );
+
+  /// Flushes any pending data and metadata operations of the given file stream
+  /// to disk.
+  ///
+  /// ```ts
+  /// const file = await Deno.open(
+  ///   "my_file.txt",
+  ///   { read: true, write: true, create: true },
+  /// );
+  /// await Deno.write(file.rid, new TextEncoder().encode("Hello World"));
+  /// await Deno.ftruncate(file.rid, 1);
+  /// await Deno.fsync(file.rid);
+  /// console.log(new TextDecoder().decode(await Deno.readFile("my_file.txt"))); // H
+  /// ```
+  _i2.Future<_i2.Future<void>> fsync(_i2.num rid) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'fsync',
+        [rid],
+      ));
+
+  /// Synchronously flushes any pending data and metadata operations of the given
+  /// file stream to disk.
+  ///
+  /// ```ts
+  /// const file = Deno.openSync(
+  ///   "my_file.txt",
+  ///   { read: true, write: true, create: true },
+  /// );
+  /// Deno.writeSync(file.rid, new TextEncoder().encode("Hello World"));
+  /// Deno.ftruncateSync(file.rid, 1);
+  /// Deno.fsyncSync(file.rid);
+  /// console.log(new TextDecoder().decode(Deno.readFileSync("my_file.txt"))); // H
+  /// ```
+  void fsyncSync(_i2.num rid) {
     _i3.callMethod(
-      _self,
-      'iter',
-      [
-        r,
-        options ?? _i6.undefined,
-      ],
-    );
-
-/// Turns a ReaderSync, `r`, into an iterator.
-_i11.IterableIterator<_i7.Uint8List> iterSync(
-  _i4.ReaderSync r, [
-  _i4.IInline3? options,
-]) =>
-    _i3.callMethod(
-      _self,
-      'iterSync',
-      [
-        r,
-        options ?? _i6.undefined,
-      ],
-    );
-
-/// Open a file and resolve to an instance of {@linkcode Deno.FsFile}. The
-/// file does not need to previously exist if using the `create` or `createNew`
-/// open options. It is the caller's responsibility to close the file when
-/// finished with it.
-///
-/// ```ts
-/// const file = await Deno.open("/foo/bar.txt", { read: true, write: true });
-/// // Do work with file
-/// file.close();
-/// ```
-///
-/// Requires `allow-read` and/or `allow-write` permissions depending on
-/// options.
-_i2.Future<_i4.FsFile> open(
-  _i2.Object path, [
-  _i4.OpenOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'open',
-      [
-        path,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Synchronously open a file and return an instance of
-/// {@linkcode Deno.FsFile}. The file does not need to previously exist if
-/// using the `create` or `createNew` open options. It is the caller's
-/// responsibility to close the file when finished with it.
-///
-/// ```ts
-/// const file = Deno.openSync("/foo/bar.txt", { read: true, write: true });
-/// // Do work with file
-/// file.close();
-/// ```
-///
-/// Requires `allow-read` and/or `allow-write` permissions depending on
-/// options.
-_i4.FsFile openSync(
-  _i2.Object path, [
-  _i4.OpenOptions? options,
-]) =>
-    _i3.callMethod(
-      _self,
-      'openSync',
-      [
-        path,
-        options ?? _i6.undefined,
-      ],
-    );
-
-/// Creates a file if none exists or truncates an existing file and resolves to
-/// an instance of {@linkcode Deno.FsFile}.
-///
-/// ```ts
-/// const file = await Deno.create("/foo/bar.txt");
-/// ```
-///
-/// Requires `allow-read` and `allow-write` permissions.
-_i2.Future<_i4.FsFile> create(_i2.Object path) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'create',
-      [path],
-    ));
-
-/// Creates a file if none exists or truncates an existing file and returns
-/// an instance of {@linkcode Deno.FsFile}.
-///
-/// ```ts
-/// const file = Deno.createSync("/foo/bar.txt");
-/// ```
-///
-/// Requires `allow-read` and `allow-write` permissions.
-_i4.FsFile createSync(_i2.Object path) => _i3.callMethod(
-      _self,
-      'createSync',
-      [path],
-    );
-
-/// Read from a resource ID (`rid`) into an array buffer (`buffer`).
-///
-/// Resolves to either the number of bytes read during the operation or EOF
-/// (`null`) if there was nothing more to read.
-///
-/// It is possible for a read to successfully return with `0` bytes. This does
-/// not indicate EOF.
-///
-/// This function is one of the lowest level APIs and most users should not
-/// work with this directly, but rather use
-/// [`readAll()`](https://deno.land/std/streams/read_all.ts?s=readAll) from
-/// [`std/streams/read_all.ts`](https://deno.land/std/streams/read_all.ts)
-/// instead.
-///
-/// **It is not guaranteed that the full buffer will be read in a single call.**
-///
-/// ```ts
-/// // if "/foo/bar.txt" contains the text "hello world":
-/// const file = await Deno.open("/foo/bar.txt");
-/// const buf = new Uint8Array(100);
-/// const numberOfBytesRead = await Deno.read(file.rid, buf); // 11 bytes
-/// const text = new TextDecoder().decode(buf);  // "hello world"
-/// Deno.close(file.rid);
-/// ```
-_i2.Future<_i2.num?> read(
-  _i2.num rid,
-  _i7.Uint8List buffer,
-) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'read',
-      [
-        rid,
-        buffer,
-      ],
-    ));
-
-/// Synchronously read from a resource ID (`rid`) into an array buffer
-/// (`buffer`).
-///
-/// Returns either the number of bytes read during the operation or EOF
-/// (`null`) if there was nothing more to read.
-///
-/// It is possible for a read to successfully return with `0` bytes. This does
-/// not indicate EOF.
-///
-/// This function is one of the lowest level APIs and most users should not
-/// work with this directly, but rather use
-/// [`readAllSync()`](https://deno.land/std/streams/read_all.ts?s=readAllSync)
-/// from
-/// [`std/streams/read_all.ts`](https://deno.land/std/streams/read_all.ts)
-/// instead.
-///
-/// **It is not guaranteed that the full buffer will be read in a single
-/// call.**
-///
-/// ```ts
-/// // if "/foo/bar.txt" contains the text "hello world":
-/// const file = Deno.openSync("/foo/bar.txt");
-/// const buf = new Uint8Array(100);
-/// const numberOfBytesRead = Deno.readSync(file.rid, buf); // 11 bytes
-/// const text = new TextDecoder().decode(buf);  // "hello world"
-/// Deno.close(file.rid);
-/// ```
-_i2.num? readSync(
-  _i2.num rid,
-  _i7.Uint8List buffer,
-) =>
-    _i3.callMethod(
-      _self,
-      'readSync',
-      [
-        rid,
-        buffer,
-      ],
-    );
-
-/// Write to the resource ID (`rid`) the contents of the array buffer (`data`).
-///
-/// Resolves to the number of bytes written. This function is one of the lowest
-/// level APIs and most users should not work with this directly, but rather use
-/// [`writeAll()`](https://deno.land/std/streams/write_all.ts?s=writeAll) from
-/// [`std/streams/write_all.ts`](https://deno.land/std/streams/write_all.ts)
-/// instead.
-///
-/// **It is not guaranteed that the full buffer will be written in a single
-/// call.**
-///
-/// ```ts
-/// const encoder = new TextEncoder();
-/// const data = encoder.encode("Hello world");
-/// const file = await Deno.open("/foo/bar.txt", { write: true });
-/// const bytesWritten = await Deno.write(file.rid, data); // 11
-/// Deno.close(file.rid);
-/// ```
-_i2.Future<_i2.num> write(
-  _i2.num rid,
-  _i7.Uint8List data,
-) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'write',
-      [
-        rid,
-        data,
-      ],
-    ));
-
-/// Synchronously write to the resource ID (`rid`) the contents of the array
-/// buffer (`data`).
-///
-/// Returns the number of bytes written. This function is one of the lowest
-/// level APIs and most users should not work with this directly, but rather
-/// use
-/// [`writeAllSync()`](https://deno.land/std/streams/write_all.ts?s=writeAllSync)
-/// from
-/// [`std/streams/write_all.ts`](https://deno.land/std/streams/write_all.ts)
-/// instead.
-///
-/// **It is not guaranteed that the full buffer will be written in a single
-/// call.**
-///
-/// ```ts
-/// const encoder = new TextEncoder();
-/// const data = encoder.encode("Hello world");
-/// const file = Deno.openSync("/foo/bar.txt", { write: true });
-/// const bytesWritten = Deno.writeSync(file.rid, data); // 11
-/// Deno.close(file.rid);
-/// ```
-_i2.num writeSync(
-  _i2.num rid,
-  _i7.Uint8List data,
-) =>
-    _i3.callMethod(
-      _self,
-      'writeSync',
-      [
-        rid,
-        data,
-      ],
-    );
-
-/// Seek a resource ID (`rid`) to the given `offset` under mode given by `whence`.
-/// The call resolves to the new position within the resource (bytes from the start).
-///
-/// ```ts
-/// // Given file.rid pointing to file with "Hello world", which is 11 bytes long:
-/// const file = await Deno.open(
-///  "hello.txt",
-///  { read: true, write: true, truncate: true, create: true },
-/// );
-/// await Deno.write(file.rid, new TextEncoder().encode("Hello world"));
-///
-/// // advance cursor 6 bytes
-/// const cursorPosition = await Deno.seek(file.rid, 6, Deno.SeekMode.Start);
-/// console.log(cursorPosition);  // 6
-/// const buf = new Uint8Array(100);
-/// await file.read(buf);
-/// console.log(new TextDecoder().decode(buf)); // "world"
-/// file.close();
-/// ```
-///
-/// The seek modes work as follows:
-///
-/// ```ts
-/// // Given file.rid pointing to file with "Hello world", which is 11 bytes long:
-/// const file = await Deno.open(
-///  "hello.txt",
-///  { read: true, write: true, truncate: true, create: true },
-/// );
-/// await Deno.write(file.rid, new TextEncoder().encode("Hello world"));
-///
-/// // Seek 6 bytes from the start of the file
-/// console.log(await Deno.seek(file.rid, 6, Deno.SeekMode.Start)); // "6"
-/// // Seek 2 more bytes from the current position
-/// console.log(await Deno.seek(file.rid, 2, Deno.SeekMode.Current)); // "8"
-/// // Seek backwards 2 bytes from the end of the file
-/// console.log(await Deno.seek(file.rid, -2, Deno.SeekMode.End)); // "9" (e.g. 11-2)
-/// file.close();
-/// ```
-_i2.Future<_i2.num> seek(
-  _i2.num rid,
-  _i2.Object offset,
-  _i4.SeekMode whence,
-) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'seek',
-      [
-        rid,
-        offset,
-        whence.name,
-      ],
-    ));
-
-/// Synchronously seek a resource ID (`rid`) to the given `offset` under mode
-/// given by `whence`. The new position within the resource (bytes from the
-/// start) is returned.
-///
-/// ```ts
-/// const file = Deno.openSync(
-///  "hello.txt",
-///  { read: true, write: true, truncate: true, create: true },
-/// );
-/// Deno.writeSync(file.rid, new TextEncoder().encode("Hello world"));
-///
-/// // advance cursor 6 bytes
-/// const cursorPosition = Deno.seekSync(file.rid, 6, Deno.SeekMode.Start);
-/// console.log(cursorPosition);  // 6
-/// const buf = new Uint8Array(100);
-/// file.readSync(buf);
-/// console.log(new TextDecoder().decode(buf)); // "world"
-/// file.close();
-/// ```
-///
-/// The seek modes work as follows:
-///
-/// ```ts
-/// // Given file.rid pointing to file with "Hello world", which is 11 bytes long:
-/// const file = Deno.openSync(
-///  "hello.txt",
-///  { read: true, write: true, truncate: true, create: true },
-/// );
-/// Deno.writeSync(file.rid, new TextEncoder().encode("Hello world"));
-///
-/// // Seek 6 bytes from the start of the file
-/// console.log(Deno.seekSync(file.rid, 6, Deno.SeekMode.Start)); // "6"
-/// // Seek 2 more bytes from the current position
-/// console.log(Deno.seekSync(file.rid, 2, Deno.SeekMode.Current)); // "8"
-/// // Seek backwards 2 bytes from the end of the file
-/// console.log(Deno.seekSync(file.rid, -2, Deno.SeekMode.End)); // "9" (e.g. 11-2)
-/// file.close();
-/// ```
-_i2.num seekSync(
-  _i2.num rid,
-  _i2.num offset,
-  _i4.SeekMode whence,
-) =>
-    _i3.callMethod(
-      _self,
-      'seekSync',
-      [
-        rid,
-        offset,
-        whence.name,
-      ],
-    );
-
-/// Flushes any pending data and metadata operations of the given file stream
-/// to disk.
-///
-/// ```ts
-/// const file = await Deno.open(
-///   "my_file.txt",
-///   { read: true, write: true, create: true },
-/// );
-/// await Deno.write(file.rid, new TextEncoder().encode("Hello World"));
-/// await Deno.ftruncate(file.rid, 1);
-/// await Deno.fsync(file.rid);
-/// console.log(new TextDecoder().decode(await Deno.readFile("my_file.txt"))); // H
-/// ```
-_i2.Future<void> fsync(_i2.num rid) => _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'fsync',
-      [rid],
-    ));
-
-/// Synchronously flushes any pending data and metadata operations of the given
-/// file stream to disk.
-///
-/// ```ts
-/// const file = Deno.openSync(
-///   "my_file.txt",
-///   { read: true, write: true, create: true },
-/// );
-/// Deno.writeSync(file.rid, new TextEncoder().encode("Hello World"));
-/// Deno.ftruncateSync(file.rid, 1);
-/// Deno.fsyncSync(file.rid);
-/// console.log(new TextDecoder().decode(Deno.readFileSync("my_file.txt"))); // H
-/// ```
-void fsyncSync(_i2.num rid) {
-  _i3.callMethod(
-    _self,
-    'fsyncSync',
-    [rid],
-  );
-}
-
-/// Flushes any pending data operations of the given file stream to disk.
-///  ```ts
-/// const file = await Deno.open(
-///   "my_file.txt",
-///   { read: true, write: true, create: true },
-/// );
-/// await Deno.write(file.rid, new TextEncoder().encode("Hello World"));
-/// await Deno.fdatasync(file.rid);
-/// console.log(new TextDecoder().decode(await Deno.readFile("my_file.txt"))); // Hello World
-/// ```
-_i2.Future<void> fdatasync(_i2.num rid) => _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'fdatasync',
-      [rid],
-    ));
-
-/// Synchronously flushes any pending data operations of the given file stream
-/// to disk.
-///
-///  ```ts
-/// const file = Deno.openSync(
-///   "my_file.txt",
-///   { read: true, write: true, create: true },
-/// );
-/// Deno.writeSync(file.rid, new TextEncoder().encode("Hello World"));
-/// Deno.fdatasyncSync(file.rid);
-/// console.log(new TextDecoder().decode(Deno.readFileSync("my_file.txt"))); // Hello World
-/// ```
-void fdatasyncSync(_i2.num rid) {
-  _i3.callMethod(
-    _self,
-    'fdatasyncSync',
-    [rid],
-  );
-}
-
-/// Close the given resource ID (`rid`) which has been previously opened, such
-/// as via opening or creating a file. Closing a file when you are finished
-/// with it is important to avoid leaking resources.
-///
-/// ```ts
-/// const file = await Deno.open("my_file.txt");
-/// // do work with "file" object
-/// Deno.close(file.rid);
-/// ```
-void close(_i2.num rid) {
-  _i3.callMethod(
-    _self,
-    'close',
-    [rid],
-  );
-}
-
-/// Gets the size of the console as columns/rows.
-///
-/// ```ts
-/// const { columns, rows } = Deno.consoleSize();
-/// ```
-///
-/// This returns the size of the console window as reported by the operating
-/// system. It's not a reflection of how many characters will fit within the
-/// console window, but can be used as part of that calculation.
-_i4.IInline4 consoleSize() => _i3.callMethod(
-      _self,
-      'consoleSize',
-      [],
-    );
-
-/// Check if a given resource id (`rid`) is a TTY (a terminal).
-///
-/// ```ts
-/// // This example is system and context specific
-/// const nonTTYRid = Deno.openSync("my_file.txt").rid;
-/// const ttyRid = Deno.openSync("/dev/tty6").rid;
-/// console.log(Deno.isatty(nonTTYRid)); // false
-/// console.log(Deno.isatty(ttyRid)); // true
-/// Deno.close(nonTTYRid);
-/// Deno.close(ttyRid);
-/// ```
-_i2.bool isatty(_i2.num rid) => _i3.callMethod(
-      _self,
-      'isatty',
+      this,
+      'fsyncSync',
       [rid],
     );
+  }
 
-/// Read Reader `r` until EOF (`null`) and resolve to the content as
-/// Uint8Array`.
-_i2.Future<_i7.Uint8List> readAll(_i4.Reader r) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'readAll',
-      [r],
-    ));
+  /// Flushes any pending data operations of the given file stream to disk.
+  ///  ```ts
+  /// const file = await Deno.open(
+  ///   "my_file.txt",
+  ///   { read: true, write: true, create: true },
+  /// );
+  /// await Deno.write(file.rid, new TextEncoder().encode("Hello World"));
+  /// await Deno.fdatasync(file.rid);
+  /// console.log(new TextDecoder().decode(await Deno.readFile("my_file.txt"))); // Hello World
+  /// ```
+  _i2.Future<_i2.Future<void>> fdatasync(_i2.num rid) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'fdatasync',
+        [rid],
+      ));
 
-/// Synchronously reads Reader `r` until EOF (`null`) and returns the content
-/// as `Uint8Array`.
-_i7.Uint8List readAllSync(_i4.ReaderSync r) => _i3.callMethod(
-      _self,
-      'readAllSync',
-      [r],
+  /// Synchronously flushes any pending data operations of the given file stream
+  /// to disk.
+  ///
+  ///  ```ts
+  /// const file = Deno.openSync(
+  ///   "my_file.txt",
+  ///   { read: true, write: true, create: true },
+  /// );
+  /// Deno.writeSync(file.rid, new TextEncoder().encode("Hello World"));
+  /// Deno.fdatasyncSync(file.rid);
+  /// console.log(new TextDecoder().decode(Deno.readFileSync("my_file.txt"))); // Hello World
+  /// ```
+  void fdatasyncSync(_i2.num rid) {
+    _i3.callMethod(
+      this,
+      'fdatasyncSync',
+      [rid],
     );
+  }
 
-/// Write all the content of the array buffer (`arr`) to the writer (`w`).
-_i2.Future<void> writeAll(
-  _i4.Writer w,
-  _i7.Uint8List arr,
-) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'writeAll',
+  /// Close the given resource ID (`rid`) which has been previously opened, such
+  /// as via opening or creating a file. Closing a file when you are finished
+  /// with it is important to avoid leaking resources.
+  ///
+  /// ```ts
+  /// const file = await Deno.open("my_file.txt");
+  /// // do work with "file" object
+  /// Deno.close(file.rid);
+  /// ```
+  void close(_i2.num rid) {
+    _i3.callMethod(
+      this,
+      'close',
+      [rid],
+    );
+  }
+
+  /// Gets the size of the console as columns/rows.
+  ///
+  /// ```ts
+  /// const { columns, rows } = Deno.consoleSize();
+  /// ```
+  ///
+  /// This returns the size of the console window as reported by the operating
+  /// system. It's not a reflection of how many characters will fit within the
+  /// console window, but can be used as part of that calculation.
+  _i4.IInline4 consoleSize() => _i3.callMethod(
+        this,
+        'consoleSize',
+        [],
+      );
+
+  /// Check if a given resource id (`rid`) is a TTY (a terminal).
+  ///
+  /// ```ts
+  /// // This example is system and context specific
+  /// const nonTTYRid = Deno.openSync("my_file.txt").rid;
+  /// const ttyRid = Deno.openSync("/dev/tty6").rid;
+  /// console.log(Deno.isatty(nonTTYRid)); // false
+  /// console.log(Deno.isatty(ttyRid)); // true
+  /// Deno.close(nonTTYRid);
+  /// Deno.close(ttyRid);
+  /// ```
+  _i2.bool isatty(_i2.num rid) => _i3.callMethod(
+        this,
+        'isatty',
+        [rid],
+      );
+
+  /// Read Reader `r` until EOF (`null`) and resolve to the content as
+  /// Uint8Array`.
+  _i2.Future<_i2.Future<_i7.Uint8List>> readAll(_i4.Reader r) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'readAll',
+        [r],
+      ));
+
+  /// Synchronously reads Reader `r` until EOF (`null`) and returns the content
+  /// as `Uint8Array`.
+  _i7.Uint8List readAllSync(_i4.ReaderSync r) => _i3.callMethod(
+        this,
+        'readAllSync',
+        [r],
+      );
+
+  /// Write all the content of the array buffer (`arr`) to the writer (`w`).
+  _i2.Future<_i2.Future<void>> writeAll(
+    _i4.Writer w,
+    _i7.Uint8List arr,
+  ) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'writeAll',
+        [
+          w,
+          arr,
+        ],
+      ));
+
+  /// Synchronously write all the content of the array buffer (`arr`) to the
+  /// writer (`w`).
+  void writeAllSync(
+    _i4.WriterSync w,
+    _i7.Uint8List arr,
+  ) {
+    _i3.callMethod(
+      this,
+      'writeAllSync',
       [
         w,
         arr,
       ],
-    ));
+    );
+  }
 
-/// Synchronously write all the content of the array buffer (`arr`) to the
-/// writer (`w`).
-void writeAllSync(
-  _i4.WriterSync w,
-  _i7.Uint8List arr,
-) {
-  _i3.callMethod(
-    _self,
-    'writeAllSync',
-    [
-      w,
-      arr,
-    ],
-  );
-}
+  /// Creates a new directory with the specified path.
+  ///
+  /// ```ts
+  /// await Deno.mkdir("new_dir");
+  /// await Deno.mkdir("nested/directories", { recursive: true });
+  /// await Deno.mkdir("restricted_access_dir", { mode: 0o700 });
+  /// ```
+  ///
+  /// Defaults to throwing error if the directory already exists.
+  ///
+  /// Requires `allow-write` permission.
+  _i2.Future<_i2.Future<void>> mkdir(
+    _i2.Object path, [
+    _i4.MkdirOptions? options,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'mkdir',
+        [
+          path,
+          options ?? _i6.undefined,
+        ],
+      ));
 
-/// Creates a new directory with the specified path.
-///
-/// ```ts
-/// await Deno.mkdir("new_dir");
-/// await Deno.mkdir("nested/directories", { recursive: true });
-/// await Deno.mkdir("restricted_access_dir", { mode: 0o700 });
-/// ```
-///
-/// Defaults to throwing error if the directory already exists.
-///
-/// Requires `allow-write` permission.
-_i2.Future<void> mkdir(
-  _i2.Object path, [
-  _i4.MkdirOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'mkdir',
+  /// Synchronously creates a new directory with the specified path.
+  ///
+  /// ```ts
+  /// Deno.mkdirSync("new_dir");
+  /// Deno.mkdirSync("nested/directories", { recursive: true });
+  /// Deno.mkdirSync("restricted_access_dir", { mode: 0o700 });
+  /// ```
+  ///
+  /// Defaults to throwing error if the directory already exists.
+  ///
+  /// Requires `allow-write` permission.
+  void mkdirSync(
+    _i2.Object path, [
+    _i4.MkdirOptions? options,
+  ]) {
+    _i3.callMethod(
+      this,
+      'mkdirSync',
       [
         path,
         options ?? _i6.undefined,
       ],
-    ));
-
-/// Synchronously creates a new directory with the specified path.
-///
-/// ```ts
-/// Deno.mkdirSync("new_dir");
-/// Deno.mkdirSync("nested/directories", { recursive: true });
-/// Deno.mkdirSync("restricted_access_dir", { mode: 0o700 });
-/// ```
-///
-/// Defaults to throwing error if the directory already exists.
-///
-/// Requires `allow-write` permission.
-void mkdirSync(
-  _i2.Object path, [
-  _i4.MkdirOptions? options,
-]) {
-  _i3.callMethod(
-    _self,
-    'mkdirSync',
-    [
-      path,
-      options ?? _i6.undefined,
-    ],
-  );
-}
-
-/// Creates a new temporary directory in the default directory for temporary
-/// files, unless `dir` is specified. Other optional options include
-/// prefixing and suffixing the directory name with `prefix` and `suffix`
-/// respectively.
-///
-/// This call resolves to the full path to the newly created directory.
-///
-/// Multiple programs calling this function simultaneously will create different
-/// directories. It is the caller's responsibility to remove the directory when
-/// no longer needed.
-///
-/// ```ts
-/// const tempDirName0 = await Deno.makeTempDir();  // e.g. /tmp/2894ea76
-/// const tempDirName1 = await Deno.makeTempDir({ prefix: 'my_temp' }); // e.g. /tmp/my_temp339c944d
-/// ```
-///
-/// Requires `allow-write` permission.
-_i2.Future<_i2.String> makeTempDir([_i4.MakeTempOptions? options]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'makeTempDir',
-      [options ?? _i6.undefined],
-    ));
-
-/// Synchronously creates a new temporary directory in the default directory
-/// for temporary files, unless `dir` is specified. Other optional options
-/// include prefixing and suffixing the directory name with `prefix` and
-/// `suffix` respectively.
-///
-/// The full path to the newly created directory is returned.
-///
-/// Multiple programs calling this function simultaneously will create different
-/// directories. It is the caller's responsibility to remove the directory when
-/// no longer needed.
-///
-/// ```ts
-/// const tempDirName0 = Deno.makeTempDirSync();  // e.g. /tmp/2894ea76
-/// const tempDirName1 = Deno.makeTempDirSync({ prefix: 'my_temp' });  // e.g. /tmp/my_temp339c944d
-/// ```
-///
-/// Requires `allow-write` permission.
-_i2.String makeTempDirSync([_i4.MakeTempOptions? options]) => _i3.callMethod(
-      _self,
-      'makeTempDirSync',
-      [options ?? _i6.undefined],
     );
+  }
 
-/// Creates a new temporary file in the default directory for temporary
-/// files, unless `dir` is specified.
-///
-/// Other options include prefixing and suffixing the directory name with
-/// `prefix` and `suffix` respectively.
-///
-/// This call resolves to the full path to the newly created file.
-///
-/// Multiple programs calling this function simultaneously will create
-/// different files. It is the caller's responsibility to remove the file when
-/// no longer needed.
-///
-/// ```ts
-/// const tmpFileName0 = await Deno.makeTempFile();  // e.g. /tmp/419e0bf2
-/// const tmpFileName1 = await Deno.makeTempFile({ prefix: 'my_temp' });  // e.g. /tmp/my_temp754d3098
-/// ```
-///
-/// Requires `allow-write` permission.
-_i2.Future<_i2.String> makeTempFile([_i4.MakeTempOptions? options]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'makeTempFile',
-      [options ?? _i6.undefined],
-    ));
+  /// Creates a new temporary directory in the default directory for temporary
+  /// files, unless `dir` is specified. Other optional options include
+  /// prefixing and suffixing the directory name with `prefix` and `suffix`
+  /// respectively.
+  ///
+  /// This call resolves to the full path to the newly created directory.
+  ///
+  /// Multiple programs calling this function simultaneously will create different
+  /// directories. It is the caller's responsibility to remove the directory when
+  /// no longer needed.
+  ///
+  /// ```ts
+  /// const tempDirName0 = await Deno.makeTempDir();  // e.g. /tmp/2894ea76
+  /// const tempDirName1 = await Deno.makeTempDir({ prefix: 'my_temp' }); // e.g. /tmp/my_temp339c944d
+  /// ```
+  ///
+  /// Requires `allow-write` permission.
+  _i2.Future<_i2.Future<_i2.String>> makeTempDir(
+          [_i4.MakeTempOptions? options]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'makeTempDir',
+        [options ?? _i6.undefined],
+      ));
 
-/// Synchronously creates a new temporary file in the default directory for
-/// temporary files, unless `dir` is specified.
-///
-/// Other options include prefixing and suffixing the directory name with
-/// `prefix` and `suffix` respectively.
-///
-/// The full path to the newly created file is returned.
-///
-/// Multiple programs calling this function simultaneously will create
-/// different files. It is the caller's responsibility to remove the file when
-/// no longer needed.
-///
-/// ```ts
-/// const tempFileName0 = Deno.makeTempFileSync(); // e.g. /tmp/419e0bf2
-/// const tempFileName1 = Deno.makeTempFileSync({ prefix: 'my_temp' });  // e.g. /tmp/my_temp754d3098
-/// ```
-///
-/// Requires `allow-write` permission.
-_i2.String makeTempFileSync([_i4.MakeTempOptions? options]) => _i3.callMethod(
-      _self,
-      'makeTempFileSync',
-      [options ?? _i6.undefined],
-    );
+  /// Synchronously creates a new temporary directory in the default directory
+  /// for temporary files, unless `dir` is specified. Other optional options
+  /// include prefixing and suffixing the directory name with `prefix` and
+  /// `suffix` respectively.
+  ///
+  /// The full path to the newly created directory is returned.
+  ///
+  /// Multiple programs calling this function simultaneously will create different
+  /// directories. It is the caller's responsibility to remove the directory when
+  /// no longer needed.
+  ///
+  /// ```ts
+  /// const tempDirName0 = Deno.makeTempDirSync();  // e.g. /tmp/2894ea76
+  /// const tempDirName1 = Deno.makeTempDirSync({ prefix: 'my_temp' });  // e.g. /tmp/my_temp339c944d
+  /// ```
+  ///
+  /// Requires `allow-write` permission.
+  _i2.String makeTempDirSync([_i4.MakeTempOptions? options]) => _i3.callMethod(
+        this,
+        'makeTempDirSync',
+        [options ?? _i6.undefined],
+      );
 
-/// Changes the permission of a specific file/directory of specified path.
-/// Ignores the process's umask.
-///
-/// ```ts
-/// await Deno.chmod("/path/to/file", 0o666);
-/// ```
-///
-/// The mode is a sequence of 3 octal numbers. The first/left-most number
-/// specifies the permissions for the owner. The second number specifies the
-/// permissions for the group. The last/right-most number specifies the
-/// permissions for others. For example, with a mode of 0o764, the owner (7)
-/// can read/write/execute, the group (6) can read/write and everyone else (4)
-/// can read only.
-///
-/// | Number | Description |
-/// | ------ | ----------- |
-/// | 7      | read, write, and execute |
-/// | 6      | read and write |
-/// | 5      | read and execute |
-/// | 4      | read only |
-/// | 3      | write and execute |
-/// | 2      | write only |
-/// | 1      | execute only |
-/// | 0      | no permission |
-///
-/// NOTE: This API currently throws on Windows
-///
-/// Requires `allow-write` permission.
-_i2.Future<void> chmod(
-  _i2.Object path,
-  _i2.num mode,
-) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'chmod',
+  /// Creates a new temporary file in the default directory for temporary
+  /// files, unless `dir` is specified.
+  ///
+  /// Other options include prefixing and suffixing the directory name with
+  /// `prefix` and `suffix` respectively.
+  ///
+  /// This call resolves to the full path to the newly created file.
+  ///
+  /// Multiple programs calling this function simultaneously will create
+  /// different files. It is the caller's responsibility to remove the file when
+  /// no longer needed.
+  ///
+  /// ```ts
+  /// const tmpFileName0 = await Deno.makeTempFile();  // e.g. /tmp/419e0bf2
+  /// const tmpFileName1 = await Deno.makeTempFile({ prefix: 'my_temp' });  // e.g. /tmp/my_temp754d3098
+  /// ```
+  ///
+  /// Requires `allow-write` permission.
+  _i2.Future<_i2.Future<_i2.String>> makeTempFile(
+          [_i4.MakeTempOptions? options]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'makeTempFile',
+        [options ?? _i6.undefined],
+      ));
+
+  /// Synchronously creates a new temporary file in the default directory for
+  /// temporary files, unless `dir` is specified.
+  ///
+  /// Other options include prefixing and suffixing the directory name with
+  /// `prefix` and `suffix` respectively.
+  ///
+  /// The full path to the newly created file is returned.
+  ///
+  /// Multiple programs calling this function simultaneously will create
+  /// different files. It is the caller's responsibility to remove the file when
+  /// no longer needed.
+  ///
+  /// ```ts
+  /// const tempFileName0 = Deno.makeTempFileSync(); // e.g. /tmp/419e0bf2
+  /// const tempFileName1 = Deno.makeTempFileSync({ prefix: 'my_temp' });  // e.g. /tmp/my_temp754d3098
+  /// ```
+  ///
+  /// Requires `allow-write` permission.
+  _i2.String makeTempFileSync([_i4.MakeTempOptions? options]) => _i3.callMethod(
+        this,
+        'makeTempFileSync',
+        [options ?? _i6.undefined],
+      );
+
+  /// Changes the permission of a specific file/directory of specified path.
+  /// Ignores the process's umask.
+  ///
+  /// ```ts
+  /// await Deno.chmod("/path/to/file", 0o666);
+  /// ```
+  ///
+  /// The mode is a sequence of 3 octal numbers. The first/left-most number
+  /// specifies the permissions for the owner. The second number specifies the
+  /// permissions for the group. The last/right-most number specifies the
+  /// permissions for others. For example, with a mode of 0o764, the owner (7)
+  /// can read/write/execute, the group (6) can read/write and everyone else (4)
+  /// can read only.
+  ///
+  /// | Number | Description |
+  /// | ------ | ----------- |
+  /// | 7      | read, write, and execute |
+  /// | 6      | read and write |
+  /// | 5      | read and execute |
+  /// | 4      | read only |
+  /// | 3      | write and execute |
+  /// | 2      | write only |
+  /// | 1      | execute only |
+  /// | 0      | no permission |
+  ///
+  /// NOTE: This API currently throws on Windows
+  ///
+  /// Requires `allow-write` permission.
+  _i2.Future<_i2.Future<void>> chmod(
+    _i2.Object path,
+    _i2.num mode,
+  ) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'chmod',
+        [
+          path,
+          mode,
+        ],
+      ));
+
+  /// Synchronously changes the permission of a specific file/directory of
+  /// specified path. Ignores the process's umask.
+  ///
+  /// ```ts
+  /// Deno.chmodSync("/path/to/file", 0o666);
+  /// ```
+  ///
+  /// For a full description, see {@linkcode Deno.chmod}.
+  ///
+  /// NOTE: This API currently throws on Windows
+  ///
+  /// Requires `allow-write` permission.
+  void chmodSync(
+    _i2.Object path,
+    _i2.num mode,
+  ) {
+    _i3.callMethod(
+      this,
+      'chmodSync',
       [
         path,
         mode,
       ],
-    ));
+    );
+  }
 
-/// Synchronously changes the permission of a specific file/directory of
-/// specified path. Ignores the process's umask.
-///
-/// ```ts
-/// Deno.chmodSync("/path/to/file", 0o666);
-/// ```
-///
-/// For a full description, see {@linkcode Deno.chmod}.
-///
-/// NOTE: This API currently throws on Windows
-///
-/// Requires `allow-write` permission.
-void chmodSync(
-  _i2.Object path,
-  _i2.num mode,
-) {
-  _i3.callMethod(
-    _self,
-    'chmodSync',
-    [
-      path,
-      mode,
-    ],
-  );
-}
+  /// Change owner of a regular file or directory.
+  ///
+  /// This functionality is not available on Windows.
+  ///
+  /// ```ts
+  /// await Deno.chown("myFile.txt", 1000, 1002);
+  /// ```
+  ///
+  /// Requires `allow-write` permission.
+  ///
+  /// Throws Error (not implemented) if executed on Windows.
+  _i2.Future<_i2.Future<void>> chown(
+    _i2.Object path, [
+    _i2.num? uid,
+    _i2.num? gid,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'chown',
+        [
+          path,
+          uid ?? _i6.undefined,
+          gid ?? _i6.undefined,
+        ],
+      ));
 
-/// Change owner of a regular file or directory.
-///
-/// This functionality is not available on Windows.
-///
-/// ```ts
-/// await Deno.chown("myFile.txt", 1000, 1002);
-/// ```
-///
-/// Requires `allow-write` permission.
-///
-/// Throws Error (not implemented) if executed on Windows.
-_i2.Future<void> chown(
-  _i2.Object path, [
-  _i2.num? uid,
-  _i2.num? gid,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'chown',
+  /// Synchronously change owner of a regular file or directory.
+  ///
+  /// This functionality is not available on Windows.
+  ///
+  /// ```ts
+  /// Deno.chownSync("myFile.txt", 1000, 1002);
+  /// ```
+  ///
+  /// Requires `allow-write` permission.
+  ///
+  /// Throws Error (not implemented) if executed on Windows.
+  void chownSync(
+    _i2.Object path, [
+    _i2.num? uid,
+    _i2.num? gid,
+  ]) {
+    _i3.callMethod(
+      this,
+      'chownSync',
       [
         path,
         uid ?? _i6.undefined,
         gid ?? _i6.undefined,
       ],
-    ));
+    );
+  }
 
-/// Synchronously change owner of a regular file or directory.
-///
-/// This functionality is not available on Windows.
-///
-/// ```ts
-/// Deno.chownSync("myFile.txt", 1000, 1002);
-/// ```
-///
-/// Requires `allow-write` permission.
-///
-/// Throws Error (not implemented) if executed on Windows.
-void chownSync(
-  _i2.Object path, [
-  _i2.num? uid,
-  _i2.num? gid,
-]) {
-  _i3.callMethod(
-    _self,
-    'chownSync',
-    [
-      path,
-      uid ?? _i6.undefined,
-      gid ?? _i6.undefined,
-    ],
-  );
-}
+  /// Removes the named file or directory.
+  ///
+  /// ```ts
+  /// await Deno.remove("/path/to/empty_dir/or/file");
+  /// await Deno.remove("/path/to/populated_dir/or/file", { recursive: true });
+  /// ```
+  ///
+  /// Throws error if permission denied, path not found, or path is a non-empty
+  /// directory and the `recursive` option isn't set to `true`.
+  ///
+  /// Requires `allow-write` permission.
+  _i2.Future<_i2.Future<void>> remove(
+    _i2.Object path, [
+    _i4.RemoveOptions? options,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'remove',
+        [
+          path,
+          options ?? _i6.undefined,
+        ],
+      ));
 
-/// Removes the named file or directory.
-///
-/// ```ts
-/// await Deno.remove("/path/to/empty_dir/or/file");
-/// await Deno.remove("/path/to/populated_dir/or/file", { recursive: true });
-/// ```
-///
-/// Throws error if permission denied, path not found, or path is a non-empty
-/// directory and the `recursive` option isn't set to `true`.
-///
-/// Requires `allow-write` permission.
-_i2.Future<void> remove(
-  _i2.Object path, [
-  _i4.RemoveOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'remove',
+  /// Synchronously removes the named file or directory.
+  ///
+  /// ```ts
+  /// Deno.removeSync("/path/to/empty_dir/or/file");
+  /// Deno.removeSync("/path/to/populated_dir/or/file", { recursive: true });
+  /// ```
+  ///
+  /// Throws error if permission denied, path not found, or path is a non-empty
+  /// directory and the `recursive` option isn't set to `true`.
+  ///
+  /// Requires `allow-write` permission.
+  void removeSync(
+    _i2.Object path, [
+    _i4.RemoveOptions? options,
+  ]) {
+    _i3.callMethod(
+      this,
+      'removeSync',
       [
         path,
         options ?? _i6.undefined,
       ],
-    ));
+    );
+  }
 
-/// Synchronously removes the named file or directory.
-///
-/// ```ts
-/// Deno.removeSync("/path/to/empty_dir/or/file");
-/// Deno.removeSync("/path/to/populated_dir/or/file", { recursive: true });
-/// ```
-///
-/// Throws error if permission denied, path not found, or path is a non-empty
-/// directory and the `recursive` option isn't set to `true`.
-///
-/// Requires `allow-write` permission.
-void removeSync(
-  _i2.Object path, [
-  _i4.RemoveOptions? options,
-]) {
-  _i3.callMethod(
-    _self,
-    'removeSync',
-    [
-      path,
-      options ?? _i6.undefined,
-    ],
-  );
-}
-
-/// Synchronously renames (moves) `oldpath` to `newpath`. Paths may be files or
-/// directories. If `newpath` already exists and is not a directory,
-/// `renameSync()` replaces it. OS-specific restrictions may apply when
-/// `oldpath` and `newpath` are in different directories.
-///
-/// ```ts
-/// Deno.renameSync("old/path", "new/path");
-/// ```
-///
-/// On Unix-like OSes, this operation does not follow symlinks at either path.
-///
-/// It varies between platforms when the operation throws errors, and if so what
-/// they are. It's always an error to rename anything to a non-empty directory.
-///
-/// Requires `allow-read` and `allow-write` permissions.
-void renameSync(
-  _i2.Object oldpath,
-  _i2.Object newpath,
-) {
-  _i3.callMethod(
-    _self,
-    'renameSync',
-    [
-      oldpath,
-      newpath,
-    ],
-  );
-}
-
-/// Renames (moves) `oldpath` to `newpath`. Paths may be files or directories.
-/// If `newpath` already exists and is not a directory, `rename()` replaces it.
-/// OS-specific restrictions may apply when `oldpath` and `newpath` are in
-/// different directories.
-///
-/// ```ts
-/// await Deno.rename("old/path", "new/path");
-/// ```
-///
-/// On Unix-like OSes, this operation does not follow symlinks at either path.
-///
-/// It varies between platforms when the operation throws errors, and if so
-/// what they are. It's always an error to rename anything to a non-empty
-/// directory.
-///
-/// Requires `allow-read` and `allow-write` permissions.
-_i2.Future<void> rename(
-  _i2.Object oldpath,
-  _i2.Object newpath,
-) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'rename',
+  /// Synchronously renames (moves) `oldpath` to `newpath`. Paths may be files or
+  /// directories. If `newpath` already exists and is not a directory,
+  /// `renameSync()` replaces it. OS-specific restrictions may apply when
+  /// `oldpath` and `newpath` are in different directories.
+  ///
+  /// ```ts
+  /// Deno.renameSync("old/path", "new/path");
+  /// ```
+  ///
+  /// On Unix-like OSes, this operation does not follow symlinks at either path.
+  ///
+  /// It varies between platforms when the operation throws errors, and if so what
+  /// they are. It's always an error to rename anything to a non-empty directory.
+  ///
+  /// Requires `allow-read` and `allow-write` permissions.
+  void renameSync(
+    _i2.Object oldpath,
+    _i2.Object newpath,
+  ) {
+    _i3.callMethod(
+      this,
+      'renameSync',
       [
         oldpath,
         newpath,
       ],
-    ));
-
-/// Asynchronously reads and returns the entire contents of a file as an UTF-8
-/// decoded string. Reading a directory throws an error.
-///
-/// ```ts
-/// const data = await Deno.readTextFile("hello.txt");
-/// console.log(data);
-/// ```
-///
-/// Requires `allow-read` permission.
-_i2.Future<_i2.String> readTextFile(
-  _i2.Object path, [
-  _i4.ReadFileOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'readTextFile',
-      [
-        path,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Synchronously reads and returns the entire contents of a file as an UTF-8
-/// decoded string. Reading a directory throws an error.
-///
-/// ```ts
-/// const data = Deno.readTextFileSync("hello.txt");
-/// console.log(data);
-/// ```
-///
-/// Requires `allow-read` permission.
-_i2.String readTextFileSync(_i2.Object path) => _i3.callMethod(
-      _self,
-      'readTextFileSync',
-      [path],
     );
+  }
 
-/// Reads and resolves to the entire contents of a file as an array of bytes.
-/// `TextDecoder` can be used to transform the bytes to string if required.
-/// Reading a directory returns an empty data array.
-///
-/// ```ts
-/// const decoder = new TextDecoder("utf-8");
-/// const data = await Deno.readFile("hello.txt");
-/// console.log(decoder.decode(data));
-/// ```
-///
-/// Requires `allow-read` permission.
-_i2.Future<_i7.Uint8List> readFile(
-  _i2.Object path, [
-  _i4.ReadFileOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'readFile',
-      [
-        path,
-        options ?? _i6.undefined,
-      ],
-    ));
+  /// Renames (moves) `oldpath` to `newpath`. Paths may be files or directories.
+  /// If `newpath` already exists and is not a directory, `rename()` replaces it.
+  /// OS-specific restrictions may apply when `oldpath` and `newpath` are in
+  /// different directories.
+  ///
+  /// ```ts
+  /// await Deno.rename("old/path", "new/path");
+  /// ```
+  ///
+  /// On Unix-like OSes, this operation does not follow symlinks at either path.
+  ///
+  /// It varies between platforms when the operation throws errors, and if so
+  /// what they are. It's always an error to rename anything to a non-empty
+  /// directory.
+  ///
+  /// Requires `allow-read` and `allow-write` permissions.
+  _i2.Future<_i2.Future<void>> rename(
+    _i2.Object oldpath,
+    _i2.Object newpath,
+  ) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'rename',
+        [
+          oldpath,
+          newpath,
+        ],
+      ));
 
-/// Synchronously reads and returns the entire contents of a file as an array
-/// of bytes. `TextDecoder` can be used to transform the bytes to string if
-/// required. Reading a directory returns an empty data array.
-///
-/// ```ts
-/// const decoder = new TextDecoder("utf-8");
-/// const data = Deno.readFileSync("hello.txt");
-/// console.log(decoder.decode(data));
-/// ```
-///
-/// Requires `allow-read` permission.
-_i7.Uint8List readFileSync(_i2.Object path) => _i3.callMethod(
-      _self,
-      'readFileSync',
-      [path],
-    );
+  /// Asynchronously reads and returns the entire contents of a file as an UTF-8
+  /// decoded string. Reading a directory throws an error.
+  ///
+  /// ```ts
+  /// const data = await Deno.readTextFile("hello.txt");
+  /// console.log(data);
+  /// ```
+  ///
+  /// Requires `allow-read` permission.
+  _i2.Future<_i2.Future<_i2.String>> readTextFile(
+    _i2.Object path, [
+    _i4.ReadFileOptions? options,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'readTextFile',
+        [
+          path,
+          options ?? _i6.undefined,
+        ],
+      ));
 
-/// Resolves to the absolute normalized path, with symbolic links resolved.
-///
-/// ```ts
-/// // e.g. given /home/alice/file.txt and current directory /home/alice
-/// await Deno.symlink("file.txt", "symlink_file.txt");
-/// const realPath = await Deno.realPath("./file.txt");
-/// const realSymLinkPath = await Deno.realPath("./symlink_file.txt");
-/// console.log(realPath);  // outputs "/home/alice/file.txt"
-/// console.log(realSymLinkPath);  // outputs "/home/alice/file.txt"
-/// ```
-///
-/// Requires `allow-read` permission for the target path.
-///
-/// Also requires `allow-read` permission for the `CWD` if the target path is
-/// relative.
-_i2.Future<_i2.String> realPath(_i2.Object path) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'realPath',
-      [path],
-    ));
+  /// Synchronously reads and returns the entire contents of a file as an UTF-8
+  /// decoded string. Reading a directory throws an error.
+  ///
+  /// ```ts
+  /// const data = Deno.readTextFileSync("hello.txt");
+  /// console.log(data);
+  /// ```
+  ///
+  /// Requires `allow-read` permission.
+  _i2.String readTextFileSync(_i2.Object path) => _i3.callMethod(
+        this,
+        'readTextFileSync',
+        [path],
+      );
 
-/// Synchronously returns absolute normalized path, with symbolic links
-/// resolved.
-///
-/// ```ts
-/// // e.g. given /home/alice/file.txt and current directory /home/alice
-/// Deno.symlinkSync("file.txt", "symlink_file.txt");
-/// const realPath = Deno.realPathSync("./file.txt");
-/// const realSymLinkPath = Deno.realPathSync("./symlink_file.txt");
-/// console.log(realPath);  // outputs "/home/alice/file.txt"
-/// console.log(realSymLinkPath);  // outputs "/home/alice/file.txt"
-/// ```
-///
-/// Requires `allow-read` permission for the target path.
-///
-/// Also requires `allow-read` permission for the `CWD` if the target path is
-/// relative.
-_i2.String realPathSync(_i2.Object path) => _i3.callMethod(
-      _self,
-      'realPathSync',
-      [path],
-    );
+  /// Reads and resolves to the entire contents of a file as an array of bytes.
+  /// `TextDecoder` can be used to transform the bytes to string if required.
+  /// Reading a directory returns an empty data array.
+  ///
+  /// ```ts
+  /// const decoder = new TextDecoder("utf-8");
+  /// const data = await Deno.readFile("hello.txt");
+  /// console.log(decoder.decode(data));
+  /// ```
+  ///
+  /// Requires `allow-read` permission.
+  _i2.Future<_i2.Future<_i7.Uint8List>> readFile(
+    _i2.Object path, [
+    _i4.ReadFileOptions? options,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'readFile',
+        [
+          path,
+          options ?? _i6.undefined,
+        ],
+      ));
 
-/// Reads the directory given by `path` and returns an async iterable of
-/// {@linkcode Deno.DirEntry}.
-///
-/// ```ts
-/// for await (const dirEntry of Deno.readDir("/")) {
-///  console.log(dirEntry.name);
-/// }
-/// ```
-///
-/// Throws error if `path` is not a directory.
-///
-/// Requires `allow-read` permission.
-_i10.AsyncIterable<_i4.DirEntry> readDir(_i2.Object path) => _i3.callMethod(
-      _self,
-      'readDir',
-      [path],
-    );
+  /// Synchronously reads and returns the entire contents of a file as an array
+  /// of bytes. `TextDecoder` can be used to transform the bytes to string if
+  /// required. Reading a directory returns an empty data array.
+  ///
+  /// ```ts
+  /// const decoder = new TextDecoder("utf-8");
+  /// const data = Deno.readFileSync("hello.txt");
+  /// console.log(decoder.decode(data));
+  /// ```
+  ///
+  /// Requires `allow-read` permission.
+  _i7.Uint8List readFileSync(_i2.Object path) => _i3.callMethod(
+        this,
+        'readFileSync',
+        [path],
+      );
 
-/// Synchronously reads the directory given by `path` and returns an iterable
-/// of `Deno.DirEntry`.
-///
-/// ```ts
-/// for (const dirEntry of Deno.readDirSync("/")) {
-///  console.log(dirEntry.name);
-/// }
-/// ```
-///
-/// Throws error if `path` is not a directory.
-///
-/// Requires `allow-read` permission.
-_i11.Iterable<_i4.DirEntry> readDirSync(_i2.Object path) => _i3.callMethod(
-      _self,
-      'readDirSync',
-      [path],
-    );
+  /// Resolves to the absolute normalized path, with symbolic links resolved.
+  ///
+  /// ```ts
+  /// // e.g. given /home/alice/file.txt and current directory /home/alice
+  /// await Deno.symlink("file.txt", "symlink_file.txt");
+  /// const realPath = await Deno.realPath("./file.txt");
+  /// const realSymLinkPath = await Deno.realPath("./symlink_file.txt");
+  /// console.log(realPath);  // outputs "/home/alice/file.txt"
+  /// console.log(realSymLinkPath);  // outputs "/home/alice/file.txt"
+  /// ```
+  ///
+  /// Requires `allow-read` permission for the target path.
+  ///
+  /// Also requires `allow-read` permission for the `CWD` if the target path is
+  /// relative.
+  _i2.Future<_i2.Future<_i2.String>> realPath(_i2.Object path) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'realPath',
+        [path],
+      ));
 
-/// Copies the contents and permissions of one file to another specified path,
-/// by default creating a new file if needed, else overwriting. Fails if target
-/// path is a directory or is unwritable.
-///
-/// ```ts
-/// await Deno.copyFile("from.txt", "to.txt");
-/// ```
-///
-/// Requires `allow-read` permission on `fromPath`.
-///
-/// Requires `allow-write` permission on `toPath`.
-_i2.Future<void> copyFile(
-  _i2.Object fromPath,
-  _i2.Object toPath,
-) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'copyFile',
+  /// Synchronously returns absolute normalized path, with symbolic links
+  /// resolved.
+  ///
+  /// ```ts
+  /// // e.g. given /home/alice/file.txt and current directory /home/alice
+  /// Deno.symlinkSync("file.txt", "symlink_file.txt");
+  /// const realPath = Deno.realPathSync("./file.txt");
+  /// const realSymLinkPath = Deno.realPathSync("./symlink_file.txt");
+  /// console.log(realPath);  // outputs "/home/alice/file.txt"
+  /// console.log(realSymLinkPath);  // outputs "/home/alice/file.txt"
+  /// ```
+  ///
+  /// Requires `allow-read` permission for the target path.
+  ///
+  /// Also requires `allow-read` permission for the `CWD` if the target path is
+  /// relative.
+  _i2.String realPathSync(_i2.Object path) => _i3.callMethod(
+        this,
+        'realPathSync',
+        [path],
+      );
+
+  /// Reads the directory given by `path` and returns an async iterable of
+  /// {@linkcode Deno.DirEntry}.
+  ///
+  /// ```ts
+  /// for await (const dirEntry of Deno.readDir("/")) {
+  ///  console.log(dirEntry.name);
+  /// }
+  /// ```
+  ///
+  /// Throws error if `path` is not a directory.
+  ///
+  /// Requires `allow-read` permission.
+  _i10.AsyncIterable<_i4.DirEntry> readDir(_i2.Object path) => _i3.callMethod(
+        this,
+        'readDir',
+        [path],
+      );
+
+  /// Synchronously reads the directory given by `path` and returns an iterable
+  /// of `Deno.DirEntry`.
+  ///
+  /// ```ts
+  /// for (const dirEntry of Deno.readDirSync("/")) {
+  ///  console.log(dirEntry.name);
+  /// }
+  /// ```
+  ///
+  /// Throws error if `path` is not a directory.
+  ///
+  /// Requires `allow-read` permission.
+  _i11.Iterable<_i4.DirEntry> readDirSync(_i2.Object path) => _i3.callMethod(
+        this,
+        'readDirSync',
+        [path],
+      );
+
+  /// Copies the contents and permissions of one file to another specified path,
+  /// by default creating a new file if needed, else overwriting. Fails if target
+  /// path is a directory or is unwritable.
+  ///
+  /// ```ts
+  /// await Deno.copyFile("from.txt", "to.txt");
+  /// ```
+  ///
+  /// Requires `allow-read` permission on `fromPath`.
+  ///
+  /// Requires `allow-write` permission on `toPath`.
+  _i2.Future<_i2.Future<void>> copyFile(
+    _i2.Object fromPath,
+    _i2.Object toPath,
+  ) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'copyFile',
+        [
+          fromPath,
+          toPath,
+        ],
+      ));
+
+  /// Synchronously copies the contents and permissions of one file to another
+  /// specified path, by default creating a new file if needed, else overwriting.
+  /// Fails if target path is a directory or is unwritable.
+  ///
+  /// ```ts
+  /// Deno.copyFileSync("from.txt", "to.txt");
+  /// ```
+  ///
+  /// Requires `allow-read` permission on `fromPath`.
+  ///
+  /// Requires `allow-write` permission on `toPath`.
+  void copyFileSync(
+    _i2.Object fromPath,
+    _i2.Object toPath,
+  ) {
+    _i3.callMethod(
+      this,
+      'copyFileSync',
       [
         fromPath,
         toPath,
       ],
-    ));
-
-/// Synchronously copies the contents and permissions of one file to another
-/// specified path, by default creating a new file if needed, else overwriting.
-/// Fails if target path is a directory or is unwritable.
-///
-/// ```ts
-/// Deno.copyFileSync("from.txt", "to.txt");
-/// ```
-///
-/// Requires `allow-read` permission on `fromPath`.
-///
-/// Requires `allow-write` permission on `toPath`.
-void copyFileSync(
-  _i2.Object fromPath,
-  _i2.Object toPath,
-) {
-  _i3.callMethod(
-    _self,
-    'copyFileSync',
-    [
-      fromPath,
-      toPath,
-    ],
-  );
-}
-
-/// Resolves to the full path destination of the named symbolic link.
-///
-/// ```ts
-/// await Deno.symlink("./test.txt", "./test_link.txt");
-/// const target = await Deno.readLink("./test_link.txt"); // full path of ./test.txt
-/// ```
-///
-/// Throws TypeError if called with a hard link.
-///
-/// Requires `allow-read` permission.
-_i2.Future<_i2.String> readLink(_i2.Object path) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'readLink',
-      [path],
-    ));
-
-/// Synchronously returns the full path destination of the named symbolic
-/// link.
-///
-/// ```ts
-/// Deno.symlinkSync("./test.txt", "./test_link.txt");
-/// const target = Deno.readLinkSync("./test_link.txt"); // full path of ./test.txt
-/// ```
-///
-/// Throws TypeError if called with a hard link.
-///
-/// Requires `allow-read` permission.
-_i2.String readLinkSync(_i2.Object path) => _i3.callMethod(
-      _self,
-      'readLinkSync',
-      [path],
     );
+  }
 
-/// Resolves to a {@linkcode Deno.FileInfo} for the specified `path`. If
-/// `path` is a symlink, information for the symlink will be returned instead
-/// of what it points to.
-///
-/// ```ts
-/// import { assert } from "https://deno.land/std/testing/asserts.ts";
-/// const fileInfo = await Deno.lstat("hello.txt");
-/// assert(fileInfo.isFile);
-/// ```
-///
-/// Requires `allow-read` permission.
-_i2.Future<_i4.FileInfo> lstat(_i2.Object path) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'lstat',
-      [path],
-    ));
+  /// Resolves to the full path destination of the named symbolic link.
+  ///
+  /// ```ts
+  /// await Deno.symlink("./test.txt", "./test_link.txt");
+  /// const target = await Deno.readLink("./test_link.txt"); // full path of ./test.txt
+  /// ```
+  ///
+  /// Throws TypeError if called with a hard link.
+  ///
+  /// Requires `allow-read` permission.
+  _i2.Future<_i2.Future<_i2.String>> readLink(_i2.Object path) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'readLink',
+        [path],
+      ));
 
-/// Synchronously returns a {@linkcode Deno.FileInfo} for the specified
-/// `path`. If `path` is a symlink, information for the symlink will be
-/// returned instead of what it points to.
-///
-/// ```ts
-/// import { assert } from "https://deno.land/std/testing/asserts.ts";
-/// const fileInfo = Deno.lstatSync("hello.txt");
-/// assert(fileInfo.isFile);
-/// ```
-///
-/// Requires `allow-read` permission.
-_i4.FileInfo lstatSync(_i2.Object path) => _i3.callMethod(
-      _self,
-      'lstatSync',
-      [path],
-    );
+  /// Synchronously returns the full path destination of the named symbolic
+  /// link.
+  ///
+  /// ```ts
+  /// Deno.symlinkSync("./test.txt", "./test_link.txt");
+  /// const target = Deno.readLinkSync("./test_link.txt"); // full path of ./test.txt
+  /// ```
+  ///
+  /// Throws TypeError if called with a hard link.
+  ///
+  /// Requires `allow-read` permission.
+  _i2.String readLinkSync(_i2.Object path) => _i3.callMethod(
+        this,
+        'readLinkSync',
+        [path],
+      );
 
-/// Resolves to a {@linkcode Deno.FileInfo} for the specified `path`. Will
-/// always follow symlinks.
-///
-/// ```ts
-/// import { assert } from "https://deno.land/std/testing/asserts.ts";
-/// const fileInfo = await Deno.stat("hello.txt");
-/// assert(fileInfo.isFile);
-/// ```
-///
-/// Requires `allow-read` permission.
-_i2.Future<_i4.FileInfo> stat(_i2.Object path) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'stat',
-      [path],
-    ));
+  /// Resolves to a {@linkcode Deno.FileInfo} for the specified `path`. If
+  /// `path` is a symlink, information for the symlink will be returned instead
+  /// of what it points to.
+  ///
+  /// ```ts
+  /// import { assert } from "https://deno.land/std/testing/asserts.ts";
+  /// const fileInfo = await Deno.lstat("hello.txt");
+  /// assert(fileInfo.isFile);
+  /// ```
+  ///
+  /// Requires `allow-read` permission.
+  _i2.Future<_i2.Future<_i4.FileInfo>> lstat(_i2.Object path) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'lstat',
+        [path],
+      ));
 
-/// Synchronously returns a {@linkcode Deno.FileInfo} for the specified
-/// `path`. Will always follow symlinks.
-///
-/// ```ts
-/// import { assert } from "https://deno.land/std/testing/asserts.ts";
-/// const fileInfo = Deno.statSync("hello.txt");
-/// assert(fileInfo.isFile);
-/// ```
-///
-/// Requires `allow-read` permission.
-_i4.FileInfo statSync(_i2.Object path) => _i3.callMethod(
-      _self,
-      'statSync',
-      [path],
-    );
+  /// Synchronously returns a {@linkcode Deno.FileInfo} for the specified
+  /// `path`. If `path` is a symlink, information for the symlink will be
+  /// returned instead of what it points to.
+  ///
+  /// ```ts
+  /// import { assert } from "https://deno.land/std/testing/asserts.ts";
+  /// const fileInfo = Deno.lstatSync("hello.txt");
+  /// assert(fileInfo.isFile);
+  /// ```
+  ///
+  /// Requires `allow-read` permission.
+  _i4.FileInfo lstatSync(_i2.Object path) => _i3.callMethod(
+        this,
+        'lstatSync',
+        [path],
+      );
 
-/// Write `data` to the given `path`, by default creating a new file if
-/// needed, else overwriting.
-///
-/// ```ts
-/// const encoder = new TextEncoder();
-/// const data = encoder.encode("Hello world\n");
-/// await Deno.writeFile("hello1.txt", data);  // overwrite "hello1.txt" or create it
-/// await Deno.writeFile("hello2.txt", data, { create: false });  // only works if "hello2.txt" exists
-/// await Deno.writeFile("hello3.txt", data, { mode: 0o777 });  // set permissions on new file
-/// await Deno.writeFile("hello4.txt", data, { append: true });  // add data to the end of the file
-/// ```
-///
-/// Requires `allow-write` permission, and `allow-read` if `options.create` is
-/// `false`.
-_i2.Future<void> writeFile(
-  _i2.Object path,
-  _i2.Object data, [
-  _i4.WriteFileOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'writeFile',
+  /// Resolves to a {@linkcode Deno.FileInfo} for the specified `path`. Will
+  /// always follow symlinks.
+  ///
+  /// ```ts
+  /// import { assert } from "https://deno.land/std/testing/asserts.ts";
+  /// const fileInfo = await Deno.stat("hello.txt");
+  /// assert(fileInfo.isFile);
+  /// ```
+  ///
+  /// Requires `allow-read` permission.
+  _i2.Future<_i2.Future<_i4.FileInfo>> stat(_i2.Object path) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'stat',
+        [path],
+      ));
+
+  /// Synchronously returns a {@linkcode Deno.FileInfo} for the specified
+  /// `path`. Will always follow symlinks.
+  ///
+  /// ```ts
+  /// import { assert } from "https://deno.land/std/testing/asserts.ts";
+  /// const fileInfo = Deno.statSync("hello.txt");
+  /// assert(fileInfo.isFile);
+  /// ```
+  ///
+  /// Requires `allow-read` permission.
+  _i4.FileInfo statSync(_i2.Object path) => _i3.callMethod(
+        this,
+        'statSync',
+        [path],
+      );
+
+  /// Write `data` to the given `path`, by default creating a new file if
+  /// needed, else overwriting.
+  ///
+  /// ```ts
+  /// const encoder = new TextEncoder();
+  /// const data = encoder.encode("Hello world\n");
+  /// await Deno.writeFile("hello1.txt", data);  // overwrite "hello1.txt" or create it
+  /// await Deno.writeFile("hello2.txt", data, { create: false });  // only works if "hello2.txt" exists
+  /// await Deno.writeFile("hello3.txt", data, { mode: 0o777 });  // set permissions on new file
+  /// await Deno.writeFile("hello4.txt", data, { append: true });  // add data to the end of the file
+  /// ```
+  ///
+  /// Requires `allow-write` permission, and `allow-read` if `options.create` is
+  /// `false`.
+  _i2.Future<_i2.Future<void>> writeFile(
+    _i2.Object path,
+    _i2.Object data, [
+    _i4.WriteFileOptions? options,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'writeFile',
+        [
+          path,
+          data,
+          options ?? _i6.undefined,
+        ],
+      ));
+
+  /// Synchronously write `data` to the given `path`, by default creating a new
+  /// file if needed, else overwriting.
+  ///
+  /// ```ts
+  /// const encoder = new TextEncoder();
+  /// const data = encoder.encode("Hello world\n");
+  /// Deno.writeFileSync("hello1.txt", data);  // overwrite "hello1.txt" or create it
+  /// Deno.writeFileSync("hello2.txt", data, { create: false });  // only works if "hello2.txt" exists
+  /// Deno.writeFileSync("hello3.txt", data, { mode: 0o777 });  // set permissions on new file
+  /// Deno.writeFileSync("hello4.txt", data, { append: true });  // add data to the end of the file
+  /// ```
+  ///
+  /// Requires `allow-write` permission, and `allow-read` if `options.create` is
+  /// `false`.
+  void writeFileSync(
+    _i2.Object path,
+    _i7.Uint8List data, [
+    _i4.WriteFileOptions? options,
+  ]) {
+    _i3.callMethod(
+      this,
+      'writeFileSync',
       [
         path,
         data,
         options ?? _i6.undefined,
       ],
-    ));
+    );
+  }
 
-/// Synchronously write `data` to the given `path`, by default creating a new
-/// file if needed, else overwriting.
-///
-/// ```ts
-/// const encoder = new TextEncoder();
-/// const data = encoder.encode("Hello world\n");
-/// Deno.writeFileSync("hello1.txt", data);  // overwrite "hello1.txt" or create it
-/// Deno.writeFileSync("hello2.txt", data, { create: false });  // only works if "hello2.txt" exists
-/// Deno.writeFileSync("hello3.txt", data, { mode: 0o777 });  // set permissions on new file
-/// Deno.writeFileSync("hello4.txt", data, { append: true });  // add data to the end of the file
-/// ```
-///
-/// Requires `allow-write` permission, and `allow-read` if `options.create` is
-/// `false`.
-void writeFileSync(
-  _i2.Object path,
-  _i7.Uint8List data, [
-  _i4.WriteFileOptions? options,
-]) {
-  _i3.callMethod(
-    _self,
-    'writeFileSync',
-    [
-      path,
-      data,
-      options ?? _i6.undefined,
-    ],
-  );
-}
+  /// Write string `data` to the given `path`, by default creating a new file if
+  /// needed, else overwriting.
+  ///
+  /// ```ts
+  /// await Deno.writeTextFile("hello1.txt", "Hello world\n");  // overwrite "hello1.txt" or create it
+  /// ```
+  ///
+  /// Requires `allow-write` permission, and `allow-read` if `options.create` is
+  /// `false`.
+  _i2.Future<_i2.Future<void>> writeTextFile(
+    _i2.Object path,
+    _i2.Object data, [
+    _i4.WriteFileOptions? options,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'writeTextFile',
+        [
+          path,
+          data,
+          options ?? _i6.undefined,
+        ],
+      ));
 
-/// Write string `data` to the given `path`, by default creating a new file if
-/// needed, else overwriting.
-///
-/// ```ts
-/// await Deno.writeTextFile("hello1.txt", "Hello world\n");  // overwrite "hello1.txt" or create it
-/// ```
-///
-/// Requires `allow-write` permission, and `allow-read` if `options.create` is
-/// `false`.
-_i2.Future<void> writeTextFile(
-  _i2.Object path,
-  _i2.Object data, [
-  _i4.WriteFileOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'writeTextFile',
+  /// Synchronously write string `data` to the given `path`, by default creating
+  /// a new file if needed, else overwriting.
+  ///
+  /// ```ts
+  /// Deno.writeTextFileSync("hello1.txt", "Hello world\n");  // overwrite "hello1.txt" or create it
+  /// ```
+  ///
+  /// Requires `allow-write` permission, and `allow-read` if `options.create` is
+  /// `false`.
+  void writeTextFileSync(
+    _i2.Object path,
+    _i2.String data, [
+    _i4.WriteFileOptions? options,
+  ]) {
+    _i3.callMethod(
+      this,
+      'writeTextFileSync',
       [
         path,
         data,
         options ?? _i6.undefined,
       ],
-    ));
+    );
+  }
 
-/// Synchronously write string `data` to the given `path`, by default creating
-/// a new file if needed, else overwriting.
-///
-/// ```ts
-/// Deno.writeTextFileSync("hello1.txt", "Hello world\n");  // overwrite "hello1.txt" or create it
-/// ```
-///
-/// Requires `allow-write` permission, and `allow-read` if `options.create` is
-/// `false`.
-void writeTextFileSync(
-  _i2.Object path,
-  _i2.String data, [
-  _i4.WriteFileOptions? options,
-]) {
-  _i3.callMethod(
-    _self,
-    'writeTextFileSync',
-    [
-      path,
-      data,
-      options ?? _i6.undefined,
-    ],
-  );
-}
+  /// Truncates (or extends) the specified file, to reach the specified `len`.
+  /// If `len` is not specified then the entire file contents are truncated.
+  ///
+  /// ### Truncate the entire file
+  /// ```ts
+  /// await Deno.truncate("my_file.txt");
+  /// ```
+  ///
+  /// ### Truncate part of the file
+  ///
+  /// ```ts
+  /// const file = await Deno.makeTempFile();
+  /// await Deno.writeFile(file, new TextEncoder().encode("Hello World"));
+  /// await Deno.truncate(file, 7);
+  /// const data = await Deno.readFile(file);
+  /// console.log(new TextDecoder().decode(data));  // "Hello W"
+  /// ```
+  ///
+  /// Requires `allow-write` permission.
+  _i2.Future<_i2.Future<void>> truncate(
+    _i2.String name, [
+    _i2.num? len,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'truncate',
+        [
+          name,
+          len ?? _i6.undefined,
+        ],
+      ));
 
-/// Truncates (or extends) the specified file, to reach the specified `len`.
-/// If `len` is not specified then the entire file contents are truncated.
-///
-/// ### Truncate the entire file
-/// ```ts
-/// await Deno.truncate("my_file.txt");
-/// ```
-///
-/// ### Truncate part of the file
-///
-/// ```ts
-/// const file = await Deno.makeTempFile();
-/// await Deno.writeFile(file, new TextEncoder().encode("Hello World"));
-/// await Deno.truncate(file, 7);
-/// const data = await Deno.readFile(file);
-/// console.log(new TextDecoder().decode(data));  // "Hello W"
-/// ```
-///
-/// Requires `allow-write` permission.
-_i2.Future<void> truncate(
-  _i2.String name, [
-  _i2.num? len,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'truncate',
+  /// Synchronously truncates (or extends) the specified file, to reach the
+  /// specified `len`. If `len` is not specified then the entire file contents
+  /// are truncated.
+  ///
+  /// ### Truncate the entire file
+  ///
+  /// ```ts
+  /// Deno.truncateSync("my_file.txt");
+  /// ```
+  ///
+  /// ### Truncate part of the file
+  ///
+  /// ```ts
+  /// const file = Deno.makeTempFileSync();
+  /// Deno.writeFileSync(file, new TextEncoder().encode("Hello World"));
+  /// Deno.truncateSync(file, 7);
+  /// const data = Deno.readFileSync(file);
+  /// console.log(new TextDecoder().decode(data));
+  /// ```
+  ///
+  /// Requires `allow-write` permission.
+  void truncateSync(
+    _i2.String name, [
+    _i2.num? len,
+  ]) {
+    _i3.callMethod(
+      this,
+      'truncateSync',
       [
         name,
         len ?? _i6.undefined,
       ],
-    ));
-
-/// Synchronously truncates (or extends) the specified file, to reach the
-/// specified `len`. If `len` is not specified then the entire file contents
-/// are truncated.
-///
-/// ### Truncate the entire file
-///
-/// ```ts
-/// Deno.truncateSync("my_file.txt");
-/// ```
-///
-/// ### Truncate part of the file
-///
-/// ```ts
-/// const file = Deno.makeTempFileSync();
-/// Deno.writeFileSync(file, new TextEncoder().encode("Hello World"));
-/// Deno.truncateSync(file, 7);
-/// const data = Deno.readFileSync(file);
-/// console.log(new TextDecoder().decode(data));
-/// ```
-///
-/// Requires `allow-write` permission.
-void truncateSync(
-  _i2.String name, [
-  _i2.num? len,
-]) {
-  _i3.callMethod(
-    _self,
-    'truncateSync',
-    [
-      name,
-      len ?? _i6.undefined,
-    ],
-  );
-}
-
-/// Receive metrics from the privileged side of Deno. This is primarily used
-/// in the development of Deno. _Ops_, also called _bindings_, are the
-/// go-between between Deno JavaScript sandbox and the rest of Deno.
-///
-/// ```shell
-/// > console.table(Deno.metrics())
-/// âââââââââââââââââââââââââââ¬âââââââââ
-/// â         (index)         â Values â
-/// âââââââââââââââââââââââââââ¼âââââââââ¤
-/// â      opsDispatched      â   3    â
-/// â    opsDispatchedSync    â   2    â
-/// â   opsDispatchedAsync    â   1    â
-/// â opsDispatchedAsyncUnref â   0    â
-/// â      opsCompleted       â   3    â
-/// â    opsCompletedSync     â   2    â
-/// â    opsCompletedAsync    â   1    â
-/// â opsCompletedAsyncUnref  â   0    â
-/// â    bytesSentControl     â   73   â
-/// â      bytesSentData      â   0    â
-/// â      bytesReceived      â  375   â
-/// âââââââââââââââââââââââââââ´âââââââââ
-/// ```
-_i4.Metrics metrics() => _i3.callMethod(
-      _self,
-      'metrics',
-      [],
     );
+  }
 
-/// Returns a map of open resource IDs (_rid_) along with their string
-/// representations. This is an internal API and as such resource
-/// representation has `unknown` type; that means it can change any time and
-/// should not be depended upon.
-///
-/// ```ts
-/// console.log(Deno.resources());
-/// // { 0: "stdin", 1: "stdout", 2: "stderr" }
-/// Deno.openSync('../test.file');
-/// console.log(Deno.resources());
-/// // { 0: "stdin", 1: "stdout", 2: "stderr", 3: "fsFile" }
-/// ```
-_i2.Object resources() => _i3.callMethod(
-      _self,
-      'resources',
-      [],
-    );
+  /// Receive metrics from the privileged side of Deno. This is primarily used
+  /// in the development of Deno. _Ops_, also called _bindings_, are the
+  /// go-between between Deno JavaScript sandbox and the rest of Deno.
+  ///
+  /// ```shell
+  /// > console.table(Deno.metrics())
+  /// âââââââââââââââââââââââââââ¬âââââââââ
+  /// â         (index)         â Values â
+  /// âââââââââââââââââââââââââââ¼âââââââââ¤
+  /// â      opsDispatched      â   3    â
+  /// â    opsDispatchedSync    â   2    â
+  /// â   opsDispatchedAsync    â   1    â
+  /// â opsDispatchedAsyncUnref â   0    â
+  /// â      opsCompleted       â   3    â
+  /// â    opsCompletedSync     â   2    â
+  /// â    opsCompletedAsync    â   1    â
+  /// â opsCompletedAsyncUnref  â   0    â
+  /// â    bytesSentControl     â   73   â
+  /// â      bytesSentData      â   0    â
+  /// â      bytesReceived      â  375   â
+  /// âââââââââââââââââââââââââââ´âââââââââ
+  /// ```
+  _i4.Metrics metrics() => _i3.callMethod(
+        this,
+        'metrics',
+        [],
+      );
 
-/// Watch for file system events against one or more `paths`, which can be
-/// files or directories. These paths must exist already. One user action (e.g.
-/// `touch test.file`) can generate multiple file system events. Likewise,
-/// one user action can result in multiple file paths in one event (e.g. `mv
-/// old_name.txt new_name.txt`).
-///
-/// The recursive option is `true` by default and, for directories, will watch
-/// the specified directory and all sub directories.
-///
-/// Note that the exact ordering of the events can vary between operating
-/// systems.
-///
-/// ```ts
-/// const watcher = Deno.watchFs("/");
-/// for await (const event of watcher) {
-///   console.log(">>>> event", event);
-///   // { kind: "create", paths: [ "/foo.txt" ] }
-/// }
-/// ```
-///
-/// Call `watcher.close()` to stop watching.
-///
-/// ```ts
-/// const watcher = Deno.watchFs("/");
-///
-/// setTimeout(() => {
-///  watcher.close();
-/// }, 5000);
-///
-/// for await (const event of watcher) {
-///   console.log(">>>> event", event);
-/// }
-/// ```
-///
-/// Requires `allow-read` permission.
-_i4.FsWatcher watchFs(
-  _i2.Object paths, [
-  _i4.IInline9? options,
-]) =>
+  /// Returns a map of open resource IDs (_rid_) along with their string
+  /// representations. This is an internal API and as such resource
+  /// representation has `unknown` type; that means it can change any time and
+  /// should not be depended upon.
+  ///
+  /// ```ts
+  /// console.log(Deno.resources());
+  /// // { 0: "stdin", 1: "stdout", 2: "stderr" }
+  /// Deno.openSync('../test.file');
+  /// console.log(Deno.resources());
+  /// // { 0: "stdin", 1: "stdout", 2: "stderr", 3: "fsFile" }
+  /// ```
+  _i2.Object resources() => _i3.callMethod(
+        this,
+        'resources',
+        [],
+      );
+
+  /// Watch for file system events against one or more `paths`, which can be
+  /// files or directories. These paths must exist already. One user action (e.g.
+  /// `touch test.file`) can generate multiple file system events. Likewise,
+  /// one user action can result in multiple file paths in one event (e.g. `mv
+  /// old_name.txt new_name.txt`).
+  ///
+  /// The recursive option is `true` by default and, for directories, will watch
+  /// the specified directory and all sub directories.
+  ///
+  /// Note that the exact ordering of the events can vary between operating
+  /// systems.
+  ///
+  /// ```ts
+  /// const watcher = Deno.watchFs("/");
+  /// for await (const event of watcher) {
+  ///   console.log(">>>> event", event);
+  ///   // { kind: "create", paths: [ "/foo.txt" ] }
+  /// }
+  /// ```
+  ///
+  /// Call `watcher.close()` to stop watching.
+  ///
+  /// ```ts
+  /// const watcher = Deno.watchFs("/");
+  ///
+  /// setTimeout(() => {
+  ///  watcher.close();
+  /// }, 5000);
+  ///
+  /// for await (const event of watcher) {
+  ///   console.log(">>>> event", event);
+  /// }
+  /// ```
+  ///
+  /// Requires `allow-read` permission.
+  _i4.FsWatcher watchFs(
+    _i2.Object paths, [
+    _i4.IInline9? options,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'watchFs',
+        [
+          paths,
+          options ?? _i6.undefined,
+        ],
+      );
+
+  /// Registers the given function as a listener of the given signal event.
+  ///
+  /// ```ts
+  /// Deno.addSignalListener(
+  ///  "SIGTERM",
+  ///  () => {
+  ///    console.log("SIGTERM!")
+  ///  }
+  /// );
+  /// ```
+  ///
+  /// _Note_: On Windows only `"SIGINT"` (CTRL+C) and `"SIGBREAK"` (CTRL+Break)
+  /// are supported.
+  void addSignalListener(
+    _i4.Signal signal,
+    void Function() handler,
+  ) {
     _i3.callMethod(
-      _self,
-      'watchFs',
+      this,
+      'addSignalListener',
       [
-        paths,
-        options ?? _i6.undefined,
+        signal.name,
+        _i3.allowInterop(handler),
       ],
     );
+  }
 
-/// Registers the given function as a listener of the given signal event.
-///
-/// ```ts
-/// Deno.addSignalListener(
-///  "SIGTERM",
-///  () => {
-///    console.log("SIGTERM!")
-///  }
-/// );
-/// ```
-///
-/// _Note_: On Windows only `"SIGINT"` (CTRL+C) and `"SIGBREAK"` (CTRL+Break)
-/// are supported.
-void addSignalListener(
-  _i4.Signal signal,
-  void Function() handler,
-) {
-  _i3.callMethod(
-    _self,
-    'addSignalListener',
-    [
-      signal.name,
-      _i3.allowInterop(handler),
-    ],
-  );
-}
-
-/// Removes the given signal listener that has been registered with
-/// {@linkcode Deno.addSignalListener}.
-///
-/// ```ts
-/// const listener = () => {
-///  console.log("SIGTERM!")
-/// };
-/// Deno.addSignalListener("SIGTERM", listener);
-/// Deno.removeSignalListener("SIGTERM", listener);
-/// ```
-///
-/// _Note_: On Windows only `"SIGINT"` (CTRL+C) and `"SIGBREAK"` (CTRL+Break)
-/// are supported.
-void removeSignalListener(
-  _i4.Signal signal,
-  void Function() handler,
-) {
-  _i3.callMethod(
-    _self,
-    'removeSignalListener',
-    [
-      signal.name,
-      _i3.allowInterop(handler),
-    ],
-  );
-}
-
-/// Spawns new subprocess. RunOptions must contain at a minimum the `opt.cmd`,
-/// an array of program arguments, the first of which is the binary.
-///
-/// ```ts
-/// const p = Deno.run({
-///  cmd: ["curl", "https://example.com"],
-/// });
-/// const status = await p.status();
-/// ```
-///
-/// Subprocess uses same working directory as parent process unless `opt.cwd`
-/// is specified.
-///
-/// Environmental variables from parent process can be cleared using `opt.clearEnv`.
-/// Doesn't guarantee that only `opt.env` variables are present,
-/// as the OS may set environmental variables for processes.
-///
-/// Environmental variables for subprocess can be specified using `opt.env`
-/// mapping.
-///
-/// `opt.uid` sets the child processâs user ID. This translates to a setuid call
-/// in the child process. Failure in the setuid call will cause the spawn to fail.
-///
-/// `opt.gid` is similar to `opt.uid`, but sets the group ID of the child process.
-/// This has the same semantics as the uid field.
-///
-/// By default subprocess inherits stdio of parent process. To change
-/// this this, `opt.stdin`, `opt.stdout`, and `opt.stderr` can be set
-/// independently to a resource ID (_rid_) of an open file, `"inherit"`,
-/// `"piped"`, or `"null"`:
-///
-/// - _number_: the resource ID of an open file/resource. This allows you to
-///  read or write to a file.
-/// - `"inherit"`: The default if unspecified. The subprocess inherits from the
-///  parent.
-/// - `"piped"`: A new pipe should be arranged to connect the parent and child
-///  sub-process.
-/// - `"null"`: This stream will be ignored. This is the equivalent of attaching
-///  the stream to `/dev/null`.
-///
-/// Details of the spawned process are returned as an instance of
-/// {@linkcode Deno.Process}.
-///
-/// Requires `allow-run` permission.
-_i4.Process<T> run<T extends _i4.RunOptions>(T opt) => _i3.callMethod(
-      _self,
-      'run',
-      [opt],
-    );
-
-/// Converts the input into a string that has the same format as printed by
-/// `console.log()`.
-///
-/// ```ts
-/// const obj = {
-///  a: 10,
-///  b: "hello",
-/// };
-/// const objAsString = Deno.inspect(obj); // { a: 10, b: "hello" }
-/// console.log(obj);  // prints same value as objAsString, e.g. { a: 10, b: "hello" }
-/// ```
-///
-/// A custom inspect functions can be registered on objects, via the symbol
-/// `Symbol.for("Deno.customInspect")`, to control and customize the output
-/// of `inspect()` or when using `console` logging:
-///
-/// ```ts
-/// class A {
-///  x = 10;
-///  y = "hello";
-///  [Symbol.for("Deno.customInspect")]() {
-///    return `x=${this.x}, y=${this.y}`;
-///  }
-/// }
-///
-/// const inStringFormat = Deno.inspect(new A()); // "x=10, y=hello"
-/// console.log(inStringFormat);  // prints "x=10, y=hello"
-/// ```
-///
-/// A depth can be specified by using the `depth` option:
-///
-/// ```ts
-/// Deno.inspect({a: {b: {c: {d: 'hello'}}}}, {depth: 2}); // { a: { b: [Object] } }
-/// ```
-_i2.String inspect(
-  _i2.Object? value, [
-  _i4.InspectOptions? options,
-]) =>
+  /// Removes the given signal listener that has been registered with
+  /// {@linkcode Deno.addSignalListener}.
+  ///
+  /// ```ts
+  /// const listener = () => {
+  ///  console.log("SIGTERM!")
+  /// };
+  /// Deno.addSignalListener("SIGTERM", listener);
+  /// Deno.removeSignalListener("SIGTERM", listener);
+  /// ```
+  ///
+  /// _Note_: On Windows only `"SIGINT"` (CTRL+C) and `"SIGBREAK"` (CTRL+Break)
+  /// are supported.
+  void removeSignalListener(
+    _i4.Signal signal,
+    void Function() handler,
+  ) {
     _i3.callMethod(
-      _self,
-      'inspect',
+      this,
+      'removeSignalListener',
       [
-        value,
-        options ?? _i6.undefined,
+        signal.name,
+        _i3.allowInterop(handler),
       ],
     );
+  }
 
-/// Creates `newpath` as a symbolic link to `oldpath`.
-///
-/// The `options.type` parameter can be set to `"file"` or `"dir"`. This
-/// argument is only available on Windows and ignored on other platforms.
-///
-/// ```ts
-/// await Deno.symlink("old/name", "new/name");
-/// ```
-///
-/// Requires full `allow-read` and `allow-write` permissions.
-_i2.Future<void> symlink(
-  _i2.Object oldpath,
-  _i2.Object newpath, [
-  _i4.SymlinkOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'symlink',
+  /// Spawns new subprocess. RunOptions must contain at a minimum the `opt.cmd`,
+  /// an array of program arguments, the first of which is the binary.
+  ///
+  /// ```ts
+  /// const p = Deno.run({
+  ///  cmd: ["curl", "https://example.com"],
+  /// });
+  /// const status = await p.status();
+  /// ```
+  ///
+  /// Subprocess uses same working directory as parent process unless `opt.cwd`
+  /// is specified.
+  ///
+  /// Environmental variables from parent process can be cleared using `opt.clearEnv`.
+  /// Doesn't guarantee that only `opt.env` variables are present,
+  /// as the OS may set environmental variables for processes.
+  ///
+  /// Environmental variables for subprocess can be specified using `opt.env`
+  /// mapping.
+  ///
+  /// `opt.uid` sets the child processâs user ID. This translates to a setuid call
+  /// in the child process. Failure in the setuid call will cause the spawn to fail.
+  ///
+  /// `opt.gid` is similar to `opt.uid`, but sets the group ID of the child process.
+  /// This has the same semantics as the uid field.
+  ///
+  /// By default subprocess inherits stdio of parent process. To change
+  /// this this, `opt.stdin`, `opt.stdout`, and `opt.stderr` can be set
+  /// independently to a resource ID (_rid_) of an open file, `"inherit"`,
+  /// `"piped"`, or `"null"`:
+  ///
+  /// - _number_: the resource ID of an open file/resource. This allows you to
+  ///  read or write to a file.
+  /// - `"inherit"`: The default if unspecified. The subprocess inherits from the
+  ///  parent.
+  /// - `"piped"`: A new pipe should be arranged to connect the parent and child
+  ///  sub-process.
+  /// - `"null"`: This stream will be ignored. This is the equivalent of attaching
+  ///  the stream to `/dev/null`.
+  ///
+  /// Details of the spawned process are returned as an instance of
+  /// {@linkcode Deno.Process}.
+  ///
+  /// Requires `allow-run` permission.
+  _i4.Process<T> run<T extends _i4.RunOptions>(T opt) => _i3.callMethod(
+        this,
+        'run',
+        [opt],
+      );
+
+  /// Converts the input into a string that has the same format as printed by
+  /// `console.log()`.
+  ///
+  /// ```ts
+  /// const obj = {
+  ///  a: 10,
+  ///  b: "hello",
+  /// };
+  /// const objAsString = Deno.inspect(obj); // { a: 10, b: "hello" }
+  /// console.log(obj);  // prints same value as objAsString, e.g. { a: 10, b: "hello" }
+  /// ```
+  ///
+  /// A custom inspect functions can be registered on objects, via the symbol
+  /// `Symbol.for("Deno.customInspect")`, to control and customize the output
+  /// of `inspect()` or when using `console` logging:
+  ///
+  /// ```ts
+  /// class A {
+  ///  x = 10;
+  ///  y = "hello";
+  ///  [Symbol.for("Deno.customInspect")]() {
+  ///    return `x=${this.x}, y=${this.y}`;
+  ///  }
+  /// }
+  ///
+  /// const inStringFormat = Deno.inspect(new A()); // "x=10, y=hello"
+  /// console.log(inStringFormat);  // prints "x=10, y=hello"
+  /// ```
+  ///
+  /// A depth can be specified by using the `depth` option:
+  ///
+  /// ```ts
+  /// Deno.inspect({a: {b: {c: {d: 'hello'}}}}, {depth: 2}); // { a: { b: [Object] } }
+  /// ```
+  _i2.String inspect(
+    _i2.Object? value, [
+    _i4.InspectOptions? options,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'inspect',
+        [
+          value,
+          options ?? _i6.undefined,
+        ],
+      );
+
+  /// Creates `newpath` as a symbolic link to `oldpath`.
+  ///
+  /// The `options.type` parameter can be set to `"file"` or `"dir"`. This
+  /// argument is only available on Windows and ignored on other platforms.
+  ///
+  /// ```ts
+  /// await Deno.symlink("old/name", "new/name");
+  /// ```
+  ///
+  /// Requires full `allow-read` and `allow-write` permissions.
+  _i2.Future<_i2.Future<void>> symlink(
+    _i2.Object oldpath,
+    _i2.Object newpath, [
+    _i4.SymlinkOptions? options,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'symlink',
+        [
+          oldpath,
+          newpath,
+          options ?? _i6.undefined,
+        ],
+      ));
+
+  /// Creates `newpath` as a symbolic link to `oldpath`.
+  ///
+  /// The `options.type` parameter can be set to `"file"` or `"dir"`. This
+  /// argument is only available on Windows and ignored on other platforms.
+  ///
+  /// ```ts
+  /// Deno.symlinkSync("old/name", "new/name");
+  /// ```
+  ///
+  /// Requires full `allow-read` and `allow-write` permissions.
+  void symlinkSync(
+    _i2.Object oldpath,
+    _i2.Object newpath, [
+    _i4.SymlinkOptions? options,
+  ]) {
+    _i3.callMethod(
+      this,
+      'symlinkSync',
       [
         oldpath,
         newpath,
         options ?? _i6.undefined,
       ],
-    ));
+    );
+  }
 
-/// Creates `newpath` as a symbolic link to `oldpath`.
-///
-/// The `options.type` parameter can be set to `"file"` or `"dir"`. This
-/// argument is only available on Windows and ignored on other platforms.
-///
-/// ```ts
-/// Deno.symlinkSync("old/name", "new/name");
-/// ```
-///
-/// Requires full `allow-read` and `allow-write` permissions.
-void symlinkSync(
-  _i2.Object oldpath,
-  _i2.Object newpath, [
-  _i4.SymlinkOptions? options,
-]) {
-  _i3.callMethod(
-    _self,
-    'symlinkSync',
-    [
-      oldpath,
-      newpath,
-      options ?? _i6.undefined,
-    ],
-  );
-}
+  /// Truncates or extends the specified file stream, to reach the specified
+  /// `len`.
+  ///
+  /// If `len` is not specified then the entire file contents are truncated as if
+  /// `len` was set to `0`.
+  ///
+  /// If the file previously was larger than this new length, the extra data is
+  /// lost.
+  ///
+  /// If the file previously was shorter, it is extended, and the extended part
+  /// reads as null bytes ('\0').
+  ///
+  /// ### Truncate the entire file
+  ///
+  /// ```ts
+  /// const file = await Deno.open(
+  ///   "my_file.txt",
+  ///   { read: true, write: true, create: true }
+  /// );
+  /// await Deno.ftruncate(file.rid);
+  /// ```
+  ///
+  /// ### Truncate part of the file
+  ///
+  /// ```ts
+  /// const file = await Deno.open(
+  ///   "my_file.txt",
+  ///   { read: true, write: true, create: true }
+  /// );
+  /// await Deno.write(file.rid, new TextEncoder().encode("Hello World"));
+  /// await Deno.ftruncate(file.rid, 7);
+  /// const data = new Uint8Array(32);
+  /// await Deno.read(file.rid, data);
+  /// console.log(new TextDecoder().decode(data)); // Hello W
+  /// ```
+  _i2.Future<_i2.Future<void>> ftruncate(
+    _i2.num rid, [
+    _i2.num? len,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'ftruncate',
+        [
+          rid,
+          len ?? _i6.undefined,
+        ],
+      ));
 
-/// Truncates or extends the specified file stream, to reach the specified
-/// `len`.
-///
-/// If `len` is not specified then the entire file contents are truncated as if
-/// `len` was set to `0`.
-///
-/// If the file previously was larger than this new length, the extra data is
-/// lost.
-///
-/// If the file previously was shorter, it is extended, and the extended part
-/// reads as null bytes ('\0').
-///
-/// ### Truncate the entire file
-///
-/// ```ts
-/// const file = await Deno.open(
-///   "my_file.txt",
-///   { read: true, write: true, create: true }
-/// );
-/// await Deno.ftruncate(file.rid);
-/// ```
-///
-/// ### Truncate part of the file
-///
-/// ```ts
-/// const file = await Deno.open(
-///   "my_file.txt",
-///   { read: true, write: true, create: true }
-/// );
-/// await Deno.write(file.rid, new TextEncoder().encode("Hello World"));
-/// await Deno.ftruncate(file.rid, 7);
-/// const data = new Uint8Array(32);
-/// await Deno.read(file.rid, data);
-/// console.log(new TextDecoder().decode(data)); // Hello W
-/// ```
-_i2.Future<void> ftruncate(
-  _i2.num rid, [
-  _i2.num? len,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'ftruncate',
+  /// Synchronously truncates or extends the specified file stream, to reach the
+  /// specified `len`.
+  ///
+  /// If `len` is not specified then the entire file contents are truncated as if
+  /// `len` was set to `0`.
+  ///
+  /// If the file previously was larger than this new length, the extra data is
+  /// lost.
+  ///
+  /// If the file previously was shorter, it is extended, and the extended part
+  /// reads as null bytes ('\0').
+  ///
+  /// ### Truncate the entire file
+  ///
+  /// ```ts
+  /// const file = Deno.openSync(
+  ///   "my_file.txt",
+  ///   { read: true, write: true, truncate: true, create: true }
+  /// );
+  /// Deno.ftruncateSync(file.rid);
+  /// ```
+  ///
+  /// ### Truncate part of the file
+  ///
+  /// ```ts
+  /// const file = Deno.openSync(
+  ///  "my_file.txt",
+  ///  { read: true, write: true, create: true }
+  /// );
+  /// Deno.writeSync(file.rid, new TextEncoder().encode("Hello World"));
+  /// Deno.ftruncateSync(file.rid, 7);
+  /// Deno.seekSync(file.rid, 0, Deno.SeekMode.Start);
+  /// const data = new Uint8Array(32);
+  /// Deno.readSync(file.rid, data);
+  /// console.log(new TextDecoder().decode(data)); // Hello W
+  /// ```
+  void ftruncateSync(
+    _i2.num rid, [
+    _i2.num? len,
+  ]) {
+    _i3.callMethod(
+      this,
+      'ftruncateSync',
       [
         rid,
         len ?? _i6.undefined,
       ],
-    ));
+    );
+  }
 
-/// Synchronously truncates or extends the specified file stream, to reach the
-/// specified `len`.
-///
-/// If `len` is not specified then the entire file contents are truncated as if
-/// `len` was set to `0`.
-///
-/// If the file previously was larger than this new length, the extra data is
-/// lost.
-///
-/// If the file previously was shorter, it is extended, and the extended part
-/// reads as null bytes ('\0').
-///
-/// ### Truncate the entire file
-///
-/// ```ts
-/// const file = Deno.openSync(
-///   "my_file.txt",
-///   { read: true, write: true, truncate: true, create: true }
-/// );
-/// Deno.ftruncateSync(file.rid);
-/// ```
-///
-/// ### Truncate part of the file
-///
-/// ```ts
-/// const file = Deno.openSync(
-///  "my_file.txt",
-///  { read: true, write: true, create: true }
-/// );
-/// Deno.writeSync(file.rid, new TextEncoder().encode("Hello World"));
-/// Deno.ftruncateSync(file.rid, 7);
-/// Deno.seekSync(file.rid, 0, Deno.SeekMode.Start);
-/// const data = new Uint8Array(32);
-/// Deno.readSync(file.rid, data);
-/// console.log(new TextDecoder().decode(data)); // Hello W
-/// ```
-void ftruncateSync(
-  _i2.num rid, [
-  _i2.num? len,
-]) {
-  _i3.callMethod(
-    _self,
-    'ftruncateSync',
-    [
-      rid,
-      len ?? _i6.undefined,
-    ],
-  );
-}
-
-/// Synchronously changes the access (`atime`) and modification (`mtime`) times
-/// of a file stream resource referenced by `rid`. Given times are either in
-/// seconds (UNIX epoch time) or as `Date` objects.
-///
-/// ```ts
-/// const file = Deno.openSync("file.txt", { create: true, write: true });
-/// Deno.futimeSync(file.rid, 1556495550, new Date());
-/// ```
-void futimeSync(
-  _i2.num rid,
-  _i2.Object atime,
-  _i2.Object mtime,
-) {
-  _i3.callMethod(
-    _self,
-    'futimeSync',
-    [
-      rid,
-      atime,
-      mtime,
-    ],
-  );
-}
-
-/// Changes the access (`atime`) and modification (`mtime`) times of a file
-/// stream resource referenced by `rid`. Given times are either in seconds
-/// (UNIX epoch time) or as `Date` objects.
-///
-/// ```ts
-/// const file = await Deno.open("file.txt", { create: true, write: true });
-/// await Deno.futime(file.rid, 1556495550, new Date());
-/// ```
-_i2.Future<void> futime(
-  _i2.num rid,
-  _i2.Object atime,
-  _i2.Object mtime,
-) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'futime',
+  /// Synchronously changes the access (`atime`) and modification (`mtime`) times
+  /// of a file stream resource referenced by `rid`. Given times are either in
+  /// seconds (UNIX epoch time) or as `Date` objects.
+  ///
+  /// ```ts
+  /// const file = Deno.openSync("file.txt", { create: true, write: true });
+  /// Deno.futimeSync(file.rid, 1556495550, new Date());
+  /// ```
+  void futimeSync(
+    _i2.num rid,
+    _i2.Object atime,
+    _i2.Object mtime,
+  ) {
+    _i3.callMethod(
+      this,
+      'futimeSync',
       [
         rid,
         atime,
         mtime,
       ],
-    ));
-
-/// Returns a `Deno.FileInfo` for the given file stream.
-///
-/// ```ts
-/// import { assert } from "https://deno.land/std/testing/asserts.ts";
-///
-/// const file = await Deno.open("file.txt", { read: true });
-/// const fileInfo = await Deno.fstat(file.rid);
-/// assert(fileInfo.isFile);
-/// ```
-_i2.Future<_i4.FileInfo> fstat(_i2.num rid) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'fstat',
-      [rid],
-    ));
-
-/// Synchronously returns a {@linkcode Deno.FileInfo} for the given file
-/// stream.
-///
-/// ```ts
-/// import { assert } from "https://deno.land/std/testing/asserts.ts";
-///
-/// const file = Deno.openSync("file.txt", { read: true });
-/// const fileInfo = Deno.fstatSync(file.rid);
-/// assert(fileInfo.isFile);
-/// ```
-_i4.FileInfo fstatSync(_i2.num rid) => _i3.callMethod(
-      _self,
-      'fstatSync',
-      [rid],
     );
+  }
 
-/// Synchronously changes the access (`atime`) and modification (`mtime`) times
-/// of a file system object referenced by `path`. Given times are either in
-/// seconds (UNIX epoch time) or as `Date` objects.
-///
-/// ```ts
-/// Deno.utimeSync("myfile.txt", 1556495550, new Date());
-/// ```
-///
-/// Requires `allow-write` permission.
-void utimeSync(
-  _i2.Object path,
-  _i2.Object atime,
-  _i2.Object mtime,
-) {
-  _i3.callMethod(
-    _self,
-    'utimeSync',
-    [
-      path,
-      atime,
-      mtime,
-    ],
-  );
-}
+  /// Changes the access (`atime`) and modification (`mtime`) times of a file
+  /// stream resource referenced by `rid`. Given times are either in seconds
+  /// (UNIX epoch time) or as `Date` objects.
+  ///
+  /// ```ts
+  /// const file = await Deno.open("file.txt", { create: true, write: true });
+  /// await Deno.futime(file.rid, 1556495550, new Date());
+  /// ```
+  _i2.Future<_i2.Future<void>> futime(
+    _i2.num rid,
+    _i2.Object atime,
+    _i2.Object mtime,
+  ) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'futime',
+        [
+          rid,
+          atime,
+          mtime,
+        ],
+      ));
 
-/// Changes the access (`atime`) and modification (`mtime`) times of a file
-/// system object referenced by `path`. Given times are either in seconds
-/// (UNIX epoch time) or as `Date` objects.
-///
-/// ```ts
-/// await Deno.utime("myfile.txt", 1556495550, new Date());
-/// ```
-///
-/// Requires `allow-write` permission.
-_i2.Future<void> utime(
-  _i2.Object path,
-  _i2.Object atime,
-  _i2.Object mtime,
-) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'utime',
+  /// Returns a `Deno.FileInfo` for the given file stream.
+  ///
+  /// ```ts
+  /// import { assert } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// const file = await Deno.open("file.txt", { read: true });
+  /// const fileInfo = await Deno.fstat(file.rid);
+  /// assert(fileInfo.isFile);
+  /// ```
+  _i2.Future<_i2.Future<_i4.FileInfo>> fstat(_i2.num rid) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'fstat',
+        [rid],
+      ));
+
+  /// Synchronously returns a {@linkcode Deno.FileInfo} for the given file
+  /// stream.
+  ///
+  /// ```ts
+  /// import { assert } from "https://deno.land/std/testing/asserts.ts";
+  ///
+  /// const file = Deno.openSync("file.txt", { read: true });
+  /// const fileInfo = Deno.fstatSync(file.rid);
+  /// assert(fileInfo.isFile);
+  /// ```
+  _i4.FileInfo fstatSync(_i2.num rid) => _i3.callMethod(
+        this,
+        'fstatSync',
+        [rid],
+      );
+
+  /// Synchronously changes the access (`atime`) and modification (`mtime`) times
+  /// of a file system object referenced by `path`. Given times are either in
+  /// seconds (UNIX epoch time) or as `Date` objects.
+  ///
+  /// ```ts
+  /// Deno.utimeSync("myfile.txt", 1556495550, new Date());
+  /// ```
+  ///
+  /// Requires `allow-write` permission.
+  void utimeSync(
+    _i2.Object path,
+    _i2.Object atime,
+    _i2.Object mtime,
+  ) {
+    _i3.callMethod(
+      this,
+      'utimeSync',
       [
         path,
         atime,
         mtime,
       ],
-    ));
-
-/// Provides an interface to handle HTTP request and responses over TCP or TLS
-/// connections. The method returns an {@linkcode HttpConn} which yields up
-/// {@linkcode RequestEvent} events, which utilize the web platform standard
-/// {@linkcode Request} and {@linkcode Response} objects to handle the request.
-///
-/// ```ts
-/// const conn = Deno.listen({ port: 80 });
-/// const httpConn = Deno.serveHttp(await conn.accept());
-/// const e = await httpConn.nextRequest();
-/// if (e) {
-///   e.respondWith(new Response("Hello World"));
-/// }
-/// ```
-///
-/// Alternatively, you can also use the async iterator approach:
-///
-/// ```ts
-/// async function handleHttp(conn: Deno.Conn) {
-///   for await (const e of Deno.serveHttp(conn)) {
-///     e.respondWith(new Response("Hello World"));
-///   }
-/// }
-///
-/// for await (const conn of Deno.listen({ port: 80 })) {
-///   handleHttp(conn);
-/// }
-/// ```
-///
-/// If `httpConn.nextRequest()` encounters an error or returns `null` then the
-/// underlying {@linkcode HttpConn} resource is closed automatically.
-///
-/// Also see the experimental Flash HTTP server {@linkcode Deno.serve } which
-/// provides a ground up rewrite of handling of HTTP requests and responses
-/// within the Deno CLI.
-///
-/// Note that this function *consumes* the given connection passed to it, thus
-/// the original connection will be unusable after calling this. Additionally,
-/// you need to ensure that the connection is not being used elsewhere when
-/// calling this function in order for the connection to be consumed properly.
-///
-/// For instance, if there is a `Promise` that is waiting for read operation on
-/// the connection to complete, it is considered that the connection is being
-/// used elsewhere. In such a case, this function will fail.
-_i4.HttpConn serveHttp(_i4.Conn conn) => _i3.callMethod(
-      _self,
-      'serveHttp',
-      [conn],
     );
+  }
 
-/// Upgrade an incoming HTTP request to a WebSocket.
-///
-/// Given a {@linkcode Request}, returns a pair of {@linkcode WebSocket} and
-/// {@linkcode Response} instances. The original request must be responded to
-/// with the returned response for the websocket upgrade to be successful.
-///
-/// ```ts
-/// const conn = Deno.listen({ port: 80 });
-/// const httpConn = Deno.serveHttp(await conn.accept());
-/// const e = await httpConn.nextRequest();
-/// if (e) {
-///   const { socket, response } = Deno.upgradeWebSocket(e.request);
-///   socket.onopen = () => {
-///     socket.send("Hello World!");
-///   };
-///   socket.onmessage = (e) => {
-///     console.log(e.data);
-///     socket.close();
-///   };
-///   socket.onclose = () => console.log("WebSocket has been closed.");
-///   socket.onerror = (e) => console.error("WebSocket error:", e);
-///   e.respondWith(response);
-/// }
-/// ```
-///
-/// If the request body is disturbed (read from) before the upgrade is
-/// completed, upgrading fails.
-///
-/// This operation does not yet consume the request or open the websocket. This
-/// only happens once the returned response has been passed to `respondWith()`.
-_i4.WebSocketUpgrade upgradeWebSocket(
-  _i8.Request request, [
-  _i4.UpgradeWebSocketOptions? options,
-]) =>
+  /// Changes the access (`atime`) and modification (`mtime`) times of a file
+  /// system object referenced by `path`. Given times are either in seconds
+  /// (UNIX epoch time) or as `Date` objects.
+  ///
+  /// ```ts
+  /// await Deno.utime("myfile.txt", 1556495550, new Date());
+  /// ```
+  ///
+  /// Requires `allow-write` permission.
+  _i2.Future<_i2.Future<void>> utime(
+    _i2.Object path,
+    _i2.Object atime,
+    _i2.Object mtime,
+  ) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'utime',
+        [
+          path,
+          atime,
+          mtime,
+        ],
+      ));
+
+  /// Provides an interface to handle HTTP request and responses over TCP or TLS
+  /// connections. The method returns an {@linkcode HttpConn} which yields up
+  /// {@linkcode RequestEvent} events, which utilize the web platform standard
+  /// {@linkcode Request} and {@linkcode Response} objects to handle the request.
+  ///
+  /// ```ts
+  /// const conn = Deno.listen({ port: 80 });
+  /// const httpConn = Deno.serveHttp(await conn.accept());
+  /// const e = await httpConn.nextRequest();
+  /// if (e) {
+  ///   e.respondWith(new Response("Hello World"));
+  /// }
+  /// ```
+  ///
+  /// Alternatively, you can also use the async iterator approach:
+  ///
+  /// ```ts
+  /// async function handleHttp(conn: Deno.Conn) {
+  ///   for await (const e of Deno.serveHttp(conn)) {
+  ///     e.respondWith(new Response("Hello World"));
+  ///   }
+  /// }
+  ///
+  /// for await (const conn of Deno.listen({ port: 80 })) {
+  ///   handleHttp(conn);
+  /// }
+  /// ```
+  ///
+  /// If `httpConn.nextRequest()` encounters an error or returns `null` then the
+  /// underlying {@linkcode HttpConn} resource is closed automatically.
+  ///
+  /// Also see the experimental Flash HTTP server {@linkcode Deno.serve } which
+  /// provides a ground up rewrite of handling of HTTP requests and responses
+  /// within the Deno CLI.
+  ///
+  /// Note that this function *consumes* the given connection passed to it, thus
+  /// the original connection will be unusable after calling this. Additionally,
+  /// you need to ensure that the connection is not being used elsewhere when
+  /// calling this function in order for the connection to be consumed properly.
+  ///
+  /// For instance, if there is a `Promise` that is waiting for read operation on
+  /// the connection to complete, it is considered that the connection is being
+  /// used elsewhere. In such a case, this function will fail.
+  _i4.HttpConn serveHttp(_i4.Conn conn) => _i3.callMethod(
+        this,
+        'serveHttp',
+        [conn],
+      );
+
+  /// Upgrade an incoming HTTP request to a WebSocket.
+  ///
+  /// Given a {@linkcode Request}, returns a pair of {@linkcode WebSocket} and
+  /// {@linkcode Response} instances. The original request must be responded to
+  /// with the returned response for the websocket upgrade to be successful.
+  ///
+  /// ```ts
+  /// const conn = Deno.listen({ port: 80 });
+  /// const httpConn = Deno.serveHttp(await conn.accept());
+  /// const e = await httpConn.nextRequest();
+  /// if (e) {
+  ///   const { socket, response } = Deno.upgradeWebSocket(e.request);
+  ///   socket.onopen = () => {
+  ///     socket.send("Hello World!");
+  ///   };
+  ///   socket.onmessage = (e) => {
+  ///     console.log(e.data);
+  ///     socket.close();
+  ///   };
+  ///   socket.onclose = () => console.log("WebSocket has been closed.");
+  ///   socket.onerror = (e) => console.error("WebSocket error:", e);
+  ///   e.respondWith(response);
+  /// }
+  /// ```
+  ///
+  /// If the request body is disturbed (read from) before the upgrade is
+  /// completed, upgrading fails.
+  ///
+  /// This operation does not yet consume the request or open the websocket. This
+  /// only happens once the returned response has been passed to `respondWith()`.
+  _i4.WebSocketUpgrade upgradeWebSocket(
+    _i8.Request request, [
+    _i4.UpgradeWebSocketOptions? options,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'upgradeWebSocket',
+        [
+          request,
+          options ?? _i6.undefined,
+        ],
+      );
+
+  /// Send a signal to process under given `pid`. The value and meaning of the
+  /// `signal` to the process is operating system and process dependant.
+  /// {@linkcode Signal} provides the most common signals. Default signal
+  /// is `"SIGTERM"`.
+  ///
+  /// The term `kill` is adopted from the UNIX-like command line command `kill`
+  /// which also signals processes.
+  ///
+  /// If `pid` is negative, the signal will be sent to the process group
+  /// identified by `pid`. An error will be thrown if a negative `pid` is used on
+  /// Windows.
+  ///
+  /// ```ts
+  /// const p = Deno.run({
+  ///  cmd: ["sleep", "10000"]
+  /// });
+  ///
+  /// Deno.kill(p.pid, "SIGINT");
+  /// ```
+  ///
+  /// Requires `allow-run` permission.
+  void kill(
+    _i2.num pid, [
+    _i4.Signal? signo,
+  ]) {
     _i3.callMethod(
-      _self,
-      'upgradeWebSocket',
+      this,
+      'kill',
       [
-        request,
-        options ?? _i6.undefined,
+        pid,
+        signo?.name ?? _i6.undefined ?? _i6.undefined,
       ],
     );
+  }
 
-/// Send a signal to process under given `pid`. The value and meaning of the
-/// `signal` to the process is operating system and process dependant.
-/// {@linkcode Signal} provides the most common signals. Default signal
-/// is `"SIGTERM"`.
-///
-/// The term `kill` is adopted from the UNIX-like command line command `kill`
-/// which also signals processes.
-///
-/// If `pid` is negative, the signal will be sent to the process group
-/// identified by `pid`. An error will be thrown if a negative `pid` is used on
-/// Windows.
-///
-/// ```ts
-/// const p = Deno.run({
-///  cmd: ["sleep", "10000"]
-/// });
-///
-/// Deno.kill(p.pid, "SIGINT");
-/// ```
-///
-/// Requires `allow-run` permission.
-void kill(
-  _i2.num pid, [
-  _i4.Signal? signo,
-]) {
-  _i3.callMethod(
-    _self,
-    'kill',
-    [
-      pid,
-      signo?.name ?? _i6.undefined ?? _i6.undefined,
-    ],
-  );
-}
-
-/// Performs DNS resolution against the given query, returning resolved
-/// records.
-///
-/// Fails in the cases such as:
-///
-/// - the query is in invalid format.
-/// - the options have an invalid parameter. For example `nameServer.port` is
-///   beyond the range of 16-bit unsigned integer.
-/// - the request timed out.
-///
-/// ```ts
-/// const a = await Deno.resolveDns("example.com", "A");
-///
-/// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
-///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
-/// });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i2.Future<_i2.List<_i2.String>> _resolveDns$1(
-  _i2.String query,
-  _i4.ResolveDns recordType, [
-  _i4.ResolveDnsOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'resolveDns',
-      [
-        query,
-        recordType.name,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Performs DNS resolution against the given query, returning resolved
-/// records.
-///
-/// Fails in the cases such as:
-///
-/// - the query is in invalid format.
-/// - the options have an invalid parameter. For example `nameServer.port` is
-///   beyond the range of 16-bit unsigned integer.
-/// - the request timed out.
-///
-/// ```ts
-/// const a = await Deno.resolveDns("example.com", "A");
-///
-/// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
-///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
-/// });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i2.Future<_i2.List<_i4.CAARecord>> _resolveDns$2(
-  _i2.String query,
-  _i2.String recordType, [
-  _i4.ResolveDnsOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'resolveDns',
-      [
-        query,
-        recordType,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Performs DNS resolution against the given query, returning resolved
-/// records.
-///
-/// Fails in the cases such as:
-///
-/// - the query is in invalid format.
-/// - the options have an invalid parameter. For example `nameServer.port` is
-///   beyond the range of 16-bit unsigned integer.
-/// - the request timed out.
-///
-/// ```ts
-/// const a = await Deno.resolveDns("example.com", "A");
-///
-/// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
-///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
-/// });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i2.Future<_i2.List<_i4.MXRecord>> _resolveDns$3(
-  _i2.String query,
-  _i2.String recordType, [
-  _i4.ResolveDnsOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'resolveDns',
-      [
-        query,
-        recordType,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Performs DNS resolution against the given query, returning resolved
-/// records.
-///
-/// Fails in the cases such as:
-///
-/// - the query is in invalid format.
-/// - the options have an invalid parameter. For example `nameServer.port` is
-///   beyond the range of 16-bit unsigned integer.
-/// - the request timed out.
-///
-/// ```ts
-/// const a = await Deno.resolveDns("example.com", "A");
-///
-/// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
-///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
-/// });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i2.Future<_i2.List<_i4.NAPTRRecord>> _resolveDns$4(
-  _i2.String query,
-  _i2.String recordType, [
-  _i4.ResolveDnsOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'resolveDns',
-      [
-        query,
-        recordType,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Performs DNS resolution against the given query, returning resolved
-/// records.
-///
-/// Fails in the cases such as:
-///
-/// - the query is in invalid format.
-/// - the options have an invalid parameter. For example `nameServer.port` is
-///   beyond the range of 16-bit unsigned integer.
-/// - the request timed out.
-///
-/// ```ts
-/// const a = await Deno.resolveDns("example.com", "A");
-///
-/// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
-///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
-/// });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i2.Future<_i2.List<_i4.SOARecord>> _resolveDns$5(
-  _i2.String query,
-  _i2.String recordType, [
-  _i4.ResolveDnsOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'resolveDns',
-      [
-        query,
-        recordType,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Performs DNS resolution against the given query, returning resolved
-/// records.
-///
-/// Fails in the cases such as:
-///
-/// - the query is in invalid format.
-/// - the options have an invalid parameter. For example `nameServer.port` is
-///   beyond the range of 16-bit unsigned integer.
-/// - the request timed out.
-///
-/// ```ts
-/// const a = await Deno.resolveDns("example.com", "A");
-///
-/// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
-///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
-/// });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i2.Future<_i2.List<_i4.SRVRecord>> _resolveDns$6(
-  _i2.String query,
-  _i2.String recordType, [
-  _i4.ResolveDnsOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'resolveDns',
-      [
-        query,
-        recordType,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Performs DNS resolution against the given query, returning resolved
-/// records.
-///
-/// Fails in the cases such as:
-///
-/// - the query is in invalid format.
-/// - the options have an invalid parameter. For example `nameServer.port` is
-///   beyond the range of 16-bit unsigned integer.
-/// - the request timed out.
-///
-/// ```ts
-/// const a = await Deno.resolveDns("example.com", "A");
-///
-/// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
-///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
-/// });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i2.Future<_i2.List<_i2.List<_i2.String>>> _resolveDns$7(
-  _i2.String query,
-  _i2.String recordType, [
-  _i4.ResolveDnsOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'resolveDns',
-      [
-        query,
-        recordType,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Performs DNS resolution against the given query, returning resolved
-/// records.
-///
-/// Fails in the cases such as:
-///
-/// - the query is in invalid format.
-/// - the options have an invalid parameter. For example `nameServer.port` is
-///   beyond the range of 16-bit unsigned integer.
-/// - the request timed out.
-///
-/// ```ts
-/// const a = await Deno.resolveDns("example.com", "A");
-///
-/// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
-///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
-/// });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i2.Future<_i2.Object> _resolveDns$8(
-  _i2.String query,
-  _i4.RecordType recordType, [
-  _i4.ResolveDnsOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'resolveDns',
-      [
-        query,
-        recordType.name,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Overload accessor: $1, $2, $3, $4, $5, $6, $7, $8
-({
   /// Performs DNS resolution against the given query, returning resolved
   /// records.
   ///
@@ -13784,11 +13754,20 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<_i2.List<_i2.String>> Function(
+  _i2.Future<_i2.Future<_i2.List<_i2.String>>> _resolveDns$1(
     _i2.String query,
     _i4.ResolveDns recordType, [
     _i4.ResolveDnsOptions? options,
-  ]) $1,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'resolveDns',
+        [
+          query,
+          recordType.name,
+          options ?? _i6.undefined,
+        ],
+      ));
 
   /// Performs DNS resolution against the given query, returning resolved
   /// records.
@@ -13809,11 +13788,20 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<_i2.List<_i4.CAARecord>> Function(
+  _i2.Future<_i2.Future<_i2.List<_i4.CAARecord>>> _resolveDns$2(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
-  ]) $2,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'resolveDns',
+        [
+          query,
+          recordType,
+          options ?? _i6.undefined,
+        ],
+      ));
 
   /// Performs DNS resolution against the given query, returning resolved
   /// records.
@@ -13834,11 +13822,20 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<_i2.List<_i4.MXRecord>> Function(
+  _i2.Future<_i2.Future<_i2.List<_i4.MXRecord>>> _resolveDns$3(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
-  ]) $3,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'resolveDns',
+        [
+          query,
+          recordType,
+          options ?? _i6.undefined,
+        ],
+      ));
 
   /// Performs DNS resolution against the given query, returning resolved
   /// records.
@@ -13859,11 +13856,20 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<_i2.List<_i4.NAPTRRecord>> Function(
+  _i2.Future<_i2.Future<_i2.List<_i4.NAPTRRecord>>> _resolveDns$4(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
-  ]) $4,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'resolveDns',
+        [
+          query,
+          recordType,
+          options ?? _i6.undefined,
+        ],
+      ));
 
   /// Performs DNS resolution against the given query, returning resolved
   /// records.
@@ -13884,11 +13890,20 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<_i2.List<_i4.SOARecord>> Function(
+  _i2.Future<_i2.Future<_i2.List<_i4.SOARecord>>> _resolveDns$5(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
-  ]) $5,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'resolveDns',
+        [
+          query,
+          recordType,
+          options ?? _i6.undefined,
+        ],
+      ));
 
   /// Performs DNS resolution against the given query, returning resolved
   /// records.
@@ -13909,11 +13924,20 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<_i2.List<_i4.SRVRecord>> Function(
+  _i2.Future<_i2.Future<_i2.List<_i4.SRVRecord>>> _resolveDns$6(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
-  ]) $6,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'resolveDns',
+        [
+          query,
+          recordType,
+          options ?? _i6.undefined,
+        ],
+      ));
 
   /// Performs DNS resolution against the given query, returning resolved
   /// records.
@@ -13934,11 +13958,20 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<_i2.List<_i2.List<_i2.String>>> Function(
+  _i2.Future<_i2.Future<_i2.List<_i2.List<_i2.String>>>> _resolveDns$7(
     _i2.String query,
     _i2.String recordType, [
     _i4.ResolveDnsOptions? options,
-  ]) $7,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'resolveDns',
+        [
+          query,
+          recordType,
+          options ?? _i6.undefined,
+        ],
+      ));
 
   /// Performs DNS resolution against the given query, returning resolved
   /// records.
@@ -13959,213 +13992,405 @@ _i2.Future<_i2.Object> _resolveDns$8(
   /// ```
   ///
   /// Requires `allow-net` permission.
-  _i2.Future<_i2.Object> Function(
+  _i2.Future<_i2.Future<_i2.Object>> _resolveDns$8(
     _i2.String query,
     _i4.RecordType recordType, [
     _i4.ResolveDnsOptions? options,
-  ]) $8,
-}) get resolveDns => (
-      $1: _resolveDns$1,
-      $2: _resolveDns$2,
-      $3: _resolveDns$3,
-      $4: _resolveDns$4,
-      $5: _resolveDns$5,
-      $6: _resolveDns$6,
-      $7: _resolveDns$7,
-      $8: _resolveDns$8,
-    );
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'resolveDns',
+        [
+          query,
+          recordType.name,
+          options ?? _i6.undefined,
+        ],
+      ));
 
-/// Make the timer of the given `id` block the event loop from finishing.
-void refTimer(_i2.num id) {
-  _i3.callMethod(
-    _self,
-    'refTimer',
-    [id],
-  );
+  /// Overload accessor: $1, $2, $3, $4, $5, $6, $7, $8
+  ({
+    /// Performs DNS resolution against the given query, returning resolved
+    /// records.
+    ///
+    /// Fails in the cases such as:
+    ///
+    /// - the query is in invalid format.
+    /// - the options have an invalid parameter. For example `nameServer.port` is
+    ///   beyond the range of 16-bit unsigned integer.
+    /// - the request timed out.
+    ///
+    /// ```ts
+    /// const a = await Deno.resolveDns("example.com", "A");
+    ///
+    /// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
+    ///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
+    /// });
+    /// ```
+    ///
+    /// Requires `allow-net` permission.
+    _i2.Future<_i2.Future<_i2.List<_i2.String>>> Function(
+      _i2.String query,
+      _i4.ResolveDns recordType, [
+      _i4.ResolveDnsOptions? options,
+    ]) $1,
+
+    /// Performs DNS resolution against the given query, returning resolved
+    /// records.
+    ///
+    /// Fails in the cases such as:
+    ///
+    /// - the query is in invalid format.
+    /// - the options have an invalid parameter. For example `nameServer.port` is
+    ///   beyond the range of 16-bit unsigned integer.
+    /// - the request timed out.
+    ///
+    /// ```ts
+    /// const a = await Deno.resolveDns("example.com", "A");
+    ///
+    /// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
+    ///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
+    /// });
+    /// ```
+    ///
+    /// Requires `allow-net` permission.
+    _i2.Future<_i2.Future<_i2.List<_i4.CAARecord>>> Function(
+      _i2.String query,
+      _i2.String recordType, [
+      _i4.ResolveDnsOptions? options,
+    ]) $2,
+
+    /// Performs DNS resolution against the given query, returning resolved
+    /// records.
+    ///
+    /// Fails in the cases such as:
+    ///
+    /// - the query is in invalid format.
+    /// - the options have an invalid parameter. For example `nameServer.port` is
+    ///   beyond the range of 16-bit unsigned integer.
+    /// - the request timed out.
+    ///
+    /// ```ts
+    /// const a = await Deno.resolveDns("example.com", "A");
+    ///
+    /// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
+    ///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
+    /// });
+    /// ```
+    ///
+    /// Requires `allow-net` permission.
+    _i2.Future<_i2.Future<_i2.List<_i4.MXRecord>>> Function(
+      _i2.String query,
+      _i2.String recordType, [
+      _i4.ResolveDnsOptions? options,
+    ]) $3,
+
+    /// Performs DNS resolution against the given query, returning resolved
+    /// records.
+    ///
+    /// Fails in the cases such as:
+    ///
+    /// - the query is in invalid format.
+    /// - the options have an invalid parameter. For example `nameServer.port` is
+    ///   beyond the range of 16-bit unsigned integer.
+    /// - the request timed out.
+    ///
+    /// ```ts
+    /// const a = await Deno.resolveDns("example.com", "A");
+    ///
+    /// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
+    ///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
+    /// });
+    /// ```
+    ///
+    /// Requires `allow-net` permission.
+    _i2.Future<_i2.Future<_i2.List<_i4.NAPTRRecord>>> Function(
+      _i2.String query,
+      _i2.String recordType, [
+      _i4.ResolveDnsOptions? options,
+    ]) $4,
+
+    /// Performs DNS resolution against the given query, returning resolved
+    /// records.
+    ///
+    /// Fails in the cases such as:
+    ///
+    /// - the query is in invalid format.
+    /// - the options have an invalid parameter. For example `nameServer.port` is
+    ///   beyond the range of 16-bit unsigned integer.
+    /// - the request timed out.
+    ///
+    /// ```ts
+    /// const a = await Deno.resolveDns("example.com", "A");
+    ///
+    /// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
+    ///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
+    /// });
+    /// ```
+    ///
+    /// Requires `allow-net` permission.
+    _i2.Future<_i2.Future<_i2.List<_i4.SOARecord>>> Function(
+      _i2.String query,
+      _i2.String recordType, [
+      _i4.ResolveDnsOptions? options,
+    ]) $5,
+
+    /// Performs DNS resolution against the given query, returning resolved
+    /// records.
+    ///
+    /// Fails in the cases such as:
+    ///
+    /// - the query is in invalid format.
+    /// - the options have an invalid parameter. For example `nameServer.port` is
+    ///   beyond the range of 16-bit unsigned integer.
+    /// - the request timed out.
+    ///
+    /// ```ts
+    /// const a = await Deno.resolveDns("example.com", "A");
+    ///
+    /// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
+    ///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
+    /// });
+    /// ```
+    ///
+    /// Requires `allow-net` permission.
+    _i2.Future<_i2.Future<_i2.List<_i4.SRVRecord>>> Function(
+      _i2.String query,
+      _i2.String recordType, [
+      _i4.ResolveDnsOptions? options,
+    ]) $6,
+
+    /// Performs DNS resolution against the given query, returning resolved
+    /// records.
+    ///
+    /// Fails in the cases such as:
+    ///
+    /// - the query is in invalid format.
+    /// - the options have an invalid parameter. For example `nameServer.port` is
+    ///   beyond the range of 16-bit unsigned integer.
+    /// - the request timed out.
+    ///
+    /// ```ts
+    /// const a = await Deno.resolveDns("example.com", "A");
+    ///
+    /// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
+    ///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
+    /// });
+    /// ```
+    ///
+    /// Requires `allow-net` permission.
+    _i2.Future<_i2.Future<_i2.List<_i2.List<_i2.String>>>> Function(
+      _i2.String query,
+      _i2.String recordType, [
+      _i4.ResolveDnsOptions? options,
+    ]) $7,
+
+    /// Performs DNS resolution against the given query, returning resolved
+    /// records.
+    ///
+    /// Fails in the cases such as:
+    ///
+    /// - the query is in invalid format.
+    /// - the options have an invalid parameter. For example `nameServer.port` is
+    ///   beyond the range of 16-bit unsigned integer.
+    /// - the request timed out.
+    ///
+    /// ```ts
+    /// const a = await Deno.resolveDns("example.com", "A");
+    ///
+    /// const aaaa = await Deno.resolveDns("example.com", "AAAA", {
+    ///   nameServer: { ipAddr: "8.8.8.8", port: 53 },
+    /// });
+    /// ```
+    ///
+    /// Requires `allow-net` permission.
+    _i2.Future<_i2.Future<_i2.Object>> Function(
+      _i2.String query,
+      _i4.RecordType recordType, [
+      _i4.ResolveDnsOptions? options,
+    ]) $8,
+  }) get resolveDns => (
+        $1: _resolveDns$1,
+        $2: _resolveDns$2,
+        $3: _resolveDns$3,
+        $4: _resolveDns$4,
+        $5: _resolveDns$5,
+        $6: _resolveDns$6,
+        $7: _resolveDns$7,
+        $8: _resolveDns$8,
+      );
+
+  /// Make the timer of the given `id` block the event loop from finishing.
+  void refTimer(_i2.num id) {
+    _i3.callMethod(
+      this,
+      'refTimer',
+      [id],
+    );
+  }
+
+  /// Make the timer of the given `id` not block the event loop from finishing.
+  void unrefTimer(_i2.num id) {
+    _i3.callMethod(
+      this,
+      'unrefTimer',
+      [id],
+    );
+  }
+
+  /// Returns the user id of the process on POSIX platforms. Returns null on Windows.
+  ///
+  /// ```ts
+  /// console.log(Deno.uid());
+  /// ```
+  ///
+  /// Requires `allow-sys` permission.
+  _i2.num? uid() => _i3.callMethod(
+        this,
+        'uid',
+        [],
+      );
+
+  /// Returns the group id of the process on POSIX platforms. Returns null on windows.
+  ///
+  /// ```ts
+  /// console.log(Deno.gid());
+  /// ```
+  ///
+  /// Requires `allow-sys` permission.
+  _i2.num? gid() => _i3.callMethod(
+        this,
+        'gid',
+        [],
+      );
+
+  /// Listen announces on the local transport address.
+  ///
+  /// ```ts
+  /// const listener1 = Deno.listen({ port: 80 })
+  /// const listener2 = Deno.listen({ hostname: "192.0.2.1", port: 80 })
+  /// const listener3 = Deno.listen({ hostname: "[2001:db8::1]", port: 80 });
+  /// const listener4 = Deno.listen({ hostname: "golang.org", port: 80, transport: "tcp" });
+  /// ```
+  ///
+  /// Requires `allow-net` permission.
+  _i4.Listener<_i4.Conn> listen(_i2.Object options) => _i3.callMethod(
+        this,
+        'listen',
+        [options],
+      );
+
+  /// Listen announces on the local transport address over TLS (transport layer
+  /// security).
+  ///
+  /// ```ts
+  /// const lstnr = Deno.listenTls({ port: 443, certFile: "./server.crt", keyFile: "./server.key" });
+  /// ```
+  ///
+  /// Requires `allow-net` permission.
+  _i4.TlsListener listenTls(_i4.ListenTlsOptions options) => _i3.callMethod(
+        this,
+        'listenTls',
+        [options],
+      );
+
+  /// Connects to the hostname (default is "127.0.0.1") and port on the named
+  /// transport (default is "tcp"), and resolves to the connection (`Conn`).
+  ///
+  /// ```ts
+  /// const conn1 = await Deno.connect({ port: 80 });
+  /// const conn2 = await Deno.connect({ hostname: "192.0.2.1", port: 80 });
+  /// const conn3 = await Deno.connect({ hostname: "[2001:db8::1]", port: 80 });
+  /// const conn4 = await Deno.connect({ hostname: "golang.org", port: 80, transport: "tcp" });
+  /// ```
+  ///
+  /// Requires `allow-net` permission for "tcp".
+  _i2.Future<_i2.Future<_i4.TcpConn>> connect(_i4.ConnectOptions options) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'connect',
+        [options],
+      ));
+
+  /// Establishes a secure connection over TLS (transport layer security) using
+  /// an optional cert file, hostname (default is "127.0.0.1") and port.  The
+  /// cert file is optional and if not included Mozilla's root certificates will
+  /// be used (see also https://github.com/ctz/webpki-roots for specifics)
+  ///
+  /// ```ts
+  /// const caCert = await Deno.readTextFile("./certs/my_custom_root_CA.pem");
+  /// const conn1 = await Deno.connectTls({ port: 80 });
+  /// const conn2 = await Deno.connectTls({ caCerts: [caCert], hostname: "192.0.2.1", port: 80 });
+  /// const conn3 = await Deno.connectTls({ hostname: "[2001:db8::1]", port: 80 });
+  /// const conn4 = await Deno.connectTls({ caCerts: [caCert], hostname: "golang.org", port: 80});
+  /// ```
+  ///
+  /// Requires `allow-net` permission.
+  _i2.Future<_i2.Future<_i4.TlsConn>> connectTls(
+          _i4.ConnectTlsOptions options) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'connectTls',
+        [options],
+      ));
+
+  /// Start TLS handshake from an existing connection using an optional list of
+  /// CA certificates, and hostname (default is "127.0.0.1"). Specifying CA certs
+  /// is optional. By default the configured root certificates are used. Using
+  /// this function requires that the other end of the connection is prepared for
+  /// a TLS handshake.
+  ///
+  /// Note that this function *consumes* the TCP connection passed to it, thus the
+  /// original TCP connection will be unusable after calling this. Additionally,
+  /// you need to ensure that the TCP connection is not being used elsewhere when
+  /// calling this function in order for the TCP connection to be consumed properly.
+  /// For instance, if there is a `Promise` that is waiting for read operation on
+  /// the TCP connection to complete, it is considered that the TCP connection is
+  /// being used elsewhere. In such a case, this function will fail.
+  ///
+  /// ```ts
+  /// const conn = await Deno.connect({ port: 80, hostname: "127.0.0.1" });
+  /// const caCert = await Deno.readTextFile("./certs/my_custom_root_CA.pem");
+  /// // `conn` becomes unusable after calling `Deno.startTls`
+  /// const tlsConn = await Deno.startTls(conn, { caCerts: [caCert], hostname: "localhost" });
+  /// ```
+  ///
+  /// Requires `allow-net` permission.
+  _i2.Future<_i2.Future<_i4.TlsConn>> startTls(
+    _i4.Conn conn, [
+    _i4.StartTlsOptions? options,
+  ]) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'startTls',
+        [
+          conn,
+          options ?? _i6.undefined,
+        ],
+      ));
+
+  /// Shutdown socket send operations.
+  ///
+  /// Matches behavior of POSIX shutdown(3).
+  ///
+  /// ```ts
+  /// const listener = Deno.listen({ port: 80 });
+  /// const conn = await listener.accept();
+  /// Deno.shutdown(conn.rid);
+  /// ```
+  _i2.Future<_i2.Future<void>> shutdown(_i2.num rid) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'shutdown',
+        [rid],
+      ));
 }
-
-/// Make the timer of the given `id` not block the event loop from finishing.
-void unrefTimer(_i2.num id) {
-  _i3.callMethod(
-    _self,
-    'unrefTimer',
-    [id],
-  );
-}
-
-/// Returns the user id of the process on POSIX platforms. Returns null on Windows.
-///
-/// ```ts
-/// console.log(Deno.uid());
-/// ```
-///
-/// Requires `allow-sys` permission.
-_i2.num? uid() => _i3.callMethod(
-      _self,
-      'uid',
-      [],
-    );
-
-/// Returns the group id of the process on POSIX platforms. Returns null on windows.
-///
-/// ```ts
-/// console.log(Deno.gid());
-/// ```
-///
-/// Requires `allow-sys` permission.
-_i2.num? gid() => _i3.callMethod(
-      _self,
-      'gid',
-      [],
-    );
-
-/// Listen announces on the local transport address.
-///
-/// ```ts
-/// const listener1 = Deno.listen({ port: 80 })
-/// const listener2 = Deno.listen({ hostname: "192.0.2.1", port: 80 })
-/// const listener3 = Deno.listen({ hostname: "[2001:db8::1]", port: 80 });
-/// const listener4 = Deno.listen({ hostname: "golang.org", port: 80, transport: "tcp" });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i4.Listener<_i4.Conn> listen(_i2.Object options) => _i3.callMethod(
-      _self,
-      'listen',
-      [options],
-    );
-
-/// Listen announces on the local transport address over TLS (transport layer
-/// security).
-///
-/// ```ts
-/// const lstnr = Deno.listenTls({ port: 443, certFile: "./server.crt", keyFile: "./server.key" });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i4.TlsListener listenTls(_i4.ListenTlsOptions options) => _i3.callMethod(
-      _self,
-      'listenTls',
-      [options],
-    );
-
-/// Connects to the hostname (default is "127.0.0.1") and port on the named
-/// transport (default is "tcp"), and resolves to the connection (`Conn`).
-///
-/// ```ts
-/// const conn1 = await Deno.connect({ port: 80 });
-/// const conn2 = await Deno.connect({ hostname: "192.0.2.1", port: 80 });
-/// const conn3 = await Deno.connect({ hostname: "[2001:db8::1]", port: 80 });
-/// const conn4 = await Deno.connect({ hostname: "golang.org", port: 80, transport: "tcp" });
-/// ```
-///
-/// Requires `allow-net` permission for "tcp".
-_i2.Future<_i4.TcpConn> connect(_i4.ConnectOptions options) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'connect',
-      [options],
-    ));
-
-/// Establishes a secure connection over TLS (transport layer security) using
-/// an optional cert file, hostname (default is "127.0.0.1") and port.  The
-/// cert file is optional and if not included Mozilla's root certificates will
-/// be used (see also https://github.com/ctz/webpki-roots for specifics)
-///
-/// ```ts
-/// const caCert = await Deno.readTextFile("./certs/my_custom_root_CA.pem");
-/// const conn1 = await Deno.connectTls({ port: 80 });
-/// const conn2 = await Deno.connectTls({ caCerts: [caCert], hostname: "192.0.2.1", port: 80 });
-/// const conn3 = await Deno.connectTls({ hostname: "[2001:db8::1]", port: 80 });
-/// const conn4 = await Deno.connectTls({ caCerts: [caCert], hostname: "golang.org", port: 80});
-/// ```
-///
-/// Requires `allow-net` permission.
-_i2.Future<_i4.TlsConn> connectTls(_i4.ConnectTlsOptions options) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'connectTls',
-      [options],
-    ));
-
-/// Start TLS handshake from an existing connection using an optional list of
-/// CA certificates, and hostname (default is "127.0.0.1"). Specifying CA certs
-/// is optional. By default the configured root certificates are used. Using
-/// this function requires that the other end of the connection is prepared for
-/// a TLS handshake.
-///
-/// Note that this function *consumes* the TCP connection passed to it, thus the
-/// original TCP connection will be unusable after calling this. Additionally,
-/// you need to ensure that the TCP connection is not being used elsewhere when
-/// calling this function in order for the TCP connection to be consumed properly.
-/// For instance, if there is a `Promise` that is waiting for read operation on
-/// the TCP connection to complete, it is considered that the TCP connection is
-/// being used elsewhere. In such a case, this function will fail.
-///
-/// ```ts
-/// const conn = await Deno.connect({ port: 80, hostname: "127.0.0.1" });
-/// const caCert = await Deno.readTextFile("./certs/my_custom_root_CA.pem");
-/// // `conn` becomes unusable after calling `Deno.startTls`
-/// const tlsConn = await Deno.startTls(conn, { caCerts: [caCert], hostname: "localhost" });
-/// ```
-///
-/// Requires `allow-net` permission.
-_i2.Future<_i4.TlsConn> startTls(
-  _i4.Conn conn, [
-  _i4.StartTlsOptions? options,
-]) =>
-    _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'startTls',
-      [
-        conn,
-        options ?? _i6.undefined,
-      ],
-    ));
-
-/// Shutdown socket send operations.
-///
-/// Matches behavior of POSIX shutdown(3).
-///
-/// ```ts
-/// const listener = Deno.listen({ port: 80 });
-/// const conn = await listener.accept();
-/// Deno.shutdown(conn.rid);
-/// ```
-_i2.Future<void> shutdown(_i2.num rid) => _i3.promiseToFuture(_i3.callMethod(
-      _self,
-      'shutdown',
-      [rid],
-    ));
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _EnvAccessor env;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _StdinAccessor stdin;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _StdoutAccessor stdout;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _StderrAccessor stderr;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _PermissionsAccessor permissions;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _BuildAccessor build;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _VersionAccessor version;

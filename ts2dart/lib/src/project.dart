@@ -4,6 +4,7 @@ import 'dart:convert' as conv;
 import 'package:code_builder/code_builder.dart';
 import 'package:collection/collection.dart';
 import 'package:dart_style/dart_style.dart';
+import 'package:recase/recase.dart';
 import 'package:ts2dart/src/ast/library.dart';
 import 'package:ts2dart/src/module.dart';
 
@@ -228,12 +229,25 @@ class InteropProject {
     }
 
     final encoder = conv.JsonEncoder.withIndent('  ');
+    final mainBuffer = StringBuffer();
 
     for (final module in modules) {
-      module
-        ..exportsDist = usesDist && (module.path.isEmpty || modules.length == 1)
-        ..generate();
+      logger.warning('ForeachModule ${module.fileName}');
+      module.generate();
+
+      for (final library in module.libraries) {
+        mainBuffer.writeln("export '/${srcDir(library.targetFileName)}';");
+      }
     }
+
+    if (usesDist) {
+      mainBuffer.writeln("export '/${srcDir('_dist.dart')}';");
+    }
+
+  // final fname = fileName ?? (path.isEmpty ? project.targetMainFile! : path);
+    File(expositionDirFullPath(
+            '${name.snakeCase.toLowerCase()}.dart'))
+        .writeAsStringSync(mainBuffer.toString(), flush: true);
 
     File(srcDirFullPath('struct.json'))
         .writeAsStringSync(encoder.convert(mapFiles), flush: true);
@@ -299,11 +313,12 @@ class InteropProject {
         var module = modules.firstWhereOrNull((m) => m.path == fullNamespace);
 
         if (module == null) {
-          module = InteropModule(path: fullNamespace, project: this);
+          module =
+              InteropModule(path: fullNamespace, project: this, parent: parent);
           modules.add(module);
         }
 
-        listModules(fileName: fileName, parent: module, map: moduleMap);
+        listModules(map: moduleMap, fileName: fileName, parent: module);
       }
     }
 

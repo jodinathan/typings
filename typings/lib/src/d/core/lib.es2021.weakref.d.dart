@@ -5,6 +5,11 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'dart:js_util' as _i3;
 import '/d/core.dart' as _i4;
+import 'lib.es2021.weakref.d.dart' as _i5;
+import 'lib.es5.intl.d.dart' as _i6;
+import 'lib.es2015.reflect.reflect.d.dart' as _i7;
+import 'lib.dom.css.d.dart' as _i8;
+import 'lib.dom.webassembly.d.dart' as _i9;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -18,11 +23,10 @@ class WeakRef<T extends _i2.Object> {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('WeakRef')
-external _i2.Object _declaredWeakRef;
+_i2.Object get _declaredWeakRef => _i3.getProperty(
+      _self,
+      'WeakRef',
+    );
 
 extension WeakRef$Typings<T extends _i2.Object> on WeakRef<T> {
   /// Returns the WeakRef instance's target object, or undefined if the target object has been
@@ -40,7 +44,7 @@ class WeakRefConstructor {}
 
 @_i1.JS()
 @_i1.staticInterop
-class FinalizationRegistry<T extends _i2.Object?> {
+class FinalizationRegistry<T> {
   factory FinalizationRegistry(void Function(T) cleanupCallback) =>
       _i3.callConstructor(
         _declaredFinalizationRegistry,
@@ -48,14 +52,12 @@ class FinalizationRegistry<T extends _i2.Object?> {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('FinalizationRegistry')
-external _i2.Object _declaredFinalizationRegistry;
+_i2.Object get _declaredFinalizationRegistry => _i3.getProperty(
+      _self,
+      'FinalizationRegistry',
+    );
 
-extension FinalizationRegistry$Typings<T extends _i2.Object?>
-    on FinalizationRegistry<T> {
+extension FinalizationRegistry$Typings<T> on FinalizationRegistry<T> {
   /// Registers an object with the registry.
   ///  @param target The target object to register.
   ///  @param heldValue The value to pass to the finalizer for this object. This cannot be the
@@ -95,10 +97,35 @@ extension FinalizationRegistry$Typings<T extends _i2.Object?>
 @_i1.staticInterop
 class FinalizationRegistryConstructor {}
 
+_i5.WeakRefConstructor get weakRef => _i3.getProperty(
+      _self,
+      'WeakRef',
+    );
+_i5.FinalizationRegistryConstructor get finalizationRegistry => _i3.getProperty(
+      _self,
+      'FinalizationRegistry',
+    );
+_i6.$ModuleIntl get intl => _i3.getProperty(
+      _self,
+      'Intl',
+    );
+_i7.$ModuleReflect get reflect => _i3.getProperty(
+      _self,
+      'Reflect',
+    );
+_i8.$ModuleCss get css => _i3.getProperty(
+      _self,
+      'CSS',
+    );
+_i9.$ModuleWebAssembly get webAssembly => _i3.getProperty(
+      _self,
+      'WebAssembly',
+    );
+
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

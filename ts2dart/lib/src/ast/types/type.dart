@@ -253,7 +253,7 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
     final type = parseType(map) ?? library.parseType(map);
 
     if (map case {'isNullable': bool isNullable}) {
-      final ret = InteropRef(type as T,
+      final ret = InteropRef.parseType(type as T,
           optional: isNullable,
           typeArgs: switch (map) {
             {'targs': List targs} => targs

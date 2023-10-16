@@ -1,113 +1,95 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:js/js.dart' as _i1;
-import 'dart:core' as _i2; /*
-FieldExternal: DeclaredVar
-*/
+import 'dart:core' as _i2;
+import 'dart:js_util' as _i3;
 
-@_i1.JS('tabGroups')
-external _i2.Object target3403;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('activeTextEditor')
-external _i2.Object target3404;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeActiveTextEditor')
-external _i2.Object target3405;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeVisibleTextEditors')
-external _i2.Object target3406;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeTextEditorSelection')
-external _i2.Object target3407;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeTextEditorVisibleRanges')
-external _i2.Object target3408;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeTextEditorOptions')
-external _i2.Object target3409;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeTextEditorViewColumn')
-external _i2.Object target3410;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeVisibleNotebookEditors')
-external _i2.Object target3411;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('activeNotebookEditor')
-external _i2.Object target3412;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeActiveNotebookEditor')
-external _i2.Object target3413;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeNotebookEditorSelection')
-external _i2.Object target3414;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeNotebookEditorVisibleRanges')
-external _i2.Object target3415;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('activeTerminal')
-external _i2.Object target3416;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeActiveTerminal')
-external _i2.Object target3417;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidOpenTerminal')
-external _i2.Object target3418;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidCloseTerminal')
-external _i2.Object target3419;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeTerminalState')
-external _i2.Object target3420;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('state')
-external _i2.Object target3421;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeWindowState')
-external _i2.Object target3422;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('activeColorTheme')
-external _i2.Object target3423;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('onDidChangeActiveColorTheme')
-external _i2.Object target3424;
+@_i1.JS('vscode.window')
+external _i2.Object _self;
+_i2.Object get target3403 => _i3.getProperty(
+      _self,
+      'tabGroups',
+    );
+_i2.Object get target3404 => _i3.getProperty(
+      _self,
+      'activeTextEditor',
+    );
+_i2.Object get target3405 => _i3.getProperty(
+      _self,
+      'onDidChangeActiveTextEditor',
+    );
+_i2.Object get target3406 => _i3.getProperty(
+      _self,
+      'onDidChangeVisibleTextEditors',
+    );
+_i2.Object get target3407 => _i3.getProperty(
+      _self,
+      'onDidChangeTextEditorSelection',
+    );
+_i2.Object get target3408 => _i3.getProperty(
+      _self,
+      'onDidChangeTextEditorVisibleRanges',
+    );
+_i2.Object get target3409 => _i3.getProperty(
+      _self,
+      'onDidChangeTextEditorOptions',
+    );
+_i2.Object get target3410 => _i3.getProperty(
+      _self,
+      'onDidChangeTextEditorViewColumn',
+    );
+_i2.Object get target3411 => _i3.getProperty(
+      _self,
+      'onDidChangeVisibleNotebookEditors',
+    );
+_i2.Object get target3412 => _i3.getProperty(
+      _self,
+      'activeNotebookEditor',
+    );
+_i2.Object get target3413 => _i3.getProperty(
+      _self,
+      'onDidChangeActiveNotebookEditor',
+    );
+_i2.Object get target3414 => _i3.getProperty(
+      _self,
+      'onDidChangeNotebookEditorSelection',
+    );
+_i2.Object get target3415 => _i3.getProperty(
+      _self,
+      'onDidChangeNotebookEditorVisibleRanges',
+    );
+_i2.Object get target3416 => _i3.getProperty(
+      _self,
+      'activeTerminal',
+    );
+_i2.Object get target3417 => _i3.getProperty(
+      _self,
+      'onDidChangeActiveTerminal',
+    );
+_i2.Object get target3418 => _i3.getProperty(
+      _self,
+      'onDidOpenTerminal',
+    );
+_i2.Object get target3419 => _i3.getProperty(
+      _self,
+      'onDidCloseTerminal',
+    );
+_i2.Object get target3420 => _i3.getProperty(
+      _self,
+      'onDidChangeTerminalState',
+    );
+_i2.Object get target3421 => _i3.getProperty(
+      _self,
+      'state',
+    );
+_i2.Object get target3422 => _i3.getProperty(
+      _self,
+      'onDidChangeWindowState',
+    );
+_i2.Object get target3423 => _i3.getProperty(
+      _self,
+      'activeColorTheme',
+    );
+_i2.Object get target3424 => _i3.getProperty(
+      _self,
+      'onDidChangeActiveColorTheme',
+    );

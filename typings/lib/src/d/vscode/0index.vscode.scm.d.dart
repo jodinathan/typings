@@ -42,32 +42,41 @@ extension InputBoxAccessor$Typings on _InputBoxAccessor {
       );
 }
 
-/// Creates a new {@link SourceControlsource control} instance.
-_i5.SourceControl createSourceControl(
-  _i2.String id,
-  _i2.String label, [
-  _i5.Uri? rootUri,
-]) =>
-    _i3.callMethod(
-      _self,
-      'createSourceControl',
-      [
-        id,
-        label,
-        rootUri ?? _i6.undefined,
-      ],
-    );
+@_i1.JS('vscode.scm')
+@_i1.staticInterop
+class $ModuleScm {}
+
+extension $ModuleScm$Typings on $ModuleScm {
+  /// The {@link SourceControlInputBoxinput box} for the last source control
+  /// created by the extension.
+  _i5.SourceControlInputBox get inputBox => _i3.getProperty(
+        this,
+        'inputBox',
+      );
+
+  /// Creates a new {@link SourceControlsource control} instance.
+  _i5.SourceControl createSourceControl(
+    _i2.String id,
+    _i2.String label, [
+    _i5.Uri? rootUri,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'createSourceControl',
+        [
+          id,
+          label,
+          rootUri ?? _i6.undefined,
+        ],
+      );
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _InputBoxAccessor inputBox;

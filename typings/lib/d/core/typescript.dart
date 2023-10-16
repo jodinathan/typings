@@ -46,3 +46,7 @@ export '/src/d/core/lib.es2023.array.d.dart';
 export '/src/d/core/lib.dom.d.dart';
 export '/src/d/core/lib.webworker.importscripts.d.dart';
 export '/src/d/core/lib.scripthost.d.dart';
+export '/src/d/core/lib.es5.intl.d.dart';
+export '/src/d/core/lib.es2015.reflect.reflect.d.dart';
+export '/src/d/core/lib.dom.css.d.dart';
+export '/src/d/core/lib.dom.webassembly.d.dart';

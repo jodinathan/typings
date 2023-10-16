@@ -15,7 +15,7 @@ class InteropTypeParam {
           ..symbol = symbol
           ..bound = switch (constraint) {
             InteropRef ref => ref.ref(),
-            _ => InteropStaticType.dyn.ref()
+            _ => null// InteropStaticType.dyn.ref()
           };
       });
 

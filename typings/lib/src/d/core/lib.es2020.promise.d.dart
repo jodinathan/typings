@@ -4,18 +4,22 @@ library typings.core.interop; // ignore_for_file: no_leading_underscores_for_lib
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'dart:js_util' as _i3;
+import 'lib.es5.intl.d.dart' as _i4;
+import 'lib.es2015.reflect.reflect.d.dart' as _i5;
+import 'lib.dom.css.d.dart' as _i6;
+import 'lib.dom.webassembly.d.dart' as _i7;
 
 @_i1.JS('self')
 external _i2.Object _self;
-typedef PromiseSettledResult<T extends _i2.Object?> = _i2.Object;
+typedef PromiseSettledResult<T> = _i2.Object;
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class PromiseFulfilledResult<T extends _i2.Object?> {
+class PromiseFulfilledResult<T> {
   external factory PromiseFulfilledResult._({
-    _i2.Object? status,
-    _i2.Object? value,
+    _i2.dynamic status,
+    _i2.dynamic value,
   });
 
   factory PromiseFulfilledResult({
@@ -28,8 +32,7 @@ class PromiseFulfilledResult<T extends _i2.Object?> {
       );
 }
 
-extension PromiseFulfilledResult$Typings<T extends _i2.Object?>
-    on PromiseFulfilledResult<T> {
+extension PromiseFulfilledResult$Typings<T> on PromiseFulfilledResult<T> {
   _i2.String get status => _i3.getProperty(
         this,
         'status',
@@ -60,13 +63,13 @@ extension PromiseFulfilledResult$Typings<T extends _i2.Object?>
 @_i1.anonymous
 class PromiseRejectedResult {
   external factory PromiseRejectedResult._({
-    _i2.Object? status,
-    _i2.Object? reason,
+    _i2.dynamic status,
+    _i2.dynamic reason,
   });
 
   factory PromiseRejectedResult({
     required _i2.String status,
-    required _i2.Object? reason,
+    required _i2.dynamic reason,
   }) =>
       PromiseRejectedResult._(
         status: status,
@@ -87,11 +90,11 @@ extension PromiseRejectedResult$Typings on PromiseRejectedResult {
     );
   }
 
-  _i2.Object? get reason => _i3.getProperty(
+  _i2.dynamic get reason => _i3.getProperty(
         this,
         'reason',
       );
-  set reason(_i2.Object? value) {
+  set reason(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'reason',
@@ -100,10 +103,27 @@ extension PromiseRejectedResult$Typings on PromiseRejectedResult {
   }
 }
 
+_i4.$ModuleIntl get intl => _i3.getProperty(
+      _self,
+      'Intl',
+    );
+_i5.$ModuleReflect get reflect => _i3.getProperty(
+      _self,
+      'Reflect',
+    );
+_i6.$ModuleCss get css => _i3.getProperty(
+      _self,
+      'CSS',
+    );
+_i7.$ModuleWebAssembly get webAssembly => _i3.getProperty(
+      _self,
+      'WebAssembly',
+    );
+
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

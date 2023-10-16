@@ -249,74 +249,18 @@ extension IInline84$Typings on IInline84 {
   }
 }
 
-/// Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
-/// registered, or if the user does not consent to sharing authentication information with
-/// the extension. If there are multiple sessions with the same scopes, the user will be shown a
-/// quickpick to select which account they would like to use.
-///
-/// Currently, there are only two authentication providers that are contributed from built in extensions
-/// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-_i7.Thenable<_i8.AuthenticationSession> _getSession$1(
-  _i2.String providerId,
-  _i2.List<_i2.String> scopes,
-  _i2.Object options,
-) =>
-    _i3.callMethod(
-      _self,
-      'getSession',
-      [
-        providerId,
-        scopes,
-        options,
-      ],
-    );
+@_i1.JS('vscode.authentication')
+@_i1.staticInterop
+class $ModuleAuthentication {}
 
-/// Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
-/// registered, or if the user does not consent to sharing authentication information with
-/// the extension. If there are multiple sessions with the same scopes, the user will be shown a
-/// quickpick to select which account they would like to use.
-///
-/// Currently, there are only two authentication providers that are contributed from built in extensions
-/// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-_i7.Thenable<_i8.AuthenticationSession> _getSession$2(
-  _i2.String providerId,
-  _i2.List<_i2.String> scopes,
-  _i2.Object options,
-) =>
-    _i3.callMethod(
-      _self,
-      'getSession',
-      [
-        providerId,
-        scopes,
-        options,
-      ],
-    );
+extension $ModuleAuthentication$Typings on $ModuleAuthentication {
+  /// An {@link Event} which fires when the authentication sessions of an authentication provider have
+  /// been added, removed, or changed.
+  _i5.Event get onDidChangeSessions => _i3.getProperty(
+        this,
+        'onDidChangeSessions',
+      );
 
-/// Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
-/// registered, or if the user does not consent to sharing authentication information with
-/// the extension. If there are multiple sessions with the same scopes, the user will be shown a
-/// quickpick to select which account they would like to use.
-///
-/// Currently, there are only two authentication providers that are contributed from built in extensions
-/// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-_i7.Thenable<_i8.AuthenticationSession?> _getSession$3(
-  _i2.String providerId,
-  _i2.List<_i2.String> scopes, [
-  _i8.AuthenticationGetSessionOptions? options,
-]) =>
-    _i3.callMethod(
-      _self,
-      'getSession',
-      [
-        providerId,
-        scopes,
-        options ?? _i6.undefined,
-      ],
-    );
-
-/// Overload accessor: $1, $2, $3
-({
   /// Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
   /// registered, or if the user does not consent to sharing authentication information with
   /// the extension. If there are multiple sessions with the same scopes, the user will be shown a
@@ -324,11 +268,20 @@ _i7.Thenable<_i8.AuthenticationSession?> _getSession$3(
   ///
   /// Currently, there are only two authentication providers that are contributed from built in extensions
   /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-  _i7.Thenable<_i8.AuthenticationSession> Function(
+  _i7.Thenable<_i8.AuthenticationSession> _getSession$1(
     _i2.String providerId,
     _i2.List<_i2.String> scopes,
     _i2.Object options,
-  ) $1,
+  ) =>
+      _i3.callMethod(
+        this,
+        'getSession',
+        [
+          providerId,
+          scopes,
+          options,
+        ],
+      );
 
   /// Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
   /// registered, or if the user does not consent to sharing authentication information with
@@ -337,11 +290,20 @@ _i7.Thenable<_i8.AuthenticationSession?> _getSession$3(
   ///
   /// Currently, there are only two authentication providers that are contributed from built in extensions
   /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-  _i7.Thenable<_i8.AuthenticationSession> Function(
+  _i7.Thenable<_i8.AuthenticationSession> _getSession$2(
     _i2.String providerId,
     _i2.List<_i2.String> scopes,
     _i2.Object options,
-  ) $2,
+  ) =>
+      _i3.callMethod(
+        this,
+        'getSession',
+        [
+          providerId,
+          scopes,
+          options,
+        ],
+      );
 
   /// Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
   /// registered, or if the user does not consent to sharing authentication information with
@@ -350,48 +312,95 @@ _i7.Thenable<_i8.AuthenticationSession?> _getSession$3(
   ///
   /// Currently, there are only two authentication providers that are contributed from built in extensions
   /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-  _i7.Thenable<_i8.AuthenticationSession?> Function(
+  _i7.Thenable<_i8.AuthenticationSession?> _getSession$3(
     _i2.String providerId,
     _i2.List<_i2.String> scopes, [
     _i8.AuthenticationGetSessionOptions? options,
-  ]) $3,
-}) get getSession => (
-      $1: _getSession$1,
-      $2: _getSession$2,
-      $3: _getSession$3,
-    );
+  ]) =>
+      _i3.callMethod(
+        this,
+        'getSession',
+        [
+          providerId,
+          scopes,
+          options ?? _i6.undefined,
+        ],
+      );
 
-/// Register an authentication provider.
-///
-/// There can only be one provider per id and an error is being thrown when an id
-/// has already been used by another provider. Ids are case-sensitive.
-_i8.Disposable registerAuthenticationProvider(
-  _i2.String id,
-  _i2.String label,
-  _i8.AuthenticationProvider provider, [
-  _i8.AuthenticationProviderOptions? options,
-]) =>
-    _i3.callMethod(
-      _self,
-      'registerAuthenticationProvider',
-      [
-        id,
-        label,
-        provider,
-        options ?? _i6.undefined,
-      ],
-    );
+  /// Overload accessor: $1, $2, $3
+  ({
+    /// Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
+    /// registered, or if the user does not consent to sharing authentication information with
+    /// the extension. If there are multiple sessions with the same scopes, the user will be shown a
+    /// quickpick to select which account they would like to use.
+    ///
+    /// Currently, there are only two authentication providers that are contributed from built in extensions
+    /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
+    _i7.Thenable<_i8.AuthenticationSession> Function(
+      _i2.String providerId,
+      _i2.List<_i2.String> scopes,
+      _i2.Object options,
+    ) $1,
+
+    /// Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
+    /// registered, or if the user does not consent to sharing authentication information with
+    /// the extension. If there are multiple sessions with the same scopes, the user will be shown a
+    /// quickpick to select which account they would like to use.
+    ///
+    /// Currently, there are only two authentication providers that are contributed from built in extensions
+    /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
+    _i7.Thenable<_i8.AuthenticationSession> Function(
+      _i2.String providerId,
+      _i2.List<_i2.String> scopes,
+      _i2.Object options,
+    ) $2,
+
+    /// Get an authentication session matching the desired scopes. Rejects if a provider with providerId is not
+    /// registered, or if the user does not consent to sharing authentication information with
+    /// the extension. If there are multiple sessions with the same scopes, the user will be shown a
+    /// quickpick to select which account they would like to use.
+    ///
+    /// Currently, there are only two authentication providers that are contributed from built in extensions
+    /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
+    _i7.Thenable<_i8.AuthenticationSession?> Function(
+      _i2.String providerId,
+      _i2.List<_i2.String> scopes, [
+      _i8.AuthenticationGetSessionOptions? options,
+    ]) $3,
+  }) get getSession => (
+        $1: _getSession$1,
+        $2: _getSession$2,
+        $3: _getSession$3,
+      );
+
+  /// Register an authentication provider.
+  ///
+  /// There can only be one provider per id and an error is being thrown when an id
+  /// has already been used by another provider. Ids are case-sensitive.
+  _i8.Disposable registerAuthenticationProvider(
+    _i2.String id,
+    _i2.String label,
+    _i8.AuthenticationProvider provider, [
+    _i8.AuthenticationProviderOptions? options,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'registerAuthenticationProvider',
+        [
+          id,
+          label,
+          provider,
+          options ?? _i6.undefined,
+        ],
+      );
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeSessionsAccessor onDidChangeSessions;

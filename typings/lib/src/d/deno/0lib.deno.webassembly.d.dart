@@ -64,11 +64,10 @@ class CompileError implements _i4.Error {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CompileError')
-external _i2.Object _declaredCompileError;
+_i2.Object get _declaredCompileError => _i6.getProperty(
+      _self,
+      'CompileError',
+    );
 
 /// A `WebAssembly.Global` object represents a global variable instance, accessible from
 /// both JavaScript and importable/exportable across one or more `WebAssembly.Module`
@@ -80,7 +79,7 @@ external _i2.Object _declaredCompileError;
 class Global {
   factory Global(
     _i3.GlobalDescriptor descriptor, [
-    _i2.Object? v,
+    _i2.dynamic v,
   ]) =>
       _i6.callConstructor(
         _declaredGlobal,
@@ -91,20 +90,19 @@ class Global {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Global')
-external _i2.Object _declaredGlobal;
+_i2.Object get _declaredGlobal => _i6.getProperty(
+      _self,
+      'Global',
+    );
 
 extension Global$Typings on Global {
   /// The value contained inside the global variable â this can be used to directly set
   ///  and get the global's value.
-  _i2.Object? get value => _i6.getProperty(
+  _i2.dynamic get value => _i6.getProperty(
         this,
         'value',
       );
-  set value(_i2.Object? value) {
+  set value(_i2.dynamic value) {
     _i6.setProperty(
       this,
       'value',
@@ -113,7 +111,7 @@ extension Global$Typings on Global {
   }
 
   /// Old-style method that returns the value contained inside the global variable.
-  _i2.Object? valueOf() => _i6.callMethod(
+  _i2.dynamic valueOf() => _i6.callMethod(
         this,
         'valueOf',
         [],
@@ -141,11 +139,10 @@ class Instance {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Instance')
-external _i2.Object _declaredInstance;
+_i2.Object get _declaredInstance => _i6.getProperty(
+      _self,
+      'Instance',
+    );
 
 extension Instance$Typings on Instance {
   /// Returns an object containing as its members all the functions exported from the
@@ -177,11 +174,10 @@ class LinkError implements _i4.Error {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LinkError')
-external _i2.Object _declaredLinkError;
+_i2.Object get _declaredLinkError => _i6.getProperty(
+      _self,
+      'LinkError',
+    );
 
 /// The `WebAssembly.Memory` object is a resizable `ArrayBuffer` or `SharedArrayBuffer` that
 /// holds the raw bytes of memory accessed by a WebAssembly Instance.
@@ -199,11 +195,10 @@ class Memory {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Memory')
-external _i2.Object _declaredMemory;
+_i2.Object get _declaredMemory => _i6.getProperty(
+      _self,
+      'Memory',
+    );
 
 extension Memory$Typings on Memory {
   /// An accessor property that returns the buffer contained in the memory.
@@ -270,11 +265,10 @@ class Module {
           .cast();
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Module')
-external _i2.Object _declaredModule;
+_i2.Object get _declaredModule => _i6.getProperty(
+      _self,
+      'Module',
+    );
 
 /// The `WebAssembly.RuntimeError` object is the error type that is thrown whenever WebAssembly
 /// specifies a trap.
@@ -296,11 +290,10 @@ class RuntimeError implements _i4.Error {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('RuntimeError')
-external _i2.Object _declaredRuntimeError;
+_i2.Object get _declaredRuntimeError => _i6.getProperty(
+      _self,
+      'RuntimeError',
+    );
 
 /// The `WebAssembly.Table()` object is a JavaScript wrapper object â an array-like structure
 /// representing a WebAssembly Table, which stores function references. A table created by
@@ -317,11 +310,10 @@ class Table {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Table')
-external _i2.Object _declaredTable;
+_i2.Object get _declaredTable => _i6.getProperty(
+      _self,
+      'Table',
+    );
 
 extension Table$Typings on Table {
   /// Returns the length of the table, i.e. the number of elements.
@@ -367,8 +359,8 @@ extension Table$Typings on Table {
 @_i1.anonymous
 class GlobalDescriptor {
   external factory GlobalDescriptor._({
-    _i2.Object? mutable,
-    _i2.Object? value,
+    _i2.dynamic mutable,
+    _i2.dynamic value,
   });
 
   factory GlobalDescriptor({
@@ -414,9 +406,9 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
 @_i1.anonymous
 class MemoryDescriptor {
   external factory MemoryDescriptor._({
-    _i2.Object? initial,
-    _i2.Object? maximum,
-    _i2.Object? shared,
+    _i2.dynamic initial,
+    _i2.dynamic maximum,
+    _i2.dynamic shared,
   });
 
   factory MemoryDescriptor({
@@ -476,8 +468,8 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
 @_i1.anonymous
 class ModuleExportDescriptor {
   external factory ModuleExportDescriptor._({
-    _i2.Object? kind,
-    _i2.Object? name,
+    _i2.dynamic kind,
+    _i2.dynamic name,
   });
 
   factory ModuleExportDescriptor({
@@ -524,9 +516,9 @@ extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
 @_i1.anonymous
 class ModuleImportDescriptor {
   external factory ModuleImportDescriptor._({
-    _i2.Object? kind,
-    _i2.Object? module,
-    _i2.Object? name,
+    _i2.dynamic kind,
+    _i2.dynamic module,
+    _i2.dynamic name,
   });
 
   factory ModuleImportDescriptor({
@@ -587,9 +579,9 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
 @_i1.anonymous
 class TableDescriptor {
   external factory TableDescriptor._({
-    _i2.Object? element,
-    _i2.Object? initial,
-    _i2.Object? maximum,
+    _i2.dynamic element,
+    _i2.dynamic initial,
+    _i2.dynamic maximum,
   });
 
   factory TableDescriptor({
@@ -648,8 +640,8 @@ extension TableDescriptor$Typings on TableDescriptor {
 @_i1.anonymous
 class WebAssemblyInstantiatedSource {
   external factory WebAssemblyInstantiatedSource._({
-    _i2.Object? instance,
-    _i2.Object? module,
+    _i2.dynamic instance,
+    _i2.dynamic module,
   });
 
   factory WebAssemblyInstantiatedSource({
@@ -691,94 +683,37 @@ extension WebAssemblyInstantiatedSource$Typings
   }
 }
 
-/// The `WebAssembly.compile()` function compiles WebAssembly binary code into a
-/// `WebAssembly.Module` object. This function is useful if it is necessary to compile
-/// a module before it can be instantiated (otherwise, the `WebAssembly.instantiate()`
-/// function should be used).
-///
-/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile)
-_i2.Future<_i3.Module> compile(_i8.BufferSource bytes) =>
-    _i6.promiseToFuture(_i6.callMethod(
-      _self,
-      'compile',
-      [bytes],
-    ));
+@_i1.JS('WebAssembly')
+@_i1.staticInterop
+class $ModuleWebAssembly {}
 
-/// The `WebAssembly.compileStreaming()` function compiles a `WebAssembly.Module`
-/// directly from a streamed underlying source. This function is useful if it is
-/// necessary to a compile a module before it can be instantiated (otherwise, the
-/// `WebAssembly.instantiateStreaming()` function should be used).
-///
-/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming)
-_i2.Future<_i3.Module> compileStreaming(_i2.Object source) =>
-    _i6.promiseToFuture(_i6.callMethod(
-      _self,
-      'compileStreaming',
-      [source],
-    ));
+extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
+  /// The `WebAssembly.compile()` function compiles WebAssembly binary code into a
+  /// `WebAssembly.Module` object. This function is useful if it is necessary to compile
+  /// a module before it can be instantiated (otherwise, the `WebAssembly.instantiate()`
+  /// function should be used).
+  ///
+  /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile)
+  _i2.Future<_i2.Future<_i3.Module>> compile(_i8.BufferSource bytes) =>
+      _i6.promiseToFuture(_i6.callMethod(
+        this,
+        'compile',
+        [bytes],
+      ));
 
-/// The WebAssembly.instantiate() function allows you to compile and instantiate
-/// WebAssembly code.
-///
-/// This overload takes the WebAssembly binary code, in the form of a typed
-/// array or ArrayBuffer, and performs both compilation and instantiation in one step.
-/// The returned Promise resolves to both a compiled WebAssembly.Module and its first
-/// WebAssembly.Instance.
-///
-/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-/// The WebAssembly.instantiate() function allows you to compile and instantiate
-/// WebAssembly code.
-///
-/// This overload takes an already-compiled WebAssembly.Module and returns
-/// a Promise that resolves to an Instance of that Module. This overload is useful
-/// if the Module has already been compiled.
-///
-/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-_i2.Future<_i3.WebAssemblyInstantiatedSource> _instantiate$1(
-  _i8.BufferSource bytes, [
-  _i3.Imports? importObject,
-]) =>
-    _i6.promiseToFuture(_i6.callMethod(
-      _self,
-      'instantiate',
-      [
-        bytes,
-        importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
-      ],
-    ));
+  /// The `WebAssembly.compileStreaming()` function compiles a `WebAssembly.Module`
+  /// directly from a streamed underlying source. This function is useful if it is
+  /// necessary to a compile a module before it can be instantiated (otherwise, the
+  /// `WebAssembly.instantiateStreaming()` function should be used).
+  ///
+  /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming)
+  _i2.Future<_i2.Future<_i3.Module>> compileStreaming(_i2.Object source) =>
+      _i6.promiseToFuture(_i6.callMethod(
+        this,
+        'compileStreaming',
+        [source],
+      ));
 
-/// The WebAssembly.instantiate() function allows you to compile and instantiate
-/// WebAssembly code.
-///
-/// This overload takes the WebAssembly binary code, in the form of a typed
-/// array or ArrayBuffer, and performs both compilation and instantiation in one step.
-/// The returned Promise resolves to both a compiled WebAssembly.Module and its first
-/// WebAssembly.Instance.
-///
-/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-/// The WebAssembly.instantiate() function allows you to compile and instantiate
-/// WebAssembly code.
-///
-/// This overload takes an already-compiled WebAssembly.Module and returns
-/// a Promise that resolves to an Instance of that Module. This overload is useful
-/// if the Module has already been compiled.
-///
-/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-_i2.Future<_i3.Instance> _instantiate$2(
-  _i3.Module moduleObject, [
-  _i3.Imports? importObject,
-]) =>
-    _i6.promiseToFuture(_i6.callMethod(
-      _self,
-      'instantiate',
-      [
-        moduleObject,
-        importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
-      ],
-    ));
-
-/// Overload accessor: $1, $2
-({
   /// The WebAssembly.instantiate() function allows you to compile and instantiate
   /// WebAssembly code.
   ///
@@ -796,10 +731,18 @@ _i2.Future<_i3.Instance> _instantiate$2(
   /// if the Module has already been compiled.
   ///
   /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-  _i2.Future<_i3.WebAssemblyInstantiatedSource> Function(
+  _i2.Future<_i2.Future<_i3.WebAssemblyInstantiatedSource>> _instantiate$1(
     _i8.BufferSource bytes, [
     _i3.Imports? importObject,
-  ]) $1,
+  ]) =>
+      _i6.promiseToFuture(_i6.callMethod(
+        this,
+        'instantiate',
+        [
+          bytes,
+          importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
+        ],
+      ));
 
   /// The WebAssembly.instantiate() function allows you to compile and instantiate
   /// WebAssembly code.
@@ -818,48 +761,104 @@ _i2.Future<_i3.Instance> _instantiate$2(
   /// if the Module has already been compiled.
   ///
   /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-  _i2.Future<_i3.Instance> Function(
+  _i2.Future<_i2.Future<_i3.Instance>> _instantiate$2(
     _i3.Module moduleObject, [
     _i3.Imports? importObject,
-  ]) $2,
-}) get instantiate => (
-      $1: _instantiate$1,
-      $2: _instantiate$2,
-    );
+  ]) =>
+      _i6.promiseToFuture(_i6.callMethod(
+        this,
+        'instantiate',
+        [
+          moduleObject,
+          importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
+        ],
+      ));
 
-/// The `WebAssembly.instantiateStreaming()` function compiles and instantiates a
-/// WebAssembly module directly from a streamed underlying source. This is the most
-/// efficient, optimized way to load wasm code.
-///
-/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming)
-_i2.Future<_i3.WebAssemblyInstantiatedSource> instantiateStreaming(
-  _i2.Object response, [
-  _i3.Imports? importObject,
-]) =>
-    _i6.promiseToFuture(_i6.callMethod(
-      _self,
-      'instantiateStreaming',
-      [
-        response,
-        importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
-      ],
-    ));
+  /// Overload accessor: $1, $2
+  ({
+    /// The WebAssembly.instantiate() function allows you to compile and instantiate
+    /// WebAssembly code.
+    ///
+    /// This overload takes the WebAssembly binary code, in the form of a typed
+    /// array or ArrayBuffer, and performs both compilation and instantiation in one step.
+    /// The returned Promise resolves to both a compiled WebAssembly.Module and its first
+    /// WebAssembly.Instance.
+    ///
+    /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
+    /// The WebAssembly.instantiate() function allows you to compile and instantiate
+    /// WebAssembly code.
+    ///
+    /// This overload takes an already-compiled WebAssembly.Module and returns
+    /// a Promise that resolves to an Instance of that Module. This overload is useful
+    /// if the Module has already been compiled.
+    ///
+    /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
+    _i2.Future<_i2.Future<_i3.WebAssemblyInstantiatedSource>> Function(
+      _i8.BufferSource bytes, [
+      _i3.Imports? importObject,
+    ]) $1,
 
-/// The `WebAssembly.validate()` function validates a given typed array of
-/// WebAssembly binary code, returning whether the bytes form a valid wasm
-/// module (`true`) or not (`false`).
-///
-/// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate)
-_i2.bool validate(_i8.BufferSource bytes) => _i6.callMethod(
-      _self,
-      'validate',
-      [bytes],
-    );
+    /// The WebAssembly.instantiate() function allows you to compile and instantiate
+    /// WebAssembly code.
+    ///
+    /// This overload takes the WebAssembly binary code, in the form of a typed
+    /// array or ArrayBuffer, and performs both compilation and instantiation in one step.
+    /// The returned Promise resolves to both a compiled WebAssembly.Module and its first
+    /// WebAssembly.Instance.
+    ///
+    /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
+    /// The WebAssembly.instantiate() function allows you to compile and instantiate
+    /// WebAssembly code.
+    ///
+    /// This overload takes an already-compiled WebAssembly.Module and returns
+    /// a Promise that resolves to an Instance of that Module. This overload is useful
+    /// if the Module has already been compiled.
+    ///
+    /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
+    _i2.Future<_i2.Future<_i3.Instance>> Function(
+      _i3.Module moduleObject, [
+      _i3.Imports? importObject,
+    ]) $2,
+  }) get instantiate => (
+        $1: _instantiate$1,
+        $2: _instantiate$2,
+      );
+
+  /// The `WebAssembly.instantiateStreaming()` function compiles and instantiates a
+  /// WebAssembly module directly from a streamed underlying source. This is the most
+  /// efficient, optimized way to load wasm code.
+  ///
+  /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming)
+  _i2.Future<_i2.Future<_i3.WebAssemblyInstantiatedSource>>
+      instantiateStreaming(
+    _i2.Object response, [
+    _i3.Imports? importObject,
+  ]) =>
+          _i6.promiseToFuture(_i6.callMethod(
+            this,
+            'instantiateStreaming',
+            [
+              response,
+              importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
+            ],
+          ));
+
+  /// The `WebAssembly.validate()` function validates a given typed array of
+  /// WebAssembly binary code, returning whether the bytes form a valid wasm
+  /// module (`true`) or not (`false`).
+  ///
+  /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate)
+  _i2.bool validate(_i8.BufferSource bytes) => _i6.callMethod(
+        this,
+        'validate',
+        [bytes],
+      );
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

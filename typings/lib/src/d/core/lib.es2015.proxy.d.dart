@@ -8,6 +8,10 @@ import 'dart:js_util' as _i4;
 import 'core_comon.d.dart' as _i5;
 import 'lib.es5.d.dart' as _i6;
 import '/d/core.dart' as _i7;
+import 'lib.es5.intl.d.dart' as _i8;
+import 'lib.es2015.reflect.reflect.d.dart' as _i9;
+import 'lib.dom.css.d.dart' as _i10;
+import 'lib.dom.webassembly.d.dart' as _i11;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -54,10 +58,10 @@ class ProxyHandler<T extends _i2.Object> {}
 extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   /// A trap method for a function call.
   ///  @param target The original callable object which is being proxied.
-  _i2.Object? apply(
+  _i2.dynamic apply(
     T target,
-    _i2.Object? thisArg,
-    _i2.List<_i2.Object?> argArray,
+    _i2.dynamic thisArg,
+    _i2.List<_i2.dynamic> argArray,
   ) =>
       _i4.callMethod(
         this,
@@ -74,7 +78,7 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   ///  @param newTarget The constructor that was originally called.
   _i2.Object construct(
     T target,
-    _i2.List<_i2.Object?> argArray,
+    _i2.List<_i2.dynamic> argArray,
     _i2.Function newTarget,
   ) =>
       _i4.callMethod(
@@ -126,10 +130,10 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   ///  @param target The original object which is being proxied.
   ///  @param p The name or `Symbol` of the property to get.
   ///  @param receiver The proxy or an object that inherits from the proxy.
-  _i2.Object? get(
+  _i2.dynamic get(
     T target,
     _i2.Object p,
-    _i2.Object? receiver,
+    _i2.dynamic receiver,
   ) =>
       _i4.callMethod(
         this,
@@ -213,8 +217,8 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   _i2.bool set(
     T target,
     _i2.Object p,
-    _i2.Object? newValue,
-    _i2.Object? receiver,
+    _i2.dynamic newValue,
+    _i2.dynamic receiver,
   ) =>
       _i4.callMethod(
         this,
@@ -297,16 +301,33 @@ extension ProxyConstructor$Typings on ProxyConstructor {
       );
 }
 
+_i3.ProxyConstructor get proxy => _i4.getProperty(
+      _self,
+      'Proxy',
+    );
+_i8.$ModuleIntl get intl => _i4.getProperty(
+      _self,
+      'Intl',
+    );
+_i9.$ModuleReflect get reflect => _i4.getProperty(
+      _self,
+      'Reflect',
+    );
+_i10.$ModuleCss get css => _i4.getProperty(
+      _self,
+      'CSS',
+    );
+_i11.$ModuleWebAssembly get webAssembly => _i4.getProperty(
+      _self,
+      'WebAssembly',
+    );
+
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-/* source: Exposed global accessor */
-@_i1.JS('Proxy')
-external final _ProxyAccessor proxy;

@@ -1,3278 +1,2627 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:js/js.dart' as _i1;
-import 'dart:core' as _i2; /*
-FieldExternal: DeclaredVar
-*/
+import 'dart:core' as _i2;
+import 'dart:js_util' as _i3;
 
-@_i1.JS('Object')
-external _i2.Object target0;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Boolean')
-external _i2.Object target1;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Number')
-external _i2.Object target2;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RegExp')
-external _i2.Object target3;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Error')
-external _i2.Object target4;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('EvalError')
-external _i2.Object target5;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RangeError')
-external _i2.Object target6;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ReferenceError')
-external _i2.Object target7;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SyntaxError')
-external _i2.Object target8;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TypeError')
-external _i2.Object target9;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('URIError')
-external _i2.Object target10;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Array')
-external _i2.Object target11;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Map')
-external _i2.Object target21;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WeakMap')
-external _i2.Object target22;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Set')
-external _i2.Object target23;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WeakSet')
-external _i2.Object target24;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Promise')
-external _i2.Object target25;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Proxy')
-external _i2.Object target26;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Symbol')
-external _i2.Object target27;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SharedArrayBuffer')
-external _i2.Object target28;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('BigInt')
-external _i2.Object target29;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('BigInt64Array')
-external _i2.Object target30;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('BigUint64Array')
-external _i2.Object target31;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AggregateError')
-external _i2.Object target32;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WeakRef')
-external _i2.Object target33;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FinalizationRegistry')
-external _i2.Object target34;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AbortController')
-external _i2.Object target35;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AbortSignal')
-external _i2.Object target36;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AbstractRange')
-external _i2.Object target37;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AnalyserNode')
-external _i2.Object target38;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Animation')
-external _i2.Object target39;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AnimationEffect')
-external _i2.Object target40;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AnimationEvent')
-external _i2.Object target41;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AnimationPlaybackEvent')
-external _i2.Object target42;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AnimationTimeline')
-external _i2.Object target43;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Attr')
-external _i2.Object target44;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioBuffer')
-external _i2.Object target45;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioBufferSourceNode')
-external _i2.Object target46;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioContext')
-external _i2.Object target47;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioDestinationNode')
-external _i2.Object target48;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioListener')
-external _i2.Object target49;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioNode')
-external _i2.Object target50;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioParam')
-external _i2.Object target51;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioParamMap')
-external _i2.Object target52;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioProcessingEvent')
-external _i2.Object target53;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioScheduledSourceNode')
-external _i2.Object target54;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioWorklet')
-external _i2.Object target55;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AudioWorkletNode')
-external _i2.Object target56;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AuthenticatorAssertionResponse')
-external _i2.Object target57;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AuthenticatorAttestationResponse')
-external _i2.Object target58;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('AuthenticatorResponse')
-external _i2.Object target59;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('BarProp')
-external _i2.Object target60;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('BaseAudioContext')
-external _i2.Object target61;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('BeforeUnloadEvent')
-external _i2.Object target62;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('BiquadFilterNode')
-external _i2.Object target63;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Blob')
-external _i2.Object target64;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('BlobEvent')
-external _i2.Object target65;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('BroadcastChannel')
-external _i2.Object target66;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ByteLengthQueuingStrategy')
-external _i2.Object target67;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CDATASection')
-external _i2.Object target68;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSAnimation')
-external _i2.Object target69;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSConditionRule')
-external _i2.Object target70;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSContainerRule')
-external _i2.Object target71;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSCounterStyleRule')
-external _i2.Object target72;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSFontFaceRule')
-external _i2.Object target73;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSFontFeatureValuesRule')
-external _i2.Object target74;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSFontPaletteValuesRule')
-external _i2.Object target75;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSGroupingRule')
-external _i2.Object target76;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSImageValue')
-external _i2.Object target77;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSImportRule')
-external _i2.Object target78;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSKeyframeRule')
-external _i2.Object target79;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSKeyframesRule')
-external _i2.Object target80;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSKeywordValue')
-external _i2.Object target81;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSLayerBlockRule')
-external _i2.Object target82;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSLayerStatementRule')
-external _i2.Object target83;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSMathClamp')
-external _i2.Object target84;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSMathInvert')
-external _i2.Object target85;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSMathMax')
-external _i2.Object target86;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSMathMin')
-external _i2.Object target87;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSMathNegate')
-external _i2.Object target88;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSMathProduct')
-external _i2.Object target89;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSMathSum')
-external _i2.Object target90;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSMathValue')
-external _i2.Object target91;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSMatrixComponent')
-external _i2.Object target92;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSMediaRule')
-external _i2.Object target93;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSNamespaceRule')
-external _i2.Object target94;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSNumericArray')
-external _i2.Object target95;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSNumericValue')
-external _i2.Object target96;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSPageRule')
-external _i2.Object target97;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSPerspective')
-external _i2.Object target98;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSPropertyRule')
-external _i2.Object target99;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSRotate')
-external _i2.Object target100;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSRule')
-external _i2.Object target101;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSRuleList')
-external _i2.Object target102;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSScale')
-external _i2.Object target103;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSSkew')
-external _i2.Object target104;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSSkewX')
-external _i2.Object target105;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSSkewY')
-external _i2.Object target106;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSStyleDeclaration')
-external _i2.Object target107;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSStyleRule')
-external _i2.Object target108;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSStyleSheet')
-external _i2.Object target109;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSStyleValue')
-external _i2.Object target110;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSSupportsRule')
-external _i2.Object target111;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSTransformComponent')
-external _i2.Object target112;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSTransformValue')
-external _i2.Object target113;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSTransition')
-external _i2.Object target114;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSTranslate')
-external _i2.Object target115;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSUnitValue')
-external _i2.Object target116;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSUnparsedValue')
-external _i2.Object target117;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CSSVariableReferenceValue')
-external _i2.Object target118;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Cache')
-external _i2.Object target119;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CacheStorage')
-external _i2.Object target120;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CanvasCaptureMediaStreamTrack')
-external _i2.Object target121;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CanvasGradient')
-external _i2.Object target122;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CanvasPattern')
-external _i2.Object target123;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CanvasRenderingContext2D')
-external _i2.Object target124;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ChannelMergerNode')
-external _i2.Object target125;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ChannelSplitterNode')
-external _i2.Object target126;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CharacterData')
-external _i2.Object target127;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Clipboard')
-external _i2.Object target128;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ClipboardEvent')
-external _i2.Object target129;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ClipboardItem')
-external _i2.Object target130;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CloseEvent')
-external _i2.Object target131;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Comment')
-external _i2.Object target132;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CompositionEvent')
-external _i2.Object target133;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CompressionStream')
-external _i2.Object target134;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ConstantSourceNode')
-external _i2.Object target135;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ConvolverNode')
-external _i2.Object target136;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CountQueuingStrategy')
-external _i2.Object target137;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Credential')
-external _i2.Object target138;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CredentialsContainer')
-external _i2.Object target139;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Crypto')
-external _i2.Object target140;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CryptoKey')
-external _i2.Object target141;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CustomElementRegistry')
-external _i2.Object target142;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('CustomEvent')
-external _i2.Object target143;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMException')
-external _i2.Object target144;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMImplementation')
-external _i2.Object target145;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMMatrix')
-external _i2.Object target146;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMMatrixReadOnly')
-external _i2.Object target147;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMParser')
-external _i2.Object target148;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMPoint')
-external _i2.Object target149;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMPointReadOnly')
-external _i2.Object target150;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMQuad')
-external _i2.Object target151;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMRect')
-external _i2.Object target152;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMRectList')
-external _i2.Object target153;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMRectReadOnly')
-external _i2.Object target154;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMStringList')
-external _i2.Object target155;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DOMTokenList')
-external _i2.Object target156;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DataTransfer')
-external _i2.Object target157;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DataTransferItem')
-external _i2.Object target158;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DataTransferItemList')
-external _i2.Object target159;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DecompressionStream')
-external _i2.Object target160;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DelayNode')
-external _i2.Object target161;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DeviceMotionEvent')
-external _i2.Object target162;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DeviceOrientationEvent')
-external _i2.Object target163;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Document')
-external _i2.Object target164;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DocumentFragment')
-external _i2.Object target165;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DocumentTimeline')
-external _i2.Object target166;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DocumentType')
-external _i2.Object target167;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DragEvent')
-external _i2.Object target168;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('DynamicsCompressorNode')
-external _i2.Object target169;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Element')
-external _i2.Object target170;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ElementInternals')
-external _i2.Object target171;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('EncodedVideoChunk')
-external _i2.Object target172;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ErrorEvent')
-external _i2.Object target173;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Event')
-external _i2.Object target174;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('EventCounts')
-external _i2.Object target175;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('EventSource')
-external _i2.Object target176;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('EventTarget')
-external _i2.Object target177;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('External')
-external _i2.Object target178;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('File')
-external _i2.Object target179;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileList')
-external _i2.Object target180;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileReader')
-external _i2.Object target181;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileSystem')
-external _i2.Object target182;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileSystemDirectoryEntry')
-external _i2.Object target183;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileSystemDirectoryHandle')
-external _i2.Object target184;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileSystemDirectoryReader')
-external _i2.Object target185;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileSystemEntry')
-external _i2.Object target186;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileSystemFileEntry')
-external _i2.Object target187;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileSystemFileHandle')
-external _i2.Object target188;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileSystemHandle')
-external _i2.Object target189;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FileSystemWritableFileStream')
-external _i2.Object target190;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FocusEvent')
-external _i2.Object target191;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FontFace')
-external _i2.Object target192;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FontFaceSet')
-external _i2.Object target193;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FontFaceSetLoadEvent')
-external _i2.Object target194;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FormData')
-external _i2.Object target195;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('FormDataEvent')
-external _i2.Object target196;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('GainNode')
-external _i2.Object target197;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Gamepad')
-external _i2.Object target198;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('GamepadButton')
-external _i2.Object target199;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('GamepadEvent')
-external _i2.Object target200;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('GamepadHapticActuator')
-external _i2.Object target201;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Geolocation')
-external _i2.Object target202;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('GeolocationCoordinates')
-external _i2.Object target203;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('GeolocationPosition')
-external _i2.Object target204;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('GeolocationPositionError')
-external _i2.Object target205;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLAllCollection')
-external _i2.Object target206;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLAnchorElement')
-external _i2.Object target207;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLAreaElement')
-external _i2.Object target208;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLAudioElement')
-external _i2.Object target209;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLBRElement')
-external _i2.Object target210;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLBaseElement')
-external _i2.Object target211;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLBodyElement')
-external _i2.Object target212;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLButtonElement')
-external _i2.Object target213;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLCanvasElement')
-external _i2.Object target214;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLCollection')
-external _i2.Object target215;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLDListElement')
-external _i2.Object target216;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLDataElement')
-external _i2.Object target217;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLDataListElement')
-external _i2.Object target218;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLDetailsElement')
-external _i2.Object target219;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLDialogElement')
-external _i2.Object target220;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLDirectoryElement')
-external _i2.Object target221;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLDivElement')
-external _i2.Object target222;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLDocument')
-external _i2.Object target223;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLElement')
-external _i2.Object target224;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLEmbedElement')
-external _i2.Object target225;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLFieldSetElement')
-external _i2.Object target226;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLFontElement')
-external _i2.Object target227;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLFormControlsCollection')
-external _i2.Object target228;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLFormElement')
-external _i2.Object target229;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLFrameElement')
-external _i2.Object target230;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLFrameSetElement')
-external _i2.Object target231;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLHRElement')
-external _i2.Object target232;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLHeadElement')
-external _i2.Object target233;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLHeadingElement')
-external _i2.Object target234;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLHtmlElement')
-external _i2.Object target235;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLIFrameElement')
-external _i2.Object target236;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLImageElement')
-external _i2.Object target237;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLInputElement')
-external _i2.Object target238;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLLIElement')
-external _i2.Object target239;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLLabelElement')
-external _i2.Object target240;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLLegendElement')
-external _i2.Object target241;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLLinkElement')
-external _i2.Object target242;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLMapElement')
-external _i2.Object target243;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLMarqueeElement')
-external _i2.Object target244;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLMediaElement')
-external _i2.Object target245;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLMenuElement')
-external _i2.Object target246;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLMetaElement')
-external _i2.Object target247;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLMeterElement')
-external _i2.Object target248;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLModElement')
-external _i2.Object target249;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLOListElement')
-external _i2.Object target250;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLObjectElement')
-external _i2.Object target251;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLOptGroupElement')
-external _i2.Object target252;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLOptionElement')
-external _i2.Object target253;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLOptionsCollection')
-external _i2.Object target254;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLOutputElement')
-external _i2.Object target255;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLParagraphElement')
-external _i2.Object target256;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLParamElement')
-external _i2.Object target257;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLPictureElement')
-external _i2.Object target258;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLPreElement')
-external _i2.Object target259;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLProgressElement')
-external _i2.Object target260;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLQuoteElement')
-external _i2.Object target261;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLScriptElement')
-external _i2.Object target262;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLSelectElement')
-external _i2.Object target263;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLSlotElement')
-external _i2.Object target264;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLSourceElement')
-external _i2.Object target265;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLSpanElement')
-external _i2.Object target266;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLStyleElement')
-external _i2.Object target267;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTableCaptionElement')
-external _i2.Object target268;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTableCellElement')
-external _i2.Object target269;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTableColElement')
-external _i2.Object target270;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTableElement')
-external _i2.Object target271;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTableRowElement')
-external _i2.Object target272;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTableSectionElement')
-external _i2.Object target273;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTemplateElement')
-external _i2.Object target274;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTextAreaElement')
-external _i2.Object target275;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTimeElement')
-external _i2.Object target276;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTitleElement')
-external _i2.Object target277;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLTrackElement')
-external _i2.Object target278;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLUListElement')
-external _i2.Object target279;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLUnknownElement')
-external _i2.Object target280;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HTMLVideoElement')
-external _i2.Object target281;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('HashChangeEvent')
-external _i2.Object target282;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Headers')
-external _i2.Object target283;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('History')
-external _i2.Object target284;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBCursor')
-external _i2.Object target285;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBCursorWithValue')
-external _i2.Object target286;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBDatabase')
-external _i2.Object target287;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBFactory')
-external _i2.Object target288;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBIndex')
-external _i2.Object target289;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBKeyRange')
-external _i2.Object target290;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBObjectStore')
-external _i2.Object target291;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBOpenDBRequest')
-external _i2.Object target292;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBRequest')
-external _i2.Object target293;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBTransaction')
-external _i2.Object target294;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IDBVersionChangeEvent')
-external _i2.Object target295;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IIRFilterNode')
-external _i2.Object target296;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IdleDeadline')
-external _i2.Object target297;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ImageBitmap')
-external _i2.Object target298;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ImageBitmapRenderingContext')
-external _i2.Object target299;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ImageData')
-external _i2.Object target300;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('InputDeviceInfo')
-external _i2.Object target301;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('InputEvent')
-external _i2.Object target302;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IntersectionObserver')
-external _i2.Object target303;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('IntersectionObserverEntry')
-external _i2.Object target304;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('KeyboardEvent')
-external _i2.Object target305;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('KeyframeEffect')
-external _i2.Object target306;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Location')
-external _i2.Object target307;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Lock')
-external _i2.Object target308;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('LockManager')
-external _i2.Object target309;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MIDIAccess')
-external _i2.Object target310;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MIDIConnectionEvent')
-external _i2.Object target311;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MIDIInput')
-external _i2.Object target312;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MIDIInputMap')
-external _i2.Object target313;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MIDIMessageEvent')
-external _i2.Object target314;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MIDIOutput')
-external _i2.Object target315;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MIDIOutputMap')
-external _i2.Object target316;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MIDIPort')
-external _i2.Object target317;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MathMLElement')
-external _i2.Object target318;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaCapabilities')
-external _i2.Object target319;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaDeviceInfo')
-external _i2.Object target320;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaDevices')
-external _i2.Object target321;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaElementAudioSourceNode')
-external _i2.Object target322;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaEncryptedEvent')
-external _i2.Object target323;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaError')
-external _i2.Object target324;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaKeyMessageEvent')
-external _i2.Object target325;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaKeySession')
-external _i2.Object target326;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaKeyStatusMap')
-external _i2.Object target327;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaKeySystemAccess')
-external _i2.Object target328;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaKeys')
-external _i2.Object target329;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaList')
-external _i2.Object target330;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaMetadata')
-external _i2.Object target331;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaQueryList')
-external _i2.Object target332;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaQueryListEvent')
-external _i2.Object target333;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaRecorder')
-external _i2.Object target334;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaSession')
-external _i2.Object target335;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaSource')
-external _i2.Object target336;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaStream')
-external _i2.Object target337;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaStreamAudioDestinationNode')
-external _i2.Object target338;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaStreamAudioSourceNode')
-external _i2.Object target339;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaStreamTrack')
-external _i2.Object target340;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MediaStreamTrackEvent')
-external _i2.Object target341;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MessageChannel')
-external _i2.Object target342;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MessageEvent')
-external _i2.Object target343;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MessagePort')
-external _i2.Object target344;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MimeType')
-external _i2.Object target345;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MimeTypeArray')
-external _i2.Object target346;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MouseEvent')
-external _i2.Object target347;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MutationEvent')
-external _i2.Object target348;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MutationObserver')
-external _i2.Object target349;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('MutationRecord')
-external _i2.Object target350;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('NamedNodeMap')
-external _i2.Object target351;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('NavigationPreloadManager')
-external _i2.Object target352;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Navigator')
-external _i2.Object target353;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Node')
-external _i2.Object target354;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('NodeIterator')
-external _i2.Object target355;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('NodeList')
-external _i2.Object target356;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Notification')
-external _i2.Object target357;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('OfflineAudioCompletionEvent')
-external _i2.Object target358;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('OfflineAudioContext')
-external _i2.Object target359;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('OffscreenCanvas')
-external _i2.Object target360;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('OffscreenCanvasRenderingContext2D')
-external _i2.Object target361;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('OscillatorNode')
-external _i2.Object target362;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('OverconstrainedError')
-external _i2.Object target363;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PageTransitionEvent')
-external _i2.Object target364;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PannerNode')
-external _i2.Object target365;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Path2D')
-external _i2.Object target366;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PaymentMethodChangeEvent')
-external _i2.Object target367;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PaymentRequest')
-external _i2.Object target368;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PaymentRequestUpdateEvent')
-external _i2.Object target369;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PaymentResponse')
-external _i2.Object target370;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Performance')
-external _i2.Object target371;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceEntry')
-external _i2.Object target372;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceEventTiming')
-external _i2.Object target373;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceMark')
-external _i2.Object target374;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceMeasure')
-external _i2.Object target375;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceNavigation')
-external _i2.Object target376;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceNavigationTiming')
-external _i2.Object target377;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceObserver')
-external _i2.Object target378;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceObserverEntryList')
-external _i2.Object target379;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformancePaintTiming')
-external _i2.Object target380;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceResourceTiming')
-external _i2.Object target381;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceServerTiming')
-external _i2.Object target382;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PerformanceTiming')
-external _i2.Object target383;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PeriodicWave')
-external _i2.Object target384;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PermissionStatus')
-external _i2.Object target385;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Permissions')
-external _i2.Object target386;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PictureInPictureEvent')
-external _i2.Object target387;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PictureInPictureWindow')
-external _i2.Object target388;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Plugin')
-external _i2.Object target389;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PluginArray')
-external _i2.Object target390;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PointerEvent')
-external _i2.Object target391;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PopStateEvent')
-external _i2.Object target392;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ProcessingInstruction')
-external _i2.Object target393;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ProgressEvent')
-external _i2.Object target394;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PromiseRejectionEvent')
-external _i2.Object target395;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PublicKeyCredential')
-external _i2.Object target396;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PushManager')
-external _i2.Object target397;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PushSubscription')
-external _i2.Object target398;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('PushSubscriptionOptions')
-external _i2.Object target399;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCCertificate')
-external _i2.Object target400;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCDTMFSender')
-external _i2.Object target401;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCDTMFToneChangeEvent')
-external _i2.Object target402;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCDataChannel')
-external _i2.Object target403;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCDataChannelEvent')
-external _i2.Object target404;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCDtlsTransport')
-external _i2.Object target405;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCEncodedAudioFrame')
-external _i2.Object target406;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCEncodedVideoFrame')
-external _i2.Object target407;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCError')
-external _i2.Object target408;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCErrorEvent')
-external _i2.Object target409;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCIceCandidate')
-external _i2.Object target410;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCIceTransport')
-external _i2.Object target411;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCPeerConnection')
-external _i2.Object target412;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCPeerConnectionIceErrorEvent')
-external _i2.Object target413;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCPeerConnectionIceEvent')
-external _i2.Object target414;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCRtpReceiver')
-external _i2.Object target415;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCRtpSender')
-external _i2.Object target416;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCRtpTransceiver')
-external _i2.Object target417;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCSctpTransport')
-external _i2.Object target418;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCSessionDescription')
-external _i2.Object target419;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCStatsReport')
-external _i2.Object target420;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RTCTrackEvent')
-external _i2.Object target421;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RadioNodeList')
-external _i2.Object target422;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Range')
-external _i2.Object target423;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ReadableByteStreamController')
-external _i2.Object target424;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ReadableStream')
-external _i2.Object target425;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ReadableStreamBYOBReader')
-external _i2.Object target426;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ReadableStreamBYOBRequest')
-external _i2.Object target427;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ReadableStreamDefaultController')
-external _i2.Object target428;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ReadableStreamDefaultReader')
-external _i2.Object target429;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('RemotePlayback')
-external _i2.Object target430;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Report')
-external _i2.Object target431;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ReportBody')
-external _i2.Object target432;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ReportingObserver')
-external _i2.Object target433;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Request')
-external _i2.Object target434;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ResizeObserver')
-external _i2.Object target435;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ResizeObserverEntry')
-external _i2.Object target436;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ResizeObserverSize')
-external _i2.Object target437;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Response')
-external _i2.Object target438;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAElement')
-external _i2.Object target439;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAngle')
-external _i2.Object target440;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimateElement')
-external _i2.Object target441;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimateMotionElement')
-external _i2.Object target442;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimateTransformElement')
-external _i2.Object target443;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedAngle')
-external _i2.Object target444;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedBoolean')
-external _i2.Object target445;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedEnumeration')
-external _i2.Object target446;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedInteger')
-external _i2.Object target447;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedLength')
-external _i2.Object target448;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedLengthList')
-external _i2.Object target449;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedNumber')
-external _i2.Object target450;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedNumberList')
-external _i2.Object target451;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedPreserveAspectRatio')
-external _i2.Object target452;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedRect')
-external _i2.Object target453;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedString')
-external _i2.Object target454;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimatedTransformList')
-external _i2.Object target455;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGAnimationElement')
-external _i2.Object target456;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGCircleElement')
-external _i2.Object target457;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGClipPathElement')
-external _i2.Object target458;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGComponentTransferFunctionElement')
-external _i2.Object target459;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGDefsElement')
-external _i2.Object target460;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGDescElement')
-external _i2.Object target461;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGElement')
-external _i2.Object target462;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGEllipseElement')
-external _i2.Object target463;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEBlendElement')
-external _i2.Object target464;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEColorMatrixElement')
-external _i2.Object target465;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEComponentTransferElement')
-external _i2.Object target466;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFECompositeElement')
-external _i2.Object target467;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEConvolveMatrixElement')
-external _i2.Object target468;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEDiffuseLightingElement')
-external _i2.Object target469;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEDisplacementMapElement')
-external _i2.Object target470;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEDistantLightElement')
-external _i2.Object target471;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEDropShadowElement')
-external _i2.Object target472;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEFloodElement')
-external _i2.Object target473;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEFuncAElement')
-external _i2.Object target474;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEFuncBElement')
-external _i2.Object target475;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEFuncGElement')
-external _i2.Object target476;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEFuncRElement')
-external _i2.Object target477;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEGaussianBlurElement')
-external _i2.Object target478;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEImageElement')
-external _i2.Object target479;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEMergeElement')
-external _i2.Object target480;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEMergeNodeElement')
-external _i2.Object target481;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEMorphologyElement')
-external _i2.Object target482;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEOffsetElement')
-external _i2.Object target483;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFEPointLightElement')
-external _i2.Object target484;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFESpecularLightingElement')
-external _i2.Object target485;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFESpotLightElement')
-external _i2.Object target486;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFETileElement')
-external _i2.Object target487;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFETurbulenceElement')
-external _i2.Object target488;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGFilterElement')
-external _i2.Object target489;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGForeignObjectElement')
-external _i2.Object target490;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGGElement')
-external _i2.Object target491;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGGeometryElement')
-external _i2.Object target492;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGGradientElement')
-external _i2.Object target493;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGGraphicsElement')
-external _i2.Object target494;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGImageElement')
-external _i2.Object target495;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGLength')
-external _i2.Object target496;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGLengthList')
-external _i2.Object target497;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGLineElement')
-external _i2.Object target498;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGLinearGradientElement')
-external _i2.Object target499;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGMPathElement')
-external _i2.Object target500;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGMarkerElement')
-external _i2.Object target501;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGMaskElement')
-external _i2.Object target502;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGMetadataElement')
-external _i2.Object target503;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGNumber')
-external _i2.Object target504;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGNumberList')
-external _i2.Object target505;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGPathElement')
-external _i2.Object target506;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGPatternElement')
-external _i2.Object target507;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGPointList')
-external _i2.Object target508;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGPolygonElement')
-external _i2.Object target509;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGPolylineElement')
-external _i2.Object target510;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGPreserveAspectRatio')
-external _i2.Object target511;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGRadialGradientElement')
-external _i2.Object target512;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGRectElement')
-external _i2.Object target513;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGSVGElement')
-external _i2.Object target514;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGScriptElement')
-external _i2.Object target515;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGSetElement')
-external _i2.Object target516;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGStopElement')
-external _i2.Object target517;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGStringList')
-external _i2.Object target518;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGStyleElement')
-external _i2.Object target519;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGSwitchElement')
-external _i2.Object target520;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGSymbolElement')
-external _i2.Object target521;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGTSpanElement')
-external _i2.Object target522;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGTextContentElement')
-external _i2.Object target523;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGTextElement')
-external _i2.Object target524;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGTextPathElement')
-external _i2.Object target525;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGTextPositioningElement')
-external _i2.Object target526;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGTitleElement')
-external _i2.Object target527;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGTransform')
-external _i2.Object target528;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGTransformList')
-external _i2.Object target529;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGUnitTypes')
-external _i2.Object target530;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGUseElement')
-external _i2.Object target531;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SVGViewElement')
-external _i2.Object target532;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Screen')
-external _i2.Object target533;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ScreenOrientation')
-external _i2.Object target534;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ScriptProcessorNode')
-external _i2.Object target535;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SecurityPolicyViolationEvent')
-external _i2.Object target536;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Selection')
-external _i2.Object target537;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ServiceWorker')
-external _i2.Object target538;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ServiceWorkerContainer')
-external _i2.Object target539;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ServiceWorkerRegistration')
-external _i2.Object target540;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ShadowRoot')
-external _i2.Object target541;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SharedWorker')
-external _i2.Object target542;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SourceBuffer')
-external _i2.Object target543;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SourceBufferList')
-external _i2.Object target544;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SpeechRecognitionAlternative')
-external _i2.Object target545;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SpeechRecognitionResult')
-external _i2.Object target546;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SpeechRecognitionResultList')
-external _i2.Object target547;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SpeechSynthesis')
-external _i2.Object target548;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SpeechSynthesisErrorEvent')
-external _i2.Object target549;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SpeechSynthesisEvent')
-external _i2.Object target550;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SpeechSynthesisUtterance')
-external _i2.Object target551;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SpeechSynthesisVoice')
-external _i2.Object target552;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('StaticRange')
-external _i2.Object target553;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('StereoPannerNode')
-external _i2.Object target554;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Storage')
-external _i2.Object target555;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('StorageEvent')
-external _i2.Object target556;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('StorageManager')
-external _i2.Object target557;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('StylePropertyMap')
-external _i2.Object target558;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('StylePropertyMapReadOnly')
-external _i2.Object target559;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('StyleSheet')
-external _i2.Object target560;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('StyleSheetList')
-external _i2.Object target561;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SubmitEvent')
-external _i2.Object target562;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('SubtleCrypto')
-external _i2.Object target563;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Text')
-external _i2.Object target564;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TextDecoder')
-external _i2.Object target565;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TextDecoderStream')
-external _i2.Object target566;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TextEncoder')
-external _i2.Object target567;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TextEncoderStream')
-external _i2.Object target568;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TextMetrics')
-external _i2.Object target569;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TextTrack')
-external _i2.Object target570;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TextTrackCue')
-external _i2.Object target571;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TextTrackCueList')
-external _i2.Object target572;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TextTrackList')
-external _i2.Object target573;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TimeRanges')
-external _i2.Object target574;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Touch')
-external _i2.Object target575;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TouchEvent')
-external _i2.Object target576;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TouchList')
-external _i2.Object target577;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TrackEvent')
-external _i2.Object target578;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TransformStream')
-external _i2.Object target579;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TransformStreamDefaultController')
-external _i2.Object target580;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TransitionEvent')
-external _i2.Object target581;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('TreeWalker')
-external _i2.Object target582;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('UIEvent')
-external _i2.Object target583;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('URL')
-external _i2.Object target584;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('URLSearchParams')
-external _i2.Object target585;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('UserActivation')
-external _i2.Object target586;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('VTTCue')
-external _i2.Object target587;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('VTTRegion')
-external _i2.Object target588;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('ValidityState')
-external _i2.Object target589;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('VideoColorSpace')
-external _i2.Object target590;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('VideoDecoder')
-external _i2.Object target591;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('VideoEncoder')
-external _i2.Object target592;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('VideoFrame')
-external _i2.Object target593;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('VideoPlaybackQuality')
-external _i2.Object target594;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('VisualViewport')
-external _i2.Object target595;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WakeLock')
-external _i2.Object target596;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WakeLockSentinel')
-external _i2.Object target597;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WaveShaperNode')
-external _i2.Object target598;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGL2RenderingContext')
-external _i2.Object target599;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLActiveInfo')
-external _i2.Object target600;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLBuffer')
-external _i2.Object target601;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLContextEvent')
-external _i2.Object target602;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLFramebuffer')
-external _i2.Object target603;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLProgram')
-external _i2.Object target604;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLQuery')
-external _i2.Object target605;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLRenderbuffer')
-external _i2.Object target606;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLRenderingContext')
-external _i2.Object target607;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLSampler')
-external _i2.Object target608;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLShader')
-external _i2.Object target609;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLShaderPrecisionFormat')
-external _i2.Object target610;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLSync')
-external _i2.Object target611;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLTexture')
-external _i2.Object target612;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLTransformFeedback')
-external _i2.Object target613;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLUniformLocation')
-external _i2.Object target614;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebGLVertexArrayObject')
-external _i2.Object target615;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WebSocket')
-external _i2.Object target616;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WheelEvent')
-external _i2.Object target617;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Window')
-external _i2.Object target618;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Worker')
-external _i2.Object target619;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Worklet')
-external _i2.Object target620;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WritableStream')
-external _i2.Object target621;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WritableStreamDefaultController')
-external _i2.Object target622;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WritableStreamDefaultWriter')
-external _i2.Object target623;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('XMLDocument')
-external _i2.Object target624;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('XMLHttpRequest')
-external _i2.Object target625;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('XMLHttpRequestEventTarget')
-external _i2.Object target626;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('XMLHttpRequestUpload')
-external _i2.Object target627;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('XMLSerializer')
-external _i2.Object target628;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('XPathEvaluator')
-external _i2.Object target629;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('XPathExpression')
-external _i2.Object target630;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('XPathResult')
-external _i2.Object target631;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('XSLTProcessor')
-external _i2.Object target632;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('console')
-external _i2.Object target633;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Audio')
-external _i2.Object target634;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Image')
-external _i2.Object target635;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Option')
-external _i2.Object target636;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('clientInformation')
-external _i2.Object target637;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('customElements')
-external _i2.Object target638;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('document')
-external _i2.Object target639;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('event')
-external _i2.Object target640;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('external')
-external _i2.Object target641;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('frameElement')
-external _i2.Object target642;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('history')
-external _i2.Object target643;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('location')
-external _i2.Object target644;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('locationbar')
-external _i2.Object target645;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('menubar')
-external _i2.Object target646;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('navigator')
-external _i2.Object target647;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('personalbar')
-external _i2.Object target648;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('screen')
-external _i2.Object target649;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('scrollbars')
-external _i2.Object target650;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('speechSynthesis')
-external _i2.Object target651;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('statusbar')
-external _i2.Object target652;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('toolbar')
-external _i2.Object target653;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('visualViewport')
-external _i2.Object target654;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('localStorage')
-external _i2.Object target655;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('caches')
-external _i2.Object target656;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('crypto')
-external _i2.Object target657;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('indexedDB')
-external _i2.Object target658;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('performance')
-external _i2.Object target659;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('sessionStorage')
-external _i2.Object target660;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('WScript')
-external _i2.Object target669;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('Enumerator')
-external _i2.Object target670;
-/*
-FieldExternal: DeclaredVar
-*/
-@_i1.JS('VBArray')
-external _i2.Object target671;
+@_i1.JS('self')
+external _i2.Object _self;
+_i2.Object get target0 => _i3.getProperty(
+      _self,
+      'Object',
+    );
+_i2.Object get target1 => _i3.getProperty(
+      _self,
+      'Boolean',
+    );
+_i2.Object get target2 => _i3.getProperty(
+      _self,
+      'Number',
+    );
+_i2.Object get target3 => _i3.getProperty(
+      _self,
+      'RegExp',
+    );
+_i2.Object get target4 => _i3.getProperty(
+      _self,
+      'Error',
+    );
+_i2.Object get target5 => _i3.getProperty(
+      _self,
+      'EvalError',
+    );
+_i2.Object get target6 => _i3.getProperty(
+      _self,
+      'RangeError',
+    );
+_i2.Object get target7 => _i3.getProperty(
+      _self,
+      'ReferenceError',
+    );
+_i2.Object get target8 => _i3.getProperty(
+      _self,
+      'SyntaxError',
+    );
+_i2.Object get target9 => _i3.getProperty(
+      _self,
+      'TypeError',
+    );
+_i2.Object get target10 => _i3.getProperty(
+      _self,
+      'URIError',
+    );
+_i2.Object get target11 => _i3.getProperty(
+      _self,
+      'Array',
+    );
+_i2.Object get target21 => _i3.getProperty(
+      _self,
+      'Map',
+    );
+_i2.Object get target22 => _i3.getProperty(
+      _self,
+      'WeakMap',
+    );
+_i2.Object get target23 => _i3.getProperty(
+      _self,
+      'Set',
+    );
+_i2.Object get target24 => _i3.getProperty(
+      _self,
+      'WeakSet',
+    );
+_i2.Object get target25 => _i3.getProperty(
+      _self,
+      'Promise',
+    );
+_i2.Object get target26 => _i3.getProperty(
+      _self,
+      'Proxy',
+    );
+_i2.Object get target27 => _i3.getProperty(
+      _self,
+      'Symbol',
+    );
+_i2.Object get target28 => _i3.getProperty(
+      _self,
+      'SharedArrayBuffer',
+    );
+_i2.Object get target29 => _i3.getProperty(
+      _self,
+      'BigInt',
+    );
+_i2.Object get target30 => _i3.getProperty(
+      _self,
+      'BigInt64Array',
+    );
+_i2.Object get target31 => _i3.getProperty(
+      _self,
+      'BigUint64Array',
+    );
+_i2.Object get target32 => _i3.getProperty(
+      _self,
+      'AggregateError',
+    );
+_i2.Object get target33 => _i3.getProperty(
+      _self,
+      'WeakRef',
+    );
+_i2.Object get target34 => _i3.getProperty(
+      _self,
+      'FinalizationRegistry',
+    );
+_i2.Object get target35 => _i3.getProperty(
+      _self,
+      'AbortController',
+    );
+_i2.Object get target36 => _i3.getProperty(
+      _self,
+      'AbortSignal',
+    );
+_i2.Object get target37 => _i3.getProperty(
+      _self,
+      'AbstractRange',
+    );
+_i2.Object get target38 => _i3.getProperty(
+      _self,
+      'AnalyserNode',
+    );
+_i2.Object get target39 => _i3.getProperty(
+      _self,
+      'Animation',
+    );
+_i2.Object get target40 => _i3.getProperty(
+      _self,
+      'AnimationEffect',
+    );
+_i2.Object get target41 => _i3.getProperty(
+      _self,
+      'AnimationEvent',
+    );
+_i2.Object get target42 => _i3.getProperty(
+      _self,
+      'AnimationPlaybackEvent',
+    );
+_i2.Object get target43 => _i3.getProperty(
+      _self,
+      'AnimationTimeline',
+    );
+_i2.Object get target44 => _i3.getProperty(
+      _self,
+      'Attr',
+    );
+_i2.Object get target45 => _i3.getProperty(
+      _self,
+      'AudioBuffer',
+    );
+_i2.Object get target46 => _i3.getProperty(
+      _self,
+      'AudioBufferSourceNode',
+    );
+_i2.Object get target47 => _i3.getProperty(
+      _self,
+      'AudioContext',
+    );
+_i2.Object get target48 => _i3.getProperty(
+      _self,
+      'AudioDestinationNode',
+    );
+_i2.Object get target49 => _i3.getProperty(
+      _self,
+      'AudioListener',
+    );
+_i2.Object get target50 => _i3.getProperty(
+      _self,
+      'AudioNode',
+    );
+_i2.Object get target51 => _i3.getProperty(
+      _self,
+      'AudioParam',
+    );
+_i2.Object get target52 => _i3.getProperty(
+      _self,
+      'AudioParamMap',
+    );
+_i2.Object get target53 => _i3.getProperty(
+      _self,
+      'AudioProcessingEvent',
+    );
+_i2.Object get target54 => _i3.getProperty(
+      _self,
+      'AudioScheduledSourceNode',
+    );
+_i2.Object get target55 => _i3.getProperty(
+      _self,
+      'AudioWorklet',
+    );
+_i2.Object get target56 => _i3.getProperty(
+      _self,
+      'AudioWorkletNode',
+    );
+_i2.Object get target57 => _i3.getProperty(
+      _self,
+      'AuthenticatorAssertionResponse',
+    );
+_i2.Object get target58 => _i3.getProperty(
+      _self,
+      'AuthenticatorAttestationResponse',
+    );
+_i2.Object get target59 => _i3.getProperty(
+      _self,
+      'AuthenticatorResponse',
+    );
+_i2.Object get target60 => _i3.getProperty(
+      _self,
+      'BarProp',
+    );
+_i2.Object get target61 => _i3.getProperty(
+      _self,
+      'BaseAudioContext',
+    );
+_i2.Object get target62 => _i3.getProperty(
+      _self,
+      'BeforeUnloadEvent',
+    );
+_i2.Object get target63 => _i3.getProperty(
+      _self,
+      'BiquadFilterNode',
+    );
+_i2.Object get target64 => _i3.getProperty(
+      _self,
+      'Blob',
+    );
+_i2.Object get target65 => _i3.getProperty(
+      _self,
+      'BlobEvent',
+    );
+_i2.Object get target66 => _i3.getProperty(
+      _self,
+      'BroadcastChannel',
+    );
+_i2.Object get target67 => _i3.getProperty(
+      _self,
+      'ByteLengthQueuingStrategy',
+    );
+_i2.Object get target68 => _i3.getProperty(
+      _self,
+      'CDATASection',
+    );
+_i2.Object get target69 => _i3.getProperty(
+      _self,
+      'CSSAnimation',
+    );
+_i2.Object get target70 => _i3.getProperty(
+      _self,
+      'CSSConditionRule',
+    );
+_i2.Object get target71 => _i3.getProperty(
+      _self,
+      'CSSContainerRule',
+    );
+_i2.Object get target72 => _i3.getProperty(
+      _self,
+      'CSSCounterStyleRule',
+    );
+_i2.Object get target73 => _i3.getProperty(
+      _self,
+      'CSSFontFaceRule',
+    );
+_i2.Object get target74 => _i3.getProperty(
+      _self,
+      'CSSFontFeatureValuesRule',
+    );
+_i2.Object get target75 => _i3.getProperty(
+      _self,
+      'CSSFontPaletteValuesRule',
+    );
+_i2.Object get target76 => _i3.getProperty(
+      _self,
+      'CSSGroupingRule',
+    );
+_i2.Object get target77 => _i3.getProperty(
+      _self,
+      'CSSImageValue',
+    );
+_i2.Object get target78 => _i3.getProperty(
+      _self,
+      'CSSImportRule',
+    );
+_i2.Object get target79 => _i3.getProperty(
+      _self,
+      'CSSKeyframeRule',
+    );
+_i2.Object get target80 => _i3.getProperty(
+      _self,
+      'CSSKeyframesRule',
+    );
+_i2.Object get target81 => _i3.getProperty(
+      _self,
+      'CSSKeywordValue',
+    );
+_i2.Object get target82 => _i3.getProperty(
+      _self,
+      'CSSLayerBlockRule',
+    );
+_i2.Object get target83 => _i3.getProperty(
+      _self,
+      'CSSLayerStatementRule',
+    );
+_i2.Object get target84 => _i3.getProperty(
+      _self,
+      'CSSMathClamp',
+    );
+_i2.Object get target85 => _i3.getProperty(
+      _self,
+      'CSSMathInvert',
+    );
+_i2.Object get target86 => _i3.getProperty(
+      _self,
+      'CSSMathMax',
+    );
+_i2.Object get target87 => _i3.getProperty(
+      _self,
+      'CSSMathMin',
+    );
+_i2.Object get target88 => _i3.getProperty(
+      _self,
+      'CSSMathNegate',
+    );
+_i2.Object get target89 => _i3.getProperty(
+      _self,
+      'CSSMathProduct',
+    );
+_i2.Object get target90 => _i3.getProperty(
+      _self,
+      'CSSMathSum',
+    );
+_i2.Object get target91 => _i3.getProperty(
+      _self,
+      'CSSMathValue',
+    );
+_i2.Object get target92 => _i3.getProperty(
+      _self,
+      'CSSMatrixComponent',
+    );
+_i2.Object get target93 => _i3.getProperty(
+      _self,
+      'CSSMediaRule',
+    );
+_i2.Object get target94 => _i3.getProperty(
+      _self,
+      'CSSNamespaceRule',
+    );
+_i2.Object get target95 => _i3.getProperty(
+      _self,
+      'CSSNumericArray',
+    );
+_i2.Object get target96 => _i3.getProperty(
+      _self,
+      'CSSNumericValue',
+    );
+_i2.Object get target97 => _i3.getProperty(
+      _self,
+      'CSSPageRule',
+    );
+_i2.Object get target98 => _i3.getProperty(
+      _self,
+      'CSSPerspective',
+    );
+_i2.Object get target99 => _i3.getProperty(
+      _self,
+      'CSSPropertyRule',
+    );
+_i2.Object get target100 => _i3.getProperty(
+      _self,
+      'CSSRotate',
+    );
+_i2.Object get target101 => _i3.getProperty(
+      _self,
+      'CSSRule',
+    );
+_i2.Object get target102 => _i3.getProperty(
+      _self,
+      'CSSRuleList',
+    );
+_i2.Object get target103 => _i3.getProperty(
+      _self,
+      'CSSScale',
+    );
+_i2.Object get target104 => _i3.getProperty(
+      _self,
+      'CSSSkew',
+    );
+_i2.Object get target105 => _i3.getProperty(
+      _self,
+      'CSSSkewX',
+    );
+_i2.Object get target106 => _i3.getProperty(
+      _self,
+      'CSSSkewY',
+    );
+_i2.Object get target107 => _i3.getProperty(
+      _self,
+      'CSSStyleDeclaration',
+    );
+_i2.Object get target108 => _i3.getProperty(
+      _self,
+      'CSSStyleRule',
+    );
+_i2.Object get target109 => _i3.getProperty(
+      _self,
+      'CSSStyleSheet',
+    );
+_i2.Object get target110 => _i3.getProperty(
+      _self,
+      'CSSStyleValue',
+    );
+_i2.Object get target111 => _i3.getProperty(
+      _self,
+      'CSSSupportsRule',
+    );
+_i2.Object get target112 => _i3.getProperty(
+      _self,
+      'CSSTransformComponent',
+    );
+_i2.Object get target113 => _i3.getProperty(
+      _self,
+      'CSSTransformValue',
+    );
+_i2.Object get target114 => _i3.getProperty(
+      _self,
+      'CSSTransition',
+    );
+_i2.Object get target115 => _i3.getProperty(
+      _self,
+      'CSSTranslate',
+    );
+_i2.Object get target116 => _i3.getProperty(
+      _self,
+      'CSSUnitValue',
+    );
+_i2.Object get target117 => _i3.getProperty(
+      _self,
+      'CSSUnparsedValue',
+    );
+_i2.Object get target118 => _i3.getProperty(
+      _self,
+      'CSSVariableReferenceValue',
+    );
+_i2.Object get target119 => _i3.getProperty(
+      _self,
+      'Cache',
+    );
+_i2.Object get target120 => _i3.getProperty(
+      _self,
+      'CacheStorage',
+    );
+_i2.Object get target121 => _i3.getProperty(
+      _self,
+      'CanvasCaptureMediaStreamTrack',
+    );
+_i2.Object get target122 => _i3.getProperty(
+      _self,
+      'CanvasGradient',
+    );
+_i2.Object get target123 => _i3.getProperty(
+      _self,
+      'CanvasPattern',
+    );
+_i2.Object get target124 => _i3.getProperty(
+      _self,
+      'CanvasRenderingContext2D',
+    );
+_i2.Object get target125 => _i3.getProperty(
+      _self,
+      'ChannelMergerNode',
+    );
+_i2.Object get target126 => _i3.getProperty(
+      _self,
+      'ChannelSplitterNode',
+    );
+_i2.Object get target127 => _i3.getProperty(
+      _self,
+      'CharacterData',
+    );
+_i2.Object get target128 => _i3.getProperty(
+      _self,
+      'Clipboard',
+    );
+_i2.Object get target129 => _i3.getProperty(
+      _self,
+      'ClipboardEvent',
+    );
+_i2.Object get target130 => _i3.getProperty(
+      _self,
+      'ClipboardItem',
+    );
+_i2.Object get target131 => _i3.getProperty(
+      _self,
+      'CloseEvent',
+    );
+_i2.Object get target132 => _i3.getProperty(
+      _self,
+      'Comment',
+    );
+_i2.Object get target133 => _i3.getProperty(
+      _self,
+      'CompositionEvent',
+    );
+_i2.Object get target134 => _i3.getProperty(
+      _self,
+      'CompressionStream',
+    );
+_i2.Object get target135 => _i3.getProperty(
+      _self,
+      'ConstantSourceNode',
+    );
+_i2.Object get target136 => _i3.getProperty(
+      _self,
+      'ConvolverNode',
+    );
+_i2.Object get target137 => _i3.getProperty(
+      _self,
+      'CountQueuingStrategy',
+    );
+_i2.Object get target138 => _i3.getProperty(
+      _self,
+      'Credential',
+    );
+_i2.Object get target139 => _i3.getProperty(
+      _self,
+      'CredentialsContainer',
+    );
+_i2.Object get target140 => _i3.getProperty(
+      _self,
+      'Crypto',
+    );
+_i2.Object get target141 => _i3.getProperty(
+      _self,
+      'CryptoKey',
+    );
+_i2.Object get target142 => _i3.getProperty(
+      _self,
+      'CustomElementRegistry',
+    );
+_i2.Object get target143 => _i3.getProperty(
+      _self,
+      'CustomEvent',
+    );
+_i2.Object get target144 => _i3.getProperty(
+      _self,
+      'DOMException',
+    );
+_i2.Object get target145 => _i3.getProperty(
+      _self,
+      'DOMImplementation',
+    );
+_i2.Object get target146 => _i3.getProperty(
+      _self,
+      'DOMMatrix',
+    );
+_i2.Object get target147 => _i3.getProperty(
+      _self,
+      'DOMMatrixReadOnly',
+    );
+_i2.Object get target148 => _i3.getProperty(
+      _self,
+      'DOMParser',
+    );
+_i2.Object get target149 => _i3.getProperty(
+      _self,
+      'DOMPoint',
+    );
+_i2.Object get target150 => _i3.getProperty(
+      _self,
+      'DOMPointReadOnly',
+    );
+_i2.Object get target151 => _i3.getProperty(
+      _self,
+      'DOMQuad',
+    );
+_i2.Object get target152 => _i3.getProperty(
+      _self,
+      'DOMRect',
+    );
+_i2.Object get target153 => _i3.getProperty(
+      _self,
+      'DOMRectList',
+    );
+_i2.Object get target154 => _i3.getProperty(
+      _self,
+      'DOMRectReadOnly',
+    );
+_i2.Object get target155 => _i3.getProperty(
+      _self,
+      'DOMStringList',
+    );
+_i2.Object get target156 => _i3.getProperty(
+      _self,
+      'DOMTokenList',
+    );
+_i2.Object get target157 => _i3.getProperty(
+      _self,
+      'DataTransfer',
+    );
+_i2.Object get target158 => _i3.getProperty(
+      _self,
+      'DataTransferItem',
+    );
+_i2.Object get target159 => _i3.getProperty(
+      _self,
+      'DataTransferItemList',
+    );
+_i2.Object get target160 => _i3.getProperty(
+      _self,
+      'DecompressionStream',
+    );
+_i2.Object get target161 => _i3.getProperty(
+      _self,
+      'DelayNode',
+    );
+_i2.Object get target162 => _i3.getProperty(
+      _self,
+      'DeviceMotionEvent',
+    );
+_i2.Object get target163 => _i3.getProperty(
+      _self,
+      'DeviceOrientationEvent',
+    );
+_i2.Object get target164 => _i3.getProperty(
+      _self,
+      'Document',
+    );
+_i2.Object get target165 => _i3.getProperty(
+      _self,
+      'DocumentFragment',
+    );
+_i2.Object get target166 => _i3.getProperty(
+      _self,
+      'DocumentTimeline',
+    );
+_i2.Object get target167 => _i3.getProperty(
+      _self,
+      'DocumentType',
+    );
+_i2.Object get target168 => _i3.getProperty(
+      _self,
+      'DragEvent',
+    );
+_i2.Object get target169 => _i3.getProperty(
+      _self,
+      'DynamicsCompressorNode',
+    );
+_i2.Object get target170 => _i3.getProperty(
+      _self,
+      'Element',
+    );
+_i2.Object get target171 => _i3.getProperty(
+      _self,
+      'ElementInternals',
+    );
+_i2.Object get target172 => _i3.getProperty(
+      _self,
+      'EncodedVideoChunk',
+    );
+_i2.Object get target173 => _i3.getProperty(
+      _self,
+      'ErrorEvent',
+    );
+_i2.Object get target174 => _i3.getProperty(
+      _self,
+      'Event',
+    );
+_i2.Object get target175 => _i3.getProperty(
+      _self,
+      'EventCounts',
+    );
+_i2.Object get target176 => _i3.getProperty(
+      _self,
+      'EventSource',
+    );
+_i2.Object get target177 => _i3.getProperty(
+      _self,
+      'EventTarget',
+    );
+_i2.Object get target178 => _i3.getProperty(
+      _self,
+      'External',
+    );
+_i2.Object get target179 => _i3.getProperty(
+      _self,
+      'File',
+    );
+_i2.Object get target180 => _i3.getProperty(
+      _self,
+      'FileList',
+    );
+_i2.Object get target181 => _i3.getProperty(
+      _self,
+      'FileReader',
+    );
+_i2.Object get target182 => _i3.getProperty(
+      _self,
+      'FileSystem',
+    );
+_i2.Object get target183 => _i3.getProperty(
+      _self,
+      'FileSystemDirectoryEntry',
+    );
+_i2.Object get target184 => _i3.getProperty(
+      _self,
+      'FileSystemDirectoryHandle',
+    );
+_i2.Object get target185 => _i3.getProperty(
+      _self,
+      'FileSystemDirectoryReader',
+    );
+_i2.Object get target186 => _i3.getProperty(
+      _self,
+      'FileSystemEntry',
+    );
+_i2.Object get target187 => _i3.getProperty(
+      _self,
+      'FileSystemFileEntry',
+    );
+_i2.Object get target188 => _i3.getProperty(
+      _self,
+      'FileSystemFileHandle',
+    );
+_i2.Object get target189 => _i3.getProperty(
+      _self,
+      'FileSystemHandle',
+    );
+_i2.Object get target190 => _i3.getProperty(
+      _self,
+      'FileSystemWritableFileStream',
+    );
+_i2.Object get target191 => _i3.getProperty(
+      _self,
+      'FocusEvent',
+    );
+_i2.Object get target192 => _i3.getProperty(
+      _self,
+      'FontFace',
+    );
+_i2.Object get target193 => _i3.getProperty(
+      _self,
+      'FontFaceSet',
+    );
+_i2.Object get target194 => _i3.getProperty(
+      _self,
+      'FontFaceSetLoadEvent',
+    );
+_i2.Object get target195 => _i3.getProperty(
+      _self,
+      'FormData',
+    );
+_i2.Object get target196 => _i3.getProperty(
+      _self,
+      'FormDataEvent',
+    );
+_i2.Object get target197 => _i3.getProperty(
+      _self,
+      'GainNode',
+    );
+_i2.Object get target198 => _i3.getProperty(
+      _self,
+      'Gamepad',
+    );
+_i2.Object get target199 => _i3.getProperty(
+      _self,
+      'GamepadButton',
+    );
+_i2.Object get target200 => _i3.getProperty(
+      _self,
+      'GamepadEvent',
+    );
+_i2.Object get target201 => _i3.getProperty(
+      _self,
+      'GamepadHapticActuator',
+    );
+_i2.Object get target202 => _i3.getProperty(
+      _self,
+      'Geolocation',
+    );
+_i2.Object get target203 => _i3.getProperty(
+      _self,
+      'GeolocationCoordinates',
+    );
+_i2.Object get target204 => _i3.getProperty(
+      _self,
+      'GeolocationPosition',
+    );
+_i2.Object get target205 => _i3.getProperty(
+      _self,
+      'GeolocationPositionError',
+    );
+_i2.Object get target206 => _i3.getProperty(
+      _self,
+      'HTMLAllCollection',
+    );
+_i2.Object get target207 => _i3.getProperty(
+      _self,
+      'HTMLAnchorElement',
+    );
+_i2.Object get target208 => _i3.getProperty(
+      _self,
+      'HTMLAreaElement',
+    );
+_i2.Object get target209 => _i3.getProperty(
+      _self,
+      'HTMLAudioElement',
+    );
+_i2.Object get target210 => _i3.getProperty(
+      _self,
+      'HTMLBRElement',
+    );
+_i2.Object get target211 => _i3.getProperty(
+      _self,
+      'HTMLBaseElement',
+    );
+_i2.Object get target212 => _i3.getProperty(
+      _self,
+      'HTMLBodyElement',
+    );
+_i2.Object get target213 => _i3.getProperty(
+      _self,
+      'HTMLButtonElement',
+    );
+_i2.Object get target214 => _i3.getProperty(
+      _self,
+      'HTMLCanvasElement',
+    );
+_i2.Object get target215 => _i3.getProperty(
+      _self,
+      'HTMLCollection',
+    );
+_i2.Object get target216 => _i3.getProperty(
+      _self,
+      'HTMLDListElement',
+    );
+_i2.Object get target217 => _i3.getProperty(
+      _self,
+      'HTMLDataElement',
+    );
+_i2.Object get target218 => _i3.getProperty(
+      _self,
+      'HTMLDataListElement',
+    );
+_i2.Object get target219 => _i3.getProperty(
+      _self,
+      'HTMLDetailsElement',
+    );
+_i2.Object get target220 => _i3.getProperty(
+      _self,
+      'HTMLDialogElement',
+    );
+_i2.Object get target221 => _i3.getProperty(
+      _self,
+      'HTMLDirectoryElement',
+    );
+_i2.Object get target222 => _i3.getProperty(
+      _self,
+      'HTMLDivElement',
+    );
+_i2.Object get target223 => _i3.getProperty(
+      _self,
+      'HTMLDocument',
+    );
+_i2.Object get target224 => _i3.getProperty(
+      _self,
+      'HTMLElement',
+    );
+_i2.Object get target225 => _i3.getProperty(
+      _self,
+      'HTMLEmbedElement',
+    );
+_i2.Object get target226 => _i3.getProperty(
+      _self,
+      'HTMLFieldSetElement',
+    );
+_i2.Object get target227 => _i3.getProperty(
+      _self,
+      'HTMLFontElement',
+    );
+_i2.Object get target228 => _i3.getProperty(
+      _self,
+      'HTMLFormControlsCollection',
+    );
+_i2.Object get target229 => _i3.getProperty(
+      _self,
+      'HTMLFormElement',
+    );
+_i2.Object get target230 => _i3.getProperty(
+      _self,
+      'HTMLFrameElement',
+    );
+_i2.Object get target231 => _i3.getProperty(
+      _self,
+      'HTMLFrameSetElement',
+    );
+_i2.Object get target232 => _i3.getProperty(
+      _self,
+      'HTMLHRElement',
+    );
+_i2.Object get target233 => _i3.getProperty(
+      _self,
+      'HTMLHeadElement',
+    );
+_i2.Object get target234 => _i3.getProperty(
+      _self,
+      'HTMLHeadingElement',
+    );
+_i2.Object get target235 => _i3.getProperty(
+      _self,
+      'HTMLHtmlElement',
+    );
+_i2.Object get target236 => _i3.getProperty(
+      _self,
+      'HTMLIFrameElement',
+    );
+_i2.Object get target237 => _i3.getProperty(
+      _self,
+      'HTMLImageElement',
+    );
+_i2.Object get target238 => _i3.getProperty(
+      _self,
+      'HTMLInputElement',
+    );
+_i2.Object get target239 => _i3.getProperty(
+      _self,
+      'HTMLLIElement',
+    );
+_i2.Object get target240 => _i3.getProperty(
+      _self,
+      'HTMLLabelElement',
+    );
+_i2.Object get target241 => _i3.getProperty(
+      _self,
+      'HTMLLegendElement',
+    );
+_i2.Object get target242 => _i3.getProperty(
+      _self,
+      'HTMLLinkElement',
+    );
+_i2.Object get target243 => _i3.getProperty(
+      _self,
+      'HTMLMapElement',
+    );
+_i2.Object get target244 => _i3.getProperty(
+      _self,
+      'HTMLMarqueeElement',
+    );
+_i2.Object get target245 => _i3.getProperty(
+      _self,
+      'HTMLMediaElement',
+    );
+_i2.Object get target246 => _i3.getProperty(
+      _self,
+      'HTMLMenuElement',
+    );
+_i2.Object get target247 => _i3.getProperty(
+      _self,
+      'HTMLMetaElement',
+    );
+_i2.Object get target248 => _i3.getProperty(
+      _self,
+      'HTMLMeterElement',
+    );
+_i2.Object get target249 => _i3.getProperty(
+      _self,
+      'HTMLModElement',
+    );
+_i2.Object get target250 => _i3.getProperty(
+      _self,
+      'HTMLOListElement',
+    );
+_i2.Object get target251 => _i3.getProperty(
+      _self,
+      'HTMLObjectElement',
+    );
+_i2.Object get target252 => _i3.getProperty(
+      _self,
+      'HTMLOptGroupElement',
+    );
+_i2.Object get target253 => _i3.getProperty(
+      _self,
+      'HTMLOptionElement',
+    );
+_i2.Object get target254 => _i3.getProperty(
+      _self,
+      'HTMLOptionsCollection',
+    );
+_i2.Object get target255 => _i3.getProperty(
+      _self,
+      'HTMLOutputElement',
+    );
+_i2.Object get target256 => _i3.getProperty(
+      _self,
+      'HTMLParagraphElement',
+    );
+_i2.Object get target257 => _i3.getProperty(
+      _self,
+      'HTMLParamElement',
+    );
+_i2.Object get target258 => _i3.getProperty(
+      _self,
+      'HTMLPictureElement',
+    );
+_i2.Object get target259 => _i3.getProperty(
+      _self,
+      'HTMLPreElement',
+    );
+_i2.Object get target260 => _i3.getProperty(
+      _self,
+      'HTMLProgressElement',
+    );
+_i2.Object get target261 => _i3.getProperty(
+      _self,
+      'HTMLQuoteElement',
+    );
+_i2.Object get target262 => _i3.getProperty(
+      _self,
+      'HTMLScriptElement',
+    );
+_i2.Object get target263 => _i3.getProperty(
+      _self,
+      'HTMLSelectElement',
+    );
+_i2.Object get target264 => _i3.getProperty(
+      _self,
+      'HTMLSlotElement',
+    );
+_i2.Object get target265 => _i3.getProperty(
+      _self,
+      'HTMLSourceElement',
+    );
+_i2.Object get target266 => _i3.getProperty(
+      _self,
+      'HTMLSpanElement',
+    );
+_i2.Object get target267 => _i3.getProperty(
+      _self,
+      'HTMLStyleElement',
+    );
+_i2.Object get target268 => _i3.getProperty(
+      _self,
+      'HTMLTableCaptionElement',
+    );
+_i2.Object get target269 => _i3.getProperty(
+      _self,
+      'HTMLTableCellElement',
+    );
+_i2.Object get target270 => _i3.getProperty(
+      _self,
+      'HTMLTableColElement',
+    );
+_i2.Object get target271 => _i3.getProperty(
+      _self,
+      'HTMLTableElement',
+    );
+_i2.Object get target272 => _i3.getProperty(
+      _self,
+      'HTMLTableRowElement',
+    );
+_i2.Object get target273 => _i3.getProperty(
+      _self,
+      'HTMLTableSectionElement',
+    );
+_i2.Object get target274 => _i3.getProperty(
+      _self,
+      'HTMLTemplateElement',
+    );
+_i2.Object get target275 => _i3.getProperty(
+      _self,
+      'HTMLTextAreaElement',
+    );
+_i2.Object get target276 => _i3.getProperty(
+      _self,
+      'HTMLTimeElement',
+    );
+_i2.Object get target277 => _i3.getProperty(
+      _self,
+      'HTMLTitleElement',
+    );
+_i2.Object get target278 => _i3.getProperty(
+      _self,
+      'HTMLTrackElement',
+    );
+_i2.Object get target279 => _i3.getProperty(
+      _self,
+      'HTMLUListElement',
+    );
+_i2.Object get target280 => _i3.getProperty(
+      _self,
+      'HTMLUnknownElement',
+    );
+_i2.Object get target281 => _i3.getProperty(
+      _self,
+      'HTMLVideoElement',
+    );
+_i2.Object get target282 => _i3.getProperty(
+      _self,
+      'HashChangeEvent',
+    );
+_i2.Object get target283 => _i3.getProperty(
+      _self,
+      'Headers',
+    );
+_i2.Object get target284 => _i3.getProperty(
+      _self,
+      'History',
+    );
+_i2.Object get target285 => _i3.getProperty(
+      _self,
+      'IDBCursor',
+    );
+_i2.Object get target286 => _i3.getProperty(
+      _self,
+      'IDBCursorWithValue',
+    );
+_i2.Object get target287 => _i3.getProperty(
+      _self,
+      'IDBDatabase',
+    );
+_i2.Object get target288 => _i3.getProperty(
+      _self,
+      'IDBFactory',
+    );
+_i2.Object get target289 => _i3.getProperty(
+      _self,
+      'IDBIndex',
+    );
+_i2.Object get target290 => _i3.getProperty(
+      _self,
+      'IDBKeyRange',
+    );
+_i2.Object get target291 => _i3.getProperty(
+      _self,
+      'IDBObjectStore',
+    );
+_i2.Object get target292 => _i3.getProperty(
+      _self,
+      'IDBOpenDBRequest',
+    );
+_i2.Object get target293 => _i3.getProperty(
+      _self,
+      'IDBRequest',
+    );
+_i2.Object get target294 => _i3.getProperty(
+      _self,
+      'IDBTransaction',
+    );
+_i2.Object get target295 => _i3.getProperty(
+      _self,
+      'IDBVersionChangeEvent',
+    );
+_i2.Object get target296 => _i3.getProperty(
+      _self,
+      'IIRFilterNode',
+    );
+_i2.Object get target297 => _i3.getProperty(
+      _self,
+      'IdleDeadline',
+    );
+_i2.Object get target298 => _i3.getProperty(
+      _self,
+      'ImageBitmap',
+    );
+_i2.Object get target299 => _i3.getProperty(
+      _self,
+      'ImageBitmapRenderingContext',
+    );
+_i2.Object get target300 => _i3.getProperty(
+      _self,
+      'ImageData',
+    );
+_i2.Object get target301 => _i3.getProperty(
+      _self,
+      'InputDeviceInfo',
+    );
+_i2.Object get target302 => _i3.getProperty(
+      _self,
+      'InputEvent',
+    );
+_i2.Object get target303 => _i3.getProperty(
+      _self,
+      'IntersectionObserver',
+    );
+_i2.Object get target304 => _i3.getProperty(
+      _self,
+      'IntersectionObserverEntry',
+    );
+_i2.Object get target305 => _i3.getProperty(
+      _self,
+      'KeyboardEvent',
+    );
+_i2.Object get target306 => _i3.getProperty(
+      _self,
+      'KeyframeEffect',
+    );
+_i2.Object get target307 => _i3.getProperty(
+      _self,
+      'Location',
+    );
+_i2.Object get target308 => _i3.getProperty(
+      _self,
+      'Lock',
+    );
+_i2.Object get target309 => _i3.getProperty(
+      _self,
+      'LockManager',
+    );
+_i2.Object get target310 => _i3.getProperty(
+      _self,
+      'MIDIAccess',
+    );
+_i2.Object get target311 => _i3.getProperty(
+      _self,
+      'MIDIConnectionEvent',
+    );
+_i2.Object get target312 => _i3.getProperty(
+      _self,
+      'MIDIInput',
+    );
+_i2.Object get target313 => _i3.getProperty(
+      _self,
+      'MIDIInputMap',
+    );
+_i2.Object get target314 => _i3.getProperty(
+      _self,
+      'MIDIMessageEvent',
+    );
+_i2.Object get target315 => _i3.getProperty(
+      _self,
+      'MIDIOutput',
+    );
+_i2.Object get target316 => _i3.getProperty(
+      _self,
+      'MIDIOutputMap',
+    );
+_i2.Object get target317 => _i3.getProperty(
+      _self,
+      'MIDIPort',
+    );
+_i2.Object get target318 => _i3.getProperty(
+      _self,
+      'MathMLElement',
+    );
+_i2.Object get target319 => _i3.getProperty(
+      _self,
+      'MediaCapabilities',
+    );
+_i2.Object get target320 => _i3.getProperty(
+      _self,
+      'MediaDeviceInfo',
+    );
+_i2.Object get target321 => _i3.getProperty(
+      _self,
+      'MediaDevices',
+    );
+_i2.Object get target322 => _i3.getProperty(
+      _self,
+      'MediaElementAudioSourceNode',
+    );
+_i2.Object get target323 => _i3.getProperty(
+      _self,
+      'MediaEncryptedEvent',
+    );
+_i2.Object get target324 => _i3.getProperty(
+      _self,
+      'MediaError',
+    );
+_i2.Object get target325 => _i3.getProperty(
+      _self,
+      'MediaKeyMessageEvent',
+    );
+_i2.Object get target326 => _i3.getProperty(
+      _self,
+      'MediaKeySession',
+    );
+_i2.Object get target327 => _i3.getProperty(
+      _self,
+      'MediaKeyStatusMap',
+    );
+_i2.Object get target328 => _i3.getProperty(
+      _self,
+      'MediaKeySystemAccess',
+    );
+_i2.Object get target329 => _i3.getProperty(
+      _self,
+      'MediaKeys',
+    );
+_i2.Object get target330 => _i3.getProperty(
+      _self,
+      'MediaList',
+    );
+_i2.Object get target331 => _i3.getProperty(
+      _self,
+      'MediaMetadata',
+    );
+_i2.Object get target332 => _i3.getProperty(
+      _self,
+      'MediaQueryList',
+    );
+_i2.Object get target333 => _i3.getProperty(
+      _self,
+      'MediaQueryListEvent',
+    );
+_i2.Object get target334 => _i3.getProperty(
+      _self,
+      'MediaRecorder',
+    );
+_i2.Object get target335 => _i3.getProperty(
+      _self,
+      'MediaSession',
+    );
+_i2.Object get target336 => _i3.getProperty(
+      _self,
+      'MediaSource',
+    );
+_i2.Object get target337 => _i3.getProperty(
+      _self,
+      'MediaStream',
+    );
+_i2.Object get target338 => _i3.getProperty(
+      _self,
+      'MediaStreamAudioDestinationNode',
+    );
+_i2.Object get target339 => _i3.getProperty(
+      _self,
+      'MediaStreamAudioSourceNode',
+    );
+_i2.Object get target340 => _i3.getProperty(
+      _self,
+      'MediaStreamTrack',
+    );
+_i2.Object get target341 => _i3.getProperty(
+      _self,
+      'MediaStreamTrackEvent',
+    );
+_i2.Object get target342 => _i3.getProperty(
+      _self,
+      'MessageChannel',
+    );
+_i2.Object get target343 => _i3.getProperty(
+      _self,
+      'MessageEvent',
+    );
+_i2.Object get target344 => _i3.getProperty(
+      _self,
+      'MessagePort',
+    );
+_i2.Object get target345 => _i3.getProperty(
+      _self,
+      'MimeType',
+    );
+_i2.Object get target346 => _i3.getProperty(
+      _self,
+      'MimeTypeArray',
+    );
+_i2.Object get target347 => _i3.getProperty(
+      _self,
+      'MouseEvent',
+    );
+_i2.Object get target348 => _i3.getProperty(
+      _self,
+      'MutationEvent',
+    );
+_i2.Object get target349 => _i3.getProperty(
+      _self,
+      'MutationObserver',
+    );
+_i2.Object get target350 => _i3.getProperty(
+      _self,
+      'MutationRecord',
+    );
+_i2.Object get target351 => _i3.getProperty(
+      _self,
+      'NamedNodeMap',
+    );
+_i2.Object get target352 => _i3.getProperty(
+      _self,
+      'NavigationPreloadManager',
+    );
+_i2.Object get target353 => _i3.getProperty(
+      _self,
+      'Navigator',
+    );
+_i2.Object get target354 => _i3.getProperty(
+      _self,
+      'Node',
+    );
+_i2.Object get target355 => _i3.getProperty(
+      _self,
+      'NodeIterator',
+    );
+_i2.Object get target356 => _i3.getProperty(
+      _self,
+      'NodeList',
+    );
+_i2.Object get target357 => _i3.getProperty(
+      _self,
+      'Notification',
+    );
+_i2.Object get target358 => _i3.getProperty(
+      _self,
+      'OfflineAudioCompletionEvent',
+    );
+_i2.Object get target359 => _i3.getProperty(
+      _self,
+      'OfflineAudioContext',
+    );
+_i2.Object get target360 => _i3.getProperty(
+      _self,
+      'OffscreenCanvas',
+    );
+_i2.Object get target361 => _i3.getProperty(
+      _self,
+      'OffscreenCanvasRenderingContext2D',
+    );
+_i2.Object get target362 => _i3.getProperty(
+      _self,
+      'OscillatorNode',
+    );
+_i2.Object get target363 => _i3.getProperty(
+      _self,
+      'OverconstrainedError',
+    );
+_i2.Object get target364 => _i3.getProperty(
+      _self,
+      'PageTransitionEvent',
+    );
+_i2.Object get target365 => _i3.getProperty(
+      _self,
+      'PannerNode',
+    );
+_i2.Object get target366 => _i3.getProperty(
+      _self,
+      'Path2D',
+    );
+_i2.Object get target367 => _i3.getProperty(
+      _self,
+      'PaymentMethodChangeEvent',
+    );
+_i2.Object get target368 => _i3.getProperty(
+      _self,
+      'PaymentRequest',
+    );
+_i2.Object get target369 => _i3.getProperty(
+      _self,
+      'PaymentRequestUpdateEvent',
+    );
+_i2.Object get target370 => _i3.getProperty(
+      _self,
+      'PaymentResponse',
+    );
+_i2.Object get target371 => _i3.getProperty(
+      _self,
+      'Performance',
+    );
+_i2.Object get target372 => _i3.getProperty(
+      _self,
+      'PerformanceEntry',
+    );
+_i2.Object get target373 => _i3.getProperty(
+      _self,
+      'PerformanceEventTiming',
+    );
+_i2.Object get target374 => _i3.getProperty(
+      _self,
+      'PerformanceMark',
+    );
+_i2.Object get target375 => _i3.getProperty(
+      _self,
+      'PerformanceMeasure',
+    );
+_i2.Object get target376 => _i3.getProperty(
+      _self,
+      'PerformanceNavigation',
+    );
+_i2.Object get target377 => _i3.getProperty(
+      _self,
+      'PerformanceNavigationTiming',
+    );
+_i2.Object get target378 => _i3.getProperty(
+      _self,
+      'PerformanceObserver',
+    );
+_i2.Object get target379 => _i3.getProperty(
+      _self,
+      'PerformanceObserverEntryList',
+    );
+_i2.Object get target380 => _i3.getProperty(
+      _self,
+      'PerformancePaintTiming',
+    );
+_i2.Object get target381 => _i3.getProperty(
+      _self,
+      'PerformanceResourceTiming',
+    );
+_i2.Object get target382 => _i3.getProperty(
+      _self,
+      'PerformanceServerTiming',
+    );
+_i2.Object get target383 => _i3.getProperty(
+      _self,
+      'PerformanceTiming',
+    );
+_i2.Object get target384 => _i3.getProperty(
+      _self,
+      'PeriodicWave',
+    );
+_i2.Object get target385 => _i3.getProperty(
+      _self,
+      'PermissionStatus',
+    );
+_i2.Object get target386 => _i3.getProperty(
+      _self,
+      'Permissions',
+    );
+_i2.Object get target387 => _i3.getProperty(
+      _self,
+      'PictureInPictureEvent',
+    );
+_i2.Object get target388 => _i3.getProperty(
+      _self,
+      'PictureInPictureWindow',
+    );
+_i2.Object get target389 => _i3.getProperty(
+      _self,
+      'Plugin',
+    );
+_i2.Object get target390 => _i3.getProperty(
+      _self,
+      'PluginArray',
+    );
+_i2.Object get target391 => _i3.getProperty(
+      _self,
+      'PointerEvent',
+    );
+_i2.Object get target392 => _i3.getProperty(
+      _self,
+      'PopStateEvent',
+    );
+_i2.Object get target393 => _i3.getProperty(
+      _self,
+      'ProcessingInstruction',
+    );
+_i2.Object get target394 => _i3.getProperty(
+      _self,
+      'ProgressEvent',
+    );
+_i2.Object get target395 => _i3.getProperty(
+      _self,
+      'PromiseRejectionEvent',
+    );
+_i2.Object get target396 => _i3.getProperty(
+      _self,
+      'PublicKeyCredential',
+    );
+_i2.Object get target397 => _i3.getProperty(
+      _self,
+      'PushManager',
+    );
+_i2.Object get target398 => _i3.getProperty(
+      _self,
+      'PushSubscription',
+    );
+_i2.Object get target399 => _i3.getProperty(
+      _self,
+      'PushSubscriptionOptions',
+    );
+_i2.Object get target400 => _i3.getProperty(
+      _self,
+      'RTCCertificate',
+    );
+_i2.Object get target401 => _i3.getProperty(
+      _self,
+      'RTCDTMFSender',
+    );
+_i2.Object get target402 => _i3.getProperty(
+      _self,
+      'RTCDTMFToneChangeEvent',
+    );
+_i2.Object get target403 => _i3.getProperty(
+      _self,
+      'RTCDataChannel',
+    );
+_i2.Object get target404 => _i3.getProperty(
+      _self,
+      'RTCDataChannelEvent',
+    );
+_i2.Object get target405 => _i3.getProperty(
+      _self,
+      'RTCDtlsTransport',
+    );
+_i2.Object get target406 => _i3.getProperty(
+      _self,
+      'RTCEncodedAudioFrame',
+    );
+_i2.Object get target407 => _i3.getProperty(
+      _self,
+      'RTCEncodedVideoFrame',
+    );
+_i2.Object get target408 => _i3.getProperty(
+      _self,
+      'RTCError',
+    );
+_i2.Object get target409 => _i3.getProperty(
+      _self,
+      'RTCErrorEvent',
+    );
+_i2.Object get target410 => _i3.getProperty(
+      _self,
+      'RTCIceCandidate',
+    );
+_i2.Object get target411 => _i3.getProperty(
+      _self,
+      'RTCIceTransport',
+    );
+_i2.Object get target412 => _i3.getProperty(
+      _self,
+      'RTCPeerConnection',
+    );
+_i2.Object get target413 => _i3.getProperty(
+      _self,
+      'RTCPeerConnectionIceErrorEvent',
+    );
+_i2.Object get target414 => _i3.getProperty(
+      _self,
+      'RTCPeerConnectionIceEvent',
+    );
+_i2.Object get target415 => _i3.getProperty(
+      _self,
+      'RTCRtpReceiver',
+    );
+_i2.Object get target416 => _i3.getProperty(
+      _self,
+      'RTCRtpSender',
+    );
+_i2.Object get target417 => _i3.getProperty(
+      _self,
+      'RTCRtpTransceiver',
+    );
+_i2.Object get target418 => _i3.getProperty(
+      _self,
+      'RTCSctpTransport',
+    );
+_i2.Object get target419 => _i3.getProperty(
+      _self,
+      'RTCSessionDescription',
+    );
+_i2.Object get target420 => _i3.getProperty(
+      _self,
+      'RTCStatsReport',
+    );
+_i2.Object get target421 => _i3.getProperty(
+      _self,
+      'RTCTrackEvent',
+    );
+_i2.Object get target422 => _i3.getProperty(
+      _self,
+      'RadioNodeList',
+    );
+_i2.Object get target423 => _i3.getProperty(
+      _self,
+      'Range',
+    );
+_i2.Object get target424 => _i3.getProperty(
+      _self,
+      'ReadableByteStreamController',
+    );
+_i2.Object get target425 => _i3.getProperty(
+      _self,
+      'ReadableStream',
+    );
+_i2.Object get target426 => _i3.getProperty(
+      _self,
+      'ReadableStreamBYOBReader',
+    );
+_i2.Object get target427 => _i3.getProperty(
+      _self,
+      'ReadableStreamBYOBRequest',
+    );
+_i2.Object get target428 => _i3.getProperty(
+      _self,
+      'ReadableStreamDefaultController',
+    );
+_i2.Object get target429 => _i3.getProperty(
+      _self,
+      'ReadableStreamDefaultReader',
+    );
+_i2.Object get target430 => _i3.getProperty(
+      _self,
+      'RemotePlayback',
+    );
+_i2.Object get target431 => _i3.getProperty(
+      _self,
+      'Report',
+    );
+_i2.Object get target432 => _i3.getProperty(
+      _self,
+      'ReportBody',
+    );
+_i2.Object get target433 => _i3.getProperty(
+      _self,
+      'ReportingObserver',
+    );
+_i2.Object get target434 => _i3.getProperty(
+      _self,
+      'Request',
+    );
+_i2.Object get target435 => _i3.getProperty(
+      _self,
+      'ResizeObserver',
+    );
+_i2.Object get target436 => _i3.getProperty(
+      _self,
+      'ResizeObserverEntry',
+    );
+_i2.Object get target437 => _i3.getProperty(
+      _self,
+      'ResizeObserverSize',
+    );
+_i2.Object get target438 => _i3.getProperty(
+      _self,
+      'Response',
+    );
+_i2.Object get target439 => _i3.getProperty(
+      _self,
+      'SVGAElement',
+    );
+_i2.Object get target440 => _i3.getProperty(
+      _self,
+      'SVGAngle',
+    );
+_i2.Object get target441 => _i3.getProperty(
+      _self,
+      'SVGAnimateElement',
+    );
+_i2.Object get target442 => _i3.getProperty(
+      _self,
+      'SVGAnimateMotionElement',
+    );
+_i2.Object get target443 => _i3.getProperty(
+      _self,
+      'SVGAnimateTransformElement',
+    );
+_i2.Object get target444 => _i3.getProperty(
+      _self,
+      'SVGAnimatedAngle',
+    );
+_i2.Object get target445 => _i3.getProperty(
+      _self,
+      'SVGAnimatedBoolean',
+    );
+_i2.Object get target446 => _i3.getProperty(
+      _self,
+      'SVGAnimatedEnumeration',
+    );
+_i2.Object get target447 => _i3.getProperty(
+      _self,
+      'SVGAnimatedInteger',
+    );
+_i2.Object get target448 => _i3.getProperty(
+      _self,
+      'SVGAnimatedLength',
+    );
+_i2.Object get target449 => _i3.getProperty(
+      _self,
+      'SVGAnimatedLengthList',
+    );
+_i2.Object get target450 => _i3.getProperty(
+      _self,
+      'SVGAnimatedNumber',
+    );
+_i2.Object get target451 => _i3.getProperty(
+      _self,
+      'SVGAnimatedNumberList',
+    );
+_i2.Object get target452 => _i3.getProperty(
+      _self,
+      'SVGAnimatedPreserveAspectRatio',
+    );
+_i2.Object get target453 => _i3.getProperty(
+      _self,
+      'SVGAnimatedRect',
+    );
+_i2.Object get target454 => _i3.getProperty(
+      _self,
+      'SVGAnimatedString',
+    );
+_i2.Object get target455 => _i3.getProperty(
+      _self,
+      'SVGAnimatedTransformList',
+    );
+_i2.Object get target456 => _i3.getProperty(
+      _self,
+      'SVGAnimationElement',
+    );
+_i2.Object get target457 => _i3.getProperty(
+      _self,
+      'SVGCircleElement',
+    );
+_i2.Object get target458 => _i3.getProperty(
+      _self,
+      'SVGClipPathElement',
+    );
+_i2.Object get target459 => _i3.getProperty(
+      _self,
+      'SVGComponentTransferFunctionElement',
+    );
+_i2.Object get target460 => _i3.getProperty(
+      _self,
+      'SVGDefsElement',
+    );
+_i2.Object get target461 => _i3.getProperty(
+      _self,
+      'SVGDescElement',
+    );
+_i2.Object get target462 => _i3.getProperty(
+      _self,
+      'SVGElement',
+    );
+_i2.Object get target463 => _i3.getProperty(
+      _self,
+      'SVGEllipseElement',
+    );
+_i2.Object get target464 => _i3.getProperty(
+      _self,
+      'SVGFEBlendElement',
+    );
+_i2.Object get target465 => _i3.getProperty(
+      _self,
+      'SVGFEColorMatrixElement',
+    );
+_i2.Object get target466 => _i3.getProperty(
+      _self,
+      'SVGFEComponentTransferElement',
+    );
+_i2.Object get target467 => _i3.getProperty(
+      _self,
+      'SVGFECompositeElement',
+    );
+_i2.Object get target468 => _i3.getProperty(
+      _self,
+      'SVGFEConvolveMatrixElement',
+    );
+_i2.Object get target469 => _i3.getProperty(
+      _self,
+      'SVGFEDiffuseLightingElement',
+    );
+_i2.Object get target470 => _i3.getProperty(
+      _self,
+      'SVGFEDisplacementMapElement',
+    );
+_i2.Object get target471 => _i3.getProperty(
+      _self,
+      'SVGFEDistantLightElement',
+    );
+_i2.Object get target472 => _i3.getProperty(
+      _self,
+      'SVGFEDropShadowElement',
+    );
+_i2.Object get target473 => _i3.getProperty(
+      _self,
+      'SVGFEFloodElement',
+    );
+_i2.Object get target474 => _i3.getProperty(
+      _self,
+      'SVGFEFuncAElement',
+    );
+_i2.Object get target475 => _i3.getProperty(
+      _self,
+      'SVGFEFuncBElement',
+    );
+_i2.Object get target476 => _i3.getProperty(
+      _self,
+      'SVGFEFuncGElement',
+    );
+_i2.Object get target477 => _i3.getProperty(
+      _self,
+      'SVGFEFuncRElement',
+    );
+_i2.Object get target478 => _i3.getProperty(
+      _self,
+      'SVGFEGaussianBlurElement',
+    );
+_i2.Object get target479 => _i3.getProperty(
+      _self,
+      'SVGFEImageElement',
+    );
+_i2.Object get target480 => _i3.getProperty(
+      _self,
+      'SVGFEMergeElement',
+    );
+_i2.Object get target481 => _i3.getProperty(
+      _self,
+      'SVGFEMergeNodeElement',
+    );
+_i2.Object get target482 => _i3.getProperty(
+      _self,
+      'SVGFEMorphologyElement',
+    );
+_i2.Object get target483 => _i3.getProperty(
+      _self,
+      'SVGFEOffsetElement',
+    );
+_i2.Object get target484 => _i3.getProperty(
+      _self,
+      'SVGFEPointLightElement',
+    );
+_i2.Object get target485 => _i3.getProperty(
+      _self,
+      'SVGFESpecularLightingElement',
+    );
+_i2.Object get target486 => _i3.getProperty(
+      _self,
+      'SVGFESpotLightElement',
+    );
+_i2.Object get target487 => _i3.getProperty(
+      _self,
+      'SVGFETileElement',
+    );
+_i2.Object get target488 => _i3.getProperty(
+      _self,
+      'SVGFETurbulenceElement',
+    );
+_i2.Object get target489 => _i3.getProperty(
+      _self,
+      'SVGFilterElement',
+    );
+_i2.Object get target490 => _i3.getProperty(
+      _self,
+      'SVGForeignObjectElement',
+    );
+_i2.Object get target491 => _i3.getProperty(
+      _self,
+      'SVGGElement',
+    );
+_i2.Object get target492 => _i3.getProperty(
+      _self,
+      'SVGGeometryElement',
+    );
+_i2.Object get target493 => _i3.getProperty(
+      _self,
+      'SVGGradientElement',
+    );
+_i2.Object get target494 => _i3.getProperty(
+      _self,
+      'SVGGraphicsElement',
+    );
+_i2.Object get target495 => _i3.getProperty(
+      _self,
+      'SVGImageElement',
+    );
+_i2.Object get target496 => _i3.getProperty(
+      _self,
+      'SVGLength',
+    );
+_i2.Object get target497 => _i3.getProperty(
+      _self,
+      'SVGLengthList',
+    );
+_i2.Object get target498 => _i3.getProperty(
+      _self,
+      'SVGLineElement',
+    );
+_i2.Object get target499 => _i3.getProperty(
+      _self,
+      'SVGLinearGradientElement',
+    );
+_i2.Object get target500 => _i3.getProperty(
+      _self,
+      'SVGMPathElement',
+    );
+_i2.Object get target501 => _i3.getProperty(
+      _self,
+      'SVGMarkerElement',
+    );
+_i2.Object get target502 => _i3.getProperty(
+      _self,
+      'SVGMaskElement',
+    );
+_i2.Object get target503 => _i3.getProperty(
+      _self,
+      'SVGMetadataElement',
+    );
+_i2.Object get target504 => _i3.getProperty(
+      _self,
+      'SVGNumber',
+    );
+_i2.Object get target505 => _i3.getProperty(
+      _self,
+      'SVGNumberList',
+    );
+_i2.Object get target506 => _i3.getProperty(
+      _self,
+      'SVGPathElement',
+    );
+_i2.Object get target507 => _i3.getProperty(
+      _self,
+      'SVGPatternElement',
+    );
+_i2.Object get target508 => _i3.getProperty(
+      _self,
+      'SVGPointList',
+    );
+_i2.Object get target509 => _i3.getProperty(
+      _self,
+      'SVGPolygonElement',
+    );
+_i2.Object get target510 => _i3.getProperty(
+      _self,
+      'SVGPolylineElement',
+    );
+_i2.Object get target511 => _i3.getProperty(
+      _self,
+      'SVGPreserveAspectRatio',
+    );
+_i2.Object get target512 => _i3.getProperty(
+      _self,
+      'SVGRadialGradientElement',
+    );
+_i2.Object get target513 => _i3.getProperty(
+      _self,
+      'SVGRectElement',
+    );
+_i2.Object get target514 => _i3.getProperty(
+      _self,
+      'SVGSVGElement',
+    );
+_i2.Object get target515 => _i3.getProperty(
+      _self,
+      'SVGScriptElement',
+    );
+_i2.Object get target516 => _i3.getProperty(
+      _self,
+      'SVGSetElement',
+    );
+_i2.Object get target517 => _i3.getProperty(
+      _self,
+      'SVGStopElement',
+    );
+_i2.Object get target518 => _i3.getProperty(
+      _self,
+      'SVGStringList',
+    );
+_i2.Object get target519 => _i3.getProperty(
+      _self,
+      'SVGStyleElement',
+    );
+_i2.Object get target520 => _i3.getProperty(
+      _self,
+      'SVGSwitchElement',
+    );
+_i2.Object get target521 => _i3.getProperty(
+      _self,
+      'SVGSymbolElement',
+    );
+_i2.Object get target522 => _i3.getProperty(
+      _self,
+      'SVGTSpanElement',
+    );
+_i2.Object get target523 => _i3.getProperty(
+      _self,
+      'SVGTextContentElement',
+    );
+_i2.Object get target524 => _i3.getProperty(
+      _self,
+      'SVGTextElement',
+    );
+_i2.Object get target525 => _i3.getProperty(
+      _self,
+      'SVGTextPathElement',
+    );
+_i2.Object get target526 => _i3.getProperty(
+      _self,
+      'SVGTextPositioningElement',
+    );
+_i2.Object get target527 => _i3.getProperty(
+      _self,
+      'SVGTitleElement',
+    );
+_i2.Object get target528 => _i3.getProperty(
+      _self,
+      'SVGTransform',
+    );
+_i2.Object get target529 => _i3.getProperty(
+      _self,
+      'SVGTransformList',
+    );
+_i2.Object get target530 => _i3.getProperty(
+      _self,
+      'SVGUnitTypes',
+    );
+_i2.Object get target531 => _i3.getProperty(
+      _self,
+      'SVGUseElement',
+    );
+_i2.Object get target532 => _i3.getProperty(
+      _self,
+      'SVGViewElement',
+    );
+_i2.Object get target533 => _i3.getProperty(
+      _self,
+      'Screen',
+    );
+_i2.Object get target534 => _i3.getProperty(
+      _self,
+      'ScreenOrientation',
+    );
+_i2.Object get target535 => _i3.getProperty(
+      _self,
+      'ScriptProcessorNode',
+    );
+_i2.Object get target536 => _i3.getProperty(
+      _self,
+      'SecurityPolicyViolationEvent',
+    );
+_i2.Object get target537 => _i3.getProperty(
+      _self,
+      'Selection',
+    );
+_i2.Object get target538 => _i3.getProperty(
+      _self,
+      'ServiceWorker',
+    );
+_i2.Object get target539 => _i3.getProperty(
+      _self,
+      'ServiceWorkerContainer',
+    );
+_i2.Object get target540 => _i3.getProperty(
+      _self,
+      'ServiceWorkerRegistration',
+    );
+_i2.Object get target541 => _i3.getProperty(
+      _self,
+      'ShadowRoot',
+    );
+_i2.Object get target542 => _i3.getProperty(
+      _self,
+      'SharedWorker',
+    );
+_i2.Object get target543 => _i3.getProperty(
+      _self,
+      'SourceBuffer',
+    );
+_i2.Object get target544 => _i3.getProperty(
+      _self,
+      'SourceBufferList',
+    );
+_i2.Object get target545 => _i3.getProperty(
+      _self,
+      'SpeechRecognitionAlternative',
+    );
+_i2.Object get target546 => _i3.getProperty(
+      _self,
+      'SpeechRecognitionResult',
+    );
+_i2.Object get target547 => _i3.getProperty(
+      _self,
+      'SpeechRecognitionResultList',
+    );
+_i2.Object get target548 => _i3.getProperty(
+      _self,
+      'SpeechSynthesis',
+    );
+_i2.Object get target549 => _i3.getProperty(
+      _self,
+      'SpeechSynthesisErrorEvent',
+    );
+_i2.Object get target550 => _i3.getProperty(
+      _self,
+      'SpeechSynthesisEvent',
+    );
+_i2.Object get target551 => _i3.getProperty(
+      _self,
+      'SpeechSynthesisUtterance',
+    );
+_i2.Object get target552 => _i3.getProperty(
+      _self,
+      'SpeechSynthesisVoice',
+    );
+_i2.Object get target553 => _i3.getProperty(
+      _self,
+      'StaticRange',
+    );
+_i2.Object get target554 => _i3.getProperty(
+      _self,
+      'StereoPannerNode',
+    );
+_i2.Object get target555 => _i3.getProperty(
+      _self,
+      'Storage',
+    );
+_i2.Object get target556 => _i3.getProperty(
+      _self,
+      'StorageEvent',
+    );
+_i2.Object get target557 => _i3.getProperty(
+      _self,
+      'StorageManager',
+    );
+_i2.Object get target558 => _i3.getProperty(
+      _self,
+      'StylePropertyMap',
+    );
+_i2.Object get target559 => _i3.getProperty(
+      _self,
+      'StylePropertyMapReadOnly',
+    );
+_i2.Object get target560 => _i3.getProperty(
+      _self,
+      'StyleSheet',
+    );
+_i2.Object get target561 => _i3.getProperty(
+      _self,
+      'StyleSheetList',
+    );
+_i2.Object get target562 => _i3.getProperty(
+      _self,
+      'SubmitEvent',
+    );
+_i2.Object get target563 => _i3.getProperty(
+      _self,
+      'SubtleCrypto',
+    );
+_i2.Object get target564 => _i3.getProperty(
+      _self,
+      'Text',
+    );
+_i2.Object get target565 => _i3.getProperty(
+      _self,
+      'TextDecoder',
+    );
+_i2.Object get target566 => _i3.getProperty(
+      _self,
+      'TextDecoderStream',
+    );
+_i2.Object get target567 => _i3.getProperty(
+      _self,
+      'TextEncoder',
+    );
+_i2.Object get target568 => _i3.getProperty(
+      _self,
+      'TextEncoderStream',
+    );
+_i2.Object get target569 => _i3.getProperty(
+      _self,
+      'TextMetrics',
+    );
+_i2.Object get target570 => _i3.getProperty(
+      _self,
+      'TextTrack',
+    );
+_i2.Object get target571 => _i3.getProperty(
+      _self,
+      'TextTrackCue',
+    );
+_i2.Object get target572 => _i3.getProperty(
+      _self,
+      'TextTrackCueList',
+    );
+_i2.Object get target573 => _i3.getProperty(
+      _self,
+      'TextTrackList',
+    );
+_i2.Object get target574 => _i3.getProperty(
+      _self,
+      'TimeRanges',
+    );
+_i2.Object get target575 => _i3.getProperty(
+      _self,
+      'Touch',
+    );
+_i2.Object get target576 => _i3.getProperty(
+      _self,
+      'TouchEvent',
+    );
+_i2.Object get target577 => _i3.getProperty(
+      _self,
+      'TouchList',
+    );
+_i2.Object get target578 => _i3.getProperty(
+      _self,
+      'TrackEvent',
+    );
+_i2.Object get target579 => _i3.getProperty(
+      _self,
+      'TransformStream',
+    );
+_i2.Object get target580 => _i3.getProperty(
+      _self,
+      'TransformStreamDefaultController',
+    );
+_i2.Object get target581 => _i3.getProperty(
+      _self,
+      'TransitionEvent',
+    );
+_i2.Object get target582 => _i3.getProperty(
+      _self,
+      'TreeWalker',
+    );
+_i2.Object get target583 => _i3.getProperty(
+      _self,
+      'UIEvent',
+    );
+_i2.Object get target584 => _i3.getProperty(
+      _self,
+      'URL',
+    );
+_i2.Object get target585 => _i3.getProperty(
+      _self,
+      'URLSearchParams',
+    );
+_i2.Object get target586 => _i3.getProperty(
+      _self,
+      'UserActivation',
+    );
+_i2.Object get target587 => _i3.getProperty(
+      _self,
+      'VTTCue',
+    );
+_i2.Object get target588 => _i3.getProperty(
+      _self,
+      'VTTRegion',
+    );
+_i2.Object get target589 => _i3.getProperty(
+      _self,
+      'ValidityState',
+    );
+_i2.Object get target590 => _i3.getProperty(
+      _self,
+      'VideoColorSpace',
+    );
+_i2.Object get target591 => _i3.getProperty(
+      _self,
+      'VideoDecoder',
+    );
+_i2.Object get target592 => _i3.getProperty(
+      _self,
+      'VideoEncoder',
+    );
+_i2.Object get target593 => _i3.getProperty(
+      _self,
+      'VideoFrame',
+    );
+_i2.Object get target594 => _i3.getProperty(
+      _self,
+      'VideoPlaybackQuality',
+    );
+_i2.Object get target595 => _i3.getProperty(
+      _self,
+      'VisualViewport',
+    );
+_i2.Object get target596 => _i3.getProperty(
+      _self,
+      'WakeLock',
+    );
+_i2.Object get target597 => _i3.getProperty(
+      _self,
+      'WakeLockSentinel',
+    );
+_i2.Object get target598 => _i3.getProperty(
+      _self,
+      'WaveShaperNode',
+    );
+_i2.Object get target599 => _i3.getProperty(
+      _self,
+      'WebGL2RenderingContext',
+    );
+_i2.Object get target600 => _i3.getProperty(
+      _self,
+      'WebGLActiveInfo',
+    );
+_i2.Object get target601 => _i3.getProperty(
+      _self,
+      'WebGLBuffer',
+    );
+_i2.Object get target602 => _i3.getProperty(
+      _self,
+      'WebGLContextEvent',
+    );
+_i2.Object get target603 => _i3.getProperty(
+      _self,
+      'WebGLFramebuffer',
+    );
+_i2.Object get target604 => _i3.getProperty(
+      _self,
+      'WebGLProgram',
+    );
+_i2.Object get target605 => _i3.getProperty(
+      _self,
+      'WebGLQuery',
+    );
+_i2.Object get target606 => _i3.getProperty(
+      _self,
+      'WebGLRenderbuffer',
+    );
+_i2.Object get target607 => _i3.getProperty(
+      _self,
+      'WebGLRenderingContext',
+    );
+_i2.Object get target608 => _i3.getProperty(
+      _self,
+      'WebGLSampler',
+    );
+_i2.Object get target609 => _i3.getProperty(
+      _self,
+      'WebGLShader',
+    );
+_i2.Object get target610 => _i3.getProperty(
+      _self,
+      'WebGLShaderPrecisionFormat',
+    );
+_i2.Object get target611 => _i3.getProperty(
+      _self,
+      'WebGLSync',
+    );
+_i2.Object get target612 => _i3.getProperty(
+      _self,
+      'WebGLTexture',
+    );
+_i2.Object get target613 => _i3.getProperty(
+      _self,
+      'WebGLTransformFeedback',
+    );
+_i2.Object get target614 => _i3.getProperty(
+      _self,
+      'WebGLUniformLocation',
+    );
+_i2.Object get target615 => _i3.getProperty(
+      _self,
+      'WebGLVertexArrayObject',
+    );
+_i2.Object get target616 => _i3.getProperty(
+      _self,
+      'WebSocket',
+    );
+_i2.Object get target617 => _i3.getProperty(
+      _self,
+      'WheelEvent',
+    );
+_i2.Object get target618 => _i3.getProperty(
+      _self,
+      'Window',
+    );
+_i2.Object get target619 => _i3.getProperty(
+      _self,
+      'Worker',
+    );
+_i2.Object get target620 => _i3.getProperty(
+      _self,
+      'Worklet',
+    );
+_i2.Object get target621 => _i3.getProperty(
+      _self,
+      'WritableStream',
+    );
+_i2.Object get target622 => _i3.getProperty(
+      _self,
+      'WritableStreamDefaultController',
+    );
+_i2.Object get target623 => _i3.getProperty(
+      _self,
+      'WritableStreamDefaultWriter',
+    );
+_i2.Object get target624 => _i3.getProperty(
+      _self,
+      'XMLDocument',
+    );
+_i2.Object get target625 => _i3.getProperty(
+      _self,
+      'XMLHttpRequest',
+    );
+_i2.Object get target626 => _i3.getProperty(
+      _self,
+      'XMLHttpRequestEventTarget',
+    );
+_i2.Object get target627 => _i3.getProperty(
+      _self,
+      'XMLHttpRequestUpload',
+    );
+_i2.Object get target628 => _i3.getProperty(
+      _self,
+      'XMLSerializer',
+    );
+_i2.Object get target629 => _i3.getProperty(
+      _self,
+      'XPathEvaluator',
+    );
+_i2.Object get target630 => _i3.getProperty(
+      _self,
+      'XPathExpression',
+    );
+_i2.Object get target631 => _i3.getProperty(
+      _self,
+      'XPathResult',
+    );
+_i2.Object get target632 => _i3.getProperty(
+      _self,
+      'XSLTProcessor',
+    );
+_i2.Object get target633 => _i3.getProperty(
+      _self,
+      'console',
+    );
+_i2.Object get target634 => _i3.getProperty(
+      _self,
+      'Audio',
+    );
+_i2.Object get target635 => _i3.getProperty(
+      _self,
+      'Image',
+    );
+_i2.Object get target636 => _i3.getProperty(
+      _self,
+      'Option',
+    );
+_i2.Object get target637 => _i3.getProperty(
+      _self,
+      'clientInformation',
+    );
+_i2.Object get target638 => _i3.getProperty(
+      _self,
+      'customElements',
+    );
+_i2.Object get target639 => _i3.getProperty(
+      _self,
+      'document',
+    );
+_i2.Object get target640 => _i3.getProperty(
+      _self,
+      'event',
+    );
+_i2.Object get target641 => _i3.getProperty(
+      _self,
+      'external',
+    );
+_i2.Object get target642 => _i3.getProperty(
+      _self,
+      'frameElement',
+    );
+_i2.Object get target643 => _i3.getProperty(
+      _self,
+      'history',
+    );
+_i2.Object get target644 => _i3.getProperty(
+      _self,
+      'location',
+    );
+_i2.Object get target645 => _i3.getProperty(
+      _self,
+      'locationbar',
+    );
+_i2.Object get target646 => _i3.getProperty(
+      _self,
+      'menubar',
+    );
+_i2.Object get target647 => _i3.getProperty(
+      _self,
+      'navigator',
+    );
+_i2.Object get target648 => _i3.getProperty(
+      _self,
+      'personalbar',
+    );
+_i2.Object get target649 => _i3.getProperty(
+      _self,
+      'screen',
+    );
+_i2.Object get target650 => _i3.getProperty(
+      _self,
+      'scrollbars',
+    );
+_i2.Object get target651 => _i3.getProperty(
+      _self,
+      'speechSynthesis',
+    );
+_i2.Object get target652 => _i3.getProperty(
+      _self,
+      'statusbar',
+    );
+_i2.Object get target653 => _i3.getProperty(
+      _self,
+      'toolbar',
+    );
+_i2.Object get target654 => _i3.getProperty(
+      _self,
+      'visualViewport',
+    );
+_i2.Object get target655 => _i3.getProperty(
+      _self,
+      'localStorage',
+    );
+_i2.Object get target656 => _i3.getProperty(
+      _self,
+      'caches',
+    );
+_i2.Object get target657 => _i3.getProperty(
+      _self,
+      'crypto',
+    );
+_i2.Object get target658 => _i3.getProperty(
+      _self,
+      'indexedDB',
+    );
+_i2.Object get target659 => _i3.getProperty(
+      _self,
+      'performance',
+    );
+_i2.Object get target660 => _i3.getProperty(
+      _self,
+      'sessionStorage',
+    );
+_i2.Object get target669 => _i3.getProperty(
+      _self,
+      'WScript',
+    );
+_i2.Object get target670 => _i3.getProperty(
+      _self,
+      'Enumerator',
+    );
+_i2.Object get target671 => _i3.getProperty(
+      _self,
+      'VBArray',
+    );

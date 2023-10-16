@@ -133,7 +133,7 @@ extension UriAccessor$Typings on _UriAccessor {
   /// so that is true: `joinPath(Uri.file('file:///c:/root'), '../../other').fsPath === 'c:/other'`
   _i5.Uri joinPath(
     _i5.Uri base, [
-    _i2.Iterable<_i2.Object?>? pathSegments,
+    _i2.Iterable<_i2.dynamic>? pathSegments,
   ]) =>
       _i3.callMethod(
         _i4.target3457,
@@ -193,7 +193,7 @@ extension UriAccessor$Typings on _UriAccessor {
   /// Returns a JSON representation of this Uri.
   ///
   ///  @return An object.
-  _i2.Object? toJSON() => _i3.callMethod(
+  _i2.dynamic toJSON() => _i3.callMethod(
         _i4.target3457,
         'toJSON',
         [],
@@ -269,65 +269,26 @@ extension IInline85$Typings on IInline85 {
   }
 }
 
-/// Marks a string for localization. If a localized bundle is available for the language specified by
-/// {@link env.language} and the bundle has a localized value for this message, then that localized
-/// value will be returned (with injected {@link args} values for any templated values).
-/// Marks a string for localization. If a localized bundle is available for the language specified by
-/// {@link env.language} and the bundle has a localized value for this message, then that localized
-/// value will be returned (with injected args values for any templated values).
-_i2.String _t$1(_i7.IInline85 options) => _i3.callMethod(
-      _self,
-      't',
-      [options],
-    );
+@_i1.JS('vscode.l10n')
+@_i1.staticInterop
+class $ModuleL10n {}
 
-/// Marks a string for localization. If a localized bundle is available for the language specified by
-/// {@link env.language} and the bundle has a localized value for this message, then that localized
-/// value will be returned (with injected {@link args} values for any templated values).
-/// Marks a string for localization. If a localized bundle is available for the language specified by
-/// {@link env.language} and the bundle has a localized value for this message, then that localized
-/// value will be returned (with injected args values for any templated values).
-_i2.String _t$2(
-  _i2.String message, [
-  _i2.Iterable<_i2.Object?>? args,
-]) =>
-    _i3.callMethod(
-      _self,
-      't',
-      [
-        message,
-        ...?args,
-      ],
-    );
+extension $ModuleL10n$Typings on $ModuleL10n {
+  /// The bundle of localized strings that have been loaded for the extension.
+  /// It's undefined if no bundle has been loaded. The bundle is typically not loaded if
+  /// there was no bundle found or when we are running with the default language.
+  _i2.Object? get bundle => _i3.getProperty(
+        this,
+        'bundle',
+      );
 
-/// Marks a string for localization. If a localized bundle is available for the language specified by
-/// {@link env.language} and the bundle has a localized value for this message, then that localized
-/// value will be returned (with injected {@link args} values for any templated values).
-/// Marks a string for localization. If a localized bundle is available for the language specified by
-/// {@link env.language} and the bundle has a localized value for this message, then that localized
-/// value will be returned (with injected args values for any templated values).
-_i2.String _t$3(
-  _i2.String message,
-  _i8.Record<_i2.String, _i2.Object?> args,
-) =>
-    _i3.callMethod(
-      _self,
-      't',
-      [
-        message,
-        args,
-      ],
-    );
-
-/// Overload accessor: $1, $2, $3
-({
-  /// Marks a string for localization. If a localized bundle is available for the language specified by
-  /// {@link env.language} and the bundle has a localized value for this message, then that localized
-  /// value will be returned (with injected {@link args} values for any templated values).
-  /// Marks a string for localization. If a localized bundle is available for the language specified by
-  /// {@link env.language} and the bundle has a localized value for this message, then that localized
-  /// value will be returned (with injected args values for any templated values).
-  _i2.String Function(_i7.IInline85 options) $1,
+  /// The URI of the localization bundle that has been loaded for the extension.
+  /// It's undefined if no bundle has been loaded. The bundle is typically not loaded if
+  /// there was no bundle found or when we are running with the default language.
+  _i5.Uri? get uri => _i3.getProperty(
+        this,
+        'uri',
+      );
 
   /// Marks a string for localization. If a localized bundle is available for the language specified by
   /// {@link env.language} and the bundle has a localized value for this message, then that localized
@@ -335,10 +296,30 @@ _i2.String _t$3(
   /// Marks a string for localization. If a localized bundle is available for the language specified by
   /// {@link env.language} and the bundle has a localized value for this message, then that localized
   /// value will be returned (with injected args values for any templated values).
-  _i2.String Function(
+  _i2.String _t$1(_i7.IInline85 options) => _i3.callMethod(
+        this,
+        't',
+        [options],
+      );
+
+  /// Marks a string for localization. If a localized bundle is available for the language specified by
+  /// {@link env.language} and the bundle has a localized value for this message, then that localized
+  /// value will be returned (with injected {@link args} values for any templated values).
+  /// Marks a string for localization. If a localized bundle is available for the language specified by
+  /// {@link env.language} and the bundle has a localized value for this message, then that localized
+  /// value will be returned (with injected args values for any templated values).
+  _i2.String _t$2(
     _i2.String message, [
-    _i2.Iterable<_i2.Object?>? args,
-  ]) $2,
+    _i2.Iterable<_i2.dynamic>? args,
+  ]) =>
+      _i3.callMethod(
+        this,
+        't',
+        [
+          message,
+          ...?args,
+        ],
+      );
 
   /// Marks a string for localization. If a localized bundle is available for the language specified by
   /// {@link env.language} and the bundle has a localized value for this message, then that localized
@@ -346,26 +327,63 @@ _i2.String _t$3(
   /// Marks a string for localization. If a localized bundle is available for the language specified by
   /// {@link env.language} and the bundle has a localized value for this message, then that localized
   /// value will be returned (with injected args values for any templated values).
-  _i2.String Function(
+  _i2.String _t$3(
     _i2.String message,
-    _i8.Record<_i2.String, _i2.Object?> args,
-  ) $3,
-}) get t => (
-      $1: _t$1,
-      $2: _t$2,
-      $3: _t$3,
-    );
+    _i8.Record<_i2.String, _i2.dynamic> args,
+  ) =>
+      _i3.callMethod(
+        this,
+        't',
+        [
+          message,
+          args,
+        ],
+      );
+
+  /// Overload accessor: $1, $2, $3
+  ({
+    /// Marks a string for localization. If a localized bundle is available for the language specified by
+    /// {@link env.language} and the bundle has a localized value for this message, then that localized
+    /// value will be returned (with injected {@link args} values for any templated values).
+    /// Marks a string for localization. If a localized bundle is available for the language specified by
+    /// {@link env.language} and the bundle has a localized value for this message, then that localized
+    /// value will be returned (with injected args values for any templated values).
+    _i2.String Function(_i7.IInline85 options) $1,
+
+    /// Marks a string for localization. If a localized bundle is available for the language specified by
+    /// {@link env.language} and the bundle has a localized value for this message, then that localized
+    /// value will be returned (with injected {@link args} values for any templated values).
+    /// Marks a string for localization. If a localized bundle is available for the language specified by
+    /// {@link env.language} and the bundle has a localized value for this message, then that localized
+    /// value will be returned (with injected args values for any templated values).
+    _i2.String Function(
+      _i2.String message, [
+      _i2.Iterable<_i2.dynamic>? args,
+    ]) $2,
+
+    /// Marks a string for localization. If a localized bundle is available for the language specified by
+    /// {@link env.language} and the bundle has a localized value for this message, then that localized
+    /// value will be returned (with injected {@link args} values for any templated values).
+    /// Marks a string for localization. If a localized bundle is available for the language specified by
+    /// {@link env.language} and the bundle has a localized value for this message, then that localized
+    /// value will be returned (with injected args values for any templated values).
+    _i2.String Function(
+      _i2.String message,
+      _i8.Record<_i2.String, _i2.dynamic> args,
+    ) $3,
+  }) get t => (
+        $1: _t$1,
+        $2: _t$2,
+        $3: _t$3,
+      );
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _UriAccessor uri;

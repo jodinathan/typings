@@ -51,7 +51,50 @@ class InteropFunction extends InteropType
       bool isNullable = false,
       bool isOptional = false,
       required List<InteropRef> typeArgs}) {
-    final exec = pkgJsUtils.allowInterop([argument]);
+    final params = this.params.toList();
+    final lastParam = params.lastOrNull;
+    Expression exec;
+
+    if (lastParam != null && lastParam.varargs) {
+      params.remove(lastParam);
+
+      exec = pkgJsUtils.allowInterop([
+        Method((b) {
+          var index = 0;
+
+          for (final param in params) {
+            final buildParam = Parameter((b) {
+              b
+                ..name = 'v$index'
+                ..type = param.ref.ref(solid: true);
+            });
+
+            if (param.ref.acceptsNull && b.requiredParameters.isEmpty) {
+              b.optionalParameters.add(buildParam);
+            } else {
+              b.requiredParameters.add(buildParam);
+            }
+
+            index++;
+          }
+
+          for (var x = 0; x < 10; x++) {
+            final buildParam = Parameter((b) {
+              b.name = 'a$x';
+            });
+
+            b.optionalParameters.add(buildParam);
+          }
+
+          b.body = argument.call([
+            for (var x = 0; x < index; x++) refer('v$x'),
+            literalList([for (var x = 0; x < 10; x++) refer('a$x')])
+          ]).code;
+        }).closure
+      ]);
+    } else {
+      exec = pkgJsUtils.allowInterop([argument]);
+    }
 
     if (isOptional) {
       return argument
@@ -76,13 +119,15 @@ class InteropFunction extends InteropType
         ..isNullable = nullable
         ..returnType = returns.ref(symbolSwap: symbolSwap, solid: true);
 
-      for (final param in params) {
-        final ref = param.ref.ref(symbolSwap: symbolSwap, solid: true);
+      if (params.isNotEmpty) {
+        for (final param in params) {
+          final ref = param.ref.ref(symbolSwap: symbolSwap, solid: true);
 
-        if (param.ref.acceptsNull && b.requiredParameters.isEmpty) {
-          b.optionalParameters.add(ref);
-        } else {
-          b.requiredParameters.add(ref);
+          if (param.ref.acceptsNull && b.requiredParameters.isEmpty) {
+            b.optionalParameters.add(ref);
+          } else {
+            b.requiredParameters.add(ref);
+          }
         }
       }
 

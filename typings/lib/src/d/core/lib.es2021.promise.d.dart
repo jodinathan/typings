@@ -9,6 +9,10 @@ import 'lib.es2015.iterable.d.dart' as _i5;
 import '/d/core.dart' as _i6;
 import 'lib.es2022.error.d.dart' as _i7;
 import 'lib.es2021.promise.d.dart' as _i8;
+import 'lib.es5.intl.d.dart' as _i9;
+import 'lib.es2015.reflect.reflect.d.dart' as _i10;
+import 'lib.dom.css.d.dart' as _i11;
+import 'lib.dom.webassembly.d.dart' as _i12;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -22,7 +26,7 @@ class AggregateError implements _i3.Error {
       );
 
   factory AggregateError.$2(
-    _i5.Iterable<_i2.Object?> errors, [
+    _i5.Iterable<_i2.dynamic> errors, [
     _i2.String? message,
   ]) =>
       _i4.callConstructor(
@@ -34,7 +38,7 @@ class AggregateError implements _i3.Error {
       );
 
   factory AggregateError.$3(
-    _i5.Iterable<_i2.Object?> errors, [
+    _i5.Iterable<_i2.dynamic> errors, [
     _i2.String? message,
     _i7.ErrorOptions? options,
   ]) =>
@@ -48,19 +52,18 @@ class AggregateError implements _i3.Error {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('AggregateError')
-external _i2.Object _declaredAggregateError;
+_i2.Object get _declaredAggregateError => _i4.getProperty(
+      _self,
+      'AggregateError',
+    );
 
 extension AggregateError$Typings on AggregateError {
-  _i2.List<_i2.Object?> get errors => (_i4.getProperty(
+  _i2.List<_i2.dynamic> get errors => (_i4.getProperty(
         this,
         'errors',
       ) as _i2.List)
           .cast();
-  set errors(_i2.List<_i2.Object?> value) {
+  set errors(_i2.List<_i2.dynamic> value) {
     _i4.setProperty(
       this,
       'errors',
@@ -75,7 +78,7 @@ class AggregateErrorConstructor {}
 
 extension AggregateErrorConstructor$Typings on AggregateErrorConstructor {
   _i8.AggregateError _call$1(
-    _i5.Iterable<_i2.Object?> errors, [
+    _i5.Iterable<_i2.dynamic> errors, [
     _i2.String? message,
   ]) =>
       _i4.callMethod(
@@ -87,7 +90,7 @@ extension AggregateErrorConstructor$Typings on AggregateErrorConstructor {
         ],
       );
   _i8.AggregateError _call$2(
-    _i5.Iterable<_i2.Object?> errors, [
+    _i5.Iterable<_i2.dynamic> errors, [
     _i2.String? message,
     _i7.ErrorOptions? options,
   ]) =>
@@ -104,11 +107,11 @@ extension AggregateErrorConstructor$Typings on AggregateErrorConstructor {
   /// Overload accessor: $1, $2
   ({
     _i8.AggregateError Function(
-      _i5.Iterable<_i2.Object?> errors, [
+      _i5.Iterable<_i2.dynamic> errors, [
       _i2.String? message,
     ]) $1,
     _i8.AggregateError Function(
-      _i5.Iterable<_i2.Object?> errors, [
+      _i5.Iterable<_i2.dynamic> errors, [
       _i2.String? message,
       _i7.ErrorOptions? options,
     ]) $2,
@@ -118,10 +121,31 @@ extension AggregateErrorConstructor$Typings on AggregateErrorConstructor {
       );
 }
 
+_i8.AggregateErrorConstructor get aggregateError => _i4.getProperty(
+      _self,
+      'AggregateError',
+    );
+_i9.$ModuleIntl get intl => _i4.getProperty(
+      _self,
+      'Intl',
+    );
+_i10.$ModuleReflect get reflect => _i4.getProperty(
+      _self,
+      'Reflect',
+    );
+_i11.$ModuleCss get css => _i4.getProperty(
+      _self,
+      'CSS',
+    );
+_i12.$ModuleWebAssembly get webAssembly => _i4.getProperty(
+      _self,
+      'WebAssembly',
+    );
+
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

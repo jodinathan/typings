@@ -807,57 +807,85 @@ extension OnDidEndTaskProcessAccessor$Typings on _OnDidEndTaskProcessAccessor {
       );
 }
 
-/// Register a task provider.
-_i8.Disposable registerTaskProvider(
-  _i2.String type,
-  _i8.TaskProvider<_i8.Task> provider,
-) =>
-    _i3.callMethod(
-      _self,
-      'registerTaskProvider',
-      [
-        type,
-        provider,
-      ],
-    );
+@_i1.JS('vscode.tasks')
+@_i1.staticInterop
+class $ModuleTasks {}
 
-/// Fetches all tasks available in the systems. This includes tasks
-/// from `tasks.json` files as well as tasks from task providers
-/// contributed through extensions.
-_i9.Thenable<_i2.List<_i8.Task>> fetchTasks([_i8.TaskFilter? filter]) =>
-    _i3.callMethod(
-      _self,
-      'fetchTasks',
-      [filter ?? _i7.undefined],
-    );
+extension $ModuleTasks$Typings on $ModuleTasks {
+  /// The currently active task executions or an empty array.
+  _i2.List<_i8.TaskExecution> get taskExecutions => (_i3.getProperty(
+        this,
+        'taskExecutions',
+      ) as _i2.List)
+          .cast();
 
-/// Executes a task that is managed by the editor. The returned
-/// task execution can be used to terminate the task.
-_i9.Thenable<_i8.TaskExecution> executeTask(_i8.Task task) => _i3.callMethod(
-      _self,
-      'executeTask',
-      [task],
-    );
+  /// Fires when a task starts.
+  _i5.Event get onDidStartTask => _i3.getProperty(
+        this,
+        'onDidStartTask',
+      );
+
+  /// Fires when a task ends.
+  _i5.Event get onDidEndTask => _i3.getProperty(
+        this,
+        'onDidEndTask',
+      );
+
+  /// Fires when the underlying process has been started.
+  /// This event will not fire for tasks that don't
+  /// execute an underlying process.
+  _i5.Event get onDidStartTaskProcess => _i3.getProperty(
+        this,
+        'onDidStartTaskProcess',
+      );
+
+  /// Fires when the underlying process has ended.
+  /// This event will not fire for tasks that don't
+  /// execute an underlying process.
+  _i5.Event get onDidEndTaskProcess => _i3.getProperty(
+        this,
+        'onDidEndTaskProcess',
+      );
+
+  /// Register a task provider.
+  _i8.Disposable registerTaskProvider(
+    _i2.String type,
+    _i8.TaskProvider<_i8.Task> provider,
+  ) =>
+      _i3.callMethod(
+        this,
+        'registerTaskProvider',
+        [
+          type,
+          provider,
+        ],
+      );
+
+  /// Fetches all tasks available in the systems. This includes tasks
+  /// from `tasks.json` files as well as tasks from task providers
+  /// contributed through extensions.
+  _i9.Thenable<_i2.List<_i8.Task>> fetchTasks([_i8.TaskFilter? filter]) =>
+      _i3.callMethod(
+        this,
+        'fetchTasks',
+        [filter ?? _i7.undefined],
+      );
+
+  /// Executes a task that is managed by the editor. The returned
+  /// task execution can be used to terminate the task.
+  _i9.Thenable<_i8.TaskExecution> executeTask(_i8.Task task) => _i3.callMethod(
+        this,
+        'executeTask',
+        [task],
+      );
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidStartTaskAccessor onDidStartTask;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidEndTaskAccessor onDidEndTask;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidStartTaskProcessAccessor onDidStartTaskProcess;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidEndTaskProcessAccessor onDidEndTaskProcess;

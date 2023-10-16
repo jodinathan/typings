@@ -66,11 +66,10 @@ class CompileError implements _i4.Error {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CompileError')
-external _i2.Object _declaredCompileError;
+_i2.Object get _declaredCompileError => _i5.getProperty(
+      _self,
+      'CompileError',
+    );
 
 @_i1.JS()
 @_i1.staticInterop
@@ -90,7 +89,7 @@ extension IInline646$Typings on IInline646 {
 class Global {
   factory Global(
     _i3.GlobalDescriptor descriptor, [
-    _i2.Object? v,
+    _i2.dynamic v,
   ]) =>
       _i5.callConstructor(
         _declaredGlobal,
@@ -101,19 +100,18 @@ class Global {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Global')
-external _i2.Object _declaredGlobal;
+_i2.Object get _declaredGlobal => _i5.getProperty(
+      _self,
+      'Global',
+    );
 
 extension Global$Typings on Global {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/value)
-  _i2.Object? get value => _i5.getProperty(
+  _i2.dynamic get value => _i5.getProperty(
         this,
         'value',
       );
-  set value(_i2.Object? value) {
+  set value(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'value',
@@ -122,7 +120,7 @@ extension Global$Typings on Global {
   }
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/valueOf)
-  _i2.Object? valueOf() => _i5.callMethod(
+  _i2.dynamic valueOf() => _i5.callMethod(
         this,
         'valueOf',
         [],
@@ -150,11 +148,10 @@ class Instance {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Instance')
-external _i2.Object _declaredInstance;
+_i2.Object get _declaredInstance => _i5.getProperty(
+      _self,
+      'Instance',
+    );
 
 extension Instance$Typings on Instance {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)
@@ -177,11 +174,10 @@ class LinkError implements _i4.Error {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LinkError')
-external _i2.Object _declaredLinkError;
+_i2.Object get _declaredLinkError => _i5.getProperty(
+      _self,
+      'LinkError',
+    );
 
 @_i1.JS()
 @_i1.staticInterop
@@ -205,11 +201,10 @@ class Memory {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Memory')
-external _i2.Object _declaredMemory;
+_i2.Object get _declaredMemory => _i5.getProperty(
+      _self,
+      'Memory',
+    );
 
 extension Memory$Typings on Memory {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)
@@ -275,11 +270,10 @@ class Module {
           .cast();
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Module')
-external _i2.Object _declaredModule;
+_i2.Object get _declaredModule => _i5.getProperty(
+      _self,
+      'Module',
+    );
 
 @_i1.JS()
 @_i1.staticInterop
@@ -329,11 +323,10 @@ class RuntimeError implements _i4.Error {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('RuntimeError')
-external _i2.Object _declaredRuntimeError;
+_i2.Object get _declaredRuntimeError => _i5.getProperty(
+      _self,
+      'RuntimeError',
+    );
 
 @_i1.JS()
 @_i1.staticInterop
@@ -353,7 +346,7 @@ extension IInline652$Typings on IInline652 {
 class Table {
   factory Table(
     _i3.TableDescriptor descriptor, [
-    _i2.Object? value,
+    _i2.dynamic value,
   ]) =>
       _i5.callConstructor(
         _declaredTable,
@@ -364,11 +357,10 @@ class Table {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Table')
-external _i2.Object _declaredTable;
+_i2.Object get _declaredTable => _i5.getProperty(
+      _self,
+      'Table',
+    );
 
 extension Table$Typings on Table {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length)
@@ -378,7 +370,7 @@ extension Table$Typings on Table {
       );
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get)
-  _i2.Object? get(_i2.num index) => _i5.callMethod(
+  _i2.dynamic get(_i2.num index) => _i5.callMethod(
         this,
         'get',
         [index],
@@ -387,7 +379,7 @@ extension Table$Typings on Table {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow)
   _i2.num grow(
     _i2.num delta, [
-    _i2.Object? value,
+    _i2.dynamic value,
   ]) =>
       _i5.callMethod(
         this,
@@ -401,7 +393,7 @@ extension Table$Typings on Table {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set)
   void set(
     _i2.num index, [
-    _i2.Object? value,
+    _i2.dynamic value,
   ]) {
     _i5.callMethod(
       this,
@@ -423,8 +415,8 @@ class IInline653 {}
 @_i1.anonymous
 class GlobalDescriptor {
   external factory GlobalDescriptor._({
-    _i2.Object? mutable,
-    _i2.Object? value,
+    _i2.dynamic mutable,
+    _i2.dynamic value,
   });
 
   factory GlobalDescriptor({
@@ -468,9 +460,9 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
 @_i1.anonymous
 class MemoryDescriptor {
   external factory MemoryDescriptor._({
-    _i2.Object? initial,
-    _i2.Object? maximum,
-    _i2.Object? shared,
+    _i2.dynamic initial,
+    _i2.dynamic maximum,
+    _i2.dynamic shared,
   });
 
   factory MemoryDescriptor({
@@ -528,8 +520,8 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
 @_i1.anonymous
 class ModuleExportDescriptor {
   external factory ModuleExportDescriptor._({
-    _i2.Object? kind,
-    _i2.Object? name,
+    _i2.dynamic kind,
+    _i2.dynamic name,
   });
 
   factory ModuleExportDescriptor({
@@ -574,9 +566,9 @@ extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
 @_i1.anonymous
 class ModuleImportDescriptor {
   external factory ModuleImportDescriptor._({
-    _i2.Object? kind,
-    _i2.Object? module,
-    _i2.Object? name,
+    _i2.dynamic kind,
+    _i2.dynamic module,
+    _i2.dynamic name,
   });
 
   factory ModuleImportDescriptor({
@@ -635,9 +627,9 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
 @_i1.anonymous
 class TableDescriptor {
   external factory TableDescriptor._({
-    _i2.Object? element,
-    _i2.Object? initial,
-    _i2.Object? maximum,
+    _i2.dynamic element,
+    _i2.dynamic initial,
+    _i2.dynamic maximum,
   });
 
   factory TableDescriptor({
@@ -696,8 +688,8 @@ extension TableDescriptor$Typings on TableDescriptor {
 @_i1.anonymous
 class WebAssemblyInstantiatedSource {
   external factory WebAssemblyInstantiatedSource._({
-    _i2.Object? instance,
-    _i2.Object? module,
+    _i2.dynamic instance,
+    _i2.dynamic module,
   });
 
   factory WebAssemblyInstantiatedSource({
@@ -737,93 +729,143 @@ extension WebAssemblyInstantiatedSource$Typings
   }
 }
 
-/// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile)
-_i2.Future<_i3.Module> compile(_i8.BufferSource bytes) =>
-    _i5.promiseToFuture(_i5.callMethod(
-      _self,
-      'compile',
-      [bytes],
-    ));
+@_i1.JS('WebAssembly')
+@_i1.staticInterop
+class $ModuleWebAssembly {}
 
-/// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming)
-_i2.Future<_i3.Module> compileStreaming(_i2.Object source) =>
-    _i5.promiseToFuture(_i5.callMethod(
-      _self,
-      'compileStreaming',
-      [source],
-    ));
+extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
+  _i2.dynamic get compileError => _i5.getProperty(
+        this,
+        'CompileError',
+      );
 
-/// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-_i2.Future<_i3.WebAssemblyInstantiatedSource> _instantiate$1(
-  _i8.BufferSource bytes, [
-  _i3.Imports? importObject,
-]) =>
-    _i5.promiseToFuture(_i5.callMethod(
-      _self,
-      'instantiate',
-      [
-        bytes,
-        importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
-      ],
-    ));
+  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global)
+  _i2.dynamic get global => _i5.getProperty(
+        this,
+        'Global',
+      );
 
-/// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-_i2.Future<_i3.Instance> _instantiate$2(
-  _i3.Module moduleObject, [
-  _i3.Imports? importObject,
-]) =>
-    _i5.promiseToFuture(_i5.callMethod(
-      _self,
-      'instantiate',
-      [
-        moduleObject,
-        importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
-      ],
-    ));
+  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance)
+  _i2.dynamic get instance => _i5.getProperty(
+        this,
+        'Instance',
+      );
+  _i2.dynamic get linkError => _i5.getProperty(
+        this,
+        'LinkError',
+      );
 
-/// Overload accessor: $1, $2
-({
+  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
+  _i2.dynamic get memory => _i5.getProperty(
+        this,
+        'Memory',
+      );
+
+  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)
+  _i2.dynamic get module => _i5.getProperty(
+        this,
+        'Module',
+      );
+  _i2.dynamic get runtimeError => _i5.getProperty(
+        this,
+        'RuntimeError',
+      );
+
+  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)
+  _i2.dynamic get table => _i5.getProperty(
+        this,
+        'Table',
+      );
+
+  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile)
+  _i2.Future<_i2.Future<_i3.Module>> compile(_i8.BufferSource bytes) =>
+      _i5.promiseToFuture(_i5.callMethod(
+        this,
+        'compile',
+        [bytes],
+      ));
+
+  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming)
+  _i2.Future<_i2.Future<_i3.Module>> compileStreaming(_i2.Object source) =>
+      _i5.promiseToFuture(_i5.callMethod(
+        this,
+        'compileStreaming',
+        [source],
+      ));
+
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-  _i2.Future<_i3.WebAssemblyInstantiatedSource> Function(
+  _i2.Future<_i2.Future<_i3.WebAssemblyInstantiatedSource>> _instantiate$1(
     _i8.BufferSource bytes, [
     _i3.Imports? importObject,
-  ]) $1,
+  ]) =>
+      _i5.promiseToFuture(_i5.callMethod(
+        this,
+        'instantiate',
+        [
+          bytes,
+          importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
+        ],
+      ));
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
-  _i2.Future<_i3.Instance> Function(
+  _i2.Future<_i2.Future<_i3.Instance>> _instantiate$2(
     _i3.Module moduleObject, [
     _i3.Imports? importObject,
-  ]) $2,
-}) get instantiate => (
-      $1: _instantiate$1,
-      $2: _instantiate$2,
-    );
+  ]) =>
+      _i5.promiseToFuture(_i5.callMethod(
+        this,
+        'instantiate',
+        [
+          moduleObject,
+          importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
+        ],
+      ));
 
-/// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming)
-_i2.Future<_i3.WebAssemblyInstantiatedSource> instantiateStreaming(
-  _i2.Object source, [
-  _i3.Imports? importObject,
-]) =>
-    _i5.promiseToFuture(_i5.callMethod(
-      _self,
-      'instantiateStreaming',
-      [
-        source,
-        importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
-      ],
-    ));
+  /// Overload accessor: $1, $2
+  ({
+    /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
+    _i2.Future<_i2.Future<_i3.WebAssemblyInstantiatedSource>> Function(
+      _i8.BufferSource bytes, [
+      _i3.Imports? importObject,
+    ]) $1,
 
-/// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate)
-_i2.bool validate(_i8.BufferSource bytes) => _i5.callMethod(
-      _self,
-      'validate',
-      [bytes],
-    );
+    /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
+    _i2.Future<_i2.Future<_i3.Instance>> Function(
+      _i3.Module moduleObject, [
+      _i3.Imports? importObject,
+    ]) $2,
+  }) get instantiate => (
+        $1: _instantiate$1,
+        $2: _instantiate$2,
+      );
+
+  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming)
+  _i2.Future<_i2.Future<_i3.WebAssemblyInstantiatedSource>>
+      instantiateStreaming(
+    _i2.Object source, [
+    _i3.Imports? importObject,
+  ]) =>
+          _i5.promiseToFuture(_i5.callMethod(
+            this,
+            'instantiateStreaming',
+            [
+              source,
+              importObject ?? _i6.undefined ?? _i6.undefined ?? _i6.undefined,
+            ],
+          ));
+
+  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate)
+  _i2.bool validate(_i8.BufferSource bytes) => _i5.callMethod(
+        this,
+        'validate',
+        [bytes],
+      );
+}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

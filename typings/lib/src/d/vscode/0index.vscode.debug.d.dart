@@ -61,9 +61,9 @@ extension ActiveDebugSessionAccessor$Typings on _ActiveDebugSessionAccessor {
       );
 
   /// Send a custom request to the debug adapter.
-  _i6.Thenable<_i2.Object?> customRequest(
+  _i6.Thenable<_i2.dynamic> customRequest(
     _i2.String command, [
-    _i2.Object? args,
+    _i2.dynamic args,
   ]) =>
       _i3.callMethod(
         _i4.target3448,
@@ -1113,151 +1113,188 @@ extension OnDidChangeBreakpointsAccessor$Typings
       );
 }
 
-/// Register a {@link DebugConfigurationProviderdebug configuration provider} for a specific debug type.
-/// The optional {@link DebugConfigurationProviderTriggerKindtriggerKind} can be used to specify when the `provideDebugConfigurations` method of the provider is triggered.
-/// Currently two trigger kinds are possible: with the value `Initial` (or if no trigger kind argument is given) the `provideDebugConfigurations` method is used to provide the initial debug configurations to be copied into a newly created launch.json.
-/// With the trigger kind `Dynamic` the `provideDebugConfigurations` method is used to dynamically determine debug configurations to be presented to the user (in addition to the static configurations from the launch.json).
-/// Please note that the `triggerKind` argument only applies to the `provideDebugConfigurations` method: so the `resolveDebugConfiguration` methods are not affected at all.
-/// Registering a single provider with resolve methods for different trigger kinds, results in the same resolve methods called multiple times.
-/// More than one provider can be registered for the same type.
-_i5.Disposable registerDebugConfigurationProvider(
-  _i2.String debugType,
-  _i5.DebugConfigurationProvider provider, [
-  _i5.DebugConfigurationProviderTriggerKind? triggerKind,
-]) =>
+@_i1.JS('vscode.debug')
+@_i1.staticInterop
+class $ModuleDebug {}
+
+extension $ModuleDebug$Typings on $ModuleDebug {
+  /// The currently active {@link DebugSessiondebug session} or `undefined`. The active debug session is the one
+  /// represented by the debug action floating window or the one currently shown in the drop down menu of the debug action floating window.
+  /// If no debug session is active, the value is `undefined`.
+  _i5.DebugSession? get activeDebugSession => _i3.getProperty(
+        this,
+        'activeDebugSession',
+      );
+
+  /// The currently active {@link DebugConsoledebug console}.
+  /// If no debug session is active, output sent to the debug console is not shown.
+  _i5.DebugConsole get activeDebugConsole => _i3.getProperty(
+        this,
+        'activeDebugConsole',
+      );
+
+  /// List of breakpoints.
+  _i2.List<_i5.Breakpoint> get breakpoints => (_i3.getProperty(
+        this,
+        'breakpoints',
+      ) as _i2.List)
+          .cast();
+
+  /// An {@link Event} which fires when the {@link debug.activeDebugSessionactive debug session}
+  /// has changed. *Note* that the event also fires when the active debug session changes
+  /// to `undefined`.
+  _i9.Event get onDidChangeActiveDebugSession => _i3.getProperty(
+        this,
+        'onDidChangeActiveDebugSession',
+      );
+
+  /// An {@link Event} which fires when a new {@link DebugSessiondebug session} has been started.
+  _i9.Event get onDidStartDebugSession => _i3.getProperty(
+        this,
+        'onDidStartDebugSession',
+      );
+
+  /// An {@link Event} which fires when a custom DAP event is received from the {@link DebugSessiondebug session}.
+  _i9.Event get onDidReceiveDebugSessionCustomEvent => _i3.getProperty(
+        this,
+        'onDidReceiveDebugSessionCustomEvent',
+      );
+
+  /// An {@link Event} which fires when a {@link DebugSessiondebug session} has terminated.
+  _i9.Event get onDidTerminateDebugSession => _i3.getProperty(
+        this,
+        'onDidTerminateDebugSession',
+      );
+
+  /// An {@link Event} that is emitted when the set of breakpoints is added, removed, or changed.
+  _i9.Event get onDidChangeBreakpoints => _i3.getProperty(
+        this,
+        'onDidChangeBreakpoints',
+      );
+
+  /// Register a {@link DebugConfigurationProviderdebug configuration provider} for a specific debug type.
+  /// The optional {@link DebugConfigurationProviderTriggerKindtriggerKind} can be used to specify when the `provideDebugConfigurations` method of the provider is triggered.
+  /// Currently two trigger kinds are possible: with the value `Initial` (or if no trigger kind argument is given) the `provideDebugConfigurations` method is used to provide the initial debug configurations to be copied into a newly created launch.json.
+  /// With the trigger kind `Dynamic` the `provideDebugConfigurations` method is used to dynamically determine debug configurations to be presented to the user (in addition to the static configurations from the launch.json).
+  /// Please note that the `triggerKind` argument only applies to the `provideDebugConfigurations` method: so the `resolveDebugConfiguration` methods are not affected at all.
+  /// Registering a single provider with resolve methods for different trigger kinds, results in the same resolve methods called multiple times.
+  /// More than one provider can be registered for the same type.
+  _i5.Disposable registerDebugConfigurationProvider(
+    _i2.String debugType,
+    _i5.DebugConfigurationProvider provider, [
+    _i5.DebugConfigurationProviderTriggerKind? triggerKind,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'registerDebugConfigurationProvider',
+        [
+          debugType,
+          provider,
+          triggerKind?.name ?? _i7.undefined,
+        ],
+      );
+
+  /// Register a {@link DebugAdapterDescriptorFactorydebug adapter descriptor factory} for a specific debug type.
+  /// An extension is only allowed to register a DebugAdapterDescriptorFactory for the debug type(s) defined by the extension. Otherwise an error is thrown.
+  /// Registering more than one DebugAdapterDescriptorFactory for a debug type results in an error.
+  _i5.Disposable registerDebugAdapterDescriptorFactory(
+    _i2.String debugType,
+    _i5.DebugAdapterDescriptorFactory factory,
+  ) =>
+      _i3.callMethod(
+        this,
+        'registerDebugAdapterDescriptorFactory',
+        [
+          debugType,
+          factory,
+        ],
+      );
+
+  /// Register a debug adapter tracker factory for the given debug type.
+  _i5.Disposable registerDebugAdapterTrackerFactory(
+    _i2.String debugType,
+    _i5.DebugAdapterTrackerFactory factory,
+  ) =>
+      _i3.callMethod(
+        this,
+        'registerDebugAdapterTrackerFactory',
+        [
+          debugType,
+          factory,
+        ],
+      );
+
+  /// Start debugging by using either a named launch or named compound configuration,
+  /// or by directly passing a {@link DebugConfiguration}.
+  /// The named configurations are looked up in '.vscode/launch.json' found in the given folder.
+  /// Before debugging starts, all unsaved files are saved and the launch configurations are brought up-to-date.
+  /// Folder specific variables used in the configuration (e.g. '${workspaceFolder}') are resolved against the given folder.
+  _i6.Thenable<_i2.bool> startDebugging(
+    _i5.WorkspaceFolder? folder,
+    _i2.Object nameOrConfiguration, [
+    _i2.Object? parentSessionOrOptions,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'startDebugging',
+        [
+          folder ?? _i7.undefined,
+          nameOrConfiguration,
+          parentSessionOrOptions ?? _i7.undefined,
+        ],
+      );
+
+  /// Stop the given debug session or stop all debug sessions if session is omitted.
+  _i6.Thenable<void> stopDebugging([_i5.DebugSession? session]) =>
+      _i3.callMethod(
+        this,
+        'stopDebugging',
+        [session ?? _i7.undefined],
+      );
+
+  /// Add breakpoints.
+  void addBreakpoints(_i2.List<_i5.Breakpoint> breakpoints) {
     _i3.callMethod(
-      _self,
-      'registerDebugConfigurationProvider',
-      [
-        debugType,
-        provider,
-        triggerKind?.name ?? _i7.undefined,
-      ],
+      this,
+      'addBreakpoints',
+      [breakpoints],
     );
+  }
 
-/// Register a {@link DebugAdapterDescriptorFactorydebug adapter descriptor factory} for a specific debug type.
-/// An extension is only allowed to register a DebugAdapterDescriptorFactory for the debug type(s) defined by the extension. Otherwise an error is thrown.
-/// Registering more than one DebugAdapterDescriptorFactory for a debug type results in an error.
-_i5.Disposable registerDebugAdapterDescriptorFactory(
-  _i2.String debugType,
-  _i5.DebugAdapterDescriptorFactory factory,
-) =>
+  /// Remove breakpoints.
+  void removeBreakpoints(_i2.List<_i5.Breakpoint> breakpoints) {
     _i3.callMethod(
-      _self,
-      'registerDebugAdapterDescriptorFactory',
-      [
-        debugType,
-        factory,
-      ],
+      this,
+      'removeBreakpoints',
+      [breakpoints],
     );
+  }
 
-/// Register a debug adapter tracker factory for the given debug type.
-_i5.Disposable registerDebugAdapterTrackerFactory(
-  _i2.String debugType,
-  _i5.DebugAdapterTrackerFactory factory,
-) =>
-    _i3.callMethod(
-      _self,
-      'registerDebugAdapterTrackerFactory',
-      [
-        debugType,
-        factory,
-      ],
-    );
-
-/// Start debugging by using either a named launch or named compound configuration,
-/// or by directly passing a {@link DebugConfiguration}.
-/// The named configurations are looked up in '.vscode/launch.json' found in the given folder.
-/// Before debugging starts, all unsaved files are saved and the launch configurations are brought up-to-date.
-/// Folder specific variables used in the configuration (e.g. '${workspaceFolder}') are resolved against the given folder.
-_i6.Thenable<_i2.bool> startDebugging(
-  _i5.WorkspaceFolder? folder,
-  _i2.Object nameOrConfiguration, [
-  _i2.Object? parentSessionOrOptions,
-]) =>
-    _i3.callMethod(
-      _self,
-      'startDebugging',
-      [
-        folder ?? _i7.undefined,
-        nameOrConfiguration,
-        parentSessionOrOptions ?? _i7.undefined,
-      ],
-    );
-
-/// Stop the given debug session or stop all debug sessions if session is omitted.
-_i6.Thenable<void> stopDebugging([_i5.DebugSession? session]) => _i3.callMethod(
-      _self,
-      'stopDebugging',
-      [session ?? _i7.undefined],
-    );
-
-/// Add breakpoints.
-void addBreakpoints(_i2.List<_i5.Breakpoint> breakpoints) {
-  _i3.callMethod(
-    _self,
-    'addBreakpoints',
-    [breakpoints],
-  );
+  /// Converts a "Source" descriptor object received via the Debug Adapter Protocol into a Uri that can be used to load its contents.
+  /// If the source descriptor is based on a path, a file Uri is returned.
+  /// If the source descriptor uses a reference number, a specific debug Uri (scheme 'debug') is constructed that requires a corresponding ContentProvider and a running debug session
+  ///
+  /// If the "Source" descriptor has insufficient information for creating the Uri, an error is thrown.
+  _i5.Uri asDebugSourceUri(
+    _i5.DebugProtocolSource source, [
+    _i5.DebugSession? session,
+  ]) =>
+      _i3.callMethod(
+        this,
+        'asDebugSourceUri',
+        [
+          source,
+          session ?? _i7.undefined,
+        ],
+      );
 }
-
-/// Remove breakpoints.
-void removeBreakpoints(_i2.List<_i5.Breakpoint> breakpoints) {
-  _i3.callMethod(
-    _self,
-    'removeBreakpoints',
-    [breakpoints],
-  );
-}
-
-/// Converts a "Source" descriptor object received via the Debug Adapter Protocol into a Uri that can be used to load its contents.
-/// If the source descriptor is based on a path, a file Uri is returned.
-/// If the source descriptor uses a reference number, a specific debug Uri (scheme 'debug') is constructed that requires a corresponding ContentProvider and a running debug session
-///
-/// If the "Source" descriptor has insufficient information for creating the Uri, an error is thrown.
-_i5.Uri asDebugSourceUri(
-  _i5.DebugProtocolSource source, [
-  _i5.DebugSession? session,
-]) =>
-    _i3.callMethod(
-      _self,
-      'asDebugSourceUri',
-      [
-        source,
-        session ?? _i7.undefined,
-      ],
-    );
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 abstract class _GlobalThis {}
-
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _ActiveDebugSessionAccessor activeDebugSession;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _ActiveDebugConsoleAccessor activeDebugConsole;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeActiveDebugSessionAccessor
-    onDidChangeActiveDebugSession;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidStartDebugSessionAccessor onDidStartDebugSession;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidReceiveDebugSessionCustomEventAccessor
-    onDidReceiveDebugSessionCustomEvent;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidTerminateDebugSessionAccessor onDidTerminateDebugSession;
-/* source: Exposed global accessor */
-@_i1.JS()
-external final _OnDidChangeBreakpointsAccessor onDidChangeBreakpoints;

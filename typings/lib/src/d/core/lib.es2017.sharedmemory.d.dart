@@ -9,6 +9,10 @@ import '/d/core.dart' as _i5;
 import 'lib.es2015.iterable.d.dart' as _i6;
 import 'dart:typed_data' as _i7;
 import 'lib.es2020.bigint.d.dart' as _i8;
+import 'lib.es5.intl.d.dart' as _i9;
+import 'lib.es2015.reflect.reflect.d.dart' as _i10;
+import 'lib.dom.css.d.dart' as _i11;
+import 'lib.dom.webassembly.d.dart' as _i12;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -51,11 +55,11 @@ extension WaitAsync$Typings on WaitAsync {
     );
   }
 
-  _i2.Object? get value => _i3.getProperty(
+  _i2.dynamic get value => _i3.getProperty(
         this,
         'value',
       );
-  set value(_i2.Object? value) {
+  set value(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'value',
@@ -82,11 +86,11 @@ extension WaitAsyncCommon$Typings on WaitAsyncCommon {
     );
   }
 
-  _i2.Object? get value => _i3.getProperty(
+  _i2.dynamic get value => _i3.getProperty(
         this,
         'value',
       );
-  set value(_i2.Object? value) {
+  set value(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'value',
@@ -104,11 +108,10 @@ class SharedArrayBuffer {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('SharedArrayBuffer')
-external _i2.Object _declaredSharedArrayBuffer;
+_i2.Object get _declaredSharedArrayBuffer => _i3.getProperty(
+      _self,
+      'SharedArrayBuffer',
+    );
 
 extension SharedArrayBuffer$Typings on SharedArrayBuffer {
   /// Read-only. The length of the ArrayBuffer (in bytes).
@@ -899,10 +902,35 @@ extension Atomics$Typings on Atomics {
       );
 }
 
+_i4.SharedArrayBufferConstructor get sharedArrayBuffer => _i3.getProperty(
+      _self,
+      'SharedArrayBuffer',
+    );
+_i4.Atomics get atomics => _i3.getProperty(
+      _self,
+      'Atomics',
+    );
+_i9.$ModuleIntl get intl => _i3.getProperty(
+      _self,
+      'Intl',
+    );
+_i10.$ModuleReflect get reflect => _i3.getProperty(
+      _self,
+      'Reflect',
+    );
+_i11.$ModuleCss get css => _i3.getProperty(
+      _self,
+      'CSS',
+    );
+_i12.$ModuleWebAssembly get webAssembly => _i3.getProperty(
+      _self,
+      'WebAssembly',
+    );
+
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

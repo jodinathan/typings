@@ -180,7 +180,7 @@ class InteropUnion extends InteropType
                     cl.addProperty(copy);
                   }
 
-                  _delegate = InteropRef(cl);
+                  _delegate = InteropRef<InteropClass>(cl);
                 }
               }
             }

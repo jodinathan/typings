@@ -2,6 +2,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:collection/collection.dart';
 
 import '../common.dart';
+import 'class.dart';
 import 'type_parameter.dart';
 import 'types/delegate.dart';
 import 'types/local.dart';
@@ -55,6 +56,19 @@ class InteropRef<T extends InteropType> {
   InteropRef(this.type,
       {this.typeArgs = const [], this.optional = false, this.nullable = false});
 
+  factory InteropRef.parseType(T type,
+      {List<InteropRef> typeArgs = const [],
+      bool optional = false,
+      bool nullable = false}) {
+    return switch (type) {
+      InteropClass c => InteropRef<InteropClass>(c,
+          typeArgs: typeArgs,
+          optional: optional,
+          nullable: nullable) as InteropRef<T>,
+      _ => InteropRef(type,
+          typeArgs: typeArgs, optional: optional, nullable: nullable)
+    };
+  }
   static List<InteropType>? shoutingTypes;
 
   final List<InteropRef> typeArgs;
@@ -149,17 +163,17 @@ class InteropRef<T extends InteropType> {
   Reference ref(
       {SymbolSwap? symbolSwap,
       bool forceOptional = false,
-      bool solid = false}) {
+      bool solid = false, bool useFuture = false}) {
     final acceptsNull = this.acceptsNull || forceOptional;
 
     if (this.type case InteropDelegateType t) {
       if (t.passthrough) {
         return copyWith(t.delegate.type).ref(
-            symbolSwap: symbolSwap, forceOptional: acceptsNull, solid: solid);
+            symbolSwap: symbolSwap, forceOptional: acceptsNull, solid: solid, useFuture: useFuture);
       }
 
       return t.delegate.ref(
-          symbolSwap: symbolSwap, forceOptional: acceptsNull, solid: solid);
+          symbolSwap: symbolSwap, forceOptional: acceptsNull, solid: solid, useFuture: useFuture);
     }
 
     final type = this.type.realType;
@@ -173,7 +187,7 @@ class InteropRef<T extends InteropType> {
       }
     }
 
-    return switch (
+    final ret = switch (
         type.ref(nullable: acceptsNull, symbolSwap: symbolSwap, solid: solid)) {
       RecordType ref => ref,
       FunctionType ref => ref,
@@ -226,7 +240,7 @@ class InteropRef<T extends InteropType> {
                           ?.reference
                           .ref() ??
                       t.ref(),
-                _ => t.ref(solid: solid)
+                _ => t.ref(solid: solid, useFuture: useFuture)
               };
 
               b.types.add(toAdd);
@@ -234,6 +248,17 @@ class InteropRef<T extends InteropType> {
           }
         })
     };
+
+    if (useFuture && type.isPromiseLike) {
+      return TypeReference((b) {
+        b
+          ..symbol = 'Future'
+          ..url = 'dart:core'
+          ..types.add(ret);
+      });
+    }
+
+    return ret;
   }
 
   bool isSame(InteropRef other) => type.isSame(other.type);

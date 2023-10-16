@@ -70,7 +70,7 @@ class TypingsBuilder extends Builder {
                       .toListValue()!
                       .map((o) => o.toStringValue()!)
                       .toList());
-              print('DONE ${base.package}');
+              print('DONE NPM ${base.package}');
               break;
             case '_TypingsUrls':
               final base = parseBase(ann);
@@ -88,6 +88,7 @@ class TypingsBuilder extends Builder {
                       .toListValue()!
                       .map((o) => o.toStringValue()!)
                       .toList());
+              print('DONE URLS ${base.package}');
               break;
             default:
               throw 'Unknown typings annotation: $ann';

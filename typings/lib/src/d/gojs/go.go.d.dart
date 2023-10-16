@@ -166,22 +166,20 @@ typedef EasingFunction = _i2.num Function(
   _i2.num,
 );
 typedef DiagramInitOptions = _i4.Partial<_i2.Object>;
-typedef DiagramEvents = _i2.Object?;
+typedef DiagramEvents = _i2.dynamic;
 typedef ConstructorType<
-        T extends _i4.InstanceType<T> Function([_i2.Iterable<_i2.Object?>?])>
-    = _i4.InstanceType<T> Function([_i2.Iterable<_i2.Object?>?]);
-typedef MakeAllow<CT extends _i3.ConstructorType<CT>, C extends _i2.Object?,
-        E extends _i2.Object?>
-    = _i2.Object?;
-typedef BrushLike = _i2.Object?;
-typedef Key = _i2.Object?;
-typedef TargetConversion = _i2.Object? Function(
-  _i2.Object?,
-  _i2.Object?,
+        T extends _i4.InstanceType<T> Function([_i2.Iterable<_i2.dynamic>?])>
+    = _i4.InstanceType<T> Function([_i2.Iterable<_i2.dynamic>?]);
+typedef MakeAllow<CT extends _i3.ConstructorType<CT>, C, E> = _i2.dynamic;
+typedef BrushLike = _i2.dynamic;
+typedef Key = _i2.dynamic;
+typedef TargetConversion = _i2.dynamic Function(
+  _i2.dynamic,
+  _i2.dynamic,
 )?;
-typedef BackConversion = _i2.Object? Function(
-  _i2.Object?,
-  _i2.Object?,
+typedef BackConversion = _i2.dynamic Function(
+  _i2.dynamic,
+  _i2.dynamic,
   _i3.Model,
 )?;
 
@@ -204,11 +202,10 @@ class EnumValue {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('EnumValue')
-external _i2.Object _declaredEnumValue;
+_i2.Object get _declaredEnumValue => _i5.getProperty(
+      _self,
+      'EnumValue',
+    );
 
 extension EnumValue$Typings on EnumValue {
   _i2.Function get classType => _i5.getProperty(
@@ -248,9 +245,9 @@ extension EnumValue$Typings on EnumValue {
 /// ```
 @_i1.JS()
 @_i1.staticInterop
-class Iterable<T extends _i2.Object?> {}
+class Iterable<T> {}
 
-extension Iterable$Typings<T extends _i2.Object?> on Iterable<T> {
+extension Iterable$Typings<T> on Iterable<T> {
   /// Gets an Iterator that can iterate over the items in the collection.
   ///
   ///  Typical usage is:
@@ -308,9 +305,9 @@ extension Iterable$Typings<T extends _i2.Object?> on Iterable<T> {
 /// by just returning themselves.
 @_i1.JS()
 @_i1.staticInterop
-class Iterator<T extends _i2.Object?> implements _i3.Iterable<T> {}
+class Iterator<T> implements _i3.Iterable<T> {}
 
-extension Iterator$Typings<T extends _i2.Object?> on Iterator<T> {
+extension Iterator$Typings<T> on Iterator<T> {
   /// Returns itself, which is convenient for code that expects an Iterable
   ///  instead of an Iterator.
   ///  @return {Iterator.<T>}
@@ -333,7 +330,7 @@ extension Iterator$Typings<T extends _i2.Object?> on Iterator<T> {
       );
 
   /// Gets the current index to the item in the collection, assuming #next has just returned true.
-  _i2.Object? get key => _i5.getProperty(
+  _i2.dynamic get key => _i5.getProperty(
         this,
         'key',
       );
@@ -439,8 +436,7 @@ extension Iterator$Typings<T extends _i2.Object?> on Iterator<T> {
   ///  @expose
   ///  @param {function(T)} func This function must not modify the collection.
   ///  @return {Iterator} this
-  _i3.Iterator<S> map<S extends _i2.Object?>(S Function(T) func) =>
-      _i5.callMethod(
+  _i3.Iterator<S> map<S>(S Function(T) func) => _i5.callMethod(
         this,
         'map',
         [_i5.allowInterop(func)],
@@ -828,11 +824,11 @@ extension IContext$Typings on IContext {
     );
   }
 
-  _i2.Object? get cachedTransform => _i5.getProperty(
+  _i2.dynamic get cachedTransform => _i5.getProperty(
         this,
         'cachedTransform',
       );
-  set cachedTransform(_i2.Object? value) {
+  set cachedTransform(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'cachedTransform',
@@ -1417,20 +1413,19 @@ extension IContext$Typings on IContext {
 /// These collection classes were defined in GoJS before the ES6 collection classes were proposed.
 @_i1.JS()
 @_i1.staticInterop
-class List<T extends _i2.Object?> implements _i3.Iterable<T> {
+class List<T> implements _i3.Iterable<T> {
   factory List([_i2.Object? coll]) => _i5.callConstructor(
         _declaredList,
         [coll ?? _i7.undefined],
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('List')
-external _i2.Object _declaredList;
+_i2.Object get _declaredList => _i5.getProperty(
+      _self,
+      'List',
+    );
 
-extension List$Typings<T extends _i2.Object?> on List<T> {
+extension List$Typings<T> on List<T> {
   /// This read-only property is the length of the List.
   _i2.num get count => _i5.getProperty(
         this,
@@ -1724,7 +1719,7 @@ extension List$Typings<T extends _i2.Object?> on List<T> {
   ///  @expose
   ///  @param {function(T):*} func This function must not modify the collection.
   ///  @return {List.<S>}
-  _i3.List<S> map<S extends _i2.Object?>(S Function(T) func) => _i5.callMethod(
+  _i3.List<S> map<S>(S Function(T) func) => _i5.callMethod(
         this,
         'map',
         [_i5.allowInterop(func)],
@@ -1953,7 +1948,7 @@ extension List$Typings<T extends _i2.Object?> on List<T> {
 /// These collection classes were defined in GoJS before the ES6 collection classes were proposed.
 @_i1.JS()
 @_i1.staticInterop
-class Set<T extends _i2.Object?> implements _i3.Iterable<T> {
+class Set<T> implements _i3.Iterable<T> {
   factory Set([_i2.Object? coll]) => _i5.callConstructor(
         _declaredSet,
         [coll ?? _i7.undefined],
@@ -1987,13 +1982,12 @@ class Set<T extends _i2.Object?> implements _i3.Iterable<T> {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Set')
-external _i2.Object _declaredSet;
+_i2.Object get _declaredSet => _i5.getProperty(
+      _self,
+      'Set',
+    );
 
-extension Set$Typings<T extends _i2.Object?> on Set<T> {
+extension Set$Typings<T> on Set<T> {
   /// This read-only property is the number of elements in the Set.
   _i2.num get count => _i5.getProperty(
         this,
@@ -2163,7 +2157,7 @@ extension Set$Typings<T extends _i2.Object?> on Set<T> {
   ///  @expose
   ///  @param {function(T):*} func This function must not modify the collection.
   ///  @return {Set.<S>}
-  _i3.Set<S> map<S extends _i2.Object?>(S Function(T) func) => _i5.callMethod(
+  _i3.Set<S> map<S>(S Function(T) func) => _i5.callMethod(
         this,
         'map',
         [_i5.allowInterop(func)],
@@ -2270,7 +2264,7 @@ extension Set$Typings<T extends _i2.Object?> on Set<T> {
 /// (undocumented)
 @_i1.JS()
 @_i1.staticInterop
-class KeyValuePair<K extends _i2.Object?, V extends _i2.Object?> {
+class KeyValuePair<K, V> {
   factory KeyValuePair(
     K k,
     V v,
@@ -2284,14 +2278,12 @@ class KeyValuePair<K extends _i2.Object?, V extends _i2.Object?> {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('KeyValuePair')
-external _i2.Object _declaredKeyValuePair;
+_i2.Object get _declaredKeyValuePair => _i5.getProperty(
+      _self,
+      'KeyValuePair',
+    );
 
-extension KeyValuePair$Typings<K extends _i2.Object?, V extends _i2.Object?>
-    on KeyValuePair<K, V> {
+extension KeyValuePair$Typings<K, V> on KeyValuePair<K, V> {
   /// Gets a key for a value in a Map.
   ///  @return {K} the key uniquely identifying a #value in a Map.
   K get key => _i5.getProperty(
@@ -2333,10 +2325,9 @@ extension KeyValuePair$Typings<K extends _i2.Object?, V extends _i2.Object?>
 /// but not exactly, because the type of the value property is V, not KeyValuePair<K, V>.
 @_i1.JS()
 @_i1.staticInterop
-class IMapIterator<K extends _i2.Object?, T extends _i2.Object?> {}
+class IMapIterator<K, T> {}
 
-extension IMapIterator$Typings<K extends _i2.Object?, T extends _i2.Object?>
-    on IMapIterator<K, T> {
+extension IMapIterator$Typings<K, T> on IMapIterator<K, T> {
   /// @hidden
   _i3.IMapIterator<K, T> get iterator => _i5.getProperty(
         this,
@@ -2418,8 +2409,7 @@ extension IMapIterator$Typings<K extends _i2.Object?, T extends _i2.Object?>
       );
 
   /// @hidden
-  _i3.Iterator<S> map<S extends _i2.Object?>(
-          S Function(_i3.KeyValuePair<K, T>) func) =>
+  _i3.Iterator<S> map<S>(S Function(_i3.KeyValuePair<K, T>) func) =>
       _i5.callMethod(
         this,
         'map',
@@ -2486,21 +2476,19 @@ extension IMapIterator$Typings<K extends _i2.Object?, T extends _i2.Object?>
 /// These collection classes were defined in GoJS before the ES6 collection classes were proposed.
 @_i1.JS()
 @_i1.staticInterop
-class Map<K extends _i2.Object?, V extends _i2.Object?> {
+class Map<K, V> {
   factory Map([_i2.Object? coll]) => _i5.callConstructor(
         _declaredMap,
         [coll ?? _i7.undefined],
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Map')
-external _i2.Object _declaredMap;
+_i2.Object get _declaredMap => _i5.getProperty(
+      _self,
+      'Map',
+    );
 
-extension Map$Typings<K extends _i2.Object?, V extends _i2.Object?>
-    on Map<K, V> {
+extension Map$Typings<K, V> on Map<K, V> {
   /// This read-only property is the number of associations in the Map.
   _i2.num get count => _i5.getProperty(
         this,
@@ -2712,8 +2700,7 @@ extension Map$Typings<K extends _i2.Object?, V extends _i2.Object?>
   ///  @param {function(KeyValuePair.<K,V>):*} func The argument to the function will be an object with both "key" and "value" properties.
   ///  This function must not modify the collection.
   ///  @return {Map.<K,S>} a new Map with the same keys but values produced by the function
-  _i3.Map<K, S> map<S extends _i2.Object?>(
-          S Function(_i3.KeyValuePair<K, V>) func) =>
+  _i3.Map<K, S> map<S>(S Function(_i3.KeyValuePair<K, V>) func) =>
       _i5.callMethod(
         this,
         'map',
@@ -3025,11 +3012,10 @@ class Point {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Point')
-external _i2.Object _declaredPoint;
+_i2.Object get _declaredPoint => _i5.getProperty(
+      _self,
+      'Point',
+    );
 
 extension Point$Typings on Point {
   /// Gets or sets the x value of the Point.
@@ -3509,11 +3495,10 @@ class Size {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Size')
-external _i2.Object _declaredSize;
+_i2.Object get _declaredSize => _i5.getProperty(
+      _self,
+      'Size',
+    );
 
 extension Size$Typings on Size {
   /// Gets or sets the width value of the Size.
@@ -3813,11 +3798,10 @@ class Rect {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Rect')
-external _i2.Object _declaredRect;
+_i2.Object get _declaredRect => _i5.getProperty(
+      _self,
+      'Rect',
+    );
 
 extension Rect$Typings on Rect {
   /// Gets or sets the top-left x coordinate of the Rect.
@@ -4475,11 +4459,10 @@ class Margin {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Margin')
-external _i2.Object _declaredMargin;
+_i2.Object get _declaredMargin => _i5.getProperty(
+      _self,
+      'Margin',
+    );
 
 extension Margin$Typings on Margin {
   /// Gets or sets the top value of this margin. Default is 0.
@@ -5148,11 +5131,10 @@ class Spot {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Spot')
-external _i2.Object _declaredSpot;
+_i2.Object get _declaredSpot => _i5.getProperty(
+      _self,
+      'Spot',
+    );
 
 extension Spot$Typings on Spot {
   /// Gets or sets the x value of the Spot, a fractional value between zero and one.
@@ -5489,11 +5471,10 @@ class Geometry {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Geometry')
-external _i2.Object _declaredGeometry;
+_i2.Object get _declaredGeometry => _i5.getProperty(
+      _self,
+      'Geometry',
+    );
 
 extension Geometry$Typings on Geometry {
   /// (undocumented)
@@ -5932,11 +5913,10 @@ class PathFigure {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('PathFigure')
-external _i2.Object _declaredPathFigure;
+_i2.Object get _declaredPathFigure => _i5.getProperty(
+      _self,
+      'PathFigure',
+    );
 
 extension PathFigure$Typings on PathFigure {
   /// Gets or sets whether this PathFigure is drawn filled.
@@ -6171,11 +6151,10 @@ class PathSegment {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('PathSegment')
-external _i2.Object _declaredPathSegment;
+_i2.Object get _declaredPathSegment => _i5.getProperty(
+      _self,
+      'PathSegment',
+    );
 
 extension PathSegment$Typings on PathSegment {
   /// Gets or sets whether the path is closed after this PathSegment.
@@ -6491,11 +6470,10 @@ class InputEvent {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('InputEvent')
-external _i2.Object _declaredInputEvent;
+_i2.Object get _declaredInputEvent => _i5.getProperty(
+      _self,
+      'InputEvent',
+    );
 
 extension InputEvent$Typings on InputEvent {
   /// Gets the source diagram associated with the event.
@@ -7082,11 +7060,10 @@ class DiagramEvent {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('DiagramEvent')
-external _i2.Object _declaredDiagramEvent;
+_i2.Object get _declaredDiagramEvent => _i5.getProperty(
+      _self,
+      'DiagramEvent',
+    );
 
 extension DiagramEvent$Typings on DiagramEvent {
   /// Gets the diagram associated with the event.
@@ -7119,11 +7096,11 @@ extension DiagramEvent$Typings on DiagramEvent {
 
   /// Gets or sets an optional object that is the subject of the diagram event.
   /// This property defaults to null.
-  _i2.Object? get subject => _i5.getProperty(
+  _i2.dynamic get subject => _i5.getProperty(
         this,
         'subject',
       );
-  set subject(_i2.Object? value) {
+  set subject(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'subject',
@@ -7133,11 +7110,11 @@ extension DiagramEvent$Typings on DiagramEvent {
 
   /// Gets or sets an optional object that describes the change to the subject of the diagram event.
   /// This property defaults to null.
-  _i2.Object? get parameter => _i5.getProperty(
+  _i2.dynamic get parameter => _i5.getProperty(
         this,
         'parameter',
       );
-  set parameter(_i2.Object? value) {
+  set parameter(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'parameter',
@@ -7152,43 +7129,43 @@ extension DiagramEvent$Typings on DiagramEvent {
 @_i1.anonymous
 class DiagramEventsInterface {
   external factory DiagramEventsInterface._({
-    _i2.Object? animationStarting,
-    _i2.Object? animationFinished,
-    _i2.Object? backgroundSingleClicked,
-    _i2.Object? backgroundDoubleClicked,
-    _i2.Object? backgroundContextClicked,
-    _i2.Object? changingSelection,
-    _i2.Object? changedSelection,
-    _i2.Object? clipboardChanged,
-    _i2.Object? clipboardPasted,
-    _i2.Object? documentBoundsChanged,
-    _i2.Object? externalObjectsDropped,
-    _i2.Object? gainedFocus,
-    _i2.Object? initialLayoutCompleted,
-    _i2.Object? layoutCompleted,
-    _i2.Object? linkDrawn,
-    _i2.Object? linkRelinked,
-    _i2.Object? linkReshaped,
-    _i2.Object? lostFocus,
-    _i2.Object? modified,
-    _i2.Object? objectSingleClicked,
-    _i2.Object? objectDoubleClicked,
-    _i2.Object? objectContextClicked,
-    _i2.Object? partCreated,
-    _i2.Object? partResized,
-    _i2.Object? partRotated,
-    _i2.Object? selectionMoved,
-    _i2.Object? selectionCopied,
-    _i2.Object? selectionDeleted,
-    _i2.Object? selectionDeleting,
-    _i2.Object? selectionGrouped,
-    _i2.Object? selectionUngrouped,
-    _i2.Object? subGraphCollapsed,
-    _i2.Object? subGraphExpanded,
-    _i2.Object? textEdited,
-    _i2.Object? treeCollapsed,
-    _i2.Object? treeExpanded,
-    _i2.Object? viewportBoundsChanged,
+    _i2.dynamic animationStarting,
+    _i2.dynamic animationFinished,
+    _i2.dynamic backgroundSingleClicked,
+    _i2.dynamic backgroundDoubleClicked,
+    _i2.dynamic backgroundContextClicked,
+    _i2.dynamic changingSelection,
+    _i2.dynamic changedSelection,
+    _i2.dynamic clipboardChanged,
+    _i2.dynamic clipboardPasted,
+    _i2.dynamic documentBoundsChanged,
+    _i2.dynamic externalObjectsDropped,
+    _i2.dynamic gainedFocus,
+    _i2.dynamic initialLayoutCompleted,
+    _i2.dynamic layoutCompleted,
+    _i2.dynamic linkDrawn,
+    _i2.dynamic linkRelinked,
+    _i2.dynamic linkReshaped,
+    _i2.dynamic lostFocus,
+    _i2.dynamic modified,
+    _i2.dynamic objectSingleClicked,
+    _i2.dynamic objectDoubleClicked,
+    _i2.dynamic objectContextClicked,
+    _i2.dynamic partCreated,
+    _i2.dynamic partResized,
+    _i2.dynamic partRotated,
+    _i2.dynamic selectionMoved,
+    _i2.dynamic selectionCopied,
+    _i2.dynamic selectionDeleted,
+    _i2.dynamic selectionDeleting,
+    _i2.dynamic selectionGrouped,
+    _i2.dynamic selectionUngrouped,
+    _i2.dynamic subGraphCollapsed,
+    _i2.dynamic subGraphExpanded,
+    _i2.dynamic textEdited,
+    _i2.dynamic treeCollapsed,
+    _i2.dynamic treeExpanded,
+    _i2.dynamic viewportBoundsChanged,
   });
 
   factory DiagramEventsInterface({
@@ -7951,11 +7928,10 @@ class ChangedEvent {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ChangedEvent')
-external _i2.Object _declaredChangedEvent;
+_i2.Object get _declaredChangedEvent => _i5.getProperty(
+      _self,
+      'ChangedEvent',
+    );
 
 extension ChangedEvent$Typings on ChangedEvent {
   /// Gets or sets the Model or TreeModel or GraphLinksModel that was modified.
@@ -8082,11 +8058,11 @@ extension ChangedEvent$Typings on ChangedEvent {
 
   /// Gets or sets the previous or old value that the property had.
   /// The default is null.
-  _i2.Object? get oldValue => _i5.getProperty(
+  _i2.dynamic get oldValue => _i5.getProperty(
         this,
         'oldValue',
       );
-  set oldValue(_i2.Object? value) {
+  set oldValue(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'oldValue',
@@ -8099,11 +8075,11 @@ extension ChangedEvent$Typings on ChangedEvent {
   /// This is typically a value that helps distinguish the old value, such as an index into an array.
   /// It is null if it is not used.
   /// The default is null.
-  _i2.Object? get oldParam => _i5.getProperty(
+  _i2.dynamic get oldParam => _i5.getProperty(
         this,
         'oldParam',
       );
-  set oldParam(_i2.Object? value) {
+  set oldParam(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'oldParam',
@@ -8113,11 +8089,11 @@ extension ChangedEvent$Typings on ChangedEvent {
 
   /// Gets or sets the next or current value that the property has.
   /// The default is null.
-  _i2.Object? get newValue => _i5.getProperty(
+  _i2.dynamic get newValue => _i5.getProperty(
         this,
         'newValue',
       );
-  set newValue(_i2.Object? value) {
+  set newValue(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'newValue',
@@ -8130,11 +8106,11 @@ extension ChangedEvent$Typings on ChangedEvent {
   /// This is typically a value that helps distinguish the new value, such as an index into an array.
   /// It is null if it is not used.
   /// The default is null.
-  _i2.Object? get newParam => _i5.getProperty(
+  _i2.dynamic get newParam => _i5.getProperty(
         this,
         'newParam',
       );
-  set newParam(_i2.Object? value) {
+  set newParam(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'newParam',
@@ -8164,7 +8140,7 @@ extension ChangedEvent$Typings on ChangedEvent {
   ///  when implementing a state change as part of an undo or a redo.
   ///  @param {boolean} undo If true, returns the oldValue, otherwise returns the newValue.
   ///  @return {*} Either the oldValue or the newValue.
-  _i2.Object? getValue(_i2.bool undo) => _i5.callMethod(
+  _i2.dynamic getValue(_i2.bool undo) => _i5.callMethod(
         this,
         'getValue',
         [undo],
@@ -8174,7 +8150,7 @@ extension ChangedEvent$Typings on ChangedEvent {
   ///  when implementing a state change as part of an undo or a redo.
   ///  @param {boolean} undo If true, returns the oldParam, otherwise returns the newParam.
   ///  @return {*} Either the oldParam or the newParam.
-  _i2.Object? getParam(_i2.bool undo) => _i5.callMethod(
+  _i2.dynamic getParam(_i2.bool undo) => _i5.callMethod(
         this,
         'getParam',
         [undo],
@@ -8247,11 +8223,10 @@ class Transaction {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Transaction')
-external _i2.Object _declaredTransaction;
+_i2.Object get _declaredTransaction => _i5.getProperty(
+      _self,
+      'Transaction',
+    );
 
 extension Transaction$Typings on Transaction {
   /// This read-only property returns the list of ChangedEvents.
@@ -8434,11 +8409,10 @@ class UndoManager {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('UndoManager')
-external _i2.Object _declaredUndoManager;
+_i2.Object get _declaredUndoManager => _i5.getProperty(
+      _self,
+      'UndoManager',
+    );
 
 extension UndoManager$Typings on UndoManager {
   /// This read-only property returns an iterator for all of the Models that this UndoManager is handling.
@@ -8946,11 +8920,10 @@ class Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Tool')
-external _i2.Object _declaredTool;
+_i2.Object get _declaredTool => _i5.getProperty(
+      _self,
+      'Tool',
+    );
 
 extension Tool$Typings on Tool {
   /// This read-only property returns the Diagram that owns this tool and
@@ -9808,11 +9781,10 @@ class ToolManager implements _i3.Tool {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ToolManager')
-external _i2.Object _declaredToolManager;
+_i2.Object get _declaredToolManager => _i5.getProperty(
+      _self,
+      'ToolManager',
+    );
 
 extension ToolManager$Typings on ToolManager {
   /// Gets or sets the ToolManager's mouse wheel behavior. Allowed values are ToolManager.WheelScroll and
@@ -9853,11 +9825,11 @@ extension ToolManager$Typings on ToolManager {
   }
 
   /// This read-only property returns the currently showing tooltip, or null if there is none.
-  _i2.Object? get currentToolTip => _i5.getProperty(
+  _i2.dynamic get currentToolTip => _i5.getProperty(
         this,
         'currentToolTip',
       );
-  set currentToolTip(_i2.Object? value) {
+  set currentToolTip(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'currentToolTip',
@@ -10636,11 +10608,10 @@ class DraggingTool implements _i3.Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('DraggingTool')
-external _i2.Object _declaredDraggingTool;
+_i2.Object get _declaredDraggingTool => _i5.getProperty(
+      _self,
+      'DraggingTool',
+    );
 
 extension DraggingTool$Typings on DraggingTool {
   /// Gets or sets whether for any internal copying operation is permitted by control-drag-and-drop.
@@ -11268,7 +11239,7 @@ extension DraggingTool$Typings on DraggingTool {
   ///  @param {Diagram} overdiag the diagram attached to the target of the mouse move event, if any.
   ///  @return {boolean}
   _i2.bool simulatedMouseMove(
-    _i2.Object? e,
+    _i2.dynamic e,
     _i3.Point modelpt, [
     _i3.Diagram? overdiag,
   ]) =>
@@ -11289,7 +11260,7 @@ extension DraggingTool$Typings on DraggingTool {
   ///  @param {Diagram} curdiag
   ///  @return {boolean}
   _i2.bool simulatedMouseUp(
-    _i2.Object? e,
+    _i2.dynamic e,
     _i3.Point modelpt, [
     _i3.Diagram? curdiag,
   ]) =>
@@ -11388,11 +11359,10 @@ class LinkingBaseTool implements _i3.Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LinkingBaseTool')
-external _i2.Object _declaredLinkingBaseTool;
+_i2.Object get _declaredLinkingBaseTool => _i5.getProperty(
+      _self,
+      'LinkingBaseTool',
+    );
 
 extension LinkingBaseTool$Typings on LinkingBaseTool {
   /// Gets or sets the distance at which link snapping occurs.
@@ -12048,11 +12018,10 @@ class LinkingTool implements _i3.LinkingBaseTool {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LinkingTool')
-external _i2.Object _declaredLinkingTool;
+_i2.Object get _declaredLinkingTool => _i5.getProperty(
+      _self,
+      'LinkingTool',
+    );
 
 extension LinkingTool$Typings on LinkingTool {
   /// Gets or sets a data object that is copied by #insertLink
@@ -12343,11 +12312,10 @@ class RelinkingTool implements _i3.LinkingBaseTool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('RelinkingTool')
-external _i2.Object _declaredRelinkingTool;
+_i2.Object get _declaredRelinkingTool => _i5.getProperty(
+      _self,
+      'RelinkingTool',
+    );
 
 extension RelinkingTool$Typings on RelinkingTool {
   /// Gets or sets a small GraphObject that is copied as a relinking handle for the selected link path
@@ -12675,11 +12643,10 @@ class LinkReshapingTool implements _i3.Tool {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LinkReshapingTool')
-external _i2.Object _declaredLinkReshapingTool;
+_i2.Object get _declaredLinkReshapingTool => _i5.getProperty(
+      _self,
+      'LinkReshapingTool',
+    );
 
 extension LinkReshapingTool$Typings on LinkReshapingTool {
   /// Gets or sets a small GraphObject that is copied as a reshape handle at each movable point in the selected link's route.
@@ -13056,11 +13023,10 @@ class ResizingTool implements _i3.Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ResizingTool')
-external _i2.Object _declaredResizingTool;
+_i2.Object get _declaredResizingTool => _i5.getProperty(
+      _self,
+      'ResizingTool',
+    );
 
 extension ResizingTool$Typings on ResizingTool {
   /// Gets or sets a small GraphObject that is copied as a resizing handle for the selected part.
@@ -13589,11 +13555,10 @@ class RotatingTool implements _i3.Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('RotatingTool')
-external _i2.Object _declaredRotatingTool;
+_i2.Object get _declaredRotatingTool => _i5.getProperty(
+      _self,
+      'RotatingTool',
+    );
 
 extension RotatingTool$Typings on RotatingTool {
   /// Gets or sets a small GraphObject that is copied as a rotation handle for the selected part.
@@ -13952,11 +13917,10 @@ class ClickSelectingTool implements _i3.Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ClickSelectingTool')
-external _i2.Object _declaredClickSelectingTool;
+_i2.Object get _declaredClickSelectingTool => _i5.getProperty(
+      _self,
+      'ClickSelectingTool',
+    );
 
 extension ClickSelectingTool$Typings on ClickSelectingTool {
   /// This tool can run whenever a click occurs.
@@ -14008,11 +13972,10 @@ class ActionTool implements _i3.Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ActionTool')
-external _i2.Object _declaredActionTool;
+_i2.Object get _declaredActionTool => _i5.getProperty(
+      _self,
+      'ActionTool',
+    );
 
 extension ActionTool$Typings on ActionTool {
   /// This tool can run when there is a mouse-down on an object with GraphObject#isActionable true
@@ -14091,11 +14054,10 @@ class ClickCreatingTool implements _i3.Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ClickCreatingTool')
-external _i2.Object _declaredClickCreatingTool;
+_i2.Object get _declaredClickCreatingTool => _i5.getProperty(
+      _self,
+      'ClickCreatingTool',
+    );
 
 extension ClickCreatingTool$Typings on ClickCreatingTool {
   /// Gets or sets a data object that will be copied and added to the diagram's model each time this tool executes.
@@ -14232,11 +14194,10 @@ class DragSelectingTool implements _i3.Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('DragSelectingTool')
-external _i2.Object _declaredDragSelectingTool;
+_i2.Object get _declaredDragSelectingTool => _i5.getProperty(
+      _self,
+      'DragSelectingTool',
+    );
 
 extension DragSelectingTool$Typings on DragSelectingTool {
   /// Gets or sets the time in milliseconds for which the mouse must be stationary
@@ -14418,11 +14379,10 @@ class PanningTool implements _i3.Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('PanningTool')
-external _i2.Object _declaredPanningTool;
+_i2.Object get _declaredPanningTool => _i5.getProperty(
+      _self,
+      'PanningTool',
+    );
 
 extension PanningTool$Typings on PanningTool {
   /// Gets or sets whether panning actions will allow
@@ -14589,11 +14549,10 @@ class HTMLInfo {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('HTMLInfo')
-external _i2.Object _declaredHTMLInfo;
+_i2.Object get _declaredHTMLInfo => _i5.getProperty(
+      _self,
+      'HTMLInfo',
+    );
 
 extension HTMLInfo$Typings on HTMLInfo {
   /// Gets or sets the primary HTML Element that represents this HTMLInfo.
@@ -14686,11 +14645,11 @@ extension HTMLInfo$Typings on HTMLInfo {
   /// such as the string value of a text editor, which would be solicited by the TextEditingTool.
   ///
   /// This typically returns a string.
-  _i2.Object? Function()? get valueFunction => _i5.getProperty(
+  _i2.dynamic Function()? get valueFunction => _i5.getProperty(
         this,
         'valueFunction',
       );
-  set valueFunction(_i2.Object? Function()? value) {
+  set valueFunction(_i2.dynamic Function()? value) {
     _i5.setProperty(
       this,
       'valueFunction',
@@ -14734,21 +14693,20 @@ class ContextMenuTool implements _i3.Tool {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ContextMenuTool')
-external _i2.Object _declaredContextMenuTool;
+_i2.Object get _declaredContextMenuTool => _i5.getProperty(
+      _self,
+      'ContextMenuTool',
+    );
 
 extension ContextMenuTool$Typings on ContextMenuTool {
   /// Gets or sets the currently showing context menu, or null if there is none.
   /// This is typically only set in #showContextMenu and not by the user.
   /// It is also typically set to null in #hideContextMenu.
-  _i2.Object? get currentContextMenu => _i5.getProperty(
+  _i2.dynamic get currentContextMenu => _i5.getProperty(
         this,
         'currentContextMenu',
       );
-  set currentContextMenu(_i2.Object? value) {
+  set currentContextMenu(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'currentContextMenu',
@@ -14762,11 +14720,11 @@ extension ContextMenuTool$Typings on ContextMenuTool {
   /// You can disable this functionality by setting this property to null.
   ///
   /// By default shows a set of HTML elements acting as a context menu.
-  _i2.Object? get defaultTouchContextMenu => _i5.getProperty(
+  _i2.dynamic get defaultTouchContextMenu => _i5.getProperty(
         this,
         'defaultTouchContextMenu',
       );
-  set defaultTouchContextMenu(_i2.Object? value) {
+  set defaultTouchContextMenu(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'defaultTouchContextMenu',
@@ -14830,7 +14788,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
   ///  If null, the Diagram will be used. If no argument is specified, this method will look for an object at the current mouse point.
   ///  @return {GraphObject|Diagram|null} something with a `contextMenu`,
   ///  or null if nothing can be found with a context menu at the current mouse point.
-  _i2.Object? findObjectWithContextMenu([_i2.Object? obj]) => _i5.callMethod(
+  _i2.dynamic findObjectWithContextMenu([_i2.Object? obj]) => _i5.callMethod(
         this,
         'findObjectWithContextMenu',
         [obj ?? _i7.undefined],
@@ -15225,11 +15183,10 @@ class TextEditingTool implements _i3.Tool {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TextEditingTool')
-external _i2.Object _declaredTextEditingTool;
+_i2.Object get _declaredTextEditingTool => _i5.getProperty(
+      _self,
+      'TextEditingTool',
+    );
 
 extension TextEditingTool$Typings on TextEditingTool {
   /// Gets or sets the TextBlock that is being edited.
@@ -15654,8 +15611,8 @@ class AnimationManager {
     _i2.String effectName,
     void Function(
       _i2.Object,
-      _i2.Object?,
-      _i2.Object?,
+      _i2.dynamic,
+      _i2.dynamic,
       _i3.EasingFunction,
       _i2.num,
       _i2.num,
@@ -15673,11 +15630,10 @@ class AnimationManager {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('AnimationManager')
-external _i2.Object _declaredAnimationManager;
+_i2.Object get _declaredAnimationManager => _i5.getProperty(
+      _self,
+      'AnimationManager',
+    );
 
 extension AnimationManager$Typings on AnimationManager {
   /// Gets or sets whether this AnimationManager operates.
@@ -16028,11 +15984,10 @@ class Animation {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Animation')
-external _i2.Object _declaredAnimation;
+_i2.Object get _declaredAnimation => _i5.getProperty(
+      _self,
+      'Animation',
+    );
 
 extension Animation$Typings on Animation {
   /// Gets or sets the duration for animations, in milliseconds.
@@ -16260,8 +16215,8 @@ extension Animation$Typings on Animation {
   _i3.Animation add(
     _i2.Object obj,
     _i2.String effectName,
-    _i2.Object? startValue,
-    _i2.Object? endValue, [
+    _i2.dynamic startValue,
+    _i2.dynamic endValue, [
     _i2.bool? cosmetic,
   ]) =>
       _i5.callMethod(
@@ -16550,11 +16505,10 @@ class AnimationTrigger {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('AnimationTrigger')
-external _i2.Object _declaredAnimationTrigger;
+_i2.Object get _declaredAnimationTrigger => _i5.getProperty(
+      _self,
+      'AnimationTrigger',
+    );
 
 extension AnimationTrigger$Typings on AnimationTrigger {
   /// Gets or sets the name of the property to animate on the target GraphObject.
@@ -16608,11 +16562,11 @@ extension AnimationTrigger$Typings on AnimationTrigger {
   /// * **duration**: a `number`, corresponding to Animation#duration.
   /// * **finished**: a `Function`, corresponding to Animation#finished.
   /// * **easing**: an `EasingFunction`, corresponding to Animation#easing.
-  _i2.Object? get animationSettings => _i5.getProperty(
+  _i2.dynamic get animationSettings => _i5.getProperty(
         this,
         'animationSettings',
       );
-  set animationSettings(_i2.Object? value) {
+  set animationSettings(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'animationSettings',
@@ -16694,11 +16648,10 @@ class Layer {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Layer')
-external _i2.Object _declaredLayer;
+_i2.Object get _declaredLayer => _i5.getProperty(
+      _self,
+      'Layer',
+    );
 
 extension Layer$Typings on Layer {
   /// This read-only property returns an iterator for this Layer's Parts.
@@ -17161,77 +17114,6 @@ extension Layer$Typings on Layer {
       );
 }
 
-enum DiagramInitStrings<T$ extends _i2.Object?> {
-  gridVisible<_i2.bool>(r'grid.visible'),
-  gridGridCellSize<_i3.Size>(r'grid.gridCellSize'),
-  gridGridOrigin<_i3.Point>(r'grid.gridOrigin'),
-  toolManagerMouseWheelBehavior<_i3.EnumValue>(
-      r'toolManager.mouseWheelBehavior'),
-  toolManagerGestureBehavior<_i3.EnumValue>(r'toolManager.gestureBehavior'),
-  toolManagerCurrentToolTip<_i2.Object?>(r'toolManager.currentToolTip'),
-  toolManagerHoverDelay<_i2.num>(r'toolManager.hoverDelay'),
-  toolManagerHoldDelay<_i2.num>(r'toolManager.holdDelay'),
-  toolManagerDragSize<_i3.Size>(r'toolManager.dragSize'),
-  toolManagerToolTipDuration<_i2.num>(r'toolManager.toolTipDuration'),
-  commandHandlerCopiesClipboardData<_i2.bool>(
-      r'commandHandler.copiesClipboardData'),
-  commandHandlerCopiesConnectedLinks<_i2.bool>(
-      r'commandHandler.copiesConnectedLinks'),
-  commandHandlerDeletesConnectedLinks<_i2.bool>(
-      r'commandHandler.deletesConnectedLinks'),
-  commandHandlerCopiesTree<_i2.bool>(r'commandHandler.copiesTree'),
-  commandHandlerDeletesTree<_i2.bool>(r'commandHandler.deletesTree'),
-  commandHandlerCopiesParentKey<_i2.bool>(r'commandHandler.copiesParentKey'),
-  commandHandlerCopiesGroupKey<_i2.bool>(r'commandHandler.copiesGroupKey'),
-  commandHandlerArchetypeGroupData<_i2.Object>(
-      r'commandHandler.archetypeGroupData'),
-  commandHandlerMemberValidation<
-      _i2.bool Function(
-        _i3.Group,
-        _i3.Part,
-      )?>(r'commandHandler.memberValidation'),
-  commandHandlerDefaultScale<_i2.num>(r'commandHandler.defaultScale'),
-  commandHandlerZoomFactor<_i2.num>(r'commandHandler.zoomFactor'),
-  commandHandlerIsZoomToFitRestoreEnabled<_i2.bool>(
-      r'commandHandler.isZoomToFitRestoreEnabled'),
-  commandHandlerScrollToPartPause<_i2.num>(r'commandHandler.scrollToPartPause'),
-  animationManagerIsEnabled<_i2.bool>(r'animationManager.isEnabled'),
-  animationManagerDuration<_i2.num>(r'animationManager.duration'),
-  animationManagerIsInitial<_i2.bool>(r'animationManager.isInitial'),
-  animationManagerInitialAnimationStyle<_i3.EnumValue>(
-      r'animationManager.initialAnimationStyle'),
-  draggingToolIsCopyEnabled<_i2.bool>(r'draggingTool.isCopyEnabled'),
-  draggingToolCopiesEffectiveCollection<_i2.bool>(
-      r'draggingTool.copiesEffectiveCollection'),
-  draggingToolDragOptions<_i3.DraggingOptions>(r'draggingTool.dragOptions'),
-  draggingToolIsGridSnapEnabled<_i2.bool>(r'draggingTool.isGridSnapEnabled'),
-  draggingToolIsComplexRoutingRealtime<_i2.bool>(
-      r'draggingTool.isComplexRoutingRealtime'),
-  draggingToolIsGridSnapRealtime<_i2.bool>(r'draggingTool.isGridSnapRealtime'),
-  draggingToolGridSnapCellSize<_i3.Size>(r'draggingTool.gridSnapCellSize'),
-  draggingToolGridSnapCellSpot<_i3.Spot>(r'draggingTool.gridSnapCellSpot'),
-  draggingToolGridSnapOrigin<_i3.Point>(r'draggingTool.gridSnapOrigin'),
-  draggingToolDragsLink<_i2.bool>(r'draggingTool.dragsLink'),
-  draggingToolDragsTree<_i2.bool>(r'draggingTool.dragsTree'),
-  draggingToolCopyCursor<_i2.String>(r'draggingTool.copyCursor'),
-  draggingToolMoveCursor<_i2.String>(r'draggingTool.moveCursor'),
-  draggingToolNodropCursor<_i2.String>(r'draggingTool.nodropCursor'),
-  draggingToolCurrentPart<_i3.Part?>(r'draggingTool.currentPart'),
-  draggingToolCopiedParts<_i3.Map<_i3.Part, _i3.DraggingInfo>?>(
-      r'draggingTool.copiedParts'),
-  draggingToolDraggedParts<_i3.Map<_i3.Part, _i3.DraggingInfo>?>(
-      r'draggingTool.draggedParts'),
-  draggingToolDraggedLink<_i3.Link>(r'draggingTool.draggedLink'),
-  draggingToolIsDragOutStarted<_i2.bool>(r'draggingTool.isDragOutStarted'),
-  draggingToolStartPoint<_i3.Point>(r'draggingTool.startPoint'),
-  draggingToolDelay<_i2.num>(r'draggingTool.delay'),
-  undoManagerIsEnabled<_i2.bool>(r'undoManager.isEnabled');
-
-  const DiagramInitStrings(this.value);
-
-  final _i2.String value;
-}
-
 /// A Diagram is associated with an HTML DIV element. Constructing a Diagram creates
 /// an HTML Canvas element which it places inside of the given DIV element, in addition to several helper DIVs.
 /// **GoJS** will manage the contents of this DIV -- you should not modify the contents of the DIV,
@@ -17692,11 +17574,10 @@ class Diagram {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Diagram')
-external _i2.Object _declaredDiagram;
+_i2.Object get _declaredDiagram => _i5.getProperty(
+      _self,
+      'Diagram',
+    );
 
 extension Diagram$Typings on Diagram {
   /// Gets or sets the rendering context type. Values are `'default'`, which uses the HTML Canvas,
@@ -18642,11 +18523,11 @@ extension Diagram$Typings on Diagram {
   ///        "This diagram lets you control the world.")
   ///    );
   /// ```
-  _i2.Object? get toolTip => _i5.getProperty(
+  _i2.dynamic get toolTip => _i5.getProperty(
         this,
         'toolTip',
       );
-  set toolTip(_i2.Object? value) {
+  set toolTip(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'toolTip',
@@ -18672,11 +18553,11 @@ extension Diagram$Typings on Diagram {
   ///        new go.Binding("visible", "", o => o.diagram.commandHandler.canRedo()).ofObject())
   ///    );
   /// ```
-  _i2.Object? get contextMenu => _i5.getProperty(
+  _i2.dynamic get contextMenu => _i5.getProperty(
         this,
         'contextMenu',
       );
-  set contextMenu(_i2.Object? value) {
+  set contextMenu(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'contextMenu',
@@ -19866,7 +19747,7 @@ extension Diagram$Typings on Diagram {
   void addEventListener(
     _i6.EventTarget domElement,
     _i2.String name,
-    _i2.Object? listener,
+    _i2.dynamic listener,
     _i2.bool capture,
   ) {
     _i5.callMethod(
@@ -19886,7 +19767,7 @@ extension Diagram$Typings on Diagram {
   void removeEventListener(
     _i6.EventTarget domElement,
     _i2.String name,
-    _i2.Object? listener,
+    _i2.dynamic listener,
     _i2.bool capture,
   ) {
     _i5.callMethod(
@@ -20444,7 +20325,7 @@ extension Diagram$Typings on Diagram {
   ///  Get value of a given rendering hint.
   ///  @param {string} name
   ///  @return {*}
-  _i2.Object? getRenderingHint(_i2.String name) => _i5.callMethod(
+  _i2.dynamic getRenderingHint(_i2.String name) => _i5.callMethod(
         this,
         'getRenderingHint',
         [name],
@@ -20456,7 +20337,7 @@ extension Diagram$Typings on Diagram {
   ///  @param {*} val
   void setRenderingHint(
     _i2.String name,
-    _i2.Object? val,
+    _i2.dynamic val,
   ) {
     _i5.callMethod(
       this,
@@ -20472,7 +20353,7 @@ extension Diagram$Typings on Diagram {
   ///  Get value of a given input option
   ///  @param {string} name
   ///  @return {*}
-  _i2.Object? getInputOption(_i2.String name) => _i5.callMethod(
+  _i2.dynamic getInputOption(_i2.String name) => _i5.callMethod(
         this,
         'getInputOption',
         [name],
@@ -20484,7 +20365,7 @@ extension Diagram$Typings on Diagram {
   ///  @param {*} val
   void setInputOption(
     _i2.String name,
-    _i2.Object? val,
+    _i2.dynamic val,
   ) {
     _i5.callMethod(
       this,
@@ -21351,7 +21232,7 @@ extension Diagram$Typings on Diagram {
   ///  @see #findLinksByExample
   ///  @since 1.5
   _i3.Iterator<_i3.Node> findNodesByExample(
-          [_i2.Iterable<_i2.Object?>? examples]) =>
+          [_i2.Iterable<_i2.dynamic>? examples]) =>
       _i5.callMethod(
         this,
         'findNodesByExample',
@@ -21368,7 +21249,7 @@ extension Diagram$Typings on Diagram {
   ///  @see #findNodesByExample
   ///  @since 1.5
   _i3.Iterator<_i3.Link> findLinksByExample(
-          [_i2.Iterable<_i2.Object?>? examples]) =>
+          [_i2.Iterable<_i2.dynamic>? examples]) =>
       _i5.callMethod(
         this,
         'findLinksByExample',
@@ -21484,7 +21365,7 @@ extension Diagram$Typings on Diagram {
   void raiseDiagramEvent(
     _i3.DiagramEventName name, [
     _i2.Object? obj,
-    _i2.Object? param,
+    _i2.dynamic param,
   ]) {
     _i5.callMethod(
       this,
@@ -21721,7 +21602,7 @@ extension Diagram$Typings on Diagram {
   ///
   ///  @return {ImageData|string|null} An ImageData, or a base64-encoded string describing an image, or an HTMLImageElement, or null if a callback is specified.
   ///  @see #makeImage
-  _i2.Object? makeImageData([_i3.ImageRendererOptions? options]) =>
+  _i2.dynamic makeImageData([_i3.ImageRendererOptions? options]) =>
       _i5.callMethod(
         this,
         'makeImageData',
@@ -21745,11 +21626,10 @@ class DraggingInfo {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('DraggingInfo')
-external _i2.Object _declaredDraggingInfo;
+_i2.Object get _declaredDraggingInfo => _i5.getProperty(
+      _self,
+      'DraggingInfo',
+    );
 
 extension DraggingInfo$Typings on DraggingInfo {
   /// Gets or sets the initial location for a dragged object.
@@ -21786,11 +21666,10 @@ class DraggingOptions {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('DraggingOptions')
-external _i2.Object _declaredDraggingOptions;
+_i2.Object get _declaredDraggingOptions => _i5.getProperty(
+      _self,
+      'DraggingOptions',
+    );
 
 extension DraggingOptions$Typings on DraggingOptions {
   /// Whether or not the dragged parts snap to the Diagram#grid.
@@ -21958,16 +21837,16 @@ extension DraggingOptions$Typings on DraggingOptions {
 @_i1.anonymous
 class DiagramRendererOptions {
   external factory DiagramRendererOptions._({
-    _i2.Object? size,
-    _i2.Object? scale,
-    _i2.Object? maxSize,
-    _i2.Object? position,
-    _i2.Object? parts,
-    _i2.Object? padding,
-    _i2.Object? background,
-    _i2.Object? showTemporary,
-    _i2.Object? showGrid,
-    _i2.Object? document,
+    _i2.dynamic size,
+    _i2.dynamic scale,
+    _i2.dynamic maxSize,
+    _i2.dynamic position,
+    _i2.dynamic parts,
+    _i2.dynamic padding,
+    _i2.dynamic background,
+    _i2.dynamic showTemporary,
+    _i2.dynamic showGrid,
+    _i2.dynamic document,
   });
 
   factory DiagramRendererOptions({
@@ -22124,17 +22003,17 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
 @_i1.anonymous
 class SvgRendererOptions implements _i3.DiagramRendererOptions {
   external factory SvgRendererOptions._({
-    _i2.Object? elementFinished,
-    _i2.Object? size,
-    _i2.Object? scale,
-    _i2.Object? maxSize,
-    _i2.Object? position,
-    _i2.Object? parts,
-    _i2.Object? padding,
-    _i2.Object? background,
-    _i2.Object? showTemporary,
-    _i2.Object? showGrid,
-    _i2.Object? document,
+    _i2.dynamic elementFinished,
+    _i2.dynamic size,
+    _i2.dynamic scale,
+    _i2.dynamic maxSize,
+    _i2.dynamic position,
+    _i2.dynamic parts,
+    _i2.dynamic padding,
+    _i2.dynamic background,
+    _i2.dynamic showTemporary,
+    _i2.dynamic showGrid,
+    _i2.dynamic document,
   });
 
   factory SvgRendererOptions({
@@ -22197,27 +22076,27 @@ extension SvgRendererOptions$Typings on SvgRendererOptions {
 @_i1.anonymous
 class ImageRendererOptions implements _i3.DiagramRendererOptions {
   external factory ImageRendererOptions._({
-    _i2.Object? type,
-    _i2.Object? returnType,
-    _i2.Object? callback,
-    _i2.Object? callbackTimeout,
-    _i2.Object? details,
-    _i2.Object? size,
-    _i2.Object? scale,
-    _i2.Object? maxSize,
-    _i2.Object? position,
-    _i2.Object? parts,
-    _i2.Object? padding,
-    _i2.Object? background,
-    _i2.Object? showTemporary,
-    _i2.Object? showGrid,
-    _i2.Object? document,
+    _i2.dynamic type,
+    _i2.dynamic returnType,
+    _i2.dynamic callback,
+    _i2.dynamic callbackTimeout,
+    _i2.dynamic details,
+    _i2.dynamic size,
+    _i2.dynamic scale,
+    _i2.dynamic maxSize,
+    _i2.dynamic position,
+    _i2.dynamic parts,
+    _i2.dynamic padding,
+    _i2.dynamic background,
+    _i2.dynamic showTemporary,
+    _i2.dynamic showGrid,
+    _i2.dynamic document,
   });
 
   factory ImageRendererOptions({
     _i2.String? type,
     _i2.String? returnType,
-    void Function(_i2.Object?)? callback,
+    void Function(_i2.dynamic)? callback,
     _i2.num? callbackTimeout,
     _i2.Object? details,
     _i3.Size? size,
@@ -22275,11 +22154,11 @@ extension ImageRendererOptions$Typings on ImageRendererOptions {
     );
   }
 
-  void Function(_i2.Object?)? get callback => _i5.getProperty(
+  void Function(_i2.dynamic)? get callback => _i5.getProperty(
         this,
         'callback',
       );
-  set callback(void Function(_i2.Object?)? value) {
+  set callback(void Function(_i2.dynamic)? value) {
     _i5.setProperty(
       this,
       'callback',
@@ -22350,11 +22229,10 @@ class Palette implements _i3.Diagram {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Palette')
-external _i2.Object _declaredPalette;
+_i2.Object get _declaredPalette => _i5.getProperty(
+      _self,
+      'Palette',
+    );
 
 /// An Overview is a Diagram that displays all of a different diagram,
 /// with a rectangular box showing the viewport displayed by that other diagram.
@@ -22406,11 +22284,10 @@ class Overview implements _i3.Diagram {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Overview')
-external _i2.Object _declaredOverview;
+_i2.Object get _declaredOverview => _i5.getProperty(
+      _self,
+      'Overview',
+    );
 
 extension Overview$Typings on Overview {
   /// Gets or sets the Diagram for which this Overview is
@@ -22554,11 +22431,10 @@ class CommandHandler {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CommandHandler')
-external _i2.Object _declaredCommandHandler;
+_i2.Object get _declaredCommandHandler => _i5.getProperty(
+      _self,
+      'CommandHandler',
+    );
 
 extension CommandHandler$Typings on CommandHandler {
   /// This read-only property returns the Diagram that is using this CommandHandler,
@@ -23967,11 +23843,11 @@ class GraphObject {
 
   /// GraphObjects with this enumeration as the value of GraphObject#stretch
   /// are scaled as much as possible in the y-axis. In another context, can be used as a value of PanelLayout, so type is "any".
-  static _i2.Object? get vertical => _i5.getProperty(
+  static _i2.dynamic get vertical => _i5.getProperty(
         _declaredGraphObject,
         'Vertical',
       );
-  static set vertical(_i2.Object? value) {
+  static set vertical(_i2.dynamic value) {
     _i5.setProperty(
       _declaredGraphObject,
       'Vertical',
@@ -23981,11 +23857,11 @@ class GraphObject {
 
   /// GraphObjects with this enumeration as the value of GraphObject#stretch
   /// are scaled as much as possible in the x-axis. In another context, can be used as a value of PanelLayout, so type is "any".
-  static _i2.Object? get horizontal => _i5.getProperty(
+  static _i2.dynamic get horizontal => _i5.getProperty(
         _declaredGraphObject,
         'Horizontal',
       );
-  static set horizontal(_i2.Object? value) {
+  static set horizontal(_i2.dynamic value) {
     _i5.setProperty(
       _declaredGraphObject,
       'Horizontal',
@@ -24099,7 +23975,7 @@ class GraphObject {
   static T build<T extends _i3.GraphObject>(
     _i2.String name, [
     _i4.Partial<T>? config,
-    _i2.Iterable<_i2.Object?>? args,
+    _i2.Iterable<_i2.dynamic>? args,
   ]) =>
       _i5.callMethod(
         _declaredGraphObject,
@@ -24236,7 +24112,7 @@ class GraphObject {
   /// for usage information and examples of GraphObject.make.
   static T _make$1<T extends _i3.Adornment>(
     _i3.Make cls, [
-    _i2.Iterable<_i2.Object?>? initializers,
+    _i2.Iterable<_i2.dynamic>? initializers,
   ]) =>
       _i5.callMethod(
         _declaredGraphObject,
@@ -24372,7 +24248,7 @@ class GraphObject {
   /// for usage information and examples of GraphObject.make.
   static T _make$2<T extends _i3.Panel>(
     _i3.MakeOptions cls, [
-    _i2.Iterable<_i2.Object?>? initializers,
+    _i2.Iterable<_i2.dynamic>? initializers,
   ]) =>
       _i5.callMethod(
         _declaredGraphObject,
@@ -24508,7 +24384,7 @@ class GraphObject {
   /// for usage information and examples of GraphObject.make.
   static T _make$3<T extends _i3.GraphObject>(
     _i2.String cls, [
-    _i2.Iterable<_i2.Object?>? initializers,
+    _i2.Iterable<_i2.dynamic>? initializers,
   ]) =>
       _i5.callMethod(
         _declaredGraphObject,
@@ -24644,7 +24520,7 @@ class GraphObject {
   /// for usage information and examples of GraphObject.make.
   static _i4.InstanceType<CT> _make$4<CT extends _i3.ConstructorType<CT>>(
     CT cls, [
-    _i2.Iterable<_i2.Object?>? initializers,
+    _i2.Iterable<_i2.dynamic>? initializers,
   ]) =>
       _i5.callMethod(
         _declaredGraphObject,
@@ -24782,7 +24658,7 @@ class GraphObject {
     /// for usage information and examples of GraphObject.make.
     T Function<T extends _i3.Adornment>(
       _i3.Make cls, [
-      _i2.Iterable<_i2.Object?>? initializers,
+      _i2.Iterable<_i2.dynamic>? initializers,
     ]) $1,
 
     /// This static function builds an object given its class and additional arguments
@@ -24910,7 +24786,7 @@ class GraphObject {
     /// for usage information and examples of GraphObject.make.
     T Function<T extends _i3.Panel>(
       _i3.MakeOptions cls, [
-      _i2.Iterable<_i2.Object?>? initializers,
+      _i2.Iterable<_i2.dynamic>? initializers,
     ]) $2,
 
     /// This static function builds an object given its class and additional arguments
@@ -25038,7 +24914,7 @@ class GraphObject {
     /// for usage information and examples of GraphObject.make.
     T Function<T extends _i3.GraphObject>(
       _i2.String cls, [
-      _i2.Iterable<_i2.Object?>? initializers,
+      _i2.Iterable<_i2.dynamic>? initializers,
     ]) $3,
 
     /// This static function builds an object given its class and additional arguments
@@ -25166,7 +25042,7 @@ class GraphObject {
     /// for usage information and examples of GraphObject.make.
     _i4.InstanceType<CT> Function<CT extends _i3.ConstructorType<CT>>(
       CT cls, [
-      _i2.Iterable<_i2.Object?>? initializers,
+      _i2.Iterable<_i2.dynamic>? initializers,
     ]) $4,
   }) get make => (
         $1: _make$1,
@@ -25190,7 +25066,7 @@ class GraphObject {
   /// in the Extensions directory.
   static void defineBuilder(
     _i2.String name,
-    _i2.Object Function(_i4.Array<_i2.Object?>) func,
+    _i2.Object Function(_i4.Array<_i2.dynamic>) func,
   ) {
     _i5.callMethod(
       _declaredGraphObject,
@@ -25206,10 +25082,10 @@ class GraphObject {
   /// to a GraphObject.defineBuilder function by GraphObject.make.
   /// By default this requires the first argument to be a string,
   /// but you can provide a predicate to determine whether the argument is suitable.
-  static _i2.Object? takeBuilderArgument(
-    _i4.Array<_i2.Object?> args, [
-    _i2.Object? defval,
-    _i2.bool Function(_i2.Object?)? pred,
+  static _i2.dynamic takeBuilderArgument(
+    _i4.Array<_i2.dynamic> args, [
+    _i2.dynamic defval,
+    _i2.bool Function(_i2.dynamic)? pred,
   ]) =>
       _i5.callMethod(
         _declaredGraphObject,
@@ -25222,11 +25098,10 @@ class GraphObject {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('GraphObject')
-external _i2.Object _declaredGraphObject;
+_i2.Object get _declaredGraphObject => _i5.getProperty(
+      _self,
+      'GraphObject',
+    );
 
 extension GraphObject$Typings on GraphObject {
   /// Gets or sets whether or not this GraphObject will be shadowed inside a Part that has Part#isShadowed set to true.
@@ -27178,11 +27053,11 @@ extension GraphObject$Typings on GraphObject {
   /// Replacing this value will not modify or remove any existing tooltip that is being shown for this object.
   ///
   /// Read more about tooltips at <a href="../../intro/toolTips.html">ToolTips</a>.
-  _i2.Object? get toolTip => _i5.getProperty(
+  _i2.dynamic get toolTip => _i5.getProperty(
         this,
         'toolTip',
       );
-  set toolTip(_i2.Object? value) {
+  set toolTip(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'toolTip',
@@ -27239,11 +27114,11 @@ extension GraphObject$Typings on GraphObject {
   /// Replacing this value will not modify or remove any existing context menu that is being shown for this object.
   ///
   /// Read more about context menus at <a href="../../intro/contextMenus.html">Context Menus</a>.
-  _i2.Object? get contextMenu => _i5.getProperty(
+  _i2.dynamic get contextMenu => _i5.getProperty(
         this,
         'contextMenu',
       );
-  set contextMenu(_i2.Object? value) {
+  set contextMenu(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'contextMenu',
@@ -27659,7 +27534,7 @@ extension GraphObject$Typings on GraphObject {
   ///  @return {GraphObject} this GraphObject
   ///  @see #setProperties a synonym of this method
   ///  @see #set a type-safe method to set a collection of properties
-  _i3.GraphObject attach(_i2.Object? config) => _i5.callMethod(
+  _i3.GraphObject attach(_i2.dynamic config) => _i5.callMethod(
         this,
         'attach',
         [config],
@@ -27778,11 +27653,10 @@ class SGradient {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('SGradient')
-external _i2.Object _declaredSGradient;
+_i2.Object get _declaredSGradient => _i5.getProperty(
+      _self,
+      'SGradient',
+    );
 
 /// A Brush holds color information and describes how to draw the inside
 /// of a Shape or the stroke of a shape or a TextBlock or the
@@ -27995,11 +27869,10 @@ class Brush {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Brush')
-external _i2.Object _declaredBrush;
+_i2.Object get _declaredBrush => _i5.getProperty(
+      _self,
+      'Brush',
+    );
 
 extension Brush$Typings on Brush {
   /// Gets or sets the type of brush.
@@ -28248,11 +28121,10 @@ class PanelLayout {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('PanelLayout')
-external _i2.Object _declaredPanelLayout;
+_i2.Object get _declaredPanelLayout => _i5.getProperty(
+      _self,
+      'PanelLayout',
+    );
 
 extension PanelLayout$Typings on PanelLayout {
   /// Gets or sets the name of this instance of a particular panel layout.
@@ -28845,11 +28717,10 @@ class Panel implements _i3.GraphObject {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Panel')
-external _i2.Object _declaredPanel;
+_i2.Object get _declaredPanel => _i5.getProperty(
+      _self,
+      'Panel',
+    );
 
 extension Panel$Typings on Panel {
   /// Gets or sets the type of the Panel, which controls how the Panel's elements are measured and arranged.
@@ -29193,11 +29064,11 @@ extension Panel$Typings on Panel {
   }
 
   /// Undocumented state for PanelLayouts
-  _i2.Object? get panelLayoutState => _i5.getProperty(
+  _i2.dynamic get panelLayoutState => _i5.getProperty(
         this,
         'panelLayoutState',
       );
-  set panelLayoutState(_i2.Object? value) {
+  set panelLayoutState(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'panelLayoutState',
@@ -29316,11 +29187,11 @@ extension Panel$Typings on Panel {
   /// Call the appropriate Model method for changing properties that affect the structure of the diagram.
   /// Call Model#setDataProperty for changing other properties that may be the sources
   /// of Bindings on GraphObject properties that are in the visual tree of this panel/part.
-  _i2.Object? get data => _i5.getProperty(
+  _i2.dynamic get data => _i5.getProperty(
         this,
         'data',
       );
-  set data(_i2.Object? value) {
+  set data(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'data',
@@ -29399,11 +29270,11 @@ extension Panel$Typings on Panel {
   /// An item Array may be shared by multiple Panels.
   ///
   /// Item Arrays should not be used with Grid Panels or Graduated Panels as they may not have nested Panels.
-  _i4.Array<_i2.Object?>? get itemArray => _i5.getProperty(
+  _i4.Array<_i2.dynamic>? get itemArray => _i5.getProperty(
         this,
         'itemArray',
       );
-  set itemArray(_i4.Array<_i2.Object?>? value) {
+  set itemArray(_i4.Array<_i2.dynamic>? value) {
     _i5.setProperty(
       this,
       'itemArray',
@@ -29591,7 +29462,7 @@ extension Panel$Typings on Panel {
   ///  You cannot add a GraphObject to a Panel if that GraphObject is already in a different Panel.
   ///  @return {Panel} this Panel
   ///  @param {...GraphObject} elements Any number of GraphObjects.
-  _i3.Panel add([_i2.Iterable<_i2.Object?>? elements]) => _i5.callMethod(
+  _i3.Panel add([_i2.Iterable<_i2.dynamic>? elements]) => _i5.callMethod(
         this,
         'add',
         [...?elements],
@@ -30018,11 +29889,10 @@ class RowColumnDefinition {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('RowColumnDefinition')
-external _i2.Object _declaredRowColumnDefinition;
+_i2.Object get _declaredRowColumnDefinition => _i5.getProperty(
+      _self,
+      'RowColumnDefinition',
+    );
 
 extension RowColumnDefinition$Typings on RowColumnDefinition {
   /// This read-only property returns the Panel that this row or column definition is in.
@@ -30684,11 +30554,10 @@ class Shape implements _i3.GraphObject {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Shape')
-external _i2.Object _declaredShape;
+_i2.Object get _declaredShape => _i5.getProperty(
+      _self,
+      'Shape',
+    );
 
 extension Shape$Typings on Shape {
   /// Gets or sets the Shape's Geometry that defines the Shape's figure.
@@ -31458,11 +31327,10 @@ class TextBlock implements _i3.GraphObject {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TextBlock')
-external _i2.Object _declaredTextBlock;
+_i2.Object get _declaredTextBlock => _i5.getProperty(
+      _self,
+      'TextBlock',
+    );
 
 extension TextBlock$Typings on TextBlock {
   /// Gets or sets the current font settings.
@@ -32110,11 +31978,10 @@ class Picture implements _i3.GraphObject {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Picture')
-external _i2.Object _declaredPicture;
+_i2.Object get _declaredPicture => _i5.getProperty(
+      _self,
+      'Picture',
+    );
 
 extension Picture$Typings on Picture {
   /// Gets or sets the Picture's HTML element that provides some kind of visual image.
@@ -32692,11 +32559,10 @@ class Part implements _i3.Panel {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Part')
-external _i2.Object _declaredPart;
+_i2.Object get _declaredPart => _i5.getProperty(
+      _self,
+      'Part',
+    );
 
 extension Part$Typings on Part {
   /// This read-only property returns the Part's Model data key if it is in a Diagram and is backed by Model data.
@@ -34283,11 +34149,10 @@ class Adornment implements _i3.Part {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Adornment')
-external _i2.Object _declaredAdornment;
+_i2.Object get _declaredAdornment => _i5.getProperty(
+      _self,
+      'Adornment',
+    );
 
 extension Adornment$Typings on Adornment {
   /// This read-only property returns a Placeholder that this Adornment may contain in its visual tree.
@@ -34591,11 +34456,10 @@ class Node implements _i3.Part {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Node')
-external _i2.Object _declaredNode;
+_i2.Object get _declaredNode => _i5.getProperty(
+      _self,
+      'Node',
+    );
 
 extension Node$Typings on Node {
   /// Gets or sets how link points are computed when the port spot is a "side" spot.
@@ -35483,11 +35347,10 @@ class Group implements _i3.Node {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Group')
-external _i2.Object _declaredGroup;
+_i2.Object get _declaredGroup => _i5.getProperty(
+      _self,
+      'Group',
+    );
 
 extension Group$Typings on Group {
   /// This read-only property returns a Placeholder that this group may contain in its visual tree.
@@ -35938,11 +35801,10 @@ class Placeholder implements _i3.GraphObject {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Placeholder')
-external _i2.Object _declaredPlaceholder;
+_i2.Object get _declaredPlaceholder => _i5.getProperty(
+      _self,
+      'Placeholder',
+    );
 
 extension Placeholder$Typings on Placeholder {
   /// Gets or sets the padding around the members of the Group or around the Adornment#adornedObject GraphObject.
@@ -36409,11 +36271,10 @@ class Link implements _i3.Part {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Link')
-external _i2.Object _declaredLink;
+_i2.Object get _declaredLink => _i5.getProperty(
+      _self,
+      'Link',
+    );
 
 extension Link$Typings on Link {
   /// Gets or sets the Node that this link comes from.
@@ -37964,11 +37825,10 @@ class Layout {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Layout')
-external _i2.Object _declaredLayout;
+_i2.Object get _declaredLayout => _i5.getProperty(
+      _self,
+      'Layout',
+    );
 
 extension Layout$Typings on Layout {
   /// Gets the Diagram that owns this layout, if it is the value of Diagram#layout.
@@ -38441,11 +38301,10 @@ class LayoutNetwork {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LayoutNetwork')
-external _i2.Object _declaredLayoutNetwork;
+_i2.Object get _declaredLayoutNetwork => _i5.getProperty(
+      _self,
+      'LayoutNetwork',
+    );
 
 extension LayoutNetwork$Typings on LayoutNetwork {
   /// Gets the Layout that uses this network
@@ -38785,11 +38644,10 @@ class LayoutVertex {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LayoutVertex')
-external _i2.Object _declaredLayoutVertex;
+_i2.Object get _declaredLayoutVertex => _i5.getProperty(
+      _self,
+      'LayoutVertex',
+    );
 
 extension LayoutVertex$Typings on LayoutVertex {
   /// (undocumented)
@@ -39206,11 +39064,10 @@ class LayoutEdge {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LayoutEdge')
-external _i2.Object _declaredLayoutEdge;
+_i2.Object get _declaredLayoutEdge => _i5.getProperty(
+      _self,
+      'LayoutEdge',
+    );
 
 extension LayoutEdge$Typings on LayoutEdge {
   /// Gets the LayoutNetwork that owns this edge.
@@ -39456,11 +39313,10 @@ class GridLayout implements _i3.Layout {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('GridLayout')
-external _i2.Object _declaredGridLayout;
+_i2.Object get _declaredGridLayout => _i5.getProperty(
+      _self,
+      'GridLayout',
+    );
 
 extension GridLayout$Typings on GridLayout {
   /// Gets or sets the wrapping width.
@@ -39640,13 +39496,13 @@ extension GridLayout$Typings on GridLayout {
 @_i1.anonymous
 class IncrementalData {
   external factory IncrementalData._({
-    _i2.Object? modelData,
-    _i2.Object? insertedNodeKeys,
-    _i2.Object? modifiedNodeData,
-    _i2.Object? removedNodeKeys,
-    _i2.Object? insertedLinkKeys,
-    _i2.Object? modifiedLinkData,
-    _i2.Object? removedLinkKeys,
+    _i2.dynamic modelData,
+    _i2.dynamic insertedNodeKeys,
+    _i2.dynamic modifiedNodeData,
+    _i2.dynamic removedNodeKeys,
+    _i2.dynamic insertedLinkKeys,
+    _i2.dynamic modifiedLinkData,
+    _i2.dynamic removedLinkKeys,
   });
 
   factory IncrementalData({
@@ -39934,11 +39790,10 @@ class Model {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Model')
-external _i2.Object _declaredModel;
+_i2.Object get _declaredModel => _i5.getProperty(
+      _self,
+      'Model',
+    );
 
 extension Model$Typings on Model {
   /// Gets or sets the name of this model.
@@ -40419,7 +40274,7 @@ extension Model$Typings on Model {
   ///  @param {T} obj
   ///  @return {T}
   ///  @since 2.1
-  T cloneDeep<T extends _i2.Object?>(T obj) => _i5.callMethod(
+  T cloneDeep<T>(T obj) => _i5.callMethod(
         this,
         'cloneDeep',
         [obj],
@@ -40599,10 +40454,10 @@ extension Model$Typings on Model {
     _i3.EnumValue change,
     _i2.Object propertyname,
     _i2.Object obj,
-    _i2.Object? oldval,
-    _i2.Object? newval, [
-    _i2.Object? oldparam,
-    _i2.Object? newparam,
+    _i2.dynamic oldval,
+    _i2.dynamic newval, [
+    _i2.dynamic oldparam,
+    _i2.dynamic newparam,
   ]) {
     _i5.callMethod(
       this,
@@ -40633,10 +40488,10 @@ extension Model$Typings on Model {
   void raiseDataChanged(
     _i2.Object data,
     _i2.Object propertyname,
-    _i2.Object? oldval,
-    _i2.Object? newval, [
-    _i2.Object? oldparam,
-    _i2.Object? newparam,
+    _i2.dynamic oldval,
+    _i2.dynamic newval, [
+    _i2.dynamic oldparam,
+    _i2.dynamic newparam,
   ]) {
     _i5.callMethod(
       this,
@@ -41009,7 +40864,7 @@ extension Model$Typings on Model {
   void setDataProperty(
     _i2.Object data,
     _i2.String propname,
-    _i2.Object? val,
+    _i2.dynamic val,
   ) {
     _i5.callMethod(
       this,
@@ -41032,7 +40887,7 @@ extension Model$Typings on Model {
   void set(
     _i2.Object data,
     _i2.String propname,
-    _i2.Object? val,
+    _i2.dynamic val,
   ) {
     _i5.callMethod(
       this,
@@ -41076,8 +40931,8 @@ extension Model$Typings on Model {
   ///  @see #insertArrayItem
   ///  @since 1.1
   void addArrayItem(
-    _i4.Array<_i2.Object?> arr,
-    _i2.Object? val,
+    _i4.Array<_i2.dynamic> arr,
+    _i2.dynamic val,
   ) {
     _i5.callMethod(
       this,
@@ -41100,9 +40955,9 @@ extension Model$Typings on Model {
   ///  @param {*} val the new value to be inserted into the array.
   ///  @see #removeArrayItem
   void insertArrayItem(
-    _i4.Array<_i2.Object?> arr,
+    _i4.Array<_i2.dynamic> arr,
     _i2.num idx,
-    _i2.Object? val,
+    _i2.dynamic val,
   ) {
     _i5.callMethod(
       this,
@@ -41130,7 +40985,7 @@ extension Model$Typings on Model {
   ///    if not supplied it will remove the last item of the array.
   ///  @see #insertArrayItem
   void removeArrayItem(
-    _i4.Array<_i2.Object?> arr, [
+    _i4.Array<_i2.dynamic> arr, [
     _i2.num? idx,
   ]) {
     _i5.callMethod(
@@ -41478,7 +41333,7 @@ class Binding {
   /// If the bound data's "dataPropName" property is not present or has an unrecognized value,
   /// the Link#routing property gets the default value, Link.Normal.
   static _i3.EnumValue Function(_i2.String) parseEnum(
-    _i2.Object? ctor,
+    _i2.dynamic ctor,
     _i3.EnumValue defval,
   ) =>
       _i5.callMethod(
@@ -41493,18 +41348,17 @@ class Binding {
   /// This static function can be used to convert an object to a string,
   /// looking for commonly defined data properties, such as "text", "name", "key", or "id".
   /// If none are found, this just calls toString() on it.
-  static _i2.String toString$([_i2.Object? val]) => _i5.callMethod(
+  static _i2.String toString$([_i2.dynamic val]) => _i5.callMethod(
         _declaredBinding,
         'toString',
         [val ?? _i7.undefined],
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('Binding')
-external _i2.Object _declaredBinding;
+_i2.Object get _declaredBinding => _i5.getProperty(
+      _self,
+      'Binding',
+    );
 
 extension Binding$Typings on Binding {
   /// Gets or sets the name of the property to be set on the target GraphObject.
@@ -41854,11 +41708,10 @@ class GraphLinksModel implements _i3.Model {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('GraphLinksModel')
-external _i2.Object _declaredGraphLinksModel;
+_i2.Object get _declaredGraphLinksModel => _i5.getProperty(
+      _self,
+      'GraphLinksModel',
+    );
 
 extension GraphLinksModel$Typings on GraphLinksModel {
   /// Gets or sets a data object that will be copied and added to the model as a new node data each time there
@@ -42696,7 +42549,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
   void setDataProperty(
     _i2.Object data,
     _i2.String propname,
-    _i2.Object? val,
+    _i2.dynamic val,
   ) {
     _i5.callMethod(
       this,
@@ -42820,11 +42673,10 @@ class TreeModel implements _i3.Model {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TreeModel')
-external _i2.Object _declaredTreeModel;
+_i2.Object get _declaredTreeModel => _i5.getProperty(
+      _self,
+      'TreeModel',
+    );
 
 extension TreeModel$Typings on TreeModel {
   /// Gets or sets the name of the property on node data that specifies
@@ -42972,7 +42824,7 @@ extension TreeModel$Typings on TreeModel {
   void setDataProperty(
     _i2.Object data,
     _i2.String propname,
-    _i2.Object? val,
+    _i2.dynamic val,
   ) {
     _i5.callMethod(
       this,
@@ -43220,11 +43072,10 @@ class CircularLayout implements _i3.Layout {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CircularLayout')
-external _i2.Object _declaredCircularLayout;
+_i2.Object get _declaredCircularLayout => _i5.getProperty(
+      _self,
+      'CircularLayout',
+    );
 
 extension CircularLayout$Typings on CircularLayout {
   /// Gets or sets the horizontal radius of the elliptical arrangement.
@@ -43542,11 +43393,10 @@ class CircularNetwork implements _i3.LayoutNetwork {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CircularNetwork')
-external _i2.Object _declaredCircularNetwork;
+_i2.Object get _declaredCircularNetwork => _i5.getProperty(
+      _self,
+      'CircularNetwork',
+    );
 
 /// This holds CircularLayout-specific information about Nodes.
 ///
@@ -43560,11 +43410,10 @@ class CircularVertex implements _i3.LayoutVertex {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CircularVertex')
-external _i2.Object _declaredCircularVertex;
+_i2.Object get _declaredCircularVertex => _i5.getProperty(
+      _self,
+      'CircularVertex',
+    );
 
 extension CircularVertex$Typings on CircularVertex {
   /// Gets or sets the value used as the vertex's diameter.
@@ -43609,11 +43458,10 @@ class CircularEdge implements _i3.LayoutEdge {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('CircularEdge')
-external _i2.Object _declaredCircularEdge;
+_i2.Object get _declaredCircularEdge => _i5.getProperty(
+      _self,
+      'CircularEdge',
+    );
 
 @_i1.JS()
 @_i1.staticInterop
@@ -43706,11 +43554,10 @@ class ForceDirectedLayout implements _i3.Layout {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ForceDirectedLayout')
-external _i2.Object _declaredForceDirectedLayout;
+_i2.Object get _declaredForceDirectedLayout => _i5.getProperty(
+      _self,
+      'ForceDirectedLayout',
+    );
 
 extension ForceDirectedLayout$Typings on ForceDirectedLayout {
   /// This read-only property returns the current iteration count, valid during a call to #doLayout.
@@ -43863,11 +43710,11 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
   ///
   /// The new value must be either null or an Object with a method named "random" taking zero arguments
   /// and returning a random number between zero (inclusive) and one (exclusive).
-  _i2.Object? get randomNumberGenerator => _i5.getProperty(
+  _i2.dynamic get randomNumberGenerator => _i5.getProperty(
         this,
         'randomNumberGenerator',
       );
-  set randomNumberGenerator(_i2.Object? value) {
+  set randomNumberGenerator(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'randomNumberGenerator',
@@ -44279,11 +44126,10 @@ class ForceDirectedNetwork implements _i3.LayoutNetwork {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ForceDirectedNetwork')
-external _i2.Object _declaredForceDirectedNetwork;
+_i2.Object get _declaredForceDirectedNetwork => _i5.getProperty(
+      _self,
+      'ForceDirectedNetwork',
+    );
 
 /// This holds ForceDirectedLayout-specific information about Nodes.
 ///
@@ -44298,11 +44144,10 @@ class ForceDirectedVertex implements _i3.LayoutVertex {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ForceDirectedVertex')
-external _i2.Object _declaredForceDirectedVertex;
+_i2.Object get _declaredForceDirectedVertex => _i5.getProperty(
+      _self,
+      'ForceDirectedVertex',
+    );
 
 extension ForceDirectedVertex$Typings on ForceDirectedVertex {
   /// Gets or sets whether the vertex may be moved by any forces.
@@ -44389,11 +44234,10 @@ class ForceDirectedEdge implements _i3.LayoutEdge {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('ForceDirectedEdge')
-external _i2.Object _declaredForceDirectedEdge;
+_i2.Object get _declaredForceDirectedEdge => _i5.getProperty(
+      _self,
+      'ForceDirectedEdge',
+    );
 
 extension ForceDirectedEdge$Typings on ForceDirectedEdge {
   /// Gets or sets this edge's stiffness or resistance to compression or stretching.
@@ -44832,11 +44676,10 @@ class LayeredDigraphLayout implements _i3.Layout {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LayeredDigraphLayout')
-external _i2.Object _declaredLayeredDigraphLayout;
+_i2.Object get _declaredLayeredDigraphLayout => _i5.getProperty(
+      _self,
+      'LayeredDigraphLayout',
+    );
 
 extension LayeredDigraphLayout$Typings on LayeredDigraphLayout {
   /// Gets or sets the space between each layer.
@@ -45387,11 +45230,10 @@ class LayeredDigraphNetwork implements _i3.LayoutNetwork {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LayeredDigraphNetwork')
-external _i2.Object _declaredLayeredDigraphNetwork;
+_i2.Object get _declaredLayeredDigraphNetwork => _i5.getProperty(
+      _self,
+      'LayeredDigraphNetwork',
+    );
 
 /// This holds LayeredDigraphLayout-specific information about Nodes.
 ///
@@ -45406,11 +45248,10 @@ class LayeredDigraphVertex implements _i3.LayoutVertex {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LayeredDigraphVertex')
-external _i2.Object _declaredLayeredDigraphVertex;
+_i2.Object get _declaredLayeredDigraphVertex => _i5.getProperty(
+      _self,
+      'LayeredDigraphVertex',
+    );
 
 extension LayeredDigraphVertex$Typings on LayeredDigraphVertex {
   /// Gets or sets the layer to which the node is assigned.
@@ -45539,11 +45380,10 @@ class LayeredDigraphEdge implements _i3.LayoutEdge {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('LayeredDigraphEdge')
-external _i2.Object _declaredLayeredDigraphEdge;
+_i2.Object get _declaredLayeredDigraphEdge => _i5.getProperty(
+      _self,
+      'LayeredDigraphEdge',
+    );
 
 extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
   /// Gets or sets the LayoutVertex that this edge comes from.
@@ -46190,11 +46030,10 @@ class TreeLayout implements _i3.Layout {
   }
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TreeLayout')
-external _i2.Object _declaredTreeLayout;
+_i2.Object get _declaredTreeLayout => _i5.getProperty(
+      _self,
+      'TreeLayout',
+    );
 
 extension TreeLayout$Typings on TreeLayout {
   /// Gets or sets the collection of root vertexes.
@@ -47544,11 +47383,10 @@ class TreeNetwork implements _i3.LayoutNetwork {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TreeNetwork')
-external _i2.Object _declaredTreeNetwork;
+_i2.Object get _declaredTreeNetwork => _i5.getProperty(
+      _self,
+      'TreeNetwork',
+    );
 
 /// This holds TreeLayout-specific information about Nodes.
 ///
@@ -47562,11 +47400,10 @@ class TreeVertex implements _i3.LayoutVertex {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TreeVertex')
-external _i2.Object _declaredTreeVertex;
+_i2.Object get _declaredTreeVertex => _i5.getProperty(
+      _self,
+      'TreeVertex',
+    );
 
 extension TreeVertex$Typings on TreeVertex {
   /// Gets or sets whether this node has been initialized as part of TreeLayout#doLayout when building the tree structures.
@@ -48165,11 +48002,10 @@ class TreeEdge implements _i3.LayoutEdge {
       );
 }
 
-/*
-FieldExternal: 
-*/
-@_i1.JS('TreeEdge')
-external _i2.Object _declaredTreeEdge;
+_i2.Object get _declaredTreeEdge => _i5.getProperty(
+      _self,
+      'TreeEdge',
+    );
 
 extension TreeEdge$Typings on TreeEdge {
   /// Gets or sets the LayoutVertex that this edge comes from.
@@ -48224,10 +48060,14 @@ extension TreeEdge$Typings on TreeEdge {
   }
 }
 
+@_i1.JS('go')
+@_i1.staticInterop
+class $ModuleGo {}
+
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _IterableLike$<T extends _i2.Object?> {}
+class _IterableLike$<T> {}
 
 @_i1.JS()
 @_i1.staticInterop

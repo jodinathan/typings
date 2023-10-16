@@ -46,7 +46,7 @@ class InteropPredicate extends InteropType
   @override
   void configure() {
     _delegate = canCast()
-        ? InteropRef(reference.type, nullable: true)
+        ? InteropRef.parseType(reference.type, nullable: true)
         : InteropStaticType.dyn.asRef;
   }
 
