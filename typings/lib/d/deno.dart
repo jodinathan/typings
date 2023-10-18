@@ -39,9 +39,11 @@ export interface Listener<T extends Conn = Conn> extends AsyncIterable<T> {
 ```
 */
 
-@Typings.urls(package: 'deno', version: 'v1.32.3', dirName: 'deno', uses: [
-  'core'
+@Typings.urls(package: 'deno', version: version, dirName: 'deno', uses: [
+  'typescript'
 ], urls: [
-  'https://github.com/denoland/deno/releases/download/v1.32.3/lib.deno.d.ts',
+  'https://github.com/denoland/deno/releases/download/$version/lib.deno.d.ts',
 ])
 export 'deno/deno.dart';
+
+const version = 'v1.37.2';

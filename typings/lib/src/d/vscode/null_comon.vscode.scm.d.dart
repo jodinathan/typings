@@ -5,7 +5,7 @@ import 'dart:js_util' as _i3;
 
 @_i1.JS('vscode.scm')
 external _i2.Object _self;
-_i2.Object get target3447 => _i3.getProperty(
+_i2.Object get target248 => _i3.getProperty(
       _self,
       'inputBox',
     );

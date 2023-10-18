@@ -2,12 +2,12 @@ class _TypingsNPM implements Typings {
   const _TypingsNPM(
       {required this.package,
       required this.version,
-      required this.dirName,
+      String? dirName,
       this.files = const [],
       this.packageJson = (typings: true, import: true),
       this.contextCheck,
       this.uses = const [],
-      this.distFiles = const []});
+      this.distFiles = const []}) : dirName = dirName ?? package;
 
   final String package;
   final String version;
@@ -23,11 +23,11 @@ class _TypingsUrls implements Typings {
   const _TypingsUrls(
       {required this.package,
       required this.version,
-      required this.dirName,
+      String? dirName,
       required this.urls,
       this.contextCheck,
       this.uses = const [],
-      this.distFiles = const []});
+      this.distFiles = const []}) : dirName = dirName ?? package;
 
   final String package;
   final String version;
@@ -42,7 +42,7 @@ abstract class Typings {
   const factory Typings.npm(
       {required String package,
       required String version,
-      required String dirName,
+      String? dirName,
       List<String> files,
       ({bool typings, bool import}) packageJson,
       String? contextCheck,
@@ -52,7 +52,7 @@ abstract class Typings {
   const factory Typings.urls(
       {required String package,
       required String version,
-      required String dirName,
+      String? dirName,
       required List<String> urls,
       String? contextCheck,
       List<String> uses,

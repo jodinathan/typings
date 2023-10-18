@@ -25,6 +25,6 @@ import 'package:typings/annotations.dart';
       'https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/inputmask/index.d.ts'
     ],
     uses: [
-      'core'
+      'typescript'
     ])
 export 'inputmask/inputmask.dart';

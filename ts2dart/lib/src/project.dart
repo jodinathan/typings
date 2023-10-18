@@ -10,6 +10,7 @@ import 'package:ts2dart/src/module.dart';
 
 import 'ast/types/type.dart';
 import 'common.dart';
+import 'metadata/library.dart';
 
 class _PrefixedAllocator implements Allocator {
   final _imports = <String, int>{};
@@ -120,11 +121,11 @@ class InteropProject {
     final typeName = list.removeLast();
     final positions = [for (var x = 0; x < list.length; x++) x];
 
-    // logger.warning('ProjectDig $path',
+    // logger.info('ProjectDig $path',
     //     {'list': list, 'typeName': typeName, 'positions': positions});
 
     for (final module in modules) {
-      // logger.warning('ProjectDigModule $path', {
+      // logger.info('ProjectDigModule $path', {
       //   'module.splittedPath.length': module.splittedPath.length,
       //   'positions.length': positions.length,
       //   'positions': positions,
@@ -136,7 +137,7 @@ class InteropProject {
           positions.every(
               (p) => list.elementAt(p) == module.splittedPath.elementAt(p))) {
         for (final lib in module.libraries) {
-          // logger.warning('ProjectLibFind $typeName. ${lib.structs.map((c) => c.name).join(', ')}');
+          // logger.info('ProjectLibFind $typeName. ${lib.structs.map((c) => c.name).join(', ')}');
           final type = lib.findDeclared(typeName);
 
           if (type != null) {
@@ -232,7 +233,7 @@ class InteropProject {
     final mainBuffer = StringBuffer();
 
     for (final module in modules) {
-      logger.warning('ForeachModule ${module.fileName}');
+      logger.info('ForeachModule ${module.fileName}');
       module.generate();
 
       for (final library in module.libraries) {
@@ -244,9 +245,8 @@ class InteropProject {
       mainBuffer.writeln("export '/${srcDir('_dist.dart')}';");
     }
 
-  // final fname = fileName ?? (path.isEmpty ? project.targetMainFile! : path);
-    File(expositionDirFullPath(
-            '${name.snakeCase.toLowerCase()}.dart'))
+    // final fname = fileName ?? (path.isEmpty ? project.targetMainFile! : path);
+    File(expositionDirFullPath('${name.snakeCase.toLowerCase()}.dart'))
         .writeAsStringSync(mainBuffer.toString(), flush: true);
 
     File(srcDirFullPath('struct.json'))
@@ -296,6 +296,13 @@ class InteropProject {
         {required Map<String, dynamic> map,
         required String fileName,
         required InteropModule parent}) {
+      final meta = map as MetadataLibrary;
+
+      if (meta.items.isEmpty) {
+        logger.info('Skipping empty meta $map');
+        return;
+      }
+
       final {'items': Map items} = map;
       final {'modules': List rawModules} = items;
 
@@ -334,7 +341,7 @@ class InteropProject {
         continue;
       }
 
-      throw 'Not lib map ${file.keys.join(', ')}';
+      throw 'Not lib map ${file.keys.join(', ')}\n';
     }
 
     mainModule.fileName = dirName;

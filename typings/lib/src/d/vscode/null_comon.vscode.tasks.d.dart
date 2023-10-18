@@ -5,19 +5,19 @@ import 'dart:js_util' as _i3;
 
 @_i1.JS('vscode.tasks')
 external _i2.Object _self;
-_i2.Object get target3396 => _i3.getProperty(
+_i2.Object get target196 => _i3.getProperty(
       _self,
       'onDidStartTask',
     );
-_i2.Object get target3397 => _i3.getProperty(
+_i2.Object get target197 => _i3.getProperty(
       _self,
       'onDidEndTask',
     );
-_i2.Object get target3398 => _i3.getProperty(
+_i2.Object get target198 => _i3.getProperty(
       _self,
       'onDidStartTaskProcess',
     );
-_i2.Object get target3399 => _i3.getProperty(
+_i2.Object get target199 => _i3.getProperty(
       _self,
       'onDidEndTaskProcess',
     );

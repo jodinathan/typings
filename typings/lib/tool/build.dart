@@ -52,6 +52,7 @@ class TypingsBuilder extends Builder {
             case '_TypingsNPM':
               final base = parseBase(ann);
               final pkg = ann.getField('packageJson')!;
+              print('_TypingsNPM $base');
 
               await Transpiler.fromNpm(
                   package: base.package,
@@ -74,6 +75,8 @@ class TypingsBuilder extends Builder {
               break;
             case '_TypingsUrls':
               final base = parseBase(ann);
+
+              print('TypingsURL $base');
 
               await Transpiler.fromUrls(
                   package: base.package,

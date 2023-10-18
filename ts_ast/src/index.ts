@@ -29,6 +29,7 @@ const coreKinds = [
 ];
 
 interface Library {
+  name?: string;
   items: {
     typedefs: any[];
     structs: any[];
@@ -46,6 +47,20 @@ function extract(files: string[]): void {
   let program = ts.createProgram(files, { allowJs: true });
   const checker: ts.TypeChecker = program.getTypeChecker();
   const mainModules: Library[] = [];
+  const mainModule: Library = {
+    _: -1,
+    namespace: "",
+    name: 'main',
+    from: "mainLoop ",
+    items: {
+      structs: [],
+      typedefs: [],
+      modules: [],
+      funcs: [],
+      vars: [],
+      enums: [],
+    },
+  };
   let inlineCounter = 0;
   let parentNamedType: any[] = [];
   let namedListen: ((ref: string) => void) | undefined;
@@ -190,6 +205,14 @@ function extract(files: string[]): void {
         //     name += used.length;
         //   }
         // }
+
+        const prototype = type.members.find((m) => {
+          return m.name?.getText() == "prototype";
+        });
+
+        if (prototype && ts.isPropertySignature(prototype) && prototype.type) {
+          return parseType(prototype.type);
+        }
 
         if (!name) {
           name = `IInline${inlineCounter}`;
@@ -618,17 +641,27 @@ function extract(files: string[]): void {
       } else if (ts.isInterfaceDeclaration(node)) {
         parseInterface(node);
       } else if (ts.isVariableDeclaration(node)) {
-        vars.push(
-          addSource(node, {
-            _: lineNumber,
-            name: node.name.getText(),
-            isReadonly: true,
-            isStatic: false,
-            isNullable: false,
-            doc: parseDoc(node),
-            type: parseType(node.type),
-          })
-        );
+        const name = node.name.getText();
+
+        if (
+          name != lib.namespace &&
+          !modules.find((v) => {
+            return v.name == name;
+          }) &&
+          !vars.find((v) => v.name == name)
+        ) {
+          vars.push(
+            addSource(node, {
+              _: lineNumber,
+              name,
+              isReadonly: true,
+              isStatic: false,
+              isNullable: false,
+              doc: parseDoc(node),
+              type: parseType(node.type),
+            })
+          );
+        }
       } else if (ts.isClassDeclaration(node)) {
         if (node.name) {
           const name = node.name.text;
@@ -659,7 +692,7 @@ function extract(files: string[]): void {
           typedefs.push(addSource(node, typedef));
         });
       } else if (ts.isModuleDeclaration(node)) {
-        if (node.body && node.name.text != 'global') {
+        if (node.body && node.name.text != "global") {
           let module: Library | undefined = modules.find(
             (it) => it.namespace == node.name.text
           );
@@ -756,7 +789,9 @@ function extract(files: string[]): void {
     });
   };
 
-  const toExport: any[] = [];
+  const toExport: any[] = [mainModule];
+
+  mainModules.push(mainModule);
 
   for (const file of files) {
     if (!fs.existsSync(file)) {
@@ -767,23 +802,8 @@ function extract(files: string[]): void {
       //console.log("Parsing", file);
     }
     const sourceFile = program.getSourceFile(file)!;
-    const module = {
-      _: -1,
-      namespace: "",
-      from: "mainLoop " + file,
-      items: {
-        structs: [],
-        typedefs: [],
-        modules: [],
-        funcs: [],
-        vars: [],
-        enums: [],
-      },
-    };
 
-    mainModules.push(module);
-
-    parseNodes(sourceFile, module);
+    parseNodes(sourceFile, mainModule);
 
     if (dev) {
       //const jsonFile = file.replace(".d.ts", ".d.json");
@@ -792,11 +812,21 @@ function extract(files: string[]): void {
       const path = file.split("/");
       const name = path[path.length - 1];
 
-      toExport.push({ ...module, name });
+      //toExport.push({ ...mainModule, name });
     }
   }
 
   if (!dev) {
+    // const JSONStream = require("JSONStream");
+    // const fileStream = fs.createWriteStream("./toExport.json");
+
+    // const jsonStream = JSONStream.stringify();
+
+    // jsonStream.pipe(fileStream);
+
+    // jsonStream.write({ files: toExport });
+
+    // jsonStream.end();
     //console.log(JSON.stringify(toExport, null, 2));
     fs.writeFileSync(
       "./toExport.json",
@@ -815,6 +845,7 @@ function extract(files: string[]): void {
 //   "d/lib.es5.d.ts",
 //   "d/lib.webworker.importscripts.d.ts",
 //   "d/lib.scripthostimport { namespace } from '../../ts2dart/work/deno/download/0lib.deno.ns.d';
-// ]);
+// ]);import { proto } from '../../typings/work/gojs/out/package/projects/pdf/pdfkit';
+
 //console.log(process.argv.splice(2));
 extract(process.argv.splice(2));

@@ -1,6 +1,7 @@
 import 'package:code_builder/code_builder.dart';
 import 'package:ts2dart/src/ast/class.dart';
 import 'package:ts2dart/src/ast/types/enum.dart';
+import 'package:ts2dart/src/common.dart';
 
 import '../../metadata/struct.dart';
 import '../reference.dart';
@@ -37,6 +38,9 @@ class InteropInterface extends InteropType
 
   @override
   bool get passthrough => true;
+
+  @override
+  String toString() => 'InteropInterface(delegate: ${_delegate})';
 
   InteropRef? _delegate;
 
@@ -75,12 +79,20 @@ class InteropInterface extends InteropType
         if (metadata.simulatesAny) {
           _delegate = InteropStaticType.obj.asRef;
         } else {
+          if (name == 'FileReaderEventMap') {
+            print('FREAKINGFUCK ${name}========= ${{
+              'isMetadataEnumMap()': isMetadataEnumMap(),
+              'lineNumber': lineNumber,
+              'source': source
+            }.pretty()}');
+          }
           if (isMetadataEnumMap()) {
             _delegate = InteropRef(InteropDynamicEnum(
                 name: name,
                 library: library,
                 lineNumber: lineNumber,
-                source: source));
+                source: source)
+              ..parse(metadata.map));
           } else {
             _delegate = InteropRef(InteropClass(
                 name: name,

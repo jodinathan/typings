@@ -5,7 +5,7 @@ import 'dart:js_util' as _i3;
 
 @_i1.JS('vscode.extensions')
 external _i2.Object _self;
-_i2.Object get target3455 => _i3.getProperty(
+_i2.Object get target256 => _i3.getProperty(
       _self,
       'onDidChange',
     );

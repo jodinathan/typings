@@ -60,6 +60,9 @@ final class InteropGetter extends InteropProperty {
       _makeProperty(
           type: MethodType.getter,
           updates: (b) {
+            if (name == 'ReadableStreamDefaultReader') {
+              print('FREAKINGFUCCCCCK ${reference.type}');
+            }
             b
               ..returns = reference.ref(solid: true, useFuture: true)
               ..lambda = true

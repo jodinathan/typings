@@ -2,7 +2,7 @@
 library typings.core;
 
 import 'package:js/js.dart';
-export 'core/core.dart';
+export 'typescript/typescript.dart';
 
 @JS()
 external dynamic undefined;

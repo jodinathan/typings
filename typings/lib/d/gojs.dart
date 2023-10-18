@@ -25,5 +25,5 @@ import 'package:typings/annotations.dart';
     version: '2.3.5',
     dirName: 'gojs',
     contextCheck: 'go',
-    uses: ['core'])
+    uses: ['typescript'])
 export 'gojs/gojs.dart';

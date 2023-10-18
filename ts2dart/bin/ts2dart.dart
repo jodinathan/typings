@@ -11,12 +11,13 @@ Future<void> main(List<String> arguments) async {
 
   final libPath = '${Directory.current.path}/../typings/lib/';
 
-  if (1 < 0) {
+  if (1 > 0) {
     await Transpiler.fromNpm(
         package: 'typescript',
         version: 'latest',
-        targetMainFile: 'core',
-        dirName: 'core',
+        targetMainFile: 'typescript',
+        packageJson: (typings: false, import: false),
+        dirName: 'typescript',
         targetPath: libPath,
         files: [
           'lib/lib.es5.d.ts',
@@ -104,7 +105,23 @@ Future<void> main(List<String> arguments) async {
         ]);
   }
 
-  if (1 > 0) {
+  if (1 < 0) {
+    await Transpiler.fromNpm(
+        package: 'inputmask',
+        contextCheck: 'Inputmask',
+        version: 'latest',
+        targetMainFile: 'inputmask',
+        dirName: 'inputmask',
+        targetPath: libPath,
+        uses: {
+          'core'
+        },
+        files: [
+          'https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/inputmask/index.d.ts',
+        ]);
+  }
+
+  if (1 < 0) {
     await Transpiler.fromUrls(
         package: 'vscode',
         version: '1.82.0',

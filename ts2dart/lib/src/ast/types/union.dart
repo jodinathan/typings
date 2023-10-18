@@ -93,7 +93,7 @@ class InteropUnion extends InteropType
         _delegate = filtered.first;
       } else if (filtered.every((t) => t.type is InteropConstType)) {
         final symbol = switch (parent) {
-          InteropNamedDeclaration parent => parent.availableName(),
+          //InteropNamedDeclaration parent => parent.availableName(),
           _ => 'UnionEnum${_cc++}'
         };
 

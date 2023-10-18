@@ -69,7 +69,7 @@ class InteropOperator extends InteropType
       case InteropLocalType _:
         return InteropStaticType.dyn;
       case InteropStaticType.list:
-        logger.warning(
+        logger.info(
             'Skipping list value of operator. Holder ${reference.type}. LineNumber: $lineNumber, operator: $operator');
         return InteropStaticType.dyn;
       default:

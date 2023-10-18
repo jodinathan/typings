@@ -79,6 +79,9 @@ class InteropRef<T extends InteropType> {
   bool get acceptsNull =>
       optional || nullable || type.nullable || type.optional;
 
+  @override
+  String toString() => 'InteropReference(type: ${type})';
+
   InteropRef<Y> copyWith<Y extends InteropType>(Y newType,
       {bool? nullable, bool? optional}) {
     return InteropRef(newType,

@@ -6,7 +6,11 @@ inline class MetadataLibrary {
 
   MetadataLibrary(this.map);
 
-  String get name => map.prop('name');
+  String get namespace => map.prop('namespace');
+
+  String get from => map.prop('from');
+
+  MetadataLibraryItems get items => map.prop('items');
 }
 
 inline class MetadataLibraryItems {
@@ -19,8 +23,27 @@ inline class MetadataLibraryItems {
 
   Iterable<MetadataTypedef> get typedefs =>
       (map['typedefs'] as Iterable).map((i) => i as MetadataTypedef);
-}
 
+  Iterable<MetadataTypedef> get modules =>
+      (map['modules'] as Iterable).map((i) => i as MetadataTypedef);
+
+  Iterable<MetadataTypedef> get funcs =>
+      (map['funcs'] as Iterable).map((i) => i as MetadataTypedef);
+
+  Iterable<MetadataTypedef> get vars =>
+      (map['vars'] as Iterable).map((i) => i as MetadataTypedef);
+
+  Iterable<MetadataTypedef> get enums =>
+      (map['enums'] as Iterable).map((i) => i as MetadataTypedef);
+
+  bool get isEmpty =>
+      structs.isEmpty &&
+      typedefs.isEmpty &&
+      modules.isEmpty &&
+      funcs.isEmpty &&
+      vars.isEmpty &&
+      enums.isEmpty;
+}
 
 inline class MetadataTypedef {
   final Map<String, dynamic> map;

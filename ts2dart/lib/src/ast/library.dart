@@ -44,7 +44,7 @@ class InteropLibrary with InteropItem {
   InteropLibrary(
       {required this.fileName, required this.module, String? targetFileName})
       : _targetFileName = targetFileName {
-    // logger.warning('CreatingLibrary ${{
+    // logger.info('CreatingLibrary ${{
     //   'fileName': fileName,
     //   'targetFileName': targetFileName,
     //   'module': module.path
@@ -153,8 +153,26 @@ class InteropLibrary with InteropItem {
         }
 
         if (globalIsModule) {
-          logger.warning(
+          logger.info(
               'ClassglobalIsModule ${global.methods.map((m) => '${m.name}: ${m.isExternal}').join(', ')}');
+        }
+
+        final properties =
+            global.properties.whereType<InteropGetter>().toList();
+        final toRemove = [];
+
+        for (final prop in properties) {
+          final found = global.properties.firstWhereOrNull(
+              (it) => it.usableName == prop.usableName && it != prop);
+
+          if (found != null) {
+            toRemove.add(found);
+          }
+        }
+
+        for (final prop in toRemove) {
+          logger.info('Skipping doubled ${global.name}.${prop.name}');
+          properties.remove(prop);
         }
 
         b
@@ -166,9 +184,7 @@ class InteropLibrary with InteropItem {
             ...buildingSpecs,
             if (!globalIsModule) ...[
               ...global.methods.expand((e) => e.buildExternal()),
-              ...global.properties
-                  .whereType<InteropGetter>()
-                  .expand((e) => e.buildExternal()),
+              ...properties.expand((e) => e.buildExternal()),
             ],
             if (globalIsModule) ...global.build(),
             ...iterableLike.build(),
@@ -252,7 +268,7 @@ class InteropLibrary with InteropItem {
 
     for (final struct in structs) {
       if (struct.isNameInStaticTypes()) {
-        logger.warning('Skipping mapped struct "${struct.name}"');
+        logger.info('Skipping mapped struct "${struct.name}"');
         continue;
       }
 
@@ -359,9 +375,9 @@ class InteropLibrary with InteropItem {
       if (isModule) {
         global
           ..name = namespace
-          ..isInline = false
           ..usableName = gmodule
           ..addAnonymousFlag = false
+          ..isInline = false
           ..makePublic();
       }
 
@@ -593,13 +609,8 @@ class InteropLibrary with InteropItem {
 
     final submodules = module.submodules;
 
-    logger.warning(
-        'GlobalClassglobalIsModule ${global.name} ${submodules.length}');
-
     if (submodules.isNotEmpty) {
       for (final submodule in submodules) {
-        logger.warning(
-            'GlobalSubModule ${global.name} ${submodule.libraries.length}');
         for (final lib in submodule.libraries) {
           global.addProperty(InteropGetter(
               name: lib.namespace.split('.').last,
@@ -709,7 +720,7 @@ class InteropLibrary with InteropItem {
 
         for (final module in module.project.modules) {
           for (final lib in module.libraries) {
-            //logger.warning('ProjectLibFind $typeName. ${lib.structs.map((c) => c.name).join(', ')}');
+            //logger.info('ProjectLibFind $typeName. ${lib.structs.map((c) => c.name).join(', ')}');
             final type = lib.findDeclared(typeName);
 
             if (type != null) {

@@ -5,15 +5,19 @@ import 'dart:js_util' as _i3;
 
 @_i1.JS('vscode.env')
 external _i2.Object _self;
-_i2.Object get target3400 => _i3.getProperty(
+_i2.Object get target200 => _i3.getProperty(
       _self,
       'clipboard',
     );
-_i2.Object get target3401 => _i3.getProperty(
+_i2.Object get target201 => _i3.getProperty(
       _self,
       'onDidChangeTelemetryEnabled',
     );
-_i2.Object get target3402 => _i3.getProperty(
+_i2.Object get target202 => _i3.getProperty(
+      _self,
+      'onDidChangeShell',
+    );
+_i2.Object get target203 => _i3.getProperty(
       _self,
       'onDidChangeLogLevel',
     );

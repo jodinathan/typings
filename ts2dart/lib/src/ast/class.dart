@@ -109,6 +109,15 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   void makePublic() => _isPrivate = false;
 
   @override
+  String toString() => '${runtimeType}#$hashCode(${{
+        'name': name,
+        'isInline': isInline,
+        'isPrivate': isPrivate,
+        'anonymousFlag': addAnonymousFlag,
+        'line': lineNumber
+      }.pretty()})';
+
+  @override
   Iterable<InteropType> crawlTypes() sync* {
     final done = <InteropType>[];
 
@@ -582,6 +591,13 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
       for (final member in struct.members) {
         if (member.name == 'prototype') {
           continue;
+        } else if (member.name.isNotEmpty &&
+            (library.namespace == member.name ||
+                library.module.submodules.any((m) =>
+                    m.libraries.any((l) => l.namespace == member.name)))) {
+          logger.info(
+              'Skipping member with same name as namespace(${member.name}): $member');
+          continue;
         }
 
         if (member.isMethod) {
@@ -594,12 +610,9 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           if (getter case InteropGetter g
               when _properties
                   .any((p) => p.type == g.type && g.name == p.name)) {
-            logger.warning('Skipping multiple property $name.${member.name}');
+            logger.info('Skipping multiple property $name.${member.name}');
             continue;
           }
-
-          logger.warning(
-              'Memba ${name}: ${member.name} - ${getter?.hasBadName()}');
 
           _properties.addAll([
             if (getter case InteropGetter g when !g.hasBadName()) getter,
@@ -698,7 +711,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
 
   void addConstructor(InteropMethod ctor) {
     if (!canAssignToThis(ctor.returnRef.type)) {
-      // logger.warning(
+      // logger.info(
       //     'Skipping ctor because return type isnt the same. Class $this. Ctor return: ${ctor.returnRef.realType}');
       // return;
     }

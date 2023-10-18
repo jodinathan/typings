@@ -42,19 +42,23 @@ final class Transpiler {
     logger.info('Compiling through NodeJS');
     logger.info('Files: \n${fileArgs.map((f) => ' - $f').join('\n')}');
 
+    final wd = dir();
+
+    print('Executing ts_ast. WorkingDirectory: $wd\n===================\n');
+
     // final p = await Process.run(
     //     'node', ['${Directory.current.path}/../ts_ast/bin/index.js', ...fileArgs],
     //     workingDirectory: dir());
     final p = await Process.run('ts-node',
         ['${Directory.current.path}/../ts_ast/src/index.ts', ...fileArgs],
-        workingDirectory: dir());
+        workingDirectory: wd);
 
     stdout.writeln(p.stdout);
     stdout.writeln(p.stderr);
 
-    logger.info('Done compiling');
+    print('===================\nDone compiling');
 
-    assert(File(jsonPath).existsSync());
+    assert(File(jsonPath).existsSync(), 'Json path was not found: $jsonPath');
 
     final map = conv.json.decode(File(jsonPath).readAsStringSync()) as Map;
 

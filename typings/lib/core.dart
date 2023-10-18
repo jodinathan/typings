@@ -17,7 +17,6 @@ import 'package:typings/annotations.dart';
 @Typings.npm(
     package: 'typescript',
     version: 'latest',
-    dirName: 'core',
     packageJson: (typings: false, import: false),
     files: [
       'lib/lib.es5.d.ts',
