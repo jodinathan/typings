@@ -12,10 +12,7 @@ import 'project.dart';
 
 class InteropModule {
   InteropModule(
-      {required this.path,
-      required this.project,
-      this.fileName,
-      this.parent});
+      {required this.path, required this.project, this.fileName, this.parent});
 
   static int _varCounter = 0;
 
@@ -23,7 +20,7 @@ class InteropModule {
   final List<InteropLibrary> libraries = [];
   final InteropProject project;
   final InteropModule? parent;
-  final List<InteropProperty> properties = [];
+  final List<InteropProperty> _targets = [];
   Iterable<String> get splittedPath => path.split('.');
   String? fileName;
   Iterable<InteropModule> get submodules =>
@@ -31,6 +28,10 @@ class InteropModule {
 
   late final InteropLibrary _lib =
       InteropLibrary(fileName: '${fileName}_comon.d.ts', module: this);
+
+  Iterable<InteropProperty> globalProperties() {
+    return libraries.expand((it) => it.global.properties);
+  }
 
   void saveSource({required String path, required String buffer}) =>
       File(project.srcDirFullPath(path)).writeAsStringSync(buffer, flush: true);
@@ -40,7 +41,7 @@ class InteropModule {
           .writeAsStringSync(buffer, flush: true);
 
   void generate() {
-    final getters = properties.whereType<InteropGetter>();
+    final getters = _targets.whereType<InteropGetter>();
 
     if (getters.isNotEmpty) {
       final codeLib = Library((b) {
@@ -112,21 +113,23 @@ class InteropModule {
   }
 
   InteropType? findDeclared(String name) {
-    // logger.info('FindDeclared $name -> ${{
-    //   'fileName': fileName,
-    //   'path': path
-    // }.pretty()}');
+    if (name.toLowerCase() == 'type') {
+      logger.info('FindDeclared $name -> ${{
+        'fileName': fileName,
+        'path': path
+      }.pretty()}');
+    }
     for (final library in libraries) {
       final outter = library.findDeclared(name);
 
-      // if (fileName != 'core') {
-      //   logger.info('FindDeclaredOutter $name -> ${{
-      //     'fileName': library.fileName,
-      //     'namespace': library.namespace,
-      //     'outter': outter != null,
-      //     'structs': library.structs.map((s) => ' - ${s.name}').join('\n')
-      //   }.pretty()}');
-      // }
+      if (name.toLowerCase() == 'type') {
+        logger.info('FindDeclaredOutter $name -> ${{
+          'fileName': library.fileName,
+          'namespace': library.namespace,
+          'outter': outter != null,
+          'structs': library.structs.map((s) => ' - ${s.name}').join('\n')
+        }.pretty()}');
+      }
 
       if (outter != null) {
         return outter;
@@ -137,8 +140,7 @@ class InteropModule {
   }
 
   InteropGetter makeDeclaredVar(String name) {
-    if (properties.firstWhereOrNull((p) => p.name == name)
-        case InteropGetter g) {
+    if (_targets.firstWhereOrNull((p) => p.name == name) case InteropGetter g) {
       return g;
     }
 
@@ -153,7 +155,7 @@ class InteropModule {
       ..reference = InteropStaticType.obj.asRef
       ..usableName = 'target${_varCounter++}';
 
-    properties.add(ret);
+    _targets.add(ret);
     return ret;
   }
 }

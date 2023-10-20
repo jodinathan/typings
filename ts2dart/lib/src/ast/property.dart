@@ -20,6 +20,7 @@ final class InteropGetter extends InteropProperty {
       super.typeParams,
       required super.library,
       required super.source,
+      this.readonly = false,
       super.doc,
       required this.isExternal})
       : nameIsConstString = name.isLiteral,
@@ -30,6 +31,9 @@ final class InteropGetter extends InteropProperty {
 
   @override
   bool get canBeBuilt => !nameIsConstString;
+
+  @override
+  final bool readonly;
 
   @override
   InteropPropertyType get type => InteropPropertyType.setter;
@@ -60,9 +64,6 @@ final class InteropGetter extends InteropProperty {
       _makeProperty(
           type: MethodType.getter,
           updates: (b) {
-            if (name == 'ReadableStreamDefaultReader') {
-              print('FREAKINGFUCCCCCK ${reference.type}');
-            }
             b
               ..returns = reference.ref(solid: true, useFuture: true)
               ..lambda = true
@@ -113,7 +114,7 @@ final class InteropSetter extends InteropProperty {
             final paramValue = Parameter((b) {
               b
                 ..name = 'value'
-                ..type = reference.ref(solid: true);
+                ..type = reference.ref(solid: true, useFuture: true);
             });
 
             b

@@ -27,6 +27,7 @@ class InteropMethodHolder extends InteropMethod {
       required super.source,
       required super.computedName,
       required super.cl,
+      super.isCall = false,
       super.doc});
 
   final Set<InteropMethod> versions = {};
@@ -41,6 +42,7 @@ class InteropMethodHolder extends InteropMethod {
       source: '',
       cl: cl,
       isStatic: isStatic,
+      isCall: isCall,
       doc: doc,
       typeParams: typeParams.map((tp) => tp.copyWith()))
     ..params.addAll(params.map((param) => param.copyWith()))
@@ -195,14 +197,17 @@ class InteropMethodHolder extends InteropMethod {
               }));
             }
 
-            final args = version.params.mapIndexed((index, p) {
-              return constIndexes.contains(index)
-                  ? InteropDynamicEnum.argumentToInterop(
-                      argument: refer(p.usableName),
-                      isNullable: p.ref.nullable,
-                      isOptional: p.ref.acceptsNull)
-                  : p.toInterop();
-            });
+            final args = [
+              if (version.isCall) refer('this'),
+              ...version.params.mapIndexed((index, p) {
+                return constIndexes.contains(index)
+                    ? InteropDynamicEnum.argumentToInterop(
+                        argument: refer(p.usableName),
+                        isNullable: p.ref.nullable,
+                        isOptional: p.ref.acceptsNull)
+                    : p.toInterop();
+              })
+            ];
             final call = (inheriter ?? version.returnRef)
                 .fromInterop(version._jsCall([
                   target ?? makeThis(),
@@ -308,6 +313,7 @@ class InteropMethod extends InteropNamedDeclaration
       this.callKey,
       this.addCallArg = true,
       this.argsAsList = true,
+      this.isCall = false,
       String? doc})
       : super(
             name: name,
@@ -327,10 +333,11 @@ class InteropMethod extends InteropNamedDeclaration
   @override
   bool isStatic;
   InteropClass cl;
+  bool isCall;
   final bool isExternal;
   bool usesFactory;
   InteropRef? target;
-  String get callableName => callKey ?? (name == 'call' ? '' : name);
+  String get callableName => callKey ?? name;
   late final JsCall _jsCall;
   final bool addCallArg;
   final bool argsAsList;
@@ -359,6 +366,7 @@ class InteropMethod extends InteropNamedDeclaration
       source: '',
       doc: doc,
       jsCall: _jsCall,
+      isCall: isCall,
       addCallArg: addCallArg,
       argsAsList: argsAsList,
       callKey: callKey,
@@ -455,7 +463,12 @@ class InteropMethod extends InteropNamedDeclaration
           }
         }
 
-        final args = params.map((p) => p.toInterop());
+        final args = params.map((p) => p.toInterop()).toList();
+
+        if (isCall) {
+          args.insert(0, refer('this'));
+        }
+
         final call = returnRef.fromInterop(_jsCall([
           target ?? makeThis(),
           if (addCallArg) InteropProperty.literalJSName(callableName),
@@ -529,6 +542,10 @@ extension AdvMethods on Iterable<InteropMethod> {
         if (!param.isOptional) {
           cp.params.replaceRange(y, y + 1, [param.copyWith(isOptional: true)]);
         }
+      }
+
+      if (method.usableName == 'getSession') {
+        print('DIOSANTI ${method.returnRef.type}, ${cp.returnRef.type}');
       }
 
       yield cp;

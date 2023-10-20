@@ -29,7 +29,6 @@ const coreKinds = [
 ];
 
 interface Library {
-  name?: string;
   items: {
     typedefs: any[];
     structs: any[];
@@ -47,20 +46,6 @@ function extract(files: string[]): void {
   let program = ts.createProgram(files, { allowJs: true });
   const checker: ts.TypeChecker = program.getTypeChecker();
   const mainModules: Library[] = [];
-  const mainModule: Library = {
-    _: -1,
-    namespace: "",
-    name: 'main',
-    from: "mainLoop ",
-    items: {
-      structs: [],
-      typedefs: [],
-      modules: [],
-      funcs: [],
-      vars: [],
-      enums: [],
-    },
-  };
   let inlineCounter = 0;
   let parentNamedType: any[] = [];
   let namedListen: ((ref: string) => void) | undefined;
@@ -789,9 +774,7 @@ function extract(files: string[]): void {
     });
   };
 
-  const toExport: any[] = [mainModule];
-
-  mainModules.push(mainModule);
+  const toExport: any[] = [];
 
   for (const file of files) {
     if (!fs.existsSync(file)) {
@@ -802,8 +785,23 @@ function extract(files: string[]): void {
       //console.log("Parsing", file);
     }
     const sourceFile = program.getSourceFile(file)!;
+    const module = {
+      _: -1,
+      namespace: "",
+      from: "mainLoop " + file,
+      items: {
+        structs: [],
+        typedefs: [],
+        modules: [],
+        funcs: [],
+        vars: [],
+        enums: [],
+      },
+    };
 
-    parseNodes(sourceFile, mainModule);
+    mainModules.push(module);
+
+    parseNodes(sourceFile, module);
 
     if (dev) {
       //const jsonFile = file.replace(".d.ts", ".d.json");
@@ -812,21 +810,11 @@ function extract(files: string[]): void {
       const path = file.split("/");
       const name = path[path.length - 1];
 
-      //toExport.push({ ...mainModule, name });
+      toExport.push({ ...module, name });
     }
   }
 
   if (!dev) {
-    // const JSONStream = require("JSONStream");
-    // const fileStream = fs.createWriteStream("./toExport.json");
-
-    // const jsonStream = JSONStream.stringify();
-
-    // jsonStream.pipe(fileStream);
-
-    // jsonStream.write({ files: toExport });
-
-    // jsonStream.end();
     //console.log(JSON.stringify(toExport, null, 2));
     fs.writeFileSync(
       "./toExport.json",

@@ -2,8 +2,7 @@
   {
     "_": -1,
     "namespace": "",
-    "name": "main",
-    "from": "mainLoop ",
+    "from": "mainLoop /Users/jonathanrezende/Projects/testes/typings/typings/work/deno/download/0lib.deno.d.ts",
     "items": {
       "structs": [
         {
@@ -52686,6 +52685,7 @@
         }
       ],
       "enums": []
-    }
+    },
+    "name": "0lib.deno.d.ts"
   }
 ]

@@ -2,8 +2,7 @@
   {
     "_": -1,
     "namespace": "",
-    "name": "main",
-    "from": "mainLoop ",
+    "from": "mainLoop /Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts",
     "items": {
       "structs": [
         {
@@ -71036,6 +71035,7 @@
       "funcs": [],
       "vars": [],
       "enums": []
-    }
+    },
+    "name": "0index.d.ts"
   }
 ]

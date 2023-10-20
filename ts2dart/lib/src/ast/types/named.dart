@@ -11,6 +11,9 @@ import '../library.dart';
 
 mixin InteropClassMember {
   bool get isStatic;
+  String get usableName;
+  set usableName(String value);
+  String get name;
 }
 
 mixin InteropNamedType on InteropType, InteropItem {
@@ -56,12 +59,15 @@ abstract class InteropNamedDeclaration extends InteropType
   bool get isPrivate => false;
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false,
-  bool solid = false}) => refer(
-      usableName, escopedReference && !isPrivate ? library.fullPath : null);
+  Reference ref(
+          {SymbolSwap? symbolSwap,
+          bool nullable = false,
+          bool solid = false}) =>
+      refer(
+          usableName, escopedReference && !isPrivate ? library.fullPath : null);
 
   bool nameExists(String name) {
-    return library.findDeclared(name) != null;
+    return library.module.project.findDeclared(name) != null;
   }
 
   String availableName({String name = '', String suffix = 'Options'}) {

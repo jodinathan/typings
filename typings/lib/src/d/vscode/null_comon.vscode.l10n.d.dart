@@ -5,7 +5,7 @@ import 'dart:js_util' as _i3;
 
 @_i1.JS('vscode.l10n')
 external _i2.Object _self;
-_i2.Object get target258 => _i3.getProperty(
+_i2.Object get target391 => _i3.getProperty(
       _self,
       'uri',
     );

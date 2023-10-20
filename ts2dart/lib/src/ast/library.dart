@@ -157,24 +157,6 @@ class InteropLibrary with InteropItem {
               'ClassglobalIsModule ${global.methods.map((m) => '${m.name}: ${m.isExternal}').join(', ')}');
         }
 
-        final properties =
-            global.properties.whereType<InteropGetter>().toList();
-        final toRemove = [];
-
-        for (final prop in properties) {
-          final found = global.properties.firstWhereOrNull(
-              (it) => it.usableName == prop.usableName && it != prop);
-
-          if (found != null) {
-            toRemove.add(found);
-          }
-        }
-
-        for (final prop in toRemove) {
-          logger.info('Skipping doubled ${global.name}.${prop.name}');
-          properties.remove(prop);
-        }
-
         b
           ..name =
               'typings.${module.project.dirName.snakeCase}.interop${namespace.isEmpty ? '' : '.${namespace.snakeCase}'}'
@@ -183,8 +165,10 @@ class InteropLibrary with InteropItem {
             selfField(),
             ...buildingSpecs,
             if (!globalIsModule) ...[
-              ...global.methods.expand((e) => e.buildExternal()),
-              ...properties.expand((e) => e.buildExternal()),
+              ...global.methods
+                  .where((m) => !m.isStatic)
+                  .expand((e) => e.buildExternal()),
+              ...global.buildGetters().where((p) => !p.static),
             ],
             if (globalIsModule) ...global.build(),
             ...iterableLike.build(),
@@ -368,6 +352,8 @@ class InteropLibrary with InteropItem {
       if (isModule) {
         globalMap['isClass'] = true;
         globalMap['isInline'] = false;
+
+        print('GLobalIsClass ${module.project.name}, ${namespace}');
       }
 
       global.parse(globalMap);
@@ -472,7 +458,7 @@ class InteropLibrary with InteropItem {
 
     for (final v in globalVars) {
       if (v.reference.realType case InteropClass cl) {
-        var swap = findDeclared(v.name)?.realType;
+        var swap = module.project.findDeclared(v.name)?.realType;
 
         if (swap != null && swap is! InteropClass) {
           logger.info(
@@ -591,7 +577,8 @@ class InteropLibrary with InteropItem {
 
             swap.addProperty(item
               ..isStatic = !needsGlobal
-              ..target = target);
+              //..target = target
+              ..target = needsGlobal ? null : target);
           }
         }
       }
@@ -683,6 +670,12 @@ class InteropLibrary with InteropItem {
       if (type != null) {
         return type;
       }
+    }
+
+    type = module.project.findDeclared(name);
+
+    if (type != null) {
+      return type;
     }
 
     return module.project.findExternalTypeByName(name);

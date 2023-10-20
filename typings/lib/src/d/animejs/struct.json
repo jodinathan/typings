@@ -2,8 +2,7 @@
   {
     "_": -1,
     "namespace": "anime",
-    "name": "main",
-    "from": "mainLoop ",
+    "from": "mainLoop /Users/jonathanrezende/Projects/testes/typings/typings/work/animejs/out/temp/https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/animejs/index.d.ts",
     "items": {
       "structs": [
         {
@@ -3390,6 +3389,7 @@
         }
       ],
       "enums": []
-    }
+    },
+    "name": "index.d.ts"
   }
 ]

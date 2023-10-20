@@ -201,6 +201,17 @@ class InteropProject {
     return null;
   }
 
+  InteropType? findDeclared(String name) {
+    for (final module in modules) {
+      final found = module.findDeclared(name);
+
+      if (found != null) {
+        return found;
+      }
+    }
+    return null;
+  }
+
   void generate({required Iterable<Map<String, dynamic>> mapFiles}) {
     parse(mapFiles: mapFiles);
 

@@ -114,7 +114,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
         'isInline': isInline,
         'isPrivate': isPrivate,
         'anonymousFlag': addAnonymousFlag,
-        'line': lineNumber
+        'line': lineNumber,
+        'promiseLike': isPromiseLike
       }.pretty()})';
 
   @override
@@ -253,7 +254,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
 
   void addMethod(InteropMethod method) => _addMethod(_methods, method);
 
-  void addCallable(InteropMethod method) => _callable.versions.add(method);
+  void addCallable(InteropMethod method) =>
+      _callable..isCall= true..versions.add(method..isCall = true);
 
   bool isEmpty() =>
       properties.isEmpty && methods.isEmpty && constructors.isEmpty;
@@ -323,6 +325,30 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
 
   void clearProperties() {
     _properties.clear();
+  }
+
+  Iterable<Method> buildGetters() {
+    final source = library.module.globalProperties();
+    final properties = this.properties.whereType<InteropGetter>().toList();
+    final toRemove = [];
+
+    for (final prop in properties) {
+      final found = source.firstWhereOrNull((it) =>
+          it.usableName == prop.usableName &&
+          it != prop &&
+          !toRemove.contains(it));
+
+      if (found != null) {
+        toRemove.add(prop);
+      }
+    }
+
+    for (final prop in toRemove) {
+      logger.info('Skipping doubled ${name}.${prop.name}');
+      properties.remove(prop);
+    }
+
+    return properties.expand((p) => p.buildExternal());
   }
 
   @override
@@ -615,7 +641,13 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           }
 
           _properties.addAll([
-            if (getter case InteropGetter g when !g.hasBadName()) getter,
+            if (getter case InteropGetter g when !g.hasBadName()) ...[
+              g,
+              if (g.readonly &&
+                  !g.isStatic &&
+                  g.reference.type is InteropConstType)
+                getter.copyWith()..isStatic = true
+            ],
             if (setter case InteropSetter g when !g.hasBadName()) setter,
           ]);
         }
@@ -786,6 +818,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           library: library,
           lineNumber: lineNumber,
           source: source,
+          readonly: isReadonly,
           isStatic: isStatic,
           isExternal: switch (map) {
             {'isExternal': bool ext} => ext,
@@ -815,23 +848,27 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   }
 
   void fixNames() {
-    final members = [...properties, ...methods];
-    final mappings = <String, List<InteropNamedDeclaration>>{};
+    final members = <InteropClassMember>[...properties, ...methods];
+    final mappings = <String, List<InteropClassMember>>{};
 
     for (final member in members) {
-      final mapping = mappings[member.usableName] ??= [];
+      final mapping = mappings[
+          '${member.usableName}.${member.isStatic}${switch (member) {
+        InteropGetter _ => 1,
+        InteropSetter _ => 2,
+        _ => 1
+      }}'] ??= [];
 
       mapping.add(member);
     }
 
-    for (final MapEntry(:key, :value) in mappings.entries) {
-      if (value.length > 1 &&
-          (value.length > 2 ||
-              (value.first is InteropGetter && value.last is! InteropSetter) ||
-              (value.first is InteropSetter && value.last is! InteropGetter))) {
+    for (final MapEntry(:value) in mappings.entries) {
+      if (value.length > 1) {
         var x = 0;
 
         for (final member in value) {
+          final key = member.usableName;
+
           if (member.name != key && '${member.name}\$' != key) {
             member.usableName = '${member.usableName}\$${x > 0 ? x : ''}';
             x++;

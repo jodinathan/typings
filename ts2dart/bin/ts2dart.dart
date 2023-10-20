@@ -11,7 +11,7 @@ Future<void> main(List<String> arguments) async {
 
   final libPath = '${Directory.current.path}/../typings/lib/';
 
-  if (1 > 0) {
+  if (1 < 0) {
     await Transpiler.fromNpm(
         package: 'typescript',
         version: 'latest',
@@ -79,7 +79,7 @@ Future<void> main(List<String> arguments) async {
         dirName: 'deno',
         targetPath: libPath,
         uses: [
-          'core'
+          'typescript'
         ],
         urls: [
           'https://github.com/denoland/deno/releases/download/v1.32.3/lib.deno.d.ts'
@@ -98,7 +98,7 @@ Future<void> main(List<String> arguments) async {
           'release/go.js'
         },
         uses: {
-          'core'
+          'typescript'
         },
         files: [
           'release/go.d.ts',
@@ -114,14 +114,14 @@ Future<void> main(List<String> arguments) async {
         dirName: 'inputmask',
         targetPath: libPath,
         uses: {
-          'core'
+          'typescript'
         },
         files: [
           'https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/inputmask/index.d.ts',
         ]);
   }
 
-  if (1 < 0) {
+  if (1 > 0) {
     await Transpiler.fromUrls(
         package: 'vscode',
         version: '1.82.0',
@@ -129,7 +129,7 @@ Future<void> main(List<String> arguments) async {
         dirName: 'vscode',
         targetPath: libPath,
         uses: [
-          'core'
+          'typescript'
         ],
         urls: [
           'https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/vscode/index.d.ts'

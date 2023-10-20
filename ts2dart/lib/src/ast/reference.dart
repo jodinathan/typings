@@ -252,7 +252,7 @@ class InteropRef<T extends InteropType> {
         })
     };
 
-    if (useFuture && type.isPromiseLike) {
+    if (useFuture && type.isPromiseLike && type != InteropClass.future) {
       return TypeReference((b) {
         b
           ..symbol = 'Future'
