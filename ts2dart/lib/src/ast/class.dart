@@ -2,6 +2,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:collection/collection.dart';
 import 'package:recase/recase.dart';
 import 'package:ts2dart/src/ast/type_parameter.dart';
+import 'package:ts2dart/src/ast/types/function.dart';
 import '../metadata/struct.dart';
 import 'library.dart';
 import 'method.dart';
@@ -66,8 +67,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   bool isInline;
 
   bool addAnonymousFlag;
-  bool get isAnonymous =>
-      isInterface && constructors.isEmpty && methods.isEmpty;
+  bool get isAnonymous => isInterface && constructors.isEmpty;
 
   @override
   bool get isPromiseLike =>
@@ -232,7 +232,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   @override
   InteropNamedDeclaration? get parent => null;
 
-  void _addMethod(List<InteropMethodHolder> list, InteropMethod method) {
+  InteropMethodHolder _addMethod(
+      List<InteropMethodHolder> list, InteropMethod method) {
     var holder = list.firstWhereOrNull(
         (item) => item.name == method.name && item.isStatic == method.isStatic);
 
@@ -250,12 +251,16 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
       list.add(holder);
     }
     holder.versions.add(method);
+
+    return holder;
   }
 
-  void addMethod(InteropMethod method) => _addMethod(_methods, method);
+  InteropMethodHolder addMethod(InteropMethod method) =>
+      _addMethod(_methods, method);
 
-  void addCallable(InteropMethod method) =>
-      _callable..isCall= true..versions.add(method..isCall = true);
+  void addCallable(InteropMethod method) => _callable
+    ..isCall = true
+    ..versions.add(method..isCall = true);
 
   bool isEmpty() =>
       properties.isEmpty && methods.isEmpty && constructors.isEmpty;
@@ -323,10 +328,6 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
     }
   }
 
-  void clearProperties() {
-    _properties.clear();
-  }
-
   Iterable<Method> buildGetters() {
     final source = library.module.globalProperties();
     final properties = this.properties.whereType<InteropGetter>().toList();
@@ -349,6 +350,33 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
     }
 
     return properties.expand((p) => p.buildExternal());
+  }
+
+  InteropProperty fromMethod(InteropMethod method, {bool setter = false}) {
+    return (setter
+        ? InteropSetter(
+            name: method.name,
+            cl: this,
+            lineNumber: method.lineNumber,
+            isStatic: false,
+            library: library,
+            source: source)
+        : InteropGetter(
+            name: method.name,
+            cl: this,
+            lineNumber: method.lineNumber,
+            isStatic: false,
+            library: library,
+            source: source,
+            isExternal: false))
+      ..reference = (InteropRef(InteropFunction(
+          rawParams: [],
+          generics: [],
+          source: source,
+          library: library,
+          lineNumber: lineNumber)
+        ..returns = method.returnRef
+        ..params.addAll(method.params)));
   }
 
   @override
@@ -375,6 +403,9 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
 
     final asVar = _asVar;
     final generics = typeParams.map((t) => t.ref());
+
+    final anonymous = isAnonymous || addAnonymousFlag;
+    final methods = this.methods;
     final staticMethods =
         methods.where((p) => p.isStatic).expand((p) => p.build()).toList();
     final extensionMethods =
@@ -417,7 +448,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
             pkgJs.js(
                 name: name != usableName && !addAnonymousFlag ? name : null),
             pkgJs.staticInterop(),
-            if (isAnonymous || addAnonymousFlag) pkgJs.anonymous()
+            if (anonymous) pkgJs.anonymous()
           ]
         ]);
 
@@ -426,17 +457,22 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
       if (isAnonymous && !isInline) {
         final refs = [InteropRef(this), ...inheritance];
         final SymbolSwap targs = refs.expand((obj) {
-          return obj.typeArgs.mapIndexed((index, ta) => (
+          return obj.type.typeParams.mapIndexed((index, ta) => (
                 symbol: obj.type.typeParams.elementAt(index).symbol,
-                reference: ta
+                reference: obj.typeArgs.length > index
+                    ? obj.typeArgs[index]
+                    : ta.def ?? InteropStaticType.dyn.asRef
               ));
         });
         final done = <String>{};
-        final props = <InteropGetter>[];
+        final anonymousProps = <InteropProperty>[];
 
-        for (var x = 0; x < refs.length; x++) {
-          final obj = refs.elementAt(x);
+        if (usableName == 'TemplateStringsArray') {
+          print(
+              'TemplateStringsArray $targs\n${refs.map((r) => '${r.type}\n- (TypeArgs: ${r.typeArgs.join(', ')})\n- [TypeParams: ${r.type.typeParams.join(', ')}]').join('\n')}');
+        }
 
+        for (final obj in refs) {
           for (final prop in obj.type.properties
               .whereType<InteropGetter>()
               .where((g) => g.canBeBuilt)) {
@@ -445,7 +481,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
             }
 
             done.add(prop.name);
-            props.add(prop);
+            anonymousProps.add(prop);
           }
         }
 
@@ -455,7 +491,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
             ..factory = true
             ..external = true;
 
-          for (final prop in props) {
+          for (final prop in anonymousProps) {
             b.optionalParameters.add(Parameter((b) {
               b
                 ..name = prop.usableName
@@ -470,9 +506,11 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           Constructor((b) {
             final args = <String, Expression>{};
 
-            for (final prop in props) {
-              args[prop.usableName] =
-                  prop.reference.toInterop(refer(prop.usableName));
+            for (final prop in anonymousProps) {
+              args[prop.usableName] = prop.reference.toInterop(
+                  refer(prop.usableName),
+                  isNullable: isInterface,
+                  isOptional: isInterface);
             }
 
             b
@@ -484,7 +522,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
 
             InteropClass? owner;
 
-            for (final prop in props) {
+            for (final prop in anonymousProps) {
               b.optionalParameters.add(Parameter((b) {
                 final ref = prop.reference;
 
@@ -495,9 +533,10 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
 
                 b
                   ..name = prop.usableName
-                  ..required = !ref.acceptsNull
+                  ..required = !isInterface && !ref.acceptsNull
                   ..named = true
-                  ..type = ref.ref(symbolSwap: targs);
+                  ..type =
+                      ref.ref(symbolSwap: targs, forceOptional: isInterface);
               }));
             }
           })
@@ -541,6 +580,11 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
 
     if (_asVar case InteropGetter v) {
       yield* v.buildExternal();
+    }
+
+    if (usableName.contains('ActiveTextEditor')) {
+      print(
+          'ActiveTextEditorAccessor $usableName($name): ${members.where((m) => m.name == 'edit').join(', ')}\n${properties.where((m) => m.name == 'edit').join(', ')}\n${_properties.where((m) => m.name == 'edit').join(', ')}');
     }
 
     if (members.isNotEmpty) {
@@ -587,10 +631,6 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
     _properties.add(property);
   }
 
-  void removeProperty(InteropProperty property) {
-    _properties.remove(property);
-  }
-
   @override
   void parse(Map<String, dynamic> map) {
     super.parse(map);
@@ -626,12 +666,17 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
           continue;
         }
 
+        var makeProp = !member.isMethod;
+        var propMap = member.map;
+
         if (member.isMethod) {
           final method = _parseMethod(member.map);
 
           addMethod(method);
-        } else {
-          final (getter, setter) = _parseProp(member.map);
+        }
+
+        if (makeProp) {
+          final (getter, setter) = _parseProp(propMap);
 
           if (getter case InteropGetter g
               when _properties
@@ -650,6 +695,51 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
             ],
             if (setter case InteropSetter g when !g.hasBadName()) setter,
           ]);
+        }
+      }
+
+      for (final method in methods.toList()) {
+        if (isInterface &&
+            method.canBeProperty &&
+            method.versions.length <= 1) {
+          final member =
+              struct.members.firstWhere((m) => m.name == method.name);
+
+          final getter = InteropGetter(
+              name: method.name,
+              cl: this,
+              library: library,
+              lineNumber: method.lineNumber,
+              source: method.source,
+              readonly: member.isReadonly,
+              isStatic: false,
+              isExternal: false,
+              doc: method.doc);
+
+          getter.reference = getter.parseRef({
+            'ctor': false,
+            'generics': member.generics,
+            'returns': member.map['type'],
+            'params': member.map['params'],
+            'isNullable': member.isNullable,
+            '_': member.lineNumber,
+            'source': member.source,
+          });
+          getter.reference.optional =
+              getter.reference.optional || member.isNullable;
+
+          final setter = InteropSetter(
+              name: method.name,
+              cl: this,
+              lineNumber: method.lineNumber,
+              library: library,
+              isStatic: false,
+              source: method.source,
+              doc: method.doc)
+            ..reference = getter.reference;
+
+          _properties.addAll([setter, getter]);
+          _methods.remove(method);
         }
       }
 

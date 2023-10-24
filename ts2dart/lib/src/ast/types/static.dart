@@ -100,6 +100,7 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
       symbol: 'Float64List',
       mappings: {'Float64Array'},
       package: 'dart:typed_data'),
+  futureOr(symbol: 'FutureOr', package: 'dart:async', typeParamsLength: 1),
   banned(symbol: 'Never', mappings: {'intrinsic'}),
   never(symbol: 'Never', mappings: {'never'}, typeParamsLength: 0),
   ctor(symbol: 'Never', mappings: {'constructor'}, typeParamsLength: 0);
@@ -243,6 +244,15 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
 
   @override
   bool get isBasic => basicTypes.contains(this);
+
+  @override
+  bool get nullable => isDynamic;
+
+  @override
+  bool get optional => isDynamic;
+
+  @override
+  bool get isPromiseLike => this == futureOr;
 
   @override
   Reference ref(

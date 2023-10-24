@@ -1,4 +1,3 @@
-import 'package:built_collection/built_collection.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:collection/collection.dart';
 import 'package:recase/recase.dart';
@@ -342,6 +341,10 @@ class InteropMethod extends InteropNamedDeclaration
   final bool addCallArg;
   final bool argsAsList;
   bool get isOperator => name.startsWith('operator');
+  bool get isSymbolIterator => name.startsWith('[') && name.endsWith(']');
+
+  bool get canBeProperty =>
+      !isStatic && !isOperator && !isExternal && !isSymbolIterator;
 
   @override
   final String source;
@@ -549,23 +552,6 @@ extension AdvMethods on Iterable<InteropMethod> {
       }
 
       yield cp;
-    }
-  }
-}
-
-extension AdvMethodParams on Iterable<InteropMethodParam> {
-  void bindCodeParams(
-      {required ListBuilder<Parameter> optionals,
-      required ListBuilder<Parameter> requireds,
-      SymbolSwap? symbolSwap}) {
-    for (final param in toList().reversed) {
-      final built = param.toCodeParam(symbolSwap: symbolSwap);
-
-      if (param.ref.acceptsNull && requireds.isEmpty) {
-        optionals.insert(0, built);
-      } else {
-        requireds.insert(0, built);
-      }
     }
   }
 }

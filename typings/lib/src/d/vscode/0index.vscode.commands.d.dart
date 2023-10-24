@@ -6,7 +6,6 @@ import 'dart:core' as _i2;
 import '0index.vscode.d.dart' as _i3;
 import 'dart:js_util' as _i4;
 import '/d/core.dart' as _i5;
-import '0index.d.dart' as _i6;
 
 @_i1.JS('vscode.commands')
 external _i2.Object _self;
@@ -55,7 +54,7 @@ extension $ModuleCommands$Typings on $ModuleCommands {
                 a8,
                 a9,
               ])),
-          thisArg ?? _i5.undefined,
+          thisArg,
         ],
       );
 
@@ -71,9 +70,9 @@ extension $ModuleCommands$Typings on $ModuleCommands {
     _i2.String command,
     void Function(
       _i3.TextEditor,
-      _i3.TextEditorEdit,
+      _i3.TextEditorEdit, [
       _i2.Iterable<_i2.dynamic>?,
-    ) callback, [
+    ]) callback, [
     _i2.dynamic thisArg,
   ]) =>
       _i4.callMethod(
@@ -111,7 +110,7 @@ extension $ModuleCommands$Typings on $ModuleCommands {
                   a9,
                 ],
               )),
-          thisArg ?? _i5.undefined,
+          thisArg,
         ],
       );
 
@@ -122,7 +121,7 @@ extension $ModuleCommands$Typings on $ModuleCommands {
   /// `number`, `undefined`, and `null`, as well as {@linkcode Position}, {@linkcode Range}, {@linkcode Uri} and {@linkcode Location}.
   /// * *Note 2:* There are no restrictions when executing commands that have been contributed
   /// by extensions.
-  _i2.Future<_i6.Thenable<T>> executeCommand<T>(
+  _i2.Future<_i2.dynamic> executeCommand<T>(
     _i2.String command, [
     _i2.Iterable<_i2.dynamic>? rest,
   ]) =>
@@ -137,8 +136,7 @@ extension $ModuleCommands$Typings on $ModuleCommands {
 
   /// Retrieve the list of all available commands. Commands starting with an underscore are
   /// treated as internal commands.
-  _i2.Future<_i6.Thenable<_i2.List<_i2.String>>> getCommands(
-          [_i2.bool? filterInternal]) =>
+  _i2.Future<_i2.dynamic> getCommands([_i2.bool? filterInternal]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'getCommands',

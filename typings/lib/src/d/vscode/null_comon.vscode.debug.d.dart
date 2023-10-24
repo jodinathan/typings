@@ -5,11 +5,11 @@ import 'dart:js_util' as _i3;
 
 @_i1.JS('vscode.debug')
 external _i2.Object _self;
-_i2.Object get target389 => _i3.getProperty(
+_i2.Object get target71 => _i3.getProperty(
       _self,
       'activeDebugSession',
     );
-_i2.Object get target390 => _i3.getProperty(
+_i2.Object get target72 => _i3.getProperty(
       _self,
       'activeDebugConsole',
     );

@@ -85,7 +85,7 @@ extension UriAccessor$Typings on _UriAccessor {
     _i2.bool? strict,
   ]) =>
       _i3.callMethod(
-        _i5.target391,
+        _i5.target73,
         'parse',
         [
           value,
@@ -112,7 +112,7 @@ extension UriAccessor$Typings on _UriAccessor {
   /// bad.fragment === '/project1';
   /// ```
   _i4.Uri file(_i2.String path) => _i3.callMethod(
-        _i5.target391,
+        _i5.target73,
         'file',
         [path],
       );
@@ -136,7 +136,7 @@ extension UriAccessor$Typings on _UriAccessor {
     _i2.Iterable<_i2.dynamic>? pathSegments,
   ]) =>
       _i3.callMethod(
-        _i5.target391,
+        _i5.target73,
         'joinPath',
         [
           base,
@@ -146,7 +146,7 @@ extension UriAccessor$Typings on _UriAccessor {
 
   /// Create an URI from its component parts
   _i4.Uri from(_i4.IInline5 components) => _i3.callMethod(
-        _i5.target391,
+        _i5.target73,
         'from',
         [components],
       );
@@ -164,7 +164,7 @@ extension UriAccessor$Typings on _UriAccessor {
   ///  @returns A new Uri that reflects the given change. Will return `this` Uri if the change
   ///   is not changing anything.
   _i4.Uri with$(_i4.IInline6 change) => _i3.callMethod(
-        _i5.target391,
+        _i5.target73,
         'with',
         [change],
       );
@@ -185,7 +185,7 @@ extension UriAccessor$Typings on _UriAccessor {
   /// 	the `#` and `?` characters occurring in the path will always be encoded.
   ///  @returns A string representation of this Uri.
   _i2.String toString$([_i2.bool? skipEncoding]) => _i3.callMethod(
-        _i5.target391,
+        _i5.target73,
         'toString',
         [skipEncoding ?? _i6.undefined],
       );
@@ -194,7 +194,7 @@ extension UriAccessor$Typings on _UriAccessor {
   ///
   ///  @returns An object.
   _i2.dynamic toJSON() => _i3.callMethod(
-        _i5.target391,
+        _i5.target73,
         'toJSON',
         [],
       );
@@ -206,7 +206,7 @@ extension UriAccessor$Typings on _UriAccessor {
     _i2.String fragment,
   ) =>
       _i3.callMethod(
-        _i5.target391,
+        _i5.target73,
         'call',
         [
           this,

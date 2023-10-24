@@ -183,6 +183,20 @@ class InteropUnion extends InteropType
                   _delegate = InteropRef<InteropClass>(cl);
                 }
               }
+
+              if (_delegate == null && filtered.length == 2) {
+                final promise =
+                    filtered.firstWhereOrNull((it) => it.type.isPromiseLike);
+                final other = filtered.firstWhere((it) => it != promise);
+
+                if (promise != null) {
+                  if (promise.typeArgs.length == 1 &&
+                      promise.typeArgs.first.isSame(other)) {
+                    _delegate = InteropRef(InteropStaticType.futureOr,
+                        typeArgs: [other]);
+                  }
+                }
+              }
             }
           }
         }

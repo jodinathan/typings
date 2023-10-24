@@ -5,9 +5,9 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'lib.dom.webassembly.d.dart' as _i3;
 import 'lib.es5.d.dart' as _i4;
-import '/d/core.dart' as _i5;
-import 'dart:js_util' as _i6;
-import 'dart:typed_data' as _i7;
+import 'dart:js_util' as _i5;
+import 'dart:typed_data' as _i6;
+import '/d/core.dart' as _i7;
 import 'lib.dom.d.dart' as _i8;
 
 @_i1.JS('WebAssembly')
@@ -54,43 +54,64 @@ class CompileError implements _i4.Error {
   });
 
   factory CompileError({
-    required _i2.String name,
-    required _i2.String message,
+    _i2.String? name,
+    _i2.String? message,
     _i2.String? stack,
     _i2.Object? cause,
   }) =>
       CompileError._(
         name: name,
         message: message,
-        stack: stack ?? _i5.undefined,
-        cause: cause ?? _i5.undefined,
+        stack: stack,
+        cause: cause,
       );
 }
 
 /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global)
 @_i1.JS()
 @_i1.staticInterop
-class Global<T extends _i3.ValueType> {}
+@_i1.anonymous
+class Global<T extends _i3.ValueType> {
+  external factory Global._({
+    _i2.dynamic value,
+    _i2.dynamic valueOf,
+  });
+
+  factory Global({
+    _i2.dynamic value,
+    _i2.dynamic Function()? valueOf,
+  }) =>
+      Global._(
+        value: value,
+        valueOf: valueOf == null ? null : _i5.allowInterop(valueOf),
+      );
+}
 
 extension Global$Typings<T extends _i3.ValueType> on Global<T> {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/value)
-  _i2.dynamic get value => _i6.getProperty(
+  _i2.dynamic get value => _i5.getProperty(
         this,
         'value',
       );
   set value(_i2.dynamic value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'value',
       value,
     );
   }
 
-  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/valueOf)
-  _i2.dynamic valueOf() => _i6.callMethod(
+  set valueOf(_i2.dynamic Function() value) {
+    _i5.setProperty(
+      this,
+      'valueOf',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.dynamic Function() get valueOf => _i5.getProperty(
         this,
         'valueOf',
-        [],
       );
 }
 
@@ -101,13 +122,12 @@ extension Global$Typings<T extends _i3.ValueType> on Global<T> {
 class Instance {
   external factory Instance._({_i2.dynamic exports});
 
-  factory Instance({required _i3.Exports exports}) =>
-      Instance._(exports: exports);
+  factory Instance({_i3.Exports? exports}) => Instance._(exports: exports);
 }
 
 extension Instance$Typings on Instance {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)
-  _i3.Exports get exports => _i6.getProperty(
+  _i3.Exports get exports => _i5.getProperty(
         this,
         'exports',
       );
@@ -125,36 +145,56 @@ class LinkError implements _i4.Error {
   });
 
   factory LinkError({
-    required _i2.String name,
-    required _i2.String message,
+    _i2.String? name,
+    _i2.String? message,
     _i2.String? stack,
     _i2.Object? cause,
   }) =>
       LinkError._(
         name: name,
         message: message,
-        stack: stack ?? _i5.undefined,
-        cause: cause ?? _i5.undefined,
+        stack: stack,
+        cause: cause,
       );
 }
 
 /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
 @_i1.JS()
 @_i1.staticInterop
-class Memory {}
+@_i1.anonymous
+class Memory {
+  external factory Memory._({
+    _i2.dynamic buffer,
+    _i2.dynamic grow,
+  });
+
+  factory Memory({
+    _i6.ByteBuffer? buffer,
+    _i2.num Function(_i2.num)? grow,
+  }) =>
+      Memory._(
+        buffer: buffer,
+        grow: grow == null ? null : _i5.allowInterop(grow),
+      );
+}
 
 extension Memory$Typings on Memory {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)
-  _i7.ByteBuffer get buffer => _i6.getProperty(
+  _i6.ByteBuffer get buffer => _i5.getProperty(
         this,
         'buffer',
       );
+  set grow(_i2.num Function(_i2.num) value) {
+    _i5.setProperty(
+      this,
+      'grow',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow)
-  _i2.num grow(_i2.num delta) => _i6.callMethod(
+  _i2.num Function(_i2.num) get grow => _i5.getProperty(
         this,
         'grow',
-        [delta],
       );
 }
 
@@ -180,66 +220,107 @@ class RuntimeError implements _i4.Error {
   });
 
   factory RuntimeError({
-    required _i2.String name,
-    required _i2.String message,
+    _i2.String? name,
+    _i2.String? message,
     _i2.String? stack,
     _i2.Object? cause,
   }) =>
       RuntimeError._(
         name: name,
         message: message,
-        stack: stack ?? _i5.undefined,
-        cause: cause ?? _i5.undefined,
+        stack: stack,
+        cause: cause,
       );
 }
 
 /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)
 @_i1.JS()
 @_i1.staticInterop
-class Table {}
+@_i1.anonymous
+class Table {
+  external factory Table._({
+    _i2.dynamic length,
+    _i2.dynamic get,
+    _i2.dynamic grow,
+    _i2.dynamic set,
+  });
+
+  factory Table({
+    _i2.num? length,
+    _i2.dynamic Function(_i2.num)? get,
+    _i2.num Function(
+      _i2.num, [
+      _i2.dynamic,
+    ])? grow,
+    void Function(
+      _i2.num, [
+      _i2.dynamic,
+    ])? set,
+  }) =>
+      Table._(
+        length: length,
+        get: get == null ? null : _i5.allowInterop(get),
+        grow: grow == null ? null : _i5.allowInterop(grow),
+        set: set == null ? null : _i5.allowInterop(set),
+      );
+}
 
 extension Table$Typings on Table {
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length)
-  _i2.num get length => _i6.getProperty(
+  _i2.num get length => _i5.getProperty(
         this,
         'length',
       );
-
-  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get)
-  _i2.dynamic get(_i2.num index) => _i6.callMethod(
-        this,
-        'get',
-        [index],
-      );
-
-  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow)
-  _i2.num grow(
-    _i2.num delta, [
-    _i2.dynamic value,
-  ]) =>
-      _i6.callMethod(
-        this,
-        'grow',
-        [
-          delta,
-          value ?? _i5.undefined,
-        ],
-      );
-
-  /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set)
-  void set(
-    _i2.num index, [
-    _i2.dynamic value,
-  ]) {
-    _i6.callMethod(
+  set get(_i2.dynamic Function(_i2.num) value) {
+    _i5.setProperty(
       this,
-      'set',
-      [
-        index,
-        value ?? _i5.undefined,
-      ],
+      'get',
+      _i5.allowInterop(value),
     );
   }
+
+  _i2.dynamic Function(_i2.num) get get => _i5.getProperty(
+        this,
+        'get',
+      );
+  set grow(
+      _i2.num Function(
+        _i2.num, [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'grow',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.num Function(
+    _i2.num, [
+    _i2.dynamic,
+  ]) get grow => _i5.getProperty(
+        this,
+        'grow',
+      );
+  set set(
+      void Function(
+        _i2.num, [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'set',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function(
+    _i2.num, [
+    _i2.dynamic,
+  ]) get set => _i5.getProperty(
+        this,
+        'set',
+      );
 }
 
 @_i1.JS()
@@ -253,34 +334,34 @@ class GlobalDescriptor<T extends _i3.ValueType> {
 
   factory GlobalDescriptor({
     _i2.bool? mutable,
-    required T value,
+    _i3.ValueType? value,
   }) =>
       GlobalDescriptor._(
-        mutable: mutable ?? _i5.undefined,
+        mutable: mutable,
         value: value,
       );
 }
 
 extension GlobalDescriptor$Typings<T extends _i3.ValueType>
     on GlobalDescriptor<T> {
-  _i2.bool? get mutable => _i6.getProperty(
+  _i2.bool? get mutable => _i5.getProperty(
         this,
         'mutable',
       );
   set mutable(_i2.bool? value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'mutable',
-      value ?? _i5.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  T get value => _i6.getProperty(
+  T get value => _i5.getProperty(
         this,
         'value',
       );
   set value(T value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'value',
       value,
@@ -299,51 +380,51 @@ class MemoryDescriptor {
   });
 
   factory MemoryDescriptor({
-    required _i2.num initial,
+    _i2.num? initial,
     _i2.num? maximum,
     _i2.bool? shared,
   }) =>
       MemoryDescriptor._(
         initial: initial,
-        maximum: maximum ?? _i5.undefined,
-        shared: shared ?? _i5.undefined,
+        maximum: maximum,
+        shared: shared,
       );
 }
 
 extension MemoryDescriptor$Typings on MemoryDescriptor {
-  _i2.num get initial => _i6.getProperty(
+  _i2.num get initial => _i5.getProperty(
         this,
         'initial',
       );
   set initial(_i2.num value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'initial',
       value,
     );
   }
 
-  _i2.num? get maximum => _i6.getProperty(
+  _i2.num? get maximum => _i5.getProperty(
         this,
         'maximum',
       );
   set maximum(_i2.num? value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'maximum',
-      value ?? _i5.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  _i2.bool? get shared => _i6.getProperty(
+  _i2.bool? get shared => _i5.getProperty(
         this,
         'shared',
       );
   set shared(_i2.bool? value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'shared',
-      value ?? _i5.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -358,35 +439,35 @@ class ModuleExportDescriptor {
   });
 
   factory ModuleExportDescriptor({
-    required _i3.ImportExportKind kind,
-    required _i2.String name,
+    _i3.ImportExportKind? kind,
+    _i2.String? name,
   }) =>
       ModuleExportDescriptor._(
-        kind: kind.name,
+        kind: kind?.name ?? _i7.undefined,
         name: name,
       );
 }
 
 extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
   _i3.ImportExportKind get kind =>
-      _i3.ImportExportKindOptions.values.byName(_i6.getProperty(
+      _i3.ImportExportKindOptions.values.byName(_i5.getProperty(
         this,
         'kind',
       ));
   set kind(_i3.ImportExportKind value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'kind',
       value.name,
     );
   }
 
-  _i2.String get name => _i6.getProperty(
+  _i2.String get name => _i5.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'name',
       value,
@@ -405,12 +486,12 @@ class ModuleImportDescriptor {
   });
 
   factory ModuleImportDescriptor({
-    required _i3.ImportExportKind kind,
-    required _i2.String module,
-    required _i2.String name,
+    _i3.ImportExportKind? kind,
+    _i2.String? module,
+    _i2.String? name,
   }) =>
       ModuleImportDescriptor._(
-        kind: kind.name,
+        kind: kind?.name ?? _i7.undefined,
         module: module,
         name: name,
       );
@@ -418,36 +499,36 @@ class ModuleImportDescriptor {
 
 extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
   _i3.ImportExportKind get kind =>
-      _i3.ImportExportKindOptions.values.byName(_i6.getProperty(
+      _i3.ImportExportKindOptions.values.byName(_i5.getProperty(
         this,
         'kind',
       ));
   set kind(_i3.ImportExportKind value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'kind',
       value.name,
     );
   }
 
-  _i2.String get module => _i6.getProperty(
+  _i2.String get module => _i5.getProperty(
         this,
         'module',
       );
   set module(_i2.String value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'module',
       value,
     );
   }
 
-  _i2.String get name => _i6.getProperty(
+  _i2.String get name => _i5.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'name',
       value,
@@ -466,52 +547,52 @@ class TableDescriptor {
   });
 
   factory TableDescriptor({
-    required _i3.TableKind element,
-    required _i2.num initial,
+    _i3.TableKind? element,
+    _i2.num? initial,
     _i2.num? maximum,
   }) =>
       TableDescriptor._(
-        element: element.name,
+        element: element?.name ?? _i7.undefined,
         initial: initial,
-        maximum: maximum ?? _i5.undefined,
+        maximum: maximum,
       );
 }
 
 extension TableDescriptor$Typings on TableDescriptor {
   _i3.TableKind get element =>
-      _i3.TableKindOptions.values.byName(_i6.getProperty(
+      _i3.TableKindOptions.values.byName(_i5.getProperty(
         this,
         'element',
       ));
   set element(_i3.TableKind value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'element',
       value.name,
     );
   }
 
-  _i2.num get initial => _i6.getProperty(
+  _i2.num get initial => _i5.getProperty(
         this,
         'initial',
       );
   set initial(_i2.num value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'initial',
       value,
     );
   }
 
-  _i2.num? get maximum => _i6.getProperty(
+  _i2.num? get maximum => _i5.getProperty(
         this,
         'maximum',
       );
   set maximum(_i2.num? value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'maximum',
-      value ?? _i5.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -531,13 +612,13 @@ class ValueTypeMap {
   });
 
   factory ValueTypeMap({
-    required _i2.Function anyfunc,
-    required _i2.dynamic externref,
-    required _i2.num f32,
-    required _i2.num f64,
-    required _i2.num i32,
-    required _i2.int i64,
-    required _i2.Never v128,
+    _i2.Function? anyfunc,
+    _i2.dynamic externref,
+    _i2.num? f32,
+    _i2.num? f64,
+    _i2.num? i32,
+    _i2.int? i64,
+    _i2.Never? v128,
   }) =>
       ValueTypeMap._(
         anyfunc: anyfunc,
@@ -565,84 +646,84 @@ enum ValueTypeMapKeys {
 }
 
 extension ValueTypeMap$Typings on ValueTypeMap {
-  _i2.Function get anyfunc => _i6.getProperty(
+  _i2.Function get anyfunc => _i5.getProperty(
         this,
         'anyfunc',
       );
   set anyfunc(_i2.Function value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'anyfunc',
       value,
     );
   }
 
-  _i2.dynamic get externref => _i6.getProperty(
+  _i2.dynamic get externref => _i5.getProperty(
         this,
         'externref',
       );
   set externref(_i2.dynamic value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'externref',
       value,
     );
   }
 
-  _i2.num get f32 => _i6.getProperty(
+  _i2.num get f32 => _i5.getProperty(
         this,
         'f32',
       );
   set f32(_i2.num value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'f32',
       value,
     );
   }
 
-  _i2.num get f64 => _i6.getProperty(
+  _i2.num get f64 => _i5.getProperty(
         this,
         'f64',
       );
   set f64(_i2.num value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'f64',
       value,
     );
   }
 
-  _i2.num get i32 => _i6.getProperty(
+  _i2.num get i32 => _i5.getProperty(
         this,
         'i32',
       );
   set i32(_i2.num value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'i32',
       value,
     );
   }
 
-  _i2.int get i64 => _i6.getProperty(
+  _i2.int get i64 => _i5.getProperty(
         this,
         'i64',
       );
   set i64(_i2.int value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'i64',
       value,
     );
   }
 
-  _i2.Never get v128 => _i6.getProperty(
+  _i2.Never get v128 => _i5.getProperty(
         this,
         'v128',
       );
   set v128(_i2.Never value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'v128',
       value,
@@ -660,35 +741,35 @@ class WebAssemblyInstantiatedSource {
   });
 
   factory WebAssemblyInstantiatedSource({
-    required _i3.Instance instance,
-    required _i3.Module module,
+    _i3.Instance? instance,
+    _i3.Module? module,
   }) =>
       WebAssemblyInstantiatedSource._(
-        instance: instance,
-        module: module,
+        instance: instance ?? _i7.undefined,
+        module: module ?? _i7.undefined,
       );
 }
 
 extension WebAssemblyInstantiatedSource$Typings
     on WebAssemblyInstantiatedSource {
-  _i3.Instance get instance => _i6.getProperty(
+  _i3.Instance get instance => _i5.getProperty(
         this,
         'instance',
       );
   set instance(_i3.Instance value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'instance',
       value,
     );
   }
 
-  _i3.Module get module => _i6.getProperty(
+  _i3.Module get module => _i5.getProperty(
         this,
         'module',
       );
   set module(_i3.Module value) {
-    _i6.setProperty(
+    _i5.setProperty(
       this,
       'module',
       value,
@@ -701,52 +782,52 @@ extension WebAssemblyInstantiatedSource$Typings
 class $ModuleWebAssembly {}
 
 extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
-  _i3.CompileError get compileError => _i6.getProperty(
+  _i3.CompileError get compileError => _i5.getProperty(
         this,
         'CompileError',
       );
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global)
-  _i3.Global<_i3.ValueType> get global => _i6.getProperty(
+  _i3.Global<_i3.ValueType> get global => _i5.getProperty(
         this,
         'Global',
       );
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance)
-  _i3.Instance get instance => _i6.getProperty(
+  _i3.Instance get instance => _i5.getProperty(
         this,
         'Instance',
       );
-  _i3.LinkError get linkError => _i6.getProperty(
+  _i3.LinkError get linkError => _i5.getProperty(
         this,
         'LinkError',
       );
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
-  _i3.Memory get memory => _i6.getProperty(
+  _i3.Memory get memory => _i5.getProperty(
         this,
         'Memory',
       );
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)
-  _i3.Module get module => _i6.getProperty(
+  _i3.Module get module => _i5.getProperty(
         this,
         'Module',
       );
-  _i3.RuntimeError get runtimeError => _i6.getProperty(
+  _i3.RuntimeError get runtimeError => _i5.getProperty(
         this,
         'RuntimeError',
       );
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)
-  _i3.Table get table => _i6.getProperty(
+  _i3.Table get table => _i5.getProperty(
         this,
         'Table',
       );
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile)
   _i2.Future<_i3.Module> compile(_i8.BufferSource bytes) =>
-      _i6.promiseToFuture(_i6.callMethod(
+      _i5.promiseToFuture(_i5.callMethod(
         this,
         'compile',
         [bytes],
@@ -754,7 +835,7 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming)
   _i2.Future<_i3.Module> compileStreaming(_i2.Object source) =>
-      _i6.promiseToFuture(_i6.callMethod(
+      _i5.promiseToFuture(_i5.callMethod(
         this,
         'compileStreaming',
         [source],
@@ -765,12 +846,12 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
     _i8.BufferSource bytes, [
     _i3.Imports? importObject,
   ]) =>
-      _i6.promiseToFuture(_i6.callMethod(
+      _i5.promiseToFuture(_i5.callMethod(
         this,
         'instantiate',
         [
           bytes,
-          importObject ?? _i5.undefined ?? _i5.undefined ?? _i5.undefined,
+          importObject ?? _i7.undefined ?? _i7.undefined,
         ],
       ));
 
@@ -779,12 +860,12 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
     _i3.Module moduleObject, [
     _i3.Imports? importObject,
   ]) =>
-      _i6.promiseToFuture(_i6.callMethod(
+      _i5.promiseToFuture(_i5.callMethod(
         this,
         'instantiate',
         [
           moduleObject,
-          importObject ?? _i5.undefined ?? _i5.undefined ?? _i5.undefined,
+          importObject ?? _i7.undefined ?? _i7.undefined,
         ],
       ));
 
@@ -811,17 +892,17 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
     _i2.Object source, [
     _i3.Imports? importObject,
   ]) =>
-      _i6.promiseToFuture(_i6.callMethod(
+      _i5.promiseToFuture(_i5.callMethod(
         this,
         'instantiateStreaming',
         [
           source,
-          importObject ?? _i5.undefined ?? _i5.undefined ?? _i5.undefined,
+          importObject ?? _i7.undefined ?? _i7.undefined,
         ],
       ));
 
   /// [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate)
-  _i2.bool validate(_i8.BufferSource bytes) => _i6.callMethod(
+  _i2.bool validate(_i8.BufferSource bytes) => _i5.callMethod(
         this,
         'validate',
         [bytes],

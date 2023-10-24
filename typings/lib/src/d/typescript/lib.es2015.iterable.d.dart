@@ -48,7 +48,61 @@ typedef IteratorResult<T, TReturn> = _i5.IteratorResultCommon;
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class SymbolConstructor {
+  external factory SymbolConstructor._({
+    _i2.dynamic iterator,
+    _i2.dynamic hasInstance,
+    _i2.dynamic isConcatSpreadable,
+    _i2.dynamic match,
+    _i2.dynamic replace,
+    _i2.dynamic search,
+    _i2.dynamic species,
+    _i2.dynamic split,
+    _i2.dynamic toPrimitive,
+    _i2.dynamic toStringTag,
+    _i2.dynamic unscopables,
+    _i2.dynamic asyncIterator,
+    _i2.dynamic matchAll,
+    _i2.dynamic for$,
+    _i2.dynamic keyFor,
+  });
+
+  factory SymbolConstructor({
+    _i2.Symbol? iterator,
+    _i2.Symbol? hasInstance,
+    _i2.Symbol? isConcatSpreadable,
+    _i2.Symbol? match,
+    _i2.Symbol? replace,
+    _i2.Symbol? search,
+    _i2.Symbol? species,
+    _i2.Symbol? split,
+    _i2.Symbol? toPrimitive,
+    _i2.Symbol? toStringTag,
+    _i2.Symbol? unscopables,
+    _i2.Symbol? asyncIterator,
+    _i2.Symbol? matchAll,
+    _i2.Symbol Function(_i2.String)? for$,
+    _i2.String? Function(_i2.Symbol)? keyFor,
+  }) =>
+      SymbolConstructor._(
+        iterator: iterator ?? _i4.undefined,
+        hasInstance: hasInstance ?? _i4.undefined,
+        isConcatSpreadable: isConcatSpreadable ?? _i4.undefined,
+        match: match ?? _i4.undefined,
+        replace: replace ?? _i4.undefined,
+        search: search ?? _i4.undefined,
+        species: species ?? _i4.undefined,
+        split: split ?? _i4.undefined,
+        toPrimitive: toPrimitive ?? _i4.undefined,
+        toStringTag: toStringTag ?? _i4.undefined,
+        unscopables: unscopables ?? _i4.undefined,
+        asyncIterator: asyncIterator ?? _i4.undefined,
+        matchAll: matchAll ?? _i4.undefined,
+        for$: for$ == null ? null : _i3.allowInterop(for$),
+        keyFor: keyFor == null ? null : _i3.allowInterop(keyFor),
+      );
+
   /// A method that returns the default iterator for an object. Called by the semantics of the
   /// for-of statement.
   /// A method that returns the default iterator for an object. Called by the semantics of the
@@ -163,25 +217,31 @@ class SymbolConstructor {
         _i6.target22,
         'matchAll',
       );
+  static set for$(_i2.Symbol Function(_i2.String) value) {
+    _i3.setProperty(
+      _i6.target22,
+      'for',
+      _i3.allowInterop(value),
+    );
+  }
+
+  static set keyFor(_i2.String? Function(_i2.Symbol) value) {
+    _i3.setProperty(
+      _i6.target22,
+      'keyFor',
+      _i3.allowInterop(value),
+    );
+  }
 }
 
 extension SymbolConstructor$Typings on SymbolConstructor {
-  /// Returns a Symbol object from the global symbol registry matching the given key if found.
-  ///  Otherwise, returns a new symbol with this key.
-  ///  @param key key to search for.
-  _i2.Symbol for$(_i2.String key) => _i3.callMethod(
+  _i2.Symbol Function(_i2.String) get for$ => _i3.getProperty(
         this,
         'for',
-        [key],
       );
-
-  /// Returns a key from the global symbol registry matching the given Symbol if found.
-  ///  Otherwise, returns a undefined.
-  ///  @param sym Symbol to find the key for.
-  _i2.String? keyFor(_i2.Symbol sym) => _i3.callMethod(
+  _i2.String? Function(_i2.Symbol) get keyFor => _i3.getProperty(
         this,
         'keyFor',
-        [sym],
       );
   _i2.Symbol call([_i2.Object? description]) => _i3.callMethod(
         this,
@@ -204,10 +264,10 @@ class IteratorYieldResult<TYield> {
 
   factory IteratorYieldResult({
     _i2.bool? done,
-    required TYield value,
+    _i2.dynamic value,
   }) =>
       IteratorYieldResult._(
-        done: done ?? _i4.undefined,
+        done: done,
         value: value,
       );
 }
@@ -248,8 +308,8 @@ class IteratorReturnResult<TReturn> {
   });
 
   factory IteratorReturnResult({
-    required _i2.bool done,
-    required TReturn value,
+    _i2.bool? done,
+    _i2.dynamic value,
   }) =>
       IteratorReturnResult._(
         done: done,
@@ -286,49 +346,209 @@ extension IteratorReturnResult$Typings<TReturn>
 
 @_i1.JS()
 @_i1.staticInterop
-class Iterator<T, TReturn, TNext> {}
+@_i1.anonymous
+class Iterator<T, TReturn, TNext> {
+  external factory Iterator._({
+    _i2.dynamic next,
+    _i2.dynamic return$,
+    _i2.dynamic throw$,
+  });
+
+  factory Iterator({
+    _i5.IteratorResult<_i2.dynamic, _i2.dynamic> Function(
+            [_i2.Iterable<_i2.dynamic>?])?
+        next,
+    _i5.IteratorResult<_i2.dynamic, _i2.dynamic> Function([_i2.dynamic])?
+        return$,
+    _i5.IteratorResult<_i2.dynamic, _i2.dynamic> Function([_i2.dynamic])?
+        throw$,
+  }) =>
+      Iterator._(
+        next: next == null
+            ? null
+            : _i3.allowInterop(([
+                a0,
+                a1,
+                a2,
+                a3,
+                a4,
+                a5,
+                a6,
+                a7,
+                a8,
+                a9,
+              ]) =>
+                next([
+                  a0,
+                  a1,
+                  a2,
+                  a3,
+                  a4,
+                  a5,
+                  a6,
+                  a7,
+                  a8,
+                  a9,
+                ])),
+        return$: return$ == null ? null : _i3.allowInterop(return$),
+        throw$: throw$ == null ? null : _i3.allowInterop(throw$),
+      );
+}
 
 extension Iterator$Typings<T, TReturn, TNext> on Iterator<T, TReturn, TNext> {
-  _i5.IteratorResult<T, TReturn> next([_i2.Iterable<_i2.dynamic>? args]) =>
-      _i3.callMethod(
-        this,
-        'next',
-        [...?args],
-      );
-  _i5.IteratorResult<T, TReturn> return$([TReturn? value]) => _i3.callMethod(
+  set next(
+      _i5.IteratorResult<T, TReturn> Function([_i2.Iterable<_i2.dynamic>?])
+          value) {
+    _i3.setProperty(
+      this,
+      'next',
+      _i3.allowInterop(([
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value([
+            a0,
+            a1,
+            a2,
+            a3,
+            a4,
+            a5,
+            a6,
+            a7,
+            a8,
+            a9,
+          ])),
+    );
+  }
+
+  _i5.IteratorResult<T, TReturn> Function([_i2.Iterable<_i2.dynamic>?])
+      get next => _i3.getProperty(
+            this,
+            'next',
+          );
+  set return$(_i5.IteratorResult<T, TReturn> Function([TReturn?]) value) {
+    _i3.setProperty(
+      this,
+      'return',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i5.IteratorResult<T, TReturn> Function([TReturn?]) get return$ =>
+      _i3.getProperty(
         this,
         'return',
-        [value ?? _i4.undefined],
       );
-  _i5.IteratorResult<T, TReturn> throw$([_i2.dynamic e]) => _i3.callMethod(
+  set throw$(_i5.IteratorResult<T, TReturn> Function([_i2.dynamic]) value) {
+    _i3.setProperty(
+      this,
+      'throw',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i5.IteratorResult<T, TReturn> Function([_i2.dynamic]) get throw$ =>
+      _i3.getProperty(
         this,
         'throw',
-        [e ?? _i4.undefined],
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class Iterable<T>
-    implements _IterableLike$<_i5.Iterator<T, _i2.dynamic, _i2.dynamic>> {}
+    implements _IterableLike$<_i5.Iterator<T, _i2.dynamic, _i2.dynamic>> {
+  external factory Iterable._();
+
+  factory Iterable() => Iterable._();
+}
 
 extension Iterable$Typings<T> on Iterable<T> {}
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class IterableIterator<T>
     implements
         _i5.Iterator<T, _i2.dynamic, _i2.dynamic>,
-        _IterableLike$<_i5.IterableIterator<T>> {}
+        _IterableLike$<_i5.IterableIterator<T>> {
+  external factory IterableIterator._({
+    _i2.dynamic next,
+    _i2.dynamic return$,
+    _i2.dynamic throw$,
+  });
+
+  factory IterableIterator({
+    _i5.IteratorResult<_i2.dynamic, _i2.dynamic> Function(
+            [_i2.Iterable<_i2.dynamic>?])?
+        next,
+    _i5.IteratorResult<_i2.dynamic, _i2.dynamic> Function([_i2.dynamic])?
+        return$,
+    _i5.IteratorResult<_i2.dynamic, _i2.dynamic> Function([_i2.dynamic])?
+        throw$,
+  }) =>
+      IterableIterator._(
+        next: next == null
+            ? null
+            : _i3.allowInterop(([
+                a0,
+                a1,
+                a2,
+                a3,
+                a4,
+                a5,
+                a6,
+                a7,
+                a8,
+                a9,
+              ]) =>
+                next([
+                  a0,
+                  a1,
+                  a2,
+                  a3,
+                  a4,
+                  a5,
+                  a6,
+                  a7,
+                  a8,
+                  a9,
+                ])),
+        return$: return$ == null ? null : _i3.allowInterop(return$),
+        throw$: throw$ == null ? null : _i3.allowInterop(throw$),
+      );
+}
 
 extension IterableIterator$Typings<T> on IterableIterator<T> {}
 
 /// Represents the completion of an asynchronous operation
 @_i1.JS()
 @_i1.staticInterop
-class PromiseConstructor {}
+class PromiseConstructor {
+  static set reject(_i2.Future<T> Function<T>([_i2.dynamic]) value) {
+    _i3.setProperty(
+      _i6.target20,
+      'reject',
+      _i3.allowInterop(value),
+    );
+  }
+}
 
 extension PromiseConstructor$Typings on PromiseConstructor {
+  _i2.Future<T> Function<T>([_i2.dynamic]) get reject => _i3.getProperty(
+        this,
+        'reject',
+      );
+
   /// Creates a Promise that is resolved with an array of results when all of the provided Promises
   ///  resolve, or rejected when any Promise is rejected.
   ///  @param values An iterable of Promises.
@@ -412,16 +632,6 @@ extension PromiseConstructor$Typings on PromiseConstructor {
         $1: _race$1,
         $2: _race$2,
       );
-
-  /// Creates a new rejected promise for the provided reason.
-  ///  @param reason The reason the promise was rejected.
-  ///  @returns A new rejected Promise.
-  _i2.Future<T> reject<T>([_i2.dynamic reason]) =>
-      _i3.promiseToFuture(_i3.callMethod(
-        this,
-        'reject',
-        [reason ?? _i4.undefined],
-      ));
 
   /// Creates a new resolved promise.
   ///  @returns A resolved promise.

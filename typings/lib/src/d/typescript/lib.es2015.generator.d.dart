@@ -12,27 +12,121 @@ external _i2.Object _self;
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class Generator<T, TReturn, TNext>
     implements
         _i3.Iterator<T, TReturn, TNext>,
-        _IterableLike$<_i4.Generator<T, TReturn, TNext>> {}
+        _IterableLike$<_i4.Generator<T, TReturn, TNext>> {
+  external factory Generator._({
+    _i2.dynamic next,
+    _i2.dynamic return$,
+    _i2.dynamic throw$,
+  });
+
+  factory Generator({
+    _i3.IteratorResult<_i2.Object?, _i2.dynamic> Function(
+            [_i2.Iterable<_i2.dynamic>?])?
+        next,
+    _i3.IteratorResult<_i2.Object?, _i2.dynamic> Function(_i2.dynamic)? return$,
+    _i3.IteratorResult<_i2.Object?, _i2.dynamic> Function([_i2.dynamic])?
+        throw$,
+  }) =>
+      Generator._(
+        next: next == null
+            ? null
+            : _i5.allowInterop(([
+                a0,
+                a1,
+                a2,
+                a3,
+                a4,
+                a5,
+                a6,
+                a7,
+                a8,
+                a9,
+              ]) =>
+                next([
+                  a0,
+                  a1,
+                  a2,
+                  a3,
+                  a4,
+                  a5,
+                  a6,
+                  a7,
+                  a8,
+                  a9,
+                ])),
+        return$: return$ == null ? null : _i5.allowInterop(return$),
+        throw$: throw$ == null ? null : _i5.allowInterop(throw$),
+      );
+}
 
 extension Generator$Typings<T, TReturn, TNext> on Generator<T, TReturn, TNext> {
-  _i3.IteratorResult<T, TReturn> next([_i2.Iterable<_i2.dynamic>? args]) =>
-      _i5.callMethod(
-        this,
-        'next',
-        [...?args],
-      );
-  _i3.IteratorResult<T, TReturn> return$(TReturn value) => _i5.callMethod(
+  set next(
+      _i3.IteratorResult<T, TReturn> Function([_i2.Iterable<_i2.dynamic>?])
+          value) {
+    _i5.setProperty(
+      this,
+      'next',
+      _i5.allowInterop(([
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value([
+            a0,
+            a1,
+            a2,
+            a3,
+            a4,
+            a5,
+            a6,
+            a7,
+            a8,
+            a9,
+          ])),
+    );
+  }
+
+  _i3.IteratorResult<T, TReturn> Function([_i2.Iterable<_i2.dynamic>?])
+      get next => _i5.getProperty(
+            this,
+            'next',
+          );
+  set return$(_i3.IteratorResult<T, TReturn> Function(TReturn) value) {
+    _i5.setProperty(
+      this,
+      'return',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.IteratorResult<T, TReturn> Function(TReturn) get return$ =>
+      _i5.getProperty(
         this,
         'return',
-        [value],
       );
-  _i3.IteratorResult<T, TReturn> throw$(_i2.dynamic e) => _i5.callMethod(
+  set throw$(_i3.IteratorResult<T, TReturn> Function([_i2.dynamic]) value) {
+    _i5.setProperty(
+      this,
+      'throw',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.IteratorResult<T, TReturn> Function([_i2.dynamic]) get throw$ =>
+      _i5.getProperty(
         this,
         'throw',
-        [e],
       );
 }
 

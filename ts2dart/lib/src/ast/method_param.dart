@@ -1,3 +1,4 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:code_builder/code_builder.dart';
 import 'property.dart';
 import 'reference.dart';
@@ -41,5 +42,54 @@ class InteropMethodParam {
     }
 
     return ref.toInterop(arg);
+  }
+}
+
+extension UtilsMethodParmas on Iterable<InteropMethodParam> {
+  void bindCodeParams(
+      {required ListBuilder<Parameter> optionals,
+      required ListBuilder<Parameter> requireds,
+      SymbolSwap? symbolSwap}) {
+    final list = toList().reversed;
+    final optional = list.optionals();
+    var index = 0;
+
+    for (final param in list) {
+      final built = param.toCodeParam(symbolSwap: symbolSwap);
+
+      if (index >= optional.from && index <= optional.to) {
+        optionals.insert(0, built);
+      } else {
+        requireds.insert(0, built);
+      }
+
+      index++;
+    }
+  }
+
+  ({int from, int to}) optionals() {
+    var optionalFrom = -1;
+    var optionalTo = -1;
+    var opt = false;
+    var x = 0;
+
+    for (final param in this) {
+      if (!param.ref.acceptsNull) {
+        if (opt) {
+          break;
+        }
+      } else {
+        opt = true;
+
+        if (optionalFrom == -1) {
+          optionalFrom = x;
+        }
+
+        optionalTo = x;
+      }
+      x++;
+    }
+
+    return (from: optionalFrom, to: optionalTo);
   }
 }

@@ -4,9 +4,9 @@ library typings.vscode.interop.vscode; // ignore_for_file: no_leading_underscore
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import '0index.vscode.d.dart' as _i3;
-import '/d/core.dart' as _i4;
+import 'dart:async' as _i4;
 import 'dart:js_util' as _i5;
-import '0index.d.dart' as _i6;
+import '/d/core.dart' as _i6;
 import '/src/d/typescript/lib.es5.d.dart' as _i7;
 import 'dart:typed_data' as _i8;
 import '/src/d/typescript/lib.es2015.iterable.d.dart' as _i9;
@@ -656,7 +656,7 @@ enum TestRunProfileKind {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection49 implements _i3.Memento, _i3.IInline33 {}
+class _Intersection7 implements _i3.Memento, _i3.IInline33 {}
 
 @_i1.JS()
 @_i1.staticInterop
@@ -665,7 +665,7 @@ class OnDidChangeCustomDocument {}
 
 typedef GlobPattern = _i2.Object;
 typedef DocumentSelector = _i2.Object;
-typedef ProviderResult<T> = _i2.dynamic;
+typedef ProviderResult<T> = _i4.FutureOr<T>?;
 typedef DefinitionLink = _i3.LocationLink;
 typedef Definition = _i2.Object;
 typedef Declaration = _i2.Object;
@@ -694,16 +694,16 @@ class Command {
   });
 
   factory Command({
-    required _i2.String title,
-    required _i2.String command,
+    _i2.String? title,
+    _i2.String? command,
     _i2.String? tooltip,
     _i2.List<_i2.dynamic>? arguments,
   }) =>
       Command._(
         title: title,
         command: command,
-        tooltip: tooltip ?? _i4.undefined,
-        arguments: arguments ?? _i4.undefined,
+        tooltip: tooltip,
+        arguments: arguments,
       );
 }
 
@@ -744,7 +744,7 @@ extension Command$Typings on Command {
     _i5.setProperty(
       this,
       'tooltip',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -759,7 +759,7 @@ extension Command$Typings on Command {
     _i5.setProperty(
       this,
       'arguments',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -782,18 +782,18 @@ class TextLine {
   });
 
   factory TextLine({
-    required _i2.num lineNumber,
-    required _i2.String text,
-    required _i3.Range range,
-    required _i3.Range rangeIncludingLineBreak,
-    required _i2.num firstNonWhitespaceCharacterIndex,
-    required _i2.bool isEmptyOrWhitespace,
+    _i2.num? lineNumber,
+    _i2.String? text,
+    _i3.Range? range,
+    _i3.Range? rangeIncludingLineBreak,
+    _i2.num? firstNonWhitespaceCharacterIndex,
+    _i2.bool? isEmptyOrWhitespace,
   }) =>
       TextLine._(
         lineNumber: lineNumber,
         text: text,
-        range: range,
-        rangeIncludingLineBreak: rangeIncludingLineBreak,
+        range: range ?? _i6.undefined,
+        rangeIncludingLineBreak: rangeIncludingLineBreak ?? _i6.undefined,
         firstNonWhitespaceCharacterIndex: firstNonWhitespaceCharacterIndex,
         isEmptyOrWhitespace: isEmptyOrWhitespace,
       );
@@ -843,7 +843,72 @@ extension TextLine$Typings on TextLine {
 /// {@link TextLinelines} and knowledge about an underlying resource like a file.
 @_i1.JS()
 @_i1.staticInterop
-class TextDocument {}
+@_i1.anonymous
+class TextDocument {
+  external factory TextDocument._({
+    _i2.dynamic uri,
+    _i2.dynamic fileName,
+    _i2.dynamic isUntitled,
+    _i2.dynamic languageId,
+    _i2.dynamic version,
+    _i2.dynamic isDirty,
+    _i2.dynamic isClosed,
+    _i2.dynamic eol,
+    _i2.dynamic lineCount,
+    _i2.dynamic save,
+    _i2.dynamic offsetAt,
+    _i2.dynamic positionAt,
+    _i2.dynamic getText,
+    _i2.dynamic getWordRangeAtPosition,
+    _i2.dynamic validateRange,
+    _i2.dynamic validatePosition,
+  });
+
+  factory TextDocument({
+    _i3.Uri? uri,
+    _i2.String? fileName,
+    _i2.bool? isUntitled,
+    _i2.String? languageId,
+    _i2.num? version,
+    _i2.bool? isDirty,
+    _i2.bool? isClosed,
+    _i3.EndOfLine? eol,
+    _i2.num? lineCount,
+    _i2.Future<_i2.dynamic> Function()? save,
+    _i2.num Function(_i3.Position)? offsetAt,
+    _i3.Position Function(_i2.num)? positionAt,
+    _i2.String Function([_i3.Range?])? getText,
+    _i3.Range? Function(
+      _i3.Position, [
+      _i7.RegExp?,
+    ])? getWordRangeAtPosition,
+    _i3.Range Function(_i3.Range)? validateRange,
+    _i3.Position Function(_i3.Position)? validatePosition,
+  }) =>
+      TextDocument._(
+        uri: uri ?? _i6.undefined,
+        fileName: fileName,
+        isUntitled: isUntitled,
+        languageId: languageId,
+        version: version,
+        isDirty: isDirty,
+        isClosed: isClosed,
+        eol: eol?.name,
+        lineCount: lineCount,
+        save: save == null ? null : _i5.allowInterop(save),
+        offsetAt: offsetAt == null ? null : _i5.allowInterop(offsetAt),
+        positionAt: positionAt == null ? null : _i5.allowInterop(positionAt),
+        getText: getText == null ? null : _i5.allowInterop(getText),
+        getWordRangeAtPosition: getWordRangeAtPosition == null
+            ? null
+            : _i5.allowInterop(getWordRangeAtPosition),
+        validateRange:
+            validateRange == null ? null : _i5.allowInterop(validateRange),
+        validatePosition: validatePosition == null
+            ? null
+            : _i5.allowInterop(validatePosition),
+      );
+}
 
 extension TextDocument$Typings on TextDocument {
   /// The associated uri for this document.
@@ -908,17 +973,97 @@ extension TextDocument$Typings on TextDocument {
         this,
         'lineCount',
       );
+  set save(_i2.Future<_i2.dynamic> Function() value) {
+    _i5.setProperty(
+      this,
+      'save',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Save the underlying file.
-  ///
-  ///  @returns A promise that will resolve to `true` when the file
-  ///  has been saved. If the save failed, will return `false`.
-  _i2.Future<_i6.Thenable<_i2.bool>> save() =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function() get save => _i5.getProperty(
         this,
         'save',
-        [],
-      ));
+      );
+  set offsetAt(_i2.num Function(_i3.Position) value) {
+    _i5.setProperty(
+      this,
+      'offsetAt',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.num Function(_i3.Position) get offsetAt => _i5.getProperty(
+        this,
+        'offsetAt',
+      );
+  set positionAt(_i3.Position Function(_i2.num) value) {
+    _i5.setProperty(
+      this,
+      'positionAt',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.Position Function(_i2.num) get positionAt => _i5.getProperty(
+        this,
+        'positionAt',
+      );
+  set getText(_i2.String Function([_i3.Range?]) value) {
+    _i5.setProperty(
+      this,
+      'getText',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.String Function([_i3.Range?]) get getText => _i5.getProperty(
+        this,
+        'getText',
+      );
+  set getWordRangeAtPosition(
+      _i3.Range? Function(
+        _i3.Position, [
+        _i7.RegExp?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'getWordRangeAtPosition',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.Range? Function(
+    _i3.Position, [
+    _i7.RegExp?,
+  ]) get getWordRangeAtPosition => _i5.getProperty(
+        this,
+        'getWordRangeAtPosition',
+      );
+  set validateRange(_i3.Range Function(_i3.Range) value) {
+    _i5.setProperty(
+      this,
+      'validateRange',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.Range Function(_i3.Range) get validateRange => _i5.getProperty(
+        this,
+        'validateRange',
+      );
+  set validatePosition(_i3.Position Function(_i3.Position) value) {
+    _i5.setProperty(
+      this,
+      'validatePosition',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.Position Function(_i3.Position) get validatePosition => _i5.getProperty(
+        this,
+        'validatePosition',
+      );
 
   /// Returns a text line denoted by the line number. Note
   ///  that the returned object is *not* live and changes to the
@@ -973,88 +1118,6 @@ extension TextDocument$Typings on TextDocument {
         $1: _lineAt$1,
         $2: _lineAt$2,
       );
-
-  /// Converts the position to a zero-based offset.
-  ///
-  ///  The position will be {@link TextDocument.validatePosition adjusted}.
-  ///
-  ///  @param position A position.
-  ///  @returns A valid zero-based offset.
-  _i2.num offsetAt(_i3.Position position) => _i5.callMethod(
-        this,
-        'offsetAt',
-        [position],
-      );
-
-  /// Converts a zero-based offset to a position.
-  ///
-  ///  @param offset A zero-based offset.
-  ///  @returns A valid {@link Position}.
-  _i3.Position positionAt(_i2.num offset) => _i5.callMethod(
-        this,
-        'positionAt',
-        [offset],
-      );
-
-  /// Get the text of this document. A substring can be retrieved by providing
-  ///  a range. The range will be {@link TextDocument.validateRange adjusted}.
-  ///
-  ///  @param range Include only the text included by the range.
-  ///  @returns The text inside the provided range or the entire text.
-  _i2.String getText([_i3.Range? range]) => _i5.callMethod(
-        this,
-        'getText',
-        [range ?? _i4.undefined],
-      );
-
-  /// Get a word-range at the given position. By default words are defined by
-  ///  common separators, like space, -, _, etc. In addition, per language custom
-  ///  [word definitions] can be defined. It
-  ///  is also possible to provide a custom regular expression.
-  ///
-  ///  * *Note 1:* A custom regular expression must not match the empty string and
-  ///  if it does, it will be ignored.
-  ///  * *Note 2:* A custom regular expression will fail to match multiline strings
-  ///  and in the name of speed regular expressions should not match words with
-  ///  spaces. Use {@linkcode TextLine.text} for more complex, non-wordy, scenarios.
-  ///
-  ///  The position will be {@link TextDocument.validatePosition adjusted}.
-  ///
-  ///  @param position A position.
-  ///  @param regex Optional regular expression that describes what a word is.
-  ///  @returns A range spanning a word, or `undefined`.
-  _i3.Range? getWordRangeAtPosition(
-    _i3.Position position, [
-    _i7.RegExp? regex,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'getWordRangeAtPosition',
-        [
-          position,
-          regex ?? _i4.undefined,
-        ],
-      );
-
-  /// Ensure a range is completely contained in this document.
-  ///
-  ///  @param range A range.
-  ///  @returns The given range or a new, adjusted range.
-  _i3.Range validateRange(_i3.Range range) => _i5.callMethod(
-        this,
-        'validateRange',
-        [range],
-      );
-
-  /// Ensure a position is contained in the range of this document.
-  ///
-  ///  @param position A position.
-  ///  @returns The given position or a new, adjusted position.
-  _i3.Position validatePosition(_i3.Position position) => _i5.callMethod(
-        this,
-        'validatePosition',
-        [position],
-      );
 }
 
 @_i1.JS()
@@ -1072,7 +1135,7 @@ extension IInline0$Typings on IInline0 {
     _i5.setProperty(
       this,
       'lineDelta',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1085,7 +1148,7 @@ extension IInline0$Typings on IInline0 {
     _i5.setProperty(
       this,
       'characterDelta',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -1105,7 +1168,7 @@ extension IInline1$Typings on IInline1 {
     _i5.setProperty(
       this,
       'line',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1118,7 +1181,7 @@ extension IInline1$Typings on IInline1 {
     _i5.setProperty(
       this,
       'character',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -1255,8 +1318,8 @@ extension Position$Typings on Position {
         this,
         'translate',
         [
-          lineDelta ?? _i4.undefined,
-          characterDelta ?? _i4.undefined,
+          lineDelta ?? _i6.undefined,
+          characterDelta ?? _i6.undefined,
         ],
       );
 
@@ -1308,8 +1371,8 @@ extension Position$Typings on Position {
         this,
         'with',
         [
-          line ?? _i4.undefined,
-          character ?? _i4.undefined,
+          line ?? _i6.undefined,
+          character ?? _i6.undefined,
         ],
       );
 
@@ -1352,7 +1415,7 @@ extension IInline2$Typings on IInline2 {
     _i5.setProperty(
       this,
       'start',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1365,7 +1428,7 @@ extension IInline2$Typings on IInline2 {
     _i5.setProperty(
       this,
       'end',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -1526,8 +1589,8 @@ extension Range$Typings on Range {
         this,
         'with',
         [
-          start ?? _i4.undefined,
-          end ?? _i4.undefined,
+          start ?? _i6.undefined,
+          end ?? _i6.undefined,
         ],
       );
 
@@ -1654,14 +1717,14 @@ class TextEditorSelectionChangeEvent {
   });
 
   factory TextEditorSelectionChangeEvent({
-    required _i3.TextEditor textEditor,
-    required _i2.List<_i3.Selection> selections,
+    _i3.TextEditor? textEditor,
+    _i2.List<_i3.Selection>? selections,
     _i3.TextEditorSelectionChangeKind? kind,
   }) =>
       TextEditorSelectionChangeEvent._(
-        textEditor: textEditor,
-        selections: selections,
-        kind: kind?.name ?? _i4.undefined,
+        textEditor: textEditor ?? _i6.undefined,
+        selections: selections ?? _i6.undefined,
+        kind: kind?.name ?? _i6.undefined,
       );
 }
 
@@ -1703,12 +1766,12 @@ class TextEditorVisibleRangesChangeEvent {
   });
 
   factory TextEditorVisibleRangesChangeEvent({
-    required _i3.TextEditor textEditor,
-    required _i2.List<_i3.Range> visibleRanges,
+    _i3.TextEditor? textEditor,
+    _i2.List<_i3.Range>? visibleRanges,
   }) =>
       TextEditorVisibleRangesChangeEvent._(
-        textEditor: textEditor,
-        visibleRanges: visibleRanges,
+        textEditor: textEditor ?? _i6.undefined,
+        visibleRanges: visibleRanges ?? _i6.undefined,
       );
 }
 
@@ -1739,12 +1802,12 @@ class TextEditorOptionsChangeEvent {
   });
 
   factory TextEditorOptionsChangeEvent({
-    required _i3.TextEditor textEditor,
-    required _i3.TextEditorOptions options,
+    _i3.TextEditor? textEditor,
+    _i3.TextEditorOptions? options,
   }) =>
       TextEditorOptionsChangeEvent._(
-        textEditor: textEditor,
-        options: options,
+        textEditor: textEditor ?? _i6.undefined,
+        options: options ?? _i6.undefined,
       );
 }
 
@@ -1773,12 +1836,12 @@ class TextEditorViewColumnChangeEvent {
   });
 
   factory TextEditorViewColumnChangeEvent({
-    required _i3.TextEditor textEditor,
-    required _i3.ViewColumn viewColumn,
+    _i3.TextEditor? textEditor,
+    _i3.ViewColumn? viewColumn,
   }) =>
       TextEditorViewColumnChangeEvent._(
-        textEditor: textEditor,
-        viewColumn: viewColumn.name,
+        textEditor: textEditor ?? _i6.undefined,
+        viewColumn: viewColumn?.name,
       );
 }
 
@@ -1818,11 +1881,11 @@ class TextEditorOptions {
     _i3.TextEditorLineNumbersStyle? lineNumbers,
   }) =>
       TextEditorOptions._(
-        tabSize: tabSize ?? _i4.undefined,
-        indentSize: indentSize ?? _i4.undefined,
-        insertSpaces: insertSpaces ?? _i4.undefined,
-        cursorStyle: cursorStyle?.name ?? _i4.undefined,
-        lineNumbers: lineNumbers?.name ?? _i4.undefined,
+        tabSize: tabSize ?? _i6.undefined,
+        indentSize: indentSize ?? _i6.undefined,
+        insertSpaces: insertSpaces ?? _i6.undefined,
+        cursorStyle: cursorStyle?.name,
+        lineNumbers: lineNumbers?.name,
       );
 }
 
@@ -1842,7 +1905,7 @@ extension TextEditorOptions$Typings on TextEditorOptions {
     _i5.setProperty(
       this,
       'tabSize',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1858,7 +1921,7 @@ extension TextEditorOptions$Typings on TextEditorOptions {
     _i5.setProperty(
       this,
       'indentSize',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1873,7 +1936,7 @@ extension TextEditorOptions$Typings on TextEditorOptions {
     _i5.setProperty(
       this,
       'insertSpaces',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1891,7 +1954,7 @@ extension TextEditorOptions$Typings on TextEditorOptions {
     _i5.setProperty(
       this,
       'cursorStyle',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -1909,7 +1972,7 @@ extension TextEditorOptions$Typings on TextEditorOptions {
     _i5.setProperty(
       this,
       'lineNumbers',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 }
@@ -1921,7 +1984,22 @@ extension TextEditorOptions$Typings on TextEditorOptions {
 /// {@link window.createTextEditorDecorationTypecreateTextEditorDecorationType}.
 @_i1.JS()
 @_i1.staticInterop
-class TextEditorDecorationType {}
+@_i1.anonymous
+class TextEditorDecorationType {
+  external factory TextEditorDecorationType._({
+    _i2.dynamic key,
+    _i2.dynamic dispose,
+  });
+
+  factory TextEditorDecorationType({
+    _i2.String? key,
+    void Function()? dispose,
+  }) =>
+      TextEditorDecorationType._(
+        key: key,
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension TextEditorDecorationType$Typings on TextEditorDecorationType {
   /// Internal representation of the handle.
@@ -1929,15 +2007,18 @@ extension TextEditorDecorationType$Typings on TextEditorDecorationType {
         this,
         'key',
       );
-
-  /// Remove this decoration type and all decorations on all text editors using it.
-  void dispose() {
-    _i5.callMethod(
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// Represents options to configure the behavior of showing a {@link TextDocumentdocument} in an {@link TextEditoreditor}.
@@ -1959,10 +2040,10 @@ class TextDocumentShowOptions {
     _i3.Range? selection,
   }) =>
       TextDocumentShowOptions._(
-        viewColumn: viewColumn?.name ?? _i4.undefined,
-        preserveFocus: preserveFocus ?? _i4.undefined,
-        preview: preview ?? _i4.undefined,
-        selection: selection ?? _i4.undefined,
+        viewColumn: viewColumn?.name,
+        preserveFocus: preserveFocus,
+        preview: preview,
+        selection: selection ?? _i6.undefined,
       );
 }
 
@@ -1983,7 +2064,7 @@ extension TextDocumentShowOptions$Typings on TextDocumentShowOptions {
     _i5.setProperty(
       this,
       'viewColumn',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -1996,7 +2077,7 @@ extension TextDocumentShowOptions$Typings on TextDocumentShowOptions {
     _i5.setProperty(
       this,
       'preserveFocus',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2012,7 +2093,7 @@ extension TextDocumentShowOptions$Typings on TextDocumentShowOptions {
     _i5.setProperty(
       this,
       'preview',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2025,7 +2106,7 @@ extension TextDocumentShowOptions$Typings on TextDocumentShowOptions {
     _i5.setProperty(
       this,
       'selection',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -2041,12 +2122,12 @@ class NotebookEditorSelectionChangeEvent {
   });
 
   factory NotebookEditorSelectionChangeEvent({
-    required _i3.NotebookEditor notebookEditor,
-    required _i2.List<_i3.NotebookRange> selections,
+    _i3.NotebookEditor? notebookEditor,
+    _i2.List<_i3.NotebookRange>? selections,
   }) =>
       NotebookEditorSelectionChangeEvent._(
-        notebookEditor: notebookEditor,
-        selections: selections,
+        notebookEditor: notebookEditor ?? _i6.undefined,
+        selections: selections ?? _i6.undefined,
       );
 }
 
@@ -2077,12 +2158,12 @@ class NotebookEditorVisibleRangesChangeEvent {
   });
 
   factory NotebookEditorVisibleRangesChangeEvent({
-    required _i3.NotebookEditor notebookEditor,
-    required _i2.List<_i3.NotebookRange> visibleRanges,
+    _i3.NotebookEditor? notebookEditor,
+    _i2.List<_i3.NotebookRange>? visibleRanges,
   }) =>
       NotebookEditorVisibleRangesChangeEvent._(
-        notebookEditor: notebookEditor,
-        visibleRanges: visibleRanges,
+        notebookEditor: notebookEditor ?? _i6.undefined,
+        visibleRanges: visibleRanges ?? _i6.undefined,
       );
 }
 
@@ -2121,10 +2202,10 @@ class NotebookDocumentShowOptions {
     _i2.List<_i3.NotebookRange>? selections,
   }) =>
       NotebookDocumentShowOptions._(
-        viewColumn: viewColumn?.name ?? _i4.undefined,
-        preserveFocus: preserveFocus ?? _i4.undefined,
-        preview: preview ?? _i4.undefined,
-        selections: selections ?? _i4.undefined,
+        viewColumn: viewColumn?.name,
+        preserveFocus: preserveFocus,
+        preview: preview,
+        selections: selections ?? _i6.undefined,
       );
 }
 
@@ -2197,7 +2278,7 @@ class ThemeIcon {
         _declaredThemeIcon,
         [
           id,
-          color ?? _i4.undefined,
+          color ?? _i6.undefined,
         ],
       );
 
@@ -2290,29 +2371,29 @@ class ThemableDecorationRenderOptions {
     _i3.ThemableDecorationAttachmentRenderOptions? after,
   }) =>
       ThemableDecorationRenderOptions._(
-        backgroundColor: backgroundColor ?? _i4.undefined,
-        outline: outline ?? _i4.undefined,
-        outlineColor: outlineColor ?? _i4.undefined,
-        outlineStyle: outlineStyle ?? _i4.undefined,
-        outlineWidth: outlineWidth ?? _i4.undefined,
-        border: border ?? _i4.undefined,
-        borderColor: borderColor ?? _i4.undefined,
-        borderRadius: borderRadius ?? _i4.undefined,
-        borderSpacing: borderSpacing ?? _i4.undefined,
-        borderStyle: borderStyle ?? _i4.undefined,
-        borderWidth: borderWidth ?? _i4.undefined,
-        fontStyle: fontStyle ?? _i4.undefined,
-        fontWeight: fontWeight ?? _i4.undefined,
-        textDecoration: textDecoration ?? _i4.undefined,
-        cursor: cursor ?? _i4.undefined,
-        color: color ?? _i4.undefined,
-        opacity: opacity ?? _i4.undefined,
-        letterSpacing: letterSpacing ?? _i4.undefined,
-        gutterIconPath: gutterIconPath ?? _i4.undefined,
-        gutterIconSize: gutterIconSize ?? _i4.undefined,
-        overviewRulerColor: overviewRulerColor ?? _i4.undefined,
-        before: before ?? _i4.undefined,
-        after: after ?? _i4.undefined,
+        backgroundColor: backgroundColor ?? _i6.undefined,
+        outline: outline,
+        outlineColor: outlineColor ?? _i6.undefined,
+        outlineStyle: outlineStyle,
+        outlineWidth: outlineWidth,
+        border: border,
+        borderColor: borderColor ?? _i6.undefined,
+        borderRadius: borderRadius,
+        borderSpacing: borderSpacing,
+        borderStyle: borderStyle,
+        borderWidth: borderWidth,
+        fontStyle: fontStyle,
+        fontWeight: fontWeight,
+        textDecoration: textDecoration,
+        cursor: cursor,
+        color: color ?? _i6.undefined,
+        opacity: opacity,
+        letterSpacing: letterSpacing,
+        gutterIconPath: gutterIconPath ?? _i6.undefined,
+        gutterIconSize: gutterIconSize,
+        overviewRulerColor: overviewRulerColor ?? _i6.undefined,
+        before: before ?? _i6.undefined,
+        after: after ?? _i6.undefined,
       );
 }
 
@@ -2328,7 +2409,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'backgroundColor',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2341,7 +2422,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'outline',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2355,7 +2436,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'outlineColor',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2369,7 +2450,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'outlineStyle',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2383,7 +2464,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'outlineWidth',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2396,7 +2477,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'border',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2410,7 +2491,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'borderColor',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2424,7 +2505,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'borderRadius',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2438,7 +2519,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'borderSpacing',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2452,7 +2533,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'borderStyle',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2466,7 +2547,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'borderWidth',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2479,7 +2560,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'fontStyle',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2492,7 +2573,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'fontWeight',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2505,7 +2586,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'textDecoration',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2518,7 +2599,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'cursor',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2531,7 +2612,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'color',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2544,7 +2625,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'opacity',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2557,7 +2638,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'letterSpacing',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2570,7 +2651,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'gutterIconPath',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2585,7 +2666,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'gutterIconSize',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2598,7 +2679,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'overviewRulerColor',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2611,7 +2692,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'before',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2624,7 +2705,7 @@ extension ThemableDecorationRenderOptions$Typings
     _i5.setProperty(
       this,
       'after',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -2665,18 +2746,18 @@ class ThemableDecorationAttachmentRenderOptions {
     _i2.String? height,
   }) =>
       ThemableDecorationAttachmentRenderOptions._(
-        contentText: contentText ?? _i4.undefined,
-        contentIconPath: contentIconPath ?? _i4.undefined,
-        border: border ?? _i4.undefined,
-        borderColor: borderColor ?? _i4.undefined,
-        fontStyle: fontStyle ?? _i4.undefined,
-        fontWeight: fontWeight ?? _i4.undefined,
-        textDecoration: textDecoration ?? _i4.undefined,
-        color: color ?? _i4.undefined,
-        backgroundColor: backgroundColor ?? _i4.undefined,
-        margin: margin ?? _i4.undefined,
-        width: width ?? _i4.undefined,
-        height: height ?? _i4.undefined,
+        contentText: contentText,
+        contentIconPath: contentIconPath ?? _i6.undefined,
+        border: border,
+        borderColor: borderColor ?? _i6.undefined,
+        fontStyle: fontStyle,
+        fontWeight: fontWeight,
+        textDecoration: textDecoration,
+        color: color ?? _i6.undefined,
+        backgroundColor: backgroundColor ?? _i6.undefined,
+        margin: margin,
+        width: width,
+        height: height,
       );
 }
 
@@ -2691,7 +2772,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'contentText',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2705,7 +2786,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'contentIconPath',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2718,7 +2799,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'border',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2731,7 +2812,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'borderColor',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2744,7 +2825,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'fontStyle',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2757,7 +2838,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'fontWeight',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2770,7 +2851,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'textDecoration',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2783,7 +2864,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'color',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2796,7 +2877,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'backgroundColor',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2809,7 +2890,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'margin',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2822,7 +2903,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'width',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2835,7 +2916,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
     _i5.setProperty(
       this,
       'height',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -2907,34 +2988,34 @@ class DecorationRenderOptions implements _i3.ThemableDecorationRenderOptions {
     _i3.ThemableDecorationAttachmentRenderOptions? after,
   }) =>
       DecorationRenderOptions._(
-        isWholeLine: isWholeLine ?? _i4.undefined,
-        rangeBehavior: rangeBehavior?.name ?? _i4.undefined,
-        overviewRulerLane: overviewRulerLane?.name ?? _i4.undefined,
-        light: light ?? _i4.undefined,
-        dark: dark ?? _i4.undefined,
-        backgroundColor: backgroundColor ?? _i4.undefined,
-        outline: outline ?? _i4.undefined,
-        outlineColor: outlineColor ?? _i4.undefined,
-        outlineStyle: outlineStyle ?? _i4.undefined,
-        outlineWidth: outlineWidth ?? _i4.undefined,
-        border: border ?? _i4.undefined,
-        borderColor: borderColor ?? _i4.undefined,
-        borderRadius: borderRadius ?? _i4.undefined,
-        borderSpacing: borderSpacing ?? _i4.undefined,
-        borderStyle: borderStyle ?? _i4.undefined,
-        borderWidth: borderWidth ?? _i4.undefined,
-        fontStyle: fontStyle ?? _i4.undefined,
-        fontWeight: fontWeight ?? _i4.undefined,
-        textDecoration: textDecoration ?? _i4.undefined,
-        cursor: cursor ?? _i4.undefined,
-        color: color ?? _i4.undefined,
-        opacity: opacity ?? _i4.undefined,
-        letterSpacing: letterSpacing ?? _i4.undefined,
-        gutterIconPath: gutterIconPath ?? _i4.undefined,
-        gutterIconSize: gutterIconSize ?? _i4.undefined,
-        overviewRulerColor: overviewRulerColor ?? _i4.undefined,
-        before: before ?? _i4.undefined,
-        after: after ?? _i4.undefined,
+        isWholeLine: isWholeLine,
+        rangeBehavior: rangeBehavior?.name,
+        overviewRulerLane: overviewRulerLane?.name,
+        light: light ?? _i6.undefined,
+        dark: dark ?? _i6.undefined,
+        backgroundColor: backgroundColor ?? _i6.undefined,
+        outline: outline,
+        outlineColor: outlineColor ?? _i6.undefined,
+        outlineStyle: outlineStyle,
+        outlineWidth: outlineWidth,
+        border: border,
+        borderColor: borderColor ?? _i6.undefined,
+        borderRadius: borderRadius,
+        borderSpacing: borderSpacing,
+        borderStyle: borderStyle,
+        borderWidth: borderWidth,
+        fontStyle: fontStyle,
+        fontWeight: fontWeight,
+        textDecoration: textDecoration,
+        cursor: cursor,
+        color: color ?? _i6.undefined,
+        opacity: opacity,
+        letterSpacing: letterSpacing,
+        gutterIconPath: gutterIconPath ?? _i6.undefined,
+        gutterIconSize: gutterIconSize,
+        overviewRulerColor: overviewRulerColor ?? _i6.undefined,
+        before: before ?? _i6.undefined,
+        after: after ?? _i6.undefined,
       );
 }
 
@@ -2949,7 +3030,7 @@ extension DecorationRenderOptions$Typings on DecorationRenderOptions {
     _i5.setProperty(
       this,
       'isWholeLine',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2966,7 +3047,7 @@ extension DecorationRenderOptions$Typings on DecorationRenderOptions {
     _i5.setProperty(
       this,
       'rangeBehavior',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -2982,7 +3063,7 @@ extension DecorationRenderOptions$Typings on DecorationRenderOptions {
     _i5.setProperty(
       this,
       'overviewRulerLane',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -2995,7 +3076,7 @@ extension DecorationRenderOptions$Typings on DecorationRenderOptions {
     _i5.setProperty(
       this,
       'light',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3008,7 +3089,7 @@ extension DecorationRenderOptions$Typings on DecorationRenderOptions {
     _i5.setProperty(
       this,
       'dark',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -3025,14 +3106,14 @@ class DecorationOptions {
   });
 
   factory DecorationOptions({
-    required _i3.Range range,
+    _i3.Range? range,
     _i2.Object? hoverMessage,
     _i3.DecorationInstanceRenderOptions? renderOptions,
   }) =>
       DecorationOptions._(
-        range: range,
-        hoverMessage: hoverMessage ?? _i4.undefined,
-        renderOptions: renderOptions ?? _i4.undefined,
+        range: range ?? _i6.undefined,
+        hoverMessage: hoverMessage ?? _i6.undefined,
+        renderOptions: renderOptions ?? _i6.undefined,
       );
 }
 
@@ -3059,7 +3140,7 @@ extension DecorationOptions$Typings on DecorationOptions {
     _i5.setProperty(
       this,
       'hoverMessage',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3073,7 +3154,7 @@ extension DecorationOptions$Typings on DecorationOptions {
     _i5.setProperty(
       this,
       'renderOptions',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -3093,8 +3174,8 @@ class ThemableDecorationInstanceRenderOptions {
     _i3.ThemableDecorationAttachmentRenderOptions? after,
   }) =>
       ThemableDecorationInstanceRenderOptions._(
-        before: before ?? _i4.undefined,
-        after: after ?? _i4.undefined,
+        before: before ?? _i6.undefined,
+        after: after ?? _i6.undefined,
       );
 }
 
@@ -3109,7 +3190,7 @@ extension ThemableDecorationInstanceRenderOptions$Typings
     _i5.setProperty(
       this,
       'before',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3122,7 +3203,7 @@ extension ThemableDecorationInstanceRenderOptions$Typings
     _i5.setProperty(
       this,
       'after',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -3147,10 +3228,10 @@ class DecorationInstanceRenderOptions
     _i3.ThemableDecorationAttachmentRenderOptions? after,
   }) =>
       DecorationInstanceRenderOptions._(
-        light: light ?? _i4.undefined,
-        dark: dark ?? _i4.undefined,
-        before: before ?? _i4.undefined,
-        after: after ?? _i4.undefined,
+        light: light ?? _i6.undefined,
+        dark: dark ?? _i6.undefined,
+        before: before ?? _i6.undefined,
+        after: after ?? _i6.undefined,
       );
 }
 
@@ -3165,7 +3246,7 @@ extension DecorationInstanceRenderOptions$Typings
     _i5.setProperty(
       this,
       'light',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3178,7 +3259,7 @@ extension DecorationInstanceRenderOptions$Typings
     _i5.setProperty(
       this,
       'dark',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -3224,7 +3305,67 @@ extension IInline4$Typings on IInline4 {
 /// Represents an editor that is attached to a {@link TextDocumentdocument}.
 @_i1.JS()
 @_i1.staticInterop
-class TextEditor {}
+@_i1.anonymous
+class TextEditor {
+  external factory TextEditor._({
+    _i2.dynamic document,
+    _i2.dynamic selection,
+    _i2.dynamic selections,
+    _i2.dynamic visibleRanges,
+    _i2.dynamic options,
+    _i2.dynamic viewColumn,
+    _i2.dynamic edit,
+    _i2.dynamic insertSnippet,
+    _i2.dynamic setDecorations,
+    _i2.dynamic revealRange,
+    _i2.dynamic show,
+    _i2.dynamic hide,
+  });
+
+  factory TextEditor({
+    _i3.TextDocument? document,
+    _i3.Selection? selection,
+    _i2.List<_i3.Selection>? selections,
+    _i2.List<_i3.Range>? visibleRanges,
+    _i3.TextEditorOptions? options,
+    _i3.ViewColumn? viewColumn,
+    _i2.Future<_i2.dynamic> Function(
+      void Function(_i3.TextEditorEdit), [
+      _i2.dynamic,
+    ])? edit,
+    _i2.Future<_i2.dynamic> Function(
+      _i3.SnippetString, [
+      _i2.Object?,
+      _i2.dynamic,
+    ])? insertSnippet,
+    void Function(
+      _i3.TextEditorDecorationType,
+      _i2.Object,
+    )? setDecorations,
+    void Function(
+      _i3.Range, [
+      _i3.TextEditorRevealType?,
+    ])? revealRange,
+    void Function([_i3.ViewColumn?])? show,
+    void Function()? hide,
+  }) =>
+      TextEditor._(
+        document: document ?? _i6.undefined,
+        selection: selection ?? _i6.undefined,
+        selections: selections ?? _i6.undefined,
+        visibleRanges: visibleRanges ?? _i6.undefined,
+        options: options ?? _i6.undefined,
+        viewColumn: viewColumn?.name ?? _i6.undefined,
+        edit: edit == null ? null : _i5.allowInterop(edit),
+        insertSnippet:
+            insertSnippet == null ? null : _i5.allowInterop(insertSnippet),
+        setDecorations:
+            setDecorations == null ? null : _i5.allowInterop(setDecorations),
+        revealRange: revealRange == null ? null : _i5.allowInterop(revealRange),
+        show: show == null ? null : _i5.allowInterop(show),
+        hide: hide == null ? null : _i5.allowInterop(hide),
+      );
+}
 
 extension TextEditor$Typings on TextEditor {
   /// The document associated with this text editor. The document will be the same for the entire lifetime of this text editor.
@@ -3291,119 +3432,108 @@ extension TextEditor$Typings on TextEditor {
         _i2.String name => _i3.ViewColumn.values.byName(name),
         _ => null
       };
+  set edit(
+      _i2.Future<_i2.dynamic> Function(
+        void Function(_i3.TextEditorEdit), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'edit',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Perform an edit on the document associated with this text editor.
-  ///
-  ///  The given callback-function is invoked with an {@link TextEditorEdit edit-builder} which must
-  ///  be used to make edits. Note that the edit-builder is only valid while the
-  ///  callback executes.
-  ///
-  ///  @param callback A function which can create edits using an {@link TextEditorEdit edit-builder}.
-  ///  @param options The undo/redo behavior around this edit. By default, undo stops will be created before and after this edit.
-  ///  @returns A promise that resolves with a value indicating if the edits could be applied.
-  _i2.Future<_i6.Thenable<_i2.bool>> edit(
-    void Function(_i3.TextEditorEdit) callback, [
-    _i3.IInline3? options,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    void Function(_i3.TextEditorEdit), [
+    _i2.dynamic,
+  ]) get edit => _i5.getProperty(
         this,
         'edit',
-        [
-          _i5.allowInterop(callback),
-          options ?? _i4.undefined,
-        ],
-      ));
+      );
+  set insertSnippet(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.SnippetString, [
+        _i2.Object?,
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'insertSnippet',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Insert a {@link SnippetString snippet} and put the editor into snippet mode. "Snippet mode"
-  ///  means the editor adds placeholders and additional cursors so that the user can complete
-  ///  or accept the snippet.
-  ///
-  ///  @param snippet The snippet to insert in this edit.
-  ///  @param location Position or range at which to insert the snippet, defaults to the current editor selection or selections.
-  ///  @param options The undo/redo behavior around this edit. By default, undo stops will be created before and after this edit.
-  ///  @returns A promise that resolves with a value indicating if the snippet could be inserted. Note that the promise does not signal
-  ///  that the snippet is completely filled-in or accepted.
-  _i2.Future<_i6.Thenable<_i2.bool>> insertSnippet(
-    _i3.SnippetString snippet, [
-    _i2.Object? location,
-    _i3.IInline4? options,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i3.SnippetString, [
+    _i2.Object?,
+    _i2.dynamic,
+  ]) get insertSnippet => _i5.getProperty(
         this,
         'insertSnippet',
-        [
-          snippet,
-          location ?? _i4.undefined,
-          options ?? _i4.undefined,
-        ],
-      ));
-
-  /// Adds a set of decorations to the text editor. If a set of decorations already exists with
-  ///  the given {@link TextEditorDecorationType decoration type}, they will be replaced. If
-  ///  `rangesOrOptions` is empty, the existing decorations with the given {@link TextEditorDecorationType decoration type}
-  ///  will be removed.
-  ///
-  ///  @see {@link window.createTextEditorDecorationType createTextEditorDecorationType}.
-  ///
-  ///  @param decorationType A decoration type.
-  ///  @param rangesOrOptions Either {@link Range ranges} or more detailed {@link DecorationOptions options}.
-  void setDecorations(
-    _i3.TextEditorDecorationType decorationType,
-    _i2.Object rangesOrOptions,
-  ) {
-    _i5.callMethod(
+      );
+  set setDecorations(
+      void Function(
+        _i3.TextEditorDecorationType,
+        _i2.Object,
+      ) value) {
+    _i5.setProperty(
       this,
       'setDecorations',
-      [
-        decorationType,
-        rangesOrOptions,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Scroll as indicated by `revealType` in order to reveal the given range.
-  ///
-  ///  @param range A range.
-  ///  @param revealType The scrolling strategy for revealing `range`.
-  void revealRange(
-    _i3.Range range, [
-    _i3.TextEditorRevealType? revealType,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i3.TextEditorDecorationType,
+    _i2.Object,
+  ) get setDecorations => _i5.getProperty(
+        this,
+        'setDecorations',
+      );
+  set revealRange(
+      void Function(
+        _i3.Range, [
+        _i3.TextEditorRevealType?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'revealRange',
-      [
-        range,
-        revealType?.name ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Show the text editor.
-  ///
-  ///  @deprecated Use {@link window.showTextDocument} instead.
-  ///
-  ///  @param column The {@link ViewColumn column} in which to show this editor.
-  ///  This method shows unexpected behavior and will be removed in the next major update.
-  void show([_i3.ViewColumn? column]) {
-    _i5.callMethod(
+  void Function(
+    _i3.Range, [
+    _i3.TextEditorRevealType?,
+  ]) get revealRange => _i5.getProperty(
+        this,
+        'revealRange',
+      );
+  set show(void Function([_i3.ViewColumn?]) value) {
+    _i5.setProperty(
       this,
       'show',
-      [column?.name ?? _i4.undefined],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Hide the text editor.
-  ///
-  ///  @deprecated Use the command `workbench.action.closeActiveEditor` instead.
-  ///  This method shows unexpected behavior and will be removed in the next major update.
-  void hide() {
-    _i5.callMethod(
+  void Function([_i3.ViewColumn?]) get show => _i5.getProperty(
+        this,
+        'show',
+      );
+  set hide(void Function() value) {
+    _i5.setProperty(
       this,
       'hide',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get hide => _i5.getProperty(
+        this,
+        'hide',
+      );
 }
 
 /// A complex edit that will be applied in one transaction on a TextEditor.
@@ -3411,69 +3541,99 @@ extension TextEditor$Typings on TextEditor {
 /// they can be applied on a {@link TextDocumentdocument} associated with a {@link TextEditortext editor}.
 @_i1.JS()
 @_i1.staticInterop
-class TextEditorEdit {}
+@_i1.anonymous
+class TextEditorEdit {
+  external factory TextEditorEdit._({
+    _i2.dynamic replace,
+    _i2.dynamic insert,
+    _i2.dynamic delete,
+    _i2.dynamic setEndOfLine,
+  });
+
+  factory TextEditorEdit({
+    void Function(
+      _i2.Object,
+      _i2.String,
+    )? replace,
+    void Function(
+      _i3.Position,
+      _i2.String,
+    )? insert,
+    void Function(_i2.Object)? delete,
+    void Function(_i3.EndOfLine)? setEndOfLine,
+  }) =>
+      TextEditorEdit._(
+        replace: replace == null ? null : _i5.allowInterop(replace),
+        insert: insert == null ? null : _i5.allowInterop(insert),
+        delete: delete == null ? null : _i5.allowInterop(delete),
+        setEndOfLine:
+            setEndOfLine == null ? null : _i5.allowInterop(setEndOfLine),
+      );
+}
 
 extension TextEditorEdit$Typings on TextEditorEdit {
-  /// Replace a certain text region with a new value.
-  ///  You can use \r\n or \n in `value` and they will be normalized to the current {@link TextDocument document}.
-  ///
-  ///  @param location The range this operation should remove.
-  ///  @param value The new text this operation should insert after removing `location`.
-  void replace(
-    _i2.Object location,
-    _i2.String value,
-  ) {
-    _i5.callMethod(
+  set replace(
+      void Function(
+        _i2.Object,
+        _i2.String,
+      ) value) {
+    _i5.setProperty(
       this,
       'replace',
-      [
-        location,
-        value,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Insert text at a location.
-  ///  You can use \r\n or \n in `value` and they will be normalized to the current {@link TextDocument document}.
-  ///  Although the equivalent text edit can be made with {@link TextEditorEdit.replace replace}, `insert` will produce a different resulting selection (it will get moved).
-  ///
-  ///  @param location The position where the new text should be inserted.
-  ///  @param value The new text this operation should insert.
-  void insert(
-    _i3.Position location,
-    _i2.String value,
-  ) {
-    _i5.callMethod(
+  void Function(
+    _i2.Object,
+    _i2.String,
+  ) get replace => _i5.getProperty(
+        this,
+        'replace',
+      );
+  set insert(
+      void Function(
+        _i3.Position,
+        _i2.String,
+      ) value) {
+    _i5.setProperty(
       this,
       'insert',
-      [
-        location,
-        value,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Delete a certain text region.
-  ///
-  ///  @param location The range this operation should remove.
-  void delete(_i2.Object location) {
-    _i5.callMethod(
+  void Function(
+    _i3.Position,
+    _i2.String,
+  ) get insert => _i5.getProperty(
+        this,
+        'insert',
+      );
+  set delete(void Function(_i2.Object) value) {
+    _i5.setProperty(
       this,
       'delete',
-      [location],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Set the end of line sequence.
-  ///
-  ///  @param endOfLine The new end of line for the {@link TextDocument document}.
-  void setEndOfLine(_i3.EndOfLine endOfLine) {
-    _i5.callMethod(
+  void Function(_i2.Object) get delete => _i5.getProperty(
+        this,
+        'delete',
+      );
+  set setEndOfLine(void Function(_i3.EndOfLine) value) {
+    _i5.setProperty(
       this,
       'setEndOfLine',
-      [endOfLine.name],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function(_i3.EndOfLine) get setEndOfLine => _i5.getProperty(
+        this,
+        'setEndOfLine',
+      );
 }
 
 @_i1.JS()
@@ -3528,7 +3688,7 @@ extension IInline6$Typings on IInline6 {
     _i5.setProperty(
       this,
       'scheme',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3541,7 +3701,7 @@ extension IInline6$Typings on IInline6 {
     _i5.setProperty(
       this,
       'authority',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3554,7 +3714,7 @@ extension IInline6$Typings on IInline6 {
     _i5.setProperty(
       this,
       'path',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3567,7 +3727,7 @@ extension IInline6$Typings on IInline6 {
     _i5.setProperty(
       this,
       'query',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3580,7 +3740,7 @@ extension IInline6$Typings on IInline6 {
     _i5.setProperty(
       this,
       'fragment',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -3623,7 +3783,7 @@ class Uri {
         'parse',
         [
           value,
-          strict ?? _i4.undefined,
+          strict ?? _i6.undefined,
         ],
       );
 
@@ -3783,7 +3943,7 @@ extension Uri$Typings on Uri {
   _i2.String toString$([_i2.bool? skipEncoding]) => _i5.callMethod(
         this,
         'toString',
-        [skipEncoding ?? _i4.undefined],
+        [skipEncoding ?? _i6.undefined],
       );
 
   /// Returns a JSON representation of this Uri.
@@ -3812,12 +3972,12 @@ class CancellationToken {
   });
 
   factory CancellationToken({
-    required _i2.bool isCancellationRequested,
-    required _i3.Event<_i2.dynamic> onCancellationRequested,
+    _i2.bool? isCancellationRequested,
+    _i3.Event<_i2.dynamic>? onCancellationRequested,
   }) =>
       CancellationToken._(
         isCancellationRequested: isCancellationRequested,
-        onCancellationRequested: onCancellationRequested,
+        onCancellationRequested: onCancellationRequested ?? _i6.undefined,
       );
 }
 
@@ -3986,8 +4146,8 @@ extension Event$Typings<T> on Event<T> {
         [
           this,
           _i5.allowInterop(listener),
-          thisArgs ?? _i4.undefined,
-          disposables ?? _i4.undefined,
+          thisArgs,
+          disposables ?? _i6.undefined,
         ],
       );
 }
@@ -4057,20 +4217,20 @@ class FileSystemWatcher implements _i3.Disposable {
   });
 
   factory FileSystemWatcher({
-    required _i2.bool ignoreCreateEvents,
-    required _i2.bool ignoreChangeEvents,
-    required _i2.bool ignoreDeleteEvents,
-    required _i3.Event<_i3.Uri> onDidCreate,
-    required _i3.Event<_i3.Uri> onDidChange,
-    required _i3.Event<_i3.Uri> onDidDelete,
+    _i2.bool? ignoreCreateEvents,
+    _i2.bool? ignoreChangeEvents,
+    _i2.bool? ignoreDeleteEvents,
+    _i3.Event<_i3.Uri>? onDidCreate,
+    _i3.Event<_i3.Uri>? onDidChange,
+    _i3.Event<_i3.Uri>? onDidDelete,
   }) =>
       FileSystemWatcher._(
         ignoreCreateEvents: ignoreCreateEvents,
         ignoreChangeEvents: ignoreChangeEvents,
         ignoreDeleteEvents: ignoreDeleteEvents,
-        onDidCreate: onDidCreate,
-        onDidChange: onDidChange,
-        onDidDelete: onDidDelete,
+        onDidCreate: onDidCreate ?? _i6.undefined,
+        onDidChange: onDidChange ?? _i6.undefined,
+        onDidDelete: onDidDelete ?? _i6.undefined,
       );
 }
 
@@ -4124,7 +4284,27 @@ extension FileSystemWatcher$Typings on FileSystemWatcher {
 /// asked.
 @_i1.JS()
 @_i1.staticInterop
-class TextDocumentContentProvider {}
+@_i1.anonymous
+class TextDocumentContentProvider {
+  external factory TextDocumentContentProvider._({
+    _i2.dynamic onDidChange,
+    _i2.dynamic provideTextDocumentContent,
+  });
+
+  factory TextDocumentContentProvider({
+    _i3.Event<_i3.Uri>? onDidChange,
+    _i3.ProviderResult<_i2.String> Function(
+      _i3.Uri,
+      _i3.CancellationToken,
+    )? provideTextDocumentContent,
+  }) =>
+      TextDocumentContentProvider._(
+        onDidChange: onDidChange ?? _i6.undefined,
+        provideTextDocumentContent: provideTextDocumentContent == null
+            ? null
+            : _i5.allowInterop(provideTextDocumentContent),
+      );
+}
 
 extension TextDocumentContentProvider$Typings on TextDocumentContentProvider {
   /// An event to signal a resource has changed.
@@ -4136,33 +4316,28 @@ extension TextDocumentContentProvider$Typings on TextDocumentContentProvider {
     _i5.setProperty(
       this,
       'onDidChange',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Provide textual content for a given uri.
-  ///
-  ///  The editor will use the returned string-content to create a readonly
-  ///  {@link TextDocument document}. Resources allocated should be released when
-  ///  the corresponding document has been {@link workspace.onDidCloseTextDocument closed}.
-  ///
-  ///  **Note**: The contents of the created {@link TextDocument document} might not be
-  ///  identical to the provided text due to end-of-line-sequence normalization.
-  ///
-  ///  @param uri An uri which scheme matches the scheme this provider was {@link workspace.registerTextDocumentContentProvider registered} for.
-  ///  @param token A cancellation token.
-  ///  @returns A string or a thenable that resolves to such.
-  _i3.ProviderResult<_i2.String> provideTextDocumentContent(
-    _i3.Uri uri,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideTextDocumentContent(
+      _i3.ProviderResult<_i2.String> Function(
+        _i3.Uri,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideTextDocumentContent',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.String> Function(
+    _i3.Uri,
+    _i3.CancellationToken,
+  ) get provideTextDocumentContent => _i5.getProperty(
         this,
         'provideTextDocumentContent',
-        [
-          uri,
-          token,
-        ],
       );
 }
 
@@ -4217,7 +4392,7 @@ class QuickPickItem {
   });
 
   factory QuickPickItem({
-    required _i2.String label,
+    _i2.String? label,
     _i3.QuickPickItemKind? kind,
     _i2.Object? iconPath,
     _i2.String? description,
@@ -4228,13 +4403,13 @@ class QuickPickItem {
   }) =>
       QuickPickItem._(
         label: label,
-        kind: kind?.name ?? _i4.undefined,
-        iconPath: iconPath ?? _i4.undefined,
-        description: description ?? _i4.undefined,
-        detail: detail ?? _i4.undefined,
-        picked: picked ?? _i4.undefined,
-        alwaysShow: alwaysShow ?? _i4.undefined,
-        buttons: buttons ?? _i4.undefined,
+        kind: kind?.name,
+        iconPath: iconPath ?? _i6.undefined,
+        description: description,
+        detail: detail,
+        picked: picked,
+        alwaysShow: alwaysShow,
+        buttons: buttons ?? _i6.undefined,
       );
 }
 
@@ -4266,7 +4441,7 @@ extension QuickPickItem$Typings on QuickPickItem {
     _i5.setProperty(
       this,
       'kind',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -4279,7 +4454,7 @@ extension QuickPickItem$Typings on QuickPickItem {
     _i5.setProperty(
       this,
       'iconPath',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4295,7 +4470,7 @@ extension QuickPickItem$Typings on QuickPickItem {
     _i5.setProperty(
       this,
       'description',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4311,7 +4486,7 @@ extension QuickPickItem$Typings on QuickPickItem {
     _i5.setProperty(
       this,
       'detail',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4332,7 +4507,7 @@ extension QuickPickItem$Typings on QuickPickItem {
     _i5.setProperty(
       this,
       'picked',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4347,7 +4522,7 @@ extension QuickPickItem$Typings on QuickPickItem {
     _i5.setProperty(
       this,
       'alwaysShow',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4366,7 +4541,7 @@ extension QuickPickItem$Typings on QuickPickItem {
     _i5.setProperty(
       this,
       'buttons',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -4374,7 +4549,38 @@ extension QuickPickItem$Typings on QuickPickItem {
 /// Options to configure the behavior of the quick pick UI.
 @_i1.JS()
 @_i1.staticInterop
-class QuickPickOptions {}
+@_i1.anonymous
+class QuickPickOptions {
+  external factory QuickPickOptions._({
+    _i2.dynamic title,
+    _i2.dynamic matchOnDescription,
+    _i2.dynamic matchOnDetail,
+    _i2.dynamic placeHolder,
+    _i2.dynamic ignoreFocusOut,
+    _i2.dynamic canPickMany,
+    _i2.dynamic onDidSelectItem,
+  });
+
+  factory QuickPickOptions({
+    _i2.String? title,
+    _i2.bool? matchOnDescription,
+    _i2.bool? matchOnDetail,
+    _i2.String? placeHolder,
+    _i2.bool? ignoreFocusOut,
+    _i2.bool? canPickMany,
+    _i2.dynamic Function(_i2.Object)? onDidSelectItem,
+  }) =>
+      QuickPickOptions._(
+        title: title,
+        matchOnDescription: matchOnDescription,
+        matchOnDetail: matchOnDetail,
+        placeHolder: placeHolder,
+        ignoreFocusOut: ignoreFocusOut,
+        canPickMany: canPickMany,
+        onDidSelectItem:
+            onDidSelectItem == null ? null : _i5.allowInterop(onDidSelectItem),
+      );
+}
 
 extension QuickPickOptions$Typings on QuickPickOptions {
   /// An optional string that represents the title of the quick pick.
@@ -4386,7 +4592,7 @@ extension QuickPickOptions$Typings on QuickPickOptions {
     _i5.setProperty(
       this,
       'title',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4399,7 +4605,7 @@ extension QuickPickOptions$Typings on QuickPickOptions {
     _i5.setProperty(
       this,
       'matchOnDescription',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4412,7 +4618,7 @@ extension QuickPickOptions$Typings on QuickPickOptions {
     _i5.setProperty(
       this,
       'matchOnDetail',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4425,7 +4631,7 @@ extension QuickPickOptions$Typings on QuickPickOptions {
     _i5.setProperty(
       this,
       'placeHolder',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4439,7 +4645,7 @@ extension QuickPickOptions$Typings on QuickPickOptions {
     _i5.setProperty(
       this,
       'ignoreFocusOut',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4452,15 +4658,21 @@ extension QuickPickOptions$Typings on QuickPickOptions {
     _i5.setProperty(
       this,
       'canPickMany',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// An optional function that is invoked whenever an item is selected.
-  _i2.dynamic onDidSelectItem(_i2.Object item) => _i5.callMethod(
+  set onDidSelectItem(_i2.dynamic Function(_i2.Object) value) {
+    _i5.setProperty(
+      this,
+      'onDidSelectItem',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.dynamic Function(_i2.Object) get onDidSelectItem => _i5.getProperty(
         this,
         'onDidSelectItem',
-        [item],
       );
 }
 
@@ -4479,8 +4691,8 @@ class WorkspaceFolderPickOptions {
     _i2.bool? ignoreFocusOut,
   }) =>
       WorkspaceFolderPickOptions._(
-        placeHolder: placeHolder ?? _i4.undefined,
-        ignoreFocusOut: ignoreFocusOut ?? _i4.undefined,
+        placeHolder: placeHolder,
+        ignoreFocusOut: ignoreFocusOut,
       );
 }
 
@@ -4494,7 +4706,7 @@ extension WorkspaceFolderPickOptions$Typings on WorkspaceFolderPickOptions {
     _i5.setProperty(
       this,
       'placeHolder',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4508,7 +4720,7 @@ extension WorkspaceFolderPickOptions$Typings on WorkspaceFolderPickOptions {
     _i5.setProperty(
       this,
       'ignoreFocusOut',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -4543,13 +4755,13 @@ class OpenDialogOptions {
     _i2.String? title,
   }) =>
       OpenDialogOptions._(
-        defaultUri: defaultUri ?? _i4.undefined,
-        openLabel: openLabel ?? _i4.undefined,
-        canSelectFiles: canSelectFiles ?? _i4.undefined,
-        canSelectFolders: canSelectFolders ?? _i4.undefined,
-        canSelectMany: canSelectMany ?? _i4.undefined,
-        filters: filters ?? _i4.undefined,
-        title: title ?? _i4.undefined,
+        defaultUri: defaultUri ?? _i6.undefined,
+        openLabel: openLabel,
+        canSelectFiles: canSelectFiles,
+        canSelectFolders: canSelectFolders,
+        canSelectMany: canSelectMany,
+        filters: filters ?? _i6.undefined,
+        title: title,
       );
 }
 
@@ -4563,7 +4775,7 @@ extension OpenDialogOptions$Typings on OpenDialogOptions {
     _i5.setProperty(
       this,
       'defaultUri',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4576,7 +4788,7 @@ extension OpenDialogOptions$Typings on OpenDialogOptions {
     _i5.setProperty(
       this,
       'openLabel',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4589,7 +4801,7 @@ extension OpenDialogOptions$Typings on OpenDialogOptions {
     _i5.setProperty(
       this,
       'canSelectFiles',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4602,7 +4814,7 @@ extension OpenDialogOptions$Typings on OpenDialogOptions {
     _i5.setProperty(
       this,
       'canSelectFolders',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4615,7 +4827,7 @@ extension OpenDialogOptions$Typings on OpenDialogOptions {
     _i5.setProperty(
       this,
       'canSelectMany',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4635,7 +4847,7 @@ extension OpenDialogOptions$Typings on OpenDialogOptions {
     _i5.setProperty(
       this,
       'filters',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4651,7 +4863,7 @@ extension OpenDialogOptions$Typings on OpenDialogOptions {
     _i5.setProperty(
       this,
       'title',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -4675,10 +4887,10 @@ class SaveDialogOptions {
     _i2.String? title,
   }) =>
       SaveDialogOptions._(
-        defaultUri: defaultUri ?? _i4.undefined,
-        saveLabel: saveLabel ?? _i4.undefined,
-        filters: filters ?? _i4.undefined,
-        title: title ?? _i4.undefined,
+        defaultUri: defaultUri ?? _i6.undefined,
+        saveLabel: saveLabel,
+        filters: filters ?? _i6.undefined,
+        title: title,
       );
 }
 
@@ -4692,7 +4904,7 @@ extension SaveDialogOptions$Typings on SaveDialogOptions {
     _i5.setProperty(
       this,
       'defaultUri',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4705,7 +4917,7 @@ extension SaveDialogOptions$Typings on SaveDialogOptions {
     _i5.setProperty(
       this,
       'saveLabel',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4725,7 +4937,7 @@ extension SaveDialogOptions$Typings on SaveDialogOptions {
     _i5.setProperty(
       this,
       'filters',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4741,7 +4953,7 @@ extension SaveDialogOptions$Typings on SaveDialogOptions {
     _i5.setProperty(
       this,
       'title',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -4758,12 +4970,12 @@ class MessageItem {
   });
 
   factory MessageItem({
-    required _i2.String title,
+    _i2.String? title,
     _i2.bool? isCloseAffordance,
   }) =>
       MessageItem._(
         title: title,
-        isCloseAffordance: isCloseAffordance ?? _i4.undefined,
+        isCloseAffordance: isCloseAffordance,
       );
 }
 
@@ -4794,7 +5006,7 @@ extension MessageItem$Typings on MessageItem {
     _i5.setProperty(
       this,
       'isCloseAffordance',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -4814,8 +5026,8 @@ class MessageOptions {
     _i2.String? detail,
   }) =>
       MessageOptions._(
-        modal: modal ?? _i4.undefined,
-        detail: detail ?? _i4.undefined,
+        modal: modal,
+        detail: detail,
       );
 }
 
@@ -4829,7 +5041,7 @@ extension MessageOptions$Typings on MessageOptions {
     _i5.setProperty(
       this,
       'modal',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4843,7 +5055,7 @@ extension MessageOptions$Typings on MessageOptions {
     _i5.setProperty(
       this,
       'detail',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -4859,12 +5071,12 @@ class InputBoxValidationMessage {
   });
 
   factory InputBoxValidationMessage({
-    required _i2.String message,
-    required _i3.InputBoxValidationSeverity severity,
+    _i2.String? message,
+    _i3.InputBoxValidationSeverity? severity,
   }) =>
       InputBoxValidationMessage._(
         message: message,
-        severity: severity.name,
+        severity: severity?.name,
       );
 }
 
@@ -4888,7 +5100,49 @@ extension InputBoxValidationMessage$Typings on InputBoxValidationMessage {
 /// Options to configure the behavior of the input box UI.
 @_i1.JS()
 @_i1.staticInterop
-class InputBoxOptions {}
+@_i1.anonymous
+class InputBoxOptions {
+  external factory InputBoxOptions._({
+    _i2.dynamic title,
+    _i2.dynamic value,
+    _i2.dynamic valueSelection,
+    _i2.dynamic prompt,
+    _i2.dynamic placeHolder,
+    _i2.dynamic password,
+    _i2.dynamic ignoreFocusOut,
+    _i2.dynamic validateInput,
+  });
+
+  factory InputBoxOptions({
+    _i2.String? title,
+    _i2.String? value,
+    (
+      _i2.num,
+      _i2.num,
+    )? valueSelection,
+    _i2.String? prompt,
+    _i2.String? placeHolder,
+    _i2.bool? password,
+    _i2.bool? ignoreFocusOut,
+    _i2.dynamic Function(_i2.String)? validateInput,
+  }) =>
+      InputBoxOptions._(
+        title: title,
+        value: value,
+        valueSelection: valueSelection == null
+            ? null
+            : [
+                valueSelection.$1,
+                valueSelection.$2,
+              ],
+        prompt: prompt,
+        placeHolder: placeHolder,
+        password: password,
+        ignoreFocusOut: ignoreFocusOut,
+        validateInput:
+            validateInput == null ? null : _i5.allowInterop(validateInput),
+      );
+}
 
 extension InputBoxOptions$Typings on InputBoxOptions {
   /// An optional string that represents the title of the input box.
@@ -4900,7 +5154,7 @@ extension InputBoxOptions$Typings on InputBoxOptions {
     _i5.setProperty(
       this,
       'title',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4913,7 +5167,7 @@ extension InputBoxOptions$Typings on InputBoxOptions {
     _i5.setProperty(
       this,
       'value',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4937,7 +5191,7 @@ extension InputBoxOptions$Typings on InputBoxOptions {
       this,
       'valueSelection',
       value == null
-          ? _i4.undefined
+          ? _i6.undefined
           : [
               value.$1,
               value.$2,
@@ -4954,7 +5208,7 @@ extension InputBoxOptions$Typings on InputBoxOptions {
     _i5.setProperty(
       this,
       'prompt',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4967,7 +5221,7 @@ extension InputBoxOptions$Typings on InputBoxOptions {
     _i5.setProperty(
       this,
       'placeHolder',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4980,7 +5234,7 @@ extension InputBoxOptions$Typings on InputBoxOptions {
     _i5.setProperty(
       this,
       'password',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4994,20 +5248,21 @@ extension InputBoxOptions$Typings on InputBoxOptions {
     _i5.setProperty(
       this,
       'ignoreFocusOut',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// An optional function that will be called to validate input and to give a hint
-  ///  to the user.
-  ///
-  ///  @param value The current value of the input box.
-  ///  @returns Either a human-readable string which is presented as an error message or an {@link InputBoxValidationMessage}
-  ///   which can provide a specific message severity. Return `undefined`, `null`, or the empty string when 'value' is valid.
-  _i2.dynamic validateInput(_i2.String value) => _i5.callMethod(
+  set validateInput(_i2.dynamic Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'validateInput',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.dynamic Function(_i2.String) get validateInput => _i5.getProperty(
         this,
         'validateInput',
-        [value],
       );
 }
 
@@ -5111,10 +5366,10 @@ class DocumentFilter {
     _i3.GlobPattern? pattern,
   }) =>
       DocumentFilter._(
-        language: language ?? _i4.undefined,
-        notebookType: notebookType ?? _i4.undefined,
-        scheme: scheme ?? _i4.undefined,
-        pattern: pattern ?? _i4.undefined ?? _i4.undefined,
+        language: language,
+        notebookType: notebookType,
+        scheme: scheme,
+        pattern: pattern ?? _i6.undefined,
       );
 }
 
@@ -5343,14 +5598,14 @@ class CodeActionContext {
   });
 
   factory CodeActionContext({
-    required _i3.CodeActionTriggerKind triggerKind,
-    required _i2.List<_i3.Diagnostic> diagnostics,
+    _i3.CodeActionTriggerKind? triggerKind,
+    _i2.List<_i3.Diagnostic>? diagnostics,
     _i3.CodeActionKind? only,
   }) =>
       CodeActionContext._(
-        triggerKind: triggerKind.name,
-        diagnostics: diagnostics,
-        only: only ?? _i4.undefined,
+        triggerKind: triggerKind?.name,
+        diagnostics: diagnostics ?? _i6.undefined,
+        only: only ?? _i6.undefined,
       );
 }
 
@@ -5408,7 +5663,7 @@ class CodeAction {
         _declaredCodeAction,
         [
           title,
-          kind ?? _i4.undefined,
+          kind ?? _i6.undefined,
         ],
       );
 }
@@ -5544,69 +5799,78 @@ extension CodeAction$Typings on CodeAction {
 /// - Change applied on save by the `editor.codeActionsOnSave` setting.
 @_i1.JS()
 @_i1.staticInterop
-class CodeActionProvider<T extends _i3.CodeAction> {}
+@_i1.anonymous
+class CodeActionProvider<T extends _i3.CodeAction> {
+  external factory CodeActionProvider._({
+    _i2.dynamic provideCodeActions,
+    _i2.dynamic resolveCodeAction,
+  });
+
+  factory CodeActionProvider({
+    _i3.ProviderResult<_i2.List<_i2.Object>> Function(
+      _i3.TextDocument,
+      _i2.Object,
+      _i3.CodeActionContext,
+      _i3.CancellationToken,
+    )? provideCodeActions,
+    _i3.ProviderResult<_i3.CodeAction> Function(
+      _i3.CodeAction,
+      _i3.CancellationToken,
+    )? resolveCodeAction,
+  }) =>
+      CodeActionProvider._(
+        provideCodeActions: provideCodeActions == null
+            ? null
+            : _i5.allowInterop(provideCodeActions),
+        resolveCodeAction: resolveCodeAction == null
+            ? null
+            : _i5.allowInterop(resolveCodeAction),
+      );
+}
 
 extension CodeActionProvider$Typings<T extends _i3.CodeAction>
     on CodeActionProvider<T> {
-  /// Get code actions for a given range in a document.
-  ///
-  ///  Only return code actions that are relevant to user for the requested range. Also keep in mind how the
-  ///  returned code actions will appear in the UI. The lightbulb widget and `Refactor` commands for instance show
-  ///  returned code actions as a list, so do not return a large number of code actions that will overwhelm the user.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param range The selector or range for which the command was invoked. This will always be a
-  ///  {@link Selection selection} if the actions are being requested in the currently active editor.
-  ///  @param context Provides additional information about what code actions are being requested. You can use this
-  ///  to see what specific type of code actions are being requested by the editor in order to return more relevant
-  ///  actions and avoid returning irrelevant code actions that the editor will discard.
-  ///  @param token A cancellation token.
-  ///
-  ///  @returns An array of code actions, such as quick fixes or refactorings. The lack of a result can be signaled
-  ///  by returning `undefined`, `null`, or an empty array.
-  ///
-  ///  We also support returning `Command` for legacy reasons, however all new extensions should return
-  ///  `CodeAction` object instead.
-  _i3.ProviderResult<_i2.List<_i2.Object>> provideCodeActions(
-    _i3.TextDocument document,
-    _i2.Object range,
-    _i3.CodeActionContext context,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideCodeActions(
+      _i3.ProviderResult<_i2.List<_i2.Object>> Function(
+        _i3.TextDocument,
+        _i2.Object,
+        _i3.CodeActionContext,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideCodeActions',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i2.Object>> Function(
+    _i3.TextDocument,
+    _i2.Object,
+    _i3.CodeActionContext,
+    _i3.CancellationToken,
+  ) get provideCodeActions => _i5.getProperty(
         this,
         'provideCodeActions',
-        [
-          document,
-          range,
-          context,
-          token,
-        ],
       );
+  set resolveCodeAction(
+      _i3.ProviderResult<T> Function(
+        T,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveCodeAction',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Given a code action fill in its {@linkcode CodeAction.edit edit}-property. Changes to
-  ///  all other properties, like title, are ignored. A code action that has an edit
-  ///  will not be resolved.
-  ///
-  ///  *Note* that a code action provider that returns commands, not code actions, cannot successfully
-  ///  implement this function. Returning commands is deprecated and instead code actions should be
-  ///  returned.
-  ///
-  ///  @param codeAction A code action.
-  ///  @param token A cancellation token.
-  ///  @returns The resolved code action or a thenable that resolves to such. It is OK to return the given
-  ///  `item`. When no result is returned, the given `item` will be used.
-  _i3.ProviderResult<T> resolveCodeAction(
-    T codeAction,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<T> Function(
+    T,
+    _i3.CancellationToken,
+  ) get resolveCodeAction => _i5.getProperty(
         this,
         'resolveCodeAction',
-        [
-          codeAction,
-          token,
-        ],
       );
 }
 
@@ -5652,8 +5916,8 @@ class CodeActionProviderMetadata {
     _i7.ReadonlyArray<_i3.IInline12>? documentation,
   }) =>
       CodeActionProviderMetadata._(
-        providedCodeActionKinds: providedCodeActionKinds ?? _i4.undefined,
-        documentation: documentation ?? _i4.undefined,
+        providedCodeActionKinds: providedCodeActionKinds ?? _i6.undefined,
+        documentation: documentation ?? _i6.undefined,
       );
 }
 
@@ -5704,7 +5968,7 @@ class CodeLens {
         _declaredCodeLens,
         [
           range,
-          command ?? _i4.undefined,
+          command ?? _i6.undefined,
         ],
       );
 }
@@ -5752,7 +6016,34 @@ extension CodeLens$Typings on CodeLens {
 /// as dedicated horizontal lines in between the source text.
 @_i1.JS()
 @_i1.staticInterop
-class CodeLensProvider<T extends _i3.CodeLens> {}
+@_i1.anonymous
+class CodeLensProvider<T extends _i3.CodeLens> {
+  external factory CodeLensProvider._({
+    _i2.dynamic onDidChangeCodeLenses,
+    _i2.dynamic provideCodeLenses,
+    _i2.dynamic resolveCodeLens,
+  });
+
+  factory CodeLensProvider({
+    _i3.Event<void>? onDidChangeCodeLenses,
+    _i3.ProviderResult<_i2.List<_i3.CodeLens>> Function(
+      _i3.TextDocument,
+      _i3.CancellationToken,
+    )? provideCodeLenses,
+    _i3.ProviderResult<_i3.CodeLens> Function(
+      _i3.CodeLens,
+      _i3.CancellationToken,
+    )? resolveCodeLens,
+  }) =>
+      CodeLensProvider._(
+        onDidChangeCodeLenses: onDidChangeCodeLenses ?? _i6.undefined,
+        provideCodeLenses: provideCodeLenses == null
+            ? null
+            : _i5.allowInterop(provideCodeLenses),
+        resolveCodeLens:
+            resolveCodeLens == null ? null : _i5.allowInterop(resolveCodeLens),
+      );
+}
 
 extension CodeLensProvider$Typings<T extends _i3.CodeLens>
     on CodeLensProvider<T> {
@@ -5765,48 +6056,47 @@ extension CodeLensProvider$Typings<T extends _i3.CodeLens>
     _i5.setProperty(
       this,
       'onDidChangeCodeLenses',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Compute a list of {@link CodeLens lenses}. This call should return as fast as possible and if
-  ///  computing the commands is expensive implementors should only return code lens objects with the
-  ///  range set and implement {@link CodeLensProvider.resolveCodeLens resolve}.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns An array of code lenses or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<T>> provideCodeLenses(
-    _i3.TextDocument document,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideCodeLenses(
+      _i3.ProviderResult<_i2.List<T>> Function(
+        _i3.TextDocument,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideCodeLenses',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<T>> Function(
+    _i3.TextDocument,
+    _i3.CancellationToken,
+  ) get provideCodeLenses => _i5.getProperty(
         this,
         'provideCodeLenses',
-        [
-          document,
-          token,
-        ],
       );
+  set resolveCodeLens(
+      _i3.ProviderResult<T> Function(
+        T,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveCodeLens',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// This function will be called for each visible code lens, usually when scrolling and after
-  ///  calls to {@link CodeLensProvider.provideCodeLenses compute}-lenses.
-  ///
-  ///  @param codeLens Code lens that must be resolved.
-  ///  @param token A cancellation token.
-  ///  @returns The given, resolved code lens or thenable that resolves to such.
-  _i3.ProviderResult<T> resolveCodeLens(
-    T codeLens,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<T> Function(
+    T,
+    _i3.CancellationToken,
+  ) get resolveCodeLens => _i5.getProperty(
         this,
         'resolveCodeLens',
-        [
-          codeLens,
-          token,
-        ],
       );
 }
 
@@ -5815,29 +6105,43 @@ extension CodeLensProvider$Typings<T extends _i3.CodeLens>
 /// and peek definition features.
 @_i1.JS()
 @_i1.staticInterop
-class DefinitionProvider {}
+@_i1.anonymous
+class DefinitionProvider {
+  external factory DefinitionProvider._({_i2.dynamic provideDefinition});
+
+  factory DefinitionProvider(
+          {_i3.ProviderResult<_i2.Object> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.CancellationToken,
+          )? provideDefinition}) =>
+      DefinitionProvider._(
+          provideDefinition: provideDefinition == null
+              ? null
+              : _i5.allowInterop(provideDefinition));
+}
 
 extension DefinitionProvider$Typings on DefinitionProvider {
-  /// Provide the definition of the symbol at the given position and document.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns A definition or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i2.Object> provideDefinition(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideDefinition(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDefinition',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get provideDefinition => _i5.getProperty(
         this,
         'provideDefinition',
-        [
-          document,
-          position,
-          token,
-        ],
       );
 }
 
@@ -5845,29 +6149,44 @@ extension DefinitionProvider$Typings on DefinitionProvider {
 /// the go to implementation feature.
 @_i1.JS()
 @_i1.staticInterop
-class ImplementationProvider {}
+@_i1.anonymous
+class ImplementationProvider {
+  external factory ImplementationProvider._(
+      {_i2.dynamic provideImplementation});
+
+  factory ImplementationProvider(
+          {_i3.ProviderResult<_i2.Object> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.CancellationToken,
+          )? provideImplementation}) =>
+      ImplementationProvider._(
+          provideImplementation: provideImplementation == null
+              ? null
+              : _i5.allowInterop(provideImplementation));
+}
 
 extension ImplementationProvider$Typings on ImplementationProvider {
-  /// Provide the implementations of the symbol at the given position and document.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns A definition or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i2.Object> provideImplementation(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideImplementation(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideImplementation',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get provideImplementation => _i5.getProperty(
         this,
         'provideImplementation',
-        [
-          document,
-          position,
-          token,
-        ],
       );
 }
 
@@ -5875,29 +6194,44 @@ extension ImplementationProvider$Typings on ImplementationProvider {
 /// the go to type definition feature.
 @_i1.JS()
 @_i1.staticInterop
-class TypeDefinitionProvider {}
+@_i1.anonymous
+class TypeDefinitionProvider {
+  external factory TypeDefinitionProvider._(
+      {_i2.dynamic provideTypeDefinition});
+
+  factory TypeDefinitionProvider(
+          {_i3.ProviderResult<_i2.Object> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.CancellationToken,
+          )? provideTypeDefinition}) =>
+      TypeDefinitionProvider._(
+          provideTypeDefinition: provideTypeDefinition == null
+              ? null
+              : _i5.allowInterop(provideTypeDefinition));
+}
 
 extension TypeDefinitionProvider$Typings on TypeDefinitionProvider {
-  /// Provide the type definition of the symbol at the given position and document.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns A definition or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i2.Object> provideTypeDefinition(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideTypeDefinition(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideTypeDefinition',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get provideTypeDefinition => _i5.getProperty(
         this,
         'provideTypeDefinition',
-        [
-          document,
-          position,
-          token,
-        ],
       );
 }
 
@@ -5905,29 +6239,43 @@ extension TypeDefinitionProvider$Typings on TypeDefinitionProvider {
 /// the go to declaration feature.
 @_i1.JS()
 @_i1.staticInterop
-class DeclarationProvider {}
+@_i1.anonymous
+class DeclarationProvider {
+  external factory DeclarationProvider._({_i2.dynamic provideDeclaration});
+
+  factory DeclarationProvider(
+          {_i3.ProviderResult<_i3.Declaration> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.CancellationToken,
+          )? provideDeclaration}) =>
+      DeclarationProvider._(
+          provideDeclaration: provideDeclaration == null
+              ? null
+              : _i5.allowInterop(provideDeclaration));
+}
 
 extension DeclarationProvider$Typings on DeclarationProvider {
-  /// Provide the declaration of the symbol at the given position and document.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns A declaration or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i3.Declaration> provideDeclaration(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideDeclaration(
+      _i3.ProviderResult<_i3.Declaration> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDeclaration',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.Declaration> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get provideDeclaration => _i5.getProperty(
         this,
         'provideDeclaration',
-        [
-          document,
-          position,
-          token,
-        ],
       );
 }
 
@@ -5961,8 +6309,8 @@ class MarkdownString {
       _i5.callConstructor(
         _declaredMarkdownString,
         [
-          value ?? _i4.undefined,
-          supportThemeIcons ?? _i4.undefined,
+          value ?? _i6.undefined,
+          supportThemeIcons ?? _i6.undefined,
         ],
       );
 }
@@ -6092,7 +6440,7 @@ extension MarkdownString$Typings on MarkdownString {
         'appendCodeblock',
         [
           value,
-          language ?? _i4.undefined,
+          language ?? _i6.undefined,
         ],
       );
 }
@@ -6145,7 +6493,7 @@ class Hover {
         _declaredHover,
         [
           contents,
-          range ?? _i4.undefined,
+          range ?? _i6.undefined,
         ],
       );
 }
@@ -6189,31 +6537,42 @@ extension Hover$Typings on Hover {
 /// the [hover](https://code.visualstudio.com/docs/editor/intellisense)-feature.
 @_i1.JS()
 @_i1.staticInterop
-class HoverProvider {}
+@_i1.anonymous
+class HoverProvider {
+  external factory HoverProvider._({_i2.dynamic provideHover});
+
+  factory HoverProvider(
+          {_i3.ProviderResult<_i3.Hover> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.CancellationToken,
+          )? provideHover}) =>
+      HoverProvider._(
+          provideHover:
+              provideHover == null ? null : _i5.allowInterop(provideHover));
+}
 
 extension HoverProvider$Typings on HoverProvider {
-  /// Provide a hover for the given position and document. Multiple hovers at the same
-  ///  position will be merged by the editor. A hover can have a range which defaults
-  ///  to the word range at the position when omitted.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns A hover or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i3.Hover> provideHover(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideHover(
+      _i3.ProviderResult<_i3.Hover> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideHover',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.Hover> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get provideHover => _i5.getProperty(
         this,
         'provideHover',
-        [
-          document,
-          position,
-          token,
-        ],
       );
 }
 
@@ -6233,7 +6592,7 @@ class EvaluatableExpression {
         _declaredEvaluatableExpression,
         [
           range,
-          expression ?? _i4.undefined,
+          expression ?? _i6.undefined,
         ],
       );
 }
@@ -6259,32 +6618,45 @@ extension EvaluatableExpression$Typings on EvaluatableExpression {
 /// in a document and the editor evaluates this expression in the active debug session and shows the result in a debug hover.
 @_i1.JS()
 @_i1.staticInterop
-class EvaluatableExpressionProvider {}
+@_i1.anonymous
+class EvaluatableExpressionProvider {
+  external factory EvaluatableExpressionProvider._(
+      {_i2.dynamic provideEvaluatableExpression});
+
+  factory EvaluatableExpressionProvider(
+          {_i3.ProviderResult<_i3.EvaluatableExpression> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.CancellationToken,
+          )? provideEvaluatableExpression}) =>
+      EvaluatableExpressionProvider._(
+          provideEvaluatableExpression: provideEvaluatableExpression == null
+              ? null
+              : _i5.allowInterop(provideEvaluatableExpression));
+}
 
 extension EvaluatableExpressionProvider$Typings
     on EvaluatableExpressionProvider {
-  /// Provide an evaluatable expression for the given document and position.
-  ///  The editor will evaluate this expression in the active debug session and will show the result in the debug hover.
-  ///  The expression can be implicitly specified by the range in the underlying document or by explicitly returning an expression.
-  ///
-  ///  @param document The document for which the debug hover is about to appear.
-  ///  @param position The line and character position in the document where the debug hover is about to appear.
-  ///  @param token A cancellation token.
-  ///  @returns An EvaluatableExpression or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i3.EvaluatableExpression> provideEvaluatableExpression(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideEvaluatableExpression(
+      _i3.ProviderResult<_i3.EvaluatableExpression> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideEvaluatableExpression',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.EvaluatableExpression> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get provideEvaluatableExpression => _i5.getProperty(
         this,
         'provideEvaluatableExpression',
-        [
-          document,
-          position,
-          token,
-        ],
       );
 }
 
@@ -6339,8 +6711,8 @@ class InlineValueVariableLookup {
         _declaredInlineValueVariableLookup,
         [
           range,
-          variableName ?? _i4.undefined,
-          caseSensitiveLookup ?? _i4.undefined,
+          variableName ?? _i6.undefined,
+          caseSensitiveLookup ?? _i6.undefined,
         ],
       );
 }
@@ -6385,7 +6757,7 @@ class InlineValueEvaluatableExpression {
         _declaredInlineValueEvaluatableExpression,
         [
           range,
-          expression ?? _i4.undefined,
+          expression ?? _i6.undefined,
         ],
       );
 }
@@ -6422,12 +6794,12 @@ class InlineValueContext {
   });
 
   factory InlineValueContext({
-    required _i2.num frameId,
-    required _i3.Range stoppedLocation,
+    _i2.num? frameId,
+    _i3.Range? stoppedLocation,
   }) =>
       InlineValueContext._(
         frameId: frameId,
-        stoppedLocation: stoppedLocation,
+        stoppedLocation: stoppedLocation ?? _i6.undefined,
       );
 }
 
@@ -6451,7 +6823,29 @@ extension InlineValueContext$Typings on InlineValueContext {
 /// and the editor shows this information in the editor at the end of lines.
 @_i1.JS()
 @_i1.staticInterop
-class InlineValuesProvider {}
+@_i1.anonymous
+class InlineValuesProvider {
+  external factory InlineValuesProvider._({
+    _i2.dynamic onDidChangeInlineValues,
+    _i2.dynamic provideInlineValues,
+  });
+
+  factory InlineValuesProvider({
+    _i3.Event<void>? onDidChangeInlineValues,
+    _i3.ProviderResult<_i2.List<_i3.InlineValue>> Function(
+      _i3.TextDocument,
+      _i3.Range,
+      _i3.InlineValueContext,
+      _i3.CancellationToken,
+    )? provideInlineValues,
+  }) =>
+      InlineValuesProvider._(
+        onDidChangeInlineValues: onDidChangeInlineValues ?? _i6.undefined,
+        provideInlineValues: provideInlineValues == null
+            ? null
+            : _i5.allowInterop(provideInlineValues),
+      );
+}
 
 extension InlineValuesProvider$Typings on InlineValuesProvider {
   /// An optional event to signal that inline values have changed.
@@ -6464,35 +6858,32 @@ extension InlineValuesProvider$Typings on InlineValuesProvider {
     _i5.setProperty(
       this,
       'onDidChangeInlineValues',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Provide "inline value" information for a given document and range.
-  ///  The editor calls this method whenever debugging stops in the given document.
-  ///  The returned inline values information is rendered in the editor at the end of lines.
-  ///
-  ///  @param document The document for which the inline values information is needed.
-  ///  @param viewPort The visible document range for which inline values should be computed.
-  ///  @param context A bag containing contextual information like the current location.
-  ///  @param token A cancellation token.
-  ///  @returns An array of InlineValueDescriptors or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i2.List<_i3.InlineValue>> provideInlineValues(
-    _i3.TextDocument document,
-    _i3.Range viewPort,
-    _i3.InlineValueContext context,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideInlineValues(
+      _i3.ProviderResult<_i2.List<_i3.InlineValue>> Function(
+        _i3.TextDocument,
+        _i3.Range,
+        _i3.InlineValueContext,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideInlineValues',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i3.InlineValue>> Function(
+    _i3.TextDocument,
+    _i3.Range,
+    _i3.InlineValueContext,
+    _i3.CancellationToken,
+  ) get provideInlineValues => _i5.getProperty(
         this,
         'provideInlineValues',
-        [
-          document,
-          viewPort,
-          context,
-          token,
-        ],
       );
 }
 
@@ -6510,7 +6901,7 @@ class DocumentHighlight {
         _declaredDocumentHighlight,
         [
           range,
-          kind?.name ?? _i4.undefined,
+          kind?.name ?? _i6.undefined,
         ],
       );
 }
@@ -6553,30 +6944,44 @@ extension DocumentHighlight$Typings on DocumentHighlight {
 /// the word-highlight-feature.
 @_i1.JS()
 @_i1.staticInterop
-class DocumentHighlightProvider {}
+@_i1.anonymous
+class DocumentHighlightProvider {
+  external factory DocumentHighlightProvider._(
+      {_i2.dynamic provideDocumentHighlights});
+
+  factory DocumentHighlightProvider(
+          {_i3.ProviderResult<_i2.List<_i3.DocumentHighlight>> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.CancellationToken,
+          )? provideDocumentHighlights}) =>
+      DocumentHighlightProvider._(
+          provideDocumentHighlights: provideDocumentHighlights == null
+              ? null
+              : _i5.allowInterop(provideDocumentHighlights));
+}
 
 extension DocumentHighlightProvider$Typings on DocumentHighlightProvider {
-  /// Provide a set of document highlights, like all occurrences of a variable or
-  ///  all exit-points of a function.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns An array of document highlights or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<_i3.DocumentHighlight>> provideDocumentHighlights(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideDocumentHighlights(
+      _i3.ProviderResult<_i2.List<_i3.DocumentHighlight>> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentHighlights',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i3.DocumentHighlight>> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get provideDocumentHighlights => _i5.getProperty(
         this,
         'provideDocumentHighlights',
-        [
-          document,
-          position,
-          token,
-        ],
       );
 }
 
@@ -6619,8 +7024,8 @@ class SymbolInformation {
           name,
           kind.name,
           range,
-          uri ?? _i4.undefined,
-          containerName ?? _i4.undefined,
+          uri ?? _i6.undefined,
+          containerName ?? _i6.undefined,
         ],
       );
 }
@@ -6832,26 +7237,41 @@ extension DocumentSymbol$Typings on DocumentSymbol {
 /// the [go to symbol](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-symbol)-feature.
 @_i1.JS()
 @_i1.staticInterop
-class DocumentSymbolProvider {}
+@_i1.anonymous
+class DocumentSymbolProvider {
+  external factory DocumentSymbolProvider._(
+      {_i2.dynamic provideDocumentSymbols});
+
+  factory DocumentSymbolProvider(
+          {_i3.ProviderResult<_i2.Object> Function(
+            _i3.TextDocument,
+            _i3.CancellationToken,
+          )? provideDocumentSymbols}) =>
+      DocumentSymbolProvider._(
+          provideDocumentSymbols: provideDocumentSymbols == null
+              ? null
+              : _i5.allowInterop(provideDocumentSymbols));
+}
 
 extension DocumentSymbolProvider$Typings on DocumentSymbolProvider {
-  /// Provide symbol information for the given document.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns An array of document highlights or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.Object> provideDocumentSymbols(
-    _i3.TextDocument document,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideDocumentSymbols(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.TextDocument,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentSymbols',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.TextDocument,
+    _i3.CancellationToken,
+  ) get provideDocumentSymbols => _i5.getProperty(
         this,
         'provideDocumentSymbols',
-        [
-          document,
-          token,
-        ],
       );
 }
 
@@ -6863,7 +7283,7 @@ class DocumentSymbolProviderMetadata {
   external factory DocumentSymbolProviderMetadata._({_i2.dynamic label});
 
   factory DocumentSymbolProviderMetadata({_i2.String? label}) =>
-      DocumentSymbolProviderMetadata._(label: label ?? _i4.undefined);
+      DocumentSymbolProviderMetadata._(label: label);
 }
 
 extension DocumentSymbolProviderMetadata$Typings
@@ -6877,7 +7297,7 @@ extension DocumentSymbolProviderMetadata$Typings
     _i5.setProperty(
       this,
       'label',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -6886,59 +7306,72 @@ extension DocumentSymbolProviderMetadata$Typings
 /// the [symbol search](https://code.visualstudio.com/docs/editor/editingevolved#_open-symbol-by-name)-feature.
 @_i1.JS()
 @_i1.staticInterop
-class WorkspaceSymbolProvider<T extends _i3.SymbolInformation> {}
+@_i1.anonymous
+class WorkspaceSymbolProvider<T extends _i3.SymbolInformation> {
+  external factory WorkspaceSymbolProvider._({
+    _i2.dynamic provideWorkspaceSymbols,
+    _i2.dynamic resolveWorkspaceSymbol,
+  });
+
+  factory WorkspaceSymbolProvider({
+    _i3.ProviderResult<_i2.List<_i3.SymbolInformation>> Function(
+      _i2.String,
+      _i3.CancellationToken,
+    )? provideWorkspaceSymbols,
+    _i3.ProviderResult<_i3.SymbolInformation> Function(
+      _i3.SymbolInformation,
+      _i3.CancellationToken,
+    )? resolveWorkspaceSymbol,
+  }) =>
+      WorkspaceSymbolProvider._(
+        provideWorkspaceSymbols: provideWorkspaceSymbols == null
+            ? null
+            : _i5.allowInterop(provideWorkspaceSymbols),
+        resolveWorkspaceSymbol: resolveWorkspaceSymbol == null
+            ? null
+            : _i5.allowInterop(resolveWorkspaceSymbol),
+      );
+}
 
 extension WorkspaceSymbolProvider$Typings<T extends _i3.SymbolInformation>
     on WorkspaceSymbolProvider<T> {
-  /// Project-wide search for a symbol matching the given query string.
-  ///
-  ///  The `query`-parameter should be interpreted in a *relaxed way* as the editor will apply its own highlighting
-  ///  and scoring on the results. A good rule of thumb is to match case-insensitive and to simply check that the
-  ///  characters of *query* appear in their order in a candidate symbol. Don't use prefix, substring, or similar
-  ///  strict matching.
-  ///
-  ///  To improve performance implementors can implement `resolveWorkspaceSymbol` and then provide symbols with partial
-  ///  {@link SymbolInformation.location location}-objects, without a `range` defined. The editor will then call
-  ///  `resolveWorkspaceSymbol` for selected symbols only, e.g. when opening a workspace symbol.
-  ///
-  ///  @param query A query string, can be the empty string in which case all symbols should be returned.
-  ///  @param token A cancellation token.
-  ///  @returns An array of document highlights or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<T>> provideWorkspaceSymbols(
-    _i2.String query,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideWorkspaceSymbols(
+      _i3.ProviderResult<_i2.List<T>> Function(
+        _i2.String,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideWorkspaceSymbols',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<T>> Function(
+    _i2.String,
+    _i3.CancellationToken,
+  ) get provideWorkspaceSymbols => _i5.getProperty(
         this,
         'provideWorkspaceSymbols',
-        [
-          query,
-          token,
-        ],
       );
+  set resolveWorkspaceSymbol(
+      _i3.ProviderResult<T> Function(
+        T,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveWorkspaceSymbol',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Given a symbol fill in its {@link SymbolInformation.location location}. This method is called whenever a symbol
-  ///  is selected in the UI. Providers can implement this method and return incomplete symbols from
-  ///  {@linkcode WorkspaceSymbolProvider.provideWorkspaceSymbols provideWorkspaceSymbols} which often helps to improve
-  ///  performance.
-  ///
-  ///  @param symbol The symbol that is to be resolved. Guaranteed to be an instance of an object returned from an
-  ///  earlier call to `provideWorkspaceSymbols`.
-  ///  @param token A cancellation token.
-  ///  @returns The resolved symbol or a thenable that resolves to that. When no result is returned,
-  ///  the given `symbol` is used.
-  _i3.ProviderResult<T> resolveWorkspaceSymbol(
-    T symbol,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<T> Function(
+    T,
+    _i3.CancellationToken,
+  ) get resolveWorkspaceSymbol => _i5.getProperty(
         this,
         'resolveWorkspaceSymbol',
-        [
-          symbol,
-          token,
-        ],
       );
 }
 
@@ -6950,7 +7383,7 @@ extension WorkspaceSymbolProvider$Typings<T extends _i3.SymbolInformation>
 class ReferenceContext {
   external factory ReferenceContext._({_i2.dynamic includeDeclaration});
 
-  factory ReferenceContext({required _i2.bool includeDeclaration}) =>
+  factory ReferenceContext({_i2.bool? includeDeclaration}) =>
       ReferenceContext._(includeDeclaration: includeDeclaration);
 }
 
@@ -6966,32 +7399,46 @@ extension ReferenceContext$Typings on ReferenceContext {
 /// the [find references](https://code.visualstudio.com/docs/editor/editingevolved#_peek)-feature.
 @_i1.JS()
 @_i1.staticInterop
-class ReferenceProvider {}
+@_i1.anonymous
+class ReferenceProvider {
+  external factory ReferenceProvider._({_i2.dynamic provideReferences});
+
+  factory ReferenceProvider(
+          {_i3.ProviderResult<_i2.List<_i3.Location>> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.ReferenceContext,
+            _i3.CancellationToken,
+          )? provideReferences}) =>
+      ReferenceProvider._(
+          provideReferences: provideReferences == null
+              ? null
+              : _i5.allowInterop(provideReferences));
+}
 
 extension ReferenceProvider$Typings on ReferenceProvider {
-  /// Provide a set of project-wide references for the given position and document.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///
-  ///  @returns An array of locations or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<_i3.Location>> provideReferences(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.ReferenceContext context,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideReferences(
+      _i3.ProviderResult<_i2.List<_i3.Location>> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.ReferenceContext,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideReferences',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i3.Location>> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.ReferenceContext,
+    _i3.CancellationToken,
+  ) get provideReferences => _i5.getProperty(
         this,
         'provideReferences',
-        [
-          document,
-          position,
-          context,
-          token,
-        ],
       );
 }
 
@@ -7372,16 +7819,16 @@ class WorkspaceEditEntryMetadata {
   });
 
   factory WorkspaceEditEntryMetadata({
-    required _i2.bool needsConfirmation,
-    required _i2.String label,
+    _i2.bool? needsConfirmation,
+    _i2.String? label,
     _i2.String? description,
     _i2.Object? iconPath,
   }) =>
       WorkspaceEditEntryMetadata._(
         needsConfirmation: needsConfirmation,
         label: label,
-        description: description ?? _i4.undefined,
-        iconPath: iconPath ?? _i4.undefined,
+        description: description,
+        iconPath: iconPath ?? _i6.undefined,
       );
 }
 
@@ -7421,7 +7868,7 @@ extension WorkspaceEditEntryMetadata$Typings on WorkspaceEditEntryMetadata {
     _i5.setProperty(
       this,
       'description',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -7434,7 +7881,7 @@ extension WorkspaceEditEntryMetadata$Typings on WorkspaceEditEntryMetadata {
     _i5.setProperty(
       this,
       'iconPath',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -7447,7 +7894,7 @@ class WorkspaceEditMetadata {
   external factory WorkspaceEditMetadata._({_i2.dynamic isRefactoring});
 
   factory WorkspaceEditMetadata({_i2.bool? isRefactoring}) =>
-      WorkspaceEditMetadata._(isRefactoring: isRefactoring ?? _i4.undefined);
+      WorkspaceEditMetadata._(isRefactoring: isRefactoring);
 }
 
 extension WorkspaceEditMetadata$Typings on WorkspaceEditMetadata {
@@ -7460,7 +7907,7 @@ extension WorkspaceEditMetadata$Typings on WorkspaceEditMetadata {
     _i5.setProperty(
       this,
       'isRefactoring',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -7565,7 +8012,7 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
         uri,
         range,
         newText,
-        metadata ?? _i4.undefined,
+        metadata ?? _i6.undefined,
       ],
     );
   }
@@ -7589,7 +8036,7 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
         uri,
         position,
         newText,
-        metadata ?? _i4.undefined,
+        metadata ?? _i6.undefined,
       ],
     );
   }
@@ -7610,7 +8057,7 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
       [
         uri,
         range,
-        metadata ?? _i4.undefined,
+        metadata ?? _i6.undefined,
       ],
     );
   }
@@ -7791,8 +8238,8 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
       'createFile',
       [
         uri,
-        options ?? _i4.undefined,
-        metadata ?? _i4.undefined,
+        options ?? _i6.undefined,
+        metadata ?? _i6.undefined,
       ],
     );
   }
@@ -7811,8 +8258,8 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
       'deleteFile',
       [
         uri,
-        options ?? _i4.undefined,
-        metadata ?? _i4.undefined,
+        options ?? _i6.undefined,
+        metadata ?? _i6.undefined,
       ],
     );
   }
@@ -7836,8 +8283,8 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
       [
         oldUri,
         newUri,
-        options ?? _i4.undefined,
-        metadata ?? _i4.undefined,
+        options ?? _i6.undefined,
+        metadata ?? _i6.undefined,
       ],
     );
   }
@@ -7870,7 +8317,7 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
 class SnippetString {
   factory SnippetString([_i2.String? value]) => _i5.callConstructor(
         _declaredSnippetString,
-        [value ?? _i4.undefined],
+        [value ?? _i6.undefined],
       );
 }
 
@@ -7913,7 +8360,7 @@ extension SnippetString$Typings on SnippetString {
   _i3.SnippetString appendTabstop([_i2.num? number]) => _i5.callMethod(
         this,
         'appendTabstop',
-        [number ?? _i4.undefined],
+        [number ?? _i6.undefined],
       );
 
   /// Builder-function that appends a placeholder (`${1:value}`) to
@@ -7933,7 +8380,7 @@ extension SnippetString$Typings on SnippetString {
         'appendPlaceholder',
         [
           value,
-          number ?? _i4.undefined,
+          number ?? _i6.undefined,
         ],
       );
 
@@ -7953,7 +8400,7 @@ extension SnippetString$Typings on SnippetString {
         'appendChoice',
         [
           values,
-          number ?? _i4.undefined,
+          number ?? _i6.undefined,
         ],
       );
 
@@ -8015,59 +8462,79 @@ extension IInline23$Typings on IInline23 {
 /// the [rename](https://code.visualstudio.com/docs/editor/editingevolved#_rename-symbol)-feature.
 @_i1.JS()
 @_i1.staticInterop
-class RenameProvider {}
+@_i1.anonymous
+class RenameProvider {
+  external factory RenameProvider._({
+    _i2.dynamic provideRenameEdits,
+    _i2.dynamic prepareRename,
+  });
+
+  factory RenameProvider({
+    _i3.ProviderResult<_i3.WorkspaceEdit> Function(
+      _i3.TextDocument,
+      _i3.Position,
+      _i2.String,
+      _i3.CancellationToken,
+    )? provideRenameEdits,
+    _i3.ProviderResult<_i2.Object> Function(
+      _i3.TextDocument,
+      _i3.Position,
+      _i3.CancellationToken,
+    )? prepareRename,
+  }) =>
+      RenameProvider._(
+        provideRenameEdits: provideRenameEdits == null
+            ? null
+            : _i5.allowInterop(provideRenameEdits),
+        prepareRename:
+            prepareRename == null ? null : _i5.allowInterop(prepareRename),
+      );
+}
 
 extension RenameProvider$Typings on RenameProvider {
-  /// Provide an edit that describes changes that have to be made to one
-  ///  or many resources to rename a symbol to a different name.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param newName The new name of the symbol. If the given name is not valid, the provider must return a rejected promise.
-  ///  @param token A cancellation token.
-  ///  @returns A workspace edit or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i3.WorkspaceEdit> provideRenameEdits(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i2.String newName,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideRenameEdits(
+      _i3.ProviderResult<_i3.WorkspaceEdit> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i2.String,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideRenameEdits',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.WorkspaceEdit> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i2.String,
+    _i3.CancellationToken,
+  ) get provideRenameEdits => _i5.getProperty(
         this,
         'provideRenameEdits',
-        [
-          document,
-          position,
-          newName,
-          token,
-        ],
       );
+  set prepareRename(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'prepareRename',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Optional function for resolving and validating a position *before* running rename. The result can
-  ///  be a range or a range and a placeholder text. The placeholder text should be the identifier of the symbol
-  ///  which is being renamed - when omitted the text in the returned range is used.
-  ///
-  ///  *Note:* This function should throw an error or return a rejected thenable when the provided location
-  ///  doesn't allow for a rename.
-  ///
-  ///  @param document The document in which rename will be invoked.
-  ///  @param position The position at which rename will be invoked.
-  ///  @param token A cancellation token.
-  ///  @returns The range or range and placeholder text of the identifier that is to be renamed. The lack of a result can signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i2.Object> prepareRename(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get prepareRename => _i5.getProperty(
         this,
         'prepareRename',
-        [
-          document,
-          position,
-          token,
-        ],
       );
 }
 
@@ -8084,7 +8551,7 @@ class SemanticTokensLegend {
         _declaredSemanticTokensLegend,
         [
           tokenTypes,
-          tokenModifiers ?? _i4.undefined,
+          tokenModifiers ?? _i6.undefined,
         ],
       );
 }
@@ -8118,7 +8585,7 @@ class SemanticTokensBuilder {
   factory SemanticTokensBuilder([_i3.SemanticTokensLegend? legend]) =>
       _i5.callConstructor(
         _declaredSemanticTokensBuilder,
-        [legend ?? _i4.undefined],
+        [legend ?? _i6.undefined],
       );
 }
 
@@ -8144,7 +8611,7 @@ extension SemanticTokensBuilder$Typings on SemanticTokensBuilder {
       [
         range,
         tokenType,
-        tokenModifiers ?? _i4.undefined,
+        tokenModifiers ?? _i6.undefined,
       ],
     );
   }
@@ -8171,7 +8638,7 @@ extension SemanticTokensBuilder$Typings on SemanticTokensBuilder {
         char,
         length,
         tokenType,
-        tokenModifiers ?? _i4.undefined,
+        tokenModifiers ?? _i6.undefined,
       ],
     );
   }
@@ -8212,7 +8679,7 @@ extension SemanticTokensBuilder$Typings on SemanticTokensBuilder {
   _i3.SemanticTokens build([_i2.String? resultId]) => _i5.callMethod(
         this,
         'build',
-        [resultId ?? _i4.undefined],
+        [resultId ?? _i6.undefined],
       );
 }
 
@@ -8228,7 +8695,7 @@ class SemanticTokens {
         _declaredSemanticTokens,
         [
           data,
-          resultId ?? _i4.undefined,
+          resultId ?? _i6.undefined,
         ],
       );
 }
@@ -8266,7 +8733,7 @@ class SemanticTokensEdits {
         _declaredSemanticTokensEdits,
         [
           edits,
-          resultId ?? _i4.undefined,
+          resultId ?? _i6.undefined,
         ],
       );
 }
@@ -8308,7 +8775,7 @@ class SemanticTokensEdit {
         [
           start,
           deleteCount,
-          data ?? _i4.undefined,
+          data ?? _i6.undefined,
         ],
       );
 }
@@ -8342,7 +8809,37 @@ extension SemanticTokensEdit$Typings on SemanticTokensEdit {
 /// semantic tokens.
 @_i1.JS()
 @_i1.staticInterop
-class DocumentSemanticTokensProvider {}
+@_i1.anonymous
+class DocumentSemanticTokensProvider {
+  external factory DocumentSemanticTokensProvider._({
+    _i2.dynamic onDidChangeSemanticTokens,
+    _i2.dynamic provideDocumentSemanticTokens,
+    _i2.dynamic provideDocumentSemanticTokensEdits,
+  });
+
+  factory DocumentSemanticTokensProvider({
+    _i3.Event<void>? onDidChangeSemanticTokens,
+    _i3.ProviderResult<_i3.SemanticTokens> Function(
+      _i3.TextDocument,
+      _i3.CancellationToken,
+    )? provideDocumentSemanticTokens,
+    _i3.ProviderResult<_i2.Object> Function(
+      _i3.TextDocument,
+      _i2.String,
+      _i3.CancellationToken,
+    )? provideDocumentSemanticTokensEdits,
+  }) =>
+      DocumentSemanticTokensProvider._(
+        onDidChangeSemanticTokens: onDidChangeSemanticTokens ?? _i6.undefined,
+        provideDocumentSemanticTokens: provideDocumentSemanticTokens == null
+            ? null
+            : _i5.allowInterop(provideDocumentSemanticTokens),
+        provideDocumentSemanticTokensEdits:
+            provideDocumentSemanticTokensEdits == null
+                ? null
+                : _i5.allowInterop(provideDocumentSemanticTokensEdits),
+      );
+}
 
 extension DocumentSemanticTokensProvider$Typings
     on DocumentSemanticTokensProvider {
@@ -8355,120 +8852,49 @@ extension DocumentSemanticTokensProvider$Typings
     _i5.setProperty(
       this,
       'onDidChangeSemanticTokens',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Tokens in a file are represented as an array of integers. The position of each token is expressed relative to
-  ///  the token before it, because most tokens remain stable relative to each other when edits are made in a file.
-  ///
-  ///  ---
-  ///  In short, each token takes 5 integers to represent, so a specific token `i` in the file consists of the following array indices:
-  ///   - at index `5*i`   - `deltaLine`: token line number, relative to the previous token
-  ///   - at index `5*i+1` - `deltaStart`: token start character, relative to the previous token (relative to 0 or the previous token's start if they are on the same line)
-  ///   - at index `5*i+2` - `length`: the length of the token. A token cannot be multiline.
-  ///   - at index `5*i+3` - `tokenType`: will be looked up in `SemanticTokensLegend.tokenTypes`. We currently ask that `tokenType` < 65536.
-  ///   - at index `5*i+4` - `tokenModifiers`: each set bit will be looked up in `SemanticTokensLegend.tokenModifiers`
-  ///
-  ///  ---
-  ///  ### How to encode tokens
-  ///
-  ///  Here is an example for encoding a file with 3 tokens in a uint32 array:
-  ///  ```
-  ///     { line: 2, startChar:  5, length: 3, tokenType: "property",  tokenModifiers: ["private", "static"] },
-  ///     { line: 2, startChar: 10, length: 4, tokenType: "type",      tokenModifiers: [] },
-  ///     { line: 5, startChar:  2, length: 7, tokenType: "class",     tokenModifiers: [] }
-  ///  ```
-  ///
-  ///  1. First of all, a legend must be devised. This legend must be provided up-front and capture all possible token types.
-  ///  For this example, we will choose the following legend which must be passed in when registering the provider:
-  ///  ```
-  ///     tokenTypes: ['property', 'type', 'class'],
-  ///     tokenModifiers: ['private', 'static']
-  ///  ```
-  ///
-  ///  2. The first transformation step is to encode `tokenType` and `tokenModifiers` as integers using the legend. Token types are looked
-  ///  up by index, so a `tokenType` value of `1` means `tokenTypes[1]`. Multiple token modifiers can be set by using bit flags,
-  ///  so a `tokenModifier` value of `3` is first viewed as binary `0b00000011`, which means `[tokenModifiers[0], tokenModifiers[1]]` because
-  ///  bits 0 and 1 are set. Using this legend, the tokens now are:
-  ///  ```
-  ///     { line: 2, startChar:  5, length: 3, tokenType: 0, tokenModifiers: 3 },
-  ///     { line: 2, startChar: 10, length: 4, tokenType: 1, tokenModifiers: 0 },
-  ///     { line: 5, startChar:  2, length: 7, tokenType: 2, tokenModifiers: 0 }
-  ///  ```
-  ///
-  ///  3. The next step is to represent each token relative to the previous token in the file. In this case, the second token
-  ///  is on the same line as the first token, so the `startChar` of the second token is made relative to the `startChar`
-  ///  of the first token, so it will be `10 - 5`. The third token is on a different line than the second token, so the
-  ///  `startChar` of the third token will not be altered:
-  ///  ```
-  ///     { deltaLine: 2, deltaStartChar: 5, length: 3, tokenType: 0, tokenModifiers: 3 },
-  ///     { deltaLine: 0, deltaStartChar: 5, length: 4, tokenType: 1, tokenModifiers: 0 },
-  ///     { deltaLine: 3, deltaStartChar: 2, length: 7, tokenType: 2, tokenModifiers: 0 }
-  ///  ```
-  ///
-  ///  4. Finally, the last step is to inline each of the 5 fields for a token in a single array, which is a memory friendly representation:
-  ///  ```
-  ///     // 1st token,  2nd token,  3rd token
-  ///     [  2,5,3,0,3,  0,5,4,1,0,  3,2,7,2,0 ]
-  ///  ```
-  ///
-  ///  @see {@link SemanticTokensBuilder} for a helper to encode tokens as integers.
-  ///  *NOTE*: When doing edits, it is possible that multiple edits occur until the editor decides to invoke the semantic tokens provider.
-  ///  *NOTE*: If the provider cannot temporarily compute semantic tokens, it can indicate this by throwing an error with the message 'Busy'.
-  _i3.ProviderResult<_i3.SemanticTokens> provideDocumentSemanticTokens(
-    _i3.TextDocument document,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideDocumentSemanticTokens(
+      _i3.ProviderResult<_i3.SemanticTokens> Function(
+        _i3.TextDocument,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentSemanticTokens',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.SemanticTokens> Function(
+    _i3.TextDocument,
+    _i3.CancellationToken,
+  ) get provideDocumentSemanticTokens => _i5.getProperty(
         this,
         'provideDocumentSemanticTokens',
-        [
-          document,
-          token,
-        ],
       );
+  set provideDocumentSemanticTokensEdits(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.TextDocument,
+        _i2.String,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentSemanticTokensEdits',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Instead of always returning all the tokens in a file, it is possible for a `DocumentSemanticTokensProvider` to implement
-  ///  this method (`provideDocumentSemanticTokensEdits`) and then return incremental updates to the previously provided semantic tokens.
-  ///
-  ///  ---
-  ///  ### How tokens change when the document changes
-  ///
-  ///  Suppose that `provideDocumentSemanticTokens` has previously returned the following semantic tokens:
-  ///  ```
-  ///     // 1st token,  2nd token,  3rd token
-  ///     [  2,5,3,0,3,  0,5,4,1,0,  3,2,7,2,0 ]
-  ///  ```
-  ///
-  ///  Also suppose that after some edits, the new semantic tokens in a file are:
-  ///  ```
-  ///     // 1st token,  2nd token,  3rd token
-  ///     [  3,5,3,0,3,  0,5,4,1,0,  3,2,7,2,0 ]
-  ///  ```
-  ///  It is possible to express these new tokens in terms of an edit applied to the previous tokens:
-  ///  ```
-  ///     [  2,5,3,0,3,  0,5,4,1,0,  3,2,7,2,0 ] // old tokens
-  ///     [  3,5,3,0,3,  0,5,4,1,0,  3,2,7,2,0 ] // new tokens
-  ///
-  ///     edit: { start:  0, deleteCount: 1, data: [3] } // replace integer at offset 0 with 3
-  ///  ```
-  ///
-  ///  *NOTE*: If the provider cannot compute `SemanticTokensEdits`, it can "give up" and return all the tokens in the document again.
-  ///  *NOTE*: All edits in `SemanticTokensEdits` contain indices in the old integers array, so they all refer to the previous result state.
-  _i3.ProviderResult<_i2.Object> provideDocumentSemanticTokensEdits(
-    _i3.TextDocument document,
-    _i2.String previousResultId,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.TextDocument,
+    _i2.String,
+    _i3.CancellationToken,
+  ) get provideDocumentSemanticTokensEdits => _i5.getProperty(
         this,
         'provideDocumentSemanticTokensEdits',
-        [
-          document,
-          previousResultId,
-          token,
-        ],
       );
 }
 
@@ -8476,31 +8902,68 @@ extension DocumentSemanticTokensProvider$Typings
 /// semantic tokens.
 @_i1.JS()
 @_i1.staticInterop
-class DocumentRangeSemanticTokensProvider {}
+@_i1.anonymous
+class DocumentRangeSemanticTokensProvider {
+  external factory DocumentRangeSemanticTokensProvider._(
+      {_i2.dynamic provideDocumentRangeSemanticTokens});
+
+  factory DocumentRangeSemanticTokensProvider(
+          {_i3.ProviderResult<_i3.SemanticTokens> Function(
+            _i3.TextDocument,
+            _i3.Range,
+            _i3.CancellationToken,
+          )? provideDocumentRangeSemanticTokens}) =>
+      DocumentRangeSemanticTokensProvider._(
+          provideDocumentRangeSemanticTokens:
+              provideDocumentRangeSemanticTokens == null
+                  ? null
+                  : _i5.allowInterop(provideDocumentRangeSemanticTokens));
+}
 
 extension DocumentRangeSemanticTokensProvider$Typings
     on DocumentRangeSemanticTokensProvider {
-  /// @see {@link DocumentSemanticTokensProvider.provideDocumentSemanticTokens provideDocumentSemanticTokens}.
-  _i3.ProviderResult<_i3.SemanticTokens> provideDocumentRangeSemanticTokens(
-    _i3.TextDocument document,
-    _i3.Range range,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideDocumentRangeSemanticTokens(
+      _i3.ProviderResult<_i3.SemanticTokens> Function(
+        _i3.TextDocument,
+        _i3.Range,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentRangeSemanticTokens',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.SemanticTokens> Function(
+    _i3.TextDocument,
+    _i3.Range,
+    _i3.CancellationToken,
+  ) get provideDocumentRangeSemanticTokens => _i5.getProperty(
         this,
         'provideDocumentRangeSemanticTokens',
-        [
-          document,
-          range,
-          token,
-        ],
       );
 }
 
 /// Value-object describing what options formatting should use.
 @_i1.JS()
 @_i1.staticInterop
-class FormattingOptions {}
+@_i1.anonymous
+class FormattingOptions {
+  external factory FormattingOptions._({
+    _i2.dynamic tabSize,
+    _i2.dynamic insertSpaces,
+  });
+
+  factory FormattingOptions({
+    _i2.num? tabSize,
+    _i2.bool? insertSpaces,
+  }) =>
+      FormattingOptions._(
+        tabSize: tabSize,
+        insertSpaces: insertSpaces,
+      );
+}
 
 extension FormattingOptions$Typings on FormattingOptions {
   /// Size of a tab in spaces.
@@ -8549,30 +9012,45 @@ extension FormattingOptions$Typings on FormattingOptions {
 /// the formatting-feature.
 @_i1.JS()
 @_i1.staticInterop
-class DocumentFormattingEditProvider {}
+@_i1.anonymous
+class DocumentFormattingEditProvider {
+  external factory DocumentFormattingEditProvider._(
+      {_i2.dynamic provideDocumentFormattingEdits});
+
+  factory DocumentFormattingEditProvider(
+          {_i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+            _i3.TextDocument,
+            _i3.FormattingOptions,
+            _i3.CancellationToken,
+          )? provideDocumentFormattingEdits}) =>
+      DocumentFormattingEditProvider._(
+          provideDocumentFormattingEdits: provideDocumentFormattingEdits == null
+              ? null
+              : _i5.allowInterop(provideDocumentFormattingEdits));
+}
 
 extension DocumentFormattingEditProvider$Typings
     on DocumentFormattingEditProvider {
-  /// Provide formatting edits for a whole document.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param options Options controlling formatting.
-  ///  @param token A cancellation token.
-  ///  @returns A set of text edits or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<_i3.TextEdit>> provideDocumentFormattingEdits(
-    _i3.TextDocument document,
-    _i3.FormattingOptions options,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideDocumentFormattingEdits(
+      _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+        _i3.TextDocument,
+        _i3.FormattingOptions,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentFormattingEdits',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+    _i3.TextDocument,
+    _i3.FormattingOptions,
+    _i3.CancellationToken,
+  ) get provideDocumentFormattingEdits => _i5.getProperty(
         this,
         'provideDocumentFormattingEdits',
-        [
-          document,
-          options,
-          token,
-        ],
       );
 }
 
@@ -8580,111 +9058,137 @@ extension DocumentFormattingEditProvider$Typings
 /// the formatting-feature.
 @_i1.JS()
 @_i1.staticInterop
-class DocumentRangeFormattingEditProvider {}
+@_i1.anonymous
+class DocumentRangeFormattingEditProvider {
+  external factory DocumentRangeFormattingEditProvider._({
+    _i2.dynamic provideDocumentRangeFormattingEdits,
+    _i2.dynamic provideDocumentRangesFormattingEdits,
+  });
+
+  factory DocumentRangeFormattingEditProvider({
+    _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+      _i3.TextDocument,
+      _i3.Range,
+      _i3.FormattingOptions,
+      _i3.CancellationToken,
+    )? provideDocumentRangeFormattingEdits,
+    _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+      _i3.TextDocument,
+      _i2.List<_i3.Range>,
+      _i3.FormattingOptions,
+      _i3.CancellationToken,
+    )? provideDocumentRangesFormattingEdits,
+  }) =>
+      DocumentRangeFormattingEditProvider._(
+        provideDocumentRangeFormattingEdits:
+            provideDocumentRangeFormattingEdits == null
+                ? null
+                : _i5.allowInterop(provideDocumentRangeFormattingEdits),
+        provideDocumentRangesFormattingEdits:
+            provideDocumentRangesFormattingEdits == null
+                ? null
+                : _i5.allowInterop(provideDocumentRangesFormattingEdits),
+      );
+}
 
 extension DocumentRangeFormattingEditProvider$Typings
     on DocumentRangeFormattingEditProvider {
-  /// Provide formatting edits for a range in a document.
-  ///
-  ///  The given range is a hint and providers can decide to format a smaller
-  ///  or larger range. Often this is done by adjusting the start and end
-  ///  of the range to full syntax nodes.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param range The range which should be formatted.
-  ///  @param options Options controlling formatting.
-  ///  @param token A cancellation token.
-  ///  @returns A set of text edits or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<_i3.TextEdit>>
-      provideDocumentRangeFormattingEdits(
-    _i3.TextDocument document,
-    _i3.Range range,
-    _i3.FormattingOptions options,
-    _i3.CancellationToken token,
-  ) =>
-          _i5.callMethod(
-            this,
-            'provideDocumentRangeFormattingEdits',
-            [
-              document,
-              range,
-              options,
-              token,
-            ],
-          );
+  set provideDocumentRangeFormattingEdits(
+      _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+        _i3.TextDocument,
+        _i3.Range,
+        _i3.FormattingOptions,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentRangeFormattingEdits',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Provide formatting edits for multiple ranges in a document.
-  ///
-  ///  This function is optional but allows a formatter to perform faster when formatting only modified ranges or when
-  ///  formatting a large number of selections.
-  ///
-  ///  The given ranges are hints and providers can decide to format a smaller
-  ///  or larger range. Often this is done by adjusting the start and end
-  ///  of the range to full syntax nodes.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param ranges The ranges which should be formatted.
-  ///  @param options Options controlling formatting.
-  ///  @param token A cancellation token.
-  ///  @returns A set of text edits or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<_i3.TextEdit>>
-      provideDocumentRangesFormattingEdits(
-    _i3.TextDocument document,
-    _i2.List<_i3.Range> ranges,
-    _i3.FormattingOptions options,
-    _i3.CancellationToken token,
-  ) =>
-          _i5.callMethod(
-            this,
-            'provideDocumentRangesFormattingEdits',
-            [
-              document,
-              ranges,
-              options,
-              token,
-            ],
-          );
+  _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+    _i3.TextDocument,
+    _i3.Range,
+    _i3.FormattingOptions,
+    _i3.CancellationToken,
+  ) get provideDocumentRangeFormattingEdits => _i5.getProperty(
+        this,
+        'provideDocumentRangeFormattingEdits',
+      );
+  set provideDocumentRangesFormattingEdits(
+      _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+        _i3.TextDocument,
+        _i2.List<_i3.Range>,
+        _i3.FormattingOptions,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentRangesFormattingEdits',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+    _i3.TextDocument,
+    _i2.List<_i3.Range>,
+    _i3.FormattingOptions,
+    _i3.CancellationToken,
+  ) get provideDocumentRangesFormattingEdits => _i5.getProperty(
+        this,
+        'provideDocumentRangesFormattingEdits',
+      );
 }
 
 /// The document formatting provider interface defines the contract between extensions and
 /// the formatting-feature.
 @_i1.JS()
 @_i1.staticInterop
-class OnTypeFormattingEditProvider {}
+@_i1.anonymous
+class OnTypeFormattingEditProvider {
+  external factory OnTypeFormattingEditProvider._(
+      {_i2.dynamic provideOnTypeFormattingEdits});
+
+  factory OnTypeFormattingEditProvider(
+          {_i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i2.String,
+            _i3.FormattingOptions,
+            _i3.CancellationToken,
+          )? provideOnTypeFormattingEdits}) =>
+      OnTypeFormattingEditProvider._(
+          provideOnTypeFormattingEdits: provideOnTypeFormattingEdits == null
+              ? null
+              : _i5.allowInterop(provideOnTypeFormattingEdits));
+}
 
 extension OnTypeFormattingEditProvider$Typings on OnTypeFormattingEditProvider {
-  /// Provide formatting edits after a character has been typed.
-  ///
-  ///  The given position and character should hint to the provider
-  ///  what range the position to expand to, like find the matching `{`
-  ///  when `}` has been entered.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param ch The character that has been typed.
-  ///  @param options Options controlling formatting.
-  ///  @param token A cancellation token.
-  ///  @returns A set of text edits or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<_i3.TextEdit>> provideOnTypeFormattingEdits(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i2.String ch,
-    _i3.FormattingOptions options,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideOnTypeFormattingEdits(
+      _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i2.String,
+        _i3.FormattingOptions,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideOnTypeFormattingEdits',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i2.String,
+    _i3.FormattingOptions,
+    _i3.CancellationToken,
+  ) get provideOnTypeFormattingEdits => _i5.getProperty(
         this,
         'provideOnTypeFormattingEdits',
-        [
-          document,
-          position,
-          ch,
-          options,
-          token,
-        ],
       );
 }
 
@@ -8701,7 +9205,7 @@ class ParameterInformation {
         _declaredParameterInformation,
         [
           label,
-          documentation ?? _i4.undefined,
+          documentation ?? _i6.undefined,
         ],
       );
 }
@@ -8758,7 +9262,7 @@ class SignatureInformation {
         _declaredSignatureInformation,
         [
           label,
-          documentation ?? _i4.undefined,
+          documentation ?? _i6.undefined,
         ],
       );
 }
@@ -8890,16 +9394,16 @@ class SignatureHelpContext {
   });
 
   factory SignatureHelpContext({
-    required _i3.SignatureHelpTriggerKind triggerKind,
+    _i3.SignatureHelpTriggerKind? triggerKind,
     _i2.String? triggerCharacter,
-    required _i2.bool isRetrigger,
+    _i2.bool? isRetrigger,
     _i3.SignatureHelp? activeSignatureHelp,
   }) =>
       SignatureHelpContext._(
-        triggerKind: triggerKind.name,
-        triggerCharacter: triggerCharacter ?? _i4.undefined,
+        triggerKind: triggerKind?.name,
+        triggerCharacter: triggerCharacter ?? _i6.undefined,
         isRetrigger: isRetrigger,
-        activeSignatureHelp: activeSignatureHelp ?? _i4.undefined,
+        activeSignatureHelp: activeSignatureHelp ?? _i6.undefined,
       );
 }
 
@@ -8943,33 +9447,46 @@ extension SignatureHelpContext$Typings on SignatureHelpContext {
 /// the [parameter hints](https://code.visualstudio.com/docs/editor/intellisense)-feature.
 @_i1.JS()
 @_i1.staticInterop
-class SignatureHelpProvider {}
+@_i1.anonymous
+class SignatureHelpProvider {
+  external factory SignatureHelpProvider._({_i2.dynamic provideSignatureHelp});
+
+  factory SignatureHelpProvider(
+          {_i3.ProviderResult<_i3.SignatureHelp> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.CancellationToken,
+            _i3.SignatureHelpContext,
+          )? provideSignatureHelp}) =>
+      SignatureHelpProvider._(
+          provideSignatureHelp: provideSignatureHelp == null
+              ? null
+              : _i5.allowInterop(provideSignatureHelp));
+}
 
 extension SignatureHelpProvider$Typings on SignatureHelpProvider {
-  /// Provide help for the signature at the given position and document.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @param context Information about how signature help was triggered.
-  ///
-  ///  @returns Signature help or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i3.SignatureHelp> provideSignatureHelp(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-    _i3.SignatureHelpContext context,
-  ) =>
-      _i5.callMethod(
+  set provideSignatureHelp(
+      _i3.ProviderResult<_i3.SignatureHelp> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+        _i3.SignatureHelpContext,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideSignatureHelp',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.SignatureHelp> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+    _i3.SignatureHelpContext,
+  ) get provideSignatureHelp => _i5.getProperty(
         this,
         'provideSignatureHelp',
-        [
-          document,
-          position,
-          token,
-          context,
-        ],
       );
 }
 
@@ -8984,12 +9501,12 @@ class SignatureHelpProviderMetadata {
   });
 
   factory SignatureHelpProviderMetadata({
-    required _i2.List<_i2.String> triggerCharacters,
-    required _i2.List<_i2.String> retriggerCharacters,
+    _i2.List<_i2.String>? triggerCharacters,
+    _i2.List<_i2.String>? retriggerCharacters,
   }) =>
       SignatureHelpProviderMetadata._(
-        triggerCharacters: triggerCharacters,
-        retriggerCharacters: retriggerCharacters,
+        triggerCharacters: triggerCharacters ?? _i6.undefined,
+        retriggerCharacters: retriggerCharacters ?? _i6.undefined,
       );
 }
 
@@ -9025,14 +9542,14 @@ class CompletionItemLabel {
   });
 
   factory CompletionItemLabel({
-    required _i2.String label,
+    _i2.String? label,
     _i2.String? detail,
     _i2.String? description,
   }) =>
       CompletionItemLabel._(
         label: label,
-        detail: detail ?? _i4.undefined,
-        description: description ?? _i4.undefined,
+        detail: detail,
+        description: description,
       );
 }
 
@@ -9062,7 +9579,7 @@ extension CompletionItemLabel$Typings on CompletionItemLabel {
     _i5.setProperty(
       this,
       'detail',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -9076,7 +9593,7 @@ extension CompletionItemLabel$Typings on CompletionItemLabel {
     _i5.setProperty(
       this,
       'description',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -9135,7 +9652,7 @@ class CompletionItem {
         _declaredCompletionItem,
         [
           label,
-          kind?.name ?? _i4.undefined,
+          kind?.name ?? _i6.undefined,
         ],
       );
 }
@@ -9405,8 +9922,8 @@ class CompletionList<T extends _i3.CompletionItem> {
       _i5.callConstructor(
         _declaredCompletionList,
         [
-          items ?? _i4.undefined,
-          isIncomplete ?? _i4.undefined,
+          items ?? _i6.undefined,
+          isIncomplete ?? _i6.undefined,
         ],
       );
 }
@@ -9459,12 +9976,12 @@ class CompletionContext {
   });
 
   factory CompletionContext({
-    required _i3.CompletionTriggerKind triggerKind,
+    _i3.CompletionTriggerKind? triggerKind,
     _i2.String? triggerCharacter,
   }) =>
       CompletionContext._(
-        triggerKind: triggerKind.name,
-        triggerCharacter: triggerCharacter ?? _i4.undefined,
+        triggerKind: triggerKind?.name,
+        triggerCharacter: triggerCharacter ?? _i6.undefined,
       );
 }
 
@@ -9500,64 +10017,78 @@ extension CompletionContext$Typings on CompletionContext {
 /// implicitly when typing words or trigger characters.
 @_i1.JS()
 @_i1.staticInterop
-class CompletionItemProvider<T extends _i3.CompletionItem> {}
+@_i1.anonymous
+class CompletionItemProvider<T extends _i3.CompletionItem> {
+  external factory CompletionItemProvider._({
+    _i2.dynamic provideCompletionItems,
+    _i2.dynamic resolveCompletionItem,
+  });
+
+  factory CompletionItemProvider({
+    _i3.ProviderResult<_i2.Object> Function(
+      _i3.TextDocument,
+      _i3.Position,
+      _i3.CancellationToken,
+      _i3.CompletionContext,
+    )? provideCompletionItems,
+    _i3.ProviderResult<_i3.CompletionItem> Function(
+      _i3.CompletionItem,
+      _i3.CancellationToken,
+    )? resolveCompletionItem,
+  }) =>
+      CompletionItemProvider._(
+        provideCompletionItems: provideCompletionItems == null
+            ? null
+            : _i5.allowInterop(provideCompletionItems),
+        resolveCompletionItem: resolveCompletionItem == null
+            ? null
+            : _i5.allowInterop(resolveCompletionItem),
+      );
+}
 
 extension CompletionItemProvider$Typings<T extends _i3.CompletionItem>
     on CompletionItemProvider<T> {
-  /// Provide completion items for the given position and document.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @param context How the completion was triggered.
-  ///
-  ///  @returns An array of completions, a {@link CompletionList completion list}, or a thenable that resolves to either.
-  ///  The lack of a result can be signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.Object> provideCompletionItems(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-    _i3.CompletionContext context,
-  ) =>
-      _i5.callMethod(
+  set provideCompletionItems(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+        _i3.CompletionContext,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideCompletionItems',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+    _i3.CompletionContext,
+  ) get provideCompletionItems => _i5.getProperty(
         this,
         'provideCompletionItems',
-        [
-          document,
-          position,
-          token,
-          context,
-        ],
       );
+  set resolveCompletionItem(
+      _i3.ProviderResult<T> Function(
+        T,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveCompletionItem',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Given a completion item fill in more data, like {@link CompletionItem.documentation doc-comment}
-  ///  or {@link CompletionItem.detail details}.
-  ///
-  ///  The editor will only resolve a completion item once.
-  ///
-  ///  *Note* that this function is called when completion items are already showing in the UI or when an item has been
-  ///  selected for insertion. Because of that, no property that changes the presentation (label, sorting, filtering etc)
-  ///  or the (primary) insert behaviour ({@link CompletionItem.insertText insertText}) can be changed.
-  ///
-  ///  This function may fill in {@link CompletionItem.additionalTextEdits additionalTextEdits}. However, that means an item might be
-  ///  inserted *before* resolving is done and in that case the editor will do a best effort to still apply those additional
-  ///  text edits.
-  ///
-  ///  @param item A completion item currently active in the UI.
-  ///  @param token A cancellation token.
-  ///  @returns The resolved completion item or a thenable that resolves to of such. It is OK to return the given
-  ///  `item`. When no result is returned, the given `item` will be used.
-  _i3.ProviderResult<T> resolveCompletionItem(
-    T item,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<T> Function(
+    T,
+    _i3.CancellationToken,
+  ) get resolveCompletionItem => _i5.getProperty(
         this,
         'resolveCompletionItem',
-        [
-          item,
-          token,
-        ],
       );
 }
 
@@ -9567,35 +10098,47 @@ extension CompletionItemProvider$Typings<T extends _i3.CompletionItem>
 /// Providers are asked for completions either explicitly by a user gesture or implicitly when typing.
 @_i1.JS()
 @_i1.staticInterop
-class InlineCompletionItemProvider {}
+@_i1.anonymous
+class InlineCompletionItemProvider {
+  external factory InlineCompletionItemProvider._(
+      {_i2.dynamic provideInlineCompletionItems});
+
+  factory InlineCompletionItemProvider(
+          {_i3.ProviderResult<_i2.Object> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.InlineCompletionContext,
+            _i3.CancellationToken,
+          )? provideInlineCompletionItems}) =>
+      InlineCompletionItemProvider._(
+          provideInlineCompletionItems: provideInlineCompletionItems == null
+              ? null
+              : _i5.allowInterop(provideInlineCompletionItems));
+}
 
 extension InlineCompletionItemProvider$Typings on InlineCompletionItemProvider {
-  /// Provides inline completion items for the given position and document.
-  ///  If inline completions are enabled, this method will be called whenever the user stopped typing.
-  ///  It will also be called when the user explicitly triggers inline completions or explicitly asks for the next or previous inline completion.
-  ///  In that case, all available inline completions should be returned.
-  ///  `context.triggerKind` can be used to distinguish between these scenarios.
-  ///
-  ///  @param document The document inline completions are requested for.
-  ///  @param position The position inline completions are requested for.
-  ///  @param context A context object with additional information.
-  ///  @param token A cancellation token.
-  ///  @returns An array of completion items or a thenable that resolves to an array of completion items.
-  _i3.ProviderResult<_i2.Object> provideInlineCompletionItems(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.InlineCompletionContext context,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideInlineCompletionItems(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.InlineCompletionContext,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideInlineCompletionItems',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.InlineCompletionContext,
+    _i3.CancellationToken,
+  ) get provideInlineCompletionItems => _i5.getProperty(
         this,
         'provideInlineCompletionItems',
-        [
-          document,
-          position,
-          context,
-          token,
-        ],
       );
 }
 
@@ -9643,12 +10186,12 @@ class InlineCompletionContext {
   });
 
   factory InlineCompletionContext({
-    required _i3.InlineCompletionTriggerKind triggerKind,
+    _i3.InlineCompletionTriggerKind? triggerKind,
     _i3.SelectedCompletionInfo? selectedCompletionInfo,
   }) =>
       InlineCompletionContext._(
-        triggerKind: triggerKind.name,
-        selectedCompletionInfo: selectedCompletionInfo ?? _i4.undefined,
+        triggerKind: triggerKind?.name,
+        selectedCompletionInfo: selectedCompletionInfo ?? _i6.undefined,
       );
 }
 
@@ -9685,11 +10228,11 @@ class SelectedCompletionInfo {
   });
 
   factory SelectedCompletionInfo({
-    required _i3.Range range,
-    required _i2.String text,
+    _i3.Range? range,
+    _i2.String? text,
   }) =>
       SelectedCompletionInfo._(
-        range: range,
+        range: range ?? _i6.undefined,
         text: text,
       );
 }
@@ -9721,8 +10264,8 @@ class InlineCompletionItem {
         _declaredInlineCompletionItem,
         [
           insertText,
-          range ?? _i4.undefined,
-          command ?? _i4.undefined,
+          range ?? _i6.undefined,
+          command ?? _i6.undefined,
         ],
       );
 }
@@ -9806,7 +10349,7 @@ class DocumentLink {
         _declaredDocumentLink,
         [
           range,
-          target ?? _i4.undefined,
+          target ?? _i6.undefined,
         ],
       );
 }
@@ -9865,48 +10408,72 @@ extension DocumentLink$Typings on DocumentLink {
 /// links in the editor.
 @_i1.JS()
 @_i1.staticInterop
-class DocumentLinkProvider<T extends _i3.DocumentLink> {}
+@_i1.anonymous
+class DocumentLinkProvider<T extends _i3.DocumentLink> {
+  external factory DocumentLinkProvider._({
+    _i2.dynamic provideDocumentLinks,
+    _i2.dynamic resolveDocumentLink,
+  });
+
+  factory DocumentLinkProvider({
+    _i3.ProviderResult<_i2.List<_i3.DocumentLink>> Function(
+      _i3.TextDocument,
+      _i3.CancellationToken,
+    )? provideDocumentLinks,
+    _i3.ProviderResult<_i3.DocumentLink> Function(
+      _i3.DocumentLink,
+      _i3.CancellationToken,
+    )? resolveDocumentLink,
+  }) =>
+      DocumentLinkProvider._(
+        provideDocumentLinks: provideDocumentLinks == null
+            ? null
+            : _i5.allowInterop(provideDocumentLinks),
+        resolveDocumentLink: resolveDocumentLink == null
+            ? null
+            : _i5.allowInterop(resolveDocumentLink),
+      );
+}
 
 extension DocumentLinkProvider$Typings<T extends _i3.DocumentLink>
     on DocumentLinkProvider<T> {
-  /// Provide links for the given document. Note that the editor ships with a default provider that detects
-  ///  `http(s)` and `file` links.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns An array of {@link DocumentLink document links} or a thenable that resolves to such. The lack of a result
-  ///  can be signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<T>> provideDocumentLinks(
-    _i3.TextDocument document,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideDocumentLinks(
+      _i3.ProviderResult<_i2.List<T>> Function(
+        _i3.TextDocument,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentLinks',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<T>> Function(
+    _i3.TextDocument,
+    _i3.CancellationToken,
+  ) get provideDocumentLinks => _i5.getProperty(
         this,
         'provideDocumentLinks',
-        [
-          document,
-          token,
-        ],
       );
+  set resolveDocumentLink(
+      _i3.ProviderResult<T> Function(
+        T,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveDocumentLink',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Given a link fill in its {@link DocumentLink.target target}. This method is called when an incomplete
-  ///  link is selected in the UI. Providers can implement this method and return incomplete links
-  ///  (without target) from the {@linkcode DocumentLinkProvider.provideDocumentLinks provideDocumentLinks} method which
-  ///  often helps to improve performance.
-  ///
-  ///  @param link The link that is to be resolved.
-  ///  @param token A cancellation token.
-  _i3.ProviderResult<T> resolveDocumentLink(
-    T link,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<T> Function(
+    T,
+    _i3.CancellationToken,
+  ) get resolveDocumentLink => _i5.getProperty(
         this,
         'resolveDocumentLink',
-        [
-          link,
-          token,
-        ],
       );
 }
 
@@ -10102,48 +10669,74 @@ extension IInline25$Typings on IInline25 {
 /// picking and modifying colors in the editor.
 @_i1.JS()
 @_i1.staticInterop
-class DocumentColorProvider {}
+@_i1.anonymous
+class DocumentColorProvider {
+  external factory DocumentColorProvider._({
+    _i2.dynamic provideDocumentColors,
+    _i2.dynamic provideColorPresentations,
+  });
+
+  factory DocumentColorProvider({
+    _i3.ProviderResult<_i2.List<_i3.ColorInformation>> Function(
+      _i3.TextDocument,
+      _i3.CancellationToken,
+    )? provideDocumentColors,
+    _i3.ProviderResult<_i2.List<_i3.ColorPresentation>> Function(
+      _i3.Color,
+      _i2.dynamic,
+      _i3.CancellationToken,
+    )? provideColorPresentations,
+  }) =>
+      DocumentColorProvider._(
+        provideDocumentColors: provideDocumentColors == null
+            ? null
+            : _i5.allowInterop(provideDocumentColors),
+        provideColorPresentations: provideColorPresentations == null
+            ? null
+            : _i5.allowInterop(provideColorPresentations),
+      );
+}
 
 extension DocumentColorProvider$Typings on DocumentColorProvider {
-  /// Provide colors for the given document.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns An array of {@link ColorInformation color information} or a thenable that resolves to such. The lack of a result
-  ///  can be signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<_i3.ColorInformation>> provideDocumentColors(
-    _i3.TextDocument document,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideDocumentColors(
+      _i3.ProviderResult<_i2.List<_i3.ColorInformation>> Function(
+        _i3.TextDocument,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentColors',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i3.ColorInformation>> Function(
+    _i3.TextDocument,
+    _i3.CancellationToken,
+  ) get provideDocumentColors => _i5.getProperty(
         this,
         'provideDocumentColors',
-        [
-          document,
-          token,
-        ],
       );
+  set provideColorPresentations(
+      _i3.ProviderResult<_i2.List<_i3.ColorPresentation>> Function(
+        _i3.Color,
+        _i2.dynamic,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideColorPresentations',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Provide {@link ColorPresentation representations} for a color.
-  ///
-  ///  @param color The color to show and insert.
-  ///  @param context A context object with additional information
-  ///  @param token A cancellation token.
-  ///  @returns An array of color presentations or a thenable that resolves to such. The lack of a result
-  ///  can be signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.List<_i3.ColorPresentation>> provideColorPresentations(
-    _i3.Color color,
-    _i3.IInline25 context,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<_i2.List<_i3.ColorPresentation>> Function(
+    _i3.Color,
+    _i2.dynamic,
+    _i3.CancellationToken,
+  ) get provideColorPresentations => _i5.getProperty(
         this,
         'provideColorPresentations',
-        [
-          color,
-          context,
-          token,
-        ],
       );
 }
 
@@ -10188,7 +10781,7 @@ extension InlayHintLabelPart$Typings on InlayHintLabelPart {
     _i5.setProperty(
       this,
       'tooltip',
-      value ?? _i4.undefined,
+      value,
     );
   }
 
@@ -10210,7 +10803,7 @@ extension InlayHintLabelPart$Typings on InlayHintLabelPart {
     _i5.setProperty(
       this,
       'location',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -10229,7 +10822,7 @@ extension InlayHintLabelPart$Typings on InlayHintLabelPart {
     _i5.setProperty(
       this,
       'command',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -10248,7 +10841,7 @@ class InlayHint {
         [
           position,
           label,
-          kind?.name ?? _i4.undefined,
+          kind?.name ?? _i6.undefined,
         ],
       );
 }
@@ -10299,7 +10892,7 @@ extension InlayHint$Typings on InlayHint {
     _i5.setProperty(
       this,
       'tooltip',
-      value ?? _i4.undefined,
+      value,
     );
   }
 
@@ -10372,7 +10965,36 @@ extension InlayHint$Typings on InlayHint {
 /// the inlay hints feature.
 @_i1.JS()
 @_i1.staticInterop
-class InlayHintsProvider<T extends _i3.InlayHint> {}
+@_i1.anonymous
+class InlayHintsProvider<T extends _i3.InlayHint> {
+  external factory InlayHintsProvider._({
+    _i2.dynamic onDidChangeInlayHints,
+    _i2.dynamic provideInlayHints,
+    _i2.dynamic resolveInlayHint,
+  });
+
+  factory InlayHintsProvider({
+    _i3.Event<void>? onDidChangeInlayHints,
+    _i3.ProviderResult<_i2.List<_i3.InlayHint>> Function(
+      _i3.TextDocument,
+      _i3.Range,
+      _i3.CancellationToken,
+    )? provideInlayHints,
+    _i3.ProviderResult<_i3.InlayHint> Function(
+      _i3.InlayHint,
+      _i3.CancellationToken,
+    )? resolveInlayHint,
+  }) =>
+      InlayHintsProvider._(
+        onDidChangeInlayHints: onDidChangeInlayHints ?? _i6.undefined,
+        provideInlayHints: provideInlayHints == null
+            ? null
+            : _i5.allowInterop(provideInlayHints),
+        resolveInlayHint: resolveInlayHint == null
+            ? null
+            : _i5.allowInterop(resolveInlayHint),
+      );
+}
 
 extension InlayHintsProvider$Typings<T extends _i3.InlayHint>
     on InlayHintsProvider<T> {
@@ -10385,52 +11007,49 @@ extension InlayHintsProvider$Typings<T extends _i3.InlayHint>
     _i5.setProperty(
       this,
       'onDidChangeInlayHints',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Provide inlay hints for the given range and document.
-  ///
-  ///  *Note* that inlay hints that are not {@link Range.contains contained} by the given range are ignored.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param range The range for which inlay hints should be computed.
-  ///  @param token A cancellation token.
-  ///  @returns An array of inlay hints or a thenable that resolves to such.
-  _i3.ProviderResult<_i2.List<T>> provideInlayHints(
-    _i3.TextDocument document,
-    _i3.Range range,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideInlayHints(
+      _i3.ProviderResult<_i2.List<T>> Function(
+        _i3.TextDocument,
+        _i3.Range,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideInlayHints',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<T>> Function(
+    _i3.TextDocument,
+    _i3.Range,
+    _i3.CancellationToken,
+  ) get provideInlayHints => _i5.getProperty(
         this,
         'provideInlayHints',
-        [
-          document,
-          range,
-          token,
-        ],
       );
+  set resolveInlayHint(
+      _i3.ProviderResult<T> Function(
+        T,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveInlayHint',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Given an inlay hint fill in {@link InlayHint.tooltip tooltip}, {@link InlayHint.textEdits text edits},
-  ///  or complete label {@link InlayHintLabelPart parts}.
-  ///
-  ///  *Note* that the editor will resolve an inlay hint at most once.
-  ///
-  ///  @param hint An inlay hint.
-  ///  @param token A cancellation token.
-  ///  @returns The resolved inlay hint or a thenable that resolves to such. It is OK to return the given `item`. When no result is returned, the given `item` will be used.
-  _i3.ProviderResult<T> resolveInlayHint(
-    T hint,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<T> Function(
+    T,
+    _i3.CancellationToken,
+  ) get resolveInlayHint => _i5.getProperty(
         this,
         'resolveInlayHint',
-        [
-          hint,
-          token,
-        ],
       );
 }
 
@@ -10449,7 +11068,7 @@ class FoldingRange {
         [
           start,
           end,
-          kind?.name ?? _i4.undefined,
+          kind?.name ?? _i6.undefined,
         ],
       );
 }
@@ -10521,7 +11140,28 @@ class FoldingContext {
 /// [Folding](https://code.visualstudio.com/docs/editor/codebasics#_folding) in the editor.
 @_i1.JS()
 @_i1.staticInterop
-class FoldingRangeProvider {}
+@_i1.anonymous
+class FoldingRangeProvider {
+  external factory FoldingRangeProvider._({
+    _i2.dynamic onDidChangeFoldingRanges,
+    _i2.dynamic provideFoldingRanges,
+  });
+
+  factory FoldingRangeProvider({
+    _i3.Event<void>? onDidChangeFoldingRanges,
+    _i3.ProviderResult<_i2.List<_i3.FoldingRange>> Function(
+      _i3.TextDocument,
+      _i3.FoldingContext,
+      _i3.CancellationToken,
+    )? provideFoldingRanges,
+  }) =>
+      FoldingRangeProvider._(
+        onDidChangeFoldingRanges: onDidChangeFoldingRanges ?? _i6.undefined,
+        provideFoldingRanges: provideFoldingRanges == null
+            ? null
+            : _i5.allowInterop(provideFoldingRanges),
+      );
+}
 
 extension FoldingRangeProvider$Typings on FoldingRangeProvider {
   /// An optional event to signal that the folding ranges from this provider have changed.
@@ -10533,28 +11173,30 @@ extension FoldingRangeProvider$Typings on FoldingRangeProvider {
     _i5.setProperty(
       this,
       'onDidChangeFoldingRanges',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Returns a list of folding ranges or null and undefined if the provider
-  ///  does not want to participate or was cancelled.
-  ///  @param document The document in which the command was invoked.
-  ///  @param context Additional context information (for future use)
-  ///  @param token A cancellation token.
-  _i3.ProviderResult<_i2.List<_i3.FoldingRange>> provideFoldingRanges(
-    _i3.TextDocument document,
-    _i3.FoldingContext context,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideFoldingRanges(
+      _i3.ProviderResult<_i2.List<_i3.FoldingRange>> Function(
+        _i3.TextDocument,
+        _i3.FoldingContext,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideFoldingRanges',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i3.FoldingRange>> Function(
+    _i3.TextDocument,
+    _i3.FoldingContext,
+    _i3.CancellationToken,
+  ) get provideFoldingRanges => _i5.getProperty(
         this,
         'provideFoldingRanges',
-        [
-          document,
-          context,
-          token,
-        ],
       );
 }
 
@@ -10571,7 +11213,7 @@ class SelectionRange {
         _declaredSelectionRange,
         [
           range,
-          parent ?? _i4.undefined,
+          parent ?? _i6.undefined,
         ],
       );
 }
@@ -10612,33 +11254,44 @@ extension SelectionRange$Typings on SelectionRange {
 /// The selection range provider interface defines the contract between extensions and the "Expand and Shrink Selection" feature.
 @_i1.JS()
 @_i1.staticInterop
-class SelectionRangeProvider {}
+@_i1.anonymous
+class SelectionRangeProvider {
+  external factory SelectionRangeProvider._(
+      {_i2.dynamic provideSelectionRanges});
+
+  factory SelectionRangeProvider(
+          {_i3.ProviderResult<_i2.List<_i3.SelectionRange>> Function(
+            _i3.TextDocument,
+            _i2.List<_i3.Position>,
+            _i3.CancellationToken,
+          )? provideSelectionRanges}) =>
+      SelectionRangeProvider._(
+          provideSelectionRanges: provideSelectionRanges == null
+              ? null
+              : _i5.allowInterop(provideSelectionRanges));
+}
 
 extension SelectionRangeProvider$Typings on SelectionRangeProvider {
-  /// Provide selection ranges for the given positions.
-  ///
-  ///  Selection ranges should be computed individually and independent for each position. The editor will merge
-  ///  and deduplicate ranges but providers must return hierarchies of selection ranges so that a range
-  ///  is {@link Range.contains contained} by its parent.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param positions The positions at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns Selection ranges or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i2.List<_i3.SelectionRange>> provideSelectionRanges(
-    _i3.TextDocument document,
-    _i2.List<_i3.Position> positions,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideSelectionRanges(
+      _i3.ProviderResult<_i2.List<_i3.SelectionRange>> Function(
+        _i3.TextDocument,
+        _i2.List<_i3.Position>,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideSelectionRanges',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i3.SelectionRange>> Function(
+    _i3.TextDocument,
+    _i2.List<_i3.Position>,
+    _i3.CancellationToken,
+  ) get provideSelectionRanges => _i5.getProperty(
         this,
         'provideSelectionRanges',
-        [
-          document,
-          positions,
-          token,
-        ],
       );
 }
 
@@ -10880,76 +11533,104 @@ extension CallHierarchyOutgoingCall$Typings on CallHierarchyOutgoingCall {
 /// methods, constructor etc.
 @_i1.JS()
 @_i1.staticInterop
-class CallHierarchyProvider {}
+@_i1.anonymous
+class CallHierarchyProvider {
+  external factory CallHierarchyProvider._({
+    _i2.dynamic prepareCallHierarchy,
+    _i2.dynamic provideCallHierarchyIncomingCalls,
+    _i2.dynamic provideCallHierarchyOutgoingCalls,
+  });
+
+  factory CallHierarchyProvider({
+    _i3.ProviderResult<_i2.Object> Function(
+      _i3.TextDocument,
+      _i3.Position,
+      _i3.CancellationToken,
+    )? prepareCallHierarchy,
+    _i3.ProviderResult<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
+      _i3.CallHierarchyItem,
+      _i3.CancellationToken,
+    )? provideCallHierarchyIncomingCalls,
+    _i3.ProviderResult<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
+      _i3.CallHierarchyItem,
+      _i3.CancellationToken,
+    )? provideCallHierarchyOutgoingCalls,
+  }) =>
+      CallHierarchyProvider._(
+        prepareCallHierarchy: prepareCallHierarchy == null
+            ? null
+            : _i5.allowInterop(prepareCallHierarchy),
+        provideCallHierarchyIncomingCalls:
+            provideCallHierarchyIncomingCalls == null
+                ? null
+                : _i5.allowInterop(provideCallHierarchyIncomingCalls),
+        provideCallHierarchyOutgoingCalls:
+            provideCallHierarchyOutgoingCalls == null
+                ? null
+                : _i5.allowInterop(provideCallHierarchyOutgoingCalls),
+      );
+}
 
 extension CallHierarchyProvider$Typings on CallHierarchyProvider {
-  /// Bootstraps call hierarchy by returning the item that is denoted by the given document
-  ///  and position. This item will be used as entry into the call graph. Providers should
-  ///  return `undefined` or `null` when there is no item at the given location.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns One or multiple call hierarchy items or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.Object> prepareCallHierarchy(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set prepareCallHierarchy(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'prepareCallHierarchy',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get prepareCallHierarchy => _i5.getProperty(
         this,
         'prepareCallHierarchy',
-        [
-          document,
-          position,
-          token,
-        ],
       );
+  set provideCallHierarchyIncomingCalls(
+      _i3.ProviderResult<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
+        _i3.CallHierarchyItem,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideCallHierarchyIncomingCalls',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Provide all incoming calls for an item, e.g all callers for a method. In graph terms this describes directed
-  ///  and annotated edges inside the call graph, e.g the given item is the starting node and the result is the nodes
-  ///  that can be reached.
-  ///
-  ///  @param item The hierarchy item for which incoming calls should be computed.
-  ///  @param token A cancellation token.
-  ///  @returns A set of incoming calls or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i2.List<_i3.CallHierarchyIncomingCall>>
-      provideCallHierarchyIncomingCalls(
-    _i3.CallHierarchyItem item,
-    _i3.CancellationToken token,
-  ) =>
-          _i5.callMethod(
-            this,
-            'provideCallHierarchyIncomingCalls',
-            [
-              item,
-              token,
-            ],
-          );
+  _i3.ProviderResult<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
+    _i3.CallHierarchyItem,
+    _i3.CancellationToken,
+  ) get provideCallHierarchyIncomingCalls => _i5.getProperty(
+        this,
+        'provideCallHierarchyIncomingCalls',
+      );
+  set provideCallHierarchyOutgoingCalls(
+      _i3.ProviderResult<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
+        _i3.CallHierarchyItem,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideCallHierarchyOutgoingCalls',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Provide all outgoing calls for an item, e.g call calls to functions, methods, or constructors from the given item. In
-  ///  graph terms this describes directed and annotated edges inside the call graph, e.g the given item is the starting
-  ///  node and the result is the nodes that can be reached.
-  ///
-  ///  @param item The hierarchy item for which outgoing calls should be computed.
-  ///  @param token A cancellation token.
-  ///  @returns A set of outgoing calls or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i2.List<_i3.CallHierarchyOutgoingCall>>
-      provideCallHierarchyOutgoingCalls(
-    _i3.CallHierarchyItem item,
-    _i3.CancellationToken token,
-  ) =>
-          _i5.callMethod(
-            this,
-            'provideCallHierarchyOutgoingCalls',
-            [
-              item,
-              token,
-            ],
-          );
+  _i3.ProviderResult<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
+    _i3.CallHierarchyItem,
+    _i3.CancellationToken,
+  ) get provideCallHierarchyOutgoingCalls => _i5.getProperty(
+        this,
+        'provideCallHierarchyOutgoingCalls',
+      );
 }
 
 /// Represents an item of a type hierarchy, like a class or an interface.
@@ -11081,76 +11762,102 @@ extension TypeHierarchyItem$Typings on TypeHierarchyItem {
 /// and the type hierarchy feature.
 @_i1.JS()
 @_i1.staticInterop
-class TypeHierarchyProvider {}
+@_i1.anonymous
+class TypeHierarchyProvider {
+  external factory TypeHierarchyProvider._({
+    _i2.dynamic prepareTypeHierarchy,
+    _i2.dynamic provideTypeHierarchySupertypes,
+    _i2.dynamic provideTypeHierarchySubtypes,
+  });
+
+  factory TypeHierarchyProvider({
+    _i3.ProviderResult<_i2.Object> Function(
+      _i3.TextDocument,
+      _i3.Position,
+      _i3.CancellationToken,
+    )? prepareTypeHierarchy,
+    _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+      _i3.TypeHierarchyItem,
+      _i3.CancellationToken,
+    )? provideTypeHierarchySupertypes,
+    _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+      _i3.TypeHierarchyItem,
+      _i3.CancellationToken,
+    )? provideTypeHierarchySubtypes,
+  }) =>
+      TypeHierarchyProvider._(
+        prepareTypeHierarchy: prepareTypeHierarchy == null
+            ? null
+            : _i5.allowInterop(prepareTypeHierarchy),
+        provideTypeHierarchySupertypes: provideTypeHierarchySupertypes == null
+            ? null
+            : _i5.allowInterop(provideTypeHierarchySupertypes),
+        provideTypeHierarchySubtypes: provideTypeHierarchySubtypes == null
+            ? null
+            : _i5.allowInterop(provideTypeHierarchySubtypes),
+      );
+}
 
 extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
-  /// Bootstraps type hierarchy by returning the item that is denoted by the given document
-  ///  and position. This item will be used as entry into the type graph. Providers should
-  ///  return `undefined` or `null` when there is no item at the given location.
-  ///
-  ///  @param document The document in which the command was invoked.
-  ///  @param position The position at which the command was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns One or multiple type hierarchy items or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined`, `null`, or an empty array.
-  _i3.ProviderResult<_i2.Object> prepareTypeHierarchy(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set prepareTypeHierarchy(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'prepareTypeHierarchy',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get prepareTypeHierarchy => _i5.getProperty(
         this,
         'prepareTypeHierarchy',
-        [
-          document,
-          position,
-          token,
-        ],
       );
+  set provideTypeHierarchySupertypes(
+      _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+        _i3.TypeHierarchyItem,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideTypeHierarchySupertypes',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Provide all supertypes for an item, e.g all types from which a type is derived/inherited. In graph terms this describes directed
-  ///  and annotated edges inside the type graph, e.g the given item is the starting node and the result is the nodes
-  ///  that can be reached.
-  ///
-  ///  @param item The hierarchy item for which super types should be computed.
-  ///  @param token A cancellation token.
-  ///  @returns A set of direct supertypes or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>>
-      provideTypeHierarchySupertypes(
-    _i3.TypeHierarchyItem item,
-    _i3.CancellationToken token,
-  ) =>
-          _i5.callMethod(
-            this,
-            'provideTypeHierarchySupertypes',
-            [
-              item,
-              token,
-            ],
-          );
+  _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+    _i3.TypeHierarchyItem,
+    _i3.CancellationToken,
+  ) get provideTypeHierarchySupertypes => _i5.getProperty(
+        this,
+        'provideTypeHierarchySupertypes',
+      );
+  set provideTypeHierarchySubtypes(
+      _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+        _i3.TypeHierarchyItem,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideTypeHierarchySubtypes',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Provide all subtypes for an item, e.g all types which are derived/inherited from the given item. In
-  ///  graph terms this describes directed and annotated edges inside the type graph, e.g the given item is the starting
-  ///  node and the result is the nodes that can be reached.
-  ///
-  ///  @param item The hierarchy item for which subtypes should be computed.
-  ///  @param token A cancellation token.
-  ///  @returns A set of direct subtypes or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>>
-      provideTypeHierarchySubtypes(
-    _i3.TypeHierarchyItem item,
-    _i3.CancellationToken token,
-  ) =>
-          _i5.callMethod(
-            this,
-            'provideTypeHierarchySubtypes',
-            [
-              item,
-              token,
-            ],
-          );
+  _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+    _i3.TypeHierarchyItem,
+    _i3.CancellationToken,
+  ) get provideTypeHierarchySubtypes => _i5.getProperty(
+        this,
+        'provideTypeHierarchySubtypes',
+      );
 }
 
 /// Represents a list of ranges that can be edited together along with a word pattern to describe valid range contents.
@@ -11165,7 +11872,7 @@ class LinkedEditingRanges {
         _declaredLinkedEditingRanges,
         [
           ranges,
-          wordPattern ?? _i4.undefined,
+          wordPattern ?? _i6.undefined,
         ],
       );
 }
@@ -11196,31 +11903,44 @@ extension LinkedEditingRanges$Typings on LinkedEditingRanges {
 /// the linked editing feature.
 @_i1.JS()
 @_i1.staticInterop
-class LinkedEditingRangeProvider {}
+@_i1.anonymous
+class LinkedEditingRangeProvider {
+  external factory LinkedEditingRangeProvider._(
+      {_i2.dynamic provideLinkedEditingRanges});
+
+  factory LinkedEditingRangeProvider(
+          {_i3.ProviderResult<_i3.LinkedEditingRanges> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.CancellationToken,
+          )? provideLinkedEditingRanges}) =>
+      LinkedEditingRangeProvider._(
+          provideLinkedEditingRanges: provideLinkedEditingRanges == null
+              ? null
+              : _i5.allowInterop(provideLinkedEditingRanges));
+}
 
 extension LinkedEditingRangeProvider$Typings on LinkedEditingRangeProvider {
-  /// For a given position in a document, returns the range of the symbol at the position and all ranges
-  ///  that have the same content. A change to one of the ranges can be applied to all other ranges if the new content
-  ///  is valid. An optional word pattern can be returned with the result to describe valid contents.
-  ///  If no result-specific word pattern is provided, the word pattern from the language configuration is used.
-  ///
-  ///  @param document The document in which the provider was invoked.
-  ///  @param position The position at which the provider was invoked.
-  ///  @param token A cancellation token.
-  ///  @returns A list of ranges that can be edited together
-  _i3.ProviderResult<_i3.LinkedEditingRanges> provideLinkedEditingRanges(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideLinkedEditingRanges(
+      _i3.ProviderResult<_i3.LinkedEditingRanges> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideLinkedEditingRanges',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.LinkedEditingRanges> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.CancellationToken,
+  ) get provideLinkedEditingRanges => _i5.getProperty(
         this,
         'provideLinkedEditingRanges',
-        [
-          document,
-          position,
-          token,
-        ],
       );
 }
 
@@ -11274,33 +11994,47 @@ extension DocumentDropEdit$Typings on DocumentDropEdit {
 /// Requires `editor.dropIntoEditor.enabled` to be on.
 @_i1.JS()
 @_i1.staticInterop
-class DocumentDropEditProvider {}
+@_i1.anonymous
+class DocumentDropEditProvider {
+  external factory DocumentDropEditProvider._(
+      {_i2.dynamic provideDocumentDropEdits});
+
+  factory DocumentDropEditProvider(
+          {_i3.ProviderResult<_i3.DocumentDropEdit> Function(
+            _i3.TextDocument,
+            _i3.Position,
+            _i3.DataTransfer,
+            _i3.CancellationToken,
+          )? provideDocumentDropEdits}) =>
+      DocumentDropEditProvider._(
+          provideDocumentDropEdits: provideDocumentDropEdits == null
+              ? null
+              : _i5.allowInterop(provideDocumentDropEdits));
+}
 
 extension DocumentDropEditProvider$Typings on DocumentDropEditProvider {
-  /// Provide edits which inserts the content being dragged and dropped into the document.
-  ///
-  ///  @param document The document in which the drop occurred.
-  ///  @param position The position in the document where the drop occurred.
-  ///  @param dataTransfer A {@link DataTransfer} object that holds data about what is being dragged and dropped.
-  ///  @param token A cancellation token.
-  ///
-  ///  @returns A {@link DocumentDropEdit} or a thenable that resolves to such. The lack of a result can be
-  ///  signaled by returning `undefined` or `null`.
-  _i3.ProviderResult<_i3.DocumentDropEdit> provideDocumentDropEdits(
-    _i3.TextDocument document,
-    _i3.Position position,
-    _i3.DataTransfer dataTransfer,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideDocumentDropEdits(
+      _i3.ProviderResult<_i3.DocumentDropEdit> Function(
+        _i3.TextDocument,
+        _i3.Position,
+        _i3.DataTransfer,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideDocumentDropEdits',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.DocumentDropEdit> Function(
+    _i3.TextDocument,
+    _i3.Position,
+    _i3.DataTransfer,
+    _i3.CancellationToken,
+  ) get provideDocumentDropEdits => _i5.getProperty(
         this,
         'provideDocumentDropEdits',
-        [
-          document,
-          position,
-          dataTransfer,
-          token,
-        ],
       );
 }
 
@@ -11319,9 +12053,9 @@ class CommentRule {
     _i3.CharacterPair? blockComment,
   }) =>
       CommentRule._(
-        lineComment: lineComment ?? _i4.undefined,
+        lineComment: lineComment,
         blockComment: blockComment == null
-            ? _i4.undefined
+            ? null
             : [
                 blockComment.$1,
                 blockComment.$2,
@@ -11339,7 +12073,7 @@ extension CommentRule$Typings on CommentRule {
     _i5.setProperty(
       this,
       'lineComment',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11353,7 +12087,7 @@ extension CommentRule$Typings on CommentRule {
       this,
       'blockComment',
       value == null
-          ? _i4.undefined
+          ? _i6.undefined
           : [
               value.$1,
               value.$2,
@@ -11375,16 +12109,16 @@ class IndentationRule {
   });
 
   factory IndentationRule({
-    required _i7.RegExp decreaseIndentPattern,
-    required _i7.RegExp increaseIndentPattern,
+    _i7.RegExp? decreaseIndentPattern,
+    _i7.RegExp? increaseIndentPattern,
     _i7.RegExp? indentNextLinePattern,
     _i7.RegExp? unIndentedLinePattern,
   }) =>
       IndentationRule._(
-        decreaseIndentPattern: decreaseIndentPattern,
-        increaseIndentPattern: increaseIndentPattern,
-        indentNextLinePattern: indentNextLinePattern ?? _i4.undefined,
-        unIndentedLinePattern: unIndentedLinePattern ?? _i4.undefined,
+        decreaseIndentPattern: decreaseIndentPattern ?? _i6.undefined,
+        increaseIndentPattern: increaseIndentPattern ?? _i6.undefined,
+        indentNextLinePattern: indentNextLinePattern ?? _i6.undefined,
+        unIndentedLinePattern: unIndentedLinePattern ?? _i6.undefined,
       );
 }
 
@@ -11424,7 +12158,7 @@ extension IndentationRule$Typings on IndentationRule {
     _i5.setProperty(
       this,
       'indentNextLinePattern',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11437,7 +12171,7 @@ extension IndentationRule$Typings on IndentationRule {
     _i5.setProperty(
       this,
       'unIndentedLinePattern',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -11454,14 +12188,14 @@ class EnterAction {
   });
 
   factory EnterAction({
-    required _i3.IndentAction indentAction,
+    _i3.IndentAction? indentAction,
     _i2.String? appendText,
     _i2.num? removeText,
   }) =>
       EnterAction._(
-        indentAction: indentAction.name,
-        appendText: appendText ?? _i4.undefined,
-        removeText: removeText ?? _i4.undefined,
+        indentAction: indentAction?.name,
+        appendText: appendText,
+        removeText: removeText,
       );
 }
 
@@ -11489,7 +12223,7 @@ extension EnterAction$Typings on EnterAction {
     _i5.setProperty(
       this,
       'appendText',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11502,7 +12236,7 @@ extension EnterAction$Typings on EnterAction {
     _i5.setProperty(
       this,
       'removeText',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -11520,16 +12254,16 @@ class OnEnterRule {
   });
 
   factory OnEnterRule({
-    required _i7.RegExp beforeText,
+    _i7.RegExp? beforeText,
     _i7.RegExp? afterText,
     _i7.RegExp? previousLineText,
-    required _i3.EnterAction action,
+    _i3.EnterAction? action,
   }) =>
       OnEnterRule._(
-        beforeText: beforeText,
-        afterText: afterText ?? _i4.undefined,
-        previousLineText: previousLineText ?? _i4.undefined,
-        action: action,
+        beforeText: beforeText ?? _i6.undefined,
+        afterText: afterText ?? _i6.undefined,
+        previousLineText: previousLineText ?? _i6.undefined,
+        action: action ?? _i6.undefined,
       );
 }
 
@@ -11556,7 +12290,7 @@ extension OnEnterRule$Typings on OnEnterRule {
     _i5.setProperty(
       this,
       'afterText',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11569,7 +12303,7 @@ extension OnEnterRule$Typings on OnEnterRule {
     _i5.setProperty(
       this,
       'previousLineText',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11599,14 +12333,14 @@ class AutoClosingPair {
   });
 
   factory AutoClosingPair({
-    required _i2.String open,
-    required _i2.String close,
+    _i2.String? open,
+    _i2.String? close,
     _i2.List<_i3.SyntaxTokenType>? notIn,
   }) =>
       AutoClosingPair._(
         open: open,
         close: close,
-        notIn: notIn?.map((i) => i.name).toList() ?? _i4.undefined,
+        notIn: notIn?.map((i) => i.name).toList(),
       );
 }
 
@@ -11649,7 +12383,7 @@ extension AutoClosingPair$Typings on AutoClosingPair {
     _i5.setProperty(
       this,
       'notIn',
-      value?.map((i) => i.name).toList() ?? _i4.undefined,
+      value?.map((i) => i.name).toList() ?? _i6.undefined,
     );
   }
 }
@@ -11708,7 +12442,7 @@ extension IInline27$Typings on IInline27 {
     _i5.setProperty(
       this,
       'close',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -11730,7 +12464,7 @@ extension IInline26$Typings on IInline26 {
     _i5.setProperty(
       this,
       'brackets',
-      value ?? _i4.undefined,
+      value,
     );
   }
 
@@ -11746,7 +12480,7 @@ extension IInline26$Typings on IInline26 {
     _i5.setProperty(
       this,
       'docComment',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -11793,7 +12527,7 @@ extension IInline29$Typings on IInline29 {
     _i5.setProperty(
       this,
       'notIn',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -11847,20 +12581,19 @@ class LanguageConfiguration {
     _i3.IInline28? characterPairSupport,
   }) =>
       LanguageConfiguration._(
-        comments: comments ?? _i4.undefined,
+        comments: comments ?? _i6.undefined,
         brackets: brackets
-                ?.map((i) => [
-                      i.$1,
-                      i.$2,
-                    ])
-                .toList() ??
-            _i4.undefined,
-        wordPattern: wordPattern ?? _i4.undefined,
-        indentationRules: indentationRules ?? _i4.undefined,
-        onEnterRules: onEnterRules ?? _i4.undefined,
-        autoClosingPairs: autoClosingPairs ?? _i4.undefined,
-        electricCharacterSupport: electricCharacterSupport ?? _i4.undefined,
-        characterPairSupport: characterPairSupport ?? _i4.undefined,
+            ?.map((i) => [
+                  i.$1,
+                  i.$2,
+                ])
+            .toList(),
+        wordPattern: wordPattern ?? _i6.undefined,
+        indentationRules: indentationRules ?? _i6.undefined,
+        onEnterRules: onEnterRules,
+        autoClosingPairs: autoClosingPairs,
+        electricCharacterSupport: electricCharacterSupport ?? _i6.undefined,
+        characterPairSupport: characterPairSupport ?? _i6.undefined,
       );
 }
 
@@ -11874,7 +12607,7 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
     _i5.setProperty(
       this,
       'comments',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11895,7 +12628,7 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
                     i.$2,
                   ])
               .toList() ??
-          _i4.undefined,
+          _i6.undefined,
     );
   }
 
@@ -11912,7 +12645,7 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
     _i5.setProperty(
       this,
       'wordPattern',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11925,7 +12658,7 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
     _i5.setProperty(
       this,
       'indentationRules',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11939,7 +12672,7 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
     _i5.setProperty(
       this,
       'onEnterRules',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11953,7 +12686,7 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
     _i5.setProperty(
       this,
       'autoClosingPairs',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11968,7 +12701,7 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
     _i5.setProperty(
       this,
       '__electricCharacterSupport',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11983,7 +12716,7 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
     _i5.setProperty(
       this,
       '__characterPairSupport',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -12016,7 +12749,7 @@ extension IInline30$Typings<T> on IInline30<T> {
     _i5.setProperty(
       this,
       'defaultValue',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12029,7 +12762,7 @@ extension IInline30$Typings<T> on IInline30<T> {
     _i5.setProperty(
       this,
       'globalValue',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12042,7 +12775,7 @@ extension IInline30$Typings<T> on IInline30<T> {
     _i5.setProperty(
       this,
       'workspaceValue',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12055,7 +12788,7 @@ extension IInline30$Typings<T> on IInline30<T> {
     _i5.setProperty(
       this,
       'workspaceFolderValue',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12068,7 +12801,7 @@ extension IInline30$Typings<T> on IInline30<T> {
     _i5.setProperty(
       this,
       'defaultLanguageValue',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12081,7 +12814,7 @@ extension IInline30$Typings<T> on IInline30<T> {
     _i5.setProperty(
       this,
       'globalLanguageValue',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12094,7 +12827,7 @@ extension IInline30$Typings<T> on IInline30<T> {
     _i5.setProperty(
       this,
       'workspaceLanguageValue',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12107,7 +12840,7 @@ extension IInline30$Typings<T> on IInline30<T> {
     _i5.setProperty(
       this,
       'workspaceFolderLanguageValue',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12121,7 +12854,7 @@ extension IInline30$Typings<T> on IInline30<T> {
     _i5.setProperty(
       this,
       'languageIds',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -12189,9 +12922,80 @@ extension IInline30$Typings<T> on IInline30<T> {
 /// Refer to [Settings](https://code.visualstudio.com/docs/getstarted/settings) for more information.
 @_i1.JS()
 @_i1.staticInterop
-class WorkspaceConfiguration {}
+@_i1.anonymous
+class WorkspaceConfiguration {
+  external factory WorkspaceConfiguration._({
+    _i2.dynamic has,
+    _i2.dynamic inspect,
+    _i2.dynamic update,
+  });
+
+  factory WorkspaceConfiguration({
+    _i2.bool Function(_i2.String)? has,
+    _i2.dynamic Function<T>(_i2.String)? inspect,
+    _i2.Future<_i2.dynamic> Function(
+      _i2.String, [
+      _i2.dynamic,
+      _i2.dynamic,
+      _i2.bool?,
+    ])? update,
+  }) =>
+      WorkspaceConfiguration._(
+        has: has == null ? null : _i5.allowInterop(has),
+        inspect: inspect == null ? null : _i5.allowInterop(inspect),
+        update: update == null ? null : _i5.allowInterop(update),
+      );
+}
 
 extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
+  set has(_i2.bool Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'has',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(_i2.String) get has => _i5.getProperty(
+        this,
+        'has',
+      );
+  set inspect(_i2.dynamic Function<T>(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'inspect',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.dynamic Function<T>(_i2.String) get inspect => _i5.getProperty(
+        this,
+        'inspect',
+      );
+  set update(
+      _i2.Future<_i2.dynamic> Function(
+        _i2.String, [
+        _i2.dynamic,
+        _i2.dynamic,
+        _i2.bool?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'update',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.dynamic> Function(
+    _i2.String, [
+    _i2.dynamic,
+    _i2.dynamic,
+    _i2.bool?,
+  ]) get update => _i5.getProperty(
+        this,
+        'update',
+      );
+
   /// Return a value from this configuration.
   ///
   ///  @param section Configuration name, supports _dotted_ names.
@@ -12209,78 +13013,6 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
           defaultValue,
         ],
       );
-
-  /// Check if this configuration has a certain value.
-  ///
-  ///  @param section Configuration name, supports _dotted_ names.
-  ///  @returns `true` if the section doesn't resolve to `undefined`.
-  _i2.bool has(_i2.String section) => _i5.callMethod(
-        this,
-        'has',
-        [section],
-      );
-
-  /// Retrieve all information about a configuration setting. A configuration value
-  ///  often consists of a *default* value, a global or installation-wide value,
-  ///  a workspace-specific value, folder-specific value
-  ///  and language-specific values (if {@link WorkspaceConfiguration} is scoped to a language).
-  ///
-  ///  Also provides all language ids under which the given configuration setting is defined.
-  ///
-  ///  *Note:* The configuration name must denote a leaf in the configuration tree
-  ///  (`editor.fontSize` vs `editor`) otherwise no result is returned.
-  ///
-  ///  @param section Configuration name, supports _dotted_ names.
-  ///  @returns Information about a configuration setting or `undefined`.
-  _i3.IInline30<_i2.dynamic>? inspect<T>(_i2.String section) => _i5.callMethod(
-        this,
-        'inspect',
-        [section],
-      );
-
-  /// Update a configuration value. The updated configuration values are persisted.
-  ///
-  ///  A value can be changed in
-  ///
-  ///  - {@link ConfigurationTarget.Global Global settings}: Changes the value for all instances of the editor.
-  ///  - {@link ConfigurationTarget.Workspace Workspace settings}: Changes the value for current workspace, if available.
-  ///  - {@link ConfigurationTarget.WorkspaceFolder Workspace folder settings}: Changes the value for settings from one of the {@link workspace.workspaceFolders Workspace Folders} under which the requested resource belongs to.
-  ///  - Language settings: Changes the value for the requested languageId.
-  ///
-  ///  *Note:* To remove a configuration value use `undefined`, like so: `config.update('somekey', undefined)`
-  ///
-  ///  @param section Configuration name, supports _dotted_ names.
-  ///  @param value The new value.
-  ///  @param configurationTarget The {@link ConfigurationTarget configuration target} or a boolean value.
-  /// 	- If `true` updates {@link ConfigurationTarget.Global Global settings}.
-  /// 	- If `false` updates {@link ConfigurationTarget.Workspace Workspace settings}.
-  /// 	- If `undefined` or `null` updates to {@link ConfigurationTarget.WorkspaceFolder Workspace folder settings} if configuration is resource specific,
-  ///  	otherwise to {@link ConfigurationTarget.Workspace Workspace settings}.
-  ///  @param overrideInLanguage Whether to update the value in the scope of requested languageId or not.
-  /// 	- If `true` updates the value under the requested languageId.
-  /// 	- If `undefined` updates the value under the requested languageId only if the configuration is defined for the language.
-  ///  @throws error while updating
-  /// 	- configuration which is not registered.
-  /// 	- window configuration to workspace folder
-  /// 	- configuration to workspace or workspace folder when no workspace is opened.
-  /// 	- configuration to workspace folder when there is no workspace folder settings.
-  /// 	- configuration to workspace folder when {@link WorkspaceConfiguration} is not scoped to a resource.
-  _i2.Future<_i6.Thenable<void>> update(
-    _i2.String section,
-    _i2.dynamic value, [
-    _i2.dynamic configurationTarget,
-    _i2.bool? overrideInLanguage,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
-        this,
-        'update',
-        [
-          section,
-          value,
-          configurationTarget ?? _i4.undefined,
-          overrideInLanguage ?? _i4.undefined,
-        ],
-      ));
   _i2.dynamic operator [](_i2.String index) => _i5.getProperty(
         this,
         index,
@@ -12353,15 +13085,15 @@ class LocationLink {
 
   factory LocationLink({
     _i3.Range? originSelectionRange,
-    required _i3.Uri targetUri,
-    required _i3.Range targetRange,
+    _i3.Uri? targetUri,
+    _i3.Range? targetRange,
     _i3.Range? targetSelectionRange,
   }) =>
       LocationLink._(
-        originSelectionRange: originSelectionRange ?? _i4.undefined,
-        targetUri: targetUri,
-        targetRange: targetRange,
-        targetSelectionRange: targetSelectionRange ?? _i4.undefined,
+        originSelectionRange: originSelectionRange ?? _i6.undefined,
+        targetUri: targetUri ?? _i6.undefined,
+        targetRange: targetRange ?? _i6.undefined,
+        targetSelectionRange: targetSelectionRange ?? _i6.undefined,
       );
 }
 
@@ -12378,7 +13110,7 @@ extension LocationLink$Typings on LocationLink {
     _i5.setProperty(
       this,
       'originSelectionRange',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12417,7 +13149,7 @@ extension LocationLink$Typings on LocationLink {
     _i5.setProperty(
       this,
       'targetSelectionRange',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -12429,8 +13161,8 @@ extension LocationLink$Typings on LocationLink {
 class DiagnosticChangeEvent {
   external factory DiagnosticChangeEvent._({_i2.dynamic uris});
 
-  factory DiagnosticChangeEvent({required _i2.List<_i3.Uri> uris}) =>
-      DiagnosticChangeEvent._(uris: uris);
+  factory DiagnosticChangeEvent({_i2.List<_i3.Uri>? uris}) =>
+      DiagnosticChangeEvent._(uris: uris ?? _i6.undefined);
 }
 
 extension DiagnosticChangeEvent$Typings on DiagnosticChangeEvent {
@@ -12543,7 +13275,7 @@ class Diagnostic {
         [
           range,
           message,
-          severity?.name ?? _i4.undefined,
+          severity?.name ?? _i6.undefined,
         ],
       );
 }
@@ -12663,13 +13395,50 @@ extension Diagnostic$Typings on Diagnostic {
 /// {@link languages.createDiagnosticCollectioncreateDiagnosticCollection}.
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class DiagnosticCollection
     implements
         _i9.Iterable<
             (
               _i3.Uri,
               _i2.List<_i3.Diagnostic>,
-            )> {}
+            )> {
+  external factory DiagnosticCollection._({
+    _i2.dynamic name,
+    _i2.dynamic delete,
+    _i2.dynamic clear,
+    _i2.dynamic forEach,
+    _i2.dynamic get,
+    _i2.dynamic has,
+    _i2.dynamic dispose,
+  });
+
+  factory DiagnosticCollection({
+    _i2.String? name,
+    void Function(_i3.Uri)? delete,
+    void Function()? clear,
+    void Function(
+      _i2.dynamic Function(
+        _i3.Uri,
+        _i2.List<_i3.Diagnostic>,
+        _i3.DiagnosticCollection,
+      ), [
+      _i2.dynamic,
+    ])? forEach,
+    _i2.List<_i3.Diagnostic>? Function(_i3.Uri)? get,
+    _i2.bool Function(_i3.Uri)? has,
+    void Function()? dispose,
+  }) =>
+      DiagnosticCollection._(
+        name: name,
+        delete: delete == null ? null : _i5.allowInterop(delete),
+        clear: clear == null ? null : _i5.allowInterop(clear),
+        forEach: forEach == null ? null : _i5.allowInterop(forEach),
+        get: get == null ? null : _i5.allowInterop(get),
+        has: has == null ? null : _i5.allowInterop(has),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension DiagnosticCollection$Typings on DiagnosticCollection {
   /// The name of this diagnostic collection, for instance `typescript`. Every diagnostic
@@ -12678,6 +13447,93 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
   _i2.String get name => _i5.getProperty(
         this,
         'name',
+      );
+  set delete(void Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'delete',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function(_i3.Uri) get delete => _i5.getProperty(
+        this,
+        'delete',
+      );
+  set clear(void Function() value) {
+    _i5.setProperty(
+      this,
+      'clear',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function() get clear => _i5.getProperty(
+        this,
+        'clear',
+      );
+  set forEach(
+      void Function(
+        _i2.dynamic Function(
+          _i3.Uri,
+          _i2.List<_i3.Diagnostic>,
+          _i3.DiagnosticCollection,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'forEach',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function(
+    _i2.dynamic Function(
+      _i3.Uri,
+      _i2.List<_i3.Diagnostic>,
+      _i3.DiagnosticCollection,
+    ), [
+    _i2.dynamic,
+  ]) get forEach => _i5.getProperty(
+        this,
+        'forEach',
+      );
+  set get(_i2.List<_i3.Diagnostic>? Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'get',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.List<_i3.Diagnostic>? Function(_i3.Uri) get get => _i5.getProperty(
+        this,
+        'get',
+      );
+  set has(_i2.bool Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'has',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(_i3.Uri) get has => _i5.getProperty(
+        this,
+        'has',
+      );
+  set dispose(void Function() value) {
+    _i5.setProperty(
+      this,
+      'dispose',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
       );
 
   /// Replace diagnostics for multiple resources in this collection.
@@ -12716,7 +13572,7 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
       'set',
       [
         uri,
-        diagnostics ?? _i4.undefined,
+        diagnostics ?? _i6.undefined,
       ],
     );
   }
@@ -12752,90 +13608,52 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
         $1: _set$1,
         $2: _set$2,
       );
-
-  /// Remove all diagnostics from this collection that belong
-  ///  to the provided `uri`. The same as `#set(uri, undefined)`.
-  ///
-  ///  @param uri A resource identifier.
-  void delete(_i3.Uri uri) {
-    _i5.callMethod(
-      this,
-      'delete',
-      [uri],
-    );
-  }
-
-  /// Remove all diagnostics from this collection. The same
-  ///  as calling `#set(undefined)`;
-  void clear() {
-    _i5.callMethod(
-      this,
-      'clear',
-      [],
-    );
-  }
-
-  /// Iterate over each entry in this collection.
-  ///
-  ///  @param callback Function to execute for each entry.
-  ///  @param thisArg The `this` context used when invoking the handler function.
-  void forEach(
-    _i2.dynamic Function(
-      _i3.Uri,
-      _i2.List<_i3.Diagnostic>,
-      _i3.DiagnosticCollection,
-    ) callback, [
-    _i2.dynamic thisArg,
-  ]) {
-    _i5.callMethod(
-      this,
-      'forEach',
-      [
-        _i5.allowInterop(callback),
-        thisArg ?? _i4.undefined,
-      ],
-    );
-  }
-
-  /// Get the diagnostics for a given resource. *Note* that you cannot
-  ///  modify the diagnostics-array returned from this call.
-  ///
-  ///  @param uri A resource identifier.
-  ///  @returns An immutable array of {@link Diagnostic diagnostics} or `undefined`.
-  _i2.List<_i3.Diagnostic>? get(_i3.Uri uri) => (_i5.callMethod(
-        this,
-        'get',
-        [uri],
-      ) as _i2.List?)
-          ?.cast();
-
-  /// Check if this collection contains diagnostics for a
-  ///  given resource.
-  ///
-  ///  @param uri A resource identifier.
-  ///  @returns `true` if this collection has diagnostic for the given resource.
-  _i2.bool has(_i3.Uri uri) => _i5.callMethod(
-        this,
-        'has',
-        [uri],
-      );
-
-  /// Dispose and free associated resources. Calls
-  ///  {@link DiagnosticCollection.clear clear}.
-  void dispose() {
-    _i5.callMethod(
-      this,
-      'dispose',
-      [],
-    );
-  }
 }
 
 /// A language status item is the preferred way to present language status reports for the active text editors,
 /// such as selected linter or notifying about a configuration problem.
 @_i1.JS()
 @_i1.staticInterop
-class LanguageStatusItem {}
+@_i1.anonymous
+class LanguageStatusItem {
+  external factory LanguageStatusItem._({
+    _i2.dynamic id,
+    _i2.dynamic name,
+    _i2.dynamic selector,
+    _i2.dynamic severity,
+    _i2.dynamic text,
+    _i2.dynamic detail,
+    _i2.dynamic busy,
+    _i2.dynamic command,
+    _i2.dynamic accessibilityInformation,
+    _i2.dynamic dispose,
+  });
+
+  factory LanguageStatusItem({
+    _i2.String? id,
+    _i2.String? name,
+    _i3.DocumentSelector? selector,
+    _i3.LanguageStatusSeverity? severity,
+    _i2.String? text,
+    _i2.String? detail,
+    _i2.bool? busy,
+    _i3.Command? command,
+    _i3.AccessibilityInformation? accessibilityInformation,
+    void Function()? dispose,
+  }) =>
+      LanguageStatusItem._(
+        id: id,
+        name: name ?? _i6.undefined,
+        selector: selector ?? _i6.undefined,
+        severity: severity?.name,
+        text: text,
+        detail: detail,
+        busy: busy,
+        command: command ?? _i6.undefined,
+        accessibilityInformation: accessibilityInformation ?? _i6.undefined,
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension LanguageStatusItem$Typings on LanguageStatusItem {
   /// The identifier of this item.
@@ -12853,7 +13671,7 @@ extension LanguageStatusItem$Typings on LanguageStatusItem {
     _i5.setProperty(
       this,
       'name',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12916,7 +13734,7 @@ extension LanguageStatusItem$Typings on LanguageStatusItem {
     _i5.setProperty(
       this,
       'detail',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12942,7 +13760,7 @@ extension LanguageStatusItem$Typings on LanguageStatusItem {
     _i5.setProperty(
       this,
       'command',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12955,18 +13773,22 @@ extension LanguageStatusItem$Typings on LanguageStatusItem {
     _i5.setProperty(
       this,
       'accessibilityInformation',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Dispose and free associated resources.
-  void dispose() {
-    _i5.callMethod(
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// An output channel is a container for readonly textual information.
@@ -12975,7 +13797,37 @@ extension LanguageStatusItem$Typings on LanguageStatusItem {
 /// {@link window.createOutputChannelcreateOutputChannel}.
 @_i1.JS()
 @_i1.staticInterop
-class OutputChannel {}
+@_i1.anonymous
+class OutputChannel {
+  external factory OutputChannel._({
+    _i2.dynamic name,
+    _i2.dynamic append,
+    _i2.dynamic appendLine,
+    _i2.dynamic replace,
+    _i2.dynamic clear,
+    _i2.dynamic hide,
+    _i2.dynamic dispose,
+  });
+
+  factory OutputChannel({
+    _i2.String? name,
+    void Function(_i2.String)? append,
+    void Function(_i2.String)? appendLine,
+    void Function(_i2.String)? replace,
+    void Function()? clear,
+    void Function()? hide,
+    void Function()? dispose,
+  }) =>
+      OutputChannel._(
+        name: name,
+        append: append == null ? null : _i5.allowInterop(append),
+        appendLine: appendLine == null ? null : _i5.allowInterop(appendLine),
+        replace: replace == null ? null : _i5.allowInterop(replace),
+        clear: clear == null ? null : _i5.allowInterop(clear),
+        hide: hide == null ? null : _i5.allowInterop(hide),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension OutputChannel$Typings on OutputChannel {
   /// The human-readable name of this output channel.
@@ -12983,49 +13835,78 @@ extension OutputChannel$Typings on OutputChannel {
         this,
         'name',
       );
-
-  /// Append the given value to the channel.
-  ///
-  ///  @param value A string, falsy values will not be printed.
-  void append(_i2.String value) {
-    _i5.callMethod(
+  set append(void Function(_i2.String) value) {
+    _i5.setProperty(
       this,
       'append',
-      [value],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Append the given value and a line feed character
-  ///  to the channel.
-  ///
-  ///  @param value A string, falsy values will be printed.
-  void appendLine(_i2.String value) {
-    _i5.callMethod(
+  void Function(_i2.String) get append => _i5.getProperty(
+        this,
+        'append',
+      );
+  set appendLine(void Function(_i2.String) value) {
+    _i5.setProperty(
       this,
       'appendLine',
-      [value],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Replaces all output from the channel with the given value.
-  ///
-  ///  @param value A string, falsy values will not be printed.
-  void replace(_i2.String value) {
-    _i5.callMethod(
+  void Function(_i2.String) get appendLine => _i5.getProperty(
+        this,
+        'appendLine',
+      );
+  set replace(void Function(_i2.String) value) {
+    _i5.setProperty(
       this,
       'replace',
-      [value],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Removes all output from the channel.
-  void clear() {
-    _i5.callMethod(
+  void Function(_i2.String) get replace => _i5.getProperty(
+        this,
+        'replace',
+      );
+  set clear(void Function() value) {
+    _i5.setProperty(
       this,
       'clear',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get clear => _i5.getProperty(
+        this,
+        'clear',
+      );
+  set hide(void Function() value) {
+    _i5.setProperty(
+      this,
+      'hide',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function() get hide => _i5.getProperty(
+        this,
+        'hide',
+      );
+  set dispose(void Function() value) {
+    _i5.setProperty(
+      this,
+      'dispose',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 
   /// Reveal this channel in the UI.
   ///
@@ -13034,7 +13915,7 @@ extension OutputChannel$Typings on OutputChannel {
     _i5.callMethod(
       this,
       'show',
-      [preserveFocus ?? _i4.undefined],
+      [preserveFocus ?? _i6.undefined],
     );
   }
 
@@ -13052,8 +13933,8 @@ extension OutputChannel$Typings on OutputChannel {
       this,
       'show',
       [
-        column?.name ?? _i4.undefined,
-        preserveFocus ?? _i4.undefined,
+        column?.name ?? _i6.undefined,
+        preserveFocus ?? _i6.undefined,
       ],
     );
   }
@@ -13079,24 +13960,6 @@ extension OutputChannel$Typings on OutputChannel {
         $1: _show$1,
         $2: _show$2,
       );
-
-  /// Hide this channel from the UI.
-  void hide() {
-    _i5.callMethod(
-      this,
-      'hide',
-      [],
-    );
-  }
-
-  /// Dispose and free associated resources.
-  void dispose() {
-    _i5.callMethod(
-      this,
-      'dispose',
-      [],
-    );
-  }
 }
 
 /// A channel for containing log output.
@@ -13105,7 +13968,218 @@ extension OutputChannel$Typings on OutputChannel {
 /// {@link window.createOutputChannelcreateOutputChannel}.
 @_i1.JS()
 @_i1.staticInterop
-class LogOutputChannel implements _i3.OutputChannel {}
+@_i1.anonymous
+class LogOutputChannel implements _i3.OutputChannel {
+  external factory LogOutputChannel._({
+    _i2.dynamic logLevel,
+    _i2.dynamic onDidChangeLogLevel,
+    _i2.dynamic trace,
+    _i2.dynamic debug,
+    _i2.dynamic info,
+    _i2.dynamic warn,
+    _i2.dynamic error,
+    _i2.dynamic name,
+    _i2.dynamic append,
+    _i2.dynamic appendLine,
+    _i2.dynamic replace,
+    _i2.dynamic clear,
+    _i2.dynamic hide,
+    _i2.dynamic dispose,
+  });
+
+  factory LogOutputChannel({
+    _i3.LogLevel? logLevel,
+    _i3.Event<_i3.LogLevel>? onDidChangeLogLevel,
+    void Function(
+      _i2.String, [
+      _i2.Iterable<_i2.dynamic>?,
+    ])? trace,
+    void Function(
+      _i2.String, [
+      _i2.Iterable<_i2.dynamic>?,
+    ])? debug,
+    void Function(
+      _i2.String, [
+      _i2.Iterable<_i2.dynamic>?,
+    ])? info,
+    void Function(
+      _i2.String, [
+      _i2.Iterable<_i2.dynamic>?,
+    ])? warn,
+    void Function(
+      _i2.Object, [
+      _i2.Iterable<_i2.dynamic>?,
+    ])? error,
+    _i2.String? name,
+    void Function(_i2.String)? append,
+    void Function(_i2.String)? appendLine,
+    void Function(_i2.String)? replace,
+    void Function()? clear,
+    void Function()? hide,
+    void Function()? dispose,
+  }) =>
+      LogOutputChannel._(
+        logLevel: logLevel?.name,
+        onDidChangeLogLevel: onDidChangeLogLevel ?? _i6.undefined,
+        trace: trace == null
+            ? null
+            : _i5.allowInterop((
+                _i2.String v0, [
+                a0,
+                a1,
+                a2,
+                a3,
+                a4,
+                a5,
+                a6,
+                a7,
+                a8,
+                a9,
+              ]) =>
+                trace(
+                  v0,
+                  [
+                    a0,
+                    a1,
+                    a2,
+                    a3,
+                    a4,
+                    a5,
+                    a6,
+                    a7,
+                    a8,
+                    a9,
+                  ],
+                )),
+        debug: debug == null
+            ? null
+            : _i5.allowInterop((
+                _i2.String v0, [
+                a0,
+                a1,
+                a2,
+                a3,
+                a4,
+                a5,
+                a6,
+                a7,
+                a8,
+                a9,
+              ]) =>
+                debug(
+                  v0,
+                  [
+                    a0,
+                    a1,
+                    a2,
+                    a3,
+                    a4,
+                    a5,
+                    a6,
+                    a7,
+                    a8,
+                    a9,
+                  ],
+                )),
+        info: info == null
+            ? null
+            : _i5.allowInterop((
+                _i2.String v0, [
+                a0,
+                a1,
+                a2,
+                a3,
+                a4,
+                a5,
+                a6,
+                a7,
+                a8,
+                a9,
+              ]) =>
+                info(
+                  v0,
+                  [
+                    a0,
+                    a1,
+                    a2,
+                    a3,
+                    a4,
+                    a5,
+                    a6,
+                    a7,
+                    a8,
+                    a9,
+                  ],
+                )),
+        warn: warn == null
+            ? null
+            : _i5.allowInterop((
+                _i2.String v0, [
+                a0,
+                a1,
+                a2,
+                a3,
+                a4,
+                a5,
+                a6,
+                a7,
+                a8,
+                a9,
+              ]) =>
+                warn(
+                  v0,
+                  [
+                    a0,
+                    a1,
+                    a2,
+                    a3,
+                    a4,
+                    a5,
+                    a6,
+                    a7,
+                    a8,
+                    a9,
+                  ],
+                )),
+        error: error == null
+            ? null
+            : _i5.allowInterop((
+                _i2.Object v0, [
+                a0,
+                a1,
+                a2,
+                a3,
+                a4,
+                a5,
+                a6,
+                a7,
+                a8,
+                a9,
+              ]) =>
+                error(
+                  v0,
+                  [
+                    a0,
+                    a1,
+                    a2,
+                    a3,
+                    a4,
+                    a5,
+                    a6,
+                    a7,
+                    a8,
+                    a9,
+                  ],
+                )),
+        name: name,
+        append: append == null ? null : _i5.allowInterop(append),
+        appendLine: appendLine == null ? null : _i5.allowInterop(appendLine),
+        replace: replace == null ? null : _i5.allowInterop(replace),
+        clear: clear == null ? null : _i5.allowInterop(clear),
+        hide: hide == null ? null : _i5.allowInterop(hide),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension LogOutputChannel$Typings on LogOutputChannel {
   /// The current log level of the channel. Defaults to {@link env.logLeveleditor log level}.
@@ -13119,101 +14193,236 @@ extension LogOutputChannel$Typings on LogOutputChannel {
         this,
         'onDidChangeLogLevel',
       );
-
-  /// Outputs the given trace message to the channel. Use this method to log verbose information.
-  ///
-  ///  The message is only logged if the channel is configured to display {@link LogLevel.Trace trace} log level.
-  ///
-  ///  @param message trace message to log
-  void trace(
-    _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? args,
-  ]) {
-    _i5.callMethod(
+  set trace(
+      void Function(
+        _i2.String, [
+        _i2.Iterable<_i2.dynamic>?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'trace',
-      [
-        message,
-        ...?args,
-      ],
+      _i5.allowInterop((
+        _i2.String v0, [
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value(
+            v0,
+            [
+              a0,
+              a1,
+              a2,
+              a3,
+              a4,
+              a5,
+              a6,
+              a7,
+              a8,
+              a9,
+            ],
+          )),
     );
   }
 
-  /// Outputs the given debug message to the channel.
-  ///
-  ///  The message is only logged if the channel is configured to display {@link LogLevel.Debug debug} log level or lower.
-  ///
-  ///  @param message debug message to log
-  void debug(
-    _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? args,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i2.String, [
+    _i2.Iterable<_i2.dynamic>?,
+  ]) get trace => _i5.getProperty(
+        this,
+        'trace',
+      );
+  set debug(
+      void Function(
+        _i2.String, [
+        _i2.Iterable<_i2.dynamic>?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'debug',
-      [
-        message,
-        ...?args,
-      ],
+      _i5.allowInterop((
+        _i2.String v0, [
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value(
+            v0,
+            [
+              a0,
+              a1,
+              a2,
+              a3,
+              a4,
+              a5,
+              a6,
+              a7,
+              a8,
+              a9,
+            ],
+          )),
     );
   }
 
-  /// Outputs the given information message to the channel.
-  ///
-  ///  The message is only logged if the channel is configured to display {@link LogLevel.Info info} log level or lower.
-  ///
-  ///  @param message info message to log
-  void info(
-    _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? args,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i2.String, [
+    _i2.Iterable<_i2.dynamic>?,
+  ]) get debug => _i5.getProperty(
+        this,
+        'debug',
+      );
+  set info(
+      void Function(
+        _i2.String, [
+        _i2.Iterable<_i2.dynamic>?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'info',
-      [
-        message,
-        ...?args,
-      ],
+      _i5.allowInterop((
+        _i2.String v0, [
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value(
+            v0,
+            [
+              a0,
+              a1,
+              a2,
+              a3,
+              a4,
+              a5,
+              a6,
+              a7,
+              a8,
+              a9,
+            ],
+          )),
     );
   }
 
-  /// Outputs the given warning message to the channel.
-  ///
-  ///  The message is only logged if the channel is configured to display {@link LogLevel.Warning warning} log level or lower.
-  ///
-  ///  @param message warning message to log
-  void warn(
-    _i2.String message, [
-    _i2.Iterable<_i2.dynamic>? args,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i2.String, [
+    _i2.Iterable<_i2.dynamic>?,
+  ]) get info => _i5.getProperty(
+        this,
+        'info',
+      );
+  set warn(
+      void Function(
+        _i2.String, [
+        _i2.Iterable<_i2.dynamic>?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'warn',
-      [
-        message,
-        ...?args,
-      ],
+      _i5.allowInterop((
+        _i2.String v0, [
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value(
+            v0,
+            [
+              a0,
+              a1,
+              a2,
+              a3,
+              a4,
+              a5,
+              a6,
+              a7,
+              a8,
+              a9,
+            ],
+          )),
     );
   }
 
-  /// Outputs the given error or error message to the channel.
-  ///
-  ///  The message is only logged if the channel is configured to display {@link LogLevel.Error error} log level or lower.
-  ///
-  ///  @param error Error or error message to log
-  void error(
-    _i2.Object error, [
-    _i2.Iterable<_i2.dynamic>? args,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i2.String, [
+    _i2.Iterable<_i2.dynamic>?,
+  ]) get warn => _i5.getProperty(
+        this,
+        'warn',
+      );
+  set error(
+      void Function(
+        _i2.Object, [
+        _i2.Iterable<_i2.dynamic>?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'error',
-      [
-        error,
-        ...?args,
-      ],
+      _i5.allowInterop((
+        _i2.Object v0, [
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value(
+            v0,
+            [
+              a0,
+              a1,
+              a2,
+              a3,
+              a4,
+              a5,
+              a6,
+              a7,
+              a8,
+              a9,
+            ],
+          )),
     );
   }
+
+  void Function(
+    _i2.Object, [
+    _i2.Iterable<_i2.dynamic>?,
+  ]) get error => _i5.getProperty(
+        this,
+        'error',
+      );
 }
 
 /// Accessibility information which controls screen reader behavior.
@@ -13227,12 +14436,12 @@ class AccessibilityInformation {
   });
 
   factory AccessibilityInformation({
-    required _i2.String label,
+    _i2.String? label,
     _i2.String? role,
   }) =>
       AccessibilityInformation._(
         label: label,
-        role: role ?? _i4.undefined,
+        role: role,
       );
 }
 
@@ -13257,7 +14466,55 @@ extension AccessibilityInformation$Typings on AccessibilityInformation {
 /// show text and icons and run a command on click.
 @_i1.JS()
 @_i1.staticInterop
-class StatusBarItem {}
+@_i1.anonymous
+class StatusBarItem {
+  external factory StatusBarItem._({
+    _i2.dynamic id,
+    _i2.dynamic alignment,
+    _i2.dynamic priority,
+    _i2.dynamic name,
+    _i2.dynamic text,
+    _i2.dynamic tooltip,
+    _i2.dynamic color,
+    _i2.dynamic backgroundColor,
+    _i2.dynamic command,
+    _i2.dynamic accessibilityInformation,
+    _i2.dynamic show,
+    _i2.dynamic hide,
+    _i2.dynamic dispose,
+  });
+
+  factory StatusBarItem({
+    _i2.String? id,
+    _i3.StatusBarAlignment? alignment,
+    _i2.num? priority,
+    _i2.String? name,
+    _i2.String? text,
+    _i2.dynamic tooltip,
+    _i2.dynamic color,
+    _i3.ThemeColor? backgroundColor,
+    _i2.dynamic command,
+    _i3.AccessibilityInformation? accessibilityInformation,
+    void Function()? show,
+    void Function()? hide,
+    void Function()? dispose,
+  }) =>
+      StatusBarItem._(
+        id: id,
+        alignment: alignment?.name,
+        priority: priority ?? _i6.undefined,
+        name: name ?? _i6.undefined,
+        text: text,
+        tooltip: tooltip,
+        color: color,
+        backgroundColor: backgroundColor ?? _i6.undefined,
+        command: command,
+        accessibilityInformation: accessibilityInformation ?? _i6.undefined,
+        show: show == null ? null : _i5.allowInterop(show),
+        hide: hide == null ? null : _i5.allowInterop(hide),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension StatusBarItem$Typings on StatusBarItem {
   /// The identifier of this item.
@@ -13294,7 +14551,7 @@ extension StatusBarItem$Typings on StatusBarItem {
     _i5.setProperty(
       this,
       'name',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -13325,7 +14582,7 @@ extension StatusBarItem$Typings on StatusBarItem {
     _i5.setProperty(
       this,
       'tooltip',
-      value ?? _i4.undefined,
+      value,
     );
   }
 
@@ -13338,7 +14595,7 @@ extension StatusBarItem$Typings on StatusBarItem {
     _i5.setProperty(
       this,
       'color',
-      value ?? _i4.undefined,
+      value,
     );
   }
 
@@ -13360,7 +14617,7 @@ extension StatusBarItem$Typings on StatusBarItem {
     _i5.setProperty(
       this,
       'backgroundColor',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -13378,7 +14635,7 @@ extension StatusBarItem$Typings on StatusBarItem {
     _i5.setProperty(
       this,
       'command',
-      value ?? _i4.undefined,
+      value,
     );
   }
 
@@ -13391,61 +14648,117 @@ extension StatusBarItem$Typings on StatusBarItem {
     _i5.setProperty(
       this,
       'accessibilityInformation',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Shows the entry in the status bar.
-  void show() {
-    _i5.callMethod(
+  set show(void Function() value) {
+    _i5.setProperty(
       this,
       'show',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Hide the entry in the status bar.
-  void hide() {
-    _i5.callMethod(
+  void Function() get show => _i5.getProperty(
+        this,
+        'show',
+      );
+  set hide(void Function() value) {
+    _i5.setProperty(
       this,
       'hide',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Dispose and free associated resources. Call
-  ///  {@link StatusBarItem.hide hide}.
-  void dispose() {
-    _i5.callMethod(
+  void Function() get hide => _i5.getProperty(
+        this,
+        'hide',
+      );
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// Defines a generalized way of reporting progress updates.
 @_i1.JS()
 @_i1.staticInterop
-class Progress<T> {}
+@_i1.anonymous
+class Progress<T> {
+  external factory Progress._({_i2.dynamic report});
+
+  factory Progress({void Function(_i2.dynamic)? report}) =>
+      Progress._(report: report == null ? null : _i5.allowInterop(report));
+}
 
 extension Progress$Typings<T> on Progress<T> {
-  /// Report a progress update.
-  ///  @param value A progress item, like a message and/or an
-  ///  report on how much work finished
-  void report(T value) {
-    _i5.callMethod(
+  set report(void Function(T) value) {
+    _i5.setProperty(
       this,
       'report',
-      [value],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function(T) get report => _i5.getProperty(
+        this,
+        'report',
+      );
 }
 
 /// An individual terminal instance within the integrated terminal.
 @_i1.JS()
 @_i1.staticInterop
-class Terminal {}
+@_i1.anonymous
+class Terminal {
+  external factory Terminal._({
+    _i2.dynamic name,
+    _i2.dynamic processId,
+    _i2.dynamic creationOptions,
+    _i2.dynamic exitStatus,
+    _i2.dynamic state,
+    _i2.dynamic sendText,
+    _i2.dynamic show,
+    _i2.dynamic hide,
+    _i2.dynamic dispose,
+  });
+
+  factory Terminal({
+    _i2.String? name,
+    _i2.Future<_i2.dynamic>? processId,
+    _i7.Readonly<_i2.Object>? creationOptions,
+    _i3.TerminalExitStatus? exitStatus,
+    _i3.TerminalState? state,
+    void Function(
+      _i2.String, [
+      _i2.bool?,
+    ])? sendText,
+    void Function([_i2.bool?])? show,
+    void Function()? hide,
+    void Function()? dispose,
+  }) =>
+      Terminal._(
+        name: name,
+        processId: processId ?? _i6.undefined,
+        creationOptions: creationOptions,
+        exitStatus: exitStatus ?? _i6.undefined,
+        state: state ?? _i6.undefined,
+        sendText: sendText == null ? null : _i5.allowInterop(sendText),
+        show: show == null ? null : _i5.allowInterop(show),
+        hide: hide == null ? null : _i5.allowInterop(hide),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension Terminal$Typings on Terminal {
   /// The name of the terminal.
@@ -13455,8 +14768,7 @@ extension Terminal$Typings on Terminal {
       );
 
   /// The process ID of the shell process.
-  _i2.Future<_i6.Thenable<_i2.num?>> get processId =>
-      _i5.promiseToFuture(_i5.getProperty(
+  _i2.Future<_i2.dynamic> get processId => _i5.promiseToFuture(_i5.getProperty(
         this,
         'processId',
       ));
@@ -13490,56 +14802,61 @@ extension Terminal$Typings on Terminal {
         this,
         'state',
       );
-
-  /// Send text to the terminal. The text is written to the stdin of the underlying pty process
-  ///  (shell) of the terminal.
-  ///
-  ///  @param text The text to send.
-  ///  @param addNewLine Whether to add a new line to the text being sent, this is normally
-  ///  required to run a command in the terminal. The character(s) added are \n or \r\n
-  ///  depending on the platform. This defaults to `true`.
-  void sendText(
-    _i2.String text, [
-    _i2.bool? addNewLine,
-  ]) {
-    _i5.callMethod(
+  set sendText(
+      void Function(
+        _i2.String, [
+        _i2.bool?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'sendText',
-      [
-        text,
-        addNewLine ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Show the terminal panel and reveal this terminal in the UI.
-  ///
-  ///  @param preserveFocus When `true` the terminal will not take focus.
-  void show([_i2.bool? preserveFocus]) {
-    _i5.callMethod(
+  void Function(
+    _i2.String, [
+    _i2.bool?,
+  ]) get sendText => _i5.getProperty(
+        this,
+        'sendText',
+      );
+  set show(void Function([_i2.bool?]) value) {
+    _i5.setProperty(
       this,
       'show',
-      [preserveFocus ?? _i4.undefined],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Hide the terminal panel if this terminal is currently showing.
-  void hide() {
-    _i5.callMethod(
+  void Function([_i2.bool?]) get show => _i5.getProperty(
+        this,
+        'show',
+      );
+  set hide(void Function() value) {
+    _i5.setProperty(
       this,
       'hide',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Dispose and free associated resources.
-  void dispose() {
-    _i5.callMethod(
+  void Function() get hide => _i5.getProperty(
+        this,
+        'hide',
+      );
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// Assumes a {@link TerminalLocation} of editor and allows specifying a {@link ViewColumn} and
@@ -13554,12 +14871,12 @@ class TerminalEditorLocationOptions {
   });
 
   factory TerminalEditorLocationOptions({
-    required _i3.ViewColumn viewColumn,
+    _i3.ViewColumn? viewColumn,
     _i2.bool? preserveFocus,
   }) =>
       TerminalEditorLocationOptions._(
-        viewColumn: viewColumn.name,
-        preserveFocus: preserveFocus ?? _i4.undefined,
+        viewColumn: viewColumn?.name,
+        preserveFocus: preserveFocus,
       );
 }
 
@@ -13591,7 +14908,7 @@ extension TerminalEditorLocationOptions$Typings
     _i5.setProperty(
       this,
       'preserveFocus',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -13603,9 +14920,9 @@ extension TerminalEditorLocationOptions$Typings
 class TerminalSplitLocationOptions {
   external factory TerminalSplitLocationOptions._({_i2.dynamic parentTerminal});
 
-  factory TerminalSplitLocationOptions(
-          {required _i3.Terminal parentTerminal}) =>
-      TerminalSplitLocationOptions._(parentTerminal: parentTerminal);
+  factory TerminalSplitLocationOptions({_i3.Terminal? parentTerminal}) =>
+      TerminalSplitLocationOptions._(
+          parentTerminal: parentTerminal ?? _i6.undefined);
 }
 
 extension TerminalSplitLocationOptions$Typings on TerminalSplitLocationOptions {
@@ -13631,7 +14948,7 @@ extension TerminalSplitLocationOptions$Typings on TerminalSplitLocationOptions {
 class TerminalState {
   external factory TerminalState._({_i2.dynamic isInteractedWith});
 
-  factory TerminalState({required _i2.bool isInteractedWith}) =>
+  factory TerminalState({_i2.bool? isInteractedWith}) =>
       TerminalState._(isInteractedWith: isInteractedWith);
 }
 
@@ -13665,12 +14982,12 @@ class TerminalLinkContext {
   });
 
   factory TerminalLinkContext({
-    required _i2.String line,
-    required _i3.Terminal terminal,
+    _i2.String? line,
+    _i3.Terminal? terminal,
   }) =>
       TerminalLinkContext._(
         line: line,
-        terminal: terminal,
+        terminal: terminal ?? _i6.undefined,
       );
 }
 
@@ -13705,35 +15022,63 @@ extension TerminalLinkContext$Typings on TerminalLinkContext {
 /// A provider that enables detection and handling of links within terminals.
 @_i1.JS()
 @_i1.staticInterop
-class TerminalLinkProvider<T extends _i3.TerminalLink> {}
+@_i1.anonymous
+class TerminalLinkProvider<T extends _i3.TerminalLink> {
+  external factory TerminalLinkProvider._({
+    _i2.dynamic provideTerminalLinks,
+    _i2.dynamic handleTerminalLink,
+  });
+
+  factory TerminalLinkProvider({
+    _i3.ProviderResult<_i2.List<_i3.TerminalLink>> Function(
+      _i3.TerminalLinkContext,
+      _i3.CancellationToken,
+    )? provideTerminalLinks,
+    _i3.ProviderResult<void> Function(_i3.TerminalLink)? handleTerminalLink,
+  }) =>
+      TerminalLinkProvider._(
+        provideTerminalLinks: provideTerminalLinks == null
+            ? null
+            : _i5.allowInterop(provideTerminalLinks),
+        handleTerminalLink: handleTerminalLink == null
+            ? null
+            : _i5.allowInterop(handleTerminalLink),
+      );
+}
 
 extension TerminalLinkProvider$Typings<T extends _i3.TerminalLink>
     on TerminalLinkProvider<T> {
-  /// Provide terminal links for the given context. Note that this can be called multiple times
-  ///  even before previous calls resolve, make sure to not share global objects (eg. `RegExp`)
-  ///  that could have problems when asynchronous usage may overlap.
-  ///  @param context Information about what links are being provided for.
-  ///  @param token A cancellation token.
-  ///  @returns A list of terminal links for the given line.
-  _i3.ProviderResult<_i2.List<T>> provideTerminalLinks(
-    _i3.TerminalLinkContext context,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideTerminalLinks(
+      _i3.ProviderResult<_i2.List<T>> Function(
+        _i3.TerminalLinkContext,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideTerminalLinks',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<T>> Function(
+    _i3.TerminalLinkContext,
+    _i3.CancellationToken,
+  ) get provideTerminalLinks => _i5.getProperty(
         this,
         'provideTerminalLinks',
-        [
-          context,
-          token,
-        ],
       );
+  set handleTerminalLink(_i3.ProviderResult<void> Function(T) value) {
+    _i5.setProperty(
+      this,
+      'handleTerminalLink',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Handle an activated terminal link.
-  ///  @param link The link to handle.
-  _i3.ProviderResult<void> handleTerminalLink(T link) => _i5.callMethod(
+  _i3.ProviderResult<void> Function(T) get handleTerminalLink =>
+      _i5.getProperty(
         this,
         'handleTerminalLink',
-        [link],
       );
 }
 
@@ -13751,7 +15096,7 @@ class TerminalLink {
         [
           startIndex,
           length,
-          tooltip ?? _i4.undefined,
+          tooltip ?? _i6.undefined,
         ],
       );
 }
@@ -13810,19 +15155,37 @@ extension TerminalLink$Typings on TerminalLink {
 /// command.
 @_i1.JS()
 @_i1.staticInterop
-class TerminalProfileProvider {}
+@_i1.anonymous
+class TerminalProfileProvider {
+  external factory TerminalProfileProvider._(
+      {_i2.dynamic provideTerminalProfile});
+
+  factory TerminalProfileProvider(
+          {_i3.ProviderResult<_i3.TerminalProfile> Function(
+                  _i3.CancellationToken)?
+              provideTerminalProfile}) =>
+      TerminalProfileProvider._(
+          provideTerminalProfile: provideTerminalProfile == null
+              ? null
+              : _i5.allowInterop(provideTerminalProfile));
+}
 
 extension TerminalProfileProvider$Typings on TerminalProfileProvider {
-  /// Provide the terminal profile.
-  ///  @param token A cancellation token that indicates the result is no longer needed.
-  ///  @returns The terminal profile.
-  _i3.ProviderResult<_i3.TerminalProfile> provideTerminalProfile(
-          _i3.CancellationToken token) =>
-      _i5.callMethod(
-        this,
-        'provideTerminalProfile',
-        [token],
-      );
+  set provideTerminalProfile(
+      _i3.ProviderResult<_i3.TerminalProfile> Function(_i3.CancellationToken)
+          value) {
+    _i5.setProperty(
+      this,
+      'provideTerminalProfile',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.TerminalProfile> Function(_i3.CancellationToken)
+      get provideTerminalProfile => _i5.getProperty(
+            this,
+            'provideTerminalProfile',
+          );
 }
 
 /// A terminal profile defines how a terminal will be launched.
@@ -13867,9 +15230,9 @@ class FileDecoration {
       _i5.callConstructor(
         _declaredFileDecoration,
         [
-          badge ?? _i4.undefined,
-          tooltip ?? _i4.undefined,
-          color ?? _i4.undefined,
+          badge ?? _i6.undefined,
+          tooltip ?? _i6.undefined,
+          color ?? _i6.undefined,
         ],
       );
 }
@@ -13938,7 +15301,27 @@ extension FileDecoration$Typings on FileDecoration {
 /// file decorations.
 @_i1.JS()
 @_i1.staticInterop
-class FileDecorationProvider {}
+@_i1.anonymous
+class FileDecorationProvider {
+  external factory FileDecorationProvider._({
+    _i2.dynamic onDidChangeFileDecorations,
+    _i2.dynamic provideFileDecoration,
+  });
+
+  factory FileDecorationProvider({
+    _i3.Event<_i2.dynamic>? onDidChangeFileDecorations,
+    _i3.ProviderResult<_i3.FileDecoration> Function(
+      _i3.Uri,
+      _i3.CancellationToken,
+    )? provideFileDecoration,
+  }) =>
+      FileDecorationProvider._(
+        onDidChangeFileDecorations: onDidChangeFileDecorations ?? _i6.undefined,
+        provideFileDecoration: provideFileDecoration == null
+            ? null
+            : _i5.allowInterop(provideFileDecoration),
+      );
+}
 
 extension FileDecorationProvider$Typings on FileDecorationProvider {
   /// An optional event to signal that decorations for one or many files have changed.
@@ -13954,30 +15337,28 @@ extension FileDecorationProvider$Typings on FileDecorationProvider {
     _i5.setProperty(
       this,
       'onDidChangeFileDecorations',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Provide decorations for a given uri.
-  ///
-  ///  *Note* that this function is only called when a file gets rendered in the UI.
-  ///  This means a decoration from a descendent that propagates upwards must be signaled
-  ///  to the editor via the {@link FileDecorationProvider.onDidChangeFileDecorations onDidChangeFileDecorations}-event.
-  ///
-  ///  @param uri The uri of the file to provide a decoration for.
-  ///  @param token A cancellation token.
-  ///  @returns A decoration or a thenable that resolves to such.
-  _i3.ProviderResult<_i3.FileDecoration> provideFileDecoration(
-    _i3.Uri uri,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideFileDecoration(
+      _i3.ProviderResult<_i3.FileDecoration> Function(
+        _i3.Uri,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideFileDecoration',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.FileDecoration> Function(
+    _i3.Uri,
+    _i3.CancellationToken,
+  ) get provideFileDecoration => _i5.getProperty(
         this,
         'provideFileDecoration',
-        [
-          uri,
-          token,
-        ],
       );
 }
 
@@ -13986,7 +15367,40 @@ extension FileDecorationProvider$Typings on FileDecorationProvider {
 /// To get an instance of an `Extension` use {@link extensions.getExtensiongetExtension}.
 @_i1.JS()
 @_i1.staticInterop
-class Extension<T> {}
+@_i1.anonymous
+class Extension<T> {
+  external factory Extension._({
+    _i2.dynamic id,
+    _i2.dynamic extensionUri,
+    _i2.dynamic extensionPath,
+    _i2.dynamic isActive,
+    _i2.dynamic packageJSON,
+    _i2.dynamic extensionKind,
+    _i2.dynamic exports,
+    _i2.dynamic activate,
+  });
+
+  factory Extension({
+    _i2.String? id,
+    _i3.Uri? extensionUri,
+    _i2.String? extensionPath,
+    _i2.bool? isActive,
+    _i2.dynamic packageJSON,
+    _i3.ExtensionKind? extensionKind,
+    _i2.dynamic exports,
+    _i2.Future<_i2.dynamic> Function()? activate,
+  }) =>
+      Extension._(
+        id: id,
+        extensionUri: extensionUri ?? _i6.undefined,
+        extensionPath: extensionPath,
+        isActive: isActive,
+        packageJSON: packageJSON,
+        extensionKind: extensionKind?.name,
+        exports: exports,
+        activate: activate == null ? null : _i5.allowInterop(activate),
+      );
+}
 
 extension Extension$Typings<T> on Extension<T> {
   /// The canonical extension identifier in the form of: `publisher.name`.
@@ -14044,53 +15458,58 @@ extension Extension$Typings<T> on Extension<T> {
         this,
         'exports',
       );
+  set activate(_i2.Future<_i2.dynamic> Function() value) {
+    _i5.setProperty(
+      this,
+      'activate',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Activates this extension and returns its public API.
-  ///
-  ///  @returns A promise that will resolve when this extension has been activated.
-  _i2.Future<_i6.Thenable<T>> activate() => _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function() get activate => _i5.getProperty(
         this,
         'activate',
-        [],
-      ));
-}
-
-@_i1.JS()
-@_i1.staticInterop
-class IInline32 {}
-
-extension IInline32$Typings on IInline32 {
-  /// Function to clean up resources.
-  _i2.dynamic dispose() => _i5.callMethod(
-        this,
-        'dispose',
-        [],
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
+class IInline32 {}
+
+extension IInline32$Typings on IInline32 {
+  set dispose(_i2.dynamic Function() value) {
+    _i5.setProperty(
+      this,
+      'dispose',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.dynamic Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
+}
+
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
 class IInline33 {}
 
 extension IInline33$Typings on IInline33 {
-  /// Set the keys whose values should be synchronized across devices when synchronizing user-data
-  ///  like configuration, extensions, and mementos.
-  ///
-  ///  Note that this function defines the whole set of keys whose values are synchronized:
-  ///   - calling it with an empty array stops synchronization for this memento
-  ///   - calling it with a non-empty array replaces all keys whose values are synchronized
-  ///
-  ///  For any given set of keys this function needs to be called only once but there is no harm in
-  ///  repeatedly calling it.
-  ///
-  ///  @param keys The set of keys whose values are synced.
-  void setKeysForSync(_i2.List<_i2.String> keys) {
-    _i5.callMethod(
+  set setKeysForSync(void Function(_i2.List<_i2.String>) value) {
+    _i5.setProperty(
       this,
       'setKeysForSync',
-      [keys],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function(_i2.List<_i2.String>) get setKeysForSync => _i5.getProperty(
+        this,
+        'setKeysForSync',
+      );
 }
 
 /// An extension context is a collection of utilities private to an
@@ -14100,7 +15519,66 @@ extension IInline33$Typings on IInline33 {
 /// parameter to the `activate`-call of an extension.
 @_i1.JS()
 @_i1.staticInterop
-class ExtensionContext {}
+@_i1.anonymous
+class ExtensionContext {
+  external factory ExtensionContext._({
+    _i2.dynamic subscriptions,
+    _i2.dynamic workspaceState,
+    _i2.dynamic globalState,
+    _i2.dynamic secrets,
+    _i2.dynamic extensionUri,
+    _i2.dynamic extensionPath,
+    _i2.dynamic environmentVariableCollection,
+    _i2.dynamic storageUri,
+    _i2.dynamic storagePath,
+    _i2.dynamic globalStorageUri,
+    _i2.dynamic globalStoragePath,
+    _i2.dynamic logUri,
+    _i2.dynamic logPath,
+    _i2.dynamic extensionMode,
+    _i2.dynamic extension,
+    _i2.dynamic asAbsolutePath,
+  });
+
+  factory ExtensionContext({
+    _i2.List<_i3.IInline32>? subscriptions,
+    _i3.Memento? workspaceState,
+    _Intersection7? globalState,
+    _i3.SecretStorage? secrets,
+    _i3.Uri? extensionUri,
+    _i2.String? extensionPath,
+    _i3.GlobalEnvironmentVariableCollection? environmentVariableCollection,
+    _i3.Uri? storageUri,
+    _i2.String? storagePath,
+    _i3.Uri? globalStorageUri,
+    _i2.String? globalStoragePath,
+    _i3.Uri? logUri,
+    _i2.String? logPath,
+    _i3.ExtensionMode? extensionMode,
+    _i3.Extension<_i2.dynamic>? extension,
+    _i2.String Function(_i2.String)? asAbsolutePath,
+  }) =>
+      ExtensionContext._(
+        subscriptions: subscriptions,
+        workspaceState: workspaceState ?? _i6.undefined,
+        globalState: globalState ?? _i6.undefined,
+        secrets: secrets ?? _i6.undefined,
+        extensionUri: extensionUri ?? _i6.undefined,
+        extensionPath: extensionPath,
+        environmentVariableCollection:
+            environmentVariableCollection ?? _i6.undefined,
+        storageUri: storageUri ?? _i6.undefined,
+        storagePath: storagePath ?? _i6.undefined,
+        globalStorageUri: globalStorageUri ?? _i6.undefined,
+        globalStoragePath: globalStoragePath,
+        logUri: logUri ?? _i6.undefined,
+        logPath: logPath,
+        extensionMode: extensionMode?.name,
+        extension: extension ?? _i6.undefined,
+        asAbsolutePath:
+            asAbsolutePath == null ? null : _i5.allowInterop(asAbsolutePath),
+      );
+}
 
 extension ExtensionContext$Typings on ExtensionContext {
   /// An array to which disposables can be added. When this
@@ -14122,7 +15600,7 @@ extension ExtensionContext$Typings on ExtensionContext {
 
   /// A memento object that stores state independent
   /// of the current opened {@link workspace.workspaceFoldersworkspace}.
-  _Intersection49 get globalState => _i5.getProperty(
+  _Intersection7 get globalState => _i5.getProperty(
         this,
         'globalState',
       );
@@ -14227,18 +15705,17 @@ extension ExtensionContext$Typings on ExtensionContext {
         this,
         'extension',
       );
+  set asAbsolutePath(_i2.String Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'asAbsolutePath',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Get the absolute path of a resource contained in the extension.
-  ///
-  ///  *Note* that an absolute uri can be constructed via {@linkcode Uri.joinPath} and
-  ///  {@linkcode ExtensionContext.extensionUri extensionUri}, e.g. `vscode.Uri.joinPath(context.extensionUri, relativePath);`
-  ///
-  ///  @param relativePath A relative path to a resource contained in the extension.
-  ///  @returns The absolute path of the resource.
-  _i2.String asAbsolutePath(_i2.String relativePath) => _i5.callMethod(
+  _i2.String Function(_i2.String) get asAbsolutePath => _i5.getProperty(
         this,
         'asAbsolutePath',
-        [relativePath],
       );
 }
 
@@ -14246,18 +15723,58 @@ extension ExtensionContext$Typings on ExtensionContext {
 /// values.
 @_i1.JS()
 @_i1.staticInterop
-class Memento {}
+@_i1.anonymous
+class Memento {
+  external factory Memento._({
+    _i2.dynamic keys,
+    _i2.dynamic update,
+  });
+
+  factory Memento({
+    _i2.List<_i2.String> Function()? keys,
+    _i2.Future<_i2.dynamic> Function(
+      _i2.String, [
+      _i2.dynamic,
+    ])? update,
+  }) =>
+      Memento._(
+        keys: keys == null ? null : _i5.allowInterop(keys),
+        update: update == null ? null : _i5.allowInterop(update),
+      );
+}
 
 extension Memento$Typings on Memento {
-  /// Returns the stored keys.
-  ///
-  ///  @returns The stored keys.
-  _i2.List<_i2.String> keys() => (_i5.callMethod(
+  set keys(_i2.List<_i2.String> Function() value) {
+    _i5.setProperty(
+      this,
+      'keys',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.List<_i2.String> Function() get keys => _i5.getProperty(
         this,
         'keys',
-        [],
-      ) as _i2.List)
-          .cast();
+      );
+  set update(
+      _i2.Future<_i2.dynamic> Function(
+        _i2.String, [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'update',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.dynamic> Function(
+    _i2.String, [
+    _i2.dynamic,
+  ]) get update => _i5.getProperty(
+        this,
+        'update',
+      );
 
   /// Return a value.
   ///
@@ -14277,26 +15794,6 @@ extension Memento$Typings on Memento {
           defaultValue,
         ],
       );
-
-  /// Store a value. The value must be JSON-stringifyable.
-  ///
-  ///  *Note* that using `undefined` as value removes the key from the underlying
-  ///  storage.
-  ///
-  ///  @param key A string.
-  ///  @param value A value. MUST not contain cyclic references.
-  _i2.Future<_i6.Thenable<void>> update(
-    _i2.String key,
-    _i2.dynamic value,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
-        this,
-        'update',
-        [
-          key,
-          value,
-        ],
-      ));
 }
 
 /// The event data that is fired when a secret is added or removed.
@@ -14306,7 +15803,7 @@ extension Memento$Typings on Memento {
 class SecretStorageChangeEvent {
   external factory SecretStorageChangeEvent._({_i2.dynamic key});
 
-  factory SecretStorageChangeEvent({required _i2.String key}) =>
+  factory SecretStorageChangeEvent({_i2.String? key}) =>
       SecretStorageChangeEvent._(key: key);
 }
 
@@ -14322,7 +15819,31 @@ extension SecretStorageChangeEvent$Typings on SecretStorageChangeEvent {
 /// sensitive.
 @_i1.JS()
 @_i1.staticInterop
-class SecretStorage {}
+@_i1.anonymous
+class SecretStorage {
+  external factory SecretStorage._({
+    _i2.dynamic onDidChange,
+    _i2.dynamic get,
+    _i2.dynamic store,
+    _i2.dynamic delete,
+  });
+
+  factory SecretStorage({
+    _i3.Event<_i3.SecretStorageChangeEvent>? onDidChange,
+    _i2.Future<_i2.dynamic> Function(_i2.String)? get,
+    _i2.Future<_i2.dynamic> Function(
+      _i2.String,
+      _i2.String,
+    )? store,
+    _i2.Future<_i2.dynamic> Function(_i2.String)? delete,
+  }) =>
+      SecretStorage._(
+        onDidChange: onDidChange ?? _i6.undefined,
+        get: get == null ? null : _i5.allowInterop(get),
+        store: store == null ? null : _i5.allowInterop(store),
+        delete: delete == null ? null : _i5.allowInterop(delete),
+      );
+}
 
 extension SecretStorage$Typings on SecretStorage {
   /// Fires when a secret is stored or deleted.
@@ -14338,41 +15859,49 @@ extension SecretStorage$Typings on SecretStorage {
     );
   }
 
-  /// Retrieve a secret that was stored with key. Returns undefined if there
-  ///  is no password matching that key.
-  ///  @param key The key the secret was stored under.
-  ///  @returns The stored value or `undefined`.
-  _i2.Future<_i6.Thenable<_i2.String?>> get(_i2.String key) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  set get(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'get',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.dynamic> Function(_i2.String) get get => _i5.getProperty(
         this,
         'get',
-        [key],
-      ));
+      );
+  set store(
+      _i2.Future<_i2.dynamic> Function(
+        _i2.String,
+        _i2.String,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'store',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Store a secret under a given key.
-  ///  @param key The key to store the secret under.
-  ///  @param value The secret.
-  _i2.Future<_i6.Thenable<void>> store(
-    _i2.String key,
-    _i2.String value,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i2.String,
+    _i2.String,
+  ) get store => _i5.getProperty(
         this,
         'store',
-        [
-          key,
-          value,
-        ],
-      ));
+      );
+  set delete(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'delete',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Remove a secret from storage.
-  ///  @param key The key the secret was stored under.
-  _i2.Future<_i6.Thenable<void>> delete(_i2.String key) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(_i2.String) get delete => _i5.getProperty(
         this,
         'delete',
-        [key],
-      ));
+      );
 }
 
 /// Represents a color theme.
@@ -14382,8 +15911,8 @@ extension SecretStorage$Typings on SecretStorage {
 class ColorTheme {
   external factory ColorTheme._({_i2.dynamic kind});
 
-  factory ColorTheme({required _i3.ColorThemeKind kind}) =>
-      ColorTheme._(kind: kind.name);
+  factory ColorTheme({_i3.ColorThemeKind? kind}) =>
+      ColorTheme._(kind: kind?.name);
 }
 
 extension ColorTheme$Typings on ColorTheme {
@@ -14420,13 +15949,13 @@ class TaskPresentationOptions {
     _i2.bool? close,
   }) =>
       TaskPresentationOptions._(
-        reveal: reveal?.name ?? _i4.undefined,
-        echo: echo ?? _i4.undefined,
-        focus: focus ?? _i4.undefined,
-        panel: panel?.name ?? _i4.undefined,
-        showReuseMessage: showReuseMessage ?? _i4.undefined,
-        clear: clear ?? _i4.undefined,
-        close: close ?? _i4.undefined,
+        reveal: reveal?.name,
+        echo: echo,
+        focus: focus,
+        panel: panel?.name,
+        showReuseMessage: showReuseMessage,
+        clear: clear,
+        close: close,
       );
 }
 
@@ -14444,7 +15973,7 @@ extension TaskPresentationOptions$Typings on TaskPresentationOptions {
     _i5.setProperty(
       this,
       'reveal',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -14458,7 +15987,7 @@ extension TaskPresentationOptions$Typings on TaskPresentationOptions {
     _i5.setProperty(
       this,
       'echo',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14471,7 +16000,7 @@ extension TaskPresentationOptions$Typings on TaskPresentationOptions {
     _i5.setProperty(
       this,
       'focus',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14489,7 +16018,7 @@ extension TaskPresentationOptions$Typings on TaskPresentationOptions {
     _i5.setProperty(
       this,
       'panel',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -14502,7 +16031,7 @@ extension TaskPresentationOptions$Typings on TaskPresentationOptions {
     _i5.setProperty(
       this,
       'showReuseMessage',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14515,7 +16044,7 @@ extension TaskPresentationOptions$Typings on TaskPresentationOptions {
     _i5.setProperty(
       this,
       'clear',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14528,7 +16057,7 @@ extension TaskPresentationOptions$Typings on TaskPresentationOptions {
     _i5.setProperty(
       this,
       'close',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -14627,7 +16156,12 @@ extension TaskGroup$Typings on TaskGroup {
 /// The value must be JSON-stringifyable.
 @_i1.JS()
 @_i1.staticInterop
-class TaskDefinition {}
+@_i1.anonymous
+class TaskDefinition {
+  external factory TaskDefinition._({_i2.dynamic type});
+
+  factory TaskDefinition({_i2.String? type}) => TaskDefinition._(type: type);
+}
 
 extension TaskDefinition$Typings on TaskDefinition {
   /// The task definition describing the task provided by an extension.
@@ -14678,8 +16212,8 @@ class ProcessExecutionOptions {
     _i2.Object? env,
   }) =>
       ProcessExecutionOptions._(
-        cwd: cwd ?? _i4.undefined,
-        env: env ?? _i4.undefined,
+        cwd: cwd,
+        env: env ?? _i6.undefined,
       );
 }
 
@@ -14694,7 +16228,7 @@ extension ProcessExecutionOptions$Typings on ProcessExecutionOptions {
     _i5.setProperty(
       this,
       'cwd',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14709,7 +16243,7 @@ extension ProcessExecutionOptions$Typings on ProcessExecutionOptions {
     _i5.setProperty(
       this,
       'env',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -14732,7 +16266,7 @@ class ProcessExecution {
         _declaredProcessExecution,
         [
           process,
-          options ?? _i4.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -14746,7 +16280,7 @@ class ProcessExecution {
         [
           process,
           args,
-          options ?? _i4.undefined,
+          options ?? _i6.undefined,
         ],
       );
 }
@@ -14849,9 +16383,9 @@ class ShellQuotingOptions {
     _i2.String? weak,
   }) =>
       ShellQuotingOptions._(
-        escape: escape ?? _i4.undefined,
-        strong: strong ?? _i4.undefined,
-        weak: weak ?? _i4.undefined,
+        escape: escape ?? _i6.undefined,
+        strong: strong,
+        weak: weak,
       );
 }
 
@@ -14867,7 +16401,7 @@ extension ShellQuotingOptions$Typings on ShellQuotingOptions {
     _i5.setProperty(
       this,
       'escape',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14880,7 +16414,7 @@ extension ShellQuotingOptions$Typings on ShellQuotingOptions {
     _i5.setProperty(
       this,
       'strong',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14893,7 +16427,7 @@ extension ShellQuotingOptions$Typings on ShellQuotingOptions {
     _i5.setProperty(
       this,
       'weak',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -14919,11 +16453,11 @@ class ShellExecutionOptions {
     _i2.Object? env,
   }) =>
       ShellExecutionOptions._(
-        executable: executable ?? _i4.undefined,
-        shellArgs: shellArgs ?? _i4.undefined,
-        shellQuoting: shellQuoting ?? _i4.undefined,
-        cwd: cwd ?? _i4.undefined,
-        env: env ?? _i4.undefined,
+        executable: executable,
+        shellArgs: shellArgs,
+        shellQuoting: shellQuoting ?? _i6.undefined,
+        cwd: cwd,
+        env: env ?? _i6.undefined,
       );
 }
 
@@ -14937,7 +16471,7 @@ extension ShellExecutionOptions$Typings on ShellExecutionOptions {
     _i5.setProperty(
       this,
       'executable',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14954,7 +16488,7 @@ extension ShellExecutionOptions$Typings on ShellExecutionOptions {
     _i5.setProperty(
       this,
       'shellArgs',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14967,7 +16501,7 @@ extension ShellExecutionOptions$Typings on ShellExecutionOptions {
     _i5.setProperty(
       this,
       'shellQuoting',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14981,7 +16515,7 @@ extension ShellExecutionOptions$Typings on ShellExecutionOptions {
     _i5.setProperty(
       this,
       'cwd',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14996,7 +16530,7 @@ extension ShellExecutionOptions$Typings on ShellExecutionOptions {
     _i5.setProperty(
       this,
       'env',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -15012,12 +16546,12 @@ class ShellQuotedString {
   });
 
   factory ShellQuotedString({
-    required _i2.String value,
-    required _i3.ShellQuoting quoting,
+    _i2.String? value,
+    _i3.ShellQuoting? quoting,
   }) =>
       ShellQuotedString._(
         value: value,
-        quoting: quoting.name,
+        quoting: quoting?.name,
       );
 }
 
@@ -15067,7 +16601,7 @@ class ShellExecution {
         _declaredShellExecution,
         [
           commandLine,
-          options ?? _i4.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -15081,7 +16615,7 @@ class ShellExecution {
         [
           command,
           args,
-          options ?? _i4.undefined,
+          options ?? _i6.undefined,
         ],
       );
 }
@@ -15101,7 +16635,7 @@ extension ShellExecution$Typings on ShellExecution {
     _i5.setProperty(
       this,
       'commandLine',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -15152,8 +16686,7 @@ extension ShellExecution$Typings on ShellExecution {
 @_i1.staticInterop
 class CustomExecution {
   factory CustomExecution(
-          _i6.Thenable<_i3.Pseudoterminal> Function(_i3.TaskDefinition)
-              callback) =>
+          _i2.Future<_i2.dynamic> Function(_i3.TaskDefinition) callback) =>
       _i5.callConstructor(
         _declaredCustomExecution,
         [_i5.allowInterop(callback)],
@@ -15173,7 +16706,7 @@ class RunOptions {
   external factory RunOptions._({_i2.dynamic reevaluateOnRerun});
 
   factory RunOptions({_i2.bool? reevaluateOnRerun}) =>
-      RunOptions._(reevaluateOnRerun: reevaluateOnRerun ?? _i4.undefined);
+      RunOptions._(reevaluateOnRerun: reevaluateOnRerun);
 }
 
 extension RunOptions$Typings on RunOptions {
@@ -15186,7 +16719,7 @@ extension RunOptions$Typings on RunOptions {
     _i5.setProperty(
       this,
       'reevaluateOnRerun',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -15213,8 +16746,8 @@ class Task {
           taskDefinition,
           name,
           source,
-          execution ?? _i4.undefined,
-          problemMatchers ?? _i4.undefined,
+          execution ?? _i6.undefined,
+          problemMatchers ?? _i6.undefined,
         ],
       );
 
@@ -15233,8 +16766,8 @@ class Task {
           scope,
           name,
           source,
-          execution ?? _i4.undefined,
-          problemMatchers ?? _i4.undefined,
+          execution ?? _i6.undefined,
+          problemMatchers ?? _i6.undefined,
         ],
       );
 }
@@ -15394,45 +16927,61 @@ extension Task$Typings on Task {
 /// A task provider is registered via {@link tasks.registerTaskProvider}.
 @_i1.JS()
 @_i1.staticInterop
-class TaskProvider<T extends _i3.Task> {}
+@_i1.anonymous
+class TaskProvider<T extends _i3.Task> {
+  external factory TaskProvider._({
+    _i2.dynamic provideTasks,
+    _i2.dynamic resolveTask,
+  });
+
+  factory TaskProvider({
+    _i3.ProviderResult<_i2.List<_i3.Task>> Function(_i3.CancellationToken)?
+        provideTasks,
+    _i3.ProviderResult<_i3.Task> Function(
+      _i3.Task,
+      _i3.CancellationToken,
+    )? resolveTask,
+  }) =>
+      TaskProvider._(
+        provideTasks:
+            provideTasks == null ? null : _i5.allowInterop(provideTasks),
+        resolveTask: resolveTask == null ? null : _i5.allowInterop(resolveTask),
+      );
+}
 
 extension TaskProvider$Typings<T extends _i3.Task> on TaskProvider<T> {
-  /// Provides tasks.
-  ///  @param token A cancellation token.
-  ///  @returns an array of tasks
-  _i3.ProviderResult<_i2.List<T>> provideTasks(_i3.CancellationToken token) =>
-      _i5.callMethod(
-        this,
-        'provideTasks',
-        [token],
-      );
+  set provideTasks(
+      _i3.ProviderResult<_i2.List<T>> Function(_i3.CancellationToken) value) {
+    _i5.setProperty(
+      this,
+      'provideTasks',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Resolves a task that has no {@linkcode Task.execution execution} set. Tasks are
-  ///  often created from information found in the `tasks.json`-file. Such tasks miss
-  ///  the information on how to execute them and a task provider must fill in
-  ///  the missing information in the `resolveTask`-method. This method will not be
-  ///  called for tasks returned from the above `provideTasks` method since those
-  ///  tasks are always fully resolved. A valid default implementation for the
-  ///  `resolveTask` method is to return `undefined`.
-  ///
-  ///  Note that when filling in the properties of `task`, you _must_ be sure to
-  ///  use the exact same `TaskDefinition` and not create a new one. Other properties
-  ///  may be changed.
-  ///
-  ///  @param task The task to resolve.
-  ///  @param token A cancellation token.
-  ///  @returns The resolved task
-  _i3.ProviderResult<T> resolveTask(
-    T task,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<_i2.List<T>> Function(_i3.CancellationToken)
+      get provideTasks => _i5.getProperty(
+            this,
+            'provideTasks',
+          );
+  set resolveTask(
+      _i3.ProviderResult<T> Function(
+        T,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveTask',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<T> Function(
+    T,
+    _i3.CancellationToken,
+  ) get resolveTask => _i5.getProperty(
         this,
         'resolveTask',
-        [
-          task,
-          token,
-        ],
       );
 }
 
@@ -15442,7 +16991,22 @@ extension TaskProvider$Typings<T extends _i3.Task> on TaskProvider<T> {
 /// This interface is not intended to be implemented.
 @_i1.JS()
 @_i1.staticInterop
-class TaskExecution {}
+@_i1.anonymous
+class TaskExecution {
+  external factory TaskExecution._({
+    _i2.dynamic task,
+    _i2.dynamic terminate,
+  });
+
+  factory TaskExecution({
+    _i3.Task? task,
+    void Function()? terminate,
+  }) =>
+      TaskExecution._(
+        task: task ?? _i6.undefined,
+        terminate: terminate == null ? null : _i5.allowInterop(terminate),
+      );
+}
 
 extension TaskExecution$Typings on TaskExecution {
   /// The task that got started.
@@ -15458,14 +17022,18 @@ extension TaskExecution$Typings on TaskExecution {
     );
   }
 
-  /// Terminates the task execution.
-  void terminate() {
-    _i5.callMethod(
+  set terminate(void Function() value) {
+    _i5.setProperty(
       this,
       'terminate',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get terminate => _i5.getProperty(
+        this,
+        'terminate',
+      );
 }
 
 /// An event signaling the start of a task execution.
@@ -15477,8 +17045,8 @@ extension TaskExecution$Typings on TaskExecution {
 class TaskStartEvent {
   external factory TaskStartEvent._({_i2.dynamic execution});
 
-  factory TaskStartEvent({required _i3.TaskExecution execution}) =>
-      TaskStartEvent._(execution: execution);
+  factory TaskStartEvent({_i3.TaskExecution? execution}) =>
+      TaskStartEvent._(execution: execution ?? _i6.undefined);
 }
 
 extension TaskStartEvent$Typings on TaskStartEvent {
@@ -15498,8 +17066,8 @@ extension TaskStartEvent$Typings on TaskStartEvent {
 class TaskEndEvent {
   external factory TaskEndEvent._({_i2.dynamic execution});
 
-  factory TaskEndEvent({required _i3.TaskExecution execution}) =>
-      TaskEndEvent._(execution: execution);
+  factory TaskEndEvent({_i3.TaskExecution? execution}) =>
+      TaskEndEvent._(execution: execution ?? _i6.undefined);
 }
 
 extension TaskEndEvent$Typings on TaskEndEvent {
@@ -15522,11 +17090,11 @@ class TaskProcessStartEvent {
   });
 
   factory TaskProcessStartEvent({
-    required _i3.TaskExecution execution,
-    required _i2.num processId,
+    _i3.TaskExecution? execution,
+    _i2.num? processId,
   }) =>
       TaskProcessStartEvent._(
-        execution: execution,
+        execution: execution ?? _i6.undefined,
         processId: processId,
       );
 }
@@ -15557,12 +17125,12 @@ class TaskProcessEndEvent {
   });
 
   factory TaskProcessEndEvent({
-    required _i3.TaskExecution execution,
+    _i3.TaskExecution? execution,
     _i2.num? exitCode,
   }) =>
       TaskProcessEndEvent._(
-        execution: execution,
-        exitCode: exitCode ?? _i4.undefined,
+        execution: execution ?? _i6.undefined,
+        exitCode: exitCode ?? _i6.undefined,
       );
 }
 
@@ -15595,8 +17163,8 @@ class TaskFilter {
     _i2.String? type,
   }) =>
       TaskFilter._(
-        version: version ?? _i4.undefined,
-        type: type ?? _i4.undefined,
+        version: version,
+        type: type,
       );
 }
 
@@ -15611,7 +17179,7 @@ extension TaskFilter$Typings on TaskFilter {
     _i5.setProperty(
       this,
       'version',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -15624,7 +17192,7 @@ extension TaskFilter$Typings on TaskFilter {
     _i5.setProperty(
       this,
       'type',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -15643,18 +17211,18 @@ class FileStat {
   });
 
   factory FileStat({
-    required _i3.FileType type,
-    required _i2.num ctime,
-    required _i2.num mtime,
-    required _i2.num size,
+    _i3.FileType? type,
+    _i2.num? ctime,
+    _i2.num? mtime,
+    _i2.num? size,
     _i3.FilePermission? permissions,
   }) =>
       FileStat._(
-        type: type.name,
+        type: type?.name,
         ctime: ctime,
         mtime: mtime,
         size: size,
-        permissions: permissions?.name ?? _i4.undefined,
+        permissions: permissions?.name,
       );
 }
 
@@ -15736,7 +17304,7 @@ extension FileStat$Typings on FileStat {
     _i5.setProperty(
       this,
       'permissions',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 }
@@ -15750,7 +17318,7 @@ extension FileStat$Typings on FileStat {
 class FileSystemError implements _i7.Error {
   factory FileSystemError([_i2.Object? messageOrUri]) => _i5.callConstructor(
         _declaredFileSystemError,
-        [messageOrUri ?? _i4.undefined],
+        [messageOrUri ?? _i6.undefined],
       );
 
   /// Create an error to signal that a file or folder wasn't found.
@@ -15758,7 +17326,7 @@ class FileSystemError implements _i7.Error {
       _i5.callMethod(
         _declaredFileSystemError,
         'FileNotFound',
-        [messageOrUri ?? _i4.undefined],
+        [messageOrUri ?? _i6.undefined],
       );
 
   /// Create an error to signal that a file or folder already exists, e.g. when
@@ -15767,7 +17335,7 @@ class FileSystemError implements _i7.Error {
       _i5.callMethod(
         _declaredFileSystemError,
         'FileExists',
-        [messageOrUri ?? _i4.undefined],
+        [messageOrUri ?? _i6.undefined],
       );
 
   /// Create an error to signal that a file is not a folder.
@@ -15775,7 +17343,7 @@ class FileSystemError implements _i7.Error {
       _i5.callMethod(
         _declaredFileSystemError,
         'FileNotADirectory',
-        [messageOrUri ?? _i4.undefined],
+        [messageOrUri ?? _i6.undefined],
       );
 
   /// Create an error to signal that a file is a folder.
@@ -15783,7 +17351,7 @@ class FileSystemError implements _i7.Error {
       _i5.callMethod(
         _declaredFileSystemError,
         'FileIsADirectory',
-        [messageOrUri ?? _i4.undefined],
+        [messageOrUri ?? _i6.undefined],
       );
 
   /// Create an error to signal that an operation lacks required permissions.
@@ -15791,7 +17359,7 @@ class FileSystemError implements _i7.Error {
       _i5.callMethod(
         _declaredFileSystemError,
         'NoPermissions',
-        [messageOrUri ?? _i4.undefined],
+        [messageOrUri ?? _i6.undefined],
       );
 
   /// Create an error to signal that the file system is unavailable or too busy to
@@ -15800,7 +17368,7 @@ class FileSystemError implements _i7.Error {
       _i5.callMethod(
         _declaredFileSystemError,
         'Unavailable',
-        [messageOrUri ?? _i4.undefined],
+        [messageOrUri ?? _i6.undefined],
       );
 }
 
@@ -15831,12 +17399,12 @@ class FileChangeEvent {
   });
 
   factory FileChangeEvent({
-    required _i3.FileChangeType type,
-    required _i3.Uri uri,
+    _i3.FileChangeType? type,
+    _i3.Uri? uri,
   }) =>
       FileChangeEvent._(
-        type: type.name,
-        uri: uri,
+        type: type?.name,
+        uri: uri ?? _i6.undefined,
       );
 }
 
@@ -15945,7 +17513,73 @@ extension IInline41$Typings on IInline41 {
 /// folders, symbolic links, and regular files.
 @_i1.JS()
 @_i1.staticInterop
-class FileSystemProvider {}
+@_i1.anonymous
+class FileSystemProvider {
+  external factory FileSystemProvider._({
+    _i2.dynamic onDidChangeFile,
+    _i2.dynamic watch,
+    _i2.dynamic stat,
+    _i2.dynamic readDirectory,
+    _i2.dynamic createDirectory,
+    _i2.dynamic readFile,
+    _i2.dynamic writeFile,
+    _i2.dynamic delete,
+    _i2.dynamic rename,
+    _i2.dynamic copy,
+  });
+
+  factory FileSystemProvider({
+    _i3.Event<_i2.List<_i3.FileChangeEvent>>? onDidChangeFile,
+    _i3.Disposable Function(
+      _i3.Uri,
+      _i2.dynamic,
+    )? watch,
+    _i2.Object Function(_i3.Uri)? stat,
+    _i4.FutureOr<
+                _i2.List<
+                    (
+                      _i2.String,
+                      _i3.FileType,
+                    )>>
+            Function(_i3.Uri)?
+        readDirectory,
+    _i4.FutureOr<void> Function(_i3.Uri)? createDirectory,
+    _i4.FutureOr<_i8.Uint8List> Function(_i3.Uri)? readFile,
+    _i4.FutureOr<void> Function(
+      _i3.Uri,
+      _i8.Uint8List,
+      _i2.dynamic,
+    )? writeFile,
+    _i4.FutureOr<void> Function(
+      _i3.Uri,
+      _i2.dynamic,
+    )? delete,
+    _i4.FutureOr<void> Function(
+      _i3.Uri,
+      _i3.Uri,
+      _i2.dynamic,
+    )? rename,
+    _i4.FutureOr<void> Function(
+      _i3.Uri,
+      _i3.Uri,
+      _i2.dynamic,
+    )? copy,
+  }) =>
+      FileSystemProvider._(
+        onDidChangeFile: onDidChangeFile ?? _i6.undefined,
+        watch: watch == null ? null : _i5.allowInterop(watch),
+        stat: stat == null ? null : _i5.allowInterop(stat),
+        readDirectory:
+            readDirectory == null ? null : _i5.allowInterop(readDirectory),
+        createDirectory:
+            createDirectory == null ? null : _i5.allowInterop(createDirectory),
+        readFile: readFile == null ? null : _i5.allowInterop(readFile),
+        writeFile: writeFile == null ? null : _i5.allowInterop(writeFile),
+        delete: delete == null ? null : _i5.allowInterop(delete),
+        rename: rename == null ? null : _i5.allowInterop(rename),
+        copy: copy == null ? null : _i5.allowInterop(copy),
+      );
+}
 
 extension FileSystemProvider$Typings on FileSystemProvider {
   /// An event to signal that a resource has been created, changed, or deleted. This
@@ -15961,178 +17595,168 @@ extension FileSystemProvider$Typings on FileSystemProvider {
         this,
         'onDidChangeFile',
       );
+  set watch(
+      _i3.Disposable Function(
+        _i3.Uri,
+        _i2.dynamic,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'watch',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Subscribes to file change events in the file or folder denoted by `uri`. For folders,
-  ///  the option `recursive` indicates whether subfolders, sub-subfolders, etc. should
-  ///  be watched for file changes as well. With `recursive: false`, only changes to the
-  ///  files that are direct children of the folder should trigger an event.
-  ///
-  ///  The `excludes` array is used to indicate paths that should be excluded from file
-  ///  watching. It is typically derived from the `files.watcherExclude` setting that
-  ///  is configurable by the user. Each entry can be be:
-  ///  - the absolute path to exclude
-  ///  - a relative path to exclude (for example `build/output`)
-  ///  - a simple glob pattern (for example `**​/build`, `output/**`)
-  ///
-  ///  It is the file system provider's job to call {@linkcode FileSystemProvider.onDidChangeFile onDidChangeFile}
-  ///  for every change given these rules. No event should be emitted for files that match any of the provided
-  ///  excludes.
-  ///
-  ///  @param uri The uri of the file or folder to be watched.
-  ///  @param options Configures the watch.
-  ///  @returns A disposable that tells the provider to stop watching the `uri`.
-  _i3.Disposable watch(
-    _i3.Uri uri,
-    _i3.IInline37 options,
-  ) =>
-      _i5.callMethod(
+  _i3.Disposable Function(
+    _i3.Uri,
+    _i2.dynamic,
+  ) get watch => _i5.getProperty(
         this,
         'watch',
-        [
-          uri,
-          options,
-        ],
       );
+  set stat(_i2.Object Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'stat',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Retrieve metadata about a file.
-  ///
-  ///  Note that the metadata for symbolic links should be the metadata of the file they refer to.
-  ///  Still, the {@link FileType.SymbolicLink SymbolicLink}-type must be used in addition to the actual type, e.g.
-  ///  `FileType.SymbolicLink | FileType.Directory`.
-  ///
-  ///  @param uri The uri of the file to retrieve metadata about.
-  ///  @returns The file metadata about the file.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when `uri` doesn't exist.
-  _i2.Object stat(_i3.Uri uri) => _i5.callMethod(
+  _i2.Object Function(_i3.Uri) get stat => _i5.getProperty(
         this,
         'stat',
-        [uri],
       );
+  set readDirectory(
+      _i4.FutureOr<
+                  _i2.List<
+                      (
+                        _i2.String,
+                        _i3.FileType,
+                      )>>
+              Function(_i3.Uri)
+          value) {
+    _i5.setProperty(
+      this,
+      'readDirectory',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Retrieve all entries of a {@link FileType.Directory directory}.
-  ///
-  ///  @param uri The uri of the folder.
-  ///  @returns An array of name/type-tuples or a thenable that resolves to such.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when `uri` doesn't exist.
-  _i2.Object readDirectory(_i3.Uri uri) => _i5.callMethod(
+  _i4.FutureOr<
+          _i2.List<
+              (
+                _i2.String,
+                _i3.FileType,
+              )>>
+      Function(_i3.Uri) get readDirectory => _i5.getProperty(
         this,
         'readDirectory',
-        [uri],
       );
+  set createDirectory(_i4.FutureOr<void> Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'createDirectory',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Create a new directory (Note, that new files are created via `write`-calls).
-  ///
-  ///  @param uri The uri of the new folder.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when the parent of `uri` doesn't exist, e.g. no mkdirp-logic required.
-  ///  @throws {@linkcode FileSystemError.FileExists FileExists} when `uri` already exists.
-  ///  @throws {@linkcode FileSystemError.NoPermissions NoPermissions} when permissions aren't sufficient.
-  _i2.Object createDirectory(_i3.Uri uri) => _i5.callMethod(
+  _i4.FutureOr<void> Function(_i3.Uri) get createDirectory => _i5.getProperty(
         this,
         'createDirectory',
-        [uri],
       );
+  set readFile(_i4.FutureOr<_i8.Uint8List> Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'readFile',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Read the entire contents of a file.
-  ///
-  ///  @param uri The uri of the file.
-  ///  @returns An array of bytes or a thenable that resolves to such.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when `uri` doesn't exist.
-  _i2.Object readFile(_i3.Uri uri) => _i5.callMethod(
+  _i4.FutureOr<_i8.Uint8List> Function(_i3.Uri) get readFile => _i5.getProperty(
         this,
         'readFile',
-        [uri],
       );
+  set writeFile(
+      _i4.FutureOr<void> Function(
+        _i3.Uri,
+        _i8.Uint8List,
+        _i2.dynamic,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'writeFile',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Write data to a file, replacing its entire contents.
-  ///
-  ///  @param uri The uri of the file.
-  ///  @param content The new content of the file.
-  ///  @param options Defines if missing files should or must be created.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when `uri` doesn't exist and `create` is not set.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when the parent of `uri` doesn't exist and `create` is set, e.g. no mkdirp-logic required.
-  ///  @throws {@linkcode FileSystemError.FileExists FileExists} when `uri` already exists, `create` is set but `overwrite` is not set.
-  ///  @throws {@linkcode FileSystemError.NoPermissions NoPermissions} when permissions aren't sufficient.
-  _i2.Object writeFile(
-    _i3.Uri uri,
-    _i8.Uint8List content,
-    _i3.IInline38 options,
-  ) =>
-      _i5.callMethod(
+  _i4.FutureOr<void> Function(
+    _i3.Uri,
+    _i8.Uint8List,
+    _i2.dynamic,
+  ) get writeFile => _i5.getProperty(
         this,
         'writeFile',
-        [
-          uri,
-          content,
-          options,
-        ],
       );
+  set delete(
+      _i4.FutureOr<void> Function(
+        _i3.Uri,
+        _i2.dynamic,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'delete',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Delete a file.
-  ///
-  ///  @param uri The resource that is to be deleted.
-  ///  @param options Defines if deletion of folders is recursive.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when `uri` doesn't exist.
-  ///  @throws {@linkcode FileSystemError.NoPermissions NoPermissions} when permissions aren't sufficient.
-  _i2.Object delete(
-    _i3.Uri uri,
-    _i3.IInline39 options,
-  ) =>
-      _i5.callMethod(
+  _i4.FutureOr<void> Function(
+    _i3.Uri,
+    _i2.dynamic,
+  ) get delete => _i5.getProperty(
         this,
         'delete',
-        [
-          uri,
-          options,
-        ],
       );
+  set rename(
+      _i4.FutureOr<void> Function(
+        _i3.Uri,
+        _i3.Uri,
+        _i2.dynamic,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'rename',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Rename a file or folder.
-  ///
-  ///  @param oldUri The existing file.
-  ///  @param newUri The new location.
-  ///  @param options Defines if existing files should be overwritten.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when `oldUri` doesn't exist.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when parent of `newUri` doesn't exist, e.g. no mkdirp-logic required.
-  ///  @throws {@linkcode FileSystemError.FileExists FileExists} when `newUri` exists and when the `overwrite` option is not `true`.
-  ///  @throws {@linkcode FileSystemError.NoPermissions NoPermissions} when permissions aren't sufficient.
-  _i2.Object rename(
-    _i3.Uri oldUri,
-    _i3.Uri newUri,
-    _i3.IInline40 options,
-  ) =>
-      _i5.callMethod(
+  _i4.FutureOr<void> Function(
+    _i3.Uri,
+    _i3.Uri,
+    _i2.dynamic,
+  ) get rename => _i5.getProperty(
         this,
         'rename',
-        [
-          oldUri,
-          newUri,
-          options,
-        ],
       );
+  set copy(
+      _i4.FutureOr<void> Function(
+        _i3.Uri,
+        _i3.Uri,
+        _i2.dynamic,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'copy',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Copy files or folders. Implementing this function is optional but it will speedup
-  ///  the copy operation.
-  ///
-  ///  @param source The existing file.
-  ///  @param destination The destination location.
-  ///  @param options Defines if existing files should be overwritten.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when `source` doesn't exist.
-  ///  @throws {@linkcode FileSystemError.FileNotFound FileNotFound} when parent of `destination` doesn't exist, e.g. no mkdirp-logic required.
-  ///  @throws {@linkcode FileSystemError.FileExists FileExists} when `destination` exists and when the `overwrite` option is not `true`.
-  ///  @throws {@linkcode FileSystemError.NoPermissions NoPermissions} when permissions aren't sufficient.
-  _i2.Object copy(
-    _i3.Uri source,
-    _i3.Uri destination,
-    _i3.IInline41 options,
-  ) =>
-      _i5.callMethod(
+  _i4.FutureOr<void> Function(
+    _i3.Uri,
+    _i3.Uri,
+    _i2.dynamic,
+  ) get copy => _i5.getProperty(
         this,
         'copy',
-        [
-          source,
-          destination,
-          options,
-        ],
       );
 }
 
@@ -16151,7 +17775,7 @@ extension IInline42$Typings on IInline42 {
     _i5.setProperty(
       this,
       'recursive',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -16164,7 +17788,7 @@ extension IInline42$Typings on IInline42 {
     _i5.setProperty(
       this,
       'useTrash',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -16184,7 +17808,7 @@ extension IInline43$Typings on IInline43 {
     _i5.setProperty(
       this,
       'overwrite',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -16204,7 +17828,7 @@ extension IInline44$Typings on IInline44 {
     _i5.setProperty(
       this,
       'overwrite',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -16217,150 +17841,204 @@ extension IInline44$Typings on IInline44 {
 /// *Note* that an instance of this interface is available as {@linkcode workspace.fs}.
 @_i1.JS()
 @_i1.staticInterop
-class FileSystem {}
+@_i1.anonymous
+class FileSystem {
+  external factory FileSystem._({
+    _i2.dynamic stat,
+    _i2.dynamic readDirectory,
+    _i2.dynamic createDirectory,
+    _i2.dynamic readFile,
+    _i2.dynamic writeFile,
+    _i2.dynamic delete,
+    _i2.dynamic rename,
+    _i2.dynamic copy,
+    _i2.dynamic isWritableFileSystem,
+  });
+
+  factory FileSystem({
+    _i2.Future<_i2.dynamic> Function(_i3.Uri)? stat,
+    _i2.Future<_i2.dynamic> Function(_i3.Uri)? readDirectory,
+    _i2.Future<_i2.dynamic> Function(_i3.Uri)? createDirectory,
+    _i2.Future<_i2.dynamic> Function(_i3.Uri)? readFile,
+    _i2.Future<_i2.dynamic> Function(
+      _i3.Uri,
+      _i8.Uint8List,
+    )? writeFile,
+    _i2.Future<_i2.dynamic> Function(
+      _i3.Uri, [
+      _i2.dynamic,
+    ])? delete,
+    _i2.Future<_i2.dynamic> Function(
+      _i3.Uri,
+      _i3.Uri, [
+      _i2.dynamic,
+    ])? rename,
+    _i2.Future<_i2.dynamic> Function(
+      _i3.Uri,
+      _i3.Uri, [
+      _i2.dynamic,
+    ])? copy,
+    _i2.bool? Function(_i2.String)? isWritableFileSystem,
+  }) =>
+      FileSystem._(
+        stat: stat == null ? null : _i5.allowInterop(stat),
+        readDirectory:
+            readDirectory == null ? null : _i5.allowInterop(readDirectory),
+        createDirectory:
+            createDirectory == null ? null : _i5.allowInterop(createDirectory),
+        readFile: readFile == null ? null : _i5.allowInterop(readFile),
+        writeFile: writeFile == null ? null : _i5.allowInterop(writeFile),
+        delete: delete == null ? null : _i5.allowInterop(delete),
+        rename: rename == null ? null : _i5.allowInterop(rename),
+        copy: copy == null ? null : _i5.allowInterop(copy),
+        isWritableFileSystem: isWritableFileSystem == null
+            ? null
+            : _i5.allowInterop(isWritableFileSystem),
+      );
+}
 
 extension FileSystem$Typings on FileSystem {
-  /// Retrieve metadata about a file.
-  ///
-  ///  @param uri The uri of the file to retrieve metadata about.
-  ///  @returns The file metadata about the file.
-  _i2.Future<_i6.Thenable<_i3.FileStat>> stat(_i3.Uri uri) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  set stat(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'stat',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.dynamic> Function(_i3.Uri) get stat => _i5.getProperty(
         this,
         'stat',
-        [uri],
-      ));
+      );
+  set readDirectory(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'readDirectory',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Retrieve all entries of a {@link FileType.Directory directory}.
-  ///
-  ///  @param uri The uri of the folder.
-  ///  @returns An array of name/type-tuples or a thenable that resolves to such.
-  _i2.Future<
-      _i6.Thenable<
-          _i2.List<
-              (
-                _i2.String,
-                _i3.FileType,
-              )>>> readDirectory(_i3.Uri uri) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(_i3.Uri) get readDirectory =>
+      _i5.getProperty(
         this,
         'readDirectory',
-        [uri],
-      ));
+      );
+  set createDirectory(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'createDirectory',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Create a new directory (Note, that new files are created via `write`-calls).
-  ///
-  ///  *Note* that missing directories are created automatically, e.g this call has
-  ///  `mkdirp` semantics.
-  ///
-  ///  @param uri The uri of the new folder.
-  _i2.Future<_i6.Thenable<void>> createDirectory(_i3.Uri uri) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(_i3.Uri) get createDirectory =>
+      _i5.getProperty(
         this,
         'createDirectory',
-        [uri],
-      ));
+      );
+  set readFile(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'readFile',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Read the entire contents of a file.
-  ///
-  ///  @param uri The uri of the file.
-  ///  @returns An array of bytes or a thenable that resolves to such.
-  _i2.Future<_i6.Thenable<_i8.Uint8List>> readFile(_i3.Uri uri) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(_i3.Uri) get readFile => _i5.getProperty(
         this,
         'readFile',
-        [uri],
-      ));
+      );
+  set writeFile(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.Uri,
+        _i8.Uint8List,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'writeFile',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Write data to a file, replacing its entire contents.
-  ///
-  ///  @param uri The uri of the file.
-  ///  @param content The new content of the file.
-  _i2.Future<_i6.Thenable<void>> writeFile(
-    _i3.Uri uri,
-    _i8.Uint8List content,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i3.Uri,
+    _i8.Uint8List,
+  ) get writeFile => _i5.getProperty(
         this,
         'writeFile',
-        [
-          uri,
-          content,
-        ],
-      ));
+      );
+  set delete(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.Uri, [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'delete',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Delete a file.
-  ///
-  ///  @param uri The resource that is to be deleted.
-  ///  @param options Defines if trash can should be used and if deletion of folders is recursive
-  _i2.Future<_i6.Thenable<void>> delete(
-    _i3.Uri uri, [
-    _i3.IInline42? options,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i3.Uri, [
+    _i2.dynamic,
+  ]) get delete => _i5.getProperty(
         this,
         'delete',
-        [
-          uri,
-          options ?? _i4.undefined,
-        ],
-      ));
+      );
+  set rename(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.Uri,
+        _i3.Uri, [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'rename',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Rename a file or folder.
-  ///
-  ///  @param source The existing file.
-  ///  @param target The new location.
-  ///  @param options Defines if existing files should be overwritten.
-  _i2.Future<_i6.Thenable<void>> rename(
-    _i3.Uri source,
-    _i3.Uri target, [
-    _i3.IInline43? options,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i3.Uri,
+    _i3.Uri, [
+    _i2.dynamic,
+  ]) get rename => _i5.getProperty(
         this,
         'rename',
-        [
-          source,
-          target,
-          options ?? _i4.undefined,
-        ],
-      ));
+      );
+  set copy(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.Uri,
+        _i3.Uri, [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'copy',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Copy files or folders.
-  ///
-  ///  @param source The existing file.
-  ///  @param target The destination location.
-  ///  @param options Defines if existing files should be overwritten.
-  _i2.Future<_i6.Thenable<void>> copy(
-    _i3.Uri source,
-    _i3.Uri target, [
-    _i3.IInline44? options,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i3.Uri,
+    _i3.Uri, [
+    _i2.dynamic,
+  ]) get copy => _i5.getProperty(
         this,
         'copy',
-        [
-          source,
-          target,
-          options ?? _i4.undefined,
-        ],
-      ));
+      );
+  set isWritableFileSystem(_i2.bool? Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'isWritableFileSystem',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Check if a given file system supports writing files.
-  ///
-  ///  Keep in mind that just because a file system supports writing, that does
-  ///  not mean that writes will always succeed. There may be permissions issues
-  ///  or other errors that prevent writing a file.
-  ///
-  ///  @param scheme The scheme of the filesystem, for example `file` or `git`.
-  ///
-  ///  @returns `true` if the file system supports writing, `false` if it does not
-  ///  support writing (i.e. it is readonly), and `undefined` if the editor does not
-  ///  know about the filesystem.
-  _i2.bool? isWritableFileSystem(_i2.String scheme) => _i5.callMethod(
+  _i2.bool? Function(_i2.String) get isWritableFileSystem => _i5.getProperty(
         this,
         'isWritableFileSystem',
-        [scheme],
       );
 }
 
@@ -16375,8 +18053,8 @@ class WebviewPortMapping {
   });
 
   factory WebviewPortMapping({
-    required _i2.num webviewPort,
-    required _i2.num extensionHostPort,
+    _i2.num? webviewPort,
+    _i2.num? extensionHostPort,
   }) =>
       WebviewPortMapping._(
         webviewPort: webviewPort,
@@ -16419,11 +18097,11 @@ class WebviewOptions {
     _i2.List<_i3.WebviewPortMapping>? portMapping,
   }) =>
       WebviewOptions._(
-        enableScripts: enableScripts ?? _i4.undefined,
-        enableForms: enableForms ?? _i4.undefined,
-        enableCommandUris: enableCommandUris ?? _i4.undefined,
-        localResourceRoots: localResourceRoots ?? _i4.undefined,
-        portMapping: portMapping ?? _i4.undefined,
+        enableScripts: enableScripts,
+        enableForms: enableForms,
+        enableCommandUris: enableCommandUris ?? _i6.undefined,
+        localResourceRoots: localResourceRoots ?? _i6.undefined,
+        portMapping: portMapping ?? _i6.undefined,
       );
 }
 
@@ -16487,7 +18165,35 @@ extension WebviewOptions$Typings on WebviewOptions {
 /// Displays html content, similarly to an iframe.
 @_i1.JS()
 @_i1.staticInterop
-class Webview {}
+@_i1.anonymous
+class Webview {
+  external factory Webview._({
+    _i2.dynamic options,
+    _i2.dynamic html,
+    _i2.dynamic onDidReceiveMessage,
+    _i2.dynamic cspSource,
+    _i2.dynamic postMessage,
+    _i2.dynamic asWebviewUri,
+  });
+
+  factory Webview({
+    _i3.WebviewOptions? options,
+    _i2.String? html,
+    _i3.Event<_i2.dynamic>? onDidReceiveMessage,
+    _i2.String? cspSource,
+    _i2.Future<_i2.dynamic> Function([_i2.dynamic])? postMessage,
+    _i3.Uri Function(_i3.Uri)? asWebviewUri,
+  }) =>
+      Webview._(
+        options: options ?? _i6.undefined,
+        html: html,
+        onDidReceiveMessage: onDidReceiveMessage ?? _i6.undefined,
+        cspSource: cspSource,
+        postMessage: postMessage == null ? null : _i5.allowInterop(postMessage),
+        asWebviewUri:
+            asWebviewUri == null ? null : _i5.allowInterop(asWebviewUri),
+      );
+}
 
 extension Webview$Typings on Webview {
   /// Content settings for the webview.
@@ -16559,56 +18265,30 @@ extension Webview$Typings on Webview {
         this,
         'cspSource',
       );
+  set postMessage(_i2.Future<_i2.dynamic> Function([_i2.dynamic]) value) {
+    _i5.setProperty(
+      this,
+      'postMessage',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Post a message to the webview content.
-  ///
-  ///  Messages are only delivered if the webview is live (either visible or in the
-  ///  background with `retainContextWhenHidden`).
-  ///
-  ///  @param message Body of the message. This must be a string or other json serializable object.
-  ///
-  ///    For older versions of vscode, if an `ArrayBuffer` is included in `message`,
-  ///    it will not be serialized properly and will not be received by the webview.
-  ///    Similarly any TypedArrays, such as a `Uint8Array`, will be very inefficiently
-  ///    serialized and will also not be recreated as a typed array inside the webview.
-  ///
-  ///    However if your extension targets vscode 1.57+ in the `engines` field of its
-  ///    `package.json`, any `ArrayBuffer` values that appear in `message` will be more
-  ///    efficiently transferred to the webview and will also be correctly recreated inside
-  ///    of the webview.
-  ///
-  ///  @returns A promise that resolves when the message is posted to a webview or when it is
-  ///  dropped because the message was not deliverable.
-  ///
-  ///    Returns `true` if the message was posted to the webview. Messages can only be posted to
-  ///  live webviews (i.e. either visible webviews or hidden webviews that set `retainContextWhenHidden`).
-  ///
-  ///    A response of `true` does not mean that the message was actually received by the webview.
-  ///    For example, no message listeners may be have been hooked up inside the webview or the webview may
-  ///    have been destroyed after the message was posted but before it was received.
-  ///
-  ///    If you want confirm that a message as actually received, you can try having your webview posting a
-  ///    confirmation message back to your extension.
-  _i2.Future<_i6.Thenable<_i2.bool>> postMessage(_i2.dynamic message) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function([_i2.dynamic]) get postMessage =>
+      _i5.getProperty(
         this,
         'postMessage',
-        [message],
-      ));
+      );
+  set asWebviewUri(_i3.Uri Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'asWebviewUri',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Convert a uri for the local file system to one that can be used inside webviews.
-  ///
-  ///  Webviews cannot directly load resources from the workspace or local file system using `file:` uris. The
-  ///  `asWebviewUri` function takes a local `file:` uri and converts it into a uri that can be used inside of
-  ///  a webview to load the same resource:
-  ///
-  ///  ```ts
-  ///  webview.html = `<img src="${webview.asWebviewUri(vscode.Uri.file('/Users/codey/workspace/cat.gif'))}">`
-  ///  ```
-  _i3.Uri asWebviewUri(_i3.Uri localResource) => _i5.callMethod(
+  _i3.Uri Function(_i3.Uri) get asWebviewUri => _i5.getProperty(
         this,
         'asWebviewUri',
-        [localResource],
       );
 }
 
@@ -16627,8 +18307,8 @@ class WebviewPanelOptions {
     _i2.bool? retainContextWhenHidden,
   }) =>
       WebviewPanelOptions._(
-        enableFindWidget: enableFindWidget ?? _i4.undefined,
-        retainContextWhenHidden: retainContextWhenHidden ?? _i4.undefined,
+        enableFindWidget: enableFindWidget,
+        retainContextWhenHidden: retainContextWhenHidden,
       );
 }
 
@@ -16683,7 +18363,55 @@ extension IInline45$Typings on IInline45 {
 /// A panel that contains a webview.
 @_i1.JS()
 @_i1.staticInterop
-class WebviewPanel {}
+@_i1.anonymous
+class WebviewPanel {
+  external factory WebviewPanel._({
+    _i2.dynamic viewType,
+    _i2.dynamic title,
+    _i2.dynamic iconPath,
+    _i2.dynamic webview,
+    _i2.dynamic options,
+    _i2.dynamic viewColumn,
+    _i2.dynamic active,
+    _i2.dynamic visible,
+    _i2.dynamic onDidChangeViewState,
+    _i2.dynamic onDidDispose,
+    _i2.dynamic reveal,
+    _i2.dynamic dispose,
+  });
+
+  factory WebviewPanel({
+    _i2.String? viewType,
+    _i2.String? title,
+    _i2.Object? iconPath,
+    _i3.Webview? webview,
+    _i3.WebviewPanelOptions? options,
+    _i3.ViewColumn? viewColumn,
+    _i2.bool? active,
+    _i2.bool? visible,
+    _i3.Event<_i3.WebviewPanelOnDidChangeViewStateEvent>? onDidChangeViewState,
+    _i3.Event<void>? onDidDispose,
+    void Function([
+      _i3.ViewColumn?,
+      _i2.bool?,
+    ])? reveal,
+    _i2.dynamic Function()? dispose,
+  }) =>
+      WebviewPanel._(
+        viewType: viewType,
+        title: title,
+        iconPath: iconPath ?? _i6.undefined,
+        webview: webview ?? _i6.undefined,
+        options: options ?? _i6.undefined,
+        viewColumn: viewColumn?.name ?? _i6.undefined,
+        active: active,
+        visible: visible,
+        onDidChangeViewState: onDidChangeViewState ?? _i6.undefined,
+        onDidDispose: onDidDispose ?? _i6.undefined,
+        reveal: reveal == null ? null : _i5.allowInterop(reveal),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension WebviewPanel$Typings on WebviewPanel {
   /// Identifies the type of the webview panel, such as `'markdown.preview'`.
@@ -16714,7 +18442,7 @@ extension WebviewPanel$Typings on WebviewPanel {
     _i5.setProperty(
       this,
       'iconPath',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -16769,37 +18497,36 @@ extension WebviewPanel$Typings on WebviewPanel {
         this,
         'onDidDispose',
       );
-
-  /// Show the webview panel in a given column.
-  ///
-  ///  A webview panel may only show in a single column at a time. If it is already showing, this
-  ///  method moves it to a new column.
-  ///
-  ///  @param viewColumn View column to show the panel in. Shows in the current `viewColumn` if undefined.
-  ///  @param preserveFocus When `true`, the webview will not take focus.
-  void reveal([
-    _i3.ViewColumn? viewColumn,
-    _i2.bool? preserveFocus,
-  ]) {
-    _i5.callMethod(
+  set reveal(
+      void Function([
+        _i3.ViewColumn?,
+        _i2.bool?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'reveal',
-      [
-        viewColumn?.name ?? _i4.undefined,
-        preserveFocus ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Dispose of the webview panel.
-  ///
-  ///  This closes the panel if it showing and disposes of the resources owned by the webview.
-  ///  Webview panels are also disposed when the user closes the webview panel. Both cases
-  ///  fire the `onDispose` event.
-  _i2.dynamic dispose() => _i5.callMethod(
+  void Function([
+    _i3.ViewColumn?,
+    _i2.bool?,
+  ]) get reveal => _i5.getProperty(
+        this,
+        'reveal',
+      );
+  set dispose(_i2.dynamic Function() value) {
+    _i5.setProperty(
+      this,
+      'dispose',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.dynamic Function() get dispose => _i5.getProperty(
         this,
         'dispose',
-        [],
       );
 }
 
@@ -16812,8 +18539,9 @@ class WebviewPanelOnDidChangeViewStateEvent {
       {_i2.dynamic webviewPanel});
 
   factory WebviewPanelOnDidChangeViewStateEvent(
-          {required _i3.WebviewPanel webviewPanel}) =>
-      WebviewPanelOnDidChangeViewStateEvent._(webviewPanel: webviewPanel);
+          {_i3.WebviewPanel? webviewPanel}) =>
+      WebviewPanelOnDidChangeViewStateEvent._(
+          webviewPanel: webviewPanel ?? _i6.undefined);
 }
 
 extension WebviewPanelOnDidChangeViewStateEvent$Typings
@@ -16856,36 +18584,84 @@ extension WebviewPanelOnDidChangeViewStateEvent$Typings
 /// The extension can then restore the old `WebviewPanel` from this state.
 @_i1.JS()
 @_i1.staticInterop
-class WebviewPanelSerializer<T> {}
+@_i1.anonymous
+class WebviewPanelSerializer<T> {
+  external factory WebviewPanelSerializer._(
+      {_i2.dynamic deserializeWebviewPanel});
+
+  factory WebviewPanelSerializer(
+          {_i2.Future<_i2.dynamic> Function(
+            _i3.WebviewPanel,
+            _i2.Object?,
+          )? deserializeWebviewPanel}) =>
+      WebviewPanelSerializer._(
+          deserializeWebviewPanel: deserializeWebviewPanel == null
+              ? null
+              : _i5.allowInterop(deserializeWebviewPanel));
+}
 
 extension WebviewPanelSerializer$Typings<T> on WebviewPanelSerializer<T> {
-  /// Restore a webview panel from its serialized `state`.
-  ///
-  ///  Called when a serialized webview first becomes visible.
-  ///
-  ///  @param webviewPanel Webview panel to restore. The serializer should take ownership of this panel. The
-  ///  serializer must restore the webview's `.html` and hook up all webview events.
-  ///  @param state Persisted state from the webview content.
-  ///
-  ///  @returns Thenable indicating that the webview has been fully restored.
-  _i2.Future<_i6.Thenable<void>> deserializeWebviewPanel(
-    _i3.WebviewPanel webviewPanel,
-    T state,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  set deserializeWebviewPanel(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.WebviewPanel,
+        T,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'deserializeWebviewPanel',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.dynamic> Function(
+    _i3.WebviewPanel,
+    T,
+  ) get deserializeWebviewPanel => _i5.getProperty(
         this,
         'deserializeWebviewPanel',
-        [
-          webviewPanel,
-          state,
-        ],
-      ));
+      );
 }
 
 /// A webview based view.
 @_i1.JS()
 @_i1.staticInterop
-class WebviewView {}
+@_i1.anonymous
+class WebviewView {
+  external factory WebviewView._({
+    _i2.dynamic viewType,
+    _i2.dynamic webview,
+    _i2.dynamic title,
+    _i2.dynamic description,
+    _i2.dynamic badge,
+    _i2.dynamic onDidDispose,
+    _i2.dynamic visible,
+    _i2.dynamic onDidChangeVisibility,
+    _i2.dynamic show,
+  });
+
+  factory WebviewView({
+    _i2.String? viewType,
+    _i3.Webview? webview,
+    _i2.String? title,
+    _i2.String? description,
+    _i3.ViewBadge? badge,
+    _i3.Event<void>? onDidDispose,
+    _i2.bool? visible,
+    _i3.Event<void>? onDidChangeVisibility,
+    void Function([_i2.bool?])? show,
+  }) =>
+      WebviewView._(
+        viewType: viewType,
+        webview: webview ?? _i6.undefined,
+        title: title,
+        description: description,
+        badge: badge ?? _i6.undefined,
+        onDidDispose: onDidDispose ?? _i6.undefined,
+        visible: visible,
+        onDidChangeVisibility: onDidChangeVisibility ?? _i6.undefined,
+        show: show == null ? null : _i5.allowInterop(show),
+      );
+}
 
 extension WebviewView$Typings on WebviewView {
   /// Identifies the type of the webview view, such as `'hexEditor.dataView'`.
@@ -16911,7 +18687,7 @@ extension WebviewView$Typings on WebviewView {
     _i5.setProperty(
       this,
       'title',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -16924,7 +18700,7 @@ extension WebviewView$Typings on WebviewView {
     _i5.setProperty(
       this,
       'description',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -16938,7 +18714,7 @@ extension WebviewView$Typings on WebviewView {
     _i5.setProperty(
       this,
       'badge',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -16973,19 +18749,18 @@ extension WebviewView$Typings on WebviewView {
         this,
         'onDidChangeVisibility',
       );
-
-  /// Reveal the view in the UI.
-  ///
-  ///  If the view is collapsed, this will expand it.
-  ///
-  ///  @param preserveFocus When `true` the view will not take focus.
-  void show([_i2.bool? preserveFocus]) {
-    _i5.callMethod(
+  set show(void Function([_i2.bool?]) value) {
+    _i5.setProperty(
       this,
       'show',
-      [preserveFocus ?? _i4.undefined],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function([_i2.bool?]) get show => _i5.getProperty(
+        this,
+        'show',
+      );
 }
 
 /// Additional information the webview view being resolved.
@@ -16995,8 +18770,8 @@ extension WebviewView$Typings on WebviewView {
 class WebviewViewResolveContext<T> {
   external factory WebviewViewResolveContext._({_i2.dynamic state});
 
-  factory WebviewViewResolveContext({T? state}) =>
-      WebviewViewResolveContext._(state: state ?? _i4.undefined);
+  factory WebviewViewResolveContext({_i2.Object? state}) =>
+      WebviewViewResolveContext._(state: state ?? _i6.undefined);
 }
 
 extension WebviewViewResolveContext$Typings<T> on WebviewViewResolveContext<T> {
@@ -17036,33 +18811,43 @@ extension WebviewViewResolveContext$Typings<T> on WebviewViewResolveContext<T> {
 /// Provider for creating `WebviewView` elements.
 @_i1.JS()
 @_i1.staticInterop
-class WebviewViewProvider {}
+@_i1.anonymous
+class WebviewViewProvider {
+  external factory WebviewViewProvider._({_i2.dynamic resolveWebviewView});
+
+  factory WebviewViewProvider(
+          {_i4.FutureOr<void> Function(
+            _i3.WebviewView,
+            _i3.WebviewViewResolveContext<_i2.Object?>,
+            _i3.CancellationToken,
+          )? resolveWebviewView}) =>
+      WebviewViewProvider._(
+          resolveWebviewView: resolveWebviewView == null
+              ? null
+              : _i5.allowInterop(resolveWebviewView));
+}
 
 extension WebviewViewProvider$Typings on WebviewViewProvider {
-  /// Revolves a webview view.
-  ///
-  ///  `resolveWebviewView` is called when a view first becomes visible. This may happen when the view is
-  ///  first loaded or when the user hides and then shows a view again.
-  ///
-  ///  @param webviewView Webview view to restore. The provider should take ownership of this view. The
-  ///     provider must set the webview's `.html` and hook up all webview events it is interested in.
-  ///  @param context Additional metadata about the view being resolved.
-  ///  @param token Cancellation token indicating that the view being provided is no longer needed.
-  ///
-  ///  @returns Optional thenable indicating that the view has been fully resolved.
-  _i2.Object resolveWebviewView(
-    _i3.WebviewView webviewView,
-    _i3.WebviewViewResolveContext<_i2.Object?> context,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set resolveWebviewView(
+      _i4.FutureOr<void> Function(
+        _i3.WebviewView,
+        _i3.WebviewViewResolveContext<_i2.Object?>,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveWebviewView',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i4.FutureOr<void> Function(
+    _i3.WebviewView,
+    _i3.WebviewViewResolveContext<_i2.Object?>,
+    _i3.CancellationToken,
+  ) get resolveWebviewView => _i5.getProperty(
         this,
         'resolveWebviewView',
-        [
-          webviewView,
-          context,
-          token,
-        ],
       );
 }
 
@@ -17073,39 +18858,44 @@ extension WebviewViewProvider$Typings on WebviewViewProvider {
 /// undo and backup. The provider is responsible for synchronizing text changes between the webview and the `TextDocument`.
 @_i1.JS()
 @_i1.staticInterop
-class CustomTextEditorProvider {}
+@_i1.anonymous
+class CustomTextEditorProvider {
+  external factory CustomTextEditorProvider._(
+      {_i2.dynamic resolveCustomTextEditor});
+
+  factory CustomTextEditorProvider(
+          {_i4.FutureOr<void> Function(
+            _i3.TextDocument,
+            _i3.WebviewPanel,
+            _i3.CancellationToken,
+          )? resolveCustomTextEditor}) =>
+      CustomTextEditorProvider._(
+          resolveCustomTextEditor: resolveCustomTextEditor == null
+              ? null
+              : _i5.allowInterop(resolveCustomTextEditor));
+}
 
 extension CustomTextEditorProvider$Typings on CustomTextEditorProvider {
-  /// Resolve a custom editor for a given text resource.
-  ///
-  ///  This is called when a user first opens a resource for a `CustomTextEditorProvider`, or if they reopen an
-  ///  existing editor using this `CustomTextEditorProvider`.
-  ///
-  ///
-  ///  @param document Document for the resource to resolve.
-  ///
-  ///  @param webviewPanel The webview panel used to display the editor UI for this resource.
-  ///
-  ///  During resolve, the provider must fill in the initial html for the content webview panel and hook up all
-  ///  the event listeners on it that it is interested in. The provider can also hold onto the `WebviewPanel` to
-  ///  use later for example in a command. See {@linkcode WebviewPanel} for additional details.
-  ///
-  ///  @param token A cancellation token that indicates the result is no longer needed.
-  ///
-  ///  @returns Thenable indicating that the custom editor has been resolved.
-  _i2.Object resolveCustomTextEditor(
-    _i3.TextDocument document,
-    _i3.WebviewPanel webviewPanel,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set resolveCustomTextEditor(
+      _i4.FutureOr<void> Function(
+        _i3.TextDocument,
+        _i3.WebviewPanel,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveCustomTextEditor',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i4.FutureOr<void> Function(
+    _i3.TextDocument,
+    _i3.WebviewPanel,
+    _i3.CancellationToken,
+  ) get resolveCustomTextEditor => _i5.getProperty(
         this,
         'resolveCustomTextEditor',
-        [
-          document,
-          webviewPanel,
-          token,
-        ],
       );
 }
 
@@ -17115,7 +18905,22 @@ extension CustomTextEditorProvider$Typings on CustomTextEditorProvider {
 /// managed by the editor. When no more references remain to a `CustomDocument`, it is disposed of.
 @_i1.JS()
 @_i1.staticInterop
-class CustomDocument {}
+@_i1.anonymous
+class CustomDocument {
+  external factory CustomDocument._({
+    _i2.dynamic uri,
+    _i2.dynamic dispose,
+  });
+
+  factory CustomDocument({
+    _i3.Uri? uri,
+    void Function()? dispose,
+  }) =>
+      CustomDocument._(
+        uri: uri ?? _i6.undefined,
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension CustomDocument$Typings on CustomDocument {
   /// The associated uri for this document.
@@ -17123,24 +18928,45 @@ extension CustomDocument$Typings on CustomDocument {
         this,
         'uri',
       );
-
-  /// Dispose of the custom document.
-  ///
-  ///  This is invoked by the editor when there are no more references to a given `CustomDocument` (for example when
-  ///  all editors associated with the document have been closed.)
-  void dispose() {
-    _i5.callMethod(
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// Event triggered by extensions to signal to the editor that an edit has occurred on an {@linkcode CustomDocument}.
 @_i1.JS()
 @_i1.staticInterop
-class CustomDocumentEditEvent<T extends _i3.CustomDocument> {}
+@_i1.anonymous
+class CustomDocumentEditEvent<T extends _i3.CustomDocument> {
+  external factory CustomDocumentEditEvent._({
+    _i2.dynamic document,
+    _i2.dynamic label,
+    _i2.dynamic undo,
+    _i2.dynamic redo,
+  });
+
+  factory CustomDocumentEditEvent({
+    _i3.CustomDocument? document,
+    _i2.String? label,
+    _i4.FutureOr<void> Function()? undo,
+    _i4.FutureOr<void> Function()? redo,
+  }) =>
+      CustomDocumentEditEvent._(
+        document: document,
+        label: label,
+        undo: undo == null ? null : _i5.allowInterop(undo),
+        redo: redo == null ? null : _i5.allowInterop(redo),
+      );
+}
 
 extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
     on CustomDocumentEditEvent<T> {
@@ -17157,27 +18983,29 @@ extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
         this,
         'label',
       );
+  set undo(_i4.FutureOr<void> Function() value) {
+    _i5.setProperty(
+      this,
+      'undo',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Undo the edit operation.
-  ///
-  ///  This is invoked by the editor when the user undoes this edit. To implement `undo`, your
-  ///  extension should restore the document and editor to the state they were in just before this
-  ///  edit was added to the editor's internal edit stack by `onDidChangeCustomDocument`.
-  _i2.Object undo() => _i5.callMethod(
+  _i4.FutureOr<void> Function() get undo => _i5.getProperty(
         this,
         'undo',
-        [],
       );
+  set redo(_i4.FutureOr<void> Function() value) {
+    _i5.setProperty(
+      this,
+      'redo',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Redo the edit operation.
-  ///
-  ///  This is invoked by the editor when the user redoes this edit. To implement `redo`, your
-  ///  extension should restore the document and editor to the state they were in just after this
-  ///  edit was added to the editor's internal edit stack by `onDidChangeCustomDocument`.
-  _i2.Object redo() => _i5.callMethod(
+  _i4.FutureOr<void> Function() get redo => _i5.getProperty(
         this,
         'redo',
-        [],
       );
 }
 
@@ -17189,7 +19017,7 @@ extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
 class CustomDocumentContentChangeEvent<T extends _i3.CustomDocument> {
   external factory CustomDocumentContentChangeEvent._({_i2.dynamic document});
 
-  factory CustomDocumentContentChangeEvent({required T document}) =>
+  factory CustomDocumentContentChangeEvent({_i3.CustomDocument? document}) =>
       CustomDocumentContentChangeEvent._(document: document);
 }
 
@@ -17205,7 +19033,22 @@ extension CustomDocumentContentChangeEvent$Typings<T extends _i3.CustomDocument>
 /// A backup for an {@linkcode CustomDocument}.
 @_i1.JS()
 @_i1.staticInterop
-class CustomDocumentBackup {}
+@_i1.anonymous
+class CustomDocumentBackup {
+  external factory CustomDocumentBackup._({
+    _i2.dynamic id,
+    _i2.dynamic delete,
+  });
+
+  factory CustomDocumentBackup({
+    _i2.String? id,
+    void Function()? delete,
+  }) =>
+      CustomDocumentBackup._(
+        id: id,
+        delete: delete == null ? null : _i5.allowInterop(delete),
+      );
+}
 
 extension CustomDocumentBackup$Typings on CustomDocumentBackup {
   /// Unique identifier for the backup.
@@ -17215,18 +19058,18 @@ extension CustomDocumentBackup$Typings on CustomDocumentBackup {
         this,
         'id',
       );
-
-  /// Delete the current backup.
-  ///
-  ///  This is called by the editor when it is clear the current backup is no longer needed, such as when a new backup
-  ///  is made or when the file is saved.
-  void delete() {
-    _i5.callMethod(
+  set delete(void Function() value) {
+    _i5.setProperty(
       this,
       'delete',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get delete => _i5.getProperty(
+        this,
+        'delete',
+      );
 }
 
 /// Additional information used to implement {@linkcode CustomDocumentBackup}.
@@ -17236,8 +19079,8 @@ extension CustomDocumentBackup$Typings on CustomDocumentBackup {
 class CustomDocumentBackupContext {
   external factory CustomDocumentBackupContext._({_i2.dynamic destination});
 
-  factory CustomDocumentBackupContext({required _i3.Uri destination}) =>
-      CustomDocumentBackupContext._(destination: destination);
+  factory CustomDocumentBackupContext({_i3.Uri? destination}) =>
+      CustomDocumentBackupContext._(destination: destination ?? _i6.undefined);
 }
 
 extension CustomDocumentBackupContext$Typings on CustomDocumentBackupContext {
@@ -17269,8 +19112,8 @@ class CustomDocumentOpenContext {
     _i8.Uint8List? untitledDocumentData,
   }) =>
       CustomDocumentOpenContext._(
-        backupId: backupId ?? _i4.undefined,
-        untitledDocumentData: untitledDocumentData ?? _i4.undefined,
+        backupId: backupId ?? _i6.undefined,
+        untitledDocumentData: untitledDocumentData ?? _i6.undefined,
       );
 }
 
@@ -17301,67 +19144,78 @@ extension CustomDocumentOpenContext$Typings on CustomDocumentOpenContext {
 /// text based documents, use {@linkcode CustomTextEditorProvider} instead.
 @_i1.JS()
 @_i1.staticInterop
-class CustomReadonlyEditorProvider<T extends _i3.CustomDocument> {}
+@_i1.anonymous
+class CustomReadonlyEditorProvider<T extends _i3.CustomDocument> {
+  external factory CustomReadonlyEditorProvider._({
+    _i2.dynamic openCustomDocument,
+    _i2.dynamic resolveCustomEditor,
+  });
+
+  factory CustomReadonlyEditorProvider({
+    _i4.FutureOr<_i3.CustomDocument> Function(
+      _i3.Uri,
+      _i3.CustomDocumentOpenContext,
+      _i3.CancellationToken,
+    )? openCustomDocument,
+    _i4.FutureOr<void> Function(
+      _i3.CustomDocument,
+      _i3.WebviewPanel,
+      _i3.CancellationToken,
+    )? resolveCustomEditor,
+  }) =>
+      CustomReadonlyEditorProvider._(
+        openCustomDocument: openCustomDocument == null
+            ? null
+            : _i5.allowInterop(openCustomDocument),
+        resolveCustomEditor: resolveCustomEditor == null
+            ? null
+            : _i5.allowInterop(resolveCustomEditor),
+      );
+}
 
 extension CustomReadonlyEditorProvider$Typings<T extends _i3.CustomDocument>
     on CustomReadonlyEditorProvider<T> {
-  /// Create a new document for a given resource.
-  ///
-  ///  `openCustomDocument` is called when the first time an editor for a given resource is opened. The opened
-  ///  document is then passed to `resolveCustomEditor` so that the editor can be shown to the user.
-  ///
-  ///  Already opened `CustomDocument` are re-used if the user opened additional editors. When all editors for a
-  ///  given resource are closed, the `CustomDocument` is disposed of. Opening an editor at this point will
-  ///  trigger another call to `openCustomDocument`.
-  ///
-  ///  @param uri Uri of the document to open.
-  ///  @param openContext Additional information about the opening custom document.
-  ///  @param token A cancellation token that indicates the result is no longer needed.
-  ///
-  ///  @returns The custom document.
-  _i2.Object openCustomDocument(
-    _i3.Uri uri,
-    _i3.CustomDocumentOpenContext openContext,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set openCustomDocument(
+      _i4.FutureOr<T> Function(
+        _i3.Uri,
+        _i3.CustomDocumentOpenContext,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'openCustomDocument',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i4.FutureOr<T> Function(
+    _i3.Uri,
+    _i3.CustomDocumentOpenContext,
+    _i3.CancellationToken,
+  ) get openCustomDocument => _i5.getProperty(
         this,
         'openCustomDocument',
-        [
-          uri,
-          openContext,
-          token,
-        ],
       );
+  set resolveCustomEditor(
+      _i4.FutureOr<void> Function(
+        T,
+        _i3.WebviewPanel,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveCustomEditor',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Resolve a custom editor for a given resource.
-  ///
-  ///  This is called whenever the user opens a new editor for this `CustomEditorProvider`.
-  ///
-  ///  @param document Document for the resource being resolved.
-  ///
-  ///  @param webviewPanel The webview panel used to display the editor UI for this resource.
-  ///
-  ///  During resolve, the provider must fill in the initial html for the content webview panel and hook up all
-  ///  the event listeners on it that it is interested in. The provider can also hold onto the `WebviewPanel` to
-  ///  use later for example in a command. See {@linkcode WebviewPanel} for additional details.
-  ///
-  ///  @param token A cancellation token that indicates the result is no longer needed.
-  ///
-  ///  @returns Optional thenable indicating that the custom editor has been resolved.
-  _i2.Object resolveCustomEditor(
-    T document,
-    _i3.WebviewPanel webviewPanel,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i4.FutureOr<void> Function(
+    T,
+    _i3.WebviewPanel,
+    _i3.CancellationToken,
+  ) get resolveCustomEditor => _i5.getProperty(
         this,
         'resolveCustomEditor',
-        [
-          document,
-          webviewPanel,
-          token,
-        ],
       );
 }
 
@@ -17374,8 +19228,72 @@ extension CustomReadonlyEditorProvider$Typings<T extends _i3.CustomDocument>
 /// text based documents, use {@linkcode CustomTextEditorProvider} instead.
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class CustomEditorProvider<T extends _i3.CustomDocument>
-    implements _i3.CustomReadonlyEditorProvider<T> {}
+    implements _i3.CustomReadonlyEditorProvider<T> {
+  external factory CustomEditorProvider._({
+    _i2.dynamic onDidChangeCustomDocument,
+    _i2.dynamic saveCustomDocument,
+    _i2.dynamic saveCustomDocumentAs,
+    _i2.dynamic revertCustomDocument,
+    _i2.dynamic backupCustomDocument,
+    _i2.dynamic openCustomDocument,
+    _i2.dynamic resolveCustomEditor,
+  });
+
+  factory CustomEditorProvider({
+    _i3.OnDidChangeCustomDocument? onDidChangeCustomDocument,
+    _i2.Future<_i2.dynamic> Function(
+      _i3.CustomDocument,
+      _i3.CancellationToken,
+    )? saveCustomDocument,
+    _i2.Future<_i2.dynamic> Function(
+      _i3.CustomDocument,
+      _i3.Uri,
+      _i3.CancellationToken,
+    )? saveCustomDocumentAs,
+    _i2.Future<_i2.dynamic> Function(
+      _i3.CustomDocument,
+      _i3.CancellationToken,
+    )? revertCustomDocument,
+    _i2.Future<_i2.dynamic> Function(
+      _i3.CustomDocument,
+      _i3.CustomDocumentBackupContext,
+      _i3.CancellationToken,
+    )? backupCustomDocument,
+    _i4.FutureOr<_i3.CustomDocument> Function(
+      _i3.Uri,
+      _i3.CustomDocumentOpenContext,
+      _i3.CancellationToken,
+    )? openCustomDocument,
+    _i4.FutureOr<void> Function(
+      _i3.CustomDocument,
+      _i3.WebviewPanel,
+      _i3.CancellationToken,
+    )? resolveCustomEditor,
+  }) =>
+      CustomEditorProvider._(
+        onDidChangeCustomDocument: onDidChangeCustomDocument ?? _i6.undefined,
+        saveCustomDocument: saveCustomDocument == null
+            ? null
+            : _i5.allowInterop(saveCustomDocument),
+        saveCustomDocumentAs: saveCustomDocumentAs == null
+            ? null
+            : _i5.allowInterop(saveCustomDocumentAs),
+        revertCustomDocument: revertCustomDocument == null
+            ? null
+            : _i5.allowInterop(revertCustomDocument),
+        backupCustomDocument: backupCustomDocument == null
+            ? null
+            : _i5.allowInterop(backupCustomDocument),
+        openCustomDocument: openCustomDocument == null
+            ? null
+            : _i5.allowInterop(openCustomDocument),
+        resolveCustomEditor: resolveCustomEditor == null
+            ? null
+            : _i5.allowInterop(resolveCustomEditor),
+      );
+}
 
 extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
     on CustomEditorProvider<T> {
@@ -17402,144 +19320,133 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
         this,
         'onDidChangeCustomDocument',
       );
+  set saveCustomDocument(
+      _i2.Future<_i2.dynamic> Function(
+        T,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'saveCustomDocument',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Save a custom document.
-  ///
-  ///  This method is invoked by the editor when the user saves a custom editor. This can happen when the user
-  ///  triggers save while the custom editor is active, by commands such as `save all`, or by auto save if enabled.
-  ///
-  ///  To implement `save`, the implementer must persist the custom editor. This usually means writing the
-  ///  file data for the custom document to disk. After `save` completes, any associated editor instances will
-  ///  no longer be marked as dirty.
-  ///
-  ///  @param document Document to save.
-  ///  @param cancellation Token that signals the save is no longer required (for example, if another save was triggered).
-  ///
-  ///  @returns Thenable signaling that saving has completed.
-  _i2.Future<_i6.Thenable<void>> saveCustomDocument(
-    T document,
-    _i3.CancellationToken cancellation,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    T,
+    _i3.CancellationToken,
+  ) get saveCustomDocument => _i5.getProperty(
         this,
         'saveCustomDocument',
-        [
-          document,
-          cancellation,
-        ],
-      ));
+      );
+  set saveCustomDocumentAs(
+      _i2.Future<_i2.dynamic> Function(
+        T,
+        _i3.Uri,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'saveCustomDocumentAs',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Save a custom document to a different location.
-  ///
-  ///  This method is invoked by the editor when the user triggers 'save as' on a custom editor. The implementer must
-  ///  persist the custom editor to `destination`.
-  ///
-  ///  When the user accepts save as, the current editor is be replaced by an non-dirty editor for the newly saved file.
-  ///
-  ///  @param document Document to save.
-  ///  @param destination Location to save to.
-  ///  @param cancellation Token that signals the save is no longer required.
-  ///
-  ///  @returns Thenable signaling that saving has completed.
-  _i2.Future<_i6.Thenable<void>> saveCustomDocumentAs(
-    T document,
-    _i3.Uri destination,
-    _i3.CancellationToken cancellation,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    T,
+    _i3.Uri,
+    _i3.CancellationToken,
+  ) get saveCustomDocumentAs => _i5.getProperty(
         this,
         'saveCustomDocumentAs',
-        [
-          document,
-          destination,
-          cancellation,
-        ],
-      ));
+      );
+  set revertCustomDocument(
+      _i2.Future<_i2.dynamic> Function(
+        T,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'revertCustomDocument',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Revert a custom document to its last saved state.
-  ///
-  ///  This method is invoked by the editor when the user triggers `File: Revert File` in a custom editor. (Note that
-  ///  this is only used using the editor's `File: Revert File` command and not on a `git revert` of the file).
-  ///
-  ///  To implement `revert`, the implementer must make sure all editor instances (webviews) for `document`
-  ///  are displaying the document in the same state is saved in. This usually means reloading the file from the
-  ///  workspace.
-  ///
-  ///  @param document Document to revert.
-  ///  @param cancellation Token that signals the revert is no longer required.
-  ///
-  ///  @returns Thenable signaling that the change has completed.
-  _i2.Future<_i6.Thenable<void>> revertCustomDocument(
-    T document,
-    _i3.CancellationToken cancellation,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    T,
+    _i3.CancellationToken,
+  ) get revertCustomDocument => _i5.getProperty(
         this,
         'revertCustomDocument',
-        [
-          document,
-          cancellation,
-        ],
-      ));
+      );
+  set backupCustomDocument(
+      _i2.Future<_i2.dynamic> Function(
+        T,
+        _i3.CustomDocumentBackupContext,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'backupCustomDocument',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Back up a dirty custom document.
-  ///
-  ///  Backups are used for hot exit and to prevent data loss. Your `backup` method should persist the resource in
-  ///  its current state, i.e. with the edits applied. Most commonly this means saving the resource to disk in
-  ///  the `ExtensionContext.storagePath`. When the editor reloads and your custom editor is opened for a resource,
-  ///  your extension should first check to see if any backups exist for the resource. If there is a backup, your
-  ///  extension should load the file contents from there instead of from the resource in the workspace.
-  ///
-  ///  `backup` is triggered approximately one second after the user stops editing the document. If the user
-  ///  rapidly edits the document, `backup` will not be invoked until the editing stops.
-  ///
-  ///  `backup` is not invoked when `auto save` is enabled (since auto save already persists the resource).
-  ///
-  ///  @param document Document to backup.
-  ///  @param context Information that can be used to backup the document.
-  ///  @param cancellation Token that signals the current backup since a new backup is coming in. It is up to your
-  ///  extension to decided how to respond to cancellation. If for example your extension is backing up a large file
-  ///  in an operation that takes time to complete, your extension may decide to finish the ongoing backup rather
-  ///  than cancelling it to ensure that the editor has some valid backup.
-  _i2.Future<_i6.Thenable<_i3.CustomDocumentBackup>> backupCustomDocument(
-    T document,
-    _i3.CustomDocumentBackupContext context,
-    _i3.CancellationToken cancellation,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    T,
+    _i3.CustomDocumentBackupContext,
+    _i3.CancellationToken,
+  ) get backupCustomDocument => _i5.getProperty(
         this,
         'backupCustomDocument',
-        [
-          document,
-          context,
-          cancellation,
-        ],
-      ));
+      );
 }
 
 /// The clipboard provides read and write access to the system's clipboard.
 @_i1.JS()
 @_i1.staticInterop
-class Clipboard {}
+@_i1.anonymous
+class Clipboard {
+  external factory Clipboard._({
+    _i2.dynamic readText,
+    _i2.dynamic writeText,
+  });
+
+  factory Clipboard({
+    _i2.Future<_i2.dynamic> Function()? readText,
+    _i2.Future<_i2.dynamic> Function(_i2.String)? writeText,
+  }) =>
+      Clipboard._(
+        readText: readText == null ? null : _i5.allowInterop(readText),
+        writeText: writeText == null ? null : _i5.allowInterop(writeText),
+      );
+}
 
 extension Clipboard$Typings on Clipboard {
-  /// Read the current clipboard contents as text.
-  ///  @returns A thenable that resolves to a string.
-  _i2.Future<_i6.Thenable<_i2.String>> readText() =>
-      _i5.promiseToFuture(_i5.callMethod(
+  set readText(_i2.Future<_i2.dynamic> Function() value) {
+    _i5.setProperty(
+      this,
+      'readText',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.dynamic> Function() get readText => _i5.getProperty(
         this,
         'readText',
-        [],
-      ));
+      );
+  set writeText(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'writeText',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Writes text into the clipboard.
-  ///  @returns A thenable that resolves when writing happened.
-  _i2.Future<_i6.Thenable<void>> writeText(_i2.String value) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(_i2.String) get writeText => _i5.getProperty(
         this,
         'writeText',
-        [value],
-      ));
+      );
 }
 
 /// Represents the state of a window.
@@ -17549,8 +19456,7 @@ extension Clipboard$Typings on Clipboard {
 class WindowState {
   external factory WindowState._({_i2.dynamic focused});
 
-  factory WindowState({required _i2.bool focused}) =>
-      WindowState._(focused: focused);
+  factory WindowState({_i2.bool? focused}) => WindowState._(focused: focused);
 }
 
 extension WindowState$Typings on WindowState {
@@ -17564,16 +19470,27 @@ extension WindowState$Typings on WindowState {
 /// A uri handler is responsible for handling system-wide {@link Uriuris}.
 @_i1.JS()
 @_i1.staticInterop
-class UriHandler {}
+@_i1.anonymous
+class UriHandler {
+  external factory UriHandler._({_i2.dynamic handleUri});
+
+  factory UriHandler({_i3.ProviderResult<void> Function(_i3.Uri)? handleUri}) =>
+      UriHandler._(
+          handleUri: handleUri == null ? null : _i5.allowInterop(handleUri));
+}
 
 extension UriHandler$Typings on UriHandler {
-  /// Handle the provided system-wide {@link Uri}.
-  ///
-  ///  @see {@link window.registerUriHandler}.
-  _i3.ProviderResult<void> handleUri(_i3.Uri uri) => _i5.callMethod(
+  set handleUri(_i3.ProviderResult<void> Function(_i3.Uri) value) {
+    _i5.setProperty(
+      this,
+      'handleUri',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<void> Function(_i3.Uri) get handleUri => _i5.getProperty(
         this,
         'handleUri',
-        [uri],
       );
 }
 
@@ -17591,19 +19508,18 @@ class TreeViewOptions<T> {
   });
 
   factory TreeViewOptions({
-    required _i3.TreeDataProvider<T> treeDataProvider,
+    _i3.TreeDataProvider<_i2.dynamic>? treeDataProvider,
     _i2.bool? showCollapseAll,
     _i2.bool? canSelectMany,
-    _i3.TreeDragAndDropController<T>? dragAndDropController,
+    _i3.TreeDragAndDropController<_i2.dynamic>? dragAndDropController,
     _i2.bool? manageCheckboxStateManually,
   }) =>
       TreeViewOptions._(
-        treeDataProvider: treeDataProvider,
-        showCollapseAll: showCollapseAll ?? _i4.undefined,
-        canSelectMany: canSelectMany ?? _i4.undefined,
-        dragAndDropController: dragAndDropController ?? _i4.undefined,
-        manageCheckboxStateManually:
-            manageCheckboxStateManually ?? _i4.undefined,
+        treeDataProvider: treeDataProvider ?? _i6.undefined,
+        showCollapseAll: showCollapseAll,
+        canSelectMany: canSelectMany,
+        dragAndDropController: dragAndDropController ?? _i6.undefined,
+        manageCheckboxStateManually: manageCheckboxStateManually,
       );
 }
 
@@ -17630,7 +19546,7 @@ extension TreeViewOptions$Typings<T> on TreeViewOptions<T> {
     _i5.setProperty(
       this,
       'showCollapseAll',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -17645,7 +19561,7 @@ extension TreeViewOptions$Typings<T> on TreeViewOptions<T> {
     _i5.setProperty(
       this,
       'canSelectMany',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -17659,7 +19575,7 @@ extension TreeViewOptions$Typings<T> on TreeViewOptions<T> {
     _i5.setProperty(
       this,
       'dragAndDropController',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -17705,7 +19621,7 @@ extension TreeViewOptions$Typings<T> on TreeViewOptions<T> {
     _i5.setProperty(
       this,
       'manageCheckboxStateManually',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -17717,7 +19633,7 @@ extension TreeViewOptions$Typings<T> on TreeViewOptions<T> {
 class TreeViewExpansionEvent<T> {
   external factory TreeViewExpansionEvent._({_i2.dynamic element});
 
-  factory TreeViewExpansionEvent({required T element}) =>
+  factory TreeViewExpansionEvent({_i2.dynamic element}) =>
       TreeViewExpansionEvent._(element: element);
 }
 
@@ -17736,8 +19652,8 @@ extension TreeViewExpansionEvent$Typings<T> on TreeViewExpansionEvent<T> {
 class TreeViewSelectionChangeEvent<T> {
   external factory TreeViewSelectionChangeEvent._({_i2.dynamic selection});
 
-  factory TreeViewSelectionChangeEvent({required _i2.List<T> selection}) =>
-      TreeViewSelectionChangeEvent._(selection: selection);
+  factory TreeViewSelectionChangeEvent({_i2.List<_i2.dynamic>? selection}) =>
+      TreeViewSelectionChangeEvent._(selection: selection ?? _i6.undefined);
 }
 
 extension TreeViewSelectionChangeEvent$Typings<T>
@@ -17757,7 +19673,7 @@ extension TreeViewSelectionChangeEvent$Typings<T>
 class TreeViewVisibilityChangeEvent {
   external factory TreeViewVisibilityChangeEvent._({_i2.dynamic visible});
 
-  factory TreeViewVisibilityChangeEvent({required _i2.bool visible}) =>
+  factory TreeViewVisibilityChangeEvent({_i2.bool? visible}) =>
       TreeViewVisibilityChangeEvent._(visible: visible);
 }
 
@@ -17775,7 +19691,25 @@ extension TreeViewVisibilityChangeEvent$Typings
 /// Instances of this type can only be created by the editor and not by extensions.
 @_i1.JS()
 @_i1.staticInterop
-class DataTransferFile {}
+@_i1.anonymous
+class DataTransferFile {
+  external factory DataTransferFile._({
+    _i2.dynamic name,
+    _i2.dynamic uri,
+    _i2.dynamic data,
+  });
+
+  factory DataTransferFile({
+    _i2.String? name,
+    _i3.Uri? uri,
+    _i2.Future<_i2.dynamic> Function()? data,
+  }) =>
+      DataTransferFile._(
+        name: name,
+        uri: uri ?? _i6.undefined,
+        data: data == null ? null : _i5.allowInterop(data),
+      );
+}
 
 extension DataTransferFile$Typings on DataTransferFile {
   /// The name of the file.
@@ -17791,21 +19725,25 @@ extension DataTransferFile$Typings on DataTransferFile {
         this,
         'uri',
       );
+  set data(_i2.Future<_i2.dynamic> Function() value) {
+    _i5.setProperty(
+      this,
+      'data',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// The full file contents of the file.
-  _i2.Future<_i6.Thenable<_i8.Uint8List>> data() =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function() get data => _i5.getProperty(
         this,
         'data',
-        [],
-      ));
+      );
 }
 
 /// Encapsulates data transferred during drag and drop operations.
 @_i1.JS()
 @_i1.staticInterop
 class DataTransferItem {
-  factory DataTransferItem(_i2.dynamic value) => _i5.callConstructor(
+  factory DataTransferItem([_i2.dynamic value]) => _i5.callConstructor(
         _declaredDataTransferItem,
         [value],
       );
@@ -17829,8 +19767,7 @@ extension DataTransferItem$Typings on DataTransferItem {
   /// Get a string representation of this item.
   ///
   ///  If {@linkcode DataTransferItem.value} is an object, this returns the result of json stringifying {@linkcode DataTransferItem.value} value.
-  _i2.Future<_i6.Thenable<_i2.String>> asString() =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> asString() => _i5.promiseToFuture(_i5.callMethod(
         this,
         'asString',
         [],
@@ -17920,7 +19857,7 @@ extension DataTransfer$Typings on DataTransfer {
       'forEach',
       [
         _i5.allowInterop(callbackfn),
-        thisArg ?? _i4.undefined,
+        thisArg,
       ],
     );
   }
@@ -17929,7 +19866,36 @@ extension DataTransfer$Typings on DataTransfer {
 /// Provides support for drag and drop in `TreeView`.
 @_i1.JS()
 @_i1.staticInterop
-class TreeDragAndDropController<T> {}
+@_i1.anonymous
+class TreeDragAndDropController<T> {
+  external factory TreeDragAndDropController._({
+    _i2.dynamic dropMimeTypes,
+    _i2.dynamic dragMimeTypes,
+    _i2.dynamic handleDrag,
+    _i2.dynamic handleDrop,
+  });
+
+  factory TreeDragAndDropController({
+    _i2.List<_i2.String>? dropMimeTypes,
+    _i2.List<_i2.String>? dragMimeTypes,
+    _i4.FutureOr<void> Function(
+      _i2.List<_i2.dynamic>,
+      _i3.DataTransfer,
+      _i3.CancellationToken,
+    )? handleDrag,
+    _i4.FutureOr<void> Function(
+      _i3.DataTransfer,
+      _i3.CancellationToken, [
+      _i2.dynamic,
+    ])? handleDrop,
+  }) =>
+      TreeDragAndDropController._(
+        dropMimeTypes: dropMimeTypes ?? _i6.undefined,
+        dragMimeTypes: dragMimeTypes ?? _i6.undefined,
+        handleDrag: handleDrag == null ? null : _i5.allowInterop(handleDrag),
+        handleDrop: handleDrop == null ? null : _i5.allowInterop(handleDrop),
+      );
+}
 
 extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
   /// The mime types that the {@link TreeDragAndDropController.handleDrop`handleDrop`} method of this `DragAndDropController` supports.
@@ -17962,56 +19928,47 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
         'dragMimeTypes',
       ) as _i2.List)
           .cast();
+  set handleDrag(
+      _i4.FutureOr<void> Function(
+        _i2.List<T>,
+        _i3.DataTransfer,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'handleDrag',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// When the user starts dragging items from this `DragAndDropController`, `handleDrag` will be called.
-  ///  Extensions can use `handleDrag` to add their {@link DataTransferItem `DataTransferItem`} items to the drag and drop.
-  ///
-  ///  When the items are dropped on **another tree item** in **the same tree**, your `DataTransferItem` objects
-  ///  will be preserved. Use the recommended mime type for the tree (`application/vnd.code.tree.<treeidlowercase>`) to add
-  ///  tree objects in a data transfer. See the documentation for `DataTransferItem` for how best to take advantage of this.
-  ///
-  ///  To add a data transfer item that can be dragged into the editor, use the application specific mime type "text/uri-list".
-  ///  The data for "text/uri-list" should be a string with `toString()`ed Uris separated by newlines. To specify a cursor position in the file,
-  ///  set the Uri's fragment to `L3,5`, where 3 is the line number and 5 is the column number.
-  ///
-  ///  @param source The source items for the drag and drop operation.
-  ///  @param dataTransfer The data transfer associated with this drag.
-  ///  @param token A cancellation token indicating that drag has been cancelled.
-  _i2.Object handleDrag(
-    _i2.List<T> source,
-    _i3.DataTransfer dataTransfer,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i4.FutureOr<void> Function(
+    _i2.List<T>,
+    _i3.DataTransfer,
+    _i3.CancellationToken,
+  ) get handleDrag => _i5.getProperty(
         this,
         'handleDrag',
-        [
-          source,
-          dataTransfer,
-          token,
-        ],
       );
+  set handleDrop(
+      _i4.FutureOr<void> Function(
+        _i3.DataTransfer,
+        _i3.CancellationToken, [
+        T?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'handleDrop',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Called when a drag and drop action results in a drop on the tree that this `DragAndDropController` belongs to.
-  ///
-  ///  Extensions should fire {@link TreeDataProvider.onDidChangeTreeData onDidChangeTreeData} for any elements that need to be refreshed.
-  ///
-  ///  @param dataTransfer The data transfer items of the source of the drag.
-  ///  @param target The target tree element that the drop is occurring on. When undefined, the target is the root.
-  ///  @param token A cancellation token indicating that the drop has been cancelled.
-  _i2.Object handleDrop(
-    T? target,
-    _i3.DataTransfer dataTransfer,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i4.FutureOr<void> Function(
+    _i3.DataTransfer,
+    _i3.CancellationToken, [
+    T?,
+  ]) get handleDrop => _i5.getProperty(
         this,
         'handleDrop',
-        [
-          target ?? _i4.undefined,
-          dataTransfer,
-          token,
-        ],
       );
 }
 
@@ -18026,8 +19983,8 @@ class ViewBadge {
   });
 
   factory ViewBadge({
-    required _i2.String tooltip,
-    required _i2.num value,
+    _i2.String? tooltip,
+    _i2.num? value,
   }) =>
       ViewBadge._(
         tooltip: tooltip,
@@ -18057,13 +20014,13 @@ class TreeCheckboxChangeEvent<T> {
   external factory TreeCheckboxChangeEvent._({_i2.dynamic items});
 
   factory TreeCheckboxChangeEvent(
-          {required _i7.ReadonlyArray<
+          {_i7.ReadonlyArray<
                   (
-                    T,
+                    _i2.dynamic,
                     _i3.TreeItemCheckboxState,
-                  )>
+                  )>?
               items}) =>
-      TreeCheckboxChangeEvent._(items: items);
+      TreeCheckboxChangeEvent._(items: items ?? _i6.undefined);
 }
 
 extension TreeCheckboxChangeEvent$Typings<T> on TreeCheckboxChangeEvent<T> {
@@ -18093,7 +20050,7 @@ extension IInline54$Typings on IInline54 {
     _i5.setProperty(
       this,
       'select',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18106,7 +20063,7 @@ extension IInline54$Typings on IInline54 {
     _i5.setProperty(
       this,
       'focus',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18119,7 +20076,7 @@ extension IInline54$Typings on IInline54 {
     _i5.setProperty(
       this,
       'expand',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -18127,7 +20084,57 @@ extension IInline54$Typings on IInline54 {
 /// Represents a Tree view
 @_i1.JS()
 @_i1.staticInterop
-class TreeView<T> implements _i3.Disposable {}
+@_i1.anonymous
+class TreeView<T> implements _i3.Disposable {
+  external factory TreeView._({
+    _i2.dynamic onDidExpandElement,
+    _i2.dynamic onDidCollapseElement,
+    _i2.dynamic selection,
+    _i2.dynamic onDidChangeSelection,
+    _i2.dynamic visible,
+    _i2.dynamic onDidChangeVisibility,
+    _i2.dynamic onDidChangeCheckboxState,
+    _i2.dynamic message,
+    _i2.dynamic title,
+    _i2.dynamic description,
+    _i2.dynamic badge,
+    _i2.dynamic reveal,
+  });
+
+  factory TreeView({
+    _i3.Event<_i3.TreeViewExpansionEvent<_i2.dynamic>>? onDidExpandElement,
+    _i3.Event<_i3.TreeViewExpansionEvent<_i2.dynamic>>? onDidCollapseElement,
+    _i2.List<_i2.dynamic>? selection,
+    _i3.Event<_i3.TreeViewSelectionChangeEvent<_i2.dynamic>>?
+        onDidChangeSelection,
+    _i2.bool? visible,
+    _i3.Event<_i3.TreeViewVisibilityChangeEvent>? onDidChangeVisibility,
+    _i3.Event<_i3.TreeCheckboxChangeEvent<_i2.dynamic>>?
+        onDidChangeCheckboxState,
+    _i2.String? message,
+    _i2.String? title,
+    _i2.String? description,
+    _i3.ViewBadge? badge,
+    _i2.Future<_i2.dynamic> Function(
+      _i2.dynamic, [
+      _i2.dynamic,
+    ])? reveal,
+  }) =>
+      TreeView._(
+        onDidExpandElement: onDidExpandElement ?? _i6.undefined,
+        onDidCollapseElement: onDidCollapseElement ?? _i6.undefined,
+        selection: selection ?? _i6.undefined,
+        onDidChangeSelection: onDidChangeSelection ?? _i6.undefined,
+        visible: visible,
+        onDidChangeVisibility: onDidChangeVisibility ?? _i6.undefined,
+        onDidChangeCheckboxState: onDidChangeCheckboxState ?? _i6.undefined,
+        message: message,
+        title: title,
+        description: description,
+        badge: badge ?? _i6.undefined,
+        reveal: reveal == null ? null : _i5.allowInterop(reveal),
+      );
+}
 
 extension TreeView$Typings<T> on TreeView<T> {
   /// Event that is fired when an element is expanded
@@ -18188,7 +20195,7 @@ extension TreeView$Typings<T> on TreeView<T> {
     _i5.setProperty(
       this,
       'message',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18202,7 +20209,7 @@ extension TreeView$Typings<T> on TreeView<T> {
     _i5.setProperty(
       this,
       'title',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18216,7 +20223,7 @@ extension TreeView$Typings<T> on TreeView<T> {
     _i5.setProperty(
       this,
       'description',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18230,38 +20237,65 @@ extension TreeView$Typings<T> on TreeView<T> {
     _i5.setProperty(
       this,
       'badge',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Reveals the given element in the tree view.
-  ///  If the tree view is not visible then the tree view is shown and element is revealed.
-  ///
-  ///  By default revealed element is selected.
-  ///  In order to not to select, set the option `select` to `false`.
-  ///  In order to focus, set the option `focus` to `true`.
-  ///  In order to expand the revealed element, set the option `expand` to `true`. To expand recursively set `expand` to the number of levels to expand.
-  ///
-  ///  * *NOTE:* You can expand only to 3 levels maximum.
-  ///  * *NOTE:* The {@link TreeDataProvider} that the `TreeView` {@link window.createTreeView is registered with} with must implement {@link TreeDataProvider.getParent getParent} method to access this API.
-  _i2.Future<_i6.Thenable<void>> reveal(
-    T element, [
-    _i3.IInline54? options,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  set reveal(
+      _i2.Future<_i2.dynamic> Function(
+        T, [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'reveal',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.dynamic> Function(
+    T, [
+    _i2.dynamic,
+  ]) get reveal => _i5.getProperty(
         this,
         'reveal',
-        [
-          element,
-          options ?? _i4.undefined,
-        ],
-      ));
+      );
 }
 
 /// A data provider that provides tree data
 @_i1.JS()
 @_i1.staticInterop
-class TreeDataProvider<T> {}
+@_i1.anonymous
+class TreeDataProvider<T> {
+  external factory TreeDataProvider._({
+    _i2.dynamic onDidChangeTreeData,
+    _i2.dynamic getTreeItem,
+    _i2.dynamic getChildren,
+    _i2.dynamic getParent,
+    _i2.dynamic resolveTreeItem,
+  });
+
+  factory TreeDataProvider({
+    _i3.Event<_i2.dynamic>? onDidChangeTreeData,
+    _i2.Object Function(_i2.dynamic)? getTreeItem,
+    _i3.ProviderResult<_i2.List<_i2.dynamic>> Function([_i2.dynamic])?
+        getChildren,
+    _i3.ProviderResult<_i2.dynamic> Function(_i2.dynamic)? getParent,
+    _i3.ProviderResult<_i3.TreeItem> Function(
+      _i3.TreeItem,
+      _i2.dynamic,
+      _i3.CancellationToken,
+    )? resolveTreeItem,
+  }) =>
+      TreeDataProvider._(
+        onDidChangeTreeData: onDidChangeTreeData ?? _i6.undefined,
+        getTreeItem: getTreeItem == null ? null : _i5.allowInterop(getTreeItem),
+        getChildren: getChildren == null ? null : _i5.allowInterop(getChildren),
+        getParent: getParent == null ? null : _i5.allowInterop(getParent),
+        resolveTreeItem:
+            resolveTreeItem == null ? null : _i5.allowInterop(resolveTreeItem),
+      );
+}
 
 extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
   /// An optional event to signal that an element or root has changed.
@@ -18275,75 +20309,67 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
     _i5.setProperty(
       this,
       'onDidChangeTreeData',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Get {@link TreeItem} representation of the `element`
-  ///
-  ///  @param element The element for which {@link TreeItem} representation is asked for.
-  ///  @returns TreeItem representation of the element.
-  _i2.Object getTreeItem(T element) => _i5.callMethod(
+  set getTreeItem(_i2.Object Function(T) value) {
+    _i5.setProperty(
+      this,
+      'getTreeItem',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Object Function(T) get getTreeItem => _i5.getProperty(
         this,
         'getTreeItem',
-        [element],
       );
+  set getChildren(_i3.ProviderResult<_i2.List<T>> Function([T?]) value) {
+    _i5.setProperty(
+      this,
+      'getChildren',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Get the children of `element` or root if no element is passed.
-  ///
-  ///  @param element The element from which the provider gets children. Can be `undefined`.
-  ///  @returns Children of `element` or root if no element is passed.
-  _i3.ProviderResult<_i2.List<T>> getChildren([T? element]) => _i5.callMethod(
+  _i3.ProviderResult<_i2.List<T>> Function([T?]) get getChildren =>
+      _i5.getProperty(
         this,
         'getChildren',
-        [element ?? _i4.undefined],
       );
+  set getParent(_i3.ProviderResult<T> Function(T) value) {
+    _i5.setProperty(
+      this,
+      'getParent',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Optional method to return the parent of `element`.
-  ///  Return `null` or `undefined` if `element` is a child of root.
-  ///
-  ///  **NOTE:** This method should be implemented in order to access {@link TreeView.reveal reveal} API.
-  ///
-  ///  @param element The element for which the parent has to be returned.
-  ///  @returns Parent of `element`.
-  _i3.ProviderResult<T> getParent(T element) => _i5.callMethod(
+  _i3.ProviderResult<T> Function(T) get getParent => _i5.getProperty(
         this,
         'getParent',
-        [element],
       );
+  set resolveTreeItem(
+      _i3.ProviderResult<_i3.TreeItem> Function(
+        _i3.TreeItem,
+        T,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'resolveTreeItem',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Called on hover to resolve the {@link TreeItem.tooltip TreeItem} property if it is undefined.
-  ///  Called on tree item click/open to resolve the {@link TreeItem.command TreeItem} property if it is undefined.
-  ///  Only properties that were undefined can be resolved in `resolveTreeItem`.
-  ///  Functionality may be expanded later to include being called to resolve other missing
-  ///  properties on selection and/or on open.
-  ///
-  ///  Will only ever be called once per TreeItem.
-  ///
-  ///  onDidChangeTreeData should not be triggered from within resolveTreeItem.
-  ///
-  ///  *Note* that this function is called when tree items are already showing in the UI.
-  ///  Because of that, no property that changes the presentation (label, description, etc.)
-  ///  can be changed.
-  ///
-  ///  @param item Undefined properties of `item` should be set then `item` should be returned.
-  ///  @param element The object associated with the TreeItem.
-  ///  @param token A cancellation token.
-  ///  @returns The resolved tree item or a thenable that resolves to such. It is OK to return the given
-  ///  `item`. When no result is returned, the given `item` will be used.
-  _i3.ProviderResult<_i3.TreeItem> resolveTreeItem(
-    _i3.TreeItem item,
-    T element,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i3.ProviderResult<_i3.TreeItem> Function(
+    _i3.TreeItem,
+    T,
+    _i3.CancellationToken,
+  ) get resolveTreeItem => _i5.getProperty(
         this,
         'resolveTreeItem',
-        [
-          item,
-          element,
-          token,
-        ],
       );
 }
 
@@ -18423,7 +20449,7 @@ class TreeItem {
         _declaredTreeItem,
         [
           label,
-          collapsibleState?.name ?? _i4.undefined,
+          collapsibleState?.name ?? _i6.undefined,
         ],
       );
 
@@ -18435,7 +20461,7 @@ class TreeItem {
         _declaredTreeItem,
         [
           resourceUri,
-          collapsibleState?.name ?? _i4.undefined,
+          collapsibleState?.name ?? _i6.undefined,
         ],
       );
 }
@@ -18528,7 +20554,7 @@ extension TreeItem$Typings on TreeItem {
     _i5.setProperty(
       this,
       'tooltip',
-      value ?? _i4.undefined,
+      value,
     );
   }
 
@@ -18632,7 +20658,7 @@ class TreeItemLabel {
   });
 
   factory TreeItemLabel({
-    required _i2.String label,
+    _i2.String? label,
     _i2.List<
             (
               _i2.num,
@@ -18643,12 +20669,11 @@ class TreeItemLabel {
       TreeItemLabel._(
         label: label,
         highlights: highlights
-                ?.map((i) => [
-                      i.$1,
-                      i.$2,
-                    ])
-                .toList() ??
-            _i4.undefined,
+            ?.map((i) => [
+                  i.$1,
+                  i.$2,
+                ])
+            .toList(),
       );
 }
 
@@ -18693,7 +20718,7 @@ extension TreeItemLabel$Typings on TreeItemLabel {
                     i.$2,
                   ])
               .toList() ??
-          _i4.undefined,
+          _i6.undefined,
     );
   }
 }
@@ -18766,18 +20791,18 @@ class TerminalOptions {
     _i2.bool? isTransient,
   }) =>
       TerminalOptions._(
-        name: name ?? _i4.undefined,
-        shellPath: shellPath ?? _i4.undefined,
-        shellArgs: shellArgs ?? _i4.undefined,
-        cwd: cwd ?? _i4.undefined,
-        env: env ?? _i4.undefined,
-        strictEnv: strictEnv ?? _i4.undefined,
-        hideFromUser: hideFromUser ?? _i4.undefined,
-        message: message ?? _i4.undefined,
-        iconPath: iconPath ?? _i4.undefined,
-        color: color ?? _i4.undefined,
-        location: location ?? _i4.undefined,
-        isTransient: isTransient ?? _i4.undefined,
+        name: name,
+        shellPath: shellPath,
+        shellArgs: shellArgs ?? _i6.undefined,
+        cwd: cwd ?? _i6.undefined,
+        env: env ?? _i6.undefined,
+        strictEnv: strictEnv,
+        hideFromUser: hideFromUser,
+        message: message,
+        iconPath: iconPath ?? _i6.undefined,
+        color: color ?? _i6.undefined,
+        location: location ?? _i6.undefined,
+        isTransient: isTransient,
       );
 }
 
@@ -18791,7 +20816,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'name',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18804,7 +20829,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'shellPath',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18818,7 +20843,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'shellArgs',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18831,7 +20856,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'cwd',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18844,7 +20869,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'env',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18861,7 +20886,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'strictEnv',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18878,7 +20903,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'hideFromUser',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18893,7 +20918,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'message',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18906,7 +20931,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'iconPath',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18921,7 +20946,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'color',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18934,7 +20959,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'location',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18948,7 +20973,7 @@ extension TerminalOptions$Typings on TerminalOptions {
     _i5.setProperty(
       this,
       'isTransient',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -19001,8 +21026,8 @@ class ExtensionTerminalOptions {
   });
 
   factory ExtensionTerminalOptions({
-    required _i2.String name,
-    required _i3.Pseudoterminal pty,
+    _i2.String? name,
+    _i3.Pseudoterminal? pty,
     _i2.Object? iconPath,
     _i3.ThemeColor? color,
     _i2.Object? location,
@@ -19010,11 +21035,11 @@ class ExtensionTerminalOptions {
   }) =>
       ExtensionTerminalOptions._(
         name: name,
-        pty: pty,
-        iconPath: iconPath ?? _i4.undefined,
-        color: color ?? _i4.undefined,
-        location: location ?? _i4.undefined,
-        isTransient: isTransient ?? _i4.undefined,
+        pty: pty ?? _i6.undefined,
+        iconPath: iconPath ?? _i6.undefined,
+        color: color ?? _i6.undefined,
+        location: location ?? _i6.undefined,
+        isTransient: isTransient,
       );
 }
 
@@ -19055,7 +21080,7 @@ extension ExtensionTerminalOptions$Typings on ExtensionTerminalOptions {
     _i5.setProperty(
       this,
       'iconPath',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -19070,7 +21095,7 @@ extension ExtensionTerminalOptions$Typings on ExtensionTerminalOptions {
     _i5.setProperty(
       this,
       'color',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -19083,7 +21108,7 @@ extension ExtensionTerminalOptions$Typings on ExtensionTerminalOptions {
     _i5.setProperty(
       this,
       'location',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -19097,7 +21122,7 @@ extension ExtensionTerminalOptions$Typings on ExtensionTerminalOptions {
     _i5.setProperty(
       this,
       'isTransient',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -19105,7 +21130,41 @@ extension ExtensionTerminalOptions$Typings on ExtensionTerminalOptions {
 /// Defines the interface of a terminal pty, enabling extensions to control a terminal.
 @_i1.JS()
 @_i1.staticInterop
-class Pseudoterminal {}
+@_i1.anonymous
+class Pseudoterminal {
+  external factory Pseudoterminal._({
+    _i2.dynamic onDidWrite,
+    _i2.dynamic onDidOverrideDimensions,
+    _i2.dynamic onDidClose,
+    _i2.dynamic onDidChangeName,
+    _i2.dynamic open,
+    _i2.dynamic close,
+    _i2.dynamic handleInput,
+    _i2.dynamic setDimensions,
+  });
+
+  factory Pseudoterminal({
+    _i3.Event<_i2.String>? onDidWrite,
+    _i3.Event<_i3.TerminalDimensions?>? onDidOverrideDimensions,
+    _i3.Event<_i2.Object>? onDidClose,
+    _i3.Event<_i2.String>? onDidChangeName,
+    void Function([_i3.TerminalDimensions?])? open,
+    void Function()? close,
+    void Function(_i2.String)? handleInput,
+    void Function(_i3.TerminalDimensions)? setDimensions,
+  }) =>
+      Pseudoterminal._(
+        onDidWrite: onDidWrite ?? _i6.undefined,
+        onDidOverrideDimensions: onDidOverrideDimensions ?? _i6.undefined,
+        onDidClose: onDidClose ?? _i6.undefined,
+        onDidChangeName: onDidChangeName ?? _i6.undefined,
+        open: open == null ? null : _i5.allowInterop(open),
+        close: close == null ? null : _i5.allowInterop(close),
+        handleInput: handleInput == null ? null : _i5.allowInterop(handleInput),
+        setDimensions:
+            setDimensions == null ? null : _i5.allowInterop(setDimensions),
+      );
+}
 
 extension Pseudoterminal$Typings on Pseudoterminal {
   /// An event that when fired will write data to the terminal. Unlike
@@ -19178,7 +21237,7 @@ extension Pseudoterminal$Typings on Pseudoterminal {
     _i5.setProperty(
       this,
       'onDidOverrideDimensions',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -19218,7 +21277,7 @@ extension Pseudoterminal$Typings on Pseudoterminal {
     _i5.setProperty(
       this,
       'onDidClose',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -19246,75 +21305,58 @@ extension Pseudoterminal$Typings on Pseudoterminal {
     _i5.setProperty(
       this,
       'onDidChangeName',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Implement to handle when the pty is open and ready to start firing events.
-  ///
-  ///  @param initialDimensions The dimensions of the terminal, this will be undefined if the
-  ///  terminal panel has not been opened before this is called.
-  void open([_i3.TerminalDimensions? initialDimensions]) {
-    _i5.callMethod(
+  set open(void Function([_i3.TerminalDimensions?]) value) {
+    _i5.setProperty(
       this,
       'open',
-      [initialDimensions ?? _i4.undefined],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Implement to handle when the terminal is closed by an act of the user.
-  void close() {
-    _i5.callMethod(
+  void Function([_i3.TerminalDimensions?]) get open => _i5.getProperty(
+        this,
+        'open',
+      );
+  set close(void Function() value) {
+    _i5.setProperty(
       this,
       'close',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Implement to handle incoming keystrokes in the terminal or when an extension calls
-  ///  {@link Terminal.sendText}. `data` contains the keystrokes/text serialized into
-  ///  their corresponding VT sequence representation.
-  ///
-  ///  @param data The incoming data.
-  ///
-  ///  **Example:** Echo input in the terminal. The sequence for enter (`\r`) is translated to
-  ///  CRLF to go to a new line and move the cursor to the start of the line.
-  ///  ```typescript
-  ///  const writeEmitter = new vscode.EventEmitter<string>();
-  ///  const pty: vscode.Pseudoterminal = {
-  ///    onDidWrite: writeEmitter.event,
-  ///    open: () => {},
-  ///    close: () => {},
-  ///    handleInput: data => writeEmitter.fire(data === '\r' ? '\r\n' : data)
-  ///  };
-  ///  vscode.window.createTerminal({ name: 'Local echo', pty });
-  ///  ```
-  void handleInput(_i2.String data) {
-    _i5.callMethod(
+  void Function() get close => _i5.getProperty(
+        this,
+        'close',
+      );
+  set handleInput(void Function(_i2.String) value) {
+    _i5.setProperty(
       this,
       'handleInput',
-      [data],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Implement to handle when the number of rows and columns that fit into the terminal panel
-  ///  changes, for example when font size changes or when the panel is resized. The initial
-  ///  state of a terminal's dimensions should be treated as `undefined` until this is triggered
-  ///  as the size of a terminal isn't known until it shows up in the user interface.
-  ///
-  ///  When dimensions are overridden by
-  ///  {@link Pseudoterminal.onDidOverrideDimensions onDidOverrideDimensions}, `setDimensions` will
-  ///  continue to be called with the regular panel dimensions, allowing the extension continue
-  ///  to react dimension changes.
-  ///
-  ///  @param dimensions The new dimensions.
-  void setDimensions(_i3.TerminalDimensions dimensions) {
-    _i5.callMethod(
+  void Function(_i2.String) get handleInput => _i5.getProperty(
+        this,
+        'handleInput',
+      );
+  set setDimensions(void Function(_i3.TerminalDimensions) value) {
+    _i5.setProperty(
       this,
       'setDimensions',
-      [dimensions],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function(_i3.TerminalDimensions) get setDimensions => _i5.getProperty(
+        this,
+        'setDimensions',
+      );
 }
 
 /// Represents the dimensions of a terminal.
@@ -19328,8 +21370,8 @@ class TerminalDimensions {
   });
 
   factory TerminalDimensions({
-    required _i2.num columns,
-    required _i2.num rows,
+    _i2.num? columns,
+    _i2.num? rows,
   }) =>
       TerminalDimensions._(
         columns: columns,
@@ -19363,11 +21405,11 @@ class TerminalExitStatus {
 
   factory TerminalExitStatus({
     _i2.num? code,
-    required _i3.TerminalExitReason reason,
+    _i3.TerminalExitReason? reason,
   }) =>
       TerminalExitStatus._(
-        code: code ?? _i4.undefined,
-        reason: reason.name,
+        code: code ?? _i6.undefined,
+        reason: reason?.name,
       );
 }
 
@@ -19405,8 +21447,8 @@ class EnvironmentVariableMutatorOptions {
     _i2.bool? applyAtShellIntegration,
   }) =>
       EnvironmentVariableMutatorOptions._(
-        applyAtProcessCreation: applyAtProcessCreation ?? _i4.undefined,
-        applyAtShellIntegration: applyAtShellIntegration ?? _i4.undefined,
+        applyAtProcessCreation: applyAtProcessCreation,
+        applyAtShellIntegration: applyAtShellIntegration,
       );
 }
 
@@ -19421,7 +21463,7 @@ extension EnvironmentVariableMutatorOptions$Typings
     _i5.setProperty(
       this,
       'applyAtProcessCreation',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -19436,7 +21478,7 @@ extension EnvironmentVariableMutatorOptions$Typings
     _i5.setProperty(
       this,
       'applyAtShellIntegration',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -19453,14 +21495,14 @@ class EnvironmentVariableMutator {
   });
 
   factory EnvironmentVariableMutator({
-    required _i3.EnvironmentVariableMutatorType type,
-    required _i2.String value,
-    required _i3.EnvironmentVariableMutatorOptions options,
+    _i3.EnvironmentVariableMutatorType? type,
+    _i2.String? value,
+    _i3.EnvironmentVariableMutatorOptions? options,
   }) =>
       EnvironmentVariableMutator._(
-        type: type.name,
+        type: type?.name,
         value: value,
-        options: options,
+        options: options ?? _i6.undefined,
       );
 }
 
@@ -19488,13 +21530,68 @@ extension EnvironmentVariableMutator$Typings on EnvironmentVariableMutator {
 /// A collection of mutations that an extension can apply to a process environment.
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class EnvironmentVariableCollection
     implements
         _i9.Iterable<
             (
               _i2.String,
               _i3.EnvironmentVariableMutator,
-            )> {}
+            )> {
+  external factory EnvironmentVariableCollection._({
+    _i2.dynamic persistent,
+    _i2.dynamic description,
+    _i2.dynamic replace,
+    _i2.dynamic append,
+    _i2.dynamic prepend,
+    _i2.dynamic get,
+    _i2.dynamic forEach,
+    _i2.dynamic delete,
+    _i2.dynamic clear,
+  });
+
+  factory EnvironmentVariableCollection({
+    _i2.bool? persistent,
+    _i2.dynamic description,
+    void Function(
+      _i2.String,
+      _i2.String, [
+      _i3.EnvironmentVariableMutatorOptions?,
+    ])? replace,
+    void Function(
+      _i2.String,
+      _i2.String, [
+      _i3.EnvironmentVariableMutatorOptions?,
+    ])? append,
+    void Function(
+      _i2.String,
+      _i2.String, [
+      _i3.EnvironmentVariableMutatorOptions?,
+    ])? prepend,
+    _i3.EnvironmentVariableMutator? Function(_i2.String)? get,
+    void Function(
+      _i2.dynamic Function(
+        _i2.String,
+        _i3.EnvironmentVariableMutator,
+        _i3.EnvironmentVariableCollection,
+      ), [
+      _i2.dynamic,
+    ])? forEach,
+    void Function(_i2.String)? delete,
+    void Function()? clear,
+  }) =>
+      EnvironmentVariableCollection._(
+        persistent: persistent,
+        description: description,
+        replace: replace == null ? null : _i5.allowInterop(replace),
+        append: append == null ? null : _i5.allowInterop(append),
+        prepend: prepend == null ? null : _i5.allowInterop(prepend),
+        get: get == null ? null : _i5.allowInterop(get),
+        forEach: forEach == null ? null : _i5.allowInterop(forEach),
+        delete: delete == null ? null : _i5.allowInterop(delete),
+        clear: clear == null ? null : _i5.allowInterop(clear),
+      );
+}
 
 extension EnvironmentVariableCollection$Typings
     on EnvironmentVariableCollection {
@@ -19525,166 +21622,221 @@ extension EnvironmentVariableCollection$Typings
     _i5.setProperty(
       this,
       'description',
-      value ?? _i4.undefined,
+      value,
     );
   }
 
-  /// Replace an environment variable with a value.
-  ///
-  ///  Note that an extension can only make a single change to any one variable, so this will
-  ///  overwrite any previous calls to replace, append or prepend.
-  ///
-  ///  @param variable The variable to replace.
-  ///  @param value The value to replace the variable with.
-  ///  @param options Options applied to the mutator, when no options are provided this will
-  ///  default to `{ applyAtProcessCreation: true }`.
-  void replace(
-    _i2.String variable,
-    _i2.String value, [
-    _i3.EnvironmentVariableMutatorOptions? options,
-  ]) {
-    _i5.callMethod(
+  set replace(
+      void Function(
+        _i2.String,
+        _i2.String, [
+        _i3.EnvironmentVariableMutatorOptions?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'replace',
-      [
-        variable,
-        value,
-        options ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Append a value to an environment variable.
-  ///
-  ///  Note that an extension can only make a single change to any one variable, so this will
-  ///  overwrite any previous calls to replace, append or prepend.
-  ///
-  ///  @param variable The variable to append to.
-  ///  @param value The value to append to the variable.
-  ///  @param options Options applied to the mutator, when no options are provided this will
-  ///  default to `{ applyAtProcessCreation: true }`.
-  void append(
-    _i2.String variable,
-    _i2.String value, [
-    _i3.EnvironmentVariableMutatorOptions? options,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i2.String,
+    _i2.String, [
+    _i3.EnvironmentVariableMutatorOptions?,
+  ]) get replace => _i5.getProperty(
+        this,
+        'replace',
+      );
+  set append(
+      void Function(
+        _i2.String,
+        _i2.String, [
+        _i3.EnvironmentVariableMutatorOptions?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'append',
-      [
-        variable,
-        value,
-        options ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Prepend a value to an environment variable.
-  ///
-  ///  Note that an extension can only make a single change to any one variable, so this will
-  ///  overwrite any previous calls to replace, append or prepend.
-  ///
-  ///  @param variable The variable to prepend.
-  ///  @param value The value to prepend to the variable.
-  ///  @param options Options applied to the mutator, when no options are provided this will
-  ///  default to `{ applyAtProcessCreation: true }`.
-  void prepend(
-    _i2.String variable,
-    _i2.String value, [
-    _i3.EnvironmentVariableMutatorOptions? options,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i2.String,
+    _i2.String, [
+    _i3.EnvironmentVariableMutatorOptions?,
+  ]) get append => _i5.getProperty(
+        this,
+        'append',
+      );
+  set prepend(
+      void Function(
+        _i2.String,
+        _i2.String, [
+        _i3.EnvironmentVariableMutatorOptions?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'prepend',
-      [
-        variable,
-        value,
-        options ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Gets the mutator that this collection applies to a variable, if any.
-  ///
-  ///  @param variable The variable to get the mutator for.
-  _i3.EnvironmentVariableMutator? get(_i2.String variable) => _i5.callMethod(
+  void Function(
+    _i2.String,
+    _i2.String, [
+    _i3.EnvironmentVariableMutatorOptions?,
+  ]) get prepend => _i5.getProperty(
+        this,
+        'prepend',
+      );
+  set get(_i3.EnvironmentVariableMutator? Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'get',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.EnvironmentVariableMutator? Function(_i2.String) get get =>
+      _i5.getProperty(
         this,
         'get',
-        [variable],
       );
+  set forEach(
+      void Function(
+        _i2.dynamic Function(
+          _i2.String,
+          _i3.EnvironmentVariableMutator,
+          _i3.EnvironmentVariableCollection,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'forEach',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Iterate over each mutator in this collection.
-  ///
-  ///  @param callback Function to execute for each entry.
-  ///  @param thisArg The `this` context used when invoking the handler function.
-  void forEach(
+  void Function(
     _i2.dynamic Function(
       _i2.String,
       _i3.EnvironmentVariableMutator,
       _i3.EnvironmentVariableCollection,
-    ) callback, [
-    _i2.dynamic thisArg,
-  ]) {
-    _i5.callMethod(
-      this,
-      'forEach',
-      [
-        _i5.allowInterop(callback),
-        thisArg ?? _i4.undefined,
-      ],
-    );
-  }
-
-  /// Deletes this collection's mutator for a variable.
-  ///
-  ///  @param variable The variable to delete the mutator for.
-  void delete(_i2.String variable) {
-    _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get forEach => _i5.getProperty(
+        this,
+        'forEach',
+      );
+  set delete(void Function(_i2.String) value) {
+    _i5.setProperty(
       this,
       'delete',
-      [variable],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Clears all mutators from this collection.
-  void clear() {
-    _i5.callMethod(
+  void Function(_i2.String) get delete => _i5.getProperty(
+        this,
+        'delete',
+      );
+  set clear(void Function() value) {
+    _i5.setProperty(
       this,
       'clear',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get clear => _i5.getProperty(
+        this,
+        'clear',
+      );
 }
 
 /// A collection of mutations that an extension can apply to a process environment. Applies to all scopes.
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class GlobalEnvironmentVariableCollection
-    implements _i3.EnvironmentVariableCollection {}
+    implements _i3.EnvironmentVariableCollection {
+  external factory GlobalEnvironmentVariableCollection._({
+    _i2.dynamic getScoped,
+    _i2.dynamic persistent,
+    _i2.dynamic description,
+    _i2.dynamic replace,
+    _i2.dynamic append,
+    _i2.dynamic prepend,
+    _i2.dynamic get,
+    _i2.dynamic forEach,
+    _i2.dynamic delete,
+    _i2.dynamic clear,
+  });
+
+  factory GlobalEnvironmentVariableCollection({
+    _i3.EnvironmentVariableCollection Function(_i3.EnvironmentVariableScope)?
+        getScoped,
+    _i2.bool? persistent,
+    _i2.dynamic description,
+    void Function(
+      _i2.String,
+      _i2.String, [
+      _i3.EnvironmentVariableMutatorOptions?,
+    ])? replace,
+    void Function(
+      _i2.String,
+      _i2.String, [
+      _i3.EnvironmentVariableMutatorOptions?,
+    ])? append,
+    void Function(
+      _i2.String,
+      _i2.String, [
+      _i3.EnvironmentVariableMutatorOptions?,
+    ])? prepend,
+    _i3.EnvironmentVariableMutator? Function(_i2.String)? get,
+    void Function(
+      _i2.dynamic Function(
+        _i2.String,
+        _i3.EnvironmentVariableMutator,
+        _i3.EnvironmentVariableCollection,
+      ), [
+      _i2.dynamic,
+    ])? forEach,
+    void Function(_i2.String)? delete,
+    void Function()? clear,
+  }) =>
+      GlobalEnvironmentVariableCollection._(
+        getScoped: getScoped == null ? null : _i5.allowInterop(getScoped),
+        persistent: persistent,
+        description: description,
+        replace: replace == null ? null : _i5.allowInterop(replace),
+        append: append == null ? null : _i5.allowInterop(append),
+        prepend: prepend == null ? null : _i5.allowInterop(prepend),
+        get: get == null ? null : _i5.allowInterop(get),
+        forEach: forEach == null ? null : _i5.allowInterop(forEach),
+        delete: delete == null ? null : _i5.allowInterop(delete),
+        clear: clear == null ? null : _i5.allowInterop(clear),
+      );
+}
 
 extension GlobalEnvironmentVariableCollection$Typings
     on GlobalEnvironmentVariableCollection {
-  /// Gets scope-specific environment variable collection for the extension. This enables alterations to
-  ///  terminal environment variables solely within the designated scope, and is applied in addition to (and
-  ///  after) the global collection.
-  ///
-  ///  Each object obtained through this method is isolated and does not impact objects for other scopes,
-  ///  including the global collection.
-  ///
-  ///  @param scope The scope to which the environment variable collection applies to.
-  ///
-  ///  If a scope parameter is omitted, collection applicable to all relevant scopes for that parameter is
-  ///  returned. For instance, if the 'workspaceFolder' parameter is not specified, the collection that applies
-  ///  across all workspace folders will be returned.
-  ///
-  ///  @returns Environment variable collection for the passed in scope.
-  _i3.EnvironmentVariableCollection getScoped(
-          _i3.EnvironmentVariableScope scope) =>
-      _i5.callMethod(
-        this,
-        'getScoped',
-        [scope],
-      );
+  set getScoped(
+      _i3.EnvironmentVariableCollection Function(_i3.EnvironmentVariableScope)
+          value) {
+    _i5.setProperty(
+      this,
+      'getScoped',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.EnvironmentVariableCollection Function(_i3.EnvironmentVariableScope)
+      get getScoped => _i5.getProperty(
+            this,
+            'getScoped',
+          );
 }
 
 /// The scope object to which the environment variable collection applies.
@@ -19696,7 +21848,7 @@ class EnvironmentVariableScope {
 
   factory EnvironmentVariableScope({_i3.WorkspaceFolder? workspaceFolder}) =>
       EnvironmentVariableScope._(
-          workspaceFolder: workspaceFolder ?? _i4.undefined);
+          workspaceFolder: workspaceFolder ?? _i6.undefined);
 }
 
 extension EnvironmentVariableScope$Typings on EnvironmentVariableScope {
@@ -19709,7 +21861,7 @@ extension EnvironmentVariableScope$Typings on EnvironmentVariableScope {
     _i5.setProperty(
       this,
       'workspaceFolder',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -19746,14 +21898,14 @@ class ProgressOptions {
   });
 
   factory ProgressOptions({
-    required _i2.Object location,
+    _i2.Object? location,
     _i2.String? title,
     _i2.bool? cancellable,
   }) =>
       ProgressOptions._(
-        location: location,
-        title: title ?? _i4.undefined,
-        cancellable: cancellable ?? _i4.undefined,
+        location: location ?? _i6.undefined,
+        title: title,
+        cancellable: cancellable,
       );
 }
 
@@ -19781,7 +21933,7 @@ extension ProgressOptions$Typings on ProgressOptions {
     _i5.setProperty(
       this,
       'title',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -19797,7 +21949,7 @@ extension ProgressOptions$Typings on ProgressOptions {
     _i5.setProperty(
       this,
       'cancellable',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -19823,7 +21975,46 @@ extension ProgressOptions$Typings on ProgressOptions {
 /// See {@link QuickPick} and {@link InputBox} for concrete UIs.
 @_i1.JS()
 @_i1.staticInterop
-class QuickInput {}
+@_i1.anonymous
+class QuickInput {
+  external factory QuickInput._({
+    _i2.dynamic title,
+    _i2.dynamic step,
+    _i2.dynamic totalSteps,
+    _i2.dynamic enabled,
+    _i2.dynamic busy,
+    _i2.dynamic ignoreFocusOut,
+    _i2.dynamic onDidHide,
+    _i2.dynamic show,
+    _i2.dynamic hide,
+    _i2.dynamic dispose,
+  });
+
+  factory QuickInput({
+    _i2.String? title,
+    _i2.num? step,
+    _i2.num? totalSteps,
+    _i2.bool? enabled,
+    _i2.bool? busy,
+    _i2.bool? ignoreFocusOut,
+    _i3.Event<void>? onDidHide,
+    void Function()? show,
+    void Function()? hide,
+    void Function()? dispose,
+  }) =>
+      QuickInput._(
+        title: title ?? _i6.undefined,
+        step: step ?? _i6.undefined,
+        totalSteps: totalSteps ?? _i6.undefined,
+        enabled: enabled,
+        busy: busy,
+        ignoreFocusOut: ignoreFocusOut,
+        onDidHide: onDidHide ?? _i6.undefined,
+        show: show == null ? null : _i5.allowInterop(show),
+        hide: hide == null ? null : _i5.allowInterop(hide),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension QuickInput$Typings on QuickInput {
   /// An optional title.
@@ -19835,7 +22026,7 @@ extension QuickInput$Typings on QuickInput {
     _i5.setProperty(
       this,
       'title',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -19848,7 +22039,7 @@ extension QuickInput$Typings on QuickInput {
     _i5.setProperty(
       this,
       'step',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -19861,7 +22052,7 @@ extension QuickInput$Typings on QuickInput {
     _i5.setProperty(
       this,
       'totalSteps',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -19929,37 +22120,42 @@ extension QuickInput$Typings on QuickInput {
     );
   }
 
-  /// Makes the input UI visible in its current configuration. Any other input
-  ///  UI will first fire an {@link QuickInput.onDidHide} event.
-  void show() {
-    _i5.callMethod(
+  set show(void Function() value) {
+    _i5.setProperty(
       this,
       'show',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Hides this input UI. This will also fire an {@link QuickInput.onDidHide}
-  ///  event.
-  void hide() {
-    _i5.callMethod(
+  void Function() get show => _i5.getProperty(
+        this,
+        'show',
+      );
+  set hide(void Function() value) {
+    _i5.setProperty(
       this,
       'hide',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Dispose of this input UI and any associated resources. If it is still
-  ///  visible, it is first hidden. After this call the input UI is no longer
-  ///  functional and no additional methods or properties on it should be
-  ///  accessed. Instead a new input UI should be created.
-  void dispose() {
-    _i5.callMethod(
+  void Function() get hide => _i5.getProperty(
+        this,
+        'hide',
+      );
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// A concrete {@link QuickInput} to let the user pick an item from a
@@ -19998,57 +22194,67 @@ class QuickPick<T extends _i3.QuickPickItem> implements _i3.QuickInput {
     _i2.dynamic busy,
     _i2.dynamic ignoreFocusOut,
     _i2.dynamic onDidHide,
+    _i2.dynamic show,
+    _i2.dynamic hide,
+    _i2.dynamic dispose,
   });
 
   factory QuickPick({
-    required _i2.String value,
+    _i2.String? value,
     _i2.String? placeholder,
-    required _i3.Event<_i2.String> onDidChangeValue,
-    required _i3.Event<void> onDidAccept,
-    required _i2.List<_i3.QuickInputButton> buttons,
-    required _i3.Event<_i3.QuickInputButton> onDidTriggerButton,
-    required _i3.Event<_i3.QuickPickItemButtonEvent<T>> onDidTriggerItemButton,
-    required _i2.List<T> items,
-    required _i2.bool canSelectMany,
-    required _i2.bool matchOnDescription,
-    required _i2.bool matchOnDetail,
+    _i3.Event<_i2.String>? onDidChangeValue,
+    _i3.Event<void>? onDidAccept,
+    _i2.List<_i3.QuickInputButton>? buttons,
+    _i3.Event<_i3.QuickInputButton>? onDidTriggerButton,
+    _i3.Event<_i3.QuickPickItemButtonEvent<_i2.dynamic>>?
+        onDidTriggerItemButton,
+    _i2.List<_i2.dynamic>? items,
+    _i2.bool? canSelectMany,
+    _i2.bool? matchOnDescription,
+    _i2.bool? matchOnDetail,
     _i2.bool? keepScrollPosition,
-    required _i2.List<T> activeItems,
-    required _i3.Event<_i2.List<T>> onDidChangeActive,
-    required _i2.List<T> selectedItems,
-    required _i3.Event<_i2.List<T>> onDidChangeSelection,
+    _i2.List<_i2.dynamic>? activeItems,
+    _i3.Event<_i2.List<_i2.dynamic>>? onDidChangeActive,
+    _i2.List<_i2.dynamic>? selectedItems,
+    _i3.Event<_i2.List<_i2.dynamic>>? onDidChangeSelection,
     _i2.String? title,
     _i2.num? step,
     _i2.num? totalSteps,
-    required _i2.bool enabled,
-    required _i2.bool busy,
-    required _i2.bool ignoreFocusOut,
-    required _i3.Event<void> onDidHide,
+    _i2.bool? enabled,
+    _i2.bool? busy,
+    _i2.bool? ignoreFocusOut,
+    _i3.Event<void>? onDidHide,
+    void Function()? show,
+    void Function()? hide,
+    void Function()? dispose,
   }) =>
       QuickPick._(
         value: value,
-        placeholder: placeholder ?? _i4.undefined,
-        onDidChangeValue: onDidChangeValue,
-        onDidAccept: onDidAccept,
-        buttons: buttons,
-        onDidTriggerButton: onDidTriggerButton,
-        onDidTriggerItemButton: onDidTriggerItemButton,
-        items: items,
+        placeholder: placeholder ?? _i6.undefined,
+        onDidChangeValue: onDidChangeValue ?? _i6.undefined,
+        onDidAccept: onDidAccept ?? _i6.undefined,
+        buttons: buttons ?? _i6.undefined,
+        onDidTriggerButton: onDidTriggerButton ?? _i6.undefined,
+        onDidTriggerItemButton: onDidTriggerItemButton ?? _i6.undefined,
+        items: items ?? _i6.undefined,
         canSelectMany: canSelectMany,
         matchOnDescription: matchOnDescription,
         matchOnDetail: matchOnDetail,
-        keepScrollPosition: keepScrollPosition ?? _i4.undefined,
-        activeItems: activeItems,
-        onDidChangeActive: onDidChangeActive,
-        selectedItems: selectedItems,
-        onDidChangeSelection: onDidChangeSelection,
-        title: title ?? _i4.undefined,
-        step: step ?? _i4.undefined,
-        totalSteps: totalSteps ?? _i4.undefined,
+        keepScrollPosition: keepScrollPosition,
+        activeItems: activeItems ?? _i6.undefined,
+        onDidChangeActive: onDidChangeActive ?? _i6.undefined,
+        selectedItems: selectedItems ?? _i6.undefined,
+        onDidChangeSelection: onDidChangeSelection ?? _i6.undefined,
+        title: title ?? _i6.undefined,
+        step: step ?? _i6.undefined,
+        totalSteps: totalSteps ?? _i6.undefined,
         enabled: enabled,
         busy: busy,
         ignoreFocusOut: ignoreFocusOut,
-        onDidHide: onDidHide,
+        onDidHide: onDidHide ?? _i6.undefined,
+        show: show == null ? null : _i5.allowInterop(show),
+        hide: hide == null ? null : _i5.allowInterop(hide),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
       );
 }
 
@@ -20075,7 +22281,7 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
     _i5.setProperty(
       this,
       'placeholder',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -20182,7 +22388,7 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
     _i5.setProperty(
       this,
       'keepScrollPosition',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -20254,53 +22460,62 @@ class InputBox implements _i3.QuickInput {
     _i2.dynamic busy,
     _i2.dynamic ignoreFocusOut,
     _i2.dynamic onDidHide,
+    _i2.dynamic show,
+    _i2.dynamic hide,
+    _i2.dynamic dispose,
   });
 
   factory InputBox({
-    required _i2.String value,
+    _i2.String? value,
     (
       _i2.num,
       _i2.num,
     )? valueSelection,
     _i2.String? placeholder,
-    required _i2.bool password,
-    required _i3.Event<_i2.String> onDidChangeValue,
-    required _i3.Event<void> onDidAccept,
-    required _i2.List<_i3.QuickInputButton> buttons,
-    required _i3.Event<_i3.QuickInputButton> onDidTriggerButton,
+    _i2.bool? password,
+    _i3.Event<_i2.String>? onDidChangeValue,
+    _i3.Event<void>? onDidAccept,
+    _i2.List<_i3.QuickInputButton>? buttons,
+    _i3.Event<_i3.QuickInputButton>? onDidTriggerButton,
     _i2.String? prompt,
     _i2.dynamic validationMessage,
     _i2.String? title,
     _i2.num? step,
     _i2.num? totalSteps,
-    required _i2.bool enabled,
-    required _i2.bool busy,
-    required _i2.bool ignoreFocusOut,
-    required _i3.Event<void> onDidHide,
+    _i2.bool? enabled,
+    _i2.bool? busy,
+    _i2.bool? ignoreFocusOut,
+    _i3.Event<void>? onDidHide,
+    void Function()? show,
+    void Function()? hide,
+    void Function()? dispose,
   }) =>
       InputBox._(
         value: value,
         valueSelection: valueSelection == null
-            ? _i4.undefined
+            ? _i6.undefined
             : [
                 valueSelection.$1,
                 valueSelection.$2,
               ],
-        placeholder: placeholder ?? _i4.undefined,
+        placeholder: placeholder ?? _i6.undefined,
         password: password,
-        onDidChangeValue: onDidChangeValue,
-        onDidAccept: onDidAccept,
-        buttons: buttons,
-        onDidTriggerButton: onDidTriggerButton,
-        prompt: prompt ?? _i4.undefined,
-        validationMessage: validationMessage ?? _i4.undefined,
-        title: title ?? _i4.undefined,
-        step: step ?? _i4.undefined,
-        totalSteps: totalSteps ?? _i4.undefined,
+        onDidChangeValue: onDidChangeValue ?? _i6.undefined,
+        onDidAccept: onDidAccept ?? _i6.undefined,
+        buttons: buttons ?? _i6.undefined,
+        onDidTriggerButton: onDidTriggerButton ?? _i6.undefined,
+        prompt: prompt ?? _i6.undefined,
+        validationMessage: validationMessage,
+        title: title ?? _i6.undefined,
+        step: step ?? _i6.undefined,
+        totalSteps: totalSteps ?? _i6.undefined,
         enabled: enabled,
         busy: busy,
         ignoreFocusOut: ignoreFocusOut,
-        onDidHide: onDidHide,
+        onDidHide: onDidHide ?? _i6.undefined,
+        show: show == null ? null : _i5.allowInterop(show),
+        hide: hide == null ? null : _i5.allowInterop(hide),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
       );
 }
 
@@ -20341,7 +22556,7 @@ extension InputBox$Typings on InputBox {
       this,
       'valueSelection',
       value == null
-          ? _i4.undefined
+          ? _i6.undefined
           : [
               value.$1,
               value.$2,
@@ -20358,7 +22573,7 @@ extension InputBox$Typings on InputBox {
     _i5.setProperty(
       this,
       'placeholder',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -20416,7 +22631,7 @@ extension InputBox$Typings on InputBox {
     _i5.setProperty(
       this,
       'prompt',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -20431,7 +22646,7 @@ extension InputBox$Typings on InputBox {
     _i5.setProperty(
       this,
       'validationMessage',
-      value ?? _i4.undefined,
+      value,
     );
   }
 }
@@ -20480,12 +22695,12 @@ class QuickInputButton {
   });
 
   factory QuickInputButton({
-    required _i2.Object iconPath,
+    _i2.Object? iconPath,
     _i2.String? tooltip,
   }) =>
       QuickInputButton._(
-        iconPath: iconPath,
-        tooltip: tooltip ?? _i4.undefined,
+        iconPath: iconPath ?? _i6.undefined,
+        tooltip: tooltip ?? _i6.undefined,
       );
 }
 
@@ -20539,11 +22754,11 @@ class QuickPickItemButtonEvent<T extends _i3.QuickPickItem> {
   });
 
   factory QuickPickItemButtonEvent({
-    required _i3.QuickInputButton button,
-    required T item,
+    _i3.QuickInputButton? button,
+    _i2.dynamic item,
   }) =>
       QuickPickItemButtonEvent._(
-        button: button,
+        button: button ?? _i6.undefined,
         item: item,
       );
 }
@@ -20576,13 +22791,13 @@ class TextDocumentContentChangeEvent {
   });
 
   factory TextDocumentContentChangeEvent({
-    required _i3.Range range,
-    required _i2.num rangeOffset,
-    required _i2.num rangeLength,
-    required _i2.String text,
+    _i3.Range? range,
+    _i2.num? rangeOffset,
+    _i2.num? rangeLength,
+    _i2.String? text,
   }) =>
       TextDocumentContentChangeEvent._(
-        range: range,
+        range: range ?? _i6.undefined,
         rangeOffset: rangeOffset,
         rangeLength: rangeLength,
         text: text,
@@ -20628,14 +22843,14 @@ class TextDocumentChangeEvent {
   });
 
   factory TextDocumentChangeEvent({
-    required _i3.TextDocument document,
-    required _i2.List<_i3.TextDocumentContentChangeEvent> contentChanges,
+    _i3.TextDocument? document,
+    _i2.List<_i3.TextDocumentContentChangeEvent>? contentChanges,
     _i3.TextDocumentChangeReason? reason,
   }) =>
       TextDocumentChangeEvent._(
-        document: document,
-        contentChanges: contentChanges,
-        reason: reason?.name ?? _i4.undefined,
+        document: document ?? _i6.undefined,
+        contentChanges: contentChanges ?? _i6.undefined,
+        reason: reason?.name ?? _i6.undefined,
       );
 }
 
@@ -20672,7 +22887,22 @@ extension TextDocumentChangeEvent$Typings on TextDocumentChangeEvent {
 /// that resolves to an array of {@link TextEdittext edits}.
 @_i1.JS()
 @_i1.staticInterop
-class TextDocumentWillSaveEvent {}
+@_i1.anonymous
+class TextDocumentWillSaveEvent {
+  external factory TextDocumentWillSaveEvent._({
+    _i2.dynamic document,
+    _i2.dynamic reason,
+  });
+
+  factory TextDocumentWillSaveEvent({
+    _i3.TextDocument? document,
+    _i3.TextDocumentSaveReason? reason,
+  }) =>
+      TextDocumentWillSaveEvent._(
+        document: document ?? _i6.undefined,
+        reason: reason?.name,
+      );
+}
 
 extension TextDocumentWillSaveEvent$Typings on TextDocumentWillSaveEvent {
   /// The document that will be saved.
@@ -20706,7 +22936,7 @@ extension TextDocumentWillSaveEvent$Typings on TextDocumentWillSaveEvent {
   ///  ```
   ///
   ///  @param thenable A thenable that resolves to {@link TextEdit pre-save-edits}.
-  void _waitUntil$1(_i6.Thenable<_i2.List<_i3.TextEdit>> thenable) {
+  void _waitUntil$1(_i2.Future<_i2.dynamic> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -20719,7 +22949,7 @@ extension TextDocumentWillSaveEvent$Typings on TextDocumentWillSaveEvent {
   ///  *Note:* This function can only be called during event dispatch.
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$2(_i6.Thenable<_i2.dynamic> thenable) {
+  void _waitUntil$2(_i2.Future<_i2.dynamic> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -20747,14 +22977,14 @@ extension TextDocumentWillSaveEvent$Typings on TextDocumentWillSaveEvent {
     ///  ```
     ///
     ///  @param thenable A thenable that resolves to {@link TextEdit pre-save-edits}.
-    void Function(_i6.Thenable<_i2.List<_i3.TextEdit>> thenable) $1,
+    void Function(_i2.Future<_i2.dynamic> thenable) $1,
 
     /// Allows to pause the event loop until the provided thenable resolved.
     ///
     ///  *Note:* This function can only be called during event dispatch.
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i2.dynamic> thenable) $2,
+    void Function(_i2.Future<_i2.dynamic> thenable) $2,
   }) get waitUntil => (
         $1: _waitUntil$1,
         $2: _waitUntil$2,
@@ -20768,7 +22998,22 @@ extension TextDocumentWillSaveEvent$Typings on TextDocumentWillSaveEvent {
 /// thenable that resolves to a {@link WorkspaceEditworkspace edit}.
 @_i1.JS()
 @_i1.staticInterop
-class FileWillCreateEvent {}
+@_i1.anonymous
+class FileWillCreateEvent {
+  external factory FileWillCreateEvent._({
+    _i2.dynamic token,
+    _i2.dynamic files,
+  });
+
+  factory FileWillCreateEvent({
+    _i3.CancellationToken? token,
+    _i2.List<_i3.Uri>? files,
+  }) =>
+      FileWillCreateEvent._(
+        token: token ?? _i6.undefined,
+        files: files ?? _i6.undefined,
+      );
+}
 
 extension FileWillCreateEvent$Typings on FileWillCreateEvent {
   /// A cancellation token.
@@ -20800,7 +23045,7 @@ extension FileWillCreateEvent$Typings on FileWillCreateEvent {
   ///  ```
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$1(_i6.Thenable<_i3.WorkspaceEdit> thenable) {
+  void _waitUntil$1(_i2.Future<_i2.dynamic> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -20813,7 +23058,7 @@ extension FileWillCreateEvent$Typings on FileWillCreateEvent {
   ///  *Note:* This function can only be called during event dispatch.
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$2(_i6.Thenable<_i2.dynamic> thenable) {
+  void _waitUntil$2(_i2.Future<_i2.dynamic> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -20839,14 +23084,14 @@ extension FileWillCreateEvent$Typings on FileWillCreateEvent {
     ///  ```
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i3.WorkspaceEdit> thenable) $1,
+    void Function(_i2.Future<_i2.dynamic> thenable) $1,
 
     /// Allows to pause the event until the provided thenable resolves.
     ///
     ///  *Note:* This function can only be called during event dispatch.
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i2.dynamic> thenable) $2,
+    void Function(_i2.Future<_i2.dynamic> thenable) $2,
   }) get waitUntil => (
         $1: _waitUntil$1,
         $2: _waitUntil$2,
@@ -20860,8 +23105,8 @@ extension FileWillCreateEvent$Typings on FileWillCreateEvent {
 class FileCreateEvent {
   external factory FileCreateEvent._({_i2.dynamic files});
 
-  factory FileCreateEvent({required _i2.List<_i3.Uri> files}) =>
-      FileCreateEvent._(files: files);
+  factory FileCreateEvent({_i2.List<_i3.Uri>? files}) =>
+      FileCreateEvent._(files: files ?? _i6.undefined);
 }
 
 extension FileCreateEvent$Typings on FileCreateEvent {
@@ -20880,7 +23125,22 @@ extension FileCreateEvent$Typings on FileCreateEvent {
 /// thenable that resolves to a {@link WorkspaceEditworkspace edit}.
 @_i1.JS()
 @_i1.staticInterop
-class FileWillDeleteEvent {}
+@_i1.anonymous
+class FileWillDeleteEvent {
+  external factory FileWillDeleteEvent._({
+    _i2.dynamic token,
+    _i2.dynamic files,
+  });
+
+  factory FileWillDeleteEvent({
+    _i3.CancellationToken? token,
+    _i2.List<_i3.Uri>? files,
+  }) =>
+      FileWillDeleteEvent._(
+        token: token ?? _i6.undefined,
+        files: files ?? _i6.undefined,
+      );
+}
 
 extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
   /// A cancellation token.
@@ -20912,7 +23172,7 @@ extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
   ///  ```
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$1(_i6.Thenable<_i3.WorkspaceEdit> thenable) {
+  void _waitUntil$1(_i2.Future<_i2.dynamic> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -20925,7 +23185,7 @@ extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
   ///  *Note:* This function can only be called during event dispatch.
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$2(_i6.Thenable<_i2.dynamic> thenable) {
+  void _waitUntil$2(_i2.Future<_i2.dynamic> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -20951,14 +23211,14 @@ extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
     ///  ```
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i3.WorkspaceEdit> thenable) $1,
+    void Function(_i2.Future<_i2.dynamic> thenable) $1,
 
     /// Allows to pause the event until the provided thenable resolves.
     ///
     ///  *Note:* This function can only be called during event dispatch.
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i2.dynamic> thenable) $2,
+    void Function(_i2.Future<_i2.dynamic> thenable) $2,
   }) get waitUntil => (
         $1: _waitUntil$1,
         $2: _waitUntil$2,
@@ -20972,8 +23232,8 @@ extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
 class FileDeleteEvent {
   external factory FileDeleteEvent._({_i2.dynamic files});
 
-  factory FileDeleteEvent({required _i2.List<_i3.Uri> files}) =>
-      FileDeleteEvent._(files: files);
+  factory FileDeleteEvent({_i2.List<_i3.Uri>? files}) =>
+      FileDeleteEvent._(files: files ?? _i6.undefined);
 }
 
 extension FileDeleteEvent$Typings on FileDeleteEvent {
@@ -21011,7 +23271,22 @@ extension IInline62$Typings on IInline62 {
 /// thenable that resolves to a {@link WorkspaceEditworkspace edit}.
 @_i1.JS()
 @_i1.staticInterop
-class FileWillRenameEvent {}
+@_i1.anonymous
+class FileWillRenameEvent {
+  external factory FileWillRenameEvent._({
+    _i2.dynamic token,
+    _i2.dynamic files,
+  });
+
+  factory FileWillRenameEvent({
+    _i3.CancellationToken? token,
+    _i7.ReadonlyArray<_i3.IInline62>? files,
+  }) =>
+      FileWillRenameEvent._(
+        token: token ?? _i6.undefined,
+        files: files ?? _i6.undefined,
+      );
+}
 
 extension FileWillRenameEvent$Typings on FileWillRenameEvent {
   /// A cancellation token.
@@ -21042,7 +23317,7 @@ extension FileWillRenameEvent$Typings on FileWillRenameEvent {
   ///  ```
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$1(_i6.Thenable<_i3.WorkspaceEdit> thenable) {
+  void _waitUntil$1(_i2.Future<_i2.dynamic> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -21055,7 +23330,7 @@ extension FileWillRenameEvent$Typings on FileWillRenameEvent {
   ///  *Note:* This function can only be called during event dispatch.
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$2(_i6.Thenable<_i2.dynamic> thenable) {
+  void _waitUntil$2(_i2.Future<_i2.dynamic> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -21081,14 +23356,14 @@ extension FileWillRenameEvent$Typings on FileWillRenameEvent {
     ///  ```
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i3.WorkspaceEdit> thenable) $1,
+    void Function(_i2.Future<_i2.dynamic> thenable) $1,
 
     /// Allows to pause the event until the provided thenable resolves.
     ///
     ///  *Note:* This function can only be called during event dispatch.
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i2.dynamic> thenable) $2,
+    void Function(_i2.Future<_i2.dynamic> thenable) $2,
   }) get waitUntil => (
         $1: _waitUntil$1,
         $2: _waitUntil$2,
@@ -21121,8 +23396,8 @@ extension IInline63$Typings on IInline63 {
 class FileRenameEvent {
   external factory FileRenameEvent._({_i2.dynamic files});
 
-  factory FileRenameEvent({required _i7.ReadonlyArray<_i3.IInline63> files}) =>
-      FileRenameEvent._(files: files);
+  factory FileRenameEvent({_i7.ReadonlyArray<_i3.IInline63>? files}) =>
+      FileRenameEvent._(files: files ?? _i6.undefined);
 }
 
 extension FileRenameEvent$Typings on FileRenameEvent {
@@ -21144,12 +23419,12 @@ class WorkspaceFoldersChangeEvent {
   });
 
   factory WorkspaceFoldersChangeEvent({
-    required _i2.List<_i3.WorkspaceFolder> added,
-    required _i2.List<_i3.WorkspaceFolder> removed,
+    _i2.List<_i3.WorkspaceFolder>? added,
+    _i2.List<_i3.WorkspaceFolder>? removed,
   }) =>
       WorkspaceFoldersChangeEvent._(
-        added: added,
-        removed: removed,
+        added: added ?? _i6.undefined,
+        removed: removed ?? _i6.undefined,
       );
 }
 
@@ -21182,12 +23457,12 @@ class WorkspaceFolder {
   });
 
   factory WorkspaceFolder({
-    required _i3.Uri uri,
-    required _i2.String name,
-    required _i2.num index,
+    _i3.Uri? uri,
+    _i2.String? name,
+    _i2.num? index,
   }) =>
       WorkspaceFolder._(
-        uri: uri,
+        uri: uri ?? _i6.undefined,
         name: name,
         index: index,
       );
@@ -21232,7 +23507,7 @@ extension IInline67$Typings on IInline67 {
     _i5.setProperty(
       this,
       'uri',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -21253,26 +23528,41 @@ extension IInline67$Typings on IInline67 {
 /// An event describing the change in Configuration
 @_i1.JS()
 @_i1.staticInterop
-class ConfigurationChangeEvent {}
+@_i1.anonymous
+class ConfigurationChangeEvent {
+  external factory ConfigurationChangeEvent._(
+      {_i2.dynamic affectsConfiguration});
+
+  factory ConfigurationChangeEvent(
+          {_i2.bool Function(
+            _i2.String, [
+            _i3.ConfigurationScope?,
+          ])? affectsConfiguration}) =>
+      ConfigurationChangeEvent._(
+          affectsConfiguration: affectsConfiguration == null
+              ? null
+              : _i5.allowInterop(affectsConfiguration));
+}
 
 extension ConfigurationChangeEvent$Typings on ConfigurationChangeEvent {
-  /// Checks if the given section has changed.
-  ///  If scope is provided, checks if the section has changed for resources under the given scope.
-  ///
-  ///  @param section Configuration name, supports _dotted_ names.
-  ///  @param scope A scope in which to check.
-  ///  @returns `true` if the given section has changed.
-  _i2.bool affectsConfiguration(
-    _i2.String section, [
-    _i3.ConfigurationScope? scope,
-  ]) =>
-      _i5.callMethod(
+  set affectsConfiguration(
+      _i2.bool Function(
+        _i2.String, [
+        _i3.ConfigurationScope?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'affectsConfiguration',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(
+    _i2.String, [
+    _i3.ConfigurationScope?,
+  ]) get affectsConfiguration => _i5.getProperty(
         this,
         'affectsConfiguration',
-        [
-          section,
-          scope ?? _i4.undefined ?? _i4.undefined,
-        ],
       );
 }
 
@@ -21281,7 +23571,37 @@ extension ConfigurationChangeEvent$Typings on ConfigurationChangeEvent {
 /// API, which will be finalized later.
 @_i1.JS()
 @_i1.staticInterop
-class NotebookEditor {}
+@_i1.anonymous
+class NotebookEditor {
+  external factory NotebookEditor._({
+    _i2.dynamic notebook,
+    _i2.dynamic selection,
+    _i2.dynamic selections,
+    _i2.dynamic visibleRanges,
+    _i2.dynamic viewColumn,
+    _i2.dynamic revealRange,
+  });
+
+  factory NotebookEditor({
+    _i3.NotebookDocument? notebook,
+    _i3.NotebookRange? selection,
+    _i2.List<_i3.NotebookRange>? selections,
+    _i2.List<_i3.NotebookRange>? visibleRanges,
+    _i3.ViewColumn? viewColumn,
+    void Function(
+      _i3.NotebookRange, [
+      _i3.NotebookEditorRevealType?,
+    ])? revealRange,
+  }) =>
+      NotebookEditor._(
+        notebook: notebook ?? _i6.undefined,
+        selection: selection ?? _i6.undefined,
+        selections: selections ?? _i6.undefined,
+        visibleRanges: visibleRanges ?? _i6.undefined,
+        viewColumn: viewColumn?.name,
+        revealRange: revealRange == null ? null : _i5.allowInterop(revealRange),
+      );
+}
 
 extension NotebookEditor$Typings on NotebookEditor {
   /// The {@link NotebookDocumentnotebook document} associated with this notebook editor.
@@ -21334,24 +23654,25 @@ extension NotebookEditor$Typings on NotebookEditor {
         _i2.String name => _i3.ViewColumn.values.byName(name),
         _ => null
       };
-
-  /// Scroll as indicated by `revealType` in order to reveal the given range.
-  ///
-  ///  @param range A range.
-  ///  @param revealType The scrolling strategy for revealing `range`.
-  void revealRange(
-    _i3.NotebookRange range, [
-    _i3.NotebookEditorRevealType? revealType,
-  ]) {
-    _i5.callMethod(
+  set revealRange(
+      void Function(
+        _i3.NotebookRange, [
+        _i3.NotebookEditorRevealType?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'revealRange',
-      [
-        range,
-        revealType?.name ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function(
+    _i3.NotebookRange, [
+    _i3.NotebookEditorRevealType?,
+  ]) get revealRange => _i5.getProperty(
+        this,
+        'revealRange',
+      );
 }
 
 @_i1.JS()
@@ -21376,7 +23697,25 @@ extension IInline68$Typings on IInline68 {
 /// Renderer messaging is used to communicate with a single renderer. It's returned from {@link notebooks.createRendererMessaging}.
 @_i1.JS()
 @_i1.staticInterop
-class NotebookRendererMessaging {}
+@_i1.anonymous
+class NotebookRendererMessaging {
+  external factory NotebookRendererMessaging._({
+    _i2.dynamic onDidReceiveMessage,
+    _i2.dynamic postMessage,
+  });
+
+  factory NotebookRendererMessaging({
+    _i3.Event<_i3.IInline68>? onDidReceiveMessage,
+    _i2.Future<_i2.dynamic> Function([
+      _i2.dynamic,
+      _i3.NotebookEditor?,
+    ])? postMessage,
+  }) =>
+      NotebookRendererMessaging._(
+        onDidReceiveMessage: onDidReceiveMessage ?? _i6.undefined,
+        postMessage: postMessage == null ? null : _i5.allowInterop(postMessage),
+      );
+}
 
 extension NotebookRendererMessaging$Typings on NotebookRendererMessaging {
   /// An event that fires when a message is received from a renderer.
@@ -21384,26 +23723,25 @@ extension NotebookRendererMessaging$Typings on NotebookRendererMessaging {
         this,
         'onDidReceiveMessage',
       );
+  set postMessage(
+      _i2.Future<_i2.dynamic> Function([
+        _i2.dynamic,
+        _i3.NotebookEditor?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'postMessage',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Send a message to one or all renderer.
-  ///
-  ///  @param message Message to send
-  ///  @param editor Editor to target with the message. If not provided, the
-  ///  message is sent to all renderers.
-  ///  @returns a boolean indicating whether the message was successfully
-  ///  delivered to any renderer.
-  _i2.Future<_i6.Thenable<_i2.bool>> postMessage(
-    _i2.dynamic message, [
-    _i3.NotebookEditor? editor,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function([
+    _i2.dynamic,
+    _i3.NotebookEditor?,
+  ]) get postMessage => _i5.getProperty(
         this,
         'postMessage',
-        [
-          message,
-          editor ?? _i4.undefined,
-        ],
-      ));
+      );
 }
 
 /// Represents a cell of a {@link NotebookDocumentnotebook}, either a {@link NotebookCellKind.Codecode}-cell
@@ -21425,22 +23763,22 @@ class NotebookCell {
   });
 
   factory NotebookCell({
-    required _i2.num index,
-    required _i3.NotebookDocument notebook,
-    required _i3.NotebookCellKind kind,
-    required _i3.TextDocument document,
-    required _i2.Object metadata,
-    required _i2.List<_i3.NotebookCellOutput> outputs,
+    _i2.num? index,
+    _i3.NotebookDocument? notebook,
+    _i3.NotebookCellKind? kind,
+    _i3.TextDocument? document,
+    _i2.Object? metadata,
+    _i2.List<_i3.NotebookCellOutput>? outputs,
     _i3.NotebookCellExecutionSummary? executionSummary,
   }) =>
       NotebookCell._(
         index: index,
-        notebook: notebook,
-        kind: kind.name,
-        document: document,
-        metadata: metadata,
-        outputs: outputs,
-        executionSummary: executionSummary ?? _i4.undefined,
+        notebook: notebook ?? _i6.undefined,
+        kind: kind?.name,
+        document: document ?? _i6.undefined,
+        metadata: metadata ?? _i6.undefined,
+        outputs: outputs ?? _i6.undefined,
+        executionSummary: executionSummary ?? _i6.undefined,
       );
 }
 
@@ -21496,7 +23834,49 @@ extension NotebookCell$Typings on NotebookCell {
 /// created from {@link NotebookDatanotebook data}.
 @_i1.JS()
 @_i1.staticInterop
-class NotebookDocument {}
+@_i1.anonymous
+class NotebookDocument {
+  external factory NotebookDocument._({
+    _i2.dynamic uri,
+    _i2.dynamic notebookType,
+    _i2.dynamic version,
+    _i2.dynamic isDirty,
+    _i2.dynamic isUntitled,
+    _i2.dynamic isClosed,
+    _i2.dynamic metadata,
+    _i2.dynamic cellCount,
+    _i2.dynamic cellAt,
+    _i2.dynamic getCells,
+    _i2.dynamic save,
+  });
+
+  factory NotebookDocument({
+    _i3.Uri? uri,
+    _i2.String? notebookType,
+    _i2.num? version,
+    _i2.bool? isDirty,
+    _i2.bool? isUntitled,
+    _i2.bool? isClosed,
+    _i2.Object? metadata,
+    _i2.num? cellCount,
+    _i3.NotebookCell Function(_i2.num)? cellAt,
+    _i2.List<_i3.NotebookCell> Function([_i3.NotebookRange?])? getCells,
+    _i2.Future<_i2.dynamic> Function()? save,
+  }) =>
+      NotebookDocument._(
+        uri: uri ?? _i6.undefined,
+        notebookType: notebookType,
+        version: version,
+        isDirty: isDirty,
+        isUntitled: isUntitled,
+        isClosed: isClosed,
+        metadata: metadata ?? _i6.undefined,
+        cellCount: cellCount,
+        cellAt: cellAt == null ? null : _i5.allowInterop(cellAt),
+        getCells: getCells == null ? null : _i5.allowInterop(getCells),
+        save: save == null ? null : _i5.allowInterop(save),
+      );
+}
 
 extension NotebookDocument$Typings on NotebookDocument {
   /// The associated uri for this notebook.
@@ -21551,40 +23931,44 @@ extension NotebookDocument$Typings on NotebookDocument {
         this,
         'cellCount',
       );
+  set cellAt(_i3.NotebookCell Function(_i2.num) value) {
+    _i5.setProperty(
+      this,
+      'cellAt',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Return the cell at the specified index. The index will be adjusted to the notebook.
-  ///
-  ///  @param index - The index of the cell to retrieve.
-  ///  @returns A {@link NotebookCell cell}.
-  _i3.NotebookCell cellAt(_i2.num index) => _i5.callMethod(
+  _i3.NotebookCell Function(_i2.num) get cellAt => _i5.getProperty(
         this,
         'cellAt',
-        [index],
       );
+  set getCells(
+      _i2.List<_i3.NotebookCell> Function([_i3.NotebookRange?]) value) {
+    _i5.setProperty(
+      this,
+      'getCells',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Get the cells of this notebook. A subset can be retrieved by providing
-  ///  a range. The range will be adjusted to the notebook.
-  ///
-  ///  @param range A notebook range.
-  ///  @returns The cells contained by the range or all cells.
-  _i2.List<_i3.NotebookCell> getCells([_i3.NotebookRange? range]) =>
-      (_i5.callMethod(
+  _i2.List<_i3.NotebookCell> Function([_i3.NotebookRange?]) get getCells =>
+      _i5.getProperty(
         this,
         'getCells',
-        [range ?? _i4.undefined],
-      ) as _i2.List)
-          .cast();
+      );
+  set save(_i2.Future<_i2.dynamic> Function() value) {
+    _i5.setProperty(
+      this,
+      'save',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Save the document. The saving will be handled by the corresponding {@link NotebookSerializer serializer}.
-  ///
-  ///  @returns A promise that will resolve to true when the document
-  ///  has been saved. Will return false if the file was not dirty or when save failed.
-  _i2.Future<_i6.Thenable<_i2.bool>> save() =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function() get save => _i5.getProperty(
         this,
         'save',
-        [],
-      ));
+      );
 }
 
 /// Describes a change to a notebook cell.
@@ -21601,18 +23985,18 @@ class NotebookDocumentCellChange {
   });
 
   factory NotebookDocumentCellChange({
-    required _i3.NotebookCell cell,
+    _i3.NotebookCell? cell,
     _i3.TextDocument? document,
     _i2.Object? metadata,
     _i2.List<_i3.NotebookCellOutput>? outputs,
     _i3.NotebookCellExecutionSummary? executionSummary,
   }) =>
       NotebookDocumentCellChange._(
-        cell: cell,
-        document: document ?? _i4.undefined,
-        metadata: metadata ?? _i4.undefined,
-        outputs: outputs ?? _i4.undefined,
-        executionSummary: executionSummary ?? _i4.undefined,
+        cell: cell ?? _i6.undefined,
+        document: document ?? _i6.undefined,
+        metadata: metadata ?? _i6.undefined,
+        outputs: outputs ?? _i6.undefined,
+        executionSummary: executionSummary ?? _i6.undefined,
       );
 }
 
@@ -21664,14 +24048,14 @@ class NotebookDocumentContentChange {
   });
 
   factory NotebookDocumentContentChange({
-    required _i3.NotebookRange range,
-    required _i2.List<_i3.NotebookCell> addedCells,
-    required _i2.List<_i3.NotebookCell> removedCells,
+    _i3.NotebookRange? range,
+    _i2.List<_i3.NotebookCell>? addedCells,
+    _i2.List<_i3.NotebookCell>? removedCells,
   }) =>
       NotebookDocumentContentChange._(
-        range: range,
-        addedCells: addedCells,
-        removedCells: removedCells,
+        range: range ?? _i6.undefined,
+        addedCells: addedCells ?? _i6.undefined,
+        removedCells: removedCells ?? _i6.undefined,
       );
 }
 
@@ -21714,16 +24098,16 @@ class NotebookDocumentChangeEvent {
   });
 
   factory NotebookDocumentChangeEvent({
-    required _i3.NotebookDocument notebook,
+    _i3.NotebookDocument? notebook,
     _i2.Object? metadata,
-    required _i2.List<_i3.NotebookDocumentContentChange> contentChanges,
-    required _i2.List<_i3.NotebookDocumentCellChange> cellChanges,
+    _i2.List<_i3.NotebookDocumentContentChange>? contentChanges,
+    _i2.List<_i3.NotebookDocumentCellChange>? cellChanges,
   }) =>
       NotebookDocumentChangeEvent._(
-        notebook: notebook,
-        metadata: metadata ?? _i4.undefined,
-        contentChanges: contentChanges,
-        cellChanges: cellChanges,
+        notebook: notebook ?? _i6.undefined,
+        metadata: metadata ?? _i6.undefined,
+        contentChanges: contentChanges ?? _i6.undefined,
+        cellChanges: cellChanges ?? _i6.undefined,
       );
 }
 
@@ -21763,7 +24147,25 @@ extension NotebookDocumentChangeEvent$Typings on NotebookDocumentChangeEvent {
 /// that resolves to a {@link WorkspaceEditworkspace edit}.
 @_i1.JS()
 @_i1.staticInterop
-class NotebookDocumentWillSaveEvent {}
+@_i1.anonymous
+class NotebookDocumentWillSaveEvent {
+  external factory NotebookDocumentWillSaveEvent._({
+    _i2.dynamic token,
+    _i2.dynamic notebook,
+    _i2.dynamic reason,
+  });
+
+  factory NotebookDocumentWillSaveEvent({
+    _i3.CancellationToken? token,
+    _i3.NotebookDocument? notebook,
+    _i3.TextDocumentSaveReason? reason,
+  }) =>
+      NotebookDocumentWillSaveEvent._(
+        token: token ?? _i6.undefined,
+        notebook: notebook ?? _i6.undefined,
+        reason: reason?.name,
+      );
+}
 
 extension NotebookDocumentWillSaveEvent$Typings
     on NotebookDocumentWillSaveEvent {
@@ -21804,7 +24206,7 @@ extension NotebookDocumentWillSaveEvent$Typings
   ///  ```
   ///
   ///  @param thenable A thenable that resolves to {@link WorkspaceEdit workspace edit}.
-  void _waitUntil$1(_i6.Thenable<_i3.WorkspaceEdit> thenable) {
+  void _waitUntil$1(_i2.Future<_i2.dynamic> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -21817,7 +24219,7 @@ extension NotebookDocumentWillSaveEvent$Typings
   ///  *Note:* This function can only be called during event dispatch.
   ///
   ///  @param thenable A thenable that delays saving.
-  void _waitUntil$2(_i6.Thenable<_i2.dynamic> thenable) {
+  void _waitUntil$2(_i2.Future<_i2.dynamic> thenable) {
     _i5.callMethod(
       this,
       'waitUntil',
@@ -21845,14 +24247,14 @@ extension NotebookDocumentWillSaveEvent$Typings
     ///  ```
     ///
     ///  @param thenable A thenable that resolves to {@link WorkspaceEdit workspace edit}.
-    void Function(_i6.Thenable<_i3.WorkspaceEdit> thenable) $1,
+    void Function(_i2.Future<_i2.dynamic> thenable) $1,
 
     /// Allows to pause the event loop until the provided thenable resolved.
     ///
     ///  *Note:* This function can only be called during event dispatch.
     ///
     ///  @param thenable A thenable that delays saving.
-    void Function(_i6.Thenable<_i2.dynamic> thenable) $2,
+    void Function(_i2.Future<_i2.dynamic> thenable) $2,
   }) get waitUntil => (
         $1: _waitUntil$1,
         $2: _waitUntil$2,
@@ -21895,9 +24297,9 @@ class NotebookCellExecutionSummary {
     _i3.IInline73? timing,
   }) =>
       NotebookCellExecutionSummary._(
-        executionOrder: executionOrder ?? _i4.undefined,
-        success: success ?? _i4.undefined,
-        timing: timing ?? _i4.undefined,
+        executionOrder: executionOrder,
+        success: success,
+        timing: timing ?? _i6.undefined,
       );
 }
 
@@ -21936,7 +24338,7 @@ extension IInline74$Typings on IInline74 {
     _i5.setProperty(
       this,
       'start',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -21949,7 +24351,7 @@ extension IInline74$Typings on IInline74 {
     _i5.setProperty(
       this,
       'end',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -22036,7 +24438,7 @@ class NotebookCellOutputItem {
         'text',
         [
           value,
-          mime ?? _i4.undefined,
+          mime ?? _i6.undefined,
         ],
       );
 
@@ -22046,8 +24448,8 @@ class NotebookCellOutputItem {
   /// *Note* that this function is not expecting "stringified JSON" but
   /// an object that can be stringified. This function will throw an error
   /// when the passed value cannot be JSON-stringified.
-  static _i3.NotebookCellOutputItem json(
-    _i2.dynamic value, [
+  static _i3.NotebookCellOutputItem json([
+    _i2.dynamic value,
     _i2.String? mime,
   ]) =>
       _i5.callMethod(
@@ -22055,7 +24457,7 @@ class NotebookCellOutputItem {
         'json',
         [
           value,
-          mime ?? _i4.undefined,
+          mime ?? _i6.undefined,
         ],
       );
 
@@ -22135,7 +24537,7 @@ class NotebookCellOutput {
         _declaredNotebookCellOutput,
         [
           items,
-          metadata ?? _i4.undefined,
+          metadata ?? _i6.undefined,
         ],
       );
 }
@@ -22347,43 +24749,71 @@ extension NotebookData$Typings on NotebookData {
 /// vice versa.
 @_i1.JS()
 @_i1.staticInterop
-class NotebookSerializer {}
+@_i1.anonymous
+class NotebookSerializer {
+  external factory NotebookSerializer._({
+    _i2.dynamic deserializeNotebook,
+    _i2.dynamic serializeNotebook,
+  });
+
+  factory NotebookSerializer({
+    _i2.Object Function(
+      _i8.Uint8List,
+      _i3.CancellationToken,
+    )? deserializeNotebook,
+    _i4.FutureOr<_i8.Uint8List> Function(
+      _i3.NotebookData,
+      _i3.CancellationToken,
+    )? serializeNotebook,
+  }) =>
+      NotebookSerializer._(
+        deserializeNotebook: deserializeNotebook == null
+            ? null
+            : _i5.allowInterop(deserializeNotebook),
+        serializeNotebook: serializeNotebook == null
+            ? null
+            : _i5.allowInterop(serializeNotebook),
+      );
+}
 
 extension NotebookSerializer$Typings on NotebookSerializer {
-  /// Deserialize contents of a notebook file into the notebook data structure.
-  ///
-  ///  @param content Contents of a notebook file.
-  ///  @param token A cancellation token.
-  ///  @returns Notebook data or a thenable that resolves to such.
-  _i2.Object deserializeNotebook(
-    _i8.Uint8List content,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set deserializeNotebook(
+      _i2.Object Function(
+        _i8.Uint8List,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'deserializeNotebook',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Object Function(
+    _i8.Uint8List,
+    _i3.CancellationToken,
+  ) get deserializeNotebook => _i5.getProperty(
         this,
         'deserializeNotebook',
-        [
-          content,
-          token,
-        ],
       );
+  set serializeNotebook(
+      _i4.FutureOr<_i8.Uint8List> Function(
+        _i3.NotebookData,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'serializeNotebook',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Serialize notebook data into file contents.
-  ///
-  ///  @param data A notebook data structure.
-  ///  @param token A cancellation token.
-  ///  @returns An array of bytes or a thenable that resolves to such.
-  _i2.Object serializeNotebook(
-    _i3.NotebookData data,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  _i4.FutureOr<_i8.Uint8List> Function(
+    _i3.NotebookData,
+    _i3.CancellationToken,
+  ) get serializeNotebook => _i5.getProperty(
         this,
         'serializeNotebook',
-        [
-          data,
-          token,
-        ],
       );
 }
 
@@ -22407,9 +24837,9 @@ class NotebookDocumentContentOptions {
     _i2.Object? transientDocumentMetadata,
   }) =>
       NotebookDocumentContentOptions._(
-        transientOutputs: transientOutputs ?? _i4.undefined,
-        transientCellMetadata: transientCellMetadata ?? _i4.undefined,
-        transientDocumentMetadata: transientDocumentMetadata ?? _i4.undefined,
+        transientOutputs: transientOutputs,
+        transientCellMetadata: transientCellMetadata ?? _i6.undefined,
+        transientDocumentMetadata: transientDocumentMetadata ?? _i6.undefined,
       );
 }
 
@@ -22426,7 +24856,7 @@ extension NotebookDocumentContentOptions$Typings
     _i5.setProperty(
       this,
       'transientOutputs',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22442,7 +24872,7 @@ extension NotebookDocumentContentOptions$Typings
     _i5.setProperty(
       this,
       'transientCellMetadata',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22458,7 +24888,7 @@ extension NotebookDocumentContentOptions$Typings
     _i5.setProperty(
       this,
       'transientDocumentMetadata',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -22495,7 +24925,71 @@ extension IInline81$Typings on IInline81 {
 /// to create executions by themselves.
 @_i1.JS()
 @_i1.staticInterop
-class NotebookController {}
+@_i1.anonymous
+class NotebookController {
+  external factory NotebookController._({
+    _i2.dynamic id,
+    _i2.dynamic notebookType,
+    _i2.dynamic supportedLanguages,
+    _i2.dynamic label,
+    _i2.dynamic description,
+    _i2.dynamic detail,
+    _i2.dynamic supportsExecutionOrder,
+    _i2.dynamic executeHandler,
+    _i2.dynamic interruptHandler,
+    _i2.dynamic onDidChangeSelectedNotebooks,
+    _i2.dynamic createNotebookCellExecution,
+    _i2.dynamic updateNotebookAffinity,
+    _i2.dynamic dispose,
+  });
+
+  factory NotebookController({
+    _i2.String? id,
+    _i2.String? notebookType,
+    _i2.List<_i2.String>? supportedLanguages,
+    _i2.String? label,
+    _i2.String? description,
+    _i2.String? detail,
+    _i2.bool? supportsExecutionOrder,
+    _i4.FutureOr<void> Function(
+      _i2.List<_i3.NotebookCell>,
+      _i3.NotebookDocument,
+      _i3.NotebookController,
+    )? executeHandler,
+    _i4.FutureOr<void> Function(_i3.NotebookDocument)? interruptHandler,
+    _i3.Event<_i3.IInline81>? onDidChangeSelectedNotebooks,
+    _i3.NotebookCellExecution Function(_i3.NotebookCell)?
+        createNotebookCellExecution,
+    void Function(
+      _i3.NotebookDocument,
+      _i3.NotebookControllerAffinity,
+    )? updateNotebookAffinity,
+    void Function()? dispose,
+  }) =>
+      NotebookController._(
+        id: id,
+        notebookType: notebookType,
+        supportedLanguages: supportedLanguages,
+        label: label,
+        description: description,
+        detail: detail,
+        supportsExecutionOrder: supportsExecutionOrder,
+        executeHandler:
+            executeHandler == null ? null : _i5.allowInterop(executeHandler),
+        interruptHandler: interruptHandler == null
+            ? null
+            : _i5.allowInterop(interruptHandler),
+        onDidChangeSelectedNotebooks:
+            onDidChangeSelectedNotebooks ?? _i6.undefined,
+        createNotebookCellExecution: createNotebookCellExecution == null
+            ? null
+            : _i5.allowInterop(createNotebookCellExecution),
+        updateNotebookAffinity: updateNotebookAffinity == null
+            ? null
+            : _i5.allowInterop(updateNotebookAffinity),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension NotebookController$Typings on NotebookController {
   /// The identifier of this notebook controller.
@@ -22535,7 +25029,7 @@ extension NotebookController$Typings on NotebookController {
     _i5.setProperty(
       this,
       'supportedLanguages',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22561,7 +25055,7 @@ extension NotebookController$Typings on NotebookController {
     _i5.setProperty(
       this,
       'description',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22574,7 +25068,7 @@ extension NotebookController$Typings on NotebookController {
     _i5.setProperty(
       this,
       'detail',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22588,13 +25082,13 @@ extension NotebookController$Typings on NotebookController {
     _i5.setProperty(
       this,
       'supportsExecutionOrder',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
   /// The execute handler is invoked when the run gestures in the UI are selected, e.g Run Cell, Run All,
   ///  Run Selection etc. The execute handler is responsible for creating and managing {@link NotebookCellExecution execution}-objects.
-  _i2.Object Function(
+  _i4.FutureOr<void> Function(
     _i2.List<_i3.NotebookCell>,
     _i3.NotebookDocument,
     _i3.NotebookController,
@@ -22603,7 +25097,7 @@ extension NotebookController$Typings on NotebookController {
         'executeHandler',
       );
   set executeHandler(
-      _i2.Object Function(
+      _i4.FutureOr<void> Function(
         _i2.List<_i3.NotebookCell>,
         _i3.NotebookDocument,
         _i3.NotebookController,
@@ -22625,16 +25119,17 @@ extension NotebookController$Typings on NotebookController {
   ///
   ///  _Note_ that supporting {@link NotebookCellExecution.token cancellation tokens} is preferred and that interrupt handlers should
   ///  only be used when tokens cannot be supported.
-  _i2.Object Function(_i3.NotebookDocument)? get interruptHandler =>
+  _i4.FutureOr<void> Function(_i3.NotebookDocument)? get interruptHandler =>
       _i5.getProperty(
         this,
         'interruptHandler',
       );
-  set interruptHandler(_i2.Object Function(_i3.NotebookDocument)? value) {
+  set interruptHandler(
+      _i4.FutureOr<void> Function(_i3.NotebookDocument)? value) {
     _i5.setProperty(
       this,
       'interruptHandler',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -22650,53 +25145,51 @@ extension NotebookController$Typings on NotebookController {
         this,
         'onDidChangeSelectedNotebooks',
       );
+  set createNotebookCellExecution(
+      _i3.NotebookCellExecution Function(_i3.NotebookCell) value) {
+    _i5.setProperty(
+      this,
+      'createNotebookCellExecution',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Create a cell execution task.
-  ///
-  ///  _Note_ that there can only be one execution per cell at a time and that an error is thrown if
-  ///  a cell execution is created while another is still active.
-  ///
-  ///  This should be used in response to the {@link NotebookController.executeHandler execution handler}
-  ///  being called or when cell execution has been started else, e.g when a cell was already
-  ///  executing or when cell execution was triggered from another source.
-  ///
-  ///  @param cell The notebook cell for which to create the execution.
-  ///  @returns A notebook cell execution.
-  _i3.NotebookCellExecution createNotebookCellExecution(
-          _i3.NotebookCell cell) =>
-      _i5.callMethod(
-        this,
-        'createNotebookCellExecution',
-        [cell],
-      );
-
-  /// A controller can set affinities for specific notebook documents. This allows a controller
-  ///  to be presented more prominent for some notebooks.
-  ///
-  ///  @param notebook The notebook for which a priority is set.
-  ///  @param affinity A controller affinity
-  void updateNotebookAffinity(
-    _i3.NotebookDocument notebook,
-    _i3.NotebookControllerAffinity affinity,
-  ) {
-    _i5.callMethod(
+  _i3.NotebookCellExecution Function(_i3.NotebookCell)
+      get createNotebookCellExecution => _i5.getProperty(
+            this,
+            'createNotebookCellExecution',
+          );
+  set updateNotebookAffinity(
+      void Function(
+        _i3.NotebookDocument,
+        _i3.NotebookControllerAffinity,
+      ) value) {
+    _i5.setProperty(
       this,
       'updateNotebookAffinity',
-      [
-        notebook,
-        affinity.name,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Dispose and free associated resources.
-  void dispose() {
-    _i5.callMethod(
+  void Function(
+    _i3.NotebookDocument,
+    _i3.NotebookControllerAffinity,
+  ) get updateNotebookAffinity => _i5.getProperty(
+        this,
+        'updateNotebookAffinity',
+      );
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// A NotebookCellExecution is how {@link NotebookControllernotebook controller} modify a notebook cell as
@@ -22707,7 +25200,67 @@ extension NotebookController$Typings on NotebookController {
 /// {@linkcode NotebookCellExecution.endend(...)} is called, it enters the {@linkcode NotebookCellExecutionState.Idle Idle} state.
 @_i1.JS()
 @_i1.staticInterop
-class NotebookCellExecution {}
+@_i1.anonymous
+class NotebookCellExecution {
+  external factory NotebookCellExecution._({
+    _i2.dynamic cell,
+    _i2.dynamic token,
+    _i2.dynamic executionOrder,
+    _i2.dynamic start,
+    _i2.dynamic end,
+    _i2.dynamic clearOutput,
+    _i2.dynamic replaceOutput,
+    _i2.dynamic appendOutput,
+    _i2.dynamic replaceOutputItems,
+    _i2.dynamic appendOutputItems,
+  });
+
+  factory NotebookCellExecution({
+    _i3.NotebookCell? cell,
+    _i3.CancellationToken? token,
+    _i2.num? executionOrder,
+    void Function([_i2.num?])? start,
+    void Function([
+      _i2.bool?,
+      _i2.num?,
+    ])? end,
+    _i2.Future<_i2.dynamic> Function([_i3.NotebookCell?])? clearOutput,
+    _i2.Future<_i2.dynamic> Function(
+      _i2.Object, [
+      _i3.NotebookCell?,
+    ])? replaceOutput,
+    _i2.Future<_i2.dynamic> Function(
+      _i2.Object, [
+      _i3.NotebookCell?,
+    ])? appendOutput,
+    _i2.Future<_i2.dynamic> Function(
+      _i2.Object,
+      _i3.NotebookCellOutput,
+    )? replaceOutputItems,
+    _i2.Future<_i2.dynamic> Function(
+      _i2.Object,
+      _i3.NotebookCellOutput,
+    )? appendOutputItems,
+  }) =>
+      NotebookCellExecution._(
+        cell: cell ?? _i6.undefined,
+        token: token ?? _i6.undefined,
+        executionOrder: executionOrder ?? _i6.undefined,
+        start: start == null ? null : _i5.allowInterop(start),
+        end: end == null ? null : _i5.allowInterop(end),
+        clearOutput: clearOutput == null ? null : _i5.allowInterop(clearOutput),
+        replaceOutput:
+            replaceOutput == null ? null : _i5.allowInterop(replaceOutput),
+        appendOutput:
+            appendOutput == null ? null : _i5.allowInterop(appendOutput),
+        replaceOutputItems: replaceOutputItems == null
+            ? null
+            : _i5.allowInterop(replaceOutputItems),
+        appendOutputItems: appendOutputItems == null
+            ? null
+            : _i5.allowInterop(appendOutputItems),
+      );
+}
 
 extension NotebookCellExecution$Typings on NotebookCellExecution {
   /// The {@link NotebookCellcell} for which this execution has been created.
@@ -22735,127 +25288,130 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
     _i5.setProperty(
       this,
       'executionOrder',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Signal that the execution has begun.
-  ///
-  ///  @param startTime The time that execution began, in milliseconds in the Unix epoch. Used to drive the clock
-  ///  that shows for how long a cell has been running. If not given, the clock won't be shown.
-  void start([_i2.num? startTime]) {
-    _i5.callMethod(
+  set start(void Function([_i2.num?]) value) {
+    _i5.setProperty(
       this,
       'start',
-      [startTime ?? _i4.undefined],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Signal that execution has ended.
-  ///
-  ///  @param success If true, a green check is shown on the cell status bar.
-  ///  If false, a red X is shown.
-  ///  If undefined, no check or X icon is shown.
-  ///  @param endTime The time that execution finished, in milliseconds in the Unix epoch.
-  void end([
-    _i2.bool? success,
-    _i2.num? endTime,
-  ]) {
-    _i5.callMethod(
+  void Function([_i2.num?]) get start => _i5.getProperty(
+        this,
+        'start',
+      );
+  set end(
+      void Function([
+        _i2.bool?,
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'end',
-      [
-        success ?? _i4.undefined,
-        endTime ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Clears the output of the cell that is executing or of another cell that is affected by this execution.
-  ///
-  ///  @param cell Cell for which output is cleared. Defaults to the {@link NotebookCellExecution.cell cell} of
-  ///  this execution.
-  ///  @returns A thenable that resolves when the operation finished.
-  _i2.Future<_i6.Thenable<void>> clearOutput([_i3.NotebookCell? cell]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  void Function([
+    _i2.bool?,
+    _i2.num?,
+  ]) get end => _i5.getProperty(
+        this,
+        'end',
+      );
+  set clearOutput(_i2.Future<_i2.dynamic> Function([_i3.NotebookCell?]) value) {
+    _i5.setProperty(
+      this,
+      'clearOutput',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.dynamic> Function([_i3.NotebookCell?]) get clearOutput =>
+      _i5.getProperty(
         this,
         'clearOutput',
-        [cell ?? _i4.undefined],
-      ));
+      );
+  set replaceOutput(
+      _i2.Future<_i2.dynamic> Function(
+        _i2.Object, [
+        _i3.NotebookCell?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'replaceOutput',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Replace the output of the cell that is executing or of another cell that is affected by this execution.
-  ///
-  ///  @param out Output that replaces the current output.
-  ///  @param cell Cell for which output is cleared. Defaults to the {@link NotebookCellExecution.cell cell} of
-  ///  this execution.
-  ///  @returns A thenable that resolves when the operation finished.
-  _i2.Future<_i6.Thenable<void>> replaceOutput(
-    _i2.Object out, [
-    _i3.NotebookCell? cell,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i2.Object, [
+    _i3.NotebookCell?,
+  ]) get replaceOutput => _i5.getProperty(
         this,
         'replaceOutput',
-        [
-          out,
-          cell ?? _i4.undefined,
-        ],
-      ));
+      );
+  set appendOutput(
+      _i2.Future<_i2.dynamic> Function(
+        _i2.Object, [
+        _i3.NotebookCell?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'appendOutput',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Append to the output of the cell that is executing or to another cell that is affected by this execution.
-  ///
-  ///  @param out Output that is appended to the current output.
-  ///  @param cell Cell for which output is cleared. Defaults to the {@link NotebookCellExecution.cell cell} of
-  ///  this execution.
-  ///  @returns A thenable that resolves when the operation finished.
-  _i2.Future<_i6.Thenable<void>> appendOutput(
-    _i2.Object out, [
-    _i3.NotebookCell? cell,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i2.Object, [
+    _i3.NotebookCell?,
+  ]) get appendOutput => _i5.getProperty(
         this,
         'appendOutput',
-        [
-          out,
-          cell ?? _i4.undefined,
-        ],
-      ));
+      );
+  set replaceOutputItems(
+      _i2.Future<_i2.dynamic> Function(
+        _i2.Object,
+        _i3.NotebookCellOutput,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'replaceOutputItems',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Replace all output items of existing cell output.
-  ///
-  ///  @param items Output items that replace the items of existing output.
-  ///  @param output Output object that already exists.
-  ///  @returns A thenable that resolves when the operation finished.
-  _i2.Future<_i6.Thenable<void>> replaceOutputItems(
-    _i2.Object items,
-    _i3.NotebookCellOutput output,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i2.Object,
+    _i3.NotebookCellOutput,
+  ) get replaceOutputItems => _i5.getProperty(
         this,
         'replaceOutputItems',
-        [
-          items,
-          output,
-        ],
-      ));
+      );
+  set appendOutputItems(
+      _i2.Future<_i2.dynamic> Function(
+        _i2.Object,
+        _i3.NotebookCellOutput,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'appendOutputItems',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Append output items to existing cell output.
-  ///
-  ///  @param items Output items that are append to existing output.
-  ///  @param output Output object that already exists.
-  ///  @returns A thenable that resolves when the operation finished.
-  _i2.Future<_i6.Thenable<void>> appendOutputItems(
-    _i2.Object items,
-    _i3.NotebookCellOutput output,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i2.Object,
+    _i3.NotebookCellOutput,
+  ) get appendOutputItems => _i5.getProperty(
         this,
         'appendOutputItems',
-        [
-          items,
-          output,
-        ],
-      ));
+      );
 }
 
 /// A contribution to a cell's status bar
@@ -22969,7 +25525,28 @@ extension NotebookCellStatusBarItem$Typings on NotebookCellStatusBarItem {
 /// A provider that can contribute items to the status bar that appears below a cell's editor.
 @_i1.JS()
 @_i1.staticInterop
-class NotebookCellStatusBarItemProvider {}
+@_i1.anonymous
+class NotebookCellStatusBarItemProvider {
+  external factory NotebookCellStatusBarItemProvider._({
+    _i2.dynamic onDidChangeCellStatusBarItems,
+    _i2.dynamic provideCellStatusBarItems,
+  });
+
+  factory NotebookCellStatusBarItemProvider({
+    _i3.Event<void>? onDidChangeCellStatusBarItems,
+    _i3.ProviderResult<_i2.Object> Function(
+      _i3.NotebookCell,
+      _i3.CancellationToken,
+    )? provideCellStatusBarItems,
+  }) =>
+      NotebookCellStatusBarItemProvider._(
+        onDidChangeCellStatusBarItems:
+            onDidChangeCellStatusBarItems ?? _i6.undefined,
+        provideCellStatusBarItems: provideCellStatusBarItems == null
+            ? null
+            : _i5.allowInterop(provideCellStatusBarItems),
+      );
+}
 
 extension NotebookCellStatusBarItemProvider$Typings
     on NotebookCellStatusBarItemProvider {
@@ -22982,25 +25559,28 @@ extension NotebookCellStatusBarItemProvider$Typings
     _i5.setProperty(
       this,
       'onDidChangeCellStatusBarItems',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// The provider will be called when the cell scrolls into view, when its content, outputs, language, or metadata change, and when it changes execution state.
-  ///  @param cell The cell for which to return items.
-  ///  @param token A token triggered if this request should be cancelled.
-  ///  @returns One or more {@link NotebookCellStatusBarItem cell statusbar items}
-  _i3.ProviderResult<_i2.Object> provideCellStatusBarItems(
-    _i3.NotebookCell cell,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideCellStatusBarItems(
+      _i3.ProviderResult<_i2.Object> Function(
+        _i3.NotebookCell,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideCellStatusBarItems',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.Object> Function(
+    _i3.NotebookCell,
+    _i3.CancellationToken,
+  ) get provideCellStatusBarItems => _i5.getProperty(
         this,
         'provideCellStatusBarItems',
-        [
-          cell,
-          token,
-        ],
       );
 }
 
@@ -23017,10 +25597,10 @@ class SourceControlInputBox {
   });
 
   factory SourceControlInputBox({
-    required _i2.String value,
-    required _i2.String placeholder,
-    required _i2.bool enabled,
-    required _i2.bool visible,
+    _i2.String? value,
+    _i2.String? placeholder,
+    _i2.bool? enabled,
+    _i2.bool? visible,
   }) =>
       SourceControlInputBox._(
         value: value,
@@ -23089,25 +25669,40 @@ extension SourceControlInputBox$Typings on SourceControlInputBox {
 /// within the text.
 @_i1.JS()
 @_i1.staticInterop
-class QuickDiffProvider {}
+@_i1.anonymous
+class QuickDiffProvider {
+  external factory QuickDiffProvider._({_i2.dynamic provideOriginalResource});
+
+  factory QuickDiffProvider(
+          {_i3.ProviderResult<_i3.Uri> Function(
+            _i3.Uri,
+            _i3.CancellationToken,
+          )? provideOriginalResource}) =>
+      QuickDiffProvider._(
+          provideOriginalResource: provideOriginalResource == null
+              ? null
+              : _i5.allowInterop(provideOriginalResource));
+}
 
 extension QuickDiffProvider$Typings on QuickDiffProvider {
-  /// Provide a {@link Uri} to the original resource of any given resource uri.
-  ///
-  ///  @param uri The uri of the resource open in a text editor.
-  ///  @param token A cancellation token.
-  ///  @returns A thenable that resolves to uri of the matching original resource.
-  _i3.ProviderResult<_i3.Uri> provideOriginalResource(
-    _i3.Uri uri,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideOriginalResource(
+      _i3.ProviderResult<_i3.Uri> Function(
+        _i3.Uri,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideOriginalResource',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.Uri> Function(
+    _i3.Uri,
+    _i3.CancellationToken,
+  ) get provideOriginalResource => _i5.getProperty(
         this,
         'provideOriginalResource',
-        [
-          uri,
-          token,
-        ],
       );
 }
 
@@ -23122,7 +25717,7 @@ class SourceControlResourceThemableDecorations {
 
   factory SourceControlResourceThemableDecorations({_i2.Object? iconPath}) =>
       SourceControlResourceThemableDecorations._(
-          iconPath: iconPath ?? _i4.undefined);
+          iconPath: iconPath ?? _i6.undefined);
 }
 
 extension SourceControlResourceThemableDecorations$Typings
@@ -23160,12 +25755,12 @@ class SourceControlResourceDecorations
     _i2.Object? iconPath,
   }) =>
       SourceControlResourceDecorations._(
-        strikeThrough: strikeThrough ?? _i4.undefined,
-        faded: faded ?? _i4.undefined,
-        tooltip: tooltip ?? _i4.undefined,
-        light: light ?? _i4.undefined,
-        dark: dark ?? _i4.undefined,
-        iconPath: iconPath ?? _i4.undefined,
+        strikeThrough: strikeThrough,
+        faded: faded,
+        tooltip: tooltip,
+        light: light ?? _i6.undefined,
+        dark: dark ?? _i6.undefined,
+        iconPath: iconPath ?? _i6.undefined,
       );
 }
 
@@ -23219,16 +25814,16 @@ class SourceControlResourceState {
   });
 
   factory SourceControlResourceState({
-    required _i3.Uri resourceUri,
+    _i3.Uri? resourceUri,
     _i3.Command? command,
     _i3.SourceControlResourceDecorations? decorations,
     _i2.String? contextValue,
   }) =>
       SourceControlResourceState._(
-        resourceUri: resourceUri,
-        command: command ?? _i4.undefined,
-        decorations: decorations ?? _i4.undefined,
-        contextValue: contextValue ?? _i4.undefined,
+        resourceUri: resourceUri ?? _i6.undefined,
+        command: command ?? _i6.undefined,
+        decorations: decorations ?? _i6.undefined,
+        contextValue: contextValue,
       );
 }
 
@@ -23279,7 +25874,31 @@ extension SourceControlResourceState$Typings on SourceControlResourceState {
 /// {@link SourceControlResourceStatesource control resource states}.
 @_i1.JS()
 @_i1.staticInterop
-class SourceControlResourceGroup {}
+@_i1.anonymous
+class SourceControlResourceGroup {
+  external factory SourceControlResourceGroup._({
+    _i2.dynamic id,
+    _i2.dynamic label,
+    _i2.dynamic hideWhenEmpty,
+    _i2.dynamic resourceStates,
+    _i2.dynamic dispose,
+  });
+
+  factory SourceControlResourceGroup({
+    _i2.String? id,
+    _i2.String? label,
+    _i2.bool? hideWhenEmpty,
+    _i2.List<_i3.SourceControlResourceState>? resourceStates,
+    void Function()? dispose,
+  }) =>
+      SourceControlResourceGroup._(
+        id: id,
+        label: label,
+        hideWhenEmpty: hideWhenEmpty,
+        resourceStates: resourceStates,
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension SourceControlResourceGroup$Typings on SourceControlResourceGroup {
   /// The id of this source control resource group.
@@ -23311,7 +25930,7 @@ extension SourceControlResourceGroup$Typings on SourceControlResourceGroup {
     _i5.setProperty(
       this,
       'hideWhenEmpty',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -23331,21 +25950,72 @@ extension SourceControlResourceGroup$Typings on SourceControlResourceGroup {
     );
   }
 
-  /// Dispose this source control resource group.
-  void dispose() {
-    _i5.callMethod(
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// An source control is able to provide {@link SourceControlResourceStateresource states}
 /// to the editor and interact with the editor in several source control related ways.
 @_i1.JS()
 @_i1.staticInterop
-class SourceControl {}
+@_i1.anonymous
+class SourceControl {
+  external factory SourceControl._({
+    _i2.dynamic id,
+    _i2.dynamic label,
+    _i2.dynamic rootUri,
+    _i2.dynamic inputBox,
+    _i2.dynamic count,
+    _i2.dynamic quickDiffProvider,
+    _i2.dynamic commitTemplate,
+    _i2.dynamic acceptInputCommand,
+    _i2.dynamic statusBarCommands,
+    _i2.dynamic createResourceGroup,
+    _i2.dynamic dispose,
+  });
+
+  factory SourceControl({
+    _i2.String? id,
+    _i2.String? label,
+    _i3.Uri? rootUri,
+    _i3.SourceControlInputBox? inputBox,
+    _i2.num? count,
+    _i3.QuickDiffProvider? quickDiffProvider,
+    _i2.String? commitTemplate,
+    _i3.Command? acceptInputCommand,
+    _i2.List<_i3.Command>? statusBarCommands,
+    _i3.SourceControlResourceGroup Function(
+      _i2.String,
+      _i2.String,
+    )? createResourceGroup,
+    void Function()? dispose,
+  }) =>
+      SourceControl._(
+        id: id,
+        label: label,
+        rootUri: rootUri ?? _i6.undefined,
+        inputBox: inputBox ?? _i6.undefined,
+        count: count,
+        quickDiffProvider: quickDiffProvider ?? _i6.undefined,
+        commitTemplate: commitTemplate,
+        acceptInputCommand: acceptInputCommand ?? _i6.undefined,
+        statusBarCommands: statusBarCommands,
+        createResourceGroup: createResourceGroup == null
+            ? null
+            : _i5.allowInterop(createResourceGroup),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension SourceControl$Typings on SourceControl {
   /// The id of this source control.
@@ -23386,7 +26056,7 @@ extension SourceControl$Typings on SourceControl {
     _i5.setProperty(
       this,
       'count',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -23399,7 +26069,7 @@ extension SourceControl$Typings on SourceControl {
     _i5.setProperty(
       this,
       'quickDiffProvider',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -23415,7 +26085,7 @@ extension SourceControl$Typings on SourceControl {
     _i5.setProperty(
       this,
       'commitTemplate',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -23431,7 +26101,7 @@ extension SourceControl$Typings on SourceControl {
     _i5.setProperty(
       this,
       'acceptInputCommand',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -23447,32 +26117,41 @@ extension SourceControl$Typings on SourceControl {
     _i5.setProperty(
       this,
       'statusBarCommands',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  /// Create a new {@link SourceControlResourceGroup resource group}.
-  _i3.SourceControlResourceGroup createResourceGroup(
-    _i2.String id,
-    _i2.String label,
-  ) =>
-      _i5.callMethod(
+  set createResourceGroup(
+      _i3.SourceControlResourceGroup Function(
+        _i2.String,
+        _i2.String,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'createResourceGroup',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.SourceControlResourceGroup Function(
+    _i2.String,
+    _i2.String,
+  ) get createResourceGroup => _i5.getProperty(
         this,
         'createResourceGroup',
-        [
-          id,
-          label,
-        ],
       );
-
-  /// Dispose this source control.
-  void dispose() {
-    _i5.callMethod(
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// A DebugProtocolMessage is an opaque stand-in type for the [ProtocolMessage](https://microsoft.github.io/debug-adapter-protocol/specification#Base_Protocol_ProtocolMessage) type defined in the Debug Adapter Protocol.
@@ -23508,7 +26187,25 @@ class DebugProtocolBreakpoint {
 /// Configuration for a debug session.
 @_i1.JS()
 @_i1.staticInterop
-class DebugConfiguration {}
+@_i1.anonymous
+class DebugConfiguration {
+  external factory DebugConfiguration._({
+    _i2.dynamic type,
+    _i2.dynamic name,
+    _i2.dynamic request,
+  });
+
+  factory DebugConfiguration({
+    _i2.String? type,
+    _i2.String? name,
+    _i2.String? request,
+  }) =>
+      DebugConfiguration._(
+        type: type,
+        name: name,
+        request: request,
+      );
+}
 
 extension DebugConfiguration$Typings on DebugConfiguration {
   /// The type of the debug session.
@@ -23569,7 +26266,47 @@ extension DebugConfiguration$Typings on DebugConfiguration {
 /// A debug session.
 @_i1.JS()
 @_i1.staticInterop
-class DebugSession {}
+@_i1.anonymous
+class DebugSession {
+  external factory DebugSession._({
+    _i2.dynamic id,
+    _i2.dynamic type,
+    _i2.dynamic parentSession,
+    _i2.dynamic name,
+    _i2.dynamic workspaceFolder,
+    _i2.dynamic configuration,
+    _i2.dynamic customRequest,
+    _i2.dynamic getDebugProtocolBreakpoint,
+  });
+
+  factory DebugSession({
+    _i2.String? id,
+    _i2.String? type,
+    _i3.DebugSession? parentSession,
+    _i2.String? name,
+    _i3.WorkspaceFolder? workspaceFolder,
+    _i3.DebugConfiguration? configuration,
+    _i2.Future<_i2.dynamic> Function(
+      _i2.String, [
+      _i2.dynamic,
+    ])? customRequest,
+    _i2.Future<_i2.dynamic> Function(_i3.Breakpoint)?
+        getDebugProtocolBreakpoint,
+  }) =>
+      DebugSession._(
+        id: id,
+        type: type,
+        parentSession: parentSession ?? _i6.undefined,
+        name: name,
+        workspaceFolder: workspaceFolder ?? _i6.undefined,
+        configuration: configuration ?? _i6.undefined,
+        customRequest:
+            customRequest == null ? null : _i5.allowInterop(customRequest),
+        getDebugProtocolBreakpoint: getDebugProtocolBreakpoint == null
+            ? null
+            : _i5.allowInterop(getDebugProtocolBreakpoint),
+      );
+}
 
 extension DebugSession$Typings on DebugSession {
   /// The unique ID of this debug session.
@@ -23618,33 +26355,39 @@ extension DebugSession$Typings on DebugSession {
         this,
         'configuration',
       );
+  set customRequest(
+      _i2.Future<_i2.dynamic> Function(
+        _i2.String, [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'customRequest',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Send a custom request to the debug adapter.
-  _i2.Future<_i6.Thenable<_i2.dynamic>> customRequest(
-    _i2.String command, [
-    _i2.dynamic args,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(
+    _i2.String, [
+    _i2.dynamic,
+  ]) get customRequest => _i5.getProperty(
         this,
         'customRequest',
-        [
-          command,
-          args ?? _i4.undefined,
-        ],
-      ));
+      );
+  set getDebugProtocolBreakpoint(
+      _i2.Future<_i2.dynamic> Function(_i3.Breakpoint) value) {
+    _i5.setProperty(
+      this,
+      'getDebugProtocolBreakpoint',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Maps a breakpoint in the editor to the corresponding Debug Adapter Protocol (DAP) breakpoint that is managed by the debug adapter of the debug session.
-  ///  If no DAP breakpoint exists (either because the editor breakpoint was not yet registered or because the debug adapter is not interested in the breakpoint), the value `undefined` is returned.
-  ///
-  ///  @param breakpoint A {@link Breakpoint} in the editor.
-  ///  @returns A promise that resolves to the Debug Adapter Protocol breakpoint or `undefined`.
-  _i2.Future<_i6.Thenable<_i3.DebugProtocolBreakpoint?>>
-      getDebugProtocolBreakpoint(_i3.Breakpoint breakpoint) =>
-          _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(_i3.Breakpoint)
+      get getDebugProtocolBreakpoint => _i5.getProperty(
             this,
             'getDebugProtocolBreakpoint',
-            [breakpoint],
-          ));
+          );
 }
 
 /// A custom Debug Adapter Protocol event received from a {@link DebugSessiondebug session}.
@@ -23659,12 +26402,12 @@ class DebugSessionCustomEvent {
   });
 
   factory DebugSessionCustomEvent({
-    required _i3.DebugSession session,
-    required _i2.String event,
-    required _i2.dynamic body,
+    _i3.DebugSession? session,
+    _i2.String? event,
+    _i2.dynamic body,
   }) =>
       DebugSessionCustomEvent._(
-        session: session,
+        session: session ?? _i6.undefined,
         event: event,
         body: body,
       );
@@ -23695,80 +26438,107 @@ extension DebugSessionCustomEvent$Typings on DebugSessionCustomEvent {
 /// A debug configuration provider is registered via {@link debug.registerDebugConfigurationProvider}.
 @_i1.JS()
 @_i1.staticInterop
-class DebugConfigurationProvider {}
+@_i1.anonymous
+class DebugConfigurationProvider {
+  external factory DebugConfigurationProvider._({
+    _i2.dynamic provideDebugConfigurations,
+    _i2.dynamic resolveDebugConfiguration,
+    _i2.dynamic resolveDebugConfigurationWithSubstitutedVariables,
+  });
+
+  factory DebugConfigurationProvider({
+    _i3.ProviderResult<_i2.List<_i3.DebugConfiguration>> Function([
+      _i3.WorkspaceFolder?,
+      _i3.CancellationToken?,
+    ])? provideDebugConfigurations,
+    _i3.ProviderResult<_i3.DebugConfiguration> Function(
+      _i3.DebugConfiguration,
+      _i3.CancellationToken?, [
+      _i3.WorkspaceFolder?,
+    ])? resolveDebugConfiguration,
+    _i3.ProviderResult<_i3.DebugConfiguration> Function(
+      _i3.DebugConfiguration,
+      _i3.CancellationToken?, [
+      _i3.WorkspaceFolder?,
+    ])? resolveDebugConfigurationWithSubstitutedVariables,
+  }) =>
+      DebugConfigurationProvider._(
+        provideDebugConfigurations: provideDebugConfigurations == null
+            ? null
+            : _i5.allowInterop(provideDebugConfigurations),
+        resolveDebugConfiguration: resolveDebugConfiguration == null
+            ? null
+            : _i5.allowInterop(resolveDebugConfiguration),
+        resolveDebugConfigurationWithSubstitutedVariables:
+            resolveDebugConfigurationWithSubstitutedVariables == null
+                ? null
+                : _i5.allowInterop(
+                    resolveDebugConfigurationWithSubstitutedVariables),
+      );
+}
 
 extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
-  /// Provides {@link DebugConfiguration debug configuration} to the debug service. If more than one debug configuration provider is
-  ///  registered for the same type, debug configurations are concatenated in arbitrary order.
-  ///
-  ///  @param folder The workspace folder for which the configurations are used or `undefined` for a folderless setup.
-  ///  @param token A cancellation token.
-  ///  @returns An array of {@link DebugConfiguration debug configurations}.
-  _i3.ProviderResult<_i2.List<_i3.DebugConfiguration>>
-      provideDebugConfigurations([
-    _i3.WorkspaceFolder? folder,
-    _i3.CancellationToken? token,
-  ]) =>
-          _i5.callMethod(
-            this,
-            'provideDebugConfigurations',
-            [
-              folder ?? _i4.undefined,
-              token ?? _i4.undefined,
-            ],
-          );
+  set provideDebugConfigurations(
+      _i3.ProviderResult<_i2.List<_i3.DebugConfiguration>> Function([
+        _i3.WorkspaceFolder?,
+        _i3.CancellationToken?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'provideDebugConfigurations',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Resolves a {@link DebugConfiguration debug configuration} by filling in missing values or by adding/changing/removing attributes.
-  ///  If more than one debug configuration provider is registered for the same type, the resolveDebugConfiguration calls are chained
-  ///  in arbitrary order and the initial debug configuration is piped through the chain.
-  ///  Returning the value 'undefined' prevents the debug session from starting.
-  ///  Returning the value 'null' prevents the debug session from starting and opens the underlying debug configuration instead.
-  ///
-  ///  @param folder The workspace folder from which the configuration originates from or `undefined` for a folderless setup.
-  ///  @param debugConfiguration The {@link DebugConfiguration debug configuration} to resolve.
-  ///  @param token A cancellation token.
-  ///  @returns The resolved debug configuration or undefined or null.
-  _i3.ProviderResult<_i3.DebugConfiguration> resolveDebugConfiguration(
-    _i3.WorkspaceFolder? folder,
-    _i3.DebugConfiguration debugConfiguration, [
-    _i3.CancellationToken? token,
-  ]) =>
-      _i5.callMethod(
+  _i3.ProviderResult<_i2.List<_i3.DebugConfiguration>> Function([
+    _i3.WorkspaceFolder?,
+    _i3.CancellationToken?,
+  ]) get provideDebugConfigurations => _i5.getProperty(
+        this,
+        'provideDebugConfigurations',
+      );
+  set resolveDebugConfiguration(
+      _i3.ProviderResult<_i3.DebugConfiguration> Function(
+        _i3.DebugConfiguration,
+        _i3.CancellationToken?, [
+        _i3.WorkspaceFolder?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'resolveDebugConfiguration',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.DebugConfiguration> Function(
+    _i3.DebugConfiguration,
+    _i3.CancellationToken?, [
+    _i3.WorkspaceFolder?,
+  ]) get resolveDebugConfiguration => _i5.getProperty(
         this,
         'resolveDebugConfiguration',
-        [
-          folder ?? _i4.undefined,
-          debugConfiguration,
-          token ?? _i4.undefined,
-        ],
       );
+  set resolveDebugConfigurationWithSubstitutedVariables(
+      _i3.ProviderResult<_i3.DebugConfiguration> Function(
+        _i3.DebugConfiguration,
+        _i3.CancellationToken?, [
+        _i3.WorkspaceFolder?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'resolveDebugConfigurationWithSubstitutedVariables',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// This hook is directly called after 'resolveDebugConfiguration' but with all variables substituted.
-  ///  It can be used to resolve or verify a {@link DebugConfiguration debug configuration} by filling in missing values or by adding/changing/removing attributes.
-  ///  If more than one debug configuration provider is registered for the same type, the 'resolveDebugConfigurationWithSubstitutedVariables' calls are chained
-  ///  in arbitrary order and the initial debug configuration is piped through the chain.
-  ///  Returning the value 'undefined' prevents the debug session from starting.
-  ///  Returning the value 'null' prevents the debug session from starting and opens the underlying debug configuration instead.
-  ///
-  ///  @param folder The workspace folder from which the configuration originates from or `undefined` for a folderless setup.
-  ///  @param debugConfiguration The {@link DebugConfiguration debug configuration} to resolve.
-  ///  @param token A cancellation token.
-  ///  @returns The resolved debug configuration or undefined or null.
-  _i3.ProviderResult<_i3.DebugConfiguration>
-      resolveDebugConfigurationWithSubstitutedVariables(
-    _i3.WorkspaceFolder? folder,
-    _i3.DebugConfiguration debugConfiguration, [
-    _i3.CancellationToken? token,
-  ]) =>
-          _i5.callMethod(
-            this,
-            'resolveDebugConfigurationWithSubstitutedVariables',
-            [
-              folder ?? _i4.undefined,
-              debugConfiguration,
-              token ?? _i4.undefined,
-            ],
-          );
+  _i3.ProviderResult<_i3.DebugConfiguration> Function(
+    _i3.DebugConfiguration,
+    _i3.CancellationToken?, [
+    _i3.WorkspaceFolder?,
+  ]) get resolveDebugConfigurationWithSubstitutedVariables => _i5.getProperty(
+        this,
+        'resolveDebugConfigurationWithSubstitutedVariables',
+      );
 }
 
 /// Represents a debug adapter executable and optional arguments and runtime options passed to it.
@@ -23784,8 +26554,8 @@ class DebugAdapterExecutable {
         _declaredDebugAdapterExecutable,
         [
           command,
-          args ?? _i4.undefined,
-          options ?? _i4.undefined,
+          args ?? _i6.undefined,
+          options ?? _i6.undefined,
         ],
       );
 }
@@ -23834,8 +26604,8 @@ class DebugAdapterExecutableOptions {
     _i2.String? cwd,
   }) =>
       DebugAdapterExecutableOptions._(
-        env: env ?? _i4.undefined,
-        cwd: cwd ?? _i4.undefined,
+        env: env ?? _i6.undefined,
+        cwd: cwd,
       );
 }
 
@@ -23852,7 +26622,7 @@ extension DebugAdapterExecutableOptions$Typings
     _i5.setProperty(
       this,
       'env',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -23865,7 +26635,7 @@ extension DebugAdapterExecutableOptions$Typings
     _i5.setProperty(
       this,
       'cwd',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -23882,7 +26652,7 @@ class DebugAdapterServer {
         _declaredDebugAdapterServer,
         [
           port,
-          host ?? _i4.undefined,
+          host ?? _i6.undefined,
         ],
       );
 }
@@ -23932,7 +26702,23 @@ extension DebugAdapterNamedPipeServer$Typings on DebugAdapterNamedPipeServer {
 /// A debug adapter that implements the Debug Adapter Protocol can be registered with the editor if it implements the DebugAdapter interface.
 @_i1.JS()
 @_i1.staticInterop
-class DebugAdapter implements _i3.Disposable {}
+@_i1.anonymous
+class DebugAdapter implements _i3.Disposable {
+  external factory DebugAdapter._({
+    _i2.dynamic onDidSendMessage,
+    _i2.dynamic handleMessage,
+  });
+
+  factory DebugAdapter({
+    _i3.Event<_i3.DebugProtocolMessage>? onDidSendMessage,
+    void Function(_i3.DebugProtocolMessage)? handleMessage,
+  }) =>
+      DebugAdapter._(
+        onDidSendMessage: onDidSendMessage ?? _i6.undefined,
+        handleMessage:
+            handleMessage == null ? null : _i5.allowInterop(handleMessage),
+      );
+}
 
 extension DebugAdapter$Typings on DebugAdapter {
   /// An event which fires after the debug adapter has sent a Debug Adapter Protocol message to the editor.
@@ -23941,18 +26727,18 @@ extension DebugAdapter$Typings on DebugAdapter {
         this,
         'onDidSendMessage',
       );
-
-  /// Handle a Debug Adapter Protocol message.
-  ///  Messages can be requests, responses, or events.
-  ///  Results or errors are returned via onSendMessage events.
-  ///  @param message A Debug Adapter Protocol message
-  void handleMessage(_i3.DebugProtocolMessage message) {
-    _i5.callMethod(
+  set handleMessage(void Function(_i3.DebugProtocolMessage) value) {
+    _i5.setProperty(
       this,
       'handleMessage',
-      [message],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function(_i3.DebugProtocolMessage) get handleMessage => _i5.getProperty(
+        this,
+        'handleMessage',
+      );
 }
 
 /// A debug adapter descriptor for an inline implementation.
@@ -23974,154 +26760,251 @@ _i2.Object get _declaredDebugAdapterInlineImplementation => _i5.getProperty(
 /// A debug adaper factory that creates {@link DebugAdapterDescriptordebug adapter descriptors}.
 @_i1.JS()
 @_i1.staticInterop
-class DebugAdapterDescriptorFactory {}
+@_i1.anonymous
+class DebugAdapterDescriptorFactory {
+  external factory DebugAdapterDescriptorFactory._(
+      {_i2.dynamic createDebugAdapterDescriptor});
+
+  factory DebugAdapterDescriptorFactory(
+          {_i3.ProviderResult<_i3.DebugAdapterDescriptor> Function(
+            _i3.DebugSession, [
+            _i3.DebugAdapterExecutable?,
+          ])? createDebugAdapterDescriptor}) =>
+      DebugAdapterDescriptorFactory._(
+          createDebugAdapterDescriptor: createDebugAdapterDescriptor == null
+              ? null
+              : _i5.allowInterop(createDebugAdapterDescriptor));
+}
 
 extension DebugAdapterDescriptorFactory$Typings
     on DebugAdapterDescriptorFactory {
-  /// 'createDebugAdapterDescriptor' is called at the start of a debug session to provide details about the debug adapter to use.
-  ///  These details must be returned as objects of type {@link DebugAdapterDescriptor}.
-  ///  Currently two types of debug adapters are supported:
-  ///  - a debug adapter executable is specified as a command path and arguments (see {@link DebugAdapterExecutable}),
-  ///  - a debug adapter server reachable via a communication port (see {@link DebugAdapterServer}).
-  ///  If the method is not implemented the default behavior is this:
-  ///    createDebugAdapter(session: DebugSession, executable: DebugAdapterExecutable) {
-  ///       if (typeof session.configuration.debugServer === 'number') {
-  ///          return new DebugAdapterServer(session.configuration.debugServer);
-  ///       }
-  ///       return executable;
-  ///    }
-  ///  @param session The {@link DebugSession debug session} for which the debug adapter will be used.
-  ///  @param executable The debug adapter's executable information as specified in the package.json (or undefined if no such information exists).
-  ///  @returns a {@link DebugAdapterDescriptor debug adapter descriptor} or undefined.
-  _i3.ProviderResult<_i3.DebugAdapterDescriptor> createDebugAdapterDescriptor(
-    _i3.DebugSession session, [
-    _i3.DebugAdapterExecutable? executable,
-  ]) =>
-      _i5.callMethod(
+  set createDebugAdapterDescriptor(
+      _i3.ProviderResult<_i3.DebugAdapterDescriptor> Function(
+        _i3.DebugSession, [
+        _i3.DebugAdapterExecutable?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'createDebugAdapterDescriptor',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.DebugAdapterDescriptor> Function(
+    _i3.DebugSession, [
+    _i3.DebugAdapterExecutable?,
+  ]) get createDebugAdapterDescriptor => _i5.getProperty(
         this,
         'createDebugAdapterDescriptor',
-        [
-          session,
-          executable ?? _i4.undefined,
-        ],
       );
 }
 
 /// A Debug Adapter Tracker is a means to track the communication between the editor and a Debug Adapter.
 @_i1.JS()
 @_i1.staticInterop
-class DebugAdapterTracker {}
+@_i1.anonymous
+class DebugAdapterTracker {
+  external factory DebugAdapterTracker._({
+    _i2.dynamic onWillStartSession,
+    _i2.dynamic onWillReceiveMessage,
+    _i2.dynamic onDidSendMessage,
+    _i2.dynamic onWillStopSession,
+    _i2.dynamic onError,
+    _i2.dynamic onExit,
+  });
+
+  factory DebugAdapterTracker({
+    void Function()? onWillStartSession,
+    void Function([_i2.dynamic])? onWillReceiveMessage,
+    void Function([_i2.dynamic])? onDidSendMessage,
+    void Function()? onWillStopSession,
+    void Function(_i7.Error)? onError,
+    void Function([
+      _i2.num?,
+      _i2.String?,
+    ])? onExit,
+  }) =>
+      DebugAdapterTracker._(
+        onWillStartSession: onWillStartSession == null
+            ? null
+            : _i5.allowInterop(onWillStartSession),
+        onWillReceiveMessage: onWillReceiveMessage == null
+            ? null
+            : _i5.allowInterop(onWillReceiveMessage),
+        onDidSendMessage: onDidSendMessage == null
+            ? null
+            : _i5.allowInterop(onDidSendMessage),
+        onWillStopSession: onWillStopSession == null
+            ? null
+            : _i5.allowInterop(onWillStopSession),
+        onError: onError == null ? null : _i5.allowInterop(onError),
+        onExit: onExit == null ? null : _i5.allowInterop(onExit),
+      );
+}
 
 extension DebugAdapterTracker$Typings on DebugAdapterTracker {
-  /// A session with the debug adapter is about to be started.
-  void onWillStartSession() {
-    _i5.callMethod(
+  set onWillStartSession(void Function() value) {
+    _i5.setProperty(
       this,
       'onWillStartSession',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  /// The debug adapter is about to receive a Debug Adapter Protocol message from the editor.
-  void onWillReceiveMessage(_i2.dynamic message) {
-    _i5.callMethod(
+  void Function() get onWillStartSession => _i5.getProperty(
+        this,
+        'onWillStartSession',
+      );
+  set onWillReceiveMessage(void Function([_i2.dynamic]) value) {
+    _i5.setProperty(
       this,
       'onWillReceiveMessage',
-      [message],
+      _i5.allowInterop(value),
     );
   }
 
-  /// The debug adapter has sent a Debug Adapter Protocol message to the editor.
-  void onDidSendMessage(_i2.dynamic message) {
-    _i5.callMethod(
+  void Function([_i2.dynamic]) get onWillReceiveMessage => _i5.getProperty(
+        this,
+        'onWillReceiveMessage',
+      );
+  set onDidSendMessage(void Function([_i2.dynamic]) value) {
+    _i5.setProperty(
       this,
       'onDidSendMessage',
-      [message],
+      _i5.allowInterop(value),
     );
   }
 
-  /// The debug adapter session is about to be stopped.
-  void onWillStopSession() {
-    _i5.callMethod(
+  void Function([_i2.dynamic]) get onDidSendMessage => _i5.getProperty(
+        this,
+        'onDidSendMessage',
+      );
+  set onWillStopSession(void Function() value) {
+    _i5.setProperty(
       this,
       'onWillStopSession',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  /// An error with the debug adapter has occurred.
-  void onError(_i7.Error error) {
-    _i5.callMethod(
+  void Function() get onWillStopSession => _i5.getProperty(
+        this,
+        'onWillStopSession',
+      );
+  set onError(void Function(_i7.Error) value) {
+    _i5.setProperty(
       this,
       'onError',
-      [error],
+      _i5.allowInterop(value),
     );
   }
 
-  /// The debug adapter has exited with the given exit code or signal.
-  void onExit([
-    _i2.num? code,
-    _i2.String? signal,
-  ]) {
-    _i5.callMethod(
+  void Function(_i7.Error) get onError => _i5.getProperty(
+        this,
+        'onError',
+      );
+  set onExit(
+      void Function([
+        _i2.num?,
+        _i2.String?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'onExit',
-      [
-        code ?? _i4.undefined,
-        signal ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function([
+    _i2.num?,
+    _i2.String?,
+  ]) get onExit => _i5.getProperty(
+        this,
+        'onExit',
+      );
 }
 
 /// A debug adaper factory that creates {@link DebugAdapterTrackerdebug adapter trackers}.
 @_i1.JS()
 @_i1.staticInterop
-class DebugAdapterTrackerFactory {}
+@_i1.anonymous
+class DebugAdapterTrackerFactory {
+  external factory DebugAdapterTrackerFactory._(
+      {_i2.dynamic createDebugAdapterTracker});
+
+  factory DebugAdapterTrackerFactory(
+          {_i3.ProviderResult<_i3.DebugAdapterTracker> Function(
+                  _i3.DebugSession)?
+              createDebugAdapterTracker}) =>
+      DebugAdapterTrackerFactory._(
+          createDebugAdapterTracker: createDebugAdapterTracker == null
+              ? null
+              : _i5.allowInterop(createDebugAdapterTracker));
+}
 
 extension DebugAdapterTrackerFactory$Typings on DebugAdapterTrackerFactory {
-  /// The method 'createDebugAdapterTracker' is called at the start of a debug session in order
-  ///  to return a "tracker" object that provides read-access to the communication between the editor and a debug adapter.
-  ///
-  ///  @param session The {@link DebugSession debug session} for which the debug adapter tracker will be used.
-  ///  @returns A {@link DebugAdapterTracker debug adapter tracker} or undefined.
-  _i3.ProviderResult<_i3.DebugAdapterTracker> createDebugAdapterTracker(
-          _i3.DebugSession session) =>
-      _i5.callMethod(
-        this,
-        'createDebugAdapterTracker',
-        [session],
-      );
+  set createDebugAdapterTracker(
+      _i3.ProviderResult<_i3.DebugAdapterTracker> Function(_i3.DebugSession)
+          value) {
+    _i5.setProperty(
+      this,
+      'createDebugAdapterTracker',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i3.DebugAdapterTracker> Function(_i3.DebugSession)
+      get createDebugAdapterTracker => _i5.getProperty(
+            this,
+            'createDebugAdapterTracker',
+          );
 }
 
 /// Represents the debug console.
 @_i1.JS()
 @_i1.staticInterop
-class DebugConsole {}
+@_i1.anonymous
+class DebugConsole {
+  external factory DebugConsole._({
+    _i2.dynamic append,
+    _i2.dynamic appendLine,
+  });
+
+  factory DebugConsole({
+    void Function(_i2.String)? append,
+    void Function(_i2.String)? appendLine,
+  }) =>
+      DebugConsole._(
+        append: append == null ? null : _i5.allowInterop(append),
+        appendLine: appendLine == null ? null : _i5.allowInterop(appendLine),
+      );
+}
 
 extension DebugConsole$Typings on DebugConsole {
-  /// Append the given value to the debug console.
-  ///
-  ///  @param value A string, falsy values will not be printed.
-  void append(_i2.String value) {
-    _i5.callMethod(
+  set append(void Function(_i2.String) value) {
+    _i5.setProperty(
       this,
       'append',
-      [value],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Append the given value and a line feed character
-  ///  to the debug console.
-  ///
-  ///  @param value A string, falsy values will be printed.
-  void appendLine(_i2.String value) {
-    _i5.callMethod(
+  void Function(_i2.String) get append => _i5.getProperty(
+        this,
+        'append',
+      );
+  set appendLine(void Function(_i2.String) value) {
+    _i5.setProperty(
       this,
       'appendLine',
-      [value],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function(_i2.String) get appendLine => _i5.getProperty(
+        this,
+        'appendLine',
+      );
 }
 
 /// An event describing the changes to the set of {@link Breakpointbreakpoints}.
@@ -24136,14 +27019,14 @@ class BreakpointsChangeEvent {
   });
 
   factory BreakpointsChangeEvent({
-    required _i2.List<_i3.Breakpoint> added,
-    required _i2.List<_i3.Breakpoint> removed,
-    required _i2.List<_i3.Breakpoint> changed,
+    _i2.List<_i3.Breakpoint>? added,
+    _i2.List<_i3.Breakpoint>? removed,
+    _i2.List<_i3.Breakpoint>? changed,
   }) =>
       BreakpointsChangeEvent._(
-        added: added,
-        removed: removed,
-        changed: changed,
+        added: added ?? _i6.undefined,
+        removed: removed ?? _i6.undefined,
+        changed: changed ?? _i6.undefined,
       );
 }
 
@@ -24183,10 +27066,10 @@ class Breakpoint {
       _i5.callConstructor(
         _declaredBreakpoint,
         [
-          enabled ?? _i4.undefined,
-          condition ?? _i4.undefined,
-          hitCondition ?? _i4.undefined,
-          logMessage ?? _i4.undefined,
+          enabled ?? _i6.undefined,
+          condition ?? _i6.undefined,
+          hitCondition ?? _i6.undefined,
+          logMessage ?? _i6.undefined,
         ],
       );
 }
@@ -24243,10 +27126,10 @@ class SourceBreakpoint implements _i3.Breakpoint {
         _declaredSourceBreakpoint,
         [
           location,
-          enabled ?? _i4.undefined,
-          condition ?? _i4.undefined,
-          hitCondition ?? _i4.undefined,
-          logMessage ?? _i4.undefined,
+          enabled ?? _i6.undefined,
+          condition ?? _i6.undefined,
+          hitCondition ?? _i6.undefined,
+          logMessage ?? _i6.undefined,
         ],
       );
 }
@@ -24279,10 +27162,10 @@ class FunctionBreakpoint implements _i3.Breakpoint {
         _declaredFunctionBreakpoint,
         [
           functionName,
-          enabled ?? _i4.undefined,
-          condition ?? _i4.undefined,
-          hitCondition ?? _i4.undefined,
-          logMessage ?? _i4.undefined,
+          enabled ?? _i6.undefined,
+          condition ?? _i6.undefined,
+          hitCondition ?? _i6.undefined,
+          logMessage ?? _i6.undefined,
         ],
       );
 }
@@ -24329,15 +27212,15 @@ class DebugSessionOptions {
     _i2.bool? suppressDebugView,
   }) =>
       DebugSessionOptions._(
-        parentSession: parentSession ?? _i4.undefined,
-        lifecycleManagedByParent: lifecycleManagedByParent ?? _i4.undefined,
-        consoleMode: consoleMode?.name ?? _i4.undefined,
-        noDebug: noDebug ?? _i4.undefined,
-        compact: compact ?? _i4.undefined,
-        suppressSaveBeforeStart: suppressSaveBeforeStart ?? _i4.undefined,
-        suppressDebugToolbar: suppressDebugToolbar ?? _i4.undefined,
-        suppressDebugStatusbar: suppressDebugStatusbar ?? _i4.undefined,
-        suppressDebugView: suppressDebugView ?? _i4.undefined,
+        parentSession: parentSession ?? _i6.undefined,
+        lifecycleManagedByParent: lifecycleManagedByParent,
+        consoleMode: consoleMode?.name,
+        noDebug: noDebug,
+        compact: compact,
+        suppressSaveBeforeStart: suppressSaveBeforeStart,
+        suppressDebugToolbar: suppressDebugToolbar,
+        suppressDebugStatusbar: suppressDebugStatusbar,
+        suppressDebugView: suppressDebugView,
       );
 }
 
@@ -24352,7 +27235,7 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
     _i5.setProperty(
       this,
       'parentSession',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24367,7 +27250,7 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
     _i5.setProperty(
       this,
       'lifecycleManagedByParent',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24385,7 +27268,7 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
     _i5.setProperty(
       this,
       'consoleMode',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -24399,7 +27282,7 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
     _i5.setProperty(
       this,
       'noDebug',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24414,7 +27297,7 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
     _i5.setProperty(
       this,
       'compact',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24427,7 +27310,7 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
     _i5.setProperty(
       this,
       'suppressSaveBeforeStart',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24440,7 +27323,7 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
     _i5.setProperty(
       this,
       'suppressDebugToolbar',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24453,7 +27336,7 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
     _i5.setProperty(
       this,
       'suppressDebugStatusbar',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24466,7 +27349,7 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
     _i5.setProperty(
       this,
       'suppressDebugView',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -24474,7 +27357,43 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
 /// A collection of {@link Commentcomments} representing a conversation at a particular range in a document.
 @_i1.JS()
 @_i1.staticInterop
-class CommentThread {}
+@_i1.anonymous
+class CommentThread {
+  external factory CommentThread._({
+    _i2.dynamic uri,
+    _i2.dynamic range,
+    _i2.dynamic comments,
+    _i2.dynamic collapsibleState,
+    _i2.dynamic canReply,
+    _i2.dynamic contextValue,
+    _i2.dynamic label,
+    _i2.dynamic state,
+    _i2.dynamic dispose,
+  });
+
+  factory CommentThread({
+    _i3.Uri? uri,
+    _i3.Range? range,
+    _i2.List<_i3.Comment>? comments,
+    _i3.CommentThreadCollapsibleState? collapsibleState,
+    _i2.bool? canReply,
+    _i2.String? contextValue,
+    _i2.String? label,
+    _i3.CommentThreadState? state,
+    void Function()? dispose,
+  }) =>
+      CommentThread._(
+        uri: uri ?? _i6.undefined,
+        range: range ?? _i6.undefined,
+        comments: comments ?? _i6.undefined,
+        collapsibleState: collapsibleState?.name,
+        canReply: canReply,
+        contextValue: contextValue,
+        label: label,
+        state: state?.name,
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension CommentThread$Typings on CommentThread {
   /// The uri of the document the thread has been created on.
@@ -24564,7 +27483,7 @@ extension CommentThread$Typings on CommentThread {
     _i5.setProperty(
       this,
       'contextValue',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24577,7 +27496,7 @@ extension CommentThread$Typings on CommentThread {
     _i5.setProperty(
       this,
       'label',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24593,20 +27512,22 @@ extension CommentThread$Typings on CommentThread {
     _i5.setProperty(
       this,
       'state',
-      value?.name ?? _i4.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
-  /// Dispose this comment thread.
-  ///
-  ///  Once disposed, this comment thread will be removed from visible editors and Comment Panel when appropriate.
-  void dispose() {
-    _i5.callMethod(
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// Author information of a {@link Comment}
@@ -24620,12 +27541,12 @@ class CommentAuthorInformation {
   });
 
   factory CommentAuthorInformation({
-    required _i2.String name,
+    _i2.String? name,
     _i3.Uri? iconPath,
   }) =>
       CommentAuthorInformation._(
         name: name,
-        iconPath: iconPath ?? _i4.undefined,
+        iconPath: iconPath ?? _i6.undefined,
       );
 }
 
@@ -24652,7 +27573,7 @@ extension CommentAuthorInformation$Typings on CommentAuthorInformation {
     _i5.setProperty(
       this,
       'iconPath',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -24670,14 +27591,14 @@ class CommentReaction {
   });
 
   factory CommentReaction({
-    required _i2.String label,
-    required _i2.Object iconPath,
-    required _i2.num count,
-    required _i2.bool authorHasReacted,
+    _i2.String? label,
+    _i2.Object? iconPath,
+    _i2.num? count,
+    _i2.bool? authorHasReacted,
   }) =>
       CommentReaction._(
         label: label,
-        iconPath: iconPath,
+        iconPath: iconPath ?? _i6.undefined,
         count: count,
         authorHasReacted: authorHasReacted,
       );
@@ -24725,22 +27646,22 @@ class Comment {
   });
 
   factory Comment({
-    required _i2.Object body,
-    required _i3.CommentMode mode,
-    required _i3.CommentAuthorInformation author,
+    _i2.Object? body,
+    _i3.CommentMode? mode,
+    _i3.CommentAuthorInformation? author,
     _i2.String? contextValue,
     _i2.List<_i3.CommentReaction>? reactions,
     _i2.String? label,
     _i2.DateTime? timestamp,
   }) =>
       Comment._(
-        body: body,
-        mode: mode.name,
-        author: author,
-        contextValue: contextValue ?? _i4.undefined,
-        reactions: reactions ?? _i4.undefined,
-        label: label ?? _i4.undefined,
-        timestamp: timestamp ?? _i4.undefined,
+        body: body ?? _i6.undefined,
+        mode: mode?.name,
+        author: author ?? _i6.undefined,
+        contextValue: contextValue,
+        reactions: reactions,
+        label: label,
+        timestamp: timestamp,
       );
 }
 
@@ -24808,7 +27729,7 @@ extension Comment$Typings on Comment {
     _i5.setProperty(
       this,
       'contextValue',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24822,7 +27743,7 @@ extension Comment$Typings on Comment {
     _i5.setProperty(
       this,
       'reactions',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24836,7 +27757,7 @@ extension Comment$Typings on Comment {
     _i5.setProperty(
       this,
       'label',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24850,7 +27771,7 @@ extension Comment$Typings on Comment {
     _i5.setProperty(
       this,
       'timestamp',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -24866,11 +27787,11 @@ class CommentReply {
   });
 
   factory CommentReply({
-    required _i3.CommentThread thread,
-    required _i2.String text,
+    _i3.CommentThread? thread,
+    _i2.String? text,
   }) =>
       CommentReply._(
-        thread: thread,
+        thread: thread ?? _i6.undefined,
         text: text,
       );
 }
@@ -24906,21 +27827,41 @@ extension CommentReply$Typings on CommentReply {
 /// Commenting range provider for a {@link CommentControllercomment controller}.
 @_i1.JS()
 @_i1.staticInterop
-class CommentingRangeProvider {}
+@_i1.anonymous
+class CommentingRangeProvider {
+  external factory CommentingRangeProvider._(
+      {_i2.dynamic provideCommentingRanges});
+
+  factory CommentingRangeProvider(
+          {_i3.ProviderResult<_i2.List<_i3.Range>> Function(
+            _i3.TextDocument,
+            _i3.CancellationToken,
+          )? provideCommentingRanges}) =>
+      CommentingRangeProvider._(
+          provideCommentingRanges: provideCommentingRanges == null
+              ? null
+              : _i5.allowInterop(provideCommentingRanges));
+}
 
 extension CommentingRangeProvider$Typings on CommentingRangeProvider {
-  /// Provide a list of ranges which allow new comment threads creation or null for a given document
-  _i3.ProviderResult<_i2.List<_i3.Range>> provideCommentingRanges(
-    _i3.TextDocument document,
-    _i3.CancellationToken token,
-  ) =>
-      _i5.callMethod(
+  set provideCommentingRanges(
+      _i3.ProviderResult<_i2.List<_i3.Range>> Function(
+        _i3.TextDocument,
+        _i3.CancellationToken,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'provideCommentingRanges',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.ProviderResult<_i2.List<_i3.Range>> Function(
+    _i3.TextDocument,
+    _i3.CancellationToken,
+  ) get provideCommentingRanges => _i5.getProperty(
         this,
         'provideCommentingRanges',
-        [
-          document,
-          token,
-        ],
       );
 }
 
@@ -24939,8 +27880,8 @@ class CommentOptions {
     _i2.String? placeHolder,
   }) =>
       CommentOptions._(
-        prompt: prompt ?? _i4.undefined,
-        placeHolder: placeHolder ?? _i4.undefined,
+        prompt: prompt,
+        placeHolder: placeHolder,
       );
 }
 
@@ -24954,7 +27895,7 @@ extension CommentOptions$Typings on CommentOptions {
     _i5.setProperty(
       this,
       'prompt',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -24967,7 +27908,7 @@ extension CommentOptions$Typings on CommentOptions {
     _i5.setProperty(
       this,
       'placeHolder',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -24976,7 +27917,47 @@ extension CommentOptions$Typings on CommentOptions {
 /// provide users various ways to interact with comments.
 @_i1.JS()
 @_i1.staticInterop
-class CommentController {}
+@_i1.anonymous
+class CommentController {
+  external factory CommentController._({
+    _i2.dynamic id,
+    _i2.dynamic label,
+    _i2.dynamic options,
+    _i2.dynamic commentingRangeProvider,
+    _i2.dynamic reactionHandler,
+    _i2.dynamic createCommentThread,
+    _i2.dynamic dispose,
+  });
+
+  factory CommentController({
+    _i2.String? id,
+    _i2.String? label,
+    _i3.CommentOptions? options,
+    _i3.CommentingRangeProvider? commentingRangeProvider,
+    _i2.Future<_i2.dynamic> Function(
+      _i3.Comment,
+      _i3.CommentReaction,
+    )? reactionHandler,
+    _i3.CommentThread Function(
+      _i3.Uri,
+      _i3.Range,
+      _i2.List<_i3.Comment>,
+    )? createCommentThread,
+    void Function()? dispose,
+  }) =>
+      CommentController._(
+        id: id,
+        label: label,
+        options: options ?? _i6.undefined,
+        commentingRangeProvider: commentingRangeProvider ?? _i6.undefined,
+        reactionHandler:
+            reactionHandler == null ? null : _i5.allowInterop(reactionHandler),
+        createCommentThread: createCommentThread == null
+            ? null
+            : _i5.allowInterop(createCommentThread),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension CommentController$Typings on CommentController {
   /// The id of this comment controller.
@@ -25000,7 +27981,7 @@ extension CommentController$Typings on CommentController {
     _i5.setProperty(
       this,
       'options',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -25015,12 +27996,12 @@ extension CommentController$Typings on CommentController {
     _i5.setProperty(
       this,
       'commentingRangeProvider',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
   /// Optional reaction handler for creating and deleting reactions on a {@link Comment}.
-  _i6.Thenable<void> Function(
+  _i2.Future<_i2.dynamic> Function(
     _i3.Comment,
     _i3.CommentReaction,
   )? get reactionHandler => _i5.getProperty(
@@ -25028,49 +28009,50 @@ extension CommentController$Typings on CommentController {
         'reactionHandler',
       );
   set reactionHandler(
-      _i6.Thenable<void> Function(
+      _i2.Future<_i2.dynamic> Function(
         _i3.Comment,
         _i3.CommentReaction,
       )? value) {
     _i5.setProperty(
       this,
       'reactionHandler',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
-  /// Create a {@link CommentThread comment thread}. The comment thread will be displayed in visible text editors (if the resource matches)
-  ///  and Comments Panel once created.
-  ///
-  ///  @param uri The uri of the document the thread has been created on.
-  ///  @param range The range the comment thread is located within the document.
-  ///  @param comments The ordered comments of the thread.
-  _i3.CommentThread createCommentThread(
-    _i3.Uri uri,
-    _i3.Range range,
-    _i2.List<_i3.Comment> comments,
-  ) =>
-      _i5.callMethod(
+  set createCommentThread(
+      _i3.CommentThread Function(
+        _i3.Uri,
+        _i3.Range,
+        _i2.List<_i3.Comment>,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'createCommentThread',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.CommentThread Function(
+    _i3.Uri,
+    _i3.Range,
+    _i2.List<_i3.Comment>,
+  ) get createCommentThread => _i5.getProperty(
         this,
         'createCommentThread',
-        [
-          uri,
-          range,
-          comments,
-        ],
       );
-
-  /// Dispose this comment controller.
-  ///
-  ///  Once disposed, all {@link CommentThread comment threads} created by this comment controller will also be removed from the editor
-  ///  and Comments Panel.
-  void dispose() {
-    _i5.callMethod(
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// Represents a session of a currently logged in user.
@@ -25086,16 +28068,16 @@ class AuthenticationSession {
   });
 
   factory AuthenticationSession({
-    required _i2.String id,
-    required _i2.String accessToken,
-    required _i3.AuthenticationSessionAccountInformation account,
-    required _i2.List<_i2.String> scopes,
+    _i2.String? id,
+    _i2.String? accessToken,
+    _i3.AuthenticationSessionAccountInformation? account,
+    _i2.List<_i2.String>? scopes,
   }) =>
       AuthenticationSession._(
         id: id,
         accessToken: accessToken,
-        account: account,
-        scopes: scopes,
+        account: account ?? _i6.undefined,
+        scopes: scopes ?? _i6.undefined,
       );
 }
 
@@ -25138,8 +28120,8 @@ class AuthenticationSessionAccountInformation {
   });
 
   factory AuthenticationSessionAccountInformation({
-    required _i2.String id,
-    required _i2.String label,
+    _i2.String? id,
+    _i2.String? label,
   }) =>
       AuthenticationSessionAccountInformation._(
         id: id,
@@ -25170,7 +28152,7 @@ class AuthenticationForceNewSessionOptions {
   external factory AuthenticationForceNewSessionOptions._({_i2.dynamic detail});
 
   factory AuthenticationForceNewSessionOptions({_i2.String? detail}) =>
-      AuthenticationForceNewSessionOptions._(detail: detail ?? _i4.undefined);
+      AuthenticationForceNewSessionOptions._(detail: detail);
 }
 
 extension AuthenticationForceNewSessionOptions$Typings
@@ -25185,7 +28167,7 @@ extension AuthenticationForceNewSessionOptions$Typings
     _i5.setProperty(
       this,
       'detail',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -25209,10 +28191,10 @@ class AuthenticationGetSessionOptions {
     _i2.bool? silent,
   }) =>
       AuthenticationGetSessionOptions._(
-        clearSessionPreference: clearSessionPreference ?? _i4.undefined,
-        createIfNone: createIfNone ?? _i4.undefined,
-        forceNewSession: forceNewSession ?? _i4.undefined,
-        silent: silent ?? _i4.undefined,
+        clearSessionPreference: clearSessionPreference,
+        createIfNone: createIfNone,
+        forceNewSession: forceNewSession ?? _i6.undefined,
+        silent: silent,
       );
 }
 
@@ -25240,7 +28222,7 @@ extension AuthenticationGetSessionOptions$Typings
     _i5.setProperty(
       this,
       'clearSessionPreference',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -25264,7 +28246,7 @@ extension AuthenticationGetSessionOptions$Typings
     _i5.setProperty(
       this,
       'createIfNone',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -25285,7 +28267,7 @@ extension AuthenticationGetSessionOptions$Typings
     _i5.setProperty(
       this,
       'forceNewSession',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -25305,7 +28287,7 @@ extension AuthenticationGetSessionOptions$Typings
     _i5.setProperty(
       this,
       'silent',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -25321,8 +28303,8 @@ class AuthenticationProviderInformation {
   });
 
   factory AuthenticationProviderInformation({
-    required _i2.String id,
-    required _i2.String label,
+    _i2.String? id,
+    _i2.String? label,
   }) =>
       AuthenticationProviderInformation._(
         id: id,
@@ -25353,8 +28335,8 @@ class AuthenticationSessionsChangeEvent {
   external factory AuthenticationSessionsChangeEvent._({_i2.dynamic provider});
 
   factory AuthenticationSessionsChangeEvent(
-          {required _i3.AuthenticationProviderInformation provider}) =>
-      AuthenticationSessionsChangeEvent._(provider: provider);
+          {_i3.AuthenticationProviderInformation? provider}) =>
+      AuthenticationSessionsChangeEvent._(provider: provider ?? _i6.undefined);
 }
 
 extension AuthenticationSessionsChangeEvent$Typings
@@ -25376,7 +28358,7 @@ class AuthenticationProviderOptions {
 
   factory AuthenticationProviderOptions({_i2.bool? supportsMultipleAccounts}) =>
       AuthenticationProviderOptions._(
-          supportsMultipleAccounts: supportsMultipleAccounts ?? _i4.undefined);
+          supportsMultipleAccounts: supportsMultipleAccounts);
 }
 
 extension AuthenticationProviderOptions$Typings
@@ -25406,9 +28388,9 @@ class AuthenticationProviderAuthenticationSessionsChangeEvent {
     _i2.List<_i3.AuthenticationSession>? changed,
   }) =>
       AuthenticationProviderAuthenticationSessionsChangeEvent._(
-        added: added ?? _i4.undefined,
-        removed: removed ?? _i4.undefined,
-        changed: changed ?? _i4.undefined,
+        added: added ?? _i6.undefined,
+        removed: removed ?? _i6.undefined,
+        changed: changed ?? _i6.undefined,
       );
 }
 
@@ -25441,7 +28423,31 @@ extension AuthenticationProviderAuthenticationSessionsChangeEvent$Typings
 /// A provider for performing authentication to a service.
 @_i1.JS()
 @_i1.staticInterop
-class AuthenticationProvider {}
+@_i1.anonymous
+class AuthenticationProvider {
+  external factory AuthenticationProvider._({
+    _i2.dynamic onDidChangeSessions,
+    _i2.dynamic getSessions,
+    _i2.dynamic createSession,
+    _i2.dynamic removeSession,
+  });
+
+  factory AuthenticationProvider({
+    _i3.Event<_i3.AuthenticationProviderAuthenticationSessionsChangeEvent>?
+        onDidChangeSessions,
+    _i2.Future<_i2.dynamic> Function([_i2.List<_i2.String>?])? getSessions,
+    _i2.Future<_i2.dynamic> Function(_i2.List<_i2.String>)? createSession,
+    _i2.Future<_i2.dynamic> Function(_i2.String)? removeSession,
+  }) =>
+      AuthenticationProvider._(
+        onDidChangeSessions: onDidChangeSessions ?? _i6.undefined,
+        getSessions: getSessions == null ? null : _i5.allowInterop(getSessions),
+        createSession:
+            createSession == null ? null : _i5.allowInterop(createSession),
+        removeSession:
+            removeSession == null ? null : _i5.allowInterop(removeSession),
+      );
+}
 
 extension AuthenticationProvider$Typings on AuthenticationProvider {
   /// An {@link Event} which fires when the array of sessions has changed, or data
@@ -25451,50 +28457,47 @@ extension AuthenticationProvider$Typings on AuthenticationProvider {
             this,
             'onDidChangeSessions',
           );
+  set getSessions(
+      _i2.Future<_i2.dynamic> Function([_i2.List<_i2.String>?]) value) {
+    _i5.setProperty(
+      this,
+      'getSessions',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Get a list of sessions.
-  ///  @param scopes An optional list of scopes. If provided, the sessions returned should match
-  ///  these permissions, otherwise all sessions should be returned.
-  ///  @returns A promise that resolves to an array of authentication sessions.
-  _i2.Future<_i6.Thenable<_i2.List<_i3.AuthenticationSession>>> getSessions(
-          [_i2.List<_i2.String>? scopes]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function([_i2.List<_i2.String>?]) get getSessions =>
+      _i5.getProperty(
         this,
         'getSessions',
-        [scopes ?? _i4.undefined],
-      ));
+      );
+  set createSession(
+      _i2.Future<_i2.dynamic> Function(_i2.List<_i2.String>) value) {
+    _i5.setProperty(
+      this,
+      'createSession',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Prompts a user to login.
-  ///
-  ///  If login is successful, the onDidChangeSessions event should be fired.
-  ///
-  ///  If login fails, a rejected promise should be returned.
-  ///
-  ///  If the provider has specified that it does not support multiple accounts,
-  ///  then this should never be called if there is already an existing session matching these
-  ///  scopes.
-  ///  @param scopes A list of scopes, permissions, that the new session should be created with.
-  ///  @returns A promise that resolves to an authentication session.
-  _i2.Future<_i6.Thenable<_i3.AuthenticationSession>> createSession(
-          _i2.List<_i2.String> scopes) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(_i2.List<_i2.String>) get createSession =>
+      _i5.getProperty(
         this,
         'createSession',
-        [scopes],
-      ));
+      );
+  set removeSession(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'removeSession',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Removes the session corresponding to session id.
-  ///
-  ///  If the removal is successful, the onDidChangeSessions event should be fired.
-  ///
-  ///  If a session cannot be removed, the provider should reject with an error message.
-  ///  @param sessionId The id of the session to remove.
-  _i2.Future<_i6.Thenable<void>> removeSession(_i2.String sessionId) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> Function(_i2.String) get removeSession =>
+      _i5.getProperty(
         this,
         'removeSession',
-        [sessionId],
-      ));
+      );
 }
 
 /// Tags can be associated with {@link TestItemTestItems} and
@@ -25526,7 +28529,45 @@ extension TestTag$Typings on TestTag {
 /// A TestRunProfile describes one way to execute tests in a {@link TestController}.
 @_i1.JS()
 @_i1.staticInterop
-class TestRunProfile {}
+@_i1.anonymous
+class TestRunProfile {
+  external factory TestRunProfile._({
+    _i2.dynamic label,
+    _i2.dynamic kind,
+    _i2.dynamic isDefault,
+    _i2.dynamic supportsContinuousRun,
+    _i2.dynamic tag,
+    _i2.dynamic configureHandler,
+    _i2.dynamic runHandler,
+    _i2.dynamic dispose,
+  });
+
+  factory TestRunProfile({
+    _i2.String? label,
+    _i3.TestRunProfileKind? kind,
+    _i2.bool? isDefault,
+    _i2.bool? supportsContinuousRun,
+    _i3.TestTag? tag,
+    void Function()? configureHandler,
+    _i4.FutureOr<void> Function(
+      _i3.TestRunRequest,
+      _i3.CancellationToken,
+    )? runHandler,
+    void Function()? dispose,
+  }) =>
+      TestRunProfile._(
+        label: label,
+        kind: kind?.name,
+        isDefault: isDefault,
+        supportsContinuousRun: supportsContinuousRun,
+        tag: tag ?? _i6.undefined,
+        configureHandler: configureHandler == null
+            ? _i6.undefined
+            : _i5.allowInterop(configureHandler),
+        runHandler: runHandler == null ? null : _i5.allowInterop(runHandler),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension TestRunProfile$Typings on TestRunProfile {
   /// Label shown to the user in the UI.
@@ -25598,7 +28639,7 @@ extension TestRunProfile$Typings on TestRunProfile {
     _i5.setProperty(
       this,
       'tag',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -25614,7 +28655,7 @@ extension TestRunProfile$Typings on TestRunProfile {
     _i5.setProperty(
       this,
       'configureHandler',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -25633,7 +28674,7 @@ extension TestRunProfile$Typings on TestRunProfile {
   ///  test run. If cancellation is requested on this token, all {@link TestRun}
   ///  instances associated with the request will be
   ///  automatically cancelled as well.
-  _i2.Object Function(
+  _i4.FutureOr<void> Function(
     _i3.TestRunRequest,
     _i3.CancellationToken,
   ) get runHandler => _i5.getProperty(
@@ -25641,7 +28682,7 @@ extension TestRunProfile$Typings on TestRunProfile {
         'runHandler',
       );
   set runHandler(
-      _i2.Object Function(
+      _i4.FutureOr<void> Function(
         _i3.TestRunRequest,
         _i3.CancellationToken,
       ) value) {
@@ -25652,14 +28693,18 @@ extension TestRunProfile$Typings on TestRunProfile {
     );
   }
 
-  /// Deletes the run profile.
-  void dispose() {
-    _i5.callMethod(
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// Entry point to discover and execute tests. It contains {@link TestController.items} which
@@ -25668,7 +28713,73 @@ extension TestRunProfile$Typings on TestRunProfile {
 /// for tests to be executed.
 @_i1.JS()
 @_i1.staticInterop
-class TestController {}
+@_i1.anonymous
+class TestController {
+  external factory TestController._({
+    _i2.dynamic id,
+    _i2.dynamic label,
+    _i2.dynamic items,
+    _i2.dynamic resolveHandler,
+    _i2.dynamic refreshHandler,
+    _i2.dynamic createRunProfile,
+    _i2.dynamic createTestRun,
+    _i2.dynamic createTestItem,
+    _i2.dynamic invalidateTestResults,
+    _i2.dynamic dispose,
+  });
+
+  factory TestController({
+    _i2.String? id,
+    _i2.String? label,
+    _i3.TestItemCollection? items,
+    _i4.FutureOr<void> Function([_i3.TestItem?])? resolveHandler,
+    _i4.FutureOr<void> Function(_i3.CancellationToken)? refreshHandler,
+    _i3.TestRunProfile Function(
+      _i2.String,
+      _i3.TestRunProfileKind,
+      _i4.FutureOr<void> Function(
+        _i3.TestRunRequest,
+        _i3.CancellationToken,
+      ), [
+      _i2.bool?,
+      _i3.TestTag?,
+      _i2.bool?,
+    ])? createRunProfile,
+    _i3.TestRun Function(
+      _i3.TestRunRequest, [
+      _i2.String?,
+      _i2.bool?,
+    ])? createTestRun,
+    _i3.TestItem Function(
+      _i2.String,
+      _i2.String, [
+      _i3.Uri?,
+    ])? createTestItem,
+    void Function([_i2.Object?])? invalidateTestResults,
+    void Function()? dispose,
+  }) =>
+      TestController._(
+        id: id,
+        label: label,
+        items: items ?? _i6.undefined,
+        resolveHandler:
+            resolveHandler == null ? null : _i5.allowInterop(resolveHandler),
+        refreshHandler: refreshHandler == null
+            ? _i6.undefined
+            : _i5.allowInterop(refreshHandler),
+        createRunProfile: createRunProfile == null
+            ? null
+            : _i5.allowInterop(createRunProfile),
+        createTestRun:
+            createTestRun == null ? null : _i5.allowInterop(createTestRun),
+        createTestItem:
+            createTestItem == null ? null : _i5.allowInterop(createTestItem),
+        invalidateTestResults: invalidateTestResults == null
+            ? null
+            : _i5.allowInterop(invalidateTestResults),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension TestController$Typings on TestController {
   /// The id of the controller passed in {@link tests.createTestController}.
@@ -25722,15 +28833,16 @@ extension TestController$Typings on TestController {
   ///
   ///  @param item An unresolved test item for which children are being
   ///  requested, or `undefined` to resolve the controller's initial {@link TestController.items items}.
-  _i2.Object Function([_i3.TestItem?])? get resolveHandler => _i5.getProperty(
+  _i4.FutureOr<void> Function([_i3.TestItem?])? get resolveHandler =>
+      _i5.getProperty(
         this,
         'resolveHandler',
       );
-  set resolveHandler(_i2.Object Function([_i3.TestItem?])? value) {
+  set resolveHandler(_i4.FutureOr<void> Function([_i3.TestItem?])? value) {
     _i5.setProperty(
       this,
       'resolveHandler',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -25743,141 +28855,119 @@ extension TestController$Typings on TestController {
   ///  a {@link FileSystemWatcher} for example, and use this method as a fallback.
   ///
   ///  @returns A thenable that resolves when tests have been refreshed.
-  _i2.Object Function(_i3.CancellationToken)? get refreshHandler =>
+  _i4.FutureOr<void> Function(_i3.CancellationToken)? get refreshHandler =>
       _i5.getProperty(
         this,
         'refreshHandler',
       );
-  set refreshHandler(_i2.Object Function(_i3.CancellationToken)? value) {
+  set refreshHandler(
+      _i4.FutureOr<void> Function(_i3.CancellationToken)? value) {
     _i5.setProperty(
       this,
       'refreshHandler',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
-  /// Creates a profile used for running tests. Extensions must create
-  ///  at least one profile in order for tests to be run.
-  ///  @param label A human-readable label for this profile.
-  ///  @param kind Configures what kind of execution this profile manages.
-  ///  @param runHandler Function called to start a test run.
-  ///  @param isDefault Whether this is the default action for its kind.
-  ///  @param tag Profile test tag.
-  ///  @param supportsContinuousRun Whether the profile supports continuous running.
-  ///  @returns An instance of a {@link TestRunProfile}, which is automatically
-  ///  associated with this controller.
-  _i3.TestRunProfile createRunProfile(
-    _i2.String label,
-    _i3.TestRunProfileKind kind,
-    _i2.Object Function(
+  set createRunProfile(
+      _i3.TestRunProfile Function(
+        _i2.String,
+        _i3.TestRunProfileKind,
+        _i4.FutureOr<void> Function(
+          _i3.TestRunRequest,
+          _i3.CancellationToken,
+        ), [
+        _i2.bool?,
+        _i3.TestTag?,
+        _i2.bool?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'createRunProfile',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.TestRunProfile Function(
+    _i2.String,
+    _i3.TestRunProfileKind,
+    _i4.FutureOr<void> Function(
       _i3.TestRunRequest,
       _i3.CancellationToken,
-    ) runHandler, [
-    _i2.bool? isDefault,
-    _i3.TestTag? tag,
-    _i2.bool? supportsContinuousRun,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.bool?,
+    _i3.TestTag?,
+    _i2.bool?,
+  ]) get createRunProfile => _i5.getProperty(
         this,
         'createRunProfile',
-        [
-          label,
-          kind.name,
-          _i5.allowInterop(runHandler),
-          isDefault ?? _i4.undefined,
-          tag ?? _i4.undefined,
-          supportsContinuousRun ?? _i4.undefined,
-        ],
       );
+  set createTestRun(
+      _i3.TestRun Function(
+        _i3.TestRunRequest, [
+        _i2.String?,
+        _i2.bool?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'createTestRun',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Creates a {@link TestRun}. This should be called by the
-  ///  {@link TestRunProfile} when a request is made to execute tests, and may
-  ///  also be called if a test run is detected externally. Once created, tests
-  ///  that are included in the request will be moved into the queued state.
-  ///
-  ///  All runs created using the same `request` instance will be grouped
-  ///  together. This is useful if, for example, a single suite of tests is
-  ///  run on multiple platforms.
-  ///
-  ///  @param request Test run request. Only tests inside the `include` may be
-  ///  modified, and tests in its `exclude` are ignored.
-  ///  @param name The human-readable name of the run. This can be used to
-  ///  disambiguate multiple sets of results in a test run. It is useful if
-  ///  tests are run across multiple platforms, for example.
-  ///  @param persist Whether the results created by the run should be
-  ///  persisted in the editor. This may be false if the results are coming from
-  ///  a file already saved externally, such as a coverage information file.
-  ///  @returns An instance of the {@link TestRun}. It will be considered "running"
-  ///  from the moment this method is invoked until {@link TestRun.end} is called.
-  _i3.TestRun createTestRun(
-    _i3.TestRunRequest request, [
-    _i2.String? name,
-    _i2.bool? persist,
-  ]) =>
-      _i5.callMethod(
+  _i3.TestRun Function(
+    _i3.TestRunRequest, [
+    _i2.String?,
+    _i2.bool?,
+  ]) get createTestRun => _i5.getProperty(
         this,
         'createTestRun',
-        [
-          request,
-          name ?? _i4.undefined,
-          persist ?? _i4.undefined,
-        ],
       );
+  set createTestItem(
+      _i3.TestItem Function(
+        _i2.String,
+        _i2.String, [
+        _i3.Uri?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'createTestItem',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Creates a new managed {@link TestItem} instance. It can be added into
-  ///  the {@link TestItem.children} of an existing item, or into the
-  ///  {@link TestController.items}.
-  ///
-  ///  @param id Identifier for the TestItem. The test item's ID must be unique
-  ///  in the {@link TestItemCollection} it's added to.
-  ///  @param label Human-readable label of the test item.
-  ///  @param uri URI this TestItem is associated with. May be a file or directory.
-  _i3.TestItem createTestItem(
-    _i2.String id,
-    _i2.String label, [
-    _i3.Uri? uri,
-  ]) =>
-      _i5.callMethod(
+  _i3.TestItem Function(
+    _i2.String,
+    _i2.String, [
+    _i3.Uri?,
+  ]) get createTestItem => _i5.getProperty(
         this,
         'createTestItem',
-        [
-          id,
-          label,
-          uri ?? _i4.undefined,
-        ],
       );
-
-  /// Marks an item's results as being outdated. This is commonly called when
-  ///  code or configuration changes and previous results should no longer
-  ///  be considered relevant. The same logic used to mark results as outdated
-  ///  may be used to drive {@link TestRunRequest.continuous continuous test runs}.
-  ///
-  ///  If an item is passed to this method, test results for the item and all of
-  ///  its children will be marked as outdated. If no item is passed, then all
-  ///  test owned by the TestController will be marked as outdated.
-  ///
-  ///  Any test runs started before the moment this method is called, including
-  ///  runs which may still be ongoing, will be marked as outdated and deprioritized
-  ///  in the editor's UI.
-  ///
-  ///  @param item Item to mark as outdated. If undefined, all the controller's items are marked outdated.
-  void invalidateTestResults([_i2.Object? items]) {
-    _i5.callMethod(
+  set invalidateTestResults(void Function([_i2.Object?]) value) {
+    _i5.setProperty(
       this,
       'invalidateTestResults',
-      [items ?? _i4.undefined],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Unregisters the test controller, disposing of its associated tests
-  ///  and unpersisted results.
-  void dispose() {
-    _i5.callMethod(
+  void Function([_i2.Object?]) get invalidateTestResults => _i5.getProperty(
+        this,
+        'invalidateTestResults',
+      );
+  set dispose(void Function() value) {
+    _i5.setProperty(
       this,
       'dispose',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// A TestRunRequest is a precursor to a {@link TestRun}, which in turn is
@@ -25900,10 +28990,10 @@ class TestRunRequest {
       _i5.callConstructor(
         _declaredTestRunRequest,
         [
-          include ?? _i4.undefined,
-          exclude ?? _i4.undefined,
-          profile ?? _i4.undefined,
-          continuous ?? _i4.undefined,
+          include ?? _i6.undefined,
+          exclude ?? _i6.undefined,
+          profile ?? _i6.undefined,
+          continuous ?? _i6.undefined,
         ],
       );
 }
@@ -25958,7 +29048,65 @@ extension TestRunRequest$Typings on TestRunRequest {
 /// provides methods to report the state of individual tests in the run.
 @_i1.JS()
 @_i1.staticInterop
-class TestRun {}
+@_i1.anonymous
+class TestRun {
+  external factory TestRun._({
+    _i2.dynamic name,
+    _i2.dynamic token,
+    _i2.dynamic isPersisted,
+    _i2.dynamic enqueued,
+    _i2.dynamic started,
+    _i2.dynamic skipped,
+    _i2.dynamic failed,
+    _i2.dynamic errored,
+    _i2.dynamic passed,
+    _i2.dynamic appendOutput,
+    _i2.dynamic end,
+  });
+
+  factory TestRun({
+    _i2.String? name,
+    _i3.CancellationToken? token,
+    _i2.bool? isPersisted,
+    void Function(_i3.TestItem)? enqueued,
+    void Function(_i3.TestItem)? started,
+    void Function(_i3.TestItem)? skipped,
+    void Function(
+      _i3.TestItem,
+      _i2.Object, [
+      _i2.num?,
+    ])? failed,
+    void Function(
+      _i3.TestItem,
+      _i2.Object, [
+      _i2.num?,
+    ])? errored,
+    void Function(
+      _i3.TestItem, [
+      _i2.num?,
+    ])? passed,
+    void Function(
+      _i2.String, [
+      _i3.Location?,
+      _i3.TestItem?,
+    ])? appendOutput,
+    void Function()? end,
+  }) =>
+      TestRun._(
+        name: name ?? _i6.undefined,
+        token: token ?? _i6.undefined,
+        isPersisted: isPersisted,
+        enqueued: enqueued == null ? null : _i5.allowInterop(enqueued),
+        started: started == null ? null : _i5.allowInterop(started),
+        skipped: skipped == null ? null : _i5.allowInterop(skipped),
+        failed: failed == null ? null : _i5.allowInterop(failed),
+        errored: errored == null ? null : _i5.allowInterop(errored),
+        passed: passed == null ? null : _i5.allowInterop(passed),
+        appendOutput:
+            appendOutput == null ? null : _i5.allowInterop(appendOutput),
+        end: end == null ? null : _i5.allowInterop(end),
+      );
+}
 
 extension TestRun$Typings on TestRun {
   /// The human-readable name of the run. This can be used to
@@ -25981,145 +29129,182 @@ extension TestRun$Typings on TestRun {
         this,
         'isPersisted',
       );
-
-  /// Indicates a test is queued for later execution.
-  ///  @param test Test item to update.
-  void enqueued(_i3.TestItem test) {
-    _i5.callMethod(
+  set enqueued(void Function(_i3.TestItem) value) {
+    _i5.setProperty(
       this,
       'enqueued',
-      [test],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Indicates a test has started running.
-  ///  @param test Test item to update.
-  void started(_i3.TestItem test) {
-    _i5.callMethod(
+  void Function(_i3.TestItem) get enqueued => _i5.getProperty(
+        this,
+        'enqueued',
+      );
+  set started(void Function(_i3.TestItem) value) {
+    _i5.setProperty(
       this,
       'started',
-      [test],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Indicates a test has been skipped.
-  ///  @param test Test item to update.
-  void skipped(_i3.TestItem test) {
-    _i5.callMethod(
+  void Function(_i3.TestItem) get started => _i5.getProperty(
+        this,
+        'started',
+      );
+  set skipped(void Function(_i3.TestItem) value) {
+    _i5.setProperty(
       this,
       'skipped',
-      [test],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Indicates a test has failed. You should pass one or more
-  ///  {@link TestMessage TestMessages} to describe the failure.
-  ///  @param test Test item to update.
-  ///  @param message Messages associated with the test failure.
-  ///  @param duration How long the test took to execute, in milliseconds.
-  void failed(
-    _i3.TestItem test,
-    _i2.Object message, [
-    _i2.num? duration,
-  ]) {
-    _i5.callMethod(
+  void Function(_i3.TestItem) get skipped => _i5.getProperty(
+        this,
+        'skipped',
+      );
+  set failed(
+      void Function(
+        _i3.TestItem,
+        _i2.Object, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'failed',
-      [
-        test,
-        message,
-        duration ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Indicates a test has errored. You should pass one or more
-  ///  {@link TestMessage TestMessages} to describe the failure. This differs
-  ///  from the "failed" state in that it indicates a test that couldn't be
-  ///  executed at all, from a compilation error for example.
-  ///  @param test Test item to update.
-  ///  @param message Messages associated with the test failure.
-  ///  @param duration How long the test took to execute, in milliseconds.
-  void errored(
-    _i3.TestItem test,
-    _i2.Object message, [
-    _i2.num? duration,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i3.TestItem,
+    _i2.Object, [
+    _i2.num?,
+  ]) get failed => _i5.getProperty(
+        this,
+        'failed',
+      );
+  set errored(
+      void Function(
+        _i3.TestItem,
+        _i2.Object, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'errored',
-      [
-        test,
-        message,
-        duration ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Indicates a test has passed.
-  ///  @param test Test item to update.
-  ///  @param duration How long the test took to execute, in milliseconds.
-  void passed(
-    _i3.TestItem test, [
-    _i2.num? duration,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i3.TestItem,
+    _i2.Object, [
+    _i2.num?,
+  ]) get errored => _i5.getProperty(
+        this,
+        'errored',
+      );
+  set passed(
+      void Function(
+        _i3.TestItem, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'passed',
-      [
-        test,
-        duration ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Appends raw output from the test runner. On the user's request, the
-  ///  output will be displayed in a terminal. ANSI escape sequences,
-  ///  such as colors and text styles, are supported. New lines must be given
-  ///  as CRLF (`\r\n`) rather than LF (`\n`).
-  ///
-  ///  @param output Output text to append.
-  ///  @param location Indicate that the output was logged at the given
-  ///  location.
-  ///  @param test Test item to associate the output with.
-  void appendOutput(
-    _i2.String output, [
-    _i3.Location? location,
-    _i3.TestItem? test,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i3.TestItem, [
+    _i2.num?,
+  ]) get passed => _i5.getProperty(
+        this,
+        'passed',
+      );
+  set appendOutput(
+      void Function(
+        _i2.String, [
+        _i3.Location?,
+        _i3.TestItem?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'appendOutput',
-      [
-        output,
-        location ?? _i4.undefined,
-        test ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Signals the end of the test run. Any tests included in the run whose
-  ///  states have not been updated will have their state reset.
-  void end() {
-    _i5.callMethod(
+  void Function(
+    _i2.String, [
+    _i3.Location?,
+    _i3.TestItem?,
+  ]) get appendOutput => _i5.getProperty(
+        this,
+        'appendOutput',
+      );
+  set end(void Function() value) {
+    _i5.setProperty(
       this,
       'end',
-      [],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function() get end => _i5.getProperty(
+        this,
+        'end',
+      );
 }
 
 /// Collection of test items, found in {@link TestItem.children} and
 /// {@link TestController.items}.
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class TestItemCollection
     implements
         _i9.Iterable<
             (
               _i2.String,
               _i3.TestItem,
-            )> {}
+            )> {
+  external factory TestItemCollection._({
+    _i2.dynamic size,
+    _i2.dynamic replace,
+    _i2.dynamic forEach,
+    _i2.dynamic add,
+    _i2.dynamic delete,
+    _i2.dynamic get,
+  });
+
+  factory TestItemCollection({
+    _i2.num? size,
+    void Function(_i2.List<_i3.TestItem>)? replace,
+    void Function(
+      _i2.Object? Function(
+        _i3.TestItem,
+        _i3.TestItemCollection,
+      ), [
+      _i2.dynamic,
+    ])? forEach,
+    void Function(_i3.TestItem)? add,
+    void Function(_i2.String)? delete,
+    _i3.TestItem? Function(_i2.String)? get,
+  }) =>
+      TestItemCollection._(
+        size: size,
+        replace: replace == null ? null : _i5.allowInterop(replace),
+        forEach: forEach == null ? null : _i5.allowInterop(forEach),
+        add: add == null ? null : _i5.allowInterop(add),
+        delete: delete == null ? null : _i5.allowInterop(delete),
+        get: get == null ? null : _i5.allowInterop(get),
+      );
+}
 
 extension TestItemCollection$Typings on TestItemCollection {
   /// Gets the number of items in the collection.
@@ -26127,66 +29312,78 @@ extension TestItemCollection$Typings on TestItemCollection {
         this,
         'size',
       );
-
-  /// Replaces the items stored by the collection.
-  ///  @param items Items to store.
-  void replace(_i2.List<_i3.TestItem> items) {
-    _i5.callMethod(
+  set replace(void Function(_i2.List<_i3.TestItem>) value) {
+    _i5.setProperty(
       this,
       'replace',
-      [items],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Iterate over each entry in this collection.
-  ///
-  ///  @param callback Function to execute for each entry.
-  ///  @param thisArg The `this` context used when invoking the handler function.
-  void forEach(
+  void Function(_i2.List<_i3.TestItem>) get replace => _i5.getProperty(
+        this,
+        'replace',
+      );
+  set forEach(
+      void Function(
+        _i2.Object? Function(
+          _i3.TestItem,
+          _i3.TestItemCollection,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'forEach',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function(
     _i2.Object? Function(
       _i3.TestItem,
       _i3.TestItemCollection,
-    ) callback, [
-    _i2.dynamic thisArg,
-  ]) {
-    _i5.callMethod(
-      this,
-      'forEach',
-      [
-        _i5.allowInterop(callback),
-        thisArg ?? _i4.undefined,
-      ],
-    );
-  }
-
-  /// Adds the test item to the children. If an item with the same ID already
-  ///  exists, it'll be replaced.
-  ///  @param item Item to add.
-  void add(_i3.TestItem item) {
-    _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get forEach => _i5.getProperty(
+        this,
+        'forEach',
+      );
+  set add(void Function(_i3.TestItem) value) {
+    _i5.setProperty(
       this,
       'add',
-      [item],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Removes a single test item from the collection.
-  ///  @param itemId Item ID to delete.
-  void delete(_i2.String itemId) {
-    _i5.callMethod(
+  void Function(_i3.TestItem) get add => _i5.getProperty(
+        this,
+        'add',
+      );
+  set delete(void Function(_i2.String) value) {
+    _i5.setProperty(
       this,
       'delete',
-      [itemId],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Efficiently gets a test item by ID, if it exists, in the children.
-  ///  @param itemId Item ID to get.
-  ///  @returns The found item or undefined if it does not exist.
-  _i3.TestItem? get(_i2.String itemId) => _i5.callMethod(
+  void Function(_i2.String) get delete => _i5.getProperty(
+        this,
+        'delete',
+      );
+  set get(_i3.TestItem? Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'get',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.TestItem? Function(_i2.String) get get => _i5.getProperty(
         this,
         'get',
-        [itemId],
       );
 }
 
@@ -26214,14 +29411,14 @@ class TestItem {
   });
 
   factory TestItem({
-    required _i2.String id,
+    _i2.String? id,
     _i3.Uri? uri,
-    required _i3.TestItemCollection children,
+    _i3.TestItemCollection? children,
     _i3.TestItem? parent,
-    required _i2.List<_i3.TestTag> tags,
-    required _i2.bool canResolveChildren,
-    required _i2.bool busy,
-    required _i2.String label,
+    _i2.List<_i3.TestTag>? tags,
+    _i2.bool? canResolveChildren,
+    _i2.bool? busy,
+    _i2.String? label,
     _i2.String? description,
     _i2.String? sortText,
     _i3.Range? range,
@@ -26229,17 +29426,17 @@ class TestItem {
   }) =>
       TestItem._(
         id: id,
-        uri: uri ?? _i4.undefined,
-        children: children,
-        parent: parent ?? _i4.undefined,
-        tags: tags,
+        uri: uri ?? _i6.undefined,
+        children: children ?? _i6.undefined,
+        parent: parent ?? _i6.undefined,
+        tags: tags ?? _i6.undefined,
         canResolveChildren: canResolveChildren,
         busy: busy,
         label: label,
-        description: description ?? _i4.undefined,
-        sortText: sortText ?? _i4.undefined,
-        range: range ?? _i4.undefined,
-        error: error ?? _i4.undefined,
+        description: description,
+        sortText: sortText ?? _i6.undefined,
+        range: range ?? _i6.undefined,
+        error: error,
       );
 }
 
@@ -26346,7 +29543,7 @@ extension TestItem$Typings on TestItem {
     _i5.setProperty(
       this,
       'description',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -26361,7 +29558,7 @@ extension TestItem$Typings on TestItem {
     _i5.setProperty(
       this,
       'sortText',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -26376,7 +29573,7 @@ extension TestItem$Typings on TestItem {
     _i5.setProperty(
       this,
       'range',
-      value ?? _i4.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -26392,7 +29589,7 @@ extension TestItem$Typings on TestItem {
     _i5.setProperty(
       this,
       'error',
-      value ?? _i4.undefined,
+      value,
     );
   }
 }
@@ -26715,18 +29912,18 @@ class Tab {
   });
 
   factory Tab({
-    required _i2.String label,
-    required _i3.TabGroup group,
-    required _i2.Object input,
-    required _i2.bool isActive,
-    required _i2.bool isDirty,
-    required _i2.bool isPinned,
-    required _i2.bool isPreview,
+    _i2.String? label,
+    _i3.TabGroup? group,
+    _i2.Object? input,
+    _i2.bool? isActive,
+    _i2.bool? isDirty,
+    _i2.bool? isPinned,
+    _i2.bool? isPreview,
   }) =>
       Tab._(
         label: label,
-        group: group,
-        input: input,
+        group: group ?? _i6.undefined,
+        input: input ?? _i6.undefined,
         isActive: isActive,
         isDirty: isDirty,
         isPinned: isPinned,
@@ -26792,14 +29989,14 @@ class TabChangeEvent {
   });
 
   factory TabChangeEvent({
-    required _i2.List<_i3.Tab> opened,
-    required _i2.List<_i3.Tab> closed,
-    required _i2.List<_i3.Tab> changed,
+    _i2.List<_i3.Tab>? opened,
+    _i2.List<_i3.Tab>? closed,
+    _i2.List<_i3.Tab>? changed,
   }) =>
       TabChangeEvent._(
-        opened: opened,
-        closed: closed,
-        changed: changed,
+        opened: opened ?? _i6.undefined,
+        closed: closed ?? _i6.undefined,
+        changed: changed ?? _i6.undefined,
       );
 }
 
@@ -26839,14 +30036,14 @@ class TabGroupChangeEvent {
   });
 
   factory TabGroupChangeEvent({
-    required _i2.List<_i3.TabGroup> opened,
-    required _i2.List<_i3.TabGroup> closed,
-    required _i2.List<_i3.TabGroup> changed,
+    _i2.List<_i3.TabGroup>? opened,
+    _i2.List<_i3.TabGroup>? closed,
+    _i2.List<_i3.TabGroup>? changed,
   }) =>
       TabGroupChangeEvent._(
-        opened: opened,
-        closed: closed,
-        changed: changed,
+        opened: opened ?? _i6.undefined,
+        closed: closed ?? _i6.undefined,
+        changed: changed ?? _i6.undefined,
       );
 }
 
@@ -26887,16 +30084,16 @@ class TabGroup {
   });
 
   factory TabGroup({
-    required _i2.bool isActive,
-    required _i3.ViewColumn viewColumn,
+    _i2.bool? isActive,
+    _i3.ViewColumn? viewColumn,
     _i3.Tab? activeTab,
-    required _i2.List<_i3.Tab> tabs,
+    _i2.List<_i3.Tab>? tabs,
   }) =>
       TabGroup._(
         isActive: isActive,
-        viewColumn: viewColumn.name,
-        activeTab: activeTab ?? _i4.undefined,
-        tabs: tabs,
+        viewColumn: viewColumn?.name,
+        activeTab: activeTab ?? _i6.undefined,
+        tabs: tabs ?? _i6.undefined,
       );
 }
 
@@ -26937,7 +30134,28 @@ extension TabGroup$Typings on TabGroup {
 /// Represents the main editor area which consists of multiple groups which contain tabs.
 @_i1.JS()
 @_i1.staticInterop
-class TabGroups {}
+@_i1.anonymous
+class TabGroups {
+  external factory TabGroups._({
+    _i2.dynamic all,
+    _i2.dynamic activeTabGroup,
+    _i2.dynamic onDidChangeTabGroups,
+    _i2.dynamic onDidChangeTabs,
+  });
+
+  factory TabGroups({
+    _i2.List<_i3.TabGroup>? all,
+    _i3.TabGroup? activeTabGroup,
+    _i3.Event<_i3.TabGroupChangeEvent>? onDidChangeTabGroups,
+    _i3.Event<_i3.TabChangeEvent>? onDidChangeTabs,
+  }) =>
+      TabGroups._(
+        all: all ?? _i6.undefined,
+        activeTabGroup: activeTabGroup ?? _i6.undefined,
+        onDidChangeTabGroups: onDidChangeTabGroups ?? _i6.undefined,
+        onDidChangeTabs: onDidChangeTabs ?? _i6.undefined,
+      );
+}
 
 extension TabGroups$Typings on TabGroups {
   /// All the groups within the group container.
@@ -26973,7 +30191,7 @@ extension TabGroups$Typings on TabGroups {
   ///  @param tab The tab to close.
   ///  @param preserveFocus When `true` focus will remain in its current position. If `false` it will jump to the next tab.
   ///  @returns A promise that resolves to `true` when all tabs have been closed.
-  _i2.Future<_i6.Thenable<_i2.bool>> _close$1(
+  _i2.Future<_i2.dynamic> _close$1(
     _i2.Object tab, [
     _i2.bool? preserveFocus,
   ]) =>
@@ -26982,7 +30200,7 @@ extension TabGroups$Typings on TabGroups {
         'close',
         [
           tab,
-          preserveFocus ?? _i4.undefined,
+          preserveFocus ?? _i6.undefined,
         ],
       ));
 
@@ -26991,7 +30209,7 @@ extension TabGroups$Typings on TabGroups {
   ///  @param tabGroup The tab group to close.
   ///  @param preserveFocus When `true` focus will remain in its current position.
   ///  @returns A promise that resolves to `true` when all tab groups have been closed.
-  _i2.Future<_i6.Thenable<_i2.bool>> _close$2(
+  _i2.Future<_i2.dynamic> _close$2(
     _i2.Object tabGroup, [
     _i2.bool? preserveFocus,
   ]) =>
@@ -27000,7 +30218,7 @@ extension TabGroups$Typings on TabGroups {
         'close',
         [
           tabGroup,
-          preserveFocus ?? _i4.undefined,
+          preserveFocus ?? _i6.undefined,
         ],
       ));
 
@@ -27013,7 +30231,7 @@ extension TabGroups$Typings on TabGroups {
     ///  @param tab The tab to close.
     ///  @param preserveFocus When `true` focus will remain in its current position. If `false` it will jump to the next tab.
     ///  @returns A promise that resolves to `true` when all tabs have been closed.
-    _i2.Future<_i6.Thenable<_i2.bool>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i2.Object tab, [
       _i2.bool? preserveFocus,
     ]) $1,
@@ -27023,7 +30241,7 @@ extension TabGroups$Typings on TabGroups {
     ///  @param tabGroup The tab group to close.
     ///  @param preserveFocus When `true` focus will remain in its current position.
     ///  @returns A promise that resolves to `true` when all tab groups have been closed.
-    _i2.Future<_i6.Thenable<_i2.bool>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i2.Object tabGroup, [
       _i2.bool? preserveFocus,
     ]) $2,
@@ -27070,7 +30288,34 @@ extension TelemetryTrustedValue$Typings<T> on TelemetryTrustedValue<T> {
 /// {@link env.createTelemetryLogger`createTelemetryLogger`}.
 @_i1.JS()
 @_i1.staticInterop
-class TelemetryLogger {}
+@_i1.anonymous
+class TelemetryLogger {
+  external factory TelemetryLogger._({
+    _i2.dynamic onDidChangeEnableStates,
+    _i2.dynamic isUsageEnabled,
+    _i2.dynamic isErrorsEnabled,
+    _i2.dynamic logUsage,
+    _i2.dynamic dispose,
+  });
+
+  factory TelemetryLogger({
+    _i3.Event<_i3.TelemetryLogger>? onDidChangeEnableStates,
+    _i2.bool? isUsageEnabled,
+    _i2.bool? isErrorsEnabled,
+    void Function(
+      _i2.String, [
+      _i7.Record<_i2.String, _i2.Object>?,
+    ])? logUsage,
+    void Function()? dispose,
+  }) =>
+      TelemetryLogger._(
+        onDidChangeEnableStates: onDidChangeEnableStates ?? _i6.undefined,
+        isUsageEnabled: isUsageEnabled,
+        isErrorsEnabled: isErrorsEnabled,
+        logUsage: logUsage == null ? null : _i5.allowInterop(logUsage),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension TelemetryLogger$Typings on TelemetryLogger {
   /// An {@link Event} which fires when the enablement state of usage or error telemetry changes.
@@ -27090,26 +30335,37 @@ extension TelemetryLogger$Typings on TelemetryLogger {
         this,
         'isErrorsEnabled',
       );
-
-  /// Log a usage event.
-  ///
-  ///  After completing cleaning, telemetry setting checks, and data mix-in calls `TelemetrySender.sendEventData` to log the event.
-  ///  Automatically supports echoing to extension telemetry output channel.
-  ///  @param eventName The event name to log
-  ///  @param data The data to log
-  void logUsage(
-    _i2.String eventName, [
-    _i7.Record<_i2.String, _i2.Object>? data,
-  ]) {
-    _i5.callMethod(
+  set logUsage(
+      void Function(
+        _i2.String, [
+        _i7.Record<_i2.String, _i2.Object>?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'logUsage',
-      [
-        eventName,
-        data ?? _i4.undefined ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function(
+    _i2.String, [
+    _i7.Record<_i2.String, _i2.Object>?,
+  ]) get logUsage => _i5.getProperty(
+        this,
+        'logUsage',
+      );
+  set dispose(void Function() value) {
+    _i5.setProperty(
+      this,
+      'dispose',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 
   /// Log an error event.
   ///
@@ -27126,7 +30382,7 @@ extension TelemetryLogger$Typings on TelemetryLogger {
       'logError',
       [
         eventName,
-        data ?? _i4.undefined ?? _i4.undefined,
+        data ?? _i6.undefined,
       ],
     );
   }
@@ -27147,7 +30403,7 @@ extension TelemetryLogger$Typings on TelemetryLogger {
       'logError',
       [
         error,
-        data ?? _i4.undefined ?? _i4.undefined,
+        data ?? _i6.undefined,
       ],
     );
   }
@@ -27180,15 +30436,6 @@ extension TelemetryLogger$Typings on TelemetryLogger {
         $1: _logError$1,
         $2: _logError$2,
       );
-
-  /// Dispose this object and free resources.
-  void dispose() {
-    _i5.callMethod(
-      this,
-      'dispose',
-      [],
-    );
-  }
 }
 
 /// The telemetry sender is the contract between a telemetry logger and some telemetry service. **Note** that extensions must NOT
@@ -27206,51 +30453,84 @@ extension TelemetryLogger$Typings on TelemetryLogger {
 /// ```
 @_i1.JS()
 @_i1.staticInterop
-class TelemetrySender {}
+@_i1.anonymous
+class TelemetrySender {
+  external factory TelemetrySender._({
+    _i2.dynamic sendEventData,
+    _i2.dynamic sendErrorData,
+    _i2.dynamic flush,
+  });
+
+  factory TelemetrySender({
+    void Function(
+      _i2.String, [
+      _i7.Record<_i2.String, _i2.dynamic>?,
+    ])? sendEventData,
+    void Function(
+      _i7.Error, [
+      _i7.Record<_i2.String, _i2.dynamic>?,
+    ])? sendErrorData,
+    _i4.FutureOr<void> Function()? flush,
+  }) =>
+      TelemetrySender._(
+        sendEventData:
+            sendEventData == null ? null : _i5.allowInterop(sendEventData),
+        sendErrorData:
+            sendErrorData == null ? null : _i5.allowInterop(sendErrorData),
+        flush: flush == null ? null : _i5.allowInterop(flush),
+      );
+}
 
 extension TelemetrySender$Typings on TelemetrySender {
-  /// Function to send event data without a stacktrace. Used within a {@link TelemetryLogger}
-  ///
-  ///  @param eventName The name of the event which you are logging
-  ///  @param data A serializable key value pair that is being logged
-  void sendEventData(
-    _i2.String eventName, [
-    _i7.Record<_i2.String, _i2.dynamic>? data,
-  ]) {
-    _i5.callMethod(
+  set sendEventData(
+      void Function(
+        _i2.String, [
+        _i7.Record<_i2.String, _i2.dynamic>?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'sendEventData',
-      [
-        eventName,
-        data ?? _i4.undefined ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Function to send an error. Used within a {@link TelemetryLogger}
-  ///
-  ///  @param error The error being logged
-  ///  @param data Any additional data to be collected with the exception
-  void sendErrorData(
-    _i7.Error error, [
-    _i7.Record<_i2.String, _i2.dynamic>? data,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i2.String, [
+    _i7.Record<_i2.String, _i2.dynamic>?,
+  ]) get sendEventData => _i5.getProperty(
+        this,
+        'sendEventData',
+      );
+  set sendErrorData(
+      void Function(
+        _i7.Error, [
+        _i7.Record<_i2.String, _i2.dynamic>?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'sendErrorData',
-      [
-        error,
-        data ?? _i4.undefined ?? _i4.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  /// Optional flush function which will give this sender a chance to send any remaining events
-  ///  as its {@link TelemetryLogger} is being disposed
-  _i2.Object flush() => _i5.callMethod(
+  void Function(
+    _i7.Error, [
+    _i7.Record<_i2.String, _i2.dynamic>?,
+  ]) get sendErrorData => _i5.getProperty(
+        this,
+        'sendErrorData',
+      );
+  set flush(_i4.FutureOr<void> Function() value) {
+    _i5.setProperty(
+      this,
+      'flush',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i4.FutureOr<void> Function() get flush => _i5.getProperty(
         this,
         'flush',
-        [],
       );
 }
 
@@ -27271,11 +30551,9 @@ class TelemetryLoggerOptions {
     _i7.Record<_i2.String, _i2.dynamic>? additionalCommonProperties,
   }) =>
       TelemetryLoggerOptions._(
-        ignoreBuiltInCommonProperties:
-            ignoreBuiltInCommonProperties ?? _i4.undefined,
-        ignoreUnhandledErrors: ignoreUnhandledErrors ?? _i4.undefined,
-        additionalCommonProperties:
-            additionalCommonProperties ?? _i4.undefined ?? _i4.undefined,
+        ignoreBuiltInCommonProperties: ignoreBuiltInCommonProperties,
+        ignoreUnhandledErrors: ignoreUnhandledErrors,
+        additionalCommonProperties: additionalCommonProperties,
       );
 }
 

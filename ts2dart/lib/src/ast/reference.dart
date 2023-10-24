@@ -166,17 +166,24 @@ class InteropRef<T extends InteropType> {
   Reference ref(
       {SymbolSwap? symbolSwap,
       bool forceOptional = false,
-      bool solid = false, bool useFuture = false}) {
+      bool solid = false,
+      bool useFuture = false}) {
     final acceptsNull = this.acceptsNull || forceOptional;
 
     if (this.type case InteropDelegateType t) {
       if (t.passthrough) {
         return copyWith(t.delegate.type).ref(
-            symbolSwap: symbolSwap, forceOptional: acceptsNull, solid: solid, useFuture: useFuture);
+            symbolSwap: symbolSwap,
+            forceOptional: acceptsNull,
+            solid: solid,
+            useFuture: useFuture);
       }
 
       return t.delegate.ref(
-          symbolSwap: symbolSwap, forceOptional: acceptsNull, solid: solid, useFuture: useFuture);
+          symbolSwap: symbolSwap,
+          forceOptional: acceptsNull,
+          solid: solid,
+          useFuture: useFuture);
     }
 
     final type = this.type.realType;
@@ -186,7 +193,9 @@ class InteropRef<T extends InteropType> {
           symbolSwap.firstWhereOrNull((it) => it.symbol == type.symbol);
 
       if (find != null) {
-        return find.reference.ref();
+        return find.reference.ref(
+          forceOptional: acceptsNull,
+        );
       }
     }
 
@@ -196,6 +205,7 @@ class InteropRef<T extends InteropType> {
       FunctionType ref => ref,
       Reference ref => TypeReference((b) {
           final Reference(:url, :symbol) = ref;
+          final dyn = symbol == 'dynamic';
 
           assert(symbol != null,
               'Cant use null symbol in type references. Url: $url. Type $type');
@@ -209,10 +219,9 @@ class InteropRef<T extends InteropType> {
               _ => ''
             }}'
             ..url = url
-            ..isNullable =
-                acceptsNull && symbol != 'dynamic' && symbol != 'Object?';
+            ..isNullable = acceptsNull && !dyn && symbol != 'Object?';
 
-          if (type case WithInteropTypeParams withParams) {
+          if (type case WithInteropTypeParams withParams when !dyn) {
             final Iterable<InteropTypeParam> typeParams = switch (type) {
               InteropSourceType type => type.typeParams,
               _ => []
@@ -222,6 +231,11 @@ class InteropRef<T extends InteropType> {
                 typeArgs.length >= withParams.typeParamsLength
                     ? withParams.typeParamsLength
                     : typeArgs.length);
+
+            if (type is InteropClass && type.name == 'IterableIterator') {
+              print(
+                  'BitchMF type: $type\nta => $ta\ntypeParams => $typeParams\nsymbolSwap => $symbolSwap');
+            }
 
             for (var index = 0; index < withParams.typeParamsLength; index++) {
               final tp = typeParams.elementAtOrNull(index);
@@ -242,8 +256,9 @@ class InteropRef<T extends InteropType> {
                           .firstWhereOrNull((it) => it.symbol == local.symbol)
                           ?.reference
                           .ref() ??
-                      t.ref(),
-                _ => t.ref(solid: solid, useFuture: useFuture)
+                      t.ref(symbolSwap: symbolSwap),
+                _ => t.ref(
+                    solid: solid, useFuture: useFuture, symbolSwap: symbolSwap)
               };
 
               b.types.add(toAdd);

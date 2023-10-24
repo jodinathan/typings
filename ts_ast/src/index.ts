@@ -69,6 +69,10 @@ function extract(files: string[]): void {
   const parseNodes = (source: ts.Node, lib: Library) => {
     const { typedefs, structs, funcs, vars, modules, enums } = lib.items;
 
+    const pushStruct = (struct: any) => {
+      structs.push(struct);
+    }
+
     const parseType = (type?: ts.TypeNode) => {
       if (!type) {
         return anyType;
@@ -231,7 +235,7 @@ function extract(files: string[]): void {
         );
 
         struct.generics = generics;
-        structs.push(struct);
+        pushStruct(struct);
         const targs: any[] = [];
 
         for (const g of generics) {
@@ -591,7 +595,7 @@ function extract(files: string[]): void {
           current.calls.push(item);
         }
       } else {
-        structs.push(parsed);
+        pushStruct(parsed);
       }
     };
 
@@ -651,7 +655,7 @@ function extract(files: string[]): void {
         if (node.name) {
           const name = node.name.text;
 
-          structs.push({
+          pushStruct({
             ...parseStruct(node, name, node.members, node.typeParameters),
             isClass: true,
           });

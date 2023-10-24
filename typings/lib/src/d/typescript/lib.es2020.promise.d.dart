@@ -19,8 +19,8 @@ class PromiseFulfilledResult<T> {
   });
 
   factory PromiseFulfilledResult({
-    required _i2.String status,
-    required T value,
+    _i2.String? status,
+    _i2.dynamic value,
   }) =>
       PromiseFulfilledResult._(
         status: status,
@@ -64,8 +64,8 @@ class PromiseRejectedResult {
   });
 
   factory PromiseRejectedResult({
-    required _i2.String status,
-    required _i2.dynamic reason,
+    _i2.String? status,
+    _i2.dynamic reason,
   }) =>
       PromiseRejectedResult._(
         status: status,

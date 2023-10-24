@@ -3,11 +3,9 @@ library typings.vscode.interop.vscode_env; // ignore_for_file: no_leading_unders
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import '0index.d.dart' as _i3;
-import 'dart:js_util' as _i4;
-import 'null_comon.vscode.env.d.dart' as _i5;
-import '0index.vscode.d.dart' as _i6;
-import '/d/core.dart' as _i7;
+import 'dart:js_util' as _i3;
+import '0index.vscode.d.dart' as _i4;
+import '/d/core.dart' as _i5;
 
 @_i1.JS('vscode.env')
 external _i2.Object _self;
@@ -18,23 +16,21 @@ external _i2.Object _self;
 class _ClipboardAccessor {}
 
 extension ClipboardAccessor$Typings on _ClipboardAccessor {
-  /// Read the current clipboard contents as text.
-  ///  @returns A thenable that resolves to a string.
-  _i2.Future<_i3.Thenable<_i2.String>> readText() =>
-      _i4.promiseToFuture(_i4.callMethod(
-        _i5.target379,
-        'readText',
-        [],
-      ));
+  set readText(_i2.Future<_i2.dynamic> Function() value) {
+    _i3.setProperty(
+      this,
+      'readText',
+      _i3.allowInterop(value),
+    );
+  }
 
-  /// Writes text into the clipboard.
-  ///  @returns A thenable that resolves when writing happened.
-  _i2.Future<_i3.Thenable<void>> writeText(_i2.String value) =>
-      _i4.promiseToFuture(_i4.callMethod(
-        _i5.target379,
-        'writeText',
-        [value],
-      ));
+  set writeText(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
+    _i3.setProperty(
+      this,
+      'writeText',
+      _i3.allowInterop(value),
+    );
+  }
 }
 
 @_i1.JS()
@@ -58,7 +54,7 @@ class $ModuleEnv {}
 
 extension $ModuleEnv$Typings on $ModuleEnv {
   /// The application name of the editor, like 'VS Code'.
-  _i2.String get appName => _i4.getProperty(
+  _i2.String get appName => _i3.getProperty(
         this,
         'appName',
       );
@@ -67,7 +63,7 @@ extension $ModuleEnv$Typings on $ModuleEnv {
   ///
   /// *Note* that the value is the empty string when running in an
   /// environment that has no representation of an application root folder.
-  _i2.String get appRoot => _i4.getProperty(
+  _i2.String get appRoot => _i3.getProperty(
         this,
         'appRoot',
       );
@@ -76,66 +72,66 @@ extension $ModuleEnv$Typings on $ModuleEnv {
   /// On desktop this is 'desktop'
   /// In the web this is the specified embedder i.e. 'github.dev', 'codespaces', or 'web' if the embedder
   /// does not provide that information
-  _i2.String get appHost => _i4.getProperty(
+  _i2.String get appHost => _i3.getProperty(
         this,
         'appHost',
       );
 
   /// The custom uri scheme the editor registers to in the operating system.
-  _i2.String get uriScheme => _i4.getProperty(
+  _i2.String get uriScheme => _i3.getProperty(
         this,
         'uriScheme',
       );
 
   /// Represents the preferred user-language, like `de-CH`, `fr`, or `en-US`.
-  _i2.String get language => _i4.getProperty(
+  _i2.String get language => _i3.getProperty(
         this,
         'language',
       );
 
   /// The system clipboard.
-  _i6.Clipboard get clipboard => _i4.getProperty(
+  _i4.Clipboard get clipboard => _i3.getProperty(
         this,
         'clipboard',
       );
 
   /// A unique identifier for the computer.
-  _i2.String get machineId => _i4.getProperty(
+  _i2.String get machineId => _i3.getProperty(
         this,
         'machineId',
       );
 
   /// A unique identifier for the current session.
   /// Changes each time the editor is started.
-  _i2.String get sessionId => _i4.getProperty(
+  _i2.String get sessionId => _i3.getProperty(
         this,
         'sessionId',
       );
 
   /// Indicates that this is a fresh install of the application.
   /// `true` if within the first day of installation otherwise `false`.
-  _i2.bool get isNewAppInstall => _i4.getProperty(
+  _i2.bool get isNewAppInstall => _i3.getProperty(
         this,
         'isNewAppInstall',
       );
 
   /// Indicates whether the users has telemetry enabled.
   /// Can be observed to determine if the extension should send telemetry.
-  _i2.bool get isTelemetryEnabled => _i4.getProperty(
+  _i2.bool get isTelemetryEnabled => _i3.getProperty(
         this,
         'isTelemetryEnabled',
       );
 
   /// An {@link Event} which fires when the user enabled or disables telemetry.
   /// `true` if the user has enabled telemetry or `false` if the user has disabled telemetry.
-  _i6.Event<_i2.bool> get onDidChangeTelemetryEnabled => _i4.getProperty(
+  _i4.Event<_i2.bool> get onDidChangeTelemetryEnabled => _i3.getProperty(
         this,
         'onDidChangeTelemetryEnabled',
       );
 
   /// An {@link Event} which fires when the default shell changes. This fires with the new
   /// shell path.
-  _i6.Event<_i2.String> get onDidChangeShell => _i4.getProperty(
+  _i4.Event<_i2.String> get onDidChangeShell => _i3.getProperty(
         this,
         'onDidChangeShell',
       );
@@ -147,7 +143,7 @@ extension $ModuleEnv$Typings on $ModuleEnv {
   /// value is defined in all extension hosts (local and remote) in case a remote extension host
   /// exists. Use {@link Extension.extensionKind} to know if
   /// a specific extension runs remote or not.
-  _i2.String? get remoteName => _i4.getProperty(
+  _i2.String? get remoteName => _i3.getProperty(
         this,
         'remoteName',
       );
@@ -155,7 +151,7 @@ extension $ModuleEnv$Typings on $ModuleEnv {
   /// The detected default shell for the extension host, this is overridden by the
   /// `terminal.integrated.defaultProfile` setting for the extension host's platform. Note that in
   /// environments that do not support a shell the value is the empty string.
-  _i2.String get shell => _i4.getProperty(
+  _i2.String get shell => _i3.getProperty(
         this,
         'shell',
       );
@@ -163,34 +159,34 @@ extension $ModuleEnv$Typings on $ModuleEnv {
   /// The UI kind property indicates from which UI extensions
   /// are accessed from. For example, extensions could be accessed
   /// from a desktop application or a web browser.
-  _i6.UIKind get uiKind => _i6.UIKind.values.byName(_i4.getProperty(
+  _i4.UIKind get uiKind => _i4.UIKind.values.byName(_i3.getProperty(
         this,
         'uiKind',
       ));
 
   /// The current log level of the editor.
-  _i6.LogLevel get logLevel => _i6.LogLevel.values.byName(_i4.getProperty(
+  _i4.LogLevel get logLevel => _i4.LogLevel.values.byName(_i3.getProperty(
         this,
         'logLevel',
       ));
 
   /// An {@link Event} which fires when the log level of the editor changes.
-  _i6.Event<_i6.LogLevel> get onDidChangeLogLevel => _i4.getProperty(
+  _i4.Event<_i4.LogLevel> get onDidChangeLogLevel => _i3.getProperty(
         this,
         'onDidChangeLogLevel',
       );
 
   /// Creates a new {@link TelemetryLoggertelemetry logger}.
-  _i6.TelemetryLogger createTelemetryLogger(
-    _i6.TelemetrySender sender, [
-    _i6.TelemetryLoggerOptions? options,
+  _i4.TelemetryLogger createTelemetryLogger(
+    _i4.TelemetrySender sender, [
+    _i4.TelemetryLoggerOptions? options,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'createTelemetryLogger',
         [
           sender,
-          options ?? _i7.undefined,
+          options ?? _i5.undefined,
         ],
       );
 
@@ -202,8 +198,8 @@ extension $ModuleEnv$Typings on $ModuleEnv {
   ///
   /// *Note* that {@linkcode window.showTextDocumentshowTextDocument} is the right
   /// way to open a text document inside the editor, not this function.
-  _i2.Future<_i3.Thenable<_i2.bool>> openExternal(_i6.Uri target) =>
-      _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.dynamic> openExternal(_i4.Uri target) =>
+      _i3.promiseToFuture(_i3.callMethod(
         this,
         'openExternal',
         [target],
@@ -258,8 +254,8 @@ extension $ModuleEnv$Typings on $ModuleEnv {
   ///
   /// Any other scheme will be handled as if the provided URI is a workspace URI. In that case, the method will return
   /// a URI which, when handled, will make the editor open the workspace.
-  _i2.Future<_i3.Thenable<_i6.Uri>> asExternalUri(_i6.Uri target) =>
-      _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.dynamic> asExternalUri(_i4.Uri target) =>
+      _i3.promiseToFuture(_i3.callMethod(
         this,
         'asExternalUri',
         [target],

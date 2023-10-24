@@ -5,8 +5,6 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'lib.scripthost.d.dart' as _i3;
 import 'dart:js_util' as _i4;
-import 'typescript_comon.d.dart' as _i5;
-import '/d/core.dart' as _i6;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -89,91 +87,72 @@ extension WScriptAccessor$Typings on _WScriptAccessor {
         this,
         'Version',
       );
-
-  /// Outputs text to either a message box (under WScript.exe) or the command console window followed by
-  ///  a newline (under CScript.exe).
-  void echo(_i2.dynamic s) {
-    _i4.callMethod(
-      _i5.target58,
+  set echo(void Function([_i2.dynamic]) value) {
+    _i4.setProperty(
+      this,
       'Echo',
-      [s],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Forces the script to stop immediately, with an optional exit code.
-  _i2.num quit([_i2.num? exitCode]) => _i4.callMethod(
-        _i5.target58,
-        'Quit',
-        [exitCode ?? _i6.undefined],
-      );
+  set quit(_i2.num Function([_i2.num?]) value) {
+    _i4.setProperty(
+      this,
+      'Quit',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Connects a COM object's event sources to functions named with a given prefix, in the form prefix_event.
-  void connectObject(
-    _i2.dynamic objEventSource,
-    _i2.String strPrefix,
-  ) {
-    _i4.callMethod(
-      _i5.target58,
+  set connectObject(
+      void Function(
+        _i2.String, [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
       'ConnectObject',
-      [
-        objEventSource,
-        strPrefix,
-      ],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Creates a COM object.
-  ///  @param strProgiID
-  ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
-  _i2.dynamic createObject(
-    _i2.String strProgID, [
-    _i2.String? strPrefix,
-  ]) =>
-      _i4.callMethod(
-        _i5.target58,
-        'CreateObject',
-        [
-          strProgID,
-          strPrefix ?? _i6.undefined,
-        ],
-      );
+  set createObject(
+      _i2.dynamic Function(
+        _i2.String, [
+        _i2.String?,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'CreateObject',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Disconnects a COM object from its event sources.
-  void disconnectObject(_i2.dynamic obj) {
-    _i4.callMethod(
-      _i5.target58,
+  set disconnectObject(void Function([_i2.dynamic]) value) {
+    _i4.setProperty(
+      this,
       'DisconnectObject',
-      [obj],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Retrieves an existing object with the specified ProgID from memory, or creates a new one from a file.
-  ///  @param strPathname Fully qualified path to the file containing the object persisted to disk.
-  ///                        For objects in memory, pass a zero-length string.
-  ///  @param strProgID
-  ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
-  _i2.dynamic getObject(
-    _i2.String strPathname, [
-    _i2.String? strProgID,
-    _i2.String? strPrefix,
-  ]) =>
-      _i4.callMethod(
-        _i5.target58,
-        'GetObject',
-        [
-          strPathname,
-          strProgID ?? _i6.undefined,
-          strPrefix ?? _i6.undefined,
-        ],
-      );
+  set getObject(
+      _i2.dynamic Function(
+        _i2.String, [
+        _i2.String?,
+        _i2.String?,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'GetObject',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Suspends script execution for a specified length of time, then continues execution.
-  ///  @param intTime Interval (in milliseconds) to suspend script execution.
-  void sleep(_i2.num intTime) {
-    _i4.callMethod(
-      _i5.target58,
+  set sleep(void Function(_i2.num) value) {
+    _i4.setProperty(
+      this,
       'Sleep',
-      [intTime],
+      _i4.allowInterop(value),
     );
   }
 }
@@ -184,37 +163,86 @@ class ActiveXObject {}
 
 @_i1.JS()
 @_i1.staticInterop
-class ITextWriter {}
+@_i1.anonymous
+class ITextWriter {
+  external factory ITextWriter._({
+    _i2.dynamic write,
+    _i2.dynamic writeLine,
+    _i2.dynamic close,
+  });
+
+  factory ITextWriter({
+    void Function(_i2.String)? write,
+    void Function(_i2.String)? writeLine,
+    void Function()? close,
+  }) =>
+      ITextWriter._(
+        write: write == null ? null : _i4.allowInterop(write),
+        writeLine: writeLine == null ? null : _i4.allowInterop(writeLine),
+        close: close == null ? null : _i4.allowInterop(close),
+      );
+}
 
 extension ITextWriter$Typings on ITextWriter {
-  void write(_i2.String s) {
-    _i4.callMethod(
+  set write(void Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'Write',
-      [s],
+      _i4.allowInterop(value),
     );
   }
 
-  void writeLine(_i2.String s) {
-    _i4.callMethod(
+  void Function(_i2.String) get write => _i4.getProperty(
+        this,
+        'Write',
+      );
+  set writeLine(void Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'WriteLine',
-      [s],
+      _i4.allowInterop(value),
     );
   }
 
-  void close() {
-    _i4.callMethod(
+  void Function(_i2.String) get writeLine => _i4.getProperty(
+        this,
+        'WriteLine',
+      );
+  set close(void Function() value) {
+    _i4.setProperty(
       this,
       'Close',
-      [],
+      _i4.allowInterop(value),
     );
   }
+
+  void Function() get close => _i4.getProperty(
+        this,
+        'Close',
+      );
 }
 
 @_i1.JS()
 @_i1.staticInterop
-class TextStreamBase {}
+@_i1.anonymous
+class TextStreamBase {
+  external factory TextStreamBase._({
+    _i2.dynamic column,
+    _i2.dynamic line,
+    _i2.dynamic close,
+  });
+
+  factory TextStreamBase({
+    _i2.num? column,
+    _i2.num? line,
+    void Function()? close,
+  }) =>
+      TextStreamBase._(
+        column: column,
+        line: line,
+        close: close == null ? null : _i4.allowInterop(close),
+      );
+}
 
 extension TextStreamBase$Typings on TextStreamBase {
   /// The column number of the current character position in an input stream.
@@ -243,54 +271,133 @@ extension TextStreamBase$Typings on TextStreamBase {
     );
   }
 
-  /// Closes a text stream.
-  ///  It is not necessary to close standard streams; they close automatically when the process ends. If
-  ///  you close a standard stream, be aware that any other pointers to that standard stream become invalid.
-  void close() {
-    _i4.callMethod(
+  set close(void Function() value) {
+    _i4.setProperty(
       this,
       'Close',
-      [],
+      _i4.allowInterop(value),
     );
   }
+
+  void Function() get close => _i4.getProperty(
+        this,
+        'Close',
+      );
 }
 
 @_i1.JS()
 @_i1.staticInterop
-class TextStreamWriter implements _i3.TextStreamBase {}
+@_i1.anonymous
+class TextStreamWriter implements _i3.TextStreamBase {
+  external factory TextStreamWriter._({
+    _i2.dynamic write,
+    _i2.dynamic writeBlankLines,
+    _i2.dynamic writeLine,
+    _i2.dynamic column,
+    _i2.dynamic line,
+    _i2.dynamic close,
+  });
+
+  factory TextStreamWriter({
+    void Function(_i2.String)? write,
+    void Function(_i2.num)? writeBlankLines,
+    void Function(_i2.String)? writeLine,
+    _i2.num? column,
+    _i2.num? line,
+    void Function()? close,
+  }) =>
+      TextStreamWriter._(
+        write: write == null ? null : _i4.allowInterop(write),
+        writeBlankLines:
+            writeBlankLines == null ? null : _i4.allowInterop(writeBlankLines),
+        writeLine: writeLine == null ? null : _i4.allowInterop(writeLine),
+        column: column,
+        line: line,
+        close: close == null ? null : _i4.allowInterop(close),
+      );
+}
 
 extension TextStreamWriter$Typings on TextStreamWriter {
-  /// Sends a string to an output stream.
-  void write(_i2.String s) {
-    _i4.callMethod(
+  set write(void Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'Write',
-      [s],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Sends a specified number of blank lines (newline characters) to an output stream.
-  void writeBlankLines(_i2.num intLines) {
-    _i4.callMethod(
+  void Function(_i2.String) get write => _i4.getProperty(
+        this,
+        'Write',
+      );
+  set writeBlankLines(void Function(_i2.num) value) {
+    _i4.setProperty(
       this,
       'WriteBlankLines',
-      [intLines],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Sends a string followed by a newline character to an output stream.
-  void writeLine(_i2.String s) {
-    _i4.callMethod(
+  void Function(_i2.num) get writeBlankLines => _i4.getProperty(
+        this,
+        'WriteBlankLines',
+      );
+  set writeLine(void Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'WriteLine',
-      [s],
+      _i4.allowInterop(value),
     );
   }
+
+  void Function(_i2.String) get writeLine => _i4.getProperty(
+        this,
+        'WriteLine',
+      );
 }
 
 @_i1.JS()
 @_i1.staticInterop
-class TextStreamReader implements _i3.TextStreamBase {}
+@_i1.anonymous
+class TextStreamReader implements _i3.TextStreamBase {
+  external factory TextStreamReader._({
+    _i2.dynamic atEndOfLine,
+    _i2.dynamic atEndOfStream,
+    _i2.dynamic read,
+    _i2.dynamic readAll,
+    _i2.dynamic readLine,
+    _i2.dynamic skip,
+    _i2.dynamic skipLine,
+    _i2.dynamic column,
+    _i2.dynamic line,
+    _i2.dynamic close,
+  });
+
+  factory TextStreamReader({
+    _i2.bool? atEndOfLine,
+    _i2.bool? atEndOfStream,
+    _i2.String Function(_i2.num)? read,
+    _i2.String Function()? readAll,
+    _i2.String Function()? readLine,
+    void Function(_i2.num)? skip,
+    void Function()? skipLine,
+    _i2.num? column,
+    _i2.num? line,
+    void Function()? close,
+  }) =>
+      TextStreamReader._(
+        atEndOfLine: atEndOfLine,
+        atEndOfStream: atEndOfStream,
+        read: read == null ? null : _i4.allowInterop(read),
+        readAll: readAll == null ? null : _i4.allowInterop(readAll),
+        readLine: readLine == null ? null : _i4.allowInterop(readLine),
+        skip: skip == null ? null : _i4.allowInterop(skip),
+        skipLine: skipLine == null ? null : _i4.allowInterop(skipLine),
+        column: column,
+        line: line,
+        close: close == null ? null : _i4.allowInterop(close),
+      );
+}
 
 extension TextStreamReader$Typings on TextStreamReader {
   /// Indicates whether the stream pointer position is at the end of a line.
@@ -319,56 +426,71 @@ extension TextStreamReader$Typings on TextStreamReader {
     );
   }
 
-  /// Returns a specified number of characters from an input stream, starting at the current pointer position.
-  ///  Does not return until the ENTER key is pressed.
-  ///  Can only be used on a stream in reading mode; causes an error in writing or appending mode.
-  _i2.String read(_i2.num characters) => _i4.callMethod(
+  set read(_i2.String Function(_i2.num) value) {
+    _i4.setProperty(
+      this,
+      'Read',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.String Function(_i2.num) get read => _i4.getProperty(
         this,
         'Read',
-        [characters],
       );
+  set readAll(_i2.String Function() value) {
+    _i4.setProperty(
+      this,
+      'ReadAll',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns all characters from an input stream.
-  ///  Can only be used on a stream in reading mode; causes an error in writing or appending mode.
-  _i2.String readAll() => _i4.callMethod(
+  _i2.String Function() get readAll => _i4.getProperty(
         this,
         'ReadAll',
-        [],
       );
+  set readLine(_i2.String Function() value) {
+    _i4.setProperty(
+      this,
+      'ReadLine',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns an entire line from an input stream.
-  ///  Although this method extracts the newline character, it does not add it to the returned string.
-  ///  Can only be used on a stream in reading mode; causes an error in writing or appending mode.
-  _i2.String readLine() => _i4.callMethod(
+  _i2.String Function() get readLine => _i4.getProperty(
         this,
         'ReadLine',
-        [],
       );
-
-  /// Skips a specified number of characters when reading from an input text stream.
-  ///  Can only be used on a stream in reading mode; causes an error in writing or appending mode.
-  ///  @param characters Positive number of characters to skip forward. (Backward skipping is not supported.)
-  void skip(_i2.num characters) {
-    _i4.callMethod(
+  set skip(void Function(_i2.num) value) {
+    _i4.setProperty(
       this,
       'Skip',
-      [characters],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Skips the next line when reading from an input text stream.
-  ///  Can only be used on a stream in reading mode, not writing or appending mode.
-  void skipLine() {
-    _i4.callMethod(
+  void Function(_i2.num) get skip => _i4.getProperty(
+        this,
+        'Skip',
+      );
+  set skipLine(void Function() value) {
+    _i4.setProperty(
       this,
       'SkipLine',
-      [],
+      _i4.allowInterop(value),
     );
   }
+
+  void Function() get skipLine => _i4.getProperty(
+        this,
+        'SkipLine',
+      );
 }
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class IInline44 {}
 
 extension IInline44$Typings on IInline44 {
@@ -384,15 +506,23 @@ extension IInline44$Typings on IInline44 {
     );
   }
 
-  _i2.String item(_i2.num n) => _i4.callMethod(
+  set item(_i2.String Function(_i2.num) value) {
+    _i4.setProperty(
+      this,
+      'Item',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.String Function(_i2.num) get item => _i4.getProperty(
         this,
         'Item',
-        [n],
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class IInline43 {}
 
 extension IInline43$Typings on IInline43 {
@@ -554,92 +684,113 @@ extension IInline43$Typings on IInline43 {
     );
   }
 
-  /// Outputs text to either a message box (under WScript.exe) or the command console window followed by
-  ///  a newline (under CScript.exe).
-  void echo(_i2.dynamic s) {
-    _i4.callMethod(
+  set echo(void Function([_i2.dynamic]) value) {
+    _i4.setProperty(
       this,
       'Echo',
-      [s],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Forces the script to stop immediately, with an optional exit code.
-  _i2.num quit([_i2.num? exitCode]) => _i4.callMethod(
+  void Function([_i2.dynamic]) get echo => _i4.getProperty(
+        this,
+        'Echo',
+      );
+  set quit(_i2.num Function([_i2.num?]) value) {
+    _i4.setProperty(
+      this,
+      'Quit',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.num Function([_i2.num?]) get quit => _i4.getProperty(
         this,
         'Quit',
-        [exitCode ?? _i6.undefined],
       );
-
-  /// Connects a COM object's event sources to functions named with a given prefix, in the form prefix_event.
-  void connectObject(
-    _i2.dynamic objEventSource,
-    _i2.String strPrefix,
-  ) {
-    _i4.callMethod(
+  set connectObject(
+      void Function(
+        _i2.String, [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
       this,
       'ConnectObject',
-      [
-        objEventSource,
-        strPrefix,
-      ],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Creates a COM object.
-  ///  @param strProgiID
-  ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
-  _i2.dynamic createObject(
-    _i2.String strProgID, [
-    _i2.String? strPrefix,
-  ]) =>
-      _i4.callMethod(
+  void Function(
+    _i2.String, [
+    _i2.dynamic,
+  ]) get connectObject => _i4.getProperty(
+        this,
+        'ConnectObject',
+      );
+  set createObject(
+      _i2.dynamic Function(
+        _i2.String, [
+        _i2.String?,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'CreateObject',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.dynamic Function(
+    _i2.String, [
+    _i2.String?,
+  ]) get createObject => _i4.getProperty(
         this,
         'CreateObject',
-        [
-          strProgID,
-          strPrefix ?? _i6.undefined,
-        ],
       );
-
-  /// Disconnects a COM object from its event sources.
-  void disconnectObject(_i2.dynamic obj) {
-    _i4.callMethod(
+  set disconnectObject(void Function([_i2.dynamic]) value) {
+    _i4.setProperty(
       this,
       'DisconnectObject',
-      [obj],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Retrieves an existing object with the specified ProgID from memory, or creates a new one from a file.
-  ///  @param strPathname Fully qualified path to the file containing the object persisted to disk.
-  ///                        For objects in memory, pass a zero-length string.
-  ///  @param strProgID
-  ///  @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
-  _i2.dynamic getObject(
-    _i2.String strPathname, [
-    _i2.String? strProgID,
-    _i2.String? strPrefix,
-  ]) =>
-      _i4.callMethod(
+  void Function([_i2.dynamic]) get disconnectObject => _i4.getProperty(
+        this,
+        'DisconnectObject',
+      );
+  set getObject(
+      _i2.dynamic Function(
+        _i2.String, [
+        _i2.String?,
+        _i2.String?,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'GetObject',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.dynamic Function(
+    _i2.String, [
+    _i2.String?,
+    _i2.String?,
+  ]) get getObject => _i4.getProperty(
         this,
         'GetObject',
-        [
-          strPathname,
-          strProgID ?? _i6.undefined,
-          strPrefix ?? _i6.undefined,
-        ],
       );
-
-  /// Suspends script execution for a specified length of time, then continues execution.
-  ///  @param intTime Interval (in milliseconds) to suspend script execution.
-  void sleep(_i2.num intTime) {
-    _i4.callMethod(
+  set sleep(void Function(_i2.num) value) {
+    _i4.setProperty(
       this,
       'Sleep',
-      [intTime],
+      _i4.allowInterop(value),
     );
   }
+
+  void Function(_i2.num) get sleep => _i4.getProperty(
+        this,
+        'Sleep',
+      );
 }
 
 /// Represents an Automation SAFEARRAY
@@ -691,7 +842,7 @@ class Enumerator<T> {
         [collection],
       );
 
-  factory Enumerator.$4(_i2.dynamic collection) => _i4.callConstructor(
+  factory Enumerator.$4([_i2.dynamic collection]) => _i4.callConstructor(
         _declaredEnumerator,
         [collection],
       );
@@ -703,51 +854,73 @@ _i2.Object get _declaredEnumerator => _i4.getProperty(
     );
 
 extension Enumerator$Typings<T> on Enumerator<T> {
-  /// Returns true if the current item is the last one in the collection, or the collection is empty,
-  ///  or the current item is undefined.
-  _i2.bool atEnd() => _i4.callMethod(
+  set atEnd(_i2.bool Function() value) {
+    _i4.setProperty(
+      this,
+      'atEnd',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function() get atEnd => _i4.getProperty(
         this,
         'atEnd',
-        [],
       );
+  set item(T Function() value) {
+    _i4.setProperty(
+      this,
+      'item',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns the current item in the collection
-  T item() => _i4.callMethod(
+  T Function() get item => _i4.getProperty(
         this,
         'item',
-        [],
       );
-
-  /// Resets the current item in the collection to the first item. If there are no items in the collection,
-  ///  the current item is set to undefined.
-  void moveFirst() {
-    _i4.callMethod(
+  set moveFirst(void Function() value) {
+    _i4.setProperty(
       this,
       'moveFirst',
-      [],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Moves the current item to the next item in the collection. If the enumerator is at the end of
-  ///  the collection or the collection is empty, the current item is set to undefined.
-  void moveNext() {
-    _i4.callMethod(
+  void Function() get moveFirst => _i4.getProperty(
+        this,
+        'moveFirst',
+      );
+  set moveNext(void Function() value) {
+    _i4.setProperty(
       this,
       'moveNext',
-      [],
+      _i4.allowInterop(value),
     );
   }
+
+  void Function() get moveNext => _i4.getProperty(
+        this,
+        'moveNext',
+      );
 }
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class IInline45<T> {}
 
 extension IInline45$Typings<T> on IInline45<T> {
-  T item(_i2.dynamic index) => _i4.callMethod(
+  set item(T Function([_i2.dynamic]) value) {
+    _i4.setProperty(
+      this,
+      'Item',
+      _i4.allowInterop(value),
+    );
+  }
+
+  T Function([_i2.dynamic]) get item => _i4.getProperty(
         this,
         'Item',
-        [index],
       );
 }
 
@@ -771,52 +944,100 @@ _i2.Object get _declaredVBArray => _i4.getProperty(
     );
 
 extension VBArray$Typings<T> on VBArray<T> {
-  /// Returns the number of dimensions (1-based).
-  _i2.num dimensions() => _i4.callMethod(
+  set dimensions(_i2.num Function() value) {
+    _i4.setProperty(
+      this,
+      'dimensions',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.num Function() get dimensions => _i4.getProperty(
         this,
         'dimensions',
-        [],
       );
+  set getItem(
+      T Function(
+        _i2.num, [
+        _i2.Iterable<_i2.dynamic>?,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'getItem',
+      _i4.allowInterop((
+        _i2.num v0, [
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value(
+            v0,
+            [
+              a0,
+              a1,
+              a2,
+              a3,
+              a4,
+              a5,
+              a6,
+              a7,
+              a8,
+              a9,
+            ],
+          )),
+    );
+  }
 
-  /// Takes an index for each dimension in the array, and returns the item at the corresponding location.
-  T getItem(
-    _i2.num dimension1Index, [
-    _i2.Iterable<_i2.dynamic>? dimensionNIndexes,
-  ]) =>
-      _i4.callMethod(
+  T Function(
+    _i2.num, [
+    _i2.Iterable<_i2.dynamic>?,
+  ]) get getItem => _i4.getProperty(
         this,
         'getItem',
-        [
-          dimension1Index,
-          ...?dimensionNIndexes,
-        ],
       );
+  set lbound(_i2.num Function([_i2.num?]) value) {
+    _i4.setProperty(
+      this,
+      'lbound',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns the smallest available index for a given dimension.
-  ///  @param dimension 1-based dimension (defaults to 1)
-  _i2.num lbound([_i2.num? dimension]) => _i4.callMethod(
+  _i2.num Function([_i2.num?]) get lbound => _i4.getProperty(
         this,
         'lbound',
-        [dimension ?? _i6.undefined],
       );
+  set ubound(_i2.num Function([_i2.num?]) value) {
+    _i4.setProperty(
+      this,
+      'ubound',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns the largest available index for a given dimension.
-  ///  @param dimension 1-based dimension (defaults to 1)
-  _i2.num ubound([_i2.num? dimension]) => _i4.callMethod(
+  _i2.num Function([_i2.num?]) get ubound => _i4.getProperty(
         this,
         'ubound',
-        [dimension ?? _i6.undefined],
       );
+  set toArray(_i2.List<T> Function() value) {
+    _i4.setProperty(
+      this,
+      'toArray',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns a Javascript array with all the elements in the VBArray. If there are multiple dimensions,
-  ///  each successive dimension is appended to the end of the array.
-  ///  Example: [[1,2,3],[4,5,6]] becomes [1,2,3,4,5,6]
-  _i2.List<T> toArray() => (_i4.callMethod(
+  _i2.List<T> Function() get toArray => _i4.getProperty(
         this,
         'toArray',
-        [],
-      ) as _i2.List)
-          .cast();
+      );
 }
 
 @_i1.JS()

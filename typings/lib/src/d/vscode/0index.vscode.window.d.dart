@@ -5,11 +5,10 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import '0index.vscode.d.dart' as _i3;
 import 'dart:js_util' as _i4;
-import '0index.d.dart' as _i5;
-import 'null_comon.vscode.window.d.dart' as _i6;
-import '/d/core.dart' as _i7;
-import '/src/d/typescript/lib.es5.d.dart' as _i8;
-import '0index.vscode.window.d.dart' as _i9;
+import 'null_comon.vscode.window.d.dart' as _i5;
+import '/d/core.dart' as _i6;
+import '/src/d/typescript/lib.es5.d.dart' as _i7;
+import '0index.vscode.window.d.dart' as _i8;
 
 @_i1.JS('vscode.window')
 external _i2.Object _self;
@@ -53,16 +52,16 @@ extension TabGroupsAccessor$Typings on _TabGroupsAccessor {
   ///  @param tab The tab to close.
   ///  @param preserveFocus When `true` focus will remain in its current position. If `false` it will jump to the next tab.
   ///  @returns A promise that resolves to `true` when all tabs have been closed.
-  _i2.Future<_i5.Thenable<_i2.bool>> _close$1(
+  _i2.Future<_i2.dynamic> _close$1(
     _i2.Object tab, [
     _i2.bool? preserveFocus,
   ]) =>
       _i4.promiseToFuture(_i4.callMethod(
-        _i6.target380,
+        _i5.target62,
         'close',
         [
           tab,
-          preserveFocus ?? _i7.undefined,
+          preserveFocus ?? _i6.undefined,
         ],
       ));
 
@@ -71,16 +70,16 @@ extension TabGroupsAccessor$Typings on _TabGroupsAccessor {
   ///  @param tabGroup The tab group to close.
   ///  @param preserveFocus When `true` focus will remain in its current position.
   ///  @returns A promise that resolves to `true` when all tab groups have been closed.
-  _i2.Future<_i5.Thenable<_i2.bool>> _close$2(
+  _i2.Future<_i2.dynamic> _close$2(
     _i2.Object tabGroup, [
     _i2.bool? preserveFocus,
   ]) =>
       _i4.promiseToFuture(_i4.callMethod(
-        _i6.target380,
+        _i5.target62,
         'close',
         [
           tabGroup,
-          preserveFocus ?? _i7.undefined,
+          preserveFocus ?? _i6.undefined,
         ],
       ));
 
@@ -93,7 +92,7 @@ extension TabGroupsAccessor$Typings on _TabGroupsAccessor {
     ///  @param tab The tab to close.
     ///  @param preserveFocus When `true` focus will remain in its current position. If `false` it will jump to the next tab.
     ///  @returns A promise that resolves to `true` when all tabs have been closed.
-    _i2.Future<_i5.Thenable<_i2.bool>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i2.Object tab, [
       _i2.bool? preserveFocus,
     ]) $1,
@@ -103,7 +102,7 @@ extension TabGroupsAccessor$Typings on _TabGroupsAccessor {
     ///  @param tabGroup The tab group to close.
     ///  @param preserveFocus When `true` focus will remain in its current position.
     ///  @returns A promise that resolves to `true` when all tab groups have been closed.
-    _i2.Future<_i5.Thenable<_i2.bool>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i2.Object tabGroup, [
       _i2.bool? preserveFocus,
     ]) $2,
@@ -162,117 +161,68 @@ extension ActiveTextEditorAccessor$Typings on _ActiveTextEditorAccessor {
         _i2.String name => _i3.ViewColumn.values.byName(name),
         _ => null
       };
+  set edit(
+      _i2.Future<_i2.dynamic> Function(
+        void Function(_i3.TextEditorEdit), [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'edit',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Perform an edit on the document associated with this text editor.
-  ///
-  ///  The given callback-function is invoked with an {@link TextEditorEdit edit-builder} which must
-  ///  be used to make edits. Note that the edit-builder is only valid while the
-  ///  callback executes.
-  ///
-  ///  @param callback A function which can create edits using an {@link TextEditorEdit edit-builder}.
-  ///  @param options The undo/redo behavior around this edit. By default, undo stops will be created before and after this edit.
-  ///  @returns A promise that resolves with a value indicating if the edits could be applied.
-  _i2.Future<_i5.Thenable<_i2.bool>> edit(
-    void Function(_i3.TextEditorEdit) callback, [
-    _i3.IInline3? options,
-  ]) =>
-      _i4.promiseToFuture(_i4.callMethod(
-        _i6.target381,
-        'edit',
-        [
-          _i4.allowInterop(callback),
-          options ?? _i7.undefined,
-        ],
-      ));
+  set insertSnippet(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.SnippetString, [
+        _i2.Object?,
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'insertSnippet',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Insert a {@link SnippetString snippet} and put the editor into snippet mode. "Snippet mode"
-  ///  means the editor adds placeholders and additional cursors so that the user can complete
-  ///  or accept the snippet.
-  ///
-  ///  @param snippet The snippet to insert in this edit.
-  ///  @param location Position or range at which to insert the snippet, defaults to the current editor selection or selections.
-  ///  @param options The undo/redo behavior around this edit. By default, undo stops will be created before and after this edit.
-  ///  @returns A promise that resolves with a value indicating if the snippet could be inserted. Note that the promise does not signal
-  ///  that the snippet is completely filled-in or accepted.
-  _i2.Future<_i5.Thenable<_i2.bool>> insertSnippet(
-    _i3.SnippetString snippet, [
-    _i2.Object? location,
-    _i3.IInline4? options,
-  ]) =>
-      _i4.promiseToFuture(_i4.callMethod(
-        _i6.target381,
-        'insertSnippet',
-        [
-          snippet,
-          location ?? _i7.undefined,
-          options ?? _i7.undefined,
-        ],
-      ));
-
-  /// Adds a set of decorations to the text editor. If a set of decorations already exists with
-  ///  the given {@link TextEditorDecorationType decoration type}, they will be replaced. If
-  ///  `rangesOrOptions` is empty, the existing decorations with the given {@link TextEditorDecorationType decoration type}
-  ///  will be removed.
-  ///
-  ///  @see {@link window.createTextEditorDecorationType createTextEditorDecorationType}.
-  ///
-  ///  @param decorationType A decoration type.
-  ///  @param rangesOrOptions Either {@link Range ranges} or more detailed {@link DecorationOptions options}.
-  void setDecorations(
-    _i3.TextEditorDecorationType decorationType,
-    _i2.Object rangesOrOptions,
-  ) {
-    _i4.callMethod(
-      _i6.target381,
+  set setDecorations(
+      void Function(
+        _i3.TextEditorDecorationType,
+        _i2.Object,
+      ) value) {
+    _i4.setProperty(
+      this,
       'setDecorations',
-      [
-        decorationType,
-        rangesOrOptions,
-      ],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Scroll as indicated by `revealType` in order to reveal the given range.
-  ///
-  ///  @param range A range.
-  ///  @param revealType The scrolling strategy for revealing `range`.
-  void revealRange(
-    _i3.Range range, [
-    _i3.TextEditorRevealType? revealType,
-  ]) {
-    _i4.callMethod(
-      _i6.target381,
+  set revealRange(
+      void Function(
+        _i3.Range, [
+        _i3.TextEditorRevealType?,
+      ]) value) {
+    _i4.setProperty(
+      this,
       'revealRange',
-      [
-        range,
-        revealType?.name ?? _i7.undefined,
-      ],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Show the text editor.
-  ///
-  ///  @deprecated Use {@link window.showTextDocument} instead.
-  ///
-  ///  @param column The {@link ViewColumn column} in which to show this editor.
-  ///  This method shows unexpected behavior and will be removed in the next major update.
-  void show([_i3.ViewColumn? column]) {
-    _i4.callMethod(
-      _i6.target381,
+  set show(void Function([_i3.ViewColumn?]) value) {
+    _i4.setProperty(
+      this,
       'show',
-      [column?.name ?? _i7.undefined],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Hide the text editor.
-  ///
-  ///  @deprecated Use the command `workbench.action.closeActiveEditor` instead.
-  ///  This method shows unexpected behavior and will be removed in the next major update.
-  void hide() {
-    _i4.callMethod(
-      _i6.target381,
+  set hide(void Function() value) {
+    _i4.setProperty(
+      this,
       'hide',
-      [],
+      _i4.allowInterop(value),
     );
   }
 }
@@ -355,22 +305,15 @@ extension ActiveNotebookEditorAccessor$Typings
         _i2.String name => _i3.ViewColumn.values.byName(name),
         _ => null
       };
-
-  /// Scroll as indicated by `revealType` in order to reveal the given range.
-  ///
-  ///  @param range A range.
-  ///  @param revealType The scrolling strategy for revealing `range`.
-  void revealRange(
-    _i3.NotebookRange range, [
-    _i3.NotebookEditorRevealType? revealType,
-  ]) {
-    _i4.callMethod(
-      _i6.target382,
+  set revealRange(
+      void Function(
+        _i3.NotebookRange, [
+        _i3.NotebookEditorRevealType?,
+      ]) value) {
+    _i4.setProperty(
+      this,
       'revealRange',
-      [
-        range,
-        revealType?.name ?? _i7.undefined,
-      ],
+      _i4.allowInterop(value),
     );
   }
 }
@@ -403,8 +346,7 @@ extension ActiveTerminalAccessor$Typings on _ActiveTerminalAccessor {
       );
 
   /// The process ID of the shell process.
-  _i2.Future<_i5.Thenable<_i2.num?>> get processId =>
-      _i4.promiseToFuture(_i4.getProperty(
+  _i2.Future<_i2.dynamic> get processId => _i4.promiseToFuture(_i4.getProperty(
         this,
         'processId',
       ));
@@ -412,7 +354,7 @@ extension ActiveTerminalAccessor$Typings on _ActiveTerminalAccessor {
   /// The object used to initialize the terminal, this is useful for example to detecting the
   /// shell type of when the terminal was not launched by this extension or for detecting what
   /// folder the shell was launched in.
-  _i8.Readonly<_i2.Object> get creationOptions => _i4.getProperty(
+  _i7.Readonly<_i2.Object> get creationOptions => _i4.getProperty(
         this,
         'creationOptions',
       );
@@ -438,54 +380,39 @@ extension ActiveTerminalAccessor$Typings on _ActiveTerminalAccessor {
         this,
         'state',
       );
-
-  /// Send text to the terminal. The text is written to the stdin of the underlying pty process
-  ///  (shell) of the terminal.
-  ///
-  ///  @param text The text to send.
-  ///  @param addNewLine Whether to add a new line to the text being sent, this is normally
-  ///  required to run a command in the terminal. The character(s) added are \n or \r\n
-  ///  depending on the platform. This defaults to `true`.
-  void sendText(
-    _i2.String text, [
-    _i2.bool? addNewLine,
-  ]) {
-    _i4.callMethod(
-      _i6.target383,
+  set sendText(
+      void Function(
+        _i2.String, [
+        _i2.bool?,
+      ]) value) {
+    _i4.setProperty(
+      this,
       'sendText',
-      [
-        text,
-        addNewLine ?? _i7.undefined,
-      ],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Show the terminal panel and reveal this terminal in the UI.
-  ///
-  ///  @param preserveFocus When `true` the terminal will not take focus.
-  void show([_i2.bool? preserveFocus]) {
-    _i4.callMethod(
-      _i6.target383,
+  set show(void Function([_i2.bool?]) value) {
+    _i4.setProperty(
+      this,
       'show',
-      [preserveFocus ?? _i7.undefined],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Hide the terminal panel if this terminal is currently showing.
-  void hide() {
-    _i4.callMethod(
-      _i6.target383,
+  set hide(void Function() value) {
+    _i4.setProperty(
+      this,
       'hide',
-      [],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Dispose and free associated resources.
-  void dispose() {
-    _i4.callMethod(
-      _i6.target383,
+  set dispose(void Function() value) {
+    _i4.setProperty(
+      this,
       'dispose',
-      [],
+      _i4.allowInterop(value),
     );
   }
 }
@@ -641,7 +568,7 @@ extension IInline50$Typings on IInline50 {
     _i4.setProperty(
       this,
       'message',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -654,7 +581,7 @@ extension IInline50$Typings on IInline50 {
     _i4.setProperty(
       this,
       'increment',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -918,7 +845,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
   /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
   /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-  _i2.Future<_i5.Thenable<_i3.TextEditor>> _showTextDocument$1(
+  _i2.Future<_i2.dynamic> _showTextDocument$1(
     _i3.TextDocument document, [
     _i3.TextDocumentShowOptions? options,
   ]) =>
@@ -927,7 +854,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         'showTextDocument',
         [
           document,
-          options ?? _i7.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -936,7 +863,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
   /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
   /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-  _i2.Future<_i5.Thenable<_i3.TextEditor>> _showTextDocument$2(
+  _i2.Future<_i2.dynamic> _showTextDocument$2(
     _i3.Uri uri, [
     _i3.TextDocumentShowOptions? options,
   ]) =>
@@ -945,7 +872,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         'showTextDocument',
         [
           uri,
-          options ?? _i7.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -954,7 +881,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
   /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
   /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-  _i2.Future<_i5.Thenable<_i3.TextEditor>> _showTextDocument$3(
+  _i2.Future<_i2.dynamic> _showTextDocument$3(
     _i3.TextDocument document, [
     _i3.ViewColumn? column,
     _i2.bool? preserveFocus,
@@ -964,8 +891,8 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         'showTextDocument',
         [
           document,
-          column?.name ?? _i7.undefined,
-          preserveFocus ?? _i7.undefined,
+          column?.name ?? _i6.undefined,
+          preserveFocus ?? _i6.undefined,
         ],
       ));
 
@@ -976,7 +903,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
     /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
     /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
     /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-    _i2.Future<_i5.Thenable<_i3.TextEditor>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i3.TextDocument document, [
       _i3.TextDocumentShowOptions? options,
     ]) $1,
@@ -986,7 +913,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
     /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
     /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
     /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-    _i2.Future<_i5.Thenable<_i3.TextEditor>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i3.Uri uri, [
       _i3.TextDocumentShowOptions? options,
     ]) $2,
@@ -996,7 +923,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
     /// Show the given document in a text editor. {@link TextDocumentShowOptionsOptions} can be provided
     /// to control options of the editor is being shown. Might change the {@link window.activeTextEditoractive editor}.
     /// A short-hand for `openTextDocument(uri).then(document => showTextDocument(document, options))`.
-    _i2.Future<_i5.Thenable<_i3.TextEditor>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i3.TextDocument document, [
       _i3.ViewColumn? column,
       _i2.bool? preserveFocus,
@@ -1008,7 +935,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
       );
 
   /// Show the given {@link NotebookDocument} in a {@link NotebookEditornotebook editor}.
-  _i2.Future<_i5.Thenable<_i3.NotebookEditor>> showNotebookDocument(
+  _i2.Future<_i2.dynamic> showNotebookDocument(
     _i3.NotebookDocument document, [
     _i3.NotebookDocumentShowOptions? options,
   ]) =>
@@ -1017,7 +944,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         'showNotebookDocument',
         [
           document,
-          options ?? _i7.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -1033,7 +960,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Show an information message to users. Optionally provide an array of items which will be presented as
   /// clickable buttons.
   /// Show an information message.
-  _i2.Future<_i5.Thenable<T?>> _showInformationMessage$1<T extends _i2.String>(
+  _i2.Future<_i2.dynamic> _showInformationMessage$1<T extends _i2.String>(
     _i2.String message, [
     _i2.Iterable<_i2.dynamic>? items,
   ]) =>
@@ -1049,7 +976,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Show an information message to users. Optionally provide an array of items which will be presented as
   /// clickable buttons.
   /// Show an information message.
-  _i2.Future<_i5.Thenable<T?>> _showInformationMessage$2<T extends _i2.String>(
+  _i2.Future<_i2.dynamic> _showInformationMessage$2<T extends _i2.String>(
     _i2.String message,
     _i3.MessageOptions options, [
     _i2.Iterable<_i2.dynamic>? items,
@@ -1067,28 +994,27 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Show an information message to users. Optionally provide an array of items which will be presented as
   /// clickable buttons.
   /// Show an information message.
-  _i2.Future<_i5.Thenable<T?>>
-      _showInformationMessage$3<T extends _i3.MessageItem>(
+  _i2.Future<_i2.dynamic> _showInformationMessage$3<T extends _i3.MessageItem>(
     _i2.String message,
     _i3.MessageOptions options, [
     _i2.Iterable<_i2.dynamic>? items,
   ]) =>
-          _i4.promiseToFuture(_i4.callMethod(
-            this,
-            'showInformationMessage',
-            [
-              message,
-              options,
-              ...?items,
-            ],
-          ));
+      _i4.promiseToFuture(_i4.callMethod(
+        this,
+        'showInformationMessage',
+        [
+          message,
+          options,
+          ...?items,
+        ],
+      ));
 
   /// Overload accessor: $1, $2, $3
   ({
     /// Show an information message to users. Optionally provide an array of items which will be presented as
     /// clickable buttons.
     /// Show an information message.
-    _i2.Future<_i5.Thenable<T?>> Function<T extends _i2.String>(
+    _i2.Future<_i2.dynamic> Function<T extends _i2.String>(
       _i2.String message, [
       _i2.Iterable<_i2.dynamic>? items,
     ]) $1,
@@ -1096,7 +1022,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
     /// Show an information message to users. Optionally provide an array of items which will be presented as
     /// clickable buttons.
     /// Show an information message.
-    _i2.Future<_i5.Thenable<T?>> Function<T extends _i2.String>(
+    _i2.Future<_i2.dynamic> Function<T extends _i2.String>(
       _i2.String message,
       _i3.MessageOptions options, [
       _i2.Iterable<_i2.dynamic>? items,
@@ -1105,7 +1031,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
     /// Show an information message to users. Optionally provide an array of items which will be presented as
     /// clickable buttons.
     /// Show an information message.
-    _i2.Future<_i5.Thenable<T?>> Function<T extends _i3.MessageItem>(
+    _i2.Future<_i2.dynamic> Function<T extends _i3.MessageItem>(
       _i2.String message,
       _i3.MessageOptions options, [
       _i2.Iterable<_i2.dynamic>? items,
@@ -1117,7 +1043,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
       );
 
   /// Show a warning message.
-  _i2.Future<_i5.Thenable<T?>> _showWarningMessage$1<T extends _i2.String>(
+  _i2.Future<_i2.dynamic> _showWarningMessage$1<T extends _i2.String>(
     _i2.String message, [
     _i2.Iterable<_i2.dynamic>? items,
   ]) =>
@@ -1131,7 +1057,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
       ));
 
   /// Show a warning message.
-  _i2.Future<_i5.Thenable<T?>> _showWarningMessage$2<T extends _i2.String>(
+  _i2.Future<_i2.dynamic> _showWarningMessage$2<T extends _i2.String>(
     _i2.String message,
     _i3.MessageOptions options, [
     _i2.Iterable<_i2.dynamic>? items,
@@ -1147,7 +1073,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
       ));
 
   /// Show a warning message.
-  _i2.Future<_i5.Thenable<T?>> _showWarningMessage$3<T extends _i3.MessageItem>(
+  _i2.Future<_i2.dynamic> _showWarningMessage$3<T extends _i3.MessageItem>(
     _i2.String message,
     _i3.MessageOptions options, [
     _i2.Iterable<_i2.dynamic>? items,
@@ -1165,20 +1091,20 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Overload accessor: $1, $2, $3
   ({
     /// Show a warning message.
-    _i2.Future<_i5.Thenable<T?>> Function<T extends _i2.String>(
+    _i2.Future<_i2.dynamic> Function<T extends _i2.String>(
       _i2.String message, [
       _i2.Iterable<_i2.dynamic>? items,
     ]) $1,
 
     /// Show a warning message.
-    _i2.Future<_i5.Thenable<T?>> Function<T extends _i2.String>(
+    _i2.Future<_i2.dynamic> Function<T extends _i2.String>(
       _i2.String message,
       _i3.MessageOptions options, [
       _i2.Iterable<_i2.dynamic>? items,
     ]) $2,
 
     /// Show a warning message.
-    _i2.Future<_i5.Thenable<T?>> Function<T extends _i3.MessageItem>(
+    _i2.Future<_i2.dynamic> Function<T extends _i3.MessageItem>(
       _i2.String message,
       _i3.MessageOptions options, [
       _i2.Iterable<_i2.dynamic>? items,
@@ -1190,7 +1116,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
       );
 
   /// Show an error message.
-  _i2.Future<_i5.Thenable<T?>> _showErrorMessage$1<T extends _i2.String>(
+  _i2.Future<_i2.dynamic> _showErrorMessage$1<T extends _i2.String>(
     _i2.String message, [
     _i2.Iterable<_i2.dynamic>? items,
   ]) =>
@@ -1204,7 +1130,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
       ));
 
   /// Show an error message.
-  _i2.Future<_i5.Thenable<T?>> _showErrorMessage$2<T extends _i2.String>(
+  _i2.Future<_i2.dynamic> _showErrorMessage$2<T extends _i2.String>(
     _i2.String message,
     _i3.MessageOptions options, [
     _i2.Iterable<_i2.dynamic>? items,
@@ -1220,7 +1146,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
       ));
 
   /// Show an error message.
-  _i2.Future<_i5.Thenable<T?>> _showErrorMessage$3<T extends _i3.MessageItem>(
+  _i2.Future<_i2.dynamic> _showErrorMessage$3<T extends _i3.MessageItem>(
     _i2.String message,
     _i3.MessageOptions options, [
     _i2.Iterable<_i2.dynamic>? items,
@@ -1238,20 +1164,20 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Overload accessor: $1, $2, $3
   ({
     /// Show an error message.
-    _i2.Future<_i5.Thenable<T?>> Function<T extends _i2.String>(
+    _i2.Future<_i2.dynamic> Function<T extends _i2.String>(
       _i2.String message, [
       _i2.Iterable<_i2.dynamic>? items,
     ]) $1,
 
     /// Show an error message.
-    _i2.Future<_i5.Thenable<T?>> Function<T extends _i2.String>(
+    _i2.Future<_i2.dynamic> Function<T extends _i2.String>(
       _i2.String message,
       _i3.MessageOptions options, [
       _i2.Iterable<_i2.dynamic>? items,
     ]) $2,
 
     /// Show an error message.
-    _i2.Future<_i5.Thenable<T?>> Function<T extends _i3.MessageItem>(
+    _i2.Future<_i2.dynamic> Function<T extends _i3.MessageItem>(
       _i2.String message,
       _i3.MessageOptions options, [
       _i2.Iterable<_i2.dynamic>? items,
@@ -1264,7 +1190,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
 
   /// Shows a selection list allowing multiple selections.
   /// Shows a selection list.
-  _i2.Future<_i5.Thenable<_i2.List<_i2.String>?>> _showQuickPick$1(
+  _i2.Future<_i2.dynamic> _showQuickPick$1(
     _i2.Object items,
     _i2.Object options, [
     _i3.CancellationToken? token,
@@ -1275,13 +1201,13 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         [
           items,
           options,
-          token ?? _i7.undefined,
+          token ?? _i6.undefined,
         ],
       ));
 
   /// Shows a selection list allowing multiple selections.
   /// Shows a selection list.
-  _i2.Future<_i5.Thenable<_i2.String?>> _showQuickPick$2(
+  _i2.Future<_i2.dynamic> _showQuickPick$2(
     _i2.Object items, [
     _i3.QuickPickOptions? options,
     _i3.CancellationToken? token,
@@ -1291,32 +1217,31 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         'showQuickPick',
         [
           items,
-          options ?? _i7.undefined,
-          token ?? _i7.undefined,
+          options ?? _i6.undefined,
+          token ?? _i6.undefined,
         ],
       ));
 
   /// Shows a selection list allowing multiple selections.
   /// Shows a selection list.
-  _i2.Future<_i5.Thenable<_i2.List<T>?>>
-      _showQuickPick$3<T extends _i3.QuickPickItem>(
+  _i2.Future<_i2.dynamic> _showQuickPick$3<T extends _i3.QuickPickItem>(
     _i2.Object items,
     _i2.Object options, [
     _i3.CancellationToken? token,
   ]) =>
-          _i4.promiseToFuture(_i4.callMethod(
-            this,
-            'showQuickPick',
-            [
-              items,
-              options,
-              token ?? _i7.undefined,
-            ],
-          ));
+      _i4.promiseToFuture(_i4.callMethod(
+        this,
+        'showQuickPick',
+        [
+          items,
+          options,
+          token ?? _i6.undefined,
+        ],
+      ));
 
   /// Shows a selection list allowing multiple selections.
   /// Shows a selection list.
-  _i2.Future<_i5.Thenable<T?>> _showQuickPick$4<T extends _i3.QuickPickItem>(
+  _i2.Future<_i2.dynamic> _showQuickPick$4<T extends _i3.QuickPickItem>(
     _i2.Object items, [
     _i3.QuickPickOptions? options,
     _i3.CancellationToken? token,
@@ -1326,8 +1251,8 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         'showQuickPick',
         [
           items,
-          options ?? _i7.undefined,
-          token ?? _i7.undefined,
+          options ?? _i6.undefined,
+          token ?? _i6.undefined,
         ],
       ));
 
@@ -1335,7 +1260,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   ({
     /// Shows a selection list allowing multiple selections.
     /// Shows a selection list.
-    _i2.Future<_i5.Thenable<_i2.List<_i2.String>?>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i2.Object items,
       _i2.Object options, [
       _i3.CancellationToken? token,
@@ -1343,7 +1268,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
 
     /// Shows a selection list allowing multiple selections.
     /// Shows a selection list.
-    _i2.Future<_i5.Thenable<_i2.String?>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i2.Object items, [
       _i3.QuickPickOptions? options,
       _i3.CancellationToken? token,
@@ -1351,8 +1276,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
 
     /// Shows a selection list allowing multiple selections.
     /// Shows a selection list.
-    _i2.Future<_i5.Thenable<_i2.List<T>?>>
-        Function<T extends _i3.QuickPickItem>(
+    _i2.Future<_i2.dynamic> Function<T extends _i3.QuickPickItem>(
       _i2.Object items,
       _i2.Object options, [
       _i3.CancellationToken? token,
@@ -1360,7 +1284,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
 
     /// Shows a selection list allowing multiple selections.
     /// Shows a selection list.
-    _i2.Future<_i5.Thenable<T?>> Function<T extends _i3.QuickPickItem>(
+    _i2.Future<_i2.dynamic> Function<T extends _i3.QuickPickItem>(
       _i2.Object items, [
       _i3.QuickPickOptions? options,
       _i3.CancellationToken? token,
@@ -1374,32 +1298,30 @@ extension $ModuleWindow$Typings on $ModuleWindow {
 
   /// Shows a selection list of {@link workspace.workspaceFoldersworkspace folders} to pick from.
   /// Returns `undefined` if no folder is open.
-  _i2.Future<_i5.Thenable<_i3.WorkspaceFolder?>> showWorkspaceFolderPick(
+  _i2.Future<_i2.dynamic> showWorkspaceFolderPick(
           [_i3.WorkspaceFolderPickOptions? options]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'showWorkspaceFolderPick',
-        [options ?? _i7.undefined],
+        [options ?? _i6.undefined],
       ));
 
   /// Shows a file open dialog to the user which allows to select a file
   /// for opening-purposes.
-  _i2.Future<_i5.Thenable<_i2.List<_i3.Uri>?>> showOpenDialog(
-          [_i3.OpenDialogOptions? options]) =>
+  _i2.Future<_i2.dynamic> showOpenDialog([_i3.OpenDialogOptions? options]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'showOpenDialog',
-        [options ?? _i7.undefined],
+        [options ?? _i6.undefined],
       ));
 
   /// Shows a file save dialog to the user which allows to select a file
   /// for saving-purposes.
-  _i2.Future<_i5.Thenable<_i3.Uri?>> showSaveDialog(
-          [_i3.SaveDialogOptions? options]) =>
+  _i2.Future<_i2.dynamic> showSaveDialog([_i3.SaveDialogOptions? options]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'showSaveDialog',
-        [options ?? _i7.undefined],
+        [options ?? _i6.undefined],
       ));
 
   /// Opens an input box to ask the user for input.
@@ -1407,7 +1329,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// The returned value will be `undefined` if the input box was canceled (e.g. pressing ESC). Otherwise the
   /// returned value will be the string typed by the user or an empty string if the user did not type
   /// anything but dismissed the input box with OK.
-  _i2.Future<_i5.Thenable<_i2.String?>> showInputBox([
+  _i2.Future<_i2.dynamic> showInputBox([
     _i3.InputBoxOptions? options,
     _i3.CancellationToken? token,
   ]) =>
@@ -1415,8 +1337,8 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         this,
         'showInputBox',
         [
-          options ?? _i7.undefined,
-          token ?? _i7.undefined,
+          options ?? _i6.undefined,
+          token ?? _i6.undefined,
         ],
       ));
 
@@ -1459,7 +1381,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         'createOutputChannel',
         [
           name,
-          languageId ?? _i7.undefined,
+          languageId ?? _i6.undefined,
         ],
       );
 
@@ -1471,7 +1393,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Creates a new {@link LogOutputChannellog output channel} with the given name.
   _i3.LogOutputChannel _createOutputChannel$2(
     _i2.String name,
-    _i9.IInline48 options,
+    _i8.IInline48 options,
   ) =>
       _i4.callMethod(
         this,
@@ -1503,7 +1425,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
     /// Creates a new {@link LogOutputChannellog output channel} with the given name.
     _i3.LogOutputChannel Function(
       _i2.String name,
-      _i9.IInline48 options,
+      _i8.IInline48 options,
     ) $2,
   }) get createOutputChannel => (
         $1: _createOutputChannel$1,
@@ -1524,7 +1446,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
           viewType,
           title,
           showOptions,
-          options ?? _i7.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -1557,7 +1479,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// longer used.
   _i3.Disposable _setStatusBarMessage$2(
     _i2.String text,
-    _i5.Thenable<_i2.dynamic> hideWhenDone,
+    _i2.Future<_i2.dynamic> hideWhenDone,
   ) =>
       _i4.callMethod(
         this,
@@ -1591,7 +1513,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
     /// longer used.
     _i3.Disposable Function(
       _i2.String text,
-      _i5.Thenable<_i2.dynamic> hideWhenDone,
+      _i2.Future<_i2.dynamic> hideWhenDone,
     ) $2,
   }) get setStatusBarMessage => (
         $1: _setStatusBarMessage$1,
@@ -1600,8 +1522,8 @@ extension $ModuleWindow$Typings on $ModuleWindow {
 
   /// Show progress in the Source Control viewlet while running the given callback and while
   /// its returned promise isn't resolve or rejected.
-  _i2.Future<_i5.Thenable<R>> withScmProgress<R>(
-          _i5.Thenable<R> Function(_i3.Progress<_i2.num>) task) =>
+  _i2.Future<_i2.dynamic> withScmProgress<R>(
+          _i2.Future<_i2.dynamic> Function(_i3.Progress<_i2.num>) task) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'withScmProgress',
@@ -1611,9 +1533,9 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Show progress in the editor. Progress is shown while running the given callback
   /// and while the promise it returned isn't resolved nor rejected. The location at which
   /// progress should show (and other details) is defined via the passed {@linkcode ProgressOptions}.
-  _i2.Future<_i5.Thenable<R>> withProgress<R>(
+  _i2.Future<_i2.dynamic> withProgress<R>(
     _i3.ProgressOptions options,
-    _i5.Thenable<R> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i3.Progress<_i2.dynamic>,
       _i3.CancellationToken,
     ) task,
@@ -1636,8 +1558,8 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         this,
         'createStatusBarItem',
         [
-          alignment?.name ?? _i7.undefined,
-          priority ?? _i7.undefined,
+          alignment?.name ?? _i6.undefined,
+          priority ?? _i6.undefined,
         ],
       );
 
@@ -1652,8 +1574,8 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         'createStatusBarItem',
         [
           id,
-          alignment?.name ?? _i7.undefined,
-          priority ?? _i7.undefined,
+          alignment?.name ?? _i6.undefined,
+          priority ?? _i6.undefined,
         ],
       );
 
@@ -1710,9 +1632,9 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         this,
         'createTerminal',
         [
-          name ?? _i7.undefined,
-          shellPath ?? _i7.undefined,
-          shellArgs ?? _i7.undefined,
+          name ?? _i6.undefined,
+          shellPath ?? _i6.undefined,
+          shellArgs ?? _i6.undefined,
         ],
       );
 
@@ -1822,7 +1744,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   _i3.Disposable registerWebviewViewProvider(
     _i2.String viewId,
     _i3.WebviewViewProvider provider, [
-    _i9.IInline51? options,
+    _i8.IInline51? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -1830,7 +1752,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         [
           viewId,
           provider,
-          options ?? _i7.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -1842,7 +1764,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   _i3.Disposable registerCustomEditorProvider(
     _i2.String viewType,
     _i2.Object provider, [
-    _i9.IInline53? options,
+    _i8.IInline53? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -1850,7 +1772,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
         [
           viewType,
           provider,
-          options ?? _i7.undefined,
+          options ?? _i6.undefined,
         ],
       );
 

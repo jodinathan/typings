@@ -92,5 +92,21 @@ inline class MetadataStructMember {
 
   String get name => map.prop('name');
   bool get isMethod => map.prop('isMethod');
+  bool get isExternal => map.prop('isExternal') ?? false;
+  bool get isReadonly => map.prop('isReadonly') ?? false;
+  bool get isStatic => map.prop('isStatic');
+  bool get isNullable {
+    return map.prop('isNullable') ?? false;
+  }
+  bool get isOperator => name.startsWith('operator');
+  bool get isSymbolIterator => name.startsWith('[') && name.endsWith(']');
+
+  bool get canBeProperty =>
+      !isStatic && !isOperator && !isExternal && !isSymbolIterator;
+
+  String get doc => map.prop('doc');
+  String get source => map.prop('source');
   Map<String, dynamic> get rawType => map.prop('type');
+  int get lineNumber => map.prop('_') ?? -1;
+  Iterable get generics => map.prop('generics');
 }

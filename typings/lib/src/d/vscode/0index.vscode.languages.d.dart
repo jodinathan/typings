@@ -5,8 +5,7 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import '0index.vscode.d.dart' as _i3;
 import 'dart:js_util' as _i4;
-import '0index.d.dart' as _i5;
-import '/d/core.dart' as _i6;
+import '/d/core.dart' as _i5;
 
 @_i1.JS('vscode.languages')
 external _i2.Object _self;
@@ -30,8 +29,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
       );
 
   /// Return the identifiers of all known languages.
-  _i2.Future<_i5.Thenable<_i2.List<_i2.String>>> getLanguages() =>
-      _i4.promiseToFuture(_i4.callMethod(
+  _i2.Future<_i2.dynamic> getLanguages() => _i4.promiseToFuture(_i4.callMethod(
         this,
         'getLanguages',
         [],
@@ -42,7 +40,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   ///
   /// *Note* that calling this function will trigger the {@linkcode workspace.onDidCloseTextDocumentonDidCloseTextDocument} event
   /// followed by the {@linkcode workspace.onDidOpenTextDocumentonDidOpenTextDocument} event.
-  _i2.Future<_i5.Thenable<_i3.TextDocument>> setTextDocumentLanguage(
+  _i2.Future<_i2.dynamic> setTextDocumentLanguage(
     _i3.TextDocument document,
     _i2.String languageId,
   ) =>
@@ -154,7 +152,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
       _i4.callMethod(
         this,
         'createDiagnosticCollection',
-        [name ?? _i6.undefined],
+        [name ?? _i5.undefined],
       );
 
   /// Creates a new {@link LanguageStatusItemlanguage status item}.
@@ -232,7 +230,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
         [
           selector,
           provider,
-          metadata ?? _i6.undefined,
+          metadata ?? _i5.undefined,
         ],
       );
 
@@ -415,7 +413,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
         [
           selector,
           provider,
-          metaData ?? _i6.undefined,
+          metaData ?? _i5.undefined,
         ],
       );
 

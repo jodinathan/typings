@@ -5,11 +5,11 @@ import 'dart:js_util' as _i3;
 
 @_i1.JS('vscode.workspace')
 external _i2.Object _self;
-_i2.Object get target386 => _i3.getProperty(
+_i2.Object get target68 => _i3.getProperty(
       _self,
       'fs',
     );
-_i2.Object get target387 => _i3.getProperty(
+_i2.Object get target69 => _i3.getProperty(
       _self,
       'workspaceFile',
     );

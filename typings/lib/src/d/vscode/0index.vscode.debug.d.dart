@@ -5,9 +5,7 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'dart:js_util' as _i3;
 import '0index.vscode.d.dart' as _i4;
-import '0index.d.dart' as _i5;
-import 'null_comon.vscode.debug.d.dart' as _i6;
-import '/d/core.dart' as _i7;
+import '/d/core.dart' as _i5;
 
 @_i1.JS('vscode.debug')
 external _i2.Object _self;
@@ -57,33 +55,26 @@ extension ActiveDebugSessionAccessor$Typings on _ActiveDebugSessionAccessor {
         this,
         'configuration',
       );
+  set customRequest(
+      _i2.Future<_i2.dynamic> Function(
+        _i2.String, [
+        _i2.dynamic,
+      ]) value) {
+    _i3.setProperty(
+      this,
+      'customRequest',
+      _i3.allowInterop(value),
+    );
+  }
 
-  /// Send a custom request to the debug adapter.
-  _i2.Future<_i5.Thenable<_i2.dynamic>> customRequest(
-    _i2.String command, [
-    _i2.dynamic args,
-  ]) =>
-      _i3.promiseToFuture(_i3.callMethod(
-        _i6.target389,
-        'customRequest',
-        [
-          command,
-          args ?? _i7.undefined,
-        ],
-      ));
-
-  /// Maps a breakpoint in the editor to the corresponding Debug Adapter Protocol (DAP) breakpoint that is managed by the debug adapter of the debug session.
-  ///  If no DAP breakpoint exists (either because the editor breakpoint was not yet registered or because the debug adapter is not interested in the breakpoint), the value `undefined` is returned.
-  ///
-  ///  @param breakpoint A {@link Breakpoint} in the editor.
-  ///  @returns A promise that resolves to the Debug Adapter Protocol breakpoint or `undefined`.
-  _i2.Future<_i5.Thenable<_i4.DebugProtocolBreakpoint?>>
-      getDebugProtocolBreakpoint(_i4.Breakpoint breakpoint) =>
-          _i3.promiseToFuture(_i3.callMethod(
-            _i6.target389,
-            'getDebugProtocolBreakpoint',
-            [breakpoint],
-          ));
+  set getDebugProtocolBreakpoint(
+      _i2.Future<_i2.dynamic> Function(_i4.Breakpoint) value) {
+    _i3.setProperty(
+      this,
+      'getDebugProtocolBreakpoint',
+      _i3.allowInterop(value),
+    );
+  }
 }
 
 @_i1.JS()
@@ -92,26 +83,19 @@ extension ActiveDebugSessionAccessor$Typings on _ActiveDebugSessionAccessor {
 class _ActiveDebugConsoleAccessor {}
 
 extension ActiveDebugConsoleAccessor$Typings on _ActiveDebugConsoleAccessor {
-  /// Append the given value to the debug console.
-  ///
-  ///  @param value A string, falsy values will not be printed.
-  void append(_i2.String value) {
-    _i3.callMethod(
-      _i6.target390,
+  set append(void Function(_i2.String) value) {
+    _i3.setProperty(
+      this,
       'append',
-      [value],
+      _i3.allowInterop(value),
     );
   }
 
-  /// Append the given value and a line feed character
-  ///  to the debug console.
-  ///
-  ///  @param value A string, falsy values will be printed.
-  void appendLine(_i2.String value) {
-    _i3.callMethod(
-      _i6.target390,
+  set appendLine(void Function(_i2.String) value) {
+    _i3.setProperty(
+      this,
       'appendLine',
-      [value],
+      _i3.allowInterop(value),
     );
   }
 }
@@ -221,7 +205,7 @@ extension $ModuleDebug$Typings on $ModuleDebug {
         [
           debugType,
           provider,
-          triggerKind?.name ?? _i7.undefined,
+          triggerKind?.name ?? _i5.undefined,
         ],
       );
 
@@ -260,7 +244,7 @@ extension $ModuleDebug$Typings on $ModuleDebug {
   /// The named configurations are looked up in '.vscode/launch.json' found in the given folder.
   /// Before debugging starts, all unsaved files are saved and the launch configurations are brought up-to-date.
   /// Folder specific variables used in the configuration (e.g. '${workspaceFolder}') are resolved against the given folder.
-  _i2.Future<_i5.Thenable<_i2.bool>> startDebugging(
+  _i2.Future<_i2.dynamic> startDebugging(
     _i4.WorkspaceFolder? folder,
     _i2.Object nameOrConfiguration, [
     _i2.Object? parentSessionOrOptions,
@@ -269,18 +253,18 @@ extension $ModuleDebug$Typings on $ModuleDebug {
         this,
         'startDebugging',
         [
-          folder ?? _i7.undefined,
+          folder ?? _i5.undefined,
           nameOrConfiguration,
-          parentSessionOrOptions ?? _i7.undefined,
+          parentSessionOrOptions ?? _i5.undefined,
         ],
       ));
 
   /// Stop the given debug session or stop all debug sessions if session is omitted.
-  _i2.Future<_i5.Thenable<void>> stopDebugging([_i4.DebugSession? session]) =>
+  _i2.Future<_i2.dynamic> stopDebugging([_i4.DebugSession? session]) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'stopDebugging',
-        [session ?? _i7.undefined],
+        [session ?? _i5.undefined],
       ));
 
   /// Add breakpoints.
@@ -315,7 +299,7 @@ extension $ModuleDebug$Typings on $ModuleDebug {
         'asDebugSourceUri',
         [
           source,
-          session ?? _i7.undefined,
+          session ?? _i5.undefined,
         ],
       );
 }

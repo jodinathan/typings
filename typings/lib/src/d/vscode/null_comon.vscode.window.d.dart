@@ -5,27 +5,27 @@ import 'dart:js_util' as _i3;
 
 @_i1.JS('vscode.window')
 external _i2.Object _self;
-_i2.Object get target380 => _i3.getProperty(
+_i2.Object get target62 => _i3.getProperty(
       _self,
       'tabGroups',
     );
-_i2.Object get target381 => _i3.getProperty(
+_i2.Object get target63 => _i3.getProperty(
       _self,
       'activeTextEditor',
     );
-_i2.Object get target382 => _i3.getProperty(
+_i2.Object get target64 => _i3.getProperty(
       _self,
       'activeNotebookEditor',
     );
-_i2.Object get target383 => _i3.getProperty(
+_i2.Object get target65 => _i3.getProperty(
       _self,
       'activeTerminal',
     );
-_i2.Object get target384 => _i3.getProperty(
+_i2.Object get target66 => _i3.getProperty(
       _self,
       'state',
     );
-_i2.Object get target385 => _i3.getProperty(
+_i2.Object get target67 => _i3.getProperty(
       _self,
       'activeColorTheme',
     );

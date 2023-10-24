@@ -59,9 +59,9 @@ extension $ModuleReflect$Typings on $ModuleReflect {
   /// and the elements of specified array as the arguments.
   _i2.dynamic _apply$2(
     _i2.Function target,
+    _i2.List<_i2.dynamic> argumentsList, [
     _i2.dynamic thisArgument,
-    _i2.List<_i2.dynamic> argumentsList,
-  ) =>
+  ]) =>
       _i4.callMethod(
         this,
         'apply',
@@ -86,9 +86,9 @@ extension $ModuleReflect$Typings on $ModuleReflect {
     /// and the elements of specified array as the arguments.
     _i2.dynamic Function(
       _i2.Function target,
+      _i2.List<_i2.dynamic> argumentsList, [
       _i2.dynamic thisArgument,
-      _i2.List<_i2.dynamic> argumentsList,
-    ) $2,
+    ]) $2,
   }) get apply => (
         $1: _apply$1,
         $2: _apply$2,
@@ -241,7 +241,7 @@ extension $ModuleReflect$Typings on $ModuleReflect {
         [
           target,
           propertyKey,
-          receiver ?? _i5.undefined,
+          receiver,
         ],
       );
 
@@ -318,16 +318,16 @@ extension $ModuleReflect$Typings on $ModuleReflect {
         [
           target,
           propertyKey,
-          value ?? _i5.undefined,
-          receiver ?? _i5.undefined,
+          value,
+          receiver,
         ],
       );
 
   /// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
   _i2.bool _set$2(
     _i2.Object target,
-    _i3.PropertyKey propertyKey,
-    _i2.dynamic value, [
+    _i3.PropertyKey propertyKey, [
+    _i2.dynamic value,
     _i2.dynamic receiver,
   ]) =>
       _i4.callMethod(
@@ -337,7 +337,7 @@ extension $ModuleReflect$Typings on $ModuleReflect {
           target,
           propertyKey,
           value,
-          receiver ?? _i5.undefined,
+          receiver,
         ],
       );
 
@@ -354,8 +354,8 @@ extension $ModuleReflect$Typings on $ModuleReflect {
     /// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
     _i2.bool Function(
       _i2.Object target,
-      _i3.PropertyKey propertyKey,
-      _i2.dynamic value, [
+      _i3.PropertyKey propertyKey, [
+      _i2.dynamic value,
       _i2.dynamic receiver,
     ]) $2,
   }) get set => (

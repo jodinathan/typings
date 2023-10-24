@@ -64,11 +64,11 @@ typedef InputMode = _i3.InputModeOptions;
 typedef Casing = _i3.CasingOptions;
 typedef DefinitionValidator = _i2.Object Function(
   _i2.String,
-  _i2.dynamic,
   _i2.num,
   _i2.bool,
-  _i3.Options,
-);
+  _i3.Options, [
+  _i2.dynamic,
+]);
 
 @_i1.JS()
 @_i1.staticInterop
@@ -345,10 +345,10 @@ class Options {
       _i2.String,
       _i2.bool,
       _i3.Options,
+      _i2.bool,
+      _i2.bool, [
       _i2.dynamic,
-      _i2.bool,
-      _i2.bool,
-    )? postValidation,
+    ])? postValidation,
     _i2.Object Function(
       _i2.List<_i2.String>,
       _i2.num,
@@ -356,9 +356,9 @@ class Options {
       _i2.bool,
       _i3.Options,
       _i2.dynamic,
+      _i2.bool, [
       _i2.dynamic,
-      _i2.bool,
-    )? preValidation,
+    ])? preValidation,
     _i2.String? staticDefinitionSymbol,
     _i2.bool? jitMasking,
     _i2.bool? nullable,
@@ -397,7 +397,7 @@ class Options {
         groupmarker: groupmarker ?? _i6.undefined ?? _i6.undefined,
         alternatormarker: alternatormarker ?? _i6.undefined,
         escapeChar: escapeChar ?? _i6.undefined,
-        mask: mask ?? _i6.undefined,
+        mask: mask,
         regex: regex ?? _i6.undefined,
         oncomplete:
             oncomplete == null ? _i6.undefined : _i4.allowInterop(oncomplete),
@@ -406,7 +406,7 @@ class Options {
             : _i4.allowInterop(onincomplete),
         oncleared:
             oncleared == null ? _i6.undefined : _i4.allowInterop(oncleared),
-        repeat: repeat ?? _i6.undefined,
+        repeat: repeat,
         greedy: greedy ?? _i6.undefined,
         autoUnmask: autoUnmask ?? _i6.undefined,
         removeMaskOnSubmit: removeMaskOnSubmit ?? _i6.undefined,
@@ -462,9 +462,9 @@ class Options {
         importDataAttributes: importDataAttributes ?? _i6.undefined,
         shiftPositions: shiftPositions ?? _i6.undefined,
         usePrototypeDefinitions: usePrototypeDefinitions ?? _i6.undefined,
-        min: min ?? _i6.undefined,
-        max: max ?? _i6.undefined,
-        digits: digits ?? _i6.undefined,
+        min: min,
+        max: max,
+        digits: digits,
         digitsOptional: digitsOptional ?? _i6.undefined,
         enforceDigitsOnBlur: enforceDigitsOnBlur ?? _i6.undefined,
         allowMinus: allowMinus ?? _i6.undefined,
@@ -588,7 +588,7 @@ extension Options$Typings on Options {
     _i4.setProperty(
       this,
       'mask',
-      value ?? _i6.undefined,
+      value,
     );
   }
 
@@ -657,7 +657,7 @@ extension Options$Typings on Options {
     _i4.setProperty(
       this,
       'repeat',
-      value ?? _i6.undefined,
+      value,
     );
   }
 
@@ -1148,10 +1148,10 @@ extension Options$Typings on Options {
     _i2.String,
     _i2.bool,
     _i3.Options,
+    _i2.bool,
+    _i2.bool, [
     _i2.dynamic,
-    _i2.bool,
-    _i2.bool,
-  )? get postValidation => _i4.getProperty(
+  ])? get postValidation => _i4.getProperty(
         this,
         'postValidation',
       );
@@ -1162,10 +1162,10 @@ extension Options$Typings on Options {
         _i2.String,
         _i2.bool,
         _i3.Options,
+        _i2.bool,
+        _i2.bool, [
         _i2.dynamic,
-        _i2.bool,
-        _i2.bool,
-      )? value) {
+      ])? value) {
     _i4.setProperty(
       this,
       'postValidation',
@@ -1186,9 +1186,9 @@ extension Options$Typings on Options {
     _i2.bool,
     _i3.Options,
     _i2.dynamic,
+    _i2.bool, [
     _i2.dynamic,
-    _i2.bool,
-  )? get preValidation => _i4.getProperty(
+  ])? get preValidation => _i4.getProperty(
         this,
         'preValidation',
       );
@@ -1200,9 +1200,9 @@ extension Options$Typings on Options {
         _i2.bool,
         _i3.Options,
         _i2.dynamic,
+        _i2.bool, [
         _i2.dynamic,
-        _i2.bool,
-      )? value) {
+      ])? value) {
     _i4.setProperty(
       this,
       'preValidation',
@@ -1397,7 +1397,7 @@ extension Options$Typings on Options {
     _i4.setProperty(
       this,
       'min',
-      value ?? _i6.undefined,
+      value,
     );
   }
 
@@ -1410,7 +1410,7 @@ extension Options$Typings on Options {
     _i4.setProperty(
       this,
       'max',
-      value ?? _i6.undefined,
+      value,
     );
   }
 
@@ -1431,7 +1431,7 @@ extension Options$Typings on Options {
     _i4.setProperty(
       this,
       'digits',
-      value ?? _i6.undefined,
+      value,
     );
   }
 
@@ -1738,53 +1738,155 @@ extension Options$Typings on Options {
 
 @_i1.JS()
 @_i1.staticInterop
-class Instance {}
+@_i1.anonymous
+class Instance {
+  external factory Instance._({
+    _i2.dynamic getemptymask,
+    _i2.dynamic getmetadata,
+    _i2.dynamic hasMaskedValue,
+    _i2.dynamic isComplete,
+    _i2.dynamic isValid,
+    _i2.dynamic mask,
+    _i2.dynamic remove,
+    _i2.dynamic setValue,
+    _i2.dynamic unmaskedvalue,
+  });
+
+  factory Instance({
+    _i2.String Function()? getemptymask,
+    _i2.dynamic Function()? getmetadata,
+    _i2.bool Function()? hasMaskedValue,
+    _i2.bool Function()? isComplete,
+    _i2.bool Function()? isValid,
+    _i3.Instance Function(_i2.Object)? mask,
+    void Function()? remove,
+    void Function(_i2.String)? setValue,
+    _i2.String Function()? unmaskedvalue,
+  }) =>
+      Instance._(
+        getemptymask:
+            getemptymask == null ? null : _i4.allowInterop(getemptymask),
+        getmetadata: getmetadata == null ? null : _i4.allowInterop(getmetadata),
+        hasMaskedValue:
+            hasMaskedValue == null ? null : _i4.allowInterop(hasMaskedValue),
+        isComplete: isComplete == null ? null : _i4.allowInterop(isComplete),
+        isValid: isValid == null ? null : _i4.allowInterop(isValid),
+        mask: mask == null ? null : _i4.allowInterop(mask),
+        remove: remove == null ? null : _i4.allowInterop(remove),
+        setValue: setValue == null ? null : _i4.allowInterop(setValue),
+        unmaskedvalue:
+            unmaskedvalue == null ? null : _i4.allowInterop(unmaskedvalue),
+      );
+}
 
 extension Instance$Typings on Instance {
-  /// Return the default (empty) mask value.
-  _i2.String getemptymask() => _i4.callMethod(
+  set getemptymask(_i2.String Function() value) {
+    _i4.setProperty(
+      this,
+      'getemptymask',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.String Function() get getemptymask => _i4.getProperty(
         this,
         'getemptymask',
-        [],
       );
+  set getmetadata(_i2.dynamic Function() value) {
+    _i4.setProperty(
+      this,
+      'getmetadata',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// The metadata of the actual mask provided in the mask definitions can be obtained by calling getmetadata. If
-  ///  only a mask is provided the mask definition will be returned by the getmetadata.
-  _i2.dynamic getmetadata() => _i4.callMethod(
+  _i2.dynamic Function() get getmetadata => _i4.getProperty(
         this,
         'getmetadata',
-        [],
       );
+  set hasMaskedValue(_i2.bool Function() value) {
+    _i4.setProperty(
+      this,
+      'hasMaskedValue',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Check whether the returned value is masked or not; currently only works reliably when using `jquery.val` fn
-  ///  to retrieve the value
-  _i2.bool hasMaskedValue() => _i4.callMethod(
+  _i2.bool Function() get hasMaskedValue => _i4.getProperty(
         this,
         'hasMaskedValue',
-        [],
       );
+  set isComplete(_i2.bool Function() value) {
+    _i4.setProperty(
+      this,
+      'isComplete',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Verify whether the current value is complete or not.
-  _i2.bool isComplete() => _i4.callMethod(
+  _i2.bool Function() get isComplete => _i4.getProperty(
         this,
         'isComplete',
-        [],
       );
+  set isValid(_i2.bool Function() value) {
+    _i4.setProperty(
+      this,
+      'isValid',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Validate a given value against the mask.
-  _i2.bool isValid() => _i4.callMethod(
+  _i2.bool Function() get isValid => _i4.getProperty(
         this,
         'isValid',
-        [],
       );
+  set mask(_i3.Instance Function(_i2.Object) value) {
+    _i4.setProperty(
+      this,
+      'mask',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Create a mask for the input.
-  ///
-  ///  @param el Element selector, a single element or an array of elements.
-  _i3.Instance mask(_i2.Object selectorOrElement) => _i4.callMethod(
+  _i3.Instance Function(_i2.Object) get mask => _i4.getProperty(
         this,
         'mask',
-        [selectorOrElement],
+      );
+  set remove(void Function() value) {
+    _i4.setProperty(
+      this,
+      'remove',
+      _i4.allowInterop(value),
+    );
+  }
+
+  void Function() get remove => _i4.getProperty(
+        this,
+        'remove',
+      );
+  set setValue(void Function(_i2.String) value) {
+    _i4.setProperty(
+      this,
+      'setValue',
+      _i4.allowInterop(value),
+    );
+  }
+
+  void Function(_i2.String) get setValue => _i4.getProperty(
+        this,
+        'setValue',
+      );
+  set unmaskedvalue(_i2.String Function() value) {
+    _i4.setProperty(
+      this,
+      'unmaskedvalue',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.String Function() get unmaskedvalue => _i4.getProperty(
+        this,
+        'unmaskedvalue',
       );
 
   /// Get an option on an existing inputmask.
@@ -1834,36 +1936,6 @@ extension Instance$Typings on Instance {
         $1: _option$1,
         $2: _option$2,
       );
-
-  /// Remove the inputmask.
-  void remove() {
-    _i4.callMethod(
-      this,
-      'remove',
-      [],
-    );
-  }
-
-  /// The `setvalue` functionality is to set a value to the inputmask like you would do with `jQuery.val`, BUT it
-  ///  will trigger the internal event used by the inputmask always, whatever the case. This is particular useful
-  ///  when cloning an inputmask with jQuery.clone. Cloning an inputmask is not a fully functional clone. On the
-  ///  first event (`mouseenter`, `focus`, ...) the inputmask can detect if it where cloned and can reactivate the
-  ///  masking. However when setting the value with jQuery.val there is none of the events triggered in that case.
-  ///  The `setvalue` functionality does this for you.
-  void setValue(_i2.String value) {
-    _i4.callMethod(
-      this,
-      'setValue',
-      [value],
-    );
-  }
-
-  /// Gets the unmasked value.
-  _i2.String unmaskedvalue() => _i4.callMethod(
-        this,
-        'unmaskedvalue',
-        [],
-      );
 }
 
 @_i1.JS()
@@ -1879,14 +1951,14 @@ class Definition {
   });
 
   factory Definition({
-    required _i2.Object validator,
+    _i2.Object? validator,
     _i3.Casing? casing,
     _i2.num? cardinality,
     _i2.String? placeholder,
     _i2.String? definitionSymbol,
   }) =>
       Definition._(
-        validator: validator,
+        validator: validator ?? _i6.undefined,
         casing: casing?.name ?? _i6.undefined ?? _i6.undefined,
         cardinality: cardinality ?? _i6.undefined,
         placeholder: placeholder ?? _i6.undefined,
@@ -1971,8 +2043,8 @@ class InsertPosition {
   });
 
   factory InsertPosition({
-    required _i2.num pos,
-    required _i2.String c,
+    _i2.num? pos,
+    _i2.String? c,
     _i2.bool? fromIsValid,
     _i2.bool? strict,
   }) =>
@@ -2096,9 +2168,9 @@ class CommandObject {
         pos: pos ?? _i6.undefined,
         c: c ?? _i6.undefined,
         caret: caret ?? _i6.undefined,
-        remove: remove ?? _i6.undefined,
-        insert: insert ?? _i6.undefined,
-        refreshFromBuffer: refreshFromBuffer ?? _i6.undefined,
+        remove: remove,
+        insert: insert,
+        refreshFromBuffer: refreshFromBuffer,
         rewritePosition: rewritePosition ?? _i6.undefined,
       );
 }
@@ -2152,7 +2224,7 @@ extension CommandObject$Typings on CommandObject {
     _i4.setProperty(
       this,
       'remove',
-      value ?? _i6.undefined,
+      value,
     );
   }
 
@@ -2165,7 +2237,7 @@ extension CommandObject$Typings on CommandObject {
     _i4.setProperty(
       this,
       'insert',
-      value ?? _i6.undefined,
+      value,
     );
   }
 
@@ -2179,7 +2251,7 @@ extension CommandObject$Typings on CommandObject {
     _i4.setProperty(
       this,
       'refreshFromBuffer',
-      value ?? _i6.undefined,
+      value,
     );
   }
 
@@ -2202,112 +2274,129 @@ extension CommandObject$Typings on CommandObject {
 class Static {}
 
 extension Static$Typings on Static {
-  /// Extends the default inputmask options.
-  void extendDefaults(_i3.Options opts) {
-    _i4.callMethod(
+  set extendDefaults(void Function(_i3.Options) value) {
+    _i4.setProperty(
       this,
       'extendDefaults',
-      [opts],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Extends the set of available definitions.
-  void extendDefinitions(_i2.Object definitions) {
-    _i4.callMethod(
+  void Function(_i3.Options) get extendDefaults => _i4.getProperty(
+        this,
+        'extendDefaults',
+      );
+  set extendDefinitions(void Function(_i2.Object) value) {
+    _i4.setProperty(
       this,
       'extendDefinitions',
-      [definitions],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Extends the set of available mask aliases.
-  void extendAliases(_i2.Object aliases) {
-    _i4.callMethod(
+  void Function(_i2.Object) get extendDefinitions => _i4.getProperty(
+        this,
+        'extendDefinitions',
+      );
+  set extendAliases(void Function(_i2.Object) value) {
+    _i4.setProperty(
       this,
       'extendAliases',
-      [aliases],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Instead of masking an input element it is also possible to use the inputmask for formatting given values.
-  ///  Think of formatting values to show in jqGrid or on other elements then inputs.
-  ///
-  ///  @param value Value to format.
-  ///  @param opts Mask options.
-  _i2.String format(
-    _i2.String value,
-    _i3.Options opts,
-  ) =>
-      _i4.callMethod(
+  void Function(_i2.Object) get extendAliases => _i4.getProperty(
+        this,
+        'extendAliases',
+      );
+  set format(
+      _i2.String Function(
+        _i2.String,
+        _i3.Options,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'format',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.String Function(
+    _i2.String,
+    _i3.Options,
+  ) get format => _i4.getProperty(
         this,
         'format',
-        [
-          value,
-          opts,
-        ],
       );
+  set isValid(
+      _i2.bool Function(
+        _i2.String,
+        _i3.Options,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'isValid',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Validate a given value against the mask.
-  ///
-  ///  @param value Value to validate.
-  ///  @param opts Mask options.
-  _i2.bool isValid(
-    _i2.String value,
-    _i3.Options opts,
-  ) =>
-      _i4.callMethod(
+  _i2.bool Function(
+    _i2.String,
+    _i3.Options,
+  ) get isValid => _i4.getProperty(
         this,
         'isValid',
-        [
-          value,
-          opts,
-        ],
       );
-
-  /// Remove the inputmask.
-  void remove(_i2.Object selectorOrElement) {
-    _i4.callMethod(
+  set remove(void Function(_i2.Object) value) {
+    _i4.setProperty(
       this,
       'remove',
-      [selectorOrElement],
+      _i4.allowInterop(value),
     );
   }
 
-  /// The setvalue functionality is to set a value to the inputmask like you would do with jQuery.val, BUT it will
-  ///  trigger the internal event used by the inputmask always, whatever the case. This is particular usefull when
-  ///  cloning an inputmask with jQuery.clone. Cloning an inputmask is not a fully functional clone. On the first
-  ///  event (mouseenter, focus, ...) the inputmask can detect if it where cloned and can reactivate the masking.
-  ///  However when setting the value with jQuery.val there is none of the events triggered in that case. The
-  ///  setvalue functionality does this for you.
-  void setValue(
-    _i2.Object selectorOrElement,
-    _i2.String value,
-  ) {
-    _i4.callMethod(
+  void Function(_i2.Object) get remove => _i4.getProperty(
+        this,
+        'remove',
+      );
+  set setValue(
+      void Function(
+        _i2.Object,
+        _i2.String,
+      ) value) {
+    _i4.setProperty(
       this,
       'setValue',
-      [
-        selectorOrElement,
-        value,
-      ],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Unmask a given value against the mask.
-  ///
-  ///  @param value Value to be unmasked.
-  ///  @param opts Mask options.
-  _i2.String unmask(
-    _i2.String value,
-    _i3.Options opts,
-  ) =>
-      _i4.callMethod(
+  void Function(
+    _i2.Object,
+    _i2.String,
+  ) get setValue => _i4.getProperty(
+        this,
+        'setValue',
+      );
+  set unmask(
+      _i2.String Function(
+        _i2.String,
+        _i3.Options,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'unmask',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.String Function(
+    _i2.String,
+    _i3.Options,
+  ) get unmask => _i4.getProperty(
         this,
         'unmask',
-        [
-          value,
-          opts,
-        ],
       );
   _i3.Instance _call$1([_i3.Options? opts]) => _i4.callMethod(
         this,

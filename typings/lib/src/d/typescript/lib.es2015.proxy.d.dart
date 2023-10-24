@@ -7,7 +7,6 @@ import 'lib.es2015.proxy.d.dart' as _i3;
 import 'dart:js_util' as _i4;
 import 'typescript_comon.d.dart' as _i5;
 import 'lib.es5.d.dart' as _i6;
-import '/d/core.dart' as _i7;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -18,21 +17,18 @@ external _i2.Object _self;
 class _ProxyAccessor {}
 
 extension ProxyAccessor$Typings on _ProxyAccessor {
-  /// Creates a revocable Proxy object.
-  ///  @param target A target object to wrap with Proxy.
-  ///  @param handler An object whose properties define the behavior of Proxy when an operation is attempted on it.
-  _i3.IInline9<_i2.Object> revocable<T extends _i2.Object>(
-    T target,
-    _i3.ProxyHandler<T> handler,
-  ) =>
-      _i4.callMethod(
-        _i5.target21,
-        'revocable',
-        [
-          target,
-          handler,
-        ],
-      );
+  set revocable(
+      _i2.dynamic Function<T extends _i2.Object>(
+        T,
+        _i3.ProxyHandler<T>,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'revocable',
+      _i4.allowInterop(value),
+    );
+  }
+
   T call<T extends _i2.Object>(
     T target,
     _i3.ProxyHandler<T> handler,
@@ -50,198 +46,329 @@ extension ProxyAccessor$Typings on _ProxyAccessor {
 
 @_i1.JS()
 @_i1.staticInterop
-class ProxyHandler<T extends _i2.Object> {}
+@_i1.anonymous
+class ProxyHandler<T extends _i2.Object> {
+  external factory ProxyHandler._({
+    _i2.dynamic apply,
+    _i2.dynamic construct,
+    _i2.dynamic defineProperty,
+    _i2.dynamic deleteProperty,
+    _i2.dynamic get,
+    _i2.dynamic getOwnPropertyDescriptor,
+    _i2.dynamic getPrototypeOf,
+    _i2.dynamic has,
+    _i2.dynamic isExtensible,
+    _i2.dynamic ownKeys,
+    _i2.dynamic preventExtensions,
+    _i2.dynamic set,
+    _i2.dynamic setPrototypeOf,
+  });
+
+  factory ProxyHandler({
+    _i2.dynamic Function(
+      _i2.dynamic,
+      _i2.List<_i2.dynamic>, [
+      _i2.dynamic,
+    ])? apply,
+    _i2.Object Function(
+      _i2.dynamic,
+      _i2.List<_i2.dynamic>,
+      _i2.Function,
+    )? construct,
+    _i2.bool Function(
+      _i2.dynamic,
+      _i2.Object,
+      _i6.PropertyDescriptor,
+    )? defineProperty,
+    _i2.bool Function(
+      _i2.dynamic,
+      _i2.Object,
+    )? deleteProperty,
+    _i2.dynamic Function(
+      _i2.dynamic,
+      _i2.Object, [
+      _i2.dynamic,
+    ])? get,
+    _i6.PropertyDescriptor? Function(
+      _i2.dynamic,
+      _i2.Object,
+    )? getOwnPropertyDescriptor,
+    _i2.Object? Function(_i2.dynamic)? getPrototypeOf,
+    _i2.bool Function(
+      _i2.dynamic,
+      _i2.Object,
+    )? has,
+    _i2.bool Function(_i2.dynamic)? isExtensible,
+    _i2.List<_i2.Object> Function(_i2.dynamic)? ownKeys,
+    _i2.bool Function(_i2.dynamic)? preventExtensions,
+    _i2.bool Function(
+      _i2.dynamic,
+      _i2.Object, [
+      _i2.dynamic,
+      _i2.dynamic,
+    ])? set,
+    _i2.bool Function(
+      _i2.dynamic, [
+      _i2.Object?,
+    ])? setPrototypeOf,
+  }) =>
+      ProxyHandler._(
+        apply: apply == null ? null : _i4.allowInterop(apply),
+        construct: construct == null ? null : _i4.allowInterop(construct),
+        defineProperty:
+            defineProperty == null ? null : _i4.allowInterop(defineProperty),
+        deleteProperty:
+            deleteProperty == null ? null : _i4.allowInterop(deleteProperty),
+        get: get == null ? null : _i4.allowInterop(get),
+        getOwnPropertyDescriptor: getOwnPropertyDescriptor == null
+            ? null
+            : _i4.allowInterop(getOwnPropertyDescriptor),
+        getPrototypeOf:
+            getPrototypeOf == null ? null : _i4.allowInterop(getPrototypeOf),
+        has: has == null ? null : _i4.allowInterop(has),
+        isExtensible:
+            isExtensible == null ? null : _i4.allowInterop(isExtensible),
+        ownKeys: ownKeys == null ? null : _i4.allowInterop(ownKeys),
+        preventExtensions: preventExtensions == null
+            ? null
+            : _i4.allowInterop(preventExtensions),
+        set: set == null ? null : _i4.allowInterop(set),
+        setPrototypeOf:
+            setPrototypeOf == null ? null : _i4.allowInterop(setPrototypeOf),
+      );
+}
 
 extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
-  /// A trap method for a function call.
-  ///  @param target The original callable object which is being proxied.
-  _i2.dynamic apply(
-    T target,
-    _i2.dynamic thisArg,
-    _i2.List<_i2.dynamic> argArray,
-  ) =>
-      _i4.callMethod(
+  set apply(
+      _i2.dynamic Function(
+        T,
+        _i2.List<_i2.dynamic>, [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'apply',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.dynamic Function(
+    T,
+    _i2.List<_i2.dynamic>, [
+    _i2.dynamic,
+  ]) get apply => _i4.getProperty(
         this,
         'apply',
-        [
-          target,
-          thisArg,
-          argArray,
-        ],
       );
+  set construct(
+      _i2.Object Function(
+        T,
+        _i2.List<_i2.dynamic>,
+        _i2.Function,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'construct',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for the `new` operator.
-  ///  @param target The original object which is being proxied.
-  ///  @param newTarget The constructor that was originally called.
-  _i2.Object construct(
-    T target,
-    _i2.List<_i2.dynamic> argArray,
-    _i2.Function newTarget,
-  ) =>
-      _i4.callMethod(
+  _i2.Object Function(
+    T,
+    _i2.List<_i2.dynamic>,
+    _i2.Function,
+  ) get construct => _i4.getProperty(
         this,
         'construct',
-        [
-          target,
-          argArray,
-          newTarget,
-        ],
       );
+  set defineProperty(
+      _i2.bool Function(
+        T,
+        _i2.Object,
+        _i6.PropertyDescriptor,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'defineProperty',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for `Object.defineProperty()`.
-  ///  @param target The original object which is being proxied.
-  ///  @returns A `Boolean` indicating whether or not the property has been defined.
-  _i2.bool defineProperty(
-    T target,
-    _i2.Object property,
-    _i6.PropertyDescriptor attributes,
-  ) =>
-      _i4.callMethod(
+  _i2.bool Function(
+    T,
+    _i2.Object,
+    _i6.PropertyDescriptor,
+  ) get defineProperty => _i4.getProperty(
         this,
         'defineProperty',
-        [
-          target,
-          property,
-          attributes,
-        ],
       );
+  set deleteProperty(
+      _i2.bool Function(
+        T,
+        _i2.Object,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'deleteProperty',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for the `delete` operator.
-  ///  @param target The original object which is being proxied.
-  ///  @param p The name or `Symbol` of the property to delete.
-  ///  @returns A `Boolean` indicating whether or not the property was deleted.
-  _i2.bool deleteProperty(
-    T target,
-    _i2.Object p,
-  ) =>
-      _i4.callMethod(
+  _i2.bool Function(
+    T,
+    _i2.Object,
+  ) get deleteProperty => _i4.getProperty(
         this,
         'deleteProperty',
-        [
-          target,
-          p,
-        ],
       );
+  set get(
+      _i2.dynamic Function(
+        T,
+        _i2.Object, [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'get',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for getting a property value.
-  ///  @param target The original object which is being proxied.
-  ///  @param p The name or `Symbol` of the property to get.
-  ///  @param receiver The proxy or an object that inherits from the proxy.
-  _i2.dynamic get(
-    T target,
-    _i2.Object p,
-    _i2.dynamic receiver,
-  ) =>
-      _i4.callMethod(
+  _i2.dynamic Function(
+    T,
+    _i2.Object, [
+    _i2.dynamic,
+  ]) get get => _i4.getProperty(
         this,
         'get',
-        [
-          target,
-          p,
-          receiver,
-        ],
       );
+  set getOwnPropertyDescriptor(
+      _i6.PropertyDescriptor? Function(
+        T,
+        _i2.Object,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'getOwnPropertyDescriptor',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for `Object.getOwnPropertyDescriptor()`.
-  ///  @param target The original object which is being proxied.
-  ///  @param p The name of the property whose description should be retrieved.
-  _i6.PropertyDescriptor? getOwnPropertyDescriptor(
-    T target,
-    _i2.Object p,
-  ) =>
-      _i4.callMethod(
+  _i6.PropertyDescriptor? Function(
+    T,
+    _i2.Object,
+  ) get getOwnPropertyDescriptor => _i4.getProperty(
         this,
         'getOwnPropertyDescriptor',
-        [
-          target,
-          p,
-        ],
       );
+  set getPrototypeOf(_i2.Object? Function(T) value) {
+    _i4.setProperty(
+      this,
+      'getPrototypeOf',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for the `[[GetPrototypeOf]]` internal method.
-  ///  @param target The original object which is being proxied.
-  _i2.Object? getPrototypeOf(T target) => _i4.callMethod(
+  _i2.Object? Function(T) get getPrototypeOf => _i4.getProperty(
         this,
         'getPrototypeOf',
-        [target],
       );
+  set has(
+      _i2.bool Function(
+        T,
+        _i2.Object,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'has',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for the `in` operator.
-  ///  @param target The original object which is being proxied.
-  ///  @param p The name or `Symbol` of the property to check for existence.
-  _i2.bool has(
-    T target,
-    _i2.Object p,
-  ) =>
-      _i4.callMethod(
+  _i2.bool Function(
+    T,
+    _i2.Object,
+  ) get has => _i4.getProperty(
         this,
         'has',
-        [
-          target,
-          p,
-        ],
       );
+  set isExtensible(_i2.bool Function(T) value) {
+    _i4.setProperty(
+      this,
+      'isExtensible',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for `Object.isExtensible()`.
-  ///  @param target The original object which is being proxied.
-  _i2.bool isExtensible(T target) => _i4.callMethod(
+  _i2.bool Function(T) get isExtensible => _i4.getProperty(
         this,
         'isExtensible',
-        [target],
       );
+  set ownKeys(_i2.List<_i2.Object> Function(T) value) {
+    _i4.setProperty(
+      this,
+      'ownKeys',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for `Reflect.ownKeys()`.
-  ///  @param target The original object which is being proxied.
-  _i2.List<_i2.Object> ownKeys(T target) => _i4.callMethod(
+  _i2.List<_i2.Object> Function(T) get ownKeys => _i4.getProperty(
         this,
         'ownKeys',
-        [target],
       );
+  set preventExtensions(_i2.bool Function(T) value) {
+    _i4.setProperty(
+      this,
+      'preventExtensions',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for `Object.preventExtensions()`.
-  ///  @param target The original object which is being proxied.
-  _i2.bool preventExtensions(T target) => _i4.callMethod(
+  _i2.bool Function(T) get preventExtensions => _i4.getProperty(
         this,
         'preventExtensions',
-        [target],
       );
+  set set(
+      _i2.bool Function(
+        T,
+        _i2.Object, [
+        _i2.dynamic,
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'set',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for setting a property value.
-  ///  @param target The original object which is being proxied.
-  ///  @param p The name or `Symbol` of the property to set.
-  ///  @param receiver The object to which the assignment was originally directed.
-  ///  @returns A `Boolean` indicating whether or not the property was set.
-  _i2.bool set(
-    T target,
-    _i2.Object p,
-    _i2.dynamic newValue,
-    _i2.dynamic receiver,
-  ) =>
-      _i4.callMethod(
+  _i2.bool Function(
+    T,
+    _i2.Object, [
+    _i2.dynamic,
+    _i2.dynamic,
+  ]) get set => _i4.getProperty(
         this,
         'set',
-        [
-          target,
-          p,
-          newValue,
-          receiver,
-        ],
       );
+  set setPrototypeOf(
+      _i2.bool Function(
+        T, [
+        _i2.Object?,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'setPrototypeOf',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// A trap for `Object.setPrototypeOf()`.
-  ///  @param target The original object which is being proxied.
-  ///  @param newPrototype The object's new prototype or `null`.
-  _i2.bool setPrototypeOf(
-    T target, [
-    _i2.Object? v,
-  ]) =>
-      _i4.callMethod(
+  _i2.bool Function(
+    T, [
+    _i2.Object?,
+  ]) get setPrototypeOf => _i4.getProperty(
         this,
         'setPrototypeOf',
-        [
-          target,
-          v ?? _i7.undefined,
-        ],
       );
 }
 
@@ -281,20 +408,24 @@ extension IInline9$Typings<T extends _i2.Object> on IInline9<T> {
 class ProxyConstructor {}
 
 extension ProxyConstructor$Typings on ProxyConstructor {
-  /// Creates a revocable Proxy object.
-  ///  @param target A target object to wrap with Proxy.
-  ///  @param handler An object whose properties define the behavior of Proxy when an operation is attempted on it.
-  _i3.IInline9<_i2.Object> revocable<T extends _i2.Object>(
-    T target,
-    _i3.ProxyHandler<T> handler,
-  ) =>
-      _i4.callMethod(
+  set revocable(
+      _i2.dynamic Function<T extends _i2.Object>(
+        T,
+        _i3.ProxyHandler<T>,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'revocable',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.dynamic Function<T extends _i2.Object>(
+    T,
+    _i3.ProxyHandler<T>,
+  ) get revocable => _i4.getProperty(
         this,
         'revocable',
-        [
-          target,
-          handler,
-        ],
       );
 }
 

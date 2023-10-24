@@ -266,9 +266,9 @@ class AnimeInstanceParams implements _i4.AnimeCallBack {
     _i4.AnimeCallbackFunction? changeComplete,
   }) =>
       AnimeInstanceParams._(
-        loop: loop ?? _i5.undefined,
+        loop: loop,
         autoplay: autoplay ?? _i5.undefined,
-        direction: direction ?? _i5.undefined,
+        direction: direction,
         begin: begin == null ? _i5.undefined : _i6.allowInterop(begin),
         change: change == null ? _i5.undefined : _i6.allowInterop(change),
         update: update == null ? _i5.undefined : _i6.allowInterop(update),
@@ -295,7 +295,7 @@ extension AnimeInstanceParams$Typings on AnimeInstanceParams {
     _i6.setProperty(
       this,
       'loop',
-      value ?? _i5.undefined,
+      value,
     );
   }
 
@@ -319,14 +319,77 @@ extension AnimeInstanceParams$Typings on AnimeInstanceParams {
     _i6.setProperty(
       this,
       'direction',
-      value ?? _i5.undefined,
+      value,
     );
   }
 }
 
 @_i1.JS()
 @_i1.staticInterop
-class AnimeAnimParams implements _i4.AnimeCallBack {}
+@_i1.anonymous
+class AnimeAnimParams implements _i4.AnimeCallBack {
+  external factory AnimeAnimParams._({
+    _i2.dynamic targets,
+    _i2.dynamic duration,
+    _i2.dynamic delay,
+    _i2.dynamic endDelay,
+    _i2.dynamic elasticity,
+    _i2.dynamic round,
+    _i2.dynamic keyframes,
+    _i2.dynamic easing,
+    _i2.dynamic begin,
+    _i2.dynamic change,
+    _i2.dynamic update,
+    _i2.dynamic complete,
+    _i2.dynamic loopBegin,
+    _i2.dynamic loopComplete,
+    _i2.dynamic changeBegin,
+    _i2.dynamic changeComplete,
+  });
+
+  factory AnimeAnimParams({
+    _i2.dynamic targets,
+    _i2.dynamic duration,
+    _i2.dynamic delay,
+    _i2.dynamic endDelay,
+    _i2.dynamic elasticity,
+    _i2.dynamic round,
+    _i7.ReadonlyArray<_i4.AnimeAnimParams>? keyframes,
+    _i2.dynamic easing,
+    _i4.AnimeCallbackFunction? begin,
+    _i4.AnimeCallbackFunction? change,
+    _i4.AnimeCallbackFunction? update,
+    _i4.AnimeCallbackFunction? complete,
+    _i4.AnimeCallbackFunction? loopBegin,
+    _i4.AnimeCallbackFunction? loopComplete,
+    _i4.AnimeCallbackFunction? changeBegin,
+    _i4.AnimeCallbackFunction? changeComplete,
+  }) =>
+      AnimeAnimParams._(
+        targets: targets,
+        duration: duration,
+        delay: delay,
+        endDelay: endDelay,
+        elasticity: elasticity,
+        round: round,
+        keyframes: keyframes ?? _i5.undefined,
+        easing: easing,
+        begin: begin == null ? _i5.undefined : _i6.allowInterop(begin),
+        change: change == null ? _i5.undefined : _i6.allowInterop(change),
+        update: update == null ? _i5.undefined : _i6.allowInterop(update),
+        complete: complete == null ? _i5.undefined : _i6.allowInterop(complete),
+        loopBegin:
+            loopBegin == null ? _i5.undefined : _i6.allowInterop(loopBegin),
+        loopComplete: loopComplete == null
+            ? _i5.undefined
+            : _i6.allowInterop(loopComplete),
+        changeBegin:
+            changeBegin == null ? _i5.undefined : _i6.allowInterop(changeBegin),
+        changeComplete: changeComplete == null
+            ? _i5.undefined
+            : _i6.allowInterop(changeComplete),
+      );
+}
 
 extension AnimeAnimParams$Typings on AnimeAnimParams {
   _i2.dynamic get targets => _i6.getProperty(
@@ -337,7 +400,7 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     _i6.setProperty(
       this,
       'targets',
-      value ?? _i5.undefined,
+      value,
     );
   }
 
@@ -349,7 +412,7 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     _i6.setProperty(
       this,
       'duration',
-      value ?? _i5.undefined,
+      value,
     );
   }
 
@@ -361,7 +424,7 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     _i6.setProperty(
       this,
       'delay',
-      value ?? _i5.undefined,
+      value,
     );
   }
 
@@ -373,7 +436,7 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     _i6.setProperty(
       this,
       'endDelay',
-      value ?? _i5.undefined,
+      value,
     );
   }
 
@@ -385,7 +448,7 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     _i6.setProperty(
       this,
       'elasticity',
-      value ?? _i5.undefined,
+      value,
     );
   }
 
@@ -397,7 +460,7 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     _i6.setProperty(
       this,
       'round',
-      value ?? _i5.undefined,
+      value,
     );
   }
 
@@ -421,7 +484,7 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
     _i6.setProperty(
       this,
       'easing',
-      value ?? _i5.undefined,
+      value,
     );
   }
 
@@ -473,17 +536,17 @@ class AnimeParams implements _i4.AnimeInstanceParams, _i4.AnimeAnimParams {
     _i2.dynamic easing,
   }) =>
       AnimeParams._(
-        loop: loop ?? _i5.undefined,
+        loop: loop,
         autoplay: autoplay ?? _i5.undefined,
-        direction: direction ?? _i5.undefined,
-        targets: targets ?? _i5.undefined,
-        duration: duration ?? _i5.undefined,
-        delay: delay ?? _i5.undefined,
-        endDelay: endDelay ?? _i5.undefined,
-        elasticity: elasticity ?? _i5.undefined,
-        round: round ?? _i5.undefined,
+        direction: direction,
+        targets: targets,
+        duration: duration,
+        delay: delay,
+        endDelay: endDelay,
+        elasticity: elasticity,
+        round: round,
         keyframes: keyframes ?? _i5.undefined,
-        easing: easing ?? _i5.undefined,
+        easing: easing,
       );
 }
 
@@ -499,14 +562,14 @@ class Animatable {
   });
 
   factory Animatable({
-    required _i2.num id,
-    required _i3.HTMLElement target,
-    required _i2.num total,
-    required _i2.Object transforms,
+    _i2.num? id,
+    _i3.HTMLElement? target,
+    _i2.num? total,
+    _i2.Object? transforms,
   }) =>
       Animatable._(
         id: id,
-        target: target,
+        target: target ?? _i5.undefined,
         total: total,
         transforms: transforms,
       );
@@ -578,23 +641,23 @@ class Animation {
   });
 
   factory Animation({
-    required _i4.Animatable animatable,
-    required _i2.String currentValue,
-    required _i2.num delay,
-    required _i2.num duration,
-    required _i2.num endDelay,
-    required _i2.String property,
-    required _i7.ReadonlyArray<_i2.Object> tweens,
-    required _i2.String type,
+    _i4.Animatable? animatable,
+    _i2.String? currentValue,
+    _i2.num? delay,
+    _i2.num? duration,
+    _i2.num? endDelay,
+    _i2.String? property,
+    _i7.ReadonlyArray<_i2.Object>? tweens,
+    _i2.String? type,
   }) =>
       Animation._(
-        animatable: animatable,
+        animatable: animatable ?? _i5.undefined,
         currentValue: currentValue,
         delay: delay,
         duration: duration,
         endDelay: endDelay,
         property: property,
-        tweens: tweens,
+        tweens: tweens ?? _i5.undefined,
         type: type,
       );
 }
@@ -699,7 +762,112 @@ extension Animation$Typings on Animation {
 
 @_i1.JS()
 @_i1.staticInterop
-class AnimeInstance implements _i4.AnimeCallBack {}
+@_i1.anonymous
+class AnimeInstance implements _i4.AnimeCallBack {
+  external factory AnimeInstance._({
+    _i2.dynamic began,
+    _i2.dynamic paused,
+    _i2.dynamic completed,
+    _i2.dynamic finished,
+    _i2.dynamic autoplay,
+    _i2.dynamic currentTime,
+    _i2.dynamic delay,
+    _i2.dynamic direction,
+    _i2.dynamic duration,
+    _i2.dynamic loop,
+    _i2.dynamic timelineOffset,
+    _i2.dynamic progress,
+    _i2.dynamic remaining,
+    _i2.dynamic reversed,
+    _i2.dynamic animatables,
+    _i2.dynamic animations,
+    _i2.dynamic play,
+    _i2.dynamic pause,
+    _i2.dynamic restart,
+    _i2.dynamic reverse,
+    _i2.dynamic seek,
+    _i2.dynamic tick,
+    _i2.dynamic begin,
+    _i2.dynamic change,
+    _i2.dynamic update,
+    _i2.dynamic complete,
+    _i2.dynamic loopBegin,
+    _i2.dynamic loopComplete,
+    _i2.dynamic changeBegin,
+    _i2.dynamic changeComplete,
+  });
+
+  factory AnimeInstance({
+    _i2.bool? began,
+    _i2.bool? paused,
+    _i2.bool? completed,
+    _i2.Future<void>? finished,
+    _i2.bool? autoplay,
+    _i2.num? currentTime,
+    _i2.num? delay,
+    _i2.String? direction,
+    _i2.num? duration,
+    _i2.Object? loop,
+    _i2.num? timelineOffset,
+    _i2.num? progress,
+    _i2.num? remaining,
+    _i2.bool? reversed,
+    _i7.ReadonlyArray<_i4.Animatable>? animatables,
+    _i7.ReadonlyArray<_i4.Animation>? animations,
+    void Function()? play,
+    void Function()? pause,
+    void Function()? restart,
+    void Function()? reverse,
+    void Function(_i2.num)? seek,
+    void Function(_i2.num)? tick,
+    _i4.AnimeCallbackFunction? begin,
+    _i4.AnimeCallbackFunction? change,
+    _i4.AnimeCallbackFunction? update,
+    _i4.AnimeCallbackFunction? complete,
+    _i4.AnimeCallbackFunction? loopBegin,
+    _i4.AnimeCallbackFunction? loopComplete,
+    _i4.AnimeCallbackFunction? changeBegin,
+    _i4.AnimeCallbackFunction? changeComplete,
+  }) =>
+      AnimeInstance._(
+        began: began,
+        paused: paused,
+        completed: completed,
+        finished: finished,
+        autoplay: autoplay,
+        currentTime: currentTime,
+        delay: delay,
+        direction: direction,
+        duration: duration,
+        loop: loop ?? _i5.undefined,
+        timelineOffset: timelineOffset,
+        progress: progress,
+        remaining: remaining,
+        reversed: reversed,
+        animatables: animatables ?? _i5.undefined,
+        animations: animations ?? _i5.undefined,
+        play: play == null ? null : _i6.allowInterop(play),
+        pause: pause == null ? null : _i6.allowInterop(pause),
+        restart: restart == null ? null : _i6.allowInterop(restart),
+        reverse: reverse == null ? null : _i6.allowInterop(reverse),
+        seek: seek == null ? null : _i6.allowInterop(seek),
+        tick: tick == null ? null : _i6.allowInterop(tick),
+        begin: begin == null ? _i5.undefined : _i6.allowInterop(begin),
+        change: change == null ? _i5.undefined : _i6.allowInterop(change),
+        update: update == null ? _i5.undefined : _i6.allowInterop(update),
+        complete: complete == null ? _i5.undefined : _i6.allowInterop(complete),
+        loopBegin:
+            loopBegin == null ? _i5.undefined : _i6.allowInterop(loopBegin),
+        loopComplete: loopComplete == null
+            ? _i5.undefined
+            : _i6.allowInterop(loopComplete),
+        changeBegin:
+            changeBegin == null ? _i5.undefined : _i6.allowInterop(changeBegin),
+        changeComplete: changeComplete == null
+            ? _i5.undefined
+            : _i6.allowInterop(changeComplete),
+      );
+}
 
 extension AnimeInstance$Typings on AnimeInstance {
   _i2.bool get began => _i6.getProperty(
@@ -894,53 +1062,78 @@ extension AnimeInstance$Typings on AnimeInstance {
     );
   }
 
-  void play() {
-    _i6.callMethod(
+  set play(void Function() value) {
+    _i6.setProperty(
       this,
       'play',
-      [],
+      _i6.allowInterop(value),
     );
   }
 
-  void pause() {
-    _i6.callMethod(
+  void Function() get play => _i6.getProperty(
+        this,
+        'play',
+      );
+  set pause(void Function() value) {
+    _i6.setProperty(
       this,
       'pause',
-      [],
+      _i6.allowInterop(value),
     );
   }
 
-  void restart() {
-    _i6.callMethod(
+  void Function() get pause => _i6.getProperty(
+        this,
+        'pause',
+      );
+  set restart(void Function() value) {
+    _i6.setProperty(
       this,
       'restart',
-      [],
+      _i6.allowInterop(value),
     );
   }
 
-  void reverse() {
-    _i6.callMethod(
+  void Function() get restart => _i6.getProperty(
+        this,
+        'restart',
+      );
+  set reverse(void Function() value) {
+    _i6.setProperty(
       this,
       'reverse',
-      [],
+      _i6.allowInterop(value),
     );
   }
 
-  void seek(_i2.num time) {
-    _i6.callMethod(
+  void Function() get reverse => _i6.getProperty(
+        this,
+        'reverse',
+      );
+  set seek(void Function(_i2.num) value) {
+    _i6.setProperty(
       this,
       'seek',
-      [time],
+      _i6.allowInterop(value),
     );
   }
 
-  void tick(_i2.num time) {
-    _i6.callMethod(
+  void Function(_i2.num) get seek => _i6.getProperty(
+        this,
+        'seek',
+      );
+  set tick(void Function(_i2.num) value) {
+    _i6.setProperty(
       this,
       'tick',
-      [time],
+      _i6.allowInterop(value),
     );
   }
+
+  void Function(_i2.num) get tick => _i6.getProperty(
+        this,
+        'tick',
+      );
 }
 
 @_i1.JS()
@@ -960,7 +1153,7 @@ class AnimeTimelineAnimParams implements _i4.AnimeAnimParams {
   });
 
   factory AnimeTimelineAnimParams({
-    required _i2.Object timelineOffset,
+    _i2.Object? timelineOffset,
     _i2.dynamic targets,
     _i2.dynamic duration,
     _i2.dynamic delay,
@@ -971,15 +1164,15 @@ class AnimeTimelineAnimParams implements _i4.AnimeAnimParams {
     _i2.dynamic easing,
   }) =>
       AnimeTimelineAnimParams._(
-        timelineOffset: timelineOffset,
-        targets: targets ?? _i5.undefined,
-        duration: duration ?? _i5.undefined,
-        delay: delay ?? _i5.undefined,
-        endDelay: endDelay ?? _i5.undefined,
-        elasticity: elasticity ?? _i5.undefined,
-        round: round ?? _i5.undefined,
+        timelineOffset: timelineOffset ?? _i5.undefined,
+        targets: targets,
+        duration: duration,
+        delay: delay,
+        endDelay: endDelay,
+        elasticity: elasticity,
+        round: round,
         keyframes: keyframes ?? _i5.undefined,
-        easing: easing ?? _i5.undefined,
+        easing: easing,
       );
 }
 
@@ -999,20 +1192,108 @@ extension AnimeTimelineAnimParams$Typings on AnimeTimelineAnimParams {
 
 @_i1.JS()
 @_i1.staticInterop
-class AnimeTimelineInstance implements _i4.AnimeInstance {}
+@_i1.anonymous
+class AnimeTimelineInstance implements _i4.AnimeInstance {
+  external factory AnimeTimelineInstance._({
+    _i2.dynamic add,
+    _i2.dynamic began,
+    _i2.dynamic paused,
+    _i2.dynamic completed,
+    _i2.dynamic finished,
+    _i2.dynamic autoplay,
+    _i2.dynamic currentTime,
+    _i2.dynamic delay,
+    _i2.dynamic direction,
+    _i2.dynamic duration,
+    _i2.dynamic loop,
+    _i2.dynamic timelineOffset,
+    _i2.dynamic progress,
+    _i2.dynamic remaining,
+    _i2.dynamic reversed,
+    _i2.dynamic animatables,
+    _i2.dynamic animations,
+    _i2.dynamic play,
+    _i2.dynamic pause,
+    _i2.dynamic restart,
+    _i2.dynamic reverse,
+    _i2.dynamic seek,
+    _i2.dynamic tick,
+  });
+
+  factory AnimeTimelineInstance({
+    _i4.AnimeTimelineInstance Function(
+      _i4.AnimeAnimParams, [
+      _i2.Object?,
+    ])? add,
+    _i2.bool? began,
+    _i2.bool? paused,
+    _i2.bool? completed,
+    _i2.Future<void>? finished,
+    _i2.bool? autoplay,
+    _i2.num? currentTime,
+    _i2.num? delay,
+    _i2.String? direction,
+    _i2.num? duration,
+    _i2.Object? loop,
+    _i2.num? timelineOffset,
+    _i2.num? progress,
+    _i2.num? remaining,
+    _i2.bool? reversed,
+    _i7.ReadonlyArray<_i4.Animatable>? animatables,
+    _i7.ReadonlyArray<_i4.Animation>? animations,
+    void Function()? play,
+    void Function()? pause,
+    void Function()? restart,
+    void Function()? reverse,
+    void Function(_i2.num)? seek,
+    void Function(_i2.num)? tick,
+  }) =>
+      AnimeTimelineInstance._(
+        add: add == null ? null : _i6.allowInterop(add),
+        began: began,
+        paused: paused,
+        completed: completed,
+        finished: finished,
+        autoplay: autoplay,
+        currentTime: currentTime,
+        delay: delay,
+        direction: direction,
+        duration: duration,
+        loop: loop ?? _i5.undefined,
+        timelineOffset: timelineOffset,
+        progress: progress,
+        remaining: remaining,
+        reversed: reversed,
+        animatables: animatables ?? _i5.undefined,
+        animations: animations ?? _i5.undefined,
+        play: play == null ? null : _i6.allowInterop(play),
+        pause: pause == null ? null : _i6.allowInterop(pause),
+        restart: restart == null ? null : _i6.allowInterop(restart),
+        reverse: reverse == null ? null : _i6.allowInterop(reverse),
+        seek: seek == null ? null : _i6.allowInterop(seek),
+        tick: tick == null ? null : _i6.allowInterop(tick),
+      );
+}
 
 extension AnimeTimelineInstance$Typings on AnimeTimelineInstance {
-  _i4.AnimeTimelineInstance add(
-    _i4.AnimeAnimParams params, [
-    _i2.Object? timelineOffset,
-  ]) =>
-      _i6.callMethod(
+  set add(
+      _i4.AnimeTimelineInstance Function(
+        _i4.AnimeAnimParams, [
+        _i2.Object?,
+      ]) value) {
+    _i6.setProperty(
+      this,
+      'add',
+      _i6.allowInterop(value),
+    );
+  }
+
+  _i4.AnimeTimelineInstance Function(
+    _i4.AnimeAnimParams, [
+    _i2.Object?,
+  ]) get add => _i6.getProperty(
         this,
         'add',
-        [
-          params,
-          timelineOffset ?? _i5.undefined,
-        ],
       );
 }
 
@@ -1038,12 +1319,12 @@ class StaggerOptions {
     _i2.dynamic from,
   }) =>
       StaggerOptions._(
-        start: start ?? _i5.undefined,
+        start: start,
         direction: direction?.name ?? _i5.undefined,
-        easing: easing ?? _i5.undefined,
+        easing: easing,
         grid: grid ?? _i5.undefined,
         axis: axis?.name ?? _i5.undefined,
-        from: from ?? _i5.undefined,
+        from: from,
       );
 }
 
@@ -1056,7 +1337,7 @@ extension StaggerOptions$Typings on StaggerOptions {
     _i6.setProperty(
       this,
       'start',
-      value ?? _i5.undefined,
+      value,
     );
   }
 
@@ -1083,7 +1364,7 @@ extension StaggerOptions$Typings on StaggerOptions {
     _i6.setProperty(
       this,
       'easing',
-      value ?? _i5.undefined,
+      value,
     );
   }
 
@@ -1122,7 +1403,7 @@ extension StaggerOptions$Typings on StaggerOptions {
     _i6.setProperty(
       this,
       'from',
-      value ?? _i5.undefined,
+      value,
     );
   }
 }
@@ -1209,7 +1490,7 @@ extension $ModuleAnime$Typings on $ModuleAnime {
         this,
         'get',
         [
-          targets ?? _i5.undefined,
+          targets,
           prop,
           unit ?? _i5.undefined,
         ],
@@ -1222,7 +1503,7 @@ extension $ModuleAnime$Typings on $ModuleAnime {
         this,
         'path',
         [
-          path ?? _i5.undefined,
+          path,
           percent ?? _i5.undefined,
         ],
       );
@@ -1267,7 +1548,7 @@ extension $ModuleAnime$Typings on $ModuleAnime {
       this,
       'set',
       [
-        targets ?? _i5.undefined,
+        targets,
         value,
       ],
     );

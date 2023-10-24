@@ -6,6 +6,7 @@ import 'package:console/console.dart';
 import 'package:recase/recase.dart';
 import 'package:ts2dart/src/ast/reference.dart';
 import 'package:ts2dart/src/ast/typedef.dart';
+import 'package:ts2dart/src/ast/types/forward.dart';
 import 'package:ts2dart/src/ast/types/local.dart';
 import 'package:ts2dart/src/module.dart';
 
@@ -74,6 +75,7 @@ class InteropLibrary with InteropItem {
   final List<InteropDynamicEnum> enums = [];
   final List<InteropInterface> interfaces = [];
   final List<InteropGetter> globalAccessors = [];
+  final List<InteropForward> forwards = [];
   final InteropModule module;
   final globalName = 'globalThis';
   bool get globalIsModule => namespace.isNotEmpty;
@@ -253,6 +255,17 @@ class InteropLibrary with InteropItem {
     for (final struct in structs) {
       if (struct.isNameInStaticTypes()) {
         logger.info('Skipping mapped struct "${struct.name}"');
+        continue;
+      }
+
+      final isPromise = struct.heritage
+          .any((it) => ['Promise', 'PromiseLike'].contains(it.name));
+
+      if (isPromise) {
+        forwards.add(InteropForward(
+            name: struct.name,
+            delegate: InteropRef(InteropClass.future),
+            source: struct.source));
         continue;
       }
 
@@ -635,6 +648,12 @@ class InteropLibrary with InteropItem {
     for (final interop in InteropStaticType.values) {
       if (interop.mappings.contains(name)) {
         return interop;
+      }
+    }
+
+    for (final f in forwards) {
+      if (f.name == name) {
+        return f;
       }
     }
 

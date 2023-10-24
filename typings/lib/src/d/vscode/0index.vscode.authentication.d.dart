@@ -5,8 +5,7 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'dart:js_util' as _i3;
 import '0index.vscode.d.dart' as _i4;
-import '0index.d.dart' as _i5;
-import '/d/core.dart' as _i6;
+import '/d/core.dart' as _i5;
 
 @_i1.JS('vscode.authentication')
 external _i2.Object _self;
@@ -75,7 +74,7 @@ extension $ModuleAuthentication$Typings on $ModuleAuthentication {
   ///
   /// Currently, there are only two authentication providers that are contributed from built in extensions
   /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-  _i2.Future<_i5.Thenable<_i4.AuthenticationSession>> _getSession$1(
+  _i2.Future<_i2.dynamic> _getSession$1(
     _i2.String providerId,
     _i2.List<_i2.String> scopes,
     _i2.Object options,
@@ -97,7 +96,7 @@ extension $ModuleAuthentication$Typings on $ModuleAuthentication {
   ///
   /// Currently, there are only two authentication providers that are contributed from built in extensions
   /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-  _i2.Future<_i5.Thenable<_i4.AuthenticationSession>> _getSession$2(
+  _i2.Future<_i2.dynamic> _getSession$2(
     _i2.String providerId,
     _i2.List<_i2.String> scopes,
     _i2.Object options,
@@ -119,7 +118,7 @@ extension $ModuleAuthentication$Typings on $ModuleAuthentication {
   ///
   /// Currently, there are only two authentication providers that are contributed from built in extensions
   /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-  _i2.Future<_i5.Thenable<_i4.AuthenticationSession?>> _getSession$3(
+  _i2.Future<_i2.dynamic> _getSession$3(
     _i2.String providerId,
     _i2.List<_i2.String> scopes, [
     _i4.AuthenticationGetSessionOptions? options,
@@ -130,7 +129,7 @@ extension $ModuleAuthentication$Typings on $ModuleAuthentication {
         [
           providerId,
           scopes,
-          options ?? _i6.undefined,
+          options ?? _i5.undefined,
         ],
       ));
 
@@ -143,7 +142,7 @@ extension $ModuleAuthentication$Typings on $ModuleAuthentication {
     ///
     /// Currently, there are only two authentication providers that are contributed from built in extensions
     /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-    _i2.Future<_i5.Thenable<_i4.AuthenticationSession>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i2.String providerId,
       _i2.List<_i2.String> scopes,
       _i2.Object options,
@@ -156,7 +155,7 @@ extension $ModuleAuthentication$Typings on $ModuleAuthentication {
     ///
     /// Currently, there are only two authentication providers that are contributed from built in extensions
     /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-    _i2.Future<_i5.Thenable<_i4.AuthenticationSession>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i2.String providerId,
       _i2.List<_i2.String> scopes,
       _i2.Object options,
@@ -169,7 +168,7 @@ extension $ModuleAuthentication$Typings on $ModuleAuthentication {
     ///
     /// Currently, there are only two authentication providers that are contributed from built in extensions
     /// to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
-    _i2.Future<_i5.Thenable<_i4.AuthenticationSession?>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i2.String providerId,
       _i2.List<_i2.String> scopes, [
       _i4.AuthenticationGetSessionOptions? options,
@@ -197,7 +196,7 @@ extension $ModuleAuthentication$Typings on $ModuleAuthentication {
           id,
           label,
           provider,
-          options ?? _i6.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }

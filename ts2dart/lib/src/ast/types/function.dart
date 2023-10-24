@@ -14,7 +14,7 @@ class InteropFunction extends InteropType
         WithInteropTypeParams,
         WithParams {
   InteropFunction(
-      {required Map<String, dynamic> returnType,
+      {Map<String, dynamic>? returnType,
       required Iterable<Map<String, dynamic>> rawParams,
       required Iterable<Map<String, dynamic>> generics,
       required this.source,
@@ -22,7 +22,10 @@ class InteropFunction extends InteropType
       required this.library,
       required this.lineNumber}) {
     typeParams.addAll(parseTypeParams(generics));
-    returns = parseRef(returnType);
+
+    if (returnType != null) {
+      returns = parseRef(returnType);
+    }
 
     parseParams(rawParams.cast());
     library.register(this);
@@ -46,6 +49,10 @@ class InteropFunction extends InteropType
   List<InteropTypeParam> typeParams = [];
 
   @override
+  String toString() =>
+      '${runtimeType}#${hashCode}(returns: $returns,\nparams: $params\nparent: $parent, library: ${library.fileName})';
+
+  @override
   Expression toInterop(
       {required Expression argument,
       bool isNullable = false,
@@ -61,6 +68,7 @@ class InteropFunction extends InteropType
       exec = pkgJsUtils.allowInterop([
         Method((b) {
           var index = 0;
+          final optionals = params.optionals();
 
           for (final param in params) {
             final buildParam = Parameter((b) {
@@ -69,7 +77,7 @@ class InteropFunction extends InteropType
                 ..type = param.ref.ref(solid: true);
             });
 
-            if (param.ref.acceptsNull && b.requiredParameters.isEmpty) {
+            if (index >= optionals.from && index <= optionals.to) {
               b.optionalParameters.add(buildParam);
             } else {
               b.requiredParameters.add(buildParam);
@@ -120,14 +128,19 @@ class InteropFunction extends InteropType
         ..returnType = returns.ref(symbolSwap: symbolSwap, solid: true);
 
       if (params.isNotEmpty) {
+        final optionals = params.optionals();
+
+        var x = 0;
         for (final param in params) {
           final ref = param.ref.ref(symbolSwap: symbolSwap, solid: true);
 
-          if (param.ref.acceptsNull && b.requiredParameters.isEmpty) {
+          if (x >= optionals.from && x <= optionals.to) {
             b.optionalParameters.add(ref);
           } else {
             b.requiredParameters.add(ref);
           }
+
+          x++;
         }
       }
 

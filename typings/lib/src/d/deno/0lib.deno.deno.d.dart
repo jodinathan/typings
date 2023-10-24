@@ -383,19 +383,19 @@ extension ProcessStatusCommon$Typings on ProcessStatusCommon {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection39
+class _Intersection32
     implements _i4.Reader, _i4.ReaderSync, _i4.Closer, _i4.IInline5 {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection40
+class _Intersection33
     implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline6 {}
 
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection41
+class _Intersection34
     implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline7 {}
 
 @_i1.JS()
@@ -409,7 +409,7 @@ extension TestAccessor$Typings on _TestAccessor {
   ///  @category Testing
   void _ignore$1(_i2.Object Function(_i4.TestContext) fn) {
     _i3.callMethod(
-      _i5.target313,
+      _i5.target252,
       'ignore',
       [_i3.allowInterop(fn)],
     );
@@ -423,7 +423,7 @@ extension TestAccessor$Typings on _TestAccessor {
     _i2.Object Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
-      _i5.target313,
+      _i5.target252,
       'ignore',
       [
         name,
@@ -440,7 +440,7 @@ extension TestAccessor$Typings on _TestAccessor {
     _i2.Object Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
-      _i5.target313,
+      _i5.target252,
       'ignore',
       [
         options,
@@ -457,7 +457,7 @@ extension TestAccessor$Typings on _TestAccessor {
     _i2.Object Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
-      _i5.target313,
+      _i5.target252,
       'ignore',
       [
         options,
@@ -475,7 +475,7 @@ extension TestAccessor$Typings on _TestAccessor {
     _i2.Object Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
-      _i5.target313,
+      _i5.target252,
       'ignore',
       [
         name,
@@ -537,7 +537,7 @@ extension TestAccessor$Typings on _TestAccessor {
   ///  @category Testing
   void _only$1(_i2.Object Function(_i4.TestContext) fn) {
     _i3.callMethod(
-      _i5.target313,
+      _i5.target252,
       'only',
       [_i3.allowInterop(fn)],
     );
@@ -551,7 +551,7 @@ extension TestAccessor$Typings on _TestAccessor {
     _i2.Object Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
-      _i5.target313,
+      _i5.target252,
       'only',
       [
         name,
@@ -568,7 +568,7 @@ extension TestAccessor$Typings on _TestAccessor {
     _i2.Object Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
-      _i5.target313,
+      _i5.target252,
       'only',
       [
         options,
@@ -585,7 +585,7 @@ extension TestAccessor$Typings on _TestAccessor {
     _i2.Object Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
-      _i5.target313,
+      _i5.target252,
       'only',
       [
         options,
@@ -603,7 +603,7 @@ extension TestAccessor$Typings on _TestAccessor {
     _i2.Object Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
-      _i5.target313,
+      _i5.target252,
       'only',
       [
         name,
@@ -667,101 +667,49 @@ extension TestAccessor$Typings on _TestAccessor {
 class _EnvAccessor {}
 
 extension EnvAccessor$Typings on _EnvAccessor {
-  /// Retrieve the value of an environment variable.
-  ///
-  ///  Returns `undefined` if the supplied environment variable is not defined.
-  ///
-  ///  ```ts
-  ///  console.log(Deno.env.get("HOME"));  // e.g. outputs "/home/alice"
-  ///  console.log(Deno.env.get("MADE_UP_VAR"));  // outputs "undefined"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  _i2.String? get(_i2.String key) => _i3.callMethod(
-        _i5.target314,
-        'get',
-        [key],
-      );
+  set get(_i2.String? Function(_i2.String) value) {
+    _i3.setProperty(
+      this,
+      'get',
+      _i3.allowInterop(value),
+    );
+  }
 
-  /// Set the value of an environment variable.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("SOME_VAR", "Value");
-  ///  Deno.env.get("SOME_VAR");  // outputs "Value"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  void set(
-    _i2.String key,
-    _i2.String value,
-  ) {
-    _i3.callMethod(
-      _i5.target314,
+  set set(
+      void Function(
+        _i2.String,
+        _i2.String,
+      ) value) {
+    _i3.setProperty(
+      this,
       'set',
-      [
-        key,
-        value,
-      ],
+      _i3.allowInterop(value),
     );
   }
 
-  /// Delete the value of an environment variable.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("SOME_VAR", "Value");
-  ///  Deno.env.delete("SOME_VAR");  // outputs "undefined"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  void delete(_i2.String key) {
-    _i3.callMethod(
-      _i5.target314,
+  set delete(void Function(_i2.String) value) {
+    _i3.setProperty(
+      this,
       'delete',
-      [key],
+      _i3.allowInterop(value),
     );
   }
 
-  /// Check whether an environment variable is present or not.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("SOME_VAR", "Value");
-  ///  Deno.env.has("SOME_VAR");  // outputs true
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  _i2.bool has(_i2.String key) => _i3.callMethod(
-        _i5.target314,
-        'has',
-        [key],
-      );
+  set has(_i2.bool Function(_i2.String) value) {
+    _i3.setProperty(
+      this,
+      'has',
+      _i3.allowInterop(value),
+    );
+  }
 
-  /// Returns a snapshot of the environment variables at invocation as a
-  ///  simple object of keys and values.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("TEST_VAR", "A");
-  ///  const myEnv = Deno.env.toObject();
-  ///  console.log(myEnv.SHELL);
-  ///  Deno.env.set("TEST_VAR", "B");
-  ///  console.log(myEnv.TEST_VAR);  // outputs "A"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  _i2.Object toObject() => _i3.callMethod(
-        _i5.target314,
-        'toObject',
-        [],
-      );
+  set toObject(_i2.Object Function() value) {
+    _i3.setProperty(
+      this,
+      'toObject',
+      _i3.allowInterop(value),
+    );
+  }
 }
 
 @_i1.JS()
@@ -801,7 +749,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i2.Future<_i4.PermissionStatus> query(_i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
-        _i5.target315,
+        _i5.target254,
         'query',
         [desc],
       ));
@@ -819,7 +767,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i4.PermissionStatus querySync(_i4.PermissionDescriptor desc) =>
       _i3.callMethod(
-        _i5.target315,
+        _i5.target254,
         'querySync',
         [desc],
       );
@@ -834,7 +782,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i2.Future<_i4.PermissionStatus> revoke(_i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
-        _i5.target315,
+        _i5.target254,
         'revoke',
         [desc],
       ));
@@ -849,7 +797,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i4.PermissionStatus revokeSync(_i4.PermissionDescriptor desc) =>
       _i3.callMethod(
-        _i5.target315,
+        _i5.target254,
         'revokeSync',
         [desc],
       );
@@ -869,7 +817,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i2.Future<_i4.PermissionStatus> request(_i4.PermissionDescriptor desc) =>
       _i3.promiseToFuture(_i3.callMethod(
-        _i5.target315,
+        _i5.target254,
         'request',
         [desc],
       ));
@@ -889,7 +837,7 @@ extension PermissionsAccessor$Typings on _PermissionsAccessor {
   ///  ```
   _i4.PermissionStatus requestSync(_i4.PermissionDescriptor desc) =>
       _i3.callMethod(
-        _i5.target315,
+        _i5.target254,
         'requestSync',
         [desc],
       );
@@ -993,10 +941,10 @@ class MemoryUsage {
   });
 
   factory MemoryUsage({
-    required _i2.num rss,
-    required _i2.num heapTotal,
-    required _i2.num heapUsed,
-    required _i2.num external$,
+    _i2.num? rss,
+    _i2.num? heapTotal,
+    _i2.num? heapUsed,
+    _i2.num? external$,
   }) =>
       MemoryUsage._(
         rss: rss,
@@ -1079,17 +1027,17 @@ class NetworkInterfaceInfo {
   });
 
   factory NetworkInterfaceInfo({
-    required _i2.String name,
-    required _i4.Family family,
-    required _i2.String address,
-    required _i2.String netmask,
+    _i2.String? name,
+    _i4.Family? family,
+    _i2.String? address,
+    _i2.String? netmask,
     _i2.num? scopeid,
-    required _i2.String cidr,
-    required _i2.String mac,
+    _i2.String? cidr,
+    _i2.String? mac,
   }) =>
       NetworkInterfaceInfo._(
         name: name,
-        family: family.name,
+        family: family?.name ?? _i8.undefined,
         address: address,
         netmask: netmask,
         scopeid: scopeid ?? _i8.undefined,
@@ -1207,13 +1155,13 @@ class SystemMemoryInfo {
   });
 
   factory SystemMemoryInfo({
-    required _i2.num total,
-    required _i2.num free,
-    required _i2.num available,
-    required _i2.num buffers,
-    required _i2.num cached,
-    required _i2.num swapTotal,
-    required _i2.num swapFree,
+    _i2.num? total,
+    _i2.num? free,
+    _i2.num? available,
+    _i2.num? buffers,
+    _i2.num? cached,
+    _i2.num? swapTotal,
+    _i2.num? swapFree,
   }) =>
       SystemMemoryInfo._(
         total: total,
@@ -1580,7 +1528,25 @@ extension PermissionOptionsObject$Typings on PermissionOptionsObject {
 /// steps within the current test.
 @_i1.JS()
 @_i1.staticInterop
-class TestContext {}
+@_i1.anonymous
+class TestContext {
+  external factory TestContext._({
+    _i2.dynamic name,
+    _i2.dynamic origin,
+    _i2.dynamic parent,
+  });
+
+  factory TestContext({
+    _i2.String? name,
+    _i2.String? origin,
+    _i4.TestContext? parent,
+  }) =>
+      TestContext._(
+        name: name,
+        origin: origin,
+        parent: parent ?? _i8.undefined,
+      );
+}
 
 extension TestContext$Typings on TestContext {
   /// The current test name.
@@ -1801,20 +1767,20 @@ class TestStepDefinition {
   });
 
   factory TestStepDefinition({
-    required _i2.Object Function(_i4.TestContext) fn,
-    required _i2.String name,
+    _i2.Object Function(_i4.TestContext)? fn,
+    _i2.String? name,
     _i2.bool? ignore,
     _i2.bool? sanitizeOps,
     _i2.bool? sanitizeResources,
     _i2.bool? sanitizeExit,
   }) =>
       TestStepDefinition._(
-        fn: _i3.allowInterop(fn),
+        fn: fn == null ? null : _i3.allowInterop(fn),
         name: name,
-        ignore: ignore ?? _i8.undefined,
-        sanitizeOps: sanitizeOps ?? _i8.undefined,
-        sanitizeResources: sanitizeResources ?? _i8.undefined,
-        sanitizeExit: sanitizeExit ?? _i8.undefined,
+        ignore: ignore,
+        sanitizeOps: sanitizeOps,
+        sanitizeResources: sanitizeResources,
+        sanitizeExit: sanitizeExit,
       );
 }
 
@@ -1932,8 +1898,8 @@ class TestDefinition {
   });
 
   factory TestDefinition({
-    required _i2.Object Function(_i4.TestContext) fn,
-    required _i2.String name,
+    _i2.Object Function(_i4.TestContext)? fn,
+    _i2.String? name,
     _i2.bool? ignore,
     _i2.bool? only,
     _i2.bool? sanitizeOps,
@@ -1942,14 +1908,14 @@ class TestDefinition {
     _i4.PermissionOptions? permissions,
   }) =>
       TestDefinition._(
-        fn: _i3.allowInterop(fn),
+        fn: fn == null ? null : _i3.allowInterop(fn),
         name: name,
-        ignore: ignore ?? _i8.undefined,
-        only: only ?? _i8.undefined,
-        sanitizeOps: sanitizeOps ?? _i8.undefined,
-        sanitizeResources: sanitizeResources ?? _i8.undefined,
-        sanitizeExit: sanitizeExit ?? _i8.undefined,
-        permissions: permissions ?? _i8.undefined ?? _i8.undefined,
+        ignore: ignore,
+        only: only,
+        sanitizeOps: sanitizeOps,
+        sanitizeResources: sanitizeResources,
+        sanitizeExit: sanitizeExit,
+        permissions: permissions ?? _i8.undefined,
       );
 }
 
@@ -2083,7 +2049,12 @@ extension TestDefinition$Typings on TestDefinition {
 
 @_i1.JS()
 @_i1.staticInterop
-class DenoTest {}
+@_i1.anonymous
+class DenoTest {
+  external factory DenoTest._();
+
+  factory DenoTest() => DenoTest._();
+}
 
 extension DenoTest$Typings on DenoTest {
   /// Shorthand property for ignoring a particular test case.
@@ -2461,7 +2432,28 @@ extension DenoTest$Typings on DenoTest {
 /// to override of the measured portion of the function.
 @_i1.JS()
 @_i1.staticInterop
-class BenchContext {}
+@_i1.anonymous
+class BenchContext {
+  external factory BenchContext._({
+    _i2.dynamic name,
+    _i2.dynamic origin,
+    _i2.dynamic start,
+    _i2.dynamic end,
+  });
+
+  factory BenchContext({
+    _i2.String? name,
+    _i2.String? origin,
+    void Function()? start,
+    void Function()? end,
+  }) =>
+      BenchContext._(
+        name: name,
+        origin: origin,
+        start: start == null ? null : _i3.allowInterop(start),
+        end: end == null ? null : _i3.allowInterop(end),
+      );
+}
 
 extension BenchContext$Typings on BenchContext {
   /// The current benchmark name.
@@ -2490,51 +2482,30 @@ extension BenchContext$Typings on BenchContext {
     );
   }
 
-  /// Restarts the timer for the bench measurement. This should be called
-  ///  after doing setup work which should not be measured.
-  ///
-  ///  Warning: This method should not be used for benchmarks averaging less
-  ///  than 10Î¼s per iteration. In such cases it will be disabled but the call
-  ///  will still have noticeable overhead, resulting in a warning.
-  ///
-  ///  ```ts
-  ///  Deno.bench("foo", async (t) => {
-  ///    const data = await Deno.readFile("data.txt");
-  ///    t.start();
-  ///    // some operation on `data`...
-  ///  });
-  ///  ```
-  void start() {
-    _i3.callMethod(
+  set start(void Function() value) {
+    _i3.setProperty(
       this,
       'start',
-      [],
+      _i3.allowInterop(value),
     );
   }
 
-  /// End the timer early for the bench measurement. This should be called
-  ///  before doing teardown work which should not be measured.
-  ///
-  ///  Warning: This method should not be used for benchmarks averaging less
-  ///  than 10Î¼s per iteration. In such cases it will be disabled but the call
-  ///  will still have noticeable overhead, resulting in a warning.
-  ///
-  ///  ```ts
-  ///  Deno.bench("foo", async (t) => {
-  ///    const file = await Deno.open("data.txt");
-  ///    t.start();
-  ///    // some operation on `file`...
-  ///    t.end();
-  ///    file.close();
-  ///  });
-  ///  ```
-  void end() {
-    _i3.callMethod(
+  void Function() get start => _i3.getProperty(
+        this,
+        'start',
+      );
+  set end(void Function() value) {
+    _i3.setProperty(
       this,
       'end',
-      [],
+      _i3.allowInterop(value),
     );
   }
+
+  void Function() get end => _i3.getProperty(
+        this,
+        'end',
+      );
 }
 
 /// The interface for defining a benchmark test using {@linkcode Deno.bench}.
@@ -2554,8 +2525,8 @@ class BenchDefinition {
   });
 
   factory BenchDefinition({
-    required _i2.Object Function(_i4.BenchContext) fn,
-    required _i2.String name,
+    _i2.Object Function(_i4.BenchContext)? fn,
+    _i2.String? name,
     _i2.bool? ignore,
     _i2.String? group,
     _i2.bool? baseline,
@@ -2564,14 +2535,14 @@ class BenchDefinition {
     _i4.PermissionOptions? permissions,
   }) =>
       BenchDefinition._(
-        fn: _i3.allowInterop(fn),
+        fn: fn == null ? null : _i3.allowInterop(fn),
         name: name,
-        ignore: ignore ?? _i8.undefined,
-        group: group ?? _i8.undefined,
-        baseline: baseline ?? _i8.undefined,
-        only: only ?? _i8.undefined,
-        sanitizeExit: sanitizeExit ?? _i8.undefined,
-        permissions: permissions ?? _i8.undefined ?? _i8.undefined,
+        ignore: ignore,
+        group: group,
+        baseline: baseline,
+        only: only,
+        sanitizeExit: sanitizeExit,
+        permissions: permissions ?? _i8.undefined,
       );
 }
 
@@ -2701,103 +2672,102 @@ extension BenchDefinition$Typings on BenchDefinition {
 /// variables.
 @_i1.JS()
 @_i1.staticInterop
-class Env {}
+@_i1.anonymous
+class Env {
+  external factory Env._({
+    _i2.dynamic get,
+    _i2.dynamic set,
+    _i2.dynamic delete,
+    _i2.dynamic has,
+    _i2.dynamic toObject,
+  });
+
+  factory Env({
+    _i2.String? Function(_i2.String)? get,
+    void Function(
+      _i2.String,
+      _i2.String,
+    )? set,
+    void Function(_i2.String)? delete,
+    _i2.bool Function(_i2.String)? has,
+    _i2.Object Function()? toObject,
+  }) =>
+      Env._(
+        get: get == null ? null : _i3.allowInterop(get),
+        set: set == null ? null : _i3.allowInterop(set),
+        delete: delete == null ? null : _i3.allowInterop(delete),
+        has: has == null ? null : _i3.allowInterop(has),
+        toObject: toObject == null ? null : _i3.allowInterop(toObject),
+      );
+}
 
 extension Env$Typings on Env {
-  /// Retrieve the value of an environment variable.
-  ///
-  ///  Returns `undefined` if the supplied environment variable is not defined.
-  ///
-  ///  ```ts
-  ///  console.log(Deno.env.get("HOME"));  // e.g. outputs "/home/alice"
-  ///  console.log(Deno.env.get("MADE_UP_VAR"));  // outputs "undefined"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  _i2.String? get(_i2.String key) => _i3.callMethod(
+  set get(_i2.String? Function(_i2.String) value) {
+    _i3.setProperty(
+      this,
+      'get',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i2.String? Function(_i2.String) get get => _i3.getProperty(
         this,
         'get',
-        [key],
       );
-
-  /// Set the value of an environment variable.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("SOME_VAR", "Value");
-  ///  Deno.env.get("SOME_VAR");  // outputs "Value"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  void set(
-    _i2.String key,
-    _i2.String value,
-  ) {
-    _i3.callMethod(
+  set set(
+      void Function(
+        _i2.String,
+        _i2.String,
+      ) value) {
+    _i3.setProperty(
       this,
       'set',
-      [
-        key,
-        value,
-      ],
+      _i3.allowInterop(value),
     );
   }
 
-  /// Delete the value of an environment variable.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("SOME_VAR", "Value");
-  ///  Deno.env.delete("SOME_VAR");  // outputs "undefined"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  void delete(_i2.String key) {
-    _i3.callMethod(
+  void Function(
+    _i2.String,
+    _i2.String,
+  ) get set => _i3.getProperty(
+        this,
+        'set',
+      );
+  set delete(void Function(_i2.String) value) {
+    _i3.setProperty(
       this,
       'delete',
-      [key],
+      _i3.allowInterop(value),
     );
   }
 
-  /// Check whether an environment variable is present or not.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("SOME_VAR", "Value");
-  ///  Deno.env.has("SOME_VAR");  // outputs true
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  _i2.bool has(_i2.String key) => _i3.callMethod(
+  void Function(_i2.String) get delete => _i3.getProperty(
+        this,
+        'delete',
+      );
+  set has(_i2.bool Function(_i2.String) value) {
+    _i3.setProperty(
+      this,
+      'has',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(_i2.String) get has => _i3.getProperty(
         this,
         'has',
-        [key],
       );
+  set toObject(_i2.Object Function() value) {
+    _i3.setProperty(
+      this,
+      'toObject',
+      _i3.allowInterop(value),
+    );
+  }
 
-  /// Returns a snapshot of the environment variables at invocation as a
-  ///  simple object of keys and values.
-  ///
-  ///  ```ts
-  ///  Deno.env.set("TEST_VAR", "A");
-  ///  const myEnv = Deno.env.toObject();
-  ///  console.log(myEnv.SHELL);
-  ///  Deno.env.set("TEST_VAR", "B");
-  ///  console.log(myEnv.TEST_VAR);  // outputs "A"
-  ///  ```
-  ///
-  ///  Requires `allow-env` permission.
-  ///
-  ///  @tags allow-env
-  _i2.Object toObject() => _i3.callMethod(
+  _i2.Object Function() get toObject => _i3.getProperty(
         this,
         'toObject',
-        [],
       );
 }
 
@@ -2805,76 +2775,54 @@ extension Env$Typings on Env {
 /// bytes into an array buffer asynchronously.
 @_i1.JS()
 @_i1.staticInterop
-class Reader {}
+@_i1.anonymous
+class Reader {
+  external factory Reader._({_i2.dynamic read});
+
+  factory Reader({_i2.Future<_i2.num?> Function(_i9.Uint8List)? read}) =>
+      Reader._(read: read == null ? null : _i3.allowInterop(read));
+}
 
 extension Reader$Typings on Reader {
-  /// Reads up to `p.byteLength` bytes into `p`. It resolves to the number of
-  ///  bytes read (`0` < `n` <= `p.byteLength`) and rejects if any error
-  ///  encountered. Even if `read()` resolves to `n` < `p.byteLength`, it may
-  ///  use all of `p` as scratch space during the call. If some data is
-  ///  available but not `p.byteLength` bytes, `read()` conventionally resolves
-  ///  to what is available instead of waiting for more.
-  ///
-  ///  When `read()` encounters end-of-file condition, it resolves to EOF
-  ///  (`null`).
-  ///
-  ///  When `read()` encounters an error, it rejects with an error.
-  ///
-  ///  Callers should always process the `n` > `0` bytes returned before
-  ///  considering the EOF (`null`). Doing so correctly handles I/O errors that
-  ///  happen after reading some bytes and also both of the allowed EOF
-  ///  behaviors.
-  ///
-  ///  Implementations should not retain a reference to `p`.
-  ///
-  ///  Use
-  ///  [`itereateReader`](https://deno.land/std/streams/iterate_reader.ts?s=iterateReader)
-  ///  from
-  ///  [`std/streams/iterate_reader.ts`](https://deno.land/std/streams/iterate_reader.ts)
-  ///  to turn a `Reader` into an {@linkcode AsyncIterator}.
-  _i2.Future<_i2.num?> read(_i9.Uint8List p) =>
-      _i3.promiseToFuture(_i3.callMethod(
+  set read(_i2.Future<_i2.num?> Function(_i9.Uint8List) value) {
+    _i3.setProperty(
+      this,
+      'read',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.num?> Function(_i9.Uint8List) get read => _i3.getProperty(
         this,
         'read',
-        [p],
-      ));
+      );
 }
 
 /// An abstract interface which when implemented provides an interface to read
 /// bytes into an array buffer synchronously.
 @_i1.JS()
 @_i1.staticInterop
-class ReaderSync {}
+@_i1.anonymous
+class ReaderSync {
+  external factory ReaderSync._({_i2.dynamic readSync});
+
+  factory ReaderSync({_i2.num? Function(_i9.Uint8List)? readSync}) =>
+      ReaderSync._(
+          readSync: readSync == null ? null : _i3.allowInterop(readSync));
+}
 
 extension ReaderSync$Typings on ReaderSync {
-  /// Reads up to `p.byteLength` bytes into `p`. It resolves to the number
-  ///  of bytes read (`0` < `n` <= `p.byteLength`) and rejects if any error
-  ///  encountered. Even if `readSync()` returns `n` < `p.byteLength`, it may use
-  ///  all of `p` as scratch space during the call. If some data is available
-  ///  but not `p.byteLength` bytes, `readSync()` conventionally returns what is
-  ///  available instead of waiting for more.
-  ///
-  ///  When `readSync()` encounters end-of-file condition, it returns EOF
-  ///  (`null`).
-  ///
-  ///  When `readSync()` encounters an error, it throws with an error.
-  ///
-  ///  Callers should always process the `n` > `0` bytes returned before
-  ///  considering the EOF (`null`). Doing so correctly handles I/O errors that
-  ///  happen after reading some bytes and also both of the allowed EOF
-  ///  behaviors.
-  ///
-  ///  Implementations should not retain a reference to `p`.
-  ///
-  ///  Use
-  ///  [`itereateReaderSync`](https://deno.land/std/streams/iterate_reader.ts?s=iterateReaderSync)
-  ///  from from
-  ///  [`std/streams/iterate_reader.ts`](https://deno.land/std/streams/iterate_reader.ts)
-  ///  to turn a `ReaderSync` into an {@linkcode Iterator}.
-  _i2.num? readSync(_i9.Uint8List p) => _i3.callMethod(
+  set readSync(_i2.num? Function(_i9.Uint8List) value) {
+    _i3.setProperty(
+      this,
+      'readSync',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i2.num? Function(_i9.Uint8List) get readSync => _i3.getProperty(
         this,
         'readSync',
-        [p],
       );
 }
 
@@ -2882,50 +2830,54 @@ extension ReaderSync$Typings on ReaderSync {
 /// bytes from an array buffer to a file/resource asynchronously.
 @_i1.JS()
 @_i1.staticInterop
-class Writer {}
+@_i1.anonymous
+class Writer {
+  external factory Writer._({_i2.dynamic write});
+
+  factory Writer({_i2.Future<_i2.num> Function(_i9.Uint8List)? write}) =>
+      Writer._(write: write == null ? null : _i3.allowInterop(write));
+}
 
 extension Writer$Typings on Writer {
-  /// Writes `p.byteLength` bytes from `p` to the underlying data stream. It
-  ///  resolves to the number of bytes written from `p` (`0` <= `n` <=
-  ///  `p.byteLength`) or reject with the error encountered that caused the
-  ///  write to stop early. `write()` must reject with a non-null error if
-  ///  would resolve to `n` < `p.byteLength`. `write()` must not modify the
-  ///  slice data, even temporarily.
-  ///
-  ///  This function is one of the lowest
-  ///  level APIs and most users should not work with this directly, but rather use
-  ///  [`writeAll()`](https://deno.land/std/streams/write_all.ts?s=writeAll) from
-  ///  [`std/streams/write_all.ts`](https://deno.land/std/streams/write_all.ts)
-  ///  instead.
-  ///
-  ///  Implementations should not retain a reference to `p`.
-  _i2.Future<_i2.num> write(_i9.Uint8List p) =>
-      _i3.promiseToFuture(_i3.callMethod(
+  set write(_i2.Future<_i2.num> Function(_i9.Uint8List) value) {
+    _i3.setProperty(
+      this,
+      'write',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.num> Function(_i9.Uint8List) get write => _i3.getProperty(
         this,
         'write',
-        [p],
-      ));
+      );
 }
 
 /// An abstract interface which when implemented provides an interface to write
 /// bytes from an array buffer to a file/resource synchronously.
 @_i1.JS()
 @_i1.staticInterop
-class WriterSync {}
+@_i1.anonymous
+class WriterSync {
+  external factory WriterSync._({_i2.dynamic writeSync});
+
+  factory WriterSync({_i2.num Function(_i9.Uint8List)? writeSync}) =>
+      WriterSync._(
+          writeSync: writeSync == null ? null : _i3.allowInterop(writeSync));
+}
 
 extension WriterSync$Typings on WriterSync {
-  /// Writes `p.byteLength` bytes from `p` to the underlying data
-  ///  stream. It returns the number of bytes written from `p` (`0` <= `n`
-  ///  <= `p.byteLength`) and any error encountered that caused the write to
-  ///  stop early. `writeSync()` must throw a non-null error if it returns `n` <
-  ///  `p.byteLength`. `writeSync()` must not modify the slice data, even
-  ///  temporarily.
-  ///
-  ///  Implementations should not retain a reference to `p`.
-  _i2.num writeSync(_i9.Uint8List p) => _i3.callMethod(
+  set writeSync(_i2.num Function(_i9.Uint8List) value) {
+    _i3.setProperty(
+      this,
+      'writeSync',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i2.num Function(_i9.Uint8List) get writeSync => _i3.getProperty(
         this,
         'writeSync',
-        [p],
       );
 }
 
@@ -2933,79 +2885,103 @@ extension WriterSync$Typings on WriterSync {
 /// files/resources that were previously opened.
 @_i1.JS()
 @_i1.staticInterop
-class Closer {}
+@_i1.anonymous
+class Closer {
+  external factory Closer._({_i2.dynamic close});
+
+  factory Closer({void Function()? close}) =>
+      Closer._(close: close == null ? null : _i3.allowInterop(close));
+}
 
 extension Closer$Typings on Closer {
-  /// Closes the resource, "freeing" the backing file/resource.
-  void close() {
-    _i3.callMethod(
+  set close(void Function() value) {
+    _i3.setProperty(
       this,
       'close',
-      [],
+      _i3.allowInterop(value),
     );
   }
+
+  void Function() get close => _i3.getProperty(
+        this,
+        'close',
+      );
 }
 
 /// An abstract interface which when implemented provides an interface to seek
 /// within an open file/resource asynchronously.
 @_i1.JS()
 @_i1.staticInterop
-class Seeker {}
+@_i1.anonymous
+class Seeker {
+  external factory Seeker._({_i2.dynamic seek});
+
+  factory Seeker(
+          {_i2.Future<_i2.num> Function(
+            _i2.Object,
+            _i4.SeekMode,
+          )? seek}) =>
+      Seeker._(seek: seek == null ? null : _i3.allowInterop(seek));
+}
 
 extension Seeker$Typings on Seeker {
-  /// Seek sets the offset for the next `read()` or `write()` to offset,
-  ///  interpreted according to `whence`: `Start` means relative to the
-  ///  start of the file, `Current` means relative to the current offset,
-  ///  and `End` means relative to the end. Seek resolves to the new offset
-  ///  relative to the start of the file.
-  ///
-  ///  Seeking to an offset before the start of the file is an error. Seeking to
-  ///  any positive offset is legal, but the behavior of subsequent I/O
-  ///  operations on the underlying object is implementation-dependent.
-  ///
-  ///  It resolves with the updated offset.
-  _i2.Future<_i2.num> seek(
-    _i2.Object offset,
-    _i4.SeekMode whence,
-  ) =>
-      _i3.promiseToFuture(_i3.callMethod(
+  set seek(
+      _i2.Future<_i2.num> Function(
+        _i2.Object,
+        _i4.SeekMode,
+      ) value) {
+    _i3.setProperty(
+      this,
+      'seek',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i2.num> Function(
+    _i2.Object,
+    _i4.SeekMode,
+  ) get seek => _i3.getProperty(
         this,
         'seek',
-        [
-          offset,
-          whence.name,
-        ],
-      ));
+      );
 }
 
 /// An abstract interface which when implemented provides an interface to seek
 /// within an open file/resource synchronously.
 @_i1.JS()
 @_i1.staticInterop
-class SeekerSync {}
+@_i1.anonymous
+class SeekerSync {
+  external factory SeekerSync._({_i2.dynamic seekSync});
+
+  factory SeekerSync(
+          {_i2.num Function(
+            _i2.Object,
+            _i4.SeekMode,
+          )? seekSync}) =>
+      SeekerSync._(
+          seekSync: seekSync == null ? null : _i3.allowInterop(seekSync));
+}
 
 extension SeekerSync$Typings on SeekerSync {
-  /// Seek sets the offset for the next `readSync()` or `writeSync()` to
-  ///  offset, interpreted according to `whence`: `Start` means relative
-  ///  to the start of the file, `Current` means relative to the current
-  ///  offset, and `End` means relative to the end.
-  ///
-  ///  Seeking to an offset before the start of the file is an error. Seeking to
-  ///  any positive offset is legal, but the behavior of subsequent I/O
-  ///  operations on the underlying object is implementation-dependent.
-  ///
-  ///  It returns the updated offset.
-  _i2.num seekSync(
-    _i2.Object offset,
-    _i4.SeekMode whence,
-  ) =>
-      _i3.callMethod(
+  set seekSync(
+      _i2.num Function(
+        _i2.Object,
+        _i4.SeekMode,
+      ) value) {
+    _i3.setProperty(
+      this,
+      'seekSync',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i2.num Function(
+    _i2.Object,
+    _i4.SeekMode,
+  ) get seekSync => _i3.getProperty(
         this,
         'seekSync',
-        [
-          offset,
-          whence.name,
-        ],
       );
 }
 
@@ -3486,8 +3462,7 @@ extension IInline4$Typings on IInline4 {
 class SetRawOptions {
   external factory SetRawOptions._({_i2.dynamic cbreak});
 
-  factory SetRawOptions({required _i2.bool cbreak}) =>
-      SetRawOptions._(cbreak: cbreak);
+  factory SetRawOptions({_i2.bool? cbreak}) => SetRawOptions._(cbreak: cbreak);
 }
 
 extension SetRawOptions$Typings on SetRawOptions {
@@ -3510,6 +3485,7 @@ extension SetRawOptions$Typings on SetRawOptions {
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class IInline5 {}
 
 extension IInline5$Typings on IInline5 {
@@ -3525,31 +3501,25 @@ extension IInline5$Typings on IInline5 {
         this,
         'readable',
       );
-
-  /// Set TTY to be under raw mode or not. In raw mode, characters are read and
-  ///  returned as is, without being processed. All special processing of
-  ///  characters by the terminal is disabled, including echoing input
-  ///  characters. Reading from a TTY device in raw mode is faster than reading
-  ///  from a TTY device in canonical mode.
-  ///
-  ///  ```ts
-  ///  Deno.stdin.setRaw(true, { cbreak: true });
-  ///  ```
-  ///
-  ///  @category I/O
-  void setRaw(
-    _i2.bool mode, [
-    _i4.SetRawOptions? options,
-  ]) {
-    _i3.callMethod(
+  set setRaw(
+      void Function(
+        _i2.bool, [
+        _i4.SetRawOptions?,
+      ]) value) {
+    _i3.setProperty(
       this,
       'setRaw',
-      [
-        mode,
-        options ?? _i8.undefined,
-      ],
+      _i3.allowInterop(value),
     );
   }
+
+  void Function(
+    _i2.bool, [
+    _i4.SetRawOptions?,
+  ]) get setRaw => _i3.getProperty(
+        this,
+        'setRaw',
+      );
 }
 
 @_i1.JS()
@@ -3618,13 +3588,13 @@ class OpenOptions {
     _i2.num? mode,
   }) =>
       OpenOptions._(
-        read: read ?? _i8.undefined,
-        write: write ?? _i8.undefined,
-        append: append ?? _i8.undefined,
-        truncate: truncate ?? _i8.undefined,
-        create: create ?? _i8.undefined,
-        createNew: createNew ?? _i8.undefined,
-        mode: mode ?? _i8.undefined,
+        read: read,
+        write: write,
+        append: append,
+        truncate: truncate,
+        create: create,
+        createNew: createNew,
+        mode: mode,
       );
 }
 
@@ -3973,8 +3943,8 @@ class MkdirOptions {
     _i2.num? mode,
   }) =>
       MkdirOptions._(
-        recursive: recursive ?? _i8.undefined,
-        mode: mode ?? _i8.undefined,
+        recursive: recursive,
+        mode: mode,
       );
 }
 
@@ -4037,9 +4007,9 @@ class MakeTempOptions {
     _i2.String? suffix,
   }) =>
       MakeTempOptions._(
-        dir: dir ?? _i8.undefined,
-        prefix: prefix ?? _i8.undefined,
-        suffix: suffix ?? _i8.undefined,
+        dir: dir,
+        prefix: prefix,
+        suffix: suffix,
       );
 }
 
@@ -4100,7 +4070,7 @@ class RemoveOptions {
   external factory RemoveOptions._({_i2.dynamic recursive});
 
   factory RemoveOptions({_i2.bool? recursive}) =>
-      RemoveOptions._(recursive: recursive ?? _i8.undefined);
+      RemoveOptions._(recursive: recursive);
 }
 
 extension RemoveOptions$Typings on RemoveOptions {
@@ -4152,14 +4122,14 @@ class FileInfo {
   });
 
   factory FileInfo({
-    required _i2.bool isFile,
-    required _i2.bool isDirectory,
-    required _i2.bool isSymlink,
-    required _i2.num size,
+    _i2.bool? isFile,
+    _i2.bool? isDirectory,
+    _i2.bool? isSymlink,
+    _i2.num? size,
     _i2.DateTime? mtime,
     _i2.DateTime? atime,
     _i2.DateTime? birthtime,
-    required _i2.num dev,
+    _i2.num? dev,
     _i2.num? ino,
     _i2.num? mode,
     _i2.num? nlink,
@@ -4507,10 +4477,10 @@ class DirEntry {
   });
 
   factory DirEntry({
-    required _i2.String name,
-    required _i2.bool isFile,
-    required _i2.bool isDirectory,
-    required _i2.bool isSymlink,
+    _i2.String? name,
+    _i2.bool? isFile,
+    _i2.bool? isDirectory,
+    _i2.bool? isSymlink,
   }) =>
       DirEntry._(
         name: name,
@@ -4599,10 +4569,10 @@ class WriteFileOptions {
     _i7.AbortSignal? signal,
   }) =>
       WriteFileOptions._(
-        append: append ?? _i8.undefined,
-        create: create ?? _i8.undefined,
-        createNew: createNew ?? _i8.undefined,
-        mode: mode ?? _i8.undefined,
+        append: append,
+        create: create,
+        createNew: createNew,
+        mode: mode,
         signal: signal ?? _i8.undefined,
       );
 }
@@ -4705,17 +4675,17 @@ class OpMetrics {
   });
 
   factory OpMetrics({
-    required _i2.num opsDispatched,
-    required _i2.num opsDispatchedSync,
-    required _i2.num opsDispatchedAsync,
-    required _i2.num opsDispatchedAsyncUnref,
-    required _i2.num opsCompleted,
-    required _i2.num opsCompletedSync,
-    required _i2.num opsCompletedAsync,
-    required _i2.num opsCompletedAsyncUnref,
-    required _i2.num bytesSentControl,
-    required _i2.num bytesSentData,
-    required _i2.num bytesReceived,
+    _i2.num? opsDispatched,
+    _i2.num? opsDispatchedSync,
+    _i2.num? opsDispatchedAsync,
+    _i2.num? opsDispatchedAsyncUnref,
+    _i2.num? opsCompleted,
+    _i2.num? opsCompletedSync,
+    _i2.num? opsCompletedAsync,
+    _i2.num? opsCompletedAsyncUnref,
+    _i2.num? bytesSentControl,
+    _i2.num? bytesSentData,
+    _i2.num? bytesReceived,
   }) =>
       OpMetrics._(
         opsDispatched: opsDispatched,
@@ -4886,18 +4856,18 @@ class Metrics implements _i4.OpMetrics {
   });
 
   factory Metrics({
-    required _i6.Record<_i2.String, _i4.OpMetrics> ops,
-    required _i2.num opsDispatched,
-    required _i2.num opsDispatchedSync,
-    required _i2.num opsDispatchedAsync,
-    required _i2.num opsDispatchedAsyncUnref,
-    required _i2.num opsCompleted,
-    required _i2.num opsCompletedSync,
-    required _i2.num opsCompletedAsync,
-    required _i2.num opsCompletedAsyncUnref,
-    required _i2.num bytesSentControl,
-    required _i2.num bytesSentData,
-    required _i2.num bytesReceived,
+    _i6.Record<_i2.String, _i4.OpMetrics>? ops,
+    _i2.num? opsDispatched,
+    _i2.num? opsDispatchedSync,
+    _i2.num? opsDispatchedAsync,
+    _i2.num? opsDispatchedAsyncUnref,
+    _i2.num? opsCompleted,
+    _i2.num? opsCompletedSync,
+    _i2.num? opsCompletedAsync,
+    _i2.num? opsCompletedAsyncUnref,
+    _i2.num? bytesSentControl,
+    _i2.num? bytesSentData,
+    _i2.num? bytesReceived,
   }) =>
       Metrics._(
         ops: ops,
@@ -4942,14 +4912,14 @@ class FsEvent {
   });
 
   factory FsEvent({
-    required _i4.Kind kind,
-    required _i2.List<_i2.String> paths,
+    _i4.Kind? kind,
+    _i2.List<_i2.String>? paths,
     _i4.FsEventFlag? flag,
   }) =>
       FsEvent._(
-        kind: kind.name,
+        kind: kind?.name ?? _i8.undefined,
         paths: paths,
-        flag: flag ?? _i8.undefined ?? _i8.undefined,
+        flag: flag,
       );
 }
 
@@ -5000,7 +4970,27 @@ extension FsEvent$Typings on FsEvent {
 /// method.
 @_i1.JS()
 @_i1.staticInterop
-class FsWatcher implements _i10.AsyncIterable<_i4.FsEvent> {}
+@_i1.anonymous
+class FsWatcher implements _i10.AsyncIterable<_i4.FsEvent> {
+  external factory FsWatcher._({
+    _i2.dynamic rid,
+    _i2.dynamic close,
+    _i2.dynamic return$,
+  });
+
+  factory FsWatcher({
+    _i2.num? rid,
+    void Function()? close,
+    _i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.dynamic>> Function(
+            [_i2.dynamic])?
+        return$,
+  }) =>
+      FsWatcher._(
+        rid: rid,
+        close: close == null ? null : _i3.allowInterop(close),
+        return$: return$ == null ? null : _i3.allowInterop(return$),
+      );
+}
 
 extension FsWatcher$Typings on FsWatcher {
   /// The resource id.
@@ -5008,26 +4998,34 @@ extension FsWatcher$Typings on FsWatcher {
         this,
         'rid',
       );
-
-  /// Stops watching the file system and closes the watcher resource.
-  void close() {
-    _i3.callMethod(
+  set close(void Function() value) {
+    _i3.setProperty(
       this,
       'close',
-      [],
+      _i3.allowInterop(value),
     );
   }
 
-  /// Stops watching the file system and closes the watcher resource.
-  ///
-  ///  @deprecated Will be removed in the future.
-  _i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.dynamic>> return$(
-          [_i2.dynamic value]) =>
-      _i3.promiseToFuture(_i3.callMethod(
+  void Function() get close => _i3.getProperty(
         this,
-        'return',
-        [value ?? _i8.undefined],
-      ));
+        'close',
+      );
+  set return$(
+      _i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.dynamic>> Function(
+              [_i2.dynamic])
+          value) {
+    _i3.setProperty(
+      this,
+      'return',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.dynamic>> Function([_i2.dynamic])
+      get return$ => _i3.getProperty(
+            this,
+            'return',
+          );
 }
 
 @_i1.JS()
@@ -5063,7 +5061,7 @@ class RunOptions {
   });
 
   factory RunOptions({
-    required _i2.Object cmd,
+    _i2.Object? cmd,
     _i2.String? cwd,
     _i6.Record<_i2.String, _i2.String>? env,
     _i2.Object? stdout,
@@ -5071,9 +5069,9 @@ class RunOptions {
     _i2.Object? stdin,
   }) =>
       RunOptions._(
-        cmd: cmd,
-        cwd: cwd ?? _i8.undefined,
-        env: env ?? _i8.undefined ?? _i8.undefined,
+        cmd: cmd ?? _i8.undefined,
+        cwd: cwd,
+        env: env,
         stdout: stdout ?? _i8.undefined,
         stderr: stderr ?? _i8.undefined,
         stdin: stdin ?? _i8.undefined,
@@ -5120,7 +5118,7 @@ extension RunOptions$Typings on RunOptions {
     _i3.setProperty(
       this,
       'env',
-      value ?? _i8.undefined ?? _i8.undefined,
+      value ?? _i8.undefined,
     );
   }
 
@@ -5235,7 +5233,7 @@ extension IInline10$Typings on IInline10 {
     _i3.setProperty(
       this,
       'signal',
-      value ?? _i8.undefined,
+      value,
     );
   }
 }
@@ -5595,17 +5593,17 @@ class CommandOptions {
     _i2.bool? windowsRawArguments,
   }) =>
       CommandOptions._(
-        args: args ?? _i8.undefined,
+        args: args,
         cwd: cwd ?? _i8.undefined,
-        clearEnv: clearEnv ?? _i8.undefined,
-        env: env ?? _i8.undefined ?? _i8.undefined,
-        uid: uid ?? _i8.undefined,
-        gid: gid ?? _i8.undefined,
+        clearEnv: clearEnv,
+        env: env,
+        uid: uid,
+        gid: gid,
         signal: signal ?? _i8.undefined,
         stdin: stdin?.name ?? _i8.undefined,
         stdout: stdout?.name ?? _i8.undefined,
         stderr: stderr?.name ?? _i8.undefined,
-        windowsRawArguments: windowsRawArguments ?? _i8.undefined,
+        windowsRawArguments: windowsRawArguments,
       );
 }
 
@@ -5666,7 +5664,7 @@ extension CommandOptions$Typings on CommandOptions {
     _i3.setProperty(
       this,
       'env',
-      value ?? _i8.undefined ?? _i8.undefined,
+      value ?? _i8.undefined,
     );
   }
 
@@ -5799,8 +5797,8 @@ class CommandStatus {
   });
 
   factory CommandStatus({
-    required _i2.bool success,
-    required _i2.num code,
+    _i2.bool? success,
+    _i2.num? code,
     _i4.Signal? signal,
   }) =>
       CommandStatus._(
@@ -5871,10 +5869,10 @@ class CommandOutput implements _i4.CommandStatus {
   });
 
   factory CommandOutput({
-    required _i9.Uint8List stdout,
-    required _i9.Uint8List stderr,
-    required _i2.bool success,
-    required _i2.num code,
+    _i9.Uint8List? stdout,
+    _i9.Uint8List? stderr,
+    _i2.bool? success,
+    _i2.num? code,
     _i4.Signal? signal,
   }) =>
       CommandOutput._(
@@ -5935,18 +5933,18 @@ class InspectOptions {
     _i2.num? strAbbreviateSize,
   }) =>
       InspectOptions._(
-        colors: colors ?? _i8.undefined,
-        compact: compact ?? _i8.undefined,
-        depth: depth ?? _i8.undefined,
-        breakLength: breakLength ?? _i8.undefined,
-        escapeSequences: escapeSequences ?? _i8.undefined,
-        iterableLimit: iterableLimit ?? _i8.undefined,
-        showProxy: showProxy ?? _i8.undefined,
-        sorted: sorted ?? _i8.undefined,
-        trailingComma: trailingComma ?? _i8.undefined,
-        getters: getters ?? _i8.undefined,
-        showHidden: showHidden ?? _i8.undefined,
-        strAbbreviateSize: strAbbreviateSize ?? _i8.undefined,
+        colors: colors,
+        compact: compact,
+        depth: depth,
+        breakLength: breakLength,
+        escapeSequences: escapeSequences,
+        iterableLimit: iterableLimit,
+        showProxy: showProxy,
+        sorted: sorted,
+        trailingComma: trailingComma,
+        getters: getters,
+        showHidden: showHidden,
+        strAbbreviateSize: strAbbreviateSize,
       );
 }
 
@@ -6148,7 +6146,7 @@ class RunPermissionDescriptor {
   });
 
   factory RunPermissionDescriptor({
-    required _i2.String name,
+    _i2.String? name,
     _i2.Object? command,
   }) =>
       RunPermissionDescriptor._(
@@ -6202,7 +6200,7 @@ class ReadPermissionDescriptor {
   });
 
   factory ReadPermissionDescriptor({
-    required _i2.String name,
+    _i2.String? name,
     _i2.Object? path,
   }) =>
       ReadPermissionDescriptor._(
@@ -6256,7 +6254,7 @@ class WritePermissionDescriptor {
   });
 
   factory WritePermissionDescriptor({
-    required _i2.String name,
+    _i2.String? name,
     _i2.Object? path,
   }) =>
       WritePermissionDescriptor._(
@@ -6307,12 +6305,12 @@ class NetPermissionDescriptor {
   });
 
   factory NetPermissionDescriptor({
-    required _i2.String name,
+    _i2.String? name,
     _i2.String? host,
   }) =>
       NetPermissionDescriptor._(
         name: name,
-        host: host ?? _i8.undefined,
+        host: host,
       );
 }
 
@@ -6361,12 +6359,12 @@ class EnvPermissionDescriptor {
   });
 
   factory EnvPermissionDescriptor({
-    required _i2.String name,
+    _i2.String? name,
     _i2.String? variable,
   }) =>
       EnvPermissionDescriptor._(
         name: name,
-        variable: variable ?? _i8.undefined,
+        variable: variable,
       );
 }
 
@@ -6411,7 +6409,7 @@ class SysPermissionDescriptor {
   });
 
   factory SysPermissionDescriptor({
-    required _i2.String name,
+    _i2.String? name,
     _i4.KindOptions? kind,
   }) =>
       SysPermissionDescriptor._(
@@ -6465,7 +6463,7 @@ class FfiPermissionDescriptor {
   });
 
   factory FfiPermissionDescriptor({
-    required _i2.String name,
+    _i2.String? name,
     _i2.Object? path,
   }) =>
       FfiPermissionDescriptor._(
@@ -6512,7 +6510,7 @@ extension FfiPermissionDescriptor$Typings on FfiPermissionDescriptor {
 class HrtimePermissionDescriptor {
   external factory HrtimePermissionDescriptor._({_i2.dynamic name});
 
-  factory HrtimePermissionDescriptor({required _i2.String name}) =>
+  factory HrtimePermissionDescriptor({_i2.String? name}) =>
       HrtimePermissionDescriptor._(name: name);
 }
 
@@ -7040,8 +7038,8 @@ extension IInline13$Typings on IInline13 {
 class SymlinkOptions {
   external factory SymlinkOptions._({_i2.dynamic type});
 
-  factory SymlinkOptions({required _i4.TypeOptions type}) =>
-      SymlinkOptions._(type: type.name);
+  factory SymlinkOptions({_i4.TypeOptions? type}) =>
+      SymlinkOptions._(type: type?.name ?? _i8.undefined);
 }
 
 extension SymlinkOptions$Typings on SymlinkOptions {
@@ -7064,7 +7062,22 @@ extension SymlinkOptions$Typings on SymlinkOptions {
 /// request from a remote client.
 @_i1.JS()
 @_i1.staticInterop
-class RequestEvent {}
+@_i1.anonymous
+class RequestEvent {
+  external factory RequestEvent._({
+    _i2.dynamic request,
+    _i2.dynamic respondWith,
+  });
+
+  factory RequestEvent({
+    _i7.Request? request,
+    _i2.Future<void> Function(_i2.Object)? respondWith,
+  }) =>
+      RequestEvent._(
+        request: request ?? _i8.undefined,
+        respondWith: respondWith == null ? null : _i3.allowInterop(respondWith),
+      );
+}
 
 extension RequestEvent$Typings on RequestEvent {
   /// The request from the client in the form of the web platform
@@ -7073,20 +7086,18 @@ extension RequestEvent$Typings on RequestEvent {
         this,
         'request',
       );
+  set respondWith(_i2.Future<void> Function(_i2.Object) value) {
+    _i3.setProperty(
+      this,
+      'respondWith',
+      _i3.allowInterop(value),
+    );
+  }
 
-  /// The method to be used to respond to the event. The response needs to
-  ///  either be an instance of {@linkcode Response} or a promise that resolves
-  ///  with an instance of `Response`.
-  ///
-  ///  When the response is successfully processed then the promise returned
-  ///  will be resolved. If there are any issues with sending the response,
-  ///  the promise will be rejected.
-  _i2.Future<void> respondWith(_i2.Object r) =>
-      _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<void> Function(_i2.Object) get respondWith => _i3.getProperty(
         this,
         'respondWith',
-        [r],
-      ));
+      );
 }
 
 /// The async iterable that is returned from {@linkcode Deno.serveHttp} which
@@ -7094,7 +7105,25 @@ extension RequestEvent$Typings on RequestEvent {
 /// requests on the HTTP server connection.
 @_i1.JS()
 @_i1.staticInterop
-class HttpConn implements _i10.AsyncIterable<_i4.RequestEvent> {}
+@_i1.anonymous
+class HttpConn implements _i10.AsyncIterable<_i4.RequestEvent> {
+  external factory HttpConn._({
+    _i2.dynamic rid,
+    _i2.dynamic nextRequest,
+    _i2.dynamic close,
+  });
+
+  factory HttpConn({
+    _i2.num? rid,
+    _i2.Future<_i4.RequestEvent?> Function()? nextRequest,
+    void Function()? close,
+  }) =>
+      HttpConn._(
+        rid: rid,
+        nextRequest: nextRequest == null ? null : _i3.allowInterop(nextRequest),
+        close: close == null ? null : _i3.allowInterop(close),
+      );
+}
 
 extension HttpConn$Typings on HttpConn {
   /// The resource ID associated with this connection. Generally users do not
@@ -7103,30 +7132,30 @@ extension HttpConn$Typings on HttpConn {
         this,
         'rid',
       );
-
-  /// An alternative to the async iterable interface which provides promises
-  ///  which resolve with either a {@linkcode RequestEvent} when there is
-  ///  another request or `null` when the client has closed the connection.
-  _i2.Future<_i4.RequestEvent?> nextRequest() =>
-      _i3.promiseToFuture(_i3.callMethod(
-        this,
-        'nextRequest',
-        [],
-      ));
-
-  /// Initiate a server side closure of the connection, indicating to the
-  ///  client that you refuse to accept any more requests on this connection.
-  ///
-  ///  Typically the client closes the connection, which will result in the
-  ///  async iterable terminating or the `nextRequest()` method returning
-  ///  `null`.
-  void close() {
-    _i3.callMethod(
+  set nextRequest(_i2.Future<_i4.RequestEvent?> Function() value) {
+    _i3.setProperty(
       this,
-      'close',
-      [],
+      'nextRequest',
+      _i3.allowInterop(value),
     );
   }
+
+  _i2.Future<_i4.RequestEvent?> Function() get nextRequest => _i3.getProperty(
+        this,
+        'nextRequest',
+      );
+  set close(void Function() value) {
+    _i3.setProperty(
+      this,
+      'close',
+      _i3.allowInterop(value),
+    );
+  }
+
+  void Function() get close => _i3.getProperty(
+        this,
+        'close',
+      );
 }
 
 /// The object that is returned from a {@linkcode Deno.upgradeWebSocket}
@@ -7141,12 +7170,12 @@ class WebSocketUpgrade {
   });
 
   factory WebSocketUpgrade({
-    required _i7.Response response,
-    required _i7.WebSocket socket,
+    _i7.Response? response,
+    _i7.WebSocket? socket,
   }) =>
       WebSocketUpgrade._(
-        response: response,
-        socket: socket,
+        response: response ?? _i8.undefined,
+        socket: socket ?? _i8.undefined,
       );
 }
 
@@ -7197,8 +7226,8 @@ class UpgradeWebSocketOptions {
     _i2.num? idleTimeout,
   }) =>
       UpgradeWebSocketOptions._(
-        protocol: protocol ?? _i8.undefined,
-        idleTimeout: idleTimeout ?? _i8.undefined,
+        protocol: protocol,
+        idleTimeout: idleTimeout,
       );
 }
 
@@ -7339,9 +7368,9 @@ class CAARecord {
   });
 
   factory CAARecord({
-    required _i2.bool critical,
-    required _i2.String tag,
-    required _i2.String value,
+    _i2.bool? critical,
+    _i2.String? tag,
+    _i2.String? value,
   }) =>
       CAARecord._(
         critical: critical,
@@ -7410,8 +7439,8 @@ class MXRecord {
   });
 
   factory MXRecord({
-    required _i2.num preference,
-    required _i2.String exchange,
+    _i2.num? preference,
+    _i2.String? exchange,
   }) =>
       MXRecord._(
         preference: preference,
@@ -7464,12 +7493,12 @@ class NAPTRRecord {
   });
 
   factory NAPTRRecord({
-    required _i2.num order,
-    required _i2.num preference,
-    required _i2.String flags,
-    required _i2.String services,
-    required _i2.String regexp,
-    required _i2.String replacement,
+    _i2.num? order,
+    _i2.num? preference,
+    _i2.String? flags,
+    _i2.String? services,
+    _i2.String? regexp,
+    _i2.String? replacement,
   }) =>
       NAPTRRecord._(
         order: order,
@@ -7572,13 +7601,13 @@ class SOARecord {
   });
 
   factory SOARecord({
-    required _i2.String mname,
-    required _i2.String rname,
-    required _i2.num serial,
-    required _i2.num refresh,
-    required _i2.num retry,
-    required _i2.num expire,
-    required _i2.num minimum,
+    _i2.String? mname,
+    _i2.String? rname,
+    _i2.num? serial,
+    _i2.num? refresh,
+    _i2.num? retry,
+    _i2.num? expire,
+    _i2.num? minimum,
   }) =>
       SOARecord._(
         mname: mname,
@@ -7691,10 +7720,10 @@ class SRVRecord {
   });
 
   factory SRVRecord({
-    required _i2.num priority,
-    required _i2.num weight,
-    required _i2.num port,
-    required _i2.String target,
+    _i2.num? priority,
+    _i2.num? weight,
+    _i2.num? port,
+    _i2.String? target,
   }) =>
       SRVRecord._(
         priority: priority,
@@ -7762,7 +7791,7 @@ class ServeHandlerInfo {
   external factory ServeHandlerInfo._({_i2.dynamic remoteAddr});
 
   factory ServeHandlerInfo({_i2.dynamic remoteAddr}) =>
-      ServeHandlerInfo._(remoteAddr: remoteAddr ?? _i8.undefined);
+      ServeHandlerInfo._(remoteAddr: remoteAddr);
 }
 
 extension ServeHandlerInfo$Typings on ServeHandlerInfo {
@@ -7775,7 +7804,7 @@ extension ServeHandlerInfo$Typings on ServeHandlerInfo {
     _i3.setProperty(
       this,
       'remoteAddr',
-      value ?? _i8.undefined,
+      value,
     );
   }
 }
@@ -7830,16 +7859,16 @@ class ServeOptions {
     _i2.String? hostname,
     _i7.AbortSignal? signal,
     _i2.bool? reusePort,
-    _i2.Object Function(_i2.Object?)? onError,
+    _i2.Object Function([_i2.Object?])? onError,
     void Function(_i2.dynamic)? onListen,
   }) =>
       ServeOptions._(
-        port: port ?? _i8.undefined,
-        hostname: hostname ?? _i8.undefined,
+        port: port,
+        hostname: hostname,
         signal: signal ?? _i8.undefined,
-        reusePort: reusePort ?? _i8.undefined,
-        onError: onError == null ? _i8.undefined : _i3.allowInterop(onError),
-        onListen: onListen == null ? _i8.undefined : _i3.allowInterop(onListen),
+        reusePort: reusePort,
+        onError: onError == null ? null : _i3.allowInterop(onError),
+        onListen: onListen == null ? null : _i3.allowInterop(onListen),
       );
 }
 
@@ -7906,11 +7935,11 @@ extension ServeOptions$Typings on ServeOptions {
   }
 
   /// The handler to invoke when route handlers throw an error.
-  _i2.Object Function(_i2.Object?)? get onError => _i3.getProperty(
+  _i2.Object Function([_i2.Object?])? get onError => _i3.getProperty(
         this,
         'onError',
       );
-  set onError(_i2.Object Function(_i2.Object?)? value) {
+  set onError(_i2.Object Function([_i2.Object?])? value) {
     _i3.setProperty(
       this,
       'onError',
@@ -7949,24 +7978,24 @@ class ServeTlsOptions implements _i4.ServeOptions {
   });
 
   factory ServeTlsOptions({
-    required _i2.String cert,
-    required _i2.String key,
+    _i2.String? cert,
+    _i2.String? key,
     _i2.num? port,
     _i2.String? hostname,
     _i7.AbortSignal? signal,
     _i2.bool? reusePort,
-    _i2.Object Function(_i2.Object?)? onError,
+    _i2.Object Function([_i2.Object?])? onError,
     void Function(_i2.dynamic)? onListen,
   }) =>
       ServeTlsOptions._(
         cert: cert,
         key: key,
-        port: port ?? _i8.undefined,
-        hostname: hostname ?? _i8.undefined,
+        port: port,
+        hostname: hostname,
         signal: signal ?? _i8.undefined,
-        reusePort: reusePort ?? _i8.undefined,
-        onError: onError == null ? _i8.undefined : _i3.allowInterop(onError),
-        onListen: onListen == null ? _i8.undefined : _i3.allowInterop(onListen),
+        reusePort: reusePort,
+        onError: onError == null ? null : _i3.allowInterop(onError),
+        onListen: onListen == null ? null : _i3.allowInterop(onListen),
       );
 }
 
@@ -8004,8 +8033,8 @@ extension ServeTlsOptions$Typings on ServeTlsOptions {
 class ServeInit {
   external factory ServeInit._({_i2.dynamic handler});
 
-  factory ServeInit({required _i4.ServeHandler handler}) =>
-      ServeInit._(handler: _i3.allowInterop(handler));
+  factory ServeInit({_i4.ServeHandler? handler}) =>
+      ServeInit._(handler: handler == null ? null : _i3.allowInterop(handler));
 }
 
 extension ServeInit$Typings on ServeInit {
@@ -8026,7 +8055,25 @@ extension ServeInit$Typings on ServeInit {
 /// An instance of the server created using `Deno.serve()` API.
 @_i1.JS()
 @_i1.staticInterop
-class Server {}
+@_i1.anonymous
+class Server {
+  external factory Server._({
+    _i2.dynamic finished,
+    _i2.dynamic ref,
+    _i2.dynamic unref,
+  });
+
+  factory Server({
+    _i2.Future<void>? finished,
+    void Function()? ref,
+    void Function()? unref,
+  }) =>
+      Server._(
+        finished: finished,
+        ref: ref == null ? null : _i3.allowInterop(ref),
+        unref: unref == null ? null : _i3.allowInterop(unref),
+      );
+}
 
 extension Server$Typings on Server {
   /// A promise that resolves once server finishes - eg. when aborted using
@@ -8043,26 +8090,30 @@ extension Server$Typings on Server {
     );
   }
 
-  /// Make the server block the event loop from finishing.
-  ///
-  ///  Note: the server blocks the event loop from finishing by default.
-  ///  This method is only meaningful after `.unref()` is called.
-  void ref() {
-    _i3.callMethod(
+  set ref(void Function() value) {
+    _i3.setProperty(
       this,
       'ref',
-      [],
+      _i3.allowInterop(value),
     );
   }
 
-  /// Make the server not block the event loop from finishing.
-  void unref() {
-    _i3.callMethod(
+  void Function() get ref => _i3.getProperty(
+        this,
+        'ref',
+      );
+  set unref(void Function() value) {
+    _i3.setProperty(
       this,
       'unref',
-      [],
+      _i3.allowInterop(value),
     );
   }
+
+  void Function() get unref => _i3.getProperty(
+        this,
+        'unref',
+      );
 }
 
 @_i1.JS()
@@ -8076,12 +8127,12 @@ class NetAddr {
   });
 
   factory NetAddr({
-    required _i4.Transport transport,
-    required _i2.String hostname,
-    required _i2.num port,
+    _i4.Transport? transport,
+    _i2.String? hostname,
+    _i2.num? port,
   }) =>
       NetAddr._(
-        transport: transport.name,
+        transport: transport?.name ?? _i8.undefined,
         hostname: hostname,
         port: port,
       );
@@ -8135,11 +8186,11 @@ class UnixAddr {
   });
 
   factory UnixAddr({
-    required _i4.TransportOptions transport,
-    required _i2.String path,
+    _i4.TransportOptions? transport,
+    _i2.String? path,
   }) =>
       UnixAddr._(
-        transport: transport.name,
+        transport: transport?.name ?? _i8.undefined,
         path: path,
       );
 }
@@ -8174,7 +8225,34 @@ extension UnixAddr$Typings on UnixAddr {
 /// A generic network listener for stream-oriented protocols.
 @_i1.JS()
 @_i1.staticInterop
-class Listener<T extends _i4.Conn> implements _i10.AsyncIterable<T> {}
+@_i1.anonymous
+class Listener<T extends _i4.Conn> implements _i10.AsyncIterable<T> {
+  external factory Listener._({
+    _i2.dynamic addr,
+    _i2.dynamic rid,
+    _i2.dynamic accept,
+    _i2.dynamic close,
+    _i2.dynamic ref,
+    _i2.dynamic unref,
+  });
+
+  factory Listener({
+    _i4.Addr? addr,
+    _i2.num? rid,
+    _i2.Future<_i4.Conn> Function()? accept,
+    void Function()? close,
+    void Function()? ref,
+    void Function()? unref,
+  }) =>
+      Listener._(
+        addr: addr ?? _i8.undefined,
+        rid: rid,
+        accept: accept == null ? null : _i3.allowInterop(accept),
+        close: close == null ? null : _i3.allowInterop(close),
+        ref: ref == null ? null : _i3.allowInterop(ref),
+        unref: unref == null ? null : _i3.allowInterop(unref),
+      );
+}
 
 extension Listener$Typings<T extends _i4.Conn> on Listener<T> {
   /// Return the address of the `Listener`.
@@ -8188,49 +8266,101 @@ extension Listener$Typings<T extends _i4.Conn> on Listener<T> {
         this,
         'rid',
       );
+  set accept(_i2.Future<T> Function() value) {
+    _i3.setProperty(
+      this,
+      'accept',
+      _i3.allowInterop(value),
+    );
+  }
 
-  /// Waits for and resolves to the next connection to the `Listener`.
-  _i2.Future<T> accept() => _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<T> Function() get accept => _i3.getProperty(
         this,
         'accept',
-        [],
-      ));
-
-  /// Close closes the listener. Any pending accept promises will be rejected
-  ///  with errors.
-  void close() {
-    _i3.callMethod(
+      );
+  set close(void Function() value) {
+    _i3.setProperty(
       this,
       'close',
-      [],
+      _i3.allowInterop(value),
     );
   }
 
-  /// Make the listener block the event loop from finishing.
-  ///
-  ///  Note: the listener blocks the event loop from finishing by default.
-  ///  This method is only meaningful after `.unref()` is called.
-  void ref() {
-    _i3.callMethod(
+  void Function() get close => _i3.getProperty(
+        this,
+        'close',
+      );
+  set ref(void Function() value) {
+    _i3.setProperty(
       this,
       'ref',
-      [],
+      _i3.allowInterop(value),
     );
   }
 
-  /// Make the listener not block the event loop from finishing.
-  void unref() {
-    _i3.callMethod(
+  void Function() get ref => _i3.getProperty(
+        this,
+        'ref',
+      );
+  set unref(void Function() value) {
+    _i3.setProperty(
       this,
       'unref',
-      [],
+      _i3.allowInterop(value),
     );
   }
+
+  void Function() get unref => _i3.getProperty(
+        this,
+        'unref',
+      );
 }
 
 @_i1.JS()
 @_i1.staticInterop
-class Conn implements _i4.Reader, _i4.Writer, _i4.Closer {}
+@_i1.anonymous
+class Conn implements _i4.Reader, _i4.Writer, _i4.Closer {
+  external factory Conn._({
+    _i2.dynamic localAddr,
+    _i2.dynamic remoteAddr,
+    _i2.dynamic rid,
+    _i2.dynamic readable,
+    _i2.dynamic writable,
+    _i2.dynamic closeWrite,
+    _i2.dynamic ref,
+    _i2.dynamic unref,
+    _i2.dynamic read,
+    _i2.dynamic write,
+    _i2.dynamic close,
+  });
+
+  factory Conn({
+    _i4.Addr? localAddr,
+    _i4.Addr? remoteAddr,
+    _i2.num? rid,
+    _i7.ReadableStream<_i9.Uint8List>? readable,
+    _i7.WritableStream<_i9.Uint8List>? writable,
+    _i2.Future<void> Function()? closeWrite,
+    void Function()? ref,
+    void Function()? unref,
+    _i2.Future<_i2.num?> Function(_i9.Uint8List)? read,
+    _i2.Future<_i2.num> Function(_i9.Uint8List)? write,
+    void Function()? close,
+  }) =>
+      Conn._(
+        localAddr: localAddr ?? _i8.undefined,
+        remoteAddr: remoteAddr ?? _i8.undefined,
+        rid: rid,
+        readable: readable ?? _i8.undefined,
+        writable: writable ?? _i8.undefined,
+        closeWrite: closeWrite == null ? null : _i3.allowInterop(closeWrite),
+        ref: ref == null ? null : _i3.allowInterop(ref),
+        unref: unref == null ? null : _i3.allowInterop(unref),
+        read: read == null ? null : _i3.allowInterop(read),
+        write: write == null ? null : _i3.allowInterop(write),
+        close: close == null ? null : _i3.allowInterop(close),
+      );
+}
 
 extension Conn$Typings on Conn {
   /// The local address of the connection.
@@ -8258,39 +8388,42 @@ extension Conn$Typings on Conn {
         this,
         'writable',
       );
+  set closeWrite(_i2.Future<void> Function() value) {
+    _i3.setProperty(
+      this,
+      'closeWrite',
+      _i3.allowInterop(value),
+    );
+  }
 
-  /// Shuts down (`shutdown(2)`) the write side of the connection. Most
-  ///  callers should just use `close()`.
-  _i2.Future<void> closeWrite() => _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<void> Function() get closeWrite => _i3.getProperty(
         this,
         'closeWrite',
-        [],
-      ));
-
-  /// *UNSTABLE**: New API, yet to be vetted.
-  ///
-  ///  Make the connection block the event loop from finishing.
-  ///
-  ///  Note: the connection blocks the event loop from finishing by default.
-  ///  This method is only meaningful after `.unref()` is called.
-  void ref() {
-    _i3.callMethod(
+      );
+  set ref(void Function() value) {
+    _i3.setProperty(
       this,
       'ref',
-      [],
+      _i3.allowInterop(value),
     );
   }
 
-  /// *UNSTABLE**: New API, yet to be vetted.
-  ///
-  ///  Make the connection not block the event loop from finishing.
-  void unref() {
-    _i3.callMethod(
+  void Function() get ref => _i3.getProperty(
+        this,
+        'ref',
+      );
+  set unref(void Function() value) {
+    _i3.setProperty(
       this,
       'unref',
-      [],
+      _i3.allowInterop(value),
     );
   }
+
+  void Function() get unref => _i3.getProperty(
+        this,
+        'unref',
+      );
 }
 
 @_i1.JS()
@@ -8304,18 +8437,57 @@ class TlsHandshakeInfo {
 
 @_i1.JS()
 @_i1.staticInterop
-class TlsConn implements _i4.Conn {}
+@_i1.anonymous
+class TlsConn implements _i4.Conn {
+  external factory TlsConn._({
+    _i2.dynamic handshake,
+    _i2.dynamic localAddr,
+    _i2.dynamic remoteAddr,
+    _i2.dynamic rid,
+    _i2.dynamic readable,
+    _i2.dynamic writable,
+    _i2.dynamic closeWrite,
+    _i2.dynamic ref,
+    _i2.dynamic unref,
+  });
+
+  factory TlsConn({
+    _i2.Future<_i4.TlsHandshakeInfo> Function()? handshake,
+    _i4.Addr? localAddr,
+    _i4.Addr? remoteAddr,
+    _i2.num? rid,
+    _i7.ReadableStream<_i9.Uint8List>? readable,
+    _i7.WritableStream<_i9.Uint8List>? writable,
+    _i2.Future<void> Function()? closeWrite,
+    void Function()? ref,
+    void Function()? unref,
+  }) =>
+      TlsConn._(
+        handshake: handshake == null ? null : _i3.allowInterop(handshake),
+        localAddr: localAddr ?? _i8.undefined,
+        remoteAddr: remoteAddr ?? _i8.undefined,
+        rid: rid,
+        readable: readable ?? _i8.undefined,
+        writable: writable ?? _i8.undefined,
+        closeWrite: closeWrite == null ? null : _i3.allowInterop(closeWrite),
+        ref: ref == null ? null : _i3.allowInterop(ref),
+        unref: unref == null ? null : _i3.allowInterop(unref),
+      );
+}
 
 extension TlsConn$Typings on TlsConn {
-  /// Runs the client or server handshake protocol to completion if that has
-  ///  not happened yet. Calling this method is optional; the TLS handshake
-  ///  will be completed automatically as soon as data is sent or received.
-  _i2.Future<_i4.TlsHandshakeInfo> handshake() =>
-      _i3.promiseToFuture(_i3.callMethod(
+  set handshake(_i2.Future<_i4.TlsHandshakeInfo> Function() value) {
+    _i3.setProperty(
+      this,
+      'handshake',
+      _i3.allowInterop(value),
+    );
+  }
+
+  _i2.Future<_i4.TlsHandshakeInfo> Function() get handshake => _i3.getProperty(
         this,
         'handshake',
-        [],
-      ));
+      );
 }
 
 @_i1.JS()
@@ -8328,12 +8500,12 @@ class ListenOptions {
   });
 
   factory ListenOptions({
-    required _i2.num port,
+    _i2.num? port,
     _i2.String? hostname,
   }) =>
       ListenOptions._(
         port: port,
-        hostname: hostname ?? _i8.undefined,
+        hostname: hostname,
       );
 }
 
@@ -8382,12 +8554,12 @@ class TcpListenOptions implements _i4.ListenOptions {
   });
 
   factory TcpListenOptions({
-    required _i2.num port,
+    _i2.num? port,
     _i2.String? hostname,
   }) =>
       TcpListenOptions._(
         port: port,
-        hostname: hostname ?? _i8.undefined,
+        hostname: hostname,
       );
 }
 
@@ -8432,12 +8604,12 @@ class ListenTlsOptions implements _i4.TcpListenOptions {
     _i2.List<_i2.String>? alpnProtocols,
   }) =>
       ListenTlsOptions._(
-        key: key ?? _i8.undefined,
-        cert: cert ?? _i8.undefined,
-        certFile: certFile ?? _i8.undefined,
-        keyFile: keyFile ?? _i8.undefined,
-        transport: transport ?? _i8.undefined,
-        alpnProtocols: alpnProtocols ?? _i8.undefined,
+        key: key,
+        cert: cert,
+        certFile: certFile,
+        keyFile: keyFile,
+        transport: transport,
+        alpnProtocols: alpnProtocols,
       );
 }
 
@@ -8541,14 +8713,14 @@ class ConnectOptions {
   });
 
   factory ConnectOptions({
-    required _i2.num port,
+    _i2.num? port,
     _i2.String? hostname,
     _i2.String? transport,
   }) =>
       ConnectOptions._(
         port: port,
-        hostname: hostname ?? _i8.undefined,
-        transport: transport ?? _i8.undefined,
+        hostname: hostname,
+        transport: transport,
       );
 }
 
@@ -8597,28 +8769,73 @@ extension ConnectOptions$Typings on ConnectOptions {
 
 @_i1.JS()
 @_i1.staticInterop
-class TcpConn implements _i4.Conn {}
+@_i1.anonymous
+class TcpConn implements _i4.Conn {
+  external factory TcpConn._({
+    _i2.dynamic setNoDelay,
+    _i2.dynamic setKeepAlive,
+    _i2.dynamic localAddr,
+    _i2.dynamic remoteAddr,
+    _i2.dynamic rid,
+    _i2.dynamic readable,
+    _i2.dynamic writable,
+    _i2.dynamic closeWrite,
+    _i2.dynamic ref,
+    _i2.dynamic unref,
+  });
+
+  factory TcpConn({
+    void Function([_i2.bool?])? setNoDelay,
+    void Function([_i2.bool?])? setKeepAlive,
+    _i4.Addr? localAddr,
+    _i4.Addr? remoteAddr,
+    _i2.num? rid,
+    _i7.ReadableStream<_i9.Uint8List>? readable,
+    _i7.WritableStream<_i9.Uint8List>? writable,
+    _i2.Future<void> Function()? closeWrite,
+    void Function()? ref,
+    void Function()? unref,
+  }) =>
+      TcpConn._(
+        setNoDelay: setNoDelay == null ? null : _i3.allowInterop(setNoDelay),
+        setKeepAlive:
+            setKeepAlive == null ? null : _i3.allowInterop(setKeepAlive),
+        localAddr: localAddr ?? _i8.undefined,
+        remoteAddr: remoteAddr ?? _i8.undefined,
+        rid: rid,
+        readable: readable ?? _i8.undefined,
+        writable: writable ?? _i8.undefined,
+        closeWrite: closeWrite == null ? null : _i3.allowInterop(closeWrite),
+        ref: ref == null ? null : _i3.allowInterop(ref),
+        unref: unref == null ? null : _i3.allowInterop(unref),
+      );
+}
 
 extension TcpConn$Typings on TcpConn {
-  /// Enable/disable the use of Nagle's algorithm.
-  ///
-  ///  @param [noDelay=true]
-  void setNoDelay([_i2.bool? noDelay]) {
-    _i3.callMethod(
+  set setNoDelay(void Function([_i2.bool?]) value) {
+    _i3.setProperty(
       this,
       'setNoDelay',
-      [noDelay ?? _i8.undefined],
+      _i3.allowInterop(value),
     );
   }
 
-  /// Enable/disable keep-alive functionality.
-  void setKeepAlive([_i2.bool? keepAlive]) {
-    _i3.callMethod(
+  void Function([_i2.bool?]) get setNoDelay => _i3.getProperty(
+        this,
+        'setNoDelay',
+      );
+  set setKeepAlive(void Function([_i2.bool?]) value) {
+    _i3.setProperty(
       this,
       'setKeepAlive',
-      [keepAlive ?? _i8.undefined],
+      _i3.allowInterop(value),
     );
   }
+
+  void Function([_i2.bool?]) get setKeepAlive => _i3.getProperty(
+        this,
+        'setKeepAlive',
+      );
 }
 
 @_i1.JS()
@@ -8631,21 +8848,30 @@ class UnixConn implements _i4.Conn {
     _i2.dynamic rid,
     _i2.dynamic readable,
     _i2.dynamic writable,
+    _i2.dynamic closeWrite,
+    _i2.dynamic ref,
+    _i2.dynamic unref,
   });
 
   factory UnixConn({
-    required _i4.Addr localAddr,
-    required _i4.Addr remoteAddr,
-    required _i2.num rid,
-    required _i7.ReadableStream<_i9.Uint8List> readable,
-    required _i7.WritableStream<_i9.Uint8List> writable,
+    _i4.Addr? localAddr,
+    _i4.Addr? remoteAddr,
+    _i2.num? rid,
+    _i7.ReadableStream<_i9.Uint8List>? readable,
+    _i7.WritableStream<_i9.Uint8List>? writable,
+    _i2.Future<void> Function()? closeWrite,
+    void Function()? ref,
+    void Function()? unref,
   }) =>
       UnixConn._(
-        localAddr: localAddr,
-        remoteAddr: remoteAddr,
+        localAddr: localAddr ?? _i8.undefined,
+        remoteAddr: remoteAddr ?? _i8.undefined,
         rid: rid,
-        readable: readable,
-        writable: writable,
+        readable: readable ?? _i8.undefined,
+        writable: writable ?? _i8.undefined,
+        closeWrite: closeWrite == null ? null : _i3.allowInterop(closeWrite),
+        ref: ref == null ? null : _i3.allowInterop(ref),
+        unref: unref == null ? null : _i3.allowInterop(unref),
       );
 }
 
@@ -8662,7 +8888,7 @@ class ConnectTlsOptions {
   });
 
   factory ConnectTlsOptions({
-    required _i2.num port,
+    _i2.num? port,
     _i2.String? hostname,
     _i2.String? certFile,
     _i2.List<_i2.String>? caCerts,
@@ -8670,10 +8896,10 @@ class ConnectTlsOptions {
   }) =>
       ConnectTlsOptions._(
         port: port,
-        hostname: hostname ?? _i8.undefined,
-        certFile: certFile ?? _i8.undefined,
-        caCerts: caCerts ?? _i8.undefined,
-        alpnProtocols: alpnProtocols ?? _i8.undefined,
+        hostname: hostname,
+        certFile: certFile,
+        caCerts: caCerts,
+        alpnProtocols: alpnProtocols,
       );
 }
 
@@ -8772,9 +8998,9 @@ class StartTlsOptions {
     _i2.List<_i2.String>? alpnProtocols,
   }) =>
       StartTlsOptions._(
-        hostname: hostname ?? _i8.undefined,
-        caCerts: caCerts ?? _i8.undefined,
-        alpnProtocols: alpnProtocols ?? _i8.undefined,
+        hostname: hostname,
+        caCerts: caCerts,
+        alpnProtocols: alpnProtocols,
       );
 }
 
@@ -8896,7 +9122,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   ///  // do something with the text
   /// }
   /// ```
-  _Intersection39 get stdin => _i3.getProperty(
+  _Intersection32 get stdin => _i3.getProperty(
         this,
         'stdin',
       );
@@ -8908,7 +9134,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   ///
   /// These are low level constructs, and the {@linkcode console} interface is a
   /// more straight forward way to interact with `stdout` and `stderr`.
-  _Intersection40 get stdout => _i3.getProperty(
+  _Intersection33 get stdout => _i3.getProperty(
         this,
         'stdout',
       );
@@ -8920,7 +9146,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   ///
   /// These are low level constructs, and the {@linkcode console} interface is a
   /// more straight forward way to interact with `stdout` and `stderr`.
-  _Intersection41 get stderr => _i3.getProperty(
+  _Intersection34 get stderr => _i3.getProperty(
         this,
         'stderr',
       );
@@ -12746,8 +12972,8 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   /// ```ts
   /// Deno.inspect({a: {b: {c: {d: 'hello'}}}}, {depth: 2}); // { a: { b: [Object] } }
   /// ```
-  _i2.String inspect(
-    _i2.Object? value, [
+  _i2.String inspect([
+    _i2.Object? value,
     _i4.InspectOptions? options,
   ]) =>
       _i3.callMethod(

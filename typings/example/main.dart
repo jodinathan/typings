@@ -151,8 +151,8 @@ Future<void> makeGo() async {
   go.Node nodeStyle() => go.Node.$1()
     ..locationSpot = go.Spot.center
     ..bind.$1(
-        go.Binding('location', 'loc', (v, t) => go.Point.parse(v as String))
-            .makeTwoWay((v, s, m) => go.Point.stringify(v as go.Point)));
+        go.Binding('location', 'loc', ([v, t]) => go.Point.parse(v as String))
+            .makeTwoWay((v, [s, m]) => go.Point.stringify(v as go.Point)));
 
   go.TextBlock textStyle([String? text]) => go.TextBlock.$1()
     ..font = 'bold 11pt Lato, Helvetica, Arial, sans-serif'
@@ -376,7 +376,7 @@ Future<void> makeGo() async {
           ..isPanelMain = true
           ..strokeWidth = 2
           ..stroke = 'gray'
-          ..bind.$1(go.Binding('stroke', 'isSelected', allowInterop((sel, [k]) {
+          ..bind.$1(go.Binding('stroke', 'isSelected', allowInterop(([sel, k]) {
             return sel ? 'dodgerblue' : 'gray';
           })).ofObject()),
         go.Shape.$1() // the arrowhead

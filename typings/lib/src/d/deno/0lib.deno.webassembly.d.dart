@@ -85,7 +85,7 @@ class Global {
         _declaredGlobal,
         [
           descriptor,
-          v ?? _i7.undefined,
+          v,
         ],
       );
 }
@@ -134,7 +134,7 @@ class Instance {
         _declaredInstance,
         [
           module,
-          importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
+          importObject ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 }
@@ -365,11 +365,11 @@ class GlobalDescriptor {
 
   factory GlobalDescriptor({
     _i2.bool? mutable,
-    required _i3.ValueType value,
+    _i3.ValueType? value,
   }) =>
       GlobalDescriptor._(
-        mutable: mutable ?? _i7.undefined,
-        value: value.name,
+        mutable: mutable,
+        value: value?.name ?? _i7.undefined,
       );
 }
 
@@ -412,14 +412,14 @@ class MemoryDescriptor {
   });
 
   factory MemoryDescriptor({
-    required _i2.num initial,
+    _i2.num? initial,
     _i2.num? maximum,
     _i2.bool? shared,
   }) =>
       MemoryDescriptor._(
         initial: initial,
-        maximum: maximum ?? _i7.undefined,
-        shared: shared ?? _i7.undefined,
+        maximum: maximum,
+        shared: shared,
       );
 }
 
@@ -473,11 +473,11 @@ class ModuleExportDescriptor {
   });
 
   factory ModuleExportDescriptor({
-    required _i3.ImportExportKind kind,
-    required _i2.String name,
+    _i3.ImportExportKind? kind,
+    _i2.String? name,
   }) =>
       ModuleExportDescriptor._(
-        kind: kind.name,
+        kind: kind?.name ?? _i7.undefined,
         name: name,
       );
 }
@@ -522,12 +522,12 @@ class ModuleImportDescriptor {
   });
 
   factory ModuleImportDescriptor({
-    required _i3.ImportExportKind kind,
-    required _i2.String module,
-    required _i2.String name,
+    _i3.ImportExportKind? kind,
+    _i2.String? module,
+    _i2.String? name,
   }) =>
       ModuleImportDescriptor._(
-        kind: kind.name,
+        kind: kind?.name ?? _i7.undefined,
         module: module,
         name: name,
       );
@@ -585,14 +585,14 @@ class TableDescriptor {
   });
 
   factory TableDescriptor({
-    required _i3.TableKind element,
-    required _i2.num initial,
+    _i3.TableKind? element,
+    _i2.num? initial,
     _i2.num? maximum,
   }) =>
       TableDescriptor._(
         element: element,
         initial: initial,
-        maximum: maximum ?? _i7.undefined,
+        maximum: maximum,
       );
 }
 
@@ -645,12 +645,12 @@ class WebAssemblyInstantiatedSource {
   });
 
   factory WebAssemblyInstantiatedSource({
-    required _i3.Instance instance,
-    required _i3.Module module,
+    _i3.Instance? instance,
+    _i3.Module? module,
   }) =>
       WebAssemblyInstantiatedSource._(
-        instance: instance,
-        module: module,
+        instance: instance ?? _i7.undefined,
+        module: module ?? _i7.undefined,
       );
 }
 
@@ -740,7 +740,7 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
         'instantiate',
         [
           bytes,
-          importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
+          importObject ?? _i7.undefined ?? _i7.undefined,
         ],
       ));
 
@@ -770,7 +770,7 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
         'instantiate',
         [
           moduleObject,
-          importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
+          importObject ?? _i7.undefined ?? _i7.undefined,
         ],
       ));
 
@@ -838,7 +838,7 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
         'instantiateStreaming',
         [
           response,
-          importObject ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
+          importObject ?? _i7.undefined ?? _i7.undefined,
         ],
       ));
 

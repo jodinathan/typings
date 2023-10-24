@@ -3,13 +3,12 @@ library typings.vscode.interop.vscode_workspace; // ignore_for_file: no_leading_
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import '0index.d.dart' as _i3;
-import '0index.vscode.d.dart' as _i4;
-import 'dart:js_util' as _i5;
+import '0index.vscode.d.dart' as _i3;
+import 'dart:js_util' as _i4;
+import 'dart:typed_data' as _i5;
 import 'null_comon.vscode.workspace.d.dart' as _i6;
-import 'dart:typed_data' as _i7;
-import '/d/core.dart' as _i8;
-import '0index.vscode.workspace.d.dart' as _i9;
+import '/d/core.dart' as _i7;
+import '0index.vscode.workspace.d.dart' as _i8;
 
 @_i1.JS('vscode.workspace')
 external _i2.Object _self;
@@ -20,148 +19,95 @@ external _i2.Object _self;
 class _FsAccessor {}
 
 extension FsAccessor$Typings on _FsAccessor {
-  /// Retrieve metadata about a file.
-  ///
-  ///  @param uri The uri of the file to retrieve metadata about.
-  ///  @returns The file metadata about the file.
-  _i2.Future<_i3.Thenable<_i4.FileStat>> stat(_i4.Uri uri) =>
-      _i5.promiseToFuture(_i5.callMethod(
-        _i6.target386,
-        'stat',
-        [uri],
-      ));
+  set stat(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
+    _i4.setProperty(
+      this,
+      'stat',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Retrieve all entries of a {@link FileType.Directory directory}.
-  ///
-  ///  @param uri The uri of the folder.
-  ///  @returns An array of name/type-tuples or a thenable that resolves to such.
-  _i2.Future<
-      _i3.Thenable<
-          _i2.List<
-              (
-                _i2.String,
-                _i4.FileType,
-              )>>> readDirectory(_i4.Uri uri) =>
-      _i5.promiseToFuture(_i5.callMethod(
-        _i6.target386,
-        'readDirectory',
-        [uri],
-      ));
+  set readDirectory(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
+    _i4.setProperty(
+      this,
+      'readDirectory',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Create a new directory (Note, that new files are created via `write`-calls).
-  ///
-  ///  *Note* that missing directories are created automatically, e.g this call has
-  ///  `mkdirp` semantics.
-  ///
-  ///  @param uri The uri of the new folder.
-  _i2.Future<_i3.Thenable<void>> createDirectory(_i4.Uri uri) =>
-      _i5.promiseToFuture(_i5.callMethod(
-        _i6.target386,
-        'createDirectory',
-        [uri],
-      ));
+  set createDirectory(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
+    _i4.setProperty(
+      this,
+      'createDirectory',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Read the entire contents of a file.
-  ///
-  ///  @param uri The uri of the file.
-  ///  @returns An array of bytes or a thenable that resolves to such.
-  _i2.Future<_i3.Thenable<_i7.Uint8List>> readFile(_i4.Uri uri) =>
-      _i5.promiseToFuture(_i5.callMethod(
-        _i6.target386,
-        'readFile',
-        [uri],
-      ));
+  set readFile(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
+    _i4.setProperty(
+      this,
+      'readFile',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Write data to a file, replacing its entire contents.
-  ///
-  ///  @param uri The uri of the file.
-  ///  @param content The new content of the file.
-  _i2.Future<_i3.Thenable<void>> writeFile(
-    _i4.Uri uri,
-    _i7.Uint8List content,
-  ) =>
-      _i5.promiseToFuture(_i5.callMethod(
-        _i6.target386,
-        'writeFile',
-        [
-          uri,
-          content,
-        ],
-      ));
+  set writeFile(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.Uri,
+        _i5.Uint8List,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'writeFile',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Delete a file.
-  ///
-  ///  @param uri The resource that is to be deleted.
-  ///  @param options Defines if trash can should be used and if deletion of folders is recursive
-  _i2.Future<_i3.Thenable<void>> delete(
-    _i4.Uri uri, [
-    _i4.IInline42? options,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
-        _i6.target386,
-        'delete',
-        [
-          uri,
-          options ?? _i8.undefined,
-        ],
-      ));
+  set delete(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.Uri, [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'delete',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Rename a file or folder.
-  ///
-  ///  @param source The existing file.
-  ///  @param target The new location.
-  ///  @param options Defines if existing files should be overwritten.
-  _i2.Future<_i3.Thenable<void>> rename(
-    _i4.Uri source,
-    _i4.Uri target, [
-    _i4.IInline43? options,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
-        _i6.target386,
-        'rename',
-        [
-          source,
-          target,
-          options ?? _i8.undefined,
-        ],
-      ));
+  set rename(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.Uri,
+        _i3.Uri, [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'rename',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Copy files or folders.
-  ///
-  ///  @param source The existing file.
-  ///  @param target The destination location.
-  ///  @param options Defines if existing files should be overwritten.
-  _i2.Future<_i3.Thenable<void>> copy(
-    _i4.Uri source,
-    _i4.Uri target, [
-    _i4.IInline44? options,
-  ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
-        _i6.target386,
-        'copy',
-        [
-          source,
-          target,
-          options ?? _i8.undefined,
-        ],
-      ));
+  set copy(
+      _i2.Future<_i2.dynamic> Function(
+        _i3.Uri,
+        _i3.Uri, [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'copy',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Check if a given file system supports writing files.
-  ///
-  ///  Keep in mind that just because a file system supports writing, that does
-  ///  not mean that writes will always succeed. There may be permissions issues
-  ///  or other errors that prevent writing a file.
-  ///
-  ///  @param scheme The scheme of the filesystem, for example `file` or `git`.
-  ///
-  ///  @returns `true` if the file system supports writing, `false` if it does not
-  ///  support writing (i.e. it is readonly), and `undefined` if the editor does not
-  ///  know about the filesystem.
-  _i2.bool? isWritableFileSystem(_i2.String scheme) => _i5.callMethod(
-        _i6.target386,
-        'isWritableFileSystem',
-        [scheme],
-      );
+  set isWritableFileSystem(_i2.bool? Function(_i2.String) value) {
+    _i4.setProperty(
+      this,
+      'isWritableFileSystem',
+      _i4.allowInterop(value),
+    );
+  }
 }
 
 @_i1.JS()
@@ -172,32 +118,32 @@ class _WorkspaceFileAccessor {}
 extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   /// Scheme is the `http` part of `http://www.example.com/some/path?query#fragment`.
   /// The part before the first colon.
-  _i2.String get scheme => _i5.getProperty(
+  _i2.String get scheme => _i4.getProperty(
         this,
         'scheme',
       );
 
   /// Authority is the `www.example.com` part of `http://www.example.com/some/path?query#fragment`.
   /// The part between the first double slashes and the next slash.
-  _i2.String get authority => _i5.getProperty(
+  _i2.String get authority => _i4.getProperty(
         this,
         'authority',
       );
 
   /// Path is the `/some/path` part of `http://www.example.com/some/path?query#fragment`.
-  _i2.String get path => _i5.getProperty(
+  _i2.String get path => _i4.getProperty(
         this,
         'path',
       );
 
   /// Query is the `query` part of `http://www.example.com/some/path?query#fragment`.
-  _i2.String get query => _i5.getProperty(
+  _i2.String get query => _i4.getProperty(
         this,
         'query',
       );
 
   /// Fragment is the `fragment` part of `http://www.example.com/some/path?query#fragment`.
-  _i2.String get fragment => _i5.getProperty(
+  _i2.String get fragment => _i4.getProperty(
         this,
         'fragment',
       );
@@ -220,7 +166,7 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   /// u.path === '/shares/c$/file.txt'
   /// u.fsPath === '\\server\c$\folder\file.txt'
   /// ```
-  _i2.String get fsPath => _i5.getProperty(
+  _i2.String get fsPath => _i4.getProperty(
         this,
         'fsPath',
       );
@@ -231,16 +177,16 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   /// *Note* that for a while uris without a `scheme` were accepted. That is not correct
   /// as all uris should have a scheme. To avoid breakage of existing code the optional
   /// `strict`-argument has been added. We *strongly* advise to use it, e.g. `Uri.parse('my:uri', true)`
-  _i4.Uri parse(
+  _i3.Uri parse(
     _i2.String value, [
     _i2.bool? strict,
   ]) =>
-      _i5.callMethod(
-        _i6.target387,
+      _i4.callMethod(
+        _i6.target69,
         'parse',
         [
           value,
-          strict ?? _i8.undefined,
+          strict ?? _i7.undefined,
         ],
       );
 
@@ -262,8 +208,8 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   /// bad.path === '/coding/c'; // path is now broken
   /// bad.fragment === '/project1';
   /// ```
-  _i4.Uri file(_i2.String path) => _i5.callMethod(
-        _i6.target387,
+  _i3.Uri file(_i2.String path) => _i4.callMethod(
+        _i6.target69,
         'file',
         [path],
       );
@@ -282,12 +228,12 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   /// - the `..`-segment denotes the parent segment, the `.` denotes the current segment
   /// - paths have a root which always remains, for instance on windows drive-letters are roots
   /// so that is true: `joinPath(Uri.file('file:///c:/root'), '../../other').fsPath === 'c:/other'`
-  _i4.Uri joinPath(
-    _i4.Uri base, [
+  _i3.Uri joinPath(
+    _i3.Uri base, [
     _i2.Iterable<_i2.dynamic>? pathSegments,
   ]) =>
-      _i5.callMethod(
-        _i6.target387,
+      _i4.callMethod(
+        _i6.target69,
         'joinPath',
         [
           base,
@@ -296,8 +242,8 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
       );
 
   /// Create an URI from its component parts
-  _i4.Uri from(_i4.IInline5 components) => _i5.callMethod(
-        _i6.target387,
+  _i3.Uri from(_i3.IInline5 components) => _i4.callMethod(
+        _i6.target69,
         'from',
         [components],
       );
@@ -314,8 +260,8 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   ///   the empty string.
   ///  @returns A new Uri that reflects the given change. Will return `this` Uri if the change
   ///   is not changing anything.
-  _i4.Uri with$(_i4.IInline6 change) => _i5.callMethod(
-        _i6.target387,
+  _i3.Uri with$(_i3.IInline6 change) => _i4.callMethod(
+        _i6.target69,
         'with',
         [change],
       );
@@ -335,17 +281,17 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   ///  @param skipEncoding Do not percentage-encode the result, defaults to `false`. Note that
   /// 	the `#` and `?` characters occurring in the path will always be encoded.
   ///  @returns A string representation of this Uri.
-  _i2.String toString$([_i2.bool? skipEncoding]) => _i5.callMethod(
-        _i6.target387,
+  _i2.String toString$([_i2.bool? skipEncoding]) => _i4.callMethod(
+        _i6.target69,
         'toString',
-        [skipEncoding ?? _i8.undefined],
+        [skipEncoding ?? _i7.undefined],
       );
 
   /// Returns a JSON representation of this Uri.
   ///
   ///  @returns An object.
-  _i2.dynamic toJSON() => _i5.callMethod(
-        _i6.target387,
+  _i2.dynamic toJSON() => _i4.callMethod(
+        _i6.target69,
         'toJSON',
         [],
       );
@@ -356,8 +302,8 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
     _i2.String query,
     _i2.String fragment,
   ) =>
-      _i5.callMethod(
-        _i6.target387,
+      _i4.callMethod(
+        _i6.target69,
         'call',
         [
           this,
@@ -472,13 +418,13 @@ class IInline64 {}
 
 extension IInline64$Typings on IInline64 {
   /// The uri of a workspace folder that's to be added.
-  _i4.Uri get uri => _i5.getProperty(
+  _i3.Uri get uri => _i4.getProperty(
         this,
         'uri',
       );
 
   /// The name of a workspace folder that's to be added.
-  _i2.String? get name => _i5.getProperty(
+  _i2.String? get name => _i4.getProperty(
         this,
         'name',
       );
@@ -491,28 +437,28 @@ class IInline65 {}
 
 extension IInline65$Typings on IInline65 {
   /// The {@link TextDocument.languageId language} of the document.
-  _i2.String? get language => _i5.getProperty(
+  _i2.String? get language => _i4.getProperty(
         this,
         'language',
       );
   set language(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'language',
-      value ?? _i8.undefined,
+      value ?? _i7.undefined,
     );
   }
 
   /// The initial contents of the document.
-  _i2.String? get content => _i5.getProperty(
+  _i2.String? get content => _i4.getProperty(
         this,
         'content',
       );
   set content(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'content',
-      value ?? _i8.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -524,13 +470,13 @@ class IInline66 {}
 
 extension IInline66$Typings on IInline66 {
   /// Whether the file system provider use case sensitive compare for {@link Uri.pathpaths}
-  _i2.bool? get isCaseSensitive => _i5.getProperty(
+  _i2.bool? get isCaseSensitive => _i4.getProperty(
         this,
         'isCaseSensitive',
       );
 
   /// Whether the file system provider is readonly, no modifications like write, delete, create are possible.
-  _i2.bool? get isReadonly => _i5.getProperty(
+  _i2.bool? get isReadonly => _i4.getProperty(
         this,
         'isReadonly',
       );
@@ -545,7 +491,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// files, e.g. `vscode.workspace.fs.readDirectory(someUri)` allows to retrieve all entries
   /// of a directory or `vscode.workspace.fs.stat(anotherUri)` returns the meta data for a
   /// file.
-  _i4.FileSystem get fs => _i5.getProperty(
+  _i3.FileSystem get fs => _i4.getProperty(
         this,
         'fs',
       );
@@ -555,7 +501,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///
   /// Refer to https://code.visualstudio.com/docs/editor/workspaces for more information
   /// on workspaces.
-  _i2.String? get rootPath => _i5.getProperty(
+  _i2.String? get rootPath => _i4.getProperty(
         this,
         'rootPath',
       );
@@ -565,7 +511,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///
   /// Refer to https://code.visualstudio.com/docs/editor/workspaces for more information
   /// on workspaces.
-  _i2.List<_i4.WorkspaceFolder>? get workspaceFolders => (_i5.getProperty(
+  _i2.List<_i3.WorkspaceFolder>? get workspaceFolders => (_i4.getProperty(
         this,
         'workspaceFolders',
       ) as _i2.List?)
@@ -576,7 +522,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///
   /// Refer to https://code.visualstudio.com/docs/editor/workspaces for more information on
   /// the concept of workspaces.
-  _i2.String? get name => _i5.getProperty(
+  _i2.String? get name => _i4.getProperty(
         this,
         'name',
       );
@@ -611,7 +557,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// configuration data into the file. You can use `workspace.getConfiguration().update()`
   /// for that purpose which will work both when a single folder is opened as
   /// well as an untitled or saved workspace.
-  _i4.Uri? get workspaceFile => _i5.getProperty(
+  _i3.Uri? get workspaceFile => _i4.getProperty(
         this,
         'workspaceFile',
       );
@@ -622,14 +568,14 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// because in that case the currently executing extensions (including the one that listens to this
   /// event) will be terminated and restarted so that the (deprecated) `rootPath` property is updated
   /// to point to the first workspace folder.
-  _i4.Event<_i4.WorkspaceFoldersChangeEvent> get onDidChangeWorkspaceFolders =>
-      _i5.getProperty(
+  _i3.Event<_i3.WorkspaceFoldersChangeEvent> get onDidChangeWorkspaceFolders =>
+      _i4.getProperty(
         this,
         'onDidChangeWorkspaceFolders',
       );
 
   /// All text documents currently known to the editor.
-  _i2.List<_i4.TextDocument> get textDocuments => (_i5.getProperty(
+  _i2.List<_i3.TextDocument> get textDocuments => (_i4.getProperty(
         this,
         'textDocuments',
       ) as _i2.List)
@@ -644,7 +590,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// - The event is emitted before the {@link TextDocumentdocument} is updated in the
   /// {@link window.activeTextEditoractive text editor}
   /// - When a {@link TextDocumenttext document} is already open (e.g.: open in another {@link window.visibleTextEditorsvisible text editor}) this event is not emitted
-  _i4.Event<_i4.TextDocument> get onDidOpenTextDocument => _i5.getProperty(
+  _i3.Event<_i3.TextDocument> get onDidOpenTextDocument => _i4.getProperty(
         this,
         'onDidOpenTextDocument',
       );
@@ -657,7 +603,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///
   /// *Note 2:* A document can be open but not shown in an editor which means this event can fire
   /// for a document that has not been shown in an editor.
-  _i4.Event<_i4.TextDocument> get onDidCloseTextDocument => _i5.getProperty(
+  _i3.Event<_i3.TextDocument> get onDidCloseTextDocument => _i4.getProperty(
         this,
         'onDidCloseTextDocument',
       );
@@ -665,8 +611,8 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// An event that is emitted when a {@link TextDocumenttext document} is changed. This usually happens
   /// when the {@link TextDocument.getTextcontents} changes but also when other things like the
   /// {@link TextDocument.isDirtydirty}-state changes.
-  _i4.Event<_i4.TextDocumentChangeEvent> get onDidChangeTextDocument =>
-      _i5.getProperty(
+  _i3.Event<_i3.TextDocumentChangeEvent> get onDidChangeTextDocument =>
+      _i4.getProperty(
         this,
         'onDidChangeTextDocument',
       );
@@ -682,28 +628,28 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///  * listeners that take a long time or produce errors frequently will not be called anymore
   ///
   /// The current thresholds are 1.5 seconds as overall time budget and a listener can misbehave 3 times before being ignored.
-  _i4.Event<_i4.TextDocumentWillSaveEvent> get onWillSaveTextDocument =>
-      _i5.getProperty(
+  _i3.Event<_i3.TextDocumentWillSaveEvent> get onWillSaveTextDocument =>
+      _i4.getProperty(
         this,
         'onWillSaveTextDocument',
       );
 
   /// An event that is emitted when a {@link TextDocumenttext document} is saved to disk.
-  _i4.Event<_i4.TextDocument> get onDidSaveTextDocument => _i5.getProperty(
+  _i3.Event<_i3.TextDocument> get onDidSaveTextDocument => _i4.getProperty(
         this,
         'onDidSaveTextDocument',
       );
 
   /// All notebook documents currently known to the editor.
-  _i2.List<_i4.NotebookDocument> get notebookDocuments => (_i5.getProperty(
+  _i2.List<_i3.NotebookDocument> get notebookDocuments => (_i4.getProperty(
         this,
         'notebookDocuments',
       ) as _i2.List)
           .cast();
 
   /// An event that is emitted when a {@link NotebookDocumentnotebook} has changed.
-  _i4.Event<_i4.NotebookDocumentChangeEvent> get onDidChangeNotebookDocument =>
-      _i5.getProperty(
+  _i3.Event<_i3.NotebookDocumentChangeEvent> get onDidChangeNotebookDocument =>
+      _i4.getProperty(
         this,
         'onDidChangeNotebookDocument',
       );
@@ -719,22 +665,22 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///  * listeners that take a long time or produce errors frequently will not be called anymore
   ///
   /// The current thresholds are 1.5 seconds as overall time budget and a listener can misbehave 3 times before being ignored.
-  _i4.Event<_i4.NotebookDocumentWillSaveEvent> get onWillSaveNotebookDocument =>
-      _i5.getProperty(
+  _i3.Event<_i3.NotebookDocumentWillSaveEvent> get onWillSaveNotebookDocument =>
+      _i4.getProperty(
         this,
         'onWillSaveNotebookDocument',
       );
 
   /// An event that is emitted when a {@link NotebookDocumentnotebook} is saved.
-  _i4.Event<_i4.NotebookDocument> get onDidSaveNotebookDocument =>
-      _i5.getProperty(
+  _i3.Event<_i3.NotebookDocument> get onDidSaveNotebookDocument =>
+      _i4.getProperty(
         this,
         'onDidSaveNotebookDocument',
       );
 
   /// An event that is emitted when a {@link NotebookDocumentnotebook} is opened.
-  _i4.Event<_i4.NotebookDocument> get onDidOpenNotebookDocument =>
-      _i5.getProperty(
+  _i3.Event<_i3.NotebookDocument> get onDidOpenNotebookDocument =>
+      _i4.getProperty(
         this,
         'onDidOpenNotebookDocument',
       );
@@ -745,8 +691,8 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///
   /// *Note 2:* A notebook can be open but not shown in an editor which means this event can fire
   /// for a notebook that has not been shown in an editor.
-  _i4.Event<_i4.NotebookDocument> get onDidCloseNotebookDocument =>
-      _i5.getProperty(
+  _i3.Event<_i3.NotebookDocument> get onDidCloseNotebookDocument =>
+      _i4.getProperty(
         this,
         'onDidCloseNotebookDocument',
       );
@@ -759,7 +705,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// {@linkcode FileSystemworkspace.fs}-api.
   ///
   /// *Note 2:* When this event is fired, edits to files that are are being created cannot be applied.
-  _i4.Event<_i4.FileWillCreateEvent> get onWillCreateFiles => _i5.getProperty(
+  _i3.Event<_i3.FileWillCreateEvent> get onWillCreateFiles => _i4.getProperty(
         this,
         'onWillCreateFiles',
       );
@@ -770,7 +716,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// explorer, or from the {@linkcode workspace.applyEdit}-api, but this event is *not* fired when
   /// files change on disk, e.g triggered by another application, or when using the
   /// {@linkcode FileSystemworkspace.fs}-api.
-  _i4.Event<_i4.FileCreateEvent> get onDidCreateFiles => _i5.getProperty(
+  _i3.Event<_i3.FileCreateEvent> get onDidCreateFiles => _i4.getProperty(
         this,
         'onDidCreateFiles',
       );
@@ -783,7 +729,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// {@linkcode FileSystemworkspace.fs}-api.
   ///
   /// *Note 2:* When deleting a folder with children only one event is fired.
-  _i4.Event<_i4.FileWillDeleteEvent> get onWillDeleteFiles => _i5.getProperty(
+  _i3.Event<_i3.FileWillDeleteEvent> get onWillDeleteFiles => _i4.getProperty(
         this,
         'onWillDeleteFiles',
       );
@@ -796,7 +742,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// {@linkcode FileSystemworkspace.fs}-api.
   ///
   /// *Note 2:* When deleting a folder with children only one event is fired.
-  _i4.Event<_i4.FileDeleteEvent> get onDidDeleteFiles => _i5.getProperty(
+  _i3.Event<_i3.FileDeleteEvent> get onDidDeleteFiles => _i4.getProperty(
         this,
         'onDidDeleteFiles',
       );
@@ -809,7 +755,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// {@linkcode FileSystemworkspace.fs}-api.
   ///
   /// *Note 2:* When renaming a folder with children only one event is fired.
-  _i4.Event<_i4.FileWillRenameEvent> get onWillRenameFiles => _i5.getProperty(
+  _i3.Event<_i3.FileWillRenameEvent> get onWillRenameFiles => _i4.getProperty(
         this,
         'onWillRenameFiles',
       );
@@ -822,26 +768,26 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// {@linkcode FileSystemworkspace.fs}-api.
   ///
   /// *Note 2:* When renaming a folder with children only one event is fired.
-  _i4.Event<_i4.FileRenameEvent> get onDidRenameFiles => _i5.getProperty(
+  _i3.Event<_i3.FileRenameEvent> get onDidRenameFiles => _i4.getProperty(
         this,
         'onDidRenameFiles',
       );
 
   /// An event that is emitted when the {@link WorkspaceConfigurationconfiguration} changed.
-  _i4.Event<_i4.ConfigurationChangeEvent> get onDidChangeConfiguration =>
-      _i5.getProperty(
+  _i3.Event<_i3.ConfigurationChangeEvent> get onDidChangeConfiguration =>
+      _i4.getProperty(
         this,
         'onDidChangeConfiguration',
       );
 
   /// When true, the user has explicitly trusted the contents of the workspace.
-  _i2.bool get isTrusted => _i5.getProperty(
+  _i2.bool get isTrusted => _i4.getProperty(
         this,
         'isTrusted',
       );
 
   /// Event that fires when the current workspace has been trusted.
-  _i4.Event<void> get onDidGrantWorkspaceTrust => _i5.getProperty(
+  _i3.Event<void> get onDidGrantWorkspaceTrust => _i4.getProperty(
         this,
         'onDidGrantWorkspaceTrust',
       );
@@ -849,7 +795,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// Returns the {@link WorkspaceFolderworkspace folder} that contains a given uri.
   /// * returns `undefined` when the given uri doesn't match any workspace folder
   /// * returns the *input* when the given uri is a workspace folder itself
-  _i4.WorkspaceFolder? getWorkspaceFolder(_i4.Uri uri) => _i5.callMethod(
+  _i3.WorkspaceFolder? getWorkspaceFolder(_i3.Uri uri) => _i4.callMethod(
         this,
         'getWorkspaceFolder',
         [uri],
@@ -863,12 +809,12 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
     _i2.Object pathOrUri, [
     _i2.bool? includeWorkspaceFolder,
   ]) =>
-      _i5.callMethod(
+      _i4.callMethod(
         this,
         'asRelativePath',
         [
           pathOrUri,
-          includeWorkspaceFolder ?? _i8.undefined,
+          includeWorkspaceFolder ?? _i7.undefined,
         ],
       );
 
@@ -910,12 +856,12 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
     _i2.num? deleteCount,
     _i2.Iterable<_i2.dynamic>? workspaceFoldersToAdd,
   ]) =>
-      _i5.callMethod(
+      _i4.callMethod(
         this,
         'updateWorkspaceFolders',
         [
           start,
-          deleteCount ?? _i8.undefined,
+          deleteCount ?? _i7.undefined,
           ...?workspaceFoldersToAdd,
         ],
       );
@@ -1033,47 +979,47 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// ```ts
   /// vscode.workspace.createFileSystemWatcher(new vscode.RelativePattern(vscode.window.activeTextEditor.document.uri, '*'));
   /// ```
-  _i4.FileSystemWatcher createFileSystemWatcher(
-    _i4.GlobPattern globPattern, [
+  _i3.FileSystemWatcher createFileSystemWatcher(
+    _i3.GlobPattern globPattern, [
     _i2.bool? ignoreCreateEvents,
     _i2.bool? ignoreChangeEvents,
     _i2.bool? ignoreDeleteEvents,
   ]) =>
-      _i5.callMethod(
+      _i4.callMethod(
         this,
         'createFileSystemWatcher',
         [
           globPattern,
-          ignoreCreateEvents ?? _i8.undefined,
-          ignoreChangeEvents ?? _i8.undefined,
-          ignoreDeleteEvents ?? _i8.undefined,
+          ignoreCreateEvents ?? _i7.undefined,
+          ignoreChangeEvents ?? _i7.undefined,
+          ignoreDeleteEvents ?? _i7.undefined,
         ],
       );
 
   /// Find files across all {@link workspace.workspaceFoldersworkspace folders} in the workspace.
-  _i2.Future<_i3.Thenable<_i2.List<_i4.Uri>>> findFiles(
-    _i4.GlobPattern include, [
-    _i4.GlobPattern? exclude,
+  _i2.Future<_i2.dynamic> findFiles(
+    _i3.GlobPattern include, [
+    _i3.GlobPattern? exclude,
     _i2.num? maxResults,
-    _i4.CancellationToken? token,
+    _i3.CancellationToken? token,
   ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'findFiles',
         [
           include,
-          exclude ?? _i8.undefined ?? _i8.undefined,
-          maxResults ?? _i8.undefined,
-          token ?? _i8.undefined,
+          exclude ?? _i7.undefined ?? _i7.undefined,
+          maxResults ?? _i7.undefined,
+          token ?? _i7.undefined,
         ],
       ));
 
   /// Save all dirty files.
-  _i2.Future<_i3.Thenable<_i2.bool>> saveAll([_i2.bool? includeUntitled]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> saveAll([_i2.bool? includeUntitled]) =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'saveAll',
-        [includeUntitled ?? _i8.undefined],
+        [includeUntitled ?? _i7.undefined],
       ));
 
   /// Make changes to one or many resources or create, delete, and rename resources as defined by the given
@@ -1087,16 +1033,16 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// When applying a workspace edit that consists only of text edits an 'all-or-nothing'-strategy is used.
   /// A workspace edit with resource creations or deletions aborts the operation, e.g. consecutive edits will
   /// not be attempted, when a single edit fails.
-  _i2.Future<_i3.Thenable<_i2.bool>> applyEdit(
-    _i4.WorkspaceEdit edit, [
-    _i4.WorkspaceEditMetadata? metadata,
+  _i2.Future<_i2.dynamic> applyEdit(
+    _i3.WorkspaceEdit edit, [
+    _i3.WorkspaceEditMetadata? metadata,
   ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'applyEdit',
         [
           edit,
-          metadata ?? _i8.undefined,
+          metadata ?? _i7.undefined,
         ],
       ));
 
@@ -1118,8 +1064,8 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// Opens an untitled text document. The editor will prompt the user for a file
   /// path when the document is to be saved. The `options` parameter allows to
   /// specify the *language* and/or the *content* of the document.
-  _i2.Future<_i3.Thenable<_i4.TextDocument>> _openTextDocument$1(_i4.Uri uri) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> _openTextDocument$1(_i3.Uri uri) =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'openTextDocument',
         [uri],
@@ -1143,9 +1089,8 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// Opens an untitled text document. The editor will prompt the user for a file
   /// path when the document is to be saved. The `options` parameter allows to
   /// specify the *language* and/or the *content* of the document.
-  _i2.Future<_i3.Thenable<_i4.TextDocument>> _openTextDocument$2(
-          _i2.String fileName) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> _openTextDocument$2(_i2.String fileName) =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'openTextDocument',
         [fileName],
@@ -1169,12 +1114,11 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// Opens an untitled text document. The editor will prompt the user for a file
   /// path when the document is to be saved. The `options` parameter allows to
   /// specify the *language* and/or the *content* of the document.
-  _i2.Future<_i3.Thenable<_i4.TextDocument>> _openTextDocument$3(
-          [_i9.IInline65? options]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> _openTextDocument$3([_i8.IInline65? options]) =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'openTextDocument',
-        [options ?? _i8.undefined],
+        [options ?? _i7.undefined],
       ));
 
   /// Overload accessor: $1, $2, $3
@@ -1197,7 +1141,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
     /// Opens an untitled text document. The editor will prompt the user for a file
     /// path when the document is to be saved. The `options` parameter allows to
     /// specify the *language* and/or the *content* of the document.
-    _i2.Future<_i3.Thenable<_i4.TextDocument>> Function(_i4.Uri uri) $1,
+    _i2.Future<_i2.dynamic> Function(_i3.Uri uri) $1,
 
     /// Opens a document. Will return early if this document is already open. Otherwise
     /// the document is loaded and the {@link workspace.onDidOpenTextDocumentdidOpen}-event fires.
@@ -1217,7 +1161,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
     /// Opens an untitled text document. The editor will prompt the user for a file
     /// path when the document is to be saved. The `options` parameter allows to
     /// specify the *language* and/or the *content* of the document.
-    _i2.Future<_i3.Thenable<_i4.TextDocument>> Function(_i2.String fileName) $2,
+    _i2.Future<_i2.dynamic> Function(_i2.String fileName) $2,
 
     /// Opens a document. Will return early if this document is already open. Otherwise
     /// the document is loaded and the {@link workspace.onDidOpenTextDocumentdidOpen}-event fires.
@@ -1237,8 +1181,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
     /// Opens an untitled text document. The editor will prompt the user for a file
     /// path when the document is to be saved. The `options` parameter allows to
     /// specify the *language* and/or the *content* of the document.
-    _i2.Future<_i3.Thenable<_i4.TextDocument>> Function(
-        [_i9.IInline65? options]) $3,
+    _i2.Future<_i2.dynamic> Function([_i8.IInline65? options]) $3,
   }) get openTextDocument => (
         $1: _openTextDocument$1,
         $2: _openTextDocument$2,
@@ -1248,11 +1191,11 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// Register a text document content provider.
   ///
   /// Only one provider can be registered per scheme.
-  _i4.Disposable registerTextDocumentContentProvider(
+  _i3.Disposable registerTextDocumentContentProvider(
     _i2.String scheme,
-    _i4.TextDocumentContentProvider provider,
+    _i3.TextDocumentContentProvider provider,
   ) =>
-      _i5.callMethod(
+      _i4.callMethod(
         this,
         'registerTextDocumentContentProvider',
         [
@@ -1271,9 +1214,8 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// can be shown in a notebook editor but it can also be used for other things.
   /// Open an untitled notebook. The editor will prompt the user for a file
   /// path when the document is to be saved.
-  _i2.Future<_i3.Thenable<_i4.NotebookDocument>> _openNotebookDocument$1(
-          _i4.Uri uri) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i2.dynamic> _openNotebookDocument$1(_i3.Uri uri) =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'openNotebookDocument',
         [uri],
@@ -1289,16 +1231,16 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// can be shown in a notebook editor but it can also be used for other things.
   /// Open an untitled notebook. The editor will prompt the user for a file
   /// path when the document is to be saved.
-  _i2.Future<_i3.Thenable<_i4.NotebookDocument>> _openNotebookDocument$2(
+  _i2.Future<_i2.dynamic> _openNotebookDocument$2(
     _i2.String notebookType, [
-    _i4.NotebookData? content,
+    _i3.NotebookData? content,
   ]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'openNotebookDocument',
         [
           notebookType,
-          content ?? _i8.undefined,
+          content ?? _i7.undefined,
         ],
       ));
 
@@ -1314,7 +1256,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
     /// can be shown in a notebook editor but it can also be used for other things.
     /// Open an untitled notebook. The editor will prompt the user for a file
     /// path when the document is to be saved.
-    _i2.Future<_i3.Thenable<_i4.NotebookDocument>> Function(_i4.Uri uri) $1,
+    _i2.Future<_i2.dynamic> Function(_i3.Uri uri) $1,
 
     /// Open a notebook. Will return early if this notebook is already {@link notebookDocumentsloaded}. Otherwise
     /// the notebook is loaded and the {@linkcode onDidOpenNotebookDocument}-event fires.
@@ -1326,9 +1268,9 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
     /// can be shown in a notebook editor but it can also be used for other things.
     /// Open an untitled notebook. The editor will prompt the user for a file
     /// path when the document is to be saved.
-    _i2.Future<_i3.Thenable<_i4.NotebookDocument>> Function(
+    _i2.Future<_i2.dynamic> Function(
       _i2.String notebookType, [
-      _i4.NotebookData? content,
+      _i3.NotebookData? content,
     ]) $2,
   }) get openNotebookDocument => (
         $1: _openNotebookDocument$1,
@@ -1339,18 +1281,18 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///
   /// A notebook serializer must be contributed through the `notebooks` extension point. When opening a notebook file, the editor will send
   /// the `onNotebook:<notebookType>` activation event, and extensions must register their serializer in return.
-  _i4.Disposable registerNotebookSerializer(
+  _i3.Disposable registerNotebookSerializer(
     _i2.String notebookType,
-    _i4.NotebookSerializer serializer, [
-    _i4.NotebookDocumentContentOptions? options,
+    _i3.NotebookSerializer serializer, [
+    _i3.NotebookDocumentContentOptions? options,
   ]) =>
-      _i5.callMethod(
+      _i4.callMethod(
         this,
         'registerNotebookSerializer',
         [
           notebookType,
           serializer,
-          options ?? _i8.undefined,
+          options ?? _i7.undefined,
         ],
       );
 
@@ -1361,25 +1303,25 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// like `{ myExt: { setting: { doIt: true }}}` and `getConfiguration('myExt.setting').get('doIt') === true`.
   ///
   /// When a scope is provided configuration confined to that scope is returned. Scope can be a resource or a language identifier or both.
-  _i4.WorkspaceConfiguration getConfiguration([
+  _i3.WorkspaceConfiguration getConfiguration([
     _i2.String? section,
-    _i4.ConfigurationScope? scope,
+    _i3.ConfigurationScope? scope,
   ]) =>
-      _i5.callMethod(
+      _i4.callMethod(
         this,
         'getConfiguration',
         [
-          section ?? _i8.undefined,
-          scope ?? _i8.undefined ?? _i8.undefined,
+          section ?? _i7.undefined,
+          scope ?? _i7.undefined ?? _i7.undefined,
         ],
       );
 
   /// Register a task provider.
-  _i4.Disposable registerTaskProvider(
+  _i3.Disposable registerTaskProvider(
     _i2.String type,
-    _i4.TaskProvider<_i4.Task> provider,
+    _i3.TaskProvider<_i3.Task> provider,
   ) =>
-      _i5.callMethod(
+      _i4.callMethod(
         this,
         'registerTaskProvider',
         [
@@ -1392,18 +1334,18 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///
   /// There can only be one provider per scheme and an error is being thrown when a scheme
   /// has been claimed by another provider or when it is reserved.
-  _i4.Disposable registerFileSystemProvider(
+  _i3.Disposable registerFileSystemProvider(
     _i2.String scheme,
-    _i4.FileSystemProvider provider, [
-    _i9.IInline66? options,
+    _i3.FileSystemProvider provider, [
+    _i8.IInline66? options,
   ]) =>
-      _i5.callMethod(
+      _i4.callMethod(
         this,
         'registerFileSystemProvider',
         [
           scheme,
           provider,
-          options ?? _i8.undefined,
+          options ?? _i7.undefined,
         ],
       );
 }

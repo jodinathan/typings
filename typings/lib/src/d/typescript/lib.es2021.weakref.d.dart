@@ -5,8 +5,7 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'lib.es5.d.dart' as _i3;
 import 'dart:js_util' as _i4;
-import '/d/core.dart' as _i5;
-import 'lib.es2021.weakref.d.dart' as _i6;
+import 'lib.es2021.weakref.d.dart' as _i5;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -26,13 +25,17 @@ _i2.Object get _declaredWeakRef => _i4.getProperty(
     );
 
 extension WeakRef$Typings<T extends _i3.WeakKey> on WeakRef<T> {
-  /// Returns the WeakRef instance's target value, or undefined if the target value has been
-  ///  reclaimed.
-  ///  In es2023 the value can be either a symbol or an object, in previous versions only object is permissible.
-  T? deref() => _i4.callMethod(
+  set deref(T? Function() value) {
+    _i4.setProperty(
+      this,
+      'deref',
+      _i4.allowInterop(value),
+    );
+  }
+
+  T? Function() get deref => _i4.getProperty(
         this,
         'deref',
-        [],
       );
 }
 
@@ -56,51 +59,50 @@ _i2.Object get _declaredFinalizationRegistry => _i4.getProperty(
     );
 
 extension FinalizationRegistry$Typings<T> on FinalizationRegistry<T> {
-  /// Registers a value with the registry.
-  ///  In es2023 the value can be either a symbol or an object, in previous versions only object is permissible.
-  ///  @param target The target value to register.
-  ///  @param heldValue The value to pass to the finalizer for this value. This cannot be the
-  ///  target value.
-  ///  @param unregisterToken The token to pass to the unregister method to unregister the target
-  ///  value. If not provided, the target cannot be unregistered.
-  void register(
-    _i3.WeakKey target,
-    T heldValue, [
-    _i3.WeakKey? unregisterToken,
-  ]) {
-    _i4.callMethod(
+  set register(
+      void Function(
+        _i3.WeakKey,
+        T, [
+        _i3.WeakKey?,
+      ]) value) {
+    _i4.setProperty(
       this,
       'register',
-      [
-        target,
-        heldValue,
-        unregisterToken ?? _i5.undefined ?? _i5.undefined,
-      ],
+      _i4.allowInterop(value),
     );
   }
 
-  /// Unregisters a value from the registry.
-  ///  In es2023 the value can be either a symbol or an object, in previous versions only object is permissible.
-  ///  @param unregisterToken The token that was used as the unregisterToken argument when calling
-  ///  register to register the target value.
-  void unregister(_i3.WeakKey unregisterToken) {
-    _i4.callMethod(
+  void Function(
+    _i3.WeakKey,
+    T, [
+    _i3.WeakKey?,
+  ]) get register => _i4.getProperty(
+        this,
+        'register',
+      );
+  set unregister(void Function(_i3.WeakKey) value) {
+    _i4.setProperty(
       this,
       'unregister',
-      [unregisterToken],
+      _i4.allowInterop(value),
     );
   }
+
+  void Function(_i3.WeakKey) get unregister => _i4.getProperty(
+        this,
+        'unregister',
+      );
 }
 
 @_i1.JS()
 @_i1.staticInterop
 class FinalizationRegistryConstructor {}
 
-_i6.WeakRefConstructor get weakRef => _i4.getProperty(
+_i5.WeakRefConstructor get weakRef => _i4.getProperty(
       _self,
       'WeakRef',
     );
-_i6.FinalizationRegistryConstructor get finalizationRegistry => _i4.getProperty(
+_i5.FinalizationRegistryConstructor get finalizationRegistry => _i4.getProperty(
       _self,
       'FinalizationRegistry',
     );

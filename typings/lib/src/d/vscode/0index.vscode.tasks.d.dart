@@ -5,8 +5,7 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import '0index.vscode.d.dart' as _i3;
 import 'dart:js_util' as _i4;
-import '0index.d.dart' as _i5;
-import '/d/core.dart' as _i6;
+import '/d/core.dart' as _i5;
 
 @_i1.JS('vscode.tasks')
 external _i2.Object _self;
@@ -89,17 +88,16 @@ extension $ModuleTasks$Typings on $ModuleTasks {
   /// Fetches all tasks available in the systems. This includes tasks
   /// from `tasks.json` files as well as tasks from task providers
   /// contributed through extensions.
-  _i2.Future<_i5.Thenable<_i2.List<_i3.Task>>> fetchTasks(
-          [_i3.TaskFilter? filter]) =>
+  _i2.Future<_i2.dynamic> fetchTasks([_i3.TaskFilter? filter]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'fetchTasks',
-        [filter ?? _i6.undefined],
+        [filter ?? _i5.undefined],
       ));
 
   /// Executes a task that is managed by the editor. The returned
   /// task execution can be used to terminate the task.
-  _i2.Future<_i5.Thenable<_i3.TaskExecution>> executeTask(_i3.Task task) =>
+  _i2.Future<_i2.dynamic> executeTask(_i3.Task task) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'executeTask',

@@ -1,7 +1,9 @@
 import 'package:code_builder/code_builder.dart';
+import 'package:collection/collection.dart';
 
 import '../library.dart';
 import '../reference.dart';
+import 'local.dart';
 import 'type.dart';
 
 class InteropTuple extends InteropType with InteropDiamondType {
@@ -35,13 +37,21 @@ class InteropTuple extends InteropType with InteropDiamondType {
       types.every((t) => other.types.any((ot) => ot.isSame(t)));
 
   @override
-  Reference ref({SymbolSwap? symbolSwap, bool nullable = false,
-  bool solid = false}) {
+  Reference ref(
+      {SymbolSwap? symbolSwap, bool nullable = false, bool solid = false}) {
     return RecordType((b) {
       b.isNullable = nullable;
 
       for (final type in types) {
-        b.parameters.add(type.ref());
+        final toAdd = switch (type) {
+          InteropLocalType local when symbolSwap is SymbolSwap => symbolSwap
+                  .firstWhereOrNull((it) => it.symbol == local.symbol)
+                  ?.reference
+                  .ref() ??
+              type.ref(),
+          _ => type.ref(solid: solid, symbolSwap: symbolSwap)
+        };
+        b.parameters.add(toAdd);
       }
     });
   }

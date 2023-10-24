@@ -193,14 +193,14 @@ class BigIntToLocaleStringOptions {
     _i2.String? compactDisplay,
   }) =>
       BigIntToLocaleStringOptions._(
-        localeMatcher: localeMatcher ?? _i4.undefined,
-        style: style ?? _i4.undefined,
-        numberingSystem: numberingSystem ?? _i4.undefined,
-        unit: unit ?? _i4.undefined,
-        unitDisplay: unitDisplay ?? _i4.undefined,
-        currency: currency ?? _i4.undefined,
-        currencyDisplay: currencyDisplay ?? _i4.undefined,
-        useGrouping: useGrouping ?? _i4.undefined,
+        localeMatcher: localeMatcher,
+        style: style,
+        numberingSystem: numberingSystem,
+        unit: unit,
+        unitDisplay: unitDisplay,
+        currency: currency,
+        currencyDisplay: currencyDisplay,
+        useGrouping: useGrouping,
         minimumIntegerDigits: minimumIntegerDigits?.name ?? _i4.undefined,
         minimumFractionDigits: minimumFractionDigits?.name ?? _i4.undefined,
         maximumFractionDigits: maximumFractionDigits?.name ?? _i4.undefined,
@@ -208,8 +208,8 @@ class BigIntToLocaleStringOptions {
             minimumSignificantDigits?.name ?? _i4.undefined,
         maximumSignificantDigits:
             maximumSignificantDigits?.name ?? _i4.undefined,
-        notation: notation ?? _i4.undefined,
-        compactDisplay: compactDisplay ?? _i4.undefined,
+        notation: notation,
+        compactDisplay: compactDisplay,
       );
 }
 
@@ -444,110 +444,163 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class BigInt {
-  /// Interprets the low bits of a BigInt as a 2's-complement signed integer.
-  ///  All higher bits are discarded.
-  ///  @param bits The number of low bits to use
-  ///  @param int The BigInt whose bits to extract
-  static _i2.int asIntN(
-    _i2.num bits,
-    _i2.int int$,
-  ) =>
-      _i5.callMethod(
-        _i6.target24,
-        'asIntN',
-        [
-          bits,
-          int$,
-        ],
+  external factory BigInt._({
+    _i2.dynamic toString$,
+    _i2.dynamic toLocaleString,
+    _i2.dynamic valueOf,
+  });
+
+  factory BigInt({
+    _i2.String Function([_i2.num?])? toString$,
+    _i2.String Function([
+      _i2.dynamic,
+      _i3.BigIntToLocaleStringOptions?,
+    ])? toLocaleString,
+    _i2.int Function()? valueOf,
+  }) =>
+      BigInt._(
+        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
+        toLocaleString:
+            toLocaleString == null ? null : _i5.allowInterop(toLocaleString),
+        valueOf: valueOf == null ? null : _i5.allowInterop(valueOf),
       );
 
-  /// Interprets the low bits of a BigInt as an unsigned integer.
-  ///  All higher bits are discarded.
-  ///  @param bits The number of low bits to use
-  ///  @param int The BigInt whose bits to extract
-  static _i2.int asUintN(
-    _i2.num bits,
-    _i2.int int$,
-  ) =>
-      _i5.callMethod(
-        _i6.target24,
-        'asUintN',
-        [
-          bits,
-          int$,
-        ],
-      );
+  static set asIntN(
+      _i2.int Function(
+        _i2.num,
+        _i2.int,
+      ) value) {
+    _i5.setProperty(
+      _i6.target24,
+      'asIntN',
+      _i5.allowInterop(value),
+    );
+  }
+
+  static set asUintN(
+      _i2.int Function(
+        _i2.num,
+        _i2.int,
+      ) value) {
+    _i5.setProperty(
+      _i6.target24,
+      'asUintN',
+      _i5.allowInterop(value),
+    );
+  }
 }
 
 extension BigInt$Typings on BigInt {
-  /// Returns a string representation of an object.
-  ///  @param radix Specifies a radix for converting numeric values to strings.
-  _i2.String toString$([_i2.num? radix]) => _i5.callMethod(
+  set toString$(_i2.String Function([_i2.num?]) value) {
+    _i5.setProperty(
+      this,
+      'toString',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.String Function([_i2.num?]) get toString$ => _i5.getProperty(
         this,
         'toString',
-        [radix ?? _i4.undefined],
       );
+  set toLocaleString(
+      _i2.String Function([
+        _i2.dynamic,
+        _i3.BigIntToLocaleStringOptions?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'toLocaleString',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns a string representation appropriate to the host environment's current locale.
-  _i2.String toLocaleString([
-    _i2.dynamic locales,
-    _i3.BigIntToLocaleStringOptions? options,
-  ]) =>
-      _i5.callMethod(
+  _i2.String Function([
+    _i2.dynamic,
+    _i3.BigIntToLocaleStringOptions?,
+  ]) get toLocaleString => _i5.getProperty(
         this,
         'toLocaleString',
-        [
-          locales ?? _i4.undefined,
-          options ?? _i4.undefined,
-        ],
       );
+  set valueOf(_i2.int Function() value) {
+    _i5.setProperty(
+      this,
+      'valueOf',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the primitive value of the specified object.
-  _i2.int valueOf() => _i5.callMethod(
+  _i2.int Function() get valueOf => _i5.getProperty(
         this,
         'valueOf',
-        [],
       );
 }
 
 @_i1.JS()
 @_i1.staticInterop
-class BigIntConstructor {}
+@_i1.anonymous
+class BigIntConstructor {
+  external factory BigIntConstructor._({
+    _i2.dynamic asIntN,
+    _i2.dynamic asUintN,
+  });
 
-extension BigIntConstructor$Typings on BigIntConstructor {
-  /// Interprets the low bits of a BigInt as a 2's-complement signed integer.
-  ///  All higher bits are discarded.
-  ///  @param bits The number of low bits to use
-  ///  @param int The BigInt whose bits to extract
-  _i2.int asIntN(
-    _i2.num bits,
-    _i2.int int$,
-  ) =>
-      _i5.callMethod(
-        this,
-        'asIntN',
-        [
-          bits,
-          int$,
-        ],
+  factory BigIntConstructor({
+    _i2.int Function(
+      _i2.num,
+      _i2.int,
+    )? asIntN,
+    _i2.int Function(
+      _i2.num,
+      _i2.int,
+    )? asUintN,
+  }) =>
+      BigIntConstructor._(
+        asIntN: asIntN == null ? null : _i5.allowInterop(asIntN),
+        asUintN: asUintN == null ? null : _i5.allowInterop(asUintN),
       );
 
-  /// Interprets the low bits of a BigInt as an unsigned integer.
-  ///  All higher bits are discarded.
-  ///  @param bits The number of low bits to use
-  ///  @param int The BigInt whose bits to extract
-  _i2.int asUintN(
-    _i2.num bits,
-    _i2.int int$,
-  ) =>
-      _i5.callMethod(
+  static set asIntN(
+      _i2.int Function(
+        _i2.num,
+        _i2.int,
+      ) value) {
+    _i5.setProperty(
+      _i6.target24,
+      'asIntN',
+      _i5.allowInterop(value),
+    );
+  }
+
+  static set asUintN(
+      _i2.int Function(
+        _i2.num,
+        _i2.int,
+      ) value) {
+    _i5.setProperty(
+      _i6.target24,
+      'asUintN',
+      _i5.allowInterop(value),
+    );
+  }
+}
+
+extension BigIntConstructor$Typings on BigIntConstructor {
+  _i2.int Function(
+    _i2.num,
+    _i2.int,
+  ) get asIntN => _i5.getProperty(
+        this,
+        'asIntN',
+      );
+  _i2.int Function(
+    _i2.num,
+    _i2.int,
+  ) get asUintN => _i5.getProperty(
         this,
         'asUintN',
-        [
-          bits,
-          int$,
-        ],
       );
   _i2.int call(_i2.Object value) => _i5.callMethod(
         this,
@@ -598,15 +651,37 @@ class BigInt64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
         _i6.target25,
         'BYTES_PER_ELEMENT',
       );
-
-  /// Returns a new array from a set of elements.
-  ///  @param items A set of elements to include in the new array object.
-  static _i3.BigInt64Array of([_i2.Iterable<_i2.dynamic>? items]) =>
-      _i5.callMethod(
-        _i6.target25,
-        'of',
-        [...?items],
-      );
+  static set of(
+      _i3.BigInt64Array Function([_i2.Iterable<_i2.dynamic>?]) value) {
+    _i5.setProperty(
+      _i6.target25,
+      'of',
+      _i5.allowInterop(([
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value([
+            a0,
+            a1,
+            a2,
+            a3,
+            a4,
+            a5,
+            a6,
+            a7,
+            a8,
+            a9,
+          ])),
+    );
+  }
 
   /// Creates an array from an array-like or iterable object.
   static _i3.BigInt64Array from<U>(
@@ -623,7 +698,7 @@ class BigInt64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
         [
           arrayLike,
           _i5.allowInterop(mapfn),
-          thisArg ?? _i4.undefined,
+          thisArg,
         ],
       );
 }
@@ -663,264 +738,572 @@ extension BigInt64Array$Typings on BigInt64Array {
         this,
         'length',
       );
+  set copyWithin(
+      _i3.BigInt64Array Function(
+        _i2.num,
+        _i2.num, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'copyWithin',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the this object after copying a section of the array identified by start and end
-  ///  to the same array starting at position target
-  ///  @param target If target is negative, it is treated as length+target where length is the
-  ///  length of the array.
-  ///  @param start If start is negative, it is treated as length+start. If end is negative, it
-  ///  is treated as length+end.
-  ///  @param end If not specified, length of the this object is used as its default value.
-  _i3.BigInt64Array copyWithin(
-    _i2.num target,
-    _i2.num start, [
-    _i2.num? end,
-  ]) =>
-      _i5.callMethod(
+  _i3.BigInt64Array Function(
+    _i2.num,
+    _i2.num, [
+    _i2.num?,
+  ]) get copyWithin => _i5.getProperty(
         this,
         'copyWithin',
-        [
-          target,
-          start,
-          end ?? _i4.undefined,
-        ],
       );
+  set entries(
+      _i7.IterableIterator<
+                  (
+                    _i2.num,
+                    _i2.int,
+                  )>
+              Function()
+          value) {
+    _i5.setProperty(
+      this,
+      'entries',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Yields index, value pairs for every entry in the array.
   _i7.IterableIterator<
-      (
-        _i2.num,
-        _i2.int,
-      )> entries() => _i5.callMethod(
+          (
+            _i2.num,
+            _i2.int,
+          )>
+      Function() get entries => _i5.getProperty(
         this,
         'entries',
-        [],
       );
+  set every(
+      _i2.bool Function(
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'every',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Determines whether all the members of an array satisfy the specified test.
-  ///  @param predicate A function that accepts up to three arguments. The every method calls
-  ///  the predicate function for each element in the array until the predicate returns false,
-  ///  or until the end of the array.
-  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
-  ///  If thisArg is omitted, undefined is used as the this value.
-  _i2.bool every(
+  _i2.bool Function(
     _i2.bool Function(
       _i2.int,
       _i2.num,
       _i3.BigInt64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get every => _i5.getProperty(
         this,
         'every',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
       );
+  set fill(
+      _i3.BigInt64Array Function(
+        _i2.int, [
+        _i2.num?,
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'fill',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Changes all array elements from `start` to `end` index to a static `value` and returns the modified array
-  ///  @param value value to fill array section with
-  ///  @param start index to start filling the array at. If start is negative, it is treated as
-  ///  length+start where length is the length of the array.
-  ///  @param end index to stop filling the array at. If end is negative, it is treated as
-  ///  length+end.
-  _i3.BigInt64Array fill(
-    _i2.int value, [
-    _i2.num? start,
-    _i2.num? end,
-  ]) =>
-      _i5.callMethod(
+  _i3.BigInt64Array Function(
+    _i2.int, [
+    _i2.num?,
+    _i2.num?,
+  ]) get fill => _i5.getProperty(
         this,
         'fill',
-        [
-          value,
-          start ?? _i4.undefined,
-          end ?? _i4.undefined,
-        ],
       );
+  set filter(
+      _i3.BigInt64Array Function(
+        _i2.dynamic Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'filter',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the elements of an array that meet the condition specified in a callback function.
-  ///  @param predicate A function that accepts up to three arguments. The filter method calls
-  ///  the predicate function one time for each element in the array.
-  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
-  ///  If thisArg is omitted, undefined is used as the this value.
-  _i3.BigInt64Array filter(
+  _i3.BigInt64Array Function(
     _i2.dynamic Function(
       _i2.int,
       _i2.num,
       _i3.BigInt64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get filter => _i5.getProperty(
         this,
         'filter',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
       );
+  set find(
+      _i2.int? Function(
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'find',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the value of the first element in the array where predicate is true, and undefined
-  ///  otherwise.
-  ///  @param predicate find calls predicate once for each element of the array, in ascending
-  ///  order, until it finds one where predicate returns true. If such an element is found, find
-  ///  immediately returns that element value. Otherwise, find returns undefined.
-  ///  @param thisArg If provided, it will be used as the this value for each invocation of
-  ///  predicate. If it is not provided, undefined is used instead.
-  _i2.int? find(
+  _i2.int? Function(
     _i2.bool Function(
       _i2.int,
       _i2.num,
       _i3.BigInt64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get find => _i5.getProperty(
         this,
         'find',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
       );
+  set findIndex(
+      _i2.num Function(
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'findIndex',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the index of the first element in the array where predicate is true, and -1
-  ///  otherwise.
-  ///  @param predicate find calls predicate once for each element of the array, in ascending
-  ///  order, until it finds one where predicate returns true. If such an element is found,
-  ///  findIndex immediately returns that element index. Otherwise, findIndex returns -1.
-  ///  @param thisArg If provided, it will be used as the this value for each invocation of
-  ///  predicate. If it is not provided, undefined is used instead.
-  _i2.num findIndex(
+  _i2.num Function(
     _i2.bool Function(
       _i2.int,
       _i2.num,
       _i3.BigInt64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get findIndex => _i5.getProperty(
         this,
         'findIndex',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
       );
+  set forEach(
+      void Function(
+        void Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'forEach',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Performs the specified action for each element in an array.
-  ///  @param callbackfn A function that accepts up to three arguments. forEach calls the
-  ///  callbackfn function one time for each element in the array.
-  ///  @param thisArg An object to which the this keyword can refer in the callbackfn function.
-  ///  If thisArg is omitted, undefined is used as the this value.
-  void forEach(
+  void Function(
     void Function(
       _i2.int,
       _i2.num,
       _i3.BigInt64Array,
-    ) callbackfn, [
-    _i2.dynamic thisArg,
-  ]) {
-    _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get forEach => _i5.getProperty(
+        this,
+        'forEach',
+      );
+  set includes(
+      _i2.bool Function(
+        _i2.int, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
       this,
-      'forEach',
-      [
-        _i5.allowInterop(callbackfn),
-        thisArg ?? _i4.undefined,
-      ],
+      'includes',
+      _i5.allowInterop(value),
     );
   }
 
-  /// Determines whether an array includes a certain element, returning true or false as appropriate.
-  ///  @param searchElement The element to search for.
-  ///  @param fromIndex The position in this array at which to begin searching for searchElement.
-  _i2.bool includes(
-    _i2.int searchElement, [
-    _i2.num? fromIndex,
-  ]) =>
-      _i5.callMethod(
+  _i2.bool Function(
+    _i2.int, [
+    _i2.num?,
+  ]) get includes => _i5.getProperty(
         this,
         'includes',
-        [
-          searchElement,
-          fromIndex ?? _i4.undefined,
-        ],
       );
+  set indexOf(
+      _i2.num Function(
+        _i2.int, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'indexOf',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the index of the first occurrence of a value in an array.
-  ///  @param searchElement The value to locate in the array.
-  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
-  ///  search starts at index 0.
-  _i2.num indexOf(
-    _i2.int searchElement, [
-    _i2.num? fromIndex,
-  ]) =>
-      _i5.callMethod(
+  _i2.num Function(
+    _i2.int, [
+    _i2.num?,
+  ]) get indexOf => _i5.getProperty(
         this,
         'indexOf',
-        [
-          searchElement,
-          fromIndex ?? _i4.undefined,
-        ],
       );
+  set join(_i2.String Function([_i2.String?]) value) {
+    _i5.setProperty(
+      this,
+      'join',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Adds all the elements of an array separated by the specified separator string.
-  ///  @param separator A string used to separate one element of an array from the next in the
-  ///  resulting String. If omitted, the array elements are separated with a comma.
-  _i2.String join([_i2.String? separator]) => _i5.callMethod(
+  _i2.String Function([_i2.String?]) get join => _i5.getProperty(
         this,
         'join',
-        [separator ?? _i4.undefined],
       );
+  set keys(_i7.IterableIterator<_i2.num> Function() value) {
+    _i5.setProperty(
+      this,
+      'keys',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Yields each index in the array.
-  _i7.IterableIterator<_i2.num> keys() => _i5.callMethod(
+  _i7.IterableIterator<_i2.num> Function() get keys => _i5.getProperty(
         this,
         'keys',
-        [],
       );
+  set lastIndexOf(
+      _i2.num Function(
+        _i2.int, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'lastIndexOf',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the index of the last occurrence of a value in an array.
-  ///  @param searchElement The value to locate in the array.
-  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
-  ///  search starts at index 0.
-  _i2.num lastIndexOf(
-    _i2.int searchElement, [
-    _i2.num? fromIndex,
-  ]) =>
-      _i5.callMethod(
+  _i2.num Function(
+    _i2.int, [
+    _i2.num?,
+  ]) get lastIndexOf => _i5.getProperty(
         this,
         'lastIndexOf',
-        [
-          searchElement,
-          fromIndex ?? _i4.undefined,
-        ],
       );
+  set map(
+      _i3.BigInt64Array Function(
+        _i2.int Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'map',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Calls a defined callback function on each element of an array, and returns an array that
-  ///  contains the results.
-  ///  @param callbackfn A function that accepts up to three arguments. The map method calls the
-  ///  callbackfn function one time for each element in the array.
-  ///  @param thisArg An object to which the this keyword can refer in the callbackfn function.
-  ///  If thisArg is omitted, undefined is used as the this value.
-  _i3.BigInt64Array map(
+  _i3.BigInt64Array Function(
     _i2.int Function(
       _i2.int,
       _i2.num,
       _i3.BigInt64Array,
-    ) callbackfn, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get map => _i5.getProperty(
         this,
         'map',
-        [
-          _i5.allowInterop(callbackfn),
-          thisArg ?? _i4.undefined,
-        ],
+      );
+  set reverse(_i3.BigInt64Array Function() value) {
+    _i5.setProperty(
+      this,
+      'reverse',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigInt64Array Function() get reverse => _i5.getProperty(
+        this,
+        'reverse',
+      );
+  set set(
+      void Function(
+        _i2.List<_i2.int>, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'set',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function(
+    _i2.List<_i2.int>, [
+    _i2.num?,
+  ]) get set => _i5.getProperty(
+        this,
+        'set',
+      );
+  set slice(
+      _i3.BigInt64Array Function([
+        _i2.num?,
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'slice',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigInt64Array Function([
+    _i2.num?,
+    _i2.num?,
+  ]) get slice => _i5.getProperty(
+        this,
+        'slice',
+      );
+  set some(
+      _i2.bool Function(
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'some',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(
+    _i2.bool Function(
+      _i2.int,
+      _i2.num,
+      _i3.BigInt64Array,
+    ), [
+    _i2.dynamic,
+  ]) get some => _i5.getProperty(
+        this,
+        'some',
+      );
+  set sort(
+      _i3.BigInt64Array Function(
+              [_i2.Object Function(
+                _i2.int,
+                _i2.int,
+              )?])
+          value) {
+    _i5.setProperty(
+      this,
+      'sort',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigInt64Array Function(
+      [_i2.Object Function(
+        _i2.int,
+        _i2.int,
+      )?]) get sort => _i5.getProperty(
+        this,
+        'sort',
+      );
+  set subarray(
+      _i3.BigInt64Array Function([
+        _i2.num?,
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'subarray',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigInt64Array Function([
+    _i2.num?,
+    _i2.num?,
+  ]) get subarray => _i5.getProperty(
+        this,
+        'subarray',
+      );
+  set toLocaleString(_i2.String Function() value) {
+    _i5.setProperty(
+      this,
+      'toLocaleString',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.String Function() get toLocaleString => _i5.getProperty(
+        this,
+        'toLocaleString',
+      );
+  set toString$(_i2.String Function() value) {
+    _i5.setProperty(
+      this,
+      'toString',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.String Function() get toString$ => _i5.getProperty(
+        this,
+        'toString',
+      );
+  set valueOf(_i3.BigInt64Array Function() value) {
+    _i5.setProperty(
+      this,
+      'valueOf',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigInt64Array Function() get valueOf => _i5.getProperty(
+        this,
+        'valueOf',
+      );
+  set values(_i7.IterableIterator<_i2.int> Function() value) {
+    _i5.setProperty(
+      this,
+      'values',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i7.IterableIterator<_i2.int> Function() get values => _i5.getProperty(
+        this,
+        'values',
+      );
+  set at(_i2.int? Function(_i2.num) value) {
+    _i5.setProperty(
+      this,
+      'at',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.int? Function(_i2.num) get at => _i5.getProperty(
+        this,
+        'at',
+      );
+  set findLastIndex(
+      _i2.num Function(
+        _i2.Object? Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'findLastIndex',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.num Function(
+    _i2.Object? Function(
+      _i2.int,
+      _i2.num,
+      _i3.BigInt64Array,
+    ), [
+    _i2.dynamic,
+  ]) get findLastIndex => _i5.getProperty(
+        this,
+        'findLastIndex',
+      );
+  set toReversed(_i3.BigInt64Array Function() value) {
+    _i5.setProperty(
+      this,
+      'toReversed',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigInt64Array Function() get toReversed => _i5.getProperty(
+        this,
+        'toReversed',
+      );
+  set toSorted(
+      _i3.BigInt64Array Function(
+              [_i2.num Function(
+                _i2.int,
+                _i2.int,
+              )?])
+          value) {
+    _i5.setProperty(
+      this,
+      'toSorted',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigInt64Array Function(
+      [_i2.num Function(
+        _i2.int,
+        _i2.int,
+      )?]) get toSorted => _i5.getProperty(
+        this,
+        'toSorted',
+      );
+  set with$(
+      _i3.BigInt64Array Function(
+        _i2.num,
+        _i2.int,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'with',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigInt64Array Function(
+    _i2.num,
+    _i2.int,
+  ) get with$ => _i5.getProperty(
+        this,
+        'with',
       );
 
   /// Calls the specified callback function for all the elements in an array. The return value of
@@ -1097,135 +1480,6 @@ extension BigInt64Array$Typings on BigInt64Array {
         $2: _reduceRight$2,
       );
 
-  /// Reverses the elements in the array.
-  _i3.BigInt64Array reverse() => _i5.callMethod(
-        this,
-        'reverse',
-        [],
-      );
-
-  /// Sets a value or an array of values.
-  ///  @param array A typed or untyped array of values to set.
-  ///  @param offset The index in the current array at which the values are to be written.
-  void set(
-    _i2.List<_i2.int> array, [
-    _i2.num? offset,
-  ]) {
-    _i5.callMethod(
-      this,
-      'set',
-      [
-        array,
-        offset ?? _i4.undefined,
-      ],
-    );
-  }
-
-  /// Returns a section of an array.
-  ///  @param start The beginning of the specified portion of the array.
-  ///  @param end The end of the specified portion of the array.
-  _i3.BigInt64Array slice([
-    _i2.num? start,
-    _i2.num? end,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'slice',
-        [
-          start ?? _i4.undefined,
-          end ?? _i4.undefined,
-        ],
-      );
-
-  /// Determines whether the specified callback function returns true for any element of an array.
-  ///  @param predicate A function that accepts up to three arguments. The some method calls the
-  ///  predicate function for each element in the array until the predicate returns true, or until
-  ///  the end of the array.
-  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
-  ///  If thisArg is omitted, undefined is used as the this value.
-  _i2.bool some(
-    _i2.bool Function(
-      _i2.int,
-      _i2.num,
-      _i3.BigInt64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'some',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
-      );
-
-  /// Sorts the array.
-  ///  @param compareFn The function used to determine the order of the elements. If omitted, the elements are sorted in ascending order.
-  _i3.BigInt64Array sort(
-          [_i2.Object Function(
-            _i2.int,
-            _i2.int,
-          )? compareFn]) =>
-      _i5.callMethod(
-        this,
-        'sort',
-        [compareFn == null ? _i4.undefined : _i5.allowInterop(compareFn)],
-      );
-
-  /// Gets a new BigInt64Array view of the ArrayBuffer store for this array, referencing the elements
-  ///  at begin, inclusive, up to end, exclusive.
-  ///  @param begin The index of the beginning of the array.
-  ///  @param end The index of the end of the array.
-  _i3.BigInt64Array subarray([
-    _i2.num? begin,
-    _i2.num? end,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'subarray',
-        [
-          begin ?? _i4.undefined,
-          end ?? _i4.undefined,
-        ],
-      );
-
-  /// Converts the array to a string by using the current locale.
-  _i2.String toLocaleString() => _i5.callMethod(
-        this,
-        'toLocaleString',
-        [],
-      );
-
-  /// Returns a string representation of the array.
-  _i2.String toString$() => _i5.callMethod(
-        this,
-        'toString',
-        [],
-      );
-
-  /// Returns the primitive value of the specified object.
-  _i3.BigInt64Array valueOf() => _i5.callMethod(
-        this,
-        'valueOf',
-        [],
-      );
-
-  /// Yields each value in the array.
-  _i7.IterableIterator<_i2.int> values() => _i5.callMethod(
-        this,
-        'values',
-        [],
-      );
-
-  /// Returns the item located at the specified index.
-  ///  @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
-  _i2.int? at(_i2.num index) => _i5.callMethod(
-        this,
-        'at',
-        [index],
-      );
-
   /// Returns the value of the last element in the array where predicate is true, and undefined
   ///  otherwise.
   ///  @param predicate findLast calls predicate once for each element of the array, in descending
@@ -1246,7 +1500,7 @@ extension BigInt64Array$Typings on BigInt64Array {
         'findLast',
         [
           _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
+          thisArg,
         ],
       );
 
@@ -1265,7 +1519,7 @@ extension BigInt64Array$Typings on BigInt64Array {
         'findLast',
         [
           _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
+          thisArg,
         ],
       );
 
@@ -1301,74 +1555,6 @@ extension BigInt64Array$Typings on BigInt64Array {
         $1: _findLast$1,
         $2: _findLast$2,
       );
-
-  /// Returns the index of the last element in the array where predicate is true, and -1
-  ///  otherwise.
-  ///  @param predicate findLastIndex calls predicate once for each element of the array, in descending
-  ///  order, until it finds one where predicate returns true. If such an element is found,
-  ///  findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
-  ///  @param thisArg If provided, it will be used as the this value for each invocation of
-  ///  predicate. If it is not provided, undefined is used instead.
-  _i2.num findLastIndex(
-    _i2.Object? Function(
-      _i2.int,
-      _i2.num,
-      _i3.BigInt64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'findLastIndex',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
-      );
-
-  /// Copies the array and returns the copy with the elements in reverse order.
-  _i3.BigInt64Array toReversed() => _i5.callMethod(
-        this,
-        'toReversed',
-        [],
-      );
-
-  /// Copies and sorts the array.
-  ///  @param compareFn Function used to determine the order of the elements. It is expected to return
-  ///  a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
-  ///  value otherwise. If omitted, the elements are sorted in ascending, ASCII character order.
-  ///  ```ts
-  ///  const myNums = BigInt64Array.from([11n, 2n, -22n, 1n]);
-  ///  myNums.toSorted((a, b) => Number(a - b)) // BigInt64Array(4) [-22n, 1n, 2n, 11n]
-  ///  ```
-  _i3.BigInt64Array toSorted(
-          [_i2.num Function(
-            _i2.int,
-            _i2.int,
-          )? compareFn]) =>
-      _i5.callMethod(
-        this,
-        'toSorted',
-        [compareFn == null ? _i4.undefined : _i5.allowInterop(compareFn)],
-      );
-
-  /// Copies the array and inserts the given bigint at the provided index.
-  ///  @param index The index of the value to overwrite. If the index is
-  ///  negative, then it replaces from the end of the array.
-  ///  @param value The value to insert into the copied array.
-  ///  @returns A copy of the original array with the inserted value.
-  _i3.BigInt64Array with$(
-    _i2.num index,
-    _i2.int value,
-  ) =>
-      _i5.callMethod(
-        this,
-        'with',
-        [
-          index,
-          value,
-        ],
-      );
   _i2.int operator [](_i2.num index) => _i5.getProperty(
         this,
         index,
@@ -1393,15 +1579,44 @@ class BigInt64ArrayConstructor {
         _i6.target25,
         'BYTES_PER_ELEMENT',
       );
+  static set of(
+      _i3.BigInt64Array Function([_i2.Iterable<_i2.dynamic>?]) value) {
+    _i5.setProperty(
+      _i6.target25,
+      'of',
+      _i5.allowInterop(([
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value([
+            a0,
+            a1,
+            a2,
+            a3,
+            a4,
+            a5,
+            a6,
+            a7,
+            a8,
+            a9,
+          ])),
+    );
+  }
 }
 
 extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
-  /// Returns a new array from a set of elements.
-  ///  @param items A set of elements to include in the new array object.
-  _i3.BigInt64Array of([_i2.Iterable<_i2.dynamic>? items]) => _i5.callMethod(
+  _i3.BigInt64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
+      _i5.getProperty(
         this,
         'of',
-        [...?items],
       );
 
   /// Creates an array from an array-like or iterable object.
@@ -1419,7 +1634,7 @@ extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
         [
           arrayLike,
           _i5.allowInterop(mapfn),
-          thisArg ?? _i4.undefined,
+          thisArg,
         ],
       );
 }
@@ -1463,15 +1678,37 @@ class BigUint64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
         _i6.target26,
         'BYTES_PER_ELEMENT',
       );
-
-  /// Returns a new array from a set of elements.
-  ///  @param items A set of elements to include in the new array object.
-  static _i3.BigUint64Array of([_i2.Iterable<_i2.dynamic>? items]) =>
-      _i5.callMethod(
-        _i6.target26,
-        'of',
-        [...?items],
-      );
+  static set of(
+      _i3.BigUint64Array Function([_i2.Iterable<_i2.dynamic>?]) value) {
+    _i5.setProperty(
+      _i6.target26,
+      'of',
+      _i5.allowInterop(([
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value([
+            a0,
+            a1,
+            a2,
+            a3,
+            a4,
+            a5,
+            a6,
+            a7,
+            a8,
+            a9,
+          ])),
+    );
+  }
 
   /// Creates an array from an array-like or iterable object.
   static _i3.BigUint64Array from<U>(
@@ -1488,7 +1725,7 @@ class BigUint64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
         [
           arrayLike,
           _i5.allowInterop(mapfn),
-          thisArg ?? _i4.undefined,
+          thisArg,
         ],
       );
 }
@@ -1528,264 +1765,572 @@ extension BigUint64Array$Typings on BigUint64Array {
         this,
         'length',
       );
+  set copyWithin(
+      _i3.BigUint64Array Function(
+        _i2.num,
+        _i2.num, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'copyWithin',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the this object after copying a section of the array identified by start and end
-  ///  to the same array starting at position target
-  ///  @param target If target is negative, it is treated as length+target where length is the
-  ///  length of the array.
-  ///  @param start If start is negative, it is treated as length+start. If end is negative, it
-  ///  is treated as length+end.
-  ///  @param end If not specified, length of the this object is used as its default value.
-  _i3.BigUint64Array copyWithin(
-    _i2.num target,
-    _i2.num start, [
-    _i2.num? end,
-  ]) =>
-      _i5.callMethod(
+  _i3.BigUint64Array Function(
+    _i2.num,
+    _i2.num, [
+    _i2.num?,
+  ]) get copyWithin => _i5.getProperty(
         this,
         'copyWithin',
-        [
-          target,
-          start,
-          end ?? _i4.undefined,
-        ],
       );
+  set entries(
+      _i7.IterableIterator<
+                  (
+                    _i2.num,
+                    _i2.int,
+                  )>
+              Function()
+          value) {
+    _i5.setProperty(
+      this,
+      'entries',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Yields index, value pairs for every entry in the array.
   _i7.IterableIterator<
-      (
-        _i2.num,
-        _i2.int,
-      )> entries() => _i5.callMethod(
+          (
+            _i2.num,
+            _i2.int,
+          )>
+      Function() get entries => _i5.getProperty(
         this,
         'entries',
-        [],
       );
+  set every(
+      _i2.bool Function(
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'every',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Determines whether all the members of an array satisfy the specified test.
-  ///  @param predicate A function that accepts up to three arguments. The every method calls
-  ///  the predicate function for each element in the array until the predicate returns false,
-  ///  or until the end of the array.
-  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
-  ///  If thisArg is omitted, undefined is used as the this value.
-  _i2.bool every(
+  _i2.bool Function(
     _i2.bool Function(
       _i2.int,
       _i2.num,
       _i3.BigUint64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get every => _i5.getProperty(
         this,
         'every',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
       );
+  set fill(
+      _i3.BigUint64Array Function(
+        _i2.int, [
+        _i2.num?,
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'fill',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Changes all array elements from `start` to `end` index to a static `value` and returns the modified array
-  ///  @param value value to fill array section with
-  ///  @param start index to start filling the array at. If start is negative, it is treated as
-  ///  length+start where length is the length of the array.
-  ///  @param end index to stop filling the array at. If end is negative, it is treated as
-  ///  length+end.
-  _i3.BigUint64Array fill(
-    _i2.int value, [
-    _i2.num? start,
-    _i2.num? end,
-  ]) =>
-      _i5.callMethod(
+  _i3.BigUint64Array Function(
+    _i2.int, [
+    _i2.num?,
+    _i2.num?,
+  ]) get fill => _i5.getProperty(
         this,
         'fill',
-        [
-          value,
-          start ?? _i4.undefined,
-          end ?? _i4.undefined,
-        ],
       );
+  set filter(
+      _i3.BigUint64Array Function(
+        _i2.dynamic Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'filter',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the elements of an array that meet the condition specified in a callback function.
-  ///  @param predicate A function that accepts up to three arguments. The filter method calls
-  ///  the predicate function one time for each element in the array.
-  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
-  ///  If thisArg is omitted, undefined is used as the this value.
-  _i3.BigUint64Array filter(
+  _i3.BigUint64Array Function(
     _i2.dynamic Function(
       _i2.int,
       _i2.num,
       _i3.BigUint64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get filter => _i5.getProperty(
         this,
         'filter',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
       );
+  set find(
+      _i2.int? Function(
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'find',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the value of the first element in the array where predicate is true, and undefined
-  ///  otherwise.
-  ///  @param predicate find calls predicate once for each element of the array, in ascending
-  ///  order, until it finds one where predicate returns true. If such an element is found, find
-  ///  immediately returns that element value. Otherwise, find returns undefined.
-  ///  @param thisArg If provided, it will be used as the this value for each invocation of
-  ///  predicate. If it is not provided, undefined is used instead.
-  _i2.int? find(
+  _i2.int? Function(
     _i2.bool Function(
       _i2.int,
       _i2.num,
       _i3.BigUint64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get find => _i5.getProperty(
         this,
         'find',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
       );
+  set findIndex(
+      _i2.num Function(
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'findIndex',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the index of the first element in the array where predicate is true, and -1
-  ///  otherwise.
-  ///  @param predicate find calls predicate once for each element of the array, in ascending
-  ///  order, until it finds one where predicate returns true. If such an element is found,
-  ///  findIndex immediately returns that element index. Otherwise, findIndex returns -1.
-  ///  @param thisArg If provided, it will be used as the this value for each invocation of
-  ///  predicate. If it is not provided, undefined is used instead.
-  _i2.num findIndex(
+  _i2.num Function(
     _i2.bool Function(
       _i2.int,
       _i2.num,
       _i3.BigUint64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get findIndex => _i5.getProperty(
         this,
         'findIndex',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
       );
+  set forEach(
+      void Function(
+        void Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'forEach',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Performs the specified action for each element in an array.
-  ///  @param callbackfn A function that accepts up to three arguments. forEach calls the
-  ///  callbackfn function one time for each element in the array.
-  ///  @param thisArg An object to which the this keyword can refer in the callbackfn function.
-  ///  If thisArg is omitted, undefined is used as the this value.
-  void forEach(
+  void Function(
     void Function(
       _i2.int,
       _i2.num,
       _i3.BigUint64Array,
-    ) callbackfn, [
-    _i2.dynamic thisArg,
-  ]) {
-    _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get forEach => _i5.getProperty(
+        this,
+        'forEach',
+      );
+  set includes(
+      _i2.bool Function(
+        _i2.int, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
       this,
-      'forEach',
-      [
-        _i5.allowInterop(callbackfn),
-        thisArg ?? _i4.undefined,
-      ],
+      'includes',
+      _i5.allowInterop(value),
     );
   }
 
-  /// Determines whether an array includes a certain element, returning true or false as appropriate.
-  ///  @param searchElement The element to search for.
-  ///  @param fromIndex The position in this array at which to begin searching for searchElement.
-  _i2.bool includes(
-    _i2.int searchElement, [
-    _i2.num? fromIndex,
-  ]) =>
-      _i5.callMethod(
+  _i2.bool Function(
+    _i2.int, [
+    _i2.num?,
+  ]) get includes => _i5.getProperty(
         this,
         'includes',
-        [
-          searchElement,
-          fromIndex ?? _i4.undefined,
-        ],
       );
+  set indexOf(
+      _i2.num Function(
+        _i2.int, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'indexOf',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the index of the first occurrence of a value in an array.
-  ///  @param searchElement The value to locate in the array.
-  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
-  ///  search starts at index 0.
-  _i2.num indexOf(
-    _i2.int searchElement, [
-    _i2.num? fromIndex,
-  ]) =>
-      _i5.callMethod(
+  _i2.num Function(
+    _i2.int, [
+    _i2.num?,
+  ]) get indexOf => _i5.getProperty(
         this,
         'indexOf',
-        [
-          searchElement,
-          fromIndex ?? _i4.undefined,
-        ],
       );
+  set join(_i2.String Function([_i2.String?]) value) {
+    _i5.setProperty(
+      this,
+      'join',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Adds all the elements of an array separated by the specified separator string.
-  ///  @param separator A string used to separate one element of an array from the next in the
-  ///  resulting String. If omitted, the array elements are separated with a comma.
-  _i2.String join([_i2.String? separator]) => _i5.callMethod(
+  _i2.String Function([_i2.String?]) get join => _i5.getProperty(
         this,
         'join',
-        [separator ?? _i4.undefined],
       );
+  set keys(_i7.IterableIterator<_i2.num> Function() value) {
+    _i5.setProperty(
+      this,
+      'keys',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Yields each index in the array.
-  _i7.IterableIterator<_i2.num> keys() => _i5.callMethod(
+  _i7.IterableIterator<_i2.num> Function() get keys => _i5.getProperty(
         this,
         'keys',
-        [],
       );
+  set lastIndexOf(
+      _i2.num Function(
+        _i2.int, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'lastIndexOf',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the index of the last occurrence of a value in an array.
-  ///  @param searchElement The value to locate in the array.
-  ///  @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
-  ///  search starts at index 0.
-  _i2.num lastIndexOf(
-    _i2.int searchElement, [
-    _i2.num? fromIndex,
-  ]) =>
-      _i5.callMethod(
+  _i2.num Function(
+    _i2.int, [
+    _i2.num?,
+  ]) get lastIndexOf => _i5.getProperty(
         this,
         'lastIndexOf',
-        [
-          searchElement,
-          fromIndex ?? _i4.undefined,
-        ],
       );
+  set map(
+      _i3.BigUint64Array Function(
+        _i2.int Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'map',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Calls a defined callback function on each element of an array, and returns an array that
-  ///  contains the results.
-  ///  @param callbackfn A function that accepts up to three arguments. The map method calls the
-  ///  callbackfn function one time for each element in the array.
-  ///  @param thisArg An object to which the this keyword can refer in the callbackfn function.
-  ///  If thisArg is omitted, undefined is used as the this value.
-  _i3.BigUint64Array map(
+  _i3.BigUint64Array Function(
     _i2.int Function(
       _i2.int,
       _i2.num,
       _i3.BigUint64Array,
-    ) callbackfn, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get map => _i5.getProperty(
         this,
         'map',
-        [
-          _i5.allowInterop(callbackfn),
-          thisArg ?? _i4.undefined,
-        ],
+      );
+  set reverse(_i3.BigUint64Array Function() value) {
+    _i5.setProperty(
+      this,
+      'reverse',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigUint64Array Function() get reverse => _i5.getProperty(
+        this,
+        'reverse',
+      );
+  set set(
+      void Function(
+        _i2.List<_i2.int>, [
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'set',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function(
+    _i2.List<_i2.int>, [
+    _i2.num?,
+  ]) get set => _i5.getProperty(
+        this,
+        'set',
+      );
+  set slice(
+      _i3.BigUint64Array Function([
+        _i2.num?,
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'slice',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigUint64Array Function([
+    _i2.num?,
+    _i2.num?,
+  ]) get slice => _i5.getProperty(
+        this,
+        'slice',
+      );
+  set some(
+      _i2.bool Function(
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'some',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(
+    _i2.bool Function(
+      _i2.int,
+      _i2.num,
+      _i3.BigUint64Array,
+    ), [
+    _i2.dynamic,
+  ]) get some => _i5.getProperty(
+        this,
+        'some',
+      );
+  set sort(
+      _i3.BigUint64Array Function(
+              [_i2.Object Function(
+                _i2.int,
+                _i2.int,
+              )?])
+          value) {
+    _i5.setProperty(
+      this,
+      'sort',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigUint64Array Function(
+      [_i2.Object Function(
+        _i2.int,
+        _i2.int,
+      )?]) get sort => _i5.getProperty(
+        this,
+        'sort',
+      );
+  set subarray(
+      _i3.BigUint64Array Function([
+        _i2.num?,
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'subarray',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigUint64Array Function([
+    _i2.num?,
+    _i2.num?,
+  ]) get subarray => _i5.getProperty(
+        this,
+        'subarray',
+      );
+  set toLocaleString(_i2.String Function() value) {
+    _i5.setProperty(
+      this,
+      'toLocaleString',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.String Function() get toLocaleString => _i5.getProperty(
+        this,
+        'toLocaleString',
+      );
+  set toString$(_i2.String Function() value) {
+    _i5.setProperty(
+      this,
+      'toString',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.String Function() get toString$ => _i5.getProperty(
+        this,
+        'toString',
+      );
+  set valueOf(_i3.BigUint64Array Function() value) {
+    _i5.setProperty(
+      this,
+      'valueOf',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigUint64Array Function() get valueOf => _i5.getProperty(
+        this,
+        'valueOf',
+      );
+  set values(_i7.IterableIterator<_i2.int> Function() value) {
+    _i5.setProperty(
+      this,
+      'values',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i7.IterableIterator<_i2.int> Function() get values => _i5.getProperty(
+        this,
+        'values',
+      );
+  set at(_i2.int? Function(_i2.num) value) {
+    _i5.setProperty(
+      this,
+      'at',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.int? Function(_i2.num) get at => _i5.getProperty(
+        this,
+        'at',
+      );
+  set findLastIndex(
+      _i2.num Function(
+        _i2.Object? Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      this,
+      'findLastIndex',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.num Function(
+    _i2.Object? Function(
+      _i2.int,
+      _i2.num,
+      _i3.BigUint64Array,
+    ), [
+    _i2.dynamic,
+  ]) get findLastIndex => _i5.getProperty(
+        this,
+        'findLastIndex',
+      );
+  set toReversed(_i3.BigUint64Array Function() value) {
+    _i5.setProperty(
+      this,
+      'toReversed',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigUint64Array Function() get toReversed => _i5.getProperty(
+        this,
+        'toReversed',
+      );
+  set toSorted(
+      _i3.BigUint64Array Function(
+              [_i2.num Function(
+                _i2.int,
+                _i2.int,
+              )?])
+          value) {
+    _i5.setProperty(
+      this,
+      'toSorted',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigUint64Array Function(
+      [_i2.num Function(
+        _i2.int,
+        _i2.int,
+      )?]) get toSorted => _i5.getProperty(
+        this,
+        'toSorted',
+      );
+  set with$(
+      _i3.BigUint64Array Function(
+        _i2.num,
+        _i2.int,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'with',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.BigUint64Array Function(
+    _i2.num,
+    _i2.int,
+  ) get with$ => _i5.getProperty(
+        this,
+        'with',
       );
 
   /// Calls the specified callback function for all the elements in an array. The return value of
@@ -1962,135 +2507,6 @@ extension BigUint64Array$Typings on BigUint64Array {
         $2: _reduceRight$2,
       );
 
-  /// Reverses the elements in the array.
-  _i3.BigUint64Array reverse() => _i5.callMethod(
-        this,
-        'reverse',
-        [],
-      );
-
-  /// Sets a value or an array of values.
-  ///  @param array A typed or untyped array of values to set.
-  ///  @param offset The index in the current array at which the values are to be written.
-  void set(
-    _i2.List<_i2.int> array, [
-    _i2.num? offset,
-  ]) {
-    _i5.callMethod(
-      this,
-      'set',
-      [
-        array,
-        offset ?? _i4.undefined,
-      ],
-    );
-  }
-
-  /// Returns a section of an array.
-  ///  @param start The beginning of the specified portion of the array.
-  ///  @param end The end of the specified portion of the array.
-  _i3.BigUint64Array slice([
-    _i2.num? start,
-    _i2.num? end,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'slice',
-        [
-          start ?? _i4.undefined,
-          end ?? _i4.undefined,
-        ],
-      );
-
-  /// Determines whether the specified callback function returns true for any element of an array.
-  ///  @param predicate A function that accepts up to three arguments. The some method calls the
-  ///  predicate function for each element in the array until the predicate returns true, or until
-  ///  the end of the array.
-  ///  @param thisArg An object to which the this keyword can refer in the predicate function.
-  ///  If thisArg is omitted, undefined is used as the this value.
-  _i2.bool some(
-    _i2.bool Function(
-      _i2.int,
-      _i2.num,
-      _i3.BigUint64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'some',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
-      );
-
-  /// Sorts the array.
-  ///  @param compareFn The function used to determine the order of the elements. If omitted, the elements are sorted in ascending order.
-  _i3.BigUint64Array sort(
-          [_i2.Object Function(
-            _i2.int,
-            _i2.int,
-          )? compareFn]) =>
-      _i5.callMethod(
-        this,
-        'sort',
-        [compareFn == null ? _i4.undefined : _i5.allowInterop(compareFn)],
-      );
-
-  /// Gets a new BigUint64Array view of the ArrayBuffer store for this array, referencing the elements
-  ///  at begin, inclusive, up to end, exclusive.
-  ///  @param begin The index of the beginning of the array.
-  ///  @param end The index of the end of the array.
-  _i3.BigUint64Array subarray([
-    _i2.num? begin,
-    _i2.num? end,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'subarray',
-        [
-          begin ?? _i4.undefined,
-          end ?? _i4.undefined,
-        ],
-      );
-
-  /// Converts the array to a string by using the current locale.
-  _i2.String toLocaleString() => _i5.callMethod(
-        this,
-        'toLocaleString',
-        [],
-      );
-
-  /// Returns a string representation of the array.
-  _i2.String toString$() => _i5.callMethod(
-        this,
-        'toString',
-        [],
-      );
-
-  /// Returns the primitive value of the specified object.
-  _i3.BigUint64Array valueOf() => _i5.callMethod(
-        this,
-        'valueOf',
-        [],
-      );
-
-  /// Yields each value in the array.
-  _i7.IterableIterator<_i2.int> values() => _i5.callMethod(
-        this,
-        'values',
-        [],
-      );
-
-  /// Returns the item located at the specified index.
-  ///  @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
-  _i2.int? at(_i2.num index) => _i5.callMethod(
-        this,
-        'at',
-        [index],
-      );
-
   /// Returns the value of the last element in the array where predicate is true, and undefined
   ///  otherwise.
   ///  @param predicate findLast calls predicate once for each element of the array, in descending
@@ -2111,7 +2527,7 @@ extension BigUint64Array$Typings on BigUint64Array {
         'findLast',
         [
           _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
+          thisArg,
         ],
       );
 
@@ -2130,7 +2546,7 @@ extension BigUint64Array$Typings on BigUint64Array {
         'findLast',
         [
           _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
+          thisArg,
         ],
       );
 
@@ -2166,74 +2582,6 @@ extension BigUint64Array$Typings on BigUint64Array {
         $1: _findLast$1,
         $2: _findLast$2,
       );
-
-  /// Returns the index of the last element in the array where predicate is true, and -1
-  ///  otherwise.
-  ///  @param predicate findLastIndex calls predicate once for each element of the array, in descending
-  ///  order, until it finds one where predicate returns true. If such an element is found,
-  ///  findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
-  ///  @param thisArg If provided, it will be used as the this value for each invocation of
-  ///  predicate. If it is not provided, undefined is used instead.
-  _i2.num findLastIndex(
-    _i2.Object? Function(
-      _i2.int,
-      _i2.num,
-      _i3.BigUint64Array,
-    ) predicate, [
-    _i2.dynamic thisArg,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'findLastIndex',
-        [
-          _i5.allowInterop(predicate),
-          thisArg ?? _i4.undefined,
-        ],
-      );
-
-  /// Copies the array and returns the copy with the elements in reverse order.
-  _i3.BigUint64Array toReversed() => _i5.callMethod(
-        this,
-        'toReversed',
-        [],
-      );
-
-  /// Copies and sorts the array.
-  ///  @param compareFn Function used to determine the order of the elements. It is expected to return
-  ///  a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
-  ///  value otherwise. If omitted, the elements are sorted in ascending, ASCII character order.
-  ///  ```ts
-  ///  const myNums = BigUint64Array.from([11n, 2n, 22n, 1n]);
-  ///  myNums.toSorted((a, b) => Number(a - b)) // BigUint64Array(4) [1n, 2n, 11n, 22n]
-  ///  ```
-  _i3.BigUint64Array toSorted(
-          [_i2.num Function(
-            _i2.int,
-            _i2.int,
-          )? compareFn]) =>
-      _i5.callMethod(
-        this,
-        'toSorted',
-        [compareFn == null ? _i4.undefined : _i5.allowInterop(compareFn)],
-      );
-
-  /// Copies the array and inserts the given bigint at the provided index.
-  ///  @param index The index of the value to overwrite. If the index is
-  ///  negative, then it replaces from the end of the array.
-  ///  @param value The value to insert into the copied array.
-  ///  @returns A copy of the original array with the inserted value.
-  _i3.BigUint64Array with$(
-    _i2.num index,
-    _i2.int value,
-  ) =>
-      _i5.callMethod(
-        this,
-        'with',
-        [
-          index,
-          value,
-        ],
-      );
   _i2.int operator [](_i2.num index) => _i5.getProperty(
         this,
         index,
@@ -2258,15 +2606,44 @@ class BigUint64ArrayConstructor {
         _i6.target26,
         'BYTES_PER_ELEMENT',
       );
+  static set of(
+      _i3.BigUint64Array Function([_i2.Iterable<_i2.dynamic>?]) value) {
+    _i5.setProperty(
+      _i6.target26,
+      'of',
+      _i5.allowInterop(([
+        a0,
+        a1,
+        a2,
+        a3,
+        a4,
+        a5,
+        a6,
+        a7,
+        a8,
+        a9,
+      ]) =>
+          value([
+            a0,
+            a1,
+            a2,
+            a3,
+            a4,
+            a5,
+            a6,
+            a7,
+            a8,
+            a9,
+          ])),
+    );
+  }
 }
 
 extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
-  /// Returns a new array from a set of elements.
-  ///  @param items A set of elements to include in the new array object.
-  _i3.BigUint64Array of([_i2.Iterable<_i2.dynamic>? items]) => _i5.callMethod(
+  _i3.BigUint64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
+      _i5.getProperty(
         this,
         'of',
-        [...?items],
       );
 
   /// Creates an array from an array-like or iterable object.
@@ -2284,7 +2661,7 @@ extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
         [
           arrayLike,
           _i5.allowInterop(mapfn),
-          thisArg ?? _i4.undefined,
+          thisArg,
         ],
       );
 }

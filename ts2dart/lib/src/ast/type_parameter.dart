@@ -10,12 +10,15 @@ class InteropTypeParam {
   InteropRef? constraint;
   InteropRef? def;
 
+  @override
+  String toString() => 'InteropTypeParam(symbol: $symbol, constraint: $constraint, def: $def)';
+
   Reference ref() => TypeReference((b) {
         b
           ..symbol = symbol
           ..bound = switch (constraint) {
             InteropRef ref => ref.ref(),
-            _ => null// InteropStaticType.dyn.ref()
+            _ => null // InteropStaticType.dyn.ref()
           };
       });
 

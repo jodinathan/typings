@@ -6,8 +6,8 @@ import 'dart:core' as _i2;
 import 'go.go.d.dart' as _i3;
 import '/src/d/typescript/lib.es5.d.dart' as _i4;
 import 'dart:js_util' as _i5;
-import '/src/d/typescript/lib.dom.d.dart' as _i6;
-import '/d/core.dart' as _i7;
+import '/d/core.dart' as _i6;
+import '/src/d/typescript/lib.dom.d.dart' as _i7;
 
 @_i1.JS('go')
 external _i2.Object _self;
@@ -145,16 +145,6 @@ enum DiagramEventNameOptions {
   final _i2.String value;
 }
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class CreateLinearGradient {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class CreateRadialGradient {}
-
 typedef MarginLike = _i2.Object;
 typedef DiagramEventHandler = void Function(_i3.DiagramEvent);
 typedef DiagramEventName = _i3.DiagramEventNameOptions;
@@ -173,15 +163,15 @@ typedef ConstructorType<
 typedef MakeAllow<CT extends _i3.ConstructorType<CT>, C, E> = _i2.dynamic;
 typedef BrushLike = _i2.dynamic;
 typedef Key = _i2.dynamic;
-typedef TargetConversion = _i2.dynamic Function(
+typedef TargetConversion = _i2.dynamic Function([
   _i2.dynamic,
   _i2.dynamic,
-)?;
+])?;
 typedef BackConversion = _i2.dynamic Function(
+  _i3.Model, [
   _i2.dynamic,
   _i2.dynamic,
-  _i3.Model,
-)?;
+])?;
 
 /// (undocumented)
 @_i1.JS()
@@ -245,7 +235,25 @@ extension EnumValue$Typings on EnumValue {
 /// ```
 @_i1.JS()
 @_i1.staticInterop
-class Iterable<T> {}
+@_i1.anonymous
+class Iterable<T> {
+  external factory Iterable._({
+    _i2.dynamic iterator,
+    _i2.dynamic count,
+    _i2.dynamic first,
+  });
+
+  factory Iterable({
+    _i3.Iterator<_i2.dynamic>? iterator,
+    _i2.num? count,
+    _i2.dynamic Function()? first,
+  }) =>
+      Iterable._(
+        iterator: iterator ?? _i6.undefined,
+        count: count,
+        first: first == null ? null : _i5.allowInterop(first),
+      );
+}
 
 extension Iterable$Typings<T> on Iterable<T> {
   /// Gets an Iterator that can iterate over the items in the collection.
@@ -275,13 +283,17 @@ extension Iterable$Typings<T> on Iterable<T> {
         this,
         'count',
       );
+  set first(T? Function() value) {
+    _i5.setProperty(
+      this,
+      'first',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Returns the first item in the list, or null if there is none.
-  ///  @return {T|null} This returns null if there are no items in the list.
-  T? first() => _i5.callMethod(
+  T? Function() get first => _i5.getProperty(
         this,
         'first',
-        [],
       );
 }
 
@@ -305,7 +317,55 @@ extension Iterable$Typings<T> on Iterable<T> {
 /// by just returning themselves.
 @_i1.JS()
 @_i1.staticInterop
-class Iterator<T> implements _i3.Iterable<T> {}
+@_i1.anonymous
+class Iterator<T> implements _i3.Iterable<T> {
+  external factory Iterator._({
+    _i2.dynamic iterator,
+    _i2.dynamic value,
+    _i2.dynamic key,
+    _i2.dynamic count,
+    _i2.dynamic next,
+    _i2.dynamic hasNext,
+    _i2.dynamic first,
+    _i2.dynamic reset,
+    _i2.dynamic any,
+    _i2.dynamic all,
+    _i2.dynamic each,
+    _i2.dynamic map,
+    _i2.dynamic filter,
+  });
+
+  factory Iterator({
+    _i3.Iterator<_i2.dynamic>? iterator,
+    _i2.dynamic value,
+    _i2.dynamic key,
+    _i2.num? count,
+    _i2.bool Function()? next,
+    _i2.bool Function()? hasNext,
+    _i2.dynamic Function()? first,
+    void Function()? reset,
+    _i2.bool Function(_i2.bool Function(_i2.dynamic))? any,
+    _i2.bool Function(_i2.bool Function(_i2.dynamic))? all,
+    void Function(void Function(_i2.dynamic))? each,
+    _i3.Iterator<S> Function<S>(S Function(_i2.dynamic))? map,
+    _i3.Iterator<_i2.dynamic> Function(_i2.bool Function(_i2.dynamic))? filter,
+  }) =>
+      Iterator._(
+        iterator: iterator ?? _i6.undefined,
+        value: value,
+        key: key,
+        count: count,
+        next: next == null ? null : _i5.allowInterop(next),
+        hasNext: hasNext == null ? null : _i5.allowInterop(hasNext),
+        first: first == null ? null : _i5.allowInterop(first),
+        reset: reset == null ? null : _i5.allowInterop(reset),
+        any: any == null ? null : _i5.allowInterop(any),
+        all: all == null ? null : _i5.allowInterop(all),
+        each: each == null ? null : _i5.allowInterop(each),
+        map: map == null ? null : _i5.allowInterop(map),
+        filter: filter == null ? null : _i5.allowInterop(filter),
+      );
+}
 
 extension Iterator$Typings<T> on Iterator<T> {
   /// Returns itself, which is convenient for code that expects an Iterable
@@ -340,132 +400,181 @@ extension Iterator$Typings<T> on Iterator<T> {
         this,
         'count',
       );
+  set next(_i2.bool Function() value) {
+    _i5.setProperty(
+      this,
+      'next',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Call this method to advance the iterator to the next item in the collection.
-  ///  This should be called before accessing any #value.
-  ///  @return {boolean} whether another item is available; when true the value of #value will be that item.
-  _i2.bool next() => _i5.callMethod(
+  _i2.bool Function() get next => _i5.getProperty(
         this,
         'next',
-        [],
       );
+  set hasNext(_i2.bool Function() value) {
+    _i5.setProperty(
+      this,
+      'hasNext',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Call this method to advance the iterator to the next item in the collection.
-  ///  This should be called before accessing any #value.
-  ///  @return {boolean} whether another item is available; when true the value of #value will be that item.
-  _i2.bool hasNext() => _i5.callMethod(
+  _i2.bool Function() get hasNext => _i5.getProperty(
         this,
         'hasNext',
-        [],
       );
+  set first(T? Function() value) {
+    _i5.setProperty(
+      this,
+      'first',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Advance if needed to the first item in the collection and return it, or return null if there is none.
-  ///
-  ///  Caution: this returns a *key/value pair*, not a *value*, for Map iterators.
-  ///  @return {T|null}
-  ///  @since 1.1
-  T? first() => _i5.callMethod(
+  T? Function() get first => _i5.getProperty(
         this,
         'first',
-        [],
       );
-
-  /// Start this iterator all over again.
-  void reset() {
-    _i5.callMethod(
+  set reset(void Function() value) {
+    _i5.setProperty(
       this,
       'reset',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  /// This is true if any invocation of the given predicate on items in the collection is true.
-  ///
-  ///  Call the given predicate on each item in the collection.
-  ///  As soon as a call returns true, this returns true.
-  ///  Otherwise this returns false.
-  ///  For an empty collection this returns false.
-  ///
-  ///  This automatically #reset's itself when it is called.
-  ///  @expose
-  ///  @param {function(T):boolean} pred This function must not have any side-effects.
-  ///  @return {boolean} True if any predicate call is true; false otherwise.
-  ///  @since 1.4
-  _i2.bool any(_i2.bool Function(T) pred) => _i5.callMethod(
+  void Function() get reset => _i5.getProperty(
+        this,
+        'reset',
+      );
+  set any(_i2.bool Function(_i2.bool Function(T)) value) {
+    _i5.setProperty(
+      this,
+      'any',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(_i2.bool Function(T)) get any => _i5.getProperty(
         this,
         'any',
-        [_i5.allowInterop(pred)],
       );
-
-  /// This is true if all invocations of the given predicate on items in the collection are true.
-  ///
-  ///  Call the given predicate on each item in the collection.
-  ///  As soon as a call returns false, this returns false.
-  ///  Otherwise this returns true.
-  ///  For an empty collection this returns true.
-  ///
-  ///  This automatically #reset's itself when it is called.
-  ///  @expose
-  ///  @param {function(T):boolean} pred This function must not have any side-effects.
-  ///  @return {boolean} True if all predicate calls are true; false otherwise.
-  ///  @since 1.4
-  _i2.bool all(_i2.bool Function(T) pred) => _i5.callMethod(
-        this,
-        'all',
-        [_i5.allowInterop(pred)],
-      );
-
-  /// Call the given function on each item in the collection.
-  ///
-  ///  This automatically #reset's itself when it is called.
-  ///  @expose
-  ///  @param {function(T)} func This function must not modify the collection.
-  ///  @return {Iterator} this iterator itself
-  ///  @since 1.4
-  void each(void Function(T) func) {
-    _i5.callMethod(
+  set all(_i2.bool Function(_i2.bool Function(T)) value) {
+    _i5.setProperty(
       this,
-      'each',
-      [_i5.allowInterop(func)],
+      'all',
+      _i5.allowInterop(value),
     );
   }
 
-  /// Call the given function on each item in the collection and present the results in an iterator.
-  ///
-  ///  This automatically #reset's itself when it is called.
-  ///  @expose
-  ///  @param {function(T)} func This function must not modify the collection.
-  ///  @return {Iterator} this
-  _i3.Iterator<S> map<S>(S Function(T) func) => _i5.callMethod(
+  _i2.bool Function(_i2.bool Function(T)) get all => _i5.getProperty(
+        this,
+        'all',
+      );
+  set each(void Function(void Function(T)) value) {
+    _i5.setProperty(
+      this,
+      'each',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function(void Function(T)) get each => _i5.getProperty(
+        this,
+        'each',
+      );
+  set map(_i3.Iterator<S> Function<S>(S Function(T)) value) {
+    _i5.setProperty(
+      this,
+      'map',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.Iterator<S> Function<S>(S Function(T)) get map => _i5.getProperty(
         this,
         'map',
-        [_i5.allowInterop(func)],
       );
+  set filter(_i3.Iterator<T> Function(_i2.bool Function(T)) value) {
+    _i5.setProperty(
+      this,
+      'filter',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// Call the given predicate on each item in the collection and for each item that it returns true, present the item in an iterator.
-  ///
-  ///  This automatically #reset's itself when it is called.
-  ///  @expose
-  ///  @param {function(T):boolean} pred This function must not have any side-effects.
-  ///  @return {Iterator.<T>} this
-  _i3.Iterator<T> filter(_i2.bool Function(T) pred) => _i5.callMethod(
+  _i3.Iterator<T> Function(_i2.bool Function(T)) get filter => _i5.getProperty(
         this,
         'filter',
-        [_i5.allowInterop(pred)],
       );
 }
 
 /// (undocumented) interface used for both the SVGSurface and the CanvasSurface, which are undocumented classes.
 @_i1.JS()
 @_i1.staticInterop
-class ISurface {}
+@_i1.anonymous
+class ISurface {
+  external factory ISurface._({
+    _i2.dynamic domElement,
+    _i2.dynamic context,
+    _i2.dynamic width,
+    _i2.dynamic height,
+    _i2.dynamic ownerDocument,
+    _i2.dynamic elementFinished,
+    _i2.dynamic style,
+    _i2.dynamic resize,
+    _i2.dynamic getBoundingClientRect,
+    _i2.dynamic focus,
+    _i2.dynamic dispose,
+  });
+
+  factory ISurface({
+    _i7.Element? domElement,
+    _i3.IContext? context,
+    _i2.num? width,
+    _i2.num? height,
+    _i7.Document? ownerDocument,
+    void Function(
+      _i3.GraphObject,
+      _i7.SVGElement,
+    )? elementFinished,
+    _i7.CSSStyleDeclaration? style,
+    _i2.bool Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? resize,
+    _i7.DOMRect Function()? getBoundingClientRect,
+    void Function()? focus,
+    void Function()? dispose,
+  }) =>
+      ISurface._(
+        domElement: domElement ?? _i6.undefined,
+        context: context ?? _i6.undefined,
+        width: width,
+        height: height,
+        ownerDocument: ownerDocument ?? _i6.undefined,
+        elementFinished: elementFinished == null
+            ? _i6.undefined
+            : _i5.allowInterop(elementFinished),
+        style: style ?? _i6.undefined,
+        resize: resize == null ? null : _i5.allowInterop(resize),
+        getBoundingClientRect: getBoundingClientRect == null
+            ? null
+            : _i5.allowInterop(getBoundingClientRect),
+        focus: focus == null ? null : _i5.allowInterop(focus),
+        dispose: dispose == null ? null : _i5.allowInterop(dispose),
+      );
+}
 
 extension ISurface$Typings on ISurface {
-  _i6.Element get domElement => _i5.getProperty(
+  _i7.Element get domElement => _i5.getProperty(
         this,
         'domElement',
       );
-  set domElement(_i6.Element value) {
+  set domElement(_i7.Element value) {
     _i5.setProperty(
       this,
       'domElement',
@@ -509,11 +618,11 @@ extension ISurface$Typings on ISurface {
     );
   }
 
-  _i6.Document get ownerDocument => _i5.getProperty(
+  _i7.Document get ownerDocument => _i5.getProperty(
         this,
         'ownerDocument',
       );
-  set ownerDocument(_i6.Document value) {
+  set ownerDocument(_i7.Document value) {
     _i5.setProperty(
       this,
       'ownerDocument',
@@ -523,7 +632,7 @@ extension ISurface$Typings on ISurface {
 
   void Function(
     _i3.GraphObject,
-    _i6.SVGElement,
+    _i7.SVGElement,
   )? get elementFinished => _i5.getProperty(
         this,
         'elementFinished',
@@ -531,20 +640,20 @@ extension ISurface$Typings on ISurface {
   set elementFinished(
       void Function(
         _i3.GraphObject,
-        _i6.SVGElement,
+        _i7.SVGElement,
       )? value) {
     _i5.setProperty(
       this,
       'elementFinished',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
-  _i6.CSSStyleDeclaration get style => _i5.getProperty(
+  _i7.CSSStyleDeclaration get style => _i5.getProperty(
         this,
         'style',
       );
-  set style(_i6.CSSStyleDeclaration value) {
+  set style(_i7.CSSStyleDeclaration value) {
     _i5.setProperty(
       this,
       'style',
@@ -552,48 +661,390 @@ extension ISurface$Typings on ISurface {
     );
   }
 
-  _i2.bool resize(
-    _i2.num pixelWidth,
-    _i2.num pixelHeight,
-    _i2.num width,
-    _i2.num height,
-  ) =>
-      _i5.callMethod(
-        this,
-        'resize',
-        [
-          pixelWidth,
-          pixelHeight,
-          width,
-          height,
-        ],
-      );
-  _i6.DOMRect getBoundingClientRect() => _i5.callMethod(
-        this,
-        'getBoundingClientRect',
-        [],
-      );
-  void focus() {
-    _i5.callMethod(
+  set resize(
+      _i2.bool Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
-      'focus',
-      [],
+      'resize',
+      _i5.allowInterop(value),
     );
   }
 
-  void dispose() {
-    _i5.callMethod(
+  _i2.bool Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get resize => _i5.getProperty(
+        this,
+        'resize',
+      );
+  set getBoundingClientRect(_i7.DOMRect Function() value) {
+    _i5.setProperty(
       this,
-      'dispose',
-      [],
+      'getBoundingClientRect',
+      _i5.allowInterop(value),
     );
   }
+
+  _i7.DOMRect Function() get getBoundingClientRect => _i5.getProperty(
+        this,
+        'getBoundingClientRect',
+      );
+  set focus(void Function() value) {
+    _i5.setProperty(
+      this,
+      'focus',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function() get focus => _i5.getProperty(
+        this,
+        'focus',
+      );
+  set dispose(void Function() value) {
+    _i5.setProperty(
+      this,
+      'dispose',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function() get dispose => _i5.getProperty(
+        this,
+        'dispose',
+      );
 }
 
 /// (undocumented) interface used for both the SVGContext and the CanvasSurfaceContext, which are undocumented classes.
 @_i1.JS()
 @_i1.staticInterop
-class IContext {}
+@_i1.anonymous
+class IContext {
+  external factory IContext._({
+    _i2.dynamic fillStyle,
+    _i2.dynamic font,
+    _i2.dynamic globalAlpha,
+    _i2.dynamic lineCap,
+    _i2.dynamic lineDashOffset,
+    _i2.dynamic lineJoin,
+    _i2.dynamic lineWidth,
+    _i2.dynamic miterLimit,
+    _i2.dynamic shadowBlur,
+    _i2.dynamic shadowColor,
+    _i2.dynamic shadowOffsetX,
+    _i2.dynamic shadowOffsetY,
+    _i2.dynamic strokeStyle,
+    _i2.dynamic textAlign,
+    _i2.dynamic imageSmoothingEnabled,
+    _i2.dynamic clipInsteadOfFill,
+    _i2.dynamic currentlyShadowed,
+    _i2.dynamic isTemporary,
+    _i2.dynamic filter,
+    _i2.dynamic cachedTransform,
+    _i2.dynamic commitTransform,
+    _i2.dynamic setImageSmoothingEnabled,
+    _i2.dynamic arc,
+    _i2.dynamic beginPath,
+    _i2.dynamic endPath,
+    _i2.dynamic bezierCurveTo,
+    _i2.dynamic clearRect,
+    _i2.dynamic clip,
+    _i2.dynamic closePath,
+    _i2.dynamic createLinearGradient,
+    _i2.dynamic createPattern,
+    _i2.dynamic createRadialGradient,
+    _i2.dynamic drawImage,
+    _i2.dynamic fill,
+    _i2.dynamic fillRect,
+    _i2.dynamic fillBackground,
+    _i2.dynamic fillText,
+    _i2.dynamic getImageData,
+    _i2.dynamic lineTo,
+    _i2.dynamic measureText,
+    _i2.dynamic moveTo,
+    _i2.dynamic quadraticCurveTo,
+    _i2.dynamic rect,
+    _i2.dynamic restore,
+    _i2.dynamic rotate,
+    _i2.dynamic save,
+    _i2.dynamic setTransform,
+    _i2.dynamic scale,
+    _i2.dynamic stroke,
+    _i2.dynamic transform,
+    _i2.dynamic translate,
+    _i2.dynamic fillContext,
+    _i2.dynamic strokeContext,
+    _i2.dynamic shadowsSet,
+    _i2.dynamic shadowsOff,
+    _i2.dynamic shadowsOn,
+    _i2.dynamic enableDash,
+    _i2.dynamic disableDash,
+    _i2.dynamic clearContextCache,
+    _i2.dynamic removePartFromView,
+  });
+
+  factory IContext({
+    _i2.Object? fillStyle,
+    _i2.String? font,
+    _i2.num? globalAlpha,
+    _i2.String? lineCap,
+    _i2.num? lineDashOffset,
+    _i2.String? lineJoin,
+    _i2.num? lineWidth,
+    _i2.num? miterLimit,
+    _i2.num? shadowBlur,
+    _i2.String? shadowColor,
+    _i2.num? shadowOffsetX,
+    _i2.num? shadowOffsetY,
+    _i2.Object? strokeStyle,
+    _i2.String? textAlign,
+    _i2.bool? imageSmoothingEnabled,
+    _i2.bool? clipInsteadOfFill,
+    _i2.bool? currentlyShadowed,
+    _i2.bool? isTemporary,
+    _i2.String? filter,
+    _i2.dynamic cachedTransform,
+    void Function()? commitTransform,
+    void Function(_i2.bool)? setImageSmoothingEnabled,
+    void Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.bool, [
+      _i2.num?,
+      _i2.num?,
+    ])? arc,
+    void Function()? beginPath,
+    void Function([_i2.num?])? endPath,
+    void Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? bezierCurveTo,
+    void Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? clearRect,
+    void Function()? clip,
+    void Function()? closePath,
+    _i2.Object Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? createLinearGradient,
+    _i2.Object Function(
+      _i7.HTMLElement,
+      _i2.String,
+    )? createPattern,
+    _i2.Object Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? createRadialGradient,
+    void Function(
+      _i7.HTMLElement,
+      _i2.num,
+      _i2.num, [
+      _i2.num?,
+      _i2.num?,
+      _i2.num?,
+      _i2.num?,
+      _i2.num?,
+      _i2.num?,
+    ])? drawImage,
+    void Function([_i2.bool?])? fill,
+    void Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? fillRect,
+    void Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? fillBackground,
+    void Function(
+      _i2.String,
+      _i2.num,
+      _i2.num,
+    )? fillText,
+    _i7.ImageData Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? getImageData,
+    void Function(
+      _i2.num,
+      _i2.num,
+    )? lineTo,
+    _i7.TextMetrics Function(_i2.String)? measureText,
+    void Function(
+      _i2.num,
+      _i2.num,
+    )? moveTo,
+    void Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? quadraticCurveTo,
+    void Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? rect,
+    void Function()? restore,
+    void Function(_i2.num)? rotate,
+    void Function()? save,
+    void Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? setTransform,
+    void Function(
+      _i2.num,
+      _i2.num,
+    )? scale,
+    void Function()? stroke,
+    void Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? transform,
+    void Function(
+      _i2.num,
+      _i2.num,
+    )? translate,
+    void Function(
+      _i3.BrushLike, [
+      _i2.bool?,
+    ])? fillContext,
+    void Function()? strokeContext,
+    void Function(
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    )? shadowsSet,
+    void Function()? shadowsOff,
+    void Function()? shadowsOn,
+    void Function(
+      _i4.Array<_i2.num>,
+      _i2.num,
+    )? enableDash,
+    void Function()? disableDash,
+    void Function(_i2.bool)? clearContextCache,
+    void Function(_i3.GraphObject)? removePartFromView,
+  }) =>
+      IContext._(
+        fillStyle: fillStyle ?? _i6.undefined,
+        font: font,
+        globalAlpha: globalAlpha,
+        lineCap: lineCap,
+        lineDashOffset: lineDashOffset,
+        lineJoin: lineJoin,
+        lineWidth: lineWidth,
+        miterLimit: miterLimit,
+        shadowBlur: shadowBlur,
+        shadowColor: shadowColor,
+        shadowOffsetX: shadowOffsetX,
+        shadowOffsetY: shadowOffsetY,
+        strokeStyle: strokeStyle ?? _i6.undefined,
+        textAlign: textAlign,
+        imageSmoothingEnabled: imageSmoothingEnabled,
+        clipInsteadOfFill: clipInsteadOfFill,
+        currentlyShadowed: currentlyShadowed,
+        isTemporary: isTemporary,
+        filter: filter,
+        cachedTransform: cachedTransform,
+        commitTransform:
+            commitTransform == null ? null : _i5.allowInterop(commitTransform),
+        setImageSmoothingEnabled: setImageSmoothingEnabled == null
+            ? null
+            : _i5.allowInterop(setImageSmoothingEnabled),
+        arc: arc == null ? null : _i5.allowInterop(arc),
+        beginPath: beginPath == null ? null : _i5.allowInterop(beginPath),
+        endPath: endPath == null ? null : _i5.allowInterop(endPath),
+        bezierCurveTo:
+            bezierCurveTo == null ? null : _i5.allowInterop(bezierCurveTo),
+        clearRect: clearRect == null ? null : _i5.allowInterop(clearRect),
+        clip: clip == null ? null : _i5.allowInterop(clip),
+        closePath: closePath == null ? null : _i5.allowInterop(closePath),
+        createLinearGradient: createLinearGradient == null
+            ? null
+            : _i5.allowInterop(createLinearGradient),
+        createPattern:
+            createPattern == null ? null : _i5.allowInterop(createPattern),
+        createRadialGradient: createRadialGradient == null
+            ? null
+            : _i5.allowInterop(createRadialGradient),
+        drawImage: drawImage == null ? null : _i5.allowInterop(drawImage),
+        fill: fill == null ? null : _i5.allowInterop(fill),
+        fillRect: fillRect == null ? null : _i5.allowInterop(fillRect),
+        fillBackground:
+            fillBackground == null ? null : _i5.allowInterop(fillBackground),
+        fillText: fillText == null ? null : _i5.allowInterop(fillText),
+        getImageData:
+            getImageData == null ? null : _i5.allowInterop(getImageData),
+        lineTo: lineTo == null ? null : _i5.allowInterop(lineTo),
+        measureText: measureText == null ? null : _i5.allowInterop(measureText),
+        moveTo: moveTo == null ? null : _i5.allowInterop(moveTo),
+        quadraticCurveTo: quadraticCurveTo == null
+            ? null
+            : _i5.allowInterop(quadraticCurveTo),
+        rect: rect == null ? null : _i5.allowInterop(rect),
+        restore: restore == null ? null : _i5.allowInterop(restore),
+        rotate: rotate == null ? null : _i5.allowInterop(rotate),
+        save: save == null ? null : _i5.allowInterop(save),
+        setTransform:
+            setTransform == null ? null : _i5.allowInterop(setTransform),
+        scale: scale == null ? null : _i5.allowInterop(scale),
+        stroke: stroke == null ? null : _i5.allowInterop(stroke),
+        transform: transform == null ? null : _i5.allowInterop(transform),
+        translate: translate == null ? null : _i5.allowInterop(translate),
+        fillContext: fillContext == null ? null : _i5.allowInterop(fillContext),
+        strokeContext:
+            strokeContext == null ? null : _i5.allowInterop(strokeContext),
+        shadowsSet: shadowsSet == null ? null : _i5.allowInterop(shadowsSet),
+        shadowsOff: shadowsOff == null ? null : _i5.allowInterop(shadowsOff),
+        shadowsOn: shadowsOn == null ? null : _i5.allowInterop(shadowsOn),
+        enableDash: enableDash == null ? null : _i5.allowInterop(enableDash),
+        disableDash: disableDash == null ? null : _i5.allowInterop(disableDash),
+        clearContextCache: clearContextCache == null
+            ? null
+            : _i5.allowInterop(clearContextCache),
+        removePartFromView: removePartFromView == null
+            ? null
+            : _i5.allowInterop(removePartFromView),
+      );
+}
 
 extension IContext$Typings on IContext {
   _i2.Object get fillStyle => _i5.getProperty(
@@ -836,536 +1287,730 @@ extension IContext$Typings on IContext {
     );
   }
 
-  void commitTransform() {
-    _i5.callMethod(
+  set commitTransform(void Function() value) {
+    _i5.setProperty(
       this,
       'commitTransform',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  void setImageSmoothingEnabled(_i2.bool smooth) {
-    _i5.callMethod(
+  void Function() get commitTransform => _i5.getProperty(
+        this,
+        'commitTransform',
+      );
+  set setImageSmoothingEnabled(void Function(_i2.bool) value) {
+    _i5.setProperty(
       this,
       'setImageSmoothingEnabled',
-      [smooth],
+      _i5.allowInterop(value),
     );
   }
 
-  void arc(
-    _i2.num x,
-    _i2.num y,
-    _i2.num radius,
-    _i2.num startAngle,
-    _i2.num endAngle,
-    _i2.bool counterclockwise, [
-    _i2.num? lx,
-    _i2.num? ly,
-  ]) {
-    _i5.callMethod(
+  void Function(_i2.bool) get setImageSmoothingEnabled => _i5.getProperty(
+        this,
+        'setImageSmoothingEnabled',
+      );
+  set arc(
+      void Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.bool, [
+        _i2.num?,
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'arc',
-      [
-        x,
-        y,
-        radius,
-        startAngle,
-        endAngle,
-        counterclockwise,
-        lx ?? _i7.undefined,
-        ly ?? _i7.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void beginPath() {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.bool, [
+    _i2.num?,
+    _i2.num?,
+  ]) get arc => _i5.getProperty(
+        this,
+        'arc',
+      );
+  set beginPath(void Function() value) {
+    _i5.setProperty(
       this,
       'beginPath',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  void endPath([_i2.num? pathIndex]) {
-    _i5.callMethod(
+  void Function() get beginPath => _i5.getProperty(
+        this,
+        'beginPath',
+      );
+  set endPath(void Function([_i2.num?]) value) {
+    _i5.setProperty(
       this,
       'endPath',
-      [pathIndex ?? _i7.undefined],
+      _i5.allowInterop(value),
     );
   }
 
-  void bezierCurveTo(
-    _i2.num a,
-    _i2.num b,
-    _i2.num c,
-    _i2.num d,
-    _i2.num e,
-    _i2.num f,
-  ) {
-    _i5.callMethod(
+  void Function([_i2.num?]) get endPath => _i5.getProperty(
+        this,
+        'endPath',
+      );
+  set bezierCurveTo(
+      void Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'bezierCurveTo',
-      [
-        a,
-        b,
-        c,
-        d,
-        e,
-        f,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void clearRect(
-    _i2.num x,
-    _i2.num y,
-    _i2.num w,
-    _i2.num h,
-  ) {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get bezierCurveTo => _i5.getProperty(
+        this,
+        'bezierCurveTo',
+      );
+  set clearRect(
+      void Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'clearRect',
-      [
-        x,
-        y,
-        w,
-        h,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void clip() {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get clearRect => _i5.getProperty(
+        this,
+        'clearRect',
+      );
+  set clip(void Function() value) {
+    _i5.setProperty(
       this,
       'clip',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  void closePath() {
-    _i5.callMethod(
+  void Function() get clip => _i5.getProperty(
+        this,
+        'clip',
+      );
+  set closePath(void Function() value) {
+    _i5.setProperty(
       this,
       'closePath',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  _i3.CreateLinearGradient createLinearGradient(
-    _i2.num aX0,
-    _i2.num aY0,
-    _i2.num aX1,
-    _i2.num aY1,
-  ) =>
-      _i5.callMethod(
+  void Function() get closePath => _i5.getProperty(
+        this,
+        'closePath',
+      );
+  set createLinearGradient(
+      _i2.Object Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'createLinearGradient',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Object Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get createLinearGradient => _i5.getProperty(
         this,
         'createLinearGradient',
-        [
-          aX0,
-          aY0,
-          aX1,
-          aY1,
-        ],
       );
-  _i2.Object createPattern(
-    _i6.HTMLElement image,
-    _i2.String repetition,
-  ) =>
-      _i5.callMethod(
+  set createPattern(
+      _i2.Object Function(
+        _i7.HTMLElement,
+        _i2.String,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'createPattern',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Object Function(
+    _i7.HTMLElement,
+    _i2.String,
+  ) get createPattern => _i5.getProperty(
         this,
         'createPattern',
-        [
-          image,
-          repetition,
-        ],
       );
-  _i3.CreateRadialGradient createRadialGradient(
-    _i2.num aX0,
-    _i2.num aY0,
-    _i2.num aR0,
-    _i2.num aX1,
-    _i2.num aY1,
-    _i2.num aR1,
-  ) =>
-      _i5.callMethod(
+  set createRadialGradient(
+      _i2.Object Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'createRadialGradient',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.Object Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get createRadialGradient => _i5.getProperty(
         this,
         'createRadialGradient',
-        [
-          aX0,
-          aY0,
-          aR0,
-          aX1,
-          aY1,
-          aR1,
-        ],
       );
-  void drawImage(
-    _i6.HTMLElement src,
-    _i2.num sx,
-    _i2.num sy, [
-    _i2.num? sw,
-    _i2.num? sh,
-    _i2.num? dx,
-    _i2.num? dy,
-    _i2.num? dw,
-    _i2.num? dh,
-  ]) {
-    _i5.callMethod(
+  set drawImage(
+      void Function(
+        _i7.HTMLElement,
+        _i2.num,
+        _i2.num, [
+        _i2.num?,
+        _i2.num?,
+        _i2.num?,
+        _i2.num?,
+        _i2.num?,
+        _i2.num?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'drawImage',
-      [
-        src,
-        sx,
-        sy,
-        sw ?? _i7.undefined,
-        sh ?? _i7.undefined,
-        dx ?? _i7.undefined,
-        dy ?? _i7.undefined,
-        dw ?? _i7.undefined,
-        dh ?? _i7.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void fill([_i2.bool? fillRule]) {
-    _i5.callMethod(
+  void Function(
+    _i7.HTMLElement,
+    _i2.num,
+    _i2.num, [
+    _i2.num?,
+    _i2.num?,
+    _i2.num?,
+    _i2.num?,
+    _i2.num?,
+    _i2.num?,
+  ]) get drawImage => _i5.getProperty(
+        this,
+        'drawImage',
+      );
+  set fill(void Function([_i2.bool?]) value) {
+    _i5.setProperty(
       this,
       'fill',
-      [fillRule ?? _i7.undefined],
+      _i5.allowInterop(value),
     );
   }
 
-  void fillRect(
-    _i2.num x,
-    _i2.num y,
-    _i2.num w,
-    _i2.num h,
-  ) {
-    _i5.callMethod(
+  void Function([_i2.bool?]) get fill => _i5.getProperty(
+        this,
+        'fill',
+      );
+  set fillRect(
+      void Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'fillRect',
-      [
-        x,
-        y,
-        w,
-        h,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void fillBackground(
-    _i2.num x,
-    _i2.num y,
-    _i2.num w,
-    _i2.num h,
-  ) {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get fillRect => _i5.getProperty(
+        this,
+        'fillRect',
+      );
+  set fillBackground(
+      void Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'fillBackground',
-      [
-        x,
-        y,
-        w,
-        h,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void fillText(
-    _i2.String str,
-    _i2.num x,
-    _i2.num y,
-  ) {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get fillBackground => _i5.getProperty(
+        this,
+        'fillBackground',
+      );
+  set fillText(
+      void Function(
+        _i2.String,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'fillText',
-      [
-        str,
-        x,
-        y,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  _i6.ImageData getImageData(
-    _i2.num x,
-    _i2.num y,
-    _i2.num w,
-    _i2.num h,
-  ) =>
-      _i5.callMethod(
+  void Function(
+    _i2.String,
+    _i2.num,
+    _i2.num,
+  ) get fillText => _i5.getProperty(
+        this,
+        'fillText',
+      );
+  set getImageData(
+      _i7.ImageData Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
+      this,
+      'getImageData',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i7.ImageData Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get getImageData => _i5.getProperty(
         this,
         'getImageData',
-        [
-          x,
-          y,
-          w,
-          h,
-        ],
       );
-  void lineTo(
-    _i2.num x,
-    _i2.num y,
-  ) {
-    _i5.callMethod(
+  set lineTo(
+      void Function(
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'lineTo',
-      [
-        x,
-        y,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  _i6.TextMetrics measureText(_i2.String text) => _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+  ) get lineTo => _i5.getProperty(
+        this,
+        'lineTo',
+      );
+  set measureText(_i7.TextMetrics Function(_i2.String) value) {
+    _i5.setProperty(
+      this,
+      'measureText',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i7.TextMetrics Function(_i2.String) get measureText => _i5.getProperty(
         this,
         'measureText',
-        [text],
       );
-  void moveTo(
-    _i2.num x,
-    _i2.num y,
-  ) {
-    _i5.callMethod(
+  set moveTo(
+      void Function(
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'moveTo',
-      [
-        x,
-        y,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void quadraticCurveTo(
-    _i2.num a,
-    _i2.num b,
-    _i2.num c,
-    _i2.num d,
-  ) {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+  ) get moveTo => _i5.getProperty(
+        this,
+        'moveTo',
+      );
+  set quadraticCurveTo(
+      void Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'quadraticCurveTo',
-      [
-        a,
-        b,
-        c,
-        d,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void rect(
-    _i2.num x,
-    _i2.num y,
-    _i2.num w,
-    _i2.num h,
-  ) {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get quadraticCurveTo => _i5.getProperty(
+        this,
+        'quadraticCurveTo',
+      );
+  set rect(
+      void Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'rect',
-      [
-        x,
-        y,
-        w,
-        h,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void restore() {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get rect => _i5.getProperty(
+        this,
+        'rect',
+      );
+  set restore(void Function() value) {
+    _i5.setProperty(
       this,
       'restore',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  void rotate(_i2.num angle) {
-    _i5.callMethod(
+  void Function() get restore => _i5.getProperty(
+        this,
+        'restore',
+      );
+  set rotate(void Function(_i2.num) value) {
+    _i5.setProperty(
       this,
       'rotate',
-      [angle],
+      _i5.allowInterop(value),
     );
   }
 
-  void save() {
-    _i5.callMethod(
+  void Function(_i2.num) get rotate => _i5.getProperty(
+        this,
+        'rotate',
+      );
+  set save(void Function() value) {
+    _i5.setProperty(
       this,
       'save',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  void setTransform(
-    _i2.num a,
-    _i2.num b,
-    _i2.num c,
-    _i2.num d,
-    _i2.num e,
-    _i2.num f,
-  ) {
-    _i5.callMethod(
+  void Function() get save => _i5.getProperty(
+        this,
+        'save',
+      );
+  set setTransform(
+      void Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'setTransform',
-      [
-        a,
-        b,
-        c,
-        d,
-        e,
-        f,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void scale(
-    _i2.num x,
-    _i2.num y,
-  ) {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get setTransform => _i5.getProperty(
+        this,
+        'setTransform',
+      );
+  set scale(
+      void Function(
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'scale',
-      [
-        x,
-        y,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void stroke() {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+  ) get scale => _i5.getProperty(
+        this,
+        'scale',
+      );
+  set stroke(void Function() value) {
+    _i5.setProperty(
       this,
       'stroke',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  void transform(
-    _i2.num a,
-    _i2.num b,
-    _i2.num c,
-    _i2.num d,
-    _i2.num e,
-    _i2.num f,
-  ) {
-    _i5.callMethod(
+  void Function() get stroke => _i5.getProperty(
+        this,
+        'stroke',
+      );
+  set transform(
+      void Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'transform',
-      [
-        a,
-        b,
-        c,
-        d,
-        e,
-        f,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void translate(
-    _i2.num x,
-    _i2.num y,
-  ) {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get transform => _i5.getProperty(
+        this,
+        'transform',
+      );
+  set translate(
+      void Function(
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'translate',
-      [
-        x,
-        y,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void fillContext(
-    _i3.BrushLike brush, [
-    _i2.bool? fillRule,
-  ]) {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+  ) get translate => _i5.getProperty(
+        this,
+        'translate',
+      );
+  set fillContext(
+      void Function(
+        _i3.BrushLike, [
+        _i2.bool?,
+      ]) value) {
+    _i5.setProperty(
       this,
       'fillContext',
-      [
-        brush ?? _i7.undefined,
-        fillRule ?? _i7.undefined,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void strokeContext() {
-    _i5.callMethod(
+  void Function(
+    _i3.BrushLike, [
+    _i2.bool?,
+  ]) get fillContext => _i5.getProperty(
+        this,
+        'fillContext',
+      );
+  set strokeContext(void Function() value) {
+    _i5.setProperty(
       this,
       'strokeContext',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  void shadowsSet(
-    _i2.num x,
-    _i2.num y,
-    _i2.num blur,
-  ) {
-    _i5.callMethod(
+  void Function() get strokeContext => _i5.getProperty(
+        this,
+        'strokeContext',
+      );
+  set shadowsSet(
+      void Function(
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'shadowsSet',
-      [
-        x,
-        y,
-        blur,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void shadowsOff() {
-    _i5.callMethod(
+  void Function(
+    _i2.num,
+    _i2.num,
+    _i2.num,
+  ) get shadowsSet => _i5.getProperty(
+        this,
+        'shadowsSet',
+      );
+  set shadowsOff(void Function() value) {
+    _i5.setProperty(
       this,
       'shadowsOff',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  void shadowsOn() {
-    _i5.callMethod(
+  void Function() get shadowsOff => _i5.getProperty(
+        this,
+        'shadowsOff',
+      );
+  set shadowsOn(void Function() value) {
+    _i5.setProperty(
       this,
       'shadowsOn',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  void enableDash(
-    _i4.Array<_i2.num> strokeDashArray,
-    _i2.num strokeDashOffset,
-  ) {
-    _i5.callMethod(
+  void Function() get shadowsOn => _i5.getProperty(
+        this,
+        'shadowsOn',
+      );
+  set enableDash(
+      void Function(
+        _i4.Array<_i2.num>,
+        _i2.num,
+      ) value) {
+    _i5.setProperty(
       this,
       'enableDash',
-      [
-        strokeDashArray,
-        strokeDashOffset,
-      ],
+      _i5.allowInterop(value),
     );
   }
 
-  void disableDash() {
-    _i5.callMethod(
+  void Function(
+    _i4.Array<_i2.num>,
+    _i2.num,
+  ) get enableDash => _i5.getProperty(
+        this,
+        'enableDash',
+      );
+  set disableDash(void Function() value) {
+    _i5.setProperty(
       this,
       'disableDash',
-      [],
+      _i5.allowInterop(value),
     );
   }
 
-  void clearContextCache(_i2.bool clearFont) {
-    _i5.callMethod(
+  void Function() get disableDash => _i5.getProperty(
+        this,
+        'disableDash',
+      );
+  set clearContextCache(void Function(_i2.bool) value) {
+    _i5.setProperty(
       this,
       'clearContextCache',
-      [clearFont],
+      _i5.allowInterop(value),
     );
   }
 
-  void removePartFromView(_i3.GraphObject p) {
-    _i5.callMethod(
+  void Function(_i2.bool) get clearContextCache => _i5.getProperty(
+        this,
+        'clearContextCache',
+      );
+  set removePartFromView(void Function(_i3.GraphObject) value) {
+    _i5.setProperty(
       this,
       'removePartFromView',
-      [p],
+      _i5.allowInterop(value),
     );
   }
+
+  void Function(_i3.GraphObject) get removePartFromView => _i5.getProperty(
+        this,
+        'removePartFromView',
+      );
 }
 
 /// <span style="color: red; font-weight: bold;">NOTE: For 2.0 the #constructor argument has changed.
@@ -1416,7 +2061,7 @@ extension IContext$Typings on IContext {
 class List<T> implements _i3.Iterable<T> {
   factory List([_i2.Object? coll]) => _i5.callConstructor(
         _declaredList,
-        [coll ?? _i7.undefined],
+        [coll ?? _i6.undefined],
       );
 }
 
@@ -1889,8 +2534,8 @@ extension List$Typings<T> on List<T> {
         'sortRange',
         [
           _i5.allowInterop(sortfunc),
-          from ?? _i7.undefined,
-          to ?? _i7.undefined,
+          from ?? _i6.undefined,
+          to ?? _i6.undefined,
         ],
       );
 
@@ -1951,7 +2596,7 @@ extension List$Typings<T> on List<T> {
 class Set<T> implements _i3.Iterable<T> {
   factory Set([_i2.Object? coll]) => _i5.callConstructor(
         _declaredSet,
-        [coll ?? _i7.undefined],
+        [coll ?? _i6.undefined],
       );
 
   /// (undocumented)
@@ -2325,7 +2970,65 @@ extension KeyValuePair$Typings<K, V> on KeyValuePair<K, V> {
 /// but not exactly, because the type of the value property is V, not KeyValuePair<K, V>.
 @_i1.JS()
 @_i1.staticInterop
-class IMapIterator<K, T> {}
+@_i1.anonymous
+class IMapIterator<K, T> {
+  external factory IMapIterator._({
+    _i2.dynamic iterator,
+    _i2.dynamic key,
+    _i2.dynamic value,
+    _i2.dynamic count,
+    _i2.dynamic next,
+    _i2.dynamic hasNext,
+    _i2.dynamic first,
+    _i2.dynamic reset,
+    _i2.dynamic any,
+    _i2.dynamic all,
+    _i2.dynamic each,
+    _i2.dynamic map,
+    _i2.dynamic filter,
+  });
+
+  factory IMapIterator({
+    _i3.IMapIterator<_i2.dynamic, _i2.dynamic>? iterator,
+    _i2.dynamic key,
+    _i2.dynamic value,
+    _i2.num? count,
+    _i2.bool Function()? next,
+    _i2.bool Function()? hasNext,
+    _i3.KeyValuePair<_i2.dynamic, _i2.dynamic>? Function()? first,
+    void Function()? reset,
+    _i2.bool Function(
+            _i2.bool Function(_i3.KeyValuePair<_i2.dynamic, _i2.dynamic>))?
+        any,
+    _i2.bool Function(
+            _i2.bool Function(_i3.KeyValuePair<_i2.dynamic, _i2.dynamic>))?
+        all,
+    _i3.IMapIterator<_i2.dynamic, _i2.dynamic> Function(
+            void Function(_i3.KeyValuePair<_i2.dynamic, _i2.dynamic>))?
+        each,
+    _i3.Iterator<S> Function<S>(
+            S Function(_i3.KeyValuePair<_i2.dynamic, _i2.dynamic>))?
+        map,
+    _i3.Iterator<_i3.KeyValuePair<_i2.dynamic, _i2.dynamic>> Function(
+            _i2.bool Function(_i3.KeyValuePair<_i2.dynamic, _i2.dynamic>))?
+        filter,
+  }) =>
+      IMapIterator._(
+        iterator: iterator ?? _i6.undefined,
+        key: key,
+        value: value,
+        count: count,
+        next: next == null ? null : _i5.allowInterop(next),
+        hasNext: hasNext == null ? null : _i5.allowInterop(hasNext),
+        first: first == null ? null : _i5.allowInterop(first),
+        reset: reset == null ? null : _i5.allowInterop(reset),
+        any: any == null ? null : _i5.allowInterop(any),
+        all: all == null ? null : _i5.allowInterop(all),
+        each: each == null ? null : _i5.allowInterop(each),
+        map: map == null ? null : _i5.allowInterop(map),
+        filter: filter == null ? null : _i5.allowInterop(filter),
+      );
+}
 
 extension IMapIterator$Typings<K, T> on IMapIterator<K, T> {
   /// @hidden
@@ -2353,77 +3056,126 @@ extension IMapIterator$Typings<K, T> on IMapIterator<K, T> {
         this,
         'count',
       );
-
-  /// @hidden
-  _i2.bool next() => _i5.callMethod(
-        this,
-        'next',
-        [],
-      );
-
-  /// @hidden
-  _i2.bool hasNext() => _i5.callMethod(
-        this,
-        'hasNext',
-        [],
-      );
-
-  /// @hidden
-  _i3.KeyValuePair<K, T>? first() => _i5.callMethod(
-        this,
-        'first',
-        [],
-      );
-
-  /// @hidden
-  void reset() {
-    _i5.callMethod(
+  set next(_i2.bool Function() value) {
+    _i5.setProperty(
       this,
-      'reset',
-      [],
+      'next',
+      _i5.allowInterop(value),
     );
   }
 
-  /// @hidden
-  _i2.bool any(_i2.bool Function(_i3.KeyValuePair<K, T>) pred) =>
-      _i5.callMethod(
+  _i2.bool Function() get next => _i5.getProperty(
+        this,
+        'next',
+      );
+  set hasNext(_i2.bool Function() value) {
+    _i5.setProperty(
+      this,
+      'hasNext',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function() get hasNext => _i5.getProperty(
+        this,
+        'hasNext',
+      );
+  set first(_i3.KeyValuePair<K, T>? Function() value) {
+    _i5.setProperty(
+      this,
+      'first',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i3.KeyValuePair<K, T>? Function() get first => _i5.getProperty(
+        this,
+        'first',
+      );
+  set reset(void Function() value) {
+    _i5.setProperty(
+      this,
+      'reset',
+      _i5.allowInterop(value),
+    );
+  }
+
+  void Function() get reset => _i5.getProperty(
+        this,
+        'reset',
+      );
+  set any(_i2.bool Function(_i2.bool Function(_i3.KeyValuePair<K, T>)) value) {
+    _i5.setProperty(
+      this,
+      'any',
+      _i5.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(_i2.bool Function(_i3.KeyValuePair<K, T>)) get any =>
+      _i5.getProperty(
         this,
         'any',
-        [_i5.allowInterop(pred)],
       );
+  set all(_i2.bool Function(_i2.bool Function(_i3.KeyValuePair<K, T>)) value) {
+    _i5.setProperty(
+      this,
+      'all',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// @hidden
-  _i2.bool all(_i2.bool Function(_i3.KeyValuePair<K, T>) pred) =>
-      _i5.callMethod(
+  _i2.bool Function(_i2.bool Function(_i3.KeyValuePair<K, T>)) get all =>
+      _i5.getProperty(
         this,
         'all',
-        [_i5.allowInterop(pred)],
       );
+  set each(
+      _i3.IMapIterator<K, T> Function(void Function(_i3.KeyValuePair<K, T>))
+          value) {
+    _i5.setProperty(
+      this,
+      'each',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// @hidden
-  _i3.IMapIterator<K, T> each(void Function(_i3.KeyValuePair<K, T>) func) =>
-      _i5.callMethod(
-        this,
-        'each',
-        [_i5.allowInterop(func)],
-      );
+  _i3.IMapIterator<K, T> Function(void Function(_i3.KeyValuePair<K, T>))
+      get each => _i5.getProperty(
+            this,
+            'each',
+          );
+  set map(
+      _i3.Iterator<S> Function<S>(S Function(_i3.KeyValuePair<K, T>)) value) {
+    _i5.setProperty(
+      this,
+      'map',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// @hidden
-  _i3.Iterator<S> map<S>(S Function(_i3.KeyValuePair<K, T>) func) =>
-      _i5.callMethod(
+  _i3.Iterator<S> Function<S>(S Function(_i3.KeyValuePair<K, T>)) get map =>
+      _i5.getProperty(
         this,
         'map',
-        [_i5.allowInterop(func)],
       );
+  set filter(
+      _i3.Iterator<_i3.KeyValuePair<K, T>> Function(
+              _i2.bool Function(_i3.KeyValuePair<K, T>))
+          value) {
+    _i5.setProperty(
+      this,
+      'filter',
+      _i5.allowInterop(value),
+    );
+  }
 
-  /// @hidden
-  _i3.Iterator<_i3.KeyValuePair<K, T>> filter(
-          _i2.bool Function(_i3.KeyValuePair<K, T>) pred) =>
-      _i5.callMethod(
-        this,
-        'filter',
-        [_i5.allowInterop(pred)],
-      );
+  _i3.Iterator<_i3.KeyValuePair<K, T>>
+          Function(_i2.bool Function(_i3.KeyValuePair<K, T>))
+      get filter => _i5.getProperty(
+            this,
+            'filter',
+          );
 }
 
 /// <span style="color: red; font-weight: bold;">NOTE: For 2.0 the #constructor arguments have changed.
@@ -2479,7 +3231,7 @@ extension IMapIterator$Typings<K, T> on IMapIterator<K, T> {
 class Map<K, V> {
   factory Map([_i2.Object? coll]) => _i5.callConstructor(
         _declaredMap,
-        [coll ?? _i7.undefined],
+        [coll ?? _i6.undefined],
       );
 }
 
@@ -2850,8 +3602,8 @@ class Point {
       _i5.callConstructor(
         _declaredPoint,
         [
-          x ?? _i7.undefined,
-          y ?? _i7.undefined,
+          x ?? _i6.undefined,
+          y ?? _i6.undefined,
         ],
       );
 
@@ -3459,8 +4211,8 @@ class Size {
       _i5.callConstructor(
         _declaredSize,
         [
-          w ?? _i7.undefined,
-          h ?? _i7.undefined,
+          w ?? _i6.undefined,
+          h ?? _i6.undefined,
         ],
       );
 
@@ -3666,10 +4418,10 @@ class Rect {
       _i5.callConstructor(
         _declaredRect,
         [
-          x ?? _i7.undefined,
-          y ?? _i7.undefined,
-          w ?? _i7.undefined,
-          h ?? _i7.undefined,
+          x ?? _i6.undefined,
+          y ?? _i6.undefined,
+          w ?? _i6.undefined,
+          h ?? _i6.undefined,
         ],
       );
 
@@ -3712,8 +4464,8 @@ class Rect {
           rh,
           x,
           y,
-          w ?? _i7.undefined,
-          h ?? _i7.undefined,
+          w ?? _i6.undefined,
+          h ?? _i6.undefined,
         ],
       );
 
@@ -4130,8 +4882,8 @@ extension Rect$Typings on Rect {
         [
           x,
           y,
-          w ?? _i7.undefined,
-          h ?? _i7.undefined,
+          w ?? _i6.undefined,
+          h ?? _i6.undefined,
         ],
       );
 
@@ -4341,8 +5093,8 @@ extension Rect$Typings on Rect {
         [
           x,
           y,
-          w ?? _i7.undefined,
-          h ?? _i7.undefined,
+          w ?? _i6.undefined,
+          h ?? _i6.undefined,
         ],
       );
 
@@ -4421,10 +5173,10 @@ class Margin {
       _i5.callConstructor(
         _declaredMargin,
         [
-          t ?? _i7.undefined,
-          r ?? _i7.undefined,
-          b ?? _i7.undefined,
-          l ?? _i7.undefined,
+          t ?? _i6.undefined,
+          r ?? _i6.undefined,
+          b ?? _i6.undefined,
+          l ?? _i6.undefined,
         ],
       );
 
@@ -4648,10 +5400,10 @@ class Spot {
       _i5.callConstructor(
         _declaredSpot,
         [
-          x ?? _i7.undefined,
-          y ?? _i7.undefined,
-          offx ?? _i7.undefined,
-          offy ?? _i7.undefined,
+          x ?? _i6.undefined,
+          y ?? _i6.undefined,
+          offx ?? _i6.undefined,
+          offy ?? _i6.undefined,
         ],
       );
 
@@ -5353,7 +6105,7 @@ extension Spot$Typings on Spot {
 class Geometry {
   factory Geometry([_i3.EnumValue? type]) => _i5.callConstructor(
         _declaredGeometry,
-        [type ?? _i7.undefined],
+        [type ?? _i6.undefined],
       );
 
   /// For drawing a simple straight line;
@@ -5466,7 +6218,7 @@ class Geometry {
         'parse',
         [
           str,
-          filled ?? _i7.undefined,
+          filled ?? _i6.undefined,
         ],
       );
 }
@@ -5772,8 +6524,8 @@ extension Geometry$Typings on Geometry {
         'rotate',
         [
           angle,
-          x ?? _i7.undefined,
-          y ?? _i7.undefined,
+          x ?? _i6.undefined,
+          y ?? _i6.undefined,
         ],
       );
 
@@ -5791,7 +6543,7 @@ extension Geometry$Typings on Geometry {
         'containsPoint',
         [
           p,
-          sw ?? _i7.undefined,
+          sw ?? _i6.undefined,
         ],
       );
 
@@ -5809,7 +6561,7 @@ extension Geometry$Typings on Geometry {
         'getPointAlongPath',
         [
           fraction,
-          result ?? _i7.undefined,
+          result ?? _i6.undefined,
         ],
       );
 
@@ -5872,10 +6624,10 @@ extension Geometry$Typings on Geometry {
           f1y,
           f2x,
           f2y,
-          o1x ?? _i7.undefined,
-          o1y ?? _i7.undefined,
-          o2x ?? _i7.undefined,
-          o2y ?? _i7.undefined,
+          o1x ?? _i6.undefined,
+          o1y ?? _i6.undefined,
+          o2x ?? _i6.undefined,
+          o2y ?? _i6.undefined,
         ],
       );
 }
@@ -5904,11 +6656,11 @@ class PathFigure {
       _i5.callConstructor(
         _declaredPathFigure,
         [
-          sx ?? _i7.undefined,
-          sy ?? _i7.undefined,
-          filled ?? _i7.undefined,
-          shadowed ?? _i7.undefined,
-          isEvenOdd ?? _i7.undefined,
+          sx ?? _i6.undefined,
+          sy ?? _i6.undefined,
+          filled ?? _i6.undefined,
+          shadowed ?? _i6.undefined,
+          isEvenOdd ?? _i6.undefined,
         ],
       );
 }
@@ -6059,14 +6811,14 @@ class PathSegment {
       _i5.callConstructor(
         _declaredPathSegment,
         [
-          type ?? _i7.undefined,
-          ex ?? _i7.undefined,
-          ey ?? _i7.undefined,
-          x1 ?? _i7.undefined,
-          y1 ?? _i7.undefined,
-          x2 ?? _i7.undefined,
-          y2 ?? _i7.undefined,
-          clockwise ?? _i7.undefined,
+          type ?? _i6.undefined,
+          ex ?? _i6.undefined,
+          ey ?? _i6.undefined,
+          x1 ?? _i6.undefined,
+          y1 ?? _i6.undefined,
+          x2 ?? _i6.undefined,
+          y2 ?? _i6.undefined,
+          clockwise ?? _i6.undefined,
         ],
       );
 
@@ -6723,15 +7475,15 @@ extension InputEvent$Typings on InputEvent {
 
   /// Gets or sets the platform's user-agent-supplied event for this event.
   /// It may be null if no underlying event exists.
-  _i6.Event? get event => _i5.getProperty(
+  _i7.Event? get event => _i5.getProperty(
         this,
         'event',
       );
-  set event(_i6.Event? value) {
+  set event(_i7.Event? value) {
     _i5.setProperty(
       this,
       'event',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6770,7 +7522,7 @@ extension InputEvent$Typings on InputEvent {
     _i5.setProperty(
       this,
       'targetDiagram',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6786,7 +7538,7 @@ extension InputEvent$Typings on InputEvent {
     _i5.setProperty(
       this,
       'targetObject',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -7209,106 +7961,91 @@ class DiagramEventsInterface {
   }) =>
       DiagramEventsInterface._(
         animationStarting: animationStarting == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(animationStarting),
         animationFinished: animationFinished == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(animationFinished),
         backgroundSingleClicked: backgroundSingleClicked == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(backgroundSingleClicked),
         backgroundDoubleClicked: backgroundDoubleClicked == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(backgroundDoubleClicked),
         backgroundContextClicked: backgroundContextClicked == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(backgroundContextClicked),
         changingSelection: changingSelection == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(changingSelection),
         changedSelection: changedSelection == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(changedSelection),
         clipboardChanged: clipboardChanged == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(clipboardChanged),
-        clipboardPasted: clipboardPasted == null
-            ? _i7.undefined
-            : _i5.allowInterop(clipboardPasted),
+        clipboardPasted:
+            clipboardPasted == null ? null : _i5.allowInterop(clipboardPasted),
         documentBoundsChanged: documentBoundsChanged == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(documentBoundsChanged),
         externalObjectsDropped: externalObjectsDropped == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(externalObjectsDropped),
-        gainedFocus:
-            gainedFocus == null ? _i7.undefined : _i5.allowInterop(gainedFocus),
+        gainedFocus: gainedFocus == null ? null : _i5.allowInterop(gainedFocus),
         initialLayoutCompleted: initialLayoutCompleted == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(initialLayoutCompleted),
-        layoutCompleted: layoutCompleted == null
-            ? _i7.undefined
-            : _i5.allowInterop(layoutCompleted),
-        linkDrawn:
-            linkDrawn == null ? _i7.undefined : _i5.allowInterop(linkDrawn),
-        linkRelinked: linkRelinked == null
-            ? _i7.undefined
-            : _i5.allowInterop(linkRelinked),
-        linkReshaped: linkReshaped == null
-            ? _i7.undefined
-            : _i5.allowInterop(linkReshaped),
-        lostFocus:
-            lostFocus == null ? _i7.undefined : _i5.allowInterop(lostFocus),
-        modified: modified == null ? _i7.undefined : _i5.allowInterop(modified),
+        layoutCompleted:
+            layoutCompleted == null ? null : _i5.allowInterop(layoutCompleted),
+        linkDrawn: linkDrawn == null ? null : _i5.allowInterop(linkDrawn),
+        linkRelinked:
+            linkRelinked == null ? null : _i5.allowInterop(linkRelinked),
+        linkReshaped:
+            linkReshaped == null ? null : _i5.allowInterop(linkReshaped),
+        lostFocus: lostFocus == null ? null : _i5.allowInterop(lostFocus),
+        modified: modified == null ? null : _i5.allowInterop(modified),
         objectSingleClicked: objectSingleClicked == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(objectSingleClicked),
         objectDoubleClicked: objectDoubleClicked == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(objectDoubleClicked),
         objectContextClicked: objectContextClicked == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(objectContextClicked),
-        partCreated:
-            partCreated == null ? _i7.undefined : _i5.allowInterop(partCreated),
-        partResized:
-            partResized == null ? _i7.undefined : _i5.allowInterop(partResized),
-        partRotated:
-            partRotated == null ? _i7.undefined : _i5.allowInterop(partRotated),
-        selectionMoved: selectionMoved == null
-            ? _i7.undefined
-            : _i5.allowInterop(selectionMoved),
-        selectionCopied: selectionCopied == null
-            ? _i7.undefined
-            : _i5.allowInterop(selectionCopied),
+        partCreated: partCreated == null ? null : _i5.allowInterop(partCreated),
+        partResized: partResized == null ? null : _i5.allowInterop(partResized),
+        partRotated: partRotated == null ? null : _i5.allowInterop(partRotated),
+        selectionMoved:
+            selectionMoved == null ? null : _i5.allowInterop(selectionMoved),
+        selectionCopied:
+            selectionCopied == null ? null : _i5.allowInterop(selectionCopied),
         selectionDeleted: selectionDeleted == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(selectionDeleted),
         selectionDeleting: selectionDeleting == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(selectionDeleting),
         selectionGrouped: selectionGrouped == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(selectionGrouped),
         selectionUngrouped: selectionUngrouped == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(selectionUngrouped),
         subGraphCollapsed: subGraphCollapsed == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(subGraphCollapsed),
         subGraphExpanded: subGraphExpanded == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(subGraphExpanded),
-        textEdited:
-            textEdited == null ? _i7.undefined : _i5.allowInterop(textEdited),
-        treeCollapsed: treeCollapsed == null
-            ? _i7.undefined
-            : _i5.allowInterop(treeCollapsed),
-        treeExpanded: treeExpanded == null
-            ? _i7.undefined
-            : _i5.allowInterop(treeExpanded),
+        textEdited: textEdited == null ? null : _i5.allowInterop(textEdited),
+        treeCollapsed:
+            treeCollapsed == null ? null : _i5.allowInterop(treeCollapsed),
+        treeExpanded:
+            treeExpanded == null ? null : _i5.allowInterop(treeExpanded),
         viewportBoundsChanged: viewportBoundsChanged == null
-            ? _i7.undefined
+            ? null
             : _i5.allowInterop(viewportBoundsChanged),
       );
 }
@@ -7322,7 +8059,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'AnimationStarting',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7334,7 +8071,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'AnimationFinished',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7346,7 +8083,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'BackgroundSingleClicked',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7358,7 +8095,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'BackgroundDoubleClicked',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7370,7 +8107,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'BackgroundContextClicked',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7382,7 +8119,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'ChangingSelection',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7394,7 +8131,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'ChangedSelection',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7406,7 +8143,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'ClipboardChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7418,7 +8155,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'ClipboardPasted',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7430,7 +8167,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'DocumentBoundsChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7442,7 +8179,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'ExternalObjectsDropped',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7454,7 +8191,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'GainedFocus',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7466,7 +8203,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'InitialLayoutCompleted',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7478,7 +8215,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'LayoutCompleted',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7490,7 +8227,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'LinkDrawn',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7502,7 +8239,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'LinkRelinked',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7514,7 +8251,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'LinkReshaped',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7526,7 +8263,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'LostFocus',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7538,7 +8275,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'Modified',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7550,7 +8287,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'ObjectSingleClicked',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7562,7 +8299,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'ObjectDoubleClicked',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7574,7 +8311,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'ObjectContextClicked',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7586,7 +8323,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'PartCreated',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7598,7 +8335,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'PartResized',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7610,7 +8347,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'PartRotated',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7622,7 +8359,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'SelectionMoved',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7634,7 +8371,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'SelectionCopied',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7646,7 +8383,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'SelectionDeleted',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7658,7 +8395,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'SelectionDeleting',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7670,7 +8407,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'SelectionGrouped',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7682,7 +8419,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'SelectionUngrouped',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7694,7 +8431,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'SubGraphCollapsed',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7706,7 +8443,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'SubGraphExpanded',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7718,7 +8455,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'TextEdited',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7730,7 +8467,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'TreeCollapsed',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7742,7 +8479,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'TreeExpanded',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -7754,7 +8491,7 @@ extension DiagramEventsInterface$Typings on DiagramEventsInterface {
     _i5.setProperty(
       this,
       'ViewportBoundsChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -7946,7 +8683,7 @@ extension ChangedEvent$Typings on ChangedEvent {
     _i5.setProperty(
       this,
       'model',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -7962,7 +8699,7 @@ extension ChangedEvent$Typings on ChangedEvent {
     _i5.setProperty(
       this,
       'diagram',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8052,7 +8789,7 @@ extension ChangedEvent$Typings on ChangedEvent {
     _i5.setProperty(
       this,
       'object',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8456,7 +9193,7 @@ extension UndoManager$Typings on UndoManager {
     _i5.setProperty(
       this,
       'transactionToUndo',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8470,7 +9207,7 @@ extension UndoManager$Typings on UndoManager {
     _i5.setProperty(
       this,
       'transactionToRedo',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8557,7 +9294,7 @@ extension UndoManager$Typings on UndoManager {
     _i5.setProperty(
       this,
       'currentTransaction',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8695,7 +9432,7 @@ extension UndoManager$Typings on UndoManager {
   _i2.bool startTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'startTransaction',
-        [tname ?? _i7.undefined],
+        [tname ?? _i6.undefined],
       );
 
   /// Commit the current transaction started by a call to #startTransaction.
@@ -8719,7 +9456,7 @@ extension UndoManager$Typings on UndoManager {
   _i2.bool commitTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'commitTransaction',
-        [tname ?? _i7.undefined],
+        [tname ?? _i6.undefined],
       );
 
   /// Rollback the current transaction started by a call to #startTransaction, undoing any changes.
@@ -9029,7 +9766,7 @@ extension Tool$Typings on Tool {
     _i5.setProperty(
       this,
       'transactionResult',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -9377,7 +10114,7 @@ extension Tool$Typings on Tool {
   _i2.bool startTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'startTransaction',
-        [tname ?? _i7.undefined],
+        [tname ?? _i6.undefined],
       );
 
   /// If #transactionResult is null, call Diagram#rollbackTransaction,
@@ -9479,8 +10216,8 @@ extension Tool$Typings on Tool {
         this,
         'standardMouseClick',
         [
-          navig == null ? _i7.undefined : _i5.allowInterop(navig),
-          pred == null ? _i7.undefined : _i5.allowInterop(pred),
+          navig == null ? _i6.undefined : _i5.allowInterop(navig),
+          pred == null ? _i6.undefined : _i5.allowInterop(pred),
         ],
       );
 
@@ -9567,7 +10304,7 @@ extension Tool$Typings on Tool {
       'standardWaitAfter',
       [
         delay,
-        event ?? _i7.undefined,
+        event ?? _i6.undefined,
       ],
     );
   }
@@ -9649,8 +10386,8 @@ extension Tool$Typings on Tool {
         this,
         'isBeyondDragSize',
         [
-          first ?? _i7.undefined,
-          last ?? _i7.undefined,
+          first ?? _i6.undefined,
+          last ?? _i6.undefined,
         ],
       );
 }
@@ -9833,7 +10570,7 @@ extension ToolManager$Typings on ToolManager {
     _i5.setProperty(
       this,
       'currentToolTip',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -10887,7 +11624,7 @@ extension DraggingTool$Typings on DraggingTool {
     _i5.setProperty(
       this,
       'currentPart',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -10905,7 +11642,7 @@ extension DraggingTool$Typings on DraggingTool {
     _i5.setProperty(
       this,
       'copiedParts',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -10922,7 +11659,7 @@ extension DraggingTool$Typings on DraggingTool {
     _i5.setProperty(
       this,
       'draggedParts',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11136,7 +11873,7 @@ extension DraggingTool$Typings on DraggingTool {
       [
         parts,
         offset,
-        check ?? _i7.undefined,
+        check ?? _i6.undefined,
       ],
     );
   }
@@ -11170,7 +11907,7 @@ extension DraggingTool$Typings on DraggingTool {
       'doDragOver',
       [
         pt,
-        obj ?? _i7.undefined,
+        obj ?? _i6.undefined,
       ],
     );
   }
@@ -11197,7 +11934,7 @@ extension DraggingTool$Typings on DraggingTool {
       'doDropOnto',
       [
         pt,
-        obj ?? _i7.undefined,
+        obj ?? _i6.undefined,
       ],
     );
   }
@@ -11247,9 +11984,9 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'simulatedMouseMove',
         [
-          e ?? _i7.undefined,
+          e,
           modelpt,
-          overdiag ?? _i7.undefined,
+          overdiag ?? _i6.undefined,
         ],
       );
 
@@ -11268,9 +12005,9 @@ extension DraggingTool$Typings on DraggingTool {
         this,
         'simulatedMouseUp',
         [
-          e ?? _i7.undefined,
+          e,
           modelpt,
-          curdiag ?? _i7.undefined,
+          curdiag ?? _i6.undefined,
         ],
       );
 
@@ -11331,8 +12068,8 @@ extension DraggingTool$Typings on DraggingTool {
         [
           n,
           newloc,
-          draggedparts ?? _i7.undefined,
-          result ?? _i7.undefined,
+          draggedparts ?? _i6.undefined,
+          result ?? _i6.undefined,
         ],
       );
 }
@@ -11496,7 +12233,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     _i5.setProperty(
       this,
       'originalLink',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11511,7 +12248,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     _i5.setProperty(
       this,
       'originalFromNode',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11525,7 +12262,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     _i5.setProperty(
       this,
       'originalFromPort',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11540,7 +12277,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     _i5.setProperty(
       this,
       'originalToNode',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11554,7 +12291,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     _i5.setProperty(
       this,
       'originalToPort',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11587,7 +12324,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     _i5.setProperty(
       this,
       'targetPort',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -11621,7 +12358,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     _i5.setProperty(
       this,
       'linkValidation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -11660,7 +12397,7 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
     _i5.setProperty(
       this,
       'portTargeted',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -11676,18 +12413,18 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
   /// the temporary node/port to "act like" the target port.
   /// Please read the Introduction page on <a href="../../intro/extensions.html">Extensions</a> for how to override methods and how to call this base method.
   void copyPortProperties(
-    _i3.Node? realnode,
-    _i3.GraphObject? realport,
     _i3.Node tempnode,
     _i3.GraphObject tempport,
-    _i2.bool toend,
-  ) {
+    _i2.bool toend, [
+    _i3.Node? realnode,
+    _i3.GraphObject? realport,
+  ]) {
     _i5.callMethod(
       this,
       'copyPortProperties',
       [
-        realnode ?? _i7.undefined,
-        realport ?? _i7.undefined,
+        realnode ?? _i6.undefined,
+        realport ?? _i6.undefined,
         tempnode,
         tempport,
         toend,
@@ -11786,8 +12523,8 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isValidFrom',
         [
-          fromnode ?? _i7.undefined,
-          fromport ?? _i7.undefined,
+          fromnode ?? _i6.undefined,
+          fromport ?? _i6.undefined,
         ],
       );
 
@@ -11814,8 +12551,8 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isValidTo',
         [
-          tonode ?? _i7.undefined,
-          toport ?? _i7.undefined,
+          tonode ?? _i6.undefined,
+          toport ?? _i6.undefined,
         ],
       );
 
@@ -11837,8 +12574,8 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isInSameNode',
         [
-          fromport ?? _i7.undefined,
-          toport ?? _i7.undefined,
+          fromport ?? _i6.undefined,
+          toport ?? _i6.undefined,
         ],
       );
 
@@ -11860,8 +12597,8 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isLinked',
         [
-          fromport ?? _i7.undefined,
-          toport ?? _i7.undefined,
+          fromport ?? _i6.undefined,
+          toport ?? _i6.undefined,
         ],
       );
 
@@ -11902,10 +12639,10 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isValidLink',
         [
-          fromnode ?? _i7.undefined,
-          fromport ?? _i7.undefined,
-          tonode ?? _i7.undefined,
-          toport ?? _i7.undefined,
+          fromnode ?? _i6.undefined,
+          fromport ?? _i6.undefined,
+          tonode ?? _i6.undefined,
+          toport ?? _i6.undefined,
         ],
       );
 
@@ -11931,9 +12668,9 @@ extension LinkingBaseTool$Typings on LinkingBaseTool {
         this,
         'isValidCycle',
         [
-          from ?? _i7.undefined,
-          to ?? _i7.undefined,
-          ignore ?? _i7.undefined,
+          from ?? _i6.undefined,
+          to ?? _i6.undefined,
+          ignore ?? _i6.undefined,
         ],
       );
 }
@@ -12047,7 +12784,7 @@ extension LinkingTool$Typings on LinkingTool {
     _i5.setProperty(
       this,
       'archetypeLinkData',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12070,7 +12807,7 @@ extension LinkingTool$Typings on LinkingTool {
     _i5.setProperty(
       this,
       'archetypeLabelNodeData',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12113,7 +12850,7 @@ extension LinkingTool$Typings on LinkingTool {
     _i5.setProperty(
       this,
       'startObject',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12238,10 +12975,10 @@ extension LinkingTool$Typings on LinkingTool {
         this,
         'insertLink',
         [
-          fromnode ?? _i7.undefined,
-          fromport ?? _i7.undefined,
-          tonode ?? _i7.undefined,
-          toport ?? _i7.undefined,
+          fromnode ?? _i6.undefined,
+          fromport ?? _i6.undefined,
+          tonode ?? _i6.undefined,
+          toport ?? _i6.undefined,
         ],
       );
 
@@ -12269,10 +13006,10 @@ extension LinkingTool$Typings on LinkingTool {
       this,
       'doNoLink',
       [
-        fromnode ?? _i7.undefined,
-        fromport ?? _i7.undefined,
-        tonode ?? _i7.undefined,
-        toport ?? _i7.undefined,
+        fromnode ?? _i6.undefined,
+        fromport ?? _i6.undefined,
+        tonode ?? _i6.undefined,
+        toport ?? _i6.undefined,
       ],
     );
   }
@@ -12337,7 +13074,7 @@ extension RelinkingTool$Typings on RelinkingTool {
     _i5.setProperty(
       this,
       'fromHandleArchetype',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12360,7 +13097,7 @@ extension RelinkingTool$Typings on RelinkingTool {
     _i5.setProperty(
       this,
       'toHandleArchetype',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12378,7 +13115,7 @@ extension RelinkingTool$Typings on RelinkingTool {
     _i5.setProperty(
       this,
       'handle',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12467,14 +13204,14 @@ extension RelinkingTool$Typings on RelinkingTool {
   /// This method may be overridden, but we recommend that you call this base method.
   /// Please read the Introduction page on <a href="../../intro/extensions.html">Extensions</a> for how to override methods and how to call this base method.
   void copyLinkProperties(
+    _i3.Link templink, [
     _i3.Link? reallink,
-    _i3.Link templink,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'copyLinkProperties',
       [
-        reallink ?? _i7.undefined,
+        reallink ?? _i6.undefined,
         templink,
       ],
     );
@@ -12526,17 +13263,17 @@ extension RelinkingTool$Typings on RelinkingTool {
   ///  @see #doNoRelink
   _i2.bool reconnectLink(
     _i3.Link existinglink,
+    _i2.bool toend, [
     _i3.Node? newnode,
     _i3.GraphObject? newport,
-    _i2.bool toend,
-  ) =>
+  ]) =>
       _i5.callMethod(
         this,
         'reconnectLink',
         [
           existinglink,
-          newnode ?? _i7.undefined,
-          newport ?? _i7.undefined,
+          newnode ?? _i6.undefined,
+          newport ?? _i6.undefined,
           toend,
         ],
       );
@@ -12667,7 +13404,7 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
     _i5.setProperty(
       this,
       'handleArchetype',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12688,7 +13425,7 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
     _i5.setProperty(
       this,
       'midHandleArchetype',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12704,7 +13441,7 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
     _i5.setProperty(
       this,
       'handle',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -12717,7 +13454,7 @@ extension LinkReshapingTool$Typings on LinkReshapingTool {
     _i5.setProperty(
       this,
       'adornedLink',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -13052,7 +13789,7 @@ extension ResizingTool$Typings on ResizingTool {
     _i5.setProperty(
       this,
       'handleArchetype',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -13071,7 +13808,7 @@ extension ResizingTool$Typings on ResizingTool {
     _i5.setProperty(
       this,
       'handle',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -13088,7 +13825,7 @@ extension ResizingTool$Typings on ResizingTool {
     _i5.setProperty(
       this,
       'adornedObject',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -13581,7 +14318,7 @@ extension RotatingTool$Typings on RotatingTool {
     _i5.setProperty(
       this,
       'handleArchetype',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -13599,7 +14336,7 @@ extension RotatingTool$Typings on RotatingTool {
     _i5.setProperty(
       this,
       'handle',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -13616,7 +14353,7 @@ extension RotatingTool$Typings on RotatingTool {
     _i5.setProperty(
       this,
       'adornedObject',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14072,7 +14809,7 @@ extension ClickCreatingTool$Typings on ClickCreatingTool {
     _i5.setProperty(
       this,
       'archetypeNodeData',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14259,7 +14996,7 @@ extension DragSelectingTool$Typings on DragSelectingTool {
     _i5.setProperty(
       this,
       'box',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14565,15 +15302,15 @@ extension HTMLInfo$Typings on HTMLInfo {
   /// when #hide would typically be called.
   ///
   /// This is set only for convenience; the default value for this property is null.
-  _i6.HTMLElement? get mainElement => _i5.getProperty(
+  _i7.HTMLElement? get mainElement => _i5.getProperty(
         this,
         'mainElement',
       );
-  set mainElement(_i6.HTMLElement? value) {
+  set mainElement(_i7.HTMLElement? value) {
     _i5.setProperty(
       this,
       'mainElement',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14608,7 +15345,7 @@ extension HTMLInfo$Typings on HTMLInfo {
     _i5.setProperty(
       this,
       'show',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -14637,7 +15374,7 @@ extension HTMLInfo$Typings on HTMLInfo {
     _i5.setProperty(
       this,
       'hide',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -14653,7 +15390,7 @@ extension HTMLInfo$Typings on HTMLInfo {
     _i5.setProperty(
       this,
       'valueFunction',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -14710,7 +15447,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
     _i5.setProperty(
       this,
       'currentContextMenu',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -14728,7 +15465,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
     _i5.setProperty(
       this,
       'defaultTouchContextMenu',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -14744,7 +15481,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
     _i5.setProperty(
       this,
       'currentObject',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -14791,7 +15528,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
   _i2.dynamic findObjectWithContextMenu([_i2.Object? obj]) => _i5.callMethod(
         this,
         'findObjectWithContextMenu',
-        [obj ?? _i7.undefined],
+        [obj ?? _i6.undefined],
       );
 
   /// Do nothing, activation is special and relies on doMouseUp
@@ -14869,7 +15606,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
       'showContextMenu',
       [
         contextmenu,
-        obj ?? _i7.undefined,
+        obj ?? _i6.undefined,
       ],
     );
   }
@@ -14903,7 +15640,7 @@ extension ContextMenuTool$Typings on ContextMenuTool {
       'positionContextMenu',
       [
         contextmenu,
-        obj ?? _i7.undefined,
+        obj ?? _i6.undefined,
       ],
     );
   }
@@ -15202,7 +15939,7 @@ extension TextEditingTool$Typings on TextEditingTool {
     _i5.setProperty(
       this,
       'textBlock',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -15215,7 +15952,7 @@ extension TextEditingTool$Typings on TextEditingTool {
     _i5.setProperty(
       this,
       'currentTextEditor',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -15283,7 +16020,7 @@ extension TextEditingTool$Typings on TextEditingTool {
     _i5.setProperty(
       this,
       'textValidation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -15537,7 +16274,7 @@ class AnimationManager {
   factory AnimationManager([_i4.Partial<_i3.AnimationManager>? init]) =>
       _i5.callConstructor(
         _declaredAnimationManager,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   /// Used as the default value for #initialAnimationStyle.
@@ -15611,13 +16348,13 @@ class AnimationManager {
     _i2.String effectName,
     void Function(
       _i2.Object,
-      _i2.dynamic,
-      _i2.dynamic,
       _i3.EasingFunction,
       _i2.num,
       _i2.num,
-      _i3.Animation,
-    ) animationFunction,
+      _i3.Animation, [
+      _i2.dynamic,
+      _i2.dynamic,
+    ]) animationFunction,
   ) {
     _i5.callMethod(
       _declaredAnimationManager,
@@ -15851,7 +16588,7 @@ extension AnimationManager$Typings on AnimationManager {
     _i5.callMethod(
       this,
       'stopAnimation',
-      [stopsAllAnimations ?? _i7.undefined],
+      [stopsAllAnimations ?? _i6.undefined],
     );
   }
 }
@@ -15901,7 +16638,7 @@ extension AnimationManager$Typings on AnimationManager {
 class Animation {
   factory Animation([_i4.Partial<_i3.Animation>? init]) => _i5.callConstructor(
         _declaredAnimation,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   /// Built-in static function for computing interpolated values. Can be used as a value for Animation#easing.
@@ -16055,7 +16792,7 @@ extension Animation$Typings on Animation {
     _i5.setProperty(
       this,
       'finished',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -16135,7 +16872,7 @@ extension Animation$Typings on Animation {
       'advanceTo',
       [
         duration,
-        resume ?? _i7.undefined,
+        resume ?? _i6.undefined,
       ],
     );
   }
@@ -16214,9 +16951,9 @@ extension Animation$Typings on Animation {
   ///  @return {Animation} this Animation
   _i3.Animation add(
     _i2.Object obj,
-    _i2.String effectName,
+    _i2.String effectName, [
     _i2.dynamic startValue,
-    _i2.dynamic endValue, [
+    _i2.dynamic endValue,
     _i2.bool? cosmetic,
   ]) =>
       _i5.callMethod(
@@ -16227,7 +16964,7 @@ extension Animation$Typings on Animation {
           effectName,
           startValue,
           endValue,
-          cosmetic ?? _i7.undefined,
+          cosmetic ?? _i6.undefined,
         ],
       );
 
@@ -16267,7 +17004,7 @@ extension IInline0$Typings on IInline0 {
     _i5.setProperty(
       this,
       'duration',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -16279,7 +17016,7 @@ extension IInline0$Typings on IInline0 {
     _i5.setProperty(
       this,
       'finished',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -16291,7 +17028,7 @@ extension IInline0$Typings on IInline0 {
     _i5.setProperty(
       this,
       'easing',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -16310,7 +17047,7 @@ extension IInline1$Typings on IInline1 {
     _i5.setProperty(
       this,
       'duration',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -16322,7 +17059,7 @@ extension IInline1$Typings on IInline1 {
     _i5.setProperty(
       this,
       'finished',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -16334,7 +17071,7 @@ extension IInline1$Typings on IInline1 {
     _i5.setProperty(
       this,
       'easing',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -16353,7 +17090,7 @@ extension IInline2$Typings on IInline2 {
     _i5.setProperty(
       this,
       'duration',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -16365,7 +17102,7 @@ extension IInline2$Typings on IInline2 {
     _i5.setProperty(
       this,
       'finished',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -16377,7 +17114,7 @@ extension IInline2$Typings on IInline2 {
     _i5.setProperty(
       this,
       'easing',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -16451,8 +17188,8 @@ class AnimationTrigger {
         _declaredAnimationTrigger,
         [
           propertyName,
-          animationSettings ?? _i7.undefined,
-          startCondition ?? _i7.undefined,
+          animationSettings ?? _i6.undefined,
+          startCondition ?? _i6.undefined,
         ],
       );
 
@@ -16644,7 +17381,7 @@ extension AnimationTrigger$Typings on AnimationTrigger {
 class Layer {
   factory Layer([_i4.Partial<_i3.Layer>? init]) => _i5.callConstructor(
         _declaredLayer,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 }
 
@@ -16692,7 +17429,7 @@ extension Layer$Typings on Layer {
     _i5.setProperty(
       this,
       'diagram',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -16998,8 +17735,8 @@ extension Layer$Typings on Layer {
         'findObjectAt',
         [
           p,
-          navig == null ? _i7.undefined : _i5.allowInterop(navig),
-          pred == null ? _i7.undefined : _i5.allowInterop(pred),
+          navig == null ? _i6.undefined : _i5.allowInterop(navig),
+          pred == null ? _i6.undefined : _i5.allowInterop(pred),
         ],
       );
 
@@ -17030,9 +17767,9 @@ extension Layer$Typings on Layer {
         'findObjectsAt',
         [
           p,
-          navig == null ? _i7.undefined : _i5.allowInterop(navig),
-          pred == null ? _i7.undefined : _i5.allowInterop(pred),
-          coll ?? _i7.undefined,
+          navig == null ? _i6.undefined : _i5.allowInterop(navig),
+          pred == null ? _i6.undefined : _i5.allowInterop(pred),
+          coll ?? _i6.undefined,
         ],
       );
 
@@ -17066,10 +17803,10 @@ extension Layer$Typings on Layer {
         'findObjectsIn',
         [
           r,
-          navig == null ? _i7.undefined : _i5.allowInterop(navig),
-          pred == null ? _i7.undefined : _i5.allowInterop(pred),
-          partialInclusion ?? _i7.undefined,
-          coll ?? _i7.undefined,
+          navig == null ? _i6.undefined : _i5.allowInterop(navig),
+          pred == null ? _i6.undefined : _i5.allowInterop(pred),
+          partialInclusion ?? _i6.undefined,
+          coll ?? _i6.undefined,
         ],
       );
 
@@ -17106,10 +17843,10 @@ extension Layer$Typings on Layer {
         [
           p,
           dist,
-          navig == null ? _i7.undefined : _i5.allowInterop(navig),
-          pred == null ? _i7.undefined : _i5.allowInterop(pred),
-          partialInclusion ?? _i7.undefined,
-          coll ?? _i7.undefined,
+          navig == null ? _i6.undefined : _i5.allowInterop(navig),
+          pred == null ? _i6.undefined : _i5.allowInterop(pred),
+          partialInclusion ?? _i6.undefined,
+          coll ?? _i6.undefined,
         ],
       );
 }
@@ -17367,7 +18104,7 @@ class Diagram {
 
   factory Diagram.$2([_i3.DiagramInitOptions? init]) => _i5.callConstructor(
         _declaredDiagram,
-        [init ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined ?? _i6.undefined],
       );
 
   factory Diagram.$3([
@@ -17377,8 +18114,8 @@ class Diagram {
       _i5.callConstructor(
         _declaredDiagram,
         [
-          div ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined ?? _i7.undefined,
+          div ?? _i6.undefined,
+          init ?? _i6.undefined ?? _i6.undefined,
         ],
       );
 
@@ -17686,15 +18423,15 @@ extension Diagram$Typings on Diagram {
   ///
   /// You should not attempt to manually modify the contents of this Div.
   /// Changing this property value does not raise a Changed event.
-  _i6.HTMLDivElement? get div => _i5.getProperty(
+  _i7.HTMLDivElement? get div => _i5.getProperty(
         this,
         'div',
       );
-  set div(_i6.HTMLDivElement? value) {
+  set div(_i7.HTMLDivElement? value) {
     _i5.setProperty(
       this,
       'div',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -18326,7 +19063,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'click',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -18353,7 +19090,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'doubleClick',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -18380,7 +19117,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'contextClick',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -18404,7 +19141,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'mouseOver',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -18427,7 +19164,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'mouseHover',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -18450,7 +19187,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'mouseHold',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -18486,7 +19223,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'mouseDragOver',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -18512,7 +19249,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'mouseDrop',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -18558,7 +19295,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'mouseEnter',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -18578,7 +19315,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'mouseLeave',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -18602,7 +19339,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'toolTip',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -18632,7 +19369,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'contextMenu',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -19265,7 +20002,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'positionComputation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -19285,7 +20022,7 @@ extension Diagram$Typings on Diagram {
     _i5.setProperty(
       this,
       'scaleComputation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -19793,11 +20530,11 @@ extension Diagram$Typings on Diagram {
   ///  (undocumented)
   ///  Used in Diagram constructor setup, this computes the pixel width of the scrollbars
   ///  @param {HTMLElement=} elem
-  void setRTL([_i6.HTMLElement? elem]) {
+  void setRTL([_i7.HTMLElement? elem]) {
     _i5.callMethod(
       this,
       'setRTL',
-      [elem ?? _i7.undefined],
+      [elem ?? _i6.undefined],
     );
   }
 
@@ -19805,22 +20542,22 @@ extension Diagram$Typings on Diagram {
   ///  Computes the pixel width of the scrollbars
   ///  @expose
   ///  @param {HTMLElement=} elem
-  void setScrollWidth([_i6.HTMLElement? elem]) {
+  void setScrollWidth([_i7.HTMLElement? elem]) {
     _i5.callMethod(
       this,
       'setScrollWidth',
-      [elem ?? _i7.undefined],
+      [elem ?? _i6.undefined],
     );
   }
 
   /// (undocumented), but may be useful for change detection calls in Angular.
   ///  @expose
   void addEventListener(
-    _i6.EventTarget domElement,
+    _i7.EventTarget domElement,
     _i2.String name,
+    _i2.bool capture, [
     _i2.dynamic listener,
-    _i2.bool capture,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'addEventListener',
@@ -19836,11 +20573,11 @@ extension Diagram$Typings on Diagram {
   /// (undocumented), but may be useful for change detection calls in Angular.
   ///  @expose
   void removeEventListener(
-    _i6.EventTarget domElement,
+    _i7.EventTarget domElement,
     _i2.String name,
+    _i2.bool capture, [
     _i2.dynamic listener,
-    _i2.bool capture,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'removeEventListener',
@@ -19907,7 +20644,7 @@ extension Diagram$Typings on Diagram {
   _i3.Rect computeBounds([_i3.Rect? rect]) => _i5.callMethod(
         this,
         'computeBounds',
-        [rect ?? _i7.undefined],
+        [rect ?? _i6.undefined],
       );
 
   /// Find the union of the GraphObject#actualBounds of all of the Parts in the given collection,
@@ -19929,7 +20666,7 @@ extension Diagram$Typings on Diagram {
         'computePartsBounds',
         [
           coll,
-          includeLinks ?? _i7.undefined,
+          includeLinks ?? _i6.undefined,
         ],
       );
 
@@ -19960,7 +20697,7 @@ extension Diagram$Typings on Diagram {
       'zoomToRect',
       [
         r,
-        scaling ?? _i7.undefined,
+        scaling ?? _i6.undefined,
       ],
     );
   }
@@ -19990,7 +20727,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'focusObject',
-      [obj ?? _i7.undefined],
+      [obj ?? _i6.undefined],
     );
   }
 
@@ -20018,7 +20755,7 @@ extension Diagram$Typings on Diagram {
         'findPartAt',
         [
           p,
-          selectable ?? _i7.undefined,
+          selectable ?? _i6.undefined,
         ],
       );
 
@@ -20061,8 +20798,8 @@ extension Diagram$Typings on Diagram {
         'findObjectAt',
         [
           p,
-          navig == null ? _i7.undefined : _i5.allowInterop(navig),
-          pred == null ? _i7.undefined : _i5.allowInterop(pred),
+          navig == null ? _i6.undefined : _i5.allowInterop(navig),
+          pred == null ? _i6.undefined : _i5.allowInterop(pred),
         ],
       );
 
@@ -20088,8 +20825,8 @@ extension Diagram$Typings on Diagram {
         'findPartsAt',
         [
           p,
-          selectable ?? _i7.undefined,
-          coll ?? _i7.undefined,
+          selectable ?? _i6.undefined,
+          coll ?? _i6.undefined,
         ],
       );
 
@@ -20132,9 +20869,9 @@ extension Diagram$Typings on Diagram {
         'findObjectsAt',
         [
           p,
-          navig == null ? _i7.undefined : _i5.allowInterop(navig),
-          pred == null ? _i7.undefined : _i5.allowInterop(pred),
-          coll ?? _i7.undefined,
+          navig == null ? _i6.undefined : _i5.allowInterop(navig),
+          pred == null ? _i6.undefined : _i5.allowInterop(pred),
+          coll ?? _i6.undefined,
         ],
       );
 
@@ -20165,9 +20902,9 @@ extension Diagram$Typings on Diagram {
         'findPartsIn',
         [
           r,
-          partialInclusion ?? _i7.undefined,
-          selectable ?? _i7.undefined,
-          coll ?? _i7.undefined,
+          partialInclusion ?? _i6.undefined,
+          selectable ?? _i6.undefined,
+          coll ?? _i6.undefined,
         ],
       );
 
@@ -20218,10 +20955,10 @@ extension Diagram$Typings on Diagram {
         'findObjectsIn',
         [
           r,
-          navig == null ? _i7.undefined : _i5.allowInterop(navig),
-          pred == null ? _i7.undefined : _i5.allowInterop(pred),
-          partialInclusion ?? _i7.undefined,
-          coll ?? _i7.undefined,
+          navig == null ? _i6.undefined : _i5.allowInterop(navig),
+          pred == null ? _i6.undefined : _i5.allowInterop(pred),
+          partialInclusion ?? _i6.undefined,
+          coll ?? _i6.undefined,
         ],
       );
 
@@ -20255,9 +20992,9 @@ extension Diagram$Typings on Diagram {
         [
           p,
           dist,
-          partialInclusion ?? _i7.undefined,
-          selectable ?? _i7.undefined,
-          coll ?? _i7.undefined,
+          partialInclusion ?? _i6.undefined,
+          selectable ?? _i6.undefined,
+          coll ?? _i6.undefined,
         ],
       );
 
@@ -20314,10 +21051,10 @@ extension Diagram$Typings on Diagram {
         [
           p,
           dist,
-          navig == null ? _i7.undefined : _i5.allowInterop(navig),
-          pred == null ? _i7.undefined : _i5.allowInterop(pred),
-          partialInclusion ?? _i7.undefined,
-          coll ?? _i7.undefined,
+          navig == null ? _i6.undefined : _i5.allowInterop(navig),
+          pred == null ? _i6.undefined : _i5.allowInterop(pred),
+          partialInclusion ?? _i6.undefined,
+          coll ?? _i6.undefined,
         ],
       );
 
@@ -20355,7 +21092,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'delayInitialization',
-      [func == null ? _i7.undefined : _i5.allowInterop(func)],
+      [func == null ? _i6.undefined : _i5.allowInterop(func)],
     );
   }
 
@@ -20378,7 +21115,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'requestUpdate',
-      [alwaysQueueUpdate ?? _i7.undefined],
+      [alwaysQueueUpdate ?? _i6.undefined],
     );
   }
 
@@ -20407,9 +21144,9 @@ extension Diagram$Typings on Diagram {
   ///  @param {string} name
   ///  @param {*} val
   void setRenderingHint(
-    _i2.String name,
+    _i2.String name, [
     _i2.dynamic val,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'setRenderingHint',
@@ -20435,9 +21172,9 @@ extension Diagram$Typings on Diagram {
   ///  @param {string} name
   ///  @param {*} val
   void setInputOption(
-    _i2.String name,
+    _i2.String name, [
     _i2.dynamic val,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'setInputOption',
@@ -20597,7 +21334,7 @@ extension Diagram$Typings on Diagram {
       'removeParts',
       [
         coll,
-        check ?? _i7.undefined,
+        check ?? _i6.undefined,
       ],
     );
   }
@@ -20626,8 +21363,8 @@ extension Diagram$Typings on Diagram {
         'copyParts',
         [
           coll,
-          diagram ?? _i7.undefined,
-          check ?? _i7.undefined,
+          diagram ?? _i6.undefined,
+          check ?? _i6.undefined,
         ],
       );
 
@@ -20655,8 +21392,8 @@ extension Diagram$Typings on Diagram {
       [
         coll,
         offset,
-        check ?? _i7.undefined,
-        dragOptions ?? _i7.undefined,
+        check ?? _i6.undefined,
+        dragOptions ?? _i6.undefined,
       ],
     );
   }
@@ -20689,7 +21426,7 @@ extension Diagram$Typings on Diagram {
           n,
           newloc,
           dragOptions,
-          result ?? _i7.undefined,
+          result ?? _i6.undefined,
         ],
       );
 
@@ -20876,7 +21613,7 @@ extension Diagram$Typings on Diagram {
   _i2.bool startTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'startTransaction',
-        [tname ?? _i7.undefined],
+        [tname ?? _i6.undefined],
       );
 
   /// Commit the changes of the current transaction.
@@ -20886,7 +21623,7 @@ extension Diagram$Typings on Diagram {
   _i2.bool commitTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'commitTransaction',
-        [tname ?? _i7.undefined],
+        [tname ?? _i6.undefined],
       );
 
   /// Rollback the current transaction, undoing any recorded changes.
@@ -20921,7 +21658,7 @@ extension Diagram$Typings on Diagram {
       'commit',
       [
         _i5.allowInterop(func),
-        tname ?? _i7.undefined,
+        tname ?? _i6.undefined,
       ],
     );
   }
@@ -20950,7 +21687,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'updateAllTargetBindings',
-      [srcprop ?? _i7.undefined],
+      [srcprop ?? _i6.undefined],
     );
   }
 
@@ -21000,7 +21737,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'clearSelection',
-      [skipsEvents ?? _i7.undefined],
+      [skipsEvents ?? _i6.undefined],
     );
   }
 
@@ -21017,7 +21754,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'select',
-      [part ?? _i7.undefined],
+      [part ?? _i6.undefined],
     );
   }
 
@@ -21071,7 +21808,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'highlight',
-      [part ?? _i7.undefined],
+      [part ?? _i6.undefined],
     );
   }
 
@@ -21111,7 +21848,7 @@ extension Diagram$Typings on Diagram {
       [
         unit.name,
         dir.name,
-        dist ?? _i7.undefined,
+        dist ?? _i6.undefined,
       ],
     );
   }
@@ -21206,7 +21943,7 @@ extension Diagram$Typings on Diagram {
   _i3.Part? findPartForKey(_i3.Key key) => _i5.callMethod(
         this,
         'findPartForKey',
-        [key ?? _i7.undefined],
+        [key],
       );
 
   /// Look for a Node or Group corresponding to a model's node data object's unique key.
@@ -21217,7 +21954,7 @@ extension Diagram$Typings on Diagram {
   _i3.Node? findNodeForKey(_i3.Key key) => _i5.callMethod(
         this,
         'findNodeForKey',
-        [key ?? _i7.undefined],
+        [key],
       );
 
   /// Look for a Link corresponding to a model's link data object's unique key.
@@ -21229,7 +21966,7 @@ extension Diagram$Typings on Diagram {
   _i3.Link? findLinkForKey(_i3.Key key) => _i5.callMethod(
         this,
         'findLinkForKey',
-        [key ?? _i7.undefined],
+        [key],
       );
 
   /// Look for a Part, Node, Group, or Link corresponding to a Model's data object.
@@ -21370,7 +22107,7 @@ extension Diagram$Typings on Diagram {
     _i5.callMethod(
       this,
       'layoutDiagram',
-      [invalidateAll ?? _i7.undefined],
+      [invalidateAll ?? _i6.undefined],
     );
   }
 
@@ -21443,8 +22180,8 @@ extension Diagram$Typings on Diagram {
       'raiseDiagramEvent',
       [
         name.name,
-        obj ?? _i7.undefined,
-        param ?? _i7.undefined,
+        obj ?? _i6.undefined,
+        param,
       ],
     );
   }
@@ -21510,10 +22247,10 @@ extension Diagram$Typings on Diagram {
   ///  @param {any=} options a JavaScript object detailing optional arguments for SVG creation.
   ///  @return {SVGElement}
   ///  @see #makeImage
-  _i6.SVGElement? makeSvg([_i3.SvgRendererOptions? options]) => _i5.callMethod(
+  _i7.SVGElement? makeSvg([_i3.SvgRendererOptions? options]) => _i5.callMethod(
         this,
         'makeSvg',
-        [options ?? _i7.undefined],
+        [options ?? _i6.undefined],
       );
 
   /// (undocumented)
@@ -21570,11 +22307,11 @@ extension Diagram$Typings on Diagram {
   ///  @return {HTMLImageElement | null} An HTML Image element, or null if a callback is specified, or null if there is no DOM.
   ///  @see #makeImageData
   ///  @see #makeSvg
-  _i6.HTMLImageElement? makeImage([_i3.ImageRendererOptions? options]) =>
+  _i7.HTMLImageElement? makeImage([_i3.ImageRendererOptions? options]) =>
       _i5.callMethod(
         this,
         'makeImage',
-        [options ?? _i7.undefined],
+        [options ?? _i6.undefined],
       );
 
   /// Create a bitmap of the current Diagram encoded as a base64 string, or returned as an ImageData object.
@@ -21677,7 +22414,7 @@ extension Diagram$Typings on Diagram {
       _i5.callMethod(
         this,
         'makeImageData',
-        [options ?? _i7.undefined],
+        [options ?? _i6.undefined],
       );
 }
 
@@ -21693,7 +22430,7 @@ extension Diagram$Typings on Diagram {
 class DraggingInfo {
   factory DraggingInfo([_i3.Point? pt]) => _i5.callConstructor(
         _declaredDraggingInfo,
-        [pt ?? _i7.undefined],
+        [pt ?? _i6.undefined],
       );
 }
 
@@ -21930,19 +22667,19 @@ class DiagramRendererOptions {
     _i3.BrushLike? background,
     _i2.bool? showTemporary,
     _i2.bool? showGrid,
-    _i6.HTMLDocument? document,
+    _i7.HTMLDocument? document,
   }) =>
       DiagramRendererOptions._(
-        size: size ?? _i7.undefined,
-        scale: scale ?? _i7.undefined,
-        maxSize: maxSize ?? _i7.undefined,
-        position: position ?? _i7.undefined,
-        parts: parts ?? _i7.undefined,
-        padding: padding ?? _i7.undefined ?? _i7.undefined,
-        background: background ?? _i7.undefined ?? _i7.undefined,
-        showTemporary: showTemporary ?? _i7.undefined,
-        showGrid: showGrid ?? _i7.undefined,
-        document: document ?? _i7.undefined,
+        size: size ?? _i6.undefined,
+        scale: scale,
+        maxSize: maxSize ?? _i6.undefined,
+        position: position ?? _i6.undefined,
+        parts: parts ?? _i6.undefined,
+        padding: padding ?? _i6.undefined,
+        background: background,
+        showTemporary: showTemporary,
+        showGrid: showGrid,
+        document: document ?? _i6.undefined,
       );
 }
 
@@ -21955,7 +22692,7 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'size',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -21967,7 +22704,7 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'scale',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -21979,7 +22716,7 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'maxSize',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -21991,7 +22728,7 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'position',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22003,7 +22740,7 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'parts',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22015,7 +22752,7 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'padding',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i6.undefined ?? _i6.undefined,
     );
   }
 
@@ -22027,7 +22764,7 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'background',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22039,7 +22776,7 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'showTemporary',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22051,19 +22788,19 @@ extension DiagramRendererOptions$Typings on DiagramRendererOptions {
     _i5.setProperty(
       this,
       'showGrid',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  _i6.HTMLDocument? get document => _i5.getProperty(
+  _i7.HTMLDocument? get document => _i5.getProperty(
         this,
         'document',
       );
-  set document(_i6.HTMLDocument? value) {
+  set document(_i7.HTMLDocument? value) {
     _i5.setProperty(
       this,
       'document',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -22090,7 +22827,7 @@ class SvgRendererOptions implements _i3.DiagramRendererOptions {
   factory SvgRendererOptions({
     void Function(
       _i3.GraphObject,
-      _i6.SVGElement,
+      _i7.SVGElement,
     )? elementFinished,
     _i3.Size? size,
     _i2.num? scale,
@@ -22101,29 +22838,29 @@ class SvgRendererOptions implements _i3.DiagramRendererOptions {
     _i3.BrushLike? background,
     _i2.bool? showTemporary,
     _i2.bool? showGrid,
-    _i6.HTMLDocument? document,
+    _i7.HTMLDocument? document,
   }) =>
       SvgRendererOptions._(
         elementFinished: elementFinished == null
-            ? _i7.undefined
+            ? _i6.undefined
             : _i5.allowInterop(elementFinished),
-        size: size ?? _i7.undefined,
-        scale: scale ?? _i7.undefined,
-        maxSize: maxSize ?? _i7.undefined,
-        position: position ?? _i7.undefined,
-        parts: parts ?? _i7.undefined,
-        padding: padding ?? _i7.undefined ?? _i7.undefined,
-        background: background ?? _i7.undefined ?? _i7.undefined,
-        showTemporary: showTemporary ?? _i7.undefined,
-        showGrid: showGrid ?? _i7.undefined,
-        document: document ?? _i7.undefined,
+        size: size ?? _i6.undefined,
+        scale: scale,
+        maxSize: maxSize ?? _i6.undefined,
+        position: position ?? _i6.undefined,
+        parts: parts ?? _i6.undefined,
+        padding: padding ?? _i6.undefined,
+        background: background,
+        showTemporary: showTemporary,
+        showGrid: showGrid,
+        document: document ?? _i6.undefined,
       );
 }
 
 extension SvgRendererOptions$Typings on SvgRendererOptions {
   void Function(
     _i3.GraphObject,
-    _i6.SVGElement,
+    _i7.SVGElement,
   )? get elementFinished => _i5.getProperty(
         this,
         'elementFinished',
@@ -22131,12 +22868,12 @@ extension SvgRendererOptions$Typings on SvgRendererOptions {
   set elementFinished(
       void Function(
         _i3.GraphObject,
-        _i6.SVGElement,
+        _i7.SVGElement,
       )? value) {
     _i5.setProperty(
       this,
       'elementFinished',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -22167,7 +22904,7 @@ class ImageRendererOptions implements _i3.DiagramRendererOptions {
   factory ImageRendererOptions({
     _i2.String? type,
     _i2.String? returnType,
-    void Function(_i2.dynamic)? callback,
+    void Function([_i2.dynamic])? callback,
     _i2.num? callbackTimeout,
     _i2.Object? details,
     _i3.Size? size,
@@ -22179,24 +22916,24 @@ class ImageRendererOptions implements _i3.DiagramRendererOptions {
     _i3.BrushLike? background,
     _i2.bool? showTemporary,
     _i2.bool? showGrid,
-    _i6.HTMLDocument? document,
+    _i7.HTMLDocument? document,
   }) =>
       ImageRendererOptions._(
-        type: type ?? _i7.undefined,
-        returnType: returnType ?? _i7.undefined,
-        callback: callback == null ? _i7.undefined : _i5.allowInterop(callback),
-        callbackTimeout: callbackTimeout ?? _i7.undefined,
-        details: details ?? _i7.undefined,
-        size: size ?? _i7.undefined,
-        scale: scale ?? _i7.undefined,
-        maxSize: maxSize ?? _i7.undefined,
-        position: position ?? _i7.undefined,
-        parts: parts ?? _i7.undefined,
-        padding: padding ?? _i7.undefined ?? _i7.undefined,
-        background: background ?? _i7.undefined ?? _i7.undefined,
-        showTemporary: showTemporary ?? _i7.undefined,
-        showGrid: showGrid ?? _i7.undefined,
-        document: document ?? _i7.undefined,
+        type: type,
+        returnType: returnType,
+        callback: callback == null ? _i6.undefined : _i5.allowInterop(callback),
+        callbackTimeout: callbackTimeout,
+        details: details ?? _i6.undefined,
+        size: size ?? _i6.undefined,
+        scale: scale,
+        maxSize: maxSize ?? _i6.undefined,
+        position: position ?? _i6.undefined,
+        parts: parts ?? _i6.undefined,
+        padding: padding ?? _i6.undefined,
+        background: background,
+        showTemporary: showTemporary,
+        showGrid: showGrid,
+        document: document ?? _i6.undefined,
       );
 }
 
@@ -22209,7 +22946,7 @@ extension ImageRendererOptions$Typings on ImageRendererOptions {
     _i5.setProperty(
       this,
       'type',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22221,19 +22958,19 @@ extension ImageRendererOptions$Typings on ImageRendererOptions {
     _i5.setProperty(
       this,
       'returnType',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
-  void Function(_i2.dynamic)? get callback => _i5.getProperty(
+  void Function([_i2.dynamic])? get callback => _i5.getProperty(
         this,
         'callback',
       );
-  set callback(void Function(_i2.dynamic)? value) {
+  set callback(void Function([_i2.dynamic])? value) {
     _i5.setProperty(
       this,
       'callback',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -22245,7 +22982,7 @@ extension ImageRendererOptions$Typings on ImageRendererOptions {
     _i5.setProperty(
       this,
       'callbackTimeout',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22257,7 +22994,7 @@ extension ImageRendererOptions$Typings on ImageRendererOptions {
     _i5.setProperty(
       this,
       'details',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -22284,7 +23021,7 @@ class Palette implements _i3.Diagram {
 
   factory Palette.$2([_i4.Partial<_i3.Palette>? init]) => _i5.callConstructor(
         _declaredPalette,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory Palette.$3([
@@ -22294,8 +23031,8 @@ class Palette implements _i3.Diagram {
       _i5.callConstructor(
         _declaredPalette,
         [
-          div ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          div ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 }
@@ -22339,7 +23076,7 @@ class Overview implements _i3.Diagram {
 
   factory Overview.$2([_i4.Partial<_i3.Overview>? init]) => _i5.callConstructor(
         _declaredOverview,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory Overview.$3([
@@ -22349,8 +23086,8 @@ class Overview implements _i3.Diagram {
       _i5.callConstructor(
         _declaredOverview,
         [
-          div ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          div ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 }
@@ -22373,7 +23110,7 @@ extension Overview$Typings on Overview {
     _i5.setProperty(
       this,
       'observed',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -22668,7 +23405,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.setProperty(
       this,
       'memberValidation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -22952,7 +23689,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'copyToClipboard',
-      [coll ?? _i7.undefined],
+      [coll ?? _i6.undefined],
     );
   }
 
@@ -22992,7 +23729,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'pasteSelection',
-      [pos ?? _i7.undefined],
+      [pos ?? _i6.undefined],
     );
   }
 
@@ -23013,7 +23750,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canPasteSelection([_i3.Point? pos]) => _i5.callMethod(
         this,
         'canPasteSelection',
-        [pos ?? _i7.undefined],
+        [pos ?? _i6.undefined],
       );
 
   /// This command calls UndoManager#undo.
@@ -23094,7 +23831,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'decreaseZoom',
-      [factor ?? _i7.undefined],
+      [factor ?? _i6.undefined],
     );
   }
 
@@ -23112,7 +23849,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canDecreaseZoom([_i2.num? factor]) => _i5.callMethod(
         this,
         'canDecreaseZoom',
-        [factor ?? _i7.undefined],
+        [factor ?? _i6.undefined],
       );
 
   /// This command increases the Diagram#scale by a given factor.
@@ -23127,7 +23864,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'increaseZoom',
-      [factor ?? _i7.undefined],
+      [factor ?? _i6.undefined],
     );
   }
 
@@ -23145,7 +23882,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canIncreaseZoom([_i2.num? factor]) => _i5.callMethod(
         this,
         'canIncreaseZoom',
-        [factor ?? _i7.undefined],
+        [factor ?? _i6.undefined],
       );
 
   /// This command sets the Diagram#scale to a new scale value, by default 1.
@@ -23160,7 +23897,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'resetZoom',
-      [newscale ?? _i7.undefined],
+      [newscale ?? _i6.undefined],
     );
   }
 
@@ -23178,7 +23915,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canResetZoom([_i2.num? newscale]) => _i5.callMethod(
         this,
         'canResetZoom',
-        [newscale ?? _i7.undefined],
+        [newscale ?? _i6.undefined],
       );
 
   /// This command changes the Diagram#scale so that the Diagram#documentBounds fits within the viewport.
@@ -23243,7 +23980,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'scrollToPart',
-      [part ?? _i7.undefined],
+      [part ?? _i6.undefined],
     );
   }
 
@@ -23262,7 +23999,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canScrollToPart([_i3.Part? part]) => _i5.callMethod(
         this,
         'canScrollToPart',
-        [part ?? _i7.undefined],
+        [part ?? _i6.undefined],
       );
 
   /// This command collapses all expanded selected Nodes.
@@ -23284,7 +24021,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'collapseTree',
-      [node ?? _i7.undefined],
+      [node ?? _i6.undefined],
     );
   }
 
@@ -23300,7 +24037,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canCollapseTree([_i3.Node? node]) => _i5.callMethod(
         this,
         'canCollapseTree',
-        [node ?? _i7.undefined],
+        [node ?? _i6.undefined],
       );
 
   /// This command expands all collapsed selected Nodes.
@@ -23322,7 +24059,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'expandTree',
-      [node ?? _i7.undefined],
+      [node ?? _i6.undefined],
     );
   }
 
@@ -23338,7 +24075,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canExpandTree([_i3.Node? node]) => _i5.callMethod(
         this,
         'canExpandTree',
-        [node ?? _i7.undefined],
+        [node ?? _i6.undefined],
       );
 
   /// This command adds a copy of #archetypeGroupData to the diagram's model
@@ -23439,7 +24176,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'ungroupSelection',
-      [group ?? _i7.undefined],
+      [group ?? _i6.undefined],
     );
   }
 
@@ -23461,7 +24198,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canUngroupSelection([_i3.Group? group]) => _i5.callMethod(
         this,
         'canUngroupSelection',
-        [group ?? _i7.undefined],
+        [group ?? _i6.undefined],
       );
 
   /// Make sure all of the unnested Parts in the given collection
@@ -23498,7 +24235,7 @@ extension CommandHandler$Typings on CommandHandler {
         'addTopLevelParts',
         [
           coll,
-          check ?? _i7.undefined,
+          check ?? _i6.undefined,
         ],
       );
 
@@ -23521,7 +24258,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'collapseSubGraph',
-      [group ?? _i7.undefined],
+      [group ?? _i6.undefined],
     );
   }
 
@@ -23537,7 +24274,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canCollapseSubGraph([_i3.Group? group]) => _i5.callMethod(
         this,
         'canCollapseSubGraph',
-        [group ?? _i7.undefined],
+        [group ?? _i6.undefined],
       );
 
   /// This command expands all collapsed selected Groups.
@@ -23559,7 +24296,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'expandSubGraph',
-      [group ?? _i7.undefined],
+      [group ?? _i6.undefined],
     );
   }
 
@@ -23575,7 +24312,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canExpandSubGraph([_i3.Group? group]) => _i5.callMethod(
         this,
         'canExpandSubGraph',
-        [group ?? _i7.undefined],
+        [group ?? _i6.undefined],
       );
 
   /// This command starts in-place editing of a TextBlock in the selected Part.
@@ -23593,7 +24330,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'editTextBlock',
-      [textblock ?? _i7.undefined],
+      [textblock ?? _i6.undefined],
     );
   }
 
@@ -23614,7 +24351,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canEditTextBlock([_i3.TextBlock? textblock]) => _i5.callMethod(
         this,
         'canEditTextBlock',
-        [textblock ?? _i7.undefined],
+        [textblock ?? _i6.undefined],
       );
 
   /// This command opens the context menu for a selected Part or given GraphObject, or else for the whole Diagram.
@@ -23635,7 +24372,7 @@ extension CommandHandler$Typings on CommandHandler {
     _i5.callMethod(
       this,
       'showContextMenu',
-      [obj ?? _i7.undefined],
+      [obj ?? _i6.undefined],
     );
   }
 
@@ -23652,7 +24389,7 @@ extension CommandHandler$Typings on CommandHandler {
   _i2.bool canShowContextMenu([_i2.Object? obj]) => _i5.callMethod(
         this,
         'canShowContextMenu',
-        [obj ?? _i7.undefined],
+        [obj ?? _i6.undefined],
       );
 
   /// Find the actual collection of nodes and links to be moved or copied,
@@ -23684,7 +24421,7 @@ extension CommandHandler$Typings on CommandHandler {
         'computeEffectiveCollection',
         [
           parts,
-          options ?? _i7.undefined,
+          options ?? _i6.undefined,
         ],
       );
 }
@@ -24053,7 +24790,7 @@ class GraphObject {
         'build',
         [
           name,
-          config ?? _i7.undefined ?? _i7.undefined,
+          config ?? _i6.undefined,
           ...?args,
         ],
       );
@@ -25156,15 +25893,15 @@ class GraphObject {
   static _i2.dynamic takeBuilderArgument(
     _i4.Array<_i2.dynamic> args, [
     _i2.dynamic defval,
-    _i2.bool Function(_i2.dynamic)? pred,
+    _i2.bool Function([_i2.dynamic])? pred,
   ]) =>
       _i5.callMethod(
         _declaredGraphObject,
         'takeBuilderArgument',
         [
           args,
-          defval ?? _i7.undefined,
-          pred == null ? _i7.undefined : _i5.allowInterop(pred),
+          defval,
+          pred == null ? _i6.undefined : _i5.allowInterop(pred),
         ],
       );
 }
@@ -25192,7 +25929,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'shadowVisible',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -25218,7 +25955,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'enabledChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -25604,7 +26341,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'areaBackground',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -25624,7 +26361,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'background',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -25651,7 +26388,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'part',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -25670,7 +26407,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'panel',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -25688,7 +26425,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'layer',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -25705,7 +26442,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'diagram',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -26078,7 +26815,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'spanAllocation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26250,7 +26987,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'toLinkable',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -26382,7 +27119,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'fromLinkable',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -26474,7 +27211,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'click',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26533,7 +27270,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'doubleClick',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26578,7 +27315,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'contextClick',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26664,7 +27401,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseEnter',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26719,7 +27456,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseLeave',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26755,7 +27492,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseOver',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26796,7 +27533,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseHover',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26837,7 +27574,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseHold',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26881,7 +27618,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseDragEnter',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26925,7 +27662,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseDragLeave',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26959,7 +27696,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'mouseDrop',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -26988,7 +27725,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'actionDown',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -27017,7 +27754,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'actionMove',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -27049,7 +27786,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'actionUp',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -27078,7 +27815,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'actionCancel',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -27132,7 +27869,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'toolTip',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -27193,7 +27930,7 @@ extension GraphObject$Typings on GraphObject {
     _i5.setProperty(
       this,
       'contextMenu',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -27286,7 +28023,7 @@ extension GraphObject$Typings on GraphObject {
         'getDocumentPoint',
         [
           local,
-          result ?? _i7.undefined,
+          result ?? _i6.undefined,
         ],
       );
 
@@ -27299,7 +28036,7 @@ extension GraphObject$Typings on GraphObject {
   _i3.Rect getDocumentBounds([_i3.Rect? result]) => _i5.callMethod(
         this,
         'getDocumentBounds',
-        [result ?? _i7.undefined],
+        [result ?? _i6.undefined],
       );
 
   /// Returns the effective angle that the object is drawn at, in document coordinates, normalized to between 0 and 360.
@@ -27346,7 +28083,7 @@ extension GraphObject$Typings on GraphObject {
         'getLocalPoint',
         [
           p,
-          result ?? _i7.undefined,
+          result ?? _i6.undefined,
         ],
       );
 
@@ -27469,10 +28206,10 @@ extension GraphObject$Typings on GraphObject {
         this,
         'bind',
         [
-          targetprop ?? _i7.undefined,
-          sourceprop ?? _i7.undefined,
-          conv == null ? _i7.undefined : _i5.allowInterop(conv),
-          backconv == null ? _i7.undefined : _i5.allowInterop(backconv),
+          targetprop ?? _i6.undefined,
+          sourceprop ?? _i6.undefined,
+          conv == null ? _i6.undefined : _i5.allowInterop(conv),
+          backconv == null ? _i6.undefined : _i5.allowInterop(backconv),
         ],
       );
 
@@ -27605,7 +28342,7 @@ extension GraphObject$Typings on GraphObject {
   ///  @return {GraphObject} this GraphObject
   ///  @see #setProperties a synonym of this method
   ///  @see #set a type-safe method to set a collection of properties
-  _i3.GraphObject attach(_i2.dynamic config) => _i5.callMethod(
+  _i3.GraphObject attach([_i2.dynamic config]) => _i5.callMethod(
         this,
         'attach',
         [config],
@@ -27747,8 +28484,8 @@ class Brush {
       _i5.callConstructor(
         _declaredBrush,
         [
-          type ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          type ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 
@@ -27839,8 +28576,8 @@ class Brush {
         _declaredBrush,
         'randomColor',
         [
-          min ?? _i7.undefined,
-          max ?? _i7.undefined,
+          min ?? _i6.undefined,
+          max ?? _i6.undefined,
         ],
       );
 
@@ -27870,8 +28607,8 @@ class Brush {
         'lightenBy',
         [
           color,
-          fraction ?? _i7.undefined,
-          mode ?? _i7.undefined,
+          fraction ?? _i6.undefined,
+          mode ?? _i6.undefined,
         ],
       );
 
@@ -27894,8 +28631,8 @@ class Brush {
         'darkenBy',
         [
           color,
-          fraction ?? _i7.undefined,
-          mode ?? _i7.undefined,
+          fraction ?? _i6.undefined,
+          mode ?? _i6.undefined,
         ],
       );
 
@@ -27911,7 +28648,7 @@ class Brush {
         [
           color1,
           color2,
-          fraction ?? _i7.undefined,
+          fraction ?? _i6.undefined,
         ],
       );
 
@@ -27936,7 +28673,7 @@ class Brush {
   static _i2.bool isDark(_i3.BrushLike color) => _i5.callMethod(
         _declaredBrush,
         'isDark',
-        [color ?? _i7.undefined],
+        [color],
       );
 }
 
@@ -28051,20 +28788,20 @@ extension Brush$Typings on Brush {
     _i5.setProperty(
       this,
       'colorStops',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
   /// Gets or sets the pattern of a brush of type Brush.Pattern.
-  _i6.HTMLElement? get pattern => _i5.getProperty(
+  _i7.HTMLElement? get pattern => _i5.getProperty(
         this,
         'pattern',
       );
-  set pattern(_i6.HTMLElement? value) {
+  set pattern(_i7.HTMLElement? value) {
     _i5.setProperty(
       this,
       'pattern',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -28108,8 +28845,8 @@ extension Brush$Typings on Brush {
         this,
         'lightenBy',
         [
-          fraction ?? _i7.undefined,
-          mode ?? _i7.undefined,
+          fraction ?? _i6.undefined,
+          mode ?? _i6.undefined,
         ],
       );
 
@@ -28126,8 +28863,8 @@ extension Brush$Typings on Brush {
         this,
         'darkenBy',
         [
-          fraction ?? _i7.undefined,
-          mode ?? _i7.undefined,
+          fraction ?? _i6.undefined,
+          mode ?? _i6.undefined,
         ],
       );
 
@@ -28350,7 +29087,7 @@ extension PanelLayout$Typings on PanelLayout {
         y,
         width,
         height,
-        clipRect ?? _i7.undefined,
+        clipRect ?? _i6.undefined,
       ],
     );
   }
@@ -28585,7 +29322,7 @@ class Panel implements _i3.GraphObject {
 
   factory Panel.$2([_i4.Partial<_i3.Panel>? init]) => _i5.callConstructor(
         _declaredPanel,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory Panel.$3([
@@ -28595,8 +29332,8 @@ class Panel implements _i3.GraphObject {
       _i5.callConstructor(
         _declaredPanel,
         [
-          type ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          type ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 
@@ -28921,7 +29658,7 @@ extension Panel$Typings on Panel {
     _i5.setProperty(
       this,
       'defaultRowSeparatorStroke',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -28959,7 +29696,7 @@ extension Panel$Typings on Panel {
     _i5.setProperty(
       this,
       'defaultRowSeparatorDashArray',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -28975,7 +29712,7 @@ extension Panel$Typings on Panel {
     _i5.setProperty(
       this,
       'defaultColumnSeparatorStroke',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -29013,7 +29750,7 @@ extension Panel$Typings on Panel {
     _i5.setProperty(
       this,
       'defaultColumnSeparatorDashArray',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -29143,7 +29880,7 @@ extension Panel$Typings on Panel {
     _i5.setProperty(
       this,
       'panelLayoutState',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -29266,7 +30003,7 @@ extension Panel$Typings on Panel {
     _i5.setProperty(
       this,
       'data',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -29349,7 +30086,7 @@ extension Panel$Typings on Panel {
     _i5.setProperty(
       this,
       'itemArray',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -29395,7 +30132,7 @@ extension Panel$Typings on Panel {
     _i5.setProperty(
       this,
       'itemTemplateMap',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -29775,7 +30512,7 @@ extension Panel$Typings on Panel {
         'graduatedPointForValue',
         [
           val,
-          result ?? _i7.undefined,
+          result ?? _i6.undefined,
         ],
       );
 
@@ -29806,7 +30543,7 @@ extension Panel$Typings on Panel {
   _i3.Panel copyTemplate([_i2.bool? freeze]) => _i5.callMethod(
         this,
         'copyTemplate',
-        [freeze ?? _i7.undefined],
+        [freeze ?? _i6.undefined],
       );
 
   /// Re-evaluate all data bindings on this panel,
@@ -29826,7 +30563,7 @@ extension Panel$Typings on Panel {
     _i5.callMethod(
       this,
       'updateTargetBindings',
-      [srcprop ?? _i7.undefined],
+      [srcprop ?? _i6.undefined],
     );
   }
 
@@ -29888,7 +30625,7 @@ extension IInline11$Typings on IInline11 {
     _i5.setProperty(
       this,
       'row',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -29900,7 +30637,7 @@ extension IInline11$Typings on IInline11 {
     _i5.setProperty(
       this,
       'column',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -29915,7 +30652,7 @@ class RowColumnDefinition {
   factory RowColumnDefinition([_i4.Partial<_i2.Object>? init]) =>
       _i5.callConstructor(
         _declaredRowColumnDefinition,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   /// The default #sizing, which resolves to RowColumnDefinition.None or else
@@ -29975,7 +30712,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     _i5.setProperty(
       this,
       'panel',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -30183,7 +30920,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     _i5.setProperty(
       this,
       'separatorStroke',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -30227,7 +30964,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     _i5.setProperty(
       this,
       'separatorDashArray',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -30243,7 +30980,7 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
     _i5.setProperty(
       this,
       'background',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -30408,10 +31145,10 @@ extension RowColumnDefinition$Typings on RowColumnDefinition {
         this,
         'bind',
         [
-          targetprop ?? _i7.undefined,
-          sourceprop ?? _i7.undefined,
-          conv == null ? _i7.undefined : _i5.allowInterop(conv),
-          backconv == null ? _i7.undefined : _i5.allowInterop(backconv),
+          targetprop ?? _i6.undefined,
+          sourceprop ?? _i6.undefined,
+          conv == null ? _i6.undefined : _i5.allowInterop(conv),
+          backconv == null ? _i6.undefined : _i5.allowInterop(backconv),
         ],
       );
 
@@ -30526,7 +31263,7 @@ class Shape implements _i3.GraphObject {
 
   factory Shape.$2([_i4.Partial<_i3.Shape>? init]) => _i5.callConstructor(
         _declaredShape,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory Shape.$3([
@@ -30536,8 +31273,8 @@ class Shape implements _i3.GraphObject {
       _i5.callConstructor(
         _declaredShape,
         [
-          figure ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          figure ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 
@@ -30647,7 +31384,7 @@ extension Shape$Typings on Shape {
     _i5.setProperty(
       this,
       'geometry',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -30708,7 +31445,7 @@ extension Shape$Typings on Shape {
     _i5.setProperty(
       this,
       'fill',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -30732,7 +31469,7 @@ extension Shape$Typings on Shape {
     _i5.setProperty(
       this,
       'stroke',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -30824,7 +31561,7 @@ extension Shape$Typings on Shape {
     _i5.setProperty(
       this,
       'strokeDashArray',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -31038,7 +31775,7 @@ extension Shape$Typings on Shape {
     _i5.setProperty(
       this,
       'pathPattern',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -31125,7 +31862,7 @@ extension Shape$Typings on Shape {
     _i5.setProperty(
       this,
       'graduatedSkip',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 }
@@ -31174,7 +31911,7 @@ class TextBlock implements _i3.GraphObject {
   factory TextBlock.$2([_i4.Partial<_i3.TextBlock>? init]) =>
       _i5.callConstructor(
         _declaredTextBlock,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory TextBlock.$3([
@@ -31184,8 +31921,8 @@ class TextBlock implements _i3.GraphObject {
       _i5.callConstructor(
         _declaredTextBlock,
         [
-          text ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          text ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 
@@ -31354,7 +32091,7 @@ class TextBlock implements _i3.GraphObject {
     _i5.callMethod(
       _declaredTextBlock,
       'setBaseline',
-      [value == null ? _i7.undefined : _i5.allowInterop(value)],
+      [value == null ? _i6.undefined : _i5.allowInterop(value)],
     );
   }
 
@@ -31385,7 +32122,7 @@ class TextBlock implements _i3.GraphObject {
     _i5.callMethod(
       _declaredTextBlock,
       'setUnderline',
-      [value == null ? _i7.undefined : _i5.allowInterop(value)],
+      [value == null ? _i6.undefined : _i5.allowInterop(value)],
     );
   }
 
@@ -31622,7 +32359,7 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'stroke',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -31691,7 +32428,7 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'textEditor',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -31714,7 +32451,7 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'errorFunction',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -31785,7 +32522,7 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'graduatedFunction',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -31813,7 +32550,7 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'graduatedSkip',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -31845,7 +32582,7 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'textValidation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -31876,7 +32613,7 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'textEdited',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -31962,7 +32699,7 @@ extension TextBlock$Typings on TextBlock {
     _i5.setProperty(
       this,
       'choices',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -32018,7 +32755,7 @@ class Picture implements _i3.GraphObject {
 
   factory Picture.$2([_i4.Partial<_i3.Picture>? init]) => _i5.callConstructor(
         _declaredPicture,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory Picture.$3([
@@ -32028,8 +32765,8 @@ class Picture implements _i3.GraphObject {
       _i5.callConstructor(
         _declaredPicture,
         [
-          source ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          source ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 
@@ -32044,7 +32781,7 @@ class Picture implements _i3.GraphObject {
     _i5.callMethod(
       _declaredPicture,
       'clearCache',
-      [url ?? _i7.undefined],
+      [url ?? _i6.undefined],
     );
   }
 }
@@ -32065,15 +32802,15 @@ extension Picture$Typings on Picture {
   /// If this property is set to an HTMLImageElement, and that element is not yet loaded before it is used,
   /// the Diagrams using that Element will not redraw on their own.
   /// You must call #redraw after the image is finished loading if you wish for the Diagram to be updated immediately.
-  _i6.HTMLElement? get element => _i5.getProperty(
+  _i7.HTMLElement? get element => _i5.getProperty(
         this,
         'element',
       );
-  set element(_i6.HTMLElement? value) {
+  set element(_i7.HTMLElement? value) {
     _i5.setProperty(
       this,
       'element',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -32127,7 +32864,7 @@ extension Picture$Typings on Picture {
     _i5.setProperty(
       this,
       'sourceCrossOrigin',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -32211,7 +32948,7 @@ extension Picture$Typings on Picture {
   /// The default value is null, meaning that no specific action occurs when there is an error loading an image.
   void Function(
     _i3.Picture,
-    _i6.Event,
+    _i7.Event,
   )? get errorFunction => _i5.getProperty(
         this,
         'errorFunction',
@@ -32219,12 +32956,12 @@ extension Picture$Typings on Picture {
   set errorFunction(
       void Function(
         _i3.Picture,
-        _i6.Event,
+        _i7.Event,
       )? value) {
     _i5.setProperty(
       this,
       'errorFunction',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -32239,7 +32976,7 @@ extension Picture$Typings on Picture {
   /// The default value is null, meaning that no specific action occurs when an image finishes loading.
   void Function(
     _i3.Picture,
-    _i6.Event,
+    _i7.Event,
   )? get successFunction => _i5.getProperty(
         this,
         'successFunction',
@@ -32247,12 +32984,12 @@ extension Picture$Typings on Picture {
   set successFunction(
       void Function(
         _i3.Picture,
-        _i6.Event,
+        _i7.Event,
       )? value) {
     _i5.setProperty(
       this,
       'successFunction',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -32484,7 +33221,7 @@ class Part implements _i3.Panel {
 
   factory Part.$2([_i4.Partial<_i3.Part>? init]) => _i5.callConstructor(
         _declaredPart,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory Part.$3([
@@ -32494,8 +33231,8 @@ class Part implements _i3.Panel {
       _i5.callConstructor(
         _declaredPart,
         [
-          type ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          type ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 
@@ -32646,7 +33383,7 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'key',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -32682,7 +33419,7 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'layer',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -32697,7 +33434,7 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'diagram',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -32732,23 +33469,23 @@ extension Part$Typings on Part {
   /// this Part, the old Layer (may be null), and the new Layer (may be null).
   /// By default this property is null -- no function is called.
   void Function(
-    _i3.Part,
+    _i3.Part, [
     _i3.Layer?,
     _i3.Layer?,
-  )? get layerChanged => _i5.getProperty(
+  ])? get layerChanged => _i5.getProperty(
         this,
         'layerChanged',
       );
   set layerChanged(
       void Function(
-        _i3.Part,
+        _i3.Part, [
         _i3.Layer?,
         _i3.Layer?,
-      )? value) {
+      ])? value) {
     _i5.setProperty(
       this,
       'layerChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -33252,7 +33989,7 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'highlightedChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -33290,7 +34027,7 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'selectionAdornmentTemplate',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -33330,7 +34067,7 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'selectionChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -33347,7 +34084,7 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'resizeAdornmentTemplate',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -33409,7 +34146,7 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'rotateAdornmentTemplate',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -33499,7 +34236,7 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'containingGroup',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -33514,23 +34251,23 @@ extension Part$Typings on Part {
   ///
   /// The initial value is null -- no function is called.
   void Function(
-    _i3.Part,
+    _i3.Part, [
     _i3.Group?,
     _i3.Group?,
-  )? get containingGroupChanged => _i5.getProperty(
+  ])? get containingGroupChanged => _i5.getProperty(
         this,
         'containingGroupChanged',
       );
   set containingGroupChanged(
       void Function(
-        _i3.Part,
+        _i3.Part, [
         _i3.Group?,
         _i3.Group?,
-      )? value) {
+      ])? value) {
     _i5.setProperty(
       this,
       'containingGroupChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -33647,7 +34384,7 @@ extension Part$Typings on Part {
     _i5.setProperty(
       this,
       'dragComputation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -33718,7 +34455,7 @@ extension Part$Typings on Part {
     _i5.callMethod(
       this,
       'updateTargetBindings',
-      [srcprop ?? _i7.undefined],
+      [srcprop ?? _i6.undefined],
     );
   }
 
@@ -33836,7 +34573,7 @@ extension Part$Typings on Part {
       'move',
       [
         newpos,
-        useLocation ?? _i7.undefined,
+        useLocation ?? _i6.undefined,
       ],
     );
   }
@@ -33858,7 +34595,7 @@ extension Part$Typings on Part {
       [
         newx,
         newy,
-        useLocation ?? _i7.undefined,
+        useLocation ?? _i6.undefined,
       ],
     );
   }
@@ -33911,7 +34648,7 @@ extension Part$Typings on Part {
   _i3.Rect getDocumentBounds([_i3.Rect? result]) => _i5.callMethod(
         this,
         'getDocumentBounds',
-        [result ?? _i7.undefined],
+        [result ?? _i6.undefined],
       );
 
   /// Measures if needed to make sure the GraphObject#measuredBounds and GraphObject#naturalBounds are all real numbers,
@@ -34148,7 +34885,7 @@ extension Part$Typings on Part {
     _i5.callMethod(
       this,
       'invalidateLayout',
-      [condition ?? _i7.undefined],
+      [condition ?? _i6.undefined],
     );
   }
 }
@@ -34204,7 +34941,7 @@ class Adornment implements _i3.Part {
   factory Adornment.$2([_i4.Partial<_i3.Adornment>? init]) =>
       _i5.callConstructor(
         _declaredAdornment,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory Adornment.$3([
@@ -34214,8 +34951,8 @@ class Adornment implements _i3.Part {
       _i5.callConstructor(
         _declaredAdornment,
         [
-          type ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          type ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 }
@@ -34236,7 +34973,7 @@ extension Adornment$Typings on Adornment {
     _i5.setProperty(
       this,
       'placeholder',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -34251,7 +34988,7 @@ extension Adornment$Typings on Adornment {
     _i5.setProperty(
       this,
       'adornedObject',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -34265,7 +35002,7 @@ extension Adornment$Typings on Adornment {
     _i5.setProperty(
       this,
       'adornedPart',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -34468,7 +35205,7 @@ class Node implements _i3.Part {
 
   factory Node.$2([_i4.Partial<_i3.Node>? init]) => _i5.callConstructor(
         _declaredNode,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory Node.$3([
@@ -34478,8 +35215,8 @@ class Node implements _i3.Part {
       _i5.callConstructor(
         _declaredNode,
         [
-          type ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          type ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 
@@ -34634,7 +35371,7 @@ extension Node$Typings on Node {
     _i5.setProperty(
       this,
       'linkConnected',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -34667,7 +35404,7 @@ extension Node$Typings on Node {
     _i5.setProperty(
       this,
       'linkDisconnected',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -34706,7 +35443,7 @@ extension Node$Typings on Node {
     _i5.setProperty(
       this,
       'linkValidation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -34737,7 +35474,7 @@ extension Node$Typings on Node {
     _i5.setProperty(
       this,
       'labeledLink',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -34818,7 +35555,7 @@ extension Node$Typings on Node {
     _i5.setProperty(
       this,
       'treeExpandedChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -34854,8 +35591,8 @@ extension Node$Typings on Node {
       'invalidateLinkBundle',
       [
         other,
-        thisportid ?? _i7.undefined,
-        otherportid ?? _i7.undefined,
+        thisportid ?? _i6.undefined,
+        otherportid ?? _i6.undefined,
       ],
     );
   }
@@ -34869,7 +35606,7 @@ extension Node$Typings on Node {
     _i5.callMethod(
       this,
       'invalidateConnectedLinks',
-      [ignore ?? _i7.undefined],
+      [ignore ?? _i6.undefined],
     );
   }
 
@@ -34916,7 +35653,7 @@ extension Node$Typings on Node {
       _i5.callMethod(
         this,
         'findLinksConnected',
-        [pid ?? _i7.undefined],
+        [pid ?? _i6.undefined],
       );
 
   /// Returns an iterator over all of the Links that come out of this node,
@@ -34926,7 +35663,7 @@ extension Node$Typings on Node {
   _i3.Iterator<_i3.Link> findLinksOutOf([_i2.String? pid]) => _i5.callMethod(
         this,
         'findLinksOutOf',
-        [pid ?? _i7.undefined],
+        [pid ?? _i6.undefined],
       );
 
   /// Returns an iterator over all of the Links that go into this node,
@@ -34936,7 +35673,7 @@ extension Node$Typings on Node {
   _i3.Iterator<_i3.Link> findLinksInto([_i2.String? pid]) => _i5.callMethod(
         this,
         'findLinksInto',
-        [pid ?? _i7.undefined],
+        [pid ?? _i6.undefined],
       );
 
   /// Returns an iterator over the Nodes that are connected with this node
@@ -34949,7 +35686,7 @@ extension Node$Typings on Node {
       _i5.callMethod(
         this,
         'findNodesConnected',
-        [pid ?? _i7.undefined],
+        [pid ?? _i6.undefined],
       );
 
   /// Returns an iterator over the Nodes that are connected with this node
@@ -34959,7 +35696,7 @@ extension Node$Typings on Node {
   _i3.Iterator<_i3.Node> findNodesOutOf([_i2.String? pid]) => _i5.callMethod(
         this,
         'findNodesOutOf',
-        [pid ?? _i7.undefined],
+        [pid ?? _i6.undefined],
       );
 
   /// Returns an iterator over the Nodes that are connected with this node
@@ -34969,7 +35706,7 @@ extension Node$Typings on Node {
   _i3.Iterator<_i3.Node> findNodesInto([_i2.String? pid]) => _i5.callMethod(
         this,
         'findNodesInto',
-        [pid ?? _i7.undefined],
+        [pid ?? _i6.undefined],
       );
 
   /// Returns an iterator over all of the Links that go from this node to another node or vice-versa,
@@ -34991,8 +35728,8 @@ extension Node$Typings on Node {
         'findLinksBetween',
         [
           othernode,
-          pid ?? _i7.undefined,
-          otherpid ?? _i7.undefined,
+          pid ?? _i6.undefined,
+          otherpid ?? _i6.undefined,
         ],
       );
 
@@ -35015,8 +35752,8 @@ extension Node$Typings on Node {
         'findLinksTo',
         [
           othernode,
-          pid ?? _i7.undefined,
-          otherpid ?? _i7.undefined,
+          pid ?? _i6.undefined,
+          otherpid ?? _i6.undefined,
         ],
       );
 
@@ -35208,7 +35945,7 @@ extension Node$Typings on Node {
   _i3.Set<_i3.Part> findTreeParts([_i2.num? level]) => _i5.callMethod(
         this,
         'findTreeParts',
-        [level ?? _i7.undefined],
+        [level ?? _i6.undefined],
       );
 
   /// Hide each child node and the connecting link,
@@ -35243,7 +35980,7 @@ extension Node$Typings on Node {
     _i5.callMethod(
       this,
       'collapseTree',
-      [level ?? _i7.undefined],
+      [level ?? _i6.undefined],
     );
   }
 
@@ -35280,7 +36017,7 @@ extension Node$Typings on Node {
     _i5.callMethod(
       this,
       'expandTree',
-      [level ?? _i7.undefined],
+      [level ?? _i6.undefined],
     );
   }
 }
@@ -35402,7 +36139,7 @@ class Group implements _i3.Node {
 
   factory Group.$2([_i4.Partial<_i3.Group>? init]) => _i5.callConstructor(
         _declaredGroup,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory Group.$3([
@@ -35412,8 +36149,8 @@ class Group implements _i3.Node {
       _i5.callConstructor(
         _declaredGroup,
         [
-          type ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          type ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 }
@@ -35433,7 +36170,7 @@ extension Group$Typings on Group {
     _i5.setProperty(
       this,
       'placeholder',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -35536,7 +36273,7 @@ extension Group$Typings on Group {
     _i5.setProperty(
       this,
       'layout',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -35564,7 +36301,7 @@ extension Group$Typings on Group {
     _i5.setProperty(
       this,
       'memberAdded',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -35592,7 +36329,7 @@ extension Group$Typings on Group {
     _i5.setProperty(
       this,
       'memberRemoved',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -35619,7 +36356,7 @@ extension Group$Typings on Group {
     _i5.setProperty(
       this,
       'memberValidation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -35686,7 +36423,7 @@ extension Group$Typings on Group {
     _i5.setProperty(
       this,
       'subGraphExpandedChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -35731,7 +36468,7 @@ extension Group$Typings on Group {
         'addMembers',
         [
           coll,
-          check ?? _i7.undefined,
+          check ?? _i6.undefined,
         ],
       );
 
@@ -35847,7 +36584,7 @@ extension Group$Typings on Group {
       'move',
       [
         newpos,
-        useLocation ?? _i7.undefined,
+        useLocation ?? _i6.undefined,
       ],
     );
   }
@@ -35868,7 +36605,7 @@ class Placeholder implements _i3.GraphObject {
   factory Placeholder([_i4.Partial<_i3.Placeholder>? init]) =>
       _i5.callConstructor(
         _declaredPlaceholder,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 }
 
@@ -36053,7 +36790,7 @@ extension Placeholder$Typings on Placeholder {
 class Link implements _i3.Part {
   factory Link([_i4.Partial<_i3.Link>? init]) => _i5.callConstructor(
         _declaredLink,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   /// Used as the default value for Link#routing:
@@ -36361,7 +37098,7 @@ extension Link$Typings on Link {
     _i5.setProperty(
       this,
       'fromNode',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -36392,7 +37129,7 @@ extension Link$Typings on Link {
     _i5.setProperty(
       this,
       'fromPort',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -36406,23 +37143,23 @@ extension Link$Typings on Link {
   ///
   /// The default value is null -- no function is called.
   void Function(
-    _i3.Link,
+    _i3.Link, [
     _i3.GraphObject?,
     _i3.GraphObject?,
-  )? get fromPortChanged => _i5.getProperty(
+  ])? get fromPortChanged => _i5.getProperty(
         this,
         'fromPortChanged',
       );
   set fromPortChanged(
       void Function(
-        _i3.Link,
+        _i3.Link, [
         _i3.GraphObject?,
         _i3.GraphObject?,
-      )? value) {
+      ])? value) {
     _i5.setProperty(
       this,
       'fromPortChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -36439,7 +37176,7 @@ extension Link$Typings on Link {
     _i5.setProperty(
       this,
       'toNode',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -36470,7 +37207,7 @@ extension Link$Typings on Link {
     _i5.setProperty(
       this,
       'toPort',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -36485,22 +37222,22 @@ extension Link$Typings on Link {
   /// The default value is null -- no function is called.
   void Function(
     _i3.Link,
+    _i3.GraphObject, [
     _i3.GraphObject?,
-    _i3.GraphObject,
-  )? get toPortChanged => _i5.getProperty(
+  ])? get toPortChanged => _i5.getProperty(
         this,
         'toPortChanged',
       );
   set toPortChanged(
       void Function(
         _i3.Link,
+        _i3.GraphObject, [
         _i3.GraphObject?,
-        _i3.GraphObject,
-      )? value) {
+      ])? value) {
     _i5.setProperty(
       this,
       'toPortChanged',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -36748,7 +37485,7 @@ extension Link$Typings on Link {
     _i5.setProperty(
       this,
       'path',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -37064,7 +37801,7 @@ extension Link$Typings on Link {
     _i5.setProperty(
       this,
       'key',
-      value ?? _i7.undefined,
+      value,
     );
   }
 
@@ -37100,7 +37837,7 @@ extension Link$Typings on Link {
       'move',
       [
         newpos,
-        useLocation ?? _i7.undefined,
+        useLocation ?? _i6.undefined,
       ],
     );
   }
@@ -37404,12 +38141,12 @@ extension Link$Typings on Link {
         this,
         'getLinkPointFromPoint',
         [
-          node ?? _i7.undefined,
-          port ?? _i7.undefined,
+          node ?? _i6.undefined,
+          port ?? _i6.undefined,
           focus,
           p,
           from,
-          result ?? _i7.undefined,
+          result ?? _i6.undefined,
         ],
       );
 
@@ -37439,14 +38176,14 @@ extension Link$Typings on Link {
         this,
         'getLinkPoint',
         [
-          node ?? _i7.undefined,
+          node ?? _i6.undefined,
           port,
           spot,
           from,
           ortho,
-          othernode ?? _i7.undefined,
+          othernode ?? _i6.undefined,
           otherport,
-          result ?? _i7.undefined,
+          result ?? _i6.undefined,
         ],
       );
 
@@ -37476,14 +38213,14 @@ extension Link$Typings on Link {
         this,
         'getLinkDirection',
         [
-          node ?? _i7.undefined,
-          port ?? _i7.undefined,
+          node ?? _i6.undefined,
+          port ?? _i6.undefined,
           linkpoint,
           spot,
           from,
           ortho,
-          othernode ?? _i7.undefined,
-          otherport ?? _i7.undefined,
+          othernode ?? _i6.undefined,
+          otherport ?? _i6.undefined,
         ],
       );
 
@@ -37503,17 +38240,17 @@ extension Link$Typings on Link {
   ///  @return {number} a distance in document coordinates; must be a real number, not NaN or infinity.
   ///  @since 1.6
   _i2.num computeEndSegmentLength(
+    _i3.Spot spot,
+    _i2.bool from, [
     _i3.Node? node,
     _i3.GraphObject? port,
-    _i3.Spot spot,
-    _i2.bool from,
-  ) =>
+  ]) =>
       _i5.callMethod(
         this,
         'computeEndSegmentLength',
         [
-          node ?? _i7.undefined,
-          port ?? _i7.undefined,
+          node ?? _i6.undefined,
+          port ?? _i6.undefined,
           spot,
           from,
         ],
@@ -37540,7 +38277,7 @@ extension Link$Typings on Link {
         'computeSpot',
         [
           from,
-          port ?? _i7.undefined,
+          port ?? _i6.undefined,
         ],
       );
 
@@ -37892,7 +38629,7 @@ extension Link$Typings on Link {
 class Layout {
   factory Layout([_i4.Partial<_i3.Layout>? init]) => _i5.callConstructor(
         _declaredLayout,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 }
 
@@ -37913,7 +38650,7 @@ extension Layout$Typings on Layout {
     _i5.setProperty(
       this,
       'diagram',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -37928,7 +38665,7 @@ extension Layout$Typings on Layout {
     _i5.setProperty(
       this,
       'group',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -38039,7 +38776,7 @@ extension Layout$Typings on Layout {
     _i5.setProperty(
       this,
       'isRealtime',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -38071,7 +38808,7 @@ extension Layout$Typings on Layout {
     _i5.setProperty(
       this,
       'network',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -38103,7 +38840,7 @@ extension Layout$Typings on Layout {
     _i5.setProperty(
       this,
       'boundsComputation',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -38305,7 +39042,7 @@ extension Layout$Typings on Layout {
         'getLayoutBounds',
         [
           part,
-          rect ?? _i7.undefined,
+          rect ?? _i6.undefined,
         ],
       );
 
@@ -38466,8 +39203,8 @@ extension LayoutNetwork$Typings on LayoutNetwork {
       'addParts',
       [
         parts,
-        toplevelonly ?? _i7.undefined,
-        pred == null ? _i7.undefined : _i5.allowInterop(pred),
+        toplevelonly ?? _i6.undefined,
+        pred == null ? _i6.undefined : _i5.allowInterop(pred),
       ],
     );
   }
@@ -38596,7 +39333,7 @@ extension LayoutNetwork$Typings on LayoutNetwork {
         [
           fromVertex,
           toVertex,
-          link ?? _i7.undefined,
+          link ?? _i6.undefined,
         ],
       );
 
@@ -38644,7 +39381,7 @@ extension LayoutNetwork$Typings on LayoutNetwork {
       _i5.callMethod(
         this,
         'splitIntoSubNetworks',
-        [clean ?? _i7.undefined],
+        [clean ?? _i6.undefined],
       );
 
   /// Retrieve all of the Nodes and Links from the
@@ -38762,7 +39499,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     _i5.setProperty(
       this,
       'data',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -38780,7 +39517,7 @@ extension LayoutVertex$Typings on LayoutVertex {
     _i5.setProperty(
       this,
       'node',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39165,7 +39902,7 @@ extension LayoutEdge$Typings on LayoutEdge {
     _i5.setProperty(
       this,
       'data',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39180,7 +39917,7 @@ extension LayoutEdge$Typings on LayoutEdge {
     _i5.setProperty(
       this,
       'link',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39194,7 +39931,7 @@ extension LayoutEdge$Typings on LayoutEdge {
     _i5.setProperty(
       this,
       'fromVertex',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39208,7 +39945,7 @@ extension LayoutEdge$Typings on LayoutEdge {
     _i5.setProperty(
       this,
       'toVertex',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39268,7 +40005,7 @@ class GridLayout implements _i3.Layout {
   factory GridLayout([_i4.Partial<_i3.GridLayout>? init]) =>
       _i5.callConstructor(
         _declaredGridLayout,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   /// Position the top-left corner of each part at a grid point;
@@ -39586,13 +40323,13 @@ class IncrementalData {
     _i4.Array<_i3.Key>? removedLinkKeys,
   }) =>
       IncrementalData._(
-        modelData: modelData ?? _i7.undefined,
-        insertedNodeKeys: insertedNodeKeys ?? _i7.undefined,
-        modifiedNodeData: modifiedNodeData ?? _i7.undefined,
-        removedNodeKeys: removedNodeKeys ?? _i7.undefined,
-        insertedLinkKeys: insertedLinkKeys ?? _i7.undefined,
-        modifiedLinkData: modifiedLinkData ?? _i7.undefined,
-        removedLinkKeys: removedLinkKeys ?? _i7.undefined,
+        modelData: modelData ?? _i6.undefined,
+        insertedNodeKeys: insertedNodeKeys ?? _i6.undefined,
+        modifiedNodeData: modifiedNodeData ?? _i6.undefined,
+        removedNodeKeys: removedNodeKeys ?? _i6.undefined,
+        insertedLinkKeys: insertedLinkKeys ?? _i6.undefined,
+        modifiedLinkData: modifiedLinkData ?? _i6.undefined,
+        removedLinkKeys: removedLinkKeys ?? _i6.undefined,
       );
 }
 
@@ -39606,7 +40343,7 @@ extension IncrementalData$Typings on IncrementalData {
     _i5.setProperty(
       this,
       'modelData',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39619,7 +40356,7 @@ extension IncrementalData$Typings on IncrementalData {
     _i5.setProperty(
       this,
       'insertedNodeKeys',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39632,7 +40369,7 @@ extension IncrementalData$Typings on IncrementalData {
     _i5.setProperty(
       this,
       'modifiedNodeData',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39645,7 +40382,7 @@ extension IncrementalData$Typings on IncrementalData {
     _i5.setProperty(
       this,
       'removedNodeKeys',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39658,7 +40395,7 @@ extension IncrementalData$Typings on IncrementalData {
     _i5.setProperty(
       this,
       'insertedLinkKeys',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39671,7 +40408,7 @@ extension IncrementalData$Typings on IncrementalData {
     _i5.setProperty(
       this,
       'modifiedLinkData',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -39684,7 +40421,7 @@ extension IncrementalData$Typings on IncrementalData {
     _i5.setProperty(
       this,
       'removedLinkKeys',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -39811,7 +40548,7 @@ class Model {
 
   factory Model.$2([_i4.Partial<_i3.Model>? init]) => _i5.callConstructor(
         _declaredModel,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory Model.$3([
@@ -39821,8 +40558,8 @@ class Model {
       _i5.callConstructor(
         _declaredModel,
         [
-          nodedataarray ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          nodedataarray ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 
@@ -39856,7 +40593,7 @@ class Model {
         'fromJson',
         [
           s,
-          model ?? _i7.undefined,
+          model ?? _i6.undefined,
         ],
       );
 }
@@ -40060,7 +40797,7 @@ extension Model$Typings on Model {
     _i5.setProperty(
       this,
       'makeUniqueKeyFunction',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -40122,7 +40859,7 @@ extension Model$Typings on Model {
     _i5.setProperty(
       this,
       'copyNodeDataFunction',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -40223,7 +40960,7 @@ extension Model$Typings on Model {
     _i5.setProperty(
       this,
       'afterCopyFunction',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -40409,7 +41146,7 @@ extension Model$Typings on Model {
         'toIncrementalJson',
         [
           e,
-          classname ?? _i7.undefined,
+          classname ?? _i6.undefined,
         ],
       );
 
@@ -40453,7 +41190,7 @@ extension Model$Typings on Model {
   _i2.String toJson([_i2.String? classname]) => _i5.callMethod(
         this,
         'toJson',
-        [classname ?? _i7.undefined],
+        [classname ?? _i6.undefined],
       );
 
   /// Modify this model by applying the changes given in an "incremental" model change in JSON format
@@ -40524,9 +41261,9 @@ extension Model$Typings on Model {
   void raiseChangedEvent(
     _i3.EnumValue change,
     _i2.Object propertyname,
-    _i2.Object obj,
+    _i2.Object obj, [
     _i2.dynamic oldval,
-    _i2.dynamic newval, [
+    _i2.dynamic newval,
     _i2.dynamic oldparam,
     _i2.dynamic newparam,
   ]) {
@@ -40539,8 +41276,8 @@ extension Model$Typings on Model {
         obj,
         oldval,
         newval,
-        oldparam ?? _i7.undefined,
-        newparam ?? _i7.undefined,
+        oldparam,
+        newparam,
       ],
     );
   }
@@ -40558,9 +41295,9 @@ extension Model$Typings on Model {
   ///  @param {*=} newparam an optional value additionally describing the new value.
   void raiseDataChanged(
     _i2.Object data,
-    _i2.Object propertyname,
+    _i2.Object propertyname, [
     _i2.dynamic oldval,
-    _i2.dynamic newval, [
+    _i2.dynamic newval,
     _i2.dynamic oldparam,
     _i2.dynamic newparam,
   ]) {
@@ -40572,8 +41309,8 @@ extension Model$Typings on Model {
         propertyname,
         oldval,
         newval,
-        oldparam ?? _i7.undefined,
-        newparam ?? _i7.undefined,
+        oldparam,
+        newparam,
       ],
     );
   }
@@ -40608,7 +41345,7 @@ extension Model$Typings on Model {
   _i2.bool startTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'startTransaction',
-        [tname ?? _i7.undefined],
+        [tname ?? _i6.undefined],
       );
 
   /// Commit the changes of the current transaction.
@@ -40618,7 +41355,7 @@ extension Model$Typings on Model {
   _i2.bool commitTransaction([_i2.String? tname]) => _i5.callMethod(
         this,
         'commitTransaction',
-        [tname ?? _i7.undefined],
+        [tname ?? _i6.undefined],
       );
 
   /// Rollback the current transaction, undoing any recorded changes.
@@ -40650,7 +41387,7 @@ extension Model$Typings on Model {
       'commit',
       [
         _i5.allowInterop(func),
-        tname ?? _i7.undefined,
+        tname ?? _i6.undefined,
       ],
     );
   }
@@ -40676,7 +41413,7 @@ extension Model$Typings on Model {
       'updateTargetBindings',
       [
         data,
-        srcpropname ?? _i7.undefined,
+        srcpropname ?? _i6.undefined,
       ],
     );
   }
@@ -40719,7 +41456,7 @@ extension Model$Typings on Model {
       'setKeyForNodeData',
       [
         nodedata,
-        key ?? _i7.undefined,
+        key,
       ],
     );
   }
@@ -40748,7 +41485,7 @@ extension Model$Typings on Model {
   _i2.Object? findNodeDataForKey(_i3.Key key) => _i5.callMethod(
         this,
         'findNodeDataForKey',
-        [key ?? _i7.undefined],
+        [key],
       );
 
   /// This method is called when a node data object is added to the model to make sure that
@@ -40870,7 +41607,7 @@ extension Model$Typings on Model {
     _i5.callMethod(
       this,
       'clearUnresolvedReferences',
-      [key ?? _i7.undefined ?? _i7.undefined],
+      [key ?? _i6.undefined],
     );
   }
 
@@ -40934,9 +41671,9 @@ extension Model$Typings on Model {
   ///  @see #set
   void setDataProperty(
     _i2.Object data,
-    _i2.String propname,
+    _i2.String propname, [
     _i2.dynamic val,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'setDataProperty',
@@ -40957,9 +41694,9 @@ extension Model$Typings on Model {
   ///  @since 1.8
   void set(
     _i2.Object data,
-    _i2.String propname,
+    _i2.String propname, [
     _i2.dynamic val,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'set',
@@ -41002,9 +41739,9 @@ extension Model$Typings on Model {
   ///  @see #insertArrayItem
   ///  @since 1.1
   void addArrayItem(
-    _i4.Array<_i2.dynamic> arr,
+    _i4.Array<_i2.dynamic> arr, [
     _i2.dynamic val,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'addArrayItem',
@@ -41027,9 +41764,9 @@ extension Model$Typings on Model {
   ///  @see #removeArrayItem
   void insertArrayItem(
     _i4.Array<_i2.dynamic> arr,
-    _i2.num idx,
+    _i2.num idx, [
     _i2.dynamic val,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'insertArrayItem',
@@ -41064,7 +41801,7 @@ extension Model$Typings on Model {
       'removeArrayItem',
       [
         arr,
-        idx ?? _i7.undefined,
+        idx ?? _i6.undefined,
       ],
     );
   }
@@ -41354,10 +42091,10 @@ class Binding {
       _i5.callConstructor(
         _declaredBinding,
         [
-          targetprop ?? _i7.undefined,
-          sourceprop ?? _i7.undefined,
-          conv == null ? _i7.undefined : _i5.allowInterop(conv),
-          backconv == null ? _i7.undefined : _i5.allowInterop(backconv),
+          targetprop ?? _i6.undefined,
+          sourceprop ?? _i6.undefined,
+          conv == null ? _i6.undefined : _i5.allowInterop(conv),
+          backconv == null ? _i6.undefined : _i5.allowInterop(backconv),
         ],
       );
 
@@ -41404,9 +42141,9 @@ class Binding {
   /// If the bound data's "dataPropName" property is not present or has an unrecognized value,
   /// the Link#routing property gets the default value, Link.Normal.
   static _i3.EnumValue Function(_i2.String) parseEnum(
+    _i3.EnumValue defval, [
     _i2.dynamic ctor,
-    _i3.EnumValue defval,
-  ) =>
+  ]) =>
       _i5.callMethod(
         _declaredBinding,
         'parseEnum',
@@ -41422,7 +42159,7 @@ class Binding {
   static _i2.String toString$([_i2.dynamic val]) => _i5.callMethod(
         _declaredBinding,
         'toString',
-        [val ?? _i7.undefined],
+        [val],
       );
 }
 
@@ -41467,7 +42204,7 @@ extension Binding$Typings on Binding {
     _i5.setProperty(
       this,
       'sourceName',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -41532,7 +42269,7 @@ extension Binding$Typings on Binding {
     _i5.setProperty(
       this,
       'converter',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -41564,7 +42301,7 @@ extension Binding$Typings on Binding {
     _i5.setProperty(
       this,
       'backConverter',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -41615,7 +42352,7 @@ extension Binding$Typings on Binding {
   _i3.Binding makeTwoWay([_i3.BackConversion? backconv]) => _i5.callMethod(
         this,
         'makeTwoWay',
-        [backconv == null ? _i7.undefined : _i5.allowInterop(backconv)],
+        [backconv == null ? _i6.undefined : _i5.allowInterop(backconv)],
       );
 
   /// Modify this Binding to set its #sourceName property so as to identify
@@ -41632,7 +42369,7 @@ extension Binding$Typings on Binding {
   _i3.Binding ofObject([_i2.String? srcname]) => _i5.callMethod(
         this,
         'ofObject',
-        [srcname ?? _i7.undefined],
+        [srcname ?? _i6.undefined],
       );
 
   /// Modify this Binding so that the source is the Model#modelData object,
@@ -41761,7 +42498,7 @@ class GraphLinksModel implements _i3.Model {
   factory GraphLinksModel.$2([_i4.Partial<_i3.GraphLinksModel>? init]) =>
       _i5.callConstructor(
         _declaredGraphLinksModel,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory GraphLinksModel.$3([
@@ -41772,9 +42509,9 @@ class GraphLinksModel implements _i3.Model {
       _i5.callConstructor(
         _declaredGraphLinksModel,
         [
-          nodedataarray ?? _i7.undefined,
-          linkdataarray ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          nodedataarray ?? _i6.undefined,
+          linkdataarray ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 }
@@ -41800,7 +42537,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     _i5.setProperty(
       this,
       'archetypeNodeData',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -42011,7 +42748,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     _i5.setProperty(
       this,
       'makeUniqueLinkKeyFunction',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -42036,7 +42773,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
     _i5.setProperty(
       this,
       'copyLinkDataFunction',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i6.undefined : _i5.allowInterop(value),
     );
   }
 
@@ -42150,7 +42887,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'setFromKeyForLinkData',
       [
         linkdata,
-        key ?? _i7.undefined,
+        key,
       ],
     );
   }
@@ -42184,7 +42921,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'setToKeyForLinkData',
       [
         linkdata,
-        key ?? _i7.undefined,
+        key,
       ],
     );
   }
@@ -42312,7 +43049,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'addLabelKeyForLinkData',
       [
         linkdata,
-        key ?? _i7.undefined,
+        key,
       ],
     );
   }
@@ -42336,7 +43073,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'removeLabelKeyForLinkData',
       [
         linkdata,
-        key ?? _i7.undefined,
+        key,
       ],
     );
   }
@@ -42381,7 +43118,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'setKeyForLinkData',
       [
         linkdata,
-        key ?? _i7.undefined,
+        key,
       ],
     );
   }
@@ -42401,7 +43138,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
   _i2.Object? findLinkDataForKey(_i3.Key key) => _i5.callMethod(
         this,
         'findLinkDataForKey',
-        [key ?? _i7.undefined],
+        [key],
       );
 
   /// This method is called when a link data object is added to the model to make sure that
@@ -42590,7 +43327,7 @@ extension GraphLinksModel$Typings on GraphLinksModel {
       'setGroupKeyForNodeData',
       [
         nodedata,
-        key ?? _i7.undefined,
+        key,
       ],
     );
   }
@@ -42619,9 +43356,9 @@ extension GraphLinksModel$Typings on GraphLinksModel {
   ///  @see Model#setDataProperty
   void setDataProperty(
     _i2.Object data,
-    _i2.String propname,
+    _i2.String propname, [
     _i2.dynamic val,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'setDataProperty',
@@ -42728,7 +43465,7 @@ class TreeModel implements _i3.Model {
   factory TreeModel.$2([_i4.Partial<_i3.TreeModel>? init]) =>
       _i5.callConstructor(
         _declaredTreeModel,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   factory TreeModel.$3([
@@ -42738,8 +43475,8 @@ class TreeModel implements _i3.Model {
       _i5.callConstructor(
         _declaredTreeModel,
         [
-          nodedataarray ?? _i7.undefined,
-          init ?? _i7.undefined ?? _i7.undefined,
+          nodedataarray ?? _i6.undefined,
+          init ?? _i6.undefined,
         ],
       );
 }
@@ -42826,7 +43563,7 @@ extension TreeModel$Typings on TreeModel {
       'setParentKeyForNodeData',
       [
         nodedata,
-        key ?? _i7.undefined,
+        key,
       ],
     );
   }
@@ -42894,9 +43631,9 @@ extension TreeModel$Typings on TreeModel {
   ///  @see Model#setDataProperty
   void setDataProperty(
     _i2.Object data,
-    _i2.String propname,
+    _i2.String propname, [
     _i2.dynamic val,
-  ) {
+  ]) {
     _i5.callMethod(
       this,
       'setDataProperty',
@@ -42925,7 +43662,7 @@ class CircularLayout implements _i3.Layout {
   factory CircularLayout([_i4.Partial<_i3.CircularLayout>? init]) =>
       _i5.callConstructor(
         _declaredCircularLayout,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   /// The spacing between the idealized boundaries of the nodes is constant;
@@ -43621,7 +44358,7 @@ class ForceDirectedLayout implements _i3.Layout {
   factory ForceDirectedLayout([_i4.Partial<_i3.ForceDirectedLayout>? init]) =>
       _i5.callConstructor(
         _declaredForceDirectedLayout,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 }
 
@@ -43789,7 +44526,7 @@ extension ForceDirectedLayout$Typings on ForceDirectedLayout {
     _i5.setProperty(
       this,
       'randomNumberGenerator',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -44407,7 +45144,7 @@ class LayeredDigraphLayout implements _i3.Layout {
   factory LayeredDigraphLayout([_i4.Partial<_i3.LayeredDigraphLayout>? init]) =>
       _i5.callConstructor(
         _declaredLayeredDigraphLayout,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   /// Remove cycles using depth first cycle removal;
@@ -45467,7 +46204,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
     _i5.setProperty(
       this,
       'fromVertex',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -45481,7 +46218,7 @@ extension LayeredDigraphEdge$Typings on LayeredDigraphEdge {
     _i5.setProperty(
       this,
       'toVertex',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -45648,7 +46385,7 @@ class TreeLayout implements _i3.Layout {
   factory TreeLayout([_i4.Partial<_i3.TreeLayout>? init]) =>
       _i5.callConstructor(
         _declaredTreeLayout,
-        [init ?? _i7.undefined ?? _i7.undefined],
+        [init ?? _i6.undefined],
       );
 
   /// This value for TreeLayout#path causes the value of Diagram#isTreePathToChildren
@@ -48103,7 +48840,7 @@ extension TreeEdge$Typings on TreeEdge {
     _i5.setProperty(
       this,
       'toVertex',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 

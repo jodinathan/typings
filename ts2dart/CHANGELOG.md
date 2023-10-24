@@ -1,6 +1,8 @@
 ## 0.0.5
 - Revamped how namespaces are generated. All namespaces are exported through one file.
 - Fixed a bug when trying to use a callable interface as function
+- Changed methods of interfaces to function getters and added a setter
+- Added `FutureOr`  type. Now unions of a ` PromiseLike<Type>`  and a ` Type`  are `FutureOr`  instead.
 
 ## 0.0.4
 - Fixed error when using nested namespaces

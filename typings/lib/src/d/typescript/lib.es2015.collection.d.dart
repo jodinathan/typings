@@ -75,92 +75,147 @@ extension Map$Typings<K, V> on Map<K, V> {
         this,
         'size',
       );
-  void clear() {
-    _i4.callMethod(
+  set clear(void Function() value) {
+    _i4.setProperty(
       this,
       'clear',
-      [],
+      _i4.allowInterop(value),
     );
   }
 
-  /// @returns true if an element in the Map existed and has been removed, or false if the element does not exist.
-  _i2.bool delete(K key) => _i4.callMethod(
+  void Function() get clear => _i4.getProperty(
+        this,
+        'clear',
+      );
+  set delete(_i2.bool Function(K) value) {
+    _i4.setProperty(
+      this,
+      'delete',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(K) get delete => _i4.getProperty(
         this,
         'delete',
-        [key],
       );
+  set forEach(
+      void Function(
+        void Function(
+          V,
+          K,
+          _i6.Map<K, V>,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'forEach',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Executes a provided function once per each key/value pair in the Map, in insertion order.
-  void forEach(
+  void Function(
     void Function(
       V,
       K,
       _i6.Map<K, V>,
-    ) callbackfn, [
-    _i2.dynamic thisArg,
-  ]) {
-    _i4.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get forEach => _i4.getProperty(
+        this,
+        'forEach',
+      );
+  set get(V? Function(K) value) {
+    _i4.setProperty(
       this,
-      'forEach',
-      [
-        _i4.allowInterop(callbackfn),
-        thisArg ?? _i5.undefined,
-      ],
+      'get',
+      _i4.allowInterop(value),
     );
   }
 
-  /// Returns a specified element from the Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object and any change made to that object will effectively modify it inside the Map.
-  ///  @returns Returns the element associated with the specified key. If no element is associated with the specified key, undefined is returned.
-  V? get(K key) => _i4.callMethod(
+  V? Function(K) get get => _i4.getProperty(
         this,
         'get',
-        [key],
       );
+  set has(_i2.bool Function(K) value) {
+    _i4.setProperty(
+      this,
+      'has',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// @returns boolean indicating whether an element with the specified key exists or not.
-  _i2.bool has(K key) => _i4.callMethod(
+  _i2.bool Function(K) get has => _i4.getProperty(
         this,
         'has',
-        [key],
       );
-
-  /// Adds a new element with a specified key and value to the Map. If an element with the same key already exists, the element will be updated.
-  _i6.Map<_i2.dynamic, _i2.dynamic> set(
-    K key,
-    V value,
-  ) =>
-      _i4.callMethod(
-        this,
-        'set',
-        [
-          key,
-          value,
-        ],
-      );
-
-  /// Returns an iterable of key, value pairs for every entry in the map.
-  _i3.IterableIterator<
-      (
+  set set(
+      _i6.Map<_i2.dynamic, _i2.dynamic> Function(
         K,
         V,
-      )> entries() => _i4.callMethod(
+      ) value) {
+    _i4.setProperty(
+      this,
+      'set',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i6.Map<_i2.dynamic, _i2.dynamic> Function(
+    K,
+    V,
+  ) get set => _i4.getProperty(
+        this,
+        'set',
+      );
+  set entries(
+      _i3.IterableIterator<
+                  (
+                    K,
+                    V,
+                  )>
+              Function()
+          value) {
+    _i4.setProperty(
+      this,
+      'entries',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i3.IterableIterator<
+          (
+            K,
+            V,
+          )>
+      Function() get entries => _i4.getProperty(
         this,
         'entries',
-        [],
       );
+  set keys(_i3.IterableIterator<K> Function() value) {
+    _i4.setProperty(
+      this,
+      'keys',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns an iterable of keys in the map
-  _i3.IterableIterator<K> keys() => _i4.callMethod(
+  _i3.IterableIterator<K> Function() get keys => _i4.getProperty(
         this,
         'keys',
-        [],
       );
+  set values(_i3.IterableIterator<V> Function() value) {
+    _i4.setProperty(
+      this,
+      'values',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns an iterable of values in the map
-  _i3.IterableIterator<V> values() => _i4.callMethod(
+  _i3.IterableIterator<V> Function() get values => _i4.getProperty(
         this,
         'values',
-        [],
       );
 }
 
@@ -170,6 +225,7 @@ class MapConstructor {}
 
 @_i1.JS()
 @_i1.staticInterop
+@_i1.anonymous
 class ReadonlyMap<K, V>
     implements
         _IterableLike$<
@@ -177,65 +233,153 @@ class ReadonlyMap<K, V>
                 (
                   K,
                   V,
-                )>> {}
+                )>> {
+  external factory ReadonlyMap._({
+    _i2.dynamic size,
+    _i2.dynamic forEach,
+    _i2.dynamic get,
+    _i2.dynamic has,
+    _i2.dynamic entries,
+    _i2.dynamic keys,
+    _i2.dynamic values,
+  });
+
+  factory ReadonlyMap({
+    _i2.num? size,
+    void Function(
+      void Function(
+        _i2.dynamic,
+        _i2.dynamic,
+        _i6.ReadonlyMap<_i2.dynamic, _i2.dynamic>,
+      ), [
+      _i2.dynamic,
+    ])? forEach,
+    _i2.dynamic Function(_i2.dynamic)? get,
+    _i2.bool Function(_i2.dynamic)? has,
+    _i3.IterableIterator<
+                (
+                  _i2.dynamic,
+                  _i2.dynamic,
+                )>
+            Function()?
+        entries,
+    _i3.IterableIterator<_i2.dynamic> Function()? keys,
+    _i3.IterableIterator<_i2.dynamic> Function()? values,
+  }) =>
+      ReadonlyMap._(
+        size: size,
+        forEach: forEach == null ? null : _i4.allowInterop(forEach),
+        get: get == null ? null : _i4.allowInterop(get),
+        has: has == null ? null : _i4.allowInterop(has),
+        entries: entries == null ? null : _i4.allowInterop(entries),
+        keys: keys == null ? null : _i4.allowInterop(keys),
+        values: values == null ? null : _i4.allowInterop(values),
+      );
+}
 
 extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
   _i2.num get size => _i4.getProperty(
         this,
         'size',
       );
-  void forEach(
+  set forEach(
+      void Function(
+        void Function(
+          V,
+          K,
+          _i6.ReadonlyMap<K, V>,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'forEach',
+      _i4.allowInterop(value),
+    );
+  }
+
+  void Function(
     void Function(
       V,
       K,
       _i6.ReadonlyMap<K, V>,
-    ) callbackfn, [
-    _i2.dynamic thisArg,
-  ]) {
-    _i4.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get forEach => _i4.getProperty(
+        this,
+        'forEach',
+      );
+  set get(V? Function(K) value) {
+    _i4.setProperty(
       this,
-      'forEach',
-      [
-        _i4.allowInterop(callbackfn),
-        thisArg ?? _i5.undefined,
-      ],
+      'get',
+      _i4.allowInterop(value),
     );
   }
 
-  V? get(K key) => _i4.callMethod(
+  V? Function(K) get get => _i4.getProperty(
         this,
         'get',
-        [key],
       );
-  _i2.bool has(K key) => _i4.callMethod(
+  set has(_i2.bool Function(K) value) {
+    _i4.setProperty(
+      this,
+      'has',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(K) get has => _i4.getProperty(
         this,
         'has',
-        [key],
       );
+  set entries(
+      _i3.IterableIterator<
+                  (
+                    K,
+                    V,
+                  )>
+              Function()
+          value) {
+    _i4.setProperty(
+      this,
+      'entries',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns an iterable of key, value pairs for every entry in the map.
   _i3.IterableIterator<
-      (
-        K,
-        V,
-      )> entries() => _i4.callMethod(
+          (
+            K,
+            V,
+          )>
+      Function() get entries => _i4.getProperty(
         this,
         'entries',
-        [],
       );
+  set keys(_i3.IterableIterator<K> Function() value) {
+    _i4.setProperty(
+      this,
+      'keys',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns an iterable of keys in the map
-  _i3.IterableIterator<K> keys() => _i4.callMethod(
+  _i3.IterableIterator<K> Function() get keys => _i4.getProperty(
         this,
         'keys',
-        [],
       );
+  set values(_i3.IterableIterator<V> Function() value) {
+    _i4.setProperty(
+      this,
+      'values',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns an iterable of values in the map
-  _i3.IterableIterator<V> values() => _i4.callMethod(
+  _i3.IterableIterator<V> Function() get values => _i4.getProperty(
         this,
         'values',
-        [],
       );
 }
 
@@ -286,41 +430,60 @@ _i2.Object get _declaredWeakMap => _i4.getProperty(
     );
 
 extension WeakMap$Typings<K extends _i7.WeakKey, V> on WeakMap<K, V> {
-  /// Removes the specified element from the WeakMap.
-  ///  @returns true if the element was successfully removed, or false if it was not present.
-  _i2.bool delete(K key) => _i4.callMethod(
+  set delete(_i2.bool Function(K) value) {
+    _i4.setProperty(
+      this,
+      'delete',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(K) get delete => _i4.getProperty(
         this,
         'delete',
-        [key],
       );
+  set get(V? Function(K) value) {
+    _i4.setProperty(
+      this,
+      'get',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// @returns a specified element.
-  V? get(K key) => _i4.callMethod(
+  V? Function(K) get get => _i4.getProperty(
         this,
         'get',
-        [key],
       );
+  set has(_i2.bool Function(K) value) {
+    _i4.setProperty(
+      this,
+      'has',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// @returns a boolean indicating whether an element with the specified key exists or not.
-  _i2.bool has(K key) => _i4.callMethod(
+  _i2.bool Function(K) get has => _i4.getProperty(
         this,
         'has',
-        [key],
       );
+  set set(
+      _i6.WeakMap<_i7.WeakKey, _i2.dynamic> Function(
+        K,
+        V,
+      ) value) {
+    _i4.setProperty(
+      this,
+      'set',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Adds a new element with a specified key and value.
-  ///  @param key Must be an object or symbol.
-  _i6.WeakMap<_i7.WeakKey, _i2.dynamic> set(
-    K key,
-    V value,
-  ) =>
-      _i4.callMethod(
+  _i6.WeakMap<_i7.WeakKey, _i2.dynamic> Function(
+    K,
+    V,
+  ) get set => _i4.getProperty(
         this,
         'set',
-        [
-          key,
-          value,
-        ],
       );
 }
 
@@ -357,78 +520,128 @@ extension Set$Typings<T> on Set<T> {
         this,
         'size',
       );
-
-  /// Appends a new element with a specified value to the end of the Set.
-  _i6.Set<_i2.dynamic> add(T value) => _i4.callMethod(
-        this,
-        'add',
-        [value],
-      );
-  void clear() {
-    _i4.callMethod(
+  set add(_i6.Set<_i2.dynamic> Function(T) value) {
+    _i4.setProperty(
       this,
-      'clear',
-      [],
+      'add',
+      _i4.allowInterop(value),
     );
   }
 
-  /// Removes a specified value from the Set.
-  ///  @returns Returns true if an element in the Set existed and has been removed, or false if the element does not exist.
-  _i2.bool delete(T value) => _i4.callMethod(
+  _i6.Set<_i2.dynamic> Function(T) get add => _i4.getProperty(
+        this,
+        'add',
+      );
+  set clear(void Function() value) {
+    _i4.setProperty(
+      this,
+      'clear',
+      _i4.allowInterop(value),
+    );
+  }
+
+  void Function() get clear => _i4.getProperty(
+        this,
+        'clear',
+      );
+  set delete(_i2.bool Function(T) value) {
+    _i4.setProperty(
+      this,
+      'delete',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i2.bool Function(T) get delete => _i4.getProperty(
         this,
         'delete',
-        [value],
       );
+  set forEach(
+      void Function(
+        void Function(
+          T,
+          T,
+          _i6.Set<T>,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'forEach',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Executes a provided function once per each value in the Set object, in insertion order.
-  void forEach(
+  void Function(
     void Function(
       T,
       T,
       _i6.Set<T>,
-    ) callbackfn, [
-    _i2.dynamic thisArg,
-  ]) {
-    _i4.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get forEach => _i4.getProperty(
+        this,
+        'forEach',
+      );
+  set has(_i2.bool Function(T) value) {
+    _i4.setProperty(
       this,
-      'forEach',
-      [
-        _i4.allowInterop(callbackfn),
-        thisArg ?? _i5.undefined,
-      ],
+      'has',
+      _i4.allowInterop(value),
     );
   }
 
-  /// @returns a boolean indicating whether an element with the specified value exists in the Set or not.
-  _i2.bool has(T value) => _i4.callMethod(
+  _i2.bool Function(T) get has => _i4.getProperty(
         this,
         'has',
-        [value],
       );
+  set entries(
+      _i3.IterableIterator<
+                  (
+                    T,
+                    T,
+                  )>
+              Function()
+          value) {
+    _i4.setProperty(
+      this,
+      'entries',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns an iterable of [v,v] pairs for every value `v` in the set.
   _i3.IterableIterator<
-      (
-        T,
-        T,
-      )> entries() => _i4.callMethod(
+          (
+            T,
+            T,
+          )>
+      Function() get entries => _i4.getProperty(
         this,
         'entries',
-        [],
       );
+  set keys(_i3.IterableIterator<T> Function() value) {
+    _i4.setProperty(
+      this,
+      'keys',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Despite its name, returns an iterable of the values in the set.
-  _i3.IterableIterator<T> keys() => _i4.callMethod(
+  _i3.IterableIterator<T> Function() get keys => _i4.getProperty(
         this,
         'keys',
-        [],
       );
+  set values(_i3.IterableIterator<T> Function() value) {
+    _i4.setProperty(
+      this,
+      'values',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns an iterable of values in the set.
-  _i3.IterableIterator<T> values() => _i4.callMethod(
+  _i3.IterableIterator<T> Function() get values => _i4.getProperty(
         this,
         'values',
-        [],
       );
 }
 
@@ -438,60 +651,139 @@ class SetConstructor {}
 
 @_i1.JS()
 @_i1.staticInterop
-class ReadonlySet<T> implements _IterableLike$<_i3.IterableIterator<T>> {}
+@_i1.anonymous
+class ReadonlySet<T> implements _IterableLike$<_i3.IterableIterator<T>> {
+  external factory ReadonlySet._({
+    _i2.dynamic size,
+    _i2.dynamic forEach,
+    _i2.dynamic has,
+    _i2.dynamic entries,
+    _i2.dynamic keys,
+    _i2.dynamic values,
+  });
+
+  factory ReadonlySet({
+    _i2.num? size,
+    void Function(
+      void Function(
+        _i2.dynamic,
+        _i2.dynamic,
+        _i6.ReadonlySet<_i2.dynamic>,
+      ), [
+      _i2.dynamic,
+    ])? forEach,
+    _i2.bool Function(_i2.dynamic)? has,
+    _i3.IterableIterator<
+                (
+                  _i2.dynamic,
+                  _i2.dynamic,
+                )>
+            Function()?
+        entries,
+    _i3.IterableIterator<_i2.dynamic> Function()? keys,
+    _i3.IterableIterator<_i2.dynamic> Function()? values,
+  }) =>
+      ReadonlySet._(
+        size: size,
+        forEach: forEach == null ? null : _i4.allowInterop(forEach),
+        has: has == null ? null : _i4.allowInterop(has),
+        entries: entries == null ? null : _i4.allowInterop(entries),
+        keys: keys == null ? null : _i4.allowInterop(keys),
+        values: values == null ? null : _i4.allowInterop(values),
+      );
+}
 
 extension ReadonlySet$Typings<T> on ReadonlySet<T> {
   _i2.num get size => _i4.getProperty(
         this,
         'size',
       );
-  void forEach(
+  set forEach(
+      void Function(
+        void Function(
+          T,
+          T,
+          _i6.ReadonlySet<T>,
+        ), [
+        _i2.dynamic,
+      ]) value) {
+    _i4.setProperty(
+      this,
+      'forEach',
+      _i4.allowInterop(value),
+    );
+  }
+
+  void Function(
     void Function(
       T,
       T,
       _i6.ReadonlySet<T>,
-    ) callbackfn, [
-    _i2.dynamic thisArg,
-  ]) {
-    _i4.callMethod(
+    ), [
+    _i2.dynamic,
+  ]) get forEach => _i4.getProperty(
+        this,
+        'forEach',
+      );
+  set has(_i2.bool Function(T) value) {
+    _i4.setProperty(
       this,
-      'forEach',
-      [
-        _i4.allowInterop(callbackfn),
-        thisArg ?? _i5.undefined,
-      ],
+      'has',
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.bool has(T value) => _i4.callMethod(
+  _i2.bool Function(T) get has => _i4.getProperty(
         this,
         'has',
-        [value],
       );
+  set entries(
+      _i3.IterableIterator<
+                  (
+                    T,
+                    T,
+                  )>
+              Function()
+          value) {
+    _i4.setProperty(
+      this,
+      'entries',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns an iterable of [v,v] pairs for every value `v` in the set.
   _i3.IterableIterator<
-      (
-        T,
-        T,
-      )> entries() => _i4.callMethod(
+          (
+            T,
+            T,
+          )>
+      Function() get entries => _i4.getProperty(
         this,
         'entries',
-        [],
       );
+  set keys(_i3.IterableIterator<T> Function() value) {
+    _i4.setProperty(
+      this,
+      'keys',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Despite its name, returns an iterable of the values in the set.
-  _i3.IterableIterator<T> keys() => _i4.callMethod(
+  _i3.IterableIterator<T> Function() get keys => _i4.getProperty(
         this,
         'keys',
-        [],
       );
+  set values(_i3.IterableIterator<T> Function() value) {
+    _i4.setProperty(
+      this,
+      'values',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Returns an iterable of values in the set.
-  _i3.IterableIterator<T> values() => _i4.callMethod(
+  _i3.IterableIterator<T> Function() get values => _i4.getProperty(
         this,
         'values',
-        [],
       );
 }
 
@@ -520,26 +812,41 @@ _i2.Object get _declaredWeakSet => _i4.getProperty(
     );
 
 extension WeakSet$Typings<T extends _i7.WeakKey> on WeakSet<T> {
-  /// Appends a new value to the end of the WeakSet.
-  _i6.WeakSet<_i7.WeakKey> add(T value) => _i4.callMethod(
+  set add(_i6.WeakSet<_i7.WeakKey> Function(T) value) {
+    _i4.setProperty(
+      this,
+      'add',
+      _i4.allowInterop(value),
+    );
+  }
+
+  _i6.WeakSet<_i7.WeakKey> Function(T) get add => _i4.getProperty(
         this,
         'add',
-        [value],
       );
+  set delete(_i2.bool Function(T) value) {
+    _i4.setProperty(
+      this,
+      'delete',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// Removes the specified element from the WeakSet.
-  ///  @returns Returns true if the element existed and has been removed, or false if the element does not exist.
-  _i2.bool delete(T value) => _i4.callMethod(
+  _i2.bool Function(T) get delete => _i4.getProperty(
         this,
         'delete',
-        [value],
       );
+  set has(_i2.bool Function(T) value) {
+    _i4.setProperty(
+      this,
+      'has',
+      _i4.allowInterop(value),
+    );
+  }
 
-  /// @returns a boolean indicating whether a value exists in the WeakSet or not.
-  _i2.bool has(T value) => _i4.callMethod(
+  _i2.bool Function(T) get has => _i4.getProperty(
         this,
         'has',
-        [value],
       );
 }
 
