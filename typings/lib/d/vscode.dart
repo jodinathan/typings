@@ -76,3 +76,31 @@ extension ChildProcess$Typings on ChildProcess {
 class LightDarkPath {
   external factory LightDarkPath({String light, String dark});
 }
+
+@JS('ws.WebSocket')
+@staticInterop
+class WebSocket {
+  external factory WebSocket(String path);
+}
+
+extension VSWebSocket on WebSocket {
+  int get readyState => jsu.getProperty(this, 'readyState');
+
+  void send(String buf) => jsu.callMethod(this, 'send', [buf]);
+
+  void on(String command, Function([dynamic data, dynamic foo]) callback) =>
+      jsu.callMethod(this, 'on', [command, jsu.allowInterop(callback)]);
+}
+
+@JS('Buffer')
+external dynamic get _buffer;
+
+@JS()
+@staticInterop
+class Buffer {
+  static Buffer from(dynamic array) => jsu.callMethod(_buffer, 'from', [array]);
+}
+
+extension UtilsBuffer on Buffer {
+  String toString$() => jsu.callMethod(this, 'toString', []);
+}
