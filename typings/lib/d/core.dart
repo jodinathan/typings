@@ -15,3 +15,22 @@ external num nan;
 class JsArray<T> {
   external factory JsArray([Iterable<T> init]);
 }
+
+@JS()
+@staticInterop
+class Promise<T> {
+  external factory Promise(
+      void Function(Function(T) resolve, Function reject) callback);
+
+  factory Promise.futureToPromise(Future<T> future) {
+    return Promise<T>(allowInterop((Function resolve, Function reject) {
+      future.then((result) => resolve(result), onError: reject);
+    }));
+  }
+
+  static dynamic functionFutureOr(Function() fn) {
+      final ret = fn();
+
+      return ret is Future ? Promise.futureToPromise(ret) : ret;
+  }
+}

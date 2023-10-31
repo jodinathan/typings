@@ -34,7 +34,18 @@ extension $ModuleNotebooks$Typings on $ModuleNotebooks {
           id,
           notebookType,
           label,
-          handler == null ? _i6.undefined : _i5.allowInterop(handler),
+          handler == null
+              ? _i6.undefined
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => handler(
+                        p0,
+                        p1,
+                        p2,
+                      ))),
         ],
       );
 

@@ -1,4 +1,5 @@
 import 'package:code_builder/code_builder.dart';
+import 'package:ts2dart/src/ast/types/future_or.dart';
 
 import '../common.dart';
 import 'class.dart';
@@ -43,6 +44,19 @@ class InteropTypedef extends InteropNamedDeclaration
 
   @override
   final String source;
+
+  @override
+  Reference ref(
+      {SymbolSwap? symbolSwap, bool nullable = false, bool solid = false}) {
+    final ref = definition!;
+    final type = ref.realType;
+
+    if (type is InteropStaticType || type is InteropFutureOr) {
+      return type.ref(symbolSwap: symbolSwap, solid: solid, nullable: nullable);
+    }
+
+    return super.ref(symbolSwap: symbolSwap, solid: solid, nullable: nullable);
+  }
 
   @override
   Iterable<Spec> build() {
@@ -94,19 +108,21 @@ class InteropTypedef extends InteropNamedDeclaration
 
   @override
   Expression toInterop(
-          {required Expression argument,
-          bool isNullable = false,
-          bool isOptional = false,
-          required List<InteropRef> typeArgs}) =>
-      definition!
-          .toInterop(argument, isNullable: isNullable, isOptional: isOptional);
+      {required Expression argument,
+      bool isNullable = false,
+      bool isOptional = false,
+      required List<InteropRef> typeArgs}) {
+    return definition!
+        .toInterop(argument, isNullable: isNullable, isOptional: isOptional);
+  }
 
   @override
   Expression fromInterop(
-          {required Expression argument,
-          bool isNullable = false,
-          bool isOptional = false,
-          required List<InteropRef> typeArgs}) =>
-      definition!.fromInterop(argument,
-          isNullable: isNullable, isOptional: isOptional);
+      {required Expression argument,
+      bool isNullable = false,
+      bool isOptional = false,
+      required List<InteropRef> typeArgs}) {
+    return definition!
+        .fromInterop(argument, isNullable: isNullable, isOptional: isOptional);
+  }
 }

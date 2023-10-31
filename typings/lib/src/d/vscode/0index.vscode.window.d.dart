@@ -7,8 +7,7 @@ import '0index.vscode.d.dart' as _i3;
 import 'dart:js_util' as _i4;
 import 'null_comon.vscode.window.d.dart' as _i5;
 import '/d/core.dart' as _i6;
-import '/src/d/typescript/lib.es5.d.dart' as _i7;
-import '0index.vscode.window.d.dart' as _i8;
+import '0index.vscode.window.d.dart' as _i7;
 
 @_i1.JS('vscode.window')
 external _i2.Object _self;
@@ -354,7 +353,7 @@ extension ActiveTerminalAccessor$Typings on _ActiveTerminalAccessor {
   /// The object used to initialize the terminal, this is useful for example to detecting the
   /// shell type of when the terminal was not launched by this extension or for detecting what
   /// folder the shell was launched in.
-  _i7.Readonly<_i2.Object> get creationOptions => _i4.getProperty(
+  _i2.dynamic get creationOptions => _i4.getProperty(
         this,
         'creationOptions',
       );
@@ -1393,7 +1392,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   /// Creates a new {@link LogOutputChannellog output channel} with the given name.
   _i3.LogOutputChannel _createOutputChannel$2(
     _i2.String name,
-    _i8.IInline48 options,
+    _i7.IInline48 options,
   ) =>
       _i4.callMethod(
         this,
@@ -1425,7 +1424,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
     /// Creates a new {@link LogOutputChannellog output channel} with the given name.
     _i3.LogOutputChannel Function(
       _i2.String name,
-      _i8.IInline48 options,
+      _i7.IInline48 options,
     ) $2,
   }) get createOutputChannel => (
         $1: _createOutputChannel$1,
@@ -1744,7 +1743,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   _i3.Disposable registerWebviewViewProvider(
     _i2.String viewId,
     _i3.WebviewViewProvider provider, [
-    _i8.IInline51? options,
+    _i7.IInline51? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -1764,7 +1763,7 @@ extension $ModuleWindow$Typings on $ModuleWindow {
   _i3.Disposable registerCustomEditorProvider(
     _i2.String viewType,
     _i2.Object provider, [
-    _i8.IInline53? options,
+    _i7.IInline53? options,
   ]) =>
       _i4.callMethod(
         this,

@@ -5,6 +5,7 @@ import '../class.dart';
 import 'delegate.dart';
 import 'enum.dart';
 import '../library.dart';
+import 'future_or.dart';
 import 'named.dart';
 import '../reference.dart';
 import 'type.dart';
@@ -192,7 +193,12 @@ class InteropUnion extends InteropType
                 if (promise != null) {
                   if (promise.typeArgs.length == 1 &&
                       promise.typeArgs.first.isSame(other)) {
-                    _delegate = InteropRef(InteropStaticType.futureOr,
+                    _delegate = InteropRef(
+                        InteropFutureOr(
+                            reference: other,
+                            library: library,
+                            source: source,
+                            lineNumber: lineNumber),
                         typeArgs: [other]);
                   }
                 }

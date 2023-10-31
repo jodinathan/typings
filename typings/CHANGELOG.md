@@ -3,6 +3,7 @@
 - Fixed a bug when trying to use a callable interface as function
 - Changed methods of interfaces to function getters and added a setter
 - Added `FutureOr`  type. Now unions of a ` PromiseLike<Type>`  and a ` Type`  are `FutureOr`  instead.
+- Typedefs now are built to its definition when known types, ie: ` ProviderResult`  is a typedef to `FutureOr`  so we directly print `FutureOr`  instead
 
 ## 0.0.4
 - Added Visual Studio Code extension bindings (vscode)

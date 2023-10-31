@@ -8,7 +8,6 @@ import '0index.vscode.d.dart' as _i4;
 import 'null_comon.vscode.l10n.d.dart' as _i5;
 import '/d/core.dart' as _i6;
 import '0index.vscode.l10n.d.dart' as _i7;
-import '/src/d/typescript/lib.es5.d.dart' as _i8;
 
 @_i1.JS('vscode.l10n')
 external _i2.Object _self;
@@ -330,7 +329,7 @@ extension $ModuleL10n$Typings on $ModuleL10n {
   /// value will be returned (with injected args values for any templated values).
   _i2.String _t$3(
     _i2.String message,
-    _i8.Record<_i2.String, _i2.dynamic> args,
+    _i2.dynamic args,
   ) =>
       _i3.callMethod(
         this,
@@ -370,7 +369,7 @@ extension $ModuleL10n$Typings on $ModuleL10n {
     /// value will be returned (with injected args values for any templated values).
     _i2.String Function(
       _i2.String message,
-      _i8.Record<_i2.String, _i2.dynamic> args,
+      _i2.dynamic args,
     ) $3,
   }) get t => (
         $1: _t$1,

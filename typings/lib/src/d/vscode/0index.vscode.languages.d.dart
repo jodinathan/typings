@@ -93,7 +93,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// match({ notebookType: '*' }, doc) // 5
   /// ```
   _i2.num match(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.TextDocument document,
   ) =>
       _i4.callMethod(
@@ -158,7 +158,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// Creates a new {@link LanguageStatusItemlanguage status item}.
   _i3.LanguageStatusItem createLanguageStatusItem(
     _i2.String id,
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
   ) =>
       _i4.callMethod(
         this,
@@ -182,7 +182,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// the typed character. Because of that trigger characters should be different than {@link LanguageConfiguration.wordPatternword characters},
   /// a common trigger character is `.` to trigger member completions.
   _i3.Disposable registerCompletionItemProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.CompletionItemProvider<_i3.CompletionItem> provider, [
     _i2.Iterable<_i2.dynamic>? triggerCharacters,
   ]) =>
@@ -202,7 +202,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerInlineCompletionItemProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.InlineCompletionItemProvider provider,
   ) =>
       _i4.callMethod(
@@ -220,7 +220,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerCodeActionsProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.CodeActionProvider<_i3.CodeAction> provider, [
     _i3.CodeActionProviderMetadata? metadata,
   ]) =>
@@ -240,7 +240,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerCodeLensProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.CodeLensProvider<_i3.CodeLens> provider,
   ) =>
       _i4.callMethod(
@@ -258,7 +258,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerDefinitionProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DefinitionProvider provider,
   ) =>
       _i4.callMethod(
@@ -276,7 +276,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerImplementationProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.ImplementationProvider provider,
   ) =>
       _i4.callMethod(
@@ -294,7 +294,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerTypeDefinitionProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.TypeDefinitionProvider provider,
   ) =>
       _i4.callMethod(
@@ -312,7 +312,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerDeclarationProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DeclarationProvider provider,
   ) =>
       _i4.callMethod(
@@ -330,7 +330,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerHoverProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.HoverProvider provider,
   ) =>
       _i4.callMethod(
@@ -347,7 +347,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   ///
   /// If multiple providers are registered for a language an arbitrary provider will be used.
   _i3.Disposable registerEvaluatableExpressionProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.EvaluatableExpressionProvider provider,
   ) =>
       _i4.callMethod(
@@ -367,7 +367,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerInlineValuesProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.InlineValuesProvider provider,
   ) =>
       _i4.callMethod(
@@ -385,7 +385,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// by their {@link languages.matchscore} and groups sequentially asked for document highlights.
   /// The process stops when a provider returns a `non-falsy` or `non-failure` result.
   _i3.Disposable registerDocumentHighlightProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DocumentHighlightProvider provider,
   ) =>
       _i4.callMethod(
@@ -403,7 +403,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerDocumentSymbolProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DocumentSymbolProvider provider, [
     _i3.DocumentSymbolProviderMetadata? metaData,
   ]) =>
@@ -436,7 +436,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerReferenceProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.ReferenceProvider provider,
   ) =>
       _i4.callMethod(
@@ -454,7 +454,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// by their {@link languages.matchscore} and asked in sequence. The first provider producing a result
   /// defines the result of the whole operation.
   _i3.Disposable registerRenameProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.RenameProvider provider,
   ) =>
       _i4.callMethod(
@@ -472,7 +472,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// by their {@link languages.matchscore} and the best-matching provider is used. Failure
   /// of the selected provider will cause a failure of the whole operation.
   _i3.Disposable registerDocumentSemanticTokensProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DocumentSemanticTokensProvider provider,
     _i3.SemanticTokensLegend legend,
   ) =>
@@ -498,7 +498,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// by their {@link languages.matchscore} and the best-matching provider is used. Failure
   /// of the selected provider will cause a failure of the whole operation.
   _i3.Disposable registerDocumentRangeSemanticTokensProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DocumentRangeSemanticTokensProvider provider,
     _i3.SemanticTokensLegend legend,
   ) =>
@@ -518,7 +518,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// by their {@link languages.matchscore} and the best-matching provider is used. Failure
   /// of the selected provider will cause a failure of the whole operation.
   _i3.Disposable registerDocumentFormattingEditProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DocumentFormattingEditProvider provider,
   ) =>
       _i4.callMethod(
@@ -540,7 +540,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// by their {@link languages.matchscore} and the best-matching provider is used. Failure
   /// of the selected provider will cause a failure of the whole operation.
   _i3.Disposable registerDocumentRangeFormattingEditProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DocumentRangeFormattingEditProvider provider,
   ) =>
       _i4.callMethod(
@@ -558,7 +558,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// by their {@link languages.matchscore} and the best-matching provider is used. Failure
   /// of the selected provider will cause a failure of the whole operation.
   _i3.Disposable registerOnTypeFormattingEditProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.OnTypeFormattingEditProvider provider,
     _i2.String firstTriggerCharacter, [
     _i2.Iterable<_i2.dynamic>? moreTriggerCharacter,
@@ -580,7 +580,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// by their {@link languages.matchscore} and called sequentially until a provider returns a
   /// valid result.
   _i3.Disposable _registerSignatureHelpProvider$1(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.SignatureHelpProvider provider, [
     _i2.Iterable<_i2.dynamic>? triggerCharacters,
   ]) =>
@@ -600,7 +600,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// by their {@link languages.matchscore} and called sequentially until a provider returns a
   /// valid result.
   _i3.Disposable _registerSignatureHelpProvider$2(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.SignatureHelpProvider provider,
     _i3.SignatureHelpProviderMetadata metadata,
   ) =>
@@ -622,7 +622,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
     /// by their {@link languages.matchscore} and called sequentially until a provider returns a
     /// valid result.
     _i3.Disposable Function(
-      _i3.DocumentSelector selector,
+      _i2.Object selector,
       _i3.SignatureHelpProvider provider, [
       _i2.Iterable<_i2.dynamic>? triggerCharacters,
     ]) $1,
@@ -633,7 +633,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
     /// by their {@link languages.matchscore} and called sequentially until a provider returns a
     /// valid result.
     _i3.Disposable Function(
-      _i3.DocumentSelector selector,
+      _i2.Object selector,
       _i3.SignatureHelpProvider provider,
       _i3.SignatureHelpProviderMetadata metadata,
     ) $2,
@@ -648,7 +648,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerDocumentLinkProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DocumentLinkProvider<_i3.DocumentLink> provider,
   ) =>
       _i4.callMethod(
@@ -666,7 +666,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerColorProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DocumentColorProvider provider,
   ) =>
       _i4.callMethod(
@@ -684,7 +684,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerInlayHintsProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.InlayHintsProvider<_i3.InlayHint> provider,
   ) =>
       _i4.callMethod(
@@ -706,7 +706,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerFoldingRangeProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.FoldingRangeProvider provider,
   ) =>
       _i4.callMethod(
@@ -724,7 +724,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// parallel and the results are merged. A failing provider (rejected promise or exception) will
   /// not cause a failure of the whole operation.
   _i3.Disposable registerSelectionRangeProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.SelectionRangeProvider provider,
   ) =>
       _i4.callMethod(
@@ -738,7 +738,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
 
   /// Register a call hierarchy provider.
   _i3.Disposable registerCallHierarchyProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.CallHierarchyProvider provider,
   ) =>
       _i4.callMethod(
@@ -752,7 +752,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
 
   /// Register a type hierarchy provider.
   _i3.Disposable registerTypeHierarchyProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.TypeHierarchyProvider provider,
   ) =>
       _i4.callMethod(
@@ -770,7 +770,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
   /// by their {@link languages.matchscore} and the best-matching provider that has a result is used. Failure
   /// of the selected provider will cause a failure of the whole operation.
   _i3.Disposable registerLinkedEditingRangeProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.LinkedEditingRangeProvider provider,
   ) =>
       _i4.callMethod(
@@ -784,7 +784,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
 
   /// Registers a new {@link DocumentDropEditProvider}.
   _i3.Disposable registerDocumentDropEditProvider(
-    _i3.DocumentSelector selector,
+    _i2.Object selector,
     _i3.DocumentDropEditProvider provider,
   ) =>
       _i4.callMethod(

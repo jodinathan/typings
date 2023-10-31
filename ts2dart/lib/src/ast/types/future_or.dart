@@ -4,7 +4,8 @@ import '../library.dart';
 import '../reference.dart';
 import 'type.dart';
 
-class InteropFutureOr extends InteropType with InteropDiamondType {
+class InteropFutureOr extends InteropType
+    with InteropDiamondType, WithInteropTypeParams {
   InteropFutureOr(
       {this.reference,
       required this.library,
@@ -22,6 +23,8 @@ class InteropFutureOr extends InteropType with InteropDiamondType {
   final int lineNumber;
   @override
   bool get toInteropDealsWithNull => true;
+  @override
+  final typeParamsLength = 1;
 
   @override
   bool isSame(InteropType other) {
@@ -35,12 +38,7 @@ class InteropFutureOr extends InteropType with InteropDiamondType {
   @override
   Reference ref(
       {SymbolSwap? symbolSwap, bool nullable = false, bool solid = false}) {
-    return TypeReference((b) {
-      b
-        ..symbol = 'FutureOr'
-        ..url = 'dart:core'
-        ..types.add(reference?.ref() ?? InteropStaticType.dyn.ref());
-    });
+    return refer('FutureOr', 'dart:async');
   }
 
   @override
@@ -59,4 +57,13 @@ class InteropFutureOr extends InteropType with InteropDiamondType {
           bool isOptional = false,
           required List<InteropRef> typeArgs}) =>
       argument;
+
+  @override
+  Expression toInterop(
+      {required Expression argument,
+      bool isNullable = false,
+      bool isOptional = false,
+      required List<InteropRef> typeArgs}) {
+    return refer('Promise.functionFutureOr', '/d/core.dart').call([argument]);
+  }
 }

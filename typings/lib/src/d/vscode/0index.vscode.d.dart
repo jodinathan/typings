@@ -901,7 +901,16 @@ class TextDocument {
         getText: getText == null ? null : _i5.allowInterop(getText),
         getWordRangeAtPosition: getWordRangeAtPosition == null
             ? null
-            : _i5.allowInterop(getWordRangeAtPosition),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                () =>
+                    getWordRangeAtPosition(
+                      p0,
+                      p1,
+                    ) ??
+                    _i6.undefined),
         validateRange:
             validateRange == null ? null : _i5.allowInterop(validateRange),
         validatePosition: validatePosition == null
@@ -1029,7 +1038,16 @@ extension TextDocument$Typings on TextDocument {
     _i5.setProperty(
       this,
       'getWordRangeAtPosition',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          () =>
+              value(
+                p0,
+                p1,
+              ) ??
+              _i6.undefined),
     );
   }
 
@@ -4293,7 +4311,7 @@ class TextDocumentContentProvider {
 
   factory TextDocumentContentProvider({
     _i3.Event<_i3.Uri>? onDidChange,
-    _i3.ProviderResult<_i2.String> Function(
+    _i4.FutureOr<_i2.String> Function(
       _i3.Uri,
       _i3.CancellationToken,
     )? provideTextDocumentContent,
@@ -4302,7 +4320,14 @@ class TextDocumentContentProvider {
         onDidChange: onDidChange ?? _i6.undefined,
         provideTextDocumentContent: provideTextDocumentContent == null
             ? null
-            : _i5.allowInterop(provideTextDocumentContent),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideTextDocumentContent(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
@@ -4321,18 +4346,25 @@ extension TextDocumentContentProvider$Typings on TextDocumentContentProvider {
   }
 
   set provideTextDocumentContent(
-      _i3.ProviderResult<_i2.String> Function(
+      _i4.FutureOr<_i2.String> Function(
         _i3.Uri,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideTextDocumentContent',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.String> Function(
+  _i4.FutureOr<_i2.String> Function(
     _i3.Uri,
     _i3.CancellationToken,
   ) get provideTextDocumentContent => _i5.getProperty(
@@ -5363,7 +5395,7 @@ class DocumentFilter {
     _i2.String? language,
     _i2.String? notebookType,
     _i2.String? scheme,
-    _i3.GlobPattern? pattern,
+    _i2.Object? pattern,
   }) =>
       DocumentFilter._(
         language: language,
@@ -5398,7 +5430,7 @@ extension DocumentFilter$Typings on DocumentFilter {
 
   /// A {@link GlobPatternglob pattern} that is matched on the absolute path of the document. Use a {@link RelativePatternrelative pattern}
   /// to filter documents to a {@link WorkspaceFolderworkspace folder}.
-  _i3.GlobPattern? get pattern => _i5.getProperty(
+  _i2.Object? get pattern => _i5.getProperty(
         this,
         'pattern',
       );
@@ -5807,13 +5839,13 @@ class CodeActionProvider<T extends _i3.CodeAction> {
   });
 
   factory CodeActionProvider({
-    _i3.ProviderResult<_i2.List<_i2.Object>> Function(
+    _i4.FutureOr<_i2.List<_i2.Object>> Function(
       _i3.TextDocument,
       _i2.Object,
       _i3.CodeActionContext,
       _i3.CancellationToken,
     )? provideCodeActions,
-    _i3.ProviderResult<_i3.CodeAction> Function(
+    _i4.FutureOr<_i3.CodeAction> Function(
       _i3.CodeAction,
       _i3.CancellationToken,
     )? resolveCodeAction,
@@ -5821,17 +5853,35 @@ class CodeActionProvider<T extends _i3.CodeAction> {
       CodeActionProvider._(
         provideCodeActions: provideCodeActions == null
             ? null
-            : _i5.allowInterop(provideCodeActions),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+                p3,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideCodeActions(
+                      p0,
+                      p1,
+                      p2,
+                      p3,
+                    ))),
         resolveCodeAction: resolveCodeAction == null
             ? null
-            : _i5.allowInterop(resolveCodeAction),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveCodeAction(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
 extension CodeActionProvider$Typings<T extends _i3.CodeAction>
     on CodeActionProvider<T> {
   set provideCodeActions(
-      _i3.ProviderResult<_i2.List<_i2.Object>> Function(
+      _i4.FutureOr<_i2.List<_i2.Object>> Function(
         _i3.TextDocument,
         _i2.Object,
         _i3.CodeActionContext,
@@ -5840,11 +5890,22 @@ extension CodeActionProvider$Typings<T extends _i3.CodeAction>
     _i5.setProperty(
       this,
       'provideCodeActions',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i2.Object>> Function(
+  _i4.FutureOr<_i2.List<_i2.Object>> Function(
     _i3.TextDocument,
     _i2.Object,
     _i3.CodeActionContext,
@@ -5854,18 +5915,25 @@ extension CodeActionProvider$Typings<T extends _i3.CodeAction>
         'provideCodeActions',
       );
   set resolveCodeAction(
-      _i3.ProviderResult<T> Function(
+      _i4.FutureOr<T> Function(
         T,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'resolveCodeAction',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<T> Function(
+  _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
   ) get resolveCodeAction => _i5.getProperty(
@@ -6026,11 +6094,11 @@ class CodeLensProvider<T extends _i3.CodeLens> {
 
   factory CodeLensProvider({
     _i3.Event<void>? onDidChangeCodeLenses,
-    _i3.ProviderResult<_i2.List<_i3.CodeLens>> Function(
+    _i4.FutureOr<_i2.List<_i3.CodeLens>> Function(
       _i3.TextDocument,
       _i3.CancellationToken,
     )? provideCodeLenses,
-    _i3.ProviderResult<_i3.CodeLens> Function(
+    _i4.FutureOr<_i3.CodeLens> Function(
       _i3.CodeLens,
       _i3.CancellationToken,
     )? resolveCodeLens,
@@ -6039,9 +6107,24 @@ class CodeLensProvider<T extends _i3.CodeLens> {
         onDidChangeCodeLenses: onDidChangeCodeLenses ?? _i6.undefined,
         provideCodeLenses: provideCodeLenses == null
             ? null
-            : _i5.allowInterop(provideCodeLenses),
-        resolveCodeLens:
-            resolveCodeLens == null ? null : _i5.allowInterop(resolveCodeLens),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideCodeLenses(
+                      p0,
+                      p1,
+                    ))),
+        resolveCodeLens: resolveCodeLens == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveCodeLens(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
@@ -6061,18 +6144,25 @@ extension CodeLensProvider$Typings<T extends _i3.CodeLens>
   }
 
   set provideCodeLenses(
-      _i3.ProviderResult<_i2.List<T>> Function(
+      _i4.FutureOr<_i2.List<T>> Function(
         _i3.TextDocument,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideCodeLenses',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<T>> Function(
+  _i4.FutureOr<_i2.List<T>> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
   ) get provideCodeLenses => _i5.getProperty(
@@ -6080,18 +6170,25 @@ extension CodeLensProvider$Typings<T extends _i3.CodeLens>
         'provideCodeLenses',
       );
   set resolveCodeLens(
-      _i3.ProviderResult<T> Function(
+      _i4.FutureOr<T> Function(
         T,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'resolveCodeLens',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<T> Function(
+  _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
   ) get resolveCodeLens => _i5.getProperty(
@@ -6110,7 +6207,7 @@ class DefinitionProvider {
   external factory DefinitionProvider._({_i2.dynamic provideDefinition});
 
   factory DefinitionProvider(
-          {_i3.ProviderResult<_i2.Object> Function(
+          {_i4.FutureOr<_i2.Object> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.CancellationToken,
@@ -6118,12 +6215,21 @@ class DefinitionProvider {
       DefinitionProvider._(
           provideDefinition: provideDefinition == null
               ? null
-              : _i5.allowInterop(provideDefinition));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideDefinition(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension DefinitionProvider$Typings on DefinitionProvider {
   set provideDefinition(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -6131,11 +6237,20 @@ extension DefinitionProvider$Typings on DefinitionProvider {
     _i5.setProperty(
       this,
       'provideDefinition',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -6155,7 +6270,7 @@ class ImplementationProvider {
       {_i2.dynamic provideImplementation});
 
   factory ImplementationProvider(
-          {_i3.ProviderResult<_i2.Object> Function(
+          {_i4.FutureOr<_i2.Object> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.CancellationToken,
@@ -6163,12 +6278,21 @@ class ImplementationProvider {
       ImplementationProvider._(
           provideImplementation: provideImplementation == null
               ? null
-              : _i5.allowInterop(provideImplementation));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideImplementation(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension ImplementationProvider$Typings on ImplementationProvider {
   set provideImplementation(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -6176,11 +6300,20 @@ extension ImplementationProvider$Typings on ImplementationProvider {
     _i5.setProperty(
       this,
       'provideImplementation',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -6200,7 +6333,7 @@ class TypeDefinitionProvider {
       {_i2.dynamic provideTypeDefinition});
 
   factory TypeDefinitionProvider(
-          {_i3.ProviderResult<_i2.Object> Function(
+          {_i4.FutureOr<_i2.Object> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.CancellationToken,
@@ -6208,12 +6341,21 @@ class TypeDefinitionProvider {
       TypeDefinitionProvider._(
           provideTypeDefinition: provideTypeDefinition == null
               ? null
-              : _i5.allowInterop(provideTypeDefinition));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideTypeDefinition(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension TypeDefinitionProvider$Typings on TypeDefinitionProvider {
   set provideTypeDefinition(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -6221,11 +6363,20 @@ extension TypeDefinitionProvider$Typings on TypeDefinitionProvider {
     _i5.setProperty(
       this,
       'provideTypeDefinition',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -6244,7 +6395,7 @@ class DeclarationProvider {
   external factory DeclarationProvider._({_i2.dynamic provideDeclaration});
 
   factory DeclarationProvider(
-          {_i3.ProviderResult<_i3.Declaration> Function(
+          {_i4.FutureOr<_i2.Object> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.CancellationToken,
@@ -6252,12 +6403,21 @@ class DeclarationProvider {
       DeclarationProvider._(
           provideDeclaration: provideDeclaration == null
               ? null
-              : _i5.allowInterop(provideDeclaration));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideDeclaration(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension DeclarationProvider$Typings on DeclarationProvider {
   set provideDeclaration(
-      _i3.ProviderResult<_i3.Declaration> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -6265,11 +6425,20 @@ extension DeclarationProvider$Typings on DeclarationProvider {
     _i5.setProperty(
       this,
       'provideDeclaration',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.Declaration> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -6542,19 +6711,29 @@ class HoverProvider {
   external factory HoverProvider._({_i2.dynamic provideHover});
 
   factory HoverProvider(
-          {_i3.ProviderResult<_i3.Hover> Function(
+          {_i4.FutureOr<_i3.Hover> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.CancellationToken,
           )? provideHover}) =>
       HoverProvider._(
-          provideHover:
-              provideHover == null ? null : _i5.allowInterop(provideHover));
+          provideHover: provideHover == null
+              ? null
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideHover(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension HoverProvider$Typings on HoverProvider {
   set provideHover(
-      _i3.ProviderResult<_i3.Hover> Function(
+      _i4.FutureOr<_i3.Hover> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -6562,11 +6741,20 @@ extension HoverProvider$Typings on HoverProvider {
     _i5.setProperty(
       this,
       'provideHover',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.Hover> Function(
+  _i4.FutureOr<_i3.Hover> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -6624,7 +6812,7 @@ class EvaluatableExpressionProvider {
       {_i2.dynamic provideEvaluatableExpression});
 
   factory EvaluatableExpressionProvider(
-          {_i3.ProviderResult<_i3.EvaluatableExpression> Function(
+          {_i4.FutureOr<_i3.EvaluatableExpression> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.CancellationToken,
@@ -6632,13 +6820,23 @@ class EvaluatableExpressionProvider {
       EvaluatableExpressionProvider._(
           provideEvaluatableExpression: provideEvaluatableExpression == null
               ? null
-              : _i5.allowInterop(provideEvaluatableExpression));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(
+                      () => provideEvaluatableExpression(
+                            p0,
+                            p1,
+                            p2,
+                          ))));
 }
 
 extension EvaluatableExpressionProvider$Typings
     on EvaluatableExpressionProvider {
   set provideEvaluatableExpression(
-      _i3.ProviderResult<_i3.EvaluatableExpression> Function(
+      _i4.FutureOr<_i3.EvaluatableExpression> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -6646,11 +6844,20 @@ extension EvaluatableExpressionProvider$Typings
     _i5.setProperty(
       this,
       'provideEvaluatableExpression',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.EvaluatableExpression> Function(
+  _i4.FutureOr<_i3.EvaluatableExpression> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -6832,7 +7039,7 @@ class InlineValuesProvider {
 
   factory InlineValuesProvider({
     _i3.Event<void>? onDidChangeInlineValues,
-    _i3.ProviderResult<_i2.List<_i3.InlineValue>> Function(
+    _i4.FutureOr<_i2.List<_i2.Object>> Function(
       _i3.TextDocument,
       _i3.Range,
       _i3.InlineValueContext,
@@ -6843,7 +7050,18 @@ class InlineValuesProvider {
         onDidChangeInlineValues: onDidChangeInlineValues ?? _i6.undefined,
         provideInlineValues: provideInlineValues == null
             ? null
-            : _i5.allowInterop(provideInlineValues),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+                p3,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideInlineValues(
+                      p0,
+                      p1,
+                      p2,
+                      p3,
+                    ))),
       );
 }
 
@@ -6863,7 +7081,7 @@ extension InlineValuesProvider$Typings on InlineValuesProvider {
   }
 
   set provideInlineValues(
-      _i3.ProviderResult<_i2.List<_i3.InlineValue>> Function(
+      _i4.FutureOr<_i2.List<_i2.Object>> Function(
         _i3.TextDocument,
         _i3.Range,
         _i3.InlineValueContext,
@@ -6872,11 +7090,22 @@ extension InlineValuesProvider$Typings on InlineValuesProvider {
     _i5.setProperty(
       this,
       'provideInlineValues',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.InlineValue>> Function(
+  _i4.FutureOr<_i2.List<_i2.Object>> Function(
     _i3.TextDocument,
     _i3.Range,
     _i3.InlineValueContext,
@@ -6950,7 +7179,7 @@ class DocumentHighlightProvider {
       {_i2.dynamic provideDocumentHighlights});
 
   factory DocumentHighlightProvider(
-          {_i3.ProviderResult<_i2.List<_i3.DocumentHighlight>> Function(
+          {_i4.FutureOr<_i2.List<_i3.DocumentHighlight>> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.CancellationToken,
@@ -6958,12 +7187,21 @@ class DocumentHighlightProvider {
       DocumentHighlightProvider._(
           provideDocumentHighlights: provideDocumentHighlights == null
               ? null
-              : _i5.allowInterop(provideDocumentHighlights));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideDocumentHighlights(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension DocumentHighlightProvider$Typings on DocumentHighlightProvider {
   set provideDocumentHighlights(
-      _i3.ProviderResult<_i2.List<_i3.DocumentHighlight>> Function(
+      _i4.FutureOr<_i2.List<_i3.DocumentHighlight>> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -6971,11 +7209,20 @@ extension DocumentHighlightProvider$Typings on DocumentHighlightProvider {
     _i5.setProperty(
       this,
       'provideDocumentHighlights',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.DocumentHighlight>> Function(
+  _i4.FutureOr<_i2.List<_i3.DocumentHighlight>> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -7243,30 +7490,44 @@ class DocumentSymbolProvider {
       {_i2.dynamic provideDocumentSymbols});
 
   factory DocumentSymbolProvider(
-          {_i3.ProviderResult<_i2.Object> Function(
+          {_i4.FutureOr<_i2.Object> Function(
             _i3.TextDocument,
             _i3.CancellationToken,
           )? provideDocumentSymbols}) =>
       DocumentSymbolProvider._(
           provideDocumentSymbols: provideDocumentSymbols == null
               ? null
-              : _i5.allowInterop(provideDocumentSymbols));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideDocumentSymbols(
+                        p0,
+                        p1,
+                      ))));
 }
 
 extension DocumentSymbolProvider$Typings on DocumentSymbolProvider {
   set provideDocumentSymbols(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideDocumentSymbols',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
   ) get provideDocumentSymbols => _i5.getProperty(
@@ -7314,11 +7575,11 @@ class WorkspaceSymbolProvider<T extends _i3.SymbolInformation> {
   });
 
   factory WorkspaceSymbolProvider({
-    _i3.ProviderResult<_i2.List<_i3.SymbolInformation>> Function(
+    _i4.FutureOr<_i2.List<_i3.SymbolInformation>> Function(
       _i2.String,
       _i3.CancellationToken,
     )? provideWorkspaceSymbols,
-    _i3.ProviderResult<_i3.SymbolInformation> Function(
+    _i4.FutureOr<_i3.SymbolInformation> Function(
       _i3.SymbolInformation,
       _i3.CancellationToken,
     )? resolveWorkspaceSymbol,
@@ -7326,28 +7587,49 @@ class WorkspaceSymbolProvider<T extends _i3.SymbolInformation> {
       WorkspaceSymbolProvider._(
         provideWorkspaceSymbols: provideWorkspaceSymbols == null
             ? null
-            : _i5.allowInterop(provideWorkspaceSymbols),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideWorkspaceSymbols(
+                      p0,
+                      p1,
+                    ))),
         resolveWorkspaceSymbol: resolveWorkspaceSymbol == null
             ? null
-            : _i5.allowInterop(resolveWorkspaceSymbol),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveWorkspaceSymbol(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
 extension WorkspaceSymbolProvider$Typings<T extends _i3.SymbolInformation>
     on WorkspaceSymbolProvider<T> {
   set provideWorkspaceSymbols(
-      _i3.ProviderResult<_i2.List<T>> Function(
+      _i4.FutureOr<_i2.List<T>> Function(
         _i2.String,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideWorkspaceSymbols',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<T>> Function(
+  _i4.FutureOr<_i2.List<T>> Function(
     _i2.String,
     _i3.CancellationToken,
   ) get provideWorkspaceSymbols => _i5.getProperty(
@@ -7355,18 +7637,25 @@ extension WorkspaceSymbolProvider$Typings<T extends _i3.SymbolInformation>
         'provideWorkspaceSymbols',
       );
   set resolveWorkspaceSymbol(
-      _i3.ProviderResult<T> Function(
+      _i4.FutureOr<T> Function(
         T,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'resolveWorkspaceSymbol',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<T> Function(
+  _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
   ) get resolveWorkspaceSymbol => _i5.getProperty(
@@ -7404,7 +7693,7 @@ class ReferenceProvider {
   external factory ReferenceProvider._({_i2.dynamic provideReferences});
 
   factory ReferenceProvider(
-          {_i3.ProviderResult<_i2.List<_i3.Location>> Function(
+          {_i4.FutureOr<_i2.List<_i3.Location>> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.ReferenceContext,
@@ -7413,12 +7702,23 @@ class ReferenceProvider {
       ReferenceProvider._(
           provideReferences: provideReferences == null
               ? null
-              : _i5.allowInterop(provideReferences));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                  p3,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideReferences(
+                        p0,
+                        p1,
+                        p2,
+                        p3,
+                      ))));
 }
 
 extension ReferenceProvider$Typings on ReferenceProvider {
   set provideReferences(
-      _i3.ProviderResult<_i2.List<_i3.Location>> Function(
+      _i4.FutureOr<_i2.List<_i3.Location>> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.ReferenceContext,
@@ -7427,11 +7727,22 @@ extension ReferenceProvider$Typings on ReferenceProvider {
     _i5.setProperty(
       this,
       'provideReferences',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.Location>> Function(
+  _i4.FutureOr<_i2.List<_i3.Location>> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.ReferenceContext,
@@ -8470,13 +8781,13 @@ class RenameProvider {
   });
 
   factory RenameProvider({
-    _i3.ProviderResult<_i3.WorkspaceEdit> Function(
+    _i4.FutureOr<_i3.WorkspaceEdit> Function(
       _i3.TextDocument,
       _i3.Position,
       _i2.String,
       _i3.CancellationToken,
     )? provideRenameEdits,
-    _i3.ProviderResult<_i2.Object> Function(
+    _i4.FutureOr<_i2.Object> Function(
       _i3.TextDocument,
       _i3.Position,
       _i3.CancellationToken,
@@ -8485,15 +8796,36 @@ class RenameProvider {
       RenameProvider._(
         provideRenameEdits: provideRenameEdits == null
             ? null
-            : _i5.allowInterop(provideRenameEdits),
-        prepareRename:
-            prepareRename == null ? null : _i5.allowInterop(prepareRename),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+                p3,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideRenameEdits(
+                      p0,
+                      p1,
+                      p2,
+                      p3,
+                    ))),
+        prepareRename: prepareRename == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => prepareRename(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
       );
 }
 
 extension RenameProvider$Typings on RenameProvider {
   set provideRenameEdits(
-      _i3.ProviderResult<_i3.WorkspaceEdit> Function(
+      _i4.FutureOr<_i3.WorkspaceEdit> Function(
         _i3.TextDocument,
         _i3.Position,
         _i2.String,
@@ -8502,11 +8834,22 @@ extension RenameProvider$Typings on RenameProvider {
     _i5.setProperty(
       this,
       'provideRenameEdits',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.WorkspaceEdit> Function(
+  _i4.FutureOr<_i3.WorkspaceEdit> Function(
     _i3.TextDocument,
     _i3.Position,
     _i2.String,
@@ -8516,7 +8859,7 @@ extension RenameProvider$Typings on RenameProvider {
         'provideRenameEdits',
       );
   set prepareRename(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -8524,11 +8867,20 @@ extension RenameProvider$Typings on RenameProvider {
     _i5.setProperty(
       this,
       'prepareRename',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -8819,11 +9171,11 @@ class DocumentSemanticTokensProvider {
 
   factory DocumentSemanticTokensProvider({
     _i3.Event<void>? onDidChangeSemanticTokens,
-    _i3.ProviderResult<_i3.SemanticTokens> Function(
+    _i4.FutureOr<_i3.SemanticTokens> Function(
       _i3.TextDocument,
       _i3.CancellationToken,
     )? provideDocumentSemanticTokens,
-    _i3.ProviderResult<_i2.Object> Function(
+    _i4.FutureOr<_i2.Object> Function(
       _i3.TextDocument,
       _i2.String,
       _i3.CancellationToken,
@@ -8833,11 +9185,29 @@ class DocumentSemanticTokensProvider {
         onDidChangeSemanticTokens: onDidChangeSemanticTokens ?? _i6.undefined,
         provideDocumentSemanticTokens: provideDocumentSemanticTokens == null
             ? null
-            : _i5.allowInterop(provideDocumentSemanticTokens),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(
+                    () => provideDocumentSemanticTokens(
+                          p0,
+                          p1,
+                        ))),
         provideDocumentSemanticTokensEdits:
             provideDocumentSemanticTokensEdits == null
                 ? null
-                : _i5.allowInterop(provideDocumentSemanticTokensEdits),
+                : _i5.allowInterop((
+                    p0,
+                    p1,
+                    p2,
+                  ) =>
+                    _i6.Promise.functionFutureOr(
+                        () => provideDocumentSemanticTokensEdits(
+                              p0,
+                              p1,
+                              p2,
+                            ))),
       );
 }
 
@@ -8857,18 +9227,25 @@ extension DocumentSemanticTokensProvider$Typings
   }
 
   set provideDocumentSemanticTokens(
-      _i3.ProviderResult<_i3.SemanticTokens> Function(
+      _i4.FutureOr<_i3.SemanticTokens> Function(
         _i3.TextDocument,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideDocumentSemanticTokens',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.SemanticTokens> Function(
+  _i4.FutureOr<_i3.SemanticTokens> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
   ) get provideDocumentSemanticTokens => _i5.getProperty(
@@ -8876,7 +9253,7 @@ extension DocumentSemanticTokensProvider$Typings
         'provideDocumentSemanticTokens',
       );
   set provideDocumentSemanticTokensEdits(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i2.String,
         _i3.CancellationToken,
@@ -8884,11 +9261,20 @@ extension DocumentSemanticTokensProvider$Typings
     _i5.setProperty(
       this,
       'provideDocumentSemanticTokensEdits',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i2.String,
     _i3.CancellationToken,
@@ -8908,7 +9294,7 @@ class DocumentRangeSemanticTokensProvider {
       {_i2.dynamic provideDocumentRangeSemanticTokens});
 
   factory DocumentRangeSemanticTokensProvider(
-          {_i3.ProviderResult<_i3.SemanticTokens> Function(
+          {_i4.FutureOr<_i3.SemanticTokens> Function(
             _i3.TextDocument,
             _i3.Range,
             _i3.CancellationToken,
@@ -8917,13 +9303,23 @@ class DocumentRangeSemanticTokensProvider {
           provideDocumentRangeSemanticTokens:
               provideDocumentRangeSemanticTokens == null
                   ? null
-                  : _i5.allowInterop(provideDocumentRangeSemanticTokens));
+                  : _i5.allowInterop((
+                      p0,
+                      p1,
+                      p2,
+                    ) =>
+                      _i6.Promise.functionFutureOr(
+                          () => provideDocumentRangeSemanticTokens(
+                                p0,
+                                p1,
+                                p2,
+                              ))));
 }
 
 extension DocumentRangeSemanticTokensProvider$Typings
     on DocumentRangeSemanticTokensProvider {
   set provideDocumentRangeSemanticTokens(
-      _i3.ProviderResult<_i3.SemanticTokens> Function(
+      _i4.FutureOr<_i3.SemanticTokens> Function(
         _i3.TextDocument,
         _i3.Range,
         _i3.CancellationToken,
@@ -8931,11 +9327,20 @@ extension DocumentRangeSemanticTokensProvider$Typings
     _i5.setProperty(
       this,
       'provideDocumentRangeSemanticTokens',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.SemanticTokens> Function(
+  _i4.FutureOr<_i3.SemanticTokens> Function(
     _i3.TextDocument,
     _i3.Range,
     _i3.CancellationToken,
@@ -9018,7 +9423,7 @@ class DocumentFormattingEditProvider {
       {_i2.dynamic provideDocumentFormattingEdits});
 
   factory DocumentFormattingEditProvider(
-          {_i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+          {_i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
             _i3.TextDocument,
             _i3.FormattingOptions,
             _i3.CancellationToken,
@@ -9026,13 +9431,23 @@ class DocumentFormattingEditProvider {
       DocumentFormattingEditProvider._(
           provideDocumentFormattingEdits: provideDocumentFormattingEdits == null
               ? null
-              : _i5.allowInterop(provideDocumentFormattingEdits));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(
+                      () => provideDocumentFormattingEdits(
+                            p0,
+                            p1,
+                            p2,
+                          ))));
 }
 
 extension DocumentFormattingEditProvider$Typings
     on DocumentFormattingEditProvider {
   set provideDocumentFormattingEdits(
-      _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+      _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
         _i3.TextDocument,
         _i3.FormattingOptions,
         _i3.CancellationToken,
@@ -9040,11 +9455,20 @@ extension DocumentFormattingEditProvider$Typings
     _i5.setProperty(
       this,
       'provideDocumentFormattingEdits',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+  _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
     _i3.TextDocument,
     _i3.FormattingOptions,
     _i3.CancellationToken,
@@ -9066,13 +9490,13 @@ class DocumentRangeFormattingEditProvider {
   });
 
   factory DocumentRangeFormattingEditProvider({
-    _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+    _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
       _i3.TextDocument,
       _i3.Range,
       _i3.FormattingOptions,
       _i3.CancellationToken,
     )? provideDocumentRangeFormattingEdits,
-    _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+    _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
       _i3.TextDocument,
       _i2.List<_i3.Range>,
       _i3.FormattingOptions,
@@ -9083,18 +9507,42 @@ class DocumentRangeFormattingEditProvider {
         provideDocumentRangeFormattingEdits:
             provideDocumentRangeFormattingEdits == null
                 ? null
-                : _i5.allowInterop(provideDocumentRangeFormattingEdits),
+                : _i5.allowInterop((
+                    p0,
+                    p1,
+                    p2,
+                    p3,
+                  ) =>
+                    _i6.Promise.functionFutureOr(
+                        () => provideDocumentRangeFormattingEdits(
+                              p0,
+                              p1,
+                              p2,
+                              p3,
+                            ))),
         provideDocumentRangesFormattingEdits:
             provideDocumentRangesFormattingEdits == null
                 ? null
-                : _i5.allowInterop(provideDocumentRangesFormattingEdits),
+                : _i5.allowInterop((
+                    p0,
+                    p1,
+                    p2,
+                    p3,
+                  ) =>
+                    _i6.Promise.functionFutureOr(
+                        () => provideDocumentRangesFormattingEdits(
+                              p0,
+                              p1,
+                              p2,
+                              p3,
+                            ))),
       );
 }
 
 extension DocumentRangeFormattingEditProvider$Typings
     on DocumentRangeFormattingEditProvider {
   set provideDocumentRangeFormattingEdits(
-      _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+      _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
         _i3.TextDocument,
         _i3.Range,
         _i3.FormattingOptions,
@@ -9103,11 +9551,22 @@ extension DocumentRangeFormattingEditProvider$Typings
     _i5.setProperty(
       this,
       'provideDocumentRangeFormattingEdits',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+  _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
     _i3.TextDocument,
     _i3.Range,
     _i3.FormattingOptions,
@@ -9117,7 +9576,7 @@ extension DocumentRangeFormattingEditProvider$Typings
         'provideDocumentRangeFormattingEdits',
       );
   set provideDocumentRangesFormattingEdits(
-      _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+      _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
         _i3.TextDocument,
         _i2.List<_i3.Range>,
         _i3.FormattingOptions,
@@ -9126,11 +9585,22 @@ extension DocumentRangeFormattingEditProvider$Typings
     _i5.setProperty(
       this,
       'provideDocumentRangesFormattingEdits',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+  _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
     _i3.TextDocument,
     _i2.List<_i3.Range>,
     _i3.FormattingOptions,
@@ -9151,7 +9621,7 @@ class OnTypeFormattingEditProvider {
       {_i2.dynamic provideOnTypeFormattingEdits});
 
   factory OnTypeFormattingEditProvider(
-          {_i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+          {_i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
             _i3.TextDocument,
             _i3.Position,
             _i2.String,
@@ -9161,12 +9631,26 @@ class OnTypeFormattingEditProvider {
       OnTypeFormattingEditProvider._(
           provideOnTypeFormattingEdits: provideOnTypeFormattingEdits == null
               ? null
-              : _i5.allowInterop(provideOnTypeFormattingEdits));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                  p3,
+                  p4,
+                ) =>
+                  _i6.Promise.functionFutureOr(
+                      () => provideOnTypeFormattingEdits(
+                            p0,
+                            p1,
+                            p2,
+                            p3,
+                            p4,
+                          ))));
 }
 
 extension OnTypeFormattingEditProvider$Typings on OnTypeFormattingEditProvider {
   set provideOnTypeFormattingEdits(
-      _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+      _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
         _i3.TextDocument,
         _i3.Position,
         _i2.String,
@@ -9176,11 +9660,24 @@ extension OnTypeFormattingEditProvider$Typings on OnTypeFormattingEditProvider {
     _i5.setProperty(
       this,
       'provideOnTypeFormattingEdits',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+        p4,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+                p4,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.TextEdit>> Function(
+  _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
     _i3.TextDocument,
     _i3.Position,
     _i2.String,
@@ -9452,7 +9949,7 @@ class SignatureHelpProvider {
   external factory SignatureHelpProvider._({_i2.dynamic provideSignatureHelp});
 
   factory SignatureHelpProvider(
-          {_i3.ProviderResult<_i3.SignatureHelp> Function(
+          {_i4.FutureOr<_i3.SignatureHelp> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.CancellationToken,
@@ -9461,12 +9958,23 @@ class SignatureHelpProvider {
       SignatureHelpProvider._(
           provideSignatureHelp: provideSignatureHelp == null
               ? null
-              : _i5.allowInterop(provideSignatureHelp));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                  p3,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideSignatureHelp(
+                        p0,
+                        p1,
+                        p2,
+                        p3,
+                      ))));
 }
 
 extension SignatureHelpProvider$Typings on SignatureHelpProvider {
   set provideSignatureHelp(
-      _i3.ProviderResult<_i3.SignatureHelp> Function(
+      _i4.FutureOr<_i3.SignatureHelp> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -9475,11 +9983,22 @@ extension SignatureHelpProvider$Typings on SignatureHelpProvider {
     _i5.setProperty(
       this,
       'provideSignatureHelp',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.SignatureHelp> Function(
+  _i4.FutureOr<_i3.SignatureHelp> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -10025,13 +10544,13 @@ class CompletionItemProvider<T extends _i3.CompletionItem> {
   });
 
   factory CompletionItemProvider({
-    _i3.ProviderResult<_i2.Object> Function(
+    _i4.FutureOr<_i2.Object> Function(
       _i3.TextDocument,
       _i3.Position,
       _i3.CancellationToken,
       _i3.CompletionContext,
     )? provideCompletionItems,
-    _i3.ProviderResult<_i3.CompletionItem> Function(
+    _i4.FutureOr<_i3.CompletionItem> Function(
       _i3.CompletionItem,
       _i3.CancellationToken,
     )? resolveCompletionItem,
@@ -10039,17 +10558,35 @@ class CompletionItemProvider<T extends _i3.CompletionItem> {
       CompletionItemProvider._(
         provideCompletionItems: provideCompletionItems == null
             ? null
-            : _i5.allowInterop(provideCompletionItems),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+                p3,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideCompletionItems(
+                      p0,
+                      p1,
+                      p2,
+                      p3,
+                    ))),
         resolveCompletionItem: resolveCompletionItem == null
             ? null
-            : _i5.allowInterop(resolveCompletionItem),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveCompletionItem(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
 extension CompletionItemProvider$Typings<T extends _i3.CompletionItem>
     on CompletionItemProvider<T> {
   set provideCompletionItems(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -10058,11 +10595,22 @@ extension CompletionItemProvider$Typings<T extends _i3.CompletionItem>
     _i5.setProperty(
       this,
       'provideCompletionItems',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -10072,18 +10620,25 @@ extension CompletionItemProvider$Typings<T extends _i3.CompletionItem>
         'provideCompletionItems',
       );
   set resolveCompletionItem(
-      _i3.ProviderResult<T> Function(
+      _i4.FutureOr<T> Function(
         T,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'resolveCompletionItem',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<T> Function(
+  _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
   ) get resolveCompletionItem => _i5.getProperty(
@@ -10104,7 +10659,7 @@ class InlineCompletionItemProvider {
       {_i2.dynamic provideInlineCompletionItems});
 
   factory InlineCompletionItemProvider(
-          {_i3.ProviderResult<_i2.Object> Function(
+          {_i4.FutureOr<_i2.Object> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.InlineCompletionContext,
@@ -10113,12 +10668,24 @@ class InlineCompletionItemProvider {
       InlineCompletionItemProvider._(
           provideInlineCompletionItems: provideInlineCompletionItems == null
               ? null
-              : _i5.allowInterop(provideInlineCompletionItems));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                  p3,
+                ) =>
+                  _i6.Promise.functionFutureOr(
+                      () => provideInlineCompletionItems(
+                            p0,
+                            p1,
+                            p2,
+                            p3,
+                          ))));
 }
 
 extension InlineCompletionItemProvider$Typings on InlineCompletionItemProvider {
   set provideInlineCompletionItems(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.InlineCompletionContext,
@@ -10127,11 +10694,22 @@ extension InlineCompletionItemProvider$Typings on InlineCompletionItemProvider {
     _i5.setProperty(
       this,
       'provideInlineCompletionItems',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.InlineCompletionContext,
@@ -10416,11 +10994,11 @@ class DocumentLinkProvider<T extends _i3.DocumentLink> {
   });
 
   factory DocumentLinkProvider({
-    _i3.ProviderResult<_i2.List<_i3.DocumentLink>> Function(
+    _i4.FutureOr<_i2.List<_i3.DocumentLink>> Function(
       _i3.TextDocument,
       _i3.CancellationToken,
     )? provideDocumentLinks,
-    _i3.ProviderResult<_i3.DocumentLink> Function(
+    _i4.FutureOr<_i3.DocumentLink> Function(
       _i3.DocumentLink,
       _i3.CancellationToken,
     )? resolveDocumentLink,
@@ -10428,28 +11006,49 @@ class DocumentLinkProvider<T extends _i3.DocumentLink> {
       DocumentLinkProvider._(
         provideDocumentLinks: provideDocumentLinks == null
             ? null
-            : _i5.allowInterop(provideDocumentLinks),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideDocumentLinks(
+                      p0,
+                      p1,
+                    ))),
         resolveDocumentLink: resolveDocumentLink == null
             ? null
-            : _i5.allowInterop(resolveDocumentLink),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveDocumentLink(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
 extension DocumentLinkProvider$Typings<T extends _i3.DocumentLink>
     on DocumentLinkProvider<T> {
   set provideDocumentLinks(
-      _i3.ProviderResult<_i2.List<T>> Function(
+      _i4.FutureOr<_i2.List<T>> Function(
         _i3.TextDocument,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideDocumentLinks',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<T>> Function(
+  _i4.FutureOr<_i2.List<T>> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
   ) get provideDocumentLinks => _i5.getProperty(
@@ -10457,18 +11056,25 @@ extension DocumentLinkProvider$Typings<T extends _i3.DocumentLink>
         'provideDocumentLinks',
       );
   set resolveDocumentLink(
-      _i3.ProviderResult<T> Function(
+      _i4.FutureOr<T> Function(
         T,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'resolveDocumentLink',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<T> Function(
+  _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
   ) get resolveDocumentLink => _i5.getProperty(
@@ -10677,11 +11283,11 @@ class DocumentColorProvider {
   });
 
   factory DocumentColorProvider({
-    _i3.ProviderResult<_i2.List<_i3.ColorInformation>> Function(
+    _i4.FutureOr<_i2.List<_i3.ColorInformation>> Function(
       _i3.TextDocument,
       _i3.CancellationToken,
     )? provideDocumentColors,
-    _i3.ProviderResult<_i2.List<_i3.ColorPresentation>> Function(
+    _i4.FutureOr<_i2.List<_i3.ColorPresentation>> Function(
       _i3.Color,
       _i2.dynamic,
       _i3.CancellationToken,
@@ -10690,27 +11296,50 @@ class DocumentColorProvider {
       DocumentColorProvider._(
         provideDocumentColors: provideDocumentColors == null
             ? null
-            : _i5.allowInterop(provideDocumentColors),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideDocumentColors(
+                      p0,
+                      p1,
+                    ))),
         provideColorPresentations: provideColorPresentations == null
             ? null
-            : _i5.allowInterop(provideColorPresentations),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideColorPresentations(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
       );
 }
 
 extension DocumentColorProvider$Typings on DocumentColorProvider {
   set provideDocumentColors(
-      _i3.ProviderResult<_i2.List<_i3.ColorInformation>> Function(
+      _i4.FutureOr<_i2.List<_i3.ColorInformation>> Function(
         _i3.TextDocument,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideDocumentColors',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.ColorInformation>> Function(
+  _i4.FutureOr<_i2.List<_i3.ColorInformation>> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
   ) get provideDocumentColors => _i5.getProperty(
@@ -10718,7 +11347,7 @@ extension DocumentColorProvider$Typings on DocumentColorProvider {
         'provideDocumentColors',
       );
   set provideColorPresentations(
-      _i3.ProviderResult<_i2.List<_i3.ColorPresentation>> Function(
+      _i4.FutureOr<_i2.List<_i3.ColorPresentation>> Function(
         _i3.Color,
         _i2.dynamic,
         _i3.CancellationToken,
@@ -10726,11 +11355,20 @@ extension DocumentColorProvider$Typings on DocumentColorProvider {
     _i5.setProperty(
       this,
       'provideColorPresentations',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.ColorPresentation>> Function(
+  _i4.FutureOr<_i2.List<_i3.ColorPresentation>> Function(
     _i3.Color,
     _i2.dynamic,
     _i3.CancellationToken,
@@ -10975,12 +11613,12 @@ class InlayHintsProvider<T extends _i3.InlayHint> {
 
   factory InlayHintsProvider({
     _i3.Event<void>? onDidChangeInlayHints,
-    _i3.ProviderResult<_i2.List<_i3.InlayHint>> Function(
+    _i4.FutureOr<_i2.List<_i3.InlayHint>> Function(
       _i3.TextDocument,
       _i3.Range,
       _i3.CancellationToken,
     )? provideInlayHints,
-    _i3.ProviderResult<_i3.InlayHint> Function(
+    _i4.FutureOr<_i3.InlayHint> Function(
       _i3.InlayHint,
       _i3.CancellationToken,
     )? resolveInlayHint,
@@ -10989,10 +11627,26 @@ class InlayHintsProvider<T extends _i3.InlayHint> {
         onDidChangeInlayHints: onDidChangeInlayHints ?? _i6.undefined,
         provideInlayHints: provideInlayHints == null
             ? null
-            : _i5.allowInterop(provideInlayHints),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideInlayHints(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
         resolveInlayHint: resolveInlayHint == null
             ? null
-            : _i5.allowInterop(resolveInlayHint),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveInlayHint(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
@@ -11012,7 +11666,7 @@ extension InlayHintsProvider$Typings<T extends _i3.InlayHint>
   }
 
   set provideInlayHints(
-      _i3.ProviderResult<_i2.List<T>> Function(
+      _i4.FutureOr<_i2.List<T>> Function(
         _i3.TextDocument,
         _i3.Range,
         _i3.CancellationToken,
@@ -11020,11 +11674,20 @@ extension InlayHintsProvider$Typings<T extends _i3.InlayHint>
     _i5.setProperty(
       this,
       'provideInlayHints',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<T>> Function(
+  _i4.FutureOr<_i2.List<T>> Function(
     _i3.TextDocument,
     _i3.Range,
     _i3.CancellationToken,
@@ -11033,18 +11696,25 @@ extension InlayHintsProvider$Typings<T extends _i3.InlayHint>
         'provideInlayHints',
       );
   set resolveInlayHint(
-      _i3.ProviderResult<T> Function(
+      _i4.FutureOr<T> Function(
         T,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'resolveInlayHint',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<T> Function(
+  _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
   ) get resolveInlayHint => _i5.getProperty(
@@ -11149,7 +11819,7 @@ class FoldingRangeProvider {
 
   factory FoldingRangeProvider({
     _i3.Event<void>? onDidChangeFoldingRanges,
-    _i3.ProviderResult<_i2.List<_i3.FoldingRange>> Function(
+    _i4.FutureOr<_i2.List<_i3.FoldingRange>> Function(
       _i3.TextDocument,
       _i3.FoldingContext,
       _i3.CancellationToken,
@@ -11159,7 +11829,16 @@ class FoldingRangeProvider {
         onDidChangeFoldingRanges: onDidChangeFoldingRanges ?? _i6.undefined,
         provideFoldingRanges: provideFoldingRanges == null
             ? null
-            : _i5.allowInterop(provideFoldingRanges),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideFoldingRanges(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
       );
 }
 
@@ -11178,7 +11857,7 @@ extension FoldingRangeProvider$Typings on FoldingRangeProvider {
   }
 
   set provideFoldingRanges(
-      _i3.ProviderResult<_i2.List<_i3.FoldingRange>> Function(
+      _i4.FutureOr<_i2.List<_i3.FoldingRange>> Function(
         _i3.TextDocument,
         _i3.FoldingContext,
         _i3.CancellationToken,
@@ -11186,11 +11865,20 @@ extension FoldingRangeProvider$Typings on FoldingRangeProvider {
     _i5.setProperty(
       this,
       'provideFoldingRanges',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.FoldingRange>> Function(
+  _i4.FutureOr<_i2.List<_i3.FoldingRange>> Function(
     _i3.TextDocument,
     _i3.FoldingContext,
     _i3.CancellationToken,
@@ -11260,7 +11948,7 @@ class SelectionRangeProvider {
       {_i2.dynamic provideSelectionRanges});
 
   factory SelectionRangeProvider(
-          {_i3.ProviderResult<_i2.List<_i3.SelectionRange>> Function(
+          {_i4.FutureOr<_i2.List<_i3.SelectionRange>> Function(
             _i3.TextDocument,
             _i2.List<_i3.Position>,
             _i3.CancellationToken,
@@ -11268,12 +11956,21 @@ class SelectionRangeProvider {
       SelectionRangeProvider._(
           provideSelectionRanges: provideSelectionRanges == null
               ? null
-              : _i5.allowInterop(provideSelectionRanges));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideSelectionRanges(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension SelectionRangeProvider$Typings on SelectionRangeProvider {
   set provideSelectionRanges(
-      _i3.ProviderResult<_i2.List<_i3.SelectionRange>> Function(
+      _i4.FutureOr<_i2.List<_i3.SelectionRange>> Function(
         _i3.TextDocument,
         _i2.List<_i3.Position>,
         _i3.CancellationToken,
@@ -11281,11 +11978,20 @@ extension SelectionRangeProvider$Typings on SelectionRangeProvider {
     _i5.setProperty(
       this,
       'provideSelectionRanges',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.SelectionRange>> Function(
+  _i4.FutureOr<_i2.List<_i3.SelectionRange>> Function(
     _i3.TextDocument,
     _i2.List<_i3.Position>,
     _i3.CancellationToken,
@@ -11542,16 +12248,16 @@ class CallHierarchyProvider {
   });
 
   factory CallHierarchyProvider({
-    _i3.ProviderResult<_i2.Object> Function(
+    _i4.FutureOr<_i2.Object> Function(
       _i3.TextDocument,
       _i3.Position,
       _i3.CancellationToken,
     )? prepareCallHierarchy,
-    _i3.ProviderResult<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
+    _i4.FutureOr<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
       _i3.CallHierarchyItem,
       _i3.CancellationToken,
     )? provideCallHierarchyIncomingCalls,
-    _i3.ProviderResult<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
+    _i4.FutureOr<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
       _i3.CallHierarchyItem,
       _i3.CancellationToken,
     )? provideCallHierarchyOutgoingCalls,
@@ -11559,21 +12265,46 @@ class CallHierarchyProvider {
       CallHierarchyProvider._(
         prepareCallHierarchy: prepareCallHierarchy == null
             ? null
-            : _i5.allowInterop(prepareCallHierarchy),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => prepareCallHierarchy(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
         provideCallHierarchyIncomingCalls:
             provideCallHierarchyIncomingCalls == null
                 ? null
-                : _i5.allowInterop(provideCallHierarchyIncomingCalls),
+                : _i5.allowInterop((
+                    p0,
+                    p1,
+                  ) =>
+                    _i6.Promise.functionFutureOr(
+                        () => provideCallHierarchyIncomingCalls(
+                              p0,
+                              p1,
+                            ))),
         provideCallHierarchyOutgoingCalls:
             provideCallHierarchyOutgoingCalls == null
                 ? null
-                : _i5.allowInterop(provideCallHierarchyOutgoingCalls),
+                : _i5.allowInterop((
+                    p0,
+                    p1,
+                  ) =>
+                    _i6.Promise.functionFutureOr(
+                        () => provideCallHierarchyOutgoingCalls(
+                              p0,
+                              p1,
+                            ))),
       );
 }
 
 extension CallHierarchyProvider$Typings on CallHierarchyProvider {
   set prepareCallHierarchy(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -11581,11 +12312,20 @@ extension CallHierarchyProvider$Typings on CallHierarchyProvider {
     _i5.setProperty(
       this,
       'prepareCallHierarchy',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -11594,18 +12334,25 @@ extension CallHierarchyProvider$Typings on CallHierarchyProvider {
         'prepareCallHierarchy',
       );
   set provideCallHierarchyIncomingCalls(
-      _i3.ProviderResult<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
+      _i4.FutureOr<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
         _i3.CallHierarchyItem,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideCallHierarchyIncomingCalls',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
+  _i4.FutureOr<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
     _i3.CallHierarchyItem,
     _i3.CancellationToken,
   ) get provideCallHierarchyIncomingCalls => _i5.getProperty(
@@ -11613,18 +12360,25 @@ extension CallHierarchyProvider$Typings on CallHierarchyProvider {
         'provideCallHierarchyIncomingCalls',
       );
   set provideCallHierarchyOutgoingCalls(
-      _i3.ProviderResult<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
+      _i4.FutureOr<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
         _i3.CallHierarchyItem,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideCallHierarchyOutgoingCalls',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
+  _i4.FutureOr<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
     _i3.CallHierarchyItem,
     _i3.CancellationToken,
   ) get provideCallHierarchyOutgoingCalls => _i5.getProperty(
@@ -11771,16 +12525,16 @@ class TypeHierarchyProvider {
   });
 
   factory TypeHierarchyProvider({
-    _i3.ProviderResult<_i2.Object> Function(
+    _i4.FutureOr<_i2.Object> Function(
       _i3.TextDocument,
       _i3.Position,
       _i3.CancellationToken,
     )? prepareTypeHierarchy,
-    _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+    _i4.FutureOr<_i2.List<_i3.TypeHierarchyItem>> Function(
       _i3.TypeHierarchyItem,
       _i3.CancellationToken,
     )? provideTypeHierarchySupertypes,
-    _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+    _i4.FutureOr<_i2.List<_i3.TypeHierarchyItem>> Function(
       _i3.TypeHierarchyItem,
       _i3.CancellationToken,
     )? provideTypeHierarchySubtypes,
@@ -11788,19 +12542,43 @@ class TypeHierarchyProvider {
       TypeHierarchyProvider._(
         prepareTypeHierarchy: prepareTypeHierarchy == null
             ? null
-            : _i5.allowInterop(prepareTypeHierarchy),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => prepareTypeHierarchy(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
         provideTypeHierarchySupertypes: provideTypeHierarchySupertypes == null
             ? null
-            : _i5.allowInterop(provideTypeHierarchySupertypes),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(
+                    () => provideTypeHierarchySupertypes(
+                          p0,
+                          p1,
+                        ))),
         provideTypeHierarchySubtypes: provideTypeHierarchySubtypes == null
             ? null
-            : _i5.allowInterop(provideTypeHierarchySubtypes),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideTypeHierarchySubtypes(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
 extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
   set prepareTypeHierarchy(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -11808,11 +12586,20 @@ extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
     _i5.setProperty(
       this,
       'prepareTypeHierarchy',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -11821,18 +12608,25 @@ extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
         'prepareTypeHierarchy',
       );
   set provideTypeHierarchySupertypes(
-      _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+      _i4.FutureOr<_i2.List<_i3.TypeHierarchyItem>> Function(
         _i3.TypeHierarchyItem,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideTypeHierarchySupertypes',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+  _i4.FutureOr<_i2.List<_i3.TypeHierarchyItem>> Function(
     _i3.TypeHierarchyItem,
     _i3.CancellationToken,
   ) get provideTypeHierarchySupertypes => _i5.getProperty(
@@ -11840,18 +12634,25 @@ extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
         'provideTypeHierarchySupertypes',
       );
   set provideTypeHierarchySubtypes(
-      _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+      _i4.FutureOr<_i2.List<_i3.TypeHierarchyItem>> Function(
         _i3.TypeHierarchyItem,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideTypeHierarchySubtypes',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.TypeHierarchyItem>> Function(
+  _i4.FutureOr<_i2.List<_i3.TypeHierarchyItem>> Function(
     _i3.TypeHierarchyItem,
     _i3.CancellationToken,
   ) get provideTypeHierarchySubtypes => _i5.getProperty(
@@ -11909,7 +12710,7 @@ class LinkedEditingRangeProvider {
       {_i2.dynamic provideLinkedEditingRanges});
 
   factory LinkedEditingRangeProvider(
-          {_i3.ProviderResult<_i3.LinkedEditingRanges> Function(
+          {_i4.FutureOr<_i3.LinkedEditingRanges> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.CancellationToken,
@@ -11917,12 +12718,21 @@ class LinkedEditingRangeProvider {
       LinkedEditingRangeProvider._(
           provideLinkedEditingRanges: provideLinkedEditingRanges == null
               ? null
-              : _i5.allowInterop(provideLinkedEditingRanges));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideLinkedEditingRanges(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension LinkedEditingRangeProvider$Typings on LinkedEditingRangeProvider {
   set provideLinkedEditingRanges(
-      _i3.ProviderResult<_i3.LinkedEditingRanges> Function(
+      _i4.FutureOr<_i3.LinkedEditingRanges> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.CancellationToken,
@@ -11930,11 +12740,20 @@ extension LinkedEditingRangeProvider$Typings on LinkedEditingRangeProvider {
     _i5.setProperty(
       this,
       'provideLinkedEditingRanges',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.LinkedEditingRanges> Function(
+  _i4.FutureOr<_i3.LinkedEditingRanges> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
@@ -12000,7 +12819,7 @@ class DocumentDropEditProvider {
       {_i2.dynamic provideDocumentDropEdits});
 
   factory DocumentDropEditProvider(
-          {_i3.ProviderResult<_i3.DocumentDropEdit> Function(
+          {_i4.FutureOr<_i3.DocumentDropEdit> Function(
             _i3.TextDocument,
             _i3.Position,
             _i3.DataTransfer,
@@ -12009,12 +12828,23 @@ class DocumentDropEditProvider {
       DocumentDropEditProvider._(
           provideDocumentDropEdits: provideDocumentDropEdits == null
               ? null
-              : _i5.allowInterop(provideDocumentDropEdits));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                  p3,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideDocumentDropEdits(
+                        p0,
+                        p1,
+                        p2,
+                        p3,
+                      ))));
 }
 
 extension DocumentDropEditProvider$Typings on DocumentDropEditProvider {
   set provideDocumentDropEdits(
-      _i3.ProviderResult<_i3.DocumentDropEdit> Function(
+      _i4.FutureOr<_i3.DocumentDropEdit> Function(
         _i3.TextDocument,
         _i3.Position,
         _i3.DataTransfer,
@@ -12023,11 +12853,22 @@ extension DocumentDropEditProvider$Typings on DocumentDropEditProvider {
     _i5.setProperty(
       this,
       'provideDocumentDropEdits',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+        p3,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+                p3,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.DocumentDropEdit> Function(
+  _i4.FutureOr<_i3.DocumentDropEdit> Function(
     _i3.TextDocument,
     _i3.Position,
     _i3.DataTransfer,
@@ -12942,7 +13783,9 @@ class WorkspaceConfiguration {
   }) =>
       WorkspaceConfiguration._(
         has: has == null ? null : _i5.allowInterop(has),
-        inspect: inspect == null ? null : _i5.allowInterop(inspect),
+        inspect: inspect == null
+            ? null
+            : _i5.allowInterop((p0) => () => inspect(p0) ?? _i6.undefined),
         update: update == null ? null : _i5.allowInterop(update),
       );
 }
@@ -12964,7 +13807,7 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
     _i5.setProperty(
       this,
       'inspect',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => () => value(p0) ?? _i6.undefined),
     );
   }
 
@@ -13434,7 +14277,9 @@ class DiagnosticCollection
         delete: delete == null ? null : _i5.allowInterop(delete),
         clear: clear == null ? null : _i5.allowInterop(clear),
         forEach: forEach == null ? null : _i5.allowInterop(forEach),
-        get: get == null ? null : _i5.allowInterop(get),
+        get: get == null
+            ? null
+            : _i5.allowInterop((p0) => () => get(p0) ?? _i6.undefined),
         has: has == null ? null : _i5.allowInterop(has),
         dispose: dispose == null ? null : _i5.allowInterop(dispose),
       );
@@ -13503,7 +14348,7 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
     _i5.setProperty(
       this,
       'get',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => () => value(p0) ?? _i6.undefined),
     );
   }
 
@@ -13632,7 +14477,7 @@ class LanguageStatusItem {
   factory LanguageStatusItem({
     _i2.String? id,
     _i2.String? name,
-    _i3.DocumentSelector? selector,
+    _i2.Object? selector,
     _i3.LanguageStatusSeverity? severity,
     _i2.String? text,
     _i2.String? detail,
@@ -13677,11 +14522,11 @@ extension LanguageStatusItem$Typings on LanguageStatusItem {
 
   /// A {@link DocumentSelector selector} that defines for what editors
   ///  this item shows.
-  _i3.DocumentSelector get selector => _i5.getProperty(
+  _i2.Object get selector => _i5.getProperty(
         this,
         'selector',
       );
-  set selector(_i3.DocumentSelector value) {
+  set selector(_i2.Object value) {
     _i5.setProperty(
       this,
       'selector',
@@ -14736,7 +15581,7 @@ class Terminal {
   factory Terminal({
     _i2.String? name,
     _i2.Future<_i2.dynamic>? processId,
-    _i7.Readonly<_i2.Object>? creationOptions,
+    _i2.dynamic creationOptions,
     _i3.TerminalExitStatus? exitStatus,
     _i3.TerminalState? state,
     void Function(
@@ -14776,7 +15621,7 @@ extension Terminal$Typings on Terminal {
   /// The object used to initialize the terminal, this is useful for example to detecting the
   /// shell type of when the terminal was not launched by this extension or for detecting what
   /// folder the shell was launched in.
-  _i7.Readonly<_i2.Object> get creationOptions => _i5.getProperty(
+  _i2.dynamic get creationOptions => _i5.getProperty(
         this,
         'creationOptions',
       );
@@ -15030,53 +15875,67 @@ class TerminalLinkProvider<T extends _i3.TerminalLink> {
   });
 
   factory TerminalLinkProvider({
-    _i3.ProviderResult<_i2.List<_i3.TerminalLink>> Function(
+    _i4.FutureOr<_i2.List<_i3.TerminalLink>> Function(
       _i3.TerminalLinkContext,
       _i3.CancellationToken,
     )? provideTerminalLinks,
-    _i3.ProviderResult<void> Function(_i3.TerminalLink)? handleTerminalLink,
+    _i4.FutureOr<void> Function(_i3.TerminalLink)? handleTerminalLink,
   }) =>
       TerminalLinkProvider._(
         provideTerminalLinks: provideTerminalLinks == null
             ? null
-            : _i5.allowInterop(provideTerminalLinks),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideTerminalLinks(
+                      p0,
+                      p1,
+                    ))),
         handleTerminalLink: handleTerminalLink == null
             ? null
-            : _i5.allowInterop(handleTerminalLink),
+            : _i5.allowInterop((p0) =>
+                _i6.Promise.functionFutureOr(() => handleTerminalLink(p0))),
       );
 }
 
 extension TerminalLinkProvider$Typings<T extends _i3.TerminalLink>
     on TerminalLinkProvider<T> {
   set provideTerminalLinks(
-      _i3.ProviderResult<_i2.List<T>> Function(
+      _i4.FutureOr<_i2.List<T>> Function(
         _i3.TerminalLinkContext,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideTerminalLinks',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<T>> Function(
+  _i4.FutureOr<_i2.List<T>> Function(
     _i3.TerminalLinkContext,
     _i3.CancellationToken,
   ) get provideTerminalLinks => _i5.getProperty(
         this,
         'provideTerminalLinks',
       );
-  set handleTerminalLink(_i3.ProviderResult<void> Function(T) value) {
+  set handleTerminalLink(_i4.FutureOr<void> Function(T) value) {
     _i5.setProperty(
       this,
       'handleTerminalLink',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
-  _i3.ProviderResult<void> Function(T) get handleTerminalLink =>
-      _i5.getProperty(
+  _i4.FutureOr<void> Function(T) get handleTerminalLink => _i5.getProperty(
         this,
         'handleTerminalLink',
       );
@@ -15161,27 +16020,26 @@ class TerminalProfileProvider {
       {_i2.dynamic provideTerminalProfile});
 
   factory TerminalProfileProvider(
-          {_i3.ProviderResult<_i3.TerminalProfile> Function(
-                  _i3.CancellationToken)?
+          {_i4.FutureOr<_i3.TerminalProfile> Function(_i3.CancellationToken)?
               provideTerminalProfile}) =>
       TerminalProfileProvider._(
           provideTerminalProfile: provideTerminalProfile == null
               ? null
-              : _i5.allowInterop(provideTerminalProfile));
+              : _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(
+                  () => provideTerminalProfile(p0))));
 }
 
 extension TerminalProfileProvider$Typings on TerminalProfileProvider {
   set provideTerminalProfile(
-      _i3.ProviderResult<_i3.TerminalProfile> Function(_i3.CancellationToken)
-          value) {
+      _i4.FutureOr<_i3.TerminalProfile> Function(_i3.CancellationToken) value) {
     _i5.setProperty(
       this,
       'provideTerminalProfile',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
-  _i3.ProviderResult<_i3.TerminalProfile> Function(_i3.CancellationToken)
+  _i4.FutureOr<_i3.TerminalProfile> Function(_i3.CancellationToken)
       get provideTerminalProfile => _i5.getProperty(
             this,
             'provideTerminalProfile',
@@ -15310,7 +16168,7 @@ class FileDecorationProvider {
 
   factory FileDecorationProvider({
     _i3.Event<_i2.dynamic>? onDidChangeFileDecorations,
-    _i3.ProviderResult<_i3.FileDecoration> Function(
+    _i4.FutureOr<_i3.FileDecoration> Function(
       _i3.Uri,
       _i3.CancellationToken,
     )? provideFileDecoration,
@@ -15319,7 +16177,14 @@ class FileDecorationProvider {
         onDidChangeFileDecorations: onDidChangeFileDecorations ?? _i6.undefined,
         provideFileDecoration: provideFileDecoration == null
             ? null
-            : _i5.allowInterop(provideFileDecoration),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideFileDecoration(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
@@ -15342,18 +16207,25 @@ extension FileDecorationProvider$Typings on FileDecorationProvider {
   }
 
   set provideFileDecoration(
-      _i3.ProviderResult<_i3.FileDecoration> Function(
+      _i4.FutureOr<_i3.FileDecoration> Function(
         _i3.Uri,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideFileDecoration',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.FileDecoration> Function(
+  _i4.FutureOr<_i3.FileDecoration> Function(
     _i3.Uri,
     _i3.CancellationToken,
   ) get provideFileDecoration => _i5.getProperty(
@@ -16935,48 +17807,66 @@ class TaskProvider<T extends _i3.Task> {
   });
 
   factory TaskProvider({
-    _i3.ProviderResult<_i2.List<_i3.Task>> Function(_i3.CancellationToken)?
+    _i4.FutureOr<_i2.List<_i3.Task>> Function(_i3.CancellationToken)?
         provideTasks,
-    _i3.ProviderResult<_i3.Task> Function(
+    _i4.FutureOr<_i3.Task> Function(
       _i3.Task,
       _i3.CancellationToken,
     )? resolveTask,
   }) =>
       TaskProvider._(
-        provideTasks:
-            provideTasks == null ? null : _i5.allowInterop(provideTasks),
-        resolveTask: resolveTask == null ? null : _i5.allowInterop(resolveTask),
+        provideTasks: provideTasks == null
+            ? null
+            : _i5.allowInterop(
+                (p0) => _i6.Promise.functionFutureOr(() => provideTasks(p0))),
+        resolveTask: resolveTask == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveTask(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
 extension TaskProvider$Typings<T extends _i3.Task> on TaskProvider<T> {
   set provideTasks(
-      _i3.ProviderResult<_i2.List<T>> Function(_i3.CancellationToken) value) {
+      _i4.FutureOr<_i2.List<T>> Function(_i3.CancellationToken) value) {
     _i5.setProperty(
       this,
       'provideTasks',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<T>> Function(_i3.CancellationToken)
-      get provideTasks => _i5.getProperty(
-            this,
-            'provideTasks',
-          );
+  _i4.FutureOr<_i2.List<T>> Function(_i3.CancellationToken) get provideTasks =>
+      _i5.getProperty(
+        this,
+        'provideTasks',
+      );
   set resolveTask(
-      _i3.ProviderResult<T> Function(
+      _i4.FutureOr<T> Function(
         T,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'resolveTask',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<T> Function(
+  _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
   ) get resolveTask => _i5.getProperty(
@@ -17569,15 +18459,64 @@ class FileSystemProvider {
         onDidChangeFile: onDidChangeFile ?? _i6.undefined,
         watch: watch == null ? null : _i5.allowInterop(watch),
         stat: stat == null ? null : _i5.allowInterop(stat),
-        readDirectory:
-            readDirectory == null ? null : _i5.allowInterop(readDirectory),
-        createDirectory:
-            createDirectory == null ? null : _i5.allowInterop(createDirectory),
-        readFile: readFile == null ? null : _i5.allowInterop(readFile),
-        writeFile: writeFile == null ? null : _i5.allowInterop(writeFile),
-        delete: delete == null ? null : _i5.allowInterop(delete),
-        rename: rename == null ? null : _i5.allowInterop(rename),
-        copy: copy == null ? null : _i5.allowInterop(copy),
+        readDirectory: readDirectory == null
+            ? null
+            : _i5.allowInterop(
+                (p0) => _i6.Promise.functionFutureOr(() => readDirectory(p0))),
+        createDirectory: createDirectory == null
+            ? null
+            : _i5.allowInterop((p0) =>
+                _i6.Promise.functionFutureOr(() => createDirectory(p0))),
+        readFile: readFile == null
+            ? null
+            : _i5.allowInterop(
+                (p0) => _i6.Promise.functionFutureOr(() => readFile(p0))),
+        writeFile: writeFile == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => writeFile(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
+        delete: delete == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => delete(
+                      p0,
+                      p1,
+                    ))),
+        rename: rename == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => rename(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
+        copy: copy == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => copy(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
       );
 }
 
@@ -17638,7 +18577,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i5.setProperty(
       this,
       'readDirectory',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
@@ -17656,7 +18595,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i5.setProperty(
       this,
       'createDirectory',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
@@ -17668,7 +18607,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i5.setProperty(
       this,
       'readFile',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
@@ -17685,7 +18624,16 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i5.setProperty(
       this,
       'writeFile',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
@@ -17705,7 +18653,14 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i5.setProperty(
       this,
       'delete',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
@@ -17725,7 +18680,16 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i5.setProperty(
       this,
       'rename',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
@@ -17746,7 +18710,16 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i5.setProperty(
       this,
       'copy',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
@@ -17893,7 +18866,8 @@ class FileSystem {
         copy: copy == null ? null : _i5.allowInterop(copy),
         isWritableFileSystem: isWritableFileSystem == null
             ? null
-            : _i5.allowInterop(isWritableFileSystem),
+            : _i5.allowInterop(
+                (p0) => () => isWritableFileSystem(p0) ?? _i6.undefined),
       );
 }
 
@@ -18032,7 +19006,7 @@ extension FileSystem$Typings on FileSystem {
     _i5.setProperty(
       this,
       'isWritableFileSystem',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => () => value(p0) ?? _i6.undefined),
     );
   }
 
@@ -18824,7 +19798,16 @@ class WebviewViewProvider {
       WebviewViewProvider._(
           resolveWebviewView: resolveWebviewView == null
               ? null
-              : _i5.allowInterop(resolveWebviewView));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => resolveWebviewView(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension WebviewViewProvider$Typings on WebviewViewProvider {
@@ -18837,7 +19820,16 @@ extension WebviewViewProvider$Typings on WebviewViewProvider {
     _i5.setProperty(
       this,
       'resolveWebviewView',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
@@ -18872,7 +19864,16 @@ class CustomTextEditorProvider {
       CustomTextEditorProvider._(
           resolveCustomTextEditor: resolveCustomTextEditor == null
               ? null
-              : _i5.allowInterop(resolveCustomTextEditor));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                  p2,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => resolveCustomTextEditor(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension CustomTextEditorProvider$Typings on CustomTextEditorProvider {
@@ -18885,7 +19886,16 @@ extension CustomTextEditorProvider$Typings on CustomTextEditorProvider {
     _i5.setProperty(
       this,
       'resolveCustomTextEditor',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
@@ -18963,8 +19973,14 @@ class CustomDocumentEditEvent<T extends _i3.CustomDocument> {
       CustomDocumentEditEvent._(
         document: document,
         label: label,
-        undo: undo == null ? null : _i5.allowInterop(undo),
-        redo: redo == null ? null : _i5.allowInterop(redo),
+        undo: undo == null
+            ? null
+            : _i5
+                .allowInterop(() => _i6.Promise.functionFutureOr(() => undo())),
+        redo: redo == null
+            ? null
+            : _i5
+                .allowInterop(() => _i6.Promise.functionFutureOr(() => redo())),
       );
 }
 
@@ -18987,7 +20003,7 @@ extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
     _i5.setProperty(
       this,
       'undo',
-      _i5.allowInterop(value),
+      _i5.allowInterop(() => _i6.Promise.functionFutureOr(() => value())),
     );
   }
 
@@ -18999,7 +20015,7 @@ extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
     _i5.setProperty(
       this,
       'redo',
-      _i5.allowInterop(value),
+      _i5.allowInterop(() => _i6.Promise.functionFutureOr(() => value())),
     );
   }
 
@@ -19166,10 +20182,28 @@ class CustomReadonlyEditorProvider<T extends _i3.CustomDocument> {
       CustomReadonlyEditorProvider._(
         openCustomDocument: openCustomDocument == null
             ? null
-            : _i5.allowInterop(openCustomDocument),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => openCustomDocument(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
         resolveCustomEditor: resolveCustomEditor == null
             ? null
-            : _i5.allowInterop(resolveCustomEditor),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveCustomEditor(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
       );
 }
 
@@ -19184,7 +20218,16 @@ extension CustomReadonlyEditorProvider$Typings<T extends _i3.CustomDocument>
     _i5.setProperty(
       this,
       'openCustomDocument',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
@@ -19205,7 +20248,16 @@ extension CustomReadonlyEditorProvider$Typings<T extends _i3.CustomDocument>
     _i5.setProperty(
       this,
       'resolveCustomEditor',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
@@ -19288,10 +20340,28 @@ class CustomEditorProvider<T extends _i3.CustomDocument>
             : _i5.allowInterop(backupCustomDocument),
         openCustomDocument: openCustomDocument == null
             ? null
-            : _i5.allowInterop(openCustomDocument),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => openCustomDocument(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
         resolveCustomEditor: resolveCustomEditor == null
             ? null
-            : _i5.allowInterop(resolveCustomEditor),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveCustomEditor(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
       );
 }
 
@@ -19474,21 +20544,24 @@ extension WindowState$Typings on WindowState {
 class UriHandler {
   external factory UriHandler._({_i2.dynamic handleUri});
 
-  factory UriHandler({_i3.ProviderResult<void> Function(_i3.Uri)? handleUri}) =>
+  factory UriHandler({_i4.FutureOr<void> Function(_i3.Uri)? handleUri}) =>
       UriHandler._(
-          handleUri: handleUri == null ? null : _i5.allowInterop(handleUri));
+          handleUri: handleUri == null
+              ? null
+              : _i5.allowInterop(
+                  (p0) => _i6.Promise.functionFutureOr(() => handleUri(p0))));
 }
 
 extension UriHandler$Typings on UriHandler {
-  set handleUri(_i3.ProviderResult<void> Function(_i3.Uri) value) {
+  set handleUri(_i4.FutureOr<void> Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
       'handleUri',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
-  _i3.ProviderResult<void> Function(_i3.Uri) get handleUri => _i5.getProperty(
+  _i4.FutureOr<void> Function(_i3.Uri) get handleUri => _i5.getProperty(
         this,
         'handleUri',
       );
@@ -19892,8 +20965,30 @@ class TreeDragAndDropController<T> {
       TreeDragAndDropController._(
         dropMimeTypes: dropMimeTypes ?? _i6.undefined,
         dragMimeTypes: dragMimeTypes ?? _i6.undefined,
-        handleDrag: handleDrag == null ? null : _i5.allowInterop(handleDrag),
-        handleDrop: handleDrop == null ? null : _i5.allowInterop(handleDrop),
+        handleDrag: handleDrag == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => handleDrag(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
+        handleDrop: handleDrop == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => handleDrop(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
       );
 }
 
@@ -19937,7 +21032,16 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
     _i5.setProperty(
       this,
       'handleDrag',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
@@ -19958,7 +21062,16 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
     _i5.setProperty(
       this,
       'handleDrop',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
@@ -20278,10 +21391,9 @@ class TreeDataProvider<T> {
   factory TreeDataProvider({
     _i3.Event<_i2.dynamic>? onDidChangeTreeData,
     _i2.Object Function(_i2.dynamic)? getTreeItem,
-    _i3.ProviderResult<_i2.List<_i2.dynamic>> Function([_i2.dynamic])?
-        getChildren,
-    _i3.ProviderResult<_i2.dynamic> Function(_i2.dynamic)? getParent,
-    _i3.ProviderResult<_i3.TreeItem> Function(
+    _i4.FutureOr<_i2.List<_i2.dynamic>> Function([_i2.dynamic])? getChildren,
+    _i4.FutureOr<_i2.dynamic> Function(_i2.dynamic)? getParent,
+    _i4.FutureOr<_i3.TreeItem> Function(
       _i3.TreeItem,
       _i2.dynamic,
       _i3.CancellationToken,
@@ -20290,10 +21402,26 @@ class TreeDataProvider<T> {
       TreeDataProvider._(
         onDidChangeTreeData: onDidChangeTreeData ?? _i6.undefined,
         getTreeItem: getTreeItem == null ? null : _i5.allowInterop(getTreeItem),
-        getChildren: getChildren == null ? null : _i5.allowInterop(getChildren),
-        getParent: getParent == null ? null : _i5.allowInterop(getParent),
-        resolveTreeItem:
-            resolveTreeItem == null ? null : _i5.allowInterop(resolveTreeItem),
+        getChildren: getChildren == null
+            ? null
+            : _i5.allowInterop(
+                (p0) => _i6.Promise.functionFutureOr(() => getChildren(p0))),
+        getParent: getParent == null
+            ? null
+            : _i5.allowInterop(
+                (p0) => _i6.Promise.functionFutureOr(() => getParent(p0))),
+        resolveTreeItem: resolveTreeItem == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveTreeItem(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
       );
 }
 
@@ -20325,33 +21453,32 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
         this,
         'getTreeItem',
       );
-  set getChildren(_i3.ProviderResult<_i2.List<T>> Function([T?]) value) {
+  set getChildren(_i4.FutureOr<_i2.List<T>> Function([T?]) value) {
     _i5.setProperty(
       this,
       'getChildren',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<T>> Function([T?]) get getChildren =>
-      _i5.getProperty(
+  _i4.FutureOr<_i2.List<T>> Function([T?]) get getChildren => _i5.getProperty(
         this,
         'getChildren',
       );
-  set getParent(_i3.ProviderResult<T> Function(T) value) {
+  set getParent(_i4.FutureOr<T> Function(T) value) {
     _i5.setProperty(
       this,
       'getParent',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
-  _i3.ProviderResult<T> Function(T) get getParent => _i5.getProperty(
+  _i4.FutureOr<T> Function(T) get getParent => _i5.getProperty(
         this,
         'getParent',
       );
   set resolveTreeItem(
-      _i3.ProviderResult<_i3.TreeItem> Function(
+      _i4.FutureOr<_i3.TreeItem> Function(
         _i3.TreeItem,
         T,
         _i3.CancellationToken,
@@ -20359,11 +21486,20 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
     _i5.setProperty(
       this,
       'resolveTreeItem',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.TreeItem> Function(
+  _i4.FutureOr<_i3.TreeItem> Function(
     _i3.TreeItem,
     T,
     _i3.CancellationToken,
@@ -21586,7 +22722,9 @@ class EnvironmentVariableCollection
         replace: replace == null ? null : _i5.allowInterop(replace),
         append: append == null ? null : _i5.allowInterop(append),
         prepend: prepend == null ? null : _i5.allowInterop(prepend),
-        get: get == null ? null : _i5.allowInterop(get),
+        get: get == null
+            ? null
+            : _i5.allowInterop((p0) => () => get(p0) ?? _i6.undefined),
         forEach: forEach == null ? null : _i5.allowInterop(forEach),
         delete: delete == null ? null : _i5.allowInterop(delete),
         clear: clear == null ? null : _i5.allowInterop(clear),
@@ -21693,7 +22831,7 @@ extension EnvironmentVariableCollection$Typings
     _i5.setProperty(
       this,
       'get',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => () => value(p0) ?? _i6.undefined),
     );
   }
 
@@ -21813,7 +22951,9 @@ class GlobalEnvironmentVariableCollection
         replace: replace == null ? null : _i5.allowInterop(replace),
         append: append == null ? null : _i5.allowInterop(append),
         prepend: prepend == null ? null : _i5.allowInterop(prepend),
-        get: get == null ? null : _i5.allowInterop(get),
+        get: get == null
+            ? null
+            : _i5.allowInterop((p0) => () => get(p0) ?? _i6.undefined),
         forEach: forEach == null ? null : _i5.allowInterop(forEach),
         delete: delete == null ? null : _i5.allowInterop(delete),
         clear: clear == null ? null : _i5.allowInterop(clear),
@@ -23536,7 +24676,7 @@ class ConfigurationChangeEvent {
   factory ConfigurationChangeEvent(
           {_i2.bool Function(
             _i2.String, [
-            _i3.ConfigurationScope?,
+            _i2.Object?,
           ])? affectsConfiguration}) =>
       ConfigurationChangeEvent._(
           affectsConfiguration: affectsConfiguration == null
@@ -23548,7 +24688,7 @@ extension ConfigurationChangeEvent$Typings on ConfigurationChangeEvent {
   set affectsConfiguration(
       _i2.bool Function(
         _i2.String, [
-        _i3.ConfigurationScope?,
+        _i2.Object?,
       ]) value) {
     _i5.setProperty(
       this,
@@ -23559,7 +24699,7 @@ extension ConfigurationChangeEvent$Typings on ConfigurationChangeEvent {
 
   _i2.bool Function(
     _i2.String, [
-    _i3.ConfigurationScope?,
+    _i2.Object?,
   ]) get affectsConfiguration => _i5.getProperty(
         this,
         'affectsConfiguration',
@@ -24772,7 +25912,14 @@ class NotebookSerializer {
             : _i5.allowInterop(deserializeNotebook),
         serializeNotebook: serializeNotebook == null
             ? null
-            : _i5.allowInterop(serializeNotebook),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => serializeNotebook(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
@@ -24804,7 +25951,14 @@ extension NotebookSerializer$Typings on NotebookSerializer {
     _i5.setProperty(
       this,
       'serializeNotebook',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
@@ -24974,11 +26128,22 @@ class NotebookController {
         description: description,
         detail: detail,
         supportsExecutionOrder: supportsExecutionOrder,
-        executeHandler:
-            executeHandler == null ? null : _i5.allowInterop(executeHandler),
+        executeHandler: executeHandler == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => executeHandler(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
         interruptHandler: interruptHandler == null
             ? null
-            : _i5.allowInterop(interruptHandler),
+            : _i5.allowInterop((p0) =>
+                _i6.Promise.functionFutureOr(() => interruptHandler(p0))),
         onDidChangeSelectedNotebooks:
             onDidChangeSelectedNotebooks ?? _i6.undefined,
         createNotebookCellExecution: createNotebookCellExecution == null
@@ -25105,7 +26270,16 @@ extension NotebookController$Typings on NotebookController {
     _i5.setProperty(
       this,
       'executeHandler',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
@@ -25129,7 +26303,10 @@ extension NotebookController$Typings on NotebookController {
     _i5.setProperty(
       this,
       'interruptHandler',
-      value == null ? _i6.undefined : _i5.allowInterop(value),
+      value == null
+          ? _i6.undefined
+          : _i5.allowInterop(
+              (p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
@@ -25534,7 +26711,7 @@ class NotebookCellStatusBarItemProvider {
 
   factory NotebookCellStatusBarItemProvider({
     _i3.Event<void>? onDidChangeCellStatusBarItems,
-    _i3.ProviderResult<_i2.Object> Function(
+    _i4.FutureOr<_i2.Object> Function(
       _i3.NotebookCell,
       _i3.CancellationToken,
     )? provideCellStatusBarItems,
@@ -25544,7 +26721,14 @@ class NotebookCellStatusBarItemProvider {
             onDidChangeCellStatusBarItems ?? _i6.undefined,
         provideCellStatusBarItems: provideCellStatusBarItems == null
             ? null
-            : _i5.allowInterop(provideCellStatusBarItems),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideCellStatusBarItems(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
@@ -25564,18 +26748,25 @@ extension NotebookCellStatusBarItemProvider$Typings
   }
 
   set provideCellStatusBarItems(
-      _i3.ProviderResult<_i2.Object> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.NotebookCell,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideCellStatusBarItems',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.Object> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.NotebookCell,
     _i3.CancellationToken,
   ) get provideCellStatusBarItems => _i5.getProperty(
@@ -25674,30 +26865,44 @@ class QuickDiffProvider {
   external factory QuickDiffProvider._({_i2.dynamic provideOriginalResource});
 
   factory QuickDiffProvider(
-          {_i3.ProviderResult<_i3.Uri> Function(
+          {_i4.FutureOr<_i3.Uri> Function(
             _i3.Uri,
             _i3.CancellationToken,
           )? provideOriginalResource}) =>
       QuickDiffProvider._(
           provideOriginalResource: provideOriginalResource == null
               ? null
-              : _i5.allowInterop(provideOriginalResource));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideOriginalResource(
+                        p0,
+                        p1,
+                      ))));
 }
 
 extension QuickDiffProvider$Typings on QuickDiffProvider {
   set provideOriginalResource(
-      _i3.ProviderResult<_i3.Uri> Function(
+      _i4.FutureOr<_i3.Uri> Function(
         _i3.Uri,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideOriginalResource',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.Uri> Function(
+  _i4.FutureOr<_i3.Uri> Function(
     _i3.Uri,
     _i3.CancellationToken,
   ) get provideOriginalResource => _i5.getProperty(
@@ -26447,16 +27652,16 @@ class DebugConfigurationProvider {
   });
 
   factory DebugConfigurationProvider({
-    _i3.ProviderResult<_i2.List<_i3.DebugConfiguration>> Function([
+    _i4.FutureOr<_i2.List<_i3.DebugConfiguration>> Function([
       _i3.WorkspaceFolder?,
       _i3.CancellationToken?,
     ])? provideDebugConfigurations,
-    _i3.ProviderResult<_i3.DebugConfiguration> Function(
+    _i4.FutureOr<_i3.DebugConfiguration> Function(
       _i3.DebugConfiguration,
       _i3.CancellationToken?, [
       _i3.WorkspaceFolder?,
     ])? resolveDebugConfiguration,
-    _i3.ProviderResult<_i3.DebugConfiguration> Function(
+    _i4.FutureOr<_i3.DebugConfiguration> Function(
       _i3.DebugConfiguration,
       _i3.CancellationToken?, [
       _i3.WorkspaceFolder?,
@@ -26465,32 +27670,64 @@ class DebugConfigurationProvider {
       DebugConfigurationProvider._(
         provideDebugConfigurations: provideDebugConfigurations == null
             ? null
-            : _i5.allowInterop(provideDebugConfigurations),
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => provideDebugConfigurations(
+                      p0,
+                      p1,
+                    ))),
         resolveDebugConfiguration: resolveDebugConfiguration == null
             ? null
-            : _i5.allowInterop(resolveDebugConfiguration),
+            : _i5.allowInterop((
+                p0,
+                p1,
+                p2,
+              ) =>
+                _i6.Promise.functionFutureOr(() => resolveDebugConfiguration(
+                      p0,
+                      p1,
+                      p2,
+                    ))),
         resolveDebugConfigurationWithSubstitutedVariables:
             resolveDebugConfigurationWithSubstitutedVariables == null
                 ? null
-                : _i5.allowInterop(
-                    resolveDebugConfigurationWithSubstitutedVariables),
+                : _i5.allowInterop((
+                    p0,
+                    p1,
+                    p2,
+                  ) =>
+                    _i6.Promise.functionFutureOr(
+                        () => resolveDebugConfigurationWithSubstitutedVariables(
+                              p0,
+                              p1,
+                              p2,
+                            ))),
       );
 }
 
 extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
   set provideDebugConfigurations(
-      _i3.ProviderResult<_i2.List<_i3.DebugConfiguration>> Function([
+      _i4.FutureOr<_i2.List<_i3.DebugConfiguration>> Function([
         _i3.WorkspaceFolder?,
         _i3.CancellationToken?,
       ]) value) {
     _i5.setProperty(
       this,
       'provideDebugConfigurations',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.DebugConfiguration>> Function([
+  _i4.FutureOr<_i2.List<_i3.DebugConfiguration>> Function([
     _i3.WorkspaceFolder?,
     _i3.CancellationToken?,
   ]) get provideDebugConfigurations => _i5.getProperty(
@@ -26498,7 +27735,7 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
         'provideDebugConfigurations',
       );
   set resolveDebugConfiguration(
-      _i3.ProviderResult<_i3.DebugConfiguration> Function(
+      _i4.FutureOr<_i3.DebugConfiguration> Function(
         _i3.DebugConfiguration,
         _i3.CancellationToken?, [
         _i3.WorkspaceFolder?,
@@ -26506,11 +27743,20 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
     _i5.setProperty(
       this,
       'resolveDebugConfiguration',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.DebugConfiguration> Function(
+  _i4.FutureOr<_i3.DebugConfiguration> Function(
     _i3.DebugConfiguration,
     _i3.CancellationToken?, [
     _i3.WorkspaceFolder?,
@@ -26519,7 +27765,7 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
         'resolveDebugConfiguration',
       );
   set resolveDebugConfigurationWithSubstitutedVariables(
-      _i3.ProviderResult<_i3.DebugConfiguration> Function(
+      _i4.FutureOr<_i3.DebugConfiguration> Function(
         _i3.DebugConfiguration,
         _i3.CancellationToken?, [
         _i3.WorkspaceFolder?,
@@ -26527,11 +27773,20 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
     _i5.setProperty(
       this,
       'resolveDebugConfigurationWithSubstitutedVariables',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+        p2,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+                p2,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.DebugConfiguration> Function(
+  _i4.FutureOr<_i3.DebugConfiguration> Function(
     _i3.DebugConfiguration,
     _i3.CancellationToken?, [
     _i3.WorkspaceFolder?,
@@ -26766,31 +28021,46 @@ class DebugAdapterDescriptorFactory {
       {_i2.dynamic createDebugAdapterDescriptor});
 
   factory DebugAdapterDescriptorFactory(
-          {_i3.ProviderResult<_i3.DebugAdapterDescriptor> Function(
+          {_i4.FutureOr<_i2.Object> Function(
             _i3.DebugSession, [
             _i3.DebugAdapterExecutable?,
           ])? createDebugAdapterDescriptor}) =>
       DebugAdapterDescriptorFactory._(
           createDebugAdapterDescriptor: createDebugAdapterDescriptor == null
               ? null
-              : _i5.allowInterop(createDebugAdapterDescriptor));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                ) =>
+                  _i6.Promise.functionFutureOr(
+                      () => createDebugAdapterDescriptor(
+                            p0,
+                            p1,
+                          ))));
 }
 
 extension DebugAdapterDescriptorFactory$Typings
     on DebugAdapterDescriptorFactory {
   set createDebugAdapterDescriptor(
-      _i3.ProviderResult<_i3.DebugAdapterDescriptor> Function(
+      _i4.FutureOr<_i2.Object> Function(
         _i3.DebugSession, [
         _i3.DebugAdapterExecutable?,
       ]) value) {
     _i5.setProperty(
       this,
       'createDebugAdapterDescriptor',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i3.DebugAdapterDescriptor> Function(
+  _i4.FutureOr<_i2.Object> Function(
     _i3.DebugSession, [
     _i3.DebugAdapterExecutable?,
   ]) get createDebugAdapterDescriptor => _i5.getProperty(
@@ -26933,27 +28203,26 @@ class DebugAdapterTrackerFactory {
       {_i2.dynamic createDebugAdapterTracker});
 
   factory DebugAdapterTrackerFactory(
-          {_i3.ProviderResult<_i3.DebugAdapterTracker> Function(
-                  _i3.DebugSession)?
+          {_i4.FutureOr<_i3.DebugAdapterTracker> Function(_i3.DebugSession)?
               createDebugAdapterTracker}) =>
       DebugAdapterTrackerFactory._(
           createDebugAdapterTracker: createDebugAdapterTracker == null
               ? null
-              : _i5.allowInterop(createDebugAdapterTracker));
+              : _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(
+                  () => createDebugAdapterTracker(p0))));
 }
 
 extension DebugAdapterTrackerFactory$Typings on DebugAdapterTrackerFactory {
   set createDebugAdapterTracker(
-      _i3.ProviderResult<_i3.DebugAdapterTracker> Function(_i3.DebugSession)
-          value) {
+      _i4.FutureOr<_i3.DebugAdapterTracker> Function(_i3.DebugSession) value) {
     _i5.setProperty(
       this,
       'createDebugAdapterTracker',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
-  _i3.ProviderResult<_i3.DebugAdapterTracker> Function(_i3.DebugSession)
+  _i4.FutureOr<_i3.DebugAdapterTracker> Function(_i3.DebugSession)
       get createDebugAdapterTracker => _i5.getProperty(
             this,
             'createDebugAdapterTracker',
@@ -27833,30 +29102,44 @@ class CommentingRangeProvider {
       {_i2.dynamic provideCommentingRanges});
 
   factory CommentingRangeProvider(
-          {_i3.ProviderResult<_i2.List<_i3.Range>> Function(
+          {_i4.FutureOr<_i2.List<_i3.Range>> Function(
             _i3.TextDocument,
             _i3.CancellationToken,
           )? provideCommentingRanges}) =>
       CommentingRangeProvider._(
           provideCommentingRanges: provideCommentingRanges == null
               ? null
-              : _i5.allowInterop(provideCommentingRanges));
+              : _i5.allowInterop((
+                  p0,
+                  p1,
+                ) =>
+                  _i6.Promise.functionFutureOr(() => provideCommentingRanges(
+                        p0,
+                        p1,
+                      ))));
 }
 
 extension CommentingRangeProvider$Typings on CommentingRangeProvider {
   set provideCommentingRanges(
-      _i3.ProviderResult<_i2.List<_i3.Range>> Function(
+      _i4.FutureOr<_i2.List<_i3.Range>> Function(
         _i3.TextDocument,
         _i3.CancellationToken,
       ) value) {
     _i5.setProperty(
       this,
       'provideCommentingRanges',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
-  _i3.ProviderResult<_i2.List<_i3.Range>> Function(
+  _i4.FutureOr<_i2.List<_i3.Range>> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
   ) get provideCommentingRanges => _i5.getProperty(
@@ -28564,7 +29847,16 @@ class TestRunProfile {
         configureHandler: configureHandler == null
             ? _i6.undefined
             : _i5.allowInterop(configureHandler),
-        runHandler: runHandler == null ? null : _i5.allowInterop(runHandler),
+        runHandler: runHandler == null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.functionFutureOr(() => runHandler(
+                      p0,
+                      p1,
+                    ))),
         dispose: dispose == null ? null : _i5.allowInterop(dispose),
       );
 }
@@ -28689,7 +29981,14 @@ extension TestRunProfile$Typings on TestRunProfile {
     _i5.setProperty(
       this,
       'runHandler',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          _i6.Promise.functionFutureOr(() => value(
+                p0,
+                p1,
+              ))),
     );
   }
 
@@ -28762,11 +30061,14 @@ class TestController {
         id: id,
         label: label,
         items: items ?? _i6.undefined,
-        resolveHandler:
-            resolveHandler == null ? null : _i5.allowInterop(resolveHandler),
+        resolveHandler: resolveHandler == null
+            ? null
+            : _i5.allowInterop(
+                (p0) => _i6.Promise.functionFutureOr(() => resolveHandler(p0))),
         refreshHandler: refreshHandler == null
             ? _i6.undefined
-            : _i5.allowInterop(refreshHandler),
+            : _i5.allowInterop(
+                (p0) => _i6.Promise.functionFutureOr(() => refreshHandler(p0))),
         createRunProfile: createRunProfile == null
             ? null
             : _i5.allowInterop(createRunProfile),
@@ -28842,7 +30144,10 @@ extension TestController$Typings on TestController {
     _i5.setProperty(
       this,
       'resolveHandler',
-      value == null ? _i6.undefined : _i5.allowInterop(value),
+      value == null
+          ? _i6.undefined
+          : _i5.allowInterop(
+              (p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
@@ -28865,7 +30170,10 @@ extension TestController$Typings on TestController {
     _i5.setProperty(
       this,
       'refreshHandler',
-      value == null ? _i6.undefined : _i5.allowInterop(value),
+      value == null
+          ? _i6.undefined
+          : _i5.allowInterop(
+              (p0) => _i6.Promise.functionFutureOr(() => value(p0))),
     );
   }
 
@@ -29302,7 +30610,9 @@ class TestItemCollection
         forEach: forEach == null ? null : _i5.allowInterop(forEach),
         add: add == null ? null : _i5.allowInterop(add),
         delete: delete == null ? null : _i5.allowInterop(delete),
-        get: get == null ? null : _i5.allowInterop(get),
+        get: get == null
+            ? null
+            : _i5.allowInterop((p0) => () => get(p0) ?? _i6.undefined),
       );
 }
 
@@ -29377,7 +30687,7 @@ extension TestItemCollection$Typings on TestItemCollection {
     _i5.setProperty(
       this,
       'get',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => () => value(p0) ?? _i6.undefined),
     );
   }
 
@@ -30304,7 +31614,7 @@ class TelemetryLogger {
     _i2.bool? isErrorsEnabled,
     void Function(
       _i2.String, [
-      _i7.Record<_i2.String, _i2.Object>?,
+      _i2.dynamic,
     ])? logUsage,
     void Function()? dispose,
   }) =>
@@ -30338,7 +31648,7 @@ extension TelemetryLogger$Typings on TelemetryLogger {
   set logUsage(
       void Function(
         _i2.String, [
-        _i7.Record<_i2.String, _i2.Object>?,
+        _i2.dynamic,
       ]) value) {
     _i5.setProperty(
       this,
@@ -30349,7 +31659,7 @@ extension TelemetryLogger$Typings on TelemetryLogger {
 
   void Function(
     _i2.String, [
-    _i7.Record<_i2.String, _i2.Object>?,
+    _i2.dynamic,
   ]) get logUsage => _i5.getProperty(
         this,
         'logUsage',
@@ -30375,7 +31685,7 @@ extension TelemetryLogger$Typings on TelemetryLogger {
   ///  @param data The data to log
   void _logError$1(
     _i2.String eventName, [
-    _i7.Record<_i2.String, _i2.Object>? data,
+    _i2.dynamic data,
   ]) {
     _i5.callMethod(
       this,
@@ -30396,7 +31706,7 @@ extension TelemetryLogger$Typings on TelemetryLogger {
   ///  @param data Additional data to log alongside the stack trace
   void _logError$2(
     _i7.Error error, [
-    _i7.Record<_i2.String, _i2.Object>? data,
+    _i2.dynamic data,
   ]) {
     _i5.callMethod(
       this,
@@ -30418,7 +31728,7 @@ extension TelemetryLogger$Typings on TelemetryLogger {
     ///  @param data The data to log
     void Function(
       _i2.String eventName, [
-      _i7.Record<_i2.String, _i2.Object>? data,
+      _i2.dynamic data,
     ]) $1,
 
     /// Log an error event.
@@ -30430,7 +31740,7 @@ extension TelemetryLogger$Typings on TelemetryLogger {
     ///  @param data Additional data to log alongside the stack trace
     void Function(
       _i7.Error error, [
-      _i7.Record<_i2.String, _i2.Object>? data,
+      _i2.dynamic data,
     ]) $2,
   }) get logError => (
         $1: _logError$1,
@@ -30464,11 +31774,11 @@ class TelemetrySender {
   factory TelemetrySender({
     void Function(
       _i2.String, [
-      _i7.Record<_i2.String, _i2.dynamic>?,
+      _i2.dynamic,
     ])? sendEventData,
     void Function(
       _i7.Error, [
-      _i7.Record<_i2.String, _i2.dynamic>?,
+      _i2.dynamic,
     ])? sendErrorData,
     _i4.FutureOr<void> Function()? flush,
   }) =>
@@ -30477,7 +31787,10 @@ class TelemetrySender {
             sendEventData == null ? null : _i5.allowInterop(sendEventData),
         sendErrorData:
             sendErrorData == null ? null : _i5.allowInterop(sendErrorData),
-        flush: flush == null ? null : _i5.allowInterop(flush),
+        flush: flush == null
+            ? null
+            : _i5.allowInterop(
+                () => _i6.Promise.functionFutureOr(() => flush())),
       );
 }
 
@@ -30485,7 +31798,7 @@ extension TelemetrySender$Typings on TelemetrySender {
   set sendEventData(
       void Function(
         _i2.String, [
-        _i7.Record<_i2.String, _i2.dynamic>?,
+        _i2.dynamic,
       ]) value) {
     _i5.setProperty(
       this,
@@ -30496,7 +31809,7 @@ extension TelemetrySender$Typings on TelemetrySender {
 
   void Function(
     _i2.String, [
-    _i7.Record<_i2.String, _i2.dynamic>?,
+    _i2.dynamic,
   ]) get sendEventData => _i5.getProperty(
         this,
         'sendEventData',
@@ -30504,7 +31817,7 @@ extension TelemetrySender$Typings on TelemetrySender {
   set sendErrorData(
       void Function(
         _i7.Error, [
-        _i7.Record<_i2.String, _i2.dynamic>?,
+        _i2.dynamic,
       ]) value) {
     _i5.setProperty(
       this,
@@ -30515,7 +31828,7 @@ extension TelemetrySender$Typings on TelemetrySender {
 
   void Function(
     _i7.Error, [
-    _i7.Record<_i2.String, _i2.dynamic>?,
+    _i2.dynamic,
   ]) get sendErrorData => _i5.getProperty(
         this,
         'sendErrorData',
@@ -30524,7 +31837,7 @@ extension TelemetrySender$Typings on TelemetrySender {
     _i5.setProperty(
       this,
       'flush',
-      _i5.allowInterop(value),
+      _i5.allowInterop(() => _i6.Promise.functionFutureOr(() => value())),
     );
   }
 
@@ -30548,7 +31861,7 @@ class TelemetryLoggerOptions {
   factory TelemetryLoggerOptions({
     _i2.bool? ignoreBuiltInCommonProperties,
     _i2.bool? ignoreUnhandledErrors,
-    _i7.Record<_i2.String, _i2.dynamic>? additionalCommonProperties,
+    _i2.dynamic additionalCommonProperties,
   }) =>
       TelemetryLoggerOptions._(
         ignoreBuiltInCommonProperties: ignoreBuiltInCommonProperties,
@@ -30573,8 +31886,7 @@ extension TelemetryLoggerOptions$Typings on TelemetryLoggerOptions {
       );
 
   /// Any additional common properties which should be injected into the data object.
-  _i7.Record<_i2.String, _i2.dynamic>? get additionalCommonProperties =>
-      _i5.getProperty(
+  _i2.dynamic get additionalCommonProperties => _i5.getProperty(
         this,
         'additionalCommonProperties',
       );

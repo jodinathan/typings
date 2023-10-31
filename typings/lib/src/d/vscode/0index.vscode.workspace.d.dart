@@ -6,8 +6,8 @@ import 'dart:core' as _i2;
 import '0index.vscode.d.dart' as _i3;
 import 'dart:js_util' as _i4;
 import 'dart:typed_data' as _i5;
-import 'null_comon.vscode.workspace.d.dart' as _i6;
-import '/d/core.dart' as _i7;
+import '/d/core.dart' as _i6;
+import 'null_comon.vscode.workspace.d.dart' as _i7;
 import '0index.vscode.workspace.d.dart' as _i8;
 
 @_i1.JS('vscode.workspace')
@@ -105,7 +105,7 @@ extension FsAccessor$Typings on _FsAccessor {
     _i4.setProperty(
       this,
       'isWritableFileSystem',
-      _i4.allowInterop(value),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i6.undefined),
     );
   }
 }
@@ -182,11 +182,11 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
     _i2.bool? strict,
   ]) =>
       _i4.callMethod(
-        _i6.target69,
+        _i7.target69,
         'parse',
         [
           value,
-          strict ?? _i7.undefined,
+          strict ?? _i6.undefined,
         ],
       );
 
@@ -209,7 +209,7 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   /// bad.fragment === '/project1';
   /// ```
   _i3.Uri file(_i2.String path) => _i4.callMethod(
-        _i6.target69,
+        _i7.target69,
         'file',
         [path],
       );
@@ -233,7 +233,7 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
     _i2.Iterable<_i2.dynamic>? pathSegments,
   ]) =>
       _i4.callMethod(
-        _i6.target69,
+        _i7.target69,
         'joinPath',
         [
           base,
@@ -243,7 +243,7 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
 
   /// Create an URI from its component parts
   _i3.Uri from(_i3.IInline5 components) => _i4.callMethod(
-        _i6.target69,
+        _i7.target69,
         'from',
         [components],
       );
@@ -261,7 +261,7 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   ///  @returns A new Uri that reflects the given change. Will return `this` Uri if the change
   ///   is not changing anything.
   _i3.Uri with$(_i3.IInline6 change) => _i4.callMethod(
-        _i6.target69,
+        _i7.target69,
         'with',
         [change],
       );
@@ -282,16 +282,16 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
   /// 	the `#` and `?` characters occurring in the path will always be encoded.
   ///  @returns A string representation of this Uri.
   _i2.String toString$([_i2.bool? skipEncoding]) => _i4.callMethod(
-        _i6.target69,
+        _i7.target69,
         'toString',
-        [skipEncoding ?? _i7.undefined],
+        [skipEncoding ?? _i6.undefined],
       );
 
   /// Returns a JSON representation of this Uri.
   ///
   ///  @returns An object.
   _i2.dynamic toJSON() => _i4.callMethod(
-        _i6.target69,
+        _i7.target69,
         'toJSON',
         [],
       );
@@ -303,7 +303,7 @@ extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
     _i2.String fragment,
   ) =>
       _i4.callMethod(
-        _i6.target69,
+        _i7.target69,
         'call',
         [
           this,
@@ -445,7 +445,7 @@ extension IInline65$Typings on IInline65 {
     _i4.setProperty(
       this,
       'language',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -458,7 +458,7 @@ extension IInline65$Typings on IInline65 {
     _i4.setProperty(
       this,
       'content',
-      value ?? _i7.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
@@ -814,7 +814,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'asRelativePath',
         [
           pathOrUri,
-          includeWorkspaceFolder ?? _i7.undefined,
+          includeWorkspaceFolder ?? _i6.undefined,
         ],
       );
 
@@ -861,7 +861,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'updateWorkspaceFolders',
         [
           start,
-          deleteCount ?? _i7.undefined,
+          deleteCount ?? _i6.undefined,
           ...?workspaceFoldersToAdd,
         ],
       );
@@ -980,7 +980,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// vscode.workspace.createFileSystemWatcher(new vscode.RelativePattern(vscode.window.activeTextEditor.document.uri, '*'));
   /// ```
   _i3.FileSystemWatcher createFileSystemWatcher(
-    _i3.GlobPattern globPattern, [
+    _i2.Object globPattern, [
     _i2.bool? ignoreCreateEvents,
     _i2.bool? ignoreChangeEvents,
     _i2.bool? ignoreDeleteEvents,
@@ -990,16 +990,16 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'createFileSystemWatcher',
         [
           globPattern,
-          ignoreCreateEvents ?? _i7.undefined,
-          ignoreChangeEvents ?? _i7.undefined,
-          ignoreDeleteEvents ?? _i7.undefined,
+          ignoreCreateEvents ?? _i6.undefined,
+          ignoreChangeEvents ?? _i6.undefined,
+          ignoreDeleteEvents ?? _i6.undefined,
         ],
       );
 
   /// Find files across all {@link workspace.workspaceFoldersworkspace folders} in the workspace.
   _i2.Future<_i2.dynamic> findFiles(
-    _i3.GlobPattern include, [
-    _i3.GlobPattern? exclude,
+    _i2.Object include, [
+    _i2.Object? exclude,
     _i2.num? maxResults,
     _i3.CancellationToken? token,
   ]) =>
@@ -1008,9 +1008,9 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'findFiles',
         [
           include,
-          exclude ?? _i7.undefined ?? _i7.undefined,
-          maxResults ?? _i7.undefined,
-          token ?? _i7.undefined,
+          exclude ?? _i6.undefined ?? _i6.undefined,
+          maxResults ?? _i6.undefined,
+          token ?? _i6.undefined,
         ],
       ));
 
@@ -1019,7 +1019,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'saveAll',
-        [includeUntitled ?? _i7.undefined],
+        [includeUntitled ?? _i6.undefined],
       ));
 
   /// Make changes to one or many resources or create, delete, and rename resources as defined by the given
@@ -1042,7 +1042,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'applyEdit',
         [
           edit,
-          metadata ?? _i7.undefined,
+          metadata ?? _i6.undefined,
         ],
       ));
 
@@ -1118,7 +1118,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'openTextDocument',
-        [options ?? _i7.undefined],
+        [options ?? _i6.undefined],
       ));
 
   /// Overload accessor: $1, $2, $3
@@ -1240,7 +1240,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'openNotebookDocument',
         [
           notebookType,
-          content ?? _i7.undefined,
+          content ?? _i6.undefined,
         ],
       ));
 
@@ -1292,7 +1292,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         [
           notebookType,
           serializer,
-          options ?? _i7.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -1305,14 +1305,14 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// When a scope is provided configuration confined to that scope is returned. Scope can be a resource or a language identifier or both.
   _i3.WorkspaceConfiguration getConfiguration([
     _i2.String? section,
-    _i3.ConfigurationScope? scope,
+    _i2.Object? scope,
   ]) =>
       _i4.callMethod(
         this,
         'getConfiguration',
         [
-          section ?? _i7.undefined,
-          scope ?? _i7.undefined ?? _i7.undefined,
+          section ?? _i6.undefined,
+          scope ?? _i6.undefined ?? _i6.undefined,
         ],
       );
 
@@ -1345,7 +1345,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         [
           scheme,
           provider,
-          options ?? _i7.undefined,
+          options ?? _i6.undefined,
         ],
       );
 }

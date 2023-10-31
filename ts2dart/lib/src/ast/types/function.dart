@@ -60,9 +60,30 @@ class InteropFunction extends InteropType
       required List<InteropRef> typeArgs}) {
     final params = this.params.toList();
     final lastParam = params.lastOrNull;
+    final useVarArg = lastParam != null && lastParam.varargs;
+    final paramsLength = params.length + (useVarArg ? 10 : 0);
+    final call = Method((b) {
+      b.body = argument.call([
+        for (var x = 0; x < paramsLength; x++) refer('p$x'),
+      ]).code;
+    }).closure;
+    final interopedReturn = returns.toInterop(call);
     Expression exec;
+    final checkedArg = interopedReturn == call
+        ? argument
+        : Method((b) {
+            b
+              ..lambda = true
+              ..requiredParameters.addAll([
+                for (var x = 0; x < paramsLength; x++)
+                  Parameter((b) {
+                    b.name = 'p$x';
+                  }),
+              ])
+              ..body = interopedReturn.code;
+          }).closure;
 
-    if (lastParam != null && lastParam.varargs) {
+    if (useVarArg) {
       params.remove(lastParam);
 
       exec = pkgJsUtils.allowInterop([
@@ -94,18 +115,18 @@ class InteropFunction extends InteropType
             b.optionalParameters.add(buildParam);
           }
 
-          b.body = argument.call([
+          b.body = checkedArg.call([
             for (var x = 0; x < index; x++) refer('v$x'),
             literalList([for (var x = 0; x < 10; x++) refer('a$x')])
           ]).code;
         }).closure
       ]);
     } else {
-      exec = pkgJsUtils.allowInterop([argument]);
+      exec = pkgJsUtils.allowInterop([checkedArg]);
     }
 
     if (isOptional) {
-      return argument
+      exec = argument
           .equalTo(refer('null'))
           .conditional(InteropStaticType.nullRef(isNullable), exec);
     }
