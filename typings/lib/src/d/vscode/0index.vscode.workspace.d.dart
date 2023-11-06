@@ -511,10 +511,10 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///
   /// Refer to https://code.visualstudio.com/docs/editor/workspaces for more information
   /// on workspaces.
-  _i2.List<_i3.WorkspaceFolder>? get workspaceFolders => (_i4.getProperty(
+  _i2.List<_i3.WorkspaceFolder>? get workspaceFolders => ((_i4.getProperty(
         this,
         'workspaceFolders',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 
   /// The name of the workspace. `undefined` when no workspace
@@ -575,10 +575,10 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
       );
 
   /// All text documents currently known to the editor.
-  _i2.List<_i3.TextDocument> get textDocuments => (_i4.getProperty(
+  _i2.List<_i3.TextDocument> get textDocuments => ((_i4.getProperty(
         this,
         'textDocuments',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// An event that is emitted when a {@link TextDocumenttext document} is opened or when the language id
@@ -641,10 +641,10 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
       );
 
   /// All notebook documents currently known to the editor.
-  _i2.List<_i3.NotebookDocument> get notebookDocuments => (_i4.getProperty(
+  _i2.List<_i3.NotebookDocument> get notebookDocuments => ((_i4.getProperty(
         this,
         'notebookDocuments',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// An event that is emitted when a {@link NotebookDocumentnotebook} has changed.

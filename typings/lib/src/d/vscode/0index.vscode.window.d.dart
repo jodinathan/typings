@@ -19,10 +19,10 @@ class _TabGroupsAccessor {}
 
 extension TabGroupsAccessor$Typings on _TabGroupsAccessor {
   /// All the groups within the group container.
-  _i2.List<_i3.TabGroup> get all => (_i4.getProperty(
+  _i2.List<_i3.TabGroup> get all => ((_i4.getProperty(
         this,
         'all',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The currently active group.
@@ -130,18 +130,18 @@ extension ActiveTextEditorAccessor$Typings on _ActiveTextEditorAccessor {
       );
 
   /// The selections in this text editor. The primary selection is always at index 0.
-  _i2.List<_i3.Selection> get selections => (_i4.getProperty(
+  _i2.List<_i3.Selection> get selections => ((_i4.getProperty(
         this,
         'selections',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The current visible ranges in the editor (vertically).
   /// This accounts only for vertical scrolling, and not for horizontal scrolling.
-  _i2.List<_i3.Range> get visibleRanges => (_i4.getProperty(
+  _i2.List<_i3.Range> get visibleRanges => ((_i4.getProperty(
         this,
         'visibleRanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Text editor options.
@@ -283,17 +283,17 @@ extension ActiveNotebookEditorAccessor$Typings
   /// All selections in this notebook editor.
   ///
   ///  The primary selection (or focused range) is `selections[0]`. When the document has no cells, the primary selection is empty `{ start: 0, end: 0 }`;
-  _i2.List<_i3.NotebookRange> get selections => (_i4.getProperty(
+  _i2.List<_i3.NotebookRange> get selections => ((_i4.getProperty(
         this,
         'selections',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The current visible ranges in the editor (vertically).
-  _i2.List<_i3.NotebookRange> get visibleRanges => (_i4.getProperty(
+  _i2.List<_i3.NotebookRange> get visibleRanges => ((_i4.getProperty(
         this,
         'visibleRanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The column in which this editor shows.
@@ -674,10 +674,10 @@ extension $ModuleWindow$Typings on $ModuleWindow {
       );
 
   /// The currently visible editors or an empty array.
-  _i2.List<_i3.TextEditor> get visibleTextEditors => (_i4.getProperty(
+  _i2.List<_i3.TextEditor> get visibleTextEditors => ((_i4.getProperty(
         this,
         'visibleTextEditors',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// An {@link Event} which fires when the {@link window.activeTextEditoractive editor}
@@ -725,10 +725,10 @@ extension $ModuleWindow$Typings on $ModuleWindow {
           );
 
   /// The currently visible {@link NotebookEditornotebook editors} or an empty array.
-  _i2.List<_i3.NotebookEditor> get visibleNotebookEditors => (_i4.getProperty(
+  _i2.List<_i3.NotebookEditor> get visibleNotebookEditors => ((_i4.getProperty(
         this,
         'visibleNotebookEditors',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// An {@link Event} which fires when the {@link window.visibleNotebookEditorsvisible notebook editors}
@@ -773,10 +773,10 @@ extension $ModuleWindow$Typings on $ModuleWindow {
           );
 
   /// The currently opened terminals or an empty array.
-  _i2.List<_i3.Terminal> get terminals => (_i4.getProperty(
+  _i2.List<_i3.Terminal> get terminals => ((_i4.getProperty(
         this,
         'terminals',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The currently active terminal or `undefined`. The active terminal is the one that

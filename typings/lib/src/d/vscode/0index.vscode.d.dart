@@ -750,10 +750,10 @@ extension Command$Typings on Command {
 
   /// Arguments that the command handler should be
   ///  invoked with.
-  _i2.List<_i2.dynamic>? get arguments => (_i5.getProperty(
+  _i2.List<_i2.dynamic>? get arguments => ((_i5.getProperty(
         this,
         'arguments',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set arguments(_i2.List<_i2.dynamic>? value) {
     _i5.setProperty(
@@ -990,9 +990,13 @@ extension TextDocument$Typings on TextDocument {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function() get save => _i5.getProperty(
-        this,
-        'save',
+  _i2.Future<_i2.dynamic> Function() get save => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'save',
+        ),
+        r'call',
+        [this],
       );
   set offsetAt(_i2.num Function(_i3.Position) value) {
     _i5.setProperty(
@@ -1002,10 +1006,18 @@ extension TextDocument$Typings on TextDocument {
     );
   }
 
-  _i2.num Function(_i3.Position) get offsetAt => _i5.getProperty(
-        this,
-        'offsetAt',
-      );
+  _i2.num Function(_i3.Position) get offsetAt =>
+      (_i3.Position p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'offsetAt',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set positionAt(_i3.Position Function(_i2.num) value) {
     _i5.setProperty(
       this,
@@ -1014,10 +1026,18 @@ extension TextDocument$Typings on TextDocument {
     );
   }
 
-  _i3.Position Function(_i2.num) get positionAt => _i5.getProperty(
-        this,
-        'positionAt',
-      );
+  _i3.Position Function(_i2.num) get positionAt =>
+      (_i2.num p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'positionAt',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set getText(_i2.String Function([_i3.Range?]) value) {
     _i5.setProperty(
       this,
@@ -1026,10 +1046,18 @@ extension TextDocument$Typings on TextDocument {
     );
   }
 
-  _i2.String Function([_i3.Range?]) get getText => _i5.getProperty(
-        this,
-        'getText',
-      );
+  _i2.String Function([_i3.Range?]) get getText =>
+      ([_i3.Range? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'getText',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set getWordRangeAtPosition(
       _i3.Range? Function(
         _i3.Position, [
@@ -1054,10 +1082,22 @@ extension TextDocument$Typings on TextDocument {
   _i3.Range? Function(
     _i3.Position, [
     _i7.RegExp?,
-  ]) get getWordRangeAtPosition => _i5.getProperty(
-        this,
-        'getWordRangeAtPosition',
-      );
+  ]) get getWordRangeAtPosition => (
+        _i3.Position p0, [
+        _i7.RegExp? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'getWordRangeAtPosition',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set validateRange(_i3.Range Function(_i3.Range) value) {
     _i5.setProperty(
       this,
@@ -1066,10 +1106,18 @@ extension TextDocument$Typings on TextDocument {
     );
   }
 
-  _i3.Range Function(_i3.Range) get validateRange => _i5.getProperty(
-        this,
-        'validateRange',
-      );
+  _i3.Range Function(_i3.Range) get validateRange =>
+      (_i3.Range p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'validateRange',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set validatePosition(_i3.Position Function(_i3.Position) value) {
     _i5.setProperty(
       this,
@@ -1078,10 +1126,18 @@ extension TextDocument$Typings on TextDocument {
     );
   }
 
-  _i3.Position Function(_i3.Position) get validatePosition => _i5.getProperty(
-        this,
-        'validatePosition',
-      );
+  _i3.Position Function(_i3.Position) get validatePosition =>
+      (_i3.Position p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'validatePosition',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 
   /// Returns a text line denoted by the line number. Note
   ///  that the returned object is *not* live and changes to the
@@ -1755,10 +1811,10 @@ extension TextEditorSelectionChangeEvent$Typings
       );
 
   /// The new value for the {@link TextEditor.selectionstext editor's selections}.
-  _i2.List<_i3.Selection> get selections => (_i5.getProperty(
+  _i2.List<_i3.Selection> get selections => ((_i5.getProperty(
         this,
         'selections',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The {@link TextEditorSelectionChangeKindchange kind} which has triggered this
@@ -1802,10 +1858,10 @@ extension TextEditorVisibleRangesChangeEvent$Typings
       );
 
   /// The new value for the {@link TextEditor.visibleRangestext editor's visible ranges}.
-  _i2.List<_i3.Range> get visibleRanges => (_i5.getProperty(
+  _i2.List<_i3.Range> get visibleRanges => ((_i5.getProperty(
         this,
         'visibleRanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -2033,9 +2089,13 @@ extension TextEditorDecorationType$Typings on TextEditorDecorationType {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -2158,10 +2218,10 @@ extension NotebookEditorSelectionChangeEvent$Typings
       );
 
   /// The new value for the {@link NotebookEditor.selectionsnotebook editor's selections}.
-  _i2.List<_i3.NotebookRange> get selections => (_i5.getProperty(
+  _i2.List<_i3.NotebookRange> get selections => ((_i5.getProperty(
         this,
         'selections',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -2194,10 +2254,10 @@ extension NotebookEditorVisibleRangesChangeEvent$Typings
       );
 
   /// The new value for the {@link NotebookEditor.visibleRangesnotebook editor's visibleRanges}.
-  _i2.List<_i3.NotebookRange> get visibleRanges => (_i5.getProperty(
+  _i2.List<_i3.NotebookRange> get visibleRanges => ((_i5.getProperty(
         this,
         'visibleRanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -2256,10 +2316,10 @@ extension NotebookDocumentShowOptions$Typings on NotebookDocumentShowOptions {
       );
 
   /// An optional selection to apply for the document in the {@link NotebookEditornotebook editor}.
-  _i2.List<_i3.NotebookRange>? get selections => (_i5.getProperty(
+  _i2.List<_i3.NotebookRange>? get selections => ((_i5.getProperty(
         this,
         'selections',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 }
 
@@ -3406,10 +3466,10 @@ extension TextEditor$Typings on TextEditor {
   }
 
   /// The selections in this text editor. The primary selection is always at index 0.
-  _i2.List<_i3.Selection> get selections => (_i5.getProperty(
+  _i2.List<_i3.Selection> get selections => ((_i5.getProperty(
         this,
         'selections',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set selections(_i2.List<_i3.Selection> value) {
     _i5.setProperty(
@@ -3421,10 +3481,10 @@ extension TextEditor$Typings on TextEditor {
 
   /// The current visible ranges in the editor (vertically).
   /// This accounts only for vertical scrolling, and not for horizontal scrolling.
-  _i2.List<_i3.Range> get visibleRanges => (_i5.getProperty(
+  _i2.List<_i3.Range> get visibleRanges => ((_i5.getProperty(
         this,
         'visibleRanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Text editor options.
@@ -3465,10 +3525,22 @@ extension TextEditor$Typings on TextEditor {
   _i2.Future<_i2.dynamic> Function(
     void Function(_i3.TextEditorEdit), [
     _i2.dynamic,
-  ]) get edit => _i5.getProperty(
-        this,
-        'edit',
-      );
+  ]) get edit => (
+        void Function(_i3.TextEditorEdit) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'edit',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set insertSnippet(
       _i2.Future<_i2.dynamic> Function(
         _i3.SnippetString, [
@@ -3486,10 +3558,24 @@ extension TextEditor$Typings on TextEditor {
     _i3.SnippetString, [
     _i2.Object?,
     _i2.dynamic,
-  ]) get insertSnippet => _i5.getProperty(
-        this,
-        'insertSnippet',
-      );
+  ]) get insertSnippet => (
+        _i3.SnippetString p0, [
+        _i2.Object? p1,
+        _i2.dynamic p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'insertSnippet',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set setDecorations(
       void Function(
         _i3.TextEditorDecorationType,
@@ -3505,10 +3591,22 @@ extension TextEditor$Typings on TextEditor {
   void Function(
     _i3.TextEditorDecorationType,
     _i2.Object,
-  ) get setDecorations => _i5.getProperty(
-        this,
-        'setDecorations',
-      );
+  ) get setDecorations => (
+        _i3.TextEditorDecorationType p0,
+        _i2.Object p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'setDecorations',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set revealRange(
       void Function(
         _i3.Range, [
@@ -3524,10 +3622,22 @@ extension TextEditor$Typings on TextEditor {
   void Function(
     _i3.Range, [
     _i3.TextEditorRevealType?,
-  ]) get revealRange => _i5.getProperty(
-        this,
-        'revealRange',
-      );
+  ]) get revealRange => (
+        _i3.Range p0, [
+        _i3.TextEditorRevealType? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'revealRange',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set show(void Function([_i3.ViewColumn?]) value) {
     _i5.setProperty(
       this,
@@ -3536,10 +3646,18 @@ extension TextEditor$Typings on TextEditor {
     );
   }
 
-  void Function([_i3.ViewColumn?]) get show => _i5.getProperty(
-        this,
-        'show',
-      );
+  void Function([_i3.ViewColumn?]) get show =>
+      ([_i3.ViewColumn? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'show',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set hide(void Function() value) {
     _i5.setProperty(
       this,
@@ -3548,9 +3666,13 @@ extension TextEditor$Typings on TextEditor {
     );
   }
 
-  void Function() get hide => _i5.getProperty(
-        this,
-        'hide',
+  void Function() get hide => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'hide',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -3605,10 +3727,22 @@ extension TextEditorEdit$Typings on TextEditorEdit {
   void Function(
     _i2.Object,
     _i2.String,
-  ) get replace => _i5.getProperty(
-        this,
-        'replace',
-      );
+  ) get replace => (
+        _i2.Object p0,
+        _i2.String p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'replace',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set insert(
       void Function(
         _i3.Position,
@@ -3624,10 +3758,22 @@ extension TextEditorEdit$Typings on TextEditorEdit {
   void Function(
     _i3.Position,
     _i2.String,
-  ) get insert => _i5.getProperty(
-        this,
-        'insert',
-      );
+  ) get insert => (
+        _i3.Position p0,
+        _i2.String p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'insert',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set delete(void Function(_i2.Object) value) {
     _i5.setProperty(
       this,
@@ -3636,9 +3782,16 @@ extension TextEditorEdit$Typings on TextEditorEdit {
     );
   }
 
-  void Function(_i2.Object) get delete => _i5.getProperty(
-        this,
-        'delete',
+  void Function(_i2.Object) get delete => (_i2.Object p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'delete',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set setEndOfLine(void Function(_i3.EndOfLine) value) {
     _i5.setProperty(
@@ -3648,10 +3801,18 @@ extension TextEditorEdit$Typings on TextEditorEdit {
     );
   }
 
-  void Function(_i3.EndOfLine) get setEndOfLine => _i5.getProperty(
-        this,
-        'setEndOfLine',
-      );
+  void Function(_i3.EndOfLine) get setEndOfLine =>
+      (_i3.EndOfLine p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'setEndOfLine',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 @_i1.JS()
@@ -4091,9 +4252,13 @@ class IInline7 {}
 
 extension IInline7$Typings on IInline7 {
   /// Function to clean up resources.
-  _i2.dynamic Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  _i2.dynamic Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
   set dispose(_i2.dynamic Function() value) {
     _i5.setProperty(
@@ -4367,10 +4532,22 @@ extension TextDocumentContentProvider$Typings on TextDocumentContentProvider {
   _i4.FutureOr<_i2.String> Function(
     _i3.Uri,
     _i3.CancellationToken,
-  ) get provideTextDocumentContent => _i5.getProperty(
-        this,
-        'provideTextDocumentContent',
-      );
+  ) get provideTextDocumentContent => (
+        _i3.Uri p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideTextDocumentContent',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 @_i1.JS()
@@ -4564,10 +4741,10 @@ extension QuickPickItem$Typings on QuickPickItem {
   ///  the {@link window.showQuickPick showQuickPick()} API.
   ///
   ///  Note: this property is ignored when {@link QuickPickItem.kind kind} is set to {@link QuickPickItemKind.Separator}
-  _i2.List<_i3.QuickInputButton>? get buttons => (_i5.getProperty(
+  _i2.List<_i3.QuickInputButton>? get buttons => ((_i5.getProperty(
         this,
         'buttons',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set buttons(_i2.List<_i3.QuickInputButton>? value) {
     _i5.setProperty(
@@ -4702,10 +4879,18 @@ extension QuickPickOptions$Typings on QuickPickOptions {
     );
   }
 
-  _i2.dynamic Function(_i2.Object) get onDidSelectItem => _i5.getProperty(
-        this,
-        'onDidSelectItem',
-      );
+  _i2.dynamic Function(_i2.Object) get onDidSelectItem =>
+      (_i2.Object p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'onDidSelectItem',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// Options to configure the behaviour of the {@link WorkspaceFolderworkspace folder} pick UI.
@@ -5292,10 +5477,18 @@ extension InputBoxOptions$Typings on InputBoxOptions {
     );
   }
 
-  _i2.dynamic Function(_i2.String) get validateInput => _i5.getProperty(
-        this,
-        'validateInput',
-      );
+  _i2.dynamic Function(_i2.String) get validateInput =>
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'validateInput',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// A relative pattern is a helper to construct glob patterns that are matched
@@ -5650,10 +5843,10 @@ extension CodeActionContext$Typings on CodeActionContext {
       ));
 
   /// An array of diagnostics.
-  _i2.List<_i3.Diagnostic> get diagnostics => (_i5.getProperty(
+  _i2.List<_i3.Diagnostic> get diagnostics => ((_i5.getProperty(
         this,
         'diagnostics',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Requested kind of actions to return.
@@ -5733,10 +5926,10 @@ extension CodeAction$Typings on CodeAction {
   }
 
   /// {@link Diagnostic Diagnostics} that this code action resolves.
-  _i2.List<_i3.Diagnostic> get diagnostics => (_i5.getProperty(
+  _i2.List<_i3.Diagnostic> get diagnostics => ((_i5.getProperty(
         this,
         'diagnostics',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set diagnostics(_i2.List<_i3.Diagnostic> value) {
     _i5.setProperty(
@@ -5910,10 +6103,26 @@ extension CodeActionProvider$Typings<T extends _i3.CodeAction>
     _i2.Object,
     _i3.CodeActionContext,
     _i3.CancellationToken,
-  ) get provideCodeActions => _i5.getProperty(
-        this,
-        'provideCodeActions',
-      );
+  ) get provideCodeActions => (
+        _i3.TextDocument p0,
+        _i2.Object p1,
+        _i3.CodeActionContext p2,
+        _i3.CancellationToken p3,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideCodeActions',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
   set resolveCodeAction(
       _i4.FutureOr<T> Function(
         T,
@@ -5936,10 +6145,22 @@ extension CodeActionProvider$Typings<T extends _i3.CodeAction>
   _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
-  ) get resolveCodeAction => _i5.getProperty(
-        this,
-        'resolveCodeAction',
-      );
+  ) get resolveCodeAction => (
+        T p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveCodeAction',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 @_i1.JS()
@@ -5996,10 +6217,11 @@ extension CodeActionProviderMetadata$Typings on CodeActionProviderMetadata {
   /// To avoid unnecessary computation, every `CodeActionProvider` should list use `providedCodeActionKinds`. The
   /// list of kinds may either be generic, such as `[CodeActionKind.Refactor]`, or list out every kind provided,
   /// such as `[CodeActionKind.Refactor.Extract.append('function'), CodeActionKind.Refactor.Extract.append('constant'), ...]`.
-  _i2.List<_i3.CodeActionKind>? get providedCodeActionKinds => (_i5.getProperty(
+  _i2.List<_i3.CodeActionKind>? get providedCodeActionKinds =>
+      ((_i5.getProperty(
         this,
         'providedCodeActionKinds',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 
   /// Static documentation for a class of code actions.
@@ -6165,10 +6387,22 @@ extension CodeLensProvider$Typings<T extends _i3.CodeLens>
   _i4.FutureOr<_i2.List<T>> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
-  ) get provideCodeLenses => _i5.getProperty(
-        this,
-        'provideCodeLenses',
-      );
+  ) get provideCodeLenses => (
+        _i3.TextDocument p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideCodeLenses',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set resolveCodeLens(
       _i4.FutureOr<T> Function(
         T,
@@ -6191,10 +6425,22 @@ extension CodeLensProvider$Typings<T extends _i3.CodeLens>
   _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
-  ) get resolveCodeLens => _i5.getProperty(
-        this,
-        'resolveCodeLens',
-      );
+  ) get resolveCodeLens => (
+        T p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveCodeLens',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// The definition provider interface defines the contract between extensions and
@@ -6254,10 +6500,24 @@ extension DefinitionProvider$Typings on DefinitionProvider {
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get provideDefinition => _i5.getProperty(
-        this,
-        'provideDefinition',
-      );
+  ) get provideDefinition => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDefinition',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// The implementation provider interface defines the contract between extensions and
@@ -6317,10 +6577,24 @@ extension ImplementationProvider$Typings on ImplementationProvider {
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get provideImplementation => _i5.getProperty(
-        this,
-        'provideImplementation',
-      );
+  ) get provideImplementation => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideImplementation',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// The type definition provider defines the contract between extensions and
@@ -6380,10 +6654,24 @@ extension TypeDefinitionProvider$Typings on TypeDefinitionProvider {
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get provideTypeDefinition => _i5.getProperty(
-        this,
-        'provideTypeDefinition',
-      );
+  ) get provideTypeDefinition => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideTypeDefinition',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// The declaration provider interface defines the contract between extensions and
@@ -6442,10 +6730,24 @@ extension DeclarationProvider$Typings on DeclarationProvider {
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get provideDeclaration => _i5.getProperty(
-        this,
-        'provideDeclaration',
-      );
+  ) get provideDeclaration => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDeclaration',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 @_i1.JS()
@@ -6455,10 +6757,10 @@ class IInline13 {}
 
 extension IInline13$Typings on IInline13 {
   /// A set of commend ids that are allowed to be executed by this markdown string.
-  _i2.List<_i2.String> get enabledCommands => (_i5.getProperty(
+  _i2.List<_i2.String> get enabledCommands => ((_i5.getProperty(
         this,
         'enabledCommands',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -6758,10 +7060,24 @@ extension HoverProvider$Typings on HoverProvider {
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get provideHover => _i5.getProperty(
-        this,
-        'provideHover',
-      );
+  ) get provideHover => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideHover',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// An EvaluatableExpression represents an expression in a document that can be evaluated by an active debugger or runtime.
@@ -6861,10 +7177,24 @@ extension EvaluatableExpressionProvider$Typings
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get provideEvaluatableExpression => _i5.getProperty(
-        this,
-        'provideEvaluatableExpression',
-      );
+  ) get provideEvaluatableExpression => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideEvaluatableExpression',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// Provide inline value as text.
@@ -7110,10 +7440,26 @@ extension InlineValuesProvider$Typings on InlineValuesProvider {
     _i3.Range,
     _i3.InlineValueContext,
     _i3.CancellationToken,
-  ) get provideInlineValues => _i5.getProperty(
-        this,
-        'provideInlineValues',
-      );
+  ) get provideInlineValues => (
+        _i3.TextDocument p0,
+        _i3.Range p1,
+        _i3.InlineValueContext p2,
+        _i3.CancellationToken p3,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideInlineValues',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
 }
 
 /// A document highlight is a range inside a text document which deserves
@@ -7226,10 +7572,24 @@ extension DocumentHighlightProvider$Typings on DocumentHighlightProvider {
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get provideDocumentHighlights => _i5.getProperty(
-        this,
-        'provideDocumentHighlights',
-      );
+  ) get provideDocumentHighlights => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentHighlights',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// Represents information about programming constructs like variables, classes,
@@ -7323,10 +7683,10 @@ extension SymbolInformation$Typings on SymbolInformation {
   }
 
   /// Tags for this symbol.
-  _i2.List<_i3.SymbolTag> get tags => (_i5.getProperty(
+  _i2.List<_i3.SymbolTag> get tags => ((_i5.getProperty(
         this,
         'tags',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast()
           .map((i) => _i3.SymbolTag.values.byName(i))
           .toList();
@@ -7423,10 +7783,10 @@ extension DocumentSymbol$Typings on DocumentSymbol {
   }
 
   /// Tags for this symbol.
-  _i2.List<_i3.SymbolTag> get tags => (_i5.getProperty(
+  _i2.List<_i3.SymbolTag> get tags => ((_i5.getProperty(
         this,
         'tags',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast()
           .map((i) => _i3.SymbolTag.values.byName(i))
           .toList();
@@ -7466,10 +7826,10 @@ extension DocumentSymbol$Typings on DocumentSymbol {
   }
 
   /// Children of this symbol, e.g. properties of a class.
-  _i2.List<_i3.DocumentSymbol> get children => (_i5.getProperty(
+  _i2.List<_i3.DocumentSymbol> get children => ((_i5.getProperty(
         this,
         'children',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set children(_i2.List<_i3.DocumentSymbol> value) {
     _i5.setProperty(
@@ -7530,10 +7890,22 @@ extension DocumentSymbolProvider$Typings on DocumentSymbolProvider {
   _i4.FutureOr<_i2.Object> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
-  ) get provideDocumentSymbols => _i5.getProperty(
-        this,
-        'provideDocumentSymbols',
-      );
+  ) get provideDocumentSymbols => (
+        _i3.TextDocument p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentSymbols',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Metadata about a document symbol provider.
@@ -7632,10 +8004,22 @@ extension WorkspaceSymbolProvider$Typings<T extends _i3.SymbolInformation>
   _i4.FutureOr<_i2.List<T>> Function(
     _i2.String,
     _i3.CancellationToken,
-  ) get provideWorkspaceSymbols => _i5.getProperty(
-        this,
-        'provideWorkspaceSymbols',
-      );
+  ) get provideWorkspaceSymbols => (
+        _i2.String p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideWorkspaceSymbols',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set resolveWorkspaceSymbol(
       _i4.FutureOr<T> Function(
         T,
@@ -7658,10 +8042,22 @@ extension WorkspaceSymbolProvider$Typings<T extends _i3.SymbolInformation>
   _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
-  ) get resolveWorkspaceSymbol => _i5.getProperty(
-        this,
-        'resolveWorkspaceSymbol',
-      );
+  ) get resolveWorkspaceSymbol => (
+        T p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveWorkspaceSymbol',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Value-object that contains additional information when
@@ -7747,10 +8143,26 @@ extension ReferenceProvider$Typings on ReferenceProvider {
     _i3.Position,
     _i3.ReferenceContext,
     _i3.CancellationToken,
-  ) get provideReferences => _i5.getProperty(
-        this,
-        'provideReferences',
-      );
+  ) get provideReferences => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.ReferenceContext p2,
+        _i3.CancellationToken p3,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideReferences',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
 }
 
 /// A text edit represents edits that should be applied
@@ -8042,10 +8454,10 @@ extension NotebookEdit$Typings on NotebookEdit {
   }
 
   /// New cells being inserted. May be empty.
-  _i2.List<_i3.NotebookCellData> get newCells => (_i5.getProperty(
+  _i2.List<_i3.NotebookCellData> get newCells => ((_i5.getProperty(
         this,
         'newCells',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set newCells(_i2.List<_i3.NotebookCellData> value) {
     _i5.setProperty(
@@ -8523,11 +8935,11 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
   ///
   ///  @param uri A resource identifier.
   ///  @returns An array of text edits.
-  _i2.List<_i3.TextEdit> get(_i3.Uri uri) => (_i5.callMethod(
+  _i2.List<_i3.TextEdit> get(_i3.Uri uri) => ((_i5.callMethod(
         this,
         'get',
         [uri],
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Create a regular file.
@@ -8607,11 +9019,11 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
       (
         _i3.Uri,
         _i2.List<_i3.TextEdit>,
-      )> entries() => (_i5.callMethod(
+      )> entries() => ((_i5.callMethod(
         this,
         'entries',
         [],
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -8854,10 +9266,26 @@ extension RenameProvider$Typings on RenameProvider {
     _i3.Position,
     _i2.String,
     _i3.CancellationToken,
-  ) get provideRenameEdits => _i5.getProperty(
-        this,
-        'provideRenameEdits',
-      );
+  ) get provideRenameEdits => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i2.String p2,
+        _i3.CancellationToken p3,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideRenameEdits',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
   set prepareRename(
       _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
@@ -8884,10 +9312,24 @@ extension RenameProvider$Typings on RenameProvider {
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get prepareRename => _i5.getProperty(
-        this,
-        'prepareRename',
-      );
+  ) get prepareRename => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'prepareRename',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// A semantic tokens legend contains the needed information to decipher
@@ -8915,17 +9357,17 @@ _i2.Object get _declaredSemanticTokensLegend => _i5.getProperty(
 
 extension SemanticTokensLegend$Typings on SemanticTokensLegend {
   /// The possible token types.
-  _i2.List<_i2.String> get tokenTypes => (_i5.getProperty(
+  _i2.List<_i2.String> get tokenTypes => ((_i5.getProperty(
         this,
         'tokenTypes',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The possible token modifiers.
-  _i2.List<_i2.String> get tokenModifiers => (_i5.getProperty(
+  _i2.List<_i2.String> get tokenModifiers => ((_i5.getProperty(
         this,
         'tokenModifiers',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -9106,10 +9548,10 @@ extension SemanticTokensEdits$Typings on SemanticTokensEdits {
 
   /// The edits to the tokens data.
   /// All edits refer to the initial data state.
-  _i2.List<_i3.SemanticTokensEdit> get edits => (_i5.getProperty(
+  _i2.List<_i3.SemanticTokensEdit> get edits => ((_i5.getProperty(
         this,
         'edits',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -9248,10 +9690,22 @@ extension DocumentSemanticTokensProvider$Typings
   _i4.FutureOr<_i3.SemanticTokens> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
-  ) get provideDocumentSemanticTokens => _i5.getProperty(
-        this,
-        'provideDocumentSemanticTokens',
-      );
+  ) get provideDocumentSemanticTokens => (
+        _i3.TextDocument p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentSemanticTokens',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set provideDocumentSemanticTokensEdits(
       _i4.FutureOr<_i2.Object> Function(
         _i3.TextDocument,
@@ -9278,10 +9732,24 @@ extension DocumentSemanticTokensProvider$Typings
     _i3.TextDocument,
     _i2.String,
     _i3.CancellationToken,
-  ) get provideDocumentSemanticTokensEdits => _i5.getProperty(
-        this,
-        'provideDocumentSemanticTokensEdits',
-      );
+  ) get provideDocumentSemanticTokensEdits => (
+        _i3.TextDocument p0,
+        _i2.String p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentSemanticTokensEdits',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// The document range semantic tokens provider interface defines the contract between extensions and
@@ -9344,10 +9812,24 @@ extension DocumentRangeSemanticTokensProvider$Typings
     _i3.TextDocument,
     _i3.Range,
     _i3.CancellationToken,
-  ) get provideDocumentRangeSemanticTokens => _i5.getProperty(
-        this,
-        'provideDocumentRangeSemanticTokens',
-      );
+  ) get provideDocumentRangeSemanticTokens => (
+        _i3.TextDocument p0,
+        _i3.Range p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentRangeSemanticTokens',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// Value-object describing what options formatting should use.
@@ -9472,10 +9954,24 @@ extension DocumentFormattingEditProvider$Typings
     _i3.TextDocument,
     _i3.FormattingOptions,
     _i3.CancellationToken,
-  ) get provideDocumentFormattingEdits => _i5.getProperty(
-        this,
-        'provideDocumentFormattingEdits',
-      );
+  ) get provideDocumentFormattingEdits => (
+        _i3.TextDocument p0,
+        _i3.FormattingOptions p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentFormattingEdits',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// The document formatting provider interface defines the contract between extensions and
@@ -9571,10 +10067,26 @@ extension DocumentRangeFormattingEditProvider$Typings
     _i3.Range,
     _i3.FormattingOptions,
     _i3.CancellationToken,
-  ) get provideDocumentRangeFormattingEdits => _i5.getProperty(
-        this,
-        'provideDocumentRangeFormattingEdits',
-      );
+  ) get provideDocumentRangeFormattingEdits => (
+        _i3.TextDocument p0,
+        _i3.Range p1,
+        _i3.FormattingOptions p2,
+        _i3.CancellationToken p3,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentRangeFormattingEdits',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
   set provideDocumentRangesFormattingEdits(
       _i4.FutureOr<_i2.List<_i3.TextEdit>> Function(
         _i3.TextDocument,
@@ -9605,10 +10117,26 @@ extension DocumentRangeFormattingEditProvider$Typings
     _i2.List<_i3.Range>,
     _i3.FormattingOptions,
     _i3.CancellationToken,
-  ) get provideDocumentRangesFormattingEdits => _i5.getProperty(
-        this,
-        'provideDocumentRangesFormattingEdits',
-      );
+  ) get provideDocumentRangesFormattingEdits => (
+        _i3.TextDocument p0,
+        _i2.List<_i3.Range> p1,
+        _i3.FormattingOptions p2,
+        _i3.CancellationToken p3,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentRangesFormattingEdits',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
 }
 
 /// The document formatting provider interface defines the contract between extensions and
@@ -9683,10 +10211,28 @@ extension OnTypeFormattingEditProvider$Typings on OnTypeFormattingEditProvider {
     _i2.String,
     _i3.FormattingOptions,
     _i3.CancellationToken,
-  ) get provideOnTypeFormattingEdits => _i5.getProperty(
-        this,
-        'provideOnTypeFormattingEdits',
-      );
+  ) get provideOnTypeFormattingEdits => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i2.String p2,
+        _i3.FormattingOptions p3,
+        _i3.CancellationToken p4,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideOnTypeFormattingEdits',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+              p4,
+            ],
+          );
 }
 
 /// Represents a parameter of a callable-signature. A parameter can
@@ -9799,10 +10345,10 @@ extension SignatureInformation$Typings on SignatureInformation {
   }
 
   /// The parameters of this signature.
-  _i2.List<_i3.ParameterInformation> get parameters => (_i5.getProperty(
+  _i2.List<_i3.ParameterInformation> get parameters => ((_i5.getProperty(
         this,
         'parameters',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set parameters(_i2.List<_i3.ParameterInformation> value) {
     _i5.setProperty(
@@ -9837,10 +10383,10 @@ class SignatureHelp {}
 
 extension SignatureHelp$Typings on SignatureHelp {
   /// One or more signatures.
-  _i2.List<_i3.SignatureInformation> get signatures => (_i5.getProperty(
+  _i2.List<_i3.SignatureInformation> get signatures => ((_i5.getProperty(
         this,
         'signatures',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set signatures(_i2.List<_i3.SignatureInformation> value) {
     _i5.setProperty(
@@ -10003,10 +10549,26 @@ extension SignatureHelpProvider$Typings on SignatureHelpProvider {
     _i3.Position,
     _i3.CancellationToken,
     _i3.SignatureHelpContext,
-  ) get provideSignatureHelp => _i5.getProperty(
-        this,
-        'provideSignatureHelp',
-      );
+  ) get provideSignatureHelp => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+        _i3.SignatureHelpContext p3,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideSignatureHelp',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
 }
 
 /// Metadata about a registered {@linkcode SignatureHelpProvider}.
@@ -10032,20 +10594,20 @@ class SignatureHelpProviderMetadata {
 extension SignatureHelpProviderMetadata$Typings
     on SignatureHelpProviderMetadata {
   /// List of characters that trigger signature help.
-  _i2.List<_i2.String> get triggerCharacters => (_i5.getProperty(
+  _i2.List<_i2.String> get triggerCharacters => ((_i5.getProperty(
         this,
         'triggerCharacters',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// List of characters that re-trigger signature help.
   ///
   /// These trigger characters are only active when signature help is already showing. All trigger characters
   /// are also counted as re-trigger characters.
-  _i2.List<_i2.String> get retriggerCharacters => (_i5.getProperty(
+  _i2.List<_i2.String> get retriggerCharacters => ((_i5.getProperty(
         this,
         'retriggerCharacters',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -10213,10 +10775,10 @@ extension CompletionItem$Typings on CompletionItem {
   }
 
   /// Tags for this completion item.
-  _i2.List<_i3.CompletionItemTag> get tags => (_i5.getProperty(
+  _i2.List<_i3.CompletionItemTag> get tags => ((_i5.getProperty(
         this,
         'tags',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast()
           .map((i) => _i3.CompletionItemTag.values.byName(i))
           .toList();
@@ -10349,10 +10911,10 @@ extension CompletionItem$Typings on CompletionItem {
   /// An optional set of characters that when pressed while this completion is active will accept it first and
   ///  then type that character. *Note* that all commit characters should have `length=1` and that superfluous
   ///  characters will be ignored.
-  _i2.List<_i2.String> get commitCharacters => (_i5.getProperty(
+  _i2.List<_i2.String> get commitCharacters => ((_i5.getProperty(
         this,
         'commitCharacters',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set commitCharacters(_i2.List<_i2.String> value) {
     _i5.setProperty(
@@ -10400,10 +10962,10 @@ extension CompletionItem$Typings on CompletionItem {
   /// An optional array of additional {@link TextEdit text edits} that are applied when
   ///  selecting this completion. Edits must not overlap with the main {@link CompletionItem.textEdit edit}
   ///  nor with themselves.
-  _i2.List<_i3.TextEdit> get additionalTextEdits => (_i5.getProperty(
+  _i2.List<_i3.TextEdit> get additionalTextEdits => ((_i5.getProperty(
         this,
         'additionalTextEdits',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set additionalTextEdits(_i2.List<_i3.TextEdit> value) {
     _i5.setProperty(
@@ -10469,10 +11031,10 @@ extension CompletionList$Typings<T extends _i3.CompletionItem>
   }
 
   /// The completion items.
-  _i2.List<T> get items => (_i5.getProperty(
+  _i2.List<T> get items => ((_i5.getProperty(
         this,
         'items',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set items(_i2.List<T> value) {
     _i5.setProperty(
@@ -10615,10 +11177,26 @@ extension CompletionItemProvider$Typings<T extends _i3.CompletionItem>
     _i3.Position,
     _i3.CancellationToken,
     _i3.CompletionContext,
-  ) get provideCompletionItems => _i5.getProperty(
-        this,
-        'provideCompletionItems',
-      );
+  ) get provideCompletionItems => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+        _i3.CompletionContext p3,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideCompletionItems',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
   set resolveCompletionItem(
       _i4.FutureOr<T> Function(
         T,
@@ -10641,10 +11219,22 @@ extension CompletionItemProvider$Typings<T extends _i3.CompletionItem>
   _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
-  ) get resolveCompletionItem => _i5.getProperty(
-        this,
-        'resolveCompletionItem',
-      );
+  ) get resolveCompletionItem => (
+        T p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveCompletionItem',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// The inline completion item provider interface defines the contract between extensions and
@@ -10714,10 +11304,26 @@ extension InlineCompletionItemProvider$Typings on InlineCompletionItemProvider {
     _i3.Position,
     _i3.InlineCompletionContext,
     _i3.CancellationToken,
-  ) get provideInlineCompletionItems => _i5.getProperty(
-        this,
-        'provideInlineCompletionItems',
-      );
+  ) get provideInlineCompletionItems => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.InlineCompletionContext p2,
+        _i3.CancellationToken p3,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideInlineCompletionItems',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
 }
 
 /// Represents a collection of {@link InlineCompletionIteminline completion items} to be presented
@@ -10739,10 +11345,10 @@ _i2.Object get _declaredInlineCompletionList => _i5.getProperty(
 
 extension InlineCompletionList$Typings on InlineCompletionList {
   /// The inline completion items.
-  _i2.List<_i3.InlineCompletionItem> get items => (_i5.getProperty(
+  _i2.List<_i3.InlineCompletionItem> get items => ((_i5.getProperty(
         this,
         'items',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set items(_i2.List<_i3.InlineCompletionItem> value) {
     _i5.setProperty(
@@ -11051,10 +11657,22 @@ extension DocumentLinkProvider$Typings<T extends _i3.DocumentLink>
   _i4.FutureOr<_i2.List<T>> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
-  ) get provideDocumentLinks => _i5.getProperty(
-        this,
-        'provideDocumentLinks',
-      );
+  ) get provideDocumentLinks => (
+        _i3.TextDocument p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentLinks',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set resolveDocumentLink(
       _i4.FutureOr<T> Function(
         T,
@@ -11077,10 +11695,22 @@ extension DocumentLinkProvider$Typings<T extends _i3.DocumentLink>
   _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
-  ) get resolveDocumentLink => _i5.getProperty(
-        this,
-        'resolveDocumentLink',
-      );
+  ) get resolveDocumentLink => (
+        T p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveDocumentLink',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Represents a color in RGBA space.
@@ -11238,10 +11868,10 @@ extension ColorPresentation$Typings on ColorPresentation {
 
   /// An optional array of additional {@link TextEdit text edits} that are applied when
   ///  selecting this color presentation. Edits must not overlap with the main {@link ColorPresentation.textEdit edit} nor with themselves.
-  _i2.List<_i3.TextEdit> get additionalTextEdits => (_i5.getProperty(
+  _i2.List<_i3.TextEdit> get additionalTextEdits => ((_i5.getProperty(
         this,
         'additionalTextEdits',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set additionalTextEdits(_i2.List<_i3.TextEdit> value) {
     _i5.setProperty(
@@ -11342,10 +11972,22 @@ extension DocumentColorProvider$Typings on DocumentColorProvider {
   _i4.FutureOr<_i2.List<_i3.ColorInformation>> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
-  ) get provideDocumentColors => _i5.getProperty(
-        this,
-        'provideDocumentColors',
-      );
+  ) get provideDocumentColors => (
+        _i3.TextDocument p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentColors',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set provideColorPresentations(
       _i4.FutureOr<_i2.List<_i3.ColorPresentation>> Function(
         _i3.Color,
@@ -11372,10 +12014,24 @@ extension DocumentColorProvider$Typings on DocumentColorProvider {
     _i3.Color,
     _i2.dynamic,
     _i3.CancellationToken,
-  ) get provideColorPresentations => _i5.getProperty(
-        this,
-        'provideColorPresentations',
-      );
+  ) get provideColorPresentations => (
+        _i3.Color p0,
+        _i2.dynamic p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideColorPresentations',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// An inlay hint label part allows for interactive and composite labels of inlay hints.
@@ -11555,10 +12211,10 @@ extension InlayHint$Typings on InlayHint {
   ///
   ///  *Note* that this property can be set late during
   ///  {@link InlayHintsProvider.resolveInlayHint resolving} of inlay hints.
-  _i2.List<_i3.TextEdit> get textEdits => (_i5.getProperty(
+  _i2.List<_i3.TextEdit> get textEdits => ((_i5.getProperty(
         this,
         'textEdits',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set textEdits(_i2.List<_i3.TextEdit> value) {
     _i5.setProperty(
@@ -11691,10 +12347,24 @@ extension InlayHintsProvider$Typings<T extends _i3.InlayHint>
     _i3.TextDocument,
     _i3.Range,
     _i3.CancellationToken,
-  ) get provideInlayHints => _i5.getProperty(
-        this,
-        'provideInlayHints',
-      );
+  ) get provideInlayHints => (
+        _i3.TextDocument p0,
+        _i3.Range p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideInlayHints',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set resolveInlayHint(
       _i4.FutureOr<T> Function(
         T,
@@ -11717,10 +12387,22 @@ extension InlayHintsProvider$Typings<T extends _i3.InlayHint>
   _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
-  ) get resolveInlayHint => _i5.getProperty(
-        this,
-        'resolveInlayHint',
-      );
+  ) get resolveInlayHint => (
+        T p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveInlayHint',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// A line based folding range. To be valid, start and end line must be bigger than zero and smaller than the number of lines in the document.
@@ -11882,10 +12564,24 @@ extension FoldingRangeProvider$Typings on FoldingRangeProvider {
     _i3.TextDocument,
     _i3.FoldingContext,
     _i3.CancellationToken,
-  ) get provideFoldingRanges => _i5.getProperty(
-        this,
-        'provideFoldingRanges',
-      );
+  ) get provideFoldingRanges => (
+        _i3.TextDocument p0,
+        _i3.FoldingContext p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideFoldingRanges',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// A selection range represents a part of a selection hierarchy. A selection range
@@ -11995,10 +12691,24 @@ extension SelectionRangeProvider$Typings on SelectionRangeProvider {
     _i3.TextDocument,
     _i2.List<_i3.Position>,
     _i3.CancellationToken,
-  ) get provideSelectionRanges => _i5.getProperty(
-        this,
-        'provideSelectionRanges',
-      );
+  ) get provideSelectionRanges => (
+        _i3.TextDocument p0,
+        _i2.List<_i3.Position> p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideSelectionRanges',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// Represents programming constructs like functions or constructors in the context
@@ -12060,10 +12770,10 @@ extension CallHierarchyItem$Typings on CallHierarchyItem {
   }
 
   /// Tags for this item.
-  _i2.List<_i3.SymbolTag> get tags => (_i5.getProperty(
+  _i2.List<_i3.SymbolTag> get tags => ((_i5.getProperty(
         this,
         'tags',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast()
           .map((i) => _i3.SymbolTag.values.byName(i))
           .toList();
@@ -12167,10 +12877,10 @@ extension CallHierarchyIncomingCall$Typings on CallHierarchyIncomingCall {
 
   /// The range at which at which the calls appears. This is relative to the caller
   ///  denoted by {@linkcode CallHierarchyIncomingCall.from this.from}.
-  _i2.List<_i3.Range> get fromRanges => (_i5.getProperty(
+  _i2.List<_i3.Range> get fromRanges => ((_i5.getProperty(
         this,
         'fromRanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set fromRanges(_i2.List<_i3.Range> value) {
     _i5.setProperty(
@@ -12220,10 +12930,10 @@ extension CallHierarchyOutgoingCall$Typings on CallHierarchyOutgoingCall {
   /// The range at which this item is called. This is the range relative to the caller, e.g the item
   ///  passed to {@linkcode CallHierarchyProvider.provideCallHierarchyOutgoingCalls provideCallHierarchyOutgoingCalls}
   ///  and not {@linkcode CallHierarchyOutgoingCall.to this.to}.
-  _i2.List<_i3.Range> get fromRanges => (_i5.getProperty(
+  _i2.List<_i3.Range> get fromRanges => ((_i5.getProperty(
         this,
         'fromRanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set fromRanges(_i2.List<_i3.Range> value) {
     _i5.setProperty(
@@ -12329,10 +13039,24 @@ extension CallHierarchyProvider$Typings on CallHierarchyProvider {
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get prepareCallHierarchy => _i5.getProperty(
-        this,
-        'prepareCallHierarchy',
-      );
+  ) get prepareCallHierarchy => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'prepareCallHierarchy',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set provideCallHierarchyIncomingCalls(
       _i4.FutureOr<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
         _i3.CallHierarchyItem,
@@ -12355,10 +13079,22 @@ extension CallHierarchyProvider$Typings on CallHierarchyProvider {
   _i4.FutureOr<_i2.List<_i3.CallHierarchyIncomingCall>> Function(
     _i3.CallHierarchyItem,
     _i3.CancellationToken,
-  ) get provideCallHierarchyIncomingCalls => _i5.getProperty(
-        this,
-        'provideCallHierarchyIncomingCalls',
-      );
+  ) get provideCallHierarchyIncomingCalls => (
+        _i3.CallHierarchyItem p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideCallHierarchyIncomingCalls',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set provideCallHierarchyOutgoingCalls(
       _i4.FutureOr<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
         _i3.CallHierarchyItem,
@@ -12381,10 +13117,22 @@ extension CallHierarchyProvider$Typings on CallHierarchyProvider {
   _i4.FutureOr<_i2.List<_i3.CallHierarchyOutgoingCall>> Function(
     _i3.CallHierarchyItem,
     _i3.CancellationToken,
-  ) get provideCallHierarchyOutgoingCalls => _i5.getProperty(
-        this,
-        'provideCallHierarchyOutgoingCalls',
-      );
+  ) get provideCallHierarchyOutgoingCalls => (
+        _i3.CallHierarchyItem p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideCallHierarchyOutgoingCalls',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Represents an item of a type hierarchy, like a class or an interface.
@@ -12603,10 +13351,24 @@ extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get prepareTypeHierarchy => _i5.getProperty(
-        this,
-        'prepareTypeHierarchy',
-      );
+  ) get prepareTypeHierarchy => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'prepareTypeHierarchy',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set provideTypeHierarchySupertypes(
       _i4.FutureOr<_i2.List<_i3.TypeHierarchyItem>> Function(
         _i3.TypeHierarchyItem,
@@ -12629,10 +13391,22 @@ extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
   _i4.FutureOr<_i2.List<_i3.TypeHierarchyItem>> Function(
     _i3.TypeHierarchyItem,
     _i3.CancellationToken,
-  ) get provideTypeHierarchySupertypes => _i5.getProperty(
-        this,
-        'provideTypeHierarchySupertypes',
-      );
+  ) get provideTypeHierarchySupertypes => (
+        _i3.TypeHierarchyItem p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideTypeHierarchySupertypes',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set provideTypeHierarchySubtypes(
       _i4.FutureOr<_i2.List<_i3.TypeHierarchyItem>> Function(
         _i3.TypeHierarchyItem,
@@ -12655,10 +13429,22 @@ extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
   _i4.FutureOr<_i2.List<_i3.TypeHierarchyItem>> Function(
     _i3.TypeHierarchyItem,
     _i3.CancellationToken,
-  ) get provideTypeHierarchySubtypes => _i5.getProperty(
-        this,
-        'provideTypeHierarchySubtypes',
-      );
+  ) get provideTypeHierarchySubtypes => (
+        _i3.TypeHierarchyItem p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideTypeHierarchySubtypes',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Represents a list of ranges that can be edited together along with a word pattern to describe valid range contents.
@@ -12686,10 +13472,10 @@ _i2.Object get _declaredLinkedEditingRanges => _i5.getProperty(
 extension LinkedEditingRanges$Typings on LinkedEditingRanges {
   /// A list of ranges that can be edited together. The ranges must have
   /// identical length and text content. The ranges cannot overlap.
-  _i2.List<_i3.Range> get ranges => (_i5.getProperty(
+  _i2.List<_i3.Range> get ranges => ((_i5.getProperty(
         this,
         'ranges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// An optional word pattern that describes valid contents for the given ranges.
@@ -12757,10 +13543,24 @@ extension LinkedEditingRangeProvider$Typings on LinkedEditingRangeProvider {
     _i3.TextDocument,
     _i3.Position,
     _i3.CancellationToken,
-  ) get provideLinkedEditingRanges => _i5.getProperty(
-        this,
-        'provideLinkedEditingRanges',
-      );
+  ) get provideLinkedEditingRanges => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideLinkedEditingRanges',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// An edit operation applied {@link DocumentDropEditProvideron drop}.
@@ -12873,10 +13673,26 @@ extension DocumentDropEditProvider$Typings on DocumentDropEditProvider {
     _i3.Position,
     _i3.DataTransfer,
     _i3.CancellationToken,
-  ) get provideDocumentDropEdits => _i5.getProperty(
-        this,
-        'provideDocumentDropEdits',
-      );
+  ) get provideDocumentDropEdits => (
+        _i3.TextDocument p0,
+        _i3.Position p1,
+        _i3.DataTransfer p2,
+        _i3.CancellationToken p3,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDocumentDropEdits',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
 }
 
 /// Describes how comments for a language work.
@@ -13213,10 +14029,10 @@ extension AutoClosingPair$Typings on AutoClosingPair {
   }
 
   /// A set of tokens where the pair should not be auto closed.
-  _i2.List<_i3.SyntaxTokenType>? get notIn => (_i5.getProperty(
+  _i2.List<_i3.SyntaxTokenType>? get notIn => ((_i5.getProperty(
         this,
         'notIn',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast()
           .map((i) => _i3.SyntaxTokenType.values.byName(i))
           .toList();
@@ -13359,10 +14175,10 @@ extension IInline29$Typings on IInline29 {
   }
 
   /// @deprecated
-  _i2.List<_i2.String>? get notIn => (_i5.getProperty(
+  _i2.List<_i2.String>? get notIn => ((_i5.getProperty(
         this,
         'notIn',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set notIn(_i2.List<_i2.String>? value) {
     _i5.setProperty(
@@ -13380,10 +14196,10 @@ class IInline28 {}
 
 extension IInline28$Typings on IInline28 {
   /// @deprecated
-  _i2.List<_i2.dynamic> get autoClosingPairs => (_i5.getProperty(
+  _i2.List<_i2.dynamic> get autoClosingPairs => ((_i5.getProperty(
         this,
         'autoClosingPairs',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set autoClosingPairs(_i2.List<_i2.dynamic> value) {
     _i5.setProperty(
@@ -13454,10 +14270,10 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
 
   /// The language's brackets.
   ///  This configuration implicitly affects pressing Enter around these brackets.
-  _i2.List<_i3.CharacterPair>? get brackets => (_i5.getProperty(
+  _i2.List<_i3.CharacterPair>? get brackets => ((_i5.getProperty(
         this,
         'brackets',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set brackets(_i2.List<_i3.CharacterPair>? value) {
     _i5.setProperty(
@@ -13504,10 +14320,10 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
   }
 
   /// The language's rules to be evaluated when pressing Enter.
-  _i2.List<_i3.OnEnterRule>? get onEnterRules => (_i5.getProperty(
+  _i2.List<_i3.OnEnterRule>? get onEnterRules => ((_i5.getProperty(
         this,
         'onEnterRules',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set onEnterRules(_i2.List<_i3.OnEnterRule>? value) {
     _i5.setProperty(
@@ -13518,10 +14334,10 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
   }
 
   /// The language's auto closing pairs.
-  _i2.List<_i3.AutoClosingPair>? get autoClosingPairs => (_i5.getProperty(
+  _i2.List<_i3.AutoClosingPair>? get autoClosingPairs => ((_i5.getProperty(
         this,
         'autoClosingPairs',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set autoClosingPairs(_i2.List<_i3.AutoClosingPair>? value) {
     _i5.setProperty(
@@ -13686,10 +14502,10 @@ extension IInline30$Typings<T> on IInline30<T> {
   }
 
   /// All language identifiers for which this configuration is defined.
-  _i2.List<_i2.String>? get languageIds => (_i5.getProperty(
+  _i2.List<_i2.String>? get languageIds => ((_i5.getProperty(
         this,
         'languageIds',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set languageIds(_i2.List<_i2.String>? value) {
     _i5.setProperty(
@@ -13773,7 +14589,7 @@ class WorkspaceConfiguration {
 
   factory WorkspaceConfiguration({
     _i2.bool Function(_i2.String)? has,
-    _i2.dynamic Function<T>(_i2.String)? inspect,
+    _i2.dynamic Function(_i2.String)? inspect,
     _i2.Future<_i2.dynamic> Function(
       _i2.String, [
       _i2.dynamic,
@@ -13799,11 +14615,18 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
     );
   }
 
-  _i2.bool Function(_i2.String) get has => _i5.getProperty(
-        this,
-        'has',
+  _i2.bool Function(_i2.String) get has => (_i2.String p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'has',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
-  set inspect(_i2.dynamic Function<T>(_i2.String) value) {
+  set inspect(_i2.dynamic Function(_i2.String) value) {
     _i5.setProperty(
       this,
       'inspect',
@@ -13811,10 +14634,18 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
     );
   }
 
-  _i2.dynamic Function<T>(_i2.String) get inspect => _i5.getProperty(
-        this,
-        'inspect',
-      );
+  _i2.dynamic Function(_i2.String) get inspect =>
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'inspect',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set update(
       _i2.Future<_i2.dynamic> Function(
         _i2.String, [
@@ -13834,10 +14665,26 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
     _i2.dynamic,
     _i2.dynamic,
     _i2.bool?,
-  ]) get update => _i5.getProperty(
-        this,
-        'update',
-      );
+  ]) get update => (
+        _i2.String p0, [
+        _i2.dynamic p1,
+        _i2.dynamic p2,
+        _i2.bool? p3,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'update',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
 
   /// Return a value from this configuration.
   ///
@@ -14010,10 +14857,10 @@ class DiagnosticChangeEvent {
 
 extension DiagnosticChangeEvent$Typings on DiagnosticChangeEvent {
   /// An array of resources for which diagnostics have changed.
-  _i2.List<_i3.Uri> get uris => (_i5.getProperty(
+  _i2.List<_i3.Uri> get uris => ((_i5.getProperty(
         this,
         'uris',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -14200,10 +15047,10 @@ extension Diagnostic$Typings on Diagnostic {
   /// An array of related diagnostic information, e.g. when symbol-names within
   ///  a scope collide all definitions can be marked via this property.
   _i2.List<_i3.DiagnosticRelatedInformation> get relatedInformation =>
-      (_i5.getProperty(
+      ((_i5.getProperty(
         this,
         'relatedInformation',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set relatedInformation(_i2.List<_i3.DiagnosticRelatedInformation> value) {
     _i5.setProperty(
@@ -14214,10 +15061,10 @@ extension Diagnostic$Typings on Diagnostic {
   }
 
   /// Additional metadata about the diagnostic.
-  _i2.List<_i3.DiagnosticTag> get tags => (_i5.getProperty(
+  _i2.List<_i3.DiagnosticTag> get tags => ((_i5.getProperty(
         this,
         'tags',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast()
           .map((i) => _i3.DiagnosticTag.values.byName(i))
           .toList();
@@ -14301,9 +15148,16 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
     );
   }
 
-  void Function(_i3.Uri) get delete => _i5.getProperty(
-        this,
-        'delete',
+  void Function(_i3.Uri) get delete => (_i3.Uri p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'delete',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set clear(void Function() value) {
     _i5.setProperty(
@@ -14313,9 +15167,13 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
     );
   }
 
-  void Function() get clear => _i5.getProperty(
-        this,
-        'clear',
+  void Function() get clear => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'clear',
+        ),
+        r'call',
+        [this],
       );
   set forEach(
       void Function(
@@ -14340,10 +15198,26 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
       _i3.DiagnosticCollection,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i5.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        _i2.dynamic Function(
+          _i3.Uri,
+          _i2.List<_i3.Diagnostic>,
+          _i3.DiagnosticCollection,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set get(_i2.List<_i3.Diagnostic>? Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -14352,10 +15226,18 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
     );
   }
 
-  _i2.List<_i3.Diagnostic>? Function(_i3.Uri) get get => _i5.getProperty(
-        this,
-        'get',
-      );
+  _i2.List<_i3.Diagnostic>? Function(_i3.Uri) get get =>
+      (_i3.Uri p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'get',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set has(_i2.bool Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -14364,9 +15246,16 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
     );
   }
 
-  _i2.bool Function(_i3.Uri) get has => _i5.getProperty(
-        this,
-        'has',
+  _i2.bool Function(_i3.Uri) get has => (_i3.Uri p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'has',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set dispose(void Function() value) {
     _i5.setProperty(
@@ -14376,9 +15265,13 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 
   /// Replace diagnostics for multiple resources in this collection.
@@ -14630,9 +15523,13 @@ extension LanguageStatusItem$Typings on LanguageStatusItem {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -14688,9 +15585,16 @@ extension OutputChannel$Typings on OutputChannel {
     );
   }
 
-  void Function(_i2.String) get append => _i5.getProperty(
-        this,
-        'append',
+  void Function(_i2.String) get append => (_i2.String p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'append',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set appendLine(void Function(_i2.String) value) {
     _i5.setProperty(
@@ -14700,9 +15604,16 @@ extension OutputChannel$Typings on OutputChannel {
     );
   }
 
-  void Function(_i2.String) get appendLine => _i5.getProperty(
-        this,
-        'appendLine',
+  void Function(_i2.String) get appendLine => (_i2.String p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'appendLine',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set replace(void Function(_i2.String) value) {
     _i5.setProperty(
@@ -14712,9 +15623,16 @@ extension OutputChannel$Typings on OutputChannel {
     );
   }
 
-  void Function(_i2.String) get replace => _i5.getProperty(
-        this,
-        'replace',
+  void Function(_i2.String) get replace => (_i2.String p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'replace',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set clear(void Function() value) {
     _i5.setProperty(
@@ -14724,9 +15642,13 @@ extension OutputChannel$Typings on OutputChannel {
     );
   }
 
-  void Function() get clear => _i5.getProperty(
-        this,
-        'clear',
+  void Function() get clear => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'clear',
+        ),
+        r'call',
+        [this],
       );
   set hide(void Function() value) {
     _i5.setProperty(
@@ -14736,9 +15658,13 @@ extension OutputChannel$Typings on OutputChannel {
     );
   }
 
-  void Function() get hide => _i5.getProperty(
-        this,
-        'hide',
+  void Function() get hide => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'hide',
+        ),
+        r'call',
+        [this],
       );
   set dispose(void Function() value) {
     _i5.setProperty(
@@ -14748,9 +15674,13 @@ extension OutputChannel$Typings on OutputChannel {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 
   /// Reveal this channel in the UI.
@@ -15080,10 +16010,22 @@ extension LogOutputChannel$Typings on LogOutputChannel {
   void Function(
     _i2.String, [
     _i2.Iterable<_i2.dynamic>?,
-  ]) get trace => _i5.getProperty(
-        this,
-        'trace',
-      );
+  ]) get trace => (
+        _i2.String p0, [
+        _i2.Iterable<_i2.dynamic>? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'trace',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set debug(
       void Function(
         _i2.String, [
@@ -15126,10 +16068,22 @@ extension LogOutputChannel$Typings on LogOutputChannel {
   void Function(
     _i2.String, [
     _i2.Iterable<_i2.dynamic>?,
-  ]) get debug => _i5.getProperty(
-        this,
-        'debug',
-      );
+  ]) get debug => (
+        _i2.String p0, [
+        _i2.Iterable<_i2.dynamic>? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'debug',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set info(
       void Function(
         _i2.String, [
@@ -15172,10 +16126,22 @@ extension LogOutputChannel$Typings on LogOutputChannel {
   void Function(
     _i2.String, [
     _i2.Iterable<_i2.dynamic>?,
-  ]) get info => _i5.getProperty(
-        this,
-        'info',
-      );
+  ]) get info => (
+        _i2.String p0, [
+        _i2.Iterable<_i2.dynamic>? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'info',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set warn(
       void Function(
         _i2.String, [
@@ -15218,10 +16184,22 @@ extension LogOutputChannel$Typings on LogOutputChannel {
   void Function(
     _i2.String, [
     _i2.Iterable<_i2.dynamic>?,
-  ]) get warn => _i5.getProperty(
-        this,
-        'warn',
-      );
+  ]) get warn => (
+        _i2.String p0, [
+        _i2.Iterable<_i2.dynamic>? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'warn',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set error(
       void Function(
         _i2.Object, [
@@ -15264,10 +16242,22 @@ extension LogOutputChannel$Typings on LogOutputChannel {
   void Function(
     _i2.Object, [
     _i2.Iterable<_i2.dynamic>?,
-  ]) get error => _i5.getProperty(
-        this,
-        'error',
-      );
+  ]) get error => (
+        _i2.Object p0, [
+        _i2.Iterable<_i2.dynamic>? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'error',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Accessibility information which controls screen reader behavior.
@@ -15505,9 +16495,13 @@ extension StatusBarItem$Typings on StatusBarItem {
     );
   }
 
-  void Function() get show => _i5.getProperty(
-        this,
-        'show',
+  void Function() get show => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'show',
+        ),
+        r'call',
+        [this],
       );
   set hide(void Function() value) {
     _i5.setProperty(
@@ -15517,9 +16511,13 @@ extension StatusBarItem$Typings on StatusBarItem {
     );
   }
 
-  void Function() get hide => _i5.getProperty(
-        this,
-        'hide',
+  void Function() get hide => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'hide',
+        ),
+        r'call',
+        [this],
       );
   set dispose(void Function() value) {
     _i5.setProperty(
@@ -15529,9 +16527,13 @@ extension StatusBarItem$Typings on StatusBarItem {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -15555,9 +16557,16 @@ extension Progress$Typings<T> on Progress<T> {
     );
   }
 
-  void Function(T) get report => _i5.getProperty(
-        this,
-        'report',
+  void Function(T) get report => (T p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'report',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
 }
 
@@ -15662,10 +16671,22 @@ extension Terminal$Typings on Terminal {
   void Function(
     _i2.String, [
     _i2.bool?,
-  ]) get sendText => _i5.getProperty(
-        this,
-        'sendText',
-      );
+  ]) get sendText => (
+        _i2.String p0, [
+        _i2.bool? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'sendText',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set show(void Function([_i2.bool?]) value) {
     _i5.setProperty(
       this,
@@ -15674,9 +16695,16 @@ extension Terminal$Typings on Terminal {
     );
   }
 
-  void Function([_i2.bool?]) get show => _i5.getProperty(
-        this,
-        'show',
+  void Function([_i2.bool?]) get show => ([_i2.bool? p0]) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'show',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set hide(void Function() value) {
     _i5.setProperty(
@@ -15686,9 +16714,13 @@ extension Terminal$Typings on Terminal {
     );
   }
 
-  void Function() get hide => _i5.getProperty(
-        this,
-        'hide',
+  void Function() get hide => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'hide',
+        ),
+        r'call',
+        [this],
       );
   set dispose(void Function() value) {
     _i5.setProperty(
@@ -15698,9 +16730,13 @@ extension Terminal$Typings on Terminal {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -15923,10 +16959,22 @@ extension TerminalLinkProvider$Typings<T extends _i3.TerminalLink>
   _i4.FutureOr<_i2.List<T>> Function(
     _i3.TerminalLinkContext,
     _i3.CancellationToken,
-  ) get provideTerminalLinks => _i5.getProperty(
-        this,
-        'provideTerminalLinks',
-      );
+  ) get provideTerminalLinks => (
+        _i3.TerminalLinkContext p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideTerminalLinks',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set handleTerminalLink(_i4.FutureOr<void> Function(T) value) {
     _i5.setProperty(
       this,
@@ -15935,10 +16983,18 @@ extension TerminalLinkProvider$Typings<T extends _i3.TerminalLink>
     );
   }
 
-  _i4.FutureOr<void> Function(T) get handleTerminalLink => _i5.getProperty(
-        this,
-        'handleTerminalLink',
-      );
+  _i4.FutureOr<void> Function(T) get handleTerminalLink =>
+      (T p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'handleTerminalLink',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// A link on a terminal line.
@@ -16040,10 +17096,18 @@ extension TerminalProfileProvider$Typings on TerminalProfileProvider {
   }
 
   _i4.FutureOr<_i3.TerminalProfile> Function(_i3.CancellationToken)
-      get provideTerminalProfile => _i5.getProperty(
-            this,
-            'provideTerminalProfile',
-          );
+      get provideTerminalProfile =>
+          (_i3.CancellationToken p0) => _i5.callMethod(
+                _i5.getProperty(
+                  this,
+                  'provideTerminalProfile',
+                ),
+                r'call',
+                [
+                  this,
+                  p0,
+                ],
+              );
 }
 
 /// A terminal profile defines how a terminal will be launched.
@@ -16228,10 +17292,22 @@ extension FileDecorationProvider$Typings on FileDecorationProvider {
   _i4.FutureOr<_i3.FileDecoration> Function(
     _i3.Uri,
     _i3.CancellationToken,
-  ) get provideFileDecoration => _i5.getProperty(
-        this,
-        'provideFileDecoration',
-      );
+  ) get provideFileDecoration => (
+        _i3.Uri p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideFileDecoration',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Represents an extension.
@@ -16338,9 +17414,13 @@ extension Extension$Typings<T> on Extension<T> {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function() get activate => _i5.getProperty(
-        this,
-        'activate',
+  _i2.Future<_i2.dynamic> Function() get activate => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'activate',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -16358,9 +17438,13 @@ extension IInline32$Typings on IInline32 {
     );
   }
 
-  _i2.dynamic Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  _i2.dynamic Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -16378,10 +17462,18 @@ extension IInline33$Typings on IInline33 {
     );
   }
 
-  void Function(_i2.List<_i2.String>) get setKeysForSync => _i5.getProperty(
-        this,
-        'setKeysForSync',
-      );
+  void Function(_i2.List<_i2.String>) get setKeysForSync =>
+      (_i2.List<_i2.String> p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'setKeysForSync',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// An extension context is a collection of utilities private to an
@@ -16457,10 +17549,10 @@ extension ExtensionContext$Typings on ExtensionContext {
   /// extension is deactivated the disposables will be disposed.
   ///
   /// *Note* that asynchronous dispose-functions aren't awaited.
-  _i2.List<_i2.dynamic> get subscriptions => (_i5.getProperty(
+  _i2.List<_i2.dynamic> get subscriptions => ((_i5.getProperty(
         this,
         'subscriptions',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// A memento object that stores state in the context
@@ -16585,10 +17677,18 @@ extension ExtensionContext$Typings on ExtensionContext {
     );
   }
 
-  _i2.String Function(_i2.String) get asAbsolutePath => _i5.getProperty(
-        this,
-        'asAbsolutePath',
-      );
+  _i2.String Function(_i2.String) get asAbsolutePath =>
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'asAbsolutePath',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// A memento represents a storage utility. It can store and retrieve
@@ -16624,9 +17724,13 @@ extension Memento$Typings on Memento {
     );
   }
 
-  _i2.List<_i2.String> Function() get keys => _i5.getProperty(
-        this,
-        'keys',
+  _i2.List<_i2.String> Function() get keys => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'keys',
+        ),
+        r'call',
+        [this],
       );
   set update(
       _i2.Future<_i2.dynamic> Function(
@@ -16643,10 +17747,22 @@ extension Memento$Typings on Memento {
   _i2.Future<_i2.dynamic> Function(
     _i2.String, [
     _i2.dynamic,
-  ]) get update => _i5.getProperty(
-        this,
-        'update',
-      );
+  ]) get update => (
+        _i2.String p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'update',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 
   /// Return a value.
   ///
@@ -16739,10 +17855,18 @@ extension SecretStorage$Typings on SecretStorage {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function(_i2.String) get get => _i5.getProperty(
-        this,
-        'get',
-      );
+  _i2.Future<_i2.dynamic> Function(_i2.String) get get =>
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'get',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set store(
       _i2.Future<_i2.dynamic> Function(
         _i2.String,
@@ -16758,10 +17882,22 @@ extension SecretStorage$Typings on SecretStorage {
   _i2.Future<_i2.dynamic> Function(
     _i2.String,
     _i2.String,
-  ) get store => _i5.getProperty(
-        this,
-        'store',
-      );
+  ) get store => (
+        _i2.String p0,
+        _i2.String p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'store',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set delete(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
     _i5.setProperty(
       this,
@@ -16770,10 +17906,18 @@ extension SecretStorage$Typings on SecretStorage {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function(_i2.String) get delete => _i5.getProperty(
-        this,
-        'delete',
-      );
+  _i2.Future<_i2.dynamic> Function(_i2.String) get delete =>
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'delete',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// Represents a color theme.
@@ -17177,10 +18321,10 @@ extension ProcessExecution$Typings on ProcessExecution {
   }
 
   /// The arguments passed to the process. Defaults to an empty array.
-  _i2.List<_i2.String> get args => (_i5.getProperty(
+  _i2.List<_i2.String> get args => ((_i5.getProperty(
         this,
         'args',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set args(_i2.List<_i2.String> value) {
     _i5.setProperty(
@@ -17351,10 +18495,10 @@ extension ShellExecutionOptions$Typings on ShellExecutionOptions {
   ///  require special arguments to execute a command. For  example `bash` requires the `-c`
   ///  argument to execute a command, `PowerShell` requires `-Command` and `cmd` requires both
   ///  `/d` and `/c`.
-  _i2.List<_i2.String>? get shellArgs => (_i5.getProperty(
+  _i2.List<_i2.String>? get shellArgs => ((_i5.getProperty(
         this,
         'shellArgs',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set shellArgs(_i2.List<_i2.String>? value) {
     _i5.setProperty(
@@ -17525,10 +18669,10 @@ extension ShellExecution$Typings on ShellExecution {
   }
 
   /// The shell args. Is `undefined` if created with a full command line.
-  _i2.List<_i2.Object> get args => (_i5.getProperty(
+  _i2.List<_i2.Object> get args => ((_i5.getProperty(
         this,
         'args',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set args(_i2.List<_i2.Object> value) {
     _i5.setProperty(
@@ -17768,10 +18912,10 @@ extension Task$Typings on Task {
 
   /// The problem matchers attached to the task. Defaults to an empty
   ///  array.
-  _i2.List<_i2.String> get problemMatchers => (_i5.getProperty(
+  _i2.List<_i2.String> get problemMatchers => ((_i5.getProperty(
         this,
         'problemMatchers',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set problemMatchers(_i2.List<_i2.String> value) {
     _i5.setProperty(
@@ -17843,10 +18987,17 @@ extension TaskProvider$Typings<T extends _i3.Task> on TaskProvider<T> {
   }
 
   _i4.FutureOr<_i2.List<T>> Function(_i3.CancellationToken) get provideTasks =>
-      _i5.getProperty(
-        this,
-        'provideTasks',
-      );
+      (_i3.CancellationToken p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideTasks',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set resolveTask(
       _i4.FutureOr<T> Function(
         T,
@@ -17869,10 +19020,22 @@ extension TaskProvider$Typings<T extends _i3.Task> on TaskProvider<T> {
   _i4.FutureOr<T> Function(
     T,
     _i3.CancellationToken,
-  ) get resolveTask => _i5.getProperty(
-        this,
-        'resolveTask',
-      );
+  ) get resolveTask => (
+        T p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveTask',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// An object representing an executed Task. It can be used
@@ -17920,9 +19083,13 @@ extension TaskExecution$Typings on TaskExecution {
     );
   }
 
-  void Function() get terminate => _i5.getProperty(
-        this,
-        'terminate',
+  void Function() get terminate => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'terminate',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -18326,10 +19493,10 @@ extension IInline37$Typings on IInline37 {
       );
 
   /// A list of paths and pattern to exclude from watching.
-  _i2.List<_i2.String> get excludes => (_i5.getProperty(
+  _i2.List<_i2.String> get excludes => ((_i5.getProperty(
         this,
         'excludes',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -18549,10 +19716,22 @@ extension FileSystemProvider$Typings on FileSystemProvider {
   _i3.Disposable Function(
     _i3.Uri,
     _i2.dynamic,
-  ) get watch => _i5.getProperty(
-        this,
-        'watch',
-      );
+  ) get watch => (
+        _i3.Uri p0,
+        _i2.dynamic p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'watch',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set stat(_i2.Object Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -18561,9 +19740,16 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     );
   }
 
-  _i2.Object Function(_i3.Uri) get stat => _i5.getProperty(
-        this,
-        'stat',
+  _i2.Object Function(_i3.Uri) get stat => (_i3.Uri p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'stat',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set readDirectory(
       _i4.FutureOr<
@@ -18587,9 +19773,16 @@ extension FileSystemProvider$Typings on FileSystemProvider {
                 _i2.String,
                 _i3.FileType,
               )>>
-      Function(_i3.Uri) get readDirectory => _i5.getProperty(
-        this,
-        'readDirectory',
+      Function(_i3.Uri) get readDirectory => (_i3.Uri p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'readDirectory',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set createDirectory(_i4.FutureOr<void> Function(_i3.Uri) value) {
     _i5.setProperty(
@@ -18599,10 +19792,18 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     );
   }
 
-  _i4.FutureOr<void> Function(_i3.Uri) get createDirectory => _i5.getProperty(
-        this,
-        'createDirectory',
-      );
+  _i4.FutureOr<void> Function(_i3.Uri) get createDirectory =>
+      (_i3.Uri p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'createDirectory',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set readFile(_i4.FutureOr<_i8.Uint8List> Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -18611,10 +19812,18 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     );
   }
 
-  _i4.FutureOr<_i8.Uint8List> Function(_i3.Uri) get readFile => _i5.getProperty(
-        this,
-        'readFile',
-      );
+  _i4.FutureOr<_i8.Uint8List> Function(_i3.Uri) get readFile =>
+      (_i3.Uri p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'readFile',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set writeFile(
       _i4.FutureOr<void> Function(
         _i3.Uri,
@@ -18641,10 +19850,24 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i3.Uri,
     _i8.Uint8List,
     _i2.dynamic,
-  ) get writeFile => _i5.getProperty(
-        this,
-        'writeFile',
-      );
+  ) get writeFile => (
+        _i3.Uri p0,
+        _i8.Uint8List p1,
+        _i2.dynamic p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'writeFile',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set delete(
       _i4.FutureOr<void> Function(
         _i3.Uri,
@@ -18667,10 +19890,22 @@ extension FileSystemProvider$Typings on FileSystemProvider {
   _i4.FutureOr<void> Function(
     _i3.Uri,
     _i2.dynamic,
-  ) get delete => _i5.getProperty(
-        this,
-        'delete',
-      );
+  ) get delete => (
+        _i3.Uri p0,
+        _i2.dynamic p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'delete',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set rename(
       _i4.FutureOr<void> Function(
         _i3.Uri,
@@ -18697,10 +19932,24 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i3.Uri,
     _i3.Uri,
     _i2.dynamic,
-  ) get rename => _i5.getProperty(
-        this,
-        'rename',
-      );
+  ) get rename => (
+        _i3.Uri p0,
+        _i3.Uri p1,
+        _i2.dynamic p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'rename',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set copy(
       _i4.FutureOr<void> Function(
         _i3.Uri,
@@ -18727,10 +19976,24 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i3.Uri,
     _i3.Uri,
     _i2.dynamic,
-  ) get copy => _i5.getProperty(
-        this,
-        'copy',
-      );
+  ) get copy => (
+        _i3.Uri p0,
+        _i3.Uri p1,
+        _i2.dynamic p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'copy',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 @_i1.JS()
@@ -18880,10 +20143,18 @@ extension FileSystem$Typings on FileSystem {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function(_i3.Uri) get stat => _i5.getProperty(
-        this,
-        'stat',
-      );
+  _i2.Future<_i2.dynamic> Function(_i3.Uri) get stat =>
+      (_i3.Uri p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'stat',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set readDirectory(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -18893,10 +20164,17 @@ extension FileSystem$Typings on FileSystem {
   }
 
   _i2.Future<_i2.dynamic> Function(_i3.Uri) get readDirectory =>
-      _i5.getProperty(
-        this,
-        'readDirectory',
-      );
+      (_i3.Uri p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'readDirectory',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set createDirectory(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -18906,10 +20184,17 @@ extension FileSystem$Typings on FileSystem {
   }
 
   _i2.Future<_i2.dynamic> Function(_i3.Uri) get createDirectory =>
-      _i5.getProperty(
-        this,
-        'createDirectory',
-      );
+      (_i3.Uri p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'createDirectory',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set readFile(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -18918,10 +20203,18 @@ extension FileSystem$Typings on FileSystem {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function(_i3.Uri) get readFile => _i5.getProperty(
-        this,
-        'readFile',
-      );
+  _i2.Future<_i2.dynamic> Function(_i3.Uri) get readFile =>
+      (_i3.Uri p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'readFile',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set writeFile(
       _i2.Future<_i2.dynamic> Function(
         _i3.Uri,
@@ -18937,10 +20230,22 @@ extension FileSystem$Typings on FileSystem {
   _i2.Future<_i2.dynamic> Function(
     _i3.Uri,
     _i8.Uint8List,
-  ) get writeFile => _i5.getProperty(
-        this,
-        'writeFile',
-      );
+  ) get writeFile => (
+        _i3.Uri p0,
+        _i8.Uint8List p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'writeFile',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set delete(
       _i2.Future<_i2.dynamic> Function(
         _i3.Uri, [
@@ -18956,10 +20261,22 @@ extension FileSystem$Typings on FileSystem {
   _i2.Future<_i2.dynamic> Function(
     _i3.Uri, [
     _i2.dynamic,
-  ]) get delete => _i5.getProperty(
-        this,
-        'delete',
-      );
+  ]) get delete => (
+        _i3.Uri p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'delete',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set rename(
       _i2.Future<_i2.dynamic> Function(
         _i3.Uri,
@@ -18977,10 +20294,24 @@ extension FileSystem$Typings on FileSystem {
     _i3.Uri,
     _i3.Uri, [
     _i2.dynamic,
-  ]) get rename => _i5.getProperty(
-        this,
-        'rename',
-      );
+  ]) get rename => (
+        _i3.Uri p0,
+        _i3.Uri p1, [
+        _i2.dynamic p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'rename',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set copy(
       _i2.Future<_i2.dynamic> Function(
         _i3.Uri,
@@ -18998,10 +20329,24 @@ extension FileSystem$Typings on FileSystem {
     _i3.Uri,
     _i3.Uri, [
     _i2.dynamic,
-  ]) get copy => _i5.getProperty(
-        this,
-        'copy',
-      );
+  ]) get copy => (
+        _i3.Uri p0,
+        _i3.Uri p1, [
+        _i2.dynamic p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'copy',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set isWritableFileSystem(_i2.bool? Function(_i2.String) value) {
     _i5.setProperty(
       this,
@@ -19010,10 +20355,18 @@ extension FileSystem$Typings on FileSystem {
     );
   }
 
-  _i2.bool? Function(_i2.String) get isWritableFileSystem => _i5.getProperty(
-        this,
-        'isWritableFileSystem',
-      );
+  _i2.bool? Function(_i2.String) get isWritableFileSystem =>
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'isWritableFileSystem',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// Defines a port mapping used for localhost inside the webview.
@@ -19112,10 +20465,10 @@ extension WebviewOptions$Typings on WebviewOptions {
   /// Default to the root folders of the current workspace plus the extension's install directory.
   ///
   /// Pass in an empty array to disallow access to any local resources.
-  _i2.List<_i3.Uri>? get localResourceRoots => (_i5.getProperty(
+  _i2.List<_i3.Uri>? get localResourceRoots => ((_i5.getProperty(
         this,
         'localResourceRoots',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 
   /// Mappings of localhost ports used inside the webview.
@@ -19129,10 +20482,10 @@ extension WebviewOptions$Typings on WebviewOptions {
   ///
   /// *Note* that port mappings only work for `http` or `https` urls. Websocket urls (e.g. `ws://localhost:3000`)
   /// cannot be mapped to another port.
-  _i2.List<_i3.WebviewPortMapping>? get portMapping => (_i5.getProperty(
+  _i2.List<_i3.WebviewPortMapping>? get portMapping => ((_i5.getProperty(
         this,
         'portMapping',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 }
 
@@ -19248,10 +20601,17 @@ extension Webview$Typings on Webview {
   }
 
   _i2.Future<_i2.dynamic> Function([_i2.dynamic]) get postMessage =>
-      _i5.getProperty(
-        this,
-        'postMessage',
-      );
+      ([_i2.dynamic p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'postMessage',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set asWebviewUri(_i3.Uri Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -19260,9 +20620,16 @@ extension Webview$Typings on Webview {
     );
   }
 
-  _i3.Uri Function(_i3.Uri) get asWebviewUri => _i5.getProperty(
-        this,
-        'asWebviewUri',
+  _i3.Uri Function(_i3.Uri) get asWebviewUri => (_i3.Uri p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'asWebviewUri',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
 }
 
@@ -19486,10 +20853,22 @@ extension WebviewPanel$Typings on WebviewPanel {
   void Function([
     _i3.ViewColumn?,
     _i2.bool?,
-  ]) get reveal => _i5.getProperty(
-        this,
-        'reveal',
-      );
+  ]) get reveal => ([
+        _i3.ViewColumn? p0,
+        _i2.bool? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'reveal',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set dispose(_i2.dynamic Function() value) {
     _i5.setProperty(
       this,
@@ -19498,9 +20877,13 @@ extension WebviewPanel$Typings on WebviewPanel {
     );
   }
 
-  _i2.dynamic Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  _i2.dynamic Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -19590,10 +20973,22 @@ extension WebviewPanelSerializer$Typings<T> on WebviewPanelSerializer<T> {
   _i2.Future<_i2.dynamic> Function(
     _i3.WebviewPanel,
     T,
-  ) get deserializeWebviewPanel => _i5.getProperty(
-        this,
-        'deserializeWebviewPanel',
-      );
+  ) get deserializeWebviewPanel => (
+        _i3.WebviewPanel p0,
+        T p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'deserializeWebviewPanel',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// A webview based view.
@@ -19731,9 +21126,16 @@ extension WebviewView$Typings on WebviewView {
     );
   }
 
-  void Function([_i2.bool?]) get show => _i5.getProperty(
-        this,
-        'show',
+  void Function([_i2.bool?]) get show => ([_i2.bool? p0]) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'show',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
 }
 
@@ -19837,10 +21239,24 @@ extension WebviewViewProvider$Typings on WebviewViewProvider {
     _i3.WebviewView,
     _i3.WebviewViewResolveContext<_i2.Object?>,
     _i3.CancellationToken,
-  ) get resolveWebviewView => _i5.getProperty(
-        this,
-        'resolveWebviewView',
-      );
+  ) get resolveWebviewView => (
+        _i3.WebviewView p0,
+        _i3.WebviewViewResolveContext<_i2.Object?> p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveWebviewView',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// Provider for text based custom editors.
@@ -19903,10 +21319,24 @@ extension CustomTextEditorProvider$Typings on CustomTextEditorProvider {
     _i3.TextDocument,
     _i3.WebviewPanel,
     _i3.CancellationToken,
-  ) get resolveCustomTextEditor => _i5.getProperty(
-        this,
-        'resolveCustomTextEditor',
-      );
+  ) get resolveCustomTextEditor => (
+        _i3.TextDocument p0,
+        _i3.WebviewPanel p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveCustomTextEditor',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// Represents a custom document used by a {@linkcode CustomEditorProvider}.
@@ -19946,9 +21376,13 @@ extension CustomDocument$Typings on CustomDocument {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -20007,9 +21441,13 @@ extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
     );
   }
 
-  _i4.FutureOr<void> Function() get undo => _i5.getProperty(
-        this,
-        'undo',
+  _i4.FutureOr<void> Function() get undo => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'undo',
+        ),
+        r'call',
+        [this],
       );
   set redo(_i4.FutureOr<void> Function() value) {
     _i5.setProperty(
@@ -20019,9 +21457,13 @@ extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
     );
   }
 
-  _i4.FutureOr<void> Function() get redo => _i5.getProperty(
-        this,
-        'redo',
+  _i4.FutureOr<void> Function() get redo => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'redo',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -20082,9 +21524,13 @@ extension CustomDocumentBackup$Typings on CustomDocumentBackup {
     );
   }
 
-  void Function() get delete => _i5.getProperty(
-        this,
-        'delete',
+  void Function() get delete => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'delete',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -20235,10 +21681,24 @@ extension CustomReadonlyEditorProvider$Typings<T extends _i3.CustomDocument>
     _i3.Uri,
     _i3.CustomDocumentOpenContext,
     _i3.CancellationToken,
-  ) get openCustomDocument => _i5.getProperty(
-        this,
-        'openCustomDocument',
-      );
+  ) get openCustomDocument => (
+        _i3.Uri p0,
+        _i3.CustomDocumentOpenContext p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'openCustomDocument',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set resolveCustomEditor(
       _i4.FutureOr<void> Function(
         T,
@@ -20265,10 +21725,24 @@ extension CustomReadonlyEditorProvider$Typings<T extends _i3.CustomDocument>
     T,
     _i3.WebviewPanel,
     _i3.CancellationToken,
-  ) get resolveCustomEditor => _i5.getProperty(
-        this,
-        'resolveCustomEditor',
-      );
+  ) get resolveCustomEditor => (
+        T p0,
+        _i3.WebviewPanel p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveCustomEditor',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// Provider for editable custom editors that use a custom document model.
@@ -20405,10 +21879,22 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
   _i2.Future<_i2.dynamic> Function(
     T,
     _i3.CancellationToken,
-  ) get saveCustomDocument => _i5.getProperty(
-        this,
-        'saveCustomDocument',
-      );
+  ) get saveCustomDocument => (
+        T p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'saveCustomDocument',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set saveCustomDocumentAs(
       _i2.Future<_i2.dynamic> Function(
         T,
@@ -20426,10 +21912,24 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
     T,
     _i3.Uri,
     _i3.CancellationToken,
-  ) get saveCustomDocumentAs => _i5.getProperty(
-        this,
-        'saveCustomDocumentAs',
-      );
+  ) get saveCustomDocumentAs => (
+        T p0,
+        _i3.Uri p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'saveCustomDocumentAs',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set revertCustomDocument(
       _i2.Future<_i2.dynamic> Function(
         T,
@@ -20445,10 +21945,22 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
   _i2.Future<_i2.dynamic> Function(
     T,
     _i3.CancellationToken,
-  ) get revertCustomDocument => _i5.getProperty(
-        this,
-        'revertCustomDocument',
-      );
+  ) get revertCustomDocument => (
+        T p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'revertCustomDocument',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set backupCustomDocument(
       _i2.Future<_i2.dynamic> Function(
         T,
@@ -20466,10 +21978,24 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
     T,
     _i3.CustomDocumentBackupContext,
     _i3.CancellationToken,
-  ) get backupCustomDocument => _i5.getProperty(
-        this,
-        'backupCustomDocument',
-      );
+  ) get backupCustomDocument => (
+        T p0,
+        _i3.CustomDocumentBackupContext p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'backupCustomDocument',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// The clipboard provides read and write access to the system's clipboard.
@@ -20501,9 +22027,13 @@ extension Clipboard$Typings on Clipboard {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function() get readText => _i5.getProperty(
-        this,
-        'readText',
+  _i2.Future<_i2.dynamic> Function() get readText => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'readText',
+        ),
+        r'call',
+        [this],
       );
   set writeText(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
     _i5.setProperty(
@@ -20513,10 +22043,18 @@ extension Clipboard$Typings on Clipboard {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function(_i2.String) get writeText => _i5.getProperty(
-        this,
-        'writeText',
-      );
+  _i2.Future<_i2.dynamic> Function(_i2.String) get writeText =>
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'writeText',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// Represents the state of a window.
@@ -20561,10 +22099,18 @@ extension UriHandler$Typings on UriHandler {
     );
   }
 
-  _i4.FutureOr<void> Function(_i3.Uri) get handleUri => _i5.getProperty(
-        this,
-        'handleUri',
-      );
+  _i4.FutureOr<void> Function(_i3.Uri) get handleUri =>
+      (_i3.Uri p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'handleUri',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// Options for creating a {@link TreeView}
@@ -20732,10 +22278,10 @@ class TreeViewSelectionChangeEvent<T> {
 extension TreeViewSelectionChangeEvent$Typings<T>
     on TreeViewSelectionChangeEvent<T> {
   /// Selected elements.
-  _i2.List<T> get selection => (_i5.getProperty(
+  _i2.List<T> get selection => ((_i5.getProperty(
         this,
         'selection',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -20806,9 +22352,13 @@ extension DataTransferFile$Typings on DataTransferFile {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function() get data => _i5.getProperty(
-        this,
-        'data',
+  _i2.Future<_i2.dynamic> Function() get data => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'data',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -21008,20 +22558,20 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
   /// 3. Open the developer tools and drag the item with unknown mime type over your tree. The mime types will be logged to the developer console
   ///
   /// Note that mime types that cannot be sent to the extension will be omitted.
-  _i2.List<_i2.String> get dropMimeTypes => (_i5.getProperty(
+  _i2.List<_i2.String> get dropMimeTypes => ((_i5.getProperty(
         this,
         'dropMimeTypes',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The mime types that the {@link TreeDragAndDropController.handleDrag`handleDrag`} method of this `TreeDragAndDropController` may add to the tree data transfer.
   /// This could be well-defined, existing, mime types, and also mime types defined by the extension.
   ///
   /// The recommended mime type of the tree (`application/vnd.code.tree.<treeidlowercase>`) will be automatically added.
-  _i2.List<_i2.String> get dragMimeTypes => (_i5.getProperty(
+  _i2.List<_i2.String> get dragMimeTypes => ((_i5.getProperty(
         this,
         'dragMimeTypes',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set handleDrag(
       _i4.FutureOr<void> Function(
@@ -21049,10 +22599,24 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
     _i2.List<T>,
     _i3.DataTransfer,
     _i3.CancellationToken,
-  ) get handleDrag => _i5.getProperty(
-        this,
-        'handleDrag',
-      );
+  ) get handleDrag => (
+        _i2.List<T> p0,
+        _i3.DataTransfer p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'handleDrag',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set handleDrop(
       _i4.FutureOr<void> Function(
         _i3.DataTransfer,
@@ -21079,10 +22643,24 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
     _i3.DataTransfer,
     _i3.CancellationToken, [
     T?,
-  ]) get handleDrop => _i5.getProperty(
-        this,
-        'handleDrop',
-      );
+  ]) get handleDrop => (
+        _i3.DataTransfer p1,
+        _i3.CancellationToken p2, [
+        T? p0,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'handleDrop',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// A badge presenting a value for a view
@@ -21265,10 +22843,10 @@ extension TreeView$Typings<T> on TreeView<T> {
       );
 
   /// Currently selected elements.
-  _i2.List<T> get selection => (_i5.getProperty(
+  _i2.List<T> get selection => ((_i5.getProperty(
         this,
         'selection',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Event that is fired when the {@link TreeView.selectionselection} has changed
@@ -21369,10 +22947,22 @@ extension TreeView$Typings<T> on TreeView<T> {
   _i2.Future<_i2.dynamic> Function(
     T, [
     _i2.dynamic,
-  ]) get reveal => _i5.getProperty(
-        this,
-        'reveal',
-      );
+  ]) get reveal => (
+        T p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'reveal',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// A data provider that provides tree data
@@ -21449,9 +23039,16 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
     );
   }
 
-  _i2.Object Function(T) get getTreeItem => _i5.getProperty(
-        this,
-        'getTreeItem',
+  _i2.Object Function(T) get getTreeItem => (T p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'getTreeItem',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set getChildren(_i4.FutureOr<_i2.List<T>> Function([T?]) value) {
     _i5.setProperty(
@@ -21461,10 +23058,18 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
     );
   }
 
-  _i4.FutureOr<_i2.List<T>> Function([T?]) get getChildren => _i5.getProperty(
-        this,
-        'getChildren',
-      );
+  _i4.FutureOr<_i2.List<T>> Function([T?]) get getChildren =>
+      ([T? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'getChildren',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set getParent(_i4.FutureOr<T> Function(T) value) {
     _i5.setProperty(
       this,
@@ -21473,9 +23078,16 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
     );
   }
 
-  _i4.FutureOr<T> Function(T) get getParent => _i5.getProperty(
-        this,
-        'getParent',
+  _i4.FutureOr<T> Function(T) get getParent => (T p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'getParent',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set resolveTreeItem(
       _i4.FutureOr<_i3.TreeItem> Function(
@@ -21503,10 +23115,24 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
     _i3.TreeItem,
     T,
     _i3.CancellationToken,
-  ) get resolveTreeItem => _i5.getProperty(
-        this,
-        'resolveTreeItem',
-      );
+  ) get resolveTreeItem => (
+        _i3.TreeItem p0,
+        T p1,
+        _i3.CancellationToken p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveTreeItem',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 @_i1.JS()
@@ -21833,10 +23459,10 @@ extension TreeItemLabel$Typings on TreeItemLabel {
       (
         _i2.num,
         _i2.num,
-      )>? get highlights => (_i5.getProperty(
+      )>? get highlights => ((_i5.getProperty(
         this,
         'highlights',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set highlights(
       _i2.List<
@@ -22453,10 +24079,18 @@ extension Pseudoterminal$Typings on Pseudoterminal {
     );
   }
 
-  void Function([_i3.TerminalDimensions?]) get open => _i5.getProperty(
-        this,
-        'open',
-      );
+  void Function([_i3.TerminalDimensions?]) get open =>
+      ([_i3.TerminalDimensions? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'open',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set close(void Function() value) {
     _i5.setProperty(
       this,
@@ -22465,9 +24099,13 @@ extension Pseudoterminal$Typings on Pseudoterminal {
     );
   }
 
-  void Function() get close => _i5.getProperty(
-        this,
-        'close',
+  void Function() get close => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'close',
+        ),
+        r'call',
+        [this],
       );
   set handleInput(void Function(_i2.String) value) {
     _i5.setProperty(
@@ -22477,10 +24115,18 @@ extension Pseudoterminal$Typings on Pseudoterminal {
     );
   }
 
-  void Function(_i2.String) get handleInput => _i5.getProperty(
-        this,
-        'handleInput',
-      );
+  void Function(_i2.String) get handleInput =>
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'handleInput',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set setDimensions(void Function(_i3.TerminalDimensions) value) {
     _i5.setProperty(
       this,
@@ -22489,10 +24135,18 @@ extension Pseudoterminal$Typings on Pseudoterminal {
     );
   }
 
-  void Function(_i3.TerminalDimensions) get setDimensions => _i5.getProperty(
-        this,
-        'setDimensions',
-      );
+  void Function(_i3.TerminalDimensions) get setDimensions =>
+      (_i3.TerminalDimensions p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'setDimensions',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// Represents the dimensions of a terminal.
@@ -22781,10 +24435,24 @@ extension EnvironmentVariableCollection$Typings
     _i2.String,
     _i2.String, [
     _i3.EnvironmentVariableMutatorOptions?,
-  ]) get replace => _i5.getProperty(
-        this,
-        'replace',
-      );
+  ]) get replace => (
+        _i2.String p0,
+        _i2.String p1, [
+        _i3.EnvironmentVariableMutatorOptions? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'replace',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set append(
       void Function(
         _i2.String,
@@ -22802,10 +24470,24 @@ extension EnvironmentVariableCollection$Typings
     _i2.String,
     _i2.String, [
     _i3.EnvironmentVariableMutatorOptions?,
-  ]) get append => _i5.getProperty(
-        this,
-        'append',
-      );
+  ]) get append => (
+        _i2.String p0,
+        _i2.String p1, [
+        _i3.EnvironmentVariableMutatorOptions? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'append',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set prepend(
       void Function(
         _i2.String,
@@ -22823,10 +24505,24 @@ extension EnvironmentVariableCollection$Typings
     _i2.String,
     _i2.String, [
     _i3.EnvironmentVariableMutatorOptions?,
-  ]) get prepend => _i5.getProperty(
-        this,
-        'prepend',
-      );
+  ]) get prepend => (
+        _i2.String p0,
+        _i2.String p1, [
+        _i3.EnvironmentVariableMutatorOptions? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'prepend',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set get(_i3.EnvironmentVariableMutator? Function(_i2.String) value) {
     _i5.setProperty(
       this,
@@ -22836,10 +24532,17 @@ extension EnvironmentVariableCollection$Typings
   }
 
   _i3.EnvironmentVariableMutator? Function(_i2.String) get get =>
-      _i5.getProperty(
-        this,
-        'get',
-      );
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'get',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set forEach(
       void Function(
         _i2.dynamic Function(
@@ -22863,10 +24566,26 @@ extension EnvironmentVariableCollection$Typings
       _i3.EnvironmentVariableCollection,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i5.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        _i2.dynamic Function(
+          _i2.String,
+          _i3.EnvironmentVariableMutator,
+          _i3.EnvironmentVariableCollection,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set delete(void Function(_i2.String) value) {
     _i5.setProperty(
       this,
@@ -22875,9 +24594,16 @@ extension EnvironmentVariableCollection$Typings
     );
   }
 
-  void Function(_i2.String) get delete => _i5.getProperty(
-        this,
-        'delete',
+  void Function(_i2.String) get delete => (_i2.String p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'delete',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set clear(void Function() value) {
     _i5.setProperty(
@@ -22887,9 +24613,13 @@ extension EnvironmentVariableCollection$Typings
     );
   }
 
-  void Function() get clear => _i5.getProperty(
-        this,
-        'clear',
+  void Function() get clear => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'clear',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -22973,9 +24703,16 @@ extension GlobalEnvironmentVariableCollection$Typings
   }
 
   _i3.EnvironmentVariableCollection Function(_i3.EnvironmentVariableScope)
-      get getScoped => _i5.getProperty(
-            this,
-            'getScoped',
+      get getScoped => (_i3.EnvironmentVariableScope p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'getScoped',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
           );
 }
 
@@ -23268,9 +25005,13 @@ extension QuickInput$Typings on QuickInput {
     );
   }
 
-  void Function() get show => _i5.getProperty(
-        this,
-        'show',
+  void Function() get show => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'show',
+        ),
+        r'call',
+        [this],
       );
   set hide(void Function() value) {
     _i5.setProperty(
@@ -23280,9 +25021,13 @@ extension QuickInput$Typings on QuickInput {
     );
   }
 
-  void Function() get hide => _i5.getProperty(
-        this,
-        'hide',
+  void Function() get hide => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'hide',
+        ),
+        r'call',
+        [this],
       );
   set dispose(void Function() value) {
     _i5.setProperty(
@@ -23292,9 +25037,13 @@ extension QuickInput$Typings on QuickInput {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -23438,10 +25187,10 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
       );
 
   /// Buttons for actions in the UI.
-  _i2.List<_i3.QuickInputButton> get buttons => (_i5.getProperty(
+  _i2.List<_i3.QuickInputButton> get buttons => ((_i5.getProperty(
         this,
         'buttons',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set buttons(_i2.List<_i3.QuickInputButton> value) {
     _i5.setProperty(
@@ -23467,10 +25216,10 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
       );
 
   /// Items to pick from. This can be read and updated by the extension.
-  _i2.List<T> get items => (_i5.getProperty(
+  _i2.List<T> get items => ((_i5.getProperty(
         this,
         'items',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set items(_i2.List<T> value) {
     _i5.setProperty(
@@ -23533,10 +25282,10 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
   }
 
   /// Active items. This can be read and updated by the extension.
-  _i2.List<T> get activeItems => (_i5.getProperty(
+  _i2.List<T> get activeItems => ((_i5.getProperty(
         this,
         'activeItems',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set activeItems(_i2.List<T> value) {
     _i5.setProperty(
@@ -23553,10 +25302,10 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
       );
 
   /// Selected items. This can be read and updated by the extension.
-  _i2.List<T> get selectedItems => (_i5.getProperty(
+  _i2.List<T> get selectedItems => ((_i5.getProperty(
         this,
         'selectedItems',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set selectedItems(_i2.List<T> value) {
     _i5.setProperty(
@@ -23743,10 +25492,10 @@ extension InputBox$Typings on InputBox {
       );
 
   /// Buttons for actions in the UI.
-  _i2.List<_i3.QuickInputButton> get buttons => (_i5.getProperty(
+  _i2.List<_i3.QuickInputButton> get buttons => ((_i5.getProperty(
         this,
         'buttons',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set buttons(_i2.List<_i3.QuickInputButton> value) {
     _i5.setProperty(
@@ -24003,10 +25752,10 @@ extension TextDocumentChangeEvent$Typings on TextDocumentChangeEvent {
 
   /// An array of content changes.
   _i2.List<_i3.TextDocumentContentChangeEvent> get contentChanges =>
-      (_i5.getProperty(
+      ((_i5.getProperty(
         this,
         'contentChanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The reason why the document was changed.
@@ -24163,10 +25912,10 @@ extension FileWillCreateEvent$Typings on FileWillCreateEvent {
       );
 
   /// The files that are going to be created.
-  _i2.List<_i3.Uri> get files => (_i5.getProperty(
+  _i2.List<_i3.Uri> get files => ((_i5.getProperty(
         this,
         'files',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Allows to pause the event and to apply a {@link WorkspaceEdit workspace edit}.
@@ -24251,10 +26000,10 @@ class FileCreateEvent {
 
 extension FileCreateEvent$Typings on FileCreateEvent {
   /// The files that got created.
-  _i2.List<_i3.Uri> get files => (_i5.getProperty(
+  _i2.List<_i3.Uri> get files => ((_i5.getProperty(
         this,
         'files',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -24290,10 +26039,10 @@ extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
       );
 
   /// The files that are going to be deleted.
-  _i2.List<_i3.Uri> get files => (_i5.getProperty(
+  _i2.List<_i3.Uri> get files => ((_i5.getProperty(
         this,
         'files',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Allows to pause the event and to apply a {@link WorkspaceEdit workspace edit}.
@@ -24378,10 +26127,10 @@ class FileDeleteEvent {
 
 extension FileDeleteEvent$Typings on FileDeleteEvent {
   /// The files that got deleted.
-  _i2.List<_i3.Uri> get files => (_i5.getProperty(
+  _i2.List<_i3.Uri> get files => ((_i5.getProperty(
         this,
         'files',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -24570,17 +26319,17 @@ class WorkspaceFoldersChangeEvent {
 
 extension WorkspaceFoldersChangeEvent$Typings on WorkspaceFoldersChangeEvent {
   /// Added workspace folders.
-  _i2.List<_i3.WorkspaceFolder> get added => (_i5.getProperty(
+  _i2.List<_i3.WorkspaceFolder> get added => ((_i5.getProperty(
         this,
         'added',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Removed workspace folders.
-  _i2.List<_i3.WorkspaceFolder> get removed => (_i5.getProperty(
+  _i2.List<_i3.WorkspaceFolder> get removed => ((_i5.getProperty(
         this,
         'removed',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -24700,10 +26449,22 @@ extension ConfigurationChangeEvent$Typings on ConfigurationChangeEvent {
   _i2.bool Function(
     _i2.String, [
     _i2.Object?,
-  ]) get affectsConfiguration => _i5.getProperty(
-        this,
-        'affectsConfiguration',
-      );
+  ]) get affectsConfiguration => (
+        _i2.String p0, [
+        _i2.Object? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'affectsConfiguration',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Represents a notebook editor that is attached to a {@link NotebookDocumentnotebook}.
@@ -24766,10 +26527,10 @@ extension NotebookEditor$Typings on NotebookEditor {
   /// All selections in this notebook editor.
   ///
   ///  The primary selection (or focused range) is `selections[0]`. When the document has no cells, the primary selection is empty `{ start: 0, end: 0 }`;
-  _i2.List<_i3.NotebookRange> get selections => (_i5.getProperty(
+  _i2.List<_i3.NotebookRange> get selections => ((_i5.getProperty(
         this,
         'selections',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set selections(_i2.List<_i3.NotebookRange> value) {
     _i5.setProperty(
@@ -24780,10 +26541,10 @@ extension NotebookEditor$Typings on NotebookEditor {
   }
 
   /// The current visible ranges in the editor (vertically).
-  _i2.List<_i3.NotebookRange> get visibleRanges => (_i5.getProperty(
+  _i2.List<_i3.NotebookRange> get visibleRanges => ((_i5.getProperty(
         this,
         'visibleRanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The column in which this editor shows.
@@ -24809,10 +26570,22 @@ extension NotebookEditor$Typings on NotebookEditor {
   void Function(
     _i3.NotebookRange, [
     _i3.NotebookEditorRevealType?,
-  ]) get revealRange => _i5.getProperty(
-        this,
-        'revealRange',
-      );
+  ]) get revealRange => (
+        _i3.NotebookRange p0, [
+        _i3.NotebookEditorRevealType? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'revealRange',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 @_i1.JS()
@@ -24878,10 +26651,22 @@ extension NotebookRendererMessaging$Typings on NotebookRendererMessaging {
   _i2.Future<_i2.dynamic> Function([
     _i2.dynamic,
     _i3.NotebookEditor?,
-  ]) get postMessage => _i5.getProperty(
-        this,
-        'postMessage',
-      );
+  ]) get postMessage => ([
+        _i2.dynamic p0,
+        _i3.NotebookEditor? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'postMessage',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Represents a cell of a {@link NotebookDocumentnotebook}, either a {@link NotebookCellKind.Codecode}-cell
@@ -24957,10 +26742,10 @@ extension NotebookCell$Typings on NotebookCell {
       );
 
   /// The outputs of this cell.
-  _i2.List<_i3.NotebookCellOutput> get outputs => (_i5.getProperty(
+  _i2.List<_i3.NotebookCellOutput> get outputs => ((_i5.getProperty(
         this,
         'outputs',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The most recent {@link NotebookCellExecutionSummaryexecution summary} for this cell.
@@ -25079,10 +26864,18 @@ extension NotebookDocument$Typings on NotebookDocument {
     );
   }
 
-  _i3.NotebookCell Function(_i2.num) get cellAt => _i5.getProperty(
-        this,
-        'cellAt',
-      );
+  _i3.NotebookCell Function(_i2.num) get cellAt =>
+      (_i2.num p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'cellAt',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set getCells(
       _i2.List<_i3.NotebookCell> Function([_i3.NotebookRange?]) value) {
     _i5.setProperty(
@@ -25093,10 +26886,17 @@ extension NotebookDocument$Typings on NotebookDocument {
   }
 
   _i2.List<_i3.NotebookCell> Function([_i3.NotebookRange?]) get getCells =>
-      _i5.getProperty(
-        this,
-        'getCells',
-      );
+      ([_i3.NotebookRange? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'getCells',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set save(_i2.Future<_i2.dynamic> Function() value) {
     _i5.setProperty(
       this,
@@ -25105,9 +26905,13 @@ extension NotebookDocument$Typings on NotebookDocument {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function() get save => _i5.getProperty(
-        this,
-        'save',
+  _i2.Future<_i2.dynamic> Function() get save => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'save',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -25163,10 +26967,10 @@ extension NotebookDocumentCellChange$Typings on NotebookDocumentCellChange {
       );
 
   /// The new outputs of the cell or `undefined` when they did not change.
-  _i2.List<_i3.NotebookCellOutput>? get outputs => (_i5.getProperty(
+  _i2.List<_i3.NotebookCellOutput>? get outputs => ((_i5.getProperty(
         this,
         'outputs',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 
   /// The new execution summary of the cell or `undefined` when it did not change.
@@ -25211,17 +27015,17 @@ extension NotebookDocumentContentChange$Typings
       );
 
   /// Cells that have been added to the document.
-  _i2.List<_i3.NotebookCell> get addedCells => (_i5.getProperty(
+  _i2.List<_i3.NotebookCell> get addedCells => ((_i5.getProperty(
         this,
         'addedCells',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Cells that have been removed from the document.
-  _i2.List<_i3.NotebookCell> get removedCells => (_i5.getProperty(
+  _i2.List<_i3.NotebookCell> get removedCells => ((_i5.getProperty(
         this,
         'removedCells',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -25266,17 +27070,17 @@ extension NotebookDocumentChangeEvent$Typings on NotebookDocumentChangeEvent {
 
   /// An array of content changes describing added or removed {@link NotebookCellcells}.
   _i2.List<_i3.NotebookDocumentContentChange> get contentChanges =>
-      (_i5.getProperty(
+      ((_i5.getProperty(
         this,
         'contentChanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// An array of {@link NotebookDocumentCellChangecell changes}.
-  _i2.List<_i3.NotebookDocumentCellChange> get cellChanges => (_i5.getProperty(
+  _i2.List<_i3.NotebookDocumentCellChange> get cellChanges => ((_i5.getProperty(
         this,
         'cellChanges',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -25699,10 +27503,10 @@ extension NotebookCellOutput$Typings on NotebookCellOutput {
   ///  	vscode.NotebookCellOutputItem.text('Hey', 'text/plain'), // INVALID: repeated type, editor will pick just one
   ///  ])
   ///  ```
-  _i2.List<_i3.NotebookCellOutputItem> get items => (_i5.getProperty(
+  _i2.List<_i3.NotebookCellOutputItem> get items => ((_i5.getProperty(
         this,
         'items',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set items(_i2.List<_i3.NotebookCellOutputItem> value) {
     _i5.setProperty(
@@ -25793,10 +27597,10 @@ extension NotebookCellData$Typings on NotebookCellData {
   }
 
   /// The outputs of this cell data.
-  _i2.List<_i3.NotebookCellOutput> get outputs => (_i5.getProperty(
+  _i2.List<_i3.NotebookCellOutput> get outputs => ((_i5.getProperty(
         this,
         'outputs',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set outputs(_i2.List<_i3.NotebookCellOutput> value) {
     _i5.setProperty(
@@ -25854,10 +27658,10 @@ _i2.Object get _declaredNotebookData => _i5.getProperty(
 
 extension NotebookData$Typings on NotebookData {
   /// The cell data of this notebook data.
-  _i2.List<_i3.NotebookCellData> get cells => (_i5.getProperty(
+  _i2.List<_i3.NotebookCellData> get cells => ((_i5.getProperty(
         this,
         'cells',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set cells(_i2.List<_i3.NotebookCellData> value) {
     _i5.setProperty(
@@ -25939,10 +27743,22 @@ extension NotebookSerializer$Typings on NotebookSerializer {
   _i2.Object Function(
     _i8.Uint8List,
     _i3.CancellationToken,
-  ) get deserializeNotebook => _i5.getProperty(
-        this,
-        'deserializeNotebook',
-      );
+  ) get deserializeNotebook => (
+        _i8.Uint8List p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'deserializeNotebook',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set serializeNotebook(
       _i4.FutureOr<_i8.Uint8List> Function(
         _i3.NotebookData,
@@ -25965,10 +27781,22 @@ extension NotebookSerializer$Typings on NotebookSerializer {
   _i4.FutureOr<_i8.Uint8List> Function(
     _i3.NotebookData,
     _i3.CancellationToken,
-  ) get serializeNotebook => _i5.getProperty(
-        this,
-        'serializeNotebook',
-      );
+  ) get serializeNotebook => (
+        _i3.NotebookData p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'serializeNotebook',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Notebook content options define what parts of a notebook are persisted. Note
@@ -26185,10 +28013,10 @@ extension NotebookController$Typings on NotebookController {
   ///  myController.supportedLanguages = undefined; // falsy
   ///  myController.supportedLanguages = []; // falsy
   ///  ```
-  _i2.List<_i2.String>? get supportedLanguages => (_i5.getProperty(
+  _i2.List<_i2.String>? get supportedLanguages => ((_i5.getProperty(
         this,
         'supportedLanguages',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set supportedLanguages(_i2.List<_i2.String>? value) {
     _i5.setProperty(
@@ -26257,10 +28085,24 @@ extension NotebookController$Typings on NotebookController {
     _i2.List<_i3.NotebookCell>,
     _i3.NotebookDocument,
     _i3.NotebookController,
-  ) get executeHandler => _i5.getProperty(
-        this,
-        'executeHandler',
-      );
+  ) get executeHandler => (
+        _i2.List<_i3.NotebookCell> p0,
+        _i3.NotebookDocument p1,
+        _i3.NotebookController p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'executeHandler',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set executeHandler(
       _i4.FutureOr<void> Function(
         _i2.List<_i3.NotebookCell>,
@@ -26294,10 +28136,17 @@ extension NotebookController$Typings on NotebookController {
   ///  _Note_ that supporting {@link NotebookCellExecution.token cancellation tokens} is preferred and that interrupt handlers should
   ///  only be used when tokens cannot be supported.
   _i4.FutureOr<void> Function(_i3.NotebookDocument)? get interruptHandler =>
-      _i5.getProperty(
-        this,
-        'interruptHandler',
-      );
+      (_i3.NotebookDocument p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'interruptHandler',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set interruptHandler(
       _i4.FutureOr<void> Function(_i3.NotebookDocument)? value) {
     _i5.setProperty(
@@ -26332,10 +28181,18 @@ extension NotebookController$Typings on NotebookController {
   }
 
   _i3.NotebookCellExecution Function(_i3.NotebookCell)
-      get createNotebookCellExecution => _i5.getProperty(
-            this,
-            'createNotebookCellExecution',
-          );
+      get createNotebookCellExecution =>
+          (_i3.NotebookCell p0) => _i5.callMethod(
+                _i5.getProperty(
+                  this,
+                  'createNotebookCellExecution',
+                ),
+                r'call',
+                [
+                  this,
+                  p0,
+                ],
+              );
   set updateNotebookAffinity(
       void Function(
         _i3.NotebookDocument,
@@ -26351,10 +28208,22 @@ extension NotebookController$Typings on NotebookController {
   void Function(
     _i3.NotebookDocument,
     _i3.NotebookControllerAffinity,
-  ) get updateNotebookAffinity => _i5.getProperty(
-        this,
-        'updateNotebookAffinity',
-      );
+  ) get updateNotebookAffinity => (
+        _i3.NotebookDocument p0,
+        _i3.NotebookControllerAffinity p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'updateNotebookAffinity',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set dispose(void Function() value) {
     _i5.setProperty(
       this,
@@ -26363,9 +28232,13 @@ extension NotebookController$Typings on NotebookController {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -26477,9 +28350,16 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
     );
   }
 
-  void Function([_i2.num?]) get start => _i5.getProperty(
-        this,
-        'start',
+  void Function([_i2.num?]) get start => ([_i2.num? p0]) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'start',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set end(
       void Function([
@@ -26496,10 +28376,22 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
   void Function([
     _i2.bool?,
     _i2.num?,
-  ]) get end => _i5.getProperty(
-        this,
-        'end',
-      );
+  ]) get end => ([
+        _i2.bool? p0,
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'end',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set clearOutput(_i2.Future<_i2.dynamic> Function([_i3.NotebookCell?]) value) {
     _i5.setProperty(
       this,
@@ -26509,10 +28401,17 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
   }
 
   _i2.Future<_i2.dynamic> Function([_i3.NotebookCell?]) get clearOutput =>
-      _i5.getProperty(
-        this,
-        'clearOutput',
-      );
+      ([_i3.NotebookCell? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'clearOutput',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set replaceOutput(
       _i2.Future<_i2.dynamic> Function(
         _i2.Object, [
@@ -26528,10 +28427,22 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
   _i2.Future<_i2.dynamic> Function(
     _i2.Object, [
     _i3.NotebookCell?,
-  ]) get replaceOutput => _i5.getProperty(
-        this,
-        'replaceOutput',
-      );
+  ]) get replaceOutput => (
+        _i2.Object p0, [
+        _i3.NotebookCell? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'replaceOutput',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set appendOutput(
       _i2.Future<_i2.dynamic> Function(
         _i2.Object, [
@@ -26547,10 +28458,22 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
   _i2.Future<_i2.dynamic> Function(
     _i2.Object, [
     _i3.NotebookCell?,
-  ]) get appendOutput => _i5.getProperty(
-        this,
-        'appendOutput',
-      );
+  ]) get appendOutput => (
+        _i2.Object p0, [
+        _i3.NotebookCell? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'appendOutput',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set replaceOutputItems(
       _i2.Future<_i2.dynamic> Function(
         _i2.Object,
@@ -26566,10 +28489,22 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
   _i2.Future<_i2.dynamic> Function(
     _i2.Object,
     _i3.NotebookCellOutput,
-  ) get replaceOutputItems => _i5.getProperty(
-        this,
-        'replaceOutputItems',
-      );
+  ) get replaceOutputItems => (
+        _i2.Object p0,
+        _i3.NotebookCellOutput p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'replaceOutputItems',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set appendOutputItems(
       _i2.Future<_i2.dynamic> Function(
         _i2.Object,
@@ -26585,10 +28520,22 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
   _i2.Future<_i2.dynamic> Function(
     _i2.Object,
     _i3.NotebookCellOutput,
-  ) get appendOutputItems => _i5.getProperty(
-        this,
-        'appendOutputItems',
-      );
+  ) get appendOutputItems => (
+        _i2.Object p0,
+        _i3.NotebookCellOutput p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'appendOutputItems',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// A contribution to a cell's status bar
@@ -26769,10 +28716,22 @@ extension NotebookCellStatusBarItemProvider$Typings
   _i4.FutureOr<_i2.Object> Function(
     _i3.NotebookCell,
     _i3.CancellationToken,
-  ) get provideCellStatusBarItems => _i5.getProperty(
-        this,
-        'provideCellStatusBarItems',
-      );
+  ) get provideCellStatusBarItems => (
+        _i3.NotebookCell p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideCellStatusBarItems',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Represents the input box in the Source Control viewlet.
@@ -26905,10 +28864,22 @@ extension QuickDiffProvider$Typings on QuickDiffProvider {
   _i4.FutureOr<_i3.Uri> Function(
     _i3.Uri,
     _i3.CancellationToken,
-  ) get provideOriginalResource => _i5.getProperty(
-        this,
-        'provideOriginalResource',
-      );
+  ) get provideOriginalResource => (
+        _i3.Uri p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideOriginalResource',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// The theme-aware decorations for a
@@ -27142,10 +29113,10 @@ extension SourceControlResourceGroup$Typings on SourceControlResourceGroup {
   /// This group's collection of
   ///  {@link SourceControlResourceState source control resource states}.
   _i2.List<_i3.SourceControlResourceState> get resourceStates =>
-      (_i5.getProperty(
+      ((_i5.getProperty(
         this,
         'resourceStates',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set resourceStates(_i2.List<_i3.SourceControlResourceState> value) {
     _i5.setProperty(
@@ -27163,9 +29134,13 @@ extension SourceControlResourceGroup$Typings on SourceControlResourceGroup {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -27313,10 +29288,10 @@ extension SourceControl$Typings on SourceControl {
   /// Optional status bar commands.
   ///
   ///  These commands will be displayed in the editor's status bar.
-  _i2.List<_i3.Command>? get statusBarCommands => (_i5.getProperty(
+  _i2.List<_i3.Command>? get statusBarCommands => ((_i5.getProperty(
         this,
         'statusBarCommands',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set statusBarCommands(_i2.List<_i3.Command>? value) {
     _i5.setProperty(
@@ -27341,10 +29316,22 @@ extension SourceControl$Typings on SourceControl {
   _i3.SourceControlResourceGroup Function(
     _i2.String,
     _i2.String,
-  ) get createResourceGroup => _i5.getProperty(
-        this,
-        'createResourceGroup',
-      );
+  ) get createResourceGroup => (
+        _i2.String p0,
+        _i2.String p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'createResourceGroup',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set dispose(void Function() value) {
     _i5.setProperty(
       this,
@@ -27353,9 +29340,13 @@ extension SourceControl$Typings on SourceControl {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -27575,10 +29566,22 @@ extension DebugSession$Typings on DebugSession {
   _i2.Future<_i2.dynamic> Function(
     _i2.String, [
     _i2.dynamic,
-  ]) get customRequest => _i5.getProperty(
-        this,
-        'customRequest',
-      );
+  ]) get customRequest => (
+        _i2.String p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'customRequest',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set getDebugProtocolBreakpoint(
       _i2.Future<_i2.dynamic> Function(_i3.Breakpoint) value) {
     _i5.setProperty(
@@ -27589,9 +29592,16 @@ extension DebugSession$Typings on DebugSession {
   }
 
   _i2.Future<_i2.dynamic> Function(_i3.Breakpoint)
-      get getDebugProtocolBreakpoint => _i5.getProperty(
-            this,
-            'getDebugProtocolBreakpoint',
+      get getDebugProtocolBreakpoint => (_i3.Breakpoint p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'getDebugProtocolBreakpoint',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
           );
 }
 
@@ -27730,10 +29740,22 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
   _i4.FutureOr<_i2.List<_i3.DebugConfiguration>> Function([
     _i3.WorkspaceFolder?,
     _i3.CancellationToken?,
-  ]) get provideDebugConfigurations => _i5.getProperty(
-        this,
-        'provideDebugConfigurations',
-      );
+  ]) get provideDebugConfigurations => ([
+        _i3.WorkspaceFolder? p0,
+        _i3.CancellationToken? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideDebugConfigurations',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set resolveDebugConfiguration(
       _i4.FutureOr<_i3.DebugConfiguration> Function(
         _i3.DebugConfiguration,
@@ -27760,10 +29782,24 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
     _i3.DebugConfiguration,
     _i3.CancellationToken?, [
     _i3.WorkspaceFolder?,
-  ]) get resolveDebugConfiguration => _i5.getProperty(
-        this,
-        'resolveDebugConfiguration',
-      );
+  ]) get resolveDebugConfiguration => (
+        _i3.DebugConfiguration p1,
+        _i3.CancellationToken? p2, [
+        _i3.WorkspaceFolder? p0,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveDebugConfiguration',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set resolveDebugConfigurationWithSubstitutedVariables(
       _i4.FutureOr<_i3.DebugConfiguration> Function(
         _i3.DebugConfiguration,
@@ -27790,10 +29826,24 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
     _i3.DebugConfiguration,
     _i3.CancellationToken?, [
     _i3.WorkspaceFolder?,
-  ]) get resolveDebugConfigurationWithSubstitutedVariables => _i5.getProperty(
-        this,
-        'resolveDebugConfigurationWithSubstitutedVariables',
-      );
+  ]) get resolveDebugConfigurationWithSubstitutedVariables => (
+        _i3.DebugConfiguration p1,
+        _i3.CancellationToken? p2, [
+        _i3.WorkspaceFolder? p0,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveDebugConfigurationWithSubstitutedVariables',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
 }
 
 /// Represents a debug adapter executable and optional arguments and runtime options passed to it.
@@ -27830,10 +29880,10 @@ extension DebugAdapterExecutable$Typings on DebugAdapterExecutable {
       );
 
   /// The arguments passed to the debug adapter executable. Defaults to an empty array.
-  _i2.List<_i2.String> get args => (_i5.getProperty(
+  _i2.List<_i2.String> get args => ((_i5.getProperty(
         this,
         'args',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Optional options to be used when the debug adapter is started.
@@ -27990,10 +30040,18 @@ extension DebugAdapter$Typings on DebugAdapter {
     );
   }
 
-  void Function(_i3.DebugProtocolMessage) get handleMessage => _i5.getProperty(
-        this,
-        'handleMessage',
-      );
+  void Function(_i3.DebugProtocolMessage) get handleMessage =>
+      (_i3.DebugProtocolMessage p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'handleMessage',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// A debug adapter descriptor for an inline implementation.
@@ -28063,10 +30121,22 @@ extension DebugAdapterDescriptorFactory$Typings
   _i4.FutureOr<_i2.Object> Function(
     _i3.DebugSession, [
     _i3.DebugAdapterExecutable?,
-  ]) get createDebugAdapterDescriptor => _i5.getProperty(
-        this,
-        'createDebugAdapterDescriptor',
-      );
+  ]) get createDebugAdapterDescriptor => (
+        _i3.DebugSession p0, [
+        _i3.DebugAdapterExecutable? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'createDebugAdapterDescriptor',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// A Debug Adapter Tracker is a means to track the communication between the editor and a Debug Adapter.
@@ -28121,9 +30191,13 @@ extension DebugAdapterTracker$Typings on DebugAdapterTracker {
     );
   }
 
-  void Function() get onWillStartSession => _i5.getProperty(
-        this,
-        'onWillStartSession',
+  void Function() get onWillStartSession => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'onWillStartSession',
+        ),
+        r'call',
+        [this],
       );
   set onWillReceiveMessage(void Function([_i2.dynamic]) value) {
     _i5.setProperty(
@@ -28133,10 +30207,18 @@ extension DebugAdapterTracker$Typings on DebugAdapterTracker {
     );
   }
 
-  void Function([_i2.dynamic]) get onWillReceiveMessage => _i5.getProperty(
-        this,
-        'onWillReceiveMessage',
-      );
+  void Function([_i2.dynamic]) get onWillReceiveMessage =>
+      ([_i2.dynamic p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'onWillReceiveMessage',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set onDidSendMessage(void Function([_i2.dynamic]) value) {
     _i5.setProperty(
       this,
@@ -28145,10 +30227,18 @@ extension DebugAdapterTracker$Typings on DebugAdapterTracker {
     );
   }
 
-  void Function([_i2.dynamic]) get onDidSendMessage => _i5.getProperty(
-        this,
-        'onDidSendMessage',
-      );
+  void Function([_i2.dynamic]) get onDidSendMessage =>
+      ([_i2.dynamic p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'onDidSendMessage',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set onWillStopSession(void Function() value) {
     _i5.setProperty(
       this,
@@ -28157,9 +30247,13 @@ extension DebugAdapterTracker$Typings on DebugAdapterTracker {
     );
   }
 
-  void Function() get onWillStopSession => _i5.getProperty(
-        this,
-        'onWillStopSession',
+  void Function() get onWillStopSession => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'onWillStopSession',
+        ),
+        r'call',
+        [this],
       );
   set onError(void Function(_i7.Error) value) {
     _i5.setProperty(
@@ -28169,9 +30263,16 @@ extension DebugAdapterTracker$Typings on DebugAdapterTracker {
     );
   }
 
-  void Function(_i7.Error) get onError => _i5.getProperty(
-        this,
-        'onError',
+  void Function(_i7.Error) get onError => (_i7.Error p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'onError',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set onExit(
       void Function([
@@ -28188,10 +30289,22 @@ extension DebugAdapterTracker$Typings on DebugAdapterTracker {
   void Function([
     _i2.num?,
     _i2.String?,
-  ]) get onExit => _i5.getProperty(
-        this,
-        'onExit',
-      );
+  ]) get onExit => ([
+        _i2.num? p0,
+        _i2.String? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'onExit',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// A debug adaper factory that creates {@link DebugAdapterTrackerdebug adapter trackers}.
@@ -28223,9 +30336,16 @@ extension DebugAdapterTrackerFactory$Typings on DebugAdapterTrackerFactory {
   }
 
   _i4.FutureOr<_i3.DebugAdapterTracker> Function(_i3.DebugSession)
-      get createDebugAdapterTracker => _i5.getProperty(
-            this,
-            'createDebugAdapterTracker',
+      get createDebugAdapterTracker => (_i3.DebugSession p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'createDebugAdapterTracker',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
           );
 }
 
@@ -28258,9 +30378,16 @@ extension DebugConsole$Typings on DebugConsole {
     );
   }
 
-  void Function(_i2.String) get append => _i5.getProperty(
-        this,
-        'append',
+  void Function(_i2.String) get append => (_i2.String p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'append',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set appendLine(void Function(_i2.String) value) {
     _i5.setProperty(
@@ -28270,9 +30397,16 @@ extension DebugConsole$Typings on DebugConsole {
     );
   }
 
-  void Function(_i2.String) get appendLine => _i5.getProperty(
-        this,
-        'appendLine',
+  void Function(_i2.String) get appendLine => (_i2.String p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'appendLine',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
 }
 
@@ -28301,24 +30435,24 @@ class BreakpointsChangeEvent {
 
 extension BreakpointsChangeEvent$Typings on BreakpointsChangeEvent {
   /// Added breakpoints.
-  _i2.List<_i3.Breakpoint> get added => (_i5.getProperty(
+  _i2.List<_i3.Breakpoint> get added => ((_i5.getProperty(
         this,
         'added',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Removed breakpoints.
-  _i2.List<_i3.Breakpoint> get removed => (_i5.getProperty(
+  _i2.List<_i3.Breakpoint> get removed => ((_i5.getProperty(
         this,
         'removed',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Changed breakpoints.
-  _i2.List<_i3.Breakpoint> get changed => (_i5.getProperty(
+  _i2.List<_i3.Breakpoint> get changed => ((_i5.getProperty(
         this,
         'changed',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -28686,10 +30820,10 @@ extension CommentThread$Typings on CommentThread {
   }
 
   /// The ordered comments of the thread.
-  _i2.List<_i3.Comment> get comments => (_i5.getProperty(
+  _i2.List<_i3.Comment> get comments => ((_i5.getProperty(
         this,
         'comments',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set comments(_i2.List<_i3.Comment> value) {
     _i5.setProperty(
@@ -28793,9 +30927,13 @@ extension CommentThread$Typings on CommentThread {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -29003,10 +31141,10 @@ extension Comment$Typings on Comment {
   }
 
   /// Optional reactions of the {@link Comment}
-  _i2.List<_i3.CommentReaction>? get reactions => (_i5.getProperty(
+  _i2.List<_i3.CommentReaction>? get reactions => ((_i5.getProperty(
         this,
         'reactions',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
   set reactions(_i2.List<_i3.CommentReaction>? value) {
     _i5.setProperty(
@@ -29142,10 +31280,22 @@ extension CommentingRangeProvider$Typings on CommentingRangeProvider {
   _i4.FutureOr<_i2.List<_i3.Range>> Function(
     _i3.TextDocument,
     _i3.CancellationToken,
-  ) get provideCommentingRanges => _i5.getProperty(
-        this,
-        'provideCommentingRanges',
-      );
+  ) get provideCommentingRanges => (
+        _i3.TextDocument p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'provideCommentingRanges',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
 /// Represents a {@link CommentControllercomment controller}'s {@link CommentController.optionsoptions}.
@@ -29287,10 +31437,22 @@ extension CommentController$Typings on CommentController {
   _i2.Future<_i2.dynamic> Function(
     _i3.Comment,
     _i3.CommentReaction,
-  )? get reactionHandler => _i5.getProperty(
-        this,
-        'reactionHandler',
-      );
+  )? get reactionHandler => (
+        _i3.Comment p0,
+        _i3.CommentReaction p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'reactionHandler',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set reactionHandler(
       _i2.Future<_i2.dynamic> Function(
         _i3.Comment,
@@ -29320,10 +31482,24 @@ extension CommentController$Typings on CommentController {
     _i3.Uri,
     _i3.Range,
     _i2.List<_i3.Comment>,
-  ) get createCommentThread => _i5.getProperty(
-        this,
-        'createCommentThread',
-      );
+  ) get createCommentThread => (
+        _i3.Uri p0,
+        _i3.Range p1,
+        _i2.List<_i3.Comment> p2,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'createCommentThread',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set dispose(void Function() value) {
     _i5.setProperty(
       this,
@@ -29332,9 +31508,13 @@ extension CommentController$Typings on CommentController {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -29385,10 +31565,10 @@ extension AuthenticationSession$Typings on AuthenticationSession {
 
   /// The permissions granted by the session's access token. Available scopes
   /// are defined by the {@link AuthenticationProvider}.
-  _i2.List<_i2.String> get scopes => (_i5.getProperty(
+  _i2.List<_i2.String> get scopes => ((_i5.getProperty(
         this,
         'scopes',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -29680,26 +31860,26 @@ class AuthenticationProviderAuthenticationSessionsChangeEvent {
 extension AuthenticationProviderAuthenticationSessionsChangeEvent$Typings
     on AuthenticationProviderAuthenticationSessionsChangeEvent {
   /// The {@link AuthenticationSessionAuthenticationSessions} of the {@link AuthenticationProvider} that have been added.
-  _i2.List<_i3.AuthenticationSession>? get added => (_i5.getProperty(
+  _i2.List<_i3.AuthenticationSession>? get added => ((_i5.getProperty(
         this,
         'added',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 
   /// The {@link AuthenticationSessionAuthenticationSessions} of the {@link AuthenticationProvider} that have been removed.
-  _i2.List<_i3.AuthenticationSession>? get removed => (_i5.getProperty(
+  _i2.List<_i3.AuthenticationSession>? get removed => ((_i5.getProperty(
         this,
         'removed',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 
   /// The {@link AuthenticationSessionAuthenticationSessions} of the {@link AuthenticationProvider} that have been changed.
   /// A session changes when its data excluding the id are updated. An example of this is a session refresh that results in a new
   /// access token being set for the session.
-  _i2.List<_i3.AuthenticationSession>? get changed => (_i5.getProperty(
+  _i2.List<_i3.AuthenticationSession>? get changed => ((_i5.getProperty(
         this,
         'changed',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 }
 
@@ -29750,10 +31930,17 @@ extension AuthenticationProvider$Typings on AuthenticationProvider {
   }
 
   _i2.Future<_i2.dynamic> Function([_i2.List<_i2.String>?]) get getSessions =>
-      _i5.getProperty(
-        this,
-        'getSessions',
-      );
+      ([_i2.List<_i2.String>? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'getSessions',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set createSession(
       _i2.Future<_i2.dynamic> Function(_i2.List<_i2.String>) value) {
     _i5.setProperty(
@@ -29764,10 +31951,17 @@ extension AuthenticationProvider$Typings on AuthenticationProvider {
   }
 
   _i2.Future<_i2.dynamic> Function(_i2.List<_i2.String>) get createSession =>
-      _i5.getProperty(
-        this,
-        'createSession',
-      );
+      (_i2.List<_i2.String> p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'createSession',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set removeSession(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
     _i5.setProperty(
       this,
@@ -29777,10 +31971,17 @@ extension AuthenticationProvider$Typings on AuthenticationProvider {
   }
 
   _i2.Future<_i2.dynamic> Function(_i2.String) get removeSession =>
-      _i5.getProperty(
-        this,
-        'removeSession',
-      );
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'removeSession',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// Tags can be associated with {@link TestItemTestItems} and
@@ -29939,9 +32140,13 @@ extension TestRunProfile$Typings on TestRunProfile {
   ///  UI, and this method will be invoked when it's clicked. When called,
   ///  you can take other editor actions, such as showing a quick pick or
   ///  opening a configuration file.
-  void Function()? get configureHandler => _i5.getProperty(
-        this,
-        'configureHandler',
+  void Function()? get configureHandler => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'configureHandler',
+        ),
+        r'call',
+        [this],
       );
   set configureHandler(void Function()? value) {
     _i5.setProperty(
@@ -29969,10 +32174,22 @@ extension TestRunProfile$Typings on TestRunProfile {
   _i4.FutureOr<void> Function(
     _i3.TestRunRequest,
     _i3.CancellationToken,
-  ) get runHandler => _i5.getProperty(
-        this,
-        'runHandler',
-      );
+  ) get runHandler => (
+        _i3.TestRunRequest p0,
+        _i3.CancellationToken p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'runHandler',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set runHandler(
       _i4.FutureOr<void> Function(
         _i3.TestRunRequest,
@@ -30000,9 +32217,13 @@ extension TestRunProfile$Typings on TestRunProfile {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -30136,10 +32357,17 @@ extension TestController$Typings on TestController {
   ///  @param item An unresolved test item for which children are being
   ///  requested, or `undefined` to resolve the controller's initial {@link TestController.items items}.
   _i4.FutureOr<void> Function([_i3.TestItem?])? get resolveHandler =>
-      _i5.getProperty(
-        this,
-        'resolveHandler',
-      );
+      ([_i3.TestItem? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolveHandler',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set resolveHandler(_i4.FutureOr<void> Function([_i3.TestItem?])? value) {
     _i5.setProperty(
       this,
@@ -30161,10 +32389,17 @@ extension TestController$Typings on TestController {
   ///
   ///  @returns A thenable that resolves when tests have been refreshed.
   _i4.FutureOr<void> Function(_i3.CancellationToken)? get refreshHandler =>
-      _i5.getProperty(
-        this,
-        'refreshHandler',
-      );
+      (_i3.CancellationToken p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'refreshHandler',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set refreshHandler(
       _i4.FutureOr<void> Function(_i3.CancellationToken)? value) {
     _i5.setProperty(
@@ -30206,10 +32441,33 @@ extension TestController$Typings on TestController {
     _i2.bool?,
     _i3.TestTag?,
     _i2.bool?,
-  ]) get createRunProfile => _i5.getProperty(
-        this,
-        'createRunProfile',
-      );
+  ]) get createRunProfile => (
+        _i2.String p0,
+        _i3.TestRunProfileKind p1,
+        _i4.FutureOr<void> Function(
+          _i3.TestRunRequest,
+          _i3.CancellationToken,
+        ) p2, [
+        _i2.bool? p3,
+        _i3.TestTag? p4,
+        _i2.bool? p5,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'createRunProfile',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+              p4,
+              p5,
+            ],
+          );
   set createTestRun(
       _i3.TestRun Function(
         _i3.TestRunRequest, [
@@ -30227,10 +32485,24 @@ extension TestController$Typings on TestController {
     _i3.TestRunRequest, [
     _i2.String?,
     _i2.bool?,
-  ]) get createTestRun => _i5.getProperty(
-        this,
-        'createTestRun',
-      );
+  ]) get createTestRun => (
+        _i3.TestRunRequest p0, [
+        _i2.String? p1,
+        _i2.bool? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'createTestRun',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set createTestItem(
       _i3.TestItem Function(
         _i2.String,
@@ -30248,10 +32520,24 @@ extension TestController$Typings on TestController {
     _i2.String,
     _i2.String, [
     _i3.Uri?,
-  ]) get createTestItem => _i5.getProperty(
-        this,
-        'createTestItem',
-      );
+  ]) get createTestItem => (
+        _i2.String p0,
+        _i2.String p1, [
+        _i3.Uri? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'createTestItem',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set invalidateTestResults(void Function([_i2.Object?]) value) {
     _i5.setProperty(
       this,
@@ -30260,10 +32546,18 @@ extension TestController$Typings on TestController {
     );
   }
 
-  void Function([_i2.Object?]) get invalidateTestResults => _i5.getProperty(
-        this,
-        'invalidateTestResults',
-      );
+  void Function([_i2.Object?]) get invalidateTestResults =>
+      ([_i2.Object? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'invalidateTestResults',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set dispose(void Function() value) {
     _i5.setProperty(
       this,
@@ -30272,9 +32566,13 @@ extension TestController$Typings on TestController {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -30319,10 +32617,10 @@ extension TestRunRequest$Typings on TestRunRequest {
   ///
   /// The process of running tests should resolve the children of any test
   /// items who have not yet been resolved.
-  _i2.List<_i3.TestItem>? get include => (_i5.getProperty(
+  _i2.List<_i3.TestItem>? get include => ((_i5.getProperty(
         this,
         'include',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 
   /// An array of tests the user has marked as excluded from the test included
@@ -30330,10 +32628,10 @@ extension TestRunRequest$Typings on TestRunRequest {
   ///
   /// May be omitted if no exclusions were requested. Test controllers should
   /// not run excluded tests or any children of excluded tests.
-  _i2.List<_i3.TestItem>? get exclude => (_i5.getProperty(
+  _i2.List<_i3.TestItem>? get exclude => ((_i5.getProperty(
         this,
         'exclude',
-      ) as _i2.List?)
+      )) as _i2.List?)
           ?.cast();
 
   /// The profile used for this request. This will always be defined
@@ -30445,10 +32743,18 @@ extension TestRun$Typings on TestRun {
     );
   }
 
-  void Function(_i3.TestItem) get enqueued => _i5.getProperty(
-        this,
-        'enqueued',
-      );
+  void Function(_i3.TestItem) get enqueued =>
+      (_i3.TestItem p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'enqueued',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set started(void Function(_i3.TestItem) value) {
     _i5.setProperty(
       this,
@@ -30457,10 +32763,18 @@ extension TestRun$Typings on TestRun {
     );
   }
 
-  void Function(_i3.TestItem) get started => _i5.getProperty(
-        this,
-        'started',
-      );
+  void Function(_i3.TestItem) get started =>
+      (_i3.TestItem p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'started',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set skipped(void Function(_i3.TestItem) value) {
     _i5.setProperty(
       this,
@@ -30469,10 +32783,18 @@ extension TestRun$Typings on TestRun {
     );
   }
 
-  void Function(_i3.TestItem) get skipped => _i5.getProperty(
-        this,
-        'skipped',
-      );
+  void Function(_i3.TestItem) get skipped =>
+      (_i3.TestItem p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'skipped',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set failed(
       void Function(
         _i3.TestItem,
@@ -30490,10 +32812,24 @@ extension TestRun$Typings on TestRun {
     _i3.TestItem,
     _i2.Object, [
     _i2.num?,
-  ]) get failed => _i5.getProperty(
-        this,
-        'failed',
-      );
+  ]) get failed => (
+        _i3.TestItem p0,
+        _i2.Object p1, [
+        _i2.num? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'failed',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set errored(
       void Function(
         _i3.TestItem,
@@ -30511,10 +32847,24 @@ extension TestRun$Typings on TestRun {
     _i3.TestItem,
     _i2.Object, [
     _i2.num?,
-  ]) get errored => _i5.getProperty(
-        this,
-        'errored',
-      );
+  ]) get errored => (
+        _i3.TestItem p0,
+        _i2.Object p1, [
+        _i2.num? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'errored',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set passed(
       void Function(
         _i3.TestItem, [
@@ -30530,10 +32880,22 @@ extension TestRun$Typings on TestRun {
   void Function(
     _i3.TestItem, [
     _i2.num?,
-  ]) get passed => _i5.getProperty(
-        this,
-        'passed',
-      );
+  ]) get passed => (
+        _i3.TestItem p0, [
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'passed',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set appendOutput(
       void Function(
         _i2.String, [
@@ -30551,10 +32913,24 @@ extension TestRun$Typings on TestRun {
     _i2.String, [
     _i3.Location?,
     _i3.TestItem?,
-  ]) get appendOutput => _i5.getProperty(
-        this,
-        'appendOutput',
-      );
+  ]) get appendOutput => (
+        _i2.String p0, [
+        _i3.Location? p1,
+        _i3.TestItem? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'appendOutput',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set end(void Function() value) {
     _i5.setProperty(
       this,
@@ -30563,9 +32939,13 @@ extension TestRun$Typings on TestRun {
     );
   }
 
-  void Function() get end => _i5.getProperty(
-        this,
-        'end',
+  void Function() get end => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'end',
+        ),
+        r'call',
+        [this],
       );
 }
 
@@ -30630,10 +33010,18 @@ extension TestItemCollection$Typings on TestItemCollection {
     );
   }
 
-  void Function(_i2.List<_i3.TestItem>) get replace => _i5.getProperty(
-        this,
-        'replace',
-      );
+  void Function(_i2.List<_i3.TestItem>) get replace =>
+      (_i2.List<_i3.TestItem> p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'replace',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set forEach(
       void Function(
         _i2.Object? Function(
@@ -30655,10 +33043,25 @@ extension TestItemCollection$Typings on TestItemCollection {
       _i3.TestItemCollection,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i5.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        _i2.Object? Function(
+          _i3.TestItem,
+          _i3.TestItemCollection,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set add(void Function(_i3.TestItem) value) {
     _i5.setProperty(
       this,
@@ -30667,9 +33070,16 @@ extension TestItemCollection$Typings on TestItemCollection {
     );
   }
 
-  void Function(_i3.TestItem) get add => _i5.getProperty(
-        this,
-        'add',
+  void Function(_i3.TestItem) get add => (_i3.TestItem p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'add',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set delete(void Function(_i2.String) value) {
     _i5.setProperty(
@@ -30679,9 +33089,16 @@ extension TestItemCollection$Typings on TestItemCollection {
     );
   }
 
-  void Function(_i2.String) get delete => _i5.getProperty(
-        this,
-        'delete',
+  void Function(_i2.String) get delete => (_i2.String p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'delete',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set get(_i3.TestItem? Function(_i2.String) value) {
     _i5.setProperty(
@@ -30691,10 +33108,18 @@ extension TestItemCollection$Typings on TestItemCollection {
     );
   }
 
-  _i3.TestItem? Function(_i2.String) get get => _i5.getProperty(
-        this,
-        'get',
-      );
+  _i3.TestItem? Function(_i2.String) get get =>
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'get',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
 /// An item shown in the "test explorer" view.
@@ -30783,10 +33208,10 @@ extension TestItem$Typings on TestItem {
 
   /// Tags associated with this test item. May be used in combination with
   ///  {@link TestRunProfile.tag tags}, or simply as an organizational feature.
-  _i2.List<_i3.TestTag> get tags => (_i5.getProperty(
+  _i2.List<_i3.TestTag> get tags => ((_i5.getProperty(
         this,
         'tags',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set tags(_i2.List<_i3.TestTag> value) {
     _i5.setProperty(
@@ -31312,25 +33737,25 @@ class TabChangeEvent {
 
 extension TabChangeEvent$Typings on TabChangeEvent {
   /// The tabs that have been opened.
-  _i2.List<_i3.Tab> get opened => (_i5.getProperty(
+  _i2.List<_i3.Tab> get opened => ((_i5.getProperty(
         this,
         'opened',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The tabs that have been closed.
-  _i2.List<_i3.Tab> get closed => (_i5.getProperty(
+  _i2.List<_i3.Tab> get closed => ((_i5.getProperty(
         this,
         'closed',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Tabs that have changed, e.g have changed
   /// their {@link Tab.isActiveactive} state.
-  _i2.List<_i3.Tab> get changed => (_i5.getProperty(
+  _i2.List<_i3.Tab> get changed => ((_i5.getProperty(
         this,
         'changed',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -31359,25 +33784,25 @@ class TabGroupChangeEvent {
 
 extension TabGroupChangeEvent$Typings on TabGroupChangeEvent {
   /// Tab groups that have been opened.
-  _i2.List<_i3.TabGroup> get opened => (_i5.getProperty(
+  _i2.List<_i3.TabGroup> get opened => ((_i5.getProperty(
         this,
         'opened',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Tab groups that have been closed.
-  _i2.List<_i3.TabGroup> get closed => (_i5.getProperty(
+  _i2.List<_i3.TabGroup> get closed => ((_i5.getProperty(
         this,
         'closed',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Tab groups that have changed, e.g have changed
   /// their {@link TabGroup.isActiveactive} state.
-  _i2.List<_i3.TabGroup> get changed => (_i5.getProperty(
+  _i2.List<_i3.TabGroup> get changed => ((_i5.getProperty(
         this,
         'changed',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -31434,10 +33859,10 @@ extension TabGroup$Typings on TabGroup {
 
   /// The list of tabs contained within the group.
   /// This can be empty if the group has no tabs open.
-  _i2.List<_i3.Tab> get tabs => (_i5.getProperty(
+  _i2.List<_i3.Tab> get tabs => ((_i5.getProperty(
         this,
         'tabs',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -31469,10 +33894,10 @@ class TabGroups {
 
 extension TabGroups$Typings on TabGroups {
   /// All the groups within the group container.
-  _i2.List<_i3.TabGroup> get all => (_i5.getProperty(
+  _i2.List<_i3.TabGroup> get all => ((_i5.getProperty(
         this,
         'all',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// The currently active group.
@@ -31660,10 +34085,22 @@ extension TelemetryLogger$Typings on TelemetryLogger {
   void Function(
     _i2.String, [
     _i2.dynamic,
-  ]) get logUsage => _i5.getProperty(
-        this,
-        'logUsage',
-      );
+  ]) get logUsage => (
+        _i2.String p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'logUsage',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set dispose(void Function() value) {
     _i5.setProperty(
       this,
@@ -31672,9 +34109,13 @@ extension TelemetryLogger$Typings on TelemetryLogger {
     );
   }
 
-  void Function() get dispose => _i5.getProperty(
-        this,
-        'dispose',
+  void Function() get dispose => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'dispose',
+        ),
+        r'call',
+        [this],
       );
 
   /// Log an error event.
@@ -31810,10 +34251,22 @@ extension TelemetrySender$Typings on TelemetrySender {
   void Function(
     _i2.String, [
     _i2.dynamic,
-  ]) get sendEventData => _i5.getProperty(
-        this,
-        'sendEventData',
-      );
+  ]) get sendEventData => (
+        _i2.String p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'sendEventData',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set sendErrorData(
       void Function(
         _i7.Error, [
@@ -31829,10 +34282,22 @@ extension TelemetrySender$Typings on TelemetrySender {
   void Function(
     _i7.Error, [
     _i2.dynamic,
-  ]) get sendErrorData => _i5.getProperty(
-        this,
-        'sendErrorData',
-      );
+  ]) get sendErrorData => (
+        _i7.Error p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'sendErrorData',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set flush(_i4.FutureOr<void> Function() value) {
     _i5.setProperty(
       this,
@@ -31841,9 +34306,13 @@ extension TelemetrySender$Typings on TelemetrySender {
     );
   }
 
-  _i4.FutureOr<void> Function() get flush => _i5.getProperty(
-        this,
-        'flush',
+  _i4.FutureOr<void> Function() get flush => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'flush',
+        ),
+        r'call',
+        [this],
       );
 }
 

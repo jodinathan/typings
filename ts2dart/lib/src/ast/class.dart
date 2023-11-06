@@ -582,11 +582,6 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
       yield* v.buildExternal();
     }
 
-    if (usableName.contains('ActiveTextEditor')) {
-      print(
-          'ActiveTextEditorAccessor $usableName($name): ${members.where((m) => m.name == 'edit').join(', ')}\n${properties.where((m) => m.name == 'edit').join(', ')}\n${_properties.where((m) => m.name == 'edit').join(', ')}');
-    }
-
     if (members.isNotEmpty) {
       final extension = Extension((b) {
         b

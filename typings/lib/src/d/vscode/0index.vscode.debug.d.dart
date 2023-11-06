@@ -146,10 +146,10 @@ extension $ModuleDebug$Typings on $ModuleDebug {
       );
 
   /// List of breakpoints.
-  _i2.List<_i4.Breakpoint> get breakpoints => (_i3.getProperty(
+  _i2.List<_i4.Breakpoint> get breakpoints => ((_i3.getProperty(
         this,
         'breakpoints',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// An {@link Event} which fires when the {@link debug.activeDebugSessionactive debug session}

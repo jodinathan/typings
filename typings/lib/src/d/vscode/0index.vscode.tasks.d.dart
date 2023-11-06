@@ -36,10 +36,10 @@ class $ModuleTasks {}
 
 extension $ModuleTasks$Typings on $ModuleTasks {
   /// The currently active task executions or an empty array.
-  _i2.List<_i3.TaskExecution> get taskExecutions => (_i4.getProperty(
+  _i2.List<_i3.TaskExecution> get taskExecutions => ((_i4.getProperty(
         this,
         'taskExecutions',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Fires when a task starts.

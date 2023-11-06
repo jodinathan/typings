@@ -1,4 +1,5 @@
 import 'package:code_builder/code_builder.dart';
+import 'package:collection/collection.dart';
 import 'package:ts2dart/src/common.dart';
 import 'package:ts2dart/src/ast/type_parameter.dart';
 
@@ -135,6 +136,42 @@ class InteropFunction extends InteropType
   }
 
   @override
+  Expression fromInterop(
+          {required Expression argument,
+          bool isNullable = false,
+          bool isOptional = false,
+          required List<InteropRef> typeArgs}) =>
+      Method((b) {
+        var index = 0;
+        final optionals = params.optionals();
+
+        for (final param in params) {
+          final buildParam = Parameter((b) {
+            b
+              ..name = 'p$index'
+              ..type = param.ref.ref(solid: true);
+          });
+
+          if (index >= optionals.from && index <= optionals.to) {
+            b.optionalParameters.add(buildParam);
+          } else {
+            b.requiredParameters.add(buildParam);
+          }
+
+          index++;
+        }
+
+        b.body = pkgJsUtils.callMethod([
+          argument,
+          literalString('call', raw: true),
+          literalList([
+            refer('this'),
+            ...params.mapIndexed((index, element) => refer('p$index'))
+          ])
+        ]).code;
+      }).closure;
+
+  @override
   bool isSame(InteropType other) =>
       other is InteropFunction &&
       other.returns.isSame(returns) &&
@@ -165,7 +202,18 @@ class InteropFunction extends InteropType
         }
       }
 
-      b.types.addAll(typeParams.map((tp) => tp.ref()));
+      final tps = <InteropTypeParam>[];
+
+      for (final tp in typeParams) {
+        final symbol = tp.symbol;
+
+        if (returns.usesLocalSymbol(symbol) ||
+            params.any((p) => p.ref.usesLocalSymbol(symbol))) {
+          tps.add(tp);
+        }
+      }
+
+      b.types.addAll(tps.map((tp) => tp.ref()));
     });
   }
 

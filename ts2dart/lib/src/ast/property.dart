@@ -59,17 +59,21 @@ final class InteropGetter extends InteropProperty {
   @override
   Iterable<Method> build({Reference? target}) {
     final t = target ??= makeThis();
+    final returns = reference.ref(solid: true, useFuture: true);
+
+    literal(null);
 
     return [
       _makeProperty(
           type: MethodType.getter,
           updates: (b) {
             b
-              ..returns = reference.ref(solid: true, useFuture: true)
+              ..returns = returns
               ..lambda = true
               ..body = reference
                   .fromInterop(pkgJsUtils
                       .getProperty([t, InteropProperty.literalJSName(name)]))
+                  //.asA(returns)
                   .code;
           }),
     ];
