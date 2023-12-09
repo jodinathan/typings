@@ -20144,7 +20144,7 @@ extension FileSystem$Typings on FileSystem {
   }
 
   _i2.Future<_i2.dynamic> Function(_i3.Uri) get stat =>
-      (_i3.Uri p0) => _i5.callMethod(
+      (_i3.Uri p0) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'stat',
@@ -20154,7 +20154,7 @@ extension FileSystem$Typings on FileSystem {
               this,
               p0,
             ],
-          );
+          ));
   set readDirectory(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
     _i5.setProperty(
       this,

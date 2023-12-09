@@ -1,10 +1,13 @@
 import 'dart:convert' as conv;
 import 'dart:io';
 
+import 'package:recase/recase.dart';
 import 'package:ts2dart/src/project.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart';
 import 'package:archive/archive_io.dart';
+import 'package:glob/glob.dart';
+import 'package:glob/list_local_fs.dart';
 
 import 'common.dart';
 
@@ -26,12 +29,14 @@ final class Transpiler {
   final List<String> distFiles;
   final String? targetMainFile;
 
-  String dir([String path = '']) =>
-      '${Directory.current.path}/work/$package/$path';
+  String dir([String path = '']) => '${pkgDir(package)}$path';
 
-  Future<InteropProject> _createProject({
-    required Iterable<String> fileArgs,
-  }) async {
+  String pkgDir(String package) => '${Directory.current.path}/work/$package/';
+
+  Future<InteropProject> _createProject(
+      {required Iterable<String> fileArgs,
+      required bool crawlTsFiles,
+      bool fetchExternals = false}) async {
     final jsonPath = dir('toExport.json');
     final jsonFile = File(jsonPath);
 
@@ -49,8 +54,13 @@ final class Transpiler {
     // final p = await Process.run(
     //     'node', ['${Directory.current.path}/../ts_ast/bin/index.js', ...fileArgs],
     //     workingDirectory: dir());
-    final p = await Process.run('ts-node',
-        ['${Directory.current.path}/../ts_ast/src/index.ts', ...fileArgs],
+    final p = await Process.run(
+        'ts-node',
+        [
+          '${Directory.current.path}/../ts_ast/src/index.ts',
+          crawlTsFiles ? '-t' : '-f',
+          ...fileArgs
+        ],
         workingDirectory: wd);
 
     stdout.writeln(p.stdout);
@@ -61,6 +71,60 @@ final class Transpiler {
     assert(File(jsonPath).existsSync(), 'Json path was not found: $jsonPath');
 
     final map = conv.json.decode(File(jsonPath).readAsStringSync()) as Map;
+
+    if (map case {'uses': List uses}
+        when uses.isNotEmpty && fetchExternals && 1 < 0) {
+      final externals = uses.cast<String>();
+      final nodeModulesExists =
+          Directory(dir('out/package/node_modules')).existsSync();
+
+      //print('Should install node_modules: (${!nodeModulesExists})');
+
+      if (!nodeModulesExists) {
+        print('Installing node_modules ${dir('out/package')}');
+        await Process.run('npm', ['install'],
+            workingDirectory: dir('out/package'));
+        print('Done installing node_modules');
+      }
+
+      for (final ext in externals) {
+        final modulePath = dir('out/package/node_modules/$ext');
+        final d = Directory(modulePath);
+        final toBasePath = pkgDir('$ext/out');
+        final toPath = '${toBasePath}package';
+        final toDir = Directory(toPath);
+
+        if (!toDir.existsSync()) {
+          print('ToMove $modulePath to $toPath. ${d.existsSync()}');
+          if (!d.existsSync()) {
+            throw 'COULDNTFIND $modulePath';
+          }
+
+          final toBase = Directory(toBasePath);
+
+          if (!toBase.existsSync()) {
+            print('Creating $toBasePath');
+            toBase.createSync(recursive: true);
+          }
+
+          d.renameSync(toPath);
+        }
+
+        final dirName = ext.camelCase;
+
+        print('=============\nTranspilling external $ext ($dirName)');
+        await Transpiler.fromNpm(
+            package: ext,
+            version: 'latest',
+            targetMainFile: dirName,
+            dirName: dirName,
+            packageJson: (typings: true, import: false),
+            targetPath: targetPath,
+            //fetchExternals: false,
+            uses: {'typescript'});
+        print('=============\nDone external $ext ($dirName)');
+      }
+    }
 
     if (map case {'files': List files}) {
       return InteropProject(
@@ -93,7 +157,8 @@ final class Transpiler {
       Iterable<String> distFiles = const [],
       Iterable<String> uses = const {},
       String? targetMainFile,
-      bool force = false}) async {
+      bool force = false,
+      bool fetchExternals = true}) async {
     final mainFiles = files.toList();
     final transpiller = Transpiler(
         package: package,
@@ -105,6 +170,7 @@ final class Transpiler {
         distFiles: distFiles.toList());
     final outDir = Directory(transpiller.dir('out/package'));
     final dir = transpiller.dir;
+    var crawlTsFiles = false;
 
     assert(!packageJson.typings || mainFiles.isEmpty,
         'Either use packageJson.typings=true or files($mainFiles)');
@@ -142,7 +208,58 @@ final class Transpiler {
           as Map<String, dynamic>;
 
       if (packageJson.typings) {
-        mainFiles.add(pkg.prop('typings'));
+        final typings = pkg.prop<String?>('typings');
+        final types = pkg.prop<String?>('types');
+
+        if (typings != null) {
+          mainFiles.add(typings);
+        } else if (types != null) {
+          crawlTsFiles = true;
+          mainFiles.add(types);
+        } else {
+          final useTypesVersions = 1 > 0;
+
+          if (useTypesVersions) {
+            final tv = pkg['typesVersions'];
+
+            if (tv case Map rawMap) {
+              Iterable<String> digFiles(Map rawMap) sync* {
+                final map = rawMap.cast<String, dynamic>();
+
+                for (final value in map.values) {
+                  if (value is Map) {
+                    yield* digFiles(value);
+                  } else if (value is Iterable) {
+                    for (final item in value) {
+                      if (item is String) {
+                        final paths = {
+                          '$item.d.ts',
+                          '$item/index.d.ts',
+                          '$item/types.d.ts'
+                        };
+
+                        for (final path in paths) {
+                          if (File(dir('out/package/$path')).existsSync()) {
+                            yield path;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              mainFiles.addAll(digFiles(rawMap).toSet());
+            }
+          } else {
+            final tsFiles = Glob(dir('out/package/**.d.ts'));
+
+            for (final entity in tsFiles.listSync()) {
+              mainFiles.add(entity.path.substring(
+                  entity.path.indexOf('out/package/') + 'out/package/'.length));
+            }
+          }
+        }
       }
 
       if (packageJson.import) {
@@ -179,7 +296,27 @@ final class Transpiler {
       }
     }
 
-    return transpiller._createProject(fileArgs: fileArgs);
+    return transpiller._createProject(
+        fileArgs: fileArgs,
+        crawlTsFiles: crawlTsFiles,
+        fetchExternals: fetchExternals);
+  }
+
+  // ignore: unused_element
+  void _parseDeps(Map<String, String> versions, Map map) {
+    final deps = map['dependencies'];
+
+    if (deps is Map) {
+      for (final name in deps.keys) {
+        final block = deps[name] as Map;
+        final version = block['version'] as String?;
+
+        if (version != null) {
+          versions[name as String] = version;
+        }
+        _parseDeps(versions, block);
+      }
+    }
   }
 
   static Future<InteropProject> fromUrls(
@@ -222,6 +359,6 @@ final class Transpiler {
       fileArgs.add(filePath);
     }
 
-    return transpiller._createProject(fileArgs: fileArgs);
+    return transpiller._createProject(fileArgs: fileArgs, crawlTsFiles: false);
   }
 }

@@ -1,8 +1,11 @@
+import { Project } from "ts-morph";
 import * as ts from "typescript";
 const fs = require("fs");
+const path = require("path");
 
 const dev = false;
 const debug = true;
+let inlineImports = 0;
 
 const anyType = {
   core: "any",
@@ -36,10 +39,19 @@ interface Library {
     vars: any[];
     modules: any[];
     enums: any[];
+    imports: ImportDeclare[];
+    file?: string;
   };
   namespace: string;
   from: string;
   _: number;
+}
+
+interface ImportDeclare {
+  alias: string;
+  from: string;
+  local: boolean;
+  types: string[];
 }
 
 function extract(files: string[]): void {
@@ -49,6 +61,9 @@ function extract(files: string[]): void {
   let inlineCounter = 0;
   let parentNamedType: any[] = [];
   let namedListen: ((ref: string) => void) | undefined;
+  let currentFile: string;
+  let sourceFile: ts.SourceFile;
+  const uses: string[] = [];
 
   const withNamed = (named: any, fn: any) => {
     parentNamedType.push(named);
@@ -66,12 +81,40 @@ function extract(files: string[]): void {
     namedListen = undefined;
   };
 
-  const parseNodes = (source: ts.Node, lib: Library) => {
-    const { typedefs, structs, funcs, vars, modules, enums } = lib.items;
+  const isRelativeImport = (buf: string) => {
+    const basePath = path.dirname(currentFile) + "/" + buf.replace(/["']/g, "");
+    let imp = basePath + ".d.ts";
 
+    console.log("tryAddRelativeImport", imp, fs.existsSync(imp), buf);
+    if (!fs.existsSync(imp)) {
+      imp = basePath + "/index.d.ts";
+
+      if (!fs.existsSync(imp)) {
+        return false;
+      }
+    }
+
+    return true;
+  };
+
+  const parseNodes = (source: ts.Node, lib: Library) => {
+    const { typedefs, structs, funcs, vars, modules, enums, imports } =
+      lib.items;
+
+    const pushImport = (declare: ImportDeclare) => {
+      if (!declare.local) {
+        const spl = declare.from.split('/');
+        const pkg = spl[0];
+
+        if (!uses.includes(pkg)) {
+          uses.push(pkg);
+        }
+      }
+      imports.push(declare);
+    }
     const pushStruct = (struct: any) => {
       structs.push(struct);
-    }
+    };
 
     const parseType = (type?: ts.TypeNode) => {
       if (!type) {
@@ -100,6 +143,25 @@ function extract(files: string[]): void {
           _: lineNumber,
         };
         //console.log('TypeQuery', name, ret, lineNumber);
+      } else if (ts.isImportTypeNode(type)) {
+        const path = type.argument.getText().replace(/["']/g, "");
+        const alias = "typingsinline" + inlineImports;
+        const typeName = type.qualifier!.getText();
+        const ref = alias + "." + typeName;
+
+        pushImport({
+          from: path,
+          alias,
+          types: [typeName],
+          local: true
+        })
+
+        ret = {
+          ref,
+          targs: parseTypeArguments(type.typeArguments),
+        };
+
+        inlineImports++;
       } else if (ts.isTypeOperatorNode(type)) {
         ret = {
           operator: type.operator,
@@ -567,15 +629,16 @@ function extract(files: string[]): void {
 
     const parseInterface = (node: ts.InterfaceDeclaration) => {
       const name = node.name.text;
-      const current =
-        structs.find((struct) => struct.name == name) ??
-        mainModules
-          .find(
-            (m) =>
-              m.namespace == lib.namespace &&
-              m.items.structs.find((struct) => struct.name == name)
-          )
-          ?.items.structs.find((struct) => struct.name == name);
+      const current = sourceFile.hasNoDefaultLib
+        ? structs.find((struct) => struct.name == name) ??
+          mainModules
+            .find(
+              (m) =>
+                m.namespace == lib.namespace &&
+                m.items.structs.find((struct) => struct.name == name)
+            )
+            ?.items.structs.find((struct) => struct.name == name)
+        : undefined;
       const parsed = {
         ...parseStruct(node, name, node.members, node.typeParameters),
         isClass: false,
@@ -710,6 +773,8 @@ function extract(files: string[]): void {
                 funcs: [],
                 vars: [],
                 enums: [],
+                imports: [],
+                file: sourceFile.fileName,
               },
             };
             modules.push(module);
@@ -736,6 +801,31 @@ function extract(files: string[]): void {
 
         en.members = members;
         enums.push(en);
+      } else if (ts.isImportDeclaration(node)) {
+        const from = node.moduleSpecifier.getText().replace(/["']/g, "");
+        let alias = "";
+        let types: string[] = [];
+        const bindings = node.importClause?.namedBindings;
+        const local = isRelativeImport(from);
+
+        if (bindings) {
+          if (ts.isNamespaceImport(bindings)) {
+            alias = bindings.name.getText();
+          } else if (ts.isNamedImports(bindings)) {
+            types = bindings.elements.map((el) => el.name.getText());
+          }
+        }
+
+        const imp = {
+          alias,
+          from,
+          types,
+          local,
+        };
+
+        pushImport(imp);
+
+        console.log("ImportDECLARE", from, imp, sourceFile.fileName);
       } else {
         if (node.kind != 1) {
           console.error(
@@ -779,16 +869,28 @@ function extract(files: string[]): void {
   };
 
   const toExport: any[] = [];
+  const done: string[] = [];
 
-  for (const file of files) {
+  for (var x = 0; x < files.length; x++) {
+    const file = files[x];
+
     if (!fs.existsSync(file)) {
       throw "File doesnt exist: " + file;
     }
 
+    if (done.includes(file)) {
+      console.log("Skipping already done file " + file);
+      continue;
+    }
+
+    done.push(file);
+    currentFile = file;
+
     if (debug) {
       //console.log("Parsing", file);
     }
-    const sourceFile = program.getSourceFile(file)!;
+
+    sourceFile = program.getSourceFile(file)!;
     const module = {
       _: -1,
       namespace: "",
@@ -800,7 +902,9 @@ function extract(files: string[]): void {
         funcs: [],
         vars: [],
         enums: [],
+        imports: [],
       },
+      file,
     };
 
     mainModules.push(module);
@@ -820,9 +924,10 @@ function extract(files: string[]): void {
 
   if (!dev) {
     //console.log(JSON.stringify(toExport, null, 2));
+    console.log('FFUSES', uses);
     fs.writeFileSync(
       "./toExport.json",
-      JSON.stringify({ files: toExport }, null, 2)
+      JSON.stringify({ files: toExport, uses }, null, 2)
     );
     //console.log("Written toExport.json!");
   }
@@ -840,4 +945,22 @@ function extract(files: string[]): void {
 // ]);import { proto } from '../../typings/work/gojs/out/package/projects/pdf/pdfkit';
 
 //console.log(process.argv.splice(2));
-extract(process.argv.splice(2));
+const type = process.argv[2];
+
+if (type) {
+  if (type == '-f') {
+    extract([...process.argv.splice(3)]);
+  } else if (type == '-t') {
+    const project = new Project();
+
+    project.addSourceFilesAtPaths(process.argv[3]);
+    project.resolveSourceFileDependencies();
+
+    const files = project.getSourceFiles().map((s) => s.getFilePath());
+
+    console.log('CrawledFiles:');
+    console.log(files.join('\n'));
+
+    extract(files);
+  }
+}

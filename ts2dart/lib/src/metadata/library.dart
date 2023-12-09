@@ -36,6 +36,9 @@ inline class MetadataLibraryItems {
   Iterable<MetadataTypedef> get enums =>
       (map['enums'] as Iterable).map((i) => i as MetadataTypedef);
 
+  Iterable<MetadataImport> get imports =>
+      (map['imports'] as Iterable).map((i) => i as MetadataImport);
+
   bool get isEmpty =>
       structs.isEmpty &&
       typedefs.isEmpty &&
@@ -43,6 +46,12 @@ inline class MetadataLibraryItems {
       funcs.isEmpty &&
       vars.isEmpty &&
       enums.isEmpty;
+}
+
+inline class MetadataImport {
+  MetadataImport(this.map);
+
+  final Map<String, dynamic> map;
 }
 
 inline class MetadataTypedef {

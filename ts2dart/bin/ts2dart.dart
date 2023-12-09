@@ -9,6 +9,8 @@ Future<void> main(List<String> arguments) async {
     print('${record.level.name}: ${record.time}: ${record.message}');
   });
 
+  print('ts2dart starting...');
+
   final libPath = '${Directory.current.path}/../typings/lib/';
 
   if (1 < 0) {
@@ -121,7 +123,7 @@ Future<void> main(List<String> arguments) async {
         ]);
   }
 
-  if (1 > 0) {
+  if (1 < 0) {
     await Transpiler.fromUrls(
         package: 'vscode',
         version: '1.82.0',
@@ -134,5 +136,40 @@ Future<void> main(List<String> arguments) async {
         urls: [
           'https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/vscode/index.d.ts'
         ]);
+  }
+
+  if (1 < 0) {
+    await Transpiler.fromNpm(
+      package: 'firebase-functions',
+      version: '4.5.0',
+      targetMainFile: 'firebaseFunctions',
+      dirName: 'firebaseFunctions',
+      packageJson: (typings: true, import: false),
+      targetPath: libPath,
+      uses: {'typescript'},
+      // files: [
+      //   'lib/v2/core.d.ts',
+      //   'lib/v2/index.d.ts',
+      //   'lib/v2/options.d.ts',
+      //   'lib/v2/trace.d.ts',
+      //   'lib/v2/providers/database.d.ts',
+      //   'lib/v2/providers/eventarc.d.ts',
+      //   'lib/v2/providers/firestore.d.ts',
+      //   'lib/v2/providers/https.d.ts',
+      //   'lib/v2/providers/identity.d.ts',
+      //   'lib/v2/providers/pubsub.d.ts',
+      //   'lib/v2/providers/remoteConfig.d.ts',
+      //   'lib/v2/providers/scheduler.d.ts',
+      //   'lib/v2/providers/storage.d.ts',
+      //   'lib/v2/providers/tasks.d.ts',
+      //   'lib/v2/providers/testLab.d.ts',
+      //   'lib/v2/providers/alerts/alerts.d.ts',
+      //   'lib/v2/providers/alerts/appDistribution.d.ts',
+      //   'lib/v2/providers/alerts/billing.d.ts',
+      //   'lib/v2/providers/alerts/crashlytics.d.ts',
+      //   'lib/v2/providers/alerts/index.d.ts',
+      //   'lib/v2/providers/alerts/performance.d.ts',
+      // ]
+    );
   }
 }
