@@ -17856,7 +17856,7 @@ extension SecretStorage$Typings on SecretStorage {
   }
 
   _i2.Future<_i2.dynamic> Function(_i2.String) get get =>
-      (_i2.String p0) => _i5.callMethod(
+      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'get',
@@ -17866,7 +17866,7 @@ extension SecretStorage$Typings on SecretStorage {
               this,
               p0,
             ],
-          );
+          ));
   set store(
       _i2.Future<_i2.dynamic> Function(
         _i2.String,
