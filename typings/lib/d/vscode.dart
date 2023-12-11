@@ -32,12 +32,15 @@ external Process get process;
 @anonymous
 class ModuleExports {
   external factory ModuleExports._(
-      {void Function(vscode.ExtensionContext context)? activate});
+      {void Function(vscode.ExtensionContext context)? activate,
+      void Function()? deactivate});
 
   factory ModuleExports(
-          {void Function(vscode.ExtensionContext context)? activate}) =>
+          {void Function(vscode.ExtensionContext context)? activate,
+          void Function()? deactivate}) =>
       ModuleExports._(
-          activate: activate == null ? null : allowInterop(activate));
+          activate: activate == null ? null : allowInterop(activate),
+          deactivate: deactivate == null ? null : allowInterop(deactivate));
 }
 
 @JS()
