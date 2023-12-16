@@ -8,15 +8,16 @@ import 'dart:core' as _i2;
 external _i2.Object _self;
 typedef FlatArray<Arr, Depth extends _i2.num> = _i2.dynamic;
 
-enum IInline24 {
+enum IInline26 {
   done(r'done'),
   recur(r'recur');
 
-  const IInline24(this.value);
+  const IInline26(this.value);
 
   final _i2.String value;
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

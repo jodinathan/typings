@@ -5,9 +5,9 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'dart:js_util' as _i3;
 import 'lib.es2017.sharedmemory.d.dart' as _i4;
-import 'lib.es2015.iterable.d.dart' as _i5;
-import 'dart:typed_data' as _i6;
-import '/d/core.dart' as _i7;
+import '/d/core.dart' as _i5;
+import 'lib.es2015.iterable.d.dart' as _i6;
+import 'dart:typed_data' as _i7;
 import 'lib.es2020.bigint.d.dart' as _i8;
 
 @_i1.JS('self')
@@ -33,6 +33,7 @@ enum WaitOptions {
   final _i2.String value;
 }
 
+/* Source: ForcedCommon from  { async: false, value: "not-equal" | "timed-out" } | { async: true, value: Promise<"ok" | "timed-out"> } */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -64,6 +65,7 @@ extension WaitAsync$Typings on WaitAsync {
   }
 }
 
+/* Source: ForcedCommon from  { async: false, value: "not-equal" | "timed-out" } | { async: true, value: Promise<"ok" | "timed-out"> } */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -95,6 +97,7 @@ extension WaitAsyncCommon$Typings on WaitAsyncCommon {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class SharedArrayBuffer {
@@ -130,16 +133,30 @@ extension SharedArrayBuffer$Typings on SharedArrayBuffer {
   _i4.SharedArrayBuffer Function(
     _i2.num, [
     _i2.num?,
-  ]) get slice => _i3.getProperty(
-        this,
-        'slice',
-      );
+  ]) get slice => (
+        _i2.num p0, [
+        _i2.num? p1,
+      ]) =>
+          _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'slice',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class SharedArrayBufferConstructor {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -159,9 +176,16 @@ extension Atomics$Typings on Atomics {
     );
   }
 
-  _i2.bool Function(_i2.num) get isLockFree => _i3.getProperty(
-        this,
-        'isLockFree',
+  _i2.bool Function(_i2.num) get isLockFree => (_i2.num p0) => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'isLockFree',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
 
   /// Adds a value to the value at the given position in the array, returning the original value.
@@ -186,7 +210,7 @@ extension Atomics$Typings on Atomics {
   ///  Until this atomic operation completes, any other read or write operation against the array
   ///  will block.
   _i2.int _add$2(
-    _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
@@ -215,7 +239,7 @@ extension Atomics$Typings on Atomics {
     ///  Until this atomic operation completes, any other read or write operation against the array
     ///  will block.
     _i2.int Function(
-      _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -246,7 +270,7 @@ extension Atomics$Typings on Atomics {
   ///  returning the original value. Until this atomic operation completes, any other read or
   ///  write operation against the array will block.
   _i2.int _and$2(
-    _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
@@ -275,7 +299,7 @@ extension Atomics$Typings on Atomics {
     ///  returning the original value. Until this atomic operation completes, any other read or
     ///  write operation against the array will block.
     _i2.int Function(
-      _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -308,7 +332,7 @@ extension Atomics$Typings on Atomics {
   ///  expected value, returning the original value. Until this atomic operation completes, any
   ///  other read or write operation against the array will block.
   _i2.int _compareExchange$2(
-    _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int expectedValue,
     _i2.int replacementValue,
@@ -340,7 +364,7 @@ extension Atomics$Typings on Atomics {
     ///  expected value, returning the original value. Until this atomic operation completes, any
     ///  other read or write operation against the array will block.
     _i2.int Function(
-      _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int expectedValue,
       _i2.int replacementValue,
@@ -372,7 +396,7 @@ extension Atomics$Typings on Atomics {
   ///  this atomic operation completes, any other read or write operation against the array will
   ///  block.
   _i2.int _exchange$2(
-    _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
@@ -401,7 +425,7 @@ extension Atomics$Typings on Atomics {
     ///  this atomic operation completes, any other read or write operation against the array will
     ///  block.
     _i2.int Function(
-      _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -428,7 +452,7 @@ extension Atomics$Typings on Atomics {
   /// Returns the value at the given position in the array. Until this atomic operation completes,
   ///  any other read or write operation against the array will block.
   _i2.int _load$2(
-    _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
   ) =>
       _i3.callMethod(
@@ -452,7 +476,7 @@ extension Atomics$Typings on Atomics {
     /// Returns the value at the given position in the array. Until this atomic operation completes,
     ///  any other read or write operation against the array will block.
     _i2.int Function(
-      _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
     ) $2,
   }) get load => (
@@ -482,7 +506,7 @@ extension Atomics$Typings on Atomics {
   ///  returning the original value. Until this atomic operation completes, any other read or write
   ///  operation against the array will block.
   _i2.int _or$2(
-    _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
@@ -511,7 +535,7 @@ extension Atomics$Typings on Atomics {
     ///  returning the original value. Until this atomic operation completes, any other read or write
     ///  operation against the array will block.
     _i2.int Function(
-      _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -540,7 +564,7 @@ extension Atomics$Typings on Atomics {
   /// Stores a value at the given position in the array, returning the new value. Until this
   ///  atomic operation completes, any other read or write operation against the array will block.
   _i2.int _store$2(
-    _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
@@ -567,7 +591,7 @@ extension Atomics$Typings on Atomics {
     /// Stores a value at the given position in the array, returning the new value. Until this
     ///  atomic operation completes, any other read or write operation against the array will block.
     _i2.int Function(
-      _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -598,7 +622,7 @@ extension Atomics$Typings on Atomics {
   ///  value. Until this atomic operation completes, any other read or write operation against the
   ///  array will block.
   _i2.int _sub$2(
-    _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
@@ -627,7 +651,7 @@ extension Atomics$Typings on Atomics {
     ///  value. Until this atomic operation completes, any other read or write operation against the
     ///  array will block.
     _i2.int Function(
-      _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -641,7 +665,7 @@ extension Atomics$Typings on Atomics {
   ///  `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
   ///  `"not-equal"`.
   _i4.Wait _wait$1(
-    _i6.Int32List typedArray,
+    _i7.Int32List typedArray,
     _i2.num index,
     _i2.num value, [
     _i2.num? timeout,
@@ -653,7 +677,7 @@ extension Atomics$Typings on Atomics {
           typedArray,
           index,
           value,
-          timeout ?? _i7.undefined,
+          timeout ?? _i5.undefined,
         ],
       ));
 
@@ -674,7 +698,7 @@ extension Atomics$Typings on Atomics {
           typedArray,
           index,
           value,
-          timeout ?? _i7.undefined,
+          timeout ?? _i5.undefined,
         ],
       ));
 
@@ -685,7 +709,7 @@ extension Atomics$Typings on Atomics {
     ///  `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns
     ///  `"not-equal"`.
     _i4.Wait Function(
-      _i6.Int32List typedArray,
+      _i7.Int32List typedArray,
       _i2.num index,
       _i2.num value, [
       _i2.num? timeout,
@@ -712,7 +736,7 @@ extension Atomics$Typings on Atomics {
   ///  @param index The position in the typedArray to wake up on.
   ///  @param count The number of sleeping agents to notify. Defaults to +Infinity.
   _i2.num _notify$1(
-    _i6.Int32List typedArray,
+    _i7.Int32List typedArray,
     _i2.num index, [
     _i2.num? count,
   ]) =>
@@ -722,7 +746,7 @@ extension Atomics$Typings on Atomics {
         [
           typedArray,
           index,
-          count ?? _i7.undefined,
+          count ?? _i5.undefined,
         ],
       );
 
@@ -742,7 +766,7 @@ extension Atomics$Typings on Atomics {
         [
           typedArray,
           index,
-          count ?? _i7.undefined,
+          count ?? _i5.undefined,
         ],
       );
 
@@ -754,7 +778,7 @@ extension Atomics$Typings on Atomics {
     ///  @param index The position in the typedArray to wake up on.
     ///  @param count The number of sleeping agents to notify. Defaults to +Infinity.
     _i2.num Function(
-      _i6.Int32List typedArray,
+      _i7.Int32List typedArray,
       _i2.num index, [
       _i2.num? count,
     ]) $1,
@@ -796,7 +820,7 @@ extension Atomics$Typings on Atomics {
   ///  returning the original value. Until this atomic operation completes, any other read or write
   ///  operation against the array will block.
   _i2.int _xor$2(
-    _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+    _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
     _i2.num index,
     _i2.int value,
   ) =>
@@ -825,7 +849,7 @@ extension Atomics$Typings on Atomics {
     ///  returning the original value. Until this atomic operation completes, any other read or write
     ///  operation against the array will block.
     _i2.int Function(
-      _IterableLike$<_i5.IterableIterator<_i2.int>> typedArray,
+      _IterableLike$<_i6.IterableIterator<_i2.int>> typedArray,
       _i2.num index,
       _i2.int value,
     ) $2,
@@ -841,7 +865,7 @@ extension Atomics$Typings on Atomics {
   ///  @param value The expected value to test.
   ///  @param [timeout] The expected value to test.
   _i4.WaitAsync _waitAsync$1(
-    _i6.Int32List typedArray,
+    _i7.Int32List typedArray,
     _i2.num index,
     _i2.num value, [
     _i2.num? timeout,
@@ -853,7 +877,7 @@ extension Atomics$Typings on Atomics {
           typedArray,
           index,
           value,
-          timeout ?? _i7.undefined,
+          timeout ?? _i5.undefined,
         ],
       );
 
@@ -876,7 +900,7 @@ extension Atomics$Typings on Atomics {
           typedArray,
           index,
           value,
-          timeout ?? _i7.undefined,
+          timeout ?? _i5.undefined,
         ],
       );
 
@@ -889,7 +913,7 @@ extension Atomics$Typings on Atomics {
     ///  @param value The expected value to test.
     ///  @param [timeout] The expected value to test.
     _i4.WaitAsync Function(
-      _i6.Int32List typedArray,
+      _i7.Int32List typedArray,
       _i2.num index,
       _i2.num value, [
       _i2.num? timeout,
@@ -920,7 +944,7 @@ _i4.SharedArrayBufferConstructor get sharedArrayBuffer => _i3.getProperty(
 _i4.Atomics get atomics => _i3.getProperty(
       _self,
       'Atomics',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop

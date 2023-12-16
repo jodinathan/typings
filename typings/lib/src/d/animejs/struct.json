@@ -3388,8 +3388,10 @@
           "source": " easings: { [EasingFunction: string]: (t: number) => any }"
         }
       ],
-      "enums": []
+      "enums": [],
+      "imports": []
     },
+    "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/animejs/out/temp/https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/animejs/index.d.ts",
     "name": "index.d.ts"
   }
 ]

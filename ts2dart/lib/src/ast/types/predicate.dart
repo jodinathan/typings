@@ -55,7 +55,8 @@ class InteropPredicate extends InteropType
       {required Expression argument,
       bool isNullable = false,
       bool isOptional = false,
-      required List<InteropRef> typeArgs}) {
+      required List<InteropRef> typeArgs,
+      Reference? target}) {
     if (_canCast!) {
       final method = parent as InteropMethod;
       final arg = method.params.firstWhere((p) => p.name == symbol);

@@ -13,6 +13,7 @@ import 'lib.es2021.promise.d.dart' as _i8;
 @_i1.JS('self')
 external _i2.Object _self;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class AggregateError implements _i3.Error {
@@ -68,6 +69,7 @@ extension AggregateError$Typings on AggregateError {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class AggregateErrorConstructor {}
@@ -122,7 +124,7 @@ extension AggregateErrorConstructor$Typings on AggregateErrorConstructor {
 _i8.AggregateErrorConstructor get aggregateError => _i4.getProperty(
       _self,
       'AggregateError',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop

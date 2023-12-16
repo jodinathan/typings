@@ -9,6 +9,7 @@ import 'dart:js_util' as _i4;
 @_i1.JS('vscode.comments')
 external _i2.Object _self;
 
+/* Source: globalThis */
 @_i1.JS('vscode.comments')
 @_i1.staticInterop
 class $ModuleComments {}
@@ -29,6 +30,7 @@ extension $ModuleComments$Typings on $ModuleComments {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

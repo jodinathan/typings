@@ -8,7 +8,6 @@ import '/d/core.dart' as _i4;
 import 'dart:js_util' as _i5;
 import 'typescript_comon.d.dart' as _i6;
 import 'lib.es2015.iterable.d.dart' as _i7;
-import 'lib.es5.d.dart' as _i8;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -153,6 +152,7 @@ enum MaximumSignificantDigits {
   final _i2.num value;
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -442,6 +442,7 @@ extension BigIntToLocaleStringOptions$Typings on BigIntToLocaleStringOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -473,7 +474,7 @@ class BigInt {
         _i2.int,
       ) value) {
     _i5.setProperty(
-      _i6.target24,
+      _i6.target28,
       'asIntN',
       _i5.allowInterop(value),
     );
@@ -485,7 +486,7 @@ class BigInt {
         _i2.int,
       ) value) {
     _i5.setProperty(
-      _i6.target24,
+      _i6.target28,
       'asUintN',
       _i5.allowInterop(value),
     );
@@ -501,10 +502,18 @@ extension BigInt$Typings on BigInt {
     );
   }
 
-  _i2.String Function([_i2.num?]) get toString$ => _i5.getProperty(
-        this,
-        'toString',
-      );
+  _i2.String Function([_i2.num?]) get toString$ =>
+      ([_i2.num? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'toString',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
+          );
   set toLocaleString(
       _i2.String Function([
         _i2.dynamic,
@@ -520,10 +529,22 @@ extension BigInt$Typings on BigInt {
   _i2.String Function([
     _i2.dynamic,
     _i3.BigIntToLocaleStringOptions?,
-  ]) get toLocaleString => _i5.getProperty(
-        this,
-        'toLocaleString',
-      );
+  ]) get toLocaleString => ([
+        _i2.dynamic p0,
+        _i3.BigIntToLocaleStringOptions? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'toLocaleString',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set valueOf(_i2.int Function() value) {
     _i5.setProperty(
       this,
@@ -532,12 +553,17 @@ extension BigInt$Typings on BigInt {
     );
   }
 
-  _i2.int Function() get valueOf => _i5.getProperty(
-        this,
-        'valueOf',
+  _i2.int Function() get valueOf => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'valueOf',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -568,7 +594,7 @@ class BigIntConstructor {
         _i2.int,
       ) value) {
     _i5.setProperty(
-      _i6.target24,
+      _i6.target28,
       'asIntN',
       _i5.allowInterop(value),
     );
@@ -580,7 +606,7 @@ class BigIntConstructor {
         _i2.int,
       ) value) {
     _i5.setProperty(
-      _i6.target24,
+      _i6.target28,
       'asUintN',
       _i5.allowInterop(value),
     );
@@ -591,17 +617,41 @@ extension BigIntConstructor$Typings on BigIntConstructor {
   _i2.int Function(
     _i2.num,
     _i2.int,
-  ) get asIntN => _i5.getProperty(
-        this,
-        'asIntN',
-      );
+  ) get asIntN => (
+        _i2.num p0,
+        _i2.int p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'asIntN',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   _i2.int Function(
     _i2.num,
     _i2.int,
-  ) get asUintN => _i5.getProperty(
-        this,
-        'asUintN',
-      );
+  ) get asUintN => (
+        _i2.num p0,
+        _i2.int p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'asUintN',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   _i2.int call(_i2.Object value) => _i5.callMethod(
         this,
         'call',
@@ -612,6 +662,7 @@ extension BigIntConstructor$Typings on BigIntConstructor {
       );
 }
 
+/* Source:  */
 /// A typed array of 64-bit signed integer values. The contents are initialized to 0. If the
 /// requested number of bytes could not be allocated, an exception is raised.
 @_i1.JS()
@@ -633,7 +684,7 @@ class BigInt64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
       );
 
   factory BigInt64Array.$4(
-    _i8.ArrayBufferLike buffer, [
+    _i2.dynamic buffer, [
     _i2.num? byteOffset,
     _i2.num? length,
   ]) =>
@@ -646,15 +697,10 @@ class BigInt64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
         ],
       );
 
-  /// The size in bytes of each element in the array.
-  static _i2.num get bytesPerElement => _i5.getProperty(
-        _i6.target25,
-        'BYTES_PER_ELEMENT',
-      );
   static set of(
       _i3.BigInt64Array Function([_i2.Iterable<_i2.dynamic>?]) value) {
     _i5.setProperty(
-      _i6.target25,
+      _i6.target29,
       'of',
       _i5.allowInterop(([
         a0,
@@ -693,7 +739,7 @@ class BigInt64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
     _i2.dynamic thisArg,
   ]) =>
       _i5.callMethod(
-        _i6.target25,
+        _i6.target29,
         'from',
         [
           arrayLike,
@@ -716,7 +762,7 @@ extension BigInt64Array$Typings on BigInt64Array {
       );
 
   /// The ArrayBuffer instance referenced by the array.
-  _i8.ArrayBufferLike get buffer => _i5.getProperty(
+  _i2.dynamic get buffer => _i5.getProperty(
         this,
         'buffer',
       );
@@ -755,10 +801,24 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.num,
     _i2.num, [
     _i2.num?,
-  ]) get copyWithin => _i5.getProperty(
-        this,
-        'copyWithin',
-      );
+  ]) get copyWithin => (
+        _i2.num p0,
+        _i2.num p1, [
+        _i2.num? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'copyWithin',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2 ?? _i4.undefined,
+            ],
+          );
   set entries(
       _i7.IterableIterator<
                   (
@@ -779,9 +839,13 @@ extension BigInt64Array$Typings on BigInt64Array {
             _i2.num,
             _i2.int,
           )>
-      Function() get entries => _i5.getProperty(
-        this,
-        'entries',
+      Function() get entries => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'entries',
+        ),
+        r'call',
+        [this],
       );
   set every(
       _i2.bool Function(
@@ -806,10 +870,26 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i3.BigInt64Array,
     ), [
     _i2.dynamic,
-  ]) get every => _i5.getProperty(
-        this,
-        'every',
-      );
+  ]) get every => (
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'every',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set fill(
       _i3.BigInt64Array Function(
         _i2.int, [
@@ -827,10 +907,24 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i2.int, [
     _i2.num?,
     _i2.num?,
-  ]) get fill => _i5.getProperty(
-        this,
-        'fill',
-      );
+  ]) get fill => (
+        _i2.int p0, [
+        _i2.num? p1,
+        _i2.num? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'fill',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+              p2 ?? _i4.undefined,
+            ],
+          );
   set filter(
       _i3.BigInt64Array Function(
         _i2.dynamic Function(
@@ -854,10 +948,26 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i3.BigInt64Array,
     ), [
     _i2.dynamic,
-  ]) get filter => _i5.getProperty(
-        this,
-        'filter',
-      );
+  ]) get filter => (
+        _i2.dynamic Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'filter',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set find(
       _i2.int? Function(
         _i2.bool Function(
@@ -870,7 +980,16 @@ extension BigInt64Array$Typings on BigInt64Array {
     _i5.setProperty(
       this,
       'find',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          () =>
+              value(
+                p0,
+                p1,
+              ) ??
+              _i4.undefined),
     );
   }
 
@@ -881,10 +1000,26 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i3.BigInt64Array,
     ), [
     _i2.dynamic,
-  ]) get find => _i5.getProperty(
-        this,
-        'find',
-      );
+  ]) get find => (
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'find',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set findIndex(
       _i2.num Function(
         _i2.bool Function(
@@ -908,10 +1043,26 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i3.BigInt64Array,
     ), [
     _i2.dynamic,
-  ]) get findIndex => _i5.getProperty(
-        this,
-        'findIndex',
-      );
+  ]) get findIndex => (
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'findIndex',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set forEach(
       void Function(
         void Function(
@@ -935,10 +1086,26 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i3.BigInt64Array,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i5.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        void Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set includes(
       _i2.bool Function(
         _i2.int, [
@@ -954,10 +1121,22 @@ extension BigInt64Array$Typings on BigInt64Array {
   _i2.bool Function(
     _i2.int, [
     _i2.num?,
-  ]) get includes => _i5.getProperty(
-        this,
-        'includes',
-      );
+  ]) get includes => (
+        _i2.int p0, [
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'includes',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set indexOf(
       _i2.num Function(
         _i2.int, [
@@ -973,10 +1152,22 @@ extension BigInt64Array$Typings on BigInt64Array {
   _i2.num Function(
     _i2.int, [
     _i2.num?,
-  ]) get indexOf => _i5.getProperty(
-        this,
-        'indexOf',
-      );
+  ]) get indexOf => (
+        _i2.int p0, [
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'indexOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set join(_i2.String Function([_i2.String?]) value) {
     _i5.setProperty(
       this,
@@ -985,10 +1176,18 @@ extension BigInt64Array$Typings on BigInt64Array {
     );
   }
 
-  _i2.String Function([_i2.String?]) get join => _i5.getProperty(
-        this,
-        'join',
-      );
+  _i2.String Function([_i2.String?]) get join =>
+      ([_i2.String? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'join',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
+          );
   set keys(_i7.IterableIterator<_i2.num> Function() value) {
     _i5.setProperty(
       this,
@@ -997,9 +1196,13 @@ extension BigInt64Array$Typings on BigInt64Array {
     );
   }
 
-  _i7.IterableIterator<_i2.num> Function() get keys => _i5.getProperty(
-        this,
-        'keys',
+  _i7.IterableIterator<_i2.num> Function() get keys => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'keys',
+        ),
+        r'call',
+        [this],
       );
   set lastIndexOf(
       _i2.num Function(
@@ -1016,10 +1219,22 @@ extension BigInt64Array$Typings on BigInt64Array {
   _i2.num Function(
     _i2.int, [
     _i2.num?,
-  ]) get lastIndexOf => _i5.getProperty(
-        this,
-        'lastIndexOf',
-      );
+  ]) get lastIndexOf => (
+        _i2.int p0, [
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'lastIndexOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set map(
       _i3.BigInt64Array Function(
         _i2.int Function(
@@ -1043,10 +1258,26 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i3.BigInt64Array,
     ), [
     _i2.dynamic,
-  ]) get map => _i5.getProperty(
-        this,
-        'map',
-      );
+  ]) get map => (
+        _i2.int Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'map',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set reverse(_i3.BigInt64Array Function() value) {
     _i5.setProperty(
       this,
@@ -1055,9 +1286,13 @@ extension BigInt64Array$Typings on BigInt64Array {
     );
   }
 
-  _i3.BigInt64Array Function() get reverse => _i5.getProperty(
-        this,
-        'reverse',
+  _i3.BigInt64Array Function() get reverse => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'reverse',
+        ),
+        r'call',
+        [this],
       );
   set set(
       void Function(
@@ -1074,10 +1309,22 @@ extension BigInt64Array$Typings on BigInt64Array {
   void Function(
     _i2.List<_i2.int>, [
     _i2.num?,
-  ]) get set => _i5.getProperty(
-        this,
-        'set',
-      );
+  ]) get set => (
+        _i2.List<_i2.int> p0, [
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'set',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set slice(
       _i3.BigInt64Array Function([
         _i2.num?,
@@ -1093,10 +1340,22 @@ extension BigInt64Array$Typings on BigInt64Array {
   _i3.BigInt64Array Function([
     _i2.num?,
     _i2.num?,
-  ]) get slice => _i5.getProperty(
-        this,
-        'slice',
-      );
+  ]) get slice => ([
+        _i2.num? p0,
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'slice',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set some(
       _i2.bool Function(
         _i2.bool Function(
@@ -1120,10 +1379,26 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i3.BigInt64Array,
     ), [
     _i2.dynamic,
-  ]) get some => _i5.getProperty(
-        this,
-        'some',
-      );
+  ]) get some => (
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'some',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set sort(
       _i3.BigInt64Array Function(
               [_i2.Object Function(
@@ -1142,9 +1417,21 @@ extension BigInt64Array$Typings on BigInt64Array {
       [_i2.Object Function(
         _i2.int,
         _i2.int,
-      )?]) get sort => _i5.getProperty(
-        this,
-        'sort',
+      )?]) get sort => (
+          [_i2.Object Function(
+            _i2.int,
+            _i2.int,
+          )? p0]) =>
+      _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'sort',
+        ),
+        r'call',
+        [
+          this,
+          p0 == null ? _i4.undefined : _i5.allowInterop(p0),
+        ],
       );
   set subarray(
       _i3.BigInt64Array Function([
@@ -1161,10 +1448,22 @@ extension BigInt64Array$Typings on BigInt64Array {
   _i3.BigInt64Array Function([
     _i2.num?,
     _i2.num?,
-  ]) get subarray => _i5.getProperty(
-        this,
-        'subarray',
-      );
+  ]) get subarray => ([
+        _i2.num? p0,
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'subarray',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set toLocaleString(_i2.String Function() value) {
     _i5.setProperty(
       this,
@@ -1173,9 +1472,13 @@ extension BigInt64Array$Typings on BigInt64Array {
     );
   }
 
-  _i2.String Function() get toLocaleString => _i5.getProperty(
-        this,
-        'toLocaleString',
+  _i2.String Function() get toLocaleString => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'toLocaleString',
+        ),
+        r'call',
+        [this],
       );
   set toString$(_i2.String Function() value) {
     _i5.setProperty(
@@ -1185,9 +1488,13 @@ extension BigInt64Array$Typings on BigInt64Array {
     );
   }
 
-  _i2.String Function() get toString$ => _i5.getProperty(
-        this,
-        'toString',
+  _i2.String Function() get toString$ => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'toString',
+        ),
+        r'call',
+        [this],
       );
   set valueOf(_i3.BigInt64Array Function() value) {
     _i5.setProperty(
@@ -1197,9 +1504,13 @@ extension BigInt64Array$Typings on BigInt64Array {
     );
   }
 
-  _i3.BigInt64Array Function() get valueOf => _i5.getProperty(
-        this,
-        'valueOf',
+  _i3.BigInt64Array Function() get valueOf => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'valueOf',
+        ),
+        r'call',
+        [this],
       );
   set values(_i7.IterableIterator<_i2.int> Function() value) {
     _i5.setProperty(
@@ -1209,21 +1520,32 @@ extension BigInt64Array$Typings on BigInt64Array {
     );
   }
 
-  _i7.IterableIterator<_i2.int> Function() get values => _i5.getProperty(
-        this,
-        'values',
+  _i7.IterableIterator<_i2.int> Function() get values => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'values',
+        ),
+        r'call',
+        [this],
       );
   set at(_i2.int? Function(_i2.num) value) {
     _i5.setProperty(
       this,
       'at',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => () => value(p0) ?? _i4.undefined),
     );
   }
 
-  _i2.int? Function(_i2.num) get at => _i5.getProperty(
-        this,
-        'at',
+  _i2.int? Function(_i2.num) get at => (_i2.num p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'at',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set findLastIndex(
       _i2.num Function(
@@ -1248,10 +1570,26 @@ extension BigInt64Array$Typings on BigInt64Array {
       _i3.BigInt64Array,
     ), [
     _i2.dynamic,
-  ]) get findLastIndex => _i5.getProperty(
-        this,
-        'findLastIndex',
-      );
+  ]) get findLastIndex => (
+        _i2.Object? Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigInt64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'findLastIndex',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set toReversed(_i3.BigInt64Array Function() value) {
     _i5.setProperty(
       this,
@@ -1260,9 +1598,13 @@ extension BigInt64Array$Typings on BigInt64Array {
     );
   }
 
-  _i3.BigInt64Array Function() get toReversed => _i5.getProperty(
-        this,
-        'toReversed',
+  _i3.BigInt64Array Function() get toReversed => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'toReversed',
+        ),
+        r'call',
+        [this],
       );
   set toSorted(
       _i3.BigInt64Array Function(
@@ -1282,9 +1624,21 @@ extension BigInt64Array$Typings on BigInt64Array {
       [_i2.num Function(
         _i2.int,
         _i2.int,
-      )?]) get toSorted => _i5.getProperty(
-        this,
-        'toSorted',
+      )?]) get toSorted => (
+          [_i2.num Function(
+            _i2.int,
+            _i2.int,
+          )? p0]) =>
+      _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'toSorted',
+        ),
+        r'call',
+        [
+          this,
+          p0 == null ? _i4.undefined : _i5.allowInterop(p0),
+        ],
       );
   set with$(
       _i3.BigInt64Array Function(
@@ -1301,10 +1655,22 @@ extension BigInt64Array$Typings on BigInt64Array {
   _i3.BigInt64Array Function(
     _i2.num,
     _i2.int,
-  ) get with$ => _i5.getProperty(
-        this,
-        'with',
-      );
+  ) get with$ => (
+        _i2.num p0,
+        _i2.int p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'with',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 
   /// Calls the specified callback function for all the elements in an array. The return value of
   ///  the callback function is the accumulated result, and is provided as an argument in the next
@@ -1571,18 +1937,14 @@ extension BigInt64Array$Typings on BigInt64Array {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class BigInt64ArrayConstructor {
-  /// The size in bytes of each element in the array.
-  static _i2.num get bytesPerElement => _i5.getProperty(
-        _i6.target25,
-        'BYTES_PER_ELEMENT',
-      );
   static set of(
       _i3.BigInt64Array Function([_i2.Iterable<_i2.dynamic>?]) value) {
     _i5.setProperty(
-      _i6.target25,
+      _i6.target29,
       'of',
       _i5.allowInterop(([
         a0,
@@ -1613,11 +1975,23 @@ class BigInt64ArrayConstructor {
 }
 
 extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
-  _i3.BigInt64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
+  /// The size in bytes of each element in the array.
+  _i2.num get bytesPerElement => _i5.getProperty(
         this,
-        'of',
+        'BYTES_PER_ELEMENT',
       );
+  _i3.BigInt64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   _i3.BigInt64Array from<U>(
@@ -1639,6 +2013,7 @@ extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
       );
 }
 
+/* Source:  */
 /// A typed array of 64-bit unsigned integer values. The contents are initialized to 0. If the
 /// requested number of bytes could not be allocated, an exception is raised.
 @_i1.JS()
@@ -1660,7 +2035,7 @@ class BigUint64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
       );
 
   factory BigUint64Array.$4(
-    _i8.ArrayBufferLike buffer, [
+    _i2.dynamic buffer, [
     _i2.num? byteOffset,
     _i2.num? length,
   ]) =>
@@ -1673,15 +2048,10 @@ class BigUint64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
         ],
       );
 
-  /// The size in bytes of each element in the array.
-  static _i2.num get bytesPerElement => _i5.getProperty(
-        _i6.target26,
-        'BYTES_PER_ELEMENT',
-      );
   static set of(
       _i3.BigUint64Array Function([_i2.Iterable<_i2.dynamic>?]) value) {
     _i5.setProperty(
-      _i6.target26,
+      _i6.target30,
       'of',
       _i5.allowInterop(([
         a0,
@@ -1720,7 +2090,7 @@ class BigUint64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
     _i2.dynamic thisArg,
   ]) =>
       _i5.callMethod(
-        _i6.target26,
+        _i6.target30,
         'from',
         [
           arrayLike,
@@ -1743,7 +2113,7 @@ extension BigUint64Array$Typings on BigUint64Array {
       );
 
   /// The ArrayBuffer instance referenced by the array.
-  _i8.ArrayBufferLike get buffer => _i5.getProperty(
+  _i2.dynamic get buffer => _i5.getProperty(
         this,
         'buffer',
       );
@@ -1782,10 +2152,24 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.num,
     _i2.num, [
     _i2.num?,
-  ]) get copyWithin => _i5.getProperty(
-        this,
-        'copyWithin',
-      );
+  ]) get copyWithin => (
+        _i2.num p0,
+        _i2.num p1, [
+        _i2.num? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'copyWithin',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2 ?? _i4.undefined,
+            ],
+          );
   set entries(
       _i7.IterableIterator<
                   (
@@ -1806,9 +2190,13 @@ extension BigUint64Array$Typings on BigUint64Array {
             _i2.num,
             _i2.int,
           )>
-      Function() get entries => _i5.getProperty(
-        this,
-        'entries',
+      Function() get entries => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'entries',
+        ),
+        r'call',
+        [this],
       );
   set every(
       _i2.bool Function(
@@ -1833,10 +2221,26 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i3.BigUint64Array,
     ), [
     _i2.dynamic,
-  ]) get every => _i5.getProperty(
-        this,
-        'every',
-      );
+  ]) get every => (
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'every',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set fill(
       _i3.BigUint64Array Function(
         _i2.int, [
@@ -1854,10 +2258,24 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i2.int, [
     _i2.num?,
     _i2.num?,
-  ]) get fill => _i5.getProperty(
-        this,
-        'fill',
-      );
+  ]) get fill => (
+        _i2.int p0, [
+        _i2.num? p1,
+        _i2.num? p2,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'fill',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+              p2 ?? _i4.undefined,
+            ],
+          );
   set filter(
       _i3.BigUint64Array Function(
         _i2.dynamic Function(
@@ -1881,10 +2299,26 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i3.BigUint64Array,
     ), [
     _i2.dynamic,
-  ]) get filter => _i5.getProperty(
-        this,
-        'filter',
-      );
+  ]) get filter => (
+        _i2.dynamic Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'filter',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set find(
       _i2.int? Function(
         _i2.bool Function(
@@ -1897,7 +2331,16 @@ extension BigUint64Array$Typings on BigUint64Array {
     _i5.setProperty(
       this,
       'find',
-      _i5.allowInterop(value),
+      _i5.allowInterop((
+        p0,
+        p1,
+      ) =>
+          () =>
+              value(
+                p0,
+                p1,
+              ) ??
+              _i4.undefined),
     );
   }
 
@@ -1908,10 +2351,26 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i3.BigUint64Array,
     ), [
     _i2.dynamic,
-  ]) get find => _i5.getProperty(
-        this,
-        'find',
-      );
+  ]) get find => (
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'find',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set findIndex(
       _i2.num Function(
         _i2.bool Function(
@@ -1935,10 +2394,26 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i3.BigUint64Array,
     ), [
     _i2.dynamic,
-  ]) get findIndex => _i5.getProperty(
-        this,
-        'findIndex',
-      );
+  ]) get findIndex => (
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'findIndex',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set forEach(
       void Function(
         void Function(
@@ -1962,10 +2437,26 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i3.BigUint64Array,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i5.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        void Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set includes(
       _i2.bool Function(
         _i2.int, [
@@ -1981,10 +2472,22 @@ extension BigUint64Array$Typings on BigUint64Array {
   _i2.bool Function(
     _i2.int, [
     _i2.num?,
-  ]) get includes => _i5.getProperty(
-        this,
-        'includes',
-      );
+  ]) get includes => (
+        _i2.int p0, [
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'includes',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set indexOf(
       _i2.num Function(
         _i2.int, [
@@ -2000,10 +2503,22 @@ extension BigUint64Array$Typings on BigUint64Array {
   _i2.num Function(
     _i2.int, [
     _i2.num?,
-  ]) get indexOf => _i5.getProperty(
-        this,
-        'indexOf',
-      );
+  ]) get indexOf => (
+        _i2.int p0, [
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'indexOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set join(_i2.String Function([_i2.String?]) value) {
     _i5.setProperty(
       this,
@@ -2012,10 +2527,18 @@ extension BigUint64Array$Typings on BigUint64Array {
     );
   }
 
-  _i2.String Function([_i2.String?]) get join => _i5.getProperty(
-        this,
-        'join',
-      );
+  _i2.String Function([_i2.String?]) get join =>
+      ([_i2.String? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'join',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
+          );
   set keys(_i7.IterableIterator<_i2.num> Function() value) {
     _i5.setProperty(
       this,
@@ -2024,9 +2547,13 @@ extension BigUint64Array$Typings on BigUint64Array {
     );
   }
 
-  _i7.IterableIterator<_i2.num> Function() get keys => _i5.getProperty(
-        this,
-        'keys',
+  _i7.IterableIterator<_i2.num> Function() get keys => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'keys',
+        ),
+        r'call',
+        [this],
       );
   set lastIndexOf(
       _i2.num Function(
@@ -2043,10 +2570,22 @@ extension BigUint64Array$Typings on BigUint64Array {
   _i2.num Function(
     _i2.int, [
     _i2.num?,
-  ]) get lastIndexOf => _i5.getProperty(
-        this,
-        'lastIndexOf',
-      );
+  ]) get lastIndexOf => (
+        _i2.int p0, [
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'lastIndexOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set map(
       _i3.BigUint64Array Function(
         _i2.int Function(
@@ -2070,10 +2609,26 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i3.BigUint64Array,
     ), [
     _i2.dynamic,
-  ]) get map => _i5.getProperty(
-        this,
-        'map',
-      );
+  ]) get map => (
+        _i2.int Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'map',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set reverse(_i3.BigUint64Array Function() value) {
     _i5.setProperty(
       this,
@@ -2082,9 +2637,13 @@ extension BigUint64Array$Typings on BigUint64Array {
     );
   }
 
-  _i3.BigUint64Array Function() get reverse => _i5.getProperty(
-        this,
-        'reverse',
+  _i3.BigUint64Array Function() get reverse => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'reverse',
+        ),
+        r'call',
+        [this],
       );
   set set(
       void Function(
@@ -2101,10 +2660,22 @@ extension BigUint64Array$Typings on BigUint64Array {
   void Function(
     _i2.List<_i2.int>, [
     _i2.num?,
-  ]) get set => _i5.getProperty(
-        this,
-        'set',
-      );
+  ]) get set => (
+        _i2.List<_i2.int> p0, [
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'set',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set slice(
       _i3.BigUint64Array Function([
         _i2.num?,
@@ -2120,10 +2691,22 @@ extension BigUint64Array$Typings on BigUint64Array {
   _i3.BigUint64Array Function([
     _i2.num?,
     _i2.num?,
-  ]) get slice => _i5.getProperty(
-        this,
-        'slice',
-      );
+  ]) get slice => ([
+        _i2.num? p0,
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'slice',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set some(
       _i2.bool Function(
         _i2.bool Function(
@@ -2147,10 +2730,26 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i3.BigUint64Array,
     ), [
     _i2.dynamic,
-  ]) get some => _i5.getProperty(
-        this,
-        'some',
-      );
+  ]) get some => (
+        _i2.bool Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'some',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set sort(
       _i3.BigUint64Array Function(
               [_i2.Object Function(
@@ -2169,9 +2768,21 @@ extension BigUint64Array$Typings on BigUint64Array {
       [_i2.Object Function(
         _i2.int,
         _i2.int,
-      )?]) get sort => _i5.getProperty(
-        this,
-        'sort',
+      )?]) get sort => (
+          [_i2.Object Function(
+            _i2.int,
+            _i2.int,
+          )? p0]) =>
+      _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'sort',
+        ),
+        r'call',
+        [
+          this,
+          p0 == null ? _i4.undefined : _i5.allowInterop(p0),
+        ],
       );
   set subarray(
       _i3.BigUint64Array Function([
@@ -2188,10 +2799,22 @@ extension BigUint64Array$Typings on BigUint64Array {
   _i3.BigUint64Array Function([
     _i2.num?,
     _i2.num?,
-  ]) get subarray => _i5.getProperty(
-        this,
-        'subarray',
-      );
+  ]) get subarray => ([
+        _i2.num? p0,
+        _i2.num? p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'subarray',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+              p1 ?? _i4.undefined,
+            ],
+          );
   set toLocaleString(_i2.String Function() value) {
     _i5.setProperty(
       this,
@@ -2200,9 +2823,13 @@ extension BigUint64Array$Typings on BigUint64Array {
     );
   }
 
-  _i2.String Function() get toLocaleString => _i5.getProperty(
-        this,
-        'toLocaleString',
+  _i2.String Function() get toLocaleString => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'toLocaleString',
+        ),
+        r'call',
+        [this],
       );
   set toString$(_i2.String Function() value) {
     _i5.setProperty(
@@ -2212,9 +2839,13 @@ extension BigUint64Array$Typings on BigUint64Array {
     );
   }
 
-  _i2.String Function() get toString$ => _i5.getProperty(
-        this,
-        'toString',
+  _i2.String Function() get toString$ => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'toString',
+        ),
+        r'call',
+        [this],
       );
   set valueOf(_i3.BigUint64Array Function() value) {
     _i5.setProperty(
@@ -2224,9 +2855,13 @@ extension BigUint64Array$Typings on BigUint64Array {
     );
   }
 
-  _i3.BigUint64Array Function() get valueOf => _i5.getProperty(
-        this,
-        'valueOf',
+  _i3.BigUint64Array Function() get valueOf => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'valueOf',
+        ),
+        r'call',
+        [this],
       );
   set values(_i7.IterableIterator<_i2.int> Function() value) {
     _i5.setProperty(
@@ -2236,21 +2871,32 @@ extension BigUint64Array$Typings on BigUint64Array {
     );
   }
 
-  _i7.IterableIterator<_i2.int> Function() get values => _i5.getProperty(
-        this,
-        'values',
+  _i7.IterableIterator<_i2.int> Function() get values => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'values',
+        ),
+        r'call',
+        [this],
       );
   set at(_i2.int? Function(_i2.num) value) {
     _i5.setProperty(
       this,
       'at',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => () => value(p0) ?? _i4.undefined),
     );
   }
 
-  _i2.int? Function(_i2.num) get at => _i5.getProperty(
-        this,
-        'at',
+  _i2.int? Function(_i2.num) get at => (_i2.num p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'at',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set findLastIndex(
       _i2.num Function(
@@ -2275,10 +2921,26 @@ extension BigUint64Array$Typings on BigUint64Array {
       _i3.BigUint64Array,
     ), [
     _i2.dynamic,
-  ]) get findLastIndex => _i5.getProperty(
-        this,
-        'findLastIndex',
-      );
+  ]) get findLastIndex => (
+        _i2.Object? Function(
+          _i2.int,
+          _i2.num,
+          _i3.BigUint64Array,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'findLastIndex',
+            ),
+            r'call',
+            [
+              this,
+              _i5.allowInterop(p0),
+              p1,
+            ],
+          );
   set toReversed(_i3.BigUint64Array Function() value) {
     _i5.setProperty(
       this,
@@ -2287,9 +2949,13 @@ extension BigUint64Array$Typings on BigUint64Array {
     );
   }
 
-  _i3.BigUint64Array Function() get toReversed => _i5.getProperty(
-        this,
-        'toReversed',
+  _i3.BigUint64Array Function() get toReversed => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'toReversed',
+        ),
+        r'call',
+        [this],
       );
   set toSorted(
       _i3.BigUint64Array Function(
@@ -2309,9 +2975,21 @@ extension BigUint64Array$Typings on BigUint64Array {
       [_i2.num Function(
         _i2.int,
         _i2.int,
-      )?]) get toSorted => _i5.getProperty(
-        this,
-        'toSorted',
+      )?]) get toSorted => (
+          [_i2.num Function(
+            _i2.int,
+            _i2.int,
+          )? p0]) =>
+      _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'toSorted',
+        ),
+        r'call',
+        [
+          this,
+          p0 == null ? _i4.undefined : _i5.allowInterop(p0),
+        ],
       );
   set with$(
       _i3.BigUint64Array Function(
@@ -2328,10 +3006,22 @@ extension BigUint64Array$Typings on BigUint64Array {
   _i3.BigUint64Array Function(
     _i2.num,
     _i2.int,
-  ) get with$ => _i5.getProperty(
-        this,
-        'with',
-      );
+  ) get with$ => (
+        _i2.num p0,
+        _i2.int p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'with',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 
   /// Calls the specified callback function for all the elements in an array. The return value of
   ///  the callback function is the accumulated result, and is provided as an argument in the next
@@ -2598,18 +3288,14 @@ extension BigUint64Array$Typings on BigUint64Array {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class BigUint64ArrayConstructor {
-  /// The size in bytes of each element in the array.
-  static _i2.num get bytesPerElement => _i5.getProperty(
-        _i6.target26,
-        'BYTES_PER_ELEMENT',
-      );
   static set of(
       _i3.BigUint64Array Function([_i2.Iterable<_i2.dynamic>?]) value) {
     _i5.setProperty(
-      _i6.target26,
+      _i6.target30,
       'of',
       _i5.allowInterop(([
         a0,
@@ -2640,11 +3326,23 @@ class BigUint64ArrayConstructor {
 }
 
 extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
-  _i3.BigUint64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
+  /// The size in bytes of each element in the array.
+  _i2.num get bytesPerElement => _i5.getProperty(
         this,
-        'of',
+        'BYTES_PER_ELEMENT',
       );
+  _i3.BigUint64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   _i3.BigUint64Array from<U>(
@@ -2683,7 +3381,7 @@ _i3.BigInt64ArrayConstructor get bigInt64Array => _i5.getProperty(
 _i3.BigUint64ArrayConstructor get bigUint64Array => _i5.getProperty(
       _self,
       'BigUint64Array',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop

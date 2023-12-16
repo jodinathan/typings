@@ -1,6 +1,8 @@
 @JS('self')
 library typings.core;
 
+import 'dart:async';
+
 import 'package:js/js.dart';
 export 'typescript/typescript.dart';
 
@@ -29,8 +31,11 @@ class Promise<T> {
   }
 
   static dynamic functionFutureOr(Function() fn) {
-      final ret = fn();
+    final ret = fn();
 
-      return ret is Future ? Promise.futureToPromise(ret) : ret;
+    return ret is Future ? Promise.futureToPromise(ret) : ret;
   }
+
+  static dynamic futureOr<T>(FutureOr<T>? value) =>
+      value is Future<T> ? Promise.futureToPromise(value) : value;
 }

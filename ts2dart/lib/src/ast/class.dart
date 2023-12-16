@@ -18,7 +18,9 @@ import 'types/type.dart';
 
 const _inlineIsPrivate = false;
 
-class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
+class InteropClass extends InteropNamedDeclaration
+    with WithInteropTypeParams
+    implements InteropTargetedType {
   InteropClass(
       {required String name,
       required InteropLibrary library,
@@ -26,7 +28,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
       required int lineNumber,
       required this.source,
       required this.isInline,
-      bool isPrivate = false})
+      bool isPrivate = false,
+      this.declaredAsVar = false})
       : _isPrivate = isPrivate,
         super(
             name: name,
@@ -50,7 +53,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
       lineNumber: -1,
       source: '',
       addAnonymousFlag: true,
-      isInline: false)
+      isInline: false,
+      declaredAsVar: false)
     ..typeParams.add(InteropTypeParam(symbol: 'T'));
 
   static InteropClass arrayLike = InteropClass(
@@ -59,7 +63,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
       lineNumber: -1,
       source: '',
       addAnonymousFlag: true,
-      isInline: false)
+      isInline: false,
+      declaredAsVar: false)
     ..typeParams.add(InteropTypeParam(symbol: 'T'));
 
   bool _isInterface = false;
@@ -67,7 +72,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   bool isInline;
 
   bool addAnonymousFlag;
-  bool get isAnonymous => isInterface && constructors.isEmpty;
+  bool get isAnonymous => isInterface && constructors.isEmpty && !declaredAsVar;
 
   @override
   bool get isPromiseLike =>
@@ -77,6 +82,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   bool get isArrayLike =>
       this == arrayLike || inheritance.any((ref) => ref.type == arrayLike);
 
+  final bool declaredAsVar;
   final List<InteropProperty> _properties = [];
   Iterable<InteropProperty> get properties => _properties;
   final List<InteropMethodHolder> _methods = [];
@@ -95,6 +101,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   InteropGetter? _asVar;
   InteropRef? _target;
   InteropRef? get target => _target;
+
   final List<InteropMethod> _constructors = [];
   Iterable<InteropMethod> get constructors => _constructors;
   @override
@@ -107,6 +114,9 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
   void makePrivate() => _isPrivate = true;
 
   void makePublic() => _isPrivate = false;
+
+  @override
+  Reference? makeTarget() => target?.ref();
 
   @override
   String toString() => '${runtimeType}#$hashCode(${{
@@ -277,7 +287,8 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
         library: library,
         lineNumber: lineNumber,
         source: source,
-        isInline: isInline);
+        isInline: isInline,
+        declaredAsVar: declaredAsVar);
     for (final m in methods) {
       ret.addMethod(m.copy());
     }
@@ -416,6 +427,7 @@ class InteropClass extends InteropNamedDeclaration with WithInteropTypeParams {
         'Class "$name"($usableName) hasnt a declared var. Ctors: ${constructors.length}, isInline: $isInline');
     final cl = Class((b) {
       b
+        ..docs.add('/* Source: $source */')
         ..name = usableName
         ..types.addAll(generics)
         ..implements.addAll(

@@ -10,6 +10,7 @@ import '/d/core.dart' as _i5;
 @_i1.JS('vscode.commands')
 external _i2.Object _self;
 
+/* Source: globalThis */
 @_i1.JS('vscode.commands')
 @_i1.staticInterop
 class $ModuleCommands {}
@@ -144,6 +145,7 @@ extension $ModuleCommands$Typings on $ModuleCommands {
       ));
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

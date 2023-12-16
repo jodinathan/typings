@@ -9,6 +9,7 @@ import 'dart:js_util' as _i3;
 external _i2.Object _self;
 typedef PromiseSettledResult<T> = _i2.Object;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -54,6 +55,7 @@ extension PromiseFulfilledResult$Typings<T> on PromiseFulfilledResult<T> {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -99,6 +101,7 @@ extension PromiseRejectedResult$Typings on PromiseRejectedResult {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

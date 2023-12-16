@@ -3,47 +3,15 @@ library typings.typescript.interop; // ignore_for_file: no_leading_underscores_f
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import 'lib.es2015.proxy.d.dart' as _i3;
+import 'lib.es5.d.dart' as _i3;
 import 'dart:js_util' as _i4;
-import 'typescript_comon.d.dart' as _i5;
-import 'lib.es5.d.dart' as _i6;
+import '/d/core.dart' as _i5;
+import 'lib.es2015.proxy.d.dart' as _i6;
 
 @_i1.JS('self')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _ProxyAccessor {}
-
-extension ProxyAccessor$Typings on _ProxyAccessor {
-  set revocable(
-      _i2.dynamic Function<T extends _i2.Object>(
-        T,
-        _i3.ProxyHandler<T>,
-      ) value) {
-    _i4.setProperty(
-      this,
-      'revocable',
-      _i4.allowInterop(value),
-    );
-  }
-
-  T call<T extends _i2.Object>(
-    T target,
-    _i3.ProxyHandler<T> handler,
-  ) =>
-      _i4.callMethod(
-        _i5.target21,
-        'call',
-        [
-          this,
-          target,
-          handler,
-        ],
-      );
-}
-
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -78,7 +46,7 @@ class ProxyHandler<T extends _i2.Object> {
     _i2.bool Function(
       _i2.dynamic,
       _i2.Object,
-      _i6.PropertyDescriptor,
+      _i3.PropertyDescriptor,
     )? defineProperty,
     _i2.bool Function(
       _i2.dynamic,
@@ -89,7 +57,7 @@ class ProxyHandler<T extends _i2.Object> {
       _i2.Object, [
       _i2.dynamic,
     ])? get,
-    _i6.PropertyDescriptor? Function(
+    _i3.PropertyDescriptor? Function(
       _i2.dynamic,
       _i2.Object,
     )? getOwnPropertyDescriptor,
@@ -122,9 +90,20 @@ class ProxyHandler<T extends _i2.Object> {
         get: get == null ? null : _i4.allowInterop(get),
         getOwnPropertyDescriptor: getOwnPropertyDescriptor == null
             ? null
-            : _i4.allowInterop(getOwnPropertyDescriptor),
-        getPrototypeOf:
-            getPrototypeOf == null ? null : _i4.allowInterop(getPrototypeOf),
+            : _i4.allowInterop((
+                p0,
+                p1,
+              ) =>
+                () =>
+                    getOwnPropertyDescriptor(
+                      p0,
+                      p1,
+                    ) ??
+                    _i5.undefined),
+        getPrototypeOf: getPrototypeOf == null
+            ? null
+            : _i4.allowInterop(
+                (p0) => () => getPrototypeOf(p0) ?? _i5.undefined),
         has: has == null ? null : _i4.allowInterop(has),
         isExtensible:
             isExtensible == null ? null : _i4.allowInterop(isExtensible),
@@ -156,10 +135,24 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
     T,
     _i2.List<_i2.dynamic>, [
     _i2.dynamic,
-  ]) get apply => _i4.getProperty(
-        this,
-        'apply',
-      );
+  ]) get apply => (
+        T p0,
+        _i2.List<_i2.dynamic> p2, [
+        _i2.dynamic p1,
+      ]) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'apply',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set construct(
       _i2.Object Function(
         T,
@@ -177,15 +170,29 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
     T,
     _i2.List<_i2.dynamic>,
     _i2.Function,
-  ) get construct => _i4.getProperty(
-        this,
-        'construct',
-      );
+  ) get construct => (
+        T p0,
+        _i2.List<_i2.dynamic> p1,
+        _i2.Function p2,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'construct',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set defineProperty(
       _i2.bool Function(
         T,
         _i2.Object,
-        _i6.PropertyDescriptor,
+        _i3.PropertyDescriptor,
       ) value) {
     _i4.setProperty(
       this,
@@ -197,11 +204,25 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   _i2.bool Function(
     T,
     _i2.Object,
-    _i6.PropertyDescriptor,
-  ) get defineProperty => _i4.getProperty(
-        this,
-        'defineProperty',
-      );
+    _i3.PropertyDescriptor,
+  ) get defineProperty => (
+        T p0,
+        _i2.Object p1,
+        _i3.PropertyDescriptor p2,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'defineProperty',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set deleteProperty(
       _i2.bool Function(
         T,
@@ -217,10 +238,22 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   _i2.bool Function(
     T,
     _i2.Object,
-  ) get deleteProperty => _i4.getProperty(
-        this,
-        'deleteProperty',
-      );
+  ) get deleteProperty => (
+        T p0,
+        _i2.Object p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'deleteProperty',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set get(
       _i2.dynamic Function(
         T,
@@ -238,40 +271,82 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
     T,
     _i2.Object, [
     _i2.dynamic,
-  ]) get get => _i4.getProperty(
-        this,
-        'get',
-      );
+  ]) get get => (
+        T p0,
+        _i2.Object p1, [
+        _i2.dynamic p2,
+      ]) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'get',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   set getOwnPropertyDescriptor(
-      _i6.PropertyDescriptor? Function(
+      _i3.PropertyDescriptor? Function(
         T,
         _i2.Object,
       ) value) {
     _i4.setProperty(
       this,
       'getOwnPropertyDescriptor',
-      _i4.allowInterop(value),
+      _i4.allowInterop((
+        p0,
+        p1,
+      ) =>
+          () =>
+              value(
+                p0,
+                p1,
+              ) ??
+              _i5.undefined),
     );
   }
 
-  _i6.PropertyDescriptor? Function(
+  _i3.PropertyDescriptor? Function(
     T,
     _i2.Object,
-  ) get getOwnPropertyDescriptor => _i4.getProperty(
-        this,
-        'getOwnPropertyDescriptor',
-      );
+  ) get getOwnPropertyDescriptor => (
+        T p0,
+        _i2.Object p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'getOwnPropertyDescriptor',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set getPrototypeOf(_i2.Object? Function(T) value) {
     _i4.setProperty(
       this,
       'getPrototypeOf',
-      _i4.allowInterop(value),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i5.undefined),
     );
   }
 
-  _i2.Object? Function(T) get getPrototypeOf => _i4.getProperty(
-        this,
-        'getPrototypeOf',
+  _i2.Object? Function(T) get getPrototypeOf => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'getPrototypeOf',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set has(
       _i2.bool Function(
@@ -288,10 +363,22 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   _i2.bool Function(
     T,
     _i2.Object,
-  ) get has => _i4.getProperty(
-        this,
-        'has',
-      );
+  ) get has => (
+        T p0,
+        _i2.Object p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'has',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set isExtensible(_i2.bool Function(T) value) {
     _i4.setProperty(
       this,
@@ -300,9 +387,16 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
     );
   }
 
-  _i2.bool Function(T) get isExtensible => _i4.getProperty(
-        this,
-        'isExtensible',
+  _i2.bool Function(T) get isExtensible => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'isExtensible',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set ownKeys(_i2.List<_i2.Object> Function(T) value) {
     _i4.setProperty(
@@ -312,9 +406,16 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
     );
   }
 
-  _i2.List<_i2.Object> Function(T) get ownKeys => _i4.getProperty(
-        this,
-        'ownKeys',
+  _i2.List<_i2.Object> Function(T) get ownKeys => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'ownKeys',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set preventExtensions(_i2.bool Function(T) value) {
     _i4.setProperty(
@@ -324,9 +425,16 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
     );
   }
 
-  _i2.bool Function(T) get preventExtensions => _i4.getProperty(
-        this,
-        'preventExtensions',
+  _i2.bool Function(T) get preventExtensions => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'preventExtensions',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set set(
       _i2.bool Function(
@@ -347,10 +455,26 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
     _i2.Object, [
     _i2.dynamic,
     _i2.dynamic,
-  ]) get set => _i4.getProperty(
-        this,
-        'set',
-      );
+  ]) get set => (
+        T p0,
+        _i2.Object p1, [
+        _i2.dynamic p2,
+        _i2.dynamic p3,
+      ]) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'set',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
   set setPrototypeOf(
       _i2.bool Function(
         T, [
@@ -366,18 +490,31 @@ extension ProxyHandler$Typings<T extends _i2.Object> on ProxyHandler<T> {
   _i2.bool Function(
     T, [
     _i2.Object?,
-  ]) get setPrototypeOf => _i4.getProperty(
-        this,
-        'setPrototypeOf',
-      );
+  ]) get setPrototypeOf => (
+        T p0, [
+        _i2.Object? p1,
+      ]) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'setPrototypeOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline9<T extends _i2.Object> {}
+class IInline11<T extends _i2.Object> {}
 
-extension IInline9$Typings<T extends _i2.Object> on IInline9<T> {
+extension IInline11$Typings<T extends _i2.Object> on IInline11<T> {
   T get proxy => _i4.getProperty(
         this,
         'proxy',
@@ -390,9 +527,13 @@ extension IInline9$Typings<T extends _i2.Object> on IInline9<T> {
     );
   }
 
-  void Function() get revoke => _i4.getProperty(
-        this,
-        'revoke',
+  void Function() get revoke => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'revoke',
+        ),
+        r'call',
+        [this],
       );
   set revoke(void Function() value) {
     _i4.setProperty(
@@ -403,6 +544,7 @@ extension IInline9$Typings<T extends _i2.Object> on IInline9<T> {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class ProxyConstructor {}
@@ -411,7 +553,7 @@ extension ProxyConstructor$Typings on ProxyConstructor {
   set revocable(
       _i2.dynamic Function<T extends _i2.Object>(
         T,
-        _i3.ProxyHandler<T>,
+        _i6.ProxyHandler<T>,
       ) value) {
     _i4.setProperty(
       this,
@@ -422,17 +564,29 @@ extension ProxyConstructor$Typings on ProxyConstructor {
 
   _i2.dynamic Function<T extends _i2.Object>(
     T,
-    _i3.ProxyHandler<T>,
-  ) get revocable => _i4.getProperty(
-        this,
-        'revocable',
-      );
+    _i6.ProxyHandler<T>,
+  ) get revocable => <T extends _i2.Object>(
+        T p0,
+        _i6.ProxyHandler<T> p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'revocable',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
-_i3.ProxyConstructor get proxy => _i4.getProperty(
+_i6.ProxyConstructor get proxy => _i4.getProperty(
       _self,
       'Proxy',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop

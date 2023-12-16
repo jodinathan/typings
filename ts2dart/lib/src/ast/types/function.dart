@@ -140,7 +140,8 @@ class InteropFunction extends InteropType
           {required Expression argument,
           bool isNullable = false,
           bool isOptional = false,
-          required List<InteropRef> typeArgs}) =>
+          required List<InteropRef> typeArgs,
+          Reference? target}) =>
       Method((b) {
         var index = 0;
         final optionals = params.optionals();
@@ -161,15 +162,23 @@ class InteropFunction extends InteropType
           index++;
         }
 
-        b.body = pkgJsUtils.callMethod([
-          argument,
-          literalString('call', raw: true),
-          literalList([
-            refer('this'),
-            ...params.mapIndexed((index, element) => refer('p$index'))
-          ])
-        ]).code;
-      }).closure;
+        final types = typeParams.map((t) => t.ref()).toList();
+        var refTarget = target ?? refer('this');
+        b
+          ..types.addAll(types)
+          ..lambda = true
+          ..body = returns
+              .fromInterop(pkgJsUtils.callMethod([
+                argument,
+                literalString('call', raw: true),
+                literalList([
+                  refTarget,
+                  ...params.mapIndexed((index, element) =>
+                      element.ref.toInterop(refer('p$index')))
+                ])
+              ]))
+              .code;
+      }).genericClosure;
 
   @override
   bool isSame(InteropType other) =>
@@ -205,12 +214,13 @@ class InteropFunction extends InteropType
       final tps = <InteropTypeParam>[];
 
       for (final tp in typeParams) {
-        final symbol = tp.symbol;
+        //final symbol = tp.symbol;
 
-        if (returns.usesLocalSymbol(symbol) ||
-            params.any((p) => p.ref.usesLocalSymbol(symbol))) {
-          tps.add(tp);
-        }
+        // if (returns.usesLocalSymbol(symbol) ||
+        //     params.any((p) => p.ref.usesLocalSymbol(symbol))) {
+        //   tps.add(tp);
+        // }
+        tps.add(tp);
       }
 
       b.types.addAll(tps.map((tp) => tp.ref()));

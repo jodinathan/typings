@@ -148,10 +148,12 @@ class InteropRef<T extends InteropType> {
   }
 
   Expression fromInterop(Expression argument,
-      {bool? isNullable, bool? isOptional}) {
-    if (this.type case InteropDelegateType t when t.delegatesFromInterop) {
-      return t.delegate
-          .fromInterop(argument, isOptional: isOptional ?? acceptsNull);
+      {bool? isNullable, bool? isOptional, Reference? target}) {
+    final type = this.type;
+
+    if (type case InteropDelegateType t when t.delegatesFromInterop) {
+      return t.delegate.fromInterop(argument,
+          isOptional: isOptional ?? acceptsNull, target: target);
     }
 
     return type.fromInterop(
@@ -160,7 +162,8 @@ class InteropRef<T extends InteropType> {
             : argument,
         isNullable: isNullable ?? (nullable || type.nullable || type.optional),
         isOptional: isOptional ?? acceptsNull,
-        typeArgs: typeArgs);
+        typeArgs: typeArgs,
+        target: target);
   }
 
   Reference ref(
@@ -205,7 +208,9 @@ class InteropRef<T extends InteropType> {
       FunctionType ref => ref,
       Reference ref => TypeReference((b) {
           final Reference(:url, :symbol) = ref;
-          final dyn = symbol == 'dynamic';
+          final isCore = url == 'dart:core';
+          final dyn = isCore && symbol == 'dynamic';
+          final isObj = isCore && symbol == 'Object';
 
           assert(symbol != null,
               'Cant use null symbol in type references. Url: $url. Type $type');
@@ -221,7 +226,7 @@ class InteropRef<T extends InteropType> {
             ..url = url
             ..isNullable = acceptsNull && !dyn && symbol != 'Object?';
 
-          if (type case WithInteropTypeParams withParams when !dyn) {
+          if (type case WithInteropTypeParams withParams when !dyn && !isObj) {
             final Iterable<InteropTypeParam> typeParams = switch (type) {
               InteropSourceType type => type.typeParams,
               _ => []
@@ -231,11 +236,6 @@ class InteropRef<T extends InteropType> {
                 typeArgs.length >= withParams.typeParamsLength
                     ? withParams.typeParamsLength
                     : typeArgs.length);
-
-            if (type is InteropClass && type.name == 'IterableIterator') {
-              print(
-                  'BitchMF type: $type\nta => $ta\ntypeParams => $typeParams\nsymbolSwap => $symbolSwap');
-            }
 
             for (var index = 0; index < withParams.typeParamsLength; index++) {
               final tp = typeParams.elementAtOrNull(index);

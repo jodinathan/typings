@@ -27,30 +27,31 @@ enum ValueOptions {
   final _i2.String value;
 }
 
-enum IInline33ValueOptions {
+enum IInline39ValueOptions {
   ok(r'ok'),
   timedOut(r'timed-out');
 
-  const IInline33ValueOptions(this.value);
+  const IInline39ValueOptions(this.value);
 
   final _i2.String value;
 }
 
-enum IInline35ValueOptions {
+enum IInline41ValueOptions {
   ok(r'ok'),
   timedOut(r'timed-out');
 
-  const IInline35ValueOptions(this.value);
+  const IInline41ValueOptions(this.value);
 
   final _i2.String value;
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline32 {}
+class IInline38 {}
 
-extension IInline32$Typings on IInline32 {
+extension IInline38$Typings on IInline38 {
   _i2.bool get async => _i3.getProperty(
         this,
         'async',
@@ -76,12 +77,13 @@ extension IInline32$Typings on IInline32 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline33 {}
+class IInline39 {}
 
-extension IInline33$Typings on IInline33 {
+extension IInline39$Typings on IInline39 {
   _i2.bool get async => _i3.getProperty(
         this,
         'async',
@@ -94,12 +96,12 @@ extension IInline33$Typings on IInline33 {
     );
   }
 
-  _i2.Future<_i4.IInline33ValueOptions> get value =>
+  _i2.Future<_i4.IInline39ValueOptions> get value =>
       _i3.promiseToFuture(_i3.getProperty(
         this,
         'value',
       ));
-  set value(_i2.Future<_i4.IInline33ValueOptions> value) {
+  set value(_i2.Future<_i4.IInline39ValueOptions> value) {
     _i3.setProperty(
       this,
       'value',
@@ -108,12 +110,13 @@ extension IInline33$Typings on IInline33 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline34 {}
+class IInline40 {}
 
-extension IInline34$Typings on IInline34 {
+extension IInline40$Typings on IInline40 {
   _i2.bool get async => _i3.getProperty(
         this,
         'async',
@@ -139,12 +142,13 @@ extension IInline34$Typings on IInline34 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline35 {}
+class IInline41 {}
 
-extension IInline35$Typings on IInline35 {
+extension IInline41$Typings on IInline41 {
   _i2.bool get async => _i3.getProperty(
         this,
         'async',
@@ -157,12 +161,12 @@ extension IInline35$Typings on IInline35 {
     );
   }
 
-  _i2.Future<_i4.IInline35ValueOptions> get value =>
+  _i2.Future<_i4.IInline41ValueOptions> get value =>
       _i3.promiseToFuture(_i3.getProperty(
         this,
         'value',
       ));
-  set value(_i2.Future<_i4.IInline35ValueOptions> value) {
+  set value(_i2.Future<_i4.IInline41ValueOptions> value) {
     _i3.setProperty(
       this,
       'value',
@@ -171,6 +175,7 @@ extension IInline35$Typings on IInline35 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

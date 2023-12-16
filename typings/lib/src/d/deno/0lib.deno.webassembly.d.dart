@@ -8,8 +8,7 @@ import '/src/d/typescript/lib.es5.d.dart' as _i4;
 import '/src/d/typescript/lib.es2022.error.d.dart' as _i5;
 import 'dart:js_util' as _i6;
 import '/d/core.dart' as _i7;
-import '0lib.deno.d.dart' as _i8;
-import 'dart:typed_data' as _i9;
+import 'dart:typed_data' as _i8;
 
 @_i1.JS('WebAssembly')
 external _i2.Object _self;
@@ -40,11 +39,12 @@ typedef ImportExportKind = _i3.ImportExportKindOptions;
 typedef TableKind = _i2.String;
 typedef ValueType = _i3.ValueTypeOptions;
 typedef ExportValue = _i2.Object;
-typedef Exports = _i4.Record<_i2.String, _i3.ExportValue>;
+typedef Exports = _i2.dynamic;
 typedef ImportValue = _i2.Object;
-typedef ModuleImports = _i4.Record<_i2.String, _i3.ImportValue>;
-typedef Imports = _i4.Record<_i2.String, _i3.ModuleImports>;
+typedef ModuleImports = _i2.dynamic;
+typedef Imports = _i2.dynamic;
 
+/* Source:  */
 /// The `WebAssembly.CompileError` object indicates an error during WebAssembly decoding or validation.
 ///
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError)
@@ -67,7 +67,7 @@ class CompileError implements _i4.Error {
 _i2.Object get _declaredCompileError => _i6.getProperty(
       _self,
       'CompileError',
-    );
+    ); /* Source:  */
 
 /// A `WebAssembly.Global` object represents a global variable instance, accessible from
 /// both JavaScript and importable/exportable across one or more `WebAssembly.Module`
@@ -118,6 +118,7 @@ extension Global$Typings on Global {
       );
 }
 
+/* Source:  */
 /// A `WebAssembly.Instance` object is a stateful, executable instance of a `WebAssembly.Module`.
 /// Instance objects contain all the Exported WebAssembly functions that allow calling into
 /// WebAssembly code from JavaScript.
@@ -154,6 +155,7 @@ extension Instance$Typings on Instance {
       );
 }
 
+/* Source:  */
 /// The `WebAssembly.LinkError` object indicates an error during module instantiation
 /// (besides traps from the start function).
 ///
@@ -177,7 +179,7 @@ class LinkError implements _i4.Error {
 _i2.Object get _declaredLinkError => _i6.getProperty(
       _self,
       'LinkError',
-    );
+    ); /* Source:  */
 
 /// The `WebAssembly.Memory` object is a resizable `ArrayBuffer` or `SharedArrayBuffer` that
 /// holds the raw bytes of memory accessed by a WebAssembly Instance.
@@ -216,6 +218,7 @@ extension Memory$Typings on Memory {
       );
 }
 
+/* Source:  */
 /// A `WebAssembly.Module` object contains stateless WebAssembly code that has already been compiled
 /// by the browser â this can be efficiently shared with Workers, and instantiated multiple times.
 ///
@@ -223,14 +226,14 @@ extension Memory$Typings on Memory {
 @_i1.JS()
 @_i1.staticInterop
 class Module {
-  factory Module(_i8.BufferSource bytes) => _i6.callConstructor(
+  factory Module(_i2.Object bytes) => _i6.callConstructor(
         _declaredModule,
         [bytes],
       );
 
   /// Given a `Module` and string, returns a copy of the contents of all custom sections in the
   /// module with the given string name.
-  static _i2.List<_i9.ByteBuffer> customSections(
+  static _i2.List<_i8.ByteBuffer> customSections(
     _i3.Module moduleObject,
     _i2.String sectionName,
   ) =>
@@ -268,7 +271,7 @@ class Module {
 _i2.Object get _declaredModule => _i6.getProperty(
       _self,
       'Module',
-    );
+    ); /* Source:  */
 
 /// The `WebAssembly.RuntimeError` object is the error type that is thrown whenever WebAssembly
 /// specifies a trap.
@@ -293,7 +296,7 @@ class RuntimeError implements _i4.Error {
 _i2.Object get _declaredRuntimeError => _i6.getProperty(
       _self,
       'RuntimeError',
-    );
+    ); /* Source:  */
 
 /// The `WebAssembly.Table()` object is a JavaScript wrapper object â an array-like structure
 /// representing a WebAssembly Table, which stores function references. A table created by
@@ -352,6 +355,7 @@ extension Table$Typings on Table {
   }
 }
 
+/* Source:  */
 /// The `GlobalDescriptor` describes the options you can pass to
 /// `new WebAssembly.Global()`.
 @_i1.JS()
@@ -399,6 +403,7 @@ extension GlobalDescriptor$Typings on GlobalDescriptor {
   }
 }
 
+/* Source:  */
 /// The `MemoryDescriptor` describes the options you can pass to
 /// `new WebAssembly.Memory()`.
 @_i1.JS()
@@ -461,6 +466,7 @@ extension MemoryDescriptor$Typings on MemoryDescriptor {
   }
 }
 
+/* Source:  */
 /// A `ModuleExportDescriptor` is the description of a declared export in a
 /// `WebAssembly.Module`.
 @_i1.JS()
@@ -509,6 +515,7 @@ extension ModuleExportDescriptor$Typings on ModuleExportDescriptor {
   }
 }
 
+/* Source:  */
 /// A `ModuleImportDescriptor` is the description of a declared import in a
 /// `WebAssembly.Module`.
 @_i1.JS()
@@ -572,6 +579,7 @@ extension ModuleImportDescriptor$Typings on ModuleImportDescriptor {
   }
 }
 
+/* Source:  */
 /// The `TableDescriptor` describes the options you can pass to
 /// `new WebAssembly.Table()`.
 @_i1.JS()
@@ -634,6 +642,7 @@ extension TableDescriptor$Typings on TableDescriptor {
   }
 }
 
+/* Source:  */
 /// The value returned from `WebAssembly.instantiate`.
 @_i1.JS()
 @_i1.staticInterop
@@ -683,6 +692,7 @@ extension WebAssemblyInstantiatedSource$Typings
   }
 }
 
+/* Source: globalThis */
 @_i1.JS('WebAssembly')
 @_i1.staticInterop
 class $ModuleWebAssembly {}
@@ -694,7 +704,7 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
   /// function should be used).
   ///
   /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile)
-  _i2.Future<_i3.Module> compile(_i8.BufferSource bytes) =>
+  _i2.Future<_i3.Module> compile(_i2.Object bytes) =>
       _i6.promiseToFuture(_i6.callMethod(
         this,
         'compile',
@@ -732,7 +742,7 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
   ///
   /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
   _i2.Future<_i3.WebAssemblyInstantiatedSource> _instantiate$1(
-    _i8.BufferSource bytes, [
+    _i2.Object bytes, [
     _i3.Imports? importObject,
   ]) =>
       _i6.promiseToFuture(_i6.callMethod(
@@ -794,7 +804,7 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
     ///
     /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)
     _i2.Future<_i3.WebAssemblyInstantiatedSource> Function(
-      _i8.BufferSource bytes, [
+      _i2.Object bytes, [
       _i3.Imports? importObject,
     ]) $1,
 
@@ -847,13 +857,14 @@ extension $ModuleWebAssembly$Typings on $ModuleWebAssembly {
   /// module (`true`) or not (`false`).
   ///
   /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate)
-  _i2.bool validate(_i8.BufferSource bytes) => _i6.callMethod(
+  _i2.bool validate(_i2.Object bytes) => _i6.callMethod(
         this,
         'validate',
         [bytes],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

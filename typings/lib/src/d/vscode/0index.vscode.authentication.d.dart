@@ -10,11 +10,7 @@ import '/d/core.dart' as _i5;
 @_i1.JS('vscode.authentication')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeSessionsAccessor {}
-
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -34,6 +30,7 @@ extension IInline83$Typings on IInline83 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -54,6 +51,7 @@ extension IInline84$Typings on IInline84 {
   }
 }
 
+/* Source: globalThis */
 @_i1.JS('vscode.authentication')
 @_i1.staticInterop
 class $ModuleAuthentication {}
@@ -201,6 +199,7 @@ extension $ModuleAuthentication$Typings on $ModuleAuthentication {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

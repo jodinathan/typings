@@ -91,6 +91,7 @@ class InteropInterface extends InteropType
                 library: library,
                 lineNumber: lineNumber,
                 source: source,
+                declaredAsVar: metadata.declaredAsVar,
                 isInline: metadata.isInline)
               ..parse(metadata.map));
           }

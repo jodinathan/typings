@@ -10,11 +10,7 @@ import '/d/core.dart' as _i5;
 @_i1.JS('vscode.languages')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeDiagnosticsAccessor {}
-
+/* Source: globalThis */
 @_i1.JS('vscode.languages')
 @_i1.staticInterop
 class $ModuleLanguages {}
@@ -111,21 +107,21 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
       (
         _i3.Uri,
         _i2.List<_i3.Diagnostic>,
-      )> _getDiagnostics$1() => ((_i4.callMethod(
+      )> _getDiagnostics$1() => (_i4.callMethod(
         this,
         'getDiagnostics',
         [],
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Get all diagnostics for a given resource.
   /// Get all diagnostics.
   _i2.List<_i3.Diagnostic> _getDiagnostics$2(_i3.Uri resource) =>
-      ((_i4.callMethod(
+      (_i4.callMethod(
         this,
         'getDiagnostics',
         [resource],
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Overload accessor: $1, $2
@@ -811,6 +807,7 @@ extension $ModuleLanguages$Typings on $ModuleLanguages {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

@@ -7,11 +7,11 @@ import 'lib.es2015.iterable.d.dart' as _i3;
 import 'dart:js_util' as _i4;
 import '/d/core.dart' as _i5;
 import 'lib.es2015.collection.d.dart' as _i6;
-import 'lib.es5.d.dart' as _i7;
 
 @_i1.JS('self')
 external _i2.Object _self;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Map<K, V>
@@ -83,9 +83,13 @@ extension Map$Typings<K, V> on Map<K, V> {
     );
   }
 
-  void Function() get clear => _i4.getProperty(
-        this,
-        'clear',
+  void Function() get clear => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'clear',
+        ),
+        r'call',
+        [this],
       );
   set delete(_i2.bool Function(K) value) {
     _i4.setProperty(
@@ -95,9 +99,16 @@ extension Map$Typings<K, V> on Map<K, V> {
     );
   }
 
-  _i2.bool Function(K) get delete => _i4.getProperty(
-        this,
-        'delete',
+  _i2.bool Function(K) get delete => (K p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'delete',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set forEach(
       void Function(
@@ -122,21 +133,44 @@ extension Map$Typings<K, V> on Map<K, V> {
       _i6.Map<K, V>,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i4.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        void Function(
+          V,
+          K,
+          _i6.Map<K, V>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              _i4.allowInterop(p0),
+              p1,
+            ],
+          );
   set get(V? Function(K) value) {
     _i4.setProperty(
       this,
       'get',
-      _i4.allowInterop(value),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i5.undefined),
     );
   }
 
-  V? Function(K) get get => _i4.getProperty(
-        this,
-        'get',
+  V? Function(K) get get => (K p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'get',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set has(_i2.bool Function(K) value) {
     _i4.setProperty(
@@ -146,9 +180,16 @@ extension Map$Typings<K, V> on Map<K, V> {
     );
   }
 
-  _i2.bool Function(K) get has => _i4.getProperty(
-        this,
-        'has',
+  _i2.bool Function(K) get has => (K p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'has',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set set(
       _i6.Map<_i2.dynamic, _i2.dynamic> Function(
@@ -165,10 +206,22 @@ extension Map$Typings<K, V> on Map<K, V> {
   _i6.Map<_i2.dynamic, _i2.dynamic> Function(
     K,
     V,
-  ) get set => _i4.getProperty(
-        this,
-        'set',
-      );
+  ) get set => (
+        K p0,
+        V p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'set',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set entries(
       _i3.IterableIterator<
                   (
@@ -189,9 +242,13 @@ extension Map$Typings<K, V> on Map<K, V> {
             K,
             V,
           )>
-      Function() get entries => _i4.getProperty(
-        this,
-        'entries',
+      Function() get entries => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'entries',
+        ),
+        r'call',
+        [this],
       );
   set keys(_i3.IterableIterator<K> Function() value) {
     _i4.setProperty(
@@ -201,9 +258,13 @@ extension Map$Typings<K, V> on Map<K, V> {
     );
   }
 
-  _i3.IterableIterator<K> Function() get keys => _i4.getProperty(
-        this,
-        'keys',
+  _i3.IterableIterator<K> Function() get keys => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'keys',
+        ),
+        r'call',
+        [this],
       );
   set values(_i3.IterableIterator<V> Function() value) {
     _i4.setProperty(
@@ -213,16 +274,22 @@ extension Map$Typings<K, V> on Map<K, V> {
     );
   }
 
-  _i3.IterableIterator<V> Function() get values => _i4.getProperty(
-        this,
-        'values',
+  _i3.IterableIterator<V> Function() get values => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'values',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class MapConstructor {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -269,7 +336,9 @@ class ReadonlyMap<K, V>
       ReadonlyMap._(
         size: size,
         forEach: forEach == null ? null : _i4.allowInterop(forEach),
-        get: get == null ? null : _i4.allowInterop(get),
+        get: get == null
+            ? null
+            : _i4.allowInterop((p0) => () => get(p0) ?? _i5.undefined),
         has: has == null ? null : _i4.allowInterop(has),
         entries: entries == null ? null : _i4.allowInterop(entries),
         keys: keys == null ? null : _i4.allowInterop(keys),
@@ -305,21 +374,44 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
       _i6.ReadonlyMap<K, V>,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i4.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        void Function(
+          V,
+          K,
+          _i6.ReadonlyMap<K, V>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              _i4.allowInterop(p0),
+              p1,
+            ],
+          );
   set get(V? Function(K) value) {
     _i4.setProperty(
       this,
       'get',
-      _i4.allowInterop(value),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i5.undefined),
     );
   }
 
-  V? Function(K) get get => _i4.getProperty(
-        this,
-        'get',
+  V? Function(K) get get => (K p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'get',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set has(_i2.bool Function(K) value) {
     _i4.setProperty(
@@ -329,9 +421,16 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
     );
   }
 
-  _i2.bool Function(K) get has => _i4.getProperty(
-        this,
-        'has',
+  _i2.bool Function(K) get has => (K p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'has',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set entries(
       _i3.IterableIterator<
@@ -353,9 +452,13 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
             K,
             V,
           )>
-      Function() get entries => _i4.getProperty(
-        this,
-        'entries',
+      Function() get entries => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'entries',
+        ),
+        r'call',
+        [this],
       );
   set keys(_i3.IterableIterator<K> Function() value) {
     _i4.setProperty(
@@ -365,9 +468,13 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
     );
   }
 
-  _i3.IterableIterator<K> Function() get keys => _i4.getProperty(
-        this,
-        'keys',
+  _i3.IterableIterator<K> Function() get keys => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'keys',
+        ),
+        r'call',
+        [this],
       );
   set values(_i3.IterableIterator<V> Function() value) {
     _i4.setProperty(
@@ -377,15 +484,20 @@ extension ReadonlyMap$Typings<K, V> on ReadonlyMap<K, V> {
     );
   }
 
-  _i3.IterableIterator<V> Function() get values => _i4.getProperty(
-        this,
-        'values',
+  _i3.IterableIterator<V> Function() get values => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'values',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
-class WeakMap<K extends _i7.WeakKey, V> {
+class WeakMap<K extends _i2.dynamic, V> {
   factory WeakMap.$1() => _i4.callConstructor(
         _declaredWeakMap,
         [],
@@ -429,7 +541,7 @@ _i2.Object get _declaredWeakMap => _i4.getProperty(
       'WeakMap',
     );
 
-extension WeakMap$Typings<K extends _i7.WeakKey, V> on WeakMap<K, V> {
+extension WeakMap$Typings<K extends _i2.dynamic, V> on WeakMap<K, V> {
   set delete(_i2.bool Function(K) value) {
     _i4.setProperty(
       this,
@@ -438,21 +550,35 @@ extension WeakMap$Typings<K extends _i7.WeakKey, V> on WeakMap<K, V> {
     );
   }
 
-  _i2.bool Function(K) get delete => _i4.getProperty(
-        this,
-        'delete',
+  _i2.bool Function(K) get delete => (K p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'delete',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set get(V? Function(K) value) {
     _i4.setProperty(
       this,
       'get',
-      _i4.allowInterop(value),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i5.undefined),
     );
   }
 
-  V? Function(K) get get => _i4.getProperty(
-        this,
-        'get',
+  V? Function(K) get get => (K p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'get',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set has(_i2.bool Function(K) value) {
     _i4.setProperty(
@@ -462,12 +588,19 @@ extension WeakMap$Typings<K extends _i7.WeakKey, V> on WeakMap<K, V> {
     );
   }
 
-  _i2.bool Function(K) get has => _i4.getProperty(
-        this,
-        'has',
+  _i2.bool Function(K) get has => (K p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'has',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set set(
-      _i6.WeakMap<_i7.WeakKey, _i2.dynamic> Function(
+      _i6.WeakMap<_i2.dynamic, _i2.dynamic> Function(
         K,
         V,
       ) value) {
@@ -478,19 +611,33 @@ extension WeakMap$Typings<K extends _i7.WeakKey, V> on WeakMap<K, V> {
     );
   }
 
-  _i6.WeakMap<_i7.WeakKey, _i2.dynamic> Function(
+  _i6.WeakMap<_i2.dynamic, _i2.dynamic> Function(
     K,
     V,
-  ) get set => _i4.getProperty(
-        this,
-        'set',
-      );
+  ) get set => (
+        K p0,
+        V p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'set',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class WeakMapConstructor {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Set<T> implements _IterableLike$<_i3.IterableIterator<T>> {
@@ -528,9 +675,16 @@ extension Set$Typings<T> on Set<T> {
     );
   }
 
-  _i6.Set<_i2.dynamic> Function(T) get add => _i4.getProperty(
-        this,
-        'add',
+  _i6.Set<_i2.dynamic> Function(T) get add => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'add',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set clear(void Function() value) {
     _i4.setProperty(
@@ -540,9 +694,13 @@ extension Set$Typings<T> on Set<T> {
     );
   }
 
-  void Function() get clear => _i4.getProperty(
-        this,
-        'clear',
+  void Function() get clear => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'clear',
+        ),
+        r'call',
+        [this],
       );
   set delete(_i2.bool Function(T) value) {
     _i4.setProperty(
@@ -552,9 +710,16 @@ extension Set$Typings<T> on Set<T> {
     );
   }
 
-  _i2.bool Function(T) get delete => _i4.getProperty(
-        this,
-        'delete',
+  _i2.bool Function(T) get delete => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'delete',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set forEach(
       void Function(
@@ -579,10 +744,26 @@ extension Set$Typings<T> on Set<T> {
       _i6.Set<T>,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i4.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        void Function(
+          T,
+          T,
+          _i6.Set<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              _i4.allowInterop(p0),
+              p1,
+            ],
+          );
   set has(_i2.bool Function(T) value) {
     _i4.setProperty(
       this,
@@ -591,9 +772,16 @@ extension Set$Typings<T> on Set<T> {
     );
   }
 
-  _i2.bool Function(T) get has => _i4.getProperty(
-        this,
-        'has',
+  _i2.bool Function(T) get has => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'has',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set entries(
       _i3.IterableIterator<
@@ -615,9 +803,13 @@ extension Set$Typings<T> on Set<T> {
             T,
             T,
           )>
-      Function() get entries => _i4.getProperty(
-        this,
-        'entries',
+      Function() get entries => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'entries',
+        ),
+        r'call',
+        [this],
       );
   set keys(_i3.IterableIterator<T> Function() value) {
     _i4.setProperty(
@@ -627,9 +819,13 @@ extension Set$Typings<T> on Set<T> {
     );
   }
 
-  _i3.IterableIterator<T> Function() get keys => _i4.getProperty(
-        this,
-        'keys',
+  _i3.IterableIterator<T> Function() get keys => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'keys',
+        ),
+        r'call',
+        [this],
       );
   set values(_i3.IterableIterator<T> Function() value) {
     _i4.setProperty(
@@ -639,16 +835,22 @@ extension Set$Typings<T> on Set<T> {
     );
   }
 
-  _i3.IterableIterator<T> Function() get values => _i4.getProperty(
-        this,
-        'values',
+  _i3.IterableIterator<T> Function() get values => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'values',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class SetConstructor {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -721,10 +923,26 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
       _i6.ReadonlySet<T>,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i4.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        void Function(
+          T,
+          T,
+          _i6.ReadonlySet<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              _i4.allowInterop(p0),
+              p1,
+            ],
+          );
   set has(_i2.bool Function(T) value) {
     _i4.setProperty(
       this,
@@ -733,9 +951,16 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
     );
   }
 
-  _i2.bool Function(T) get has => _i4.getProperty(
-        this,
-        'has',
+  _i2.bool Function(T) get has => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'has',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set entries(
       _i3.IterableIterator<
@@ -757,9 +982,13 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
             T,
             T,
           )>
-      Function() get entries => _i4.getProperty(
-        this,
-        'entries',
+      Function() get entries => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'entries',
+        ),
+        r'call',
+        [this],
       );
   set keys(_i3.IterableIterator<T> Function() value) {
     _i4.setProperty(
@@ -769,9 +998,13 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
     );
   }
 
-  _i3.IterableIterator<T> Function() get keys => _i4.getProperty(
-        this,
-        'keys',
+  _i3.IterableIterator<T> Function() get keys => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'keys',
+        ),
+        r'call',
+        [this],
       );
   set values(_i3.IterableIterator<T> Function() value) {
     _i4.setProperty(
@@ -781,15 +1014,20 @@ extension ReadonlySet$Typings<T> on ReadonlySet<T> {
     );
   }
 
-  _i3.IterableIterator<T> Function() get values => _i4.getProperty(
-        this,
-        'values',
+  _i3.IterableIterator<T> Function() get values => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'values',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
-class WeakSet<T extends _i7.WeakKey> {
+class WeakSet<T extends _i2.dynamic> {
   factory WeakSet.$1() => _i4.callConstructor(
         _declaredWeakSet,
         [],
@@ -811,8 +1049,8 @@ _i2.Object get _declaredWeakSet => _i4.getProperty(
       'WeakSet',
     );
 
-extension WeakSet$Typings<T extends _i7.WeakKey> on WeakSet<T> {
-  set add(_i6.WeakSet<_i7.WeakKey> Function(T) value) {
+extension WeakSet$Typings<T extends _i2.dynamic> on WeakSet<T> {
+  set add(_i6.WeakSet<_i2.dynamic> Function(T) value) {
     _i4.setProperty(
       this,
       'add',
@@ -820,9 +1058,16 @@ extension WeakSet$Typings<T extends _i7.WeakKey> on WeakSet<T> {
     );
   }
 
-  _i6.WeakSet<_i7.WeakKey> Function(T) get add => _i4.getProperty(
-        this,
-        'add',
+  _i6.WeakSet<_i2.dynamic> Function(T) get add => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'add',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set delete(_i2.bool Function(T) value) {
     _i4.setProperty(
@@ -832,9 +1077,16 @@ extension WeakSet$Typings<T extends _i7.WeakKey> on WeakSet<T> {
     );
   }
 
-  _i2.bool Function(T) get delete => _i4.getProperty(
-        this,
-        'delete',
+  _i2.bool Function(T) get delete => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'delete',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set has(_i2.bool Function(T) value) {
     _i4.setProperty(
@@ -844,12 +1096,20 @@ extension WeakSet$Typings<T extends _i7.WeakKey> on WeakSet<T> {
     );
   }
 
-  _i2.bool Function(T) get has => _i4.getProperty(
-        this,
-        'has',
+  _i2.bool Function(T) get has => (T p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'has',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class WeakSetConstructor {}
@@ -869,7 +1129,7 @@ _i6.SetConstructor get set => _i4.getProperty(
 _i6.WeakSetConstructor get weakSet => _i4.getProperty(
       _self,
       'WeakSet',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop

@@ -103,7 +103,7 @@ function extract(files: string[]): void {
 
     const pushImport = (declare: ImportDeclare) => {
       if (!declare.local) {
-        const spl = declare.from.split('/');
+        const spl = declare.from.split("/");
         const pkg = spl[0];
 
         if (!uses.includes(pkg)) {
@@ -111,7 +111,7 @@ function extract(files: string[]): void {
         }
       }
       imports.push(declare);
-    }
+    };
     const pushStruct = (struct: any) => {
       structs.push(struct);
     };
@@ -153,8 +153,8 @@ function extract(files: string[]): void {
           from: path,
           alias,
           types: [typeName],
-          local: true
-        })
+          local: true,
+        });
 
         ret = {
           ref,
@@ -262,7 +262,7 @@ function extract(files: string[]): void {
         });
 
         if (prototype && ts.isPropertySignature(prototype) && prototype.type) {
-          return parseType(prototype.type);
+          //return parseType(prototype.type);
         }
 
         if (!name) {
@@ -695,6 +695,17 @@ function extract(files: string[]): void {
       } else if (ts.isVariableDeclaration(node)) {
         const name = node.name.getText();
 
+        if (name == "Headers") {
+          console.log(
+            "HeyCatch, ",
+            name != lib.namespace &&
+              !modules.find((v) => {
+                return v.name == name;
+              }) &&
+              !vars.find((v) => v.name == name)
+          );
+        }
+
         if (
           name != lib.namespace &&
           !modules.find((v) => {
@@ -702,6 +713,36 @@ function extract(files: string[]): void {
           }) &&
           !vars.find((v) => v.name == name)
         ) {
+          const parsedType = parseType(node.type);
+          const type = node.type!;
+
+          if (name == "Headers") {
+            console.log("HeyCatch2, ", ts.isTypeLiteralNode(type));
+          }
+
+          if (ts.isTypeLiteralNode(type)) {
+            const prototype = type.members.find((m) => {
+              return m.name?.getText() == "prototype";
+            });
+            const cl = structs.find((struct) => struct.name == name);
+
+            if (cl) {
+              cl.declaredAsVar = !!(
+                prototype &&
+                ts.isPropertySignature(prototype) &&
+                prototype.type
+              );
+
+              if (name == "Headers") {
+                console.log("HeyCatch4, ", cl.declaredAsVar);
+              }
+            }
+
+            if (name == "Headers" && !cl) {
+              console.log("HeyCatch3, ", false);
+            }
+          }
+
           vars.push(
             addSource(node, {
               _: lineNumber,
@@ -710,7 +751,7 @@ function extract(files: string[]): void {
               isStatic: false,
               isNullable: false,
               doc: parseDoc(node),
-              type: parseType(node.type),
+              type: parsedType,
             })
           );
         }
@@ -924,7 +965,7 @@ function extract(files: string[]): void {
 
   if (!dev) {
     //console.log(JSON.stringify(toExport, null, 2));
-    console.log('FFUSES', uses);
+    console.log("FFUSES", uses);
     fs.writeFileSync(
       "./toExport.json",
       JSON.stringify({ files: toExport, uses }, null, 2)
@@ -948,9 +989,9 @@ function extract(files: string[]): void {
 const type = process.argv[2];
 
 if (type) {
-  if (type == '-f') {
+  if (type == "-f") {
     extract([...process.argv.splice(3)]);
-  } else if (type == '-t') {
+  } else if (type == "-t") {
     const project = new Project();
 
     project.addSourceFilesAtPaths(process.argv[3]);
@@ -958,8 +999,8 @@ if (type) {
 
     const files = project.getSourceFiles().map((s) => s.getFilePath());
 
-    console.log('CrawledFiles:');
-    console.log(files.join('\n'));
+    console.log("CrawledFiles:");
+    console.log(files.join("\n"));
 
     extract(files);
   }

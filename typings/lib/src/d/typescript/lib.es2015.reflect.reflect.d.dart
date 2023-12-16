@@ -3,13 +3,14 @@ library typings.typescript.interop.reflect; // ignore_for_file: no_leading_under
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import 'lib.es5.d.dart' as _i3;
-import 'dart:js_util' as _i4;
-import '/d/core.dart' as _i5;
+import 'dart:js_util' as _i3;
+import '/d/core.dart' as _i4;
+import 'lib.es5.d.dart' as _i5;
 
 @_i1.JS('Reflect')
 external _i2.Object _self;
 
+/* Source: globalThis */
 @_i1.JS('Reflect')
 @_i1.staticInterop
 class $ModuleReflect {}
@@ -20,13 +21,13 @@ extension $ModuleReflect$Typings on $ModuleReflect {
   R _apply$1<T, A extends _i2.List<_i2.dynamic>, R>(
     R Function([_i2.Iterable<_i2.dynamic>?]) target,
     T thisArgument,
-    _i3.Readonly<A> argumentsList,
+    _i2.dynamic argumentsList,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'apply',
         [
-          _i4.allowInterop(([
+          _i3.allowInterop(([
             a0,
             a1,
             a2,
@@ -62,7 +63,7 @@ extension $ModuleReflect$Typings on $ModuleReflect {
     _i2.List<_i2.dynamic> argumentsList, [
     _i2.dynamic thisArgument,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'apply',
         [
@@ -79,7 +80,7 @@ extension $ModuleReflect$Typings on $ModuleReflect {
     R Function<T, A extends _i2.List<_i2.dynamic>, R>(
       R Function([_i2.Iterable<_i2.dynamic>?]) target,
       T thisArgument,
-      _i3.Readonly<A> argumentsList,
+      _i2.dynamic argumentsList,
     ) $1,
 
     /// Calls the function with the specified object as the this value
@@ -98,14 +99,14 @@ extension $ModuleReflect$Typings on $ModuleReflect {
   /// and the specified constructor as the `new.target` value.
   R _construct$1<A extends _i2.List<_i2.dynamic>, R>(
     R Function([_i2.Iterable<_i2.dynamic>?]) target,
-    _i3.Readonly<A> argumentsList, [
+    _i2.dynamic argumentsList, [
     _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])? newTarget,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'construct',
         [
-          _i4.allowInterop(([
+          _i3.allowInterop(([
             a0,
             a1,
             a2,
@@ -131,8 +132,8 @@ extension $ModuleReflect$Typings on $ModuleReflect {
               ])),
           argumentsList,
           newTarget == null
-              ? _i5.undefined
-              : _i4.allowInterop(([
+              ? _i4.undefined
+              : _i3.allowInterop(([
                   a0,
                   a1,
                   a2,
@@ -166,13 +167,13 @@ extension $ModuleReflect$Typings on $ModuleReflect {
     _i2.List<_i2.dynamic> argumentsList, [
     _i2.Function? newTarget,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'construct',
         [
           target,
           argumentsList,
-          newTarget ?? _i5.undefined,
+          newTarget ?? _i4.undefined,
         ],
       );
 
@@ -182,7 +183,7 @@ extension $ModuleReflect$Typings on $ModuleReflect {
     /// and the specified constructor as the `new.target` value.
     R Function<A extends _i2.List<_i2.dynamic>, R>(
       R Function([_i2.Iterable<_i2.dynamic>?]) target,
-      _i3.Readonly<A> argumentsList, [
+      _i2.dynamic argumentsList, [
       _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])? newTarget,
     ]) $1,
 
@@ -201,10 +202,10 @@ extension $ModuleReflect$Typings on $ModuleReflect {
   /// Adds a property to an object, or modifies attributes of an existing property.
   _i2.bool defineProperty(
     _i2.Object target,
-    _i3.PropertyKey propertyKey,
+    _i2.Object propertyKey,
     _i2.Object attributes,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'defineProperty',
         [
@@ -218,9 +219,9 @@ extension $ModuleReflect$Typings on $ModuleReflect {
   /// except it won't throw if `target[propertyKey]` is non-configurable.
   _i2.bool deleteProperty(
     _i2.Object target,
-    _i3.PropertyKey propertyKey,
+    _i2.Object propertyKey,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'deleteProperty',
         [
@@ -230,12 +231,12 @@ extension $ModuleReflect$Typings on $ModuleReflect {
       );
 
   /// Gets the property of target, equivalent to `target[propertyKey]` when `receiver === target`.
-  _i2.dynamic get<T extends _i2.Object, P extends _i3.PropertyKey>(
+  _i2.dynamic get<T extends _i2.Object, P extends _i2.Object>(
     T target,
     P propertyKey, [
     _i2.Object? receiver,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'get',
         [
@@ -247,12 +248,12 @@ extension $ModuleReflect$Typings on $ModuleReflect {
 
   /// Gets the own property descriptor of the specified object.
   /// An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
-  _i3.TypedPropertyDescriptor<_i2.dynamic>?
-      getOwnPropertyDescriptor<T extends _i2.Object, P extends _i3.PropertyKey>(
+  _i5.TypedPropertyDescriptor<_i2.dynamic>?
+      getOwnPropertyDescriptor<T extends _i2.Object, P extends _i2.Object>(
     T target,
     P propertyKey,
   ) =>
-          _i4.callMethod(
+          _i3.callMethod(
             this,
             'getOwnPropertyDescriptor',
             [
@@ -262,7 +263,7 @@ extension $ModuleReflect$Typings on $ModuleReflect {
           );
 
   /// Returns the prototype of an object.
-  _i2.Object? getPrototypeOf(_i2.Object target) => _i4.callMethod(
+  _i2.Object? getPrototypeOf(_i2.Object target) => _i3.callMethod(
         this,
         'getPrototypeOf',
         [target],
@@ -271,9 +272,9 @@ extension $ModuleReflect$Typings on $ModuleReflect {
   /// Equivalent to `propertyKey in target`.
   _i2.bool has(
     _i2.Object target,
-    _i3.PropertyKey propertyKey,
+    _i2.Object propertyKey,
   ) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'has',
         [
@@ -283,7 +284,7 @@ extension $ModuleReflect$Typings on $ModuleReflect {
       );
 
   /// Returns a value that indicates whether new properties can be added to an object.
-  _i2.bool isExtensible(_i2.Object target) => _i4.callMethod(
+  _i2.bool isExtensible(_i2.Object target) => _i3.callMethod(
         this,
         'isExtensible',
         [target],
@@ -291,7 +292,7 @@ extension $ModuleReflect$Typings on $ModuleReflect {
 
   /// Returns the string and symbol keys of the own properties of an object. The own properties of an object
   /// are those that are defined directly on that object, and are not inherited from the object's prototype.
-  _i2.List<_i2.Object> ownKeys(_i2.Object target) => (_i4.callMethod(
+  _i2.List<_i2.Object> ownKeys(_i2.Object target) => (_i3.callMethod(
         this,
         'ownKeys',
         [target],
@@ -299,20 +300,20 @@ extension $ModuleReflect$Typings on $ModuleReflect {
           .cast();
 
   /// Prevents the addition of new properties to an object.
-  _i2.bool preventExtensions(_i2.Object target) => _i4.callMethod(
+  _i2.bool preventExtensions(_i2.Object target) => _i3.callMethod(
         this,
         'preventExtensions',
         [target],
       );
 
   /// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
-  _i2.bool _set$1<T extends _i2.Object, P extends _i3.PropertyKey>(
+  _i2.bool _set$1<T extends _i2.Object, P extends _i2.Object>(
     T target,
     P propertyKey, [
     _i2.dynamic value,
     _i2.dynamic receiver,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'set',
         [
@@ -326,11 +327,11 @@ extension $ModuleReflect$Typings on $ModuleReflect {
   /// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
   _i2.bool _set$2(
     _i2.Object target,
-    _i3.PropertyKey propertyKey, [
+    _i2.Object propertyKey, [
     _i2.dynamic value,
     _i2.dynamic receiver,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'set',
         [
@@ -344,7 +345,7 @@ extension $ModuleReflect$Typings on $ModuleReflect {
   /// Overload accessor: $1, $2
   ({
     /// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
-    _i2.bool Function<T extends _i2.Object, P extends _i3.PropertyKey>(
+    _i2.bool Function<T extends _i2.Object, P extends _i2.Object>(
       T target,
       P propertyKey, [
       _i2.dynamic value,
@@ -354,7 +355,7 @@ extension $ModuleReflect$Typings on $ModuleReflect {
     /// Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
     _i2.bool Function(
       _i2.Object target,
-      _i3.PropertyKey propertyKey, [
+      _i2.Object propertyKey, [
       _i2.dynamic value,
       _i2.dynamic receiver,
     ]) $2,
@@ -368,16 +369,17 @@ extension $ModuleReflect$Typings on $ModuleReflect {
     _i2.Object target, [
     _i2.Object? proto,
   ]) =>
-      _i4.callMethod(
+      _i3.callMethod(
         this,
         'setPrototypeOf',
         [
           target,
-          proto ?? _i5.undefined,
+          proto ?? _i4.undefined,
         ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

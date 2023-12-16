@@ -58,7 +58,7 @@ final class InteropGetter extends InteropProperty {
 
   @override
   Iterable<Method> build({Reference? target}) {
-    final t = target ??= makeThis();
+    final t = _buildTarget = target ??= makeThis();
     final returns = reference.ref(solid: true, useFuture: true);
 
     literal(null);
@@ -71,8 +71,10 @@ final class InteropGetter extends InteropProperty {
               ..returns = returns
               ..lambda = true
               ..body = reference
-                  .fromInterop(pkgJsUtils
-                      .getProperty([t, InteropProperty.literalJSName(name)]))
+                  .fromInterop(
+                      pkgJsUtils.getProperty(
+                          [t, InteropProperty.literalJSName(name)]),
+                      target: t)
                   //.asA(returns)
                   .code;
           }),
@@ -109,7 +111,7 @@ final class InteropSetter extends InteropProperty {
 
   @override
   Iterable<Method> build({Reference? target}) {
-    final t = target ??= makeThis();
+    final t = _buildTarget = target ??= makeThis();
 
     return [
       _makeProperty(
@@ -136,7 +138,8 @@ final class InteropSetter extends InteropProperty {
 }
 
 abstract base class InteropProperty extends InteropNamedDeclaration
-    with InteropClassMember, WithInteropTypeParams {
+    with InteropClassMember, WithInteropTypeParams
+    implements InteropTargetedType {
   InteropProperty(
       {required String name,
       required this.cl,
@@ -205,6 +208,8 @@ abstract base class InteropProperty extends InteropNamedDeclaration
 
   InteropRef? target;
 
+  Reference? _buildTarget;
+
   @override
   Iterable<InteropType> crawlTypes() =>
       [...reference.usedTypes(), ...typeParams.expand((tp) => tp.usedTypes())];
@@ -219,6 +224,9 @@ abstract base class InteropProperty extends InteropNamedDeclaration
 
   Reference makeThis() =>
       target?.ref() ?? (isStatic ? cl.makeDeclared().ref() : refer('this'));
+
+  @override
+  Reference makeTarget() => _buildTarget ?? makeThis();
 
   Method _makeProperty(
       {required MethodType type,

@@ -16,7 +16,7 @@ dependencies:
   ts2dart: any
 
 dev_dependencies:
-  build_web_compilers: ^4.0.2
+  build_web_compilers: ^4.0.4
   build_runner: ^2.4.1
   build_daemon: ^4.0.0
   lints: ^2.0.0

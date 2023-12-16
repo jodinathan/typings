@@ -100,7 +100,8 @@ class InteropDynamicEnum extends InteropNamedDeclaration
       {required Expression argument,
       bool isNullable = false,
       bool isOptional = false,
-      required List<InteropRef> typeArgs}) {
+      required List<InteropRef> typeArgs,
+      Reference? target}) {
     if (isOptional) {
       final ret = Block.of([
         const Code('switch ('),

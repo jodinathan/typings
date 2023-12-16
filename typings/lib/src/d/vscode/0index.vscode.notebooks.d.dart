@@ -11,6 +11,7 @@ import '/d/core.dart' as _i6;
 @_i1.JS('vscode.notebooks')
 external _i2.Object _self;
 
+/* Source: globalThis */
 @_i1.JS('vscode.notebooks')
 @_i1.staticInterop
 class $ModuleNotebooks {}
@@ -41,7 +42,7 @@ extension $ModuleNotebooks$Typings on $ModuleNotebooks {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => handler(
+                  _i6.Promise.futureOr(() => handler(
                         p0,
                         p1,
                         p2,
@@ -77,6 +78,7 @@ extension $ModuleNotebooks$Typings on $ModuleNotebooks {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

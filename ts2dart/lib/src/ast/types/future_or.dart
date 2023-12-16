@@ -49,21 +49,13 @@ class InteropFutureOr extends InteropType
       yield t.type;
     }
   }
-
-  @override
-  Expression fromInterop(
-          {required Expression argument,
-          bool isNullable = false,
-          bool isOptional = false,
-          required List<InteropRef> typeArgs}) =>
-      argument;
-
+  
   @override
   Expression toInterop(
       {required Expression argument,
       bool isNullable = false,
       bool isOptional = false,
       required List<InteropRef> typeArgs}) {
-    return refer('Promise.functionFutureOr', '/d/core.dart').call([argument]);
+    return refer('Promise.futureOr', '/d/core.dart').call([argument]);
   }
 }

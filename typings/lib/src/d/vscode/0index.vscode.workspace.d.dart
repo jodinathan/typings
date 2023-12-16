@@ -5,412 +5,13 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import '0index.vscode.d.dart' as _i3;
 import 'dart:js_util' as _i4;
-import 'dart:typed_data' as _i5;
-import '/d/core.dart' as _i6;
-import 'null_comon.vscode.workspace.d.dart' as _i7;
-import '0index.vscode.workspace.d.dart' as _i8;
+import '/d/core.dart' as _i5;
+import '0index.vscode.workspace.d.dart' as _i6;
 
 @_i1.JS('vscode.workspace')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _FsAccessor {}
-
-extension FsAccessor$Typings on _FsAccessor {
-  set stat(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
-    _i4.setProperty(
-      this,
-      'stat',
-      _i4.allowInterop(value),
-    );
-  }
-
-  set readDirectory(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
-    _i4.setProperty(
-      this,
-      'readDirectory',
-      _i4.allowInterop(value),
-    );
-  }
-
-  set createDirectory(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
-    _i4.setProperty(
-      this,
-      'createDirectory',
-      _i4.allowInterop(value),
-    );
-  }
-
-  set readFile(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
-    _i4.setProperty(
-      this,
-      'readFile',
-      _i4.allowInterop(value),
-    );
-  }
-
-  set writeFile(
-      _i2.Future<_i2.dynamic> Function(
-        _i3.Uri,
-        _i5.Uint8List,
-      ) value) {
-    _i4.setProperty(
-      this,
-      'writeFile',
-      _i4.allowInterop(value),
-    );
-  }
-
-  set delete(
-      _i2.Future<_i2.dynamic> Function(
-        _i3.Uri, [
-        _i2.dynamic,
-      ]) value) {
-    _i4.setProperty(
-      this,
-      'delete',
-      _i4.allowInterop(value),
-    );
-  }
-
-  set rename(
-      _i2.Future<_i2.dynamic> Function(
-        _i3.Uri,
-        _i3.Uri, [
-        _i2.dynamic,
-      ]) value) {
-    _i4.setProperty(
-      this,
-      'rename',
-      _i4.allowInterop(value),
-    );
-  }
-
-  set copy(
-      _i2.Future<_i2.dynamic> Function(
-        _i3.Uri,
-        _i3.Uri, [
-        _i2.dynamic,
-      ]) value) {
-    _i4.setProperty(
-      this,
-      'copy',
-      _i4.allowInterop(value),
-    );
-  }
-
-  set isWritableFileSystem(_i2.bool? Function(_i2.String) value) {
-    _i4.setProperty(
-      this,
-      'isWritableFileSystem',
-      _i4.allowInterop((p0) => () => value(p0) ?? _i6.undefined),
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _WorkspaceFileAccessor {}
-
-extension WorkspaceFileAccessor$Typings on _WorkspaceFileAccessor {
-  /// Scheme is the `http` part of `http://www.example.com/some/path?query#fragment`.
-  /// The part before the first colon.
-  _i2.String get scheme => _i4.getProperty(
-        this,
-        'scheme',
-      );
-
-  /// Authority is the `www.example.com` part of `http://www.example.com/some/path?query#fragment`.
-  /// The part between the first double slashes and the next slash.
-  _i2.String get authority => _i4.getProperty(
-        this,
-        'authority',
-      );
-
-  /// Path is the `/some/path` part of `http://www.example.com/some/path?query#fragment`.
-  _i2.String get path => _i4.getProperty(
-        this,
-        'path',
-      );
-
-  /// Query is the `query` part of `http://www.example.com/some/path?query#fragment`.
-  _i2.String get query => _i4.getProperty(
-        this,
-        'query',
-      );
-
-  /// Fragment is the `fragment` part of `http://www.example.com/some/path?query#fragment`.
-  _i2.String get fragment => _i4.getProperty(
-        this,
-        'fragment',
-      );
-
-  /// The string representing the corresponding file system path of this Uri.
-  ///
-  /// Will handle UNC paths and normalize windows drive letters to lower-case. Also
-  /// uses the platform specific path separator.
-  ///
-  /// * Will *not* validate the path for invalid characters and semantics.
-  /// * Will *not* look at the scheme of this Uri.
-  /// * The resulting string shall *not* be used for display purposes but
-  /// for disk operations, like `readFile` et al.
-  ///
-  /// The *difference* to the {@linkcode Uri.pathpath}-property is the use of the platform specific
-  /// path separator and the handling of UNC paths. The sample below outlines the difference:
-  /// ```ts
-  /// const u = URI.parse('file://server/c$/folder/file.txt')
-  /// u.authority === 'server'
-  /// u.path === '/shares/c$/file.txt'
-  /// u.fsPath === '\\server\c$\folder\file.txt'
-  /// ```
-  _i2.String get fsPath => _i4.getProperty(
-        this,
-        'fsPath',
-      );
-
-  /// Create an URI from a string, e.g. `http://www.example.com/some/path`,
-  /// `file:///usr/home`, or `scheme:with/path`.
-  ///
-  /// *Note* that for a while uris without a `scheme` were accepted. That is not correct
-  /// as all uris should have a scheme. To avoid breakage of existing code the optional
-  /// `strict`-argument has been added. We *strongly* advise to use it, e.g. `Uri.parse('my:uri', true)`
-  _i3.Uri parse(
-    _i2.String value, [
-    _i2.bool? strict,
-  ]) =>
-      _i4.callMethod(
-        _i7.target69,
-        'parse',
-        [
-          value,
-          strict ?? _i6.undefined,
-        ],
-      );
-
-  /// Create an URI from a file system path. The {@link Uri.schemescheme}
-  /// will be `file`.
-  ///
-  /// The *difference* between {@link Uri.parse} and {@link Uri.file} is that the latter treats the argument
-  /// as path, not as stringified-uri. E.g. `Uri.file(path)` is *not* the same as
-  /// `Uri.parse('file://' + path)` because the path might contain characters that are
-  /// interpreted (# and ?). See the following sample:
-  /// ```ts
-  /// const good = URI.file('/coding/c#/project1');
-  /// good.scheme === 'file';
-  /// good.path === '/coding/c#/project1';
-  /// good.fragment === '';
-  ///
-  /// const bad = URI.parse('file://' + '/coding/c#/project1');
-  /// bad.scheme === 'file';
-  /// bad.path === '/coding/c'; // path is now broken
-  /// bad.fragment === '/project1';
-  /// ```
-  _i3.Uri file(_i2.String path) => _i4.callMethod(
-        _i7.target69,
-        'file',
-        [path],
-      );
-
-  /// Create a new uri which path is the result of joining
-  /// the path of the base uri with the provided path segments.
-  ///
-  /// - Note 1: `joinPath` only affects the path component
-  /// and all other components (scheme, authority, query, and fragment) are
-  /// left as they are.
-  /// - Note 2: The base uri must have a path; an error is thrown otherwise.
-  ///
-  /// The path segments are normalized in the following ways:
-  /// - sequences of path separators (`/` or `\`) are replaced with a single separator
-  /// - for `file`-uris on windows, the backslash-character (`\`) is considered a path-separator
-  /// - the `..`-segment denotes the parent segment, the `.` denotes the current segment
-  /// - paths have a root which always remains, for instance on windows drive-letters are roots
-  /// so that is true: `joinPath(Uri.file('file:///c:/root'), '../../other').fsPath === 'c:/other'`
-  _i3.Uri joinPath(
-    _i3.Uri base, [
-    _i2.Iterable<_i2.dynamic>? pathSegments,
-  ]) =>
-      _i4.callMethod(
-        _i7.target69,
-        'joinPath',
-        [
-          base,
-          ...?pathSegments,
-        ],
-      );
-
-  /// Create an URI from its component parts
-  _i3.Uri from(_i3.IInline5 components) => _i4.callMethod(
-        _i7.target69,
-        'from',
-        [components],
-      );
-
-  /// Derive a new Uri from this Uri.
-  ///
-  ///  ```ts
-  ///  let file = Uri.parse('before:some/file/path');
-  ///  let other = file.with({ scheme: 'after' });
-  ///  assert.ok(other.toString() === 'after:some/file/path');
-  ///  ```
-  ///
-  ///  @param change An object that describes a change to this Uri. To unset components use `null` or
-  ///   the empty string.
-  ///  @returns A new Uri that reflects the given change. Will return `this` Uri if the change
-  ///   is not changing anything.
-  _i3.Uri with$(_i3.IInline6 change) => _i4.callMethod(
-        _i7.target69,
-        'with',
-        [change],
-      );
-
-  /// Returns a string representation of this Uri. The representation and normalization
-  ///  of a URI depends on the scheme.
-  ///
-  ///  * The resulting string can be safely used with {@link Uri.parse}.
-  ///  * The resulting string shall *not* be used for display purposes.
-  ///
-  ///  *Note* that the implementation will encode _aggressive_ which often leads to unexpected,
-  ///  but not incorrect, results. For instance, colons are encoded to `%3A` which might be unexpected
-  ///  in file-uri. Also `&` and `=` will be encoded which might be unexpected for http-uris. For stability
-  ///  reasons this cannot be changed anymore. If you suffer from too aggressive encoding you should use
-  ///  the `skipEncoding`-argument: `uri.toString(true)`.
-  ///
-  ///  @param skipEncoding Do not percentage-encode the result, defaults to `false`. Note that
-  /// 	the `#` and `?` characters occurring in the path will always be encoded.
-  ///  @returns A string representation of this Uri.
-  _i2.String toString$([_i2.bool? skipEncoding]) => _i4.callMethod(
-        _i7.target69,
-        'toString',
-        [skipEncoding ?? _i6.undefined],
-      );
-
-  /// Returns a JSON representation of this Uri.
-  ///
-  ///  @returns An object.
-  _i2.dynamic toJSON() => _i4.callMethod(
-        _i7.target69,
-        'toJSON',
-        [],
-      );
-  _i2.Never call(
-    _i2.String scheme,
-    _i2.String authority,
-    _i2.String path,
-    _i2.String query,
-    _i2.String fragment,
-  ) =>
-      _i4.callMethod(
-        _i7.target69,
-        'call',
-        [
-          this,
-          scheme,
-          authority,
-          path,
-          query,
-          fragment,
-        ],
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeWorkspaceFoldersAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidOpenTextDocumentAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidCloseTextDocumentAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeTextDocumentAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnWillSaveTextDocumentAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidSaveTextDocumentAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeNotebookDocumentAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnWillSaveNotebookDocumentAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidSaveNotebookDocumentAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidOpenNotebookDocumentAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidCloseNotebookDocumentAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnWillCreateFilesAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidCreateFilesAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnWillDeleteFilesAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidDeleteFilesAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnWillRenameFilesAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidRenameFilesAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeConfigurationAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidGrantWorkspaceTrustAccessor {}
-
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -430,6 +31,7 @@ extension IInline64$Typings on IInline64 {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -445,7 +47,7 @@ extension IInline65$Typings on IInline65 {
     _i4.setProperty(
       this,
       'language',
-      value ?? _i6.undefined,
+      value ?? _i5.undefined,
     );
   }
 
@@ -458,11 +60,12 @@ extension IInline65$Typings on IInline65 {
     _i4.setProperty(
       this,
       'content',
-      value ?? _i6.undefined,
+      value ?? _i5.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -482,6 +85,7 @@ extension IInline66$Typings on IInline66 {
       );
 }
 
+/* Source: globalThis */
 @_i1.JS('vscode.workspace')
 @_i1.staticInterop
 class $ModuleWorkspace {}
@@ -511,10 +115,10 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   ///
   /// Refer to https://code.visualstudio.com/docs/editor/workspaces for more information
   /// on workspaces.
-  _i2.List<_i3.WorkspaceFolder>? get workspaceFolders => ((_i4.getProperty(
+  _i2.List<_i3.WorkspaceFolder>? get workspaceFolders => (_i4.getProperty(
         this,
         'workspaceFolders',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 
   /// The name of the workspace. `undefined` when no workspace
@@ -575,10 +179,10 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
       );
 
   /// All text documents currently known to the editor.
-  _i2.List<_i3.TextDocument> get textDocuments => ((_i4.getProperty(
+  _i2.List<_i3.TextDocument> get textDocuments => (_i4.getProperty(
         this,
         'textDocuments',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// An event that is emitted when a {@link TextDocumenttext document} is opened or when the language id
@@ -641,10 +245,10 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
       );
 
   /// All notebook documents currently known to the editor.
-  _i2.List<_i3.NotebookDocument> get notebookDocuments => ((_i4.getProperty(
+  _i2.List<_i3.NotebookDocument> get notebookDocuments => (_i4.getProperty(
         this,
         'notebookDocuments',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// An event that is emitted when a {@link NotebookDocumentnotebook} has changed.
@@ -814,7 +418,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'asRelativePath',
         [
           pathOrUri,
-          includeWorkspaceFolder ?? _i6.undefined,
+          includeWorkspaceFolder ?? _i5.undefined,
         ],
       );
 
@@ -861,7 +465,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'updateWorkspaceFolders',
         [
           start,
-          deleteCount ?? _i6.undefined,
+          deleteCount ?? _i5.undefined,
           ...?workspaceFoldersToAdd,
         ],
       );
@@ -990,9 +594,9 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'createFileSystemWatcher',
         [
           globPattern,
-          ignoreCreateEvents ?? _i6.undefined,
-          ignoreChangeEvents ?? _i6.undefined,
-          ignoreDeleteEvents ?? _i6.undefined,
+          ignoreCreateEvents ?? _i5.undefined,
+          ignoreChangeEvents ?? _i5.undefined,
+          ignoreDeleteEvents ?? _i5.undefined,
         ],
       );
 
@@ -1008,9 +612,9 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'findFiles',
         [
           include,
-          exclude ?? _i6.undefined ?? _i6.undefined,
-          maxResults ?? _i6.undefined,
-          token ?? _i6.undefined,
+          exclude ?? _i5.undefined ?? _i5.undefined,
+          maxResults ?? _i5.undefined,
+          token ?? _i5.undefined,
         ],
       ));
 
@@ -1019,7 +623,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'saveAll',
-        [includeUntitled ?? _i6.undefined],
+        [includeUntitled ?? _i5.undefined],
       ));
 
   /// Make changes to one or many resources or create, delete, and rename resources as defined by the given
@@ -1042,7 +646,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'applyEdit',
         [
           edit,
-          metadata ?? _i6.undefined,
+          metadata ?? _i5.undefined,
         ],
       ));
 
@@ -1114,11 +718,11 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   /// Opens an untitled text document. The editor will prompt the user for a file
   /// path when the document is to be saved. The `options` parameter allows to
   /// specify the *language* and/or the *content* of the document.
-  _i2.Future<_i2.dynamic> _openTextDocument$3([_i8.IInline65? options]) =>
+  _i2.Future<_i2.dynamic> _openTextDocument$3([_i6.IInline65? options]) =>
       _i4.promiseToFuture(_i4.callMethod(
         this,
         'openTextDocument',
-        [options ?? _i6.undefined],
+        [options ?? _i5.undefined],
       ));
 
   /// Overload accessor: $1, $2, $3
@@ -1181,7 +785,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
     /// Opens an untitled text document. The editor will prompt the user for a file
     /// path when the document is to be saved. The `options` parameter allows to
     /// specify the *language* and/or the *content* of the document.
-    _i2.Future<_i2.dynamic> Function([_i8.IInline65? options]) $3,
+    _i2.Future<_i2.dynamic> Function([_i6.IInline65? options]) $3,
   }) get openTextDocument => (
         $1: _openTextDocument$1,
         $2: _openTextDocument$2,
@@ -1240,7 +844,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         'openNotebookDocument',
         [
           notebookType,
-          content ?? _i6.undefined,
+          content ?? _i5.undefined,
         ],
       ));
 
@@ -1292,7 +896,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         [
           notebookType,
           serializer,
-          options ?? _i6.undefined,
+          options ?? _i5.undefined,
         ],
       );
 
@@ -1311,8 +915,8 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         this,
         'getConfiguration',
         [
-          section ?? _i6.undefined,
-          scope ?? _i6.undefined ?? _i6.undefined,
+          section ?? _i5.undefined,
+          scope ?? _i5.undefined ?? _i5.undefined,
         ],
       );
 
@@ -1337,7 +941,7 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
   _i3.Disposable registerFileSystemProvider(
     _i2.String scheme,
     _i3.FileSystemProvider provider, [
-    _i8.IInline66? options,
+    _i6.IInline66? options,
   ]) =>
       _i4.callMethod(
         this,
@@ -1345,11 +949,12 @@ extension $ModuleWorkspace$Typings on $ModuleWorkspace {
         [
           scheme,
           provider,
-          options ?? _i6.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

@@ -207,13 +207,15 @@ class InteropMethodHolder extends InteropMethod {
                     : p.toInterop();
               })
             ];
+            final refTarget = target ?? makeThis();
             final call = (inheriter ?? version.returnRef)
                 .fromInterop(version._jsCall([
-                  target ?? makeThis(),
+                  refTarget,
                   if (version.addCallArg)
                     InteropProperty.literalJSName(version.callableName),
                   if (version.argsAsList) literalList(args) else ...args
-                ]))
+                ]),
+                target: refTarget)
                 .returned;
 
             b
@@ -472,11 +474,14 @@ class InteropMethod extends InteropNamedDeclaration
           args.insert(0, refer('this'));
         }
 
-        final call = returnRef.fromInterop(_jsCall([
-          target ?? makeThis(),
-          if (addCallArg) InteropProperty.literalJSName(callableName),
-          if (argsAsList) literalList(args) else ...args
-        ]));
+        final refTarget = target ?? makeThis();
+        final call = returnRef.fromInterop(
+            target: refTarget,
+            _jsCall([
+              refTarget,
+              if (addCallArg) InteropProperty.literalJSName(callableName),
+              if (argsAsList) literalList(args) else ...args
+            ]));
 
         if (isOperator) {
           b.requiredParameters.addAll(params.map((p) => p.toCodeParam()));

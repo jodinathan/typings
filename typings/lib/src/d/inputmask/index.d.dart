@@ -11,7 +11,7 @@ external _i2.Object _self;
 _i3.$ModuleInputmask get inputmask => _i4.getProperty(
       _self,
       'Inputmask',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop

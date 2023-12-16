@@ -9,7 +9,8 @@ import 'reference.dart';
 import 'types/type.dart';
 
 class InteropTypedef extends InteropNamedDeclaration
-    with WithInteropTypeParams {
+    with WithInteropTypeParams
+    implements InteropTargetedType {
   InteropTypedef(
       {required String name,
       required InteropLibrary library,
@@ -44,6 +45,15 @@ class InteropTypedef extends InteropNamedDeclaration
 
   @override
   final String source;
+
+  @override
+  Reference? makeTarget() {
+    if (definition?.type case InteropTargetedType tt) {
+      return tt.makeTarget();
+    }
+
+    return null;
+  }
 
   @override
   Reference ref(
@@ -121,8 +131,10 @@ class InteropTypedef extends InteropNamedDeclaration
       {required Expression argument,
       bool isNullable = false,
       bool isOptional = false,
-      required List<InteropRef> typeArgs}) {
+      required List<InteropRef> typeArgs,
+      Reference? target}) {
     return definition!
-        .fromInterop(argument, isNullable: isNullable, isOptional: isOptional);
+        .fromInterop(argument, isNullable: isNullable, isOptional: isOptional,
+        target: target);
   }
 }

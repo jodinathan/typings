@@ -93,6 +93,7 @@ typedef AnimeTarget = _i2.dynamic;
 typedef EasingOptions = _i4.EasingOptionsOptions;
 typedef DirectionOptions = _i4.DirectionOptionsOptions;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -137,9 +138,16 @@ class AnimeCallBack {
 }
 
 extension AnimeCallBack$Typings on AnimeCallBack {
-  _i4.AnimeCallbackFunction? get begin => _i6.getProperty(
-        this,
-        'begin',
+  _i4.AnimeCallbackFunction? get begin => ([_i2.dynamic p0]) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'begin',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set begin(_i4.AnimeCallbackFunction? value) {
     _i6.setProperty(
@@ -149,9 +157,16 @@ extension AnimeCallBack$Typings on AnimeCallBack {
     );
   }
 
-  _i4.AnimeCallbackFunction? get change => _i6.getProperty(
-        this,
-        'change',
+  _i4.AnimeCallbackFunction? get change => ([_i2.dynamic p0]) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'change',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set change(_i4.AnimeCallbackFunction? value) {
     _i6.setProperty(
@@ -161,9 +176,16 @@ extension AnimeCallBack$Typings on AnimeCallBack {
     );
   }
 
-  _i4.AnimeCallbackFunction? get update => _i6.getProperty(
-        this,
-        'update',
+  _i4.AnimeCallbackFunction? get update => ([_i2.dynamic p0]) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'update',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set update(_i4.AnimeCallbackFunction? value) {
     _i6.setProperty(
@@ -173,10 +195,18 @@ extension AnimeCallBack$Typings on AnimeCallBack {
     );
   }
 
-  _i4.AnimeCallbackFunction? get complete => _i6.getProperty(
-        this,
-        'complete',
-      );
+  _i4.AnimeCallbackFunction? get complete =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'complete',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set complete(_i4.AnimeCallbackFunction? value) {
     _i6.setProperty(
       this,
@@ -185,10 +215,18 @@ extension AnimeCallBack$Typings on AnimeCallBack {
     );
   }
 
-  _i4.AnimeCallbackFunction? get loopBegin => _i6.getProperty(
-        this,
-        'loopBegin',
-      );
+  _i4.AnimeCallbackFunction? get loopBegin =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'loopBegin',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set loopBegin(_i4.AnimeCallbackFunction? value) {
     _i6.setProperty(
       this,
@@ -197,10 +235,18 @@ extension AnimeCallBack$Typings on AnimeCallBack {
     );
   }
 
-  _i4.AnimeCallbackFunction? get loopComplete => _i6.getProperty(
-        this,
-        'loopComplete',
-      );
+  _i4.AnimeCallbackFunction? get loopComplete =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'loopComplete',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set loopComplete(_i4.AnimeCallbackFunction? value) {
     _i6.setProperty(
       this,
@@ -209,10 +255,18 @@ extension AnimeCallBack$Typings on AnimeCallBack {
     );
   }
 
-  _i4.AnimeCallbackFunction? get changeBegin => _i6.getProperty(
-        this,
-        'changeBegin',
-      );
+  _i4.AnimeCallbackFunction? get changeBegin =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'changeBegin',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set changeBegin(_i4.AnimeCallbackFunction? value) {
     _i6.setProperty(
       this,
@@ -221,10 +275,18 @@ extension AnimeCallBack$Typings on AnimeCallBack {
     );
   }
 
-  _i4.AnimeCallbackFunction? get changeComplete => _i6.getProperty(
-        this,
-        'changeComplete',
-      );
+  _i4.AnimeCallbackFunction? get changeComplete =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'changeComplete',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set changeComplete(_i4.AnimeCallbackFunction? value) {
     _i6.setProperty(
       this,
@@ -234,6 +296,7 @@ extension AnimeCallBack$Typings on AnimeCallBack {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -324,6 +387,7 @@ extension AnimeInstanceParams$Typings on AnimeInstanceParams {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -504,6 +568,7 @@ extension AnimeAnimParams$Typings on AnimeAnimParams {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -550,6 +615,7 @@ class AnimeParams implements _i4.AnimeInstanceParams, _i4.AnimeAnimParams {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -625,6 +691,7 @@ extension Animatable$Typings on Animatable {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -760,6 +827,7 @@ extension Animation$Typings on Animation {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1070,9 +1138,13 @@ extension AnimeInstance$Typings on AnimeInstance {
     );
   }
 
-  void Function() get play => _i6.getProperty(
-        this,
-        'play',
+  void Function() get play => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'play',
+        ),
+        r'call',
+        [this],
       );
   set pause(void Function() value) {
     _i6.setProperty(
@@ -1082,9 +1154,13 @@ extension AnimeInstance$Typings on AnimeInstance {
     );
   }
 
-  void Function() get pause => _i6.getProperty(
-        this,
-        'pause',
+  void Function() get pause => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'pause',
+        ),
+        r'call',
+        [this],
       );
   set restart(void Function() value) {
     _i6.setProperty(
@@ -1094,9 +1170,13 @@ extension AnimeInstance$Typings on AnimeInstance {
     );
   }
 
-  void Function() get restart => _i6.getProperty(
-        this,
-        'restart',
+  void Function() get restart => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'restart',
+        ),
+        r'call',
+        [this],
       );
   set reverse(void Function() value) {
     _i6.setProperty(
@@ -1106,9 +1186,13 @@ extension AnimeInstance$Typings on AnimeInstance {
     );
   }
 
-  void Function() get reverse => _i6.getProperty(
-        this,
-        'reverse',
+  void Function() get reverse => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'reverse',
+        ),
+        r'call',
+        [this],
       );
   set seek(void Function(_i2.num) value) {
     _i6.setProperty(
@@ -1118,9 +1202,16 @@ extension AnimeInstance$Typings on AnimeInstance {
     );
   }
 
-  void Function(_i2.num) get seek => _i6.getProperty(
-        this,
-        'seek',
+  void Function(_i2.num) get seek => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'seek',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set tick(void Function(_i2.num) value) {
     _i6.setProperty(
@@ -1130,12 +1221,20 @@ extension AnimeInstance$Typings on AnimeInstance {
     );
   }
 
-  void Function(_i2.num) get tick => _i6.getProperty(
-        this,
-        'tick',
+  void Function(_i2.num) get tick => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'tick',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1190,6 +1289,7 @@ extension AnimeTimelineAnimParams$Typings on AnimeTimelineAnimParams {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1291,12 +1391,25 @@ extension AnimeTimelineInstance$Typings on AnimeTimelineInstance {
   _i4.AnimeTimelineInstance Function(
     _i4.AnimeAnimParams, [
     _i2.Object?,
-  ]) get add => _i6.getProperty(
-        this,
-        'add',
-      );
+  ]) get add => (
+        _i4.AnimeAnimParams p0, [
+        _i2.Object? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'add',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1408,6 +1521,7 @@ extension StaggerOptions$Typings on StaggerOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1451,6 +1565,7 @@ extension IInline1$Typings on IInline1 {
   }
 }
 
+/* Source: globalThis */
 @_i1.JS('anime')
 @_i1.staticInterop
 class $ModuleAnime {}
@@ -1482,7 +1597,7 @@ extension $ModuleAnime$Typings on $ModuleAnime {
   }
 
   _i2.Object get(
-    _i4.AnimeTarget targets,
+    _i2.dynamic targets,
     _i2.String prop, [
     _i2.String? unit,
   ]) =>
@@ -1499,14 +1614,21 @@ extension $ModuleAnime$Typings on $ModuleAnime {
     _i2.dynamic path,
     _i2.num? percent,
   ]) =>
-      _i6.callMethod(
-        this,
-        'path',
-        [
-          path,
-          percent ?? _i5.undefined,
-        ],
-      );
+      (_i2.String p0) => _i6.callMethod(
+            _i6.callMethod(
+              this,
+              'path',
+              [
+                path,
+                percent ?? _i5.undefined,
+              ],
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   _i2.num setDashoffset([_i3.Element? el]) => _i6.callMethod(
         this,
         'setDashoffset',
@@ -1518,30 +1640,51 @@ extension $ModuleAnime$Typings on $ModuleAnime {
     _i2.num x2,
     _i2.num y2,
   ) =>
-      _i6.callMethod(
-        this,
-        'bezier',
-        [
-          x1,
-          y1,
-          x2,
-          y2,
-        ],
-      );
+      (_i2.num p0) => _i6.callMethod(
+            _i6.callMethod(
+              this,
+              'bezier',
+              [
+                x1,
+                y1,
+                x2,
+                y2,
+              ],
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   _i4.FunctionBasedParameter stagger(
     _i2.Object value, [
     _i4.StaggerOptions? options,
   ]) =>
-      _i6.callMethod(
-        this,
-        'stagger',
-        [
-          value,
-          options ?? _i5.undefined,
-        ],
-      );
+      (
+        _i3.HTMLElement p0,
+        _i2.num p1,
+        _i2.num p2,
+      ) =>
+          _i6.callMethod(
+            _i6.callMethod(
+              this,
+              'stagger',
+              [
+                value,
+                options ?? _i5.undefined,
+              ],
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   void set(
-    _i4.AnimeTarget targets,
+    _i2.dynamic targets,
     _i2.Object value,
   ) {
     _i6.callMethod(
@@ -1573,6 +1716,7 @@ extension $ModuleAnime$Typings on $ModuleAnime {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

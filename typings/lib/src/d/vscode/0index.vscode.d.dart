@@ -653,11 +653,28 @@ enum TestRunProfileKind {
   final _i2.num value;
 }
 
+/* Source:  Memento & {
+			/**
+			 * Set the keys whose values should be synchronized across devices when synchronizing user-data
+			 * like configuration, extensions, and mementos.
+			 *
+			 * Note that this function defines the whole set of keys whose values are synchronized:
+			 *  - calling it with an empty array stops synchronization for this memento
+			 *  - calling it with a non-empty array replaces all keys whose values are synchronized
+			 *
+			 * For any given set of keys this function needs to be called only once but there is no harm in
+			 * repeatedly calling it.
+			 *
+			 * @param keys The set of keys whose values are synced.
+			 */
+			setKeysForSync(keys: readonly string[]): void;
+		} */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection7 implements _i3.Memento, _i3.IInline33 {}
+class _Intersection14 implements _i3.Memento, _i3.IInline33 {}
 
+/* Source: ForcedCommon from  Event<CustomDocumentEditEvent<T>> | Event<CustomDocumentContentChangeEvent<T>> */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -678,6 +695,7 @@ typedef CharacterPair = (
 typedef ConfigurationScope = _i2.Object;
 typedef DebugAdapterDescriptor = _i2.Object;
 
+/* Source:  */
 /// Represents a reference to a command. Provides a title which
 /// will be used to represent a command in the UI and, optionally,
 /// an array of arguments which will be passed to the command handler
@@ -750,10 +768,10 @@ extension Command$Typings on Command {
 
   /// Arguments that the command handler should be
   ///  invoked with.
-  _i2.List<_i2.dynamic>? get arguments => ((_i5.getProperty(
+  _i2.List<_i2.dynamic>? get arguments => (_i5.getProperty(
         this,
         'arguments',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set arguments(_i2.List<_i2.dynamic>? value) {
     _i5.setProperty(
@@ -764,6 +782,7 @@ extension Command$Typings on Command {
   }
 }
 
+/* Source:  */
 /// Represents a line of text, such as a line of source code.
 ///
 /// TextLine objects are __immutable__. When a {@link TextDocumentdocument} changes,
@@ -839,6 +858,7 @@ extension TextLine$Typings on TextLine {
       );
 }
 
+/* Source:  */
 /// Represents a text document, such as a source file. Text documents have
 /// {@link TextLinelines} and knowledge about an underlying resource like a file.
 @_i1.JS()
@@ -990,14 +1010,15 @@ extension TextDocument$Typings on TextDocument {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function() get save => () => _i5.callMethod(
-        _i5.getProperty(
-          this,
-          'save',
-        ),
-        r'call',
-        [this],
-      );
+  _i2.Future<_i2.dynamic> Function() get save =>
+      () => _i5.promiseToFuture(_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'save',
+            ),
+            r'call',
+            [this],
+          ));
   set offsetAt(_i2.num Function(_i3.Position) value) {
     _i5.setProperty(
       this,
@@ -1055,7 +1076,7 @@ extension TextDocument$Typings on TextDocument {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
             ],
           );
   set getWordRangeAtPosition(
@@ -1095,7 +1116,7 @@ extension TextDocument$Typings on TextDocument {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
   set validateRange(_i3.Range Function(_i3.Range) value) {
@@ -1194,6 +1215,7 @@ extension TextDocument$Typings on TextDocument {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1227,6 +1249,7 @@ extension IInline0$Typings on IInline0 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1260,6 +1283,7 @@ extension IInline1$Typings on IInline1 {
   }
 }
 
+/* Source:  */
 /// Represents a line and character position, such as
 /// the position of the cursor.
 ///
@@ -1474,6 +1498,7 @@ extension Position$Typings on Position {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1507,6 +1532,7 @@ extension IInline2$Typings on IInline2 {
   }
 }
 
+/* Source:  */
 /// A range represents an ordered pair of two positions.
 /// It is guaranteed that {@link Range.startstart}.isBeforeOrEqual({@link Range.endend})
 ///
@@ -1693,6 +1719,7 @@ extension Range$Typings on Range {
       );
 }
 
+/* Source:  */
 /// Represents a text selection in an editor.
 @_i1.JS()
 @_i1.staticInterop
@@ -1779,6 +1806,7 @@ extension Selection$Typings on Selection {
   }
 }
 
+/* Source:  */
 /// Represents an event describing the change in a {@link TextEditor.selectionstext editor's selections}.
 @_i1.JS()
 @_i1.staticInterop
@@ -1811,10 +1839,10 @@ extension TextEditorSelectionChangeEvent$Typings
       );
 
   /// The new value for the {@link TextEditor.selectionstext editor's selections}.
-  _i2.List<_i3.Selection> get selections => ((_i5.getProperty(
+  _i2.List<_i3.Selection> get selections => (_i5.getProperty(
         this,
         'selections',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// The {@link TextEditorSelectionChangeKindchange kind} which has triggered this
@@ -1829,6 +1857,7 @@ extension TextEditorSelectionChangeEvent$Typings
       };
 }
 
+/* Source:  */
 /// Represents an event describing the change in a {@link TextEditor.visibleRangestext editor's visible ranges}.
 @_i1.JS()
 @_i1.staticInterop
@@ -1858,13 +1887,14 @@ extension TextEditorVisibleRangesChangeEvent$Typings
       );
 
   /// The new value for the {@link TextEditor.visibleRangestext editor's visible ranges}.
-  _i2.List<_i3.Range> get visibleRanges => ((_i5.getProperty(
+  _i2.List<_i3.Range> get visibleRanges => (_i5.getProperty(
         this,
         'visibleRanges',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// Represents an event describing the change in a {@link TextEditor.optionstext editor's options}.
 @_i1.JS()
 @_i1.staticInterop
@@ -1899,6 +1929,7 @@ extension TextEditorOptionsChangeEvent$Typings on TextEditorOptionsChangeEvent {
       );
 }
 
+/* Source:  */
 /// Represents an event describing the change of a {@link TextEditor.viewColumntext editor's view column}.
 @_i1.JS()
 @_i1.staticInterop
@@ -1934,6 +1965,7 @@ extension TextEditorViewColumnChangeEvent$Typings
       ));
 }
 
+/* Source:  */
 /// Represents a {@link TextEditortext editor}'s {@link TextEditor.optionsoptions}.
 @_i1.JS()
 @_i1.staticInterop
@@ -2051,6 +2083,7 @@ extension TextEditorOptions$Typings on TextEditorOptions {
   }
 }
 
+/* Source:  */
 /// Represents a handle to a set of decorations
 /// sharing the same {@link DecorationRenderOptionsstyling options} in a {@link TextEditortext editor}.
 ///
@@ -2099,6 +2132,7 @@ extension TextEditorDecorationType$Typings on TextEditorDecorationType {
       );
 }
 
+/* Source:  */
 /// Represents options to configure the behavior of showing a {@link TextDocumentdocument} in an {@link TextEditoreditor}.
 @_i1.JS()
 @_i1.staticInterop
@@ -2189,6 +2223,7 @@ extension TextDocumentShowOptions$Typings on TextDocumentShowOptions {
   }
 }
 
+/* Source:  */
 /// Represents an event describing the change in a {@link NotebookEditor.selectionsnotebook editor's selections}.
 @_i1.JS()
 @_i1.staticInterop
@@ -2218,13 +2253,14 @@ extension NotebookEditorSelectionChangeEvent$Typings
       );
 
   /// The new value for the {@link NotebookEditor.selectionsnotebook editor's selections}.
-  _i2.List<_i3.NotebookRange> get selections => ((_i5.getProperty(
+  _i2.List<_i3.NotebookRange> get selections => (_i5.getProperty(
         this,
         'selections',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// Represents an event describing the change in a {@link NotebookEditor.visibleRangesnotebook editor's visibleRanges}.
 @_i1.JS()
 @_i1.staticInterop
@@ -2254,13 +2290,14 @@ extension NotebookEditorVisibleRangesChangeEvent$Typings
       );
 
   /// The new value for the {@link NotebookEditor.visibleRangesnotebook editor's visibleRanges}.
-  _i2.List<_i3.NotebookRange> get visibleRanges => ((_i5.getProperty(
+  _i2.List<_i3.NotebookRange> get visibleRanges => (_i5.getProperty(
         this,
         'visibleRanges',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// Represents options to configure the behavior of showing a {@link NotebookDocumentnotebook document} in an {@link NotebookEditornotebook editor}.
 @_i1.JS()
 @_i1.staticInterop
@@ -2316,13 +2353,14 @@ extension NotebookDocumentShowOptions$Typings on NotebookDocumentShowOptions {
       );
 
   /// An optional selection to apply for the document in the {@link NotebookEditornotebook editor}.
-  _i2.List<_i3.NotebookRange>? get selections => ((_i5.getProperty(
+  _i2.List<_i3.NotebookRange>? get selections => (_i5.getProperty(
         this,
         'selections',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 }
 
+/* Source:  */
 /// A reference to one of the workbench colors as defined in https://code.visualstudio.com/docs/getstarted/theme-color-reference.
 /// Using a theme color is preferred over a custom color as it gives theme authors and users the possibility to change the color.
 @_i1.JS()
@@ -2337,7 +2375,7 @@ class ThemeColor {
 _i2.Object get _declaredThemeColor => _i5.getProperty(
       _self,
       'ThemeColor',
-    );
+    ); /* Source:  */
 
 /// A reference to a named icon. Currently, {@link ThemeIcon.FileFile}, {@link ThemeIcon.FolderFolder},
 /// and [ThemeIcon ids](https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) are supported.
@@ -2392,6 +2430,7 @@ extension ThemeIcon$Typings on ThemeIcon {
       );
 }
 
+/* Source:  */
 /// Represents theme specific rendering styles for a {@link TextEditorDecorationTypetext editor decoration}.
 @_i1.JS()
 @_i1.staticInterop
@@ -2788,6 +2827,7 @@ extension ThemableDecorationRenderOptions$Typings
   }
 }
 
+/* Source:  */
 /// Represents theme specific rendeirng styles for {@link ThemableDecorationRenderOptions.beforebefore} and
 /// {@link ThemableDecorationRenderOptions.afterafter} the content of text decorations.
 @_i1.JS()
@@ -2999,6 +3039,7 @@ extension ThemableDecorationAttachmentRenderOptions$Typings
   }
 }
 
+/* Source:  */
 /// Represents rendering styles for a {@link TextEditorDecorationTypetext editor decoration}.
 @_i1.JS()
 @_i1.staticInterop
@@ -3172,6 +3213,7 @@ extension DecorationRenderOptions$Typings on DecorationRenderOptions {
   }
 }
 
+/* Source:  */
 /// Represents options for a specific decoration in a {@link TextEditorDecorationTypedecoration set}.
 @_i1.JS()
 @_i1.staticInterop
@@ -3237,6 +3279,7 @@ extension DecorationOptions$Typings on DecorationOptions {
   }
 }
 
+/* Source:  */
 /// Represents themable render options for decoration instances.
 @_i1.JS()
 @_i1.staticInterop
@@ -3286,6 +3329,7 @@ extension ThemableDecorationInstanceRenderOptions$Typings
   }
 }
 
+/* Source:  */
 /// Represents render options for decoration instances. See {@link DecorationOptions.renderOptions}.
 @_i1.JS()
 @_i1.staticInterop
@@ -3342,6 +3386,7 @@ extension DecorationInstanceRenderOptions$Typings
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3361,6 +3406,7 @@ extension IInline3$Typings on IInline3 {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3380,6 +3426,7 @@ extension IInline4$Typings on IInline4 {
       );
 }
 
+/* Source:  */
 /// Represents an editor that is attached to a {@link TextDocumentdocument}.
 @_i1.JS()
 @_i1.staticInterop
@@ -3466,10 +3513,10 @@ extension TextEditor$Typings on TextEditor {
   }
 
   /// The selections in this text editor. The primary selection is always at index 0.
-  _i2.List<_i3.Selection> get selections => ((_i5.getProperty(
+  _i2.List<_i3.Selection> get selections => (_i5.getProperty(
         this,
         'selections',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set selections(_i2.List<_i3.Selection> value) {
     _i5.setProperty(
@@ -3481,10 +3528,10 @@ extension TextEditor$Typings on TextEditor {
 
   /// The current visible ranges in the editor (vertically).
   /// This accounts only for vertical scrolling, and not for horizontal scrolling.
-  _i2.List<_i3.Range> get visibleRanges => ((_i5.getProperty(
+  _i2.List<_i3.Range> get visibleRanges => (_i5.getProperty(
         this,
         'visibleRanges',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Text editor options.
@@ -3529,7 +3576,7 @@ extension TextEditor$Typings on TextEditor {
         void Function(_i3.TextEditorEdit) p0, [
         _i2.dynamic p1,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'edit',
@@ -3537,10 +3584,10 @@ extension TextEditor$Typings on TextEditor {
             r'call',
             [
               this,
-              p0,
-              p1,
+              _i5.allowInterop(p0),
+              p1 ?? _i6.undefined,
             ],
-          );
+          ));
   set insertSnippet(
       _i2.Future<_i2.dynamic> Function(
         _i3.SnippetString, [
@@ -3563,7 +3610,7 @@ extension TextEditor$Typings on TextEditor {
         _i2.Object? p1,
         _i2.dynamic p2,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'insertSnippet',
@@ -3572,10 +3619,10 @@ extension TextEditor$Typings on TextEditor {
             [
               this,
               p0,
-              p1,
-              p2,
+              p1 ?? _i6.undefined,
+              p2 ?? _i6.undefined,
             ],
-          );
+          ));
   set setDecorations(
       void Function(
         _i3.TextEditorDecorationType,
@@ -3635,7 +3682,7 @@ extension TextEditor$Typings on TextEditor {
             [
               this,
               p0,
-              p1,
+              p1?.name ?? _i6.undefined,
             ],
           );
   set show(void Function([_i3.ViewColumn?]) value) {
@@ -3655,7 +3702,7 @@ extension TextEditor$Typings on TextEditor {
             r'call',
             [
               this,
-              p0,
+              p0?.name ?? _i6.undefined,
             ],
           );
   set hide(void Function() value) {
@@ -3676,6 +3723,7 @@ extension TextEditor$Typings on TextEditor {
       );
 }
 
+/* Source:  */
 /// A complex edit that will be applied in one transaction on a TextEditor.
 /// This holds a description of the edits and if the edits are valid (i.e. no overlapping regions, document was not changed in the meantime, etc.)
 /// they can be applied on a {@link TextDocumentdocument} associated with a {@link TextEditortext editor}.
@@ -3810,11 +3858,12 @@ extension TextEditorEdit$Typings on TextEditorEdit {
             r'call',
             [
               this,
-              p0,
+              p0.name,
             ],
           );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3852,6 +3901,7 @@ extension IInline5$Typings on IInline5 {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3924,6 +3974,7 @@ extension IInline6$Typings on IInline6 {
   }
 }
 
+/* Source:  */
 /// A universal resource identifier representing either a file on disk
 /// or another resource, like untitled resources.
 @_i1.JS()
@@ -4135,6 +4186,7 @@ extension Uri$Typings on Uri {
       );
 }
 
+/* Source:  */
 /// A cancellation token is passed to an asynchronous or long running
 /// operation to request cancellation, like cancelling a request
 /// for completion items because the user continued to type.
@@ -4188,6 +4240,7 @@ extension CancellationToken$Typings on CancellationToken {
   }
 }
 
+/* Source:  */
 /// A cancellation source creates and controls a {@link CancellationTokencancellation token}.
 @_i1.JS()
 @_i1.staticInterop
@@ -4226,6 +4279,7 @@ extension CancellationTokenSource$Typings on CancellationTokenSource {
   }
 }
 
+/* Source:  */
 /// An error type that should be used to signal cancellation of an operation.
 ///
 /// This type can be used in response to a {@link CancellationTokencancellation token}
@@ -4243,7 +4297,7 @@ class CancellationError implements _i7.Error {
 _i2.Object get _declaredCancellationError => _i5.getProperty(
       _self,
       'CancellationError',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop
@@ -4269,6 +4323,7 @@ extension IInline7$Typings on IInline7 {
   }
 }
 
+/* Source:  */
 /// Represents a type which can release resources, such
 /// as event listening or a timer.
 @_i1.JS()
@@ -4304,6 +4359,7 @@ extension Disposable$Typings on Disposable {
       );
 }
 
+/* Source:  */
 /// Represents a typed event.
 ///
 /// A function that represents an event to which you subscribe by calling it with
@@ -4335,6 +4391,7 @@ extension Event$Typings<T> on Event<T> {
       );
 }
 
+/* Source:  */
 /// An event emitter can be used to create and manage an {@link Event} for others
 /// to subscribe to. One emitter always owns one event.
 ///
@@ -4381,6 +4438,7 @@ extension EventEmitter$Typings<T> on EventEmitter<T> {
   }
 }
 
+/* Source:  */
 /// A file system watcher notifies about changes to files and folders
 /// on disk or from other {@link FileSystemProviderFileSystemProviders}.
 ///
@@ -4458,6 +4516,7 @@ extension FileSystemWatcher$Typings on FileSystemWatcher {
       );
 }
 
+/* Source:  */
 /// A text document content provider allows to add readonly documents
 /// to the editor, such as source from a dll or generated html from md.
 ///
@@ -4489,7 +4548,7 @@ class TextDocumentContentProvider {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideTextDocumentContent(
+                _i6.Promise.futureOr(() => provideTextDocumentContent(
                       p0,
                       p1,
                     ))),
@@ -4522,7 +4581,7 @@ extension TextDocumentContentProvider$Typings on TextDocumentContentProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -4550,6 +4609,7 @@ extension TextDocumentContentProvider$Typings on TextDocumentContentProvider {
           );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -4583,6 +4643,7 @@ extension IInline8$Typings on IInline8 {
   }
 }
 
+/* Source:  */
 /// Represents an item that can be selected from
 /// a list of items.
 @_i1.JS()
@@ -4741,10 +4802,10 @@ extension QuickPickItem$Typings on QuickPickItem {
   ///  the {@link window.showQuickPick showQuickPick()} API.
   ///
   ///  Note: this property is ignored when {@link QuickPickItem.kind kind} is set to {@link QuickPickItemKind.Separator}
-  _i2.List<_i3.QuickInputButton>? get buttons => ((_i5.getProperty(
+  _i2.List<_i3.QuickInputButton>? get buttons => (_i5.getProperty(
         this,
         'buttons',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set buttons(_i2.List<_i3.QuickInputButton>? value) {
     _i5.setProperty(
@@ -4755,6 +4816,7 @@ extension QuickPickItem$Typings on QuickPickItem {
   }
 }
 
+/* Source:  */
 /// Options to configure the behavior of the quick pick UI.
 @_i1.JS()
 @_i1.staticInterop
@@ -4893,6 +4955,7 @@ extension QuickPickOptions$Typings on QuickPickOptions {
           );
 }
 
+/* Source:  */
 /// Options to configure the behaviour of the {@link WorkspaceFolderworkspace folder} pick UI.
 @_i1.JS()
 @_i1.staticInterop
@@ -4942,6 +5005,7 @@ extension WorkspaceFolderPickOptions$Typings on WorkspaceFolderPickOptions {
   }
 }
 
+/* Source:  */
 /// Options to configure the behaviour of a file open dialog.
 ///
 /// * Note 1: On Windows and Linux, a file dialog cannot be both a file selector and a folder selector, so if you
@@ -5085,6 +5149,7 @@ extension OpenDialogOptions$Typings on OpenDialogOptions {
   }
 }
 
+/* Source:  */
 /// Options to configure the behaviour of a file save dialog.
 @_i1.JS()
 @_i1.staticInterop
@@ -5175,6 +5240,7 @@ extension SaveDialogOptions$Typings on SaveDialogOptions {
   }
 }
 
+/* Source:  */
 /// Represents an action that is shown with an information, warning, or
 /// error message.
 @_i1.JS()
@@ -5228,6 +5294,7 @@ extension MessageItem$Typings on MessageItem {
   }
 }
 
+/* Source:  */
 /// Options to configure the behavior of the message.
 @_i1.JS()
 @_i1.staticInterop
@@ -5277,6 +5344,7 @@ extension MessageOptions$Typings on MessageOptions {
   }
 }
 
+/* Source:  */
 /// Object to configure the behavior of the validation message.
 @_i1.JS()
 @_i1.staticInterop
@@ -5314,6 +5382,7 @@ extension InputBoxValidationMessage$Typings on InputBoxValidationMessage {
       ));
 }
 
+/* Source:  */
 /// Options to configure the behavior of the input box UI.
 @_i1.JS()
 @_i1.staticInterop
@@ -5491,6 +5560,7 @@ extension InputBoxOptions$Typings on InputBoxOptions {
           );
 }
 
+/* Source:  */
 /// A relative pattern is a helper to construct glob patterns that are matched
 /// relatively to a base file path. The base path can either be an absolute file
 /// path as string or uri or a {@link WorkspaceFolderworkspace folder}, which is the
@@ -5570,6 +5640,7 @@ extension RelativePattern$Typings on RelativePattern {
   }
 }
 
+/* Source:  */
 /// A document filter denotes a document by different properties like
 /// the {@link TextDocument.languageIdlanguage}, the {@link Uri.schemescheme} of
 /// its resource, or a glob-pattern that is applied to the {@link TextDocument.fileNamepath}.
@@ -5629,6 +5700,7 @@ extension DocumentFilter$Typings on DocumentFilter {
       );
 }
 
+/* Source:  */
 /// Kind of a code action.
 ///
 /// Kinds are a hierarchical list of identifiers separated by `.`, e.g. `"refactor.extract.function"`.
@@ -5810,6 +5882,7 @@ extension CodeActionKind$Typings on CodeActionKind {
       );
 }
 
+/* Source:  */
 /// Contains additional diagnostic information about the context in which
 /// a {@link CodeActionProvider.provideCodeActionscode action} is run.
 @_i1.JS()
@@ -5843,10 +5916,10 @@ extension CodeActionContext$Typings on CodeActionContext {
       ));
 
   /// An array of diagnostics.
-  _i2.List<_i3.Diagnostic> get diagnostics => ((_i5.getProperty(
+  _i2.List<_i3.Diagnostic> get diagnostics => (_i5.getProperty(
         this,
         'diagnostics',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Requested kind of actions to return.
@@ -5858,6 +5931,7 @@ extension CodeActionContext$Typings on CodeActionContext {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -5873,6 +5947,7 @@ extension IInline11$Typings on IInline11 {
       );
 }
 
+/* Source:  */
 /// A code action represents a change that can be performed in code, e.g. to fix a problem or
 /// to refactor code.
 ///
@@ -5926,10 +6001,10 @@ extension CodeAction$Typings on CodeAction {
   }
 
   /// {@link Diagnostic Diagnostics} that this code action resolves.
-  _i2.List<_i3.Diagnostic> get diagnostics => ((_i5.getProperty(
+  _i2.List<_i3.Diagnostic> get diagnostics => (_i5.getProperty(
         this,
         'diagnostics',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set diagnostics(_i2.List<_i3.Diagnostic> value) {
     _i5.setProperty(
@@ -6011,6 +6086,7 @@ extension CodeAction$Typings on CodeAction {
   }
 }
 
+/* Source:  */
 /// Provides contextual actions for code. Code actions typically either fix problems or beautify/refactor code.
 ///
 /// Code actions are surfaced to users in a few different ways:
@@ -6052,7 +6128,7 @@ class CodeActionProvider<T extends _i3.CodeAction> {
                 p2,
                 p3,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideCodeActions(
+                _i6.Promise.futureOr(() => provideCodeActions(
                       p0,
                       p1,
                       p2,
@@ -6064,7 +6140,7 @@ class CodeActionProvider<T extends _i3.CodeAction> {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveCodeAction(
+                _i6.Promise.futureOr(() => resolveCodeAction(
                       p0,
                       p1,
                     ))),
@@ -6089,7 +6165,7 @@ extension CodeActionProvider$Typings<T extends _i3.CodeAction>
         p2,
         p3,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -6135,7 +6211,7 @@ extension CodeActionProvider$Typings<T extends _i3.CodeAction>
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -6163,6 +6239,7 @@ extension CodeActionProvider$Typings<T extends _i3.CodeAction>
           );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -6190,6 +6267,7 @@ extension IInline12$Typings on IInline12 {
       );
 }
 
+/* Source:  */
 /// Metadata about the type of code actions that a {@link CodeActionProvider} provides.
 @_i1.JS()
 @_i1.staticInterop
@@ -6217,11 +6295,10 @@ extension CodeActionProviderMetadata$Typings on CodeActionProviderMetadata {
   /// To avoid unnecessary computation, every `CodeActionProvider` should list use `providedCodeActionKinds`. The
   /// list of kinds may either be generic, such as `[CodeActionKind.Refactor]`, or list out every kind provided,
   /// such as `[CodeActionKind.Refactor.Extract.append('function'), CodeActionKind.Refactor.Extract.append('constant'), ...]`.
-  _i2.List<_i3.CodeActionKind>? get providedCodeActionKinds =>
-      ((_i5.getProperty(
+  _i2.List<_i3.CodeActionKind>? get providedCodeActionKinds => (_i5.getProperty(
         this,
         'providedCodeActionKinds',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 
   /// Static documentation for a class of code actions.
@@ -6242,6 +6319,7 @@ extension CodeActionProviderMetadata$Typings on CodeActionProviderMetadata {
       );
 }
 
+/* Source:  */
 /// A code lens represents a {@link Command} that should be shown along with
 /// source text, like the number of references, a way to run tests, etc.
 ///
@@ -6302,6 +6380,7 @@ extension CodeLens$Typings on CodeLens {
       );
 }
 
+/* Source:  */
 /// A code lens provider adds {@link Commandcommands} to source text. The commands will be shown
 /// as dedicated horizontal lines in between the source text.
 @_i1.JS()
@@ -6333,7 +6412,7 @@ class CodeLensProvider<T extends _i3.CodeLens> {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideCodeLenses(
+                _i6.Promise.futureOr(() => provideCodeLenses(
                       p0,
                       p1,
                     ))),
@@ -6343,7 +6422,7 @@ class CodeLensProvider<T extends _i3.CodeLens> {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveCodeLens(
+                _i6.Promise.futureOr(() => resolveCodeLens(
                       p0,
                       p1,
                     ))),
@@ -6377,7 +6456,7 @@ extension CodeLensProvider$Typings<T extends _i3.CodeLens>
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -6415,7 +6494,7 @@ extension CodeLensProvider$Typings<T extends _i3.CodeLens>
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -6443,6 +6522,7 @@ extension CodeLensProvider$Typings<T extends _i3.CodeLens>
           );
 }
 
+/* Source:  */
 /// The definition provider interface defines the contract between extensions and
 /// the [go to definition](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-definition)
 /// and peek definition features.
@@ -6466,7 +6546,7 @@ class DefinitionProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideDefinition(
+                  _i6.Promise.futureOr(() => provideDefinition(
                         p0,
                         p1,
                         p2,
@@ -6488,7 +6568,7 @@ extension DefinitionProvider$Typings on DefinitionProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -6520,6 +6600,7 @@ extension DefinitionProvider$Typings on DefinitionProvider {
           );
 }
 
+/* Source:  */
 /// The implementation provider interface defines the contract between extensions and
 /// the go to implementation feature.
 @_i1.JS()
@@ -6543,7 +6624,7 @@ class ImplementationProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideImplementation(
+                  _i6.Promise.futureOr(() => provideImplementation(
                         p0,
                         p1,
                         p2,
@@ -6565,7 +6646,7 @@ extension ImplementationProvider$Typings on ImplementationProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -6597,6 +6678,7 @@ extension ImplementationProvider$Typings on ImplementationProvider {
           );
 }
 
+/* Source:  */
 /// The type definition provider defines the contract between extensions and
 /// the go to type definition feature.
 @_i1.JS()
@@ -6620,7 +6702,7 @@ class TypeDefinitionProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideTypeDefinition(
+                  _i6.Promise.futureOr(() => provideTypeDefinition(
                         p0,
                         p1,
                         p2,
@@ -6642,7 +6724,7 @@ extension TypeDefinitionProvider$Typings on TypeDefinitionProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -6674,6 +6756,7 @@ extension TypeDefinitionProvider$Typings on TypeDefinitionProvider {
           );
 }
 
+/* Source:  */
 /// The declaration provider interface defines the contract between extensions and
 /// the go to declaration feature.
 @_i1.JS()
@@ -6696,7 +6779,7 @@ class DeclarationProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideDeclaration(
+                  _i6.Promise.futureOr(() => provideDeclaration(
                         p0,
                         p1,
                         p2,
@@ -6718,7 +6801,7 @@ extension DeclarationProvider$Typings on DeclarationProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -6750,6 +6833,7 @@ extension DeclarationProvider$Typings on DeclarationProvider {
           );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -6757,13 +6841,14 @@ class IInline13 {}
 
 extension IInline13$Typings on IInline13 {
   /// A set of commend ids that are allowed to be executed by this markdown string.
-  _i2.List<_i2.String> get enabledCommands => ((_i5.getProperty(
+  _i2.List<_i2.String> get enabledCommands => (_i5.getProperty(
         this,
         'enabledCommands',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// Human-readable text that supports formatting via the [markdown syntax](https://commonmark.org).
 ///
 /// Rendering of {@link ThemeIcontheme icons} via the `$(<name>)`-syntax is supported
@@ -6916,6 +7001,7 @@ extension MarkdownString$Typings on MarkdownString {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -6951,6 +7037,7 @@ extension IInline14$Typings on IInline14 {
   }
 }
 
+/* Source:  */
 /// A hover represents additional information for a symbol or word. Hovers are
 /// rendered in a tooltip-like widget.
 @_i1.JS()
@@ -7004,6 +7091,7 @@ extension Hover$Typings on Hover {
   }
 }
 
+/* Source:  */
 /// The hover provider interface defines the contract between extensions and
 /// the [hover](https://code.visualstudio.com/docs/editor/intellisense)-feature.
 @_i1.JS()
@@ -7026,7 +7114,7 @@ class HoverProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideHover(
+                  _i6.Promise.futureOr(() => provideHover(
                         p0,
                         p1,
                         p2,
@@ -7048,7 +7136,7 @@ extension HoverProvider$Typings on HoverProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -7080,6 +7168,7 @@ extension HoverProvider$Typings on HoverProvider {
           );
 }
 
+/* Source:  */
 /// An EvaluatableExpression represents an expression in a document that can be evaluated by an active debugger or runtime.
 /// The result of this evaluation is shown in a tooltip-like widget.
 /// If only a range is specified, the expression will be extracted from the underlying document.
@@ -7117,6 +7206,7 @@ extension EvaluatableExpression$Typings on EvaluatableExpression {
       );
 }
 
+/* Source:  */
 /// The evaluatable expression provider interface defines the contract between extensions and
 /// the debug hover. In this contract the provider returns an evaluatable expression for a given position
 /// in a document and the editor evaluates this expression in the active debug session and shows the result in a debug hover.
@@ -7141,12 +7231,11 @@ class EvaluatableExpressionProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(
-                      () => provideEvaluatableExpression(
-                            p0,
-                            p1,
-                            p2,
-                          ))));
+                  _i6.Promise.futureOr(() => provideEvaluatableExpression(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension EvaluatableExpressionProvider$Typings
@@ -7165,7 +7254,7 @@ extension EvaluatableExpressionProvider$Typings
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -7197,6 +7286,7 @@ extension EvaluatableExpressionProvider$Typings
           );
 }
 
+/* Source:  */
 /// Provide inline value as text.
 @_i1.JS()
 @_i1.staticInterop
@@ -7233,6 +7323,7 @@ extension InlineValueText$Typings on InlineValueText {
       );
 }
 
+/* Source:  */
 /// Provide inline value through a variable lookup.
 /// If only a range is specified, the variable name will be extracted from the underlying document.
 /// An optional variable name can be used to override the extracted name.
@@ -7280,6 +7371,7 @@ extension InlineValueVariableLookup$Typings on InlineValueVariableLookup {
       );
 }
 
+/* Source:  */
 /// Provide an inline value through an expression evaluation.
 /// If only a range is specified, the expression will be extracted from the underlying document.
 /// An optional expression can be used to override the extracted expression.
@@ -7320,6 +7412,7 @@ extension InlineValueEvaluatableExpression$Typings
       );
 }
 
+/* Source:  */
 /// A value-object that contains contextual information when requesting inline values from a InlineValuesProvider.
 @_i1.JS()
 @_i1.staticInterop
@@ -7355,6 +7448,7 @@ extension InlineValueContext$Typings on InlineValueContext {
       );
 }
 
+/* Source:  */
 /// The inline values provider interface defines the contract between extensions and the editor's debugger inline values feature.
 /// In this contract the provider returns inline value information for a given document range
 /// and the editor shows this information in the editor at the end of lines.
@@ -7386,7 +7480,7 @@ class InlineValuesProvider {
                 p2,
                 p3,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideInlineValues(
+                _i6.Promise.futureOr(() => provideInlineValues(
                       p0,
                       p1,
                       p2,
@@ -7426,7 +7520,7 @@ extension InlineValuesProvider$Typings on InlineValuesProvider {
         p2,
         p3,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -7462,6 +7556,7 @@ extension InlineValuesProvider$Typings on InlineValuesProvider {
           );
 }
 
+/* Source:  */
 /// A document highlight is a range inside a text document which deserves
 /// special attention. Usually a document highlight is visualized by changing
 /// the background color of its range.
@@ -7515,6 +7610,7 @@ extension DocumentHighlight$Typings on DocumentHighlight {
   }
 }
 
+/* Source:  */
 /// The document highlight provider interface defines the contract between extensions and
 /// the word-highlight-feature.
 @_i1.JS()
@@ -7538,7 +7634,7 @@ class DocumentHighlightProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideDocumentHighlights(
+                  _i6.Promise.futureOr(() => provideDocumentHighlights(
                         p0,
                         p1,
                         p2,
@@ -7560,7 +7656,7 @@ extension DocumentHighlightProvider$Typings on DocumentHighlightProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -7592,6 +7688,7 @@ extension DocumentHighlightProvider$Typings on DocumentHighlightProvider {
           );
 }
 
+/* Source:  */
 /// Represents information about programming constructs like variables, classes,
 /// interfaces etc.
 @_i1.JS()
@@ -7683,10 +7780,10 @@ extension SymbolInformation$Typings on SymbolInformation {
   }
 
   /// Tags for this symbol.
-  _i2.List<_i3.SymbolTag> get tags => ((_i5.getProperty(
+  _i2.List<_i3.SymbolTag> get tags => (_i5.getProperty(
         this,
         'tags',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast()
           .map((i) => _i3.SymbolTag.values.byName(i))
           .toList();
@@ -7712,6 +7809,7 @@ extension SymbolInformation$Typings on SymbolInformation {
   }
 }
 
+/* Source:  */
 /// Represents programming constructs like variables, classes, interfaces etc. that appear in a document. Document
 /// symbols can be hierarchical and they have two ranges: one that encloses its definition and one that points to
 /// its most interesting range, e.g. the range of an identifier.
@@ -7783,10 +7881,10 @@ extension DocumentSymbol$Typings on DocumentSymbol {
   }
 
   /// Tags for this symbol.
-  _i2.List<_i3.SymbolTag> get tags => ((_i5.getProperty(
+  _i2.List<_i3.SymbolTag> get tags => (_i5.getProperty(
         this,
         'tags',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast()
           .map((i) => _i3.SymbolTag.values.byName(i))
           .toList();
@@ -7826,10 +7924,10 @@ extension DocumentSymbol$Typings on DocumentSymbol {
   }
 
   /// Children of this symbol, e.g. properties of a class.
-  _i2.List<_i3.DocumentSymbol> get children => ((_i5.getProperty(
+  _i2.List<_i3.DocumentSymbol> get children => (_i5.getProperty(
         this,
         'children',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set children(_i2.List<_i3.DocumentSymbol> value) {
     _i5.setProperty(
@@ -7840,6 +7938,7 @@ extension DocumentSymbol$Typings on DocumentSymbol {
   }
 }
 
+/* Source:  */
 /// The document symbol provider interface defines the contract between extensions and
 /// the [go to symbol](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-symbol)-feature.
 @_i1.JS()
@@ -7861,7 +7960,7 @@ class DocumentSymbolProvider {
                   p0,
                   p1,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideDocumentSymbols(
+                  _i6.Promise.futureOr(() => provideDocumentSymbols(
                         p0,
                         p1,
                       ))));
@@ -7880,7 +7979,7 @@ extension DocumentSymbolProvider$Typings on DocumentSymbolProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -7908,6 +8007,7 @@ extension DocumentSymbolProvider$Typings on DocumentSymbolProvider {
           );
 }
 
+/* Source:  */
 /// Metadata about a document symbol provider.
 @_i1.JS()
 @_i1.staticInterop
@@ -7935,6 +8035,7 @@ extension DocumentSymbolProviderMetadata$Typings
   }
 }
 
+/* Source:  */
 /// The workspace symbol provider interface defines the contract between extensions and
 /// the [symbol search](https://code.visualstudio.com/docs/editor/editingevolved#_open-symbol-by-name)-feature.
 @_i1.JS()
@@ -7963,7 +8064,7 @@ class WorkspaceSymbolProvider<T extends _i3.SymbolInformation> {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideWorkspaceSymbols(
+                _i6.Promise.futureOr(() => provideWorkspaceSymbols(
                       p0,
                       p1,
                     ))),
@@ -7973,7 +8074,7 @@ class WorkspaceSymbolProvider<T extends _i3.SymbolInformation> {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveWorkspaceSymbol(
+                _i6.Promise.futureOr(() => resolveWorkspaceSymbol(
                       p0,
                       p1,
                     ))),
@@ -7994,7 +8095,7 @@ extension WorkspaceSymbolProvider$Typings<T extends _i3.SymbolInformation>
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -8032,7 +8133,7 @@ extension WorkspaceSymbolProvider$Typings<T extends _i3.SymbolInformation>
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -8060,6 +8161,7 @@ extension WorkspaceSymbolProvider$Typings<T extends _i3.SymbolInformation>
           );
 }
 
+/* Source:  */
 /// Value-object that contains additional information when
 /// requesting references.
 @_i1.JS()
@@ -8080,6 +8182,7 @@ extension ReferenceContext$Typings on ReferenceContext {
       );
 }
 
+/* Source:  */
 /// The reference provider interface defines the contract between extensions and
 /// the [find references](https://code.visualstudio.com/docs/editor/editingevolved#_peek)-feature.
 @_i1.JS()
@@ -8104,7 +8207,7 @@ class ReferenceProvider {
                   p2,
                   p3,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideReferences(
+                  _i6.Promise.futureOr(() => provideReferences(
                         p0,
                         p1,
                         p2,
@@ -8129,7 +8232,7 @@ extension ReferenceProvider$Typings on ReferenceProvider {
         p2,
         p3,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -8165,6 +8268,7 @@ extension ReferenceProvider$Typings on ReferenceProvider {
           );
 }
 
+/* Source:  */
 /// A text edit represents edits that should be applied
 /// to a document.
 @_i1.JS()
@@ -8274,6 +8378,7 @@ extension TextEdit$Typings on TextEdit {
   }
 }
 
+/* Source:  */
 /// A snippet edit represents an interactive edit that is performed by
 /// the editor.
 ///
@@ -8358,6 +8463,7 @@ extension SnippetTextEdit$Typings on SnippetTextEdit {
   }
 }
 
+/* Source:  */
 /// A notebook edit represents edits that should be applied to the contents of a notebook.
 @_i1.JS()
 @_i1.staticInterop
@@ -8454,10 +8560,10 @@ extension NotebookEdit$Typings on NotebookEdit {
   }
 
   /// New cells being inserted. May be empty.
-  _i2.List<_i3.NotebookCellData> get newCells => ((_i5.getProperty(
+  _i2.List<_i3.NotebookCellData> get newCells => (_i5.getProperty(
         this,
         'newCells',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set newCells(_i2.List<_i3.NotebookCellData> value) {
     _i5.setProperty(
@@ -8494,6 +8600,7 @@ extension NotebookEdit$Typings on NotebookEdit {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8527,6 +8634,7 @@ extension IInline19$Typings on IInline19 {
   }
 }
 
+/* Source:  */
 /// Additional data for entries of a workspace edit. Supports to label entries and marks entries
 /// as needing confirmation by the user. The editor groups edits with equal labels into tree nodes,
 /// for instance all edits labelled with "Changes in Strings" would be a tree node.
@@ -8609,6 +8717,7 @@ extension WorkspaceEditEntryMetadata$Typings on WorkspaceEditEntryMetadata {
   }
 }
 
+/* Source:  */
 /// Additional data about a workspace edit.
 @_i1.JS()
 @_i1.staticInterop
@@ -8635,6 +8744,7 @@ extension WorkspaceEditMetadata$Typings on WorkspaceEditMetadata {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8663,6 +8773,7 @@ extension IInline20$Typings on IInline20 {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8682,6 +8793,7 @@ extension IInline21$Typings on IInline21 {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8701,6 +8813,7 @@ extension IInline22$Typings on IInline22 {
       );
 }
 
+/* Source:  */
 /// A workspace edit is a collection of textual and files changes for
 /// multiple resources and documents.
 ///
@@ -8935,11 +9048,11 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
   ///
   ///  @param uri A resource identifier.
   ///  @returns An array of text edits.
-  _i2.List<_i3.TextEdit> get(_i3.Uri uri) => ((_i5.callMethod(
+  _i2.List<_i3.TextEdit> get(_i3.Uri uri) => (_i5.callMethod(
         this,
         'get',
         [uri],
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Create a regular file.
@@ -9019,14 +9132,15 @@ extension WorkspaceEdit$Typings on WorkspaceEdit {
       (
         _i3.Uri,
         _i2.List<_i3.TextEdit>,
-      )> entries() => ((_i5.callMethod(
+      )> entries() => (_i5.callMethod(
         this,
         'entries',
         [],
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// A snippet string is a template which allows to insert text
 /// and to control the editor cursor when insertion happens.
 ///
@@ -9148,6 +9262,7 @@ extension SnippetString$Typings on SnippetString {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -9181,6 +9296,7 @@ extension IInline23$Typings on IInline23 {
   }
 }
 
+/* Source:  */
 /// The rename provider interface defines the contract between extensions and
 /// the [rename](https://code.visualstudio.com/docs/editor/editingevolved#_rename-symbol)-feature.
 @_i1.JS()
@@ -9214,7 +9330,7 @@ class RenameProvider {
                 p2,
                 p3,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideRenameEdits(
+                _i6.Promise.futureOr(() => provideRenameEdits(
                       p0,
                       p1,
                       p2,
@@ -9227,7 +9343,7 @@ class RenameProvider {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => prepareRename(
+                _i6.Promise.futureOr(() => prepareRename(
                       p0,
                       p1,
                       p2,
@@ -9252,7 +9368,7 @@ extension RenameProvider$Typings on RenameProvider {
         p2,
         p3,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -9300,7 +9416,7 @@ extension RenameProvider$Typings on RenameProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -9332,6 +9448,7 @@ extension RenameProvider$Typings on RenameProvider {
           );
 }
 
+/* Source:  */
 /// A semantic tokens legend contains the needed information to decipher
 /// the integer encoded representation of semantic tokens.
 @_i1.JS()
@@ -9357,20 +9474,21 @@ _i2.Object get _declaredSemanticTokensLegend => _i5.getProperty(
 
 extension SemanticTokensLegend$Typings on SemanticTokensLegend {
   /// The possible token types.
-  _i2.List<_i2.String> get tokenTypes => ((_i5.getProperty(
+  _i2.List<_i2.String> get tokenTypes => (_i5.getProperty(
         this,
         'tokenTypes',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// The possible token modifiers.
-  _i2.List<_i2.String> get tokenModifiers => ((_i5.getProperty(
+  _i2.List<_i2.String> get tokenModifiers => (_i5.getProperty(
         this,
         'tokenModifiers',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// A semantic tokens builder can help with creating a `SemanticTokens` instance
 /// which contains delta encoded semantic tokens.
 @_i1.JS()
@@ -9477,6 +9595,7 @@ extension SemanticTokensBuilder$Typings on SemanticTokensBuilder {
       );
 }
 
+/* Source:  */
 /// Represents semantic tokens, either in a range or in an entire document.
 @_i1.JS()
 @_i1.staticInterop
@@ -9515,6 +9634,7 @@ extension SemanticTokens$Typings on SemanticTokens {
       );
 }
 
+/* Source:  */
 /// Represents edits to semantic tokens.
 @_i1.JS()
 @_i1.staticInterop
@@ -9548,13 +9668,14 @@ extension SemanticTokensEdits$Typings on SemanticTokensEdits {
 
   /// The edits to the tokens data.
   /// All edits refer to the initial data state.
-  _i2.List<_i3.SemanticTokensEdit> get edits => ((_i5.getProperty(
+  _i2.List<_i3.SemanticTokensEdit> get edits => (_i5.getProperty(
         this,
         'edits',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// Represents an edit to semantic tokens.
 @_i1.JS()
 @_i1.staticInterop
@@ -9599,6 +9720,7 @@ extension SemanticTokensEdit$Typings on SemanticTokensEdit {
       );
 }
 
+/* Source:  */
 /// The document semantic tokens provider interface defines the contract between extensions and
 /// semantic tokens.
 @_i1.JS()
@@ -9631,11 +9753,10 @@ class DocumentSemanticTokensProvider {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(
-                    () => provideDocumentSemanticTokens(
-                          p0,
-                          p1,
-                        ))),
+                _i6.Promise.futureOr(() => provideDocumentSemanticTokens(
+                      p0,
+                      p1,
+                    ))),
         provideDocumentSemanticTokensEdits:
             provideDocumentSemanticTokensEdits == null
                 ? null
@@ -9644,7 +9765,7 @@ class DocumentSemanticTokensProvider {
                     p1,
                     p2,
                   ) =>
-                    _i6.Promise.functionFutureOr(
+                    _i6.Promise.futureOr(
                         () => provideDocumentSemanticTokensEdits(
                               p0,
                               p1,
@@ -9680,7 +9801,7 @@ extension DocumentSemanticTokensProvider$Typings
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -9720,7 +9841,7 @@ extension DocumentSemanticTokensProvider$Typings
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -9752,6 +9873,7 @@ extension DocumentSemanticTokensProvider$Typings
           );
 }
 
+/* Source:  */
 /// The document range semantic tokens provider interface defines the contract between extensions and
 /// semantic tokens.
 @_i1.JS()
@@ -9776,7 +9898,7 @@ class DocumentRangeSemanticTokensProvider {
                       p1,
                       p2,
                     ) =>
-                      _i6.Promise.functionFutureOr(
+                      _i6.Promise.futureOr(
                           () => provideDocumentRangeSemanticTokens(
                                 p0,
                                 p1,
@@ -9800,7 +9922,7 @@ extension DocumentRangeSemanticTokensProvider$Typings
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -9832,6 +9954,7 @@ extension DocumentRangeSemanticTokensProvider$Typings
           );
 }
 
+/* Source:  */
 /// Value-object describing what options formatting should use.
 @_i1.JS()
 @_i1.staticInterop
@@ -9895,6 +10018,7 @@ extension FormattingOptions$Typings on FormattingOptions {
   }
 }
 
+/* Source:  */
 /// The document formatting provider interface defines the contract between extensions and
 /// the formatting-feature.
 @_i1.JS()
@@ -9918,12 +10042,11 @@ class DocumentFormattingEditProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(
-                      () => provideDocumentFormattingEdits(
-                            p0,
-                            p1,
-                            p2,
-                          ))));
+                  _i6.Promise.futureOr(() => provideDocumentFormattingEdits(
+                        p0,
+                        p1,
+                        p2,
+                      ))));
 }
 
 extension DocumentFormattingEditProvider$Typings
@@ -9942,7 +10065,7 @@ extension DocumentFormattingEditProvider$Typings
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -9974,6 +10097,7 @@ extension DocumentFormattingEditProvider$Typings
           );
 }
 
+/* Source:  */
 /// The document formatting provider interface defines the contract between extensions and
 /// the formatting-feature.
 @_i1.JS()
@@ -10009,7 +10133,7 @@ class DocumentRangeFormattingEditProvider {
                     p2,
                     p3,
                   ) =>
-                    _i6.Promise.functionFutureOr(
+                    _i6.Promise.futureOr(
                         () => provideDocumentRangeFormattingEdits(
                               p0,
                               p1,
@@ -10025,7 +10149,7 @@ class DocumentRangeFormattingEditProvider {
                     p2,
                     p3,
                   ) =>
-                    _i6.Promise.functionFutureOr(
+                    _i6.Promise.futureOr(
                         () => provideDocumentRangesFormattingEdits(
                               p0,
                               p1,
@@ -10053,7 +10177,7 @@ extension DocumentRangeFormattingEditProvider$Typings
         p2,
         p3,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -10103,7 +10227,7 @@ extension DocumentRangeFormattingEditProvider$Typings
         p2,
         p3,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -10139,6 +10263,7 @@ extension DocumentRangeFormattingEditProvider$Typings
           );
 }
 
+/* Source:  */
 /// The document formatting provider interface defines the contract between extensions and
 /// the formatting-feature.
 @_i1.JS()
@@ -10166,14 +10291,13 @@ class OnTypeFormattingEditProvider {
                   p3,
                   p4,
                 ) =>
-                  _i6.Promise.functionFutureOr(
-                      () => provideOnTypeFormattingEdits(
-                            p0,
-                            p1,
-                            p2,
-                            p3,
-                            p4,
-                          ))));
+                  _i6.Promise.futureOr(() => provideOnTypeFormattingEdits(
+                        p0,
+                        p1,
+                        p2,
+                        p3,
+                        p4,
+                      ))));
 }
 
 extension OnTypeFormattingEditProvider$Typings on OnTypeFormattingEditProvider {
@@ -10195,7 +10319,7 @@ extension OnTypeFormattingEditProvider$Typings on OnTypeFormattingEditProvider {
         p3,
         p4,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -10235,6 +10359,7 @@ extension OnTypeFormattingEditProvider$Typings on OnTypeFormattingEditProvider {
           );
 }
 
+/* Source:  */
 /// Represents a parameter of a callable-signature. A parameter can
 /// have a label and a doc-comment.
 @_i1.JS()
@@ -10291,6 +10416,7 @@ extension ParameterInformation$Typings on ParameterInformation {
   }
 }
 
+/* Source:  */
 /// Represents the signature of something callable. A signature
 /// can have a label, like a function-name, a doc-comment, and
 /// a set of parameters.
@@ -10345,10 +10471,10 @@ extension SignatureInformation$Typings on SignatureInformation {
   }
 
   /// The parameters of this signature.
-  _i2.List<_i3.ParameterInformation> get parameters => ((_i5.getProperty(
+  _i2.List<_i3.ParameterInformation> get parameters => (_i5.getProperty(
         this,
         'parameters',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set parameters(_i2.List<_i3.ParameterInformation> value) {
     _i5.setProperty(
@@ -10374,6 +10500,7 @@ extension SignatureInformation$Typings on SignatureInformation {
   }
 }
 
+/* Source:  */
 /// Signature help represents the signature of something
 /// callable. There can be multiple signatures but only one
 /// active and only one active parameter.
@@ -10383,10 +10510,10 @@ class SignatureHelp {}
 
 extension SignatureHelp$Typings on SignatureHelp {
   /// One or more signatures.
-  _i2.List<_i3.SignatureInformation> get signatures => ((_i5.getProperty(
+  _i2.List<_i3.SignatureInformation> get signatures => (_i5.getProperty(
         this,
         'signatures',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set signatures(_i2.List<_i3.SignatureInformation> value) {
     _i5.setProperty(
@@ -10423,6 +10550,7 @@ extension SignatureHelp$Typings on SignatureHelp {
   }
 }
 
+/* Source:  */
 /// Additional information about the context in which a
 /// {@linkcode SignatureHelpProvider.provideSignatureHelpSignatureHelpProvider} was triggered.
 @_i1.JS()
@@ -10486,6 +10614,7 @@ extension SignatureHelpContext$Typings on SignatureHelpContext {
       );
 }
 
+/* Source:  */
 /// The signature help provider interface defines the contract between extensions and
 /// the [parameter hints](https://code.visualstudio.com/docs/editor/intellisense)-feature.
 @_i1.JS()
@@ -10510,7 +10639,7 @@ class SignatureHelpProvider {
                   p2,
                   p3,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideSignatureHelp(
+                  _i6.Promise.futureOr(() => provideSignatureHelp(
                         p0,
                         p1,
                         p2,
@@ -10535,7 +10664,7 @@ extension SignatureHelpProvider$Typings on SignatureHelpProvider {
         p2,
         p3,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -10571,6 +10700,7 @@ extension SignatureHelpProvider$Typings on SignatureHelpProvider {
           );
 }
 
+/* Source:  */
 /// Metadata about a registered {@linkcode SignatureHelpProvider}.
 @_i1.JS()
 @_i1.staticInterop
@@ -10594,23 +10724,24 @@ class SignatureHelpProviderMetadata {
 extension SignatureHelpProviderMetadata$Typings
     on SignatureHelpProviderMetadata {
   /// List of characters that trigger signature help.
-  _i2.List<_i2.String> get triggerCharacters => ((_i5.getProperty(
+  _i2.List<_i2.String> get triggerCharacters => (_i5.getProperty(
         this,
         'triggerCharacters',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// List of characters that re-trigger signature help.
   ///
   /// These trigger characters are only active when signature help is already showing. All trigger characters
   /// are also counted as re-trigger characters.
-  _i2.List<_i2.String> get retriggerCharacters => ((_i5.getProperty(
+  _i2.List<_i2.String> get retriggerCharacters => (_i5.getProperty(
         this,
         'retriggerCharacters',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// A structured label for a {@link CompletionItemcompletion item}.
 @_i1.JS()
 @_i1.staticInterop
@@ -10679,6 +10810,7 @@ extension CompletionItemLabel$Typings on CompletionItemLabel {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -10712,6 +10844,7 @@ extension IInline24$Typings on IInline24 {
   }
 }
 
+/* Source:  */
 /// A completion item represents a text snippet that is proposed to complete text that is being typed.
 ///
 /// It is sufficient to create a completion item from just a {@link CompletionItem.labellabel}. In that
@@ -10775,10 +10908,10 @@ extension CompletionItem$Typings on CompletionItem {
   }
 
   /// Tags for this completion item.
-  _i2.List<_i3.CompletionItemTag> get tags => ((_i5.getProperty(
+  _i2.List<_i3.CompletionItemTag> get tags => (_i5.getProperty(
         this,
         'tags',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast()
           .map((i) => _i3.CompletionItemTag.values.byName(i))
           .toList();
@@ -10911,10 +11044,10 @@ extension CompletionItem$Typings on CompletionItem {
   /// An optional set of characters that when pressed while this completion is active will accept it first and
   ///  then type that character. *Note* that all commit characters should have `length=1` and that superfluous
   ///  characters will be ignored.
-  _i2.List<_i2.String> get commitCharacters => ((_i5.getProperty(
+  _i2.List<_i2.String> get commitCharacters => (_i5.getProperty(
         this,
         'commitCharacters',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set commitCharacters(_i2.List<_i2.String> value) {
     _i5.setProperty(
@@ -10962,10 +11095,10 @@ extension CompletionItem$Typings on CompletionItem {
   /// An optional array of additional {@link TextEdit text edits} that are applied when
   ///  selecting this completion. Edits must not overlap with the main {@link CompletionItem.textEdit edit}
   ///  nor with themselves.
-  _i2.List<_i3.TextEdit> get additionalTextEdits => ((_i5.getProperty(
+  _i2.List<_i3.TextEdit> get additionalTextEdits => (_i5.getProperty(
         this,
         'additionalTextEdits',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set additionalTextEdits(_i2.List<_i3.TextEdit> value) {
     _i5.setProperty(
@@ -10991,6 +11124,7 @@ extension CompletionItem$Typings on CompletionItem {
   }
 }
 
+/* Source:  */
 /// Represents a collection of {@link CompletionItemcompletion items} to be presented
 /// in the editor.
 @_i1.JS()
@@ -11031,10 +11165,10 @@ extension CompletionList$Typings<T extends _i3.CompletionItem>
   }
 
   /// The completion items.
-  _i2.List<T> get items => ((_i5.getProperty(
+  _i2.List<T> get items => (_i5.getProperty(
         this,
         'items',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set items(_i2.List<T> value) {
     _i5.setProperty(
@@ -11045,6 +11179,7 @@ extension CompletionList$Typings<T extends _i3.CompletionItem>
   }
 }
 
+/* Source:  */
 /// Contains additional information about the context in which
 /// {@link CompletionItemProvider.provideCompletionItemscompletion provider} is triggered.
 @_i1.JS()
@@ -11085,6 +11220,7 @@ extension CompletionContext$Typings on CompletionContext {
       );
 }
 
+/* Source:  */
 /// The completion item provider interface defines the contract between extensions and
 /// [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense).
 ///
@@ -11126,7 +11262,7 @@ class CompletionItemProvider<T extends _i3.CompletionItem> {
                 p2,
                 p3,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideCompletionItems(
+                _i6.Promise.futureOr(() => provideCompletionItems(
                       p0,
                       p1,
                       p2,
@@ -11138,7 +11274,7 @@ class CompletionItemProvider<T extends _i3.CompletionItem> {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveCompletionItem(
+                _i6.Promise.futureOr(() => resolveCompletionItem(
                       p0,
                       p1,
                     ))),
@@ -11163,7 +11299,7 @@ extension CompletionItemProvider$Typings<T extends _i3.CompletionItem>
         p2,
         p3,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -11209,7 +11345,7 @@ extension CompletionItemProvider$Typings<T extends _i3.CompletionItem>
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -11237,6 +11373,7 @@ extension CompletionItemProvider$Typings<T extends _i3.CompletionItem>
           );
 }
 
+/* Source:  */
 /// The inline completion item provider interface defines the contract between extensions and
 /// the inline completion feature.
 ///
@@ -11264,13 +11401,12 @@ class InlineCompletionItemProvider {
                   p2,
                   p3,
                 ) =>
-                  _i6.Promise.functionFutureOr(
-                      () => provideInlineCompletionItems(
-                            p0,
-                            p1,
-                            p2,
-                            p3,
-                          ))));
+                  _i6.Promise.futureOr(() => provideInlineCompletionItems(
+                        p0,
+                        p1,
+                        p2,
+                        p3,
+                      ))));
 }
 
 extension InlineCompletionItemProvider$Typings on InlineCompletionItemProvider {
@@ -11290,7 +11426,7 @@ extension InlineCompletionItemProvider$Typings on InlineCompletionItemProvider {
         p2,
         p3,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -11326,6 +11462,7 @@ extension InlineCompletionItemProvider$Typings on InlineCompletionItemProvider {
           );
 }
 
+/* Source:  */
 /// Represents a collection of {@link InlineCompletionIteminline completion items} to be presented
 /// in the editor.
 @_i1.JS()
@@ -11345,10 +11482,10 @@ _i2.Object get _declaredInlineCompletionList => _i5.getProperty(
 
 extension InlineCompletionList$Typings on InlineCompletionList {
   /// The inline completion items.
-  _i2.List<_i3.InlineCompletionItem> get items => ((_i5.getProperty(
+  _i2.List<_i3.InlineCompletionItem> get items => (_i5.getProperty(
         this,
         'items',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set items(_i2.List<_i3.InlineCompletionItem> value) {
     _i5.setProperty(
@@ -11359,6 +11496,7 @@ extension InlineCompletionList$Typings on InlineCompletionList {
   }
 }
 
+/* Source:  */
 /// Provides information about the context in which an inline completion was requested.
 @_i1.JS()
 @_i1.staticInterop
@@ -11401,6 +11539,7 @@ extension InlineCompletionContext$Typings on InlineCompletionContext {
       );
 }
 
+/* Source:  */
 /// Describes the currently selected completion item.
 @_i1.JS()
 @_i1.staticInterop
@@ -11435,6 +11574,7 @@ extension SelectedCompletionInfo$Typings on SelectedCompletionInfo {
       );
 }
 
+/* Source:  */
 /// An inline completion item represents a text snippet that is proposed inline to complete text that is being typed.
 @_i1.JS()
 @_i1.staticInterop
@@ -11520,6 +11660,7 @@ extension InlineCompletionItem$Typings on InlineCompletionItem {
   }
 }
 
+/* Source:  */
 /// A document link is a range in a text document that links to an internal or external resource, like another
 /// text document or a web site.
 @_i1.JS()
@@ -11588,6 +11729,7 @@ extension DocumentLink$Typings on DocumentLink {
   }
 }
 
+/* Source:  */
 /// The document link provider defines the contract between extensions and feature of showing
 /// links in the editor.
 @_i1.JS()
@@ -11616,7 +11758,7 @@ class DocumentLinkProvider<T extends _i3.DocumentLink> {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideDocumentLinks(
+                _i6.Promise.futureOr(() => provideDocumentLinks(
                       p0,
                       p1,
                     ))),
@@ -11626,7 +11768,7 @@ class DocumentLinkProvider<T extends _i3.DocumentLink> {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveDocumentLink(
+                _i6.Promise.futureOr(() => resolveDocumentLink(
                       p0,
                       p1,
                     ))),
@@ -11647,7 +11789,7 @@ extension DocumentLinkProvider$Typings<T extends _i3.DocumentLink>
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -11685,7 +11827,7 @@ extension DocumentLinkProvider$Typings<T extends _i3.DocumentLink>
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -11713,6 +11855,7 @@ extension DocumentLinkProvider$Typings<T extends _i3.DocumentLink>
           );
 }
 
+/* Source:  */
 /// Represents a color in RGBA space.
 @_i1.JS()
 @_i1.staticInterop
@@ -11765,6 +11908,7 @@ extension Color$Typings on Color {
       );
 }
 
+/* Source:  */
 /// Represents a color range from a document.
 @_i1.JS()
 @_i1.staticInterop
@@ -11815,6 +11959,7 @@ extension ColorInformation$Typings on ColorInformation {
   }
 }
 
+/* Source:  */
 /// A color presentation object describes how a {@linkcode Color} should be represented as text and what
 /// edits are required to refer to it from source code.
 ///
@@ -11868,10 +12013,10 @@ extension ColorPresentation$Typings on ColorPresentation {
 
   /// An optional array of additional {@link TextEdit text edits} that are applied when
   ///  selecting this color presentation. Edits must not overlap with the main {@link ColorPresentation.textEdit edit} nor with themselves.
-  _i2.List<_i3.TextEdit> get additionalTextEdits => ((_i5.getProperty(
+  _i2.List<_i3.TextEdit> get additionalTextEdits => (_i5.getProperty(
         this,
         'additionalTextEdits',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set additionalTextEdits(_i2.List<_i3.TextEdit> value) {
     _i5.setProperty(
@@ -11882,6 +12027,7 @@ extension ColorPresentation$Typings on ColorPresentation {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -11901,6 +12047,7 @@ extension IInline25$Typings on IInline25 {
       );
 }
 
+/* Source:  */
 /// The document color provider defines the contract between extensions and feature of
 /// picking and modifying colors in the editor.
 @_i1.JS()
@@ -11930,7 +12077,7 @@ class DocumentColorProvider {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideDocumentColors(
+                _i6.Promise.futureOr(() => provideDocumentColors(
                       p0,
                       p1,
                     ))),
@@ -11941,7 +12088,7 @@ class DocumentColorProvider {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideColorPresentations(
+                _i6.Promise.futureOr(() => provideColorPresentations(
                       p0,
                       p1,
                       p2,
@@ -11962,7 +12109,7 @@ extension DocumentColorProvider$Typings on DocumentColorProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -12002,7 +12149,7 @@ extension DocumentColorProvider$Typings on DocumentColorProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -12034,6 +12181,7 @@ extension DocumentColorProvider$Typings on DocumentColorProvider {
           );
 }
 
+/* Source:  */
 /// An inlay hint label part allows for interactive and composite labels of inlay hints.
 @_i1.JS()
 @_i1.staticInterop
@@ -12121,6 +12269,7 @@ extension InlayHintLabelPart$Typings on InlayHintLabelPart {
   }
 }
 
+/* Source:  */
 /// Inlay hint information.
 @_i1.JS()
 @_i1.staticInterop
@@ -12211,10 +12360,10 @@ extension InlayHint$Typings on InlayHint {
   ///
   ///  *Note* that this property can be set late during
   ///  {@link InlayHintsProvider.resolveInlayHint resolving} of inlay hints.
-  _i2.List<_i3.TextEdit> get textEdits => ((_i5.getProperty(
+  _i2.List<_i3.TextEdit> get textEdits => (_i5.getProperty(
         this,
         'textEdits',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set textEdits(_i2.List<_i3.TextEdit> value) {
     _i5.setProperty(
@@ -12255,6 +12404,7 @@ extension InlayHint$Typings on InlayHint {
   }
 }
 
+/* Source:  */
 /// The inlay hints provider interface defines the contract between extensions and
 /// the inlay hints feature.
 @_i1.JS()
@@ -12288,7 +12438,7 @@ class InlayHintsProvider<T extends _i3.InlayHint> {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideInlayHints(
+                _i6.Promise.futureOr(() => provideInlayHints(
                       p0,
                       p1,
                       p2,
@@ -12299,7 +12449,7 @@ class InlayHintsProvider<T extends _i3.InlayHint> {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveInlayHint(
+                _i6.Promise.futureOr(() => resolveInlayHint(
                       p0,
                       p1,
                     ))),
@@ -12335,7 +12485,7 @@ extension InlayHintsProvider$Typings<T extends _i3.InlayHint>
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -12377,7 +12527,7 @@ extension InlayHintsProvider$Typings<T extends _i3.InlayHint>
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -12405,6 +12555,7 @@ extension InlayHintsProvider$Typings<T extends _i3.InlayHint>
           );
 }
 
+/* Source:  */
 /// A line based folding range. To be valid, start and end line must be bigger than zero and smaller than the number of lines in the document.
 /// Invalid ranges will be ignored.
 @_i1.JS()
@@ -12478,6 +12629,7 @@ extension FoldingRange$Typings on FoldingRange {
   }
 }
 
+/* Source:  */
 /// Folding context (for future use)
 @_i1.JS()
 @_i1.staticInterop
@@ -12488,6 +12640,7 @@ class FoldingContext {
   factory FoldingContext() => FoldingContext._();
 }
 
+/* Source:  */
 /// The folding range provider interface defines the contract between extensions and
 /// [Folding](https://code.visualstudio.com/docs/editor/codebasics#_folding) in the editor.
 @_i1.JS()
@@ -12516,7 +12669,7 @@ class FoldingRangeProvider {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideFoldingRanges(
+                _i6.Promise.futureOr(() => provideFoldingRanges(
                       p0,
                       p1,
                       p2,
@@ -12552,7 +12705,7 @@ extension FoldingRangeProvider$Typings on FoldingRangeProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -12584,6 +12737,7 @@ extension FoldingRangeProvider$Typings on FoldingRangeProvider {
           );
 }
 
+/* Source:  */
 /// A selection range represents a part of a selection hierarchy. A selection range
 /// may have a parent selection range that contains it.
 @_i1.JS()
@@ -12635,6 +12789,7 @@ extension SelectionRange$Typings on SelectionRange {
   }
 }
 
+/* Source:  */
 /// The selection range provider interface defines the contract between extensions and the "Expand and Shrink Selection" feature.
 @_i1.JS()
 @_i1.staticInterop
@@ -12657,7 +12812,7 @@ class SelectionRangeProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideSelectionRanges(
+                  _i6.Promise.futureOr(() => provideSelectionRanges(
                         p0,
                         p1,
                         p2,
@@ -12679,7 +12834,7 @@ extension SelectionRangeProvider$Typings on SelectionRangeProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -12711,6 +12866,7 @@ extension SelectionRangeProvider$Typings on SelectionRangeProvider {
           );
 }
 
+/* Source:  */
 /// Represents programming constructs like functions or constructors in the context
 /// of call hierarchy.
 @_i1.JS()
@@ -12770,10 +12926,10 @@ extension CallHierarchyItem$Typings on CallHierarchyItem {
   }
 
   /// Tags for this item.
-  _i2.List<_i3.SymbolTag> get tags => ((_i5.getProperty(
+  _i2.List<_i3.SymbolTag> get tags => (_i5.getProperty(
         this,
         'tags',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast()
           .map((i) => _i3.SymbolTag.values.byName(i))
           .toList();
@@ -12839,6 +12995,7 @@ extension CallHierarchyItem$Typings on CallHierarchyItem {
   }
 }
 
+/* Source:  */
 /// Represents an incoming call, e.g. a caller of a method or constructor.
 @_i1.JS()
 @_i1.staticInterop
@@ -12877,10 +13034,10 @@ extension CallHierarchyIncomingCall$Typings on CallHierarchyIncomingCall {
 
   /// The range at which at which the calls appears. This is relative to the caller
   ///  denoted by {@linkcode CallHierarchyIncomingCall.from this.from}.
-  _i2.List<_i3.Range> get fromRanges => ((_i5.getProperty(
+  _i2.List<_i3.Range> get fromRanges => (_i5.getProperty(
         this,
         'fromRanges',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set fromRanges(_i2.List<_i3.Range> value) {
     _i5.setProperty(
@@ -12891,6 +13048,7 @@ extension CallHierarchyIncomingCall$Typings on CallHierarchyIncomingCall {
   }
 }
 
+/* Source:  */
 /// Represents an outgoing call, e.g. calling a getter from a method or a method from a constructor etc.
 @_i1.JS()
 @_i1.staticInterop
@@ -12930,10 +13088,10 @@ extension CallHierarchyOutgoingCall$Typings on CallHierarchyOutgoingCall {
   /// The range at which this item is called. This is the range relative to the caller, e.g the item
   ///  passed to {@linkcode CallHierarchyProvider.provideCallHierarchyOutgoingCalls provideCallHierarchyOutgoingCalls}
   ///  and not {@linkcode CallHierarchyOutgoingCall.to this.to}.
-  _i2.List<_i3.Range> get fromRanges => ((_i5.getProperty(
+  _i2.List<_i3.Range> get fromRanges => (_i5.getProperty(
         this,
         'fromRanges',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set fromRanges(_i2.List<_i3.Range> value) {
     _i5.setProperty(
@@ -12944,6 +13102,7 @@ extension CallHierarchyOutgoingCall$Typings on CallHierarchyOutgoingCall {
   }
 }
 
+/* Source:  */
 /// The call hierarchy provider interface describes the contract between extensions
 /// and the call hierarchy feature which allows to browse calls and caller of function,
 /// methods, constructor etc.
@@ -12980,35 +13139,33 @@ class CallHierarchyProvider {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => prepareCallHierarchy(
+                _i6.Promise.futureOr(() => prepareCallHierarchy(
                       p0,
                       p1,
                       p2,
                     ))),
-        provideCallHierarchyIncomingCalls:
-            provideCallHierarchyIncomingCalls == null
-                ? null
-                : _i5.allowInterop((
-                    p0,
-                    p1,
-                  ) =>
-                    _i6.Promise.functionFutureOr(
-                        () => provideCallHierarchyIncomingCalls(
-                              p0,
-                              p1,
-                            ))),
-        provideCallHierarchyOutgoingCalls:
-            provideCallHierarchyOutgoingCalls == null
-                ? null
-                : _i5.allowInterop((
-                    p0,
-                    p1,
-                  ) =>
-                    _i6.Promise.functionFutureOr(
-                        () => provideCallHierarchyOutgoingCalls(
-                              p0,
-                              p1,
-                            ))),
+        provideCallHierarchyIncomingCalls: provideCallHierarchyIncomingCalls ==
+                null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.futureOr(() => provideCallHierarchyIncomingCalls(
+                      p0,
+                      p1,
+                    ))),
+        provideCallHierarchyOutgoingCalls: provideCallHierarchyOutgoingCalls ==
+                null
+            ? null
+            : _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                _i6.Promise.futureOr(() => provideCallHierarchyOutgoingCalls(
+                      p0,
+                      p1,
+                    ))),
       );
 }
 
@@ -13027,7 +13184,7 @@ extension CallHierarchyProvider$Typings on CallHierarchyProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -13069,7 +13226,7 @@ extension CallHierarchyProvider$Typings on CallHierarchyProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -13107,7 +13264,7 @@ extension CallHierarchyProvider$Typings on CallHierarchyProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -13135,6 +13292,7 @@ extension CallHierarchyProvider$Typings on CallHierarchyProvider {
           );
 }
 
+/* Source:  */
 /// Represents an item of a type hierarchy, like a class or an interface.
 @_i1.JS()
 @_i1.staticInterop
@@ -13260,6 +13418,7 @@ extension TypeHierarchyItem$Typings on TypeHierarchyItem {
   }
 }
 
+/* Source:  */
 /// The type hierarchy provider interface describes the contract between extensions
 /// and the type hierarchy feature.
 @_i1.JS()
@@ -13295,7 +13454,7 @@ class TypeHierarchyProvider {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => prepareTypeHierarchy(
+                _i6.Promise.futureOr(() => prepareTypeHierarchy(
                       p0,
                       p1,
                       p2,
@@ -13306,18 +13465,17 @@ class TypeHierarchyProvider {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(
-                    () => provideTypeHierarchySupertypes(
-                          p0,
-                          p1,
-                        ))),
+                _i6.Promise.futureOr(() => provideTypeHierarchySupertypes(
+                      p0,
+                      p1,
+                    ))),
         provideTypeHierarchySubtypes: provideTypeHierarchySubtypes == null
             ? null
             : _i5.allowInterop((
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideTypeHierarchySubtypes(
+                _i6.Promise.futureOr(() => provideTypeHierarchySubtypes(
                       p0,
                       p1,
                     ))),
@@ -13339,7 +13497,7 @@ extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -13381,7 +13539,7 @@ extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -13419,7 +13577,7 @@ extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -13447,6 +13605,7 @@ extension TypeHierarchyProvider$Typings on TypeHierarchyProvider {
           );
 }
 
+/* Source:  */
 /// Represents a list of ranges that can be edited together along with a word pattern to describe valid range contents.
 @_i1.JS()
 @_i1.staticInterop
@@ -13472,10 +13631,10 @@ _i2.Object get _declaredLinkedEditingRanges => _i5.getProperty(
 extension LinkedEditingRanges$Typings on LinkedEditingRanges {
   /// A list of ranges that can be edited together. The ranges must have
   /// identical length and text content. The ranges cannot overlap.
-  _i2.List<_i3.Range> get ranges => ((_i5.getProperty(
+  _i2.List<_i3.Range> get ranges => (_i5.getProperty(
         this,
         'ranges',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// An optional word pattern that describes valid contents for the given ranges.
@@ -13486,6 +13645,7 @@ extension LinkedEditingRanges$Typings on LinkedEditingRanges {
       );
 }
 
+/* Source:  */
 /// The linked editing range provider interface defines the contract between extensions and
 /// the linked editing feature.
 @_i1.JS()
@@ -13509,7 +13669,7 @@ class LinkedEditingRangeProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideLinkedEditingRanges(
+                  _i6.Promise.futureOr(() => provideLinkedEditingRanges(
                         p0,
                         p1,
                         p2,
@@ -13531,7 +13691,7 @@ extension LinkedEditingRangeProvider$Typings on LinkedEditingRangeProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -13563,6 +13723,7 @@ extension LinkedEditingRangeProvider$Typings on LinkedEditingRangeProvider {
           );
 }
 
+/* Source:  */
 /// An edit operation applied {@link DocumentDropEditProvideron drop}.
 @_i1.JS()
 @_i1.staticInterop
@@ -13606,6 +13767,7 @@ extension DocumentDropEdit$Typings on DocumentDropEdit {
   }
 }
 
+/* Source:  */
 /// Provider which handles dropping of resources into a text editor.
 ///
 /// This allows users to drag and drop resources (including resources from external apps) into the editor. While dragging
@@ -13634,7 +13796,7 @@ class DocumentDropEditProvider {
                   p2,
                   p3,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideDocumentDropEdits(
+                  _i6.Promise.futureOr(() => provideDocumentDropEdits(
                         p0,
                         p1,
                         p2,
@@ -13659,7 +13821,7 @@ extension DocumentDropEditProvider$Typings on DocumentDropEditProvider {
         p2,
         p3,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -13695,6 +13857,7 @@ extension DocumentDropEditProvider$Typings on DocumentDropEditProvider {
           );
 }
 
+/* Source:  */
 /// Describes how comments for a language work.
 @_i1.JS()
 @_i1.staticInterop
@@ -13753,6 +13916,7 @@ extension CommentRule$Typings on CommentRule {
   }
 }
 
+/* Source:  */
 /// Describes indentation rules for a language.
 @_i1.JS()
 @_i1.staticInterop
@@ -13833,6 +13997,7 @@ extension IndentationRule$Typings on IndentationRule {
   }
 }
 
+/* Source:  */
 /// Describes what to do when pressing Enter.
 @_i1.JS()
 @_i1.staticInterop
@@ -13898,6 +14063,7 @@ extension EnterAction$Typings on EnterAction {
   }
 }
 
+/* Source:  */
 /// Describes a rule to be evaluated when pressing Enter.
 @_i1.JS()
 @_i1.staticInterop
@@ -13978,6 +14144,7 @@ extension OnEnterRule$Typings on OnEnterRule {
   }
 }
 
+/* Source:  */
 /// Describes pairs of strings where the close string will be automatically inserted when typing the opening string.
 @_i1.JS()
 @_i1.staticInterop
@@ -14029,10 +14196,10 @@ extension AutoClosingPair$Typings on AutoClosingPair {
   }
 
   /// A set of tokens where the pair should not be auto closed.
-  _i2.List<_i3.SyntaxTokenType>? get notIn => ((_i5.getProperty(
+  _i2.List<_i3.SyntaxTokenType>? get notIn => (_i5.getProperty(
         this,
         'notIn',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast()
           .map((i) => _i3.SyntaxTokenType.values.byName(i))
           .toList();
@@ -14045,6 +14212,7 @@ extension AutoClosingPair$Typings on AutoClosingPair {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -14104,6 +14272,7 @@ extension IInline27$Typings on IInline27 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -14142,6 +14311,7 @@ extension IInline26$Typings on IInline26 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -14175,10 +14345,10 @@ extension IInline29$Typings on IInline29 {
   }
 
   /// @deprecated
-  _i2.List<_i2.String>? get notIn => ((_i5.getProperty(
+  _i2.List<_i2.String>? get notIn => (_i5.getProperty(
         this,
         'notIn',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set notIn(_i2.List<_i2.String>? value) {
     _i5.setProperty(
@@ -14189,6 +14359,7 @@ extension IInline29$Typings on IInline29 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -14196,10 +14367,10 @@ class IInline28 {}
 
 extension IInline28$Typings on IInline28 {
   /// @deprecated
-  _i2.List<_i2.dynamic> get autoClosingPairs => ((_i5.getProperty(
+  _i2.List<_i2.dynamic> get autoClosingPairs => (_i5.getProperty(
         this,
         'autoClosingPairs',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set autoClosingPairs(_i2.List<_i2.dynamic> value) {
     _i5.setProperty(
@@ -14210,6 +14381,7 @@ extension IInline28$Typings on IInline28 {
   }
 }
 
+/* Source:  */
 /// The language configuration interfaces defines the contract between extensions
 /// and various editor features, like automatic bracket insertion, automatic indentation etc.
 @_i1.JS()
@@ -14270,10 +14442,10 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
 
   /// The language's brackets.
   ///  This configuration implicitly affects pressing Enter around these brackets.
-  _i2.List<_i3.CharacterPair>? get brackets => ((_i5.getProperty(
+  _i2.List<_i3.CharacterPair>? get brackets => (_i5.getProperty(
         this,
         'brackets',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set brackets(_i2.List<_i3.CharacterPair>? value) {
     _i5.setProperty(
@@ -14320,10 +14492,10 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
   }
 
   /// The language's rules to be evaluated when pressing Enter.
-  _i2.List<_i3.OnEnterRule>? get onEnterRules => ((_i5.getProperty(
+  _i2.List<_i3.OnEnterRule>? get onEnterRules => (_i5.getProperty(
         this,
         'onEnterRules',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set onEnterRules(_i2.List<_i3.OnEnterRule>? value) {
     _i5.setProperty(
@@ -14334,10 +14506,10 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
   }
 
   /// The language's auto closing pairs.
-  _i2.List<_i3.AutoClosingPair>? get autoClosingPairs => ((_i5.getProperty(
+  _i2.List<_i3.AutoClosingPair>? get autoClosingPairs => (_i5.getProperty(
         this,
         'autoClosingPairs',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set autoClosingPairs(_i2.List<_i3.AutoClosingPair>? value) {
     _i5.setProperty(
@@ -14378,6 +14550,7 @@ extension LanguageConfiguration$Typings on LanguageConfiguration {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -14502,10 +14675,10 @@ extension IInline30$Typings<T> on IInline30<T> {
   }
 
   /// All language identifiers for which this configuration is defined.
-  _i2.List<_i2.String>? get languageIds => ((_i5.getProperty(
+  _i2.List<_i2.String>? get languageIds => (_i5.getProperty(
         this,
         'languageIds',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set languageIds(_i2.List<_i2.String>? value) {
     _i5.setProperty(
@@ -14516,6 +14689,7 @@ extension IInline30$Typings<T> on IInline30<T> {
   }
 }
 
+/* Source:  */
 /// Represents the configuration. It is a merged view of
 ///
 /// - *Default Settings*
@@ -14589,7 +14763,7 @@ class WorkspaceConfiguration {
 
   factory WorkspaceConfiguration({
     _i2.bool Function(_i2.String)? has,
-    _i2.dynamic Function(_i2.String)? inspect,
+    _i2.dynamic Function<T>(_i2.String)? inspect,
     _i2.Future<_i2.dynamic> Function(
       _i2.String, [
       _i2.dynamic,
@@ -14626,7 +14800,7 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
           p0,
         ],
       );
-  set inspect(_i2.dynamic Function(_i2.String) value) {
+  set inspect(_i2.dynamic Function<T>(_i2.String) value) {
     _i5.setProperty(
       this,
       'inspect',
@@ -14634,8 +14808,8 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
     );
   }
 
-  _i2.dynamic Function(_i2.String) get inspect =>
-      (_i2.String p0) => _i5.callMethod(
+  _i2.dynamic Function<T>(_i2.String) get inspect =>
+      <T>(_i2.String p0) => _i5.callMethod(
             _i5.getProperty(
               this,
               'inspect',
@@ -14671,7 +14845,7 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
         _i2.dynamic p2,
         _i2.bool? p3,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'update',
@@ -14682,9 +14856,9 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
               p0,
               p1,
               p2,
-              p3,
+              p3 ?? _i6.undefined,
             ],
-          );
+          ));
 
   /// Return a value from this configuration.
   ///
@@ -14709,6 +14883,7 @@ extension WorkspaceConfiguration$Typings on WorkspaceConfiguration {
       );
 }
 
+/* Source:  */
 /// Represents a location inside a resource, such as a line
 /// inside a text file.
 @_i1.JS()
@@ -14760,6 +14935,7 @@ extension Location$Typings on Location {
   }
 }
 
+/* Source:  */
 /// Represents the connection of two locations. Provides additional metadata over normal {@link Locationlocations},
 /// including an origin range.
 @_i1.JS()
@@ -14844,6 +15020,7 @@ extension LocationLink$Typings on LocationLink {
   }
 }
 
+/* Source:  */
 /// The event that is fired when diagnostics change.
 @_i1.JS()
 @_i1.staticInterop
@@ -14857,13 +15034,14 @@ class DiagnosticChangeEvent {
 
 extension DiagnosticChangeEvent$Typings on DiagnosticChangeEvent {
   /// An array of resources for which diagnostics have changed.
-  _i2.List<_i3.Uri> get uris => ((_i5.getProperty(
+  _i2.List<_i3.Uri> get uris => (_i5.getProperty(
         this,
         'uris',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// Represents a related message and source code location for a diagnostic. This should be
 /// used to point to code locations that cause or related to a diagnostics, e.g. when duplicating
 /// a symbol in a scope.
@@ -14916,6 +15094,7 @@ extension DiagnosticRelatedInformation$Typings on DiagnosticRelatedInformation {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -14950,6 +15129,7 @@ extension IInline31$Typings on IInline31 {
   }
 }
 
+/* Source:  */
 /// Represents a diagnostic, such as a compiler error or warning. Diagnostic objects
 /// are only valid in the scope of a file.
 @_i1.JS()
@@ -15047,10 +15227,10 @@ extension Diagnostic$Typings on Diagnostic {
   /// An array of related diagnostic information, e.g. when symbol-names within
   ///  a scope collide all definitions can be marked via this property.
   _i2.List<_i3.DiagnosticRelatedInformation> get relatedInformation =>
-      ((_i5.getProperty(
+      (_i5.getProperty(
         this,
         'relatedInformation',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set relatedInformation(_i2.List<_i3.DiagnosticRelatedInformation> value) {
     _i5.setProperty(
@@ -15061,10 +15241,10 @@ extension Diagnostic$Typings on Diagnostic {
   }
 
   /// Additional metadata about the diagnostic.
-  _i2.List<_i3.DiagnosticTag> get tags => ((_i5.getProperty(
+  _i2.List<_i3.DiagnosticTag> get tags => (_i5.getProperty(
         this,
         'tags',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast()
           .map((i) => _i3.DiagnosticTag.values.byName(i))
           .toList();
@@ -15077,6 +15257,7 @@ extension Diagnostic$Typings on Diagnostic {
   }
 }
 
+/* Source:  */
 /// A diagnostics collection is a container that manages a set of
 /// {@link Diagnosticdiagnostics}. Diagnostics are always scopes to a
 /// diagnostics collection and a resource.
@@ -15214,7 +15395,7 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
             r'call',
             [
               this,
-              p0,
+              _i5.allowInterop(p0),
               p1,
             ],
           );
@@ -15227,7 +15408,7 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
   }
 
   _i2.List<_i3.Diagnostic>? Function(_i3.Uri) get get =>
-      (_i3.Uri p0) => _i5.callMethod(
+      (_i3.Uri p0) => (_i5.callMethod(
             _i5.getProperty(
               this,
               'get',
@@ -15237,7 +15418,8 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
               this,
               p0,
             ],
-          );
+          ) as _i2.List?)
+              ?.cast();
   set has(_i2.bool Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -15348,6 +15530,7 @@ extension DiagnosticCollection$Typings on DiagnosticCollection {
       );
 }
 
+/* Source:  */
 /// A language status item is the preferred way to present language status reports for the active text editors,
 /// such as selected linter or notifying about a configuration problem.
 @_i1.JS()
@@ -15533,6 +15716,7 @@ extension LanguageStatusItem$Typings on LanguageStatusItem {
       );
 }
 
+/* Source:  */
 /// An output channel is a container for readonly textual information.
 ///
 /// To get an instance of an `OutputChannel` use
@@ -15737,6 +15921,7 @@ extension OutputChannel$Typings on OutputChannel {
       );
 }
 
+/* Source:  */
 /// A channel for containing log output.
 ///
 /// To get an instance of a `LogOutputChannel` use
@@ -16023,7 +16208,7 @@ extension LogOutputChannel$Typings on LogOutputChannel {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
   set debug(
@@ -16081,7 +16266,7 @@ extension LogOutputChannel$Typings on LogOutputChannel {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
   set info(
@@ -16139,7 +16324,7 @@ extension LogOutputChannel$Typings on LogOutputChannel {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
   set warn(
@@ -16197,7 +16382,7 @@ extension LogOutputChannel$Typings on LogOutputChannel {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
   set error(
@@ -16255,11 +16440,12 @@ extension LogOutputChannel$Typings on LogOutputChannel {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
 }
 
+/* Source:  */
 /// Accessibility information which controls screen reader behavior.
 @_i1.JS()
 @_i1.staticInterop
@@ -16297,6 +16483,7 @@ extension AccessibilityInformation$Typings on AccessibilityInformation {
       );
 }
 
+/* Source:  */
 /// A status bar item is a status bar contribution that can
 /// show text and icons and run a command on click.
 @_i1.JS()
@@ -16537,6 +16724,7 @@ extension StatusBarItem$Typings on StatusBarItem {
       );
 }
 
+/* Source:  */
 /// Defines a generalized way of reporting progress updates.
 @_i1.JS()
 @_i1.staticInterop
@@ -16570,6 +16758,7 @@ extension Progress$Typings<T> on Progress<T> {
       );
 }
 
+/* Source:  */
 /// An individual terminal instance within the integrated terminal.
 @_i1.JS()
 @_i1.staticInterop
@@ -16684,7 +16873,7 @@ extension Terminal$Typings on Terminal {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
   set show(void Function([_i2.bool?]) value) {
@@ -16703,7 +16892,7 @@ extension Terminal$Typings on Terminal {
         r'call',
         [
           this,
-          p0,
+          p0 ?? _i6.undefined,
         ],
       );
   set hide(void Function() value) {
@@ -16740,6 +16929,7 @@ extension Terminal$Typings on Terminal {
       );
 }
 
+/* Source:  */
 /// Assumes a {@link TerminalLocation} of editor and allows specifying a {@link ViewColumn} and
 /// {@link TerminalEditorLocationOptions.preserveFocuspreserveFocus } property
 @_i1.JS()
@@ -16794,6 +16984,7 @@ extension TerminalEditorLocationOptions$Typings
   }
 }
 
+/* Source:  */
 /// Uses the parent {@link Terminal}'s location for the terminal
 @_i1.JS()
 @_i1.staticInterop
@@ -16822,6 +17013,7 @@ extension TerminalSplitLocationOptions$Typings on TerminalSplitLocationOptions {
   }
 }
 
+/* Source:  */
 /// Represents the state of a {@link Terminal}.
 @_i1.JS()
 @_i1.staticInterop
@@ -16852,6 +17044,7 @@ extension TerminalState$Typings on TerminalState {
       );
 }
 
+/* Source:  */
 /// Provides information on a line in a terminal in order to provide links for it.
 @_i1.JS()
 @_i1.staticInterop
@@ -16900,6 +17093,7 @@ extension TerminalLinkContext$Typings on TerminalLinkContext {
   }
 }
 
+/* Source:  */
 /// A provider that enables detection and handling of links within terminals.
 @_i1.JS()
 @_i1.staticInterop
@@ -16924,14 +17118,14 @@ class TerminalLinkProvider<T extends _i3.TerminalLink> {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideTerminalLinks(
+                _i6.Promise.futureOr(() => provideTerminalLinks(
                       p0,
                       p1,
                     ))),
         handleTerminalLink: handleTerminalLink == null
             ? null
-            : _i5.allowInterop((p0) =>
-                _i6.Promise.functionFutureOr(() => handleTerminalLink(p0))),
+            : _i5.allowInterop(
+                (p0) => _i6.Promise.futureOr(() => handleTerminalLink(p0))),
       );
 }
 
@@ -16949,7 +17143,7 @@ extension TerminalLinkProvider$Typings<T extends _i3.TerminalLink>
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -16979,7 +17173,7 @@ extension TerminalLinkProvider$Typings<T extends _i3.TerminalLink>
     _i5.setProperty(
       this,
       'handleTerminalLink',
-      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+      _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -16997,6 +17191,7 @@ extension TerminalLinkProvider$Typings<T extends _i3.TerminalLink>
           );
 }
 
+/* Source:  */
 /// A link on a terminal line.
 @_i1.JS()
 @_i1.staticInterop
@@ -17066,6 +17261,7 @@ extension TerminalLink$Typings on TerminalLink {
   }
 }
 
+/* Source:  */
 /// Provides a terminal profile for the contributed terminal profile when launched via the UI or
 /// command.
 @_i1.JS()
@@ -17081,8 +17277,8 @@ class TerminalProfileProvider {
       TerminalProfileProvider._(
           provideTerminalProfile: provideTerminalProfile == null
               ? null
-              : _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(
-                  () => provideTerminalProfile(p0))));
+              : _i5.allowInterop((p0) =>
+                  _i6.Promise.futureOr(() => provideTerminalProfile(p0))));
 }
 
 extension TerminalProfileProvider$Typings on TerminalProfileProvider {
@@ -17091,7 +17287,7 @@ extension TerminalProfileProvider$Typings on TerminalProfileProvider {
     _i5.setProperty(
       this,
       'provideTerminalProfile',
-      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+      _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -17110,6 +17306,7 @@ extension TerminalProfileProvider$Typings on TerminalProfileProvider {
               );
 }
 
+/* Source:  */
 /// A terminal profile defines how a terminal will be launched.
 @_i1.JS()
 @_i1.staticInterop
@@ -17140,6 +17337,7 @@ extension TerminalProfile$Typings on TerminalProfile {
   }
 }
 
+/* Source:  */
 /// A file decoration represents metadata that can be rendered with a file.
 @_i1.JS()
 @_i1.staticInterop
@@ -17219,6 +17417,7 @@ extension FileDecoration$Typings on FileDecoration {
   }
 }
 
+/* Source:  */
 /// The decoration provider interfaces defines the contract between extensions and
 /// file decorations.
 @_i1.JS()
@@ -17245,7 +17444,7 @@ class FileDecorationProvider {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideFileDecoration(
+                _i6.Promise.futureOr(() => provideFileDecoration(
                       p0,
                       p1,
                     ))),
@@ -17282,7 +17481,7 @@ extension FileDecorationProvider$Typings on FileDecorationProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -17310,6 +17509,7 @@ extension FileDecorationProvider$Typings on FileDecorationProvider {
           );
 }
 
+/* Source:  */
 /// Represents an extension.
 ///
 /// To get an instance of an `Extension` use {@link extensions.getExtensiongetExtension}.
@@ -17414,16 +17614,18 @@ extension Extension$Typings<T> on Extension<T> {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function() get activate => () => _i5.callMethod(
-        _i5.getProperty(
-          this,
-          'activate',
-        ),
-        r'call',
-        [this],
-      );
+  _i2.Future<_i2.dynamic> Function() get activate =>
+      () => _i5.promiseToFuture(_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'activate',
+            ),
+            r'call',
+            [this],
+          ));
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -17448,6 +17650,7 @@ extension IInline32$Typings on IInline32 {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -17476,6 +17679,7 @@ extension IInline33$Typings on IInline33 {
           );
 }
 
+/* Source:  */
 /// An extension context is a collection of utilities private to an
 /// extension.
 ///
@@ -17507,7 +17711,7 @@ class ExtensionContext {
   factory ExtensionContext({
     _i2.List<_i3.IInline32>? subscriptions,
     _i3.Memento? workspaceState,
-    _Intersection7? globalState,
+    _Intersection14? globalState,
     _i3.SecretStorage? secrets,
     _i3.Uri? extensionUri,
     _i2.String? extensionPath,
@@ -17549,10 +17753,10 @@ extension ExtensionContext$Typings on ExtensionContext {
   /// extension is deactivated the disposables will be disposed.
   ///
   /// *Note* that asynchronous dispose-functions aren't awaited.
-  _i2.List<_i2.dynamic> get subscriptions => ((_i5.getProperty(
+  _i2.List<_i2.dynamic> get subscriptions => (_i5.getProperty(
         this,
         'subscriptions',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// A memento object that stores state in the context
@@ -17564,7 +17768,7 @@ extension ExtensionContext$Typings on ExtensionContext {
 
   /// A memento object that stores state independent
   /// of the current opened {@link workspace.workspaceFoldersworkspace}.
-  _Intersection7 get globalState => _i5.getProperty(
+  _Intersection14 get globalState => _i5.getProperty(
         this,
         'globalState',
       );
@@ -17691,6 +17895,7 @@ extension ExtensionContext$Typings on ExtensionContext {
           );
 }
 
+/* Source:  */
 /// A memento represents a storage utility. It can store and retrieve
 /// values.
 @_i1.JS()
@@ -17724,14 +17929,15 @@ extension Memento$Typings on Memento {
     );
   }
 
-  _i2.List<_i2.String> Function() get keys => () => _i5.callMethod(
+  _i2.List<_i2.String> Function() get keys => () => (_i5.callMethod(
         _i5.getProperty(
           this,
           'keys',
         ),
         r'call',
         [this],
-      );
+      ) as _i2.List)
+          .cast();
   set update(
       _i2.Future<_i2.dynamic> Function(
         _i2.String, [
@@ -17751,7 +17957,7 @@ extension Memento$Typings on Memento {
         _i2.String p0, [
         _i2.dynamic p1,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'update',
@@ -17762,7 +17968,7 @@ extension Memento$Typings on Memento {
               p0,
               p1,
             ],
-          );
+          ));
 
   /// Return a value.
   ///
@@ -17784,6 +17990,7 @@ extension Memento$Typings on Memento {
       );
 }
 
+/* Source:  */
 /// The event data that is fired when a secret is added or removed.
 @_i1.JS()
 @_i1.staticInterop
@@ -17803,6 +18010,7 @@ extension SecretStorageChangeEvent$Typings on SecretStorageChangeEvent {
       );
 }
 
+/* Source:  */
 /// Represents a storage utility for secrets, information that is
 /// sensitive.
 @_i1.JS()
@@ -17886,7 +18094,7 @@ extension SecretStorage$Typings on SecretStorage {
         _i2.String p0,
         _i2.String p1,
       ) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'store',
@@ -17897,7 +18105,7 @@ extension SecretStorage$Typings on SecretStorage {
               p0,
               p1,
             ],
-          );
+          ));
   set delete(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
     _i5.setProperty(
       this,
@@ -17907,7 +18115,7 @@ extension SecretStorage$Typings on SecretStorage {
   }
 
   _i2.Future<_i2.dynamic> Function(_i2.String) get delete =>
-      (_i2.String p0) => _i5.callMethod(
+      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'delete',
@@ -17917,9 +18125,10 @@ extension SecretStorage$Typings on SecretStorage {
               this,
               p0,
             ],
-          );
+          ));
 }
 
+/* Source:  */
 /// Represents a color theme.
 @_i1.JS()
 @_i1.staticInterop
@@ -17940,6 +18149,7 @@ extension ColorTheme$Typings on ColorTheme {
       ));
 }
 
+/* Source:  */
 /// Controls how the task is presented in the UI.
 @_i1.JS()
 @_i1.staticInterop
@@ -18078,6 +18288,7 @@ extension TaskPresentationOptions$Typings on TaskPresentationOptions {
   }
 }
 
+/* Source:  */
 /// A grouping for tasks. The editor by default supports the
 /// 'Clean', 'Build', 'RebuildAll' and 'Test' group.
 @_i1.JS()
@@ -18168,6 +18379,7 @@ extension TaskGroup$Typings on TaskGroup {
       );
 }
 
+/* Source:  */
 /// A structure that defines a task kind in the system.
 /// The value must be JSON-stringifyable.
 @_i1.JS()
@@ -18213,6 +18425,7 @@ extension TaskDefinition$Typings on TaskDefinition {
   }
 }
 
+/* Source:  */
 /// Options for a process execution
 @_i1.JS()
 @_i1.staticInterop
@@ -18264,6 +18477,7 @@ extension ProcessExecutionOptions$Typings on ProcessExecutionOptions {
   }
 }
 
+/* Source:  */
 /// The execution of a task happens as an external process
 /// without shell interaction.
 @_i1.JS()
@@ -18321,10 +18535,10 @@ extension ProcessExecution$Typings on ProcessExecution {
   }
 
   /// The arguments passed to the process. Defaults to an empty array.
-  _i2.List<_i2.String> get args => ((_i5.getProperty(
+  _i2.List<_i2.String> get args => (_i5.getProperty(
         this,
         'args',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set args(_i2.List<_i2.String> value) {
     _i5.setProperty(
@@ -18349,6 +18563,7 @@ extension ProcessExecution$Typings on ProcessExecution {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -18382,6 +18597,7 @@ extension IInline35$Typings on IInline35 {
   }
 }
 
+/* Source:  */
 /// The shell quoting options.
 @_i1.JS()
 @_i1.staticInterop
@@ -18448,6 +18664,7 @@ extension ShellQuotingOptions$Typings on ShellQuotingOptions {
   }
 }
 
+/* Source:  */
 /// Options for a shell execution
 @_i1.JS()
 @_i1.staticInterop
@@ -18495,10 +18712,10 @@ extension ShellExecutionOptions$Typings on ShellExecutionOptions {
   ///  require special arguments to execute a command. For  example `bash` requires the `-c`
   ///  argument to execute a command, `PowerShell` requires `-Command` and `cmd` requires both
   ///  `/d` and `/c`.
-  _i2.List<_i2.String>? get shellArgs => ((_i5.getProperty(
+  _i2.List<_i2.String>? get shellArgs => (_i5.getProperty(
         this,
         'shellArgs',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set shellArgs(_i2.List<_i2.String>? value) {
     _i5.setProperty(
@@ -18551,6 +18768,7 @@ extension ShellExecutionOptions$Typings on ShellExecutionOptions {
   }
 }
 
+/* Source:  */
 /// A string that will be quoted depending on the used shell.
 @_i1.JS()
 @_i1.staticInterop
@@ -18600,6 +18818,7 @@ extension ShellQuotedString$Typings on ShellQuotedString {
   }
 }
 
+/* Source:  */
 /// Represents a task execution that happens inside a shell.
 @_i1.JS()
 @_i1.staticInterop
@@ -18669,10 +18888,10 @@ extension ShellExecution$Typings on ShellExecution {
   }
 
   /// The shell args. Is `undefined` if created with a full command line.
-  _i2.List<_i2.Object> get args => ((_i5.getProperty(
+  _i2.List<_i2.Object> get args => (_i5.getProperty(
         this,
         'args',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set args(_i2.List<_i2.Object> value) {
     _i5.setProperty(
@@ -18697,6 +18916,7 @@ extension ShellExecution$Typings on ShellExecution {
   }
 }
 
+/* Source:  */
 /// Class used to execute an extension callback as a task.
 @_i1.JS()
 @_i1.staticInterop
@@ -18712,7 +18932,7 @@ class CustomExecution {
 _i2.Object get _declaredCustomExecution => _i5.getProperty(
       _self,
       'CustomExecution',
-    );
+    ); /* Source:  */
 
 /// Run options for a task.
 @_i1.JS()
@@ -18740,6 +18960,7 @@ extension RunOptions$Typings on RunOptions {
   }
 }
 
+/* Source:  */
 /// A task to execute
 @_i1.JS()
 @_i1.staticInterop
@@ -18912,10 +19133,10 @@ extension Task$Typings on Task {
 
   /// The problem matchers attached to the task. Defaults to an empty
   ///  array.
-  _i2.List<_i2.String> get problemMatchers => ((_i5.getProperty(
+  _i2.List<_i2.String> get problemMatchers => (_i5.getProperty(
         this,
         'problemMatchers',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set problemMatchers(_i2.List<_i2.String> value) {
     _i5.setProperty(
@@ -18939,6 +19160,7 @@ extension Task$Typings on Task {
   }
 }
 
+/* Source:  */
 /// A task provider allows to add tasks to the task service.
 /// A task provider is registered via {@link tasks.registerTaskProvider}.
 @_i1.JS()
@@ -18962,14 +19184,14 @@ class TaskProvider<T extends _i3.Task> {
         provideTasks: provideTasks == null
             ? null
             : _i5.allowInterop(
-                (p0) => _i6.Promise.functionFutureOr(() => provideTasks(p0))),
+                (p0) => _i6.Promise.futureOr(() => provideTasks(p0))),
         resolveTask: resolveTask == null
             ? null
             : _i5.allowInterop((
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveTask(
+                _i6.Promise.futureOr(() => resolveTask(
                       p0,
                       p1,
                     ))),
@@ -18982,7 +19204,7 @@ extension TaskProvider$Typings<T extends _i3.Task> on TaskProvider<T> {
     _i5.setProperty(
       this,
       'provideTasks',
-      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+      _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -19010,7 +19232,7 @@ extension TaskProvider$Typings<T extends _i3.Task> on TaskProvider<T> {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -19038,6 +19260,7 @@ extension TaskProvider$Typings<T extends _i3.Task> on TaskProvider<T> {
           );
 }
 
+/* Source:  */
 /// An object representing an executed Task. It can be used
 /// to terminate a task.
 ///
@@ -19093,6 +19316,7 @@ extension TaskExecution$Typings on TaskExecution {
       );
 }
 
+/* Source:  */
 /// An event signaling the start of a task execution.
 ///
 /// This interface is not intended to be implemented.
@@ -19114,6 +19338,7 @@ extension TaskStartEvent$Typings on TaskStartEvent {
       );
 }
 
+/* Source:  */
 /// An event signaling the end of an executed task.
 ///
 /// This interface is not intended to be implemented.
@@ -19135,6 +19360,7 @@ extension TaskEndEvent$Typings on TaskEndEvent {
       );
 }
 
+/* Source:  */
 /// An event signaling the start of a process execution
 /// triggered through a task
 @_i1.JS()
@@ -19170,6 +19396,7 @@ extension TaskProcessStartEvent$Typings on TaskProcessStartEvent {
       );
 }
 
+/* Source:  */
 /// An event signaling the end of a process execution
 /// triggered through a task
 @_i1.JS()
@@ -19205,6 +19432,7 @@ extension TaskProcessEndEvent$Typings on TaskProcessEndEvent {
       );
 }
 
+/* Source:  */
 /// A task filter denotes tasks by their version and types
 @_i1.JS()
 @_i1.staticInterop
@@ -19254,6 +19482,7 @@ extension TaskFilter$Typings on TaskFilter {
   }
 }
 
+/* Source:  */
 /// The `FileStat`-type represents metadata about a file
 @_i1.JS()
 @_i1.staticInterop
@@ -19366,6 +19595,7 @@ extension FileStat$Typings on FileStat {
   }
 }
 
+/* Source:  */
 /// A type that filesystem providers should use to signal errors.
 ///
 /// This class has factory methods for common error-cases, like `FileNotFound` when
@@ -19445,6 +19675,7 @@ extension FileSystemError$Typings on FileSystemError {
       );
 }
 
+/* Source:  */
 /// The event filesystem providers must use to signal a file change.
 @_i1.JS()
 @_i1.staticInterop
@@ -19480,6 +19711,7 @@ extension FileChangeEvent$Typings on FileChangeEvent {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -19493,13 +19725,14 @@ extension IInline37$Typings on IInline37 {
       );
 
   /// A list of paths and pattern to exclude from watching.
-  _i2.List<_i2.String> get excludes => ((_i5.getProperty(
+  _i2.List<_i2.String> get excludes => (_i5.getProperty(
         this,
         'excludes',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -19519,6 +19752,7 @@ extension IInline38$Typings on IInline38 {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -19532,6 +19766,7 @@ extension IInline39$Typings on IInline39 {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -19545,6 +19780,7 @@ extension IInline40$Typings on IInline40 {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -19558,6 +19794,7 @@ extension IInline41$Typings on IInline41 {
       );
 }
 
+/* Source:  */
 /// The filesystem provider defines what the editor needs to read, write, discover,
 /// and to manage files and folders. It allows extensions to serve files from remote places,
 /// like ftp-servers, and to seamlessly integrate those into the editor.
@@ -19629,15 +19866,15 @@ class FileSystemProvider {
         readDirectory: readDirectory == null
             ? null
             : _i5.allowInterop(
-                (p0) => _i6.Promise.functionFutureOr(() => readDirectory(p0))),
+                (p0) => _i6.Promise.futureOr(() => readDirectory(p0))),
         createDirectory: createDirectory == null
             ? null
-            : _i5.allowInterop((p0) =>
-                _i6.Promise.functionFutureOr(() => createDirectory(p0))),
+            : _i5.allowInterop(
+                (p0) => _i6.Promise.futureOr(() => createDirectory(p0))),
         readFile: readFile == null
             ? null
-            : _i5.allowInterop(
-                (p0) => _i6.Promise.functionFutureOr(() => readFile(p0))),
+            : _i5
+                .allowInterop((p0) => _i6.Promise.futureOr(() => readFile(p0))),
         writeFile: writeFile == null
             ? null
             : _i5.allowInterop((
@@ -19645,7 +19882,7 @@ class FileSystemProvider {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => writeFile(
+                _i6.Promise.futureOr(() => writeFile(
                       p0,
                       p1,
                       p2,
@@ -19656,7 +19893,7 @@ class FileSystemProvider {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => delete(
+                _i6.Promise.futureOr(() => delete(
                       p0,
                       p1,
                     ))),
@@ -19667,7 +19904,7 @@ class FileSystemProvider {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => rename(
+                _i6.Promise.futureOr(() => rename(
                       p0,
                       p1,
                       p2,
@@ -19679,7 +19916,7 @@ class FileSystemProvider {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => copy(
+                _i6.Promise.futureOr(() => copy(
                       p0,
                       p1,
                       p2,
@@ -19763,7 +20000,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i5.setProperty(
       this,
       'readDirectory',
-      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+      _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -19788,7 +20025,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i5.setProperty(
       this,
       'createDirectory',
-      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+      _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -19808,7 +20045,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
     _i5.setProperty(
       this,
       'readFile',
-      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+      _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -19838,7 +20075,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -19880,7 +20117,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -19920,7 +20157,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -19964,7 +20201,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -19996,6 +20233,7 @@ extension FileSystemProvider$Typings on FileSystemProvider {
           );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -20029,6 +20267,7 @@ extension IInline42$Typings on IInline42 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -20049,6 +20288,7 @@ extension IInline43$Typings on IInline43 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -20069,6 +20309,7 @@ extension IInline44$Typings on IInline44 {
   }
 }
 
+/* Source:  */
 /// The file system interface exposes the editor's built-in and contributed
 /// {@link FileSystemProviderfile system providers}. It allows extensions to work
 /// with files from the local disk as well as files from remote places, like the
@@ -20164,7 +20405,7 @@ extension FileSystem$Typings on FileSystem {
   }
 
   _i2.Future<_i2.dynamic> Function(_i3.Uri) get readDirectory =>
-      (_i3.Uri p0) => _i5.callMethod(
+      (_i3.Uri p0) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'readDirectory',
@@ -20174,7 +20415,7 @@ extension FileSystem$Typings on FileSystem {
               this,
               p0,
             ],
-          );
+          ));
   set createDirectory(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -20184,7 +20425,7 @@ extension FileSystem$Typings on FileSystem {
   }
 
   _i2.Future<_i2.dynamic> Function(_i3.Uri) get createDirectory =>
-      (_i3.Uri p0) => _i5.callMethod(
+      (_i3.Uri p0) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'createDirectory',
@@ -20194,7 +20435,7 @@ extension FileSystem$Typings on FileSystem {
               this,
               p0,
             ],
-          );
+          ));
   set readFile(_i2.Future<_i2.dynamic> Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -20204,7 +20445,7 @@ extension FileSystem$Typings on FileSystem {
   }
 
   _i2.Future<_i2.dynamic> Function(_i3.Uri) get readFile =>
-      (_i3.Uri p0) => _i5.callMethod(
+      (_i3.Uri p0) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'readFile',
@@ -20214,7 +20455,7 @@ extension FileSystem$Typings on FileSystem {
               this,
               p0,
             ],
-          );
+          ));
   set writeFile(
       _i2.Future<_i2.dynamic> Function(
         _i3.Uri,
@@ -20234,7 +20475,7 @@ extension FileSystem$Typings on FileSystem {
         _i3.Uri p0,
         _i8.Uint8List p1,
       ) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'writeFile',
@@ -20245,7 +20486,7 @@ extension FileSystem$Typings on FileSystem {
               p0,
               p1,
             ],
-          );
+          ));
   set delete(
       _i2.Future<_i2.dynamic> Function(
         _i3.Uri, [
@@ -20265,7 +20506,7 @@ extension FileSystem$Typings on FileSystem {
         _i3.Uri p0, [
         _i2.dynamic p1,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'delete',
@@ -20274,9 +20515,9 @@ extension FileSystem$Typings on FileSystem {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
-          );
+          ));
   set rename(
       _i2.Future<_i2.dynamic> Function(
         _i3.Uri,
@@ -20299,7 +20540,7 @@ extension FileSystem$Typings on FileSystem {
         _i3.Uri p1, [
         _i2.dynamic p2,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'rename',
@@ -20309,9 +20550,9 @@ extension FileSystem$Typings on FileSystem {
               this,
               p0,
               p1,
-              p2,
+              p2 ?? _i6.undefined,
             ],
-          );
+          ));
   set copy(
       _i2.Future<_i2.dynamic> Function(
         _i3.Uri,
@@ -20334,7 +20575,7 @@ extension FileSystem$Typings on FileSystem {
         _i3.Uri p1, [
         _i2.dynamic p2,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'copy',
@@ -20344,9 +20585,9 @@ extension FileSystem$Typings on FileSystem {
               this,
               p0,
               p1,
-              p2,
+              p2 ?? _i6.undefined,
             ],
-          );
+          ));
   set isWritableFileSystem(_i2.bool? Function(_i2.String) value) {
     _i5.setProperty(
       this,
@@ -20369,6 +20610,7 @@ extension FileSystem$Typings on FileSystem {
           );
 }
 
+/* Source:  */
 /// Defines a port mapping used for localhost inside the webview.
 @_i1.JS()
 @_i1.staticInterop
@@ -20403,6 +20645,7 @@ extension WebviewPortMapping$Typings on WebviewPortMapping {
       );
 }
 
+/* Source:  */
 /// Content settings for a webview.
 @_i1.JS()
 @_i1.staticInterop
@@ -20465,10 +20708,10 @@ extension WebviewOptions$Typings on WebviewOptions {
   /// Default to the root folders of the current workspace plus the extension's install directory.
   ///
   /// Pass in an empty array to disallow access to any local resources.
-  _i2.List<_i3.Uri>? get localResourceRoots => ((_i5.getProperty(
+  _i2.List<_i3.Uri>? get localResourceRoots => (_i5.getProperty(
         this,
         'localResourceRoots',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 
   /// Mappings of localhost ports used inside the webview.
@@ -20482,13 +20725,14 @@ extension WebviewOptions$Typings on WebviewOptions {
   ///
   /// *Note* that port mappings only work for `http` or `https` urls. Websocket urls (e.g. `ws://localhost:3000`)
   /// cannot be mapped to another port.
-  _i2.List<_i3.WebviewPortMapping>? get portMapping => ((_i5.getProperty(
+  _i2.List<_i3.WebviewPortMapping>? get portMapping => (_i5.getProperty(
         this,
         'portMapping',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 }
 
+/* Source:  */
 /// Displays html content, similarly to an iframe.
 @_i1.JS()
 @_i1.staticInterop
@@ -20601,7 +20845,7 @@ extension Webview$Typings on Webview {
   }
 
   _i2.Future<_i2.dynamic> Function([_i2.dynamic]) get postMessage =>
-      ([_i2.dynamic p0]) => _i5.callMethod(
+      ([_i2.dynamic p0]) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'postMessage',
@@ -20611,7 +20855,7 @@ extension Webview$Typings on Webview {
               this,
               p0,
             ],
-          );
+          ));
   set asWebviewUri(_i3.Uri Function(_i3.Uri) value) {
     _i5.setProperty(
       this,
@@ -20633,6 +20877,7 @@ extension Webview$Typings on Webview {
       );
 }
 
+/* Source:  */
 /// Content settings for a webview panel.
 @_i1.JS()
 @_i1.staticInterop
@@ -20682,6 +20927,7 @@ extension WebviewPanelOptions$Typings on WebviewPanelOptions {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -20701,6 +20947,7 @@ extension IInline45$Typings on IInline45 {
       );
 }
 
+/* Source:  */
 /// A panel that contains a webview.
 @_i1.JS()
 @_i1.staticInterop
@@ -20865,8 +21112,8 @@ extension WebviewPanel$Typings on WebviewPanel {
             r'call',
             [
               this,
-              p0,
-              p1,
+              p0?.name ?? _i6.undefined,
+              p1 ?? _i6.undefined,
             ],
           );
   set dispose(_i2.dynamic Function() value) {
@@ -20887,6 +21134,7 @@ extension WebviewPanel$Typings on WebviewPanel {
       );
 }
 
+/* Source:  */
 /// Event fired when a webview panel's view state changes.
 @_i1.JS()
 @_i1.staticInterop
@@ -20910,6 +21158,7 @@ extension WebviewPanelOnDidChangeViewStateEvent$Typings
       );
 }
 
+/* Source:  */
 /// Restore webview panels that have been persisted when vscode shuts down.
 ///
 /// There are two types of webview persistence:
@@ -20977,7 +21226,7 @@ extension WebviewPanelSerializer$Typings<T> on WebviewPanelSerializer<T> {
         _i3.WebviewPanel p0,
         T p1,
       ) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'deserializeWebviewPanel',
@@ -20988,9 +21237,10 @@ extension WebviewPanelSerializer$Typings<T> on WebviewPanelSerializer<T> {
               p0,
               p1,
             ],
-          );
+          ));
 }
 
+/* Source:  */
 /// A webview based view.
 @_i1.JS()
 @_i1.staticInterop
@@ -21134,11 +21384,12 @@ extension WebviewView$Typings on WebviewView {
         r'call',
         [
           this,
-          p0,
+          p0 ?? _i6.undefined,
         ],
       );
 }
 
+/* Source:  */
 /// Additional information the webview view being resolved.
 @_i1.JS()
 @_i1.staticInterop
@@ -21184,6 +21435,7 @@ extension WebviewViewResolveContext$Typings<T> on WebviewViewResolveContext<T> {
       );
 }
 
+/* Source:  */
 /// Provider for creating `WebviewView` elements.
 @_i1.JS()
 @_i1.staticInterop
@@ -21205,7 +21457,7 @@ class WebviewViewProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => resolveWebviewView(
+                  _i6.Promise.futureOr(() => resolveWebviewView(
                         p0,
                         p1,
                         p2,
@@ -21227,7 +21479,7 @@ extension WebviewViewProvider$Typings on WebviewViewProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -21259,6 +21511,7 @@ extension WebviewViewProvider$Typings on WebviewViewProvider {
           );
 }
 
+/* Source:  */
 /// Provider for text based custom editors.
 ///
 /// Text based custom editors use a {@linkcode TextDocument} as their data model. This considerably simplifies
@@ -21285,7 +21538,7 @@ class CustomTextEditorProvider {
                   p1,
                   p2,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => resolveCustomTextEditor(
+                  _i6.Promise.futureOr(() => resolveCustomTextEditor(
                         p0,
                         p1,
                         p2,
@@ -21307,7 +21560,7 @@ extension CustomTextEditorProvider$Typings on CustomTextEditorProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -21339,6 +21592,7 @@ extension CustomTextEditorProvider$Typings on CustomTextEditorProvider {
           );
 }
 
+/* Source:  */
 /// Represents a custom document used by a {@linkcode CustomEditorProvider}.
 ///
 /// Custom documents are only used within a given `CustomEditorProvider`. The lifecycle of a `CustomDocument` is
@@ -21386,6 +21640,7 @@ extension CustomDocument$Typings on CustomDocument {
       );
 }
 
+/* Source:  */
 /// Event triggered by extensions to signal to the editor that an edit has occurred on an {@linkcode CustomDocument}.
 @_i1.JS()
 @_i1.staticInterop
@@ -21409,12 +21664,10 @@ class CustomDocumentEditEvent<T extends _i3.CustomDocument> {
         label: label,
         undo: undo == null
             ? null
-            : _i5
-                .allowInterop(() => _i6.Promise.functionFutureOr(() => undo())),
+            : _i5.allowInterop(() => _i6.Promise.futureOr(() => undo())),
         redo: redo == null
             ? null
-            : _i5
-                .allowInterop(() => _i6.Promise.functionFutureOr(() => redo())),
+            : _i5.allowInterop(() => _i6.Promise.futureOr(() => redo())),
       );
 }
 
@@ -21437,7 +21690,7 @@ extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
     _i5.setProperty(
       this,
       'undo',
-      _i5.allowInterop(() => _i6.Promise.functionFutureOr(() => value())),
+      _i5.allowInterop(() => _i6.Promise.futureOr(() => value())),
     );
   }
 
@@ -21453,7 +21706,7 @@ extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
     _i5.setProperty(
       this,
       'redo',
-      _i5.allowInterop(() => _i6.Promise.functionFutureOr(() => value())),
+      _i5.allowInterop(() => _i6.Promise.futureOr(() => value())),
     );
   }
 
@@ -21467,6 +21720,7 @@ extension CustomDocumentEditEvent$Typings<T extends _i3.CustomDocument>
       );
 }
 
+/* Source:  */
 /// Event triggered by extensions to signal to the editor that the content of a {@linkcode CustomDocument}
 /// has changed.
 @_i1.JS()
@@ -21488,6 +21742,7 @@ extension CustomDocumentContentChangeEvent$Typings<T extends _i3.CustomDocument>
       );
 }
 
+/* Source:  */
 /// A backup for an {@linkcode CustomDocument}.
 @_i1.JS()
 @_i1.staticInterop
@@ -21534,6 +21789,7 @@ extension CustomDocumentBackup$Typings on CustomDocumentBackup {
       );
 }
 
+/* Source:  */
 /// Additional information used to implement {@linkcode CustomDocumentBackup}.
 @_i1.JS()
 @_i1.staticInterop
@@ -21559,6 +21815,7 @@ extension CustomDocumentBackupContext$Typings on CustomDocumentBackupContext {
       );
 }
 
+/* Source:  */
 /// Additional information about the opening custom document.
 @_i1.JS()
 @_i1.staticInterop
@@ -21598,6 +21855,7 @@ extension CustomDocumentOpenContext$Typings on CustomDocumentOpenContext {
       );
 }
 
+/* Source:  */
 /// Provider for readonly custom editors that use a custom document model.
 ///
 /// Custom editors use {@linkcode CustomDocument} as their document model instead of a {@linkcode TextDocument}.
@@ -21633,7 +21891,7 @@ class CustomReadonlyEditorProvider<T extends _i3.CustomDocument> {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => openCustomDocument(
+                _i6.Promise.futureOr(() => openCustomDocument(
                       p0,
                       p1,
                       p2,
@@ -21645,7 +21903,7 @@ class CustomReadonlyEditorProvider<T extends _i3.CustomDocument> {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveCustomEditor(
+                _i6.Promise.futureOr(() => resolveCustomEditor(
                       p0,
                       p1,
                       p2,
@@ -21669,7 +21927,7 @@ extension CustomReadonlyEditorProvider$Typings<T extends _i3.CustomDocument>
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -21713,7 +21971,7 @@ extension CustomReadonlyEditorProvider$Typings<T extends _i3.CustomDocument>
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -21745,6 +22003,7 @@ extension CustomReadonlyEditorProvider$Typings<T extends _i3.CustomDocument>
           );
 }
 
+/* Source:  */
 /// Provider for editable custom editors that use a custom document model.
 ///
 /// Custom editors use {@linkcode CustomDocument} as their document model instead of a {@linkcode TextDocument}.
@@ -21819,7 +22078,7 @@ class CustomEditorProvider<T extends _i3.CustomDocument>
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => openCustomDocument(
+                _i6.Promise.futureOr(() => openCustomDocument(
                       p0,
                       p1,
                       p2,
@@ -21831,7 +22090,7 @@ class CustomEditorProvider<T extends _i3.CustomDocument>
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveCustomEditor(
+                _i6.Promise.futureOr(() => resolveCustomEditor(
                       p0,
                       p1,
                       p2,
@@ -21883,7 +22142,7 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
         T p0,
         _i3.CancellationToken p1,
       ) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'saveCustomDocument',
@@ -21894,7 +22153,7 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
               p0,
               p1,
             ],
-          );
+          ));
   set saveCustomDocumentAs(
       _i2.Future<_i2.dynamic> Function(
         T,
@@ -21917,7 +22176,7 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
         _i3.Uri p1,
         _i3.CancellationToken p2,
       ) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'saveCustomDocumentAs',
@@ -21929,7 +22188,7 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
               p1,
               p2,
             ],
-          );
+          ));
   set revertCustomDocument(
       _i2.Future<_i2.dynamic> Function(
         T,
@@ -21949,7 +22208,7 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
         T p0,
         _i3.CancellationToken p1,
       ) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'revertCustomDocument',
@@ -21960,7 +22219,7 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
               p0,
               p1,
             ],
-          );
+          ));
   set backupCustomDocument(
       _i2.Future<_i2.dynamic> Function(
         T,
@@ -21983,7 +22242,7 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
         _i3.CustomDocumentBackupContext p1,
         _i3.CancellationToken p2,
       ) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'backupCustomDocument',
@@ -21995,9 +22254,10 @@ extension CustomEditorProvider$Typings<T extends _i3.CustomDocument>
               p1,
               p2,
             ],
-          );
+          ));
 }
 
+/* Source:  */
 /// The clipboard provides read and write access to the system's clipboard.
 @_i1.JS()
 @_i1.staticInterop
@@ -22027,14 +22287,15 @@ extension Clipboard$Typings on Clipboard {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function() get readText => () => _i5.callMethod(
-        _i5.getProperty(
-          this,
-          'readText',
-        ),
-        r'call',
-        [this],
-      );
+  _i2.Future<_i2.dynamic> Function() get readText =>
+      () => _i5.promiseToFuture(_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'readText',
+            ),
+            r'call',
+            [this],
+          ));
   set writeText(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
     _i5.setProperty(
       this,
@@ -22044,7 +22305,7 @@ extension Clipboard$Typings on Clipboard {
   }
 
   _i2.Future<_i2.dynamic> Function(_i2.String) get writeText =>
-      (_i2.String p0) => _i5.callMethod(
+      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'writeText',
@@ -22054,9 +22315,10 @@ extension Clipboard$Typings on Clipboard {
               this,
               p0,
             ],
-          );
+          ));
 }
 
+/* Source:  */
 /// Represents the state of a window.
 @_i1.JS()
 @_i1.staticInterop
@@ -22075,6 +22337,7 @@ extension WindowState$Typings on WindowState {
       );
 }
 
+/* Source:  */
 /// A uri handler is responsible for handling system-wide {@link Uriuris}.
 @_i1.JS()
 @_i1.staticInterop
@@ -22087,7 +22350,7 @@ class UriHandler {
           handleUri: handleUri == null
               ? null
               : _i5.allowInterop(
-                  (p0) => _i6.Promise.functionFutureOr(() => handleUri(p0))));
+                  (p0) => _i6.Promise.futureOr(() => handleUri(p0))));
 }
 
 extension UriHandler$Typings on UriHandler {
@@ -22095,7 +22358,7 @@ extension UriHandler$Typings on UriHandler {
     _i5.setProperty(
       this,
       'handleUri',
-      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+      _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -22113,6 +22376,7 @@ extension UriHandler$Typings on UriHandler {
           );
 }
 
+/* Source:  */
 /// Options for creating a {@link TreeView}
 @_i1.JS()
 @_i1.staticInterop
@@ -22245,6 +22509,7 @@ extension TreeViewOptions$Typings<T> on TreeViewOptions<T> {
   }
 }
 
+/* Source:  */
 /// The event that is fired when an element in the {@link TreeView} is expanded or collapsed
 @_i1.JS()
 @_i1.staticInterop
@@ -22264,6 +22529,7 @@ extension TreeViewExpansionEvent$Typings<T> on TreeViewExpansionEvent<T> {
       );
 }
 
+/* Source:  */
 /// The event that is fired when there is a change in {@link TreeView.selectiontree view's selection}
 @_i1.JS()
 @_i1.staticInterop
@@ -22278,13 +22544,14 @@ class TreeViewSelectionChangeEvent<T> {
 extension TreeViewSelectionChangeEvent$Typings<T>
     on TreeViewSelectionChangeEvent<T> {
   /// Selected elements.
-  _i2.List<T> get selection => ((_i5.getProperty(
+  _i2.List<T> get selection => (_i5.getProperty(
         this,
         'selection',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// The event that is fired when there is a change in {@link TreeView.visibletree view's visibility}
 @_i1.JS()
 @_i1.staticInterop
@@ -22305,6 +22572,7 @@ extension TreeViewVisibilityChangeEvent$Typings
       );
 }
 
+/* Source:  */
 /// A file associated with a {@linkcode DataTransferItem}.
 ///
 /// Instances of this type can only be created by the editor and not by extensions.
@@ -22352,16 +22620,18 @@ extension DataTransferFile$Typings on DataTransferFile {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function() get data => () => _i5.callMethod(
-        _i5.getProperty(
-          this,
-          'data',
-        ),
-        r'call',
-        [this],
-      );
+  _i2.Future<_i2.dynamic> Function() get data =>
+      () => _i5.promiseToFuture(_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'data',
+            ),
+            r'call',
+            [this],
+          ));
 }
 
+/* Source:  */
 /// Encapsulates data transferred during drag and drop operations.
 @_i1.JS()
 @_i1.staticInterop
@@ -22409,6 +22679,7 @@ extension DataTransferItem$Typings on DataTransferItem {
       );
 }
 
+/* Source:  */
 /// A map containing a mapping of the mime type of the corresponding transferred data.
 ///
 /// Drag and drop controllers that implement {@link TreeDragAndDropController.handleDrag`handleDrag`} can add additional mime types to the
@@ -22486,6 +22757,7 @@ extension DataTransfer$Typings on DataTransfer {
   }
 }
 
+/* Source:  */
 /// Provides support for drag and drop in `TreeView`.
 @_i1.JS()
 @_i1.staticInterop
@@ -22522,7 +22794,7 @@ class TreeDragAndDropController<T> {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => handleDrag(
+                _i6.Promise.futureOr(() => handleDrag(
                       p0,
                       p1,
                       p2,
@@ -22534,7 +22806,7 @@ class TreeDragAndDropController<T> {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => handleDrop(
+                _i6.Promise.futureOr(() => handleDrop(
                       p0,
                       p1,
                       p2,
@@ -22558,20 +22830,20 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
   /// 3. Open the developer tools and drag the item with unknown mime type over your tree. The mime types will be logged to the developer console
   ///
   /// Note that mime types that cannot be sent to the extension will be omitted.
-  _i2.List<_i2.String> get dropMimeTypes => ((_i5.getProperty(
+  _i2.List<_i2.String> get dropMimeTypes => (_i5.getProperty(
         this,
         'dropMimeTypes',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// The mime types that the {@link TreeDragAndDropController.handleDrag`handleDrag`} method of this `TreeDragAndDropController` may add to the tree data transfer.
   /// This could be well-defined, existing, mime types, and also mime types defined by the extension.
   ///
   /// The recommended mime type of the tree (`application/vnd.code.tree.<treeidlowercase>`) will be automatically added.
-  _i2.List<_i2.String> get dragMimeTypes => ((_i5.getProperty(
+  _i2.List<_i2.String> get dragMimeTypes => (_i5.getProperty(
         this,
         'dragMimeTypes',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set handleDrag(
       _i4.FutureOr<void> Function(
@@ -22587,7 +22859,7 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -22631,7 +22903,7 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -22656,13 +22928,14 @@ extension TreeDragAndDropController$Typings<T> on TreeDragAndDropController<T> {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
               p1,
               p2,
             ],
           );
 }
 
+/* Source:  */
 /// A badge presenting a value for a view
 @_i1.JS()
 @_i1.staticInterop
@@ -22697,6 +22970,7 @@ extension ViewBadge$Typings on ViewBadge {
       );
 }
 
+/* Source:  */
 /// An event describing the change in a tree item's checkbox state.
 @_i1.JS()
 @_i1.staticInterop
@@ -22726,6 +23000,7 @@ extension TreeCheckboxChangeEvent$Typings<T> on TreeCheckboxChangeEvent<T> {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -22772,6 +23047,7 @@ extension IInline54$Typings on IInline54 {
   }
 }
 
+/* Source:  */
 /// Represents a Tree view
 @_i1.JS()
 @_i1.staticInterop
@@ -22843,10 +23119,10 @@ extension TreeView$Typings<T> on TreeView<T> {
       );
 
   /// Currently selected elements.
-  _i2.List<T> get selection => ((_i5.getProperty(
+  _i2.List<T> get selection => (_i5.getProperty(
         this,
         'selection',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Event that is fired when the {@link TreeView.selectionselection} has changed
@@ -22951,7 +23227,7 @@ extension TreeView$Typings<T> on TreeView<T> {
         T p0, [
         _i2.dynamic p1,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'reveal',
@@ -22960,11 +23236,12 @@ extension TreeView$Typings<T> on TreeView<T> {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
-          );
+          ));
 }
 
+/* Source:  */
 /// A data provider that provides tree data
 @_i1.JS()
 @_i1.staticInterop
@@ -22995,11 +23272,11 @@ class TreeDataProvider<T> {
         getChildren: getChildren == null
             ? null
             : _i5.allowInterop(
-                (p0) => _i6.Promise.functionFutureOr(() => getChildren(p0))),
+                (p0) => _i6.Promise.futureOr(() => getChildren(p0))),
         getParent: getParent == null
             ? null
             : _i5.allowInterop(
-                (p0) => _i6.Promise.functionFutureOr(() => getParent(p0))),
+                (p0) => _i6.Promise.futureOr(() => getParent(p0))),
         resolveTreeItem: resolveTreeItem == null
             ? null
             : _i5.allowInterop((
@@ -23007,7 +23284,7 @@ class TreeDataProvider<T> {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveTreeItem(
+                _i6.Promise.futureOr(() => resolveTreeItem(
                       p0,
                       p1,
                       p2,
@@ -23054,7 +23331,7 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
     _i5.setProperty(
       this,
       'getChildren',
-      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+      _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -23067,14 +23344,14 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
             ],
           );
   set getParent(_i4.FutureOr<T> Function(T) value) {
     _i5.setProperty(
       this,
       'getParent',
-      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+      _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -23103,7 +23380,7 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -23135,6 +23412,7 @@ extension TreeDataProvider$Typings<T> on TreeDataProvider<T> {
           );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -23168,6 +23446,7 @@ extension IInline55$Typings on IInline55 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -23194,6 +23473,7 @@ extension IInline56$Typings on IInline56 {
       );
 }
 
+/* Source:  */
 /// A tree item is an UI element of the tree. Tree items are created by the {@link TreeDataProviderdata provider}.
 @_i1.JS()
 @_i1.staticInterop
@@ -23409,6 +23689,7 @@ extension TreeItem$Typings on TreeItem {
   }
 }
 
+/* Source:  */
 /// Label describing the {@link TreeItemTree item}
 @_i1.JS()
 @_i1.staticInterop
@@ -23459,10 +23740,10 @@ extension TreeItemLabel$Typings on TreeItemLabel {
       (
         _i2.num,
         _i2.num,
-      )>? get highlights => ((_i5.getProperty(
+      )>? get highlights => (_i5.getProperty(
         this,
         'highlights',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set highlights(
       _i2.List<
@@ -23485,6 +23766,7 @@ extension TreeItemLabel$Typings on TreeItemLabel {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -23518,6 +23800,7 @@ extension IInline58$Typings on IInline58 {
   }
 }
 
+/* Source:  */
 /// Value-object describing what options a terminal should use.
 @_i1.JS()
 @_i1.staticInterop
@@ -23740,6 +24023,7 @@ extension TerminalOptions$Typings on TerminalOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -23773,6 +24057,7 @@ extension IInline59$Typings on IInline59 {
   }
 }
 
+/* Source:  */
 /// Value-object describing what options a virtual process terminal should use.
 @_i1.JS()
 @_i1.staticInterop
@@ -23889,6 +24174,7 @@ extension ExtensionTerminalOptions$Typings on ExtensionTerminalOptions {
   }
 }
 
+/* Source:  */
 /// Defines the interface of a terminal pty, enabling extensions to control a terminal.
 @_i1.JS()
 @_i1.staticInterop
@@ -24088,7 +24374,7 @@ extension Pseudoterminal$Typings on Pseudoterminal {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
             ],
           );
   set close(void Function() value) {
@@ -24149,6 +24435,7 @@ extension Pseudoterminal$Typings on Pseudoterminal {
           );
 }
 
+/* Source:  */
 /// Represents the dimensions of a terminal.
 @_i1.JS()
 @_i1.staticInterop
@@ -24183,6 +24470,7 @@ extension TerminalDimensions$Typings on TerminalDimensions {
       );
 }
 
+/* Source:  */
 /// Represents how a terminal exited.
 @_i1.JS()
 @_i1.staticInterop
@@ -24222,6 +24510,7 @@ extension TerminalExitStatus$Typings on TerminalExitStatus {
       ));
 }
 
+/* Source:  */
 /// Options applied to the mutator.
 @_i1.JS()
 @_i1.staticInterop
@@ -24273,6 +24562,7 @@ extension EnvironmentVariableMutatorOptions$Typings
   }
 }
 
+/* Source:  */
 /// A type of mutation and its value to be applied to an environment variable.
 @_i1.JS()
 @_i1.staticInterop
@@ -24317,6 +24607,7 @@ extension EnvironmentVariableMutator$Typings on EnvironmentVariableMutator {
       );
 }
 
+/* Source:  */
 /// A collection of mutations that an extension can apply to a process environment.
 @_i1.JS()
 @_i1.staticInterop
@@ -24450,7 +24741,7 @@ extension EnvironmentVariableCollection$Typings
               this,
               p0,
               p1,
-              p2,
+              p2 ?? _i6.undefined,
             ],
           );
   set append(
@@ -24485,7 +24776,7 @@ extension EnvironmentVariableCollection$Typings
               this,
               p0,
               p1,
-              p2,
+              p2 ?? _i6.undefined,
             ],
           );
   set prepend(
@@ -24520,7 +24811,7 @@ extension EnvironmentVariableCollection$Typings
               this,
               p0,
               p1,
-              p2,
+              p2 ?? _i6.undefined,
             ],
           );
   set get(_i3.EnvironmentVariableMutator? Function(_i2.String) value) {
@@ -24582,7 +24873,7 @@ extension EnvironmentVariableCollection$Typings
             r'call',
             [
               this,
-              p0,
+              _i5.allowInterop(p0),
               p1,
             ],
           );
@@ -24623,6 +24914,7 @@ extension EnvironmentVariableCollection$Typings
       );
 }
 
+/* Source:  */
 /// A collection of mutations that an extension can apply to a process environment. Applies to all scopes.
 @_i1.JS()
 @_i1.staticInterop
@@ -24716,6 +25008,7 @@ extension GlobalEnvironmentVariableCollection$Typings
           );
 }
 
+/* Source:  */
 /// The scope object to which the environment variable collection applies.
 @_i1.JS()
 @_i1.staticInterop
@@ -24743,6 +25036,7 @@ extension EnvironmentVariableScope$Typings on EnvironmentVariableScope {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -24763,6 +25057,7 @@ extension IInline60$Typings on IInline60 {
   }
 }
 
+/* Source:  */
 /// Value-object describing where and how progress should show.
 @_i1.JS()
 @_i1.staticInterop
@@ -24831,6 +25126,7 @@ extension ProgressOptions$Typings on ProgressOptions {
   }
 }
 
+/* Source:  */
 /// A light-weight user input UI that is initially not visible. After
 /// configuring it through its properties the extension can make it
 /// visible by calling {@link QuickInput.show}.
@@ -25047,6 +25343,7 @@ extension QuickInput$Typings on QuickInput {
       );
 }
 
+/* Source:  */
 /// A concrete {@link QuickInput} to let the user pick an item from a
 /// list of items of type T. The items can be filtered through a filter text field and
 /// there is an option {@link QuickPick.canSelectManycanSelectMany} to allow for
@@ -25187,10 +25484,10 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
       );
 
   /// Buttons for actions in the UI.
-  _i2.List<_i3.QuickInputButton> get buttons => ((_i5.getProperty(
+  _i2.List<_i3.QuickInputButton> get buttons => (_i5.getProperty(
         this,
         'buttons',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set buttons(_i2.List<_i3.QuickInputButton> value) {
     _i5.setProperty(
@@ -25216,10 +25513,10 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
       );
 
   /// Items to pick from. This can be read and updated by the extension.
-  _i2.List<T> get items => ((_i5.getProperty(
+  _i2.List<T> get items => (_i5.getProperty(
         this,
         'items',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set items(_i2.List<T> value) {
     _i5.setProperty(
@@ -25282,10 +25579,10 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
   }
 
   /// Active items. This can be read and updated by the extension.
-  _i2.List<T> get activeItems => ((_i5.getProperty(
+  _i2.List<T> get activeItems => (_i5.getProperty(
         this,
         'activeItems',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set activeItems(_i2.List<T> value) {
     _i5.setProperty(
@@ -25302,10 +25599,10 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
       );
 
   /// Selected items. This can be read and updated by the extension.
-  _i2.List<T> get selectedItems => ((_i5.getProperty(
+  _i2.List<T> get selectedItems => (_i5.getProperty(
         this,
         'selectedItems',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set selectedItems(_i2.List<T> value) {
     _i5.setProperty(
@@ -25322,6 +25619,7 @@ extension QuickPick$Typings<T extends _i3.QuickPickItem> on QuickPick<T> {
       );
 }
 
+/* Source:  */
 /// A concrete {@link QuickInput} to let the user input a text value.
 ///
 /// Note that in many cases the more convenient {@link window.showInputBox}
@@ -25492,10 +25790,10 @@ extension InputBox$Typings on InputBox {
       );
 
   /// Buttons for actions in the UI.
-  _i2.List<_i3.QuickInputButton> get buttons => ((_i5.getProperty(
+  _i2.List<_i3.QuickInputButton> get buttons => (_i5.getProperty(
         this,
         'buttons',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set buttons(_i2.List<_i3.QuickInputButton> value) {
     _i5.setProperty(
@@ -25540,6 +25838,7 @@ extension InputBox$Typings on InputBox {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -25573,6 +25872,7 @@ extension IInline61$Typings on IInline61 {
   }
 }
 
+/* Source:  */
 /// Button for an action in a {@link QuickPick} or {@link InputBox}.
 @_i1.JS()
 @_i1.staticInterop
@@ -25607,6 +25907,7 @@ extension QuickInputButton$Typings on QuickInputButton {
       );
 }
 
+/* Source:  */
 /// Predefined buttons for {@link QuickPick} and {@link InputBox}.
 @_i1.JS()
 @_i1.staticInterop
@@ -25629,7 +25930,7 @@ class QuickInputButtons {
 _i2.Object get _declaredQuickInputButtons => _i5.getProperty(
       _self,
       'QuickInputButtons',
-    );
+    ); /* Source:  */
 
 /// An event signaling when a button in a particular {@link QuickPickItem} was triggered.
 /// This event does not fire for buttons in the title bar.
@@ -25667,6 +25968,7 @@ extension QuickPickItemButtonEvent$Typings<T extends _i3.QuickPickItem>
       );
 }
 
+/* Source:  */
 /// An event describing an individual change in the text of a {@link TextDocumentdocument}.
 @_i1.JS()
 @_i1.staticInterop
@@ -25720,6 +26022,7 @@ extension TextDocumentContentChangeEvent$Typings
       );
 }
 
+/* Source:  */
 /// An event describing a transactional {@link TextDocumentdocument} change.
 @_i1.JS()
 @_i1.staticInterop
@@ -25752,10 +26055,10 @@ extension TextDocumentChangeEvent$Typings on TextDocumentChangeEvent {
 
   /// An array of content changes.
   _i2.List<_i3.TextDocumentContentChangeEvent> get contentChanges =>
-      ((_i5.getProperty(
+      (_i5.getProperty(
         this,
         'contentChanges',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// The reason why the document was changed.
@@ -25769,6 +26072,7 @@ extension TextDocumentChangeEvent$Typings on TextDocumentChangeEvent {
       };
 }
 
+/* Source:  */
 /// An event that is fired when a {@link TextDocumentdocument} will be saved.
 ///
 /// To make modifications to the document before it is being saved, call the
@@ -25880,6 +26184,7 @@ extension TextDocumentWillSaveEvent$Typings on TextDocumentWillSaveEvent {
       );
 }
 
+/* Source:  */
 /// An event that is fired when files are going to be created.
 ///
 /// To make modifications to the workspace before the files are created,
@@ -25912,10 +26217,10 @@ extension FileWillCreateEvent$Typings on FileWillCreateEvent {
       );
 
   /// The files that are going to be created.
-  _i2.List<_i3.Uri> get files => ((_i5.getProperty(
+  _i2.List<_i3.Uri> get files => (_i5.getProperty(
         this,
         'files',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Allows to pause the event and to apply a {@link WorkspaceEdit workspace edit}.
@@ -25987,6 +26292,7 @@ extension FileWillCreateEvent$Typings on FileWillCreateEvent {
       );
 }
 
+/* Source:  */
 /// An event that is fired after files are created.
 @_i1.JS()
 @_i1.staticInterop
@@ -26000,13 +26306,14 @@ class FileCreateEvent {
 
 extension FileCreateEvent$Typings on FileCreateEvent {
   /// The files that got created.
-  _i2.List<_i3.Uri> get files => ((_i5.getProperty(
+  _i2.List<_i3.Uri> get files => (_i5.getProperty(
         this,
         'files',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// An event that is fired when files are going to be deleted.
 ///
 /// To make modifications to the workspace before the files are deleted,
@@ -26039,10 +26346,10 @@ extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
       );
 
   /// The files that are going to be deleted.
-  _i2.List<_i3.Uri> get files => ((_i5.getProperty(
+  _i2.List<_i3.Uri> get files => (_i5.getProperty(
         this,
         'files',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Allows to pause the event and to apply a {@link WorkspaceEdit workspace edit}.
@@ -26114,6 +26421,7 @@ extension FileWillDeleteEvent$Typings on FileWillDeleteEvent {
       );
 }
 
+/* Source:  */
 /// An event that is fired after files are deleted.
 @_i1.JS()
 @_i1.staticInterop
@@ -26127,13 +26435,14 @@ class FileDeleteEvent {
 
 extension FileDeleteEvent$Typings on FileDeleteEvent {
   /// The files that got deleted.
-  _i2.List<_i3.Uri> get files => ((_i5.getProperty(
+  _i2.List<_i3.Uri> get files => (_i5.getProperty(
         this,
         'files',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -26153,6 +26462,7 @@ extension IInline62$Typings on IInline62 {
       );
 }
 
+/* Source:  */
 /// An event that is fired when files are going to be renamed.
 ///
 /// To make modifications to the workspace before the files are renamed,
@@ -26259,6 +26569,7 @@ extension FileWillRenameEvent$Typings on FileWillRenameEvent {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -26278,6 +26589,7 @@ extension IInline63$Typings on IInline63 {
       );
 }
 
+/* Source:  */
 /// An event that is fired after files are renamed.
 @_i1.JS()
 @_i1.staticInterop
@@ -26297,6 +26609,7 @@ extension FileRenameEvent$Typings on FileRenameEvent {
       );
 }
 
+/* Source:  */
 /// An event describing a change to the set of {@link workspace.workspaceFoldersworkspace folders}.
 @_i1.JS()
 @_i1.staticInterop
@@ -26319,20 +26632,21 @@ class WorkspaceFoldersChangeEvent {
 
 extension WorkspaceFoldersChangeEvent$Typings on WorkspaceFoldersChangeEvent {
   /// Added workspace folders.
-  _i2.List<_i3.WorkspaceFolder> get added => ((_i5.getProperty(
+  _i2.List<_i3.WorkspaceFolder> get added => (_i5.getProperty(
         this,
         'added',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Removed workspace folders.
-  _i2.List<_i3.WorkspaceFolder> get removed => ((_i5.getProperty(
+  _i2.List<_i3.WorkspaceFolder> get removed => (_i5.getProperty(
         this,
         'removed',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// A workspace folder is one of potentially many roots opened by the editor. All workspace folders
 /// are equal which means there is no notion of an active or primary workspace folder.
 @_i1.JS()
@@ -26381,6 +26695,7 @@ extension WorkspaceFolder$Typings on WorkspaceFolder {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -26414,6 +26729,7 @@ extension IInline67$Typings on IInline67 {
   }
 }
 
+/* Source:  */
 /// An event describing the change in Configuration
 @_i1.JS()
 @_i1.staticInterop
@@ -26462,11 +26778,12 @@ extension ConfigurationChangeEvent$Typings on ConfigurationChangeEvent {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined ?? _i6.undefined,
             ],
           );
 }
 
+/* Source:  */
 /// Represents a notebook editor that is attached to a {@link NotebookDocumentnotebook}.
 /// Additional properties of the NotebookEditor are available in the proposed
 /// API, which will be finalized later.
@@ -26527,10 +26844,10 @@ extension NotebookEditor$Typings on NotebookEditor {
   /// All selections in this notebook editor.
   ///
   ///  The primary selection (or focused range) is `selections[0]`. When the document has no cells, the primary selection is empty `{ start: 0, end: 0 }`;
-  _i2.List<_i3.NotebookRange> get selections => ((_i5.getProperty(
+  _i2.List<_i3.NotebookRange> get selections => (_i5.getProperty(
         this,
         'selections',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set selections(_i2.List<_i3.NotebookRange> value) {
     _i5.setProperty(
@@ -26541,10 +26858,10 @@ extension NotebookEditor$Typings on NotebookEditor {
   }
 
   /// The current visible ranges in the editor (vertically).
-  _i2.List<_i3.NotebookRange> get visibleRanges => ((_i5.getProperty(
+  _i2.List<_i3.NotebookRange> get visibleRanges => (_i5.getProperty(
         this,
         'visibleRanges',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// The column in which this editor shows.
@@ -26583,11 +26900,12 @@ extension NotebookEditor$Typings on NotebookEditor {
             [
               this,
               p0,
-              p1,
+              p1?.name ?? _i6.undefined,
             ],
           );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -26607,6 +26925,7 @@ extension IInline68$Typings on IInline68 {
       );
 }
 
+/* Source:  */
 /// Renderer messaging is used to communicate with a single renderer. It's returned from {@link notebooks.createRendererMessaging}.
 @_i1.JS()
 @_i1.staticInterop
@@ -26655,7 +26974,7 @@ extension NotebookRendererMessaging$Typings on NotebookRendererMessaging {
         _i2.dynamic p0,
         _i3.NotebookEditor? p1,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'postMessage',
@@ -26664,11 +26983,12 @@ extension NotebookRendererMessaging$Typings on NotebookRendererMessaging {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
-          );
+          ));
 }
 
+/* Source:  */
 /// Represents a cell of a {@link NotebookDocumentnotebook}, either a {@link NotebookCellKind.Codecode}-cell
 /// or {@link NotebookCellKind.Markupmarkup}-cell.
 ///
@@ -26742,10 +27062,10 @@ extension NotebookCell$Typings on NotebookCell {
       );
 
   /// The outputs of this cell.
-  _i2.List<_i3.NotebookCellOutput> get outputs => ((_i5.getProperty(
+  _i2.List<_i3.NotebookCellOutput> get outputs => (_i5.getProperty(
         this,
         'outputs',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// The most recent {@link NotebookCellExecutionSummaryexecution summary} for this cell.
@@ -26755,6 +27075,7 @@ extension NotebookCell$Typings on NotebookCell {
       );
 }
 
+/* Source:  */
 /// Represents a notebook which itself is a sequence of {@link NotebookCellcode or markup cells}. Notebook documents are
 /// created from {@link NotebookDatanotebook data}.
 @_i1.JS()
@@ -26886,7 +27207,7 @@ extension NotebookDocument$Typings on NotebookDocument {
   }
 
   _i2.List<_i3.NotebookCell> Function([_i3.NotebookRange?]) get getCells =>
-      ([_i3.NotebookRange? p0]) => _i5.callMethod(
+      ([_i3.NotebookRange? p0]) => (_i5.callMethod(
             _i5.getProperty(
               this,
               'getCells',
@@ -26894,9 +27215,10 @@ extension NotebookDocument$Typings on NotebookDocument {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
             ],
-          );
+          ) as _i2.List)
+              .cast();
   set save(_i2.Future<_i2.dynamic> Function() value) {
     _i5.setProperty(
       this,
@@ -26905,16 +27227,18 @@ extension NotebookDocument$Typings on NotebookDocument {
     );
   }
 
-  _i2.Future<_i2.dynamic> Function() get save => () => _i5.callMethod(
-        _i5.getProperty(
-          this,
-          'save',
-        ),
-        r'call',
-        [this],
-      );
+  _i2.Future<_i2.dynamic> Function() get save =>
+      () => _i5.promiseToFuture(_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'save',
+            ),
+            r'call',
+            [this],
+          ));
 }
 
+/* Source:  */
 /// Describes a change to a notebook cell.
 @_i1.JS()
 @_i1.staticInterop
@@ -26967,10 +27291,10 @@ extension NotebookDocumentCellChange$Typings on NotebookDocumentCellChange {
       );
 
   /// The new outputs of the cell or `undefined` when they did not change.
-  _i2.List<_i3.NotebookCellOutput>? get outputs => ((_i5.getProperty(
+  _i2.List<_i3.NotebookCellOutput>? get outputs => (_i5.getProperty(
         this,
         'outputs',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 
   /// The new execution summary of the cell or `undefined` when it did not change.
@@ -26980,6 +27304,7 @@ extension NotebookDocumentCellChange$Typings on NotebookDocumentCellChange {
       );
 }
 
+/* Source:  */
 /// Describes a structural change to a notebook document, e.g newly added and removed cells.
 @_i1.JS()
 @_i1.staticInterop
@@ -27015,20 +27340,21 @@ extension NotebookDocumentContentChange$Typings
       );
 
   /// Cells that have been added to the document.
-  _i2.List<_i3.NotebookCell> get addedCells => ((_i5.getProperty(
+  _i2.List<_i3.NotebookCell> get addedCells => (_i5.getProperty(
         this,
         'addedCells',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Cells that have been removed from the document.
-  _i2.List<_i3.NotebookCell> get removedCells => ((_i5.getProperty(
+  _i2.List<_i3.NotebookCell> get removedCells => (_i5.getProperty(
         this,
         'removedCells',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// An event describing a transactional {@link NotebookDocumentnotebook} change.
 @_i1.JS()
 @_i1.staticInterop
@@ -27070,20 +27396,21 @@ extension NotebookDocumentChangeEvent$Typings on NotebookDocumentChangeEvent {
 
   /// An array of content changes describing added or removed {@link NotebookCellcells}.
   _i2.List<_i3.NotebookDocumentContentChange> get contentChanges =>
-      ((_i5.getProperty(
+      (_i5.getProperty(
         this,
         'contentChanges',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// An array of {@link NotebookDocumentCellChangecell changes}.
-  _i2.List<_i3.NotebookDocumentCellChange> get cellChanges => ((_i5.getProperty(
+  _i2.List<_i3.NotebookDocumentCellChange> get cellChanges => (_i5.getProperty(
         this,
         'cellChanges',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// An event that is fired when a {@link NotebookDocumentnotebook document} will be saved.
 ///
 /// To make modifications to the document before it is being saved, call the
@@ -27205,6 +27532,7 @@ extension NotebookDocumentWillSaveEvent$Typings
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -27224,6 +27552,7 @@ extension IInline73$Typings on IInline73 {
       );
 }
 
+/* Source:  */
 /// The summary of a notebook cell execution.
 @_i1.JS()
 @_i1.staticInterop
@@ -27267,6 +27596,7 @@ extension NotebookCellExecutionSummary$Typings on NotebookCellExecutionSummary {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -27300,6 +27630,7 @@ extension IInline74$Typings on IInline74 {
   }
 }
 
+/* Source:  */
 /// A notebook range represents an ordered pair of two cell indices.
 /// It is guaranteed that start is less than or equal to end.
 @_i1.JS()
@@ -27354,6 +27685,7 @@ extension NotebookRange$Typings on NotebookRange {
       );
 }
 
+/* Source:  */
 /// One representation of a {@link NotebookCellOutputnotebook output}, defined by MIME type and data.
 @_i1.JS()
 @_i1.staticInterop
@@ -27467,6 +27799,7 @@ extension NotebookCellOutputItem$Typings on NotebookCellOutputItem {
   }
 }
 
+/* Source:  */
 /// Notebook cell output represents a result of executing a cell. It is a container type for multiple
 /// {@link NotebookCellOutputItemoutput items} where contained items represent the same result but
 /// use different MIME types.
@@ -27503,10 +27836,10 @@ extension NotebookCellOutput$Typings on NotebookCellOutput {
   ///  	vscode.NotebookCellOutputItem.text('Hey', 'text/plain'), // INVALID: repeated type, editor will pick just one
   ///  ])
   ///  ```
-  _i2.List<_i3.NotebookCellOutputItem> get items => ((_i5.getProperty(
+  _i2.List<_i3.NotebookCellOutputItem> get items => (_i5.getProperty(
         this,
         'items',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set items(_i2.List<_i3.NotebookCellOutputItem> value) {
     _i5.setProperty(
@@ -27530,6 +27863,7 @@ extension NotebookCellOutput$Typings on NotebookCellOutput {
   }
 }
 
+/* Source:  */
 /// NotebookCellData is the raw representation of notebook cells. Its is part of {@linkcode NotebookData}.
 @_i1.JS()
 @_i1.staticInterop
@@ -27597,10 +27931,10 @@ extension NotebookCellData$Typings on NotebookCellData {
   }
 
   /// The outputs of this cell data.
-  _i2.List<_i3.NotebookCellOutput> get outputs => ((_i5.getProperty(
+  _i2.List<_i3.NotebookCellOutput> get outputs => (_i5.getProperty(
         this,
         'outputs',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set outputs(_i2.List<_i3.NotebookCellOutput> value) {
     _i5.setProperty(
@@ -27637,6 +27971,7 @@ extension NotebookCellData$Typings on NotebookCellData {
   }
 }
 
+/* Source:  */
 /// Raw representation of a notebook.
 ///
 /// Extensions are responsible for creating {@linkcode NotebookData} so that the editor
@@ -27658,10 +27993,10 @@ _i2.Object get _declaredNotebookData => _i5.getProperty(
 
 extension NotebookData$Typings on NotebookData {
   /// The cell data of this notebook data.
-  _i2.List<_i3.NotebookCellData> get cells => ((_i5.getProperty(
+  _i2.List<_i3.NotebookCellData> get cells => (_i5.getProperty(
         this,
         'cells',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set cells(_i2.List<_i3.NotebookCellData> value) {
     _i5.setProperty(
@@ -27685,6 +28020,7 @@ extension NotebookData$Typings on NotebookData {
   }
 }
 
+/* Source:  */
 /// The notebook serializer enables the editor to open notebook files.
 ///
 /// At its core the editor only knows a {@link NotebookDatanotebook data structure} but not
@@ -27720,7 +28056,7 @@ class NotebookSerializer {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => serializeNotebook(
+                _i6.Promise.futureOr(() => serializeNotebook(
                       p0,
                       p1,
                     ))),
@@ -27771,7 +28107,7 @@ extension NotebookSerializer$Typings on NotebookSerializer {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -27799,6 +28135,7 @@ extension NotebookSerializer$Typings on NotebookSerializer {
           );
 }
 
+/* Source:  */
 /// Notebook content options define what parts of a notebook are persisted. Note
 ///
 /// For instance, a notebook serializer can opt-out of saving outputs and in that case the editor doesn't mark a
@@ -27875,6 +28212,7 @@ extension NotebookDocumentContentOptions$Typings
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -27894,6 +28232,7 @@ extension IInline81$Typings on IInline81 {
       );
 }
 
+/* Source:  */
 /// A notebook controller represents an entity that can execute notebook cells. This is often referred to as a kernel.
 ///
 /// There can be multiple controllers and the editor will let users choose which controller to use for a certain notebook. The
@@ -27963,15 +28302,15 @@ class NotebookController {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => executeHandler(
+                _i6.Promise.futureOr(() => executeHandler(
                       p0,
                       p1,
                       p2,
                     ))),
         interruptHandler: interruptHandler == null
             ? null
-            : _i5.allowInterop((p0) =>
-                _i6.Promise.functionFutureOr(() => interruptHandler(p0))),
+            : _i5.allowInterop(
+                (p0) => _i6.Promise.futureOr(() => interruptHandler(p0))),
         onDidChangeSelectedNotebooks:
             onDidChangeSelectedNotebooks ?? _i6.undefined,
         createNotebookCellExecution: createNotebookCellExecution == null
@@ -28013,10 +28352,10 @@ extension NotebookController$Typings on NotebookController {
   ///  myController.supportedLanguages = undefined; // falsy
   ///  myController.supportedLanguages = []; // falsy
   ///  ```
-  _i2.List<_i2.String>? get supportedLanguages => ((_i5.getProperty(
+  _i2.List<_i2.String>? get supportedLanguages => (_i5.getProperty(
         this,
         'supportedLanguages',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set supportedLanguages(_i2.List<_i2.String>? value) {
     _i5.setProperty(
@@ -28117,7 +28456,7 @@ extension NotebookController$Typings on NotebookController {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -28154,8 +28493,7 @@ extension NotebookController$Typings on NotebookController {
       'interruptHandler',
       value == null
           ? _i6.undefined
-          : _i5.allowInterop(
-              (p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+          : _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -28221,7 +28559,7 @@ extension NotebookController$Typings on NotebookController {
             [
               this,
               p0,
-              p1,
+              p1.name,
             ],
           );
   set dispose(void Function() value) {
@@ -28242,6 +28580,7 @@ extension NotebookController$Typings on NotebookController {
       );
 }
 
+/* Source:  */
 /// A NotebookCellExecution is how {@link NotebookControllernotebook controller} modify a notebook cell as
 /// it is executing.
 ///
@@ -28358,7 +28697,7 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
         r'call',
         [
           this,
-          p0,
+          p0 ?? _i6.undefined,
         ],
       );
   set end(
@@ -28388,8 +28727,8 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
             r'call',
             [
               this,
-              p0,
-              p1,
+              p0 ?? _i6.undefined,
+              p1 ?? _i6.undefined,
             ],
           );
   set clearOutput(_i2.Future<_i2.dynamic> Function([_i3.NotebookCell?]) value) {
@@ -28401,7 +28740,7 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
   }
 
   _i2.Future<_i2.dynamic> Function([_i3.NotebookCell?]) get clearOutput =>
-      ([_i3.NotebookCell? p0]) => _i5.callMethod(
+      ([_i3.NotebookCell? p0]) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'clearOutput',
@@ -28409,9 +28748,9 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
             ],
-          );
+          ));
   set replaceOutput(
       _i2.Future<_i2.dynamic> Function(
         _i2.Object, [
@@ -28431,7 +28770,7 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
         _i2.Object p0, [
         _i3.NotebookCell? p1,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'replaceOutput',
@@ -28440,9 +28779,9 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
-          );
+          ));
   set appendOutput(
       _i2.Future<_i2.dynamic> Function(
         _i2.Object, [
@@ -28462,7 +28801,7 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
         _i2.Object p0, [
         _i3.NotebookCell? p1,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'appendOutput',
@@ -28471,9 +28810,9 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
-          );
+          ));
   set replaceOutputItems(
       _i2.Future<_i2.dynamic> Function(
         _i2.Object,
@@ -28493,7 +28832,7 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
         _i2.Object p0,
         _i3.NotebookCellOutput p1,
       ) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'replaceOutputItems',
@@ -28504,7 +28843,7 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
               p0,
               p1,
             ],
-          );
+          ));
   set appendOutputItems(
       _i2.Future<_i2.dynamic> Function(
         _i2.Object,
@@ -28524,7 +28863,7 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
         _i2.Object p0,
         _i3.NotebookCellOutput p1,
       ) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'appendOutputItems',
@@ -28535,9 +28874,10 @@ extension NotebookCellExecution$Typings on NotebookCellExecution {
               p0,
               p1,
             ],
-          );
+          ));
 }
 
+/* Source:  */
 /// A contribution to a cell's status bar
 @_i1.JS()
 @_i1.staticInterop
@@ -28646,6 +28986,7 @@ extension NotebookCellStatusBarItem$Typings on NotebookCellStatusBarItem {
   }
 }
 
+/* Source:  */
 /// A provider that can contribute items to the status bar that appears below a cell's editor.
 @_i1.JS()
 @_i1.staticInterop
@@ -28672,7 +29013,7 @@ class NotebookCellStatusBarItemProvider {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideCellStatusBarItems(
+                _i6.Promise.futureOr(() => provideCellStatusBarItems(
                       p0,
                       p1,
                     ))),
@@ -28706,7 +29047,7 @@ extension NotebookCellStatusBarItemProvider$Typings
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -28734,6 +29075,7 @@ extension NotebookCellStatusBarItemProvider$Typings
           );
 }
 
+/* Source:  */
 /// Represents the input box in the Source Control viewlet.
 @_i1.JS()
 @_i1.staticInterop
@@ -28814,6 +29156,7 @@ extension SourceControlInputBox$Typings on SourceControlInputBox {
   }
 }
 
+/* Source:  */
 /// A quick diff provider provides a {@link Uriuri} to the original state of a
 /// modified resource. The editor will use this information to render ad'hoc diffs
 /// within the text.
@@ -28835,7 +29178,7 @@ class QuickDiffProvider {
                   p0,
                   p1,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideOriginalResource(
+                  _i6.Promise.futureOr(() => provideOriginalResource(
                         p0,
                         p1,
                       ))));
@@ -28854,7 +29197,7 @@ extension QuickDiffProvider$Typings on QuickDiffProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -28882,6 +29225,7 @@ extension QuickDiffProvider$Typings on QuickDiffProvider {
           );
 }
 
+/* Source:  */
 /// The theme-aware decorations for a
 /// {@link SourceControlResourceStatesource control resource state}.
 @_i1.JS()
@@ -28906,6 +29250,7 @@ extension SourceControlResourceThemableDecorations$Typings
       );
 }
 
+/* Source:  */
 /// The decorations for a {@link SourceControlResourceStatesource control resource state}.
 /// Can be independently specified for light and dark themes.
 @_i1.JS()
@@ -28976,6 +29321,7 @@ extension SourceControlResourceDecorations$Typings
       );
 }
 
+/* Source:  */
 /// An source control resource state represents the state of an underlying workspace
 /// resource within a certain {@link SourceControlResourceGroupsource control group}.
 @_i1.JS()
@@ -29046,6 +29392,7 @@ extension SourceControlResourceState$Typings on SourceControlResourceState {
       );
 }
 
+/* Source:  */
 /// A source control resource group is a collection of
 /// {@link SourceControlResourceStatesource control resource states}.
 @_i1.JS()
@@ -29113,10 +29460,10 @@ extension SourceControlResourceGroup$Typings on SourceControlResourceGroup {
   /// This group's collection of
   ///  {@link SourceControlResourceState source control resource states}.
   _i2.List<_i3.SourceControlResourceState> get resourceStates =>
-      ((_i5.getProperty(
+      (_i5.getProperty(
         this,
         'resourceStates',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set resourceStates(_i2.List<_i3.SourceControlResourceState> value) {
     _i5.setProperty(
@@ -29144,6 +29491,7 @@ extension SourceControlResourceGroup$Typings on SourceControlResourceGroup {
       );
 }
 
+/* Source:  */
 /// An source control is able to provide {@link SourceControlResourceStateresource states}
 /// to the editor and interact with the editor in several source control related ways.
 @_i1.JS()
@@ -29288,10 +29636,10 @@ extension SourceControl$Typings on SourceControl {
   /// Optional status bar commands.
   ///
   ///  These commands will be displayed in the editor's status bar.
-  _i2.List<_i3.Command>? get statusBarCommands => ((_i5.getProperty(
+  _i2.List<_i3.Command>? get statusBarCommands => (_i5.getProperty(
         this,
         'statusBarCommands',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set statusBarCommands(_i2.List<_i3.Command>? value) {
     _i5.setProperty(
@@ -29350,6 +29698,7 @@ extension SourceControl$Typings on SourceControl {
       );
 }
 
+/* Source:  */
 /// A DebugProtocolMessage is an opaque stand-in type for the [ProtocolMessage](https://microsoft.github.io/debug-adapter-protocol/specification#Base_Protocol_ProtocolMessage) type defined in the Debug Adapter Protocol.
 @_i1.JS()
 @_i1.staticInterop
@@ -29360,6 +29709,7 @@ class DebugProtocolMessage {
   factory DebugProtocolMessage() => DebugProtocolMessage._();
 }
 
+/* Source:  */
 /// A DebugProtocolSource is an opaque stand-in type for the [Source](https://microsoft.github.io/debug-adapter-protocol/specification#Types_Source) type defined in the Debug Adapter Protocol.
 @_i1.JS()
 @_i1.staticInterop
@@ -29370,6 +29720,7 @@ class DebugProtocolSource {
   factory DebugProtocolSource() => DebugProtocolSource._();
 }
 
+/* Source:  */
 /// A DebugProtocolBreakpoint is an opaque stand-in type for the [Breakpoint](https://microsoft.github.io/debug-adapter-protocol/specification#Types_Breakpoint) type defined in the Debug Adapter Protocol.
 @_i1.JS()
 @_i1.staticInterop
@@ -29380,6 +29731,7 @@ class DebugProtocolBreakpoint {
   factory DebugProtocolBreakpoint() => DebugProtocolBreakpoint._();
 }
 
+/* Source:  */
 /// Configuration for a debug session.
 @_i1.JS()
 @_i1.staticInterop
@@ -29459,6 +29811,7 @@ extension DebugConfiguration$Typings on DebugConfiguration {
   }
 }
 
+/* Source:  */
 /// A debug session.
 @_i1.JS()
 @_i1.staticInterop
@@ -29570,7 +29923,7 @@ extension DebugSession$Typings on DebugSession {
         _i2.String p0, [
         _i2.dynamic p1,
       ]) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'customRequest',
@@ -29581,7 +29934,7 @@ extension DebugSession$Typings on DebugSession {
               p0,
               p1,
             ],
-          );
+          ));
   set getDebugProtocolBreakpoint(
       _i2.Future<_i2.dynamic> Function(_i3.Breakpoint) value) {
     _i5.setProperty(
@@ -29592,19 +29945,21 @@ extension DebugSession$Typings on DebugSession {
   }
 
   _i2.Future<_i2.dynamic> Function(_i3.Breakpoint)
-      get getDebugProtocolBreakpoint => (_i3.Breakpoint p0) => _i5.callMethod(
-            _i5.getProperty(
-              this,
-              'getDebugProtocolBreakpoint',
-            ),
-            r'call',
-            [
-              this,
-              p0,
-            ],
-          );
+      get getDebugProtocolBreakpoint =>
+          (_i3.Breakpoint p0) => _i5.promiseToFuture(_i5.callMethod(
+                _i5.getProperty(
+                  this,
+                  'getDebugProtocolBreakpoint',
+                ),
+                r'call',
+                [
+                  this,
+                  p0,
+                ],
+              ));
 }
 
+/* Source:  */
 /// A custom Debug Adapter Protocol event received from a {@link DebugSessiondebug session}.
 @_i1.JS()
 @_i1.staticInterop
@@ -29648,6 +30003,7 @@ extension DebugSessionCustomEvent$Typings on DebugSessionCustomEvent {
       );
 }
 
+/* Source:  */
 /// A debug configuration provider allows to add debug configurations to the debug service
 /// and to resolve launch configurations before they are used to start a debug session.
 /// A debug configuration provider is registered via {@link debug.registerDebugConfigurationProvider}.
@@ -29684,7 +30040,7 @@ class DebugConfigurationProvider {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => provideDebugConfigurations(
+                _i6.Promise.futureOr(() => provideDebugConfigurations(
                       p0,
                       p1,
                     ))),
@@ -29695,7 +30051,7 @@ class DebugConfigurationProvider {
                 p1,
                 p2,
               ) =>
-                _i6.Promise.functionFutureOr(() => resolveDebugConfiguration(
+                _i6.Promise.futureOr(() => resolveDebugConfiguration(
                       p0,
                       p1,
                       p2,
@@ -29708,7 +30064,7 @@ class DebugConfigurationProvider {
                     p1,
                     p2,
                   ) =>
-                    _i6.Promise.functionFutureOr(
+                    _i6.Promise.futureOr(
                         () => resolveDebugConfigurationWithSubstitutedVariables(
                               p0,
                               p1,
@@ -29730,7 +30086,7 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -29752,8 +30108,8 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
             r'call',
             [
               this,
-              p0,
-              p1,
+              p0 ?? _i6.undefined,
+              p1 ?? _i6.undefined,
             ],
           );
   set resolveDebugConfiguration(
@@ -29770,7 +30126,7 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -29795,9 +30151,9 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
               p1,
-              p2,
+              p2 ?? _i6.undefined,
             ],
           );
   set resolveDebugConfigurationWithSubstitutedVariables(
@@ -29814,7 +30170,7 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
         p1,
         p2,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
                 p2,
@@ -29839,13 +30195,14 @@ extension DebugConfigurationProvider$Typings on DebugConfigurationProvider {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
               p1,
-              p2,
+              p2 ?? _i6.undefined,
             ],
           );
 }
 
+/* Source:  */
 /// Represents a debug adapter executable and optional arguments and runtime options passed to it.
 @_i1.JS()
 @_i1.staticInterop
@@ -29880,10 +30237,10 @@ extension DebugAdapterExecutable$Typings on DebugAdapterExecutable {
       );
 
   /// The arguments passed to the debug adapter executable. Defaults to an empty array.
-  _i2.List<_i2.String> get args => ((_i5.getProperty(
+  _i2.List<_i2.String> get args => (_i5.getProperty(
         this,
         'args',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Optional options to be used when the debug adapter is started.
@@ -29894,6 +30251,7 @@ extension DebugAdapterExecutable$Typings on DebugAdapterExecutable {
       );
 }
 
+/* Source:  */
 /// Options for a debug adapter executable.
 @_i1.JS()
 @_i1.staticInterop
@@ -29945,6 +30303,7 @@ extension DebugAdapterExecutableOptions$Typings
   }
 }
 
+/* Source:  */
 /// Represents a debug adapter running as a socket based server.
 @_i1.JS()
 @_i1.staticInterop
@@ -29981,6 +30340,7 @@ extension DebugAdapterServer$Typings on DebugAdapterServer {
       );
 }
 
+/* Source:  */
 /// Represents a debug adapter running as a Named Pipe (on Windows)/UNIX Domain Socket (on non-Windows) based server.
 @_i1.JS()
 @_i1.staticInterop
@@ -30004,6 +30364,7 @@ extension DebugAdapterNamedPipeServer$Typings on DebugAdapterNamedPipeServer {
       );
 }
 
+/* Source:  */
 /// A debug adapter that implements the Debug Adapter Protocol can be registered with the editor if it implements the DebugAdapter interface.
 @_i1.JS()
 @_i1.staticInterop
@@ -30054,6 +30415,7 @@ extension DebugAdapter$Typings on DebugAdapter {
           );
 }
 
+/* Source:  */
 /// A debug adapter descriptor for an inline implementation.
 @_i1.JS()
 @_i1.staticInterop
@@ -30068,7 +30430,7 @@ class DebugAdapterInlineImplementation {
 _i2.Object get _declaredDebugAdapterInlineImplementation => _i5.getProperty(
       _self,
       'DebugAdapterInlineImplementation',
-    );
+    ); /* Source:  */
 
 /// A debug adaper factory that creates {@link DebugAdapterDescriptordebug adapter descriptors}.
 @_i1.JS()
@@ -30090,11 +30452,10 @@ class DebugAdapterDescriptorFactory {
                   p0,
                   p1,
                 ) =>
-                  _i6.Promise.functionFutureOr(
-                      () => createDebugAdapterDescriptor(
-                            p0,
-                            p1,
-                          ))));
+                  _i6.Promise.futureOr(() => createDebugAdapterDescriptor(
+                        p0,
+                        p1,
+                      ))));
 }
 
 extension DebugAdapterDescriptorFactory$Typings
@@ -30111,7 +30472,7 @@ extension DebugAdapterDescriptorFactory$Typings
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -30134,11 +30495,12 @@ extension DebugAdapterDescriptorFactory$Typings
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
 }
 
+/* Source:  */
 /// A Debug Adapter Tracker is a means to track the communication between the editor and a Debug Adapter.
 @_i1.JS()
 @_i1.staticInterop
@@ -30301,12 +30663,13 @@ extension DebugAdapterTracker$Typings on DebugAdapterTracker {
             r'call',
             [
               this,
-              p0,
-              p1,
+              p0 ?? _i6.undefined,
+              p1 ?? _i6.undefined,
             ],
           );
 }
 
+/* Source:  */
 /// A debug adaper factory that creates {@link DebugAdapterTrackerdebug adapter trackers}.
 @_i1.JS()
 @_i1.staticInterop
@@ -30321,8 +30684,8 @@ class DebugAdapterTrackerFactory {
       DebugAdapterTrackerFactory._(
           createDebugAdapterTracker: createDebugAdapterTracker == null
               ? null
-              : _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(
-                  () => createDebugAdapterTracker(p0))));
+              : _i5.allowInterop((p0) =>
+                  _i6.Promise.futureOr(() => createDebugAdapterTracker(p0))));
 }
 
 extension DebugAdapterTrackerFactory$Typings on DebugAdapterTrackerFactory {
@@ -30331,7 +30694,7 @@ extension DebugAdapterTrackerFactory$Typings on DebugAdapterTrackerFactory {
     _i5.setProperty(
       this,
       'createDebugAdapterTracker',
-      _i5.allowInterop((p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+      _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -30349,6 +30712,7 @@ extension DebugAdapterTrackerFactory$Typings on DebugAdapterTrackerFactory {
           );
 }
 
+/* Source:  */
 /// Represents the debug console.
 @_i1.JS()
 @_i1.staticInterop
@@ -30410,6 +30774,7 @@ extension DebugConsole$Typings on DebugConsole {
       );
 }
 
+/* Source:  */
 /// An event describing the changes to the set of {@link Breakpointbreakpoints}.
 @_i1.JS()
 @_i1.staticInterop
@@ -30435,27 +30800,28 @@ class BreakpointsChangeEvent {
 
 extension BreakpointsChangeEvent$Typings on BreakpointsChangeEvent {
   /// Added breakpoints.
-  _i2.List<_i3.Breakpoint> get added => ((_i5.getProperty(
+  _i2.List<_i3.Breakpoint> get added => (_i5.getProperty(
         this,
         'added',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Removed breakpoints.
-  _i2.List<_i3.Breakpoint> get removed => ((_i5.getProperty(
+  _i2.List<_i3.Breakpoint> get removed => (_i5.getProperty(
         this,
         'removed',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Changed breakpoints.
-  _i2.List<_i3.Breakpoint> get changed => ((_i5.getProperty(
+  _i2.List<_i3.Breakpoint> get changed => (_i5.getProperty(
         this,
         'changed',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// The base class of all breakpoint types.
 @_i1.JS()
 @_i1.staticInterop
@@ -30514,6 +30880,7 @@ extension Breakpoint$Typings on Breakpoint {
       );
 }
 
+/* Source:  */
 /// A breakpoint specified by a source location.
 @_i1.JS()
 @_i1.staticInterop
@@ -30550,6 +30917,7 @@ extension SourceBreakpoint$Typings on SourceBreakpoint {
       );
 }
 
+/* Source:  */
 /// A breakpoint specified by a function name.
 @_i1.JS()
 @_i1.staticInterop
@@ -30586,6 +30954,7 @@ extension FunctionBreakpoint$Typings on FunctionBreakpoint {
       );
 }
 
+/* Source:  */
 /// Options for {@link debug.startDebuggingstarting a debug session}.
 @_i1.JS()
 @_i1.staticInterop
@@ -30757,6 +31126,7 @@ extension DebugSessionOptions$Typings on DebugSessionOptions {
   }
 }
 
+/* Source:  */
 /// A collection of {@link Commentcomments} representing a conversation at a particular range in a document.
 @_i1.JS()
 @_i1.staticInterop
@@ -30820,10 +31190,10 @@ extension CommentThread$Typings on CommentThread {
   }
 
   /// The ordered comments of the thread.
-  _i2.List<_i3.Comment> get comments => ((_i5.getProperty(
+  _i2.List<_i3.Comment> get comments => (_i5.getProperty(
         this,
         'comments',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set comments(_i2.List<_i3.Comment> value) {
     _i5.setProperty(
@@ -30937,6 +31307,7 @@ extension CommentThread$Typings on CommentThread {
       );
 }
 
+/* Source:  */
 /// Author information of a {@link Comment}
 @_i1.JS()
 @_i1.staticInterop
@@ -30985,6 +31356,7 @@ extension CommentAuthorInformation$Typings on CommentAuthorInformation {
   }
 }
 
+/* Source:  */
 /// Reactions of a {@link Comment}
 @_i1.JS()
 @_i1.staticInterop
@@ -31037,6 +31409,7 @@ extension CommentReaction$Typings on CommentReaction {
       );
 }
 
+/* Source:  */
 /// A comment is displayed within the editor or the Comments Panel, depending on how it is provided.
 @_i1.JS()
 @_i1.staticInterop
@@ -31141,10 +31514,10 @@ extension Comment$Typings on Comment {
   }
 
   /// Optional reactions of the {@link Comment}
-  _i2.List<_i3.CommentReaction>? get reactions => ((_i5.getProperty(
+  _i2.List<_i3.CommentReaction>? get reactions => (_i5.getProperty(
         this,
         'reactions',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
   set reactions(_i2.List<_i3.CommentReaction>? value) {
     _i5.setProperty(
@@ -31183,6 +31556,7 @@ extension Comment$Typings on Comment {
   }
 }
 
+/* Source:  */
 /// Command argument for actions registered in `comments/commentThread/context`.
 @_i1.JS()
 @_i1.staticInterop
@@ -31231,6 +31605,7 @@ extension CommentReply$Typings on CommentReply {
   }
 }
 
+/* Source:  */
 /// Commenting range provider for a {@link CommentControllercomment controller}.
 @_i1.JS()
 @_i1.staticInterop
@@ -31251,7 +31626,7 @@ class CommentingRangeProvider {
                   p0,
                   p1,
                 ) =>
-                  _i6.Promise.functionFutureOr(() => provideCommentingRanges(
+                  _i6.Promise.futureOr(() => provideCommentingRanges(
                         p0,
                         p1,
                       ))));
@@ -31270,7 +31645,7 @@ extension CommentingRangeProvider$Typings on CommentingRangeProvider {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -31298,6 +31673,7 @@ extension CommentingRangeProvider$Typings on CommentingRangeProvider {
           );
 }
 
+/* Source:  */
 /// Represents a {@link CommentControllercomment controller}'s {@link CommentController.optionsoptions}.
 @_i1.JS()
 @_i1.staticInterop
@@ -31346,6 +31722,7 @@ extension CommentOptions$Typings on CommentOptions {
   }
 }
 
+/* Source:  */
 /// A comment controller is able to provide {@link CommentThreadcomments} support to the editor and
 /// provide users various ways to interact with comments.
 @_i1.JS()
@@ -31441,7 +31818,7 @@ extension CommentController$Typings on CommentController {
         _i3.Comment p0,
         _i3.CommentReaction p1,
       ) =>
-          _i5.callMethod(
+          _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'reactionHandler',
@@ -31452,7 +31829,7 @@ extension CommentController$Typings on CommentController {
               p0,
               p1,
             ],
-          );
+          ));
   set reactionHandler(
       _i2.Future<_i2.dynamic> Function(
         _i3.Comment,
@@ -31518,6 +31895,7 @@ extension CommentController$Typings on CommentController {
       );
 }
 
+/* Source:  */
 /// Represents a session of a currently logged in user.
 @_i1.JS()
 @_i1.staticInterop
@@ -31565,13 +31943,14 @@ extension AuthenticationSession$Typings on AuthenticationSession {
 
   /// The permissions granted by the session's access token. Available scopes
   /// are defined by the {@link AuthenticationProvider}.
-  _i2.List<_i2.String> get scopes => ((_i5.getProperty(
+  _i2.List<_i2.String> get scopes => (_i5.getProperty(
         this,
         'scopes',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// The information of an account associated with an {@link AuthenticationSession}.
 @_i1.JS()
 @_i1.staticInterop
@@ -31607,6 +31986,7 @@ extension AuthenticationSessionAccountInformation$Typings
       );
 }
 
+/* Source:  */
 /// Optional options to be used when calling {@link authentication.getSession} with the flag `forceNewSession`.
 @_i1.JS()
 @_i1.staticInterop
@@ -31635,6 +32015,7 @@ extension AuthenticationForceNewSessionOptions$Typings
   }
 }
 
+/* Source:  */
 /// Options to be used when getting an {@link AuthenticationSession} from an {@link AuthenticationProvider}.
 @_i1.JS()
 @_i1.staticInterop
@@ -31755,6 +32136,7 @@ extension AuthenticationGetSessionOptions$Typings
   }
 }
 
+/* Source:  */
 /// Basic information about an {@link AuthenticationProvider}
 @_i1.JS()
 @_i1.staticInterop
@@ -31790,6 +32172,7 @@ extension AuthenticationProviderInformation$Typings
       );
 }
 
+/* Source:  */
 /// An {@link Event} which fires when an {@link AuthenticationSession} is added, removed, or changed.
 @_i1.JS()
 @_i1.staticInterop
@@ -31811,6 +32194,7 @@ extension AuthenticationSessionsChangeEvent$Typings
       );
 }
 
+/* Source:  */
 /// Options for creating an {@link AuthenticationProvider}.
 @_i1.JS()
 @_i1.staticInterop
@@ -31834,6 +32218,7 @@ extension AuthenticationProviderOptions$Typings
       );
 }
 
+/* Source:  */
 /// An {@link Event} which fires when an {@link AuthenticationSession} is added, removed, or changed.
 @_i1.JS()
 @_i1.staticInterop
@@ -31860,29 +32245,30 @@ class AuthenticationProviderAuthenticationSessionsChangeEvent {
 extension AuthenticationProviderAuthenticationSessionsChangeEvent$Typings
     on AuthenticationProviderAuthenticationSessionsChangeEvent {
   /// The {@link AuthenticationSessionAuthenticationSessions} of the {@link AuthenticationProvider} that have been added.
-  _i2.List<_i3.AuthenticationSession>? get added => ((_i5.getProperty(
+  _i2.List<_i3.AuthenticationSession>? get added => (_i5.getProperty(
         this,
         'added',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 
   /// The {@link AuthenticationSessionAuthenticationSessions} of the {@link AuthenticationProvider} that have been removed.
-  _i2.List<_i3.AuthenticationSession>? get removed => ((_i5.getProperty(
+  _i2.List<_i3.AuthenticationSession>? get removed => (_i5.getProperty(
         this,
         'removed',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 
   /// The {@link AuthenticationSessionAuthenticationSessions} of the {@link AuthenticationProvider} that have been changed.
   /// A session changes when its data excluding the id are updated. An example of this is a session refresh that results in a new
   /// access token being set for the session.
-  _i2.List<_i3.AuthenticationSession>? get changed => ((_i5.getProperty(
+  _i2.List<_i3.AuthenticationSession>? get changed => (_i5.getProperty(
         this,
         'changed',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 }
 
+/* Source:  */
 /// A provider for performing authentication to a service.
 @_i1.JS()
 @_i1.staticInterop
@@ -31930,7 +32316,7 @@ extension AuthenticationProvider$Typings on AuthenticationProvider {
   }
 
   _i2.Future<_i2.dynamic> Function([_i2.List<_i2.String>?]) get getSessions =>
-      ([_i2.List<_i2.String>? p0]) => _i5.callMethod(
+      ([_i2.List<_i2.String>? p0]) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'getSessions',
@@ -31938,9 +32324,9 @@ extension AuthenticationProvider$Typings on AuthenticationProvider {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
             ],
-          );
+          ));
   set createSession(
       _i2.Future<_i2.dynamic> Function(_i2.List<_i2.String>) value) {
     _i5.setProperty(
@@ -31951,7 +32337,7 @@ extension AuthenticationProvider$Typings on AuthenticationProvider {
   }
 
   _i2.Future<_i2.dynamic> Function(_i2.List<_i2.String>) get createSession =>
-      (_i2.List<_i2.String> p0) => _i5.callMethod(
+      (_i2.List<_i2.String> p0) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'createSession',
@@ -31961,7 +32347,7 @@ extension AuthenticationProvider$Typings on AuthenticationProvider {
               this,
               p0,
             ],
-          );
+          ));
   set removeSession(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
     _i5.setProperty(
       this,
@@ -31971,7 +32357,7 @@ extension AuthenticationProvider$Typings on AuthenticationProvider {
   }
 
   _i2.Future<_i2.dynamic> Function(_i2.String) get removeSession =>
-      (_i2.String p0) => _i5.callMethod(
+      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
             _i5.getProperty(
               this,
               'removeSession',
@@ -31981,9 +32367,10 @@ extension AuthenticationProvider$Typings on AuthenticationProvider {
               this,
               p0,
             ],
-          );
+          ));
 }
 
+/* Source:  */
 /// Tags can be associated with {@link TestItemTestItems} and
 /// {@link TestRunProfileTestRunProfiles}. A profile with a tag can only
 /// execute tests that include that tag in their {@link TestItem.tags} array.
@@ -32010,6 +32397,7 @@ extension TestTag$Typings on TestTag {
       );
 }
 
+/* Source:  */
 /// A TestRunProfile describes one way to execute tests in a {@link TestController}.
 @_i1.JS()
 @_i1.staticInterop
@@ -32054,7 +32442,7 @@ class TestRunProfile {
                 p0,
                 p1,
               ) =>
-                _i6.Promise.functionFutureOr(() => runHandler(
+                _i6.Promise.futureOr(() => runHandler(
                       p0,
                       p1,
                     ))),
@@ -32202,7 +32590,7 @@ extension TestRunProfile$Typings on TestRunProfile {
         p0,
         p1,
       ) =>
-          _i6.Promise.functionFutureOr(() => value(
+          _i6.Promise.futureOr(() => value(
                 p0,
                 p1,
               ))),
@@ -32227,6 +32615,7 @@ extension TestRunProfile$Typings on TestRunProfile {
       );
 }
 
+/* Source:  */
 /// Entry point to discover and execute tests. It contains {@link TestController.items} which
 /// are used to populate the editor UI, and is associated with
 /// {@link TestController.createRunProfilerun profiles} to allow
@@ -32285,11 +32674,11 @@ class TestController {
         resolveHandler: resolveHandler == null
             ? null
             : _i5.allowInterop(
-                (p0) => _i6.Promise.functionFutureOr(() => resolveHandler(p0))),
+                (p0) => _i6.Promise.futureOr(() => resolveHandler(p0))),
         refreshHandler: refreshHandler == null
             ? _i6.undefined
             : _i5.allowInterop(
-                (p0) => _i6.Promise.functionFutureOr(() => refreshHandler(p0))),
+                (p0) => _i6.Promise.futureOr(() => refreshHandler(p0))),
         createRunProfile: createRunProfile == null
             ? null
             : _i5.allowInterop(createRunProfile),
@@ -32365,7 +32754,7 @@ extension TestController$Typings on TestController {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
             ],
           );
   set resolveHandler(_i4.FutureOr<void> Function([_i3.TestItem?])? value) {
@@ -32374,8 +32763,7 @@ extension TestController$Typings on TestController {
       'resolveHandler',
       value == null
           ? _i6.undefined
-          : _i5.allowInterop(
-              (p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+          : _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -32407,8 +32795,7 @@ extension TestController$Typings on TestController {
       'refreshHandler',
       value == null
           ? _i6.undefined
-          : _i5.allowInterop(
-              (p0) => _i6.Promise.functionFutureOr(() => value(p0))),
+          : _i5.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -32461,11 +32848,18 @@ extension TestController$Typings on TestController {
             [
               this,
               p0,
-              p1,
-              p2,
-              p3,
-              p4,
-              p5,
+              p1.name,
+              _i5.allowInterop((
+                p0,
+                p1,
+              ) =>
+                  _i6.Promise.futureOr(() => p2(
+                        p0,
+                        p1,
+                      ))),
+              p3 ?? _i6.undefined,
+              p4 ?? _i6.undefined,
+              p5 ?? _i6.undefined,
             ],
           );
   set createTestRun(
@@ -32499,8 +32893,8 @@ extension TestController$Typings on TestController {
             [
               this,
               p0,
-              p1,
-              p2,
+              p1 ?? _i6.undefined,
+              p2 ?? _i6.undefined,
             ],
           );
   set createTestItem(
@@ -32535,7 +32929,7 @@ extension TestController$Typings on TestController {
               this,
               p0,
               p1,
-              p2,
+              p2 ?? _i6.undefined,
             ],
           );
   set invalidateTestResults(void Function([_i2.Object?]) value) {
@@ -32555,7 +32949,7 @@ extension TestController$Typings on TestController {
             r'call',
             [
               this,
-              p0,
+              p0 ?? _i6.undefined,
             ],
           );
   set dispose(void Function() value) {
@@ -32576,6 +32970,7 @@ extension TestController$Typings on TestController {
       );
 }
 
+/* Source:  */
 /// A TestRunRequest is a precursor to a {@link TestRun}, which in turn is
 /// created by passing a request to {@link TestController.createTestRun}. The
 /// TestRunRequest contains information about which tests should be run, which
@@ -32617,10 +33012,10 @@ extension TestRunRequest$Typings on TestRunRequest {
   ///
   /// The process of running tests should resolve the children of any test
   /// items who have not yet been resolved.
-  _i2.List<_i3.TestItem>? get include => ((_i5.getProperty(
+  _i2.List<_i3.TestItem>? get include => (_i5.getProperty(
         this,
         'include',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 
   /// An array of tests the user has marked as excluded from the test included
@@ -32628,10 +33023,10 @@ extension TestRunRequest$Typings on TestRunRequest {
   ///
   /// May be omitted if no exclusions were requested. Test controllers should
   /// not run excluded tests or any children of excluded tests.
-  _i2.List<_i3.TestItem>? get exclude => ((_i5.getProperty(
+  _i2.List<_i3.TestItem>? get exclude => (_i5.getProperty(
         this,
         'exclude',
-      )) as _i2.List?)
+      ) as _i2.List?)
           ?.cast();
 
   /// The profile used for this request. This will always be defined
@@ -32650,6 +33045,7 @@ extension TestRunRequest$Typings on TestRunRequest {
       );
 }
 
+/* Source:  */
 /// A TestRun represents an in-progress or completed test run and
 /// provides methods to report the state of individual tests in the run.
 @_i1.JS()
@@ -32827,7 +33223,7 @@ extension TestRun$Typings on TestRun {
               this,
               p0,
               p1,
-              p2,
+              p2 ?? _i6.undefined,
             ],
           );
   set errored(
@@ -32862,7 +33258,7 @@ extension TestRun$Typings on TestRun {
               this,
               p0,
               p1,
-              p2,
+              p2 ?? _i6.undefined,
             ],
           );
   set passed(
@@ -32893,7 +33289,7 @@ extension TestRun$Typings on TestRun {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
   set appendOutput(
@@ -32927,8 +33323,8 @@ extension TestRun$Typings on TestRun {
             [
               this,
               p0,
-              p1,
-              p2,
+              p1 ?? _i6.undefined,
+              p2 ?? _i6.undefined,
             ],
           );
   set end(void Function() value) {
@@ -32949,6 +33345,7 @@ extension TestRun$Typings on TestRun {
       );
 }
 
+/* Source:  */
 /// Collection of test items, found in {@link TestItem.children} and
 /// {@link TestController.items}.
 @_i1.JS()
@@ -33058,7 +33455,7 @@ extension TestItemCollection$Typings on TestItemCollection {
             r'call',
             [
               this,
-              p0,
+              _i5.allowInterop(p0),
               p1,
             ],
           );
@@ -33122,6 +33519,7 @@ extension TestItemCollection$Typings on TestItemCollection {
           );
 }
 
+/* Source:  */
 /// An item shown in the "test explorer" view.
 ///
 /// A `TestItem` can represent either a test suite or a test itself, since
@@ -33208,10 +33606,10 @@ extension TestItem$Typings on TestItem {
 
   /// Tags associated with this test item. May be used in combination with
   ///  {@link TestRunProfile.tag tags}, or simply as an organizational feature.
-  _i2.List<_i3.TestTag> get tags => ((_i5.getProperty(
+  _i2.List<_i3.TestTag> get tags => (_i5.getProperty(
         this,
         'tags',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
   set tags(_i2.List<_i3.TestTag> value) {
     _i5.setProperty(
@@ -33329,6 +33727,7 @@ extension TestItem$Typings on TestItem {
   }
 }
 
+/* Source:  */
 /// Message associated with the test state. Can be linked to a specific
 /// source range -- useful for assertion failures, for example.
 @_i1.JS()
@@ -33415,6 +33814,7 @@ extension TestMessage$Typings on TestMessage {
   }
 }
 
+/* Source:  */
 /// The tab represents a single text based resource.
 @_i1.JS()
 @_i1.staticInterop
@@ -33438,6 +33838,7 @@ extension TabInputText$Typings on TabInputText {
       );
 }
 
+/* Source:  */
 /// The tab represents two text based resources
 /// being rendered as a diff.
 @_i1.JS()
@@ -33475,6 +33876,7 @@ extension TabInputTextDiff$Typings on TabInputTextDiff {
       );
 }
 
+/* Source:  */
 /// The tab represents a custom editor.
 @_i1.JS()
 @_i1.staticInterop
@@ -33511,6 +33913,7 @@ extension TabInputCustom$Typings on TabInputCustom {
       );
 }
 
+/* Source:  */
 /// The tab represents a webview.
 @_i1.JS()
 @_i1.staticInterop
@@ -33534,6 +33937,7 @@ extension TabInputWebview$Typings on TabInputWebview {
       );
 }
 
+/* Source:  */
 /// The tab represents a notebook.
 @_i1.JS()
 @_i1.staticInterop
@@ -33570,6 +33974,7 @@ extension TabInputNotebook$Typings on TabInputNotebook {
       );
 }
 
+/* Source:  */
 /// The tabs represents two notebooks in a diff configuration.
 @_i1.JS()
 @_i1.staticInterop
@@ -33614,6 +34019,7 @@ extension TabInputNotebookDiff$Typings on TabInputNotebookDiff {
       );
 }
 
+/* Source:  */
 /// The tab represents a terminal in the editor area.
 @_i1.JS()
 @_i1.staticInterop
@@ -33627,7 +34033,7 @@ class TabInputTerminal {
 _i2.Object get _declaredTabInputTerminal => _i5.getProperty(
       _self,
       'TabInputTerminal',
-    );
+    ); /* Source:  */
 
 /// Represents a tab within a {@link TabGroupgroup of tabs}.
 /// Tabs are merely the graphical representation within the editor area.
@@ -33712,6 +34118,7 @@ extension Tab$Typings on Tab {
       );
 }
 
+/* Source:  */
 /// An event describing change to tabs.
 @_i1.JS()
 @_i1.staticInterop
@@ -33737,28 +34144,29 @@ class TabChangeEvent {
 
 extension TabChangeEvent$Typings on TabChangeEvent {
   /// The tabs that have been opened.
-  _i2.List<_i3.Tab> get opened => ((_i5.getProperty(
+  _i2.List<_i3.Tab> get opened => (_i5.getProperty(
         this,
         'opened',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// The tabs that have been closed.
-  _i2.List<_i3.Tab> get closed => ((_i5.getProperty(
+  _i2.List<_i3.Tab> get closed => (_i5.getProperty(
         this,
         'closed',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Tabs that have changed, e.g have changed
   /// their {@link Tab.isActiveactive} state.
-  _i2.List<_i3.Tab> get changed => ((_i5.getProperty(
+  _i2.List<_i3.Tab> get changed => (_i5.getProperty(
         this,
         'changed',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// An event describing changes to tab groups.
 @_i1.JS()
 @_i1.staticInterop
@@ -33784,28 +34192,29 @@ class TabGroupChangeEvent {
 
 extension TabGroupChangeEvent$Typings on TabGroupChangeEvent {
   /// Tab groups that have been opened.
-  _i2.List<_i3.TabGroup> get opened => ((_i5.getProperty(
+  _i2.List<_i3.TabGroup> get opened => (_i5.getProperty(
         this,
         'opened',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Tab groups that have been closed.
-  _i2.List<_i3.TabGroup> get closed => ((_i5.getProperty(
+  _i2.List<_i3.TabGroup> get closed => (_i5.getProperty(
         this,
         'closed',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Tab groups that have changed, e.g have changed
   /// their {@link TabGroup.isActiveactive} state.
-  _i2.List<_i3.TabGroup> get changed => ((_i5.getProperty(
+  _i2.List<_i3.TabGroup> get changed => (_i5.getProperty(
         this,
         'changed',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// Represents a group of tabs. A tab group itself consists of multiple tabs.
 @_i1.JS()
 @_i1.staticInterop
@@ -33859,13 +34268,14 @@ extension TabGroup$Typings on TabGroup {
 
   /// The list of tabs contained within the group.
   /// This can be empty if the group has no tabs open.
-  _i2.List<_i3.Tab> get tabs => ((_i5.getProperty(
+  _i2.List<_i3.Tab> get tabs => (_i5.getProperty(
         this,
         'tabs',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// Represents the main editor area which consists of multiple groups which contain tabs.
 @_i1.JS()
 @_i1.staticInterop
@@ -33894,10 +34304,10 @@ class TabGroups {
 
 extension TabGroups$Typings on TabGroups {
   /// All the groups within the group container.
-  _i2.List<_i3.TabGroup> get all => ((_i5.getProperty(
+  _i2.List<_i3.TabGroup> get all => (_i5.getProperty(
         this,
         'all',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// The currently active group.
@@ -33986,6 +34396,7 @@ extension TabGroups$Typings on TabGroups {
       );
 }
 
+/* Source:  */
 /// A special value wrapper denoting a value that is safe to not clean.
 /// This is to be used when you can guarantee no identifiable information is contained in the value and the cleaning is improperly redacting it.
 @_i1.JS()
@@ -34010,6 +34421,7 @@ extension TelemetryTrustedValue$Typings<T> on TelemetryTrustedValue<T> {
       );
 }
 
+/* Source:  */
 /// A telemetry logger which can be used by extensions to log usage and error telementry.
 ///
 /// A logger wraps around an {@link TelemetrySendersender} but it guarantees that
@@ -34098,7 +34510,7 @@ extension TelemetryLogger$Typings on TelemetryLogger {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
   set dispose(void Function() value) {
@@ -34189,6 +34601,7 @@ extension TelemetryLogger$Typings on TelemetryLogger {
       );
 }
 
+/* Source:  */
 /// The telemetry sender is the contract between a telemetry logger and some telemetry service. **Note** that extensions must NOT
 /// call the methods of their sender directly as the logger provides extra guards and cleaning.
 ///
@@ -34230,8 +34643,7 @@ class TelemetrySender {
             sendErrorData == null ? null : _i5.allowInterop(sendErrorData),
         flush: flush == null
             ? null
-            : _i5.allowInterop(
-                () => _i6.Promise.functionFutureOr(() => flush())),
+            : _i5.allowInterop(() => _i6.Promise.futureOr(() => flush())),
       );
 }
 
@@ -34264,7 +34676,7 @@ extension TelemetrySender$Typings on TelemetrySender {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
   set sendErrorData(
@@ -34295,14 +34707,14 @@ extension TelemetrySender$Typings on TelemetrySender {
             [
               this,
               p0,
-              p1,
+              p1 ?? _i6.undefined,
             ],
           );
   set flush(_i4.FutureOr<void> Function() value) {
     _i5.setProperty(
       this,
       'flush',
-      _i5.allowInterop(() => _i6.Promise.functionFutureOr(() => value())),
+      _i5.allowInterop(() => _i6.Promise.futureOr(() => value())),
     );
   }
 
@@ -34316,6 +34728,7 @@ extension TelemetrySender$Typings on TelemetrySender {
       );
 }
 
+/* Source:  */
 /// Options for creating a {@link TelemetryLogger}
 @_i1.JS()
 @_i1.staticInterop
@@ -34361,6 +34774,7 @@ extension TelemetryLoggerOptions$Typings on TelemetryLoggerOptions {
       );
 }
 
+/* Source: globalThis */
 @_i1.JS('vscode')
 @_i1.staticInterop
 class $ModuleVscode {}
@@ -34429,6 +34843,7 @@ extension $ModuleVscode$Typings on $ModuleVscode {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

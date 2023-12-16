@@ -13,7 +13,7 @@ Future<void> main(List<String> arguments) async {
 
   final libPath = '${Directory.current.path}/../typings/lib/';
 
-  if (1 < 0) {
+  if (1 > 0) {
     await Transpiler.fromNpm(
         package: 'typescript',
         version: 'latest',
@@ -96,6 +96,7 @@ Future<void> main(List<String> arguments) async {
         targetMainFile: 'gojs',
         dirName: 'gojs',
         targetPath: libPath,
+        packageJson: (typings: false, import: false),
         distFiles: {
           'release/go.js'
         },

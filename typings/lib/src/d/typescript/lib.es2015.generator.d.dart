@@ -6,10 +6,12 @@ import 'dart:core' as _i2;
 import 'lib.es2015.iterable.d.dart' as _i3;
 import 'lib.es2015.generator.d.dart' as _i4;
 import 'dart:js_util' as _i5;
+import '/d/core.dart' as _i6;
 
 @_i1.JS('self')
 external _i2.Object _self;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -98,9 +100,16 @@ extension Generator$Typings<T, TReturn, TNext> on Generator<T, TReturn, TNext> {
   }
 
   _i3.IteratorResult<T, TReturn> Function([_i2.Iterable<_i2.dynamic>?])
-      get next => _i5.getProperty(
-            this,
-            'next',
+      get next => ([_i2.Iterable<_i2.dynamic>? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'next',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i6.undefined,
+            ],
           );
   set return$(_i3.IteratorResult<T, TReturn> Function(TReturn) value) {
     _i5.setProperty(
@@ -111,10 +120,17 @@ extension Generator$Typings<T, TReturn, TNext> on Generator<T, TReturn, TNext> {
   }
 
   _i3.IteratorResult<T, TReturn> Function(TReturn) get return$ =>
-      _i5.getProperty(
-        this,
-        'return',
-      );
+      (TReturn p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'return',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set throw$(_i3.IteratorResult<T, TReturn> Function([_i2.dynamic]) value) {
     _i5.setProperty(
       this,
@@ -124,12 +140,20 @@ extension Generator$Typings<T, TReturn, TNext> on Generator<T, TReturn, TNext> {
   }
 
   _i3.IteratorResult<T, TReturn> Function([_i2.dynamic]) get throw$ =>
-      _i5.getProperty(
-        this,
-        'throw',
-      );
+      ([_i2.dynamic p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'throw',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class GeneratorFunction {}
@@ -158,6 +182,7 @@ extension GeneratorFunction$Typings on GeneratorFunction {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class GeneratorFunctionConstructor {}
@@ -185,6 +210,7 @@ extension GeneratorFunctionConstructor$Typings on GeneratorFunctionConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

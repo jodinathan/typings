@@ -9,6 +9,7 @@ import 'dart:js_util' as _i4;
 @_i1.JS('CSS')
 external _i2.Object _self;
 
+/* Source: globalThis */
 @_i1.JS('CSS')
 @_i1.staticInterop
 class $ModuleCss {}
@@ -423,6 +424,7 @@ extension $ModuleCss$Typings on $ModuleCss {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

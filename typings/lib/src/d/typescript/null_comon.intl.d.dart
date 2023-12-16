@@ -11,13 +11,33 @@ _i2.Object get target12 => _i3.getProperty(
     );
 _i2.Object get target13 => _i3.getProperty(
       _self,
-      'PluralRules',
+      'NumberFormat',
     );
 _i2.Object get target14 => _i3.getProperty(
       _self,
-      'RelativeTimeFormat',
+      'DateTimeFormat',
     );
 _i2.Object get target15 => _i3.getProperty(
       _self,
+      'PluralRules',
+    );
+_i2.Object get target16 => _i3.getProperty(
+      _self,
+      'RelativeTimeFormat',
+    );
+_i2.Object get target17 => _i3.getProperty(
+      _self,
       'Locale',
+    );
+_i2.Object get target18 => _i3.getProperty(
+      _self,
+      'DisplayNames',
+    );
+_i2.Object get target19 => _i3.getProperty(
+      _self,
+      'ListFormat',
+    );
+_i2.Object get target20 => _i3.getProperty(
+      _self,
+      'Segmenter',
     );

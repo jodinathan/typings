@@ -4,13 +4,13 @@ library typings.typescript.interop; // ignore_for_file: no_leading_underscores_f
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'lib.es5.d.dart' as _i3;
-import '/d/core.dart' as _i4;
-import 'dart:js_util' as _i5;
-import 'typescript_comon.d.dart' as _i6;
-import 'lib.es2015.core.d.dart' as _i7;
-import 'lib.es2017.object.d.dart' as _i8;
-import 'lib.es2015.iterable.d.dart' as _i9;
-import 'lib.es2019.array.d.dart' as _i10;
+import 'dart:async' as _i4;
+import '/d/core.dart' as _i5;
+import 'dart:js_util' as _i6;
+import 'typescript_comon.d.dart' as _i7;
+import 'lib.es2015.core.d.dart' as _i8;
+import 'lib.es2017.object.d.dart' as _i9;
+import 'lib.es2015.iterable.d.dart' as _i10;
 import 'lib.es2022.regexp.d.dart' as _i11;
 import 'lib.es2022.error.d.dart' as _i12;
 import 'dart:typed_data' as _i13;
@@ -19,16 +19,19 @@ import 'lib.es2017.sharedmemory.d.dart' as _i14;
 @_i1.JS('self')
 external _i2.Object _self;
 
+/* Source: ForcedCommon from  Iterable<T> | ArrayLike<T> */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 class From {}
 
+/* Source: ForcedCommon from  Iterable<T> | ArrayLike<T> */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 class FromCommon {}
 
+/* Source:  T & {} */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -39,7 +42,7 @@ typedef ThisParameterType<T> = _i2.dynamic;
 typedef OmitThisParameter<T> = _i2.dynamic;
 typedef PromiseConstructorLike = _i2.Future<T> Function<T>(
     void Function(
-      void Function(_i2.Object),
+      void Function(_i4.FutureOr<T>),
       void Function([_i2.dynamic]),
     ));
 typedef Awaited<T> = _i2.dynamic;
@@ -50,8 +53,7 @@ typedef Pick<T, K extends _i2.dynamic> = _i2.dynamic;
 typedef Record<K extends _i2.dynamic, T> = _i2.dynamic;
 typedef Exclude<T, U> = _i2.dynamic;
 typedef Extract<T, U> = _i2.dynamic;
-typedef Omit<T, K extends _i2.dynamic>
-    = _i3.Pick<T, _i3.Exclude<_i2.dynamic, K>>;
+typedef Omit<T, K extends _i2.dynamic> = _i2.dynamic;
 typedef NonNullable<T> = _Intersection0;
 typedef Parameters<T extends _i2.dynamic Function([_i2.Iterable<_i2.dynamic>?])>
     = _i2.dynamic;
@@ -70,6 +72,7 @@ typedef Uncapitalize<S extends _i2.String> = _i2.Never;
 typedef WeakKey = _i2.dynamic;
 typedef ArrayBufferLike = _i2.dynamic;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -112,30 +115,30 @@ class Symbol {
     _i2.Symbol? matchAll,
   }) =>
       Symbol._(
-        description: description ?? _i4.undefined,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
-        valueOf: valueOf == null ? null : _i5.allowInterop(valueOf),
-        iterator: iterator ?? _i4.undefined,
-        hasInstance: hasInstance ?? _i4.undefined,
-        isConcatSpreadable: isConcatSpreadable ?? _i4.undefined,
-        match: match ?? _i4.undefined,
-        replace: replace ?? _i4.undefined,
-        search: search ?? _i4.undefined,
-        species: species ?? _i4.undefined,
-        split: split ?? _i4.undefined,
-        toPrimitive: toPrimitive ?? _i4.undefined,
-        toStringTag: toStringTag ?? _i4.undefined,
-        unscopables: unscopables ?? _i4.undefined,
-        asyncIterator: asyncIterator ?? _i4.undefined,
-        matchAll: matchAll ?? _i4.undefined,
+        description: description ?? _i5.undefined,
+        toString$: toString$ == null ? null : _i6.allowInterop(toString$),
+        valueOf: valueOf == null ? null : _i6.allowInterop(valueOf),
+        iterator: iterator ?? _i5.undefined,
+        hasInstance: hasInstance ?? _i5.undefined,
+        isConcatSpreadable: isConcatSpreadable ?? _i5.undefined,
+        match: match ?? _i5.undefined,
+        replace: replace ?? _i5.undefined,
+        search: search ?? _i5.undefined,
+        species: species ?? _i5.undefined,
+        split: split ?? _i5.undefined,
+        toPrimitive: toPrimitive ?? _i5.undefined,
+        toStringTag: toStringTag ?? _i5.undefined,
+        unscopables: unscopables ?? _i5.undefined,
+        asyncIterator: asyncIterator ?? _i5.undefined,
+        matchAll: matchAll ?? _i5.undefined,
       );
 
   /// A method that returns the default iterator for an object. Called by the semantics of the
   /// for-of statement.
   /// A method that returns the default iterator for an object. Called by the semantics of the
   /// for-of statement.
-  static _i2.Symbol get iterator => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get iterator => _i6.getProperty(
+        _i7.target26,
         'iterator',
       );
 
@@ -143,8 +146,8 @@ class Symbol {
   /// constructor’s instances. Called by the semantics of the instanceof operator.
   /// A method that determines if a constructor object recognizes an object as one of the
   /// constructor’s instances. Called by the semantics of the instanceof operator.
-  static _i2.Symbol get hasInstance => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get hasInstance => _i6.getProperty(
+        _i7.target26,
         'hasInstance',
       );
 
@@ -152,8 +155,8 @@ class Symbol {
   /// by Array.prototype.concat.
   /// A Boolean value that if true indicates that an object should flatten to its array elements
   /// by Array.prototype.concat.
-  static _i2.Symbol get isConcatSpreadable => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get isConcatSpreadable => _i6.getProperty(
+        _i7.target26,
         'isConcatSpreadable',
       );
 
@@ -161,8 +164,8 @@ class Symbol {
   /// by the String.prototype.match method.
   /// A regular expression method that matches the regular expression against a string. Called
   /// by the String.prototype.match method.
-  static _i2.Symbol get match => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get match => _i6.getProperty(
+        _i7.target26,
         'match',
       );
 
@@ -170,8 +173,8 @@ class Symbol {
   /// String.prototype.replace method.
   /// A regular expression method that replaces matched substrings of a string. Called by the
   /// String.prototype.replace method.
-  static _i2.Symbol get replace => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get replace => _i6.getProperty(
+        _i7.target26,
         'replace',
       );
 
@@ -179,8 +182,8 @@ class Symbol {
   /// regular expression. Called by the String.prototype.search method.
   /// A regular expression method that returns the index within a string that matches the
   /// regular expression. Called by the String.prototype.search method.
-  static _i2.Symbol get search => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get search => _i6.getProperty(
+        _i7.target26,
         'search',
       );
 
@@ -188,8 +191,8 @@ class Symbol {
   /// derived objects.
   /// A function valued property that is the constructor function that is used to create
   /// derived objects.
-  static _i2.Symbol get species => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get species => _i6.getProperty(
+        _i7.target26,
         'species',
       );
 
@@ -197,8 +200,8 @@ class Symbol {
   /// expression. Called by the String.prototype.split method.
   /// A regular expression method that splits a string at the indices that match the regular
   /// expression. Called by the String.prototype.split method.
-  static _i2.Symbol get split => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get split => _i6.getProperty(
+        _i7.target26,
         'split',
       );
 
@@ -206,8 +209,8 @@ class Symbol {
   /// Called by the ToPrimitive abstract operation.
   /// A method that converts an object to a corresponding primitive value.
   /// Called by the ToPrimitive abstract operation.
-  static _i2.Symbol get toPrimitive => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get toPrimitive => _i6.getProperty(
+        _i7.target26,
         'toPrimitive',
       );
 
@@ -215,8 +218,8 @@ class Symbol {
   /// Called by the built-in method Object.prototype.toString.
   /// A String value that is used in the creation of the default string description of an object.
   /// Called by the built-in method Object.prototype.toString.
-  static _i2.Symbol get toStringTag => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get toStringTag => _i6.getProperty(
+        _i7.target26,
         'toStringTag',
       );
 
@@ -224,8 +227,8 @@ class Symbol {
   /// environment bindings of the associated objects.
   /// An Object whose truthy properties are properties that are excluded from the 'with'
   /// environment bindings of the associated objects.
-  static _i2.Symbol get unscopables => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get unscopables => _i6.getProperty(
+        _i7.target26,
         'unscopables',
       );
 
@@ -233,66 +236,75 @@ class Symbol {
   /// the for-await-of statement.
   /// A method that returns the default async iterator for an object. Called by the semantics of
   /// the for-await-of statement.
-  static _i2.Symbol get asyncIterator => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get asyncIterator => _i6.getProperty(
+        _i7.target26,
         'asyncIterator',
       );
 
   /// A regular expression method that matches the regular expression against a string. Called
   /// by the String.prototype.matchAll method.
-  static _i2.Symbol get matchAll => _i5.getProperty(
-        _i6.target22,
+  static _i2.Symbol get matchAll => _i6.getProperty(
+        _i7.target26,
         'matchAll',
       );
   static set for$(_i2.Symbol Function(_i2.String) value) {
-    _i5.setProperty(
-      _i6.target22,
+    _i6.setProperty(
+      _i7.target26,
       'for',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set keyFor(_i2.String? Function(_i2.Symbol) value) {
-    _i5.setProperty(
-      _i6.target22,
+    _i6.setProperty(
+      _i7.target26,
       'keyFor',
-      _i5.allowInterop(value),
+      _i6.allowInterop((p0) => () => value(p0) ?? _i5.undefined),
     );
   }
 }
 
 extension Symbol$Typings on Symbol {
   /// Expose the [[Description]] internal slot of a symbol directly.
-  _i2.String? get description => _i5.getProperty(
+  _i2.String? get description => _i6.getProperty(
         this,
         'description',
       );
   set toString$(_i2.String Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toString',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function() get toString$ => _i5.getProperty(
-        this,
-        'toString',
+  _i2.String Function() get toString$ => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toString',
+        ),
+        r'call',
+        [this],
       );
   set valueOf(_i2.Symbol Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'valueOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.Symbol Function() get valueOf => _i5.getProperty(
-        this,
-        'valueOf',
+  _i2.Symbol Function() get valueOf => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'valueOf',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -319,134 +331,155 @@ class PropertyDescriptor {
         enumerable: enumerable,
         value: value,
         writable: writable,
-        get: get == null ? null : _i5.allowInterop(get),
-        set: set == null ? null : _i5.allowInterop(set),
+        get: get == null ? null : _i6.allowInterop(get),
+        set: set == null ? null : _i6.allowInterop(set),
       );
 }
 
 extension PropertyDescriptor$Typings on PropertyDescriptor {
-  _i2.bool? get configurable => _i5.getProperty(
+  _i2.bool? get configurable => _i6.getProperty(
         this,
         'configurable',
       );
   set configurable(_i2.bool? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'configurable',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
-  _i2.bool? get enumerable => _i5.getProperty(
+  _i2.bool? get enumerable => _i6.getProperty(
         this,
         'enumerable',
       );
   set enumerable(_i2.bool? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'enumerable',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
-  _i2.dynamic get value => _i5.getProperty(
+  _i2.dynamic get value => _i6.getProperty(
         this,
         'value',
       );
   set value(_i2.dynamic value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'value',
       value,
     );
   }
 
-  _i2.bool? get writable => _i5.getProperty(
+  _i2.bool? get writable => _i6.getProperty(
         this,
         'writable',
       );
   set writable(_i2.bool? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'writable',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
   set get(_i2.dynamic Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'get',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.dynamic Function() get get => _i5.getProperty(
-        this,
-        'get',
+  _i2.dynamic Function() get get => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'get',
+        ),
+        r'call',
+        [this],
       );
   set set(void Function([_i2.dynamic]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'set',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  void Function([_i2.dynamic]) get set => _i5.getProperty(
-        this,
-        'set',
+  void Function([_i2.dynamic]) get set => ([_i2.dynamic p0]) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'set',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
 }
 
+/* Source:  */
 /// Provides functionality common to all JavaScript objects.
 @_i1.JS()
 @_i1.staticInterop
 class Object {
-  factory Object([_i2.dynamic value]) => _i5.callConstructor(
+  factory Object([_i2.dynamic value]) => _i6.callConstructor(
         _declaredObject,
         [value],
       );
 
   static set getPrototypeOf(_i2.dynamic Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'getPrototypeOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set getOwnPropertyDescriptor(
       _i3.PropertyDescriptor? Function(
-        _i3.PropertyKey, [
+        _i2.Object, [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'getOwnPropertyDescriptor',
-      _i5.allowInterop(value),
+      _i6.allowInterop((
+        p0,
+        p1,
+      ) =>
+          () =>
+              value(
+                p0,
+                p1,
+              ) ??
+              _i5.undefined),
     );
   }
 
   static set getOwnPropertyNames(
       _i2.List<_i2.String> Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'getOwnPropertyNames',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set defineProperty(
       T Function<T>(
         T,
-        _i3.PropertyKey,
+        _i2.Object,
         _i2.Object,
       ) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'defineProperty',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -455,59 +488,59 @@ class Object {
         T,
         _i2.Object,
       ) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'defineProperties',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set seal(T Function<T>(T) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'seal',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set preventExtensions(T Function<T>(T) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'preventExtensions',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isSealed(_i2.bool Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'isSealed',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isFrozen(_i2.bool Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'isFrozen',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isExtensible(_i2.bool Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'isExtensible',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set getOwnPropertySymbols(
       _i2.List<_i2.Symbol> Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'getOwnPropertySymbols',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -516,10 +549,10 @@ class Object {
         _i2.dynamic,
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'is',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -528,39 +561,39 @@ class Object {
         _i2.dynamic,
         _i2.Object?,
       ]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'setPrototypeOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set getOwnPropertyDescriptors(_i2.Object Function<T>(T) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'getOwnPropertyDescriptors',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set hasOwn(
       _i2.bool Function(
         _i2.Object,
-        _i3.PropertyKey,
+        _i2.Object,
       ) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'hasOwn',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   /// Creates an object that has the specified prototype or that has null prototype.
   ///  @param o Object to use as a prototype. May be null.
-  static _i2.dynamic _create$1([_i2.Object? o]) => _i5.callMethod(
-        _i6.target0,
+  static _i2.dynamic _create$1([_i2.Object? o]) => _i6.callMethod(
+        _i7.target0,
         'create',
-        [o ?? _i4.undefined],
+        [o ?? _i5.undefined],
       );
 
   /// Creates an object that has the specified prototype, and that optionally contains specified properties.
@@ -570,11 +603,11 @@ class Object {
     _i2.Object properties, [
     _i2.Object? o,
   ]) =>
-      _i5.callMethod(
-        _i6.target0,
+      _i6.callMethod(
+        _i7.target0,
         'create',
         [
-          o ?? _i4.undefined,
+          o ?? _i5.undefined,
           properties,
         ],
       );
@@ -599,16 +632,16 @@ class Object {
 
   /// Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
   ///  @param f Object on which to lock the attributes.
-  static T freeze<T extends _i2.Function>(T f) => _i5.callMethod(
-        _i6.target0,
+  static T freeze<T extends _i2.Function>(T f) => _i6.callMethod(
+        _i7.target0,
         'freeze',
         [f],
       );
 
   /// Returns the names of the enumerable string properties and methods of an object.
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2.List<_i2.String> _keys$1(_i2.Object o) => (_i5.callMethod(
-        _i6.target0,
+  static _i2.List<_i2.String> _keys$1(_i2.Object o) => (_i6.callMethod(
+        _i7.target0,
         'keys',
         [o],
       ) as _i2.List)
@@ -616,8 +649,8 @@ class Object {
 
   /// Returns the names of the enumerable string properties and methods of an object.
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2.List<_i2.String> _keys$2(_i7.IInline7 o) => (_i5.callMethod(
-        _i6.target0,
+  static _i2.List<_i2.String> _keys$2(_i8.IInline9 o) => (_i6.callMethod(
+        _i7.target0,
         'keys',
         [o],
       ) as _i2.List)
@@ -631,7 +664,7 @@ class Object {
 
     /// Returns the names of the enumerable string properties and methods of an object.
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List<_i2.String> Function(_i7.IInline7 o) $2,
+    _i2.List<_i2.String> Function(_i8.IInline9 o) $2,
   }) get keys => (
         $1: _keys$1,
         $2: _keys$2,
@@ -645,8 +678,8 @@ class Object {
     _i2.Object target, [
     _i2.Iterable<_i2.dynamic>? sources,
   ]) =>
-      _i5.callMethod(
-        _i6.target0,
+      _i6.callMethod(
+        _i7.target0,
         'assign',
         [
           target,
@@ -660,14 +693,14 @@ class Object {
   ///  @param source1 The first source object from which to copy properties.
   ///  @param source2 The second source object from which to copy properties.
   ///  @param source3 The third source object from which to copy properties.
-  static _i2.Object _assign$2<T extends _i7.IInline6, U, V, W>(
+  static _i2.Object _assign$2<T extends _i8.IInline8, U, V, W>(
     T target,
     U source1,
     V source2,
     W source3,
   ) =>
-      _i5.callMethod(
-        _i6.target0,
+      _i6.callMethod(
+        _i7.target0,
         'assign',
         [
           target,
@@ -694,7 +727,7 @@ class Object {
     ///  @param source1 The first source object from which to copy properties.
     ///  @param source2 The second source object from which to copy properties.
     ///  @param source3 The third source object from which to copy properties.
-    _i2.Object Function<T extends _i7.IInline6, U, V, W>(
+    _i2.Object Function<T extends _i8.IInline8, U, V, W>(
       T target,
       U source1,
       V source2,
@@ -707,8 +740,8 @@ class Object {
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2.List<T> _values$1<T>(_i2.Object o) => (_i5.callMethod(
-        _i6.target0,
+  static _i2.List<T> _values$1<T>(_i2.Object o) => (_i6.callMethod(
+        _i7.target0,
         'values',
         [o],
       ) as _i2.List)
@@ -716,8 +749,8 @@ class Object {
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  static _i2.List<_i2.dynamic> _values$2(_i8.IInline16 o) => (_i5.callMethod(
-        _i6.target0,
+  static _i2.List<_i2.dynamic> _values$2(_i9.IInline18 o) => (_i6.callMethod(
+        _i7.target0,
         'values',
         [o],
       ) as _i2.List)
@@ -731,7 +764,7 @@ class Object {
 
     /// Returns an array of values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List<_i2.dynamic> Function(_i8.IInline16 o) $2,
+    _i2.List<_i2.dynamic> Function(_i9.IInline18 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
@@ -743,8 +776,8 @@ class Object {
       (
         _i2.String,
         T,
-      )> _entries$1<T>(_i2.Object o) => (_i5.callMethod(
-        _i6.target0,
+      )> _entries$1<T>(_i2.Object o) => (_i6.callMethod(
+        _i7.target0,
         'entries',
         [o],
       ) as _i2.List)
@@ -756,8 +789,8 @@ class Object {
       (
         _i2.String,
         _i2.dynamic,
-      )> _entries$2(_i8.IInline18 o) => (_i5.callMethod(
-        _i6.target0,
+      )> _entries$2(_i9.IInline20 o) => (_i6.callMethod(
+        _i7.target0,
         'entries',
         [o],
       ) as _i2.List)
@@ -781,7 +814,7 @@ class Object {
               _i2.String,
               _i2.dynamic,
             )>
-        Function(_i8.IInline18 o) $2,
+        Function(_i9.IInline20 o) $2,
   }) get entries => (
         $1: _entries$1,
         $2: _entries$2,
@@ -790,14 +823,14 @@ class Object {
   /// Returns an object created by key-value entries for properties and methods
   ///  @param entries An iterable object that contains key-value entries for properties and methods.
   static _i2.Object _fromEntries$1<T>(
-          _i9.Iterable<
+          _i10.Iterable<
                   (
-                    _i3.PropertyKey,
+                    _i2.Object,
                     T,
                   )>
               entries) =>
-      _i5.callMethod(
-        _i6.target0,
+      _i6.callMethod(
+        _i7.target0,
         'fromEntries',
         [entries],
       );
@@ -805,9 +838,9 @@ class Object {
   /// Returns an object created by key-value entries for properties and methods
   ///  @param entries An iterable object that contains key-value entries for properties and methods.
   static _i2.dynamic _fromEntries$2(
-          _i9.Iterable<_i2.List<_i2.dynamic>> entries) =>
-      _i5.callMethod(
-        _i6.target0,
+          _i10.Iterable<_i2.List<_i2.dynamic>> entries) =>
+      _i6.callMethod(
+        _i7.target0,
         'fromEntries',
         [entries],
       );
@@ -817,35 +850,35 @@ class Object {
     /// Returns an object created by key-value entries for properties and methods
     ///  @param entries An iterable object that contains key-value entries for properties and methods.
     _i2.Object Function<T>(
-        _i9.Iterable<
+        _i10.Iterable<
                 (
-                  _i3.PropertyKey,
+                  _i2.Object,
                   T,
                 )>
             entries) $1,
 
     /// Returns an object created by key-value entries for properties and methods
     ///  @param entries An iterable object that contains key-value entries for properties and methods.
-    _i2.dynamic Function(_i9.Iterable<_i2.List<_i2.dynamic>> entries) $2,
+    _i2.dynamic Function(_i10.Iterable<_i2.List<_i2.dynamic>> entries) $2,
   }) get fromEntries => (
         $1: _fromEntries$1,
         $2: _fromEntries$2,
       );
 }
 
-_i2.Object get _declaredObject => _i5.getProperty(
+_i2.Object get _declaredObject => _i6.getProperty(
       _self,
       'Object',
     );
 
 extension Object$Typings on Object {
   /// The initial value of Object.prototype.constructor is the standard built-in Object constructor.
-  _i2.Function get constructor => _i5.getProperty(
+  _i2.Function get constructor => _i6.getProperty(
         this,
         'constructor',
       );
   set constructor(_i2.Function value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'constructor',
       value,
@@ -853,122 +886,167 @@ extension Object$Typings on Object {
   }
 
   set toString$(_i2.String Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toString',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function() get toString$ => _i5.getProperty(
-        this,
-        'toString',
+  _i2.String Function() get toString$ => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toString',
+        ),
+        r'call',
+        [this],
       );
   set toLocaleString(_i2.String Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toLocaleString',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function() get toLocaleString => _i5.getProperty(
-        this,
-        'toLocaleString',
+  _i2.String Function() get toLocaleString => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toLocaleString',
+        ),
+        r'call',
+        [this],
       );
   set valueOf(_i3.Object Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'valueOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i3.Object Function() get valueOf => _i5.getProperty(
-        this,
-        'valueOf',
+  _i3.Object Function() get valueOf => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'valueOf',
+        ),
+        r'call',
+        [this],
       );
-  set hasOwnProperty(_i2.bool Function(_i3.PropertyKey) value) {
-    _i5.setProperty(
+  set hasOwnProperty(_i2.bool Function(_i2.Object) value) {
+    _i6.setProperty(
       this,
       'hasOwnProperty',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.bool Function(_i3.PropertyKey) get hasOwnProperty => _i5.getProperty(
-        this,
-        'hasOwnProperty',
-      );
+  _i2.bool Function(_i2.Object) get hasOwnProperty =>
+      (_i2.Object p0) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'hasOwnProperty',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set isPrototypeOf(_i2.bool Function(_i3.Object) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'isPrototypeOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.bool Function(_i3.Object) get isPrototypeOf => _i5.getProperty(
-        this,
-        'isPrototypeOf',
-      );
-  set propertyIsEnumerable(_i2.bool Function(_i3.PropertyKey) value) {
-    _i5.setProperty(
+  _i2.bool Function(_i3.Object) get isPrototypeOf =>
+      (_i3.Object p0) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'isPrototypeOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  set propertyIsEnumerable(_i2.bool Function(_i2.Object) value) {
+    _i6.setProperty(
       this,
       'propertyIsEnumerable',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.bool Function(_i3.PropertyKey) get propertyIsEnumerable =>
-      _i5.getProperty(
-        this,
-        'propertyIsEnumerable',
-      );
+  _i2.bool Function(_i2.Object) get propertyIsEnumerable =>
+      (_i2.Object p0) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'propertyIsEnumerable',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class ObjectConstructor {
   static set getPrototypeOf(_i2.dynamic Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'getPrototypeOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set getOwnPropertyDescriptor(
       _i3.PropertyDescriptor? Function(
-        _i3.PropertyKey, [
+        _i2.Object, [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'getOwnPropertyDescriptor',
-      _i5.allowInterop(value),
+      _i6.allowInterop((
+        p0,
+        p1,
+      ) =>
+          () =>
+              value(
+                p0,
+                p1,
+              ) ??
+              _i5.undefined),
     );
   }
 
   static set getOwnPropertyNames(
       _i2.List<_i2.String> Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'getOwnPropertyNames',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set defineProperty(
       T Function<T>(
         T,
-        _i3.PropertyKey,
+        _i2.Object,
         _i2.Object,
       ) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'defineProperty',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -977,59 +1055,59 @@ class ObjectConstructor {
         T,
         _i2.Object,
       ) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'defineProperties',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set seal(T Function<T>(T) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'seal',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set preventExtensions(T Function<T>(T) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'preventExtensions',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isSealed(_i2.bool Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'isSealed',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isFrozen(_i2.bool Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'isFrozen',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isExtensible(_i2.bool Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'isExtensible',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set getOwnPropertySymbols(
       _i2.List<_i2.Symbol> Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'getOwnPropertySymbols',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -1038,10 +1116,10 @@ class ObjectConstructor {
         _i2.dynamic,
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'is',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -1050,123 +1128,267 @@ class ObjectConstructor {
         _i2.dynamic,
         _i2.Object?,
       ]) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'setPrototypeOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set getOwnPropertyDescriptors(_i2.Object Function<T>(T) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'getOwnPropertyDescriptors',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set hasOwn(
       _i2.bool Function(
         _i2.Object,
-        _i3.PropertyKey,
+        _i2.Object,
       ) value) {
-    _i5.setProperty(
-      _i6.target0,
+    _i6.setProperty(
+      _i7.target0,
       'hasOwn',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 }
 
 extension ObjectConstructor$Typings on ObjectConstructor {
-  _i2.dynamic Function([_i2.dynamic]) get getPrototypeOf => _i5.getProperty(
-        this,
-        'getPrototypeOf',
-      );
+  _i2.dynamic Function([_i2.dynamic]) get getPrototypeOf =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'getPrototypeOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   _i3.PropertyDescriptor? Function(
-    _i3.PropertyKey, [
+    _i2.Object, [
     _i2.dynamic,
-  ]) get getOwnPropertyDescriptor => _i5.getProperty(
-        this,
-        'getOwnPropertyDescriptor',
-      );
+  ]) get getOwnPropertyDescriptor => (
+        _i2.Object p1, [
+        _i2.dynamic p0,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'getOwnPropertyDescriptor',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   _i2.List<_i2.String> Function([_i2.dynamic]) get getOwnPropertyNames =>
-      _i5.getProperty(
-        this,
-        'getOwnPropertyNames',
-      );
+      ([_i2.dynamic p0]) => (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'getOwnPropertyNames',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          ) as _i2.List)
+              .cast();
   T Function<T>(
     T,
-    _i3.PropertyKey,
     _i2.Object,
-  ) get defineProperty => _i5.getProperty(
-        this,
-        'defineProperty',
-      );
+    _i2.Object,
+  ) get defineProperty => <T>(
+        T p0,
+        _i2.Object p1,
+        _i2.Object p2,
+      ) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'defineProperty',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+            ],
+          );
   T Function<T>(
     T,
     _i2.Object,
-  ) get defineProperties => _i5.getProperty(
-        this,
-        'defineProperties',
+  ) get defineProperties => <T>(
+        T p0,
+        _i2.Object p1,
+      ) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'defineProperties',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
+  T Function<T>(T) get seal => <T>(T p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'seal',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
-  T Function<T>(T) get seal => _i5.getProperty(
-        this,
-        'seal',
+  T Function<T>(T) get preventExtensions => <T>(T p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'preventExtensions',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
-  T Function<T>(T) get preventExtensions => _i5.getProperty(
-        this,
-        'preventExtensions',
-      );
-  _i2.bool Function([_i2.dynamic]) get isSealed => _i5.getProperty(
-        this,
-        'isSealed',
-      );
-  _i2.bool Function([_i2.dynamic]) get isFrozen => _i5.getProperty(
-        this,
-        'isFrozen',
-      );
-  _i2.bool Function([_i2.dynamic]) get isExtensible => _i5.getProperty(
-        this,
-        'isExtensible',
-      );
+  _i2.bool Function([_i2.dynamic]) get isSealed =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'isSealed',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  _i2.bool Function([_i2.dynamic]) get isFrozen =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'isFrozen',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  _i2.bool Function([_i2.dynamic]) get isExtensible =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'isExtensible',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   _i2.List<_i2.Symbol> Function([_i2.dynamic]) get getOwnPropertySymbols =>
-      _i5.getProperty(
-        this,
-        'getOwnPropertySymbols',
-      );
+      ([_i2.dynamic p0]) => (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'getOwnPropertySymbols',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          ) as _i2.List)
+              .cast();
   _i2.bool Function([
     _i2.dynamic,
     _i2.dynamic,
-  ]) get is$ => _i5.getProperty(
-        this,
-        'is',
-      );
+  ]) get is$ => ([
+        _i2.dynamic p0,
+        _i2.dynamic p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'is',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   _i2.dynamic Function([
     _i2.dynamic,
     _i2.Object?,
-  ]) get setPrototypeOf => _i5.getProperty(
-        this,
-        'setPrototypeOf',
-      );
-  _i2.Object Function<T>(T) get getOwnPropertyDescriptors => _i5.getProperty(
-        this,
-        'getOwnPropertyDescriptors',
-      );
+  ]) get setPrototypeOf => ([
+        _i2.dynamic p0,
+        _i2.Object? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'setPrototypeOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
+  _i2.Object Function<T>(T) get getOwnPropertyDescriptors =>
+      <T>(T p0) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'getOwnPropertyDescriptors',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   _i2.bool Function(
     _i2.Object,
-    _i3.PropertyKey,
-  ) get hasOwn => _i5.getProperty(
-        this,
-        'hasOwn',
-      );
+    _i2.Object,
+  ) get hasOwn => (
+        _i2.Object p0,
+        _i2.Object p1,
+      ) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'hasOwn',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
 
   /// Creates an object that has the specified prototype or that has null prototype.
   ///  @param o Object to use as a prototype. May be null.
-  _i2.dynamic _create$1([_i2.Object? o]) => _i5.callMethod(
+  _i2.dynamic _create$1([_i2.Object? o]) => _i6.callMethod(
         this,
         'create',
-        [o ?? _i4.undefined],
+        [o ?? _i5.undefined],
       );
 
   /// Creates an object that has the specified prototype, and that optionally contains specified properties.
@@ -1176,11 +1398,11 @@ extension ObjectConstructor$Typings on ObjectConstructor {
     _i2.Object properties, [
     _i2.Object? o,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'create',
         [
-          o ?? _i4.undefined,
+          o ?? _i5.undefined,
           properties,
         ],
       );
@@ -1205,7 +1427,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
   ///  @param f Object on which to lock the attributes.
-  T freeze<T extends _i2.Function>(T f) => _i5.callMethod(
+  T freeze<T extends _i2.Function>(T f) => _i6.callMethod(
         this,
         'freeze',
         [f],
@@ -1213,7 +1435,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns the names of the enumerable string properties and methods of an object.
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List<_i2.String> _keys$1(_i2.Object o) => (_i5.callMethod(
+  _i2.List<_i2.String> _keys$1(_i2.Object o) => (_i6.callMethod(
         this,
         'keys',
         [o],
@@ -1222,7 +1444,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns the names of the enumerable string properties and methods of an object.
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List<_i2.String> _keys$2(_i7.IInline7 o) => (_i5.callMethod(
+  _i2.List<_i2.String> _keys$2(_i8.IInline9 o) => (_i6.callMethod(
         this,
         'keys',
         [o],
@@ -1237,7 +1459,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
     /// Returns the names of the enumerable string properties and methods of an object.
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List<_i2.String> Function(_i7.IInline7 o) $2,
+    _i2.List<_i2.String> Function(_i8.IInline9 o) $2,
   }) get keys => (
         $1: _keys$1,
         $2: _keys$2,
@@ -1251,7 +1473,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
     _i2.Object target, [
     _i2.Iterable<_i2.dynamic>? sources,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'assign',
         [
@@ -1266,13 +1488,13 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   ///  @param source1 The first source object from which to copy properties.
   ///  @param source2 The second source object from which to copy properties.
   ///  @param source3 The third source object from which to copy properties.
-  _i2.Object _assign$2<T extends _i7.IInline6, U, V, W>(
+  _i2.Object _assign$2<T extends _i8.IInline8, U, V, W>(
     T target,
     U source1,
     V source2,
     W source3,
   ) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'assign',
         [
@@ -1300,7 +1522,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
     ///  @param source1 The first source object from which to copy properties.
     ///  @param source2 The second source object from which to copy properties.
     ///  @param source3 The third source object from which to copy properties.
-    _i2.Object Function<T extends _i7.IInline6, U, V, W>(
+    _i2.Object Function<T extends _i8.IInline8, U, V, W>(
       T target,
       U source1,
       V source2,
@@ -1313,7 +1535,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List<T> _values$1<T>(_i2.Object o) => (_i5.callMethod(
+  _i2.List<T> _values$1<T>(_i2.Object o) => (_i6.callMethod(
         this,
         'values',
         [o],
@@ -1322,7 +1544,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an array of values of the enumerable properties of an object
   ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-  _i2.List<_i2.dynamic> _values$2(_i8.IInline16 o) => (_i5.callMethod(
+  _i2.List<_i2.dynamic> _values$2(_i9.IInline18 o) => (_i6.callMethod(
         this,
         'values',
         [o],
@@ -1337,7 +1559,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
     /// Returns an array of values of the enumerable properties of an object
     ///  @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
-    _i2.List<_i2.dynamic> Function(_i8.IInline16 o) $2,
+    _i2.List<_i2.dynamic> Function(_i9.IInline18 o) $2,
   }) get values => (
         $1: _values$1,
         $2: _values$2,
@@ -1349,7 +1571,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
       (
         _i2.String,
         T,
-      )> _entries$1<T>(_i2.Object o) => (_i5.callMethod(
+      )> _entries$1<T>(_i2.Object o) => (_i6.callMethod(
         this,
         'entries',
         [o],
@@ -1362,7 +1584,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
       (
         _i2.String,
         _i2.dynamic,
-      )> _entries$2(_i8.IInline18 o) => (_i5.callMethod(
+      )> _entries$2(_i9.IInline20 o) => (_i6.callMethod(
         this,
         'entries',
         [o],
@@ -1387,7 +1609,7 @@ extension ObjectConstructor$Typings on ObjectConstructor {
               _i2.String,
               _i2.dynamic,
             )>
-        Function(_i8.IInline18 o) $2,
+        Function(_i9.IInline20 o) $2,
   }) get entries => (
         $1: _entries$1,
         $2: _entries$2,
@@ -1396,13 +1618,13 @@ extension ObjectConstructor$Typings on ObjectConstructor {
   /// Returns an object created by key-value entries for properties and methods
   ///  @param entries An iterable object that contains key-value entries for properties and methods.
   _i2.Object _fromEntries$1<T>(
-          _i9.Iterable<
+          _i10.Iterable<
                   (
-                    _i3.PropertyKey,
+                    _i2.Object,
                     T,
                   )>
               entries) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'fromEntries',
         [entries],
@@ -1410,8 +1632,8 @@ extension ObjectConstructor$Typings on ObjectConstructor {
 
   /// Returns an object created by key-value entries for properties and methods
   ///  @param entries An iterable object that contains key-value entries for properties and methods.
-  _i2.dynamic _fromEntries$2(_i9.Iterable<_i2.List<_i2.dynamic>> entries) =>
-      _i5.callMethod(
+  _i2.dynamic _fromEntries$2(_i10.Iterable<_i2.List<_i2.dynamic>> entries) =>
+      _i6.callMethod(
         this,
         'fromEntries',
         [entries],
@@ -1422,26 +1644,26 @@ extension ObjectConstructor$Typings on ObjectConstructor {
     /// Returns an object created by key-value entries for properties and methods
     ///  @param entries An iterable object that contains key-value entries for properties and methods.
     _i2.Object Function<T>(
-        _i9.Iterable<
+        _i10.Iterable<
                 (
-                  _i3.PropertyKey,
+                  _i2.Object,
                   T,
                 )>
             entries) $1,
 
     /// Returns an object created by key-value entries for properties and methods
     ///  @param entries An iterable object that contains key-value entries for properties and methods.
-    _i2.dynamic Function(_i9.Iterable<_i2.List<_i2.dynamic>> entries) $2,
+    _i2.dynamic Function(_i10.Iterable<_i2.List<_i2.dynamic>> entries) $2,
   }) get fromEntries => (
         $1: _fromEntries$1,
         $2: _fromEntries$2,
       );
-  _i2.dynamic _call$1() => _i5.callMethod(
+  _i2.dynamic _call$1() => _i6.callMethod(
         this,
         'call',
         [this],
       );
-  _i2.dynamic _call$2([_i2.dynamic value]) => _i5.callMethod(
+  _i2.dynamic _call$2([_i2.dynamic value]) => _i6.callMethod(
         this,
         'call',
         [
@@ -1460,12 +1682,13 @@ extension ObjectConstructor$Typings on ObjectConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class FunctionConstructor {}
 
 extension FunctionConstructor$Typings on FunctionConstructor {
-  _i2.Function call([_i2.Iterable<_i2.dynamic>? args]) => _i5.callMethod(
+  _i2.Function call([_i2.Iterable<_i2.dynamic>? args]) => _i6.callMethod(
         this,
         'call',
         [
@@ -1475,10 +1698,11 @@ extension FunctionConstructor$Typings on FunctionConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IArguments implements _IterableLike$<_i9.IterableIterator<_i2.dynamic>> {
+class IArguments implements _IterableLike$<_i10.IterableIterator<_i2.dynamic>> {
   external factory IArguments._({
     _i2.dynamic length,
     _i2.dynamic callee,
@@ -1495,31 +1719,31 @@ class IArguments implements _IterableLike$<_i9.IterableIterator<_i2.dynamic>> {
 }
 
 extension IArguments$Typings on IArguments {
-  _i2.num get length => _i5.getProperty(
+  _i2.num get length => _i6.getProperty(
         this,
         'length',
       );
   set length(_i2.num value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'length',
       value,
     );
   }
 
-  _i2.Function get callee => _i5.getProperty(
+  _i2.Function get callee => _i6.getProperty(
         this,
         'callee',
       );
   set callee(_i2.Function value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'callee',
       value,
     );
   }
 
-  _i2.dynamic operator [](_i2.num index) => _i5.getProperty(
+  _i2.dynamic operator [](_i2.num index) => _i6.getProperty(
         this,
         index,
       );
@@ -1527,7 +1751,7 @@ extension IArguments$Typings on IArguments {
     _i2.num index,
     _i2.dynamic value,
   ) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       index,
       value,
@@ -1535,16 +1759,17 @@ extension IArguments$Typings on IArguments {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class StringConstructor {}
 
 extension StringConstructor$Typings on StringConstructor {
   set fromCharCode(_i2.String Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'fromCharCode',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -1572,15 +1797,22 @@ extension StringConstructor$Typings on StringConstructor {
   }
 
   _i2.String Function([_i2.Iterable<_i2.dynamic>?]) get fromCharCode =>
-      _i5.getProperty(
-        this,
-        'fromCharCode',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'fromCharCode',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set fromCodePoint(_i2.String Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'fromCodePoint',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -1608,19 +1840,26 @@ extension StringConstructor$Typings on StringConstructor {
   }
 
   _i2.String Function([_i2.Iterable<_i2.dynamic>?]) get fromCodePoint =>
-      _i5.getProperty(
-        this,
-        'fromCodePoint',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'fromCodePoint',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set raw(
       _i2.String Function(
         _i2.dynamic, [
         _i2.Iterable<_i2.dynamic>?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'raw',
-      _i5.allowInterop((
+      _i6.allowInterop((
         _i2.dynamic v0, [
         a0,
         a1,
@@ -1654,11 +1893,23 @@ extension StringConstructor$Typings on StringConstructor {
   _i2.String Function(
     _i2.dynamic, [
     _i2.Iterable<_i2.dynamic>?,
-  ]) get raw => _i5.getProperty(
-        this,
-        'raw',
-      );
-  _i2.String call([_i2.dynamic value]) => _i5.callMethod(
+  ]) get raw => (
+        _i2.dynamic p0, [
+        _i2.Iterable<_i2.dynamic>? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'raw',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
+  _i2.String call([_i2.dynamic value]) => _i6.callMethod(
         this,
         'call',
         [
@@ -1668,152 +1919,159 @@ extension StringConstructor$Typings on StringConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Boolean {
-  factory Boolean([_i2.dynamic value]) => _i5.callConstructor(
+  factory Boolean([_i2.dynamic value]) => _i6.callConstructor(
         _declaredBoolean,
         [value],
       );
 }
 
-_i2.Object get _declaredBoolean => _i5.getProperty(
+_i2.Object get _declaredBoolean => _i6.getProperty(
       _self,
       'Boolean',
     );
 
 extension Boolean$Typings on Boolean {
   set valueOf(_i2.bool Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'valueOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.bool Function() get valueOf => _i5.getProperty(
-        this,
-        'valueOf',
+  _i2.bool Function() get valueOf => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'valueOf',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class BooleanConstructor {}
 
 extension BooleanConstructor$Typings on BooleanConstructor {
-  _i2.bool call<T>([T? value]) => _i5.callMethod(
+  _i2.bool call<T>([T? value]) => _i6.callMethod(
         this,
         'call',
         [
           this,
-          value ?? _i4.undefined,
+          value ?? _i5.undefined,
         ],
       );
 }
 
+/* Source:  */
 /// An object that represents a number of any kind. All JavaScript numbers are 64-bit floating-point numbers.
 @_i1.JS()
 @_i1.staticInterop
 class Number {
-  factory Number([_i2.dynamic value]) => _i5.callConstructor(
+  factory Number([_i2.dynamic value]) => _i6.callConstructor(
         _declaredNumber,
         [value],
       );
 
   /// The largest number that can be represented in JavaScript. Equal to approximately 1.79E+308.
-  static _i2.num get maxValue => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get maxValue => _i6.getProperty(
+        _i7.target2,
         'MAX_VALUE',
       );
 
   /// The closest number to zero that can be represented in JavaScript. Equal to approximately 5.00E-324.
-  static _i2.num get minValue => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get minValue => _i6.getProperty(
+        _i7.target2,
         'MIN_VALUE',
       );
 
   /// A value that is not a number.
   /// In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
-  static _i2.num get naN => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get naN => _i6.getProperty(
+        _i7.target2,
         'NaN',
       );
 
   /// A value that is less than the largest negative number that can be represented in JavaScript.
   /// JavaScript displays NEGATIVE_INFINITY values as -infinity.
-  static _i2.num get negativeInfinity => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get negativeInfinity => _i6.getProperty(
+        _i7.target2,
         'NEGATIVE_INFINITY',
       );
 
   /// A value greater than the largest number that can be represented in JavaScript.
   /// JavaScript displays POSITIVE_INFINITY values as infinity.
-  static _i2.num get positiveInfinity => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get positiveInfinity => _i6.getProperty(
+        _i7.target2,
         'POSITIVE_INFINITY',
       );
 
   /// The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1
   /// that is representable as a Number value, which is approximately:
   /// 2.2204460492503130808472633361816 x 10‍−‍16.
-  static _i2.num get epsilon => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get epsilon => _i6.getProperty(
+        _i7.target2,
         'EPSILON',
       );
 
   /// The value of the largest integer n such that n and n + 1 are both exactly representable as
   /// a Number value.
   /// The value of Number.MAX_SAFE_INTEGER is 9007199254740991 2^53 − 1.
-  static _i2.num get maxSafeInteger => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get maxSafeInteger => _i6.getProperty(
+        _i7.target2,
         'MAX_SAFE_INTEGER',
       );
 
   /// The value of the smallest integer n such that n and n − 1 are both exactly representable as
   /// a Number value.
   /// The value of Number.MIN_SAFE_INTEGER is −9007199254740991 (−(2^53 − 1)).
-  static _i2.num get minSafeInteger => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get minSafeInteger => _i6.getProperty(
+        _i7.target2,
         'MIN_SAFE_INTEGER',
       );
   static set isFinite(_i2.bool Function([_i2.Object?]) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'isFinite',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isInteger(_i2.bool Function([_i2.Object?]) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'isInteger',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isNaN(_i2.bool Function([_i2.Object?]) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'isNaN',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isSafeInteger(_i2.bool Function([_i2.Object?]) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'isSafeInteger',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set parseFloat(_i2.num Function(_i2.String) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'parseFloat',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -1822,79 +2080,115 @@ class Number {
         _i2.String, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'parseInt',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 }
 
-_i2.Object get _declaredNumber => _i5.getProperty(
+_i2.Object get _declaredNumber => _i6.getProperty(
       _self,
       'Number',
     );
 
 extension Number$Typings on Number {
   set toString$(_i2.String Function([_i2.num?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toString',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function([_i2.num?]) get toString$ => _i5.getProperty(
-        this,
-        'toString',
-      );
+  _i2.String Function([_i2.num?]) get toString$ =>
+      ([_i2.num? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'toString',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set toFixed(_i2.String Function([_i2.num?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toFixed',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function([_i2.num?]) get toFixed => _i5.getProperty(
-        this,
-        'toFixed',
-      );
+  _i2.String Function([_i2.num?]) get toFixed =>
+      ([_i2.num? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'toFixed',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set toExponential(_i2.String Function([_i2.num?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toExponential',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function([_i2.num?]) get toExponential => _i5.getProperty(
-        this,
-        'toExponential',
-      );
+  _i2.String Function([_i2.num?]) get toExponential =>
+      ([_i2.num? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'toExponential',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set toPrecision(_i2.String Function([_i2.num?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toPrecision',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function([_i2.num?]) get toPrecision => _i5.getProperty(
-        this,
-        'toPrecision',
-      );
+  _i2.String Function([_i2.num?]) get toPrecision =>
+      ([_i2.num? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'toPrecision',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set valueOf(_i2.num Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'valueOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function() get valueOf => _i5.getProperty(
-        this,
-        'valueOf',
+  _i2.num Function() get valueOf => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'valueOf',
+        ),
+        r'call',
+        [this],
       );
 
   /// Converts a number to a string by using the current or specified locale.
@@ -1904,11 +2198,11 @@ extension Number$Typings on Number {
     _i2.Object? locales,
     _i2.dynamic options,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'toLocaleString',
         [
-          locales ?? _i4.undefined,
+          locales ?? _i5.undefined,
           options,
         ],
       );
@@ -1920,7 +2214,7 @@ extension Number$Typings on Number {
     _i2.dynamic locales,
     _i2.dynamic options,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'toLocaleString',
         [
@@ -1952,102 +2246,103 @@ extension Number$Typings on Number {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class NumberConstructor {
   /// The largest number that can be represented in JavaScript. Equal to approximately 1.79E+308.
-  static _i2.num get maxValue => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get maxValue => _i6.getProperty(
+        _i7.target2,
         'MAX_VALUE',
       );
 
   /// The closest number to zero that can be represented in JavaScript. Equal to approximately 5.00E-324.
-  static _i2.num get minValue => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get minValue => _i6.getProperty(
+        _i7.target2,
         'MIN_VALUE',
       );
 
   /// A value that is not a number.
   /// In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
-  static _i2.num get naN => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get naN => _i6.getProperty(
+        _i7.target2,
         'NaN',
       );
 
   /// A value that is less than the largest negative number that can be represented in JavaScript.
   /// JavaScript displays NEGATIVE_INFINITY values as -infinity.
-  static _i2.num get negativeInfinity => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get negativeInfinity => _i6.getProperty(
+        _i7.target2,
         'NEGATIVE_INFINITY',
       );
 
   /// A value greater than the largest number that can be represented in JavaScript.
   /// JavaScript displays POSITIVE_INFINITY values as infinity.
-  static _i2.num get positiveInfinity => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get positiveInfinity => _i6.getProperty(
+        _i7.target2,
         'POSITIVE_INFINITY',
       );
 
   /// The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1
   /// that is representable as a Number value, which is approximately:
   /// 2.2204460492503130808472633361816 x 10‍−‍16.
-  static _i2.num get epsilon => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get epsilon => _i6.getProperty(
+        _i7.target2,
         'EPSILON',
       );
 
   /// The value of the largest integer n such that n and n + 1 are both exactly representable as
   /// a Number value.
   /// The value of Number.MAX_SAFE_INTEGER is 9007199254740991 2^53 − 1.
-  static _i2.num get maxSafeInteger => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get maxSafeInteger => _i6.getProperty(
+        _i7.target2,
         'MAX_SAFE_INTEGER',
       );
 
   /// The value of the smallest integer n such that n and n − 1 are both exactly representable as
   /// a Number value.
   /// The value of Number.MIN_SAFE_INTEGER is −9007199254740991 (−(2^53 − 1)).
-  static _i2.num get minSafeInteger => _i5.getProperty(
-        _i6.target2,
+  static _i2.num get minSafeInteger => _i6.getProperty(
+        _i7.target2,
         'MIN_SAFE_INTEGER',
       );
   static set isFinite(_i2.bool Function([_i2.Object?]) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'isFinite',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isInteger(_i2.bool Function([_i2.Object?]) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'isInteger',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isNaN(_i2.bool Function([_i2.Object?]) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'isNaN',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set isSafeInteger(_i2.bool Function([_i2.Object?]) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'isSafeInteger',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set parseFloat(_i2.num Function(_i2.String) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'parseFloat',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -2056,43 +2351,95 @@ class NumberConstructor {
         _i2.String, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
-      _i6.target2,
+    _i6.setProperty(
+      _i7.target2,
       'parseInt',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 }
 
 extension NumberConstructor$Typings on NumberConstructor {
-  _i2.bool Function([_i2.Object?]) get isFinite => _i5.getProperty(
-        this,
-        'isFinite',
-      );
-  _i2.bool Function([_i2.Object?]) get isInteger => _i5.getProperty(
-        this,
-        'isInteger',
-      );
-  _i2.bool Function([_i2.Object?]) get isNaN => _i5.getProperty(
-        this,
-        'isNaN',
-      );
-  _i2.bool Function([_i2.Object?]) get isSafeInteger => _i5.getProperty(
-        this,
-        'isSafeInteger',
-      );
-  _i2.num Function(_i2.String) get parseFloat => _i5.getProperty(
-        this,
-        'parseFloat',
-      );
+  _i2.bool Function([_i2.Object?]) get isFinite =>
+      ([_i2.Object? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'isFinite',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  _i2.bool Function([_i2.Object?]) get isInteger =>
+      ([_i2.Object? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'isInteger',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  _i2.bool Function([_i2.Object?]) get isNaN =>
+      ([_i2.Object? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'isNaN',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  _i2.bool Function([_i2.Object?]) get isSafeInteger =>
+      ([_i2.Object? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'isSafeInteger',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  _i2.num Function(_i2.String) get parseFloat =>
+      (_i2.String p0) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'parseFloat',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   _i2.num Function(
     _i2.String, [
     _i2.num?,
-  ]) get parseInt => _i5.getProperty(
-        this,
-        'parseInt',
-      );
-  _i2.num call([_i2.dynamic value]) => _i5.callMethod(
+  ]) get parseInt => (
+        _i2.String p0, [
+        _i2.num? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'parseInt',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
+  _i2.num call([_i2.dynamic value]) => _i6.callMethod(
         this,
         'call',
         [
@@ -2102,6 +2449,7 @@ extension NumberConstructor$Typings on NumberConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2182,15 +2530,15 @@ class TemplateStringsArray implements _i3.ReadonlyArray<_i2.String> {
       ), [
       _i2.dynamic,
     ])? findIndex,
-    _i9.IterableIterator<
+    _i10.IterableIterator<
                 (
                   _i2.num,
                   _i2.String,
                 )>
             Function()?
         entries,
-    _i9.IterableIterator<_i2.num> Function()? keys,
-    _i9.IterableIterator<_i2.String> Function()? values,
+    _i10.IterableIterator<_i2.num> Function()? keys,
+    _i10.IterableIterator<_i2.String> Function()? values,
     _i2.bool Function(
       _i2.String, [
       _i2.num?,
@@ -2203,7 +2551,7 @@ class TemplateStringsArray implements _i3.ReadonlyArray<_i2.String> {
       ), [
       This?,
     ])? flatMap,
-    _i2.List<_i10.FlatArray<A, D>> Function<A, D extends _i2.num>([D?])? flat,
+    _i2.List<_i2.dynamic> Function<A, D extends _i2.num>([D?])? flat,
     _i2.String? Function(_i2.num)? at,
     _i2.num Function(
       _i2.Object? Function(
@@ -2226,42 +2574,45 @@ class TemplateStringsArray implements _i3.ReadonlyArray<_i2.String> {
     )? with$,
   }) =>
       TemplateStringsArray._(
-        raw: raw ?? _i4.undefined,
+        raw: raw ?? _i5.undefined,
         length: length,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
+        toString$: toString$ == null ? null : _i6.allowInterop(toString$),
         toLocaleString:
-            toLocaleString == null ? null : _i5.allowInterop(toLocaleString),
-        join: join == null ? null : _i5.allowInterop(join),
-        slice: slice == null ? null : _i5.allowInterop(slice),
-        indexOf: indexOf == null ? null : _i5.allowInterop(indexOf),
-        lastIndexOf: lastIndexOf == null ? null : _i5.allowInterop(lastIndexOf),
-        some: some == null ? null : _i5.allowInterop(some),
-        forEach: forEach == null ? null : _i5.allowInterop(forEach),
-        map: map == null ? null : _i5.allowInterop(map),
-        findIndex: findIndex == null ? null : _i5.allowInterop(findIndex),
-        entries: entries == null ? null : _i5.allowInterop(entries),
-        keys: keys == null ? null : _i5.allowInterop(keys),
-        values: values == null ? null : _i5.allowInterop(values),
-        includes: includes == null ? null : _i5.allowInterop(includes),
-        flatMap: flatMap == null ? null : _i5.allowInterop(flatMap),
-        flat: flat == null ? null : _i5.allowInterop(flat),
-        at: at == null ? null : _i5.allowInterop(at),
+            toLocaleString == null ? null : _i6.allowInterop(toLocaleString),
+        join: join == null ? null : _i6.allowInterop(join),
+        slice: slice == null ? null : _i6.allowInterop(slice),
+        indexOf: indexOf == null ? null : _i6.allowInterop(indexOf),
+        lastIndexOf: lastIndexOf == null ? null : _i6.allowInterop(lastIndexOf),
+        some: some == null ? null : _i6.allowInterop(some),
+        forEach: forEach == null ? null : _i6.allowInterop(forEach),
+        map: map == null ? null : _i6.allowInterop(map),
+        findIndex: findIndex == null ? null : _i6.allowInterop(findIndex),
+        entries: entries == null ? null : _i6.allowInterop(entries),
+        keys: keys == null ? null : _i6.allowInterop(keys),
+        values: values == null ? null : _i6.allowInterop(values),
+        includes: includes == null ? null : _i6.allowInterop(includes),
+        flatMap: flatMap == null ? null : _i6.allowInterop(flatMap),
+        flat: flat == null ? null : _i6.allowInterop(flat),
+        at: at == null
+            ? null
+            : _i6.allowInterop((p0) => () => at(p0) ?? _i5.undefined),
         findLastIndex:
-            findLastIndex == null ? null : _i5.allowInterop(findLastIndex),
-        toReversed: toReversed == null ? null : _i5.allowInterop(toReversed),
-        toSorted: toSorted == null ? null : _i5.allowInterop(toSorted),
-        with$: with$ == null ? null : _i5.allowInterop(with$),
+            findLastIndex == null ? null : _i6.allowInterop(findLastIndex),
+        toReversed: toReversed == null ? null : _i6.allowInterop(toReversed),
+        toSorted: toSorted == null ? null : _i6.allowInterop(toSorted),
+        with$: with$ == null ? null : _i6.allowInterop(with$),
       );
 }
 
 extension TemplateStringsArray$Typings on TemplateStringsArray {
-  _i2.List<_i2.String> get raw => (_i5.getProperty(
+  _i2.List<_i2.String> get raw => (_i6.getProperty(
         this,
         'raw',
       ) as _i2.List)
           .cast();
 }
 
+/* Source:  */
 /// The type of `import.meta`.
 ///
 /// If you need to declare that a given property exists on `import.meta`,
@@ -2276,12 +2627,12 @@ class ImportMeta {
 }
 
 extension ImportMeta$Typings on ImportMeta {
-  _i2.String get url => _i5.getProperty(
+  _i2.String get url => _i6.getProperty(
         this,
         'url',
       );
   set url(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'url',
       value,
@@ -2289,6 +2640,7 @@ extension ImportMeta$Typings on ImportMeta {
   }
 }
 
+/* Source:  */
 /// The type for the optional second argument to `import()`.
 ///
 /// If your host environment supports additional options, this type may be
@@ -2300,23 +2652,24 @@ class ImportCallOptions {
   external factory ImportCallOptions._({_i2.dynamic assert$});
 
   factory ImportCallOptions({_i2.Object? assert$}) =>
-      ImportCallOptions._(assert$: assert$ ?? _i4.undefined);
+      ImportCallOptions._(assert$: assert$ ?? _i5.undefined);
 }
 
 extension ImportCallOptions$Typings on ImportCallOptions {
-  _i2.Object? get assert$ => _i5.getProperty(
+  _i2.Object? get assert$ => _i6.getProperty(
         this,
         'assert',
       );
   set assert$(_i2.Object? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'assert',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 }
 
+/* Source:  */
 /// An intrinsic object that provides basic mathematics functionality and constants.
 @_i1.JS()
 @_i1.staticInterop
@@ -2431,19 +2784,19 @@ class Math {
         pi: pi,
         sqrt12: sqrt12,
         sqrt2: sqrt2,
-        abs: abs == null ? null : _i5.allowInterop(abs),
-        acos: acos == null ? null : _i5.allowInterop(acos),
-        asin: asin == null ? null : _i5.allowInterop(asin),
-        atan: atan == null ? null : _i5.allowInterop(atan),
-        atan2: atan2 == null ? null : _i5.allowInterop(atan2),
-        ceil: ceil == null ? null : _i5.allowInterop(ceil),
-        cos: cos == null ? null : _i5.allowInterop(cos),
-        exp: exp == null ? null : _i5.allowInterop(exp),
-        floor: floor == null ? null : _i5.allowInterop(floor),
-        log: log == null ? null : _i5.allowInterop(log),
+        abs: abs == null ? null : _i6.allowInterop(abs),
+        acos: acos == null ? null : _i6.allowInterop(acos),
+        asin: asin == null ? null : _i6.allowInterop(asin),
+        atan: atan == null ? null : _i6.allowInterop(atan),
+        atan2: atan2 == null ? null : _i6.allowInterop(atan2),
+        ceil: ceil == null ? null : _i6.allowInterop(ceil),
+        cos: cos == null ? null : _i6.allowInterop(cos),
+        exp: exp == null ? null : _i6.allowInterop(exp),
+        floor: floor == null ? null : _i6.allowInterop(floor),
+        log: log == null ? null : _i6.allowInterop(log),
         max: max == null
             ? null
-            : _i5.allowInterop(([
+            : _i6.allowInterop(([
                 a0,
                 a1,
                 a2,
@@ -2469,7 +2822,7 @@ class Math {
                 ])),
         min: min == null
             ? null
-            : _i5.allowInterop(([
+            : _i6.allowInterop(([
                 a0,
                 a1,
                 a2,
@@ -2493,28 +2846,28 @@ class Math {
                   a8,
                   a9,
                 ])),
-        pow: pow == null ? null : _i5.allowInterop(pow),
-        random: random == null ? null : _i5.allowInterop(random),
-        round: round == null ? null : _i5.allowInterop(round),
-        sin: sin == null ? null : _i5.allowInterop(sin),
-        sqrt: sqrt == null ? null : _i5.allowInterop(sqrt),
-        tan: tan == null ? null : _i5.allowInterop(tan),
-        clz32: clz32 == null ? null : _i5.allowInterop(clz32),
-        imul: imul == null ? null : _i5.allowInterop(imul),
-        sign: sign == null ? null : _i5.allowInterop(sign),
-        log10: log10 == null ? null : _i5.allowInterop(log10),
-        log2: log2 == null ? null : _i5.allowInterop(log2),
-        log1p: log1p == null ? null : _i5.allowInterop(log1p),
-        expm1: expm1 == null ? null : _i5.allowInterop(expm1),
-        cosh: cosh == null ? null : _i5.allowInterop(cosh),
-        sinh: sinh == null ? null : _i5.allowInterop(sinh),
-        tanh: tanh == null ? null : _i5.allowInterop(tanh),
-        acosh: acosh == null ? null : _i5.allowInterop(acosh),
-        asinh: asinh == null ? null : _i5.allowInterop(asinh),
-        atanh: atanh == null ? null : _i5.allowInterop(atanh),
+        pow: pow == null ? null : _i6.allowInterop(pow),
+        random: random == null ? null : _i6.allowInterop(random),
+        round: round == null ? null : _i6.allowInterop(round),
+        sin: sin == null ? null : _i6.allowInterop(sin),
+        sqrt: sqrt == null ? null : _i6.allowInterop(sqrt),
+        tan: tan == null ? null : _i6.allowInterop(tan),
+        clz32: clz32 == null ? null : _i6.allowInterop(clz32),
+        imul: imul == null ? null : _i6.allowInterop(imul),
+        sign: sign == null ? null : _i6.allowInterop(sign),
+        log10: log10 == null ? null : _i6.allowInterop(log10),
+        log2: log2 == null ? null : _i6.allowInterop(log2),
+        log1p: log1p == null ? null : _i6.allowInterop(log1p),
+        expm1: expm1 == null ? null : _i6.allowInterop(expm1),
+        cosh: cosh == null ? null : _i6.allowInterop(cosh),
+        sinh: sinh == null ? null : _i6.allowInterop(sinh),
+        tanh: tanh == null ? null : _i6.allowInterop(tanh),
+        acosh: acosh == null ? null : _i6.allowInterop(acosh),
+        asinh: asinh == null ? null : _i6.allowInterop(asinh),
+        atanh: atanh == null ? null : _i6.allowInterop(atanh),
         hypot: hypot == null
             ? null
-            : _i5.allowInterop(([
+            : _i6.allowInterop(([
                 a0,
                 a1,
                 a2,
@@ -2538,192 +2891,267 @@ class Math {
                   a8,
                   a9,
                 ])),
-        trunc: trunc == null ? null : _i5.allowInterop(trunc),
-        fround: fround == null ? null : _i5.allowInterop(fround),
-        cbrt: cbrt == null ? null : _i5.allowInterop(cbrt),
+        trunc: trunc == null ? null : _i6.allowInterop(trunc),
+        fround: fround == null ? null : _i6.allowInterop(fround),
+        cbrt: cbrt == null ? null : _i6.allowInterop(cbrt),
       );
 }
 
 extension Math$Typings on Math {
   /// The mathematical constant e. This is Euler's number, the base of natural logarithms.
-  _i2.num get e => _i5.getProperty(
+  _i2.num get e => _i6.getProperty(
         this,
         'E',
       );
 
   /// The natural logarithm of 10.
-  _i2.num get ln10 => _i5.getProperty(
+  _i2.num get ln10 => _i6.getProperty(
         this,
         'LN10',
       );
 
   /// The natural logarithm of 2.
-  _i2.num get ln2 => _i5.getProperty(
+  _i2.num get ln2 => _i6.getProperty(
         this,
         'LN2',
       );
 
   /// The base-2 logarithm of e.
-  _i2.num get log2e => _i5.getProperty(
+  _i2.num get log2e => _i6.getProperty(
         this,
         'LOG2E',
       );
 
   /// The base-10 logarithm of e.
-  _i2.num get log10e => _i5.getProperty(
+  _i2.num get log10e => _i6.getProperty(
         this,
         'LOG10E',
       );
 
   /// Pi. This is the ratio of the circumference of a circle to its diameter.
-  _i2.num get pi => _i5.getProperty(
+  _i2.num get pi => _i6.getProperty(
         this,
         'PI',
       );
 
   /// The square root of 0.5, or, equivalently, one divided by the square root of 2.
-  _i2.num get sqrt12 => _i5.getProperty(
+  _i2.num get sqrt12 => _i6.getProperty(
         this,
         'SQRT1_2',
       );
 
   /// The square root of 2.
-  _i2.num get sqrt2 => _i5.getProperty(
+  _i2.num get sqrt2 => _i6.getProperty(
         this,
         'SQRT2',
       );
   set abs(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'abs',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get abs => _i5.getProperty(
-        this,
-        'abs',
+  _i2.num Function(_i2.num) get abs => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'abs',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set acos(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'acos',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get acos => _i5.getProperty(
-        this,
-        'acos',
+  _i2.num Function(_i2.num) get acos => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'acos',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set asin(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'asin',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get asin => _i5.getProperty(
-        this,
-        'asin',
+  _i2.num Function(_i2.num) get asin => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'asin',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set atan(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'atan',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get atan => _i5.getProperty(
-        this,
-        'atan',
+  _i2.num Function(_i2.num) get atan => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'atan',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set atan2(
       _i2.num Function(
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'atan2',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.num Function(
     _i2.num,
     _i2.num,
-  ) get atan2 => _i5.getProperty(
-        this,
-        'atan2',
-      );
+  ) get atan2 => (
+        _i2.num p0,
+        _i2.num p1,
+      ) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'atan2',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set ceil(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'ceil',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get ceil => _i5.getProperty(
-        this,
-        'ceil',
+  _i2.num Function(_i2.num) get ceil => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'ceil',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set cos(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'cos',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get cos => _i5.getProperty(
-        this,
-        'cos',
+  _i2.num Function(_i2.num) get cos => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'cos',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set exp(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'exp',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get exp => _i5.getProperty(
-        this,
-        'exp',
+  _i2.num Function(_i2.num) get exp => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'exp',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set floor(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'floor',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get floor => _i5.getProperty(
-        this,
-        'floor',
+  _i2.num Function(_i2.num) get floor => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'floor',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set log(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'log',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get log => _i5.getProperty(
-        this,
-        'log',
+  _i2.num Function(_i2.num) get log => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'log',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set max(_i2.num Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'max',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -2750,15 +3178,23 @@ extension Math$Typings on Math {
     );
   }
 
-  _i2.num Function([_i2.Iterable<_i2.dynamic>?]) get max => _i5.getProperty(
-        this,
-        'max',
-      );
+  _i2.num Function([_i2.Iterable<_i2.dynamic>?]) get max =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'max',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set min(_i2.num Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'min',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -2785,257 +3221,405 @@ extension Math$Typings on Math {
     );
   }
 
-  _i2.num Function([_i2.Iterable<_i2.dynamic>?]) get min => _i5.getProperty(
-        this,
-        'min',
-      );
+  _i2.num Function([_i2.Iterable<_i2.dynamic>?]) get min =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'min',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set pow(
       _i2.num Function(
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'pow',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.num Function(
     _i2.num,
     _i2.num,
-  ) get pow => _i5.getProperty(
-        this,
-        'pow',
-      );
+  ) get pow => (
+        _i2.num p0,
+        _i2.num p1,
+      ) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'pow',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set random(_i2.num Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'random',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function() get random => _i5.getProperty(
-        this,
-        'random',
+  _i2.num Function() get random => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'random',
+        ),
+        r'call',
+        [this],
       );
   set round(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'round',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get round => _i5.getProperty(
-        this,
-        'round',
+  _i2.num Function(_i2.num) get round => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'round',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set sin(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'sin',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get sin => _i5.getProperty(
-        this,
-        'sin',
+  _i2.num Function(_i2.num) get sin => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'sin',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set sqrt(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'sqrt',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get sqrt => _i5.getProperty(
-        this,
-        'sqrt',
+  _i2.num Function(_i2.num) get sqrt => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'sqrt',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set tan(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'tan',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get tan => _i5.getProperty(
-        this,
-        'tan',
+  _i2.num Function(_i2.num) get tan => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'tan',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set clz32(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'clz32',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get clz32 => _i5.getProperty(
-        this,
-        'clz32',
+  _i2.num Function(_i2.num) get clz32 => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'clz32',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set imul(
       _i2.num Function(
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'imul',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.num Function(
     _i2.num,
     _i2.num,
-  ) get imul => _i5.getProperty(
-        this,
-        'imul',
-      );
+  ) get imul => (
+        _i2.num p0,
+        _i2.num p1,
+      ) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'imul',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set sign(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'sign',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get sign => _i5.getProperty(
-        this,
-        'sign',
+  _i2.num Function(_i2.num) get sign => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'sign',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set log10(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'log10',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get log10 => _i5.getProperty(
-        this,
-        'log10',
+  _i2.num Function(_i2.num) get log10 => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'log10',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set log2(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'log2',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get log2 => _i5.getProperty(
-        this,
-        'log2',
+  _i2.num Function(_i2.num) get log2 => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'log2',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set log1p(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'log1p',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get log1p => _i5.getProperty(
-        this,
-        'log1p',
+  _i2.num Function(_i2.num) get log1p => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'log1p',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set expm1(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'expm1',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get expm1 => _i5.getProperty(
-        this,
-        'expm1',
+  _i2.num Function(_i2.num) get expm1 => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'expm1',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set cosh(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'cosh',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get cosh => _i5.getProperty(
-        this,
-        'cosh',
+  _i2.num Function(_i2.num) get cosh => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'cosh',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set sinh(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'sinh',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get sinh => _i5.getProperty(
-        this,
-        'sinh',
+  _i2.num Function(_i2.num) get sinh => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'sinh',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set tanh(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'tanh',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get tanh => _i5.getProperty(
-        this,
-        'tanh',
+  _i2.num Function(_i2.num) get tanh => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'tanh',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set acosh(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'acosh',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get acosh => _i5.getProperty(
-        this,
-        'acosh',
+  _i2.num Function(_i2.num) get acosh => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'acosh',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set asinh(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'asinh',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get asinh => _i5.getProperty(
-        this,
-        'asinh',
+  _i2.num Function(_i2.num) get asinh => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'asinh',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set atanh(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'atanh',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get atanh => _i5.getProperty(
-        this,
-        'atanh',
+  _i2.num Function(_i2.num) get atanh => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'atanh',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set hypot(_i2.num Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'hypot',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -3062,64 +3646,101 @@ extension Math$Typings on Math {
     );
   }
 
-  _i2.num Function([_i2.Iterable<_i2.dynamic>?]) get hypot => _i5.getProperty(
-        this,
-        'hypot',
-      );
+  _i2.num Function([_i2.Iterable<_i2.dynamic>?]) get hypot =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'hypot',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set trunc(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'trunc',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get trunc => _i5.getProperty(
-        this,
-        'trunc',
+  _i2.num Function(_i2.num) get trunc => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'trunc',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set fround(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'fround',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get fround => _i5.getProperty(
-        this,
-        'fround',
+  _i2.num Function(_i2.num) get fround => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'fround',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set cbrt(_i2.num Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'cbrt',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.num) get cbrt => _i5.getProperty(
-        this,
-        'cbrt',
+  _i2.num Function(_i2.num) get cbrt => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'cbrt',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class DateConstructor {}
 
 extension DateConstructor$Typings on DateConstructor {
   set parse(_i2.num Function(_i2.String) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'parse',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function(_i2.String) get parse => _i5.getProperty(
-        this,
-        'parse',
+  _i2.num Function(_i2.String) get parse => (_i2.String p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'parse',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set utc(
       _i2.num Function(
@@ -3131,10 +3752,10 @@ extension DateConstructor$Typings on DateConstructor {
         _i2.num?,
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'UTC',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -3146,29 +3767,56 @@ extension DateConstructor$Typings on DateConstructor {
     _i2.num?,
     _i2.num?,
     _i2.num?,
-  ]) get utc => _i5.getProperty(
-        this,
-        'UTC',
-      );
+  ]) get utc => (
+        _i2.num p0,
+        _i2.num p1, [
+        _i2.num? p2,
+        _i2.num? p3,
+        _i2.num? p4,
+        _i2.num? p5,
+        _i2.num? p6,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'UTC',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2 ?? _i5.undefined,
+              p3 ?? _i5.undefined,
+              p4 ?? _i5.undefined,
+              p5 ?? _i5.undefined,
+              p6 ?? _i5.undefined,
+            ],
+          );
   set now(_i2.num Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'now',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.num Function() get now => _i5.getProperty(
-        this,
-        'now',
+  _i2.num Function() get now => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'now',
+        ),
+        r'call',
+        [this],
       );
-  _i2.String call() => _i5.callMethod(
+  _i2.String call() => _i6.callMethod(
         this,
         'call',
         [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3286,15 +3934,15 @@ class RegExpMatchArray implements _i3.Array<_i2.String> {
       _i2.num, [
       _i2.num?,
     ])? copyWithin,
-    _i9.IterableIterator<
+    _i10.IterableIterator<
                 (
                   _i2.num,
                   _i2.String,
                 )>
             Function()?
         entries,
-    _i9.IterableIterator<_i2.num> Function()? keys,
-    _i9.IterableIterator<_i2.String> Function()? values,
+    _i10.IterableIterator<_i2.num> Function()? keys,
+    _i10.IterableIterator<_i2.String> Function()? values,
     _i2.bool Function(
       _i2.String, [
       _i2.num?,
@@ -3307,7 +3955,7 @@ class RegExpMatchArray implements _i3.Array<_i2.String> {
       ), [
       This?,
     ])? flatMap,
-    _i2.List<_i10.FlatArray<A, D>> Function<A, D extends _i2.num>([D?])? flat,
+    _i2.List<_i2.dynamic> Function<A, D extends _i2.num>([D?])? flat,
     _i2.String? Function(_i2.num)? at,
     _i2.num Function(
       _i2.Object? Function(
@@ -3333,16 +3981,18 @@ class RegExpMatchArray implements _i3.Array<_i2.String> {
         index: index,
         input: input,
         first: first,
-        groups: groups ?? _i4.undefined,
-        indices: indices ?? _i4.undefined,
+        groups: groups ?? _i5.undefined,
+        indices: indices ?? _i5.undefined,
         length: length,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
+        toString$: toString$ == null ? null : _i6.allowInterop(toString$),
         toLocaleString:
-            toLocaleString == null ? null : _i5.allowInterop(toLocaleString),
-        pop: pop == null ? null : _i5.allowInterop(pop),
+            toLocaleString == null ? null : _i6.allowInterop(toLocaleString),
+        pop: pop == null
+            ? null
+            : _i6.allowInterop(() => () => pop() ?? _i5.undefined),
         push: push == null
             ? null
-            : _i5.allowInterop(([
+            : _i6.allowInterop(([
                 a0,
                 a1,
                 a2,
@@ -3366,14 +4016,16 @@ class RegExpMatchArray implements _i3.Array<_i2.String> {
                   a8,
                   a9,
                 ])),
-        join: join == null ? null : _i5.allowInterop(join),
-        reverse: reverse == null ? null : _i5.allowInterop(reverse),
-        shift: shift == null ? null : _i5.allowInterop(shift),
-        slice: slice == null ? null : _i5.allowInterop(slice),
-        sort: sort == null ? null : _i5.allowInterop(sort),
+        join: join == null ? null : _i6.allowInterop(join),
+        reverse: reverse == null ? null : _i6.allowInterop(reverse),
+        shift: shift == null
+            ? null
+            : _i6.allowInterop(() => () => shift() ?? _i5.undefined),
+        slice: slice == null ? null : _i6.allowInterop(slice),
+        sort: sort == null ? null : _i6.allowInterop(sort),
         unshift: unshift == null
             ? null
-            : _i5.allowInterop(([
+            : _i6.allowInterop(([
                 a0,
                 a1,
                 a2,
@@ -3397,86 +4049,89 @@ class RegExpMatchArray implements _i3.Array<_i2.String> {
                   a8,
                   a9,
                 ])),
-        indexOf: indexOf == null ? null : _i5.allowInterop(indexOf),
-        lastIndexOf: lastIndexOf == null ? null : _i5.allowInterop(lastIndexOf),
-        some: some == null ? null : _i5.allowInterop(some),
-        forEach: forEach == null ? null : _i5.allowInterop(forEach),
-        map: map == null ? null : _i5.allowInterop(map),
-        findIndex: findIndex == null ? null : _i5.allowInterop(findIndex),
-        fill: fill == null ? null : _i5.allowInterop(fill),
-        copyWithin: copyWithin == null ? null : _i5.allowInterop(copyWithin),
-        entries: entries == null ? null : _i5.allowInterop(entries),
-        keys: keys == null ? null : _i5.allowInterop(keys),
-        values: values == null ? null : _i5.allowInterop(values),
-        includes: includes == null ? null : _i5.allowInterop(includes),
-        flatMap: flatMap == null ? null : _i5.allowInterop(flatMap),
-        flat: flat == null ? null : _i5.allowInterop(flat),
-        at: at == null ? null : _i5.allowInterop(at),
+        indexOf: indexOf == null ? null : _i6.allowInterop(indexOf),
+        lastIndexOf: lastIndexOf == null ? null : _i6.allowInterop(lastIndexOf),
+        some: some == null ? null : _i6.allowInterop(some),
+        forEach: forEach == null ? null : _i6.allowInterop(forEach),
+        map: map == null ? null : _i6.allowInterop(map),
+        findIndex: findIndex == null ? null : _i6.allowInterop(findIndex),
+        fill: fill == null ? null : _i6.allowInterop(fill),
+        copyWithin: copyWithin == null ? null : _i6.allowInterop(copyWithin),
+        entries: entries == null ? null : _i6.allowInterop(entries),
+        keys: keys == null ? null : _i6.allowInterop(keys),
+        values: values == null ? null : _i6.allowInterop(values),
+        includes: includes == null ? null : _i6.allowInterop(includes),
+        flatMap: flatMap == null ? null : _i6.allowInterop(flatMap),
+        flat: flat == null ? null : _i6.allowInterop(flat),
+        at: at == null
+            ? null
+            : _i6.allowInterop((p0) => () => at(p0) ?? _i5.undefined),
         findLastIndex:
-            findLastIndex == null ? null : _i5.allowInterop(findLastIndex),
-        toReversed: toReversed == null ? null : _i5.allowInterop(toReversed),
-        toSorted: toSorted == null ? null : _i5.allowInterop(toSorted),
-        with$: with$ == null ? null : _i5.allowInterop(with$),
+            findLastIndex == null ? null : _i6.allowInterop(findLastIndex),
+        toReversed: toReversed == null ? null : _i6.allowInterop(toReversed),
+        toSorted: toSorted == null ? null : _i6.allowInterop(toSorted),
+        with$: with$ == null ? null : _i6.allowInterop(with$),
       );
 }
 
 extension RegExpMatchArray$Typings on RegExpMatchArray {
   /// The index of the search at which the result was found.
-  _i2.num? get index => _i5.getProperty(
+  _i2.num? get index => _i6.getProperty(
         this,
         'index',
       );
   set index(_i2.num? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'index',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
   /// A copy of the search string.
-  _i2.String? get input => _i5.getProperty(
+  _i2.String? get input => _i6.getProperty(
         this,
         'input',
       );
   set input(_i2.String? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'input',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
   /// The first match. This will always be present because `null` will be returned if there are no matches.
-  _i2.String get first => _i5.getProperty(
+  _i2.String get first => _i6.getProperty(
         this,
         '0',
       );
-  _i2.Object? get groups => _i5.getProperty(
+  _i2.Object? get groups => _i6.getProperty(
         this,
         'groups',
       );
   set groups(_i2.Object? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'groups',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
-  _i11.RegExpIndicesArray? get indices => _i5.getProperty(
+  _i11.RegExpIndicesArray? get indices => _i6.getProperty(
         this,
         'indices',
       );
   set indices(_i11.RegExpIndicesArray? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'indices',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3594,15 +4249,15 @@ class RegExpExecArray implements _i3.Array<_i2.String> {
       _i2.num, [
       _i2.num?,
     ])? copyWithin,
-    _i9.IterableIterator<
+    _i10.IterableIterator<
                 (
                   _i2.num,
                   _i2.String,
                 )>
             Function()?
         entries,
-    _i9.IterableIterator<_i2.num> Function()? keys,
-    _i9.IterableIterator<_i2.String> Function()? values,
+    _i10.IterableIterator<_i2.num> Function()? keys,
+    _i10.IterableIterator<_i2.String> Function()? values,
     _i2.bool Function(
       _i2.String, [
       _i2.num?,
@@ -3615,7 +4270,7 @@ class RegExpExecArray implements _i3.Array<_i2.String> {
       ), [
       This?,
     ])? flatMap,
-    _i2.List<_i10.FlatArray<A, D>> Function<A, D extends _i2.num>([D?])? flat,
+    _i2.List<_i2.dynamic> Function<A, D extends _i2.num>([D?])? flat,
     _i2.String? Function(_i2.num)? at,
     _i2.num Function(
       _i2.Object? Function(
@@ -3641,16 +4296,18 @@ class RegExpExecArray implements _i3.Array<_i2.String> {
         index: index,
         input: input,
         first: first,
-        groups: groups ?? _i4.undefined,
-        indices: indices ?? _i4.undefined,
+        groups: groups ?? _i5.undefined,
+        indices: indices ?? _i5.undefined,
         length: length,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
+        toString$: toString$ == null ? null : _i6.allowInterop(toString$),
         toLocaleString:
-            toLocaleString == null ? null : _i5.allowInterop(toLocaleString),
-        pop: pop == null ? null : _i5.allowInterop(pop),
+            toLocaleString == null ? null : _i6.allowInterop(toLocaleString),
+        pop: pop == null
+            ? null
+            : _i6.allowInterop(() => () => pop() ?? _i5.undefined),
         push: push == null
             ? null
-            : _i5.allowInterop(([
+            : _i6.allowInterop(([
                 a0,
                 a1,
                 a2,
@@ -3674,14 +4331,16 @@ class RegExpExecArray implements _i3.Array<_i2.String> {
                   a8,
                   a9,
                 ])),
-        join: join == null ? null : _i5.allowInterop(join),
-        reverse: reverse == null ? null : _i5.allowInterop(reverse),
-        shift: shift == null ? null : _i5.allowInterop(shift),
-        slice: slice == null ? null : _i5.allowInterop(slice),
-        sort: sort == null ? null : _i5.allowInterop(sort),
+        join: join == null ? null : _i6.allowInterop(join),
+        reverse: reverse == null ? null : _i6.allowInterop(reverse),
+        shift: shift == null
+            ? null
+            : _i6.allowInterop(() => () => shift() ?? _i5.undefined),
+        slice: slice == null ? null : _i6.allowInterop(slice),
+        sort: sort == null ? null : _i6.allowInterop(sort),
         unshift: unshift == null
             ? null
-            : _i5.allowInterop(([
+            : _i6.allowInterop(([
                 a0,
                 a1,
                 a2,
@@ -3705,37 +4364,39 @@ class RegExpExecArray implements _i3.Array<_i2.String> {
                   a8,
                   a9,
                 ])),
-        indexOf: indexOf == null ? null : _i5.allowInterop(indexOf),
-        lastIndexOf: lastIndexOf == null ? null : _i5.allowInterop(lastIndexOf),
-        some: some == null ? null : _i5.allowInterop(some),
-        forEach: forEach == null ? null : _i5.allowInterop(forEach),
-        map: map == null ? null : _i5.allowInterop(map),
-        findIndex: findIndex == null ? null : _i5.allowInterop(findIndex),
-        fill: fill == null ? null : _i5.allowInterop(fill),
-        copyWithin: copyWithin == null ? null : _i5.allowInterop(copyWithin),
-        entries: entries == null ? null : _i5.allowInterop(entries),
-        keys: keys == null ? null : _i5.allowInterop(keys),
-        values: values == null ? null : _i5.allowInterop(values),
-        includes: includes == null ? null : _i5.allowInterop(includes),
-        flatMap: flatMap == null ? null : _i5.allowInterop(flatMap),
-        flat: flat == null ? null : _i5.allowInterop(flat),
-        at: at == null ? null : _i5.allowInterop(at),
+        indexOf: indexOf == null ? null : _i6.allowInterop(indexOf),
+        lastIndexOf: lastIndexOf == null ? null : _i6.allowInterop(lastIndexOf),
+        some: some == null ? null : _i6.allowInterop(some),
+        forEach: forEach == null ? null : _i6.allowInterop(forEach),
+        map: map == null ? null : _i6.allowInterop(map),
+        findIndex: findIndex == null ? null : _i6.allowInterop(findIndex),
+        fill: fill == null ? null : _i6.allowInterop(fill),
+        copyWithin: copyWithin == null ? null : _i6.allowInterop(copyWithin),
+        entries: entries == null ? null : _i6.allowInterop(entries),
+        keys: keys == null ? null : _i6.allowInterop(keys),
+        values: values == null ? null : _i6.allowInterop(values),
+        includes: includes == null ? null : _i6.allowInterop(includes),
+        flatMap: flatMap == null ? null : _i6.allowInterop(flatMap),
+        flat: flat == null ? null : _i6.allowInterop(flat),
+        at: at == null
+            ? null
+            : _i6.allowInterop((p0) => () => at(p0) ?? _i5.undefined),
         findLastIndex:
-            findLastIndex == null ? null : _i5.allowInterop(findLastIndex),
-        toReversed: toReversed == null ? null : _i5.allowInterop(toReversed),
-        toSorted: toSorted == null ? null : _i5.allowInterop(toSorted),
-        with$: with$ == null ? null : _i5.allowInterop(with$),
+            findLastIndex == null ? null : _i6.allowInterop(findLastIndex),
+        toReversed: toReversed == null ? null : _i6.allowInterop(toReversed),
+        toSorted: toSorted == null ? null : _i6.allowInterop(toSorted),
+        with$: with$ == null ? null : _i6.allowInterop(with$),
       );
 }
 
 extension RegExpExecArray$Typings on RegExpExecArray {
   /// The index of the search at which the result was found.
-  _i2.num get index => _i5.getProperty(
+  _i2.num get index => _i6.getProperty(
         this,
         'index',
       );
   set index(_i2.num value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'index',
       value,
@@ -3743,12 +4404,12 @@ extension RegExpExecArray$Typings on RegExpExecArray {
   }
 
   /// A copy of the search string.
-  _i2.String get input => _i5.getProperty(
+  _i2.String get input => _i6.getProperty(
         this,
         'input',
       );
   set input(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'input',
       value,
@@ -3756,44 +4417,45 @@ extension RegExpExecArray$Typings on RegExpExecArray {
   }
 
   /// The first match. This will always be present because `null` will be returned if there are no matches.
-  _i2.String get first => _i5.getProperty(
+  _i2.String get first => _i6.getProperty(
         this,
         '0',
       );
-  _i2.Object? get groups => _i5.getProperty(
+  _i2.Object? get groups => _i6.getProperty(
         this,
         'groups',
       );
   set groups(_i2.Object? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'groups',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
-  _i11.RegExpIndicesArray? get indices => _i5.getProperty(
+  _i11.RegExpIndicesArray? get indices => _i6.getProperty(
         this,
         'indices',
       );
   set indices(_i11.RegExpIndicesArray? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'indices',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class RegExp {
-  factory RegExp.$1() => _i5.callConstructor(
+  factory RegExp.$1() => _i6.callConstructor(
         _declaredRegExp,
         [],
       );
 
-  factory RegExp.$2(_i2.Object pattern) => _i5.callConstructor(
+  factory RegExp.$2(_i2.Object pattern) => _i6.callConstructor(
         _declaredRegExp,
         [pattern],
       );
@@ -3802,11 +4464,11 @@ class RegExp {
     _i2.String pattern, [
     _i2.String? flags,
   ]) =>
-      _i5.callConstructor(
+      _i6.callConstructor(
         _declaredRegExp,
         [
           pattern,
-          flags ?? _i4.undefined,
+          flags ?? _i5.undefined,
         ],
       );
 
@@ -3814,146 +4476,146 @@ class RegExp {
     _i2.Object pattern, [
     _i2.String? flags,
   ]) =>
-      _i5.callConstructor(
+      _i6.callConstructor(
         _declaredRegExp,
         [
           pattern,
-          flags ?? _i4.undefined,
+          flags ?? _i5.undefined,
         ],
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$1 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$1 => _i6.getProperty(
+        _i7.target3,
         '\$1',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$2 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$2 => _i6.getProperty(
+        _i7.target3,
         '\$2',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$3 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$3 => _i6.getProperty(
+        _i7.target3,
         '\$3',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$4 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$4 => _i6.getProperty(
+        _i7.target3,
         '\$4',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$5 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$5 => _i6.getProperty(
+        _i7.target3,
         '\$5',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$6 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$6 => _i6.getProperty(
+        _i7.target3,
         '\$6',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$7 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$7 => _i6.getProperty(
+        _i7.target3,
         '\$7',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$8 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$8 => _i6.getProperty(
+        _i7.target3,
         '\$8',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$9 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$9 => _i6.getProperty(
+        _i7.target3,
         '\$9',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get input => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get input => _i6.getProperty(
+        _i7.target3,
         'input',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$$ => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$$ => _i6.getProperty(
+        _i7.target3,
         '\$_',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get lastMatch => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get lastMatch => _i6.getProperty(
+        _i7.target3,
         'lastMatch',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get lastParen => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get lastParen => _i6.getProperty(
+        _i7.target3,
         'lastParen',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get leftContext => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get leftContext => _i6.getProperty(
+        _i7.target3,
         'leftContext',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get rightContext => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get rightContext => _i6.getProperty(
+        _i7.target3,
         'rightContext',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$ => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$ => _i6.getProperty(
+        _i7.target3,
         '\$',
       );
 }
 
-_i2.Object get _declaredRegExp => _i5.getProperty(
+_i2.Object get _declaredRegExp => _i6.getProperty(
       _self,
       'RegExp',
     );
 
 extension RegExp$Typings on RegExp {
   /// Returns a copy of the text of the regular expression pattern. Read-only. The regExp argument is a Regular expression object. It can be a variable name or a literal.
-  _i2.String get source => _i5.getProperty(
+  _i2.String get source => _i6.getProperty(
         this,
         'source',
       );
 
   /// Returns a Boolean value indicating the state of the global flag (g) used with a regular expression. Default is false. Read-only.
-  _i2.bool get global => _i5.getProperty(
+  _i2.bool get global => _i6.getProperty(
         this,
         'global',
       );
 
   /// Returns a Boolean value indicating the state of the ignoreCase flag (i) used with a regular expression. Default is false. Read-only.
-  _i2.bool get ignoreCase => _i5.getProperty(
+  _i2.bool get ignoreCase => _i6.getProperty(
         this,
         'ignoreCase',
       );
 
   /// Returns a Boolean value indicating the state of the multiline flag (m) used with a regular expression. Default is false. Read-only.
-  _i2.bool get multiline => _i5.getProperty(
+  _i2.bool get multiline => _i6.getProperty(
         this,
         'multiline',
       );
-  _i2.num get lastIndex => _i5.getProperty(
+  _i2.num get lastIndex => _i6.getProperty(
         this,
         'lastIndex',
       );
   set lastIndex(_i2.num value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'lastIndex',
       value,
@@ -3970,186 +4632,214 @@ extension RegExp$Typings on RegExp {
   ///    - "y" for sticky
   ///
   /// If no flags are set, the value is the empty string.
-  _i2.String get flags => _i5.getProperty(
+  _i2.String get flags => _i6.getProperty(
         this,
         'flags',
       );
 
   /// Returns a Boolean value indicating the state of the sticky flag (y) used with a regular
   /// expression. Default is false. Read-only.
-  _i2.bool get sticky => _i5.getProperty(
+  _i2.bool get sticky => _i6.getProperty(
         this,
         'sticky',
       );
 
   /// Returns a Boolean value indicating the state of the Unicode flag (u) used with a regular
   /// expression. Default is false. Read-only.
-  _i2.bool get unicode => _i5.getProperty(
+  _i2.bool get unicode => _i6.getProperty(
         this,
         'unicode',
       );
 
   /// Returns a Boolean value indicating the state of the dotAll flag (s) used with a regular expression.
   /// Default is false. Read-only.
-  _i2.bool get dotAll => _i5.getProperty(
+  _i2.bool get dotAll => _i6.getProperty(
         this,
         'dotAll',
       );
 
   /// Returns a Boolean value indicating the state of the hasIndices flag (d) used with with a regular expression.
   /// Default is false. Read-only.
-  _i2.bool get hasIndices => _i5.getProperty(
+  _i2.bool get hasIndices => _i6.getProperty(
         this,
         'hasIndices',
       );
   set exec(_i3.RegExpExecArray? Function(_i2.String) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'exec',
-      _i5.allowInterop(value),
+      _i6.allowInterop((p0) => () => value(p0) ?? _i5.undefined),
     );
   }
 
-  _i3.RegExpExecArray? Function(_i2.String) get exec => _i5.getProperty(
-        this,
-        'exec',
-      );
+  _i3.RegExpExecArray? Function(_i2.String) get exec =>
+      (_i2.String p0) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'exec',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set test(_i2.bool Function(_i2.String) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'test',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.bool Function(_i2.String) get test => _i5.getProperty(
-        this,
-        'test',
+  _i2.bool Function(_i2.String) get test => (_i2.String p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'test',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set compile(
       _i3.RegExp Function(
         _i2.String, [
         _i2.String?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'compile',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i3.RegExp Function(
     _i2.String, [
     _i2.String?,
-  ]) get compile => _i5.getProperty(
-        this,
-        'compile',
-      );
+  ]) get compile => (
+        _i2.String p0, [
+        _i2.String? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'compile',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class RegExpConstructor {
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$1 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$1 => _i6.getProperty(
+        _i7.target3,
         '\$1',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$2 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$2 => _i6.getProperty(
+        _i7.target3,
         '\$2',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$3 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$3 => _i6.getProperty(
+        _i7.target3,
         '\$3',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$4 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$4 => _i6.getProperty(
+        _i7.target3,
         '\$4',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$5 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$5 => _i6.getProperty(
+        _i7.target3,
         '\$5',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$6 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$6 => _i6.getProperty(
+        _i7.target3,
         '\$6',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$7 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$7 => _i6.getProperty(
+        _i7.target3,
         '\$7',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$8 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$8 => _i6.getProperty(
+        _i7.target3,
         '\$8',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$9 => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$9 => _i6.getProperty(
+        _i7.target3,
         '\$9',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get input => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get input => _i6.getProperty(
+        _i7.target3,
         'input',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$$ => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$$ => _i6.getProperty(
+        _i7.target3,
         '\$_',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get lastMatch => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get lastMatch => _i6.getProperty(
+        _i7.target3,
         'lastMatch',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get lastParen => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get lastParen => _i6.getProperty(
+        _i7.target3,
         'lastParen',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get leftContext => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get leftContext => _i6.getProperty(
+        _i7.target3,
         'leftContext',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get rightContext => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get rightContext => _i6.getProperty(
+        _i7.target3,
         'rightContext',
       );
 
   /// @deprecated A legacy feature for browser compatibility
-  static _i2.String get $$ => _i5.getProperty(
-        _i6.target3,
+  static _i2.String get $$ => _i6.getProperty(
+        _i7.target3,
         '\$',
       );
 }
 
 extension RegExpConstructor$Typings on RegExpConstructor {
   set $$1(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       '\$1',
       value,
@@ -4157,7 +4847,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set $$2(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       '\$2',
       value,
@@ -4165,7 +4855,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set $$3(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       '\$3',
       value,
@@ -4173,7 +4863,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set $$4(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       '\$4',
       value,
@@ -4181,7 +4871,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set $$5(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       '\$5',
       value,
@@ -4189,7 +4879,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set $$6(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       '\$6',
       value,
@@ -4197,7 +4887,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set $$7(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       '\$7',
       value,
@@ -4205,7 +4895,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set $$8(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       '\$8',
       value,
@@ -4213,7 +4903,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set $$9(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       '\$9',
       value,
@@ -4221,7 +4911,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set input(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'input',
       value,
@@ -4229,7 +4919,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set $$(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       '\$_',
       value,
@@ -4237,7 +4927,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set lastMatch(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'lastMatch',
       value,
@@ -4245,7 +4935,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set lastParen(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'lastParen',
       value,
@@ -4253,7 +4943,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set leftContext(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'leftContext',
       value,
@@ -4261,14 +4951,14 @@ extension RegExpConstructor$Typings on RegExpConstructor {
   }
 
   set rightContext(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'rightContext',
       value,
     );
   }
 
-  _i3.RegExp _call$1(_i2.Object pattern) => _i5.callMethod(
+  _i3.RegExp _call$1(_i2.Object pattern) => _i6.callMethod(
         this,
         'call',
         [
@@ -4280,26 +4970,26 @@ extension RegExpConstructor$Typings on RegExpConstructor {
     _i2.String pattern, [
     _i2.String? flags,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'call',
         [
           this,
           pattern,
-          flags ?? _i4.undefined,
+          flags ?? _i5.undefined,
         ],
       );
   _i3.RegExp _call$3(
     _i2.Object pattern, [
     _i2.String? flags,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'call',
         [
           this,
           pattern,
-          flags ?? _i4.undefined,
+          flags ?? _i5.undefined,
         ],
       );
 
@@ -4321,6 +5011,7 @@ extension RegExpConstructor$Typings on RegExpConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Error {
@@ -4328,63 +5019,63 @@ class Error {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callConstructor(
+      _i6.callConstructor(
         _declaredError,
         [
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
-_i2.Object get _declaredError => _i5.getProperty(
+_i2.Object get _declaredError => _i6.getProperty(
       _self,
       'Error',
     );
 
 extension Error$Typings on Error {
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i6.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'name',
       value,
     );
   }
 
-  _i2.String get message => _i5.getProperty(
+  _i2.String get message => _i6.getProperty(
         this,
         'message',
       );
   set message(_i2.String value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'message',
       value,
     );
   }
 
-  _i2.String? get stack => _i5.getProperty(
+  _i2.String? get stack => _i6.getProperty(
         this,
         'stack',
       );
   set stack(_i2.String? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'stack',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
-  _i2.Object? get cause => _i5.getProperty(
+  _i2.Object? get cause => _i6.getProperty(
         this,
         'cause',
       );
   set cause(_i2.Object? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'cause',
       value,
@@ -4392,6 +5083,7 @@ extension Error$Typings on Error {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class ErrorConstructor {}
@@ -4401,17 +5093,18 @@ extension ErrorConstructor$Typings on ErrorConstructor {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'call',
         [
           this,
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class EvalError implements _i3.Error {
@@ -4419,19 +5112,19 @@ class EvalError implements _i3.Error {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callConstructor(
+      _i6.callConstructor(
         _declaredEvalError,
         [
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
-_i2.Object get _declaredEvalError => _i5.getProperty(
+_i2.Object get _declaredEvalError => _i6.getProperty(
       _self,
       'EvalError',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop
@@ -4442,17 +5135,18 @@ extension EvalErrorConstructor$Typings on EvalErrorConstructor {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'call',
         [
           this,
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class RangeError implements _i3.Error {
@@ -4460,19 +5154,19 @@ class RangeError implements _i3.Error {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callConstructor(
+      _i6.callConstructor(
         _declaredRangeError,
         [
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
-_i2.Object get _declaredRangeError => _i5.getProperty(
+_i2.Object get _declaredRangeError => _i6.getProperty(
       _self,
       'RangeError',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop
@@ -4483,17 +5177,18 @@ extension RangeErrorConstructor$Typings on RangeErrorConstructor {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'call',
         [
           this,
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class ReferenceError implements _i3.Error {
@@ -4501,19 +5196,19 @@ class ReferenceError implements _i3.Error {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callConstructor(
+      _i6.callConstructor(
         _declaredReferenceError,
         [
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
-_i2.Object get _declaredReferenceError => _i5.getProperty(
+_i2.Object get _declaredReferenceError => _i6.getProperty(
       _self,
       'ReferenceError',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop
@@ -4524,17 +5219,18 @@ extension ReferenceErrorConstructor$Typings on ReferenceErrorConstructor {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'call',
         [
           this,
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class SyntaxError implements _i3.Error {
@@ -4542,19 +5238,19 @@ class SyntaxError implements _i3.Error {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callConstructor(
+      _i6.callConstructor(
         _declaredSyntaxError,
         [
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
-_i2.Object get _declaredSyntaxError => _i5.getProperty(
+_i2.Object get _declaredSyntaxError => _i6.getProperty(
       _self,
       'SyntaxError',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop
@@ -4565,17 +5261,18 @@ extension SyntaxErrorConstructor$Typings on SyntaxErrorConstructor {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'call',
         [
           this,
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class TypeError implements _i3.Error {
@@ -4583,19 +5280,19 @@ class TypeError implements _i3.Error {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callConstructor(
+      _i6.callConstructor(
         _declaredTypeError,
         [
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
-_i2.Object get _declaredTypeError => _i5.getProperty(
+_i2.Object get _declaredTypeError => _i6.getProperty(
       _self,
       'TypeError',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop
@@ -4606,17 +5303,18 @@ extension TypeErrorConstructor$Typings on TypeErrorConstructor {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'call',
         [
           this,
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class URIError implements _i3.Error {
@@ -4624,19 +5322,19 @@ class URIError implements _i3.Error {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callConstructor(
+      _i6.callConstructor(
         _declaredURIError,
         [
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
-_i2.Object get _declaredURIError => _i5.getProperty(
+_i2.Object get _declaredURIError => _i6.getProperty(
       _self,
       'URIError',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop
@@ -4647,17 +5345,18 @@ extension URIErrorConstructor$Typings on URIErrorConstructor {
     _i2.String? message,
     _i12.ErrorOptions? options,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'call',
         [
           this,
-          message ?? _i4.undefined,
-          options ?? _i4.undefined,
+          message ?? _i5.undefined,
+          options ?? _i5.undefined,
         ],
       );
 }
 
+/* Source:  */
 /// An intrinsic object that provides functions to convert JavaScript values to and from the JavaScript Object Notation (JSON) format.
 @_i1.JS('JSON')
 @_i1.staticInterop
@@ -4673,7 +5372,7 @@ class Json {
               _i2.dynamic,
             ])?,
           ])? parse}) =>
-      Json._(parse: parse == null ? null : _i5.allowInterop(parse));
+      Json._(parse: parse == null ? null : _i6.allowInterop(parse));
 }
 
 extension Json$Typings on Json {
@@ -4685,10 +5384,10 @@ extension Json$Typings on Json {
           _i2.dynamic,
         ])?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'parse',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -4698,10 +5397,25 @@ extension Json$Typings on Json {
       _i2.String, [
       _i2.dynamic,
     ])?,
-  ]) get parse => _i5.getProperty(
-        this,
-        'parse',
-      );
+  ]) get parse => (
+        _i2.String p0, [
+        _i2.dynamic Function(
+          _i2.String, [
+          _i2.dynamic,
+        ])? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'parse',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 == null ? _i5.undefined : _i6.allowInterop(p1),
+            ],
+          );
 
   /// Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
   ///  @param value A JavaScript value, usually an object or array, to be converted.
@@ -4715,13 +5429,13 @@ extension Json$Typings on Json {
     ])? replacer,
     _i2.Object? space,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'stringify',
         [
           value,
-          replacer == null ? _i4.undefined : _i5.allowInterop(replacer),
-          space ?? _i4.undefined,
+          replacer == null ? _i5.undefined : _i6.allowInterop(replacer),
+          space ?? _i5.undefined,
         ],
       );
 
@@ -4734,13 +5448,13 @@ extension Json$Typings on Json {
     _i2.List<_i2.Object>? replacer,
     _i2.Object? space,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'stringify',
         [
           value,
-          replacer ?? _i4.undefined,
-          space ?? _i4.undefined,
+          replacer ?? _i5.undefined,
+          space ?? _i5.undefined,
         ],
       );
 
@@ -4774,10 +5488,11 @@ extension Json$Typings on Json {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class ReadonlyArray<T> implements _IterableLike$<_i9.IterableIterator<T>> {
+class ReadonlyArray<T> implements _IterableLike$<_i10.IterableIterator<T>> {
   external factory ReadonlyArray._({
     _i2.dynamic length,
     _i2.dynamic toString$,
@@ -4852,15 +5567,15 @@ class ReadonlyArray<T> implements _IterableLike$<_i9.IterableIterator<T>> {
       ), [
       _i2.dynamic,
     ])? findIndex,
-    _i9.IterableIterator<
+    _i10.IterableIterator<
                 (
                   _i2.num,
                   _i2.dynamic,
                 )>
             Function()?
         entries,
-    _i9.IterableIterator<_i2.num> Function()? keys,
-    _i9.IterableIterator<_i2.dynamic> Function()? values,
+    _i10.IterableIterator<_i2.num> Function()? keys,
+    _i10.IterableIterator<_i2.dynamic> Function()? values,
     _i2.bool Function(
       _i2.dynamic, [
       _i2.num?,
@@ -4873,7 +5588,7 @@ class ReadonlyArray<T> implements _IterableLike$<_i9.IterableIterator<T>> {
       ), [
       This?,
     ])? flatMap,
-    _i2.List<_i10.FlatArray<A, D>> Function<A, D extends _i2.num>([D?])? flat,
+    _i2.List<_i2.dynamic> Function<A, D extends _i2.num>([D?])? flat,
     _i2.dynamic Function(_i2.num)? at,
     _i2.num Function(
       _i2.Object? Function(
@@ -4897,131 +5612,186 @@ class ReadonlyArray<T> implements _IterableLike$<_i9.IterableIterator<T>> {
   }) =>
       ReadonlyArray._(
         length: length,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
+        toString$: toString$ == null ? null : _i6.allowInterop(toString$),
         toLocaleString:
-            toLocaleString == null ? null : _i5.allowInterop(toLocaleString),
-        join: join == null ? null : _i5.allowInterop(join),
-        slice: slice == null ? null : _i5.allowInterop(slice),
-        indexOf: indexOf == null ? null : _i5.allowInterop(indexOf),
-        lastIndexOf: lastIndexOf == null ? null : _i5.allowInterop(lastIndexOf),
-        some: some == null ? null : _i5.allowInterop(some),
-        forEach: forEach == null ? null : _i5.allowInterop(forEach),
-        map: map == null ? null : _i5.allowInterop(map),
-        findIndex: findIndex == null ? null : _i5.allowInterop(findIndex),
-        entries: entries == null ? null : _i5.allowInterop(entries),
-        keys: keys == null ? null : _i5.allowInterop(keys),
-        values: values == null ? null : _i5.allowInterop(values),
-        includes: includes == null ? null : _i5.allowInterop(includes),
-        flatMap: flatMap == null ? null : _i5.allowInterop(flatMap),
-        flat: flat == null ? null : _i5.allowInterop(flat),
-        at: at == null ? null : _i5.allowInterop(at),
+            toLocaleString == null ? null : _i6.allowInterop(toLocaleString),
+        join: join == null ? null : _i6.allowInterop(join),
+        slice: slice == null ? null : _i6.allowInterop(slice),
+        indexOf: indexOf == null ? null : _i6.allowInterop(indexOf),
+        lastIndexOf: lastIndexOf == null ? null : _i6.allowInterop(lastIndexOf),
+        some: some == null ? null : _i6.allowInterop(some),
+        forEach: forEach == null ? null : _i6.allowInterop(forEach),
+        map: map == null ? null : _i6.allowInterop(map),
+        findIndex: findIndex == null ? null : _i6.allowInterop(findIndex),
+        entries: entries == null ? null : _i6.allowInterop(entries),
+        keys: keys == null ? null : _i6.allowInterop(keys),
+        values: values == null ? null : _i6.allowInterop(values),
+        includes: includes == null ? null : _i6.allowInterop(includes),
+        flatMap: flatMap == null ? null : _i6.allowInterop(flatMap),
+        flat: flat == null ? null : _i6.allowInterop(flat),
+        at: at == null
+            ? null
+            : _i6.allowInterop((p0) => () => at(p0) ?? _i5.undefined),
         findLastIndex:
-            findLastIndex == null ? null : _i5.allowInterop(findLastIndex),
-        toReversed: toReversed == null ? null : _i5.allowInterop(toReversed),
-        toSorted: toSorted == null ? null : _i5.allowInterop(toSorted),
-        with$: with$ == null ? null : _i5.allowInterop(with$),
+            findLastIndex == null ? null : _i6.allowInterop(findLastIndex),
+        toReversed: toReversed == null ? null : _i6.allowInterop(toReversed),
+        toSorted: toSorted == null ? null : _i6.allowInterop(toSorted),
+        with$: with$ == null ? null : _i6.allowInterop(with$),
       );
 }
 
 extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
   /// Gets the length of the array. This is a number one higher than the highest element defined in an array.
-  _i2.num get length => _i5.getProperty(
+  _i2.num get length => _i6.getProperty(
         this,
         'length',
       );
   set toString$(_i2.String Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toString',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function() get toString$ => _i5.getProperty(
-        this,
-        'toString',
+  _i2.String Function() get toString$ => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toString',
+        ),
+        r'call',
+        [this],
       );
   set toLocaleString(_i2.String Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toLocaleString',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function() get toLocaleString => _i5.getProperty(
-        this,
-        'toLocaleString',
+  _i2.String Function() get toLocaleString => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toLocaleString',
+        ),
+        r'call',
+        [this],
       );
   set join(_i2.String Function([_i2.String?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'join',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function([_i2.String?]) get join => _i5.getProperty(
-        this,
-        'join',
-      );
+  _i2.String Function([_i2.String?]) get join =>
+      ([_i2.String? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'join',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set slice(
       _i2.List<T> Function([
         _i2.num?,
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'slice',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.List<T> Function([
     _i2.num?,
     _i2.num?,
-  ]) get slice => _i5.getProperty(
-        this,
-        'slice',
-      );
+  ]) get slice => ([
+        _i2.num? p0,
+        _i2.num? p1,
+      ]) =>
+          (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'slice',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+              p1 ?? _i5.undefined,
+            ],
+          ) as _i2.List)
+              .cast();
   set indexOf(
       _i2.num Function(
         T, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'indexOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.num Function(
     T, [
     _i2.num?,
-  ]) get indexOf => _i5.getProperty(
-        this,
-        'indexOf',
-      );
+  ]) get indexOf => (
+        T p0, [
+        _i2.num? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'indexOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
   set lastIndexOf(
       _i2.num Function(
         T, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'lastIndexOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.num Function(
     T, [
     _i2.num?,
-  ]) get lastIndexOf => _i5.getProperty(
-        this,
-        'lastIndexOf',
-      );
+  ]) get lastIndexOf => (
+        T p0, [
+        _i2.num? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'lastIndexOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
   set some(
       _i2.bool Function(
         _i2.Object? Function(
@@ -5031,10 +5801,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ), [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'some',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -5045,10 +5815,26 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.List<T>,
     ), [
     _i2.dynamic,
-  ]) get some => _i5.getProperty(
-        this,
-        'some',
-      );
+  ]) get some => (
+        _i2.Object? Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'some',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1,
+            ],
+          );
   set forEach(
       void Function(
         void Function(
@@ -5058,10 +5844,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ), [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'forEach',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -5072,10 +5858,26 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.List<T>,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i5.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        void Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1,
+            ],
+          );
   set map(
       _i2.List<U> Function<U>(
         U Function(
@@ -5085,10 +5887,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ), [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'map',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -5099,10 +5901,27 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.List<T>,
     ), [
     _i2.dynamic,
-  ]) get map => _i5.getProperty(
-        this,
-        'map',
-      );
+  ]) get map => <U>(
+        U Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'map',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1,
+            ],
+          ) as _i2.List)
+              .cast();
   set findIndex(
       _i2.num Function(
         _i2.Object? Function(
@@ -5112,10 +5931,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ), [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'findIndex',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -5126,77 +5945,117 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.List<T>,
     ), [
     _i2.dynamic,
-  ]) get findIndex => _i5.getProperty(
-        this,
-        'findIndex',
-      );
+  ]) get findIndex => (
+        _i2.Object? Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'findIndex',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1,
+            ],
+          );
   set entries(
-      _i9.IterableIterator<
+      _i10.IterableIterator<
                   (
                     _i2.num,
                     T,
                   )>
               Function()
           value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'entries',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i9.IterableIterator<
+  _i10.IterableIterator<
           (
             _i2.num,
             T,
           )>
-      Function() get entries => _i5.getProperty(
-        this,
-        'entries',
+      Function() get entries => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'entries',
+        ),
+        r'call',
+        [this],
       );
-  set keys(_i9.IterableIterator<_i2.num> Function() value) {
-    _i5.setProperty(
+  set keys(_i10.IterableIterator<_i2.num> Function() value) {
+    _i6.setProperty(
       this,
       'keys',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i9.IterableIterator<_i2.num> Function() get keys => _i5.getProperty(
-        this,
-        'keys',
+  _i10.IterableIterator<_i2.num> Function() get keys => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'keys',
+        ),
+        r'call',
+        [this],
       );
-  set values(_i9.IterableIterator<T> Function() value) {
-    _i5.setProperty(
+  set values(_i10.IterableIterator<T> Function() value) {
+    _i6.setProperty(
       this,
       'values',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i9.IterableIterator<T> Function() get values => _i5.getProperty(
-        this,
-        'values',
+  _i10.IterableIterator<T> Function() get values => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'values',
+        ),
+        r'call',
+        [this],
       );
   set includes(
       _i2.bool Function(
         T, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'includes',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.bool Function(
     T, [
     _i2.num?,
-  ]) get includes => _i5.getProperty(
-        this,
-        'includes',
-      );
+  ]) get includes => (
+        T p0, [
+        _i2.num? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'includes',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
   set flatMap(
       _i2.List<U> Function<U, This>(
         _i2.Object Function(
@@ -5206,10 +6065,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ), [
         This?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'flatMap',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -5220,36 +6079,66 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.List<T>,
     ), [
     This?,
-  ]) get flatMap => _i5.getProperty(
-        this,
-        'flatMap',
-      );
-  set flat(
-      _i2.List<_i10.FlatArray<A, D>> Function<A, D extends _i2.num>([D?])
-          value) {
-    _i5.setProperty(
+  ]) get flatMap => <U, This>(
+        _i2.Object Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        This? p1,
+      ]) =>
+          (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'flatMap',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1 ?? _i5.undefined,
+            ],
+          ) as _i2.List)
+              .cast();
+  set flat(_i2.List<_i2.dynamic> Function<A, D extends _i2.num>([D?]) value) {
+    _i6.setProperty(
       this,
       'flat',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.List<_i10.FlatArray<A, D>> Function<A, D extends _i2.num>([D?])
-      get flat => _i5.getProperty(
-            this,
-            'flat',
-          );
+  _i2.List<_i2.dynamic> Function<A, D extends _i2.num>([D?]) get flat =>
+      <A, D extends _i2.num>([D? p0]) => (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'flat',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          ) as _i2.List)
+              .cast();
   set at(T? Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'at',
-      _i5.allowInterop(value),
+      _i6.allowInterop((p0) => () => value(p0) ?? _i5.undefined),
     );
   }
 
-  T? Function(_i2.num) get at => _i5.getProperty(
-        this,
-        'at',
+  T? Function(_i2.num) get at => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'at',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set findLastIndex(
       _i2.num Function(
@@ -5260,10 +6149,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ), [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'findLastIndex',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -5274,22 +6163,43 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       _i2.List<T>,
     ), [
     _i2.dynamic,
-  ]) get findLastIndex => _i5.getProperty(
-        this,
-        'findLastIndex',
-      );
+  ]) get findLastIndex => (
+        _i2.Object? Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'findLastIndex',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1,
+            ],
+          );
   set toReversed(_i2.List<T> Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toReversed',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.List<T> Function() get toReversed => _i5.getProperty(
-        this,
-        'toReversed',
-      );
+  _i2.List<T> Function() get toReversed => () => (_i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toReversed',
+        ),
+        r'call',
+        [this],
+      ) as _i2.List)
+          .cast();
   set toSorted(
       _i2.List<T> Function(
               [_i2.num Function(
@@ -5297,10 +6207,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
                 T,
               )?])
           value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toSorted',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -5308,33 +6218,59 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
       [_i2.num Function(
         T,
         T,
-      )?]) get toSorted => _i5.getProperty(
-        this,
-        'toSorted',
-      );
+      )?]) get toSorted => (
+          [_i2.num Function(
+            T,
+            T,
+          )? p0]) =>
+      (_i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toSorted',
+        ),
+        r'call',
+        [
+          this,
+          p0 == null ? _i5.undefined : _i6.allowInterop(p0),
+        ],
+      ) as _i2.List)
+          .cast();
   set with$(
       _i2.List<T> Function(
         _i2.num,
         T,
       ) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'with',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.List<T> Function(
     _i2.num,
     T,
-  ) get with$ => _i5.getProperty(
-        this,
-        'with',
-      );
+  ) get with$ => (
+        _i2.num p0,
+        T p1,
+      ) =>
+          (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'with',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          ) as _i2.List)
+              .cast();
 
   /// Combines two or more arrays.
   ///  @param items Additional items to add to the end of array1.
-  _i2.List<T> concat([_i2.Iterable<_i2.dynamic>? items]) => (_i5.callMethod(
+  _i2.List<T> concat([_i2.Iterable<_i2.dynamic>? items]) => (_i6.callMethod(
         this,
         'concat',
         [...?items],
@@ -5355,11 +6291,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'every',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -5378,11 +6314,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'every',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -5434,11 +6370,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      (_i5.callMethod(
+      (_i6.callMethod(
         this,
         'filter',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       ) as _i2.List)
@@ -5455,11 +6391,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      (_i5.callMethod(
+      (_i6.callMethod(
         this,
         'filter',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       ) as _i2.List)
@@ -5505,10 +6441,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
             _i2.num,
             _i2.List<T>,
           ) callbackfn) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'reduce',
-        [_i5.allowInterop(callbackfn)],
+        [_i6.allowInterop(callbackfn)],
       );
 
   /// Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
@@ -5521,11 +6457,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) callbackfn,
     T initialValue,
   ) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'reduce',
         [
-          _i5.allowInterop(callbackfn),
+          _i6.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -5542,11 +6478,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) callbackfn,
     U initialValue,
   ) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'reduce',
         [
-          _i5.allowInterop(callbackfn),
+          _i6.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -5603,10 +6539,10 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
             _i2.num,
             _i2.List<T>,
           ) callbackfn) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'reduceRight',
-        [_i5.allowInterop(callbackfn)],
+        [_i6.allowInterop(callbackfn)],
       );
 
   /// Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
@@ -5619,11 +6555,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) callbackfn,
     T initialValue,
   ) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'reduceRight',
         [
-          _i5.allowInterop(callbackfn),
+          _i6.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -5640,11 +6576,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) callbackfn,
     U initialValue,
   ) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'reduceRight',
         [
-          _i5.allowInterop(callbackfn),
+          _i6.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -5706,11 +6642,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'find',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -5725,11 +6661,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'find',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -5782,11 +6718,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'findLast',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -5801,11 +6737,11 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'findLast',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -5853,7 +6789,7 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
     _i2.num deleteCount, [
     _i2.Iterable<_i2.dynamic>? items,
   ]) =>
-      (_i5.callMethod(
+      (_i6.callMethod(
         this,
         'toSpliced',
         [
@@ -5863,12 +6799,13 @@ extension ReadonlyArray$Typings<T> on ReadonlyArray<T> {
         ],
       ) as _i2.List)
           .cast();
-  T operator [](_i2.num index) => _i5.getProperty(
+  T operator [](_i2.num index) => _i6.getProperty(
         this,
         index,
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -5889,84 +6826,106 @@ class ConcatArray<T> {
   }) =>
       ConcatArray._(
         length: length,
-        join: join == null ? null : _i5.allowInterop(join),
-        slice: slice == null ? null : _i5.allowInterop(slice),
+        join: join == null ? null : _i6.allowInterop(join),
+        slice: slice == null ? null : _i6.allowInterop(slice),
       );
 }
 
 extension ConcatArray$Typings<T> on ConcatArray<T> {
-  _i2.num get length => _i5.getProperty(
+  _i2.num get length => _i6.getProperty(
         this,
         'length',
       );
   set join(_i2.String Function([_i2.String?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'join',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function([_i2.String?]) get join => _i5.getProperty(
-        this,
-        'join',
-      );
+  _i2.String Function([_i2.String?]) get join =>
+      ([_i2.String? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'join',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set slice(
       _i2.List<T> Function([
         _i2.num?,
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'slice',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.List<T> Function([
     _i2.num?,
     _i2.num?,
-  ]) get slice => _i5.getProperty(
-        this,
-        'slice',
-      );
-  T operator [](_i2.num index) => _i5.getProperty(
+  ]) get slice => ([
+        _i2.num? p0,
+        _i2.num? p1,
+      ]) =>
+          (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'slice',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+              p1 ?? _i5.undefined,
+            ],
+          ) as _i2.List)
+              .cast();
+  T operator [](_i2.num index) => _i6.getProperty(
         this,
         index,
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
-class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
-  factory Array.$1() => _i5.callConstructor(
+class Array<T> implements _IterableLike$<_i10.IterableIterator<T>> {
+  factory Array.$1() => _i6.callConstructor(
         _declaredArray,
         [],
       );
 
-  factory Array.$2([_i2.num? arrayLength]) => _i5.callConstructor(
+  factory Array.$2([_i2.num? arrayLength]) => _i6.callConstructor(
         _declaredArray,
-        [arrayLength ?? _i4.undefined],
+        [arrayLength ?? _i5.undefined],
       );
 
-  factory Array.$3([_i2.Iterable<_i2.dynamic>? items]) => _i5.callConstructor(
+  factory Array.$3([_i2.Iterable<_i2.dynamic>? items]) => _i6.callConstructor(
         _declaredArray,
-        [items ?? _i4.undefined],
+        [items ?? _i5.undefined],
       );
 
   static set isArray(_i2.dynamic Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target11,
+    _i6.setProperty(
+      _i7.target11,
       'isArray',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set of(_i2.List<T> Function<T>([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
-      _i6.target11,
+    _i6.setProperty(
+      _i7.target11,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -5995,8 +6954,8 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
 
   /// Creates an array from an iterable object.
   ///  @param iterable An iterable object to convert to an array.
-  static _i2.List<T> _from$1<T>(_i3.From iterable) => (_i5.callMethod(
-        _i6.target11,
+  static _i2.List<T> _from$1<T>(_i3.From iterable) => (_i6.callMethod(
+        _i7.target11,
         'from',
         [iterable],
       ) as _i2.List)
@@ -6014,12 +6973,12 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      (_i5.callMethod(
-        _i6.target11,
+      (_i6.callMethod(
+        _i7.target11,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       ) as _i2.List)
@@ -6037,12 +6996,12 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      (_i5.callMethod(
-        _i6.target11,
+      (_i6.callMethod(
+        _i7.target11,
         'from',
         [
           iterable,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       ) as _i2.List)
@@ -6086,19 +7045,19 @@ class Array<T> implements _IterableLike$<_i9.IterableIterator<T>> {
       );
 }
 
-_i2.Object get _declaredArray => _i5.getProperty(
+_i2.Object get _declaredArray => _i6.getProperty(
       _self,
       'Array',
     );
 
 extension Array$Typings<T> on Array<T> {
   /// Gets or sets the length of the array. This is a number one higher than the highest index in the array.
-  _i2.num get length => _i5.getProperty(
+  _i2.num get length => _i6.getProperty(
         this,
         'length',
       );
   set length(_i2.num value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'length',
       value,
@@ -6106,46 +7065,58 @@ extension Array$Typings<T> on Array<T> {
   }
 
   set toString$(_i2.String Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toString',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function() get toString$ => _i5.getProperty(
-        this,
-        'toString',
+  _i2.String Function() get toString$ => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toString',
+        ),
+        r'call',
+        [this],
       );
   set toLocaleString(_i2.String Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toLocaleString',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function() get toLocaleString => _i5.getProperty(
-        this,
-        'toLocaleString',
+  _i2.String Function() get toLocaleString => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toLocaleString',
+        ),
+        r'call',
+        [this],
       );
   set pop(T? Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'pop',
-      _i5.allowInterop(value),
+      _i6.allowInterop(() => () => value() ?? _i5.undefined),
     );
   }
 
-  T? Function() get pop => _i5.getProperty(
-        this,
-        'pop',
+  T? Function() get pop => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'pop',
+        ),
+        r'call',
+        [this],
       );
   set push(_i2.num Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'push',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -6172,65 +7143,103 @@ extension Array$Typings<T> on Array<T> {
     );
   }
 
-  _i2.num Function([_i2.Iterable<_i2.dynamic>?]) get push => _i5.getProperty(
-        this,
-        'push',
-      );
+  _i2.num Function([_i2.Iterable<_i2.dynamic>?]) get push =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'push',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set join(_i2.String Function([_i2.String?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'join',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.String Function([_i2.String?]) get join => _i5.getProperty(
-        this,
-        'join',
-      );
+  _i2.String Function([_i2.String?]) get join =>
+      ([_i2.String? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'join',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set reverse(_i2.List<T> Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'reverse',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.List<T> Function() get reverse => _i5.getProperty(
-        this,
-        'reverse',
-      );
+  _i2.List<T> Function() get reverse => () => (_i6.callMethod(
+        _i6.getProperty(
+          this,
+          'reverse',
+        ),
+        r'call',
+        [this],
+      ) as _i2.List)
+          .cast();
   set shift(T? Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'shift',
-      _i5.allowInterop(value),
+      _i6.allowInterop(() => () => value() ?? _i5.undefined),
     );
   }
 
-  T? Function() get shift => _i5.getProperty(
-        this,
-        'shift',
+  T? Function() get shift => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'shift',
+        ),
+        r'call',
+        [this],
       );
   set slice(
       _i2.List<T> Function([
         _i2.num?,
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'slice',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.List<T> Function([
     _i2.num?,
     _i2.num?,
-  ]) get slice => _i5.getProperty(
-        this,
-        'slice',
-      );
+  ]) get slice => ([
+        _i2.num? p0,
+        _i2.num? p1,
+      ]) =>
+          (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'slice',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+              p1 ?? _i5.undefined,
+            ],
+          ) as _i2.List)
+              .cast();
   set sort(
       _i3.Array<_i2.dynamic> Function(
               [_i2.num Function(
@@ -6238,10 +7247,10 @@ extension Array$Typings<T> on Array<T> {
                 T,
               )?])
           value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'sort',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -6249,15 +7258,27 @@ extension Array$Typings<T> on Array<T> {
       [_i2.num Function(
         T,
         T,
-      )?]) get sort => _i5.getProperty(
-        this,
-        'sort',
+      )?]) get sort => (
+          [_i2.num Function(
+            T,
+            T,
+          )? p0]) =>
+      _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'sort',
+        ),
+        r'call',
+        [
+          this,
+          p0 == null ? _i5.undefined : _i6.allowInterop(p0),
+        ],
       );
   set unshift(_i2.num Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'unshift',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -6284,48 +7305,80 @@ extension Array$Typings<T> on Array<T> {
     );
   }
 
-  _i2.num Function([_i2.Iterable<_i2.dynamic>?]) get unshift => _i5.getProperty(
-        this,
-        'unshift',
-      );
+  _i2.num Function([_i2.Iterable<_i2.dynamic>?]) get unshift =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'unshift',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
   set indexOf(
       _i2.num Function(
         T, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'indexOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.num Function(
     T, [
     _i2.num?,
-  ]) get indexOf => _i5.getProperty(
-        this,
-        'indexOf',
-      );
+  ]) get indexOf => (
+        T p0, [
+        _i2.num? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'indexOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
   set lastIndexOf(
       _i2.num Function(
         T, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'lastIndexOf',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.num Function(
     T, [
     _i2.num?,
-  ]) get lastIndexOf => _i5.getProperty(
-        this,
-        'lastIndexOf',
-      );
+  ]) get lastIndexOf => (
+        T p0, [
+        _i2.num? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'lastIndexOf',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
   set some(
       _i2.bool Function(
         _i2.Object? Function(
@@ -6335,10 +7388,10 @@ extension Array$Typings<T> on Array<T> {
         ), [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'some',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -6349,10 +7402,26 @@ extension Array$Typings<T> on Array<T> {
       _i2.List<T>,
     ), [
     _i2.dynamic,
-  ]) get some => _i5.getProperty(
-        this,
-        'some',
-      );
+  ]) get some => (
+        _i2.Object? Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'some',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1,
+            ],
+          );
   set forEach(
       void Function(
         void Function(
@@ -6362,10 +7431,10 @@ extension Array$Typings<T> on Array<T> {
         ), [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'forEach',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -6376,10 +7445,26 @@ extension Array$Typings<T> on Array<T> {
       _i2.List<T>,
     ), [
     _i2.dynamic,
-  ]) get forEach => _i5.getProperty(
-        this,
-        'forEach',
-      );
+  ]) get forEach => (
+        void Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'forEach',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1,
+            ],
+          );
   set map(
       _i2.List<U> Function<U>(
         U Function(
@@ -6389,10 +7474,10 @@ extension Array$Typings<T> on Array<T> {
         ), [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'map',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -6403,10 +7488,27 @@ extension Array$Typings<T> on Array<T> {
       _i2.List<T>,
     ), [
     _i2.dynamic,
-  ]) get map => _i5.getProperty(
-        this,
-        'map',
-      );
+  ]) get map => <U>(
+        U Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'map',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1,
+            ],
+          ) as _i2.List)
+              .cast();
   set findIndex(
       _i2.num Function(
         _i2.Object? Function(
@@ -6416,10 +7518,10 @@ extension Array$Typings<T> on Array<T> {
         ), [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'findIndex',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -6430,20 +7532,36 @@ extension Array$Typings<T> on Array<T> {
       _i2.List<T>,
     ), [
     _i2.dynamic,
-  ]) get findIndex => _i5.getProperty(
-        this,
-        'findIndex',
-      );
+  ]) get findIndex => (
+        _i2.Object? Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'findIndex',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1,
+            ],
+          );
   set fill(
       _i3.Array<_i2.dynamic> Function(
         T, [
         _i2.num?,
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'fill',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -6451,20 +7569,34 @@ extension Array$Typings<T> on Array<T> {
     T, [
     _i2.num?,
     _i2.num?,
-  ]) get fill => _i5.getProperty(
-        this,
-        'fill',
-      );
+  ]) get fill => (
+        T p0, [
+        _i2.num? p1,
+        _i2.num? p2,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'fill',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+              p2 ?? _i5.undefined,
+            ],
+          );
   set copyWithin(
       _i3.Array<_i2.dynamic> Function(
         _i2.num,
         _i2.num, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'copyWithin',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -6472,77 +7604,115 @@ extension Array$Typings<T> on Array<T> {
     _i2.num,
     _i2.num, [
     _i2.num?,
-  ]) get copyWithin => _i5.getProperty(
-        this,
-        'copyWithin',
-      );
+  ]) get copyWithin => (
+        _i2.num p0,
+        _i2.num p1, [
+        _i2.num? p2,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'copyWithin',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2 ?? _i5.undefined,
+            ],
+          );
   set entries(
-      _i9.IterableIterator<
+      _i10.IterableIterator<
                   (
                     _i2.num,
                     T,
                   )>
               Function()
           value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'entries',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i9.IterableIterator<
+  _i10.IterableIterator<
           (
             _i2.num,
             T,
           )>
-      Function() get entries => _i5.getProperty(
-        this,
-        'entries',
+      Function() get entries => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'entries',
+        ),
+        r'call',
+        [this],
       );
-  set keys(_i9.IterableIterator<_i2.num> Function() value) {
-    _i5.setProperty(
+  set keys(_i10.IterableIterator<_i2.num> Function() value) {
+    _i6.setProperty(
       this,
       'keys',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i9.IterableIterator<_i2.num> Function() get keys => _i5.getProperty(
-        this,
-        'keys',
+  _i10.IterableIterator<_i2.num> Function() get keys => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'keys',
+        ),
+        r'call',
+        [this],
       );
-  set values(_i9.IterableIterator<T> Function() value) {
-    _i5.setProperty(
+  set values(_i10.IterableIterator<T> Function() value) {
+    _i6.setProperty(
       this,
       'values',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i9.IterableIterator<T> Function() get values => _i5.getProperty(
-        this,
-        'values',
+  _i10.IterableIterator<T> Function() get values => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'values',
+        ),
+        r'call',
+        [this],
       );
   set includes(
       _i2.bool Function(
         T, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'includes',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.bool Function(
     T, [
     _i2.num?,
-  ]) get includes => _i5.getProperty(
-        this,
-        'includes',
-      );
+  ]) get includes => (
+        T p0, [
+        _i2.num? p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'includes',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i5.undefined,
+            ],
+          );
   set flatMap(
       _i2.List<U> Function<U, This>(
         _i2.Object Function(
@@ -6552,10 +7722,10 @@ extension Array$Typings<T> on Array<T> {
         ), [
         This?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'flatMap',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -6566,36 +7736,66 @@ extension Array$Typings<T> on Array<T> {
       _i2.List<T>,
     ), [
     This?,
-  ]) get flatMap => _i5.getProperty(
-        this,
-        'flatMap',
-      );
-  set flat(
-      _i2.List<_i10.FlatArray<A, D>> Function<A, D extends _i2.num>([D?])
-          value) {
-    _i5.setProperty(
+  ]) get flatMap => <U, This>(
+        _i2.Object Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        This? p1,
+      ]) =>
+          (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'flatMap',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1 ?? _i5.undefined,
+            ],
+          ) as _i2.List)
+              .cast();
+  set flat(_i2.List<_i2.dynamic> Function<A, D extends _i2.num>([D?]) value) {
+    _i6.setProperty(
       this,
       'flat',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.List<_i10.FlatArray<A, D>> Function<A, D extends _i2.num>([D?])
-      get flat => _i5.getProperty(
-            this,
-            'flat',
-          );
+  _i2.List<_i2.dynamic> Function<A, D extends _i2.num>([D?]) get flat =>
+      <A, D extends _i2.num>([D? p0]) => (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'flat',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          ) as _i2.List)
+              .cast();
   set at(T? Function(_i2.num) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'at',
-      _i5.allowInterop(value),
+      _i6.allowInterop((p0) => () => value(p0) ?? _i5.undefined),
     );
   }
 
-  T? Function(_i2.num) get at => _i5.getProperty(
-        this,
-        'at',
+  T? Function(_i2.num) get at => (_i2.num p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'at',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set findLastIndex(
       _i2.num Function(
@@ -6606,10 +7806,10 @@ extension Array$Typings<T> on Array<T> {
         ), [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'findLastIndex',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -6620,22 +7820,43 @@ extension Array$Typings<T> on Array<T> {
       _i2.List<T>,
     ), [
     _i2.dynamic,
-  ]) get findLastIndex => _i5.getProperty(
-        this,
-        'findLastIndex',
-      );
+  ]) get findLastIndex => (
+        _i2.Object? Function(
+          T,
+          _i2.num,
+          _i2.List<T>,
+        ) p0, [
+        _i2.dynamic p1,
+      ]) =>
+          _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'findLastIndex',
+            ),
+            r'call',
+            [
+              this,
+              _i6.allowInterop(p0),
+              p1,
+            ],
+          );
   set toReversed(_i2.List<T> Function() value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toReversed',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.List<T> Function() get toReversed => _i5.getProperty(
-        this,
-        'toReversed',
-      );
+  _i2.List<T> Function() get toReversed => () => (_i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toReversed',
+        ),
+        r'call',
+        [this],
+      ) as _i2.List)
+          .cast();
   set toSorted(
       _i2.List<T> Function(
               [_i2.num Function(
@@ -6643,10 +7864,10 @@ extension Array$Typings<T> on Array<T> {
                 T,
               )?])
           value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'toSorted',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
@@ -6654,34 +7875,60 @@ extension Array$Typings<T> on Array<T> {
       [_i2.num Function(
         T,
         T,
-      )?]) get toSorted => _i5.getProperty(
-        this,
-        'toSorted',
-      );
+      )?]) get toSorted => (
+          [_i2.num Function(
+            T,
+            T,
+          )? p0]) =>
+      (_i6.callMethod(
+        _i6.getProperty(
+          this,
+          'toSorted',
+        ),
+        r'call',
+        [
+          this,
+          p0 == null ? _i5.undefined : _i6.allowInterop(p0),
+        ],
+      ) as _i2.List)
+          .cast();
   set with$(
       _i2.List<T> Function(
         _i2.num,
         T,
       ) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'with',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.List<T> Function(
     _i2.num,
     T,
-  ) get with$ => _i5.getProperty(
-        this,
-        'with',
-      );
+  ) get with$ => (
+        _i2.num p0,
+        T p1,
+      ) =>
+          (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'with',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          ) as _i2.List)
+              .cast();
 
   /// Combines two or more arrays.
   ///  This method returns a new array without modifying any existing arrays.
   ///  @param items Additional arrays and/or items to add to the end of the array.
-  _i2.List<T> concat([_i2.Iterable<_i2.dynamic>? items]) => (_i5.callMethod(
+  _i2.List<T> concat([_i2.Iterable<_i2.dynamic>? items]) => (_i6.callMethod(
         this,
         'concat',
         [...?items],
@@ -6698,7 +7945,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.num deleteCount, [
     _i2.Iterable<_i2.dynamic>? items,
   ]) =>
-      (_i5.callMethod(
+      (_i6.callMethod(
         this,
         'splice',
         [
@@ -6723,11 +7970,11 @@ extension Array$Typings<T> on Array<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'every',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -6746,11 +7993,11 @@ extension Array$Typings<T> on Array<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'every',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -6802,11 +8049,11 @@ extension Array$Typings<T> on Array<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      (_i5.callMethod(
+      (_i6.callMethod(
         this,
         'filter',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       ) as _i2.List)
@@ -6823,11 +8070,11 @@ extension Array$Typings<T> on Array<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      (_i5.callMethod(
+      (_i6.callMethod(
         this,
         'filter',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       ) as _i2.List)
@@ -6873,11 +8120,11 @@ extension Array$Typings<T> on Array<T> {
     ) callbackfn,
     T initialValue,
   ) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'reduce',
         [
-          _i5.allowInterop(callbackfn),
+          _i6.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -6894,11 +8141,11 @@ extension Array$Typings<T> on Array<T> {
     ) callbackfn,
     U initialValue,
   ) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'reduce',
         [
-          _i5.allowInterop(callbackfn),
+          _i6.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -6943,11 +8190,11 @@ extension Array$Typings<T> on Array<T> {
     ) callbackfn,
     T initialValue,
   ) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'reduceRight',
         [
-          _i5.allowInterop(callbackfn),
+          _i6.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -6964,11 +8211,11 @@ extension Array$Typings<T> on Array<T> {
     ) callbackfn,
     U initialValue,
   ) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'reduceRight',
         [
-          _i5.allowInterop(callbackfn),
+          _i6.allowInterop(callbackfn),
           initialValue,
         ],
       );
@@ -7018,11 +8265,11 @@ extension Array$Typings<T> on Array<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'find',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -7037,11 +8284,11 @@ extension Array$Typings<T> on Array<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'find',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -7094,11 +8341,11 @@ extension Array$Typings<T> on Array<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'findLast',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -7113,11 +8360,11 @@ extension Array$Typings<T> on Array<T> {
     ) predicate, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'findLast',
         [
-          _i5.allowInterop(predicate),
+          _i6.allowInterop(predicate),
           thisArg,
         ],
       );
@@ -7165,7 +8412,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.num deleteCount, [
     _i2.Iterable<_i2.dynamic>? items,
   ]) =>
-      (_i5.callMethod(
+      (_i6.callMethod(
         this,
         'toSpliced',
         [
@@ -7175,7 +8422,7 @@ extension Array$Typings<T> on Array<T> {
         ],
       ) as _i2.List)
           .cast();
-  T operator [](_i2.num index) => _i5.getProperty(
+  T operator [](_i2.num index) => _i6.getProperty(
         this,
         index,
       );
@@ -7183,7 +8430,7 @@ extension Array$Typings<T> on Array<T> {
     _i2.num index,
     T value,
   ) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       index,
       value,
@@ -7191,22 +8438,23 @@ extension Array$Typings<T> on Array<T> {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class ArrayConstructor {
   static set isArray(_i2.dynamic Function([_i2.dynamic]) value) {
-    _i5.setProperty(
-      _i6.target11,
+    _i6.setProperty(
+      _i7.target11,
       'isArray',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   static set of(_i2.List<T> Function<T>([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
-      _i6.target11,
+    _i6.setProperty(
+      _i7.target11,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -7235,19 +8483,35 @@ class ArrayConstructor {
 }
 
 extension ArrayConstructor$Typings on ArrayConstructor {
-  _i2.dynamic Function([_i2.dynamic]) get isArray => _i5.getProperty(
-        this,
-        'isArray',
-      );
+  _i2.dynamic Function([_i2.dynamic]) get isArray =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'isArray',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   _i2.List<T> Function<T>([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
-        this,
-        'of',
-      );
+      <T>([_i2.Iterable<_i2.dynamic>? p0]) => (_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          ) as _i2.List)
+              .cast();
 
   /// Creates an array from an iterable object.
   ///  @param iterable An iterable object to convert to an array.
-  _i2.List<T> _from$1<T>(_i3.From iterable) => (_i5.callMethod(
+  _i2.List<T> _from$1<T>(_i3.From iterable) => (_i6.callMethod(
         this,
         'from',
         [iterable],
@@ -7266,12 +8530,12 @@ extension ArrayConstructor$Typings on ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      (_i5.callMethod(
+      (_i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       ) as _i2.List)
@@ -7289,12 +8553,12 @@ extension ArrayConstructor$Typings on ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      (_i5.callMethod(
+      (_i6.callMethod(
         this,
         'from',
         [
           iterable,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       ) as _i2.List)
@@ -7336,16 +8600,16 @@ extension ArrayConstructor$Typings on ArrayConstructor {
         $2: _from$2,
         $3: _from$3,
       );
-  _i2.List<_i2.dynamic> _call$1([_i2.num? arrayLength]) => (_i5.callMethod(
+  _i2.List<_i2.dynamic> _call$1([_i2.num? arrayLength]) => (_i6.callMethod(
         this,
         'call',
         [
           this,
-          arrayLength ?? _i4.undefined,
+          arrayLength ?? _i5.undefined,
         ],
       ) as _i2.List)
           .cast();
-  _i2.List<T> _call$2<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i5.callMethod(
+  _i2.List<T> _call$2<T>([_i2.Iterable<_i2.dynamic>? items]) => (_i6.callMethod(
         this,
         'call',
         [
@@ -7365,6 +8629,7 @@ extension ArrayConstructor$Typings on ArrayConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -7391,85 +8656,97 @@ class TypedPropertyDescriptor<T> {
         configurable: configurable,
         writable: writable,
         value: value,
-        get: get == null ? null : _i5.allowInterop(get),
-        set: set == null ? null : _i5.allowInterop(set),
+        get: get == null ? null : _i6.allowInterop(get),
+        set: set == null ? null : _i6.allowInterop(set),
       );
 }
 
 extension TypedPropertyDescriptor$Typings<T> on TypedPropertyDescriptor<T> {
-  _i2.bool? get enumerable => _i5.getProperty(
+  _i2.bool? get enumerable => _i6.getProperty(
         this,
         'enumerable',
       );
   set enumerable(_i2.bool? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'enumerable',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
-  _i2.bool? get configurable => _i5.getProperty(
+  _i2.bool? get configurable => _i6.getProperty(
         this,
         'configurable',
       );
   set configurable(_i2.bool? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'configurable',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
-  _i2.bool? get writable => _i5.getProperty(
+  _i2.bool? get writable => _i6.getProperty(
         this,
         'writable',
       );
   set writable(_i2.bool? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'writable',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
-  T? get value => _i5.getProperty(
+  T? get value => _i6.getProperty(
         this,
         'value',
       );
   set value(T? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'value',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 
-  T Function()? get get => _i5.getProperty(
-        this,
-        'get',
+  T Function()? get get => () => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'get',
+        ),
+        r'call',
+        [this],
       );
   set get(T Function()? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'get',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i5.undefined : _i6.allowInterop(value),
     );
   }
 
-  void Function(T)? get set => _i5.getProperty(
-        this,
-        'set',
+  void Function(T)? get set => (T p0) => _i6.callMethod(
+        _i6.getProperty(
+          this,
+          'set',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set set(void Function(T)? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'set',
-      value == null ? _i4.undefined : _i5.allowInterop(value),
+      value == null ? _i5.undefined : _i6.allowInterop(value),
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -7478,34 +8755,53 @@ class PromiseLike<T> {
 
   factory PromiseLike(
           {_i2.Future<_i2.Object> Function<TResult1, TResult2>([
-            _i2.Object Function(_i2.dynamic)?,
-            _i2.Object Function([_i2.dynamic])?,
+            _i4.FutureOr<TResult1> Function(_i2.dynamic)?,
+            _i4.FutureOr<TResult2> Function([_i2.dynamic])?,
           ])? then}) =>
-      PromiseLike._(then: then == null ? null : _i5.allowInterop(then));
+      PromiseLike._(then: then == null ? null : _i6.allowInterop(then));
 }
 
 extension PromiseLike$Typings<T> on PromiseLike<T> {
   set then(
       _i2.Future<_i2.Object> Function<TResult1, TResult2>([
-        _i2.Object Function(T)?,
-        _i2.Object Function([_i2.dynamic])?,
+        _i4.FutureOr<TResult1> Function(T)?,
+        _i4.FutureOr<TResult2> Function([_i2.dynamic])?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'then',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.Object> Function<TResult1, TResult2>([
-    _i2.Object Function(T)?,
-    _i2.Object Function([_i2.dynamic])?,
-  ]) get then => _i5.getProperty(
-        this,
-        'then',
-      );
+    _i4.FutureOr<TResult1> Function(T)?,
+    _i4.FutureOr<TResult2> Function([_i2.dynamic])?,
+  ]) get then => <TResult1, TResult2>([
+        _i4.FutureOr<TResult1> Function(T)? p0,
+        _i4.FutureOr<TResult2> Function([_i2.dynamic])? p1,
+      ]) =>
+          _i6.promiseToFuture(_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'then',
+            ),
+            r'call',
+            [
+              this,
+              p0 == null
+                  ? _i5.undefined
+                  : _i6
+                      .allowInterop((p0) => _i5.Promise.futureOr(() => p0(p0))),
+              p1 == null
+                  ? _i5.undefined
+                  : _i6
+                      .allowInterop((p0) => _i5.Promise.futureOr(() => p1(p0))),
+            ],
+          ));
 }
 
+/* Source:  */
 /// Represents the completion of an asynchronous operation
 @_i1.JS()
 @_i1.staticInterop
@@ -7519,72 +8815,109 @@ class Promise<T> {
 
   factory Promise({
     _i2.Future<_i2.Object> Function<TResult1, TResult2>([
-      _i2.Object Function(_i2.dynamic)?,
-      _i2.Object Function([_i2.dynamic])?,
+      _i4.FutureOr<TResult1> Function(_i2.dynamic)?,
+      _i4.FutureOr<TResult2> Function([_i2.dynamic])?,
     ])? then,
     _i2.Future<_i2.Object> Function<TResult>(
-            [_i2.Object Function([_i2.dynamic])?])?
+            [_i4.FutureOr<TResult> Function([_i2.dynamic])?])?
         catch$,
     _i2.Future<_i2.dynamic> Function([void Function()?])? finally$,
   }) =>
       Promise._(
-        then: then == null ? null : _i5.allowInterop(then),
-        catch$: catch$ == null ? null : _i5.allowInterop(catch$),
-        finally$: finally$ == null ? null : _i5.allowInterop(finally$),
+        then: then == null ? null : _i6.allowInterop(then),
+        catch$: catch$ == null ? null : _i6.allowInterop(catch$),
+        finally$: finally$ == null ? null : _i6.allowInterop(finally$),
       );
 }
 
 extension Promise$Typings<T> on Promise<T> {
   set then(
       _i2.Future<_i2.Object> Function<TResult1, TResult2>([
-        _i2.Object Function(T)?,
-        _i2.Object Function([_i2.dynamic])?,
+        _i4.FutureOr<TResult1> Function(T)?,
+        _i4.FutureOr<TResult2> Function([_i2.dynamic])?,
       ]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'then',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.Object> Function<TResult1, TResult2>([
-    _i2.Object Function(T)?,
-    _i2.Object Function([_i2.dynamic])?,
-  ]) get then => _i5.getProperty(
-        this,
-        'then',
-      );
+    _i4.FutureOr<TResult1> Function(T)?,
+    _i4.FutureOr<TResult2> Function([_i2.dynamic])?,
+  ]) get then => <TResult1, TResult2>([
+        _i4.FutureOr<TResult1> Function(T)? p0,
+        _i4.FutureOr<TResult2> Function([_i2.dynamic])? p1,
+      ]) =>
+          _i6.promiseToFuture(_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'then',
+            ),
+            r'call',
+            [
+              this,
+              p0 == null
+                  ? _i5.undefined
+                  : _i6
+                      .allowInterop((p0) => _i5.Promise.futureOr(() => p0(p0))),
+              p1 == null
+                  ? _i5.undefined
+                  : _i6
+                      .allowInterop((p0) => _i5.Promise.futureOr(() => p1(p0))),
+            ],
+          ));
   set catch$(
       _i2.Future<_i2.Object> Function<TResult>(
-              [_i2.Object Function([_i2.dynamic])?])
+              [_i4.FutureOr<TResult> Function([_i2.dynamic])?])
           value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'catch',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.Future<_i2.Object>
-          Function<TResult>([_i2.Object Function([_i2.dynamic])?])
-      get catch$ => _i5.getProperty(
-            this,
-            'catch',
-          );
+  _i2.Future<_i2.Object> Function<TResult>(
+      [_i4.FutureOr<TResult> Function([_i2.dynamic])?]) get catch$ => <TResult>(
+          [_i4.FutureOr<TResult> Function([_i2.dynamic])? p0]) =>
+      _i6.promiseToFuture(_i6.callMethod(
+        _i6.getProperty(
+          this,
+          'catch',
+        ),
+        r'call',
+        [
+          this,
+          p0 == null
+              ? _i5.undefined
+              : _i6.allowInterop((p0) => _i5.Promise.futureOr(() => p0(p0))),
+        ],
+      ));
   set finally$(_i2.Future<T> Function([void Function()?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'finally',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.Future<T> Function([void Function()?]) get finally$ => _i5.getProperty(
-        this,
-        'finally',
-      );
+  _i2.Future<T> Function([void Function()?]) get finally$ =>
+      ([void Function()? p0]) => _i6.promiseToFuture(_i6.callMethod(
+            _i6.getProperty(
+              this,
+              'finally',
+            ),
+            r'call',
+            [
+              this,
+              p0 == null ? _i5.undefined : _i6.allowInterop(p0),
+            ],
+          ));
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -7595,21 +8928,23 @@ class ArrayLike<T> {
 }
 
 extension ArrayLike$Typings<T> on ArrayLike<T> {
-  _i2.num get length => _i5.getProperty(
+  _i2.num get length => _i6.getProperty(
         this,
         'length',
       );
-  T operator [](_i2.num index) => _i5.getProperty(
+  T operator [](_i2.num index) => _i6.getProperty(
         this,
         index,
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 class IInline1 {}
 
+/* Source:  */
 /// Marker for contextual 'this' type
 @_i1.JS()
 @_i1.staticInterop
@@ -7620,6 +8955,7 @@ class ThisType<T> {
   factory ThisType() => ThisType._();
 }
 
+/* Source:  */
 /// Stores types to be used with WeakSet, WeakMap, WeakRef, and FinalizationRegistry
 @_i1.JS()
 @_i1.staticInterop
@@ -7639,12 +8975,12 @@ enum WeakKeyTypesKeys {
 }
 
 extension WeakKeyTypes$Typings on WeakKeyTypes {
-  _i2.Object get object => _i5.getProperty(
+  _i2.Object get object => _i6.getProperty(
         this,
         'object',
       );
   set object(_i2.Object value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'object',
       value,
@@ -7652,6 +8988,7 @@ extension WeakKeyTypes$Typings on WeakKeyTypes {
   }
 }
 
+/* Source:  */
 /// Allowed ArrayBuffer types for the buffer of an ArrayBufferView and related Typed Arrays.
 @_i1.JS()
 @_i1.staticInterop
@@ -7668,7 +9005,7 @@ class ArrayBufferTypes {
   }) =>
       ArrayBufferTypes._(
         arrayBuffer: arrayBuffer,
-        sharedArrayBuffer: sharedArrayBuffer ?? _i4.undefined,
+        sharedArrayBuffer: sharedArrayBuffer ?? _i5.undefined,
       );
 }
 
@@ -7682,24 +9019,24 @@ enum ArrayBufferTypesKeys {
 }
 
 extension ArrayBufferTypes$Typings on ArrayBufferTypes {
-  _i13.ByteBuffer get arrayBuffer => _i5.getProperty(
+  _i13.ByteBuffer get arrayBuffer => _i6.getProperty(
         this,
         'ArrayBuffer',
       );
   set arrayBuffer(_i13.ByteBuffer value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'ArrayBuffer',
       value,
     );
   }
 
-  _i14.SharedArrayBuffer get sharedArrayBuffer => _i5.getProperty(
+  _i14.SharedArrayBuffer get sharedArrayBuffer => _i6.getProperty(
         this,
         'SharedArrayBuffer',
       );
   set sharedArrayBuffer(_i14.SharedArrayBuffer value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'SharedArrayBuffer',
       value,
@@ -7707,25 +9044,35 @@ extension ArrayBufferTypes$Typings on ArrayBufferTypes {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class ArrayBufferConstructor {}
 
 extension ArrayBufferConstructor$Typings on ArrayBufferConstructor {
   set isView(_i2.dynamic Function([_i2.dynamic]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'isView',
-      _i5.allowInterop(value),
+      _i6.allowInterop(value),
     );
   }
 
-  _i2.dynamic Function([_i2.dynamic]) get isView => _i5.getProperty(
-        this,
-        'isView',
-      );
+  _i2.dynamic Function([_i2.dynamic]) get isView =>
+      ([_i2.dynamic p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'isView',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -7737,7 +9084,7 @@ class ArrayBufferView {
   });
 
   factory ArrayBufferView({
-    _i3.ArrayBufferLike? buffer,
+    _i2.dynamic buffer,
     _i2.num? byteLength,
     _i2.num? byteOffset,
   }) =>
@@ -7750,12 +9097,12 @@ class ArrayBufferView {
 
 extension ArrayBufferView$Typings on ArrayBufferView {
   /// The ArrayBuffer instance referenced by the array.
-  _i3.ArrayBufferLike get buffer => _i5.getProperty(
+  _i2.dynamic get buffer => _i6.getProperty(
         this,
         'buffer',
       );
-  set buffer(_i3.ArrayBufferLike value) {
-    _i5.setProperty(
+  set buffer(_i2.dynamic value) {
+    _i6.setProperty(
       this,
       'buffer',
       value,
@@ -7763,12 +9110,12 @@ extension ArrayBufferView$Typings on ArrayBufferView {
   }
 
   /// The length in bytes of the array.
-  _i2.num get byteLength => _i5.getProperty(
+  _i2.num get byteLength => _i6.getProperty(
         this,
         'byteLength',
       );
   set byteLength(_i2.num value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'byteLength',
       value,
@@ -7776,12 +9123,12 @@ extension ArrayBufferView$Typings on ArrayBufferView {
   }
 
   /// The offset in bytes of the array.
-  _i2.num get byteOffset => _i5.getProperty(
+  _i2.num get byteOffset => _i6.getProperty(
         this,
         'byteOffset',
       );
   set byteOffset(_i2.num value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'byteOffset',
       value,
@@ -7789,44 +9136,47 @@ extension ArrayBufferView$Typings on ArrayBufferView {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 class IInline2 {}
 
 extension IInline2$Typings on IInline2 {
-  _i2.Never? get bytesPerElement => _i5.getProperty(
+  _i2.Never? get bytesPerElement => _i6.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
   set bytesPerElement(_i2.Never? value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'BYTES_PER_ELEMENT',
-      value ?? _i4.undefined,
+      value ?? _i5.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class DataViewConstructor {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Int8ArrayConstructor {}
 
 extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i5.getProperty(
+  _i2.num get bytesPerElement => _i6.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
   set of(_i13.Int8List Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -7854,10 +9204,17 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
   }
 
   _i13.Int8List Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
-        this,
-        'of',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   ///  @param arrayLike An array-like or iterable object to convert to an array.
@@ -7871,12 +9228,12 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -7886,19 +9243,19 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i13.Int8List _from$2(
-    _i9.Iterable<_i2.num> arrayLike, [
+    _i10.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
       _i2.num,
     )? mapfn,
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          mapfn == null ? _i4.undefined : _i5.allowInterop(mapfn),
+          mapfn == null ? _i5.undefined : _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -7923,7 +9280,7 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i13.Int8List Function(
-      _i9.Iterable<_i2.num> arrayLike, [
+      _i10.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
         _i2.num,
@@ -7936,21 +9293,22 @@ extension Int8ArrayConstructor$Typings on Int8ArrayConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Uint8ArrayConstructor {}
 
 extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i5.getProperty(
+  _i2.num get bytesPerElement => _i6.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
   set of(_i13.Uint8List Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -7978,10 +9336,17 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
   }
 
   _i13.Uint8List Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
-        this,
-        'of',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   ///  @param arrayLike An array-like or iterable object to convert to an array.
@@ -7995,12 +9360,12 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8010,19 +9375,19 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i13.Uint8List _from$2(
-    _i9.Iterable<_i2.num> arrayLike, [
+    _i10.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
       _i2.num,
     )? mapfn,
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          mapfn == null ? _i4.undefined : _i5.allowInterop(mapfn),
+          mapfn == null ? _i5.undefined : _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8047,7 +9412,7 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i13.Uint8List Function(
-      _i9.Iterable<_i2.num> arrayLike, [
+      _i10.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
         _i2.num,
@@ -8060,21 +9425,22 @@ extension Uint8ArrayConstructor$Typings on Uint8ArrayConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Uint8ClampedArrayConstructor {}
 
 extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i5.getProperty(
+  _i2.num get bytesPerElement => _i6.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
   set of(_i13.Uint8ClampedList Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -8102,10 +9468,17 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
   }
 
   _i13.Uint8ClampedList Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
-        this,
-        'of',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   ///  @param arrayLike An array-like or iterable object to convert to an array.
@@ -8119,12 +9492,12 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8134,19 +9507,19 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i13.Uint8ClampedList _from$2(
-    _i9.Iterable<_i2.num> arrayLike, [
+    _i10.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
       _i2.num,
     )? mapfn,
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          mapfn == null ? _i4.undefined : _i5.allowInterop(mapfn),
+          mapfn == null ? _i5.undefined : _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8171,7 +9544,7 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i13.Uint8ClampedList Function(
-      _i9.Iterable<_i2.num> arrayLike, [
+      _i10.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
         _i2.num,
@@ -8184,21 +9557,22 @@ extension Uint8ClampedArrayConstructor$Typings on Uint8ClampedArrayConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Int16ArrayConstructor {}
 
 extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i5.getProperty(
+  _i2.num get bytesPerElement => _i6.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
   set of(_i13.Int16List Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -8226,10 +9600,17 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
   }
 
   _i13.Int16List Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
-        this,
-        'of',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   ///  @param arrayLike An array-like or iterable object to convert to an array.
@@ -8243,12 +9624,12 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8258,19 +9639,19 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i13.Int16List _from$2(
-    _i9.Iterable<_i2.num> arrayLike, [
+    _i10.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
       _i2.num,
     )? mapfn,
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          mapfn == null ? _i4.undefined : _i5.allowInterop(mapfn),
+          mapfn == null ? _i5.undefined : _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8295,7 +9676,7 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i13.Int16List Function(
-      _i9.Iterable<_i2.num> arrayLike, [
+      _i10.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
         _i2.num,
@@ -8308,21 +9689,22 @@ extension Int16ArrayConstructor$Typings on Int16ArrayConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Uint16ArrayConstructor {}
 
 extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i5.getProperty(
+  _i2.num get bytesPerElement => _i6.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
   set of(_i13.Uint16List Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -8350,10 +9732,17 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
   }
 
   _i13.Uint16List Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
-        this,
-        'of',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   ///  @param arrayLike An array-like or iterable object to convert to an array.
@@ -8367,12 +9756,12 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8382,19 +9771,19 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i13.Uint16List _from$2(
-    _i9.Iterable<_i2.num> arrayLike, [
+    _i10.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
       _i2.num,
     )? mapfn,
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          mapfn == null ? _i4.undefined : _i5.allowInterop(mapfn),
+          mapfn == null ? _i5.undefined : _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8419,7 +9808,7 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i13.Uint16List Function(
-      _i9.Iterable<_i2.num> arrayLike, [
+      _i10.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
         _i2.num,
@@ -8432,21 +9821,22 @@ extension Uint16ArrayConstructor$Typings on Uint16ArrayConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Int32ArrayConstructor {}
 
 extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i5.getProperty(
+  _i2.num get bytesPerElement => _i6.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
   set of(_i13.Int32List Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -8474,10 +9864,17 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
   }
 
   _i13.Int32List Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
-        this,
-        'of',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   ///  @param arrayLike An array-like or iterable object to convert to an array.
@@ -8491,12 +9888,12 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8506,19 +9903,19 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i13.Int32List _from$2(
-    _i9.Iterable<_i2.num> arrayLike, [
+    _i10.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
       _i2.num,
     )? mapfn,
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          mapfn == null ? _i4.undefined : _i5.allowInterop(mapfn),
+          mapfn == null ? _i5.undefined : _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8543,7 +9940,7 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i13.Int32List Function(
-      _i9.Iterable<_i2.num> arrayLike, [
+      _i10.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
         _i2.num,
@@ -8556,21 +9953,22 @@ extension Int32ArrayConstructor$Typings on Int32ArrayConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Uint32ArrayConstructor {}
 
 extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i5.getProperty(
+  _i2.num get bytesPerElement => _i6.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
   set of(_i13.Uint32List Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -8598,10 +9996,17 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
   }
 
   _i13.Uint32List Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
-        this,
-        'of',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   ///  @param arrayLike An array-like or iterable object to convert to an array.
@@ -8615,12 +10020,12 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8630,19 +10035,19 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i13.Uint32List _from$2(
-    _i9.Iterable<_i2.num> arrayLike, [
+    _i10.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
       _i2.num,
     )? mapfn,
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          mapfn == null ? _i4.undefined : _i5.allowInterop(mapfn),
+          mapfn == null ? _i5.undefined : _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8667,7 +10072,7 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i13.Uint32List Function(
-      _i9.Iterable<_i2.num> arrayLike, [
+      _i10.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
         _i2.num,
@@ -8680,21 +10085,22 @@ extension Uint32ArrayConstructor$Typings on Uint32ArrayConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Float32ArrayConstructor {}
 
 extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i5.getProperty(
+  _i2.num get bytesPerElement => _i6.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
   set of(_i13.Float32List Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -8722,10 +10128,17 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
   }
 
   _i13.Float32List Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
-        this,
-        'of',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   ///  @param arrayLike An array-like or iterable object to convert to an array.
@@ -8739,12 +10152,12 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8754,19 +10167,19 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i13.Float32List _from$2(
-    _i9.Iterable<_i2.num> arrayLike, [
+    _i10.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
       _i2.num,
     )? mapfn,
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          mapfn == null ? _i4.undefined : _i5.allowInterop(mapfn),
+          mapfn == null ? _i5.undefined : _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8791,7 +10204,7 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i13.Float32List Function(
-      _i9.Iterable<_i2.num> arrayLike, [
+      _i10.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
         _i2.num,
@@ -8804,21 +10217,22 @@ extension Float32ArrayConstructor$Typings on Float32ArrayConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Float64ArrayConstructor {}
 
 extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
   /// The size in bytes of each element in the array.
-  _i2.num get bytesPerElement => _i5.getProperty(
+  _i2.num get bytesPerElement => _i6.getProperty(
         this,
         'BYTES_PER_ELEMENT',
       );
   set of(_i13.Float64List Function([_i2.Iterable<_i2.dynamic>?]) value) {
-    _i5.setProperty(
+    _i6.setProperty(
       this,
       'of',
-      _i5.allowInterop(([
+      _i6.allowInterop(([
         a0,
         a1,
         a2,
@@ -8846,10 +10260,17 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
   }
 
   _i13.Float64List Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      _i5.getProperty(
-        this,
-        'of',
-      );
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i6.callMethod(
+            _i6.getProperty(
+              this,
+              'of',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i5.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   ///  @param arrayLike An array-like or iterable object to convert to an array.
@@ -8863,12 +10284,12 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
     ) mapfn, [
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          _i5.allowInterop(mapfn),
+          _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8878,19 +10299,19 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
   ///  @param mapfn A mapping function to call on every element of the array.
   ///  @param thisArg Value of 'this' used to invoke the mapfn.
   _i13.Float64List _from$2(
-    _i9.Iterable<_i2.num> arrayLike, [
+    _i10.Iterable<_i2.num> arrayLike, [
     _i2.num Function(
       _i2.num,
       _i2.num,
     )? mapfn,
     _i2.dynamic thisArg,
   ]) =>
-      _i5.callMethod(
+      _i6.callMethod(
         this,
         'from',
         [
           arrayLike,
-          mapfn == null ? _i4.undefined : _i5.allowInterop(mapfn),
+          mapfn == null ? _i5.undefined : _i6.allowInterop(mapfn),
           thisArg,
         ],
       );
@@ -8915,7 +10336,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
     ///  @param mapfn A mapping function to call on every element of the array.
     ///  @param thisArg Value of 'this' used to invoke the mapfn.
     _i13.Float64List Function(
-      _i9.Iterable<_i2.num> arrayLike, [
+      _i10.Iterable<_i2.num> arrayLike, [
       _i2.num Function(
         _i2.num,
         _i2.num,
@@ -8929,7 +10350,7 @@ extension Float64ArrayConstructor$Typings on Float64ArrayConstructor {
 }
 
 /// Evaluates JavaScript code and executes it.
-_i2.dynamic eval(_i2.String x) => _i5.callMethod(
+_i2.dynamic eval(_i2.String x) => _i6.callMethod(
       _self,
       'eval',
       [x],
@@ -8940,164 +10361,164 @@ _i2.num parseInt(
   _i2.String string, [
   _i2.num? radix,
 ]) =>
-    _i5.callMethod(
+    _i6.callMethod(
       _self,
       'parseInt',
       [
         string,
-        radix ?? _i4.undefined,
+        radix ?? _i5.undefined,
       ],
     );
 
 /// Converts a string to a floating-point number.
-_i2.num parseFloat(_i2.String string) => _i5.callMethod(
+_i2.num parseFloat(_i2.String string) => _i6.callMethod(
       _self,
       'parseFloat',
       [string],
     );
 
 /// Returns a Boolean value that indicates whether a value is the reserved value NaN (not a number).
-_i2.bool isNaN(_i2.num number) => _i5.callMethod(
+_i2.bool isNaN(_i2.num number) => _i6.callMethod(
       _self,
       'isNaN',
       [number],
     );
 
 /// Determines whether a supplied number is finite.
-_i2.bool isFinite(_i2.num number) => _i5.callMethod(
+_i2.bool isFinite(_i2.num number) => _i6.callMethod(
       _self,
       'isFinite',
       [number],
     );
 
 /// Gets the unencoded version of an encoded Uniform Resource Identifier (URI).
-_i2.String decodeURI(_i2.String encodedURI) => _i5.callMethod(
+_i2.String decodeURI(_i2.String encodedURI) => _i6.callMethod(
       _self,
       'decodeURI',
       [encodedURI],
     );
 
 /// Gets the unencoded version of an encoded component of a Uniform Resource Identifier (URI).
-_i2.String decodeURIComponent(_i2.String encodedURIComponent) => _i5.callMethod(
+_i2.String decodeURIComponent(_i2.String encodedURIComponent) => _i6.callMethod(
       _self,
       'decodeURIComponent',
       [encodedURIComponent],
     );
 
 /// Encodes a text string as a valid Uniform Resource Identifier (URI)
-_i2.String encodeURI(_i2.String uri) => _i5.callMethod(
+_i2.String encodeURI(_i2.String uri) => _i6.callMethod(
       _self,
       'encodeURI',
       [uri],
     );
 
 /// Encodes a text string as a valid component of a Uniform Resource Identifier (URI).
-_i2.String encodeURIComponent(_i2.Object uriComponent) => _i5.callMethod(
+_i2.String encodeURIComponent(_i2.Object uriComponent) => _i6.callMethod(
       _self,
       'encodeURIComponent',
       [uriComponent],
     );
 
 /// Computes a new string in which certain characters have been replaced by a hexadecimal escape sequence.
-_i2.String escape(_i2.String string) => _i5.callMethod(
+_i2.String escape(_i2.String string) => _i6.callMethod(
       _self,
       'escape',
       [string],
     );
 
 /// Computes a new string in which hexadecimal escape sequences are replaced with the character that it represents.
-_i2.String unescape(_i2.String string) => _i5.callMethod(
+_i2.String unescape(_i2.String string) => _i6.callMethod(
       _self,
       'unescape',
       [string],
     );
-_i2.num get naN => _i5.getProperty(
+_i2.num get naN => _i6.getProperty(
       _self,
       'NaN',
     );
-_i2.num get infinity => _i5.getProperty(
+_i2.num get infinity => _i6.getProperty(
       _self,
       'Infinity',
     );
 
 /// Provides functionality common to all JavaScript objects.
-_i3.ObjectConstructor get object => _i5.getProperty(
+_i3.ObjectConstructor get object => _i6.getProperty(
       _self,
       'Object',
     );
 
 /// Creates a new function.
-_i3.FunctionConstructor get function => _i5.getProperty(
+_i3.FunctionConstructor get function => _i6.getProperty(
       _self,
       'Function',
     );
 
 /// Allows manipulation and formatting of text strings and determination and location of substrings within strings.
-_i3.StringConstructor get string => _i5.getProperty(
+_i3.StringConstructor get string => _i6.getProperty(
       _self,
       'String',
     );
-_i3.BooleanConstructor get boolean => _i5.getProperty(
+_i3.BooleanConstructor get boolean => _i6.getProperty(
       _self,
       'Boolean',
     );
 
 /// An object that represents a number of any kind. All JavaScript numbers are 64-bit floating-point numbers.
-_i3.NumberConstructor get number => _i5.getProperty(
+_i3.NumberConstructor get number => _i6.getProperty(
       _self,
       'Number',
     );
 
 /// An intrinsic object that provides basic mathematics functionality and constants.
-_i3.Math get math => _i5.getProperty(
+_i3.Math get math => _i6.getProperty(
       _self,
       'Math',
     );
 
 /// Enables basic storage and retrieval of dates and times.
-_i3.DateConstructor get date => _i5.getProperty(
+_i3.DateConstructor get date => _i6.getProperty(
       _self,
       'Date',
     );
-_i3.RegExpConstructor get regExp => _i5.getProperty(
+_i3.RegExpConstructor get regExp => _i6.getProperty(
       _self,
       'RegExp',
     );
-_i3.ErrorConstructor get error => _i5.getProperty(
+_i3.ErrorConstructor get error => _i6.getProperty(
       _self,
       'Error',
     );
-_i3.EvalErrorConstructor get evalError => _i5.getProperty(
+_i3.EvalErrorConstructor get evalError => _i6.getProperty(
       _self,
       'EvalError',
     );
-_i3.RangeErrorConstructor get rangeError => _i5.getProperty(
+_i3.RangeErrorConstructor get rangeError => _i6.getProperty(
       _self,
       'RangeError',
     );
-_i3.ReferenceErrorConstructor get referenceError => _i5.getProperty(
+_i3.ReferenceErrorConstructor get referenceError => _i6.getProperty(
       _self,
       'ReferenceError',
     );
-_i3.SyntaxErrorConstructor get syntaxError => _i5.getProperty(
+_i3.SyntaxErrorConstructor get syntaxError => _i6.getProperty(
       _self,
       'SyntaxError',
     );
-_i3.TypeErrorConstructor get typeError => _i5.getProperty(
+_i3.TypeErrorConstructor get typeError => _i6.getProperty(
       _self,
       'TypeError',
     );
-_i3.URIErrorConstructor get uriError => _i5.getProperty(
+_i3.URIErrorConstructor get uriError => _i6.getProperty(
       _self,
       'URIError',
     );
 
 /// An intrinsic object that provides functions to convert JavaScript values to and from the JavaScript Object Notation (JSON) format.
-_i3.Json get json => _i5.getProperty(
+_i3.Json get json => _i6.getProperty(
       _self,
       'JSON',
     );
-_i3.ArrayConstructor get array => _i5.getProperty(
+_i3.ArrayConstructor get array => _i6.getProperty(
       _self,
       'Array',
     );
@@ -9106,77 +10527,77 @@ _i3.ArrayConstructor get array => _i5.getProperty(
 /// different typed arrays. ArrayBuffers cannot be read from or written to directly,
 /// but can be passed to a typed array or DataView Object to interpret the raw
 /// buffer as needed.
-_i3.ArrayBufferConstructor get arrayBuffer => _i5.getProperty(
+_i3.ArrayBufferConstructor get arrayBuffer => _i6.getProperty(
       _self,
       'ArrayBuffer',
     );
-_i3.DataViewConstructor get dataView => _i5.getProperty(
+_i3.DataViewConstructor get dataView => _i6.getProperty(
       _self,
       'DataView',
     );
 
 /// A typed array of 8-bit integer values. The contents are initialized to 0. If the requested
 /// number of bytes could not be allocated an exception is raised.
-_i3.Int8ArrayConstructor get int8Array => _i5.getProperty(
+_i3.Int8ArrayConstructor get int8Array => _i6.getProperty(
       _self,
       'Int8Array',
     );
 
 /// A typed array of 8-bit unsigned integer values. The contents are initialized to 0. If the
 /// requested number of bytes could not be allocated an exception is raised.
-_i3.Uint8ArrayConstructor get uint8Array => _i5.getProperty(
+_i3.Uint8ArrayConstructor get uint8Array => _i6.getProperty(
       _self,
       'Uint8Array',
     );
 
 /// A typed array of 8-bit unsigned integer (clamped) values. The contents are initialized to 0.
 /// If the requested number of bytes could not be allocated an exception is raised.
-_i3.Uint8ClampedArrayConstructor get uint8ClampedArray => _i5.getProperty(
+_i3.Uint8ClampedArrayConstructor get uint8ClampedArray => _i6.getProperty(
       _self,
       'Uint8ClampedArray',
     );
 
 /// A typed array of 16-bit signed integer values. The contents are initialized to 0. If the
 /// requested number of bytes could not be allocated an exception is raised.
-_i3.Int16ArrayConstructor get int16Array => _i5.getProperty(
+_i3.Int16ArrayConstructor get int16Array => _i6.getProperty(
       _self,
       'Int16Array',
     );
 
 /// A typed array of 16-bit unsigned integer values. The contents are initialized to 0. If the
 /// requested number of bytes could not be allocated an exception is raised.
-_i3.Uint16ArrayConstructor get uint16Array => _i5.getProperty(
+_i3.Uint16ArrayConstructor get uint16Array => _i6.getProperty(
       _self,
       'Uint16Array',
     );
 
 /// A typed array of 32-bit signed integer values. The contents are initialized to 0. If the
 /// requested number of bytes could not be allocated an exception is raised.
-_i3.Int32ArrayConstructor get int32Array => _i5.getProperty(
+_i3.Int32ArrayConstructor get int32Array => _i6.getProperty(
       _self,
       'Int32Array',
     );
 
 /// A typed array of 32-bit unsigned integer values. The contents are initialized to 0. If the
 /// requested number of bytes could not be allocated an exception is raised.
-_i3.Uint32ArrayConstructor get uint32Array => _i5.getProperty(
+_i3.Uint32ArrayConstructor get uint32Array => _i6.getProperty(
       _self,
       'Uint32Array',
     );
 
 /// A typed array of 32-bit float values. The contents are initialized to 0. If the requested number
 /// of bytes could not be allocated an exception is raised.
-_i3.Float32ArrayConstructor get float32Array => _i5.getProperty(
+_i3.Float32ArrayConstructor get float32Array => _i6.getProperty(
       _self,
       'Float32Array',
     );
 
 /// A typed array of 64-bit float values. The contents are initialized to 0. If the requested
 /// number of bytes could not be allocated an exception is raised.
-_i3.Float64ArrayConstructor get float64Array => _i5.getProperty(
+_i3.Float64ArrayConstructor get float64Array => _i6.getProperty(
       _self,
       'Float64Array',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop

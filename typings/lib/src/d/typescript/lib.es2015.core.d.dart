@@ -8,32 +8,37 @@ import 'dart:js_util' as _i3;
 @_i1.JS('self')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class IInline4 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class IInline5 {}
-
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 class IInline6 {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 class IInline7 {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 class IInline8 {}
 
-extension IInline8$Typings on IInline8 {
+/* Source:  */
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class IInline9 {}
+
+/* Source:  */
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class IInline10 {}
+
+extension IInline10$Typings on IInline10 {
   _i2.Object get raw => _i3.getProperty(
         this,
         'raw',
@@ -47,6 +52,7 @@ extension IInline8$Typings on IInline8 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

@@ -10,36 +10,17 @@ import '/d/core.dart' as _i5;
 @_i1.JS('vscode.tasks')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidStartTaskAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidEndTaskAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidStartTaskProcessAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidEndTaskProcessAccessor {}
-
+/* Source: globalThis */
 @_i1.JS('vscode.tasks')
 @_i1.staticInterop
 class $ModuleTasks {}
 
 extension $ModuleTasks$Typings on $ModuleTasks {
   /// The currently active task executions or an empty array.
-  _i2.List<_i3.TaskExecution> get taskExecutions => ((_i4.getProperty(
+  _i2.List<_i3.TaskExecution> get taskExecutions => (_i4.getProperty(
         this,
         'taskExecutions',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// Fires when a task starts.
@@ -105,6 +86,7 @@ extension $ModuleTasks$Typings on $ModuleTasks {
       ));
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

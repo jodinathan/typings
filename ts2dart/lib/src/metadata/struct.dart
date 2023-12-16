@@ -50,6 +50,7 @@ inline class MetadataStruct {
   String get name => map.prop('name');
   String get source => map.prop('source');
   bool get isInline => map.prop('isInline');
+  bool get declaredAsVar => map.prop('declaredAsVar') == true;
   bool get isClass => map.prop('isClass');
   int get lineNumber => map.prop('_');
 

@@ -10,44 +10,7 @@ import '/d/core.dart' as _i5;
 @_i1.JS('vscode.env')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _ClipboardAccessor {}
-
-extension ClipboardAccessor$Typings on _ClipboardAccessor {
-  set readText(_i2.Future<_i2.dynamic> Function() value) {
-    _i3.setProperty(
-      this,
-      'readText',
-      _i3.allowInterop(value),
-    );
-  }
-
-  set writeText(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
-    _i3.setProperty(
-      this,
-      'writeText',
-      _i3.allowInterop(value),
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeTelemetryEnabledAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeShellAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeLogLevelAccessor {}
-
+/* Source: globalThis */
 @_i1.JS('vscode.env')
 @_i1.staticInterop
 class $ModuleEnv {}
@@ -262,6 +225,7 @@ extension $ModuleEnv$Typings on $ModuleEnv {
       ));
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

@@ -3,128 +3,14 @@ library typings.vscode.interop.vscode_debug; // ignore_for_file: no_leading_unde
 
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
-import 'dart:js_util' as _i3;
-import '0index.vscode.d.dart' as _i4;
+import '0index.vscode.d.dart' as _i3;
+import 'dart:js_util' as _i4;
 import '/d/core.dart' as _i5;
 
 @_i1.JS('vscode.debug')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _ActiveDebugSessionAccessor {}
-
-extension ActiveDebugSessionAccessor$Typings on _ActiveDebugSessionAccessor {
-  /// The unique ID of this debug session.
-  _i2.String get id => _i3.getProperty(
-        this,
-        'id',
-      );
-
-  /// The debug session's type from the {@link DebugConfigurationdebug configuration}.
-  _i2.String get type => _i3.getProperty(
-        this,
-        'type',
-      );
-
-  /// The parent session of this debug session, if it was created as a child.
-  _i4.DebugSession? get parentSession => _i3.getProperty(
-        this,
-        'parentSession',
-      );
-
-  /// The debug session's name is initially taken from the {@link DebugConfiguration debug configuration}.
-  ///  Any changes will be properly reflected in the UI.
-  _i2.String get name => _i3.getProperty(
-        this,
-        'name',
-      );
-
-  /// The workspace folder of this session or `undefined` for a folderless setup.
-  _i4.WorkspaceFolder? get workspaceFolder => _i3.getProperty(
-        this,
-        'workspaceFolder',
-      );
-
-  /// The "resolved" {@link DebugConfigurationdebug configuration} of this session.
-  /// "Resolved" means that
-  /// - all variables have been substituted and
-  /// - platform specific attribute sections have been "flattened" for the matching platform and removed for non-matching platforms.
-  _i4.DebugConfiguration get configuration => _i3.getProperty(
-        this,
-        'configuration',
-      );
-  set customRequest(
-      _i2.Future<_i2.dynamic> Function(
-        _i2.String, [
-        _i2.dynamic,
-      ]) value) {
-    _i3.setProperty(
-      this,
-      'customRequest',
-      _i3.allowInterop(value),
-    );
-  }
-
-  set getDebugProtocolBreakpoint(
-      _i2.Future<_i2.dynamic> Function(_i4.Breakpoint) value) {
-    _i3.setProperty(
-      this,
-      'getDebugProtocolBreakpoint',
-      _i3.allowInterop(value),
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _ActiveDebugConsoleAccessor {}
-
-extension ActiveDebugConsoleAccessor$Typings on _ActiveDebugConsoleAccessor {
-  set append(void Function(_i2.String) value) {
-    _i3.setProperty(
-      this,
-      'append',
-      _i3.allowInterop(value),
-    );
-  }
-
-  set appendLine(void Function(_i2.String) value) {
-    _i3.setProperty(
-      this,
-      'appendLine',
-      _i3.allowInterop(value),
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeActiveDebugSessionAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidStartDebugSessionAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidReceiveDebugSessionCustomEventAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidTerminateDebugSessionAccessor {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeBreakpointsAccessor {}
-
+/* Source: globalThis */
 @_i1.JS('vscode.debug')
 @_i1.staticInterop
 class $ModuleDebug {}
@@ -133,56 +19,56 @@ extension $ModuleDebug$Typings on $ModuleDebug {
   /// The currently active {@link DebugSessiondebug session} or `undefined`. The active debug session is the one
   /// represented by the debug action floating window or the one currently shown in the drop down menu of the debug action floating window.
   /// If no debug session is active, the value is `undefined`.
-  _i4.DebugSession? get activeDebugSession => _i3.getProperty(
+  _i3.DebugSession? get activeDebugSession => _i4.getProperty(
         this,
         'activeDebugSession',
       );
 
   /// The currently active {@link DebugConsoledebug console}.
   /// If no debug session is active, output sent to the debug console is not shown.
-  _i4.DebugConsole get activeDebugConsole => _i3.getProperty(
+  _i3.DebugConsole get activeDebugConsole => _i4.getProperty(
         this,
         'activeDebugConsole',
       );
 
   /// List of breakpoints.
-  _i2.List<_i4.Breakpoint> get breakpoints => ((_i3.getProperty(
+  _i2.List<_i3.Breakpoint> get breakpoints => (_i4.getProperty(
         this,
         'breakpoints',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// An {@link Event} which fires when the {@link debug.activeDebugSessionactive debug session}
   /// has changed. *Note* that the event also fires when the active debug session changes
   /// to `undefined`.
-  _i4.Event<_i4.DebugSession?> get onDidChangeActiveDebugSession =>
-      _i3.getProperty(
+  _i3.Event<_i3.DebugSession?> get onDidChangeActiveDebugSession =>
+      _i4.getProperty(
         this,
         'onDidChangeActiveDebugSession',
       );
 
   /// An {@link Event} which fires when a new {@link DebugSessiondebug session} has been started.
-  _i4.Event<_i4.DebugSession> get onDidStartDebugSession => _i3.getProperty(
+  _i3.Event<_i3.DebugSession> get onDidStartDebugSession => _i4.getProperty(
         this,
         'onDidStartDebugSession',
       );
 
   /// An {@link Event} which fires when a custom DAP event is received from the {@link DebugSessiondebug session}.
-  _i4.Event<_i4.DebugSessionCustomEvent>
-      get onDidReceiveDebugSessionCustomEvent => _i3.getProperty(
+  _i3.Event<_i3.DebugSessionCustomEvent>
+      get onDidReceiveDebugSessionCustomEvent => _i4.getProperty(
             this,
             'onDidReceiveDebugSessionCustomEvent',
           );
 
   /// An {@link Event} which fires when a {@link DebugSessiondebug session} has terminated.
-  _i4.Event<_i4.DebugSession> get onDidTerminateDebugSession => _i3.getProperty(
+  _i3.Event<_i3.DebugSession> get onDidTerminateDebugSession => _i4.getProperty(
         this,
         'onDidTerminateDebugSession',
       );
 
   /// An {@link Event} that is emitted when the set of breakpoints is added, removed, or changed.
-  _i4.Event<_i4.BreakpointsChangeEvent> get onDidChangeBreakpoints =>
-      _i3.getProperty(
+  _i3.Event<_i3.BreakpointsChangeEvent> get onDidChangeBreakpoints =>
+      _i4.getProperty(
         this,
         'onDidChangeBreakpoints',
       );
@@ -194,12 +80,12 @@ extension $ModuleDebug$Typings on $ModuleDebug {
   /// Please note that the `triggerKind` argument only applies to the `provideDebugConfigurations` method: so the `resolveDebugConfiguration` methods are not affected at all.
   /// Registering a single provider with resolve methods for different trigger kinds, results in the same resolve methods called multiple times.
   /// More than one provider can be registered for the same type.
-  _i4.Disposable registerDebugConfigurationProvider(
+  _i3.Disposable registerDebugConfigurationProvider(
     _i2.String debugType,
-    _i4.DebugConfigurationProvider provider, [
-    _i4.DebugConfigurationProviderTriggerKind? triggerKind,
+    _i3.DebugConfigurationProvider provider, [
+    _i3.DebugConfigurationProviderTriggerKind? triggerKind,
   ]) =>
-      _i3.callMethod(
+      _i4.callMethod(
         this,
         'registerDebugConfigurationProvider',
         [
@@ -212,11 +98,11 @@ extension $ModuleDebug$Typings on $ModuleDebug {
   /// Register a {@link DebugAdapterDescriptorFactorydebug adapter descriptor factory} for a specific debug type.
   /// An extension is only allowed to register a DebugAdapterDescriptorFactory for the debug type(s) defined by the extension. Otherwise an error is thrown.
   /// Registering more than one DebugAdapterDescriptorFactory for a debug type results in an error.
-  _i4.Disposable registerDebugAdapterDescriptorFactory(
+  _i3.Disposable registerDebugAdapterDescriptorFactory(
     _i2.String debugType,
-    _i4.DebugAdapterDescriptorFactory factory,
+    _i3.DebugAdapterDescriptorFactory factory,
   ) =>
-      _i3.callMethod(
+      _i4.callMethod(
         this,
         'registerDebugAdapterDescriptorFactory',
         [
@@ -226,11 +112,11 @@ extension $ModuleDebug$Typings on $ModuleDebug {
       );
 
   /// Register a debug adapter tracker factory for the given debug type.
-  _i4.Disposable registerDebugAdapterTrackerFactory(
+  _i3.Disposable registerDebugAdapterTrackerFactory(
     _i2.String debugType,
-    _i4.DebugAdapterTrackerFactory factory,
+    _i3.DebugAdapterTrackerFactory factory,
   ) =>
-      _i3.callMethod(
+      _i4.callMethod(
         this,
         'registerDebugAdapterTrackerFactory',
         [
@@ -245,11 +131,11 @@ extension $ModuleDebug$Typings on $ModuleDebug {
   /// Before debugging starts, all unsaved files are saved and the launch configurations are brought up-to-date.
   /// Folder specific variables used in the configuration (e.g. '${workspaceFolder}') are resolved against the given folder.
   _i2.Future<_i2.dynamic> startDebugging(
-    _i4.WorkspaceFolder? folder,
+    _i3.WorkspaceFolder? folder,
     _i2.Object nameOrConfiguration, [
     _i2.Object? parentSessionOrOptions,
   ]) =>
-      _i3.promiseToFuture(_i3.callMethod(
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'startDebugging',
         [
@@ -260,16 +146,16 @@ extension $ModuleDebug$Typings on $ModuleDebug {
       ));
 
   /// Stop the given debug session or stop all debug sessions if session is omitted.
-  _i2.Future<_i2.dynamic> stopDebugging([_i4.DebugSession? session]) =>
-      _i3.promiseToFuture(_i3.callMethod(
+  _i2.Future<_i2.dynamic> stopDebugging([_i3.DebugSession? session]) =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'stopDebugging',
         [session ?? _i5.undefined],
       ));
 
   /// Add breakpoints.
-  void addBreakpoints(_i2.List<_i4.Breakpoint> breakpoints) {
-    _i3.callMethod(
+  void addBreakpoints(_i2.List<_i3.Breakpoint> breakpoints) {
+    _i4.callMethod(
       this,
       'addBreakpoints',
       [breakpoints],
@@ -277,8 +163,8 @@ extension $ModuleDebug$Typings on $ModuleDebug {
   }
 
   /// Remove breakpoints.
-  void removeBreakpoints(_i2.List<_i4.Breakpoint> breakpoints) {
-    _i3.callMethod(
+  void removeBreakpoints(_i2.List<_i3.Breakpoint> breakpoints) {
+    _i4.callMethod(
       this,
       'removeBreakpoints',
       [breakpoints],
@@ -290,11 +176,11 @@ extension $ModuleDebug$Typings on $ModuleDebug {
   /// If the source descriptor uses a reference number, a specific debug Uri (scheme 'debug') is constructed that requires a corresponding ContentProvider and a running debug session
   ///
   /// If the "Source" descriptor has insufficient information for creating the Uri, an error is thrown.
-  _i4.Uri asDebugSourceUri(
-    _i4.DebugProtocolSource source, [
-    _i4.DebugSession? session,
+  _i3.Uri asDebugSourceUri(
+    _i3.DebugProtocolSource source, [
+    _i3.DebugSession? session,
   ]) =>
-      _i3.callMethod(
+      _i4.callMethod(
         this,
         'asDebugSourceUri',
         [
@@ -304,6 +190,7 @@ extension $ModuleDebug$Typings on $ModuleDebug {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

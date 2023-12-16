@@ -68,8 +68,13 @@ abstract mixin class InteropType {
           {required Expression argument,
           bool isNullable = false,
           bool isOptional = false,
-          required List<InteropRef> typeArgs}) =>
+          required List<InteropRef> typeArgs,
+          Reference? target}) =>
       argument;
+}
+
+abstract class InteropTargetedType {
+  Reference? makeTarget();
 }
 
 mixin InteropImmutableType on InteropType {
@@ -151,9 +156,9 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
       {'ref': String ref, '_': int lineNumber} when typeParams.hasSymbol(ref) =>
         InteropLocalType(ref, lineNumber: lineNumber),
       {'core': String core} when core == 'this' => switch (firstParent) {
-        InteropSourceType parent => parent,
-        _ => this
-      },
+          InteropSourceType parent => parent,
+          _ => this
+        },
       {
         'returns': Map returns,
         'params': List params,
@@ -238,13 +243,13 @@ mixin InteropSourceType on InteropType, InteropDiamondType {
         'source': String source,
       } =>
         () {
-        return InteropUnion(
-            library: library,
-            lineNumber: lineNumber,
-            source: source,
-            types: union.map((u) => parseRef((u as Map).cast())).toList(),
-            parent: this);
-      }(),
+          return InteropUnion(
+              library: library,
+              lineNumber: lineNumber,
+              source: source,
+              types: union.map((u) => parseRef((u as Map).cast())).toList(),
+              parent: this);
+        }(),
       _ => parent?.parseType(map)
     };
   }

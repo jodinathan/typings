@@ -70,6 +70,7 @@ typedef DefinitionValidator = _i2.Object Function(
   _i2.dynamic,
 ]);
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -101,6 +102,7 @@ extension IInline0$Typings on IInline0 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -132,6 +134,7 @@ extension IInline1$Typings on IInline1 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -163,6 +166,7 @@ extension IInline2$Typings on IInline2 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -194,6 +198,7 @@ extension IInline3$Typings on IInline3 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -275,9 +280,9 @@ class Options {
 
   factory Options({
     _i2.String? placeholder,
-    _i3.Range? optionalmarker,
-    _i3.Range? quantifiermarker,
-    _i3.Range? groupmarker,
+    _i2.Object? optionalmarker,
+    _i2.Object? quantifiermarker,
+    _i2.Object? groupmarker,
     _i2.String? alternatormarker,
     _i2.String? escapeChar,
     _i2.dynamic mask,
@@ -507,11 +512,11 @@ extension Options$Typings on Options {
   /// Definition of the symbols used to indicate an optional part in the mask.
   ///
   ///  @default { start: "[", end: "]" }
-  _i3.Range? get optionalmarker => _i4.getProperty(
+  _i2.Object? get optionalmarker => _i4.getProperty(
         this,
         'optionalmarker',
       );
-  set optionalmarker(_i3.Range? value) {
+  set optionalmarker(_i2.Object? value) {
     _i4.setProperty(
       this,
       'optionalmarker',
@@ -522,11 +527,11 @@ extension Options$Typings on Options {
   /// Definition of the symbols used to indicate a quantifier in the mask.
   ///
   ///  @default { start: "{", end: "}" }
-  _i3.Range? get quantifiermarker => _i4.getProperty(
+  _i2.Object? get quantifiermarker => _i4.getProperty(
         this,
         'quantifiermarker',
       );
-  set quantifiermarker(_i3.Range? value) {
+  set quantifiermarker(_i2.Object? value) {
     _i4.setProperty(
       this,
       'quantifiermarker',
@@ -537,11 +542,11 @@ extension Options$Typings on Options {
   /// Definition of the symbols used to indicate a group in the mask.
   ///
   ///  @default { start: "(", end: ")" }
-  _i3.Range? get groupmarker => _i4.getProperty(
+  _i2.Object? get groupmarker => _i4.getProperty(
         this,
         'groupmarker',
       );
-  set groupmarker(_i3.Range? value) {
+  set groupmarker(_i2.Object? value) {
     _i4.setProperty(
       this,
       'groupmarker',
@@ -607,9 +612,13 @@ extension Options$Typings on Options {
   }
 
   /// Execute a function when the mask is completed.
-  void Function()? get oncomplete => _i4.getProperty(
-        this,
-        'oncomplete',
+  void Function()? get oncomplete => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'oncomplete',
+        ),
+        r'call',
+        [this],
       );
   set oncomplete(void Function()? value) {
     _i4.setProperty(
@@ -620,9 +629,13 @@ extension Options$Typings on Options {
   }
 
   /// Execute a function when the mask is cleared.
-  void Function()? get onincomplete => _i4.getProperty(
-        this,
-        'onincomplete',
+  void Function()? get onincomplete => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'onincomplete',
+        ),
+        r'call',
+        [this],
       );
   set onincomplete(void Function()? value) {
     _i4.setProperty(
@@ -633,9 +646,13 @@ extension Options$Typings on Options {
   }
 
   /// Execute a function when the mask is cleared.
-  void Function()? get oncleared => _i4.getProperty(
-        this,
-        'oncleared',
+  void Function()? get oncleared => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'oncleared',
+        ),
+        r'call',
+        [this],
       );
   set oncleared(void Function()? value) {
     _i4.setProperty(
@@ -790,10 +807,26 @@ extension Options$Typings on Options {
     _i2.List<_i2.String>,
     _i2.dynamic,
     _i3.Options,
-  )? get onKeyDown => _i4.getProperty(
-        this,
-        'onKeyDown',
-      );
+  )? get onKeyDown => (
+        _i5.KeyboardEvent p0,
+        _i2.List<_i2.String> p1,
+        _i2.dynamic p2,
+        _i3.Options p3,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'onKeyDown',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
   set onKeyDown(
       void Function(
         _i5.KeyboardEvent,
@@ -812,10 +845,22 @@ extension Options$Typings on Options {
   _i2.String Function(
     _i2.String,
     _i3.Options,
-  )? get onBeforeMask => _i4.getProperty(
-        this,
-        'onBeforeMask',
-      );
+  )? get onBeforeMask => (
+        _i2.String p0,
+        _i3.Options p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'onBeforeMask',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set onBeforeMask(
       _i2.String Function(
         _i2.String,
@@ -834,10 +879,22 @@ extension Options$Typings on Options {
   _i2.String Function(
     _i2.String,
     _i3.Options,
-  )? get onBeforePaste => _i4.getProperty(
-        this,
-        'onBeforePaste',
-      );
+  )? get onBeforePaste => (
+        _i2.String p0,
+        _i3.Options p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'onBeforePaste',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set onBeforePaste(
       _i2.String Function(
         _i2.String,
@@ -857,10 +914,26 @@ extension Options$Typings on Options {
     _i2.List<_i2.String>,
     _i2.num,
     _i3.Options,
-  )? get onBeforeWrite => _i4.getProperty(
-        this,
-        'onBeforeWrite',
-      );
+  )? get onBeforeWrite => (
+        _i5.KeyboardEvent p0,
+        _i2.List<_i2.String> p1,
+        _i2.num p2,
+        _i3.Options p3,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'onBeforeWrite',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+            ],
+          );
   set onBeforeWrite(
       _i3.CommandObject Function(
         _i5.KeyboardEvent,
@@ -881,10 +954,22 @@ extension Options$Typings on Options {
   _i2.String Function(
     _i2.String,
     _i2.String,
-  )? get onUnMask => _i4.getProperty(
-        this,
-        'onUnMask',
-      );
+  )? get onUnMask => (
+        _i2.String p0,
+        _i2.String p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'onUnMask',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set onUnMask(
       _i2.String Function(
         _i2.String,
@@ -931,10 +1016,22 @@ extension Options$Typings on Options {
   void Function(
     _i2.num,
     _i2.bool,
-  )? get onKeyValidation => _i4.getProperty(
-        this,
-        'onKeyValidation',
-      );
+  )? get onKeyValidation => (
+        _i2.num p0,
+        _i2.bool p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'onKeyValidation',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set onKeyValidation(
       void Function(
         _i2.num,
@@ -1125,10 +1222,22 @@ extension Options$Typings on Options {
   _i2.bool Function(
     _i2.List<_i2.String>,
     _i3.Options,
-  )? get isComplete => _i4.getProperty(
-        this,
-        'isComplete',
-      );
+  )? get isComplete => (
+        _i2.List<_i2.String> p0,
+        _i3.Options p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'isComplete',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set isComplete(
       _i2.bool Function(
         _i2.List<_i2.String>,
@@ -1151,10 +1260,34 @@ extension Options$Typings on Options {
     _i2.bool,
     _i2.bool, [
     _i2.dynamic,
-  ])? get postValidation => _i4.getProperty(
-        this,
-        'postValidation',
-      );
+  ])? get postValidation => (
+        _i2.List<_i2.String> p0,
+        _i2.num p1,
+        _i2.String p2,
+        _i2.bool p3,
+        _i3.Options p4,
+        _i2.bool p6,
+        _i2.bool p7, [
+        _i2.dynamic p5,
+      ]) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'postValidation',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+              p4,
+              p5,
+              p6,
+              p7,
+            ],
+          );
   set postValidation(
       _i2.Object Function(
         _i2.List<_i2.String>,
@@ -1188,10 +1321,34 @@ extension Options$Typings on Options {
     _i2.dynamic,
     _i2.bool, [
     _i2.dynamic,
-  ])? get preValidation => _i4.getProperty(
-        this,
-        'preValidation',
-      );
+  ])? get preValidation => (
+        _i2.List<_i2.String> p0,
+        _i2.num p1,
+        _i2.String p2,
+        _i2.bool p3,
+        _i3.Options p4,
+        _i2.dynamic p6,
+        _i2.bool p7, [
+        _i2.dynamic p5,
+      ]) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'preValidation',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+              p2,
+              p3,
+              p4,
+              p5,
+              p6,
+              p7,
+            ],
+          );
   set preValidation(
       _i2.Object Function(
         _i2.List<_i2.String>,
@@ -1600,9 +1757,16 @@ extension Options$Typings on Options {
   ///  * `fn(x) { // do your own rounding logic // return x; }`
   ///
   ///  @default Math.round
-  _i2.num Function(_i2.num)? get roundingFN => _i4.getProperty(
-        this,
-        'roundingFN',
+  _i2.num Function(_i2.num)? get roundingFN => (_i2.num p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'roundingFN',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set roundingFN(_i2.num Function(_i2.num)? value) {
     _i4.setProperty(
@@ -1736,6 +1900,7 @@ extension Options$Typings on Options {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1788,9 +1953,13 @@ extension Instance$Typings on Instance {
     );
   }
 
-  _i2.String Function() get getemptymask => _i4.getProperty(
-        this,
-        'getemptymask',
+  _i2.String Function() get getemptymask => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'getemptymask',
+        ),
+        r'call',
+        [this],
       );
   set getmetadata(_i2.dynamic Function() value) {
     _i4.setProperty(
@@ -1800,9 +1969,13 @@ extension Instance$Typings on Instance {
     );
   }
 
-  _i2.dynamic Function() get getmetadata => _i4.getProperty(
-        this,
-        'getmetadata',
+  _i2.dynamic Function() get getmetadata => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'getmetadata',
+        ),
+        r'call',
+        [this],
       );
   set hasMaskedValue(_i2.bool Function() value) {
     _i4.setProperty(
@@ -1812,9 +1985,13 @@ extension Instance$Typings on Instance {
     );
   }
 
-  _i2.bool Function() get hasMaskedValue => _i4.getProperty(
-        this,
-        'hasMaskedValue',
+  _i2.bool Function() get hasMaskedValue => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'hasMaskedValue',
+        ),
+        r'call',
+        [this],
       );
   set isComplete(_i2.bool Function() value) {
     _i4.setProperty(
@@ -1824,9 +2001,13 @@ extension Instance$Typings on Instance {
     );
   }
 
-  _i2.bool Function() get isComplete => _i4.getProperty(
-        this,
-        'isComplete',
+  _i2.bool Function() get isComplete => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'isComplete',
+        ),
+        r'call',
+        [this],
       );
   set isValid(_i2.bool Function() value) {
     _i4.setProperty(
@@ -1836,9 +2017,13 @@ extension Instance$Typings on Instance {
     );
   }
 
-  _i2.bool Function() get isValid => _i4.getProperty(
-        this,
-        'isValid',
+  _i2.bool Function() get isValid => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'isValid',
+        ),
+        r'call',
+        [this],
       );
   set mask(_i3.Instance Function(_i2.Object) value) {
     _i4.setProperty(
@@ -1848,10 +2033,18 @@ extension Instance$Typings on Instance {
     );
   }
 
-  _i3.Instance Function(_i2.Object) get mask => _i4.getProperty(
-        this,
-        'mask',
-      );
+  _i3.Instance Function(_i2.Object) get mask =>
+      (_i2.Object p0) => _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'mask',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set remove(void Function() value) {
     _i4.setProperty(
       this,
@@ -1860,9 +2053,13 @@ extension Instance$Typings on Instance {
     );
   }
 
-  void Function() get remove => _i4.getProperty(
-        this,
-        'remove',
+  void Function() get remove => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'remove',
+        ),
+        r'call',
+        [this],
       );
   set setValue(void Function(_i2.String) value) {
     _i4.setProperty(
@@ -1872,9 +2069,16 @@ extension Instance$Typings on Instance {
     );
   }
 
-  void Function(_i2.String) get setValue => _i4.getProperty(
-        this,
-        'setValue',
+  void Function(_i2.String) get setValue => (_i2.String p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'setValue',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set unmaskedvalue(_i2.String Function() value) {
     _i4.setProperty(
@@ -1884,9 +2088,13 @@ extension Instance$Typings on Instance {
     );
   }
 
-  _i2.String Function() get unmaskedvalue => _i4.getProperty(
-        this,
-        'unmaskedvalue',
+  _i2.String Function() get unmaskedvalue => () => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'unmaskedvalue',
+        ),
+        r'call',
+        [this],
       );
 
   /// Get an option on an existing inputmask.
@@ -1938,6 +2146,7 @@ extension Instance$Typings on Instance {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2031,6 +2240,7 @@ extension Definition$Typings on Definition {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2110,6 +2320,7 @@ extension InsertPosition$Typings on InsertPosition {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2141,6 +2352,7 @@ extension IInline6$Typings on IInline6 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2269,6 +2481,7 @@ extension CommandObject$Typings on CommandObject {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Static {}
@@ -2282,10 +2495,18 @@ extension Static$Typings on Static {
     );
   }
 
-  void Function(_i3.Options) get extendDefaults => _i4.getProperty(
-        this,
-        'extendDefaults',
-      );
+  void Function(_i3.Options) get extendDefaults =>
+      (_i3.Options p0) => _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'extendDefaults',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set extendDefinitions(void Function(_i2.Object) value) {
     _i4.setProperty(
       this,
@@ -2294,10 +2515,18 @@ extension Static$Typings on Static {
     );
   }
 
-  void Function(_i2.Object) get extendDefinitions => _i4.getProperty(
-        this,
-        'extendDefinitions',
-      );
+  void Function(_i2.Object) get extendDefinitions =>
+      (_i2.Object p0) => _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'extendDefinitions',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set extendAliases(void Function(_i2.Object) value) {
     _i4.setProperty(
       this,
@@ -2306,10 +2535,18 @@ extension Static$Typings on Static {
     );
   }
 
-  void Function(_i2.Object) get extendAliases => _i4.getProperty(
-        this,
-        'extendAliases',
-      );
+  void Function(_i2.Object) get extendAliases =>
+      (_i2.Object p0) => _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'extendAliases',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set format(
       _i2.String Function(
         _i2.String,
@@ -2325,10 +2562,22 @@ extension Static$Typings on Static {
   _i2.String Function(
     _i2.String,
     _i3.Options,
-  ) get format => _i4.getProperty(
-        this,
-        'format',
-      );
+  ) get format => (
+        _i2.String p0,
+        _i3.Options p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'format',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set isValid(
       _i2.bool Function(
         _i2.String,
@@ -2344,10 +2593,22 @@ extension Static$Typings on Static {
   _i2.bool Function(
     _i2.String,
     _i3.Options,
-  ) get isValid => _i4.getProperty(
-        this,
-        'isValid',
-      );
+  ) get isValid => (
+        _i2.String p0,
+        _i3.Options p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'isValid',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set remove(void Function(_i2.Object) value) {
     _i4.setProperty(
       this,
@@ -2356,9 +2617,16 @@ extension Static$Typings on Static {
     );
   }
 
-  void Function(_i2.Object) get remove => _i4.getProperty(
-        this,
-        'remove',
+  void Function(_i2.Object) get remove => (_i2.Object p0) => _i4.callMethod(
+        _i4.getProperty(
+          this,
+          'remove',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set setValue(
       void Function(
@@ -2375,10 +2643,22 @@ extension Static$Typings on Static {
   void Function(
     _i2.Object,
     _i2.String,
-  ) get setValue => _i4.getProperty(
-        this,
-        'setValue',
-      );
+  ) get setValue => (
+        _i2.Object p0,
+        _i2.String p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'setValue',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set unmask(
       _i2.String Function(
         _i2.String,
@@ -2394,10 +2674,22 @@ extension Static$Typings on Static {
   _i2.String Function(
     _i2.String,
     _i3.Options,
-  ) get unmask => _i4.getProperty(
-        this,
-        'unmask',
-      );
+  ) get unmask => (
+        _i2.String p0,
+        _i3.Options p1,
+      ) =>
+          _i4.callMethod(
+            _i4.getProperty(
+              this,
+              'unmask',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   _i3.Instance _call$1([_i3.Options? opts]) => _i4.callMethod(
         this,
         'call',
@@ -2433,10 +2725,12 @@ extension Static$Typings on Static {
       );
 }
 
+/* Source: globalThis */
 @_i1.JS('Inputmask')
 @_i1.staticInterop
 class $ModuleInputmask {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

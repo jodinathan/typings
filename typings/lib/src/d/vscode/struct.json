@@ -2,7 +2,7 @@
   {
     "_": -1,
     "namespace": "",
-    "from": "mainLoop /Users/jonathanrezende/Projects/testes/typings/ts2dart/work/vscode/download/0index.d.ts",
+    "from": "mainLoop /Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts",
     "items": {
       "structs": [
         {
@@ -58677,7 +58677,9 @@
                       "source": " onDidEndTaskProcess: Event<TaskProcessEndEvent>"
                     }
                   ],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -59099,7 +59101,9 @@
                       "source": " onDidChangeLogLevel: Event<LogLevel>"
                     }
                   ],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -59399,7 +59403,9 @@
                     }
                   ],
                   "vars": [],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -63605,7 +63611,9 @@
                       "source": " onDidChangeActiveColorTheme: Event<ColorTheme>"
                     }
                   ],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -65285,7 +65293,9 @@
                       "source": " onDidGrantWorkspaceTrust: Event<void>"
                     }
                   ],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -67022,7 +67032,9 @@
                       "source": " onDidChangeDiagnostics: Event<DiagnosticChangeEvent>"
                     }
                   ],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -67236,7 +67248,9 @@
                     }
                   ],
                   "vars": [],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -67317,7 +67331,9 @@
                       "source": " inputBox: SourceControlInputBox"
                     }
                   ],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -67925,7 +67941,9 @@
                       "source": " onDidChangeBreakpoints: Event<BreakpointsChangeEvent>"
                     }
                   ],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -68060,7 +68078,9 @@
                       "source": " onDidChange: Event<void>"
                     }
                   ],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -68112,7 +68132,9 @@
                     }
                   ],
                   "vars": [],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -68555,7 +68577,9 @@
                       "source": " onDidChangeSessions: Event<AuthenticationSessionsChangeEvent>"
                     }
                   ],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -68956,7 +68980,9 @@
                       "source": " uri: Uri | undefined"
                     }
                   ],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               },
               {
@@ -69008,7 +69034,9 @@
                     }
                   ],
                   "vars": [],
-                  "enums": []
+                  "enums": [],
+                  "imports": [],
+                  "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
                 }
               }
             ],
@@ -71028,14 +71056,18 @@
                   }
                 ]
               }
-            ]
+            ],
+            "imports": [],
+            "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts"
           }
         }
       ],
       "funcs": [],
       "vars": [],
-      "enums": []
+      "enums": [],
+      "imports": []
     },
+    "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/vscode/download/0index.d.ts",
     "name": "0index.d.ts"
   }
 ]

@@ -500,6 +500,8 @@ void makeCore() {
 
   log(['Empty headers: ', headers]);
 
+  js.console.log([headers]);
+
   headers.append('foo', 'bar');
 
   log(['Filled headers:', headers]);
@@ -593,7 +595,7 @@ void makeCore() {
 void main() {
   js.console.log(['Starting']);
 
-  //makeCore();
+  makeCore();
 
-  makeGo();
+  //makeGo();
 }

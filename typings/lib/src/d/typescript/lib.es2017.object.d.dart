@@ -7,16 +7,19 @@ import 'dart:core' as _i2;
 @_i1.JS('self')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class IInline16 {}
-
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 class IInline18 {}
 
+/* Source:  */
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class IInline20 {}
+
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

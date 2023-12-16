@@ -5,10 +5,10 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'dart:js_util' as _i3;
 import '0lib.deno.deno.d.dart' as _i4;
-import 'null_comon.deno.d.dart' as _i5;
-import '/src/d/typescript/lib.es5.d.dart' as _i6;
-import '0lib.deno.d.dart' as _i7;
-import '/d/core.dart' as _i8;
+import '0lib.deno.d.dart' as _i5;
+import '/d/core.dart' as _i6;
+import 'dart:async' as _i7;
+import '/src/d/typescript/lib.es5.d.dart' as _i8;
 import 'dart:typed_data' as _i9;
 import '/src/d/typescript/lib.es2018.asynciterable.d.dart' as _i10;
 import '/src/d/typescript/lib.es2015.iterable.d.dart' as _i11;
@@ -337,6 +337,17 @@ enum ResolveDns {
   final _i2.String value;
 }
 
+/* Source: ForcedCommon from 
+    | {
+      success: true;
+      code: 0;
+      signal?: undefined;
+    }
+    | {
+      success: false;
+      code: number;
+      signal?: number;
+    } */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -380,539 +391,58 @@ extension ProcessStatusCommon$Typings on ProcessStatusCommon {
   }
 }
 
+/* Source:  Reader & ReaderSync & Closer & {
+    /** The resource ID assigned to `stdin`. This can be used with the discreet
+     * I/O functions in the `Deno` namespace. */
+    readonly rid: number;
+    /** A readable stream interface to `stdin`. */
+    readonly readable: ReadableStream<Uint8Array>;
+    /**
+     * Set TTY to be under raw mode or not. In raw mode, characters are read and
+     * returned as is, without being processed. All special processing of
+     * characters by the terminal is disabled, including echoing input
+     * characters. Reading from a TTY device in raw mode is faster than reading
+     * from a TTY device in canonical mode.
+     *
+     * ```ts
+     * Deno.stdin.setRaw(true, { cbreak: true });
+     * ```
+     *
+     * @category I/O
+     */
+    setRaw(mode: boolean, options?: SetRawOptions): void;
+  } */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection32
+class _Intersection40
     implements _i4.Reader, _i4.ReaderSync, _i4.Closer, _i4.IInline5 {}
 
+/* Source:  Writer & WriterSync & Closer & {
+    /** The resource ID assigned to `stdout`. This can be used with the discreet
+     * I/O functions in the `Deno` namespace. */
+    readonly rid: number;
+    /** A writable stream interface to `stdout`. */
+    readonly writable: WritableStream<Uint8Array>;
+  } */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection33
+class _Intersection41
     implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline6 {}
 
+/* Source:  Writer & WriterSync & Closer & {
+    /** The resource ID assigned to `stderr`. This can be used with the discreet
+     * I/O functions in the `Deno` namespace. */
+    readonly rid: number;
+    /** A writable stream interface to `stderr`. */
+    readonly writable: WritableStream<Uint8Array>;
+  } */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection34
+class _Intersection42
     implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline7 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _TestAccessor {}
-
-extension TestAccessor$Typings on _TestAccessor {
-  /// Shorthand property for ignoring a particular test case.
-  ///
-  ///  @category Testing
-  void _ignore$1(_i2.Object Function(_i4.TestContext) fn) {
-    _i3.callMethod(
-      _i5.target252,
-      'ignore',
-      [_i3.allowInterop(fn)],
-    );
-  }
-
-  /// Shorthand property for ignoring a particular test case.
-  ///
-  ///  @category Testing
-  void _ignore$2(
-    _i2.String name,
-    _i2.Object Function(_i4.TestContext) fn,
-  ) {
-    _i3.callMethod(
-      _i5.target252,
-      'ignore',
-      [
-        name,
-        _i3.allowInterop(fn),
-      ],
-    );
-  }
-
-  /// Shorthand property for ignoring a particular test case.
-  ///
-  ///  @category Testing
-  void _ignore$3(
-    _i6.Omit<_i4.TestDefinition, _i4.IgnoreOptions> options,
-    _i2.Object Function(_i4.TestContext) fn,
-  ) {
-    _i3.callMethod(
-      _i5.target252,
-      'ignore',
-      [
-        options,
-        _i3.allowInterop(fn),
-      ],
-    );
-  }
-
-  /// Shorthand property for ignoring a particular test case.
-  ///
-  ///  @category Testing
-  void _ignore$4(
-    _i6.Omit<_i4.TestDefinition, _i4.DenoTestIgnoreOptions> options,
-    _i2.Object Function(_i4.TestContext) fn,
-  ) {
-    _i3.callMethod(
-      _i5.target252,
-      'ignore',
-      [
-        options,
-        _i3.allowInterop(fn),
-      ],
-    );
-  }
-
-  /// Shorthand property for ignoring a particular test case.
-  ///
-  ///  @category Testing
-  void _ignore$5(
-    _i2.String name,
-    _i6.Omit<_i4.TestDefinition, _i4.Ignore> options,
-    _i2.Object Function(_i4.TestContext) fn,
-  ) {
-    _i3.callMethod(
-      _i5.target252,
-      'ignore',
-      [
-        name,
-        options,
-        _i3.allowInterop(fn),
-      ],
-    );
-  }
-
-  /// Overload accessor: $1, $2, $3, $4, $5
-  ({
-    /// Shorthand property for ignoring a particular test case.
-    ///
-    ///  @category Testing
-    void Function(_i2.Object Function(_i4.TestContext) fn) $1,
-
-    /// Shorthand property for ignoring a particular test case.
-    ///
-    ///  @category Testing
-    void Function(
-      _i2.String name,
-      _i2.Object Function(_i4.TestContext) fn,
-    ) $2,
-
-    /// Shorthand property for ignoring a particular test case.
-    ///
-    ///  @category Testing
-    void Function(
-      _i6.Omit<_i4.TestDefinition, _i4.IgnoreOptions> options,
-      _i2.Object Function(_i4.TestContext) fn,
-    ) $3,
-
-    /// Shorthand property for ignoring a particular test case.
-    ///
-    ///  @category Testing
-    void Function(
-      _i6.Omit<_i4.TestDefinition, _i4.DenoTestIgnoreOptions> options,
-      _i2.Object Function(_i4.TestContext) fn,
-    ) $4,
-
-    /// Shorthand property for ignoring a particular test case.
-    ///
-    ///  @category Testing
-    void Function(
-      _i2.String name,
-      _i6.Omit<_i4.TestDefinition, _i4.Ignore> options,
-      _i2.Object Function(_i4.TestContext) fn,
-    ) $5,
-  }) get ignore => (
-        $1: _ignore$1,
-        $2: _ignore$2,
-        $3: _ignore$3,
-        $4: _ignore$4,
-        $5: _ignore$5,
-      );
-
-  /// Shorthand property for focusing a particular test case.
-  ///
-  ///  @category Testing
-  void _only$1(_i2.Object Function(_i4.TestContext) fn) {
-    _i3.callMethod(
-      _i5.target252,
-      'only',
-      [_i3.allowInterop(fn)],
-    );
-  }
-
-  /// Shorthand property for focusing a particular test case.
-  ///
-  ///  @category Testing
-  void _only$2(
-    _i2.String name,
-    _i2.Object Function(_i4.TestContext) fn,
-  ) {
-    _i3.callMethod(
-      _i5.target252,
-      'only',
-      [
-        name,
-        _i3.allowInterop(fn),
-      ],
-    );
-  }
-
-  /// Shorthand property for focusing a particular test case.
-  ///
-  ///  @category Testing
-  void _only$3(
-    _i6.Omit<_i4.TestDefinition, _i4.OnlyOptions> options,
-    _i2.Object Function(_i4.TestContext) fn,
-  ) {
-    _i3.callMethod(
-      _i5.target252,
-      'only',
-      [
-        options,
-        _i3.allowInterop(fn),
-      ],
-    );
-  }
-
-  /// Shorthand property for focusing a particular test case.
-  ///
-  ///  @category Testing
-  void _only$4(
-    _i6.Omit<_i4.TestDefinition, _i4.DenoTestOnlyOptions> options,
-    _i2.Object Function(_i4.TestContext) fn,
-  ) {
-    _i3.callMethod(
-      _i5.target252,
-      'only',
-      [
-        options,
-        _i3.allowInterop(fn),
-      ],
-    );
-  }
-
-  /// Shorthand property for focusing a particular test case.
-  ///
-  ///  @category Testing
-  void _only$5(
-    _i2.String name,
-    _i6.Omit<_i4.TestDefinition, _i4.Only> options,
-    _i2.Object Function(_i4.TestContext) fn,
-  ) {
-    _i3.callMethod(
-      _i5.target252,
-      'only',
-      [
-        name,
-        options,
-        _i3.allowInterop(fn),
-      ],
-    );
-  }
-
-  /// Overload accessor: $1, $2, $3, $4, $5
-  ({
-    /// Shorthand property for focusing a particular test case.
-    ///
-    ///  @category Testing
-    void Function(_i2.Object Function(_i4.TestContext) fn) $1,
-
-    /// Shorthand property for focusing a particular test case.
-    ///
-    ///  @category Testing
-    void Function(
-      _i2.String name,
-      _i2.Object Function(_i4.TestContext) fn,
-    ) $2,
-
-    /// Shorthand property for focusing a particular test case.
-    ///
-    ///  @category Testing
-    void Function(
-      _i6.Omit<_i4.TestDefinition, _i4.OnlyOptions> options,
-      _i2.Object Function(_i4.TestContext) fn,
-    ) $3,
-
-    /// Shorthand property for focusing a particular test case.
-    ///
-    ///  @category Testing
-    void Function(
-      _i6.Omit<_i4.TestDefinition, _i4.DenoTestOnlyOptions> options,
-      _i2.Object Function(_i4.TestContext) fn,
-    ) $4,
-
-    /// Shorthand property for focusing a particular test case.
-    ///
-    ///  @category Testing
-    void Function(
-      _i2.String name,
-      _i6.Omit<_i4.TestDefinition, _i4.Only> options,
-      _i2.Object Function(_i4.TestContext) fn,
-    ) $5,
-  }) get only => (
-        $1: _only$1,
-        $2: _only$2,
-        $3: _only$3,
-        $4: _only$4,
-        $5: _only$5,
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _EnvAccessor {}
-
-extension EnvAccessor$Typings on _EnvAccessor {
-  set get(_i2.String? Function(_i2.String) value) {
-    _i3.setProperty(
-      this,
-      'get',
-      _i3.allowInterop(value),
-    );
-  }
-
-  set set(
-      void Function(
-        _i2.String,
-        _i2.String,
-      ) value) {
-    _i3.setProperty(
-      this,
-      'set',
-      _i3.allowInterop(value),
-    );
-  }
-
-  set delete(void Function(_i2.String) value) {
-    _i3.setProperty(
-      this,
-      'delete',
-      _i3.allowInterop(value),
-    );
-  }
-
-  set has(_i2.bool Function(_i2.String) value) {
-    _i3.setProperty(
-      this,
-      'has',
-      _i3.allowInterop(value),
-    );
-  }
-
-  set toObject(_i2.Object Function() value) {
-    _i3.setProperty(
-      this,
-      'toObject',
-      _i3.allowInterop(value),
-    );
-  }
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _StdinAccessor
-    implements _i4.Reader, _i4.ReaderSync, _i4.Closer, _i4.IInline5 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _StdoutAccessor
-    implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline6 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _StderrAccessor
-    implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline7 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _PermissionsAccessor {}
-
-extension PermissionsAccessor$Typings on _PermissionsAccessor {
-  /// Resolves to the current status of a permission.
-  ///
-  ///  Note, if the permission is already granted, `request()` will not prompt
-  ///  the user again, therefore `query()` is only necessary if you are going
-  ///  to react differently existing permissions without wanting to modify them
-  ///  or prompt the user to modify them.
-  ///
-  ///  ```ts
-  ///  const status = await Deno.permissions.query({ name: "read", path: "/etc" });
-  ///  console.log(status.state);
-  ///  ```
-  _i2.Future<_i4.PermissionStatus> query(_i4.PermissionDescriptor desc) =>
-      _i3.promiseToFuture(_i3.callMethod(
-        _i5.target254,
-        'query',
-        [desc],
-      ));
-
-  /// Returns the current status of a permission.
-  ///
-  ///  Note, if the permission is already granted, `request()` will not prompt
-  ///  the user again, therefore `querySync()` is only necessary if you are going
-  ///  to react differently existing permissions without wanting to modify them
-  ///  or prompt the user to modify them.
-  ///
-  ///  ```ts
-  ///  const status = Deno.permissions.querySync({ name: "read", path: "/etc" });
-  ///  console.log(status.state);
-  ///  ```
-  _i4.PermissionStatus querySync(_i4.PermissionDescriptor desc) =>
-      _i3.callMethod(
-        _i5.target254,
-        'querySync',
-        [desc],
-      );
-
-  /// Revokes a permission, and resolves to the state of the permission.
-  ///
-  ///  ```ts
-  ///  import { assert } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  ///  const status = await Deno.permissions.revoke({ name: "run" });
-  ///  assert(status.state !== "granted")
-  ///  ```
-  _i2.Future<_i4.PermissionStatus> revoke(_i4.PermissionDescriptor desc) =>
-      _i3.promiseToFuture(_i3.callMethod(
-        _i5.target254,
-        'revoke',
-        [desc],
-      ));
-
-  /// Revokes a permission, and returns the state of the permission.
-  ///
-  ///  ```ts
-  ///  import { assert } from "https://deno.land/std/testing/asserts.ts";
-  ///
-  ///  const status = Deno.permissions.revokeSync({ name: "run" });
-  ///  assert(status.state !== "granted")
-  ///  ```
-  _i4.PermissionStatus revokeSync(_i4.PermissionDescriptor desc) =>
-      _i3.callMethod(
-        _i5.target254,
-        'revokeSync',
-        [desc],
-      );
-
-  /// Requests the permission, and resolves to the state of the permission.
-  ///
-  ///  If the permission is already granted, the user will not be prompted to
-  ///  grant the permission again.
-  ///
-  ///  ```ts
-  ///  const status = await Deno.permissions.request({ name: "env" });
-  ///  if (status.state === "granted") {
-  ///    console.log("'env' permission is granted.");
-  ///  } else {
-  ///    console.log("'env' permission is denied.");
-  ///  }
-  ///  ```
-  _i2.Future<_i4.PermissionStatus> request(_i4.PermissionDescriptor desc) =>
-      _i3.promiseToFuture(_i3.callMethod(
-        _i5.target254,
-        'request',
-        [desc],
-      ));
-
-  /// Requests the permission, and returns the state of the permission.
-  ///
-  ///  If the permission is already granted, the user will not be prompted to
-  ///  grant the permission again.
-  ///
-  ///  ```ts
-  ///  const status = Deno.permissions.requestSync({ name: "env" });
-  ///  if (status.state === "granted") {
-  ///    console.log("'env' permission is granted.");
-  ///  } else {
-  ///    console.log("'env' permission is denied.");
-  ///  }
-  ///  ```
-  _i4.PermissionStatus requestSync(_i4.PermissionDescriptor desc) =>
-      _i3.callMethod(
-        _i5.target254,
-        'requestSync',
-        [desc],
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _BuildAccessor {}
-
-extension BuildAccessor$Typings on _BuildAccessor {
-  /// The [LLVM](https://llvm.org/) target triple, which is the combination
-  ///  of `${arch}-${vendor}-${os}` and represent the specific build target that
-  ///  the current runtime was built for.
-  _i2.String get target => _i3.getProperty(
-        this,
-        'target',
-      );
-
-  /// Instruction set architecture that the Deno CLI was built for.
-  _i4.Arch get arch => _i4.Arch.values.byName(_i3.getProperty(
-        this,
-        'arch',
-      ));
-
-  /// The operating system that the Deno CLI was built for. `"darwin"` is
-  ///  also known as OSX or MacOS.
-  _i4.Os get os => _i4.Os.values.byName(_i3.getProperty(
-        this,
-        'os',
-      ));
-
-  /// The computer vendor that the Deno CLI was built for.
-  _i2.String get vendor => _i3.getProperty(
-        this,
-        'vendor',
-      );
-
-  /// Optional environment flags that were set for this build of Deno CLI.
-  _i2.String? get env => _i3.getProperty(
-        this,
-        'env',
-      );
-}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _VersionAccessor {}
-
-extension VersionAccessor$Typings on _VersionAccessor {
-  /// Deno CLI's version. For example: `"1.26.0"`.
-  _i2.String get deno => _i3.getProperty(
-        this,
-        'deno',
-      );
-
-  /// The V8 version used by Deno. For example: `"10.7.100.0"`.
-  ///
-  ///  V8 is the underlying JavaScript runtime platform that Deno is built on
-  ///  top of.
-  _i2.String get v8 => _i3.getProperty(
-        this,
-        'v8',
-      );
-
-  /// The TypeScript version used by Deno. For example: `"4.8.3"`.
-  ///
-  ///  A version of the TypeScript type checker and language server is built-in
-  ///  to the Deno CLI.
-  _i2.String get typescript => _i3.getProperty(
-        this,
-        'typescript',
-      );
-}
 
 typedef PermissionOptions = _i2.Object;
 typedef FsEventFlag = _i2.String;
@@ -923,12 +453,13 @@ typedef PermissionState = _i4.PermissionStateOptions;
 typedef PermissionDescriptor = _i2.Object;
 typedef RecordType = _i4.RecordTypeOptions;
 typedef ServeHandler = _i2.Object Function(
-  _i7.Request,
+  _i5.Request,
   _i4.ServeHandlerInfo,
 );
 typedef Addr = _i2.Object;
 typedef TlsListener = _i4.Listener<_i4.TlsConn>;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1010,6 +541,7 @@ extension MemoryUsage$Typings on MemoryUsage {
   }
 }
 
+/* Source:  */
 /// The information for a network interface returned from a call to
 /// {@linkcode Deno.networkInterfaces}.
 @_i1.JS()
@@ -1037,10 +569,10 @@ class NetworkInterfaceInfo {
   }) =>
       NetworkInterfaceInfo._(
         name: name,
-        family: family?.name ?? _i8.undefined,
+        family: family?.name ?? _i6.undefined,
         address: address,
         netmask: netmask,
-        scopeid: scopeid ?? _i8.undefined,
+        scopeid: scopeid ?? _i6.undefined,
         cidr: cidr,
         mac: mac,
       );
@@ -1108,7 +640,7 @@ extension NetworkInterfaceInfo$Typings on NetworkInterfaceInfo {
     _i3.setProperty(
       this,
       'scopeid',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1139,6 +671,7 @@ extension NetworkInterfaceInfo$Typings on NetworkInterfaceInfo {
   }
 }
 
+/* Source:  */
 /// Information returned from a call to {@linkcode Deno.systemMemoryInfo}.
 @_i1.JS()
 @_i1.staticInterop
@@ -1270,6 +803,7 @@ extension SystemMemoryInfo$Typings on SystemMemoryInfo {
   }
 }
 
+/* Source:  */
 /// A set of options which can define the permissions within a test or worker
 /// context at a highly specific level.
 @_i1.JS()
@@ -1298,14 +832,14 @@ class PermissionOptionsObject {
     _i2.Object? write,
   }) =>
       PermissionOptionsObject._(
-        env: env ?? _i8.undefined,
-        sys: sys ?? _i8.undefined,
-        hrtime: hrtime ?? _i8.undefined,
-        net: net ?? _i8.undefined,
-        ffi: ffi ?? _i8.undefined,
-        read: read ?? _i8.undefined,
-        run: run ?? _i8.undefined,
-        write: write ?? _i8.undefined,
+        env: env ?? _i6.undefined,
+        sys: sys ?? _i6.undefined,
+        hrtime: hrtime ?? _i6.undefined,
+        net: net ?? _i6.undefined,
+        ffi: ffi ?? _i6.undefined,
+        read: read ?? _i6.undefined,
+        run: run ?? _i6.undefined,
+        write: write ?? _i6.undefined,
       );
 }
 
@@ -1324,7 +858,7 @@ extension PermissionOptionsObject$Typings on PermissionOptionsObject {
     _i3.setProperty(
       this,
       'env',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1342,7 +876,7 @@ extension PermissionOptionsObject$Typings on PermissionOptionsObject {
     _i3.setProperty(
       this,
       'sys',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1360,7 +894,7 @@ extension PermissionOptionsObject$Typings on PermissionOptionsObject {
     _i3.setProperty(
       this,
       'hrtime',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1442,7 +976,7 @@ extension PermissionOptionsObject$Typings on PermissionOptionsObject {
     _i3.setProperty(
       this,
       'net',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1460,7 +994,7 @@ extension PermissionOptionsObject$Typings on PermissionOptionsObject {
     _i3.setProperty(
       this,
       'ffi',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1480,7 +1014,7 @@ extension PermissionOptionsObject$Typings on PermissionOptionsObject {
     _i3.setProperty(
       this,
       'read',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1498,7 +1032,7 @@ extension PermissionOptionsObject$Typings on PermissionOptionsObject {
     _i3.setProperty(
       this,
       'run',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1518,11 +1052,12 @@ extension PermissionOptionsObject$Typings on PermissionOptionsObject {
     _i3.setProperty(
       this,
       'write',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// Context that is passed to a testing function, which can be used to either
 /// gain information about the current test, or register additional test
 /// steps within the current test.
@@ -1544,7 +1079,7 @@ class TestContext {
       TestContext._(
         name: name,
         origin: origin,
-        parent: parent ?? _i8.undefined,
+        parent: parent ?? _i6.undefined,
       );
 }
 
@@ -1585,7 +1120,7 @@ extension TestContext$Typings on TestContext {
     _i3.setProperty(
       this,
       'parent',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1634,11 +1169,12 @@ extension TestContext$Typings on TestContext {
   ///    console.log("after the step");
   ///  });
   ///  ```
-  _i2.Future<_i2.bool> _step$2(_i2.Object Function(_i4.TestContext) fn) =>
+  _i2.Future<_i2.bool> _step$2(
+          _i7.FutureOr<void> Function(_i4.TestContext) fn) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'step',
-        [_i3.allowInterop(fn)],
+        [_i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0)))],
       ));
 
   /// Run a sub step of the parent test or step. Returns a promise
@@ -1665,14 +1201,14 @@ extension TestContext$Typings on TestContext {
   ///  ```
   _i2.Future<_i2.bool> _step$3(
     _i2.String name,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'step',
         [
           name,
-          _i3.allowInterop(fn),
+          _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
         ],
       ));
 
@@ -1718,7 +1254,8 @@ extension TestContext$Typings on TestContext {
     ///    console.log("after the step");
     ///  });
     ///  ```
-    _i2.Future<_i2.bool> Function(_i2.Object Function(_i4.TestContext) fn) $2,
+    _i2.Future<_i2.bool> Function(
+        _i7.FutureOr<void> Function(_i4.TestContext) fn) $2,
 
     /// Run a sub step of the parent test or step. Returns a promise
     ///  that resolves to a boolean signifying if the step completed successfully.
@@ -1744,7 +1281,7 @@ extension TestContext$Typings on TestContext {
     ///  ```
     _i2.Future<_i2.bool> Function(
       _i2.String name,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $3,
   }) get step => (
         $1: _step$1,
@@ -1753,6 +1290,7 @@ extension TestContext$Typings on TestContext {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1767,7 +1305,7 @@ class TestStepDefinition {
   });
 
   factory TestStepDefinition({
-    _i2.Object Function(_i4.TestContext)? fn,
+    _i7.FutureOr<void> Function(_i4.TestContext)? fn,
     _i2.String? name,
     _i2.bool? ignore,
     _i2.bool? sanitizeOps,
@@ -1775,7 +1313,9 @@ class TestStepDefinition {
     _i2.bool? sanitizeExit,
   }) =>
       TestStepDefinition._(
-        fn: fn == null ? null : _i3.allowInterop(fn),
+        fn: fn == null
+            ? null
+            : _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
         name: name,
         ignore: ignore,
         sanitizeOps: sanitizeOps,
@@ -1788,15 +1328,23 @@ extension TestStepDefinition$Typings on TestStepDefinition {
   /// The test function that will be tested when this step is executed. The
   ///  function can take an argument which will provide information about the
   ///  current step's context.
-  _i2.Object Function(_i4.TestContext) get fn => _i3.getProperty(
-        this,
-        'fn',
-      );
-  set fn(_i2.Object Function(_i4.TestContext) value) {
+  _i7.FutureOr<void> Function(_i4.TestContext) get fn =>
+      (_i4.TestContext p0) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'fn',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  set fn(_i7.FutureOr<void> Function(_i4.TestContext) value) {
     _i3.setProperty(
       this,
       'fn',
-      _i3.allowInterop(value),
+      _i3.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -1825,7 +1373,7 @@ extension TestStepDefinition$Typings on TestStepDefinition {
     _i3.setProperty(
       this,
       'ignore',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1844,7 +1392,7 @@ extension TestStepDefinition$Typings on TestStepDefinition {
     _i3.setProperty(
       this,
       'sanitizeOps',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1861,7 +1409,7 @@ extension TestStepDefinition$Typings on TestStepDefinition {
     _i3.setProperty(
       this,
       'sanitizeResources',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1877,11 +1425,12 @@ extension TestStepDefinition$Typings on TestStepDefinition {
     _i3.setProperty(
       this,
       'sanitizeExit',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1898,37 +1447,47 @@ class TestDefinition {
   });
 
   factory TestDefinition({
-    _i2.Object Function(_i4.TestContext)? fn,
+    _i7.FutureOr<void> Function(_i4.TestContext)? fn,
     _i2.String? name,
     _i2.bool? ignore,
     _i2.bool? only,
     _i2.bool? sanitizeOps,
     _i2.bool? sanitizeResources,
     _i2.bool? sanitizeExit,
-    _i4.PermissionOptions? permissions,
+    _i2.Object? permissions,
   }) =>
       TestDefinition._(
-        fn: fn == null ? null : _i3.allowInterop(fn),
+        fn: fn == null
+            ? null
+            : _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
         name: name,
         ignore: ignore,
         only: only,
         sanitizeOps: sanitizeOps,
         sanitizeResources: sanitizeResources,
         sanitizeExit: sanitizeExit,
-        permissions: permissions ?? _i8.undefined,
+        permissions: permissions ?? _i6.undefined,
       );
 }
 
 extension TestDefinition$Typings on TestDefinition {
-  _i2.Object Function(_i4.TestContext) get fn => _i3.getProperty(
-        this,
-        'fn',
-      );
-  set fn(_i2.Object Function(_i4.TestContext) value) {
+  _i7.FutureOr<void> Function(_i4.TestContext) get fn =>
+      (_i4.TestContext p0) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'fn',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  set fn(_i7.FutureOr<void> Function(_i4.TestContext) value) {
     _i3.setProperty(
       this,
       'fn',
-      _i3.allowInterop(value),
+      _i3.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -1957,7 +1516,7 @@ extension TestDefinition$Typings on TestDefinition {
     _i3.setProperty(
       this,
       'ignore',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1971,7 +1530,7 @@ extension TestDefinition$Typings on TestDefinition {
     _i3.setProperty(
       this,
       'only',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -1990,7 +1549,7 @@ extension TestDefinition$Typings on TestDefinition {
     _i3.setProperty(
       this,
       'sanitizeOps',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2007,7 +1566,7 @@ extension TestDefinition$Typings on TestDefinition {
     _i3.setProperty(
       this,
       'sanitizeResources',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2023,7 +1582,7 @@ extension TestDefinition$Typings on TestDefinition {
     _i3.setProperty(
       this,
       'sanitizeExit',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2034,19 +1593,20 @@ extension TestDefinition$Typings on TestDefinition {
   ///  permissions using a {@linkcode PermissionOptionsObject}.
   ///
   ///  @default {"inherit"}
-  _i4.PermissionOptions? get permissions => _i3.getProperty(
+  _i2.Object? get permissions => _i3.getProperty(
         this,
         'permissions',
       );
-  set permissions(_i4.PermissionOptions? value) {
+  set permissions(_i2.Object? value) {
     _i3.setProperty(
       this,
       'permissions',
-      value ?? _i8.undefined ?? _i8.undefined,
+      value ?? _i6.undefined ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2060,11 +1620,11 @@ extension DenoTest$Typings on DenoTest {
   /// Shorthand property for ignoring a particular test case.
   ///
   ///  @category Testing
-  void _ignore$1(_i2.Object Function(_i4.TestContext) fn) {
+  void _ignore$1(_i7.FutureOr<void> Function(_i4.TestContext) fn) {
     _i3.callMethod(
       this,
       'ignore',
-      [_i3.allowInterop(fn)],
+      [_i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0)))],
     );
   }
 
@@ -2073,14 +1633,14 @@ extension DenoTest$Typings on DenoTest {
   ///  @category Testing
   void _ignore$2(
     _i2.String name,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
       'ignore',
       [
         name,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -2089,15 +1649,15 @@ extension DenoTest$Typings on DenoTest {
   ///
   ///  @category Testing
   void _ignore$3(
-    _i6.Omit<_i4.TestDefinition, _i4.IgnoreOptions> options,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i8.Omit<_i4.TestDefinition, _i4.IgnoreOptions> options,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
       'ignore',
       [
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -2106,15 +1666,15 @@ extension DenoTest$Typings on DenoTest {
   ///
   ///  @category Testing
   void _ignore$4(
-    _i6.Omit<_i4.TestDefinition, _i4.DenoTestIgnoreOptions> options,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i8.Omit<_i4.TestDefinition, _i4.DenoTestIgnoreOptions> options,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
       'ignore',
       [
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -2124,8 +1684,8 @@ extension DenoTest$Typings on DenoTest {
   ///  @category Testing
   void _ignore$5(
     _i2.String name,
-    _i6.Omit<_i4.TestDefinition, _i4.Ignore> options,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i8.Omit<_i4.TestDefinition, _i4.Ignore> options,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
@@ -2133,7 +1693,7 @@ extension DenoTest$Typings on DenoTest {
       [
         name,
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -2143,30 +1703,30 @@ extension DenoTest$Typings on DenoTest {
     /// Shorthand property for ignoring a particular test case.
     ///
     ///  @category Testing
-    void Function(_i2.Object Function(_i4.TestContext) fn) $1,
+    void Function(_i7.FutureOr<void> Function(_i4.TestContext) fn) $1,
 
     /// Shorthand property for ignoring a particular test case.
     ///
     ///  @category Testing
     void Function(
       _i2.String name,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $2,
 
     /// Shorthand property for ignoring a particular test case.
     ///
     ///  @category Testing
     void Function(
-      _i6.Omit<_i4.TestDefinition, _i4.IgnoreOptions> options,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i8.Omit<_i4.TestDefinition, _i4.IgnoreOptions> options,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $3,
 
     /// Shorthand property for ignoring a particular test case.
     ///
     ///  @category Testing
     void Function(
-      _i6.Omit<_i4.TestDefinition, _i4.DenoTestIgnoreOptions> options,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i8.Omit<_i4.TestDefinition, _i4.DenoTestIgnoreOptions> options,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $4,
 
     /// Shorthand property for ignoring a particular test case.
@@ -2174,8 +1734,8 @@ extension DenoTest$Typings on DenoTest {
     ///  @category Testing
     void Function(
       _i2.String name,
-      _i6.Omit<_i4.TestDefinition, _i4.Ignore> options,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i8.Omit<_i4.TestDefinition, _i4.Ignore> options,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $5,
   }) get ignore => (
         $1: _ignore$1,
@@ -2188,11 +1748,11 @@ extension DenoTest$Typings on DenoTest {
   /// Shorthand property for focusing a particular test case.
   ///
   ///  @category Testing
-  void _only$1(_i2.Object Function(_i4.TestContext) fn) {
+  void _only$1(_i7.FutureOr<void> Function(_i4.TestContext) fn) {
     _i3.callMethod(
       this,
       'only',
-      [_i3.allowInterop(fn)],
+      [_i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0)))],
     );
   }
 
@@ -2201,14 +1761,14 @@ extension DenoTest$Typings on DenoTest {
   ///  @category Testing
   void _only$2(
     _i2.String name,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
       'only',
       [
         name,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -2217,15 +1777,15 @@ extension DenoTest$Typings on DenoTest {
   ///
   ///  @category Testing
   void _only$3(
-    _i6.Omit<_i4.TestDefinition, _i4.OnlyOptions> options,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i8.Omit<_i4.TestDefinition, _i4.OnlyOptions> options,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
       'only',
       [
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -2234,15 +1794,15 @@ extension DenoTest$Typings on DenoTest {
   ///
   ///  @category Testing
   void _only$4(
-    _i6.Omit<_i4.TestDefinition, _i4.DenoTestOnlyOptions> options,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i8.Omit<_i4.TestDefinition, _i4.DenoTestOnlyOptions> options,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
       'only',
       [
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -2252,8 +1812,8 @@ extension DenoTest$Typings on DenoTest {
   ///  @category Testing
   void _only$5(
     _i2.String name,
-    _i6.Omit<_i4.TestDefinition, _i4.Only> options,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i8.Omit<_i4.TestDefinition, _i4.Only> options,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
@@ -2261,7 +1821,7 @@ extension DenoTest$Typings on DenoTest {
       [
         name,
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -2271,30 +1831,30 @@ extension DenoTest$Typings on DenoTest {
     /// Shorthand property for focusing a particular test case.
     ///
     ///  @category Testing
-    void Function(_i2.Object Function(_i4.TestContext) fn) $1,
+    void Function(_i7.FutureOr<void> Function(_i4.TestContext) fn) $1,
 
     /// Shorthand property for focusing a particular test case.
     ///
     ///  @category Testing
     void Function(
       _i2.String name,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $2,
 
     /// Shorthand property for focusing a particular test case.
     ///
     ///  @category Testing
     void Function(
-      _i6.Omit<_i4.TestDefinition, _i4.OnlyOptions> options,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i8.Omit<_i4.TestDefinition, _i4.OnlyOptions> options,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $3,
 
     /// Shorthand property for focusing a particular test case.
     ///
     ///  @category Testing
     void Function(
-      _i6.Omit<_i4.TestDefinition, _i4.DenoTestOnlyOptions> options,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i8.Omit<_i4.TestDefinition, _i4.DenoTestOnlyOptions> options,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $4,
 
     /// Shorthand property for focusing a particular test case.
@@ -2302,8 +1862,8 @@ extension DenoTest$Typings on DenoTest {
     ///  @category Testing
     void Function(
       _i2.String name,
-      _i6.Omit<_i4.TestDefinition, _i4.Only> options,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i8.Omit<_i4.TestDefinition, _i4.Only> options,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $5,
   }) get only => (
         $1: _only$1,
@@ -2323,20 +1883,20 @@ extension DenoTest$Typings on DenoTest {
     );
   }
 
-  void _call$2(_i2.Object Function(_i4.TestContext) fn) {
+  void _call$2(_i7.FutureOr<void> Function(_i4.TestContext) fn) {
     _i3.callMethod(
       this,
       'call',
       [
         this,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
 
   void _call$3(
     _i2.String name,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
@@ -2344,14 +1904,14 @@ extension DenoTest$Typings on DenoTest {
       [
         this,
         name,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
 
   void _call$4(
-    _i6.Omit<_i4.TestDefinition, _i4.CallOptions> options,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i8.Omit<_i4.TestDefinition, _i4.CallOptions> options,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
@@ -2359,14 +1919,14 @@ extension DenoTest$Typings on DenoTest {
       [
         this,
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
 
   void _call$5(
-    _i6.Omit<_i4.TestDefinition, _i2.String> options,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i8.Omit<_i4.TestDefinition, _i2.String> options,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
@@ -2374,15 +1934,15 @@ extension DenoTest$Typings on DenoTest {
       [
         this,
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
 
   void _call$6(
     _i2.String name,
-    _i6.Omit<_i4.TestDefinition, _i4.Call> options,
-    _i2.Object Function(_i4.TestContext) fn,
+    _i8.Omit<_i4.TestDefinition, _i4.Call> options,
+    _i7.FutureOr<void> Function(_i4.TestContext) fn,
   ) {
     _i3.callMethod(
       this,
@@ -2391,7 +1951,7 @@ extension DenoTest$Typings on DenoTest {
         this,
         name,
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -2399,23 +1959,23 @@ extension DenoTest$Typings on DenoTest {
   /// Overload accessor: $1, $2, $3, $4, $5, $6
   ({
     void Function(_i4.TestDefinition t) $1,
-    void Function(_i2.Object Function(_i4.TestContext) fn) $2,
+    void Function(_i7.FutureOr<void> Function(_i4.TestContext) fn) $2,
     void Function(
       _i2.String name,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $3,
     void Function(
-      _i6.Omit<_i4.TestDefinition, _i4.CallOptions> options,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i8.Omit<_i4.TestDefinition, _i4.CallOptions> options,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $4,
     void Function(
-      _i6.Omit<_i4.TestDefinition, _i2.String> options,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i8.Omit<_i4.TestDefinition, _i2.String> options,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $5,
     void Function(
       _i2.String name,
-      _i6.Omit<_i4.TestDefinition, _i4.Call> options,
-      _i2.Object Function(_i4.TestContext) fn,
+      _i8.Omit<_i4.TestDefinition, _i4.Call> options,
+      _i7.FutureOr<void> Function(_i4.TestContext) fn,
     ) $6,
   }) get call => (
         $1: _call$1,
@@ -2427,6 +1987,7 @@ extension DenoTest$Typings on DenoTest {
       );
 }
 
+/* Source:  */
 /// Context that is passed to a benchmarked function. The instance is shared
 /// between iterations of the benchmark. Its methods can be used for example
 /// to override of the measured portion of the function.
@@ -2490,9 +2051,13 @@ extension BenchContext$Typings on BenchContext {
     );
   }
 
-  void Function() get start => _i3.getProperty(
-        this,
-        'start',
+  void Function() get start => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'start',
+        ),
+        r'call',
+        [this],
       );
   set end(void Function() value) {
     _i3.setProperty(
@@ -2502,12 +2067,17 @@ extension BenchContext$Typings on BenchContext {
     );
   }
 
-  void Function() get end => _i3.getProperty(
-        this,
-        'end',
+  void Function() get end => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'end',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 /// The interface for defining a benchmark test using {@linkcode Deno.bench}.
 @_i1.JS()
 @_i1.staticInterop
@@ -2525,38 +2095,48 @@ class BenchDefinition {
   });
 
   factory BenchDefinition({
-    _i2.Object Function(_i4.BenchContext)? fn,
+    _i7.FutureOr<void> Function(_i4.BenchContext)? fn,
     _i2.String? name,
     _i2.bool? ignore,
     _i2.String? group,
     _i2.bool? baseline,
     _i2.bool? only,
     _i2.bool? sanitizeExit,
-    _i4.PermissionOptions? permissions,
+    _i2.Object? permissions,
   }) =>
       BenchDefinition._(
-        fn: fn == null ? null : _i3.allowInterop(fn),
+        fn: fn == null
+            ? null
+            : _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
         name: name,
         ignore: ignore,
         group: group,
         baseline: baseline,
         only: only,
         sanitizeExit: sanitizeExit,
-        permissions: permissions ?? _i8.undefined,
+        permissions: permissions ?? _i6.undefined,
       );
 }
 
 extension BenchDefinition$Typings on BenchDefinition {
   /// The test function which will be benchmarked.
-  _i2.Object Function(_i4.BenchContext) get fn => _i3.getProperty(
-        this,
-        'fn',
-      );
-  set fn(_i2.Object Function(_i4.BenchContext) value) {
+  _i7.FutureOr<void> Function(_i4.BenchContext) get fn =>
+      (_i4.BenchContext p0) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'fn',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  set fn(_i7.FutureOr<void> Function(_i4.BenchContext) value) {
     _i3.setProperty(
       this,
       'fn',
-      _i3.allowInterop(value),
+      _i3.allowInterop((p0) => _i6.Promise.futureOr(() => value(p0))),
     );
   }
 
@@ -2582,7 +2162,7 @@ extension BenchDefinition$Typings on BenchDefinition {
     _i3.setProperty(
       this,
       'ignore',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2598,7 +2178,7 @@ extension BenchDefinition$Typings on BenchDefinition {
     _i3.setProperty(
       this,
       'group',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2614,7 +2194,7 @@ extension BenchDefinition$Typings on BenchDefinition {
     _i3.setProperty(
       this,
       'baseline',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2628,7 +2208,7 @@ extension BenchDefinition$Typings on BenchDefinition {
     _i3.setProperty(
       this,
       'only',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2644,7 +2224,7 @@ extension BenchDefinition$Typings on BenchDefinition {
     _i3.setProperty(
       this,
       'sanitizeExit',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -2655,19 +2235,20 @@ extension BenchDefinition$Typings on BenchDefinition {
   ///  Set this to `"none"` to revoke all permissions.
   ///
   ///  @default {"inherit"}
-  _i4.PermissionOptions? get permissions => _i3.getProperty(
+  _i2.Object? get permissions => _i3.getProperty(
         this,
         'permissions',
       );
-  set permissions(_i4.PermissionOptions? value) {
+  set permissions(_i2.Object? value) {
     _i3.setProperty(
       this,
       'permissions',
-      value ?? _i8.undefined ?? _i8.undefined,
+      value ?? _i6.undefined ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// An interface containing methods to interact with the process environment
 /// variables.
 @_i1.JS()
@@ -2693,7 +2274,9 @@ class Env {
     _i2.Object Function()? toObject,
   }) =>
       Env._(
-        get: get == null ? null : _i3.allowInterop(get),
+        get: get == null
+            ? null
+            : _i3.allowInterop((p0) => () => get(p0) ?? _i6.undefined),
         set: set == null ? null : _i3.allowInterop(set),
         delete: delete == null ? null : _i3.allowInterop(delete),
         has: has == null ? null : _i3.allowInterop(has),
@@ -2706,13 +2289,20 @@ extension Env$Typings on Env {
     _i3.setProperty(
       this,
       'get',
-      _i3.allowInterop(value),
+      _i3.allowInterop((p0) => () => value(p0) ?? _i6.undefined),
     );
   }
 
-  _i2.String? Function(_i2.String) get get => _i3.getProperty(
-        this,
-        'get',
+  _i2.String? Function(_i2.String) get get => (_i2.String p0) => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'get',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set set(
       void Function(
@@ -2729,10 +2319,22 @@ extension Env$Typings on Env {
   void Function(
     _i2.String,
     _i2.String,
-  ) get set => _i3.getProperty(
-        this,
-        'set',
-      );
+  ) get set => (
+        _i2.String p0,
+        _i2.String p1,
+      ) =>
+          _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'set',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set delete(void Function(_i2.String) value) {
     _i3.setProperty(
       this,
@@ -2741,9 +2343,16 @@ extension Env$Typings on Env {
     );
   }
 
-  void Function(_i2.String) get delete => _i3.getProperty(
-        this,
-        'delete',
+  void Function(_i2.String) get delete => (_i2.String p0) => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'delete',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set has(_i2.bool Function(_i2.String) value) {
     _i3.setProperty(
@@ -2753,9 +2362,16 @@ extension Env$Typings on Env {
     );
   }
 
-  _i2.bool Function(_i2.String) get has => _i3.getProperty(
-        this,
-        'has',
+  _i2.bool Function(_i2.String) get has => (_i2.String p0) => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'has',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set toObject(_i2.Object Function() value) {
     _i3.setProperty(
@@ -2765,12 +2381,17 @@ extension Env$Typings on Env {
     );
   }
 
-  _i2.Object Function() get toObject => _i3.getProperty(
-        this,
-        'toObject',
+  _i2.Object Function() get toObject => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'toObject',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 /// An abstract interface which when implemented provides an interface to read
 /// bytes into an array buffer asynchronously.
 @_i1.JS()
@@ -2792,12 +2413,21 @@ extension Reader$Typings on Reader {
     );
   }
 
-  _i2.Future<_i2.num?> Function(_i9.Uint8List) get read => _i3.getProperty(
-        this,
-        'read',
-      );
+  _i2.Future<_i2.num?> Function(_i9.Uint8List) get read =>
+      (_i9.Uint8List p0) => _i3.promiseToFuture(_i3.callMethod(
+            _i3.getProperty(
+              this,
+              'read',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          ));
 }
 
+/* Source:  */
 /// An abstract interface which when implemented provides an interface to read
 /// bytes into an array buffer synchronously.
 @_i1.JS()
@@ -2808,7 +2438,9 @@ class ReaderSync {
 
   factory ReaderSync({_i2.num? Function(_i9.Uint8List)? readSync}) =>
       ReaderSync._(
-          readSync: readSync == null ? null : _i3.allowInterop(readSync));
+          readSync: readSync == null
+              ? null
+              : _i3.allowInterop((p0) => () => readSync(p0) ?? _i6.undefined));
 }
 
 extension ReaderSync$Typings on ReaderSync {
@@ -2816,16 +2448,25 @@ extension ReaderSync$Typings on ReaderSync {
     _i3.setProperty(
       this,
       'readSync',
-      _i3.allowInterop(value),
+      _i3.allowInterop((p0) => () => value(p0) ?? _i6.undefined),
     );
   }
 
-  _i2.num? Function(_i9.Uint8List) get readSync => _i3.getProperty(
-        this,
-        'readSync',
-      );
+  _i2.num? Function(_i9.Uint8List) get readSync =>
+      (_i9.Uint8List p0) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'readSync',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
+/* Source:  */
 /// An abstract interface which when implemented provides an interface to write
 /// bytes from an array buffer to a file/resource asynchronously.
 @_i1.JS()
@@ -2847,12 +2488,21 @@ extension Writer$Typings on Writer {
     );
   }
 
-  _i2.Future<_i2.num> Function(_i9.Uint8List) get write => _i3.getProperty(
-        this,
-        'write',
-      );
+  _i2.Future<_i2.num> Function(_i9.Uint8List) get write =>
+      (_i9.Uint8List p0) => _i3.promiseToFuture(_i3.callMethod(
+            _i3.getProperty(
+              this,
+              'write',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          ));
 }
 
+/* Source:  */
 /// An abstract interface which when implemented provides an interface to write
 /// bytes from an array buffer to a file/resource synchronously.
 @_i1.JS()
@@ -2875,12 +2525,21 @@ extension WriterSync$Typings on WriterSync {
     );
   }
 
-  _i2.num Function(_i9.Uint8List) get writeSync => _i3.getProperty(
-        this,
-        'writeSync',
-      );
+  _i2.num Function(_i9.Uint8List) get writeSync =>
+      (_i9.Uint8List p0) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'writeSync',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
+/* Source:  */
 /// An abstract interface which when implemented provides an interface to close
 /// files/resources that were previously opened.
 @_i1.JS()
@@ -2902,12 +2561,17 @@ extension Closer$Typings on Closer {
     );
   }
 
-  void Function() get close => _i3.getProperty(
-        this,
-        'close',
+  void Function() get close => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'close',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 /// An abstract interface which when implemented provides an interface to seek
 /// within an open file/resource asynchronously.
 @_i1.JS()
@@ -2940,12 +2604,25 @@ extension Seeker$Typings on Seeker {
   _i2.Future<_i2.num> Function(
     _i2.Object,
     _i4.SeekMode,
-  ) get seek => _i3.getProperty(
-        this,
-        'seek',
-      );
+  ) get seek => (
+        _i2.Object p0,
+        _i4.SeekMode p1,
+      ) =>
+          _i3.promiseToFuture(_i3.callMethod(
+            _i3.getProperty(
+              this,
+              'seek',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1.name,
+            ],
+          ));
 }
 
+/* Source:  */
 /// An abstract interface which when implemented provides an interface to seek
 /// within an open file/resource synchronously.
 @_i1.JS()
@@ -2979,12 +2656,25 @@ extension SeekerSync$Typings on SeekerSync {
   _i2.num Function(
     _i2.Object,
     _i4.SeekMode,
-  ) get seekSync => _i3.getProperty(
-        this,
-        'seekSync',
-      );
+  ) get seekSync => (
+        _i2.Object p0,
+        _i4.SeekMode p1,
+      ) =>
+          _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'seekSync',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1.name,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2999,11 +2689,12 @@ extension IInline1$Typings on IInline1 {
     _i3.setProperty(
       this,
       'bufSize',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3018,11 +2709,12 @@ extension IInline2$Typings on IInline2 {
     _i3.setProperty(
       this,
       'bufSize',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3037,11 +2729,12 @@ extension IInline3$Typings on IInline3 {
     _i3.setProperty(
       this,
       'bufSize',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// The Deno abstraction for reading and writing files.
 ///
 /// This is the most straight forward way of handling files within Deno and is
@@ -3098,7 +2791,7 @@ extension FsFile$Typings on FsFile {
   ///  console.log(decoder.decode(chunk));
   /// }
   /// ```
-  _i7.ReadableStream<_i9.Uint8List> get readable => _i3.getProperty(
+  _i5.ReadableStream<_i9.Uint8List> get readable => _i3.getProperty(
         this,
         'readable',
       );
@@ -3117,7 +2810,7 @@ extension FsFile$Typings on FsFile {
   /// }
   /// file.close();
   /// ```
-  _i7.WritableStream<_i9.Uint8List> get writable => _i3.getProperty(
+  _i5.WritableStream<_i9.Uint8List> get writable => _i3.getProperty(
         this,
         'writable',
       );
@@ -3191,7 +2884,7 @@ extension FsFile$Typings on FsFile {
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'truncate',
-        [len ?? _i8.undefined],
+        [len ?? _i6.undefined],
       ));
 
   /// Synchronously truncates (or extends) the file to reach the specified
@@ -3221,7 +2914,7 @@ extension FsFile$Typings on FsFile {
     _i3.callMethod(
       this,
       'truncateSync',
-      [len ?? _i8.undefined],
+      [len ?? _i6.undefined],
     );
   }
 
@@ -3425,6 +3118,7 @@ extension FsFile$Typings on FsFile {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3456,6 +3150,7 @@ extension IInline4$Typings on IInline4 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3483,6 +3178,7 @@ extension SetRawOptions$Typings on SetRawOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3497,7 +3193,7 @@ extension IInline5$Typings on IInline5 {
       );
 
   /// A readable stream interface to `stdin`.
-  _i7.ReadableStream<_i9.Uint8List> get readable => _i3.getProperty(
+  _i5.ReadableStream<_i9.Uint8List> get readable => _i3.getProperty(
         this,
         'readable',
       );
@@ -3516,12 +3212,25 @@ extension IInline5$Typings on IInline5 {
   void Function(
     _i2.bool, [
     _i4.SetRawOptions?,
-  ]) get setRaw => _i3.getProperty(
-        this,
-        'setRaw',
-      );
+  ]) get setRaw => (
+        _i2.bool p0, [
+        _i4.SetRawOptions? p1,
+      ]) =>
+          _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'setRaw',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1 ?? _i6.undefined,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3536,12 +3245,13 @@ extension IInline6$Typings on IInline6 {
       );
 
   /// A writable stream interface to `stdout`.
-  _i7.WritableStream<_i9.Uint8List> get writable => _i3.getProperty(
+  _i5.WritableStream<_i9.Uint8List> get writable => _i3.getProperty(
         this,
         'writable',
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3556,12 +3266,13 @@ extension IInline7$Typings on IInline7 {
       );
 
   /// A writable stream interface to `stderr`.
-  _i7.WritableStream<_i9.Uint8List> get writable => _i3.getProperty(
+  _i5.WritableStream<_i9.Uint8List> get writable => _i3.getProperty(
         this,
         'writable',
       );
 }
 
+/* Source:  */
 /// Options which can be set when doing {@linkcode Deno.open} and
 /// {@linkcode Deno.openSync}.
 @_i1.JS()
@@ -3611,7 +3322,7 @@ extension OpenOptions$Typings on OpenOptions {
     _i3.setProperty(
       this,
       'read',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3629,7 +3340,7 @@ extension OpenOptions$Typings on OpenOptions {
     _i3.setProperty(
       this,
       'write',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3649,7 +3360,7 @@ extension OpenOptions$Typings on OpenOptions {
     _i3.setProperty(
       this,
       'append',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3667,7 +3378,7 @@ extension OpenOptions$Typings on OpenOptions {
     _i3.setProperty(
       this,
       'truncate',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3684,7 +3395,7 @@ extension OpenOptions$Typings on OpenOptions {
     _i3.setProperty(
       this,
       'create',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3701,7 +3412,7 @@ extension OpenOptions$Typings on OpenOptions {
     _i3.setProperty(
       this,
       'createNew',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3717,11 +3428,12 @@ extension OpenOptions$Typings on OpenOptions {
     _i3.setProperty(
       this,
       'mode',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// Options which can be set when using {@linkcode Deno.readFile} or
 /// {@linkcode Deno.readFileSync}.
 @_i1.JS()
@@ -3730,27 +3442,28 @@ extension OpenOptions$Typings on OpenOptions {
 class ReadFileOptions {
   external factory ReadFileOptions._({_i2.dynamic signal});
 
-  factory ReadFileOptions({_i7.AbortSignal? signal}) =>
-      ReadFileOptions._(signal: signal ?? _i8.undefined);
+  factory ReadFileOptions({_i5.AbortSignal? signal}) =>
+      ReadFileOptions._(signal: signal ?? _i6.undefined);
 }
 
 extension ReadFileOptions$Typings on ReadFileOptions {
   /// An abort signal to allow cancellation of the file read operation.
   ///  If the signal becomes aborted the readFile operation will be stopped
   ///  and the promise returned will be rejected with an AbortError.
-  _i7.AbortSignal? get signal => _i3.getProperty(
+  _i5.AbortSignal? get signal => _i3.getProperty(
         this,
         'signal',
       );
-  set signal(_i7.AbortSignal? value) {
+  set signal(_i5.AbortSignal? value) {
     _i3.setProperty(
       this,
       'signal',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3765,18 +3478,19 @@ extension IInline8$Typings on IInline8 {
     _i3.setProperty(
       this,
       'copy',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// A variable-sized buffer of bytes with `read()` and `write()` methods.
 @_i1.JS()
 @_i1.staticInterop
 class Buffer implements _i4.Reader, _i4.ReaderSync, _i4.Writer, _i4.WriterSync {
   factory Buffer([_i9.ByteBuffer? ab]) => _i3.callConstructor(
         _declaredBuffer,
-        [ab ?? _i8.undefined],
+        [ab ?? _i6.undefined],
       );
 }
 
@@ -3810,7 +3524,7 @@ extension Buffer$Typings on Buffer {
   _i9.Uint8List bytes([_i4.IInline8? options]) => _i3.callMethod(
         this,
         'bytes',
-        [options ?? _i8.undefined],
+        [options ?? _i6.undefined],
       );
 
   /// Returns whether the unread portion of the buffer is empty.
@@ -3927,6 +3641,7 @@ extension Buffer$Typings on Buffer {
       );
 }
 
+/* Source:  */
 /// Options which can be set when using {@linkcode Deno.mkdir} and
 /// {@linkcode Deno.mkdirSync}.
 @_i1.JS()
@@ -3967,7 +3682,7 @@ extension MkdirOptions$Typings on MkdirOptions {
     _i3.setProperty(
       this,
       'recursive',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -3983,11 +3698,12 @@ extension MkdirOptions$Typings on MkdirOptions {
     _i3.setProperty(
       this,
       'mode',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// Options which can be set when using {@linkcode Deno.makeTempDir},
 /// {@linkcode Deno.makeTempDirSync}, {@linkcode Deno.makeTempFile}, and
 /// {@linkcode Deno.makeTempFileSync}.
@@ -4028,7 +3744,7 @@ extension MakeTempOptions$Typings on MakeTempOptions {
     _i3.setProperty(
       this,
       'dir',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4042,7 +3758,7 @@ extension MakeTempOptions$Typings on MakeTempOptions {
     _i3.setProperty(
       this,
       'prefix',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4056,11 +3772,12 @@ extension MakeTempOptions$Typings on MakeTempOptions {
     _i3.setProperty(
       this,
       'suffix',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// Options which can be set when using {@linkcode Deno.remove} and
 /// {@linkcode Deno.removeSync}.
 @_i1.JS()
@@ -4085,11 +3802,12 @@ extension RemoveOptions$Typings on RemoveOptions {
     _i3.setProperty(
       this,
       'recursive',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// Provides information about a file and is returned by
 /// {@linkcode Deno.stat}, {@linkcode Deno.lstat}, {@linkcode Deno.statSync},
 /// and {@linkcode Deno.lstatSync} or from calling `stat()` and `statSync()`
@@ -4148,22 +3866,22 @@ class FileInfo {
         isDirectory: isDirectory,
         isSymlink: isSymlink,
         size: size,
-        mtime: mtime ?? _i8.undefined,
-        atime: atime ?? _i8.undefined,
-        birthtime: birthtime ?? _i8.undefined,
+        mtime: mtime ?? _i6.undefined,
+        atime: atime ?? _i6.undefined,
+        birthtime: birthtime ?? _i6.undefined,
         dev: dev,
-        ino: ino ?? _i8.undefined,
-        mode: mode ?? _i8.undefined,
-        nlink: nlink ?? _i8.undefined,
-        uid: uid ?? _i8.undefined,
-        gid: gid ?? _i8.undefined,
-        rdev: rdev ?? _i8.undefined,
-        blksize: blksize ?? _i8.undefined,
-        blocks: blocks ?? _i8.undefined,
-        isBlockDevice: isBlockDevice ?? _i8.undefined,
-        isCharDevice: isCharDevice ?? _i8.undefined,
-        isFifo: isFifo ?? _i8.undefined,
-        isSocket: isSocket ?? _i8.undefined,
+        ino: ino ?? _i6.undefined,
+        mode: mode ?? _i6.undefined,
+        nlink: nlink ?? _i6.undefined,
+        uid: uid ?? _i6.undefined,
+        gid: gid ?? _i6.undefined,
+        rdev: rdev ?? _i6.undefined,
+        blksize: blksize ?? _i6.undefined,
+        blocks: blocks ?? _i6.undefined,
+        isBlockDevice: isBlockDevice ?? _i6.undefined,
+        isCharDevice: isCharDevice ?? _i6.undefined,
+        isFifo: isFifo ?? _i6.undefined,
+        isSocket: isSocket ?? _i6.undefined,
       );
 }
 
@@ -4234,7 +3952,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'mtime',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4249,7 +3967,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'atime',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4264,7 +3982,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'birthtime',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4292,7 +4010,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'ino',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4308,7 +4026,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'mode',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4323,7 +4041,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'nlink',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4338,7 +4056,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'uid',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4353,7 +4071,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'gid',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4368,7 +4086,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'rdev',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4383,7 +4101,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'blksize',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4398,7 +4116,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'blocks',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4413,7 +4131,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'isBlockDevice',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4428,7 +4146,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'isCharDevice',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4443,7 +4161,7 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'isFifo',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4458,11 +4176,12 @@ extension FileInfo$Typings on FileInfo {
     _i3.setProperty(
       this,
       'isSocket',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// Information about a directory entry returned from {@linkcode Deno.readDir}
 /// and {@linkcode Deno.readDirSync}.
 @_i1.JS()
@@ -4548,6 +4267,7 @@ extension DirEntry$Typings on DirEntry {
   }
 }
 
+/* Source:  */
 /// Options for writing to a file.
 @_i1.JS()
 @_i1.staticInterop
@@ -4566,14 +4286,14 @@ class WriteFileOptions {
     _i2.bool? create,
     _i2.bool? createNew,
     _i2.num? mode,
-    _i7.AbortSignal? signal,
+    _i5.AbortSignal? signal,
   }) =>
       WriteFileOptions._(
         append: append,
         create: create,
         createNew: createNew,
         mode: mode,
-        signal: signal ?? _i8.undefined,
+        signal: signal ?? _i6.undefined,
       );
 }
 
@@ -4590,7 +4310,7 @@ extension WriteFileOptions$Typings on WriteFileOptions {
     _i3.setProperty(
       this,
       'append',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4606,7 +4326,7 @@ extension WriteFileOptions$Typings on WriteFileOptions {
     _i3.setProperty(
       this,
       'create',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4622,7 +4342,7 @@ extension WriteFileOptions$Typings on WriteFileOptions {
     _i3.setProperty(
       this,
       'createNew',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4635,7 +4355,7 @@ extension WriteFileOptions$Typings on WriteFileOptions {
     _i3.setProperty(
       this,
       'mode',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -4643,19 +4363,20 @@ extension WriteFileOptions$Typings on WriteFileOptions {
   ///
   ///  If the signal becomes aborted the write file operation will be stopped
   ///  and the promise returned will be rejected with an {@linkcode AbortError}.
-  _i7.AbortSignal? get signal => _i3.getProperty(
+  _i5.AbortSignal? get signal => _i3.getProperty(
         this,
         'signal',
       );
-  set signal(_i7.AbortSignal? value) {
+  set signal(_i5.AbortSignal? value) {
     _i3.setProperty(
       this,
       'signal',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -4836,6 +4557,7 @@ extension OpMetrics$Typings on OpMetrics {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -4856,7 +4578,7 @@ class Metrics implements _i4.OpMetrics {
   });
 
   factory Metrics({
-    _i6.Record<_i2.String, _i4.OpMetrics>? ops,
+    _i2.dynamic ops,
     _i2.num? opsDispatched,
     _i2.num? opsDispatchedSync,
     _i2.num? opsDispatchedAsync,
@@ -4886,11 +4608,11 @@ class Metrics implements _i4.OpMetrics {
 }
 
 extension Metrics$Typings on Metrics {
-  _i6.Record<_i2.String, _i4.OpMetrics> get ops => _i3.getProperty(
+  _i2.dynamic get ops => _i3.getProperty(
         this,
         'ops',
       );
-  set ops(_i6.Record<_i2.String, _i4.OpMetrics> value) {
+  set ops(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'ops',
@@ -4899,6 +4621,7 @@ extension Metrics$Typings on Metrics {
   }
 }
 
+/* Source:  */
 /// Represents a unique file system event yielded by a
 /// {@linkcode Deno.FsWatcher}.
 @_i1.JS()
@@ -4917,7 +4640,7 @@ class FsEvent {
     _i4.FsEventFlag? flag,
   }) =>
       FsEvent._(
-        kind: kind?.name ?? _i8.undefined,
+        kind: kind?.name ?? _i6.undefined,
         paths: paths,
         flag: flag,
       );
@@ -4960,11 +4683,12 @@ extension FsEvent$Typings on FsEvent {
     _i3.setProperty(
       this,
       'flag',
-      value ?? _i8.undefined ?? _i8.undefined,
+      value ?? _i6.undefined ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// Returned by {@linkcode Deno.watchFs}. It is an async iterator yielding up
 /// system events. To stop watching the file system by calling `.close()`
 /// method.
@@ -5006,9 +4730,13 @@ extension FsWatcher$Typings on FsWatcher {
     );
   }
 
-  void Function() get close => _i3.getProperty(
-        this,
-        'close',
+  void Function() get close => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'close',
+        ),
+        r'call',
+        [this],
       );
   set return$(
       _i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.dynamic>> Function(
@@ -5021,13 +4749,22 @@ extension FsWatcher$Typings on FsWatcher {
     );
   }
 
-  _i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.dynamic>> Function([_i2.dynamic])
-      get return$ => _i3.getProperty(
-            this,
-            'return',
-          );
+  _i2.Future<_i11.IteratorResult<_i4.FsEvent, _i2.dynamic>> Function(
+          [_i2.dynamic])
+      get return$ => ([_i2.dynamic p0]) => _i3.promiseToFuture(_i3.callMethod(
+            _i3.getProperty(
+              this,
+              'return',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          ));
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -5047,6 +4784,7 @@ extension IInline9$Typings on IInline9 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -5063,18 +4801,18 @@ class RunOptions {
   factory RunOptions({
     _i2.Object? cmd,
     _i2.String? cwd,
-    _i6.Record<_i2.String, _i2.String>? env,
+    _i2.dynamic env,
     _i2.Object? stdout,
     _i2.Object? stderr,
     _i2.Object? stdin,
   }) =>
       RunOptions._(
-        cmd: cmd ?? _i8.undefined,
+        cmd: cmd ?? _i6.undefined,
         cwd: cwd,
         env: env,
-        stdout: stdout ?? _i8.undefined,
-        stderr: stderr ?? _i8.undefined,
-        stdin: stdin ?? _i8.undefined,
+        stdout: stdout ?? _i6.undefined,
+        stderr: stderr ?? _i6.undefined,
+        stdin: stdin ?? _i6.undefined,
       );
 }
 
@@ -5105,20 +4843,20 @@ extension RunOptions$Typings on RunOptions {
     _i3.setProperty(
       this,
       'cwd',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
   /// Any environment variables to be set when running the sub-process.
-  _i6.Record<_i2.String, _i2.String>? get env => _i3.getProperty(
+  _i2.dynamic get env => _i3.getProperty(
         this,
         'env',
       );
-  set env(_i6.Record<_i2.String, _i2.String>? value) {
+  set env(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'env',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5142,7 +4880,7 @@ extension RunOptions$Typings on RunOptions {
     _i3.setProperty(
       this,
       'stdout',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5166,7 +4904,7 @@ extension RunOptions$Typings on RunOptions {
     _i3.setProperty(
       this,
       'stderr',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5190,11 +4928,12 @@ extension RunOptions$Typings on RunOptions {
     _i3.setProperty(
       this,
       'stdin',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -5238,6 +4977,7 @@ extension IInline10$Typings on IInline10 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -5276,11 +5016,12 @@ extension IInline11$Typings on IInline11 {
     _i3.setProperty(
       this,
       'signal',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// * @deprecated Use {@linkcode Deno.Command} instead.
 ///
 /// Represents an instance of a sub process that is returned from
@@ -5395,11 +5136,12 @@ extension Process$Typings<T extends _i4.RunOptions> on Process<T> {
     _i3.callMethod(
       this,
       'kill',
-      [signo?.name ?? _i8.undefined ?? _i8.undefined],
+      [signo?.name ?? _i6.undefined ?? _i6.undefined],
     );
   }
 }
 
+/* Source:  */
 /// Create a child process.
 ///
 /// If any stdio options are not set to `"piped"`, accessing the corresponding
@@ -5418,7 +5160,7 @@ class Command {
         _declaredCommand,
         [
           command,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       );
 }
@@ -5465,6 +5207,7 @@ extension Command$Typings on Command {
       );
 }
 
+/* Source:  */
 /// The interface for handling a child process returned from
 /// {@linkcode Deno.Command.spawn}.
 @_i1.JS()
@@ -5472,11 +5215,11 @@ extension Command$Typings on Command {
 class ChildProcess {}
 
 extension ChildProcess$Typings on ChildProcess {
-  _i7.WritableStream<_i9.Uint8List> get stdin => _i3.getProperty(
+  _i5.WritableStream<_i9.Uint8List> get stdin => _i3.getProperty(
         this,
         'stdin',
       );
-  set stdin(_i7.WritableStream<_i9.Uint8List> value) {
+  set stdin(_i5.WritableStream<_i9.Uint8List> value) {
     _i3.setProperty(
       this,
       'stdin',
@@ -5484,11 +5227,11 @@ extension ChildProcess$Typings on ChildProcess {
     );
   }
 
-  _i7.ReadableStream<_i9.Uint8List> get stdout => _i3.getProperty(
+  _i5.ReadableStream<_i9.Uint8List> get stdout => _i3.getProperty(
         this,
         'stdout',
       );
-  set stdout(_i7.ReadableStream<_i9.Uint8List> value) {
+  set stdout(_i5.ReadableStream<_i9.Uint8List> value) {
     _i3.setProperty(
       this,
       'stdout',
@@ -5496,11 +5239,11 @@ extension ChildProcess$Typings on ChildProcess {
     );
   }
 
-  _i7.ReadableStream<_i9.Uint8List> get stderr => _i3.getProperty(
+  _i5.ReadableStream<_i9.Uint8List> get stderr => _i3.getProperty(
         this,
         'stderr',
       );
-  set stderr(_i7.ReadableStream<_i9.Uint8List> value) {
+  set stderr(_i5.ReadableStream<_i9.Uint8List> value) {
     _i3.setProperty(
       this,
       'stderr',
@@ -5535,7 +5278,7 @@ extension ChildProcess$Typings on ChildProcess {
     _i3.callMethod(
       this,
       'kill',
-      [signo?.name ?? _i8.undefined ?? _i8.undefined],
+      [signo?.name ?? _i6.undefined ?? _i6.undefined],
     );
   }
 
@@ -5560,6 +5303,7 @@ extension ChildProcess$Typings on ChildProcess {
   }
 }
 
+/* Source:  */
 /// Options which can be set when calling {@linkcode Deno.Command}.
 @_i1.JS()
 @_i1.staticInterop
@@ -5583,10 +5327,10 @@ class CommandOptions {
     _i2.List<_i2.String>? args,
     _i2.Object? cwd,
     _i2.bool? clearEnv,
-    _i6.Record<_i2.String, _i2.String>? env,
+    _i2.dynamic env,
     _i2.num? uid,
     _i2.num? gid,
-    _i7.AbortSignal? signal,
+    _i5.AbortSignal? signal,
     _i4.Stdin? stdin,
     _i4.Stdout? stdout,
     _i4.Stderr? stderr,
@@ -5594,15 +5338,15 @@ class CommandOptions {
   }) =>
       CommandOptions._(
         args: args,
-        cwd: cwd ?? _i8.undefined,
+        cwd: cwd ?? _i6.undefined,
         clearEnv: clearEnv,
         env: env,
         uid: uid,
         gid: gid,
-        signal: signal ?? _i8.undefined,
-        stdin: stdin?.name ?? _i8.undefined,
-        stdout: stdout?.name ?? _i8.undefined,
-        stderr: stderr?.name ?? _i8.undefined,
+        signal: signal ?? _i6.undefined,
+        stdin: stdin?.name ?? _i6.undefined,
+        stdout: stdout?.name ?? _i6.undefined,
+        stderr: stderr?.name ?? _i6.undefined,
         windowsRawArguments: windowsRawArguments,
       );
 }
@@ -5618,7 +5362,7 @@ extension CommandOptions$Typings on CommandOptions {
     _i3.setProperty(
       this,
       'args',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5633,7 +5377,7 @@ extension CommandOptions$Typings on CommandOptions {
     _i3.setProperty(
       this,
       'cwd',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5651,20 +5395,20 @@ extension CommandOptions$Typings on CommandOptions {
     _i3.setProperty(
       this,
       'clearEnv',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
   /// Environmental variables to pass to the subprocess.
-  _i6.Record<_i2.String, _i2.String>? get env => _i3.getProperty(
+  _i2.dynamic get env => _i3.getProperty(
         this,
         'env',
       );
-  set env(_i6.Record<_i2.String, _i2.String>? value) {
+  set env(_i2.dynamic value) {
     _i3.setProperty(
       this,
       'env',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5678,7 +5422,7 @@ extension CommandOptions$Typings on CommandOptions {
     _i3.setProperty(
       this,
       'uid',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5691,7 +5435,7 @@ extension CommandOptions$Typings on CommandOptions {
     _i3.setProperty(
       this,
       'gid',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5700,15 +5444,15 @@ extension CommandOptions$Typings on CommandOptions {
   ///  SIGTERM signal.
   ///
   ///  Not supported in {@linkcode Deno.Command.outputSync}.
-  _i7.AbortSignal? get signal => _i3.getProperty(
+  _i5.AbortSignal? get signal => _i3.getProperty(
         this,
         'signal',
       );
-  set signal(_i7.AbortSignal? value) {
+  set signal(_i5.AbortSignal? value) {
     _i3.setProperty(
       this,
       'signal',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5727,7 +5471,7 @@ extension CommandOptions$Typings on CommandOptions {
     _i3.setProperty(
       this,
       'stdin',
-      value?.name ?? _i8.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -5746,7 +5490,7 @@ extension CommandOptions$Typings on CommandOptions {
     _i3.setProperty(
       this,
       'stdout',
-      value?.name ?? _i8.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -5765,7 +5509,7 @@ extension CommandOptions$Typings on CommandOptions {
     _i3.setProperty(
       this,
       'stderr',
-      value?.name ?? _i8.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 
@@ -5781,11 +5525,12 @@ extension CommandOptions$Typings on CommandOptions {
     _i3.setProperty(
       this,
       'windowsRawArguments',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -5804,7 +5549,7 @@ class CommandStatus {
       CommandStatus._(
         success: success,
         code: code,
-        signal: signal?.name ?? _i8.undefined ?? _i8.undefined,
+        signal: signal?.name ?? _i6.undefined ?? _i6.undefined,
       );
 }
 
@@ -5848,11 +5593,12 @@ extension CommandStatus$Typings on CommandStatus {
     _i3.setProperty(
       this,
       'signal',
-      value?.name ?? _i8.undefined ?? _i8.undefined,
+      value?.name ?? _i6.undefined ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// The interface returned from calling {@linkcode Deno.Command.output} or
 /// {@linkcode Deno.Command.outputSync} which represents the result of spawning the
 /// child process.
@@ -5880,7 +5626,7 @@ class CommandOutput implements _i4.CommandStatus {
         stderr: stderr,
         success: success,
         code: code,
-        signal: signal?.name ?? _i8.undefined ?? _i8.undefined,
+        signal: signal?.name ?? _i6.undefined ?? _i6.undefined,
       );
 }
 
@@ -5898,6 +5644,7 @@ extension CommandOutput$Typings on CommandOutput {
       );
 }
 
+/* Source:  */
 /// Option which can be specified when performing {@linkcode Deno.inspect}.
 @_i1.JS()
 @_i1.staticInterop
@@ -5960,7 +5707,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'colors',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5975,7 +5722,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'compact',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -5990,7 +5737,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'depth',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6005,7 +5752,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'breakLength',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6020,7 +5767,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'escapeSequences',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6035,7 +5782,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'iterableLimit',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6050,7 +5797,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'showProxy',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6065,7 +5812,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'sorted',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6080,7 +5827,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'trailingComma',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6095,7 +5842,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'getters',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6110,7 +5857,7 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'showHidden',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -6124,11 +5871,12 @@ extension InspectOptions$Typings on InspectOptions {
     _i3.setProperty(
       this,
       'strAbbreviateSize',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// The permission descriptor for the `allow-run` and `deny-run` permissions, which controls
 /// access to what sub-processes can be executed by Deno. The option `command`
 /// allows scoping the permission to a specific executable.
@@ -6151,7 +5899,7 @@ class RunPermissionDescriptor {
   }) =>
       RunPermissionDescriptor._(
         name: name,
-        command: command ?? _i8.undefined,
+        command: command ?? _i6.undefined,
       );
 }
 
@@ -6178,11 +5926,12 @@ extension RunPermissionDescriptor$Typings on RunPermissionDescriptor {
     _i3.setProperty(
       this,
       'command',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// The permission descriptor for the `allow-read` and `deny-read` permissions, which controls
 /// access to reading resources from the local host. The option `path` allows
 /// scoping the permission to a specific path (and if the path is a directory
@@ -6205,7 +5954,7 @@ class ReadPermissionDescriptor {
   }) =>
       ReadPermissionDescriptor._(
         name: name,
-        path: path ?? _i8.undefined,
+        path: path ?? _i6.undefined,
       );
 }
 
@@ -6232,11 +5981,12 @@ extension ReadPermissionDescriptor$Typings on ReadPermissionDescriptor {
     _i3.setProperty(
       this,
       'path',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// The permission descriptor for the `allow-write` and `deny-write` permissions, which
 /// controls access to writing to resources from the local host. The option
 /// `path` allow scoping the permission to a specific path (and if the path is
@@ -6259,7 +6009,7 @@ class WritePermissionDescriptor {
   }) =>
       WritePermissionDescriptor._(
         name: name,
-        path: path ?? _i8.undefined,
+        path: path ?? _i6.undefined,
       );
 }
 
@@ -6286,11 +6036,12 @@ extension WritePermissionDescriptor$Typings on WritePermissionDescriptor {
     _i3.setProperty(
       this,
       'path',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// The permission descriptor for the `allow-net` and `deny-net` permissions, which controls
 /// access to opening network ports and connecting to remote hosts via the
 /// network. The option `host` allows scoping the permission for outbound
@@ -6339,11 +6090,12 @@ extension NetPermissionDescriptor$Typings on NetPermissionDescriptor {
     _i3.setProperty(
       this,
       'host',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// The permission descriptor for the `allow-env` and `deny-env` permissions, which controls
 /// access to being able to read and write to the process environment variables
 /// as well as access other information about the environment. The option
@@ -6390,11 +6142,12 @@ extension EnvPermissionDescriptor$Typings on EnvPermissionDescriptor {
     _i3.setProperty(
       this,
       'variable',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// The permission descriptor for the `allow-sys` and `deny-sys` permissions, which controls
 /// access to sensitive host system information, which malicious code might
 /// attempt to exploit. The option `kind` allows scoping the permission to a
@@ -6414,7 +6167,7 @@ class SysPermissionDescriptor {
   }) =>
       SysPermissionDescriptor._(
         name: name,
-        kind: kind?.name ?? _i8.undefined,
+        kind: kind?.name ?? _i6.undefined,
       );
 }
 
@@ -6443,11 +6196,12 @@ extension SysPermissionDescriptor$Typings on SysPermissionDescriptor {
     _i3.setProperty(
       this,
       'kind',
-      value?.name ?? _i8.undefined,
+      value?.name ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// The permission descriptor for the `allow-ffi` and `deny-ffi` permissions, which controls
 /// access to loading _foreign_ code and interfacing with it via the
 /// [Foreign Function Interface API](https://deno.land/manual/runtime/ffi_api)
@@ -6468,7 +6222,7 @@ class FfiPermissionDescriptor {
   }) =>
       FfiPermissionDescriptor._(
         name: name,
-        path: path ?? _i8.undefined,
+        path: path ?? _i6.undefined,
       );
 }
 
@@ -6494,11 +6248,12 @@ extension FfiPermissionDescriptor$Typings on FfiPermissionDescriptor {
     _i3.setProperty(
       this,
       'path',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// The permission descriptor for the `allow-hrtime` and `deny-hrtime` permissions, which
 /// controls if the runtime code has access to high resolution time. High
 /// resolution time is considered sensitive information, because it can be used
@@ -6531,29 +6286,38 @@ extension HrtimePermissionDescriptor$Typings on HrtimePermissionDescriptor {
 /// The interface which defines what event types are supported by
 /// {@linkcode PermissionStatus} instances.
 enum PermissionStatusEventMap<T$> {
-  change<_i7.Event>(r'change');
+  change<_i5.Event>(r'change');
 
   const PermissionStatusEventMap(this.value);
 
   final _i2.String value;
 }
 
+/* Source:  */
 /// An {@linkcode EventTarget} returned from the {@linkcode Deno.permissions}
 /// API which can provide updates to any state changes of the permission.
 @_i1.JS()
 @_i1.staticInterop
-class PermissionStatus implements _i7.EventTarget {}
+class PermissionStatus implements _i5.EventTarget {}
 
 extension PermissionStatus$Typings on PermissionStatus {
-  _i2.dynamic Function(_i7.Event)? get onchange => _i3.getProperty(
-        this,
-        'onchange',
-      );
-  set onchange(_i2.dynamic Function(_i7.Event)? value) {
+  _i2.dynamic Function(_i5.Event)? get onchange =>
+      (_i5.Event p0) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'onchange',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
+  set onchange(_i2.dynamic Function(_i5.Event)? value) {
     _i3.setProperty(
       this,
       'onchange',
-      value == null ? _i8.undefined : _i3.allowInterop(value),
+      value == null ? _i6.undefined : _i3.allowInterop(value),
     );
   }
 
@@ -6606,7 +6370,7 @@ extension PermissionStatus$Typings on PermissionStatus {
       [
         type.name,
         _i3.allowInterop(listener),
-        options ?? _i8.undefined,
+        options ?? _i6.undefined,
       ],
     );
   }
@@ -6636,7 +6400,7 @@ extension PermissionStatus$Typings on PermissionStatus {
   /// appended if it has the same type, callback, and capture.
   void _addEventListener$2(
     _i2.String type,
-    _i7.EventListenerOrEventListenerObject listener, [
+    _i2.Object listener, [
     _i2.Object? options,
   ]) {
     _i3.callMethod(
@@ -6645,7 +6409,7 @@ extension PermissionStatus$Typings on PermissionStatus {
       [
         type,
         listener,
-        options ?? _i8.undefined,
+        options ?? _i6.undefined,
       ],
     );
   }
@@ -6706,7 +6470,7 @@ extension PermissionStatus$Typings on PermissionStatus {
     /// appended if it has the same type, callback, and capture.
     void Function(
       _i2.String type,
-      _i7.EventListenerOrEventListenerObject listener, [
+      _i2.Object listener, [
       _i2.Object? options,
     ]) $2,
   }) get addEventListener => (
@@ -6727,7 +6491,7 @@ extension PermissionStatus$Typings on PermissionStatus {
       [
         type.name,
         _i3.allowInterop(listener),
-        options ?? _i8.undefined,
+        options ?? _i6.undefined,
       ],
     );
   }
@@ -6736,7 +6500,7 @@ extension PermissionStatus$Typings on PermissionStatus {
   /// type, callback, and options.
   void _removeEventListener$2(
     _i2.String type,
-    _i7.EventListenerOrEventListenerObject listener, [
+    _i2.Object listener, [
     _i2.Object? options,
   ]) {
     _i3.callMethod(
@@ -6745,7 +6509,7 @@ extension PermissionStatus$Typings on PermissionStatus {
       [
         type,
         listener,
-        options ?? _i8.undefined,
+        options ?? _i6.undefined,
       ],
     );
   }
@@ -6764,7 +6528,7 @@ extension PermissionStatus$Typings on PermissionStatus {
     /// type, callback, and options.
     void Function(
       _i2.String type,
-      _i7.EventListenerOrEventListenerObject listener, [
+      _i2.Object listener, [
       _i2.Object? options,
     ]) $2,
   }) get removeEventListener => (
@@ -6773,6 +6537,7 @@ extension PermissionStatus$Typings on PermissionStatus {
       );
 }
 
+/* Source:  */
 /// Deno's permission management API.
 ///
 /// The class which provides the interface for the {@linkcode Deno.permissions}
@@ -6807,7 +6572,7 @@ extension Permissions$Typings on Permissions {
   ///  const status = await Deno.permissions.query({ name: "read", path: "/etc" });
   ///  console.log(status.state);
   ///  ```
-  _i2.Future<_i4.PermissionStatus> query(_i4.PermissionDescriptor desc) =>
+  _i2.Future<_i4.PermissionStatus> query(_i2.Object desc) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'query',
@@ -6825,8 +6590,7 @@ extension Permissions$Typings on Permissions {
   ///  const status = Deno.permissions.querySync({ name: "read", path: "/etc" });
   ///  console.log(status.state);
   ///  ```
-  _i4.PermissionStatus querySync(_i4.PermissionDescriptor desc) =>
-      _i3.callMethod(
+  _i4.PermissionStatus querySync(_i2.Object desc) => _i3.callMethod(
         this,
         'querySync',
         [desc],
@@ -6840,7 +6604,7 @@ extension Permissions$Typings on Permissions {
   ///  const status = await Deno.permissions.revoke({ name: "run" });
   ///  assert(status.state !== "granted")
   ///  ```
-  _i2.Future<_i4.PermissionStatus> revoke(_i4.PermissionDescriptor desc) =>
+  _i2.Future<_i4.PermissionStatus> revoke(_i2.Object desc) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'revoke',
@@ -6855,8 +6619,7 @@ extension Permissions$Typings on Permissions {
   ///  const status = Deno.permissions.revokeSync({ name: "run" });
   ///  assert(status.state !== "granted")
   ///  ```
-  _i4.PermissionStatus revokeSync(_i4.PermissionDescriptor desc) =>
-      _i3.callMethod(
+  _i4.PermissionStatus revokeSync(_i2.Object desc) => _i3.callMethod(
         this,
         'revokeSync',
         [desc],
@@ -6875,7 +6638,7 @@ extension Permissions$Typings on Permissions {
   ///    console.log("'env' permission is denied.");
   ///  }
   ///  ```
-  _i2.Future<_i4.PermissionStatus> request(_i4.PermissionDescriptor desc) =>
+  _i2.Future<_i4.PermissionStatus> request(_i2.Object desc) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'request',
@@ -6895,14 +6658,14 @@ extension Permissions$Typings on Permissions {
   ///    console.log("'env' permission is denied.");
   ///  }
   ///  ```
-  _i4.PermissionStatus requestSync(_i4.PermissionDescriptor desc) =>
-      _i3.callMethod(
+  _i4.PermissionStatus requestSync(_i2.Object desc) => _i3.callMethod(
         this,
         'requestSync',
         [desc],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -6973,11 +6736,12 @@ extension IInline12$Typings on IInline12 {
     _i3.setProperty(
       this,
       'env',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -7030,6 +6794,7 @@ extension IInline13$Typings on IInline13 {
   }
 }
 
+/* Source:  */
 /// Options that can be used with {@linkcode symlink} and
 /// {@linkcode symlinkSync}.
 @_i1.JS()
@@ -7039,7 +6804,7 @@ class SymlinkOptions {
   external factory SymlinkOptions._({_i2.dynamic type});
 
   factory SymlinkOptions({_i4.TypeOptions? type}) =>
-      SymlinkOptions._(type: type?.name ?? _i8.undefined);
+      SymlinkOptions._(type: type?.name ?? _i6.undefined);
 }
 
 extension SymlinkOptions$Typings on SymlinkOptions {
@@ -7058,6 +6823,7 @@ extension SymlinkOptions$Typings on SymlinkOptions {
   }
 }
 
+/* Source:  */
 /// The event yielded from an {@linkcode HttpConn} which represents an HTTP
 /// request from a remote client.
 @_i1.JS()
@@ -7070,11 +6836,11 @@ class RequestEvent {
   });
 
   factory RequestEvent({
-    _i7.Request? request,
+    _i5.Request? request,
     _i2.Future<void> Function(_i2.Object)? respondWith,
   }) =>
       RequestEvent._(
-        request: request ?? _i8.undefined,
+        request: request ?? _i6.undefined,
         respondWith: respondWith == null ? null : _i3.allowInterop(respondWith),
       );
 }
@@ -7082,7 +6848,7 @@ class RequestEvent {
 extension RequestEvent$Typings on RequestEvent {
   /// The request from the client in the form of the web platform
   /// {@linkcode Request}.
-  _i7.Request get request => _i3.getProperty(
+  _i5.Request get request => _i3.getProperty(
         this,
         'request',
       );
@@ -7094,12 +6860,21 @@ extension RequestEvent$Typings on RequestEvent {
     );
   }
 
-  _i2.Future<void> Function(_i2.Object) get respondWith => _i3.getProperty(
-        this,
-        'respondWith',
-      );
+  _i2.Future<void> Function(_i2.Object) get respondWith =>
+      (_i2.Object p0) => _i3.promiseToFuture(_i3.callMethod(
+            _i3.getProperty(
+              this,
+              'respondWith',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          ));
 }
 
+/* Source:  */
 /// The async iterable that is returned from {@linkcode Deno.serveHttp} which
 /// yields up {@linkcode RequestEvent} events, representing individual
 /// requests on the HTTP server connection.
@@ -7140,10 +6915,15 @@ extension HttpConn$Typings on HttpConn {
     );
   }
 
-  _i2.Future<_i4.RequestEvent?> Function() get nextRequest => _i3.getProperty(
-        this,
-        'nextRequest',
-      );
+  _i2.Future<_i4.RequestEvent?> Function() get nextRequest =>
+      () => _i3.promiseToFuture(_i3.callMethod(
+            _i3.getProperty(
+              this,
+              'nextRequest',
+            ),
+            r'call',
+            [this],
+          ));
   set close(void Function() value) {
     _i3.setProperty(
       this,
@@ -7152,12 +6932,17 @@ extension HttpConn$Typings on HttpConn {
     );
   }
 
-  void Function() get close => _i3.getProperty(
-        this,
-        'close',
+  void Function() get close => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'close',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 /// The object that is returned from a {@linkcode Deno.upgradeWebSocket}
 /// request.
 @_i1.JS()
@@ -7170,12 +6955,12 @@ class WebSocketUpgrade {
   });
 
   factory WebSocketUpgrade({
-    _i7.Response? response,
-    _i7.WebSocket? socket,
+    _i5.Response? response,
+    _i5.WebSocket? socket,
   }) =>
       WebSocketUpgrade._(
-        response: response ?? _i8.undefined,
-        socket: socket ?? _i8.undefined,
+        response: response ?? _i6.undefined,
+        socket: socket ?? _i6.undefined,
       );
 }
 
@@ -7183,11 +6968,11 @@ extension WebSocketUpgrade$Typings on WebSocketUpgrade {
   /// The response object that represents the HTTP response to the client,
   ///  which should be used to the {@linkcode RequestEvent} `.respondWith()` for
   ///  the upgrade to be successful.
-  _i7.Response get response => _i3.getProperty(
+  _i5.Response get response => _i3.getProperty(
         this,
         'response',
       );
-  set response(_i7.Response value) {
+  set response(_i5.Response value) {
     _i3.setProperty(
       this,
       'response',
@@ -7197,11 +6982,11 @@ extension WebSocketUpgrade$Typings on WebSocketUpgrade {
 
   /// The {@linkcode WebSocket} interface to communicate to the client via a
   ///  web socket.
-  _i7.WebSocket get socket => _i3.getProperty(
+  _i5.WebSocket get socket => _i3.getProperty(
         this,
         'socket',
       );
-  set socket(_i7.WebSocket value) {
+  set socket(_i5.WebSocket value) {
     _i3.setProperty(
       this,
       'socket',
@@ -7210,6 +6995,7 @@ extension WebSocketUpgrade$Typings on WebSocketUpgrade {
   }
 }
 
+/* Source:  */
 /// Options which can be set when performing a
 /// {@linkcode Deno.upgradeWebSocket} upgrade of a {@linkcode Request}
 @_i1.JS()
@@ -7245,7 +7031,7 @@ extension UpgradeWebSocketOptions$Typings on UpgradeWebSocketOptions {
     _i3.setProperty(
       this,
       'protocol',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -7262,11 +7048,12 @@ extension UpgradeWebSocketOptions$Typings on UpgradeWebSocketOptions {
     _i3.setProperty(
       this,
       'idleTimeout',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -7297,11 +7084,12 @@ extension IInline14$Typings on IInline14 {
     _i3.setProperty(
       this,
       'port',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// Options which can be set when using {@linkcode Deno.resolveDns}.
 @_i1.JS()
 @_i1.staticInterop
@@ -7314,11 +7102,11 @@ class ResolveDnsOptions {
 
   factory ResolveDnsOptions({
     _i4.IInline14? nameServer,
-    _i7.AbortSignal? signal,
+    _i5.AbortSignal? signal,
   }) =>
       ResolveDnsOptions._(
-        nameServer: nameServer ?? _i8.undefined,
-        signal: signal ?? _i8.undefined,
+        nameServer: nameServer ?? _i6.undefined,
+        signal: signal ?? _i6.undefined,
       );
 }
 
@@ -7335,26 +7123,27 @@ extension ResolveDnsOptions$Typings on ResolveDnsOptions {
     _i3.setProperty(
       this,
       'nameServer',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
   /// An abort signal to allow cancellation of the DNS resolution operation.
   ///  If the signal becomes aborted the resolveDns operation will be stopped
   ///  and the promise returned will be rejected with an AbortError.
-  _i7.AbortSignal? get signal => _i3.getProperty(
+  _i5.AbortSignal? get signal => _i3.getProperty(
         this,
         'signal',
       );
-  set signal(_i7.AbortSignal? value) {
+  set signal(_i5.AbortSignal? value) {
     _i3.setProperty(
       this,
       'signal',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 /// If {@linkcode Deno.resolveDns} is called with `"CAA"` record type
 /// specified, it will resolve with an array of objects with this interface.
 @_i1.JS()
@@ -7427,6 +7216,7 @@ extension CAARecord$Typings on CAARecord {
   }
 }
 
+/* Source:  */
 /// If {@linkcode Deno.resolveDns} is called with `"MX"` record type
 /// specified, it will return an array of objects with this interface.
 @_i1.JS()
@@ -7477,6 +7267,7 @@ extension MXRecord$Typings on MXRecord {
   }
 }
 
+/* Source:  */
 /// If {@linkcode Deno.resolveDns} is called with `"NAPTR"` record type
 /// specified, it will return an array of objects with this interface.
 @_i1.JS()
@@ -7584,6 +7375,7 @@ extension NAPTRRecord$Typings on NAPTRRecord {
   }
 }
 
+/* Source:  */
 /// If {@linkcode Deno.resolveDns} is called with `"SOA"` record type
 /// specified, it will return an array of objects with this interface.
 @_i1.JS()
@@ -7706,6 +7498,7 @@ extension SOARecord$Typings on SOARecord {
   }
 }
 
+/* Source:  */
 /// If {@linkcode Deno.resolveDns} is called with `"SRV"` record type
 /// specified, it will return an array of objects with this interface.
 @_i1.JS()
@@ -7783,6 +7576,7 @@ extension SRVRecord$Typings on SRVRecord {
   }
 }
 
+/* Source:  */
 /// Information for a HTTP request.
 @_i1.JS()
 @_i1.staticInterop
@@ -7809,6 +7603,7 @@ extension ServeHandlerInfo$Typings on ServeHandlerInfo {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -7840,6 +7635,7 @@ extension IInline15$Typings on IInline15 {
   }
 }
 
+/* Source:  */
 /// Options which can be set when calling {@linkcode Deno.serve}.
 @_i1.JS()
 @_i1.staticInterop
@@ -7857,7 +7653,7 @@ class ServeOptions {
   factory ServeOptions({
     _i2.num? port,
     _i2.String? hostname,
-    _i7.AbortSignal? signal,
+    _i5.AbortSignal? signal,
     _i2.bool? reusePort,
     _i2.Object Function([_i2.Object?])? onError,
     void Function(_i2.dynamic)? onListen,
@@ -7865,7 +7661,7 @@ class ServeOptions {
       ServeOptions._(
         port: port,
         hostname: hostname,
-        signal: signal ?? _i8.undefined,
+        signal: signal ?? _i6.undefined,
         reusePort: reusePort,
         onError: onError == null ? null : _i3.allowInterop(onError),
         onListen: onListen == null ? null : _i3.allowInterop(onListen),
@@ -7884,7 +7680,7 @@ extension ServeOptions$Typings on ServeOptions {
     _i3.setProperty(
       this,
       'port',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -7904,20 +7700,20 @@ extension ServeOptions$Typings on ServeOptions {
     _i3.setProperty(
       this,
       'hostname',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
   /// An {@linkcode AbortSignal} to close the server and all connections.
-  _i7.AbortSignal? get signal => _i3.getProperty(
+  _i5.AbortSignal? get signal => _i3.getProperty(
         this,
         'signal',
       );
-  set signal(_i7.AbortSignal? value) {
+  set signal(_i5.AbortSignal? value) {
     _i3.setProperty(
       this,
       'signal',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -7930,37 +7726,54 @@ extension ServeOptions$Typings on ServeOptions {
     _i3.setProperty(
       this,
       'reusePort',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
   /// The handler to invoke when route handlers throw an error.
-  _i2.Object Function([_i2.Object?])? get onError => _i3.getProperty(
-        this,
-        'onError',
-      );
+  _i2.Object Function([_i2.Object?])? get onError =>
+      ([_i2.Object? p0]) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'onError',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set onError(_i2.Object Function([_i2.Object?])? value) {
     _i3.setProperty(
       this,
       'onError',
-      value == null ? _i8.undefined : _i3.allowInterop(value),
+      value == null ? _i6.undefined : _i3.allowInterop(value),
     );
   }
 
   /// The callback which is called when the server starts listening.
-  void Function(_i2.dynamic)? get onListen => _i3.getProperty(
-        this,
-        'onListen',
-      );
+  void Function(_i2.dynamic)? get onListen =>
+      (_i2.dynamic p0) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'onListen',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set onListen(void Function(_i2.dynamic)? value) {
     _i3.setProperty(
       this,
       'onListen',
-      value == null ? _i8.undefined : _i3.allowInterop(value),
+      value == null ? _i6.undefined : _i3.allowInterop(value),
     );
   }
 }
 
+/* Source:  */
 /// Additional options which are used when opening a TLS (HTTPS) server.
 @_i1.JS()
 @_i1.staticInterop
@@ -7982,7 +7795,7 @@ class ServeTlsOptions implements _i4.ServeOptions {
     _i2.String? key,
     _i2.num? port,
     _i2.String? hostname,
-    _i7.AbortSignal? signal,
+    _i5.AbortSignal? signal,
     _i2.bool? reusePort,
     _i2.Object Function([_i2.Object?])? onError,
     void Function(_i2.dynamic)? onListen,
@@ -7992,7 +7805,7 @@ class ServeTlsOptions implements _i4.ServeOptions {
         key: key,
         port: port,
         hostname: hostname,
-        signal: signal ?? _i8.undefined,
+        signal: signal ?? _i6.undefined,
         reusePort: reusePort,
         onError: onError == null ? null : _i3.allowInterop(onError),
         onListen: onListen == null ? null : _i3.allowInterop(onListen),
@@ -8027,6 +7840,7 @@ extension ServeTlsOptions$Typings on ServeTlsOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8039,10 +7853,22 @@ class ServeInit {
 
 extension ServeInit$Typings on ServeInit {
   /// The handler to invoke to process each incoming request.
-  _i4.ServeHandler get handler => _i3.getProperty(
-        this,
-        'handler',
-      );
+  _i4.ServeHandler get handler => (
+        _i5.Request p0,
+        _i4.ServeHandlerInfo p1,
+      ) =>
+          _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'handler',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set handler(_i4.ServeHandler value) {
     _i3.setProperty(
       this,
@@ -8052,6 +7878,7 @@ extension ServeInit$Typings on ServeInit {
   }
 }
 
+/* Source:  */
 /// An instance of the server created using `Deno.serve()` API.
 @_i1.JS()
 @_i1.staticInterop
@@ -8098,9 +7925,13 @@ extension Server$Typings on Server {
     );
   }
 
-  void Function() get ref => _i3.getProperty(
-        this,
-        'ref',
+  void Function() get ref => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'ref',
+        ),
+        r'call',
+        [this],
       );
   set unref(void Function() value) {
     _i3.setProperty(
@@ -8110,12 +7941,17 @@ extension Server$Typings on Server {
     );
   }
 
-  void Function() get unref => _i3.getProperty(
-        this,
-        'unref',
+  void Function() get unref => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'unref',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8132,7 +7968,7 @@ class NetAddr {
     _i2.num? port,
   }) =>
       NetAddr._(
-        transport: transport?.name ?? _i8.undefined,
+        transport: transport?.name ?? _i6.undefined,
         hostname: hostname,
         port: port,
       );
@@ -8176,6 +8012,7 @@ extension NetAddr$Typings on NetAddr {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8190,7 +8027,7 @@ class UnixAddr {
     _i2.String? path,
   }) =>
       UnixAddr._(
-        transport: transport?.name ?? _i8.undefined,
+        transport: transport?.name ?? _i6.undefined,
         path: path,
       );
 }
@@ -8222,6 +8059,7 @@ extension UnixAddr$Typings on UnixAddr {
   }
 }
 
+/* Source:  */
 /// A generic network listener for stream-oriented protocols.
 @_i1.JS()
 @_i1.staticInterop
@@ -8237,7 +8075,7 @@ class Listener<T extends _i4.Conn> implements _i10.AsyncIterable<T> {
   });
 
   factory Listener({
-    _i4.Addr? addr,
+    _i2.Object? addr,
     _i2.num? rid,
     _i2.Future<_i4.Conn> Function()? accept,
     void Function()? close,
@@ -8245,7 +8083,7 @@ class Listener<T extends _i4.Conn> implements _i10.AsyncIterable<T> {
     void Function()? unref,
   }) =>
       Listener._(
-        addr: addr ?? _i8.undefined,
+        addr: addr ?? _i6.undefined,
         rid: rid,
         accept: accept == null ? null : _i3.allowInterop(accept),
         close: close == null ? null : _i3.allowInterop(close),
@@ -8256,7 +8094,7 @@ class Listener<T extends _i4.Conn> implements _i10.AsyncIterable<T> {
 
 extension Listener$Typings<T extends _i4.Conn> on Listener<T> {
   /// Return the address of the `Listener`.
-  _i4.Addr get addr => _i3.getProperty(
+  _i2.Object get addr => _i3.getProperty(
         this,
         'addr',
       );
@@ -8274,10 +8112,15 @@ extension Listener$Typings<T extends _i4.Conn> on Listener<T> {
     );
   }
 
-  _i2.Future<T> Function() get accept => _i3.getProperty(
-        this,
-        'accept',
-      );
+  _i2.Future<T> Function() get accept =>
+      () => _i3.promiseToFuture(_i3.callMethod(
+            _i3.getProperty(
+              this,
+              'accept',
+            ),
+            r'call',
+            [this],
+          ));
   set close(void Function() value) {
     _i3.setProperty(
       this,
@@ -8286,9 +8129,13 @@ extension Listener$Typings<T extends _i4.Conn> on Listener<T> {
     );
   }
 
-  void Function() get close => _i3.getProperty(
-        this,
-        'close',
+  void Function() get close => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'close',
+        ),
+        r'call',
+        [this],
       );
   set ref(void Function() value) {
     _i3.setProperty(
@@ -8298,9 +8145,13 @@ extension Listener$Typings<T extends _i4.Conn> on Listener<T> {
     );
   }
 
-  void Function() get ref => _i3.getProperty(
-        this,
-        'ref',
+  void Function() get ref => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'ref',
+        ),
+        r'call',
+        [this],
       );
   set unref(void Function() value) {
     _i3.setProperty(
@@ -8310,12 +8161,17 @@ extension Listener$Typings<T extends _i4.Conn> on Listener<T> {
     );
   }
 
-  void Function() get unref => _i3.getProperty(
-        this,
-        'unref',
+  void Function() get unref => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'unref',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8335,11 +8191,11 @@ class Conn implements _i4.Reader, _i4.Writer, _i4.Closer {
   });
 
   factory Conn({
-    _i4.Addr? localAddr,
-    _i4.Addr? remoteAddr,
+    _i2.Object? localAddr,
+    _i2.Object? remoteAddr,
     _i2.num? rid,
-    _i7.ReadableStream<_i9.Uint8List>? readable,
-    _i7.WritableStream<_i9.Uint8List>? writable,
+    _i5.ReadableStream<_i9.Uint8List>? readable,
+    _i5.WritableStream<_i9.Uint8List>? writable,
     _i2.Future<void> Function()? closeWrite,
     void Function()? ref,
     void Function()? unref,
@@ -8348,11 +8204,11 @@ class Conn implements _i4.Reader, _i4.Writer, _i4.Closer {
     void Function()? close,
   }) =>
       Conn._(
-        localAddr: localAddr ?? _i8.undefined,
-        remoteAddr: remoteAddr ?? _i8.undefined,
+        localAddr: localAddr ?? _i6.undefined,
+        remoteAddr: remoteAddr ?? _i6.undefined,
         rid: rid,
-        readable: readable ?? _i8.undefined,
-        writable: writable ?? _i8.undefined,
+        readable: readable ?? _i6.undefined,
+        writable: writable ?? _i6.undefined,
         closeWrite: closeWrite == null ? null : _i3.allowInterop(closeWrite),
         ref: ref == null ? null : _i3.allowInterop(ref),
         unref: unref == null ? null : _i3.allowInterop(unref),
@@ -8364,13 +8220,13 @@ class Conn implements _i4.Reader, _i4.Writer, _i4.Closer {
 
 extension Conn$Typings on Conn {
   /// The local address of the connection.
-  _i4.Addr get localAddr => _i3.getProperty(
+  _i2.Object get localAddr => _i3.getProperty(
         this,
         'localAddr',
       );
 
   /// The remote address of the connection.
-  _i4.Addr get remoteAddr => _i3.getProperty(
+  _i2.Object get remoteAddr => _i3.getProperty(
         this,
         'remoteAddr',
       );
@@ -8380,11 +8236,11 @@ extension Conn$Typings on Conn {
         this,
         'rid',
       );
-  _i7.ReadableStream<_i9.Uint8List> get readable => _i3.getProperty(
+  _i5.ReadableStream<_i9.Uint8List> get readable => _i3.getProperty(
         this,
         'readable',
       );
-  _i7.WritableStream<_i9.Uint8List> get writable => _i3.getProperty(
+  _i5.WritableStream<_i9.Uint8List> get writable => _i3.getProperty(
         this,
         'writable',
       );
@@ -8396,10 +8252,15 @@ extension Conn$Typings on Conn {
     );
   }
 
-  _i2.Future<void> Function() get closeWrite => _i3.getProperty(
-        this,
-        'closeWrite',
-      );
+  _i2.Future<void> Function() get closeWrite =>
+      () => _i3.promiseToFuture(_i3.callMethod(
+            _i3.getProperty(
+              this,
+              'closeWrite',
+            ),
+            r'call',
+            [this],
+          ));
   set ref(void Function() value) {
     _i3.setProperty(
       this,
@@ -8408,9 +8269,13 @@ extension Conn$Typings on Conn {
     );
   }
 
-  void Function() get ref => _i3.getProperty(
-        this,
-        'ref',
+  void Function() get ref => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'ref',
+        ),
+        r'call',
+        [this],
       );
   set unref(void Function() value) {
     _i3.setProperty(
@@ -8420,12 +8285,17 @@ extension Conn$Typings on Conn {
     );
   }
 
-  void Function() get unref => _i3.getProperty(
-        this,
-        'unref',
+  void Function() get unref => () => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'unref',
+        ),
+        r'call',
+        [this],
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8435,6 +8305,7 @@ class TlsHandshakeInfo {
   factory TlsHandshakeInfo() => TlsHandshakeInfo._();
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8453,22 +8324,22 @@ class TlsConn implements _i4.Conn {
 
   factory TlsConn({
     _i2.Future<_i4.TlsHandshakeInfo> Function()? handshake,
-    _i4.Addr? localAddr,
-    _i4.Addr? remoteAddr,
+    _i2.Object? localAddr,
+    _i2.Object? remoteAddr,
     _i2.num? rid,
-    _i7.ReadableStream<_i9.Uint8List>? readable,
-    _i7.WritableStream<_i9.Uint8List>? writable,
+    _i5.ReadableStream<_i9.Uint8List>? readable,
+    _i5.WritableStream<_i9.Uint8List>? writable,
     _i2.Future<void> Function()? closeWrite,
     void Function()? ref,
     void Function()? unref,
   }) =>
       TlsConn._(
         handshake: handshake == null ? null : _i3.allowInterop(handshake),
-        localAddr: localAddr ?? _i8.undefined,
-        remoteAddr: remoteAddr ?? _i8.undefined,
+        localAddr: localAddr ?? _i6.undefined,
+        remoteAddr: remoteAddr ?? _i6.undefined,
         rid: rid,
-        readable: readable ?? _i8.undefined,
-        writable: writable ?? _i8.undefined,
+        readable: readable ?? _i6.undefined,
+        writable: writable ?? _i6.undefined,
         closeWrite: closeWrite == null ? null : _i3.allowInterop(closeWrite),
         ref: ref == null ? null : _i3.allowInterop(ref),
         unref: unref == null ? null : _i3.allowInterop(unref),
@@ -8484,12 +8355,18 @@ extension TlsConn$Typings on TlsConn {
     );
   }
 
-  _i2.Future<_i4.TlsHandshakeInfo> Function() get handshake => _i3.getProperty(
-        this,
-        'handshake',
-      );
+  _i2.Future<_i4.TlsHandshakeInfo> Function() get handshake =>
+      () => _i3.promiseToFuture(_i3.callMethod(
+            _i3.getProperty(
+              this,
+              'handshake',
+            ),
+            r'call',
+            [this],
+          ));
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8539,11 +8416,12 @@ extension ListenOptions$Typings on ListenOptions {
     _i3.setProperty(
       this,
       'hostname',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8563,12 +8441,13 @@ class TcpListenOptions implements _i4.ListenOptions {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline21 {}
+class IInline70 {}
 
-extension IInline21$Typings on IInline21 {
+extension IInline70$Typings on IInline70 {
   _i2.String? get transport => _i3.getProperty(
         this,
         'transport',
@@ -8577,11 +8456,12 @@ extension IInline21$Typings on IInline21 {
     _i3.setProperty(
       this,
       'transport',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8623,7 +8503,7 @@ extension ListenTlsOptions$Typings on ListenTlsOptions {
     _i3.setProperty(
       this,
       'key',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8636,7 +8516,7 @@ extension ListenTlsOptions$Typings on ListenTlsOptions {
     _i3.setProperty(
       this,
       'cert',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8653,7 +8533,7 @@ extension ListenTlsOptions$Typings on ListenTlsOptions {
     _i3.setProperty(
       this,
       'certFile',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8669,7 +8549,7 @@ extension ListenTlsOptions$Typings on ListenTlsOptions {
     _i3.setProperty(
       this,
       'keyFile',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8681,7 +8561,7 @@ extension ListenTlsOptions$Typings on ListenTlsOptions {
     _i3.setProperty(
       this,
       'transport',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8697,11 +8577,12 @@ extension ListenTlsOptions$Typings on ListenTlsOptions {
     _i3.setProperty(
       this,
       'alpnProtocols',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8750,7 +8631,7 @@ extension ConnectOptions$Typings on ConnectOptions {
     _i3.setProperty(
       this,
       'hostname',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8762,11 +8643,12 @@ extension ConnectOptions$Typings on ConnectOptions {
     _i3.setProperty(
       this,
       'transport',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8787,11 +8669,11 @@ class TcpConn implements _i4.Conn {
   factory TcpConn({
     void Function([_i2.bool?])? setNoDelay,
     void Function([_i2.bool?])? setKeepAlive,
-    _i4.Addr? localAddr,
-    _i4.Addr? remoteAddr,
+    _i2.Object? localAddr,
+    _i2.Object? remoteAddr,
     _i2.num? rid,
-    _i7.ReadableStream<_i9.Uint8List>? readable,
-    _i7.WritableStream<_i9.Uint8List>? writable,
+    _i5.ReadableStream<_i9.Uint8List>? readable,
+    _i5.WritableStream<_i9.Uint8List>? writable,
     _i2.Future<void> Function()? closeWrite,
     void Function()? ref,
     void Function()? unref,
@@ -8800,11 +8682,11 @@ class TcpConn implements _i4.Conn {
         setNoDelay: setNoDelay == null ? null : _i3.allowInterop(setNoDelay),
         setKeepAlive:
             setKeepAlive == null ? null : _i3.allowInterop(setKeepAlive),
-        localAddr: localAddr ?? _i8.undefined,
-        remoteAddr: remoteAddr ?? _i8.undefined,
+        localAddr: localAddr ?? _i6.undefined,
+        remoteAddr: remoteAddr ?? _i6.undefined,
         rid: rid,
-        readable: readable ?? _i8.undefined,
-        writable: writable ?? _i8.undefined,
+        readable: readable ?? _i6.undefined,
+        writable: writable ?? _i6.undefined,
         closeWrite: closeWrite == null ? null : _i3.allowInterop(closeWrite),
         ref: ref == null ? null : _i3.allowInterop(ref),
         unref: unref == null ? null : _i3.allowInterop(unref),
@@ -8820,10 +8702,18 @@ extension TcpConn$Typings on TcpConn {
     );
   }
 
-  void Function([_i2.bool?]) get setNoDelay => _i3.getProperty(
-        this,
-        'setNoDelay',
-      );
+  void Function([_i2.bool?]) get setNoDelay =>
+      ([_i2.bool? p0]) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'setNoDelay',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i6.undefined,
+            ],
+          );
   set setKeepAlive(void Function([_i2.bool?]) value) {
     _i3.setProperty(
       this,
@@ -8832,12 +8722,21 @@ extension TcpConn$Typings on TcpConn {
     );
   }
 
-  void Function([_i2.bool?]) get setKeepAlive => _i3.getProperty(
-        this,
-        'setKeepAlive',
-      );
+  void Function([_i2.bool?]) get setKeepAlive =>
+      ([_i2.bool? p0]) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'setKeepAlive',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i6.undefined,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8854,27 +8753,28 @@ class UnixConn implements _i4.Conn {
   });
 
   factory UnixConn({
-    _i4.Addr? localAddr,
-    _i4.Addr? remoteAddr,
+    _i2.Object? localAddr,
+    _i2.Object? remoteAddr,
     _i2.num? rid,
-    _i7.ReadableStream<_i9.Uint8List>? readable,
-    _i7.WritableStream<_i9.Uint8List>? writable,
+    _i5.ReadableStream<_i9.Uint8List>? readable,
+    _i5.WritableStream<_i9.Uint8List>? writable,
     _i2.Future<void> Function()? closeWrite,
     void Function()? ref,
     void Function()? unref,
   }) =>
       UnixConn._(
-        localAddr: localAddr ?? _i8.undefined,
-        remoteAddr: remoteAddr ?? _i8.undefined,
+        localAddr: localAddr ?? _i6.undefined,
+        remoteAddr: remoteAddr ?? _i6.undefined,
         rid: rid,
-        readable: readable ?? _i8.undefined,
-        writable: writable ?? _i8.undefined,
+        readable: readable ?? _i6.undefined,
+        writable: writable ?? _i6.undefined,
         closeWrite: closeWrite == null ? null : _i3.allowInterop(closeWrite),
         ref: ref == null ? null : _i3.allowInterop(ref),
         unref: unref == null ? null : _i3.allowInterop(unref),
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -8928,7 +8828,7 @@ extension ConnectTlsOptions$Typings on ConnectTlsOptions {
     _i3.setProperty(
       this,
       'hostname',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8944,7 +8844,7 @@ extension ConnectTlsOptions$Typings on ConnectTlsOptions {
     _i3.setProperty(
       this,
       'certFile',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8961,7 +8861,7 @@ extension ConnectTlsOptions$Typings on ConnectTlsOptions {
     _i3.setProperty(
       this,
       'caCerts',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -8977,11 +8877,12 @@ extension ConnectTlsOptions$Typings on ConnectTlsOptions {
     _i3.setProperty(
       this,
       'alpnProtocols',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -9016,7 +8917,7 @@ extension StartTlsOptions$Typings on StartTlsOptions {
     _i3.setProperty(
       this,
       'hostname',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -9033,7 +8934,7 @@ extension StartTlsOptions$Typings on StartTlsOptions {
     _i3.setProperty(
       this,
       'caCerts',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 
@@ -9049,11 +8950,12 @@ extension StartTlsOptions$Typings on StartTlsOptions {
     _i3.setProperty(
       this,
       'alpnProtocols',
-      value ?? _i8.undefined,
+      value ?? _i6.undefined,
     );
   }
 }
 
+/* Source: globalThis */
 @_i1.JS('Deno')
 @_i1.staticInterop
 class $ModuleDeno {}
@@ -9122,7 +9024,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   ///  // do something with the text
   /// }
   /// ```
-  _Intersection32 get stdin => _i3.getProperty(
+  _Intersection40 get stdin => _i3.getProperty(
         this,
         'stdin',
       );
@@ -9134,7 +9036,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   ///
   /// These are low level constructs, and the {@linkcode console} interface is a
   /// more straight forward way to interact with `stdout` and `stderr`.
-  _Intersection33 get stdout => _i3.getProperty(
+  _Intersection41 get stdout => _i3.getProperty(
         this,
         'stdout',
       );
@@ -9146,7 +9048,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   ///
   /// These are low level constructs, and the {@linkcode console} interface is a
   /// more straight forward way to interact with `stdout` and `stderr`.
-  _Intersection34 get stderr => _i3.getProperty(
+  _Intersection42 get stderr => _i3.getProperty(
         this,
         'stderr',
       );
@@ -9698,11 +9600,11 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   ///   }
   /// );
   /// ```
-  void _bench$2(_i2.Object Function(_i4.BenchContext) fn) {
+  void _bench$2(_i7.FutureOr<void> Function(_i4.BenchContext) fn) {
     _i3.callMethod(
       this,
       'bench',
-      [_i3.allowInterop(fn)],
+      [_i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0)))],
     );
   }
 
@@ -9856,14 +9758,14 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   /// ```
   void _bench$3(
     _i2.String name,
-    _i2.Object Function(_i4.BenchContext) fn,
+    _i7.FutureOr<void> Function(_i4.BenchContext) fn,
   ) {
     _i3.callMethod(
       this,
       'bench',
       [
         name,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -10017,15 +9919,15 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   /// );
   /// ```
   void _bench$4(
-    _i6.Omit<_i4.BenchDefinition, _i2.String> options,
-    _i2.Object Function(_i4.BenchContext) fn,
+    _i8.Omit<_i4.BenchDefinition, _i2.String> options,
+    _i7.FutureOr<void> Function(_i4.BenchContext) fn,
   ) {
     _i3.callMethod(
       this,
       'bench',
       [
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -10179,15 +10081,15 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   /// );
   /// ```
   void _bench$5(
-    _i6.Omit<_i4.BenchDefinition, _i4.BenchOptions> options,
-    _i2.Object Function(_i4.BenchContext) fn,
+    _i8.Omit<_i4.BenchDefinition, _i4.BenchOptions> options,
+    _i7.FutureOr<void> Function(_i4.BenchContext) fn,
   ) {
     _i3.callMethod(
       this,
       'bench',
       [
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -10342,8 +10244,8 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   /// ```
   void _bench$6(
     _i2.String name,
-    _i6.Omit<_i4.BenchDefinition, _i4.Bench> options,
-    _i2.Object Function(_i4.BenchContext) fn,
+    _i8.Omit<_i4.BenchDefinition, _i4.Bench> options,
+    _i7.FutureOr<void> Function(_i4.BenchContext) fn,
   ) {
     _i3.callMethod(
       this,
@@ -10351,7 +10253,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       [
         name,
         options,
-        _i3.allowInterop(fn),
+        _i3.allowInterop((p0) => _i6.Promise.futureOr(() => fn(p0))),
       ],
     );
   }
@@ -10656,7 +10558,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
     ///   }
     /// );
     /// ```
-    void Function(_i2.Object Function(_i4.BenchContext) fn) $2,
+    void Function(_i7.FutureOr<void> Function(_i4.BenchContext) fn) $2,
 
     /// Register a benchmark test which will be run when `deno bench` is used on
     /// the command line and the containing module looks like a bench module.
@@ -10808,7 +10710,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
     /// ```
     void Function(
       _i2.String name,
-      _i2.Object Function(_i4.BenchContext) fn,
+      _i7.FutureOr<void> Function(_i4.BenchContext) fn,
     ) $3,
 
     /// Register a benchmark test which will be run when `deno bench` is used on
@@ -10960,8 +10862,8 @@ extension $ModuleDeno$Typings on $ModuleDeno {
     /// );
     /// ```
     void Function(
-      _i6.Omit<_i4.BenchDefinition, _i2.String> options,
-      _i2.Object Function(_i4.BenchContext) fn,
+      _i8.Omit<_i4.BenchDefinition, _i2.String> options,
+      _i7.FutureOr<void> Function(_i4.BenchContext) fn,
     ) $4,
 
     /// Register a benchmark test which will be run when `deno bench` is used on
@@ -11113,8 +11015,8 @@ extension $ModuleDeno$Typings on $ModuleDeno {
     /// );
     /// ```
     void Function(
-      _i6.Omit<_i4.BenchDefinition, _i4.BenchOptions> options,
-      _i2.Object Function(_i4.BenchContext) fn,
+      _i8.Omit<_i4.BenchDefinition, _i4.BenchOptions> options,
+      _i7.FutureOr<void> Function(_i4.BenchContext) fn,
     ) $5,
 
     /// Register a benchmark test which will be run when `deno bench` is used on
@@ -11267,8 +11169,8 @@ extension $ModuleDeno$Typings on $ModuleDeno {
     /// ```
     void Function(
       _i2.String name,
-      _i6.Omit<_i4.BenchDefinition, _i4.Bench> options,
-      _i2.Object Function(_i4.BenchContext) fn,
+      _i8.Omit<_i4.BenchDefinition, _i4.Bench> options,
+      _i7.FutureOr<void> Function(_i4.BenchContext) fn,
     ) $6,
   }) get bench => (
         $1: _bench$1,
@@ -11291,7 +11193,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   _i2.Never exit([_i2.num? code]) => _i3.callMethod(
         this,
         'exit',
-        [code ?? _i8.undefined],
+        [code ?? _i6.undefined],
       );
 
   /// Returns the path to the current deno executable.
@@ -11402,7 +11304,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           src,
           dst,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -11416,7 +11318,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'iter',
         [
           r,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -11430,7 +11332,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'iterSync',
         [
           r,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -11456,7 +11358,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'open',
         [
           path,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -11482,7 +11384,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'openSync',
         [
           path,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -11948,7 +11850,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'mkdir',
         [
           path,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -11972,7 +11874,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       'mkdirSync',
       [
         path,
-        options ?? _i8.undefined,
+        options ?? _i6.undefined,
       ],
     );
   }
@@ -11998,7 +11900,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'makeTempDir',
-        [options ?? _i8.undefined],
+        [options ?? _i6.undefined],
       ));
 
   /// Synchronously creates a new temporary directory in the default directory
@@ -12021,7 +11923,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   _i2.String makeTempDirSync([_i4.MakeTempOptions? options]) => _i3.callMethod(
         this,
         'makeTempDirSync',
-        [options ?? _i8.undefined],
+        [options ?? _i6.undefined],
       );
 
   /// Creates a new temporary file in the default directory for temporary
@@ -12046,7 +11948,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'makeTempFile',
-        [options ?? _i8.undefined],
+        [options ?? _i6.undefined],
       ));
 
   /// Synchronously creates a new temporary file in the default directory for
@@ -12070,7 +11972,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   _i2.String makeTempFileSync([_i4.MakeTempOptions? options]) => _i3.callMethod(
         this,
         'makeTempFileSync',
-        [options ?? _i8.undefined],
+        [options ?? _i6.undefined],
       );
 
   /// Changes the permission of a specific file/directory of specified path.
@@ -12161,8 +12063,8 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'chown',
         [
           path,
-          uid ?? _i8.undefined,
-          gid ?? _i8.undefined,
+          uid ?? _i6.undefined,
+          gid ?? _i6.undefined,
         ],
       ));
 
@@ -12187,8 +12089,8 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       'chownSync',
       [
         path,
-        uid ?? _i8.undefined,
-        gid ?? _i8.undefined,
+        uid ?? _i6.undefined,
+        gid ?? _i6.undefined,
       ],
     );
   }
@@ -12213,7 +12115,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'remove',
         [
           path,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -12237,7 +12139,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       'removeSync',
       [
         path,
-        options ?? _i8.undefined,
+        options ?? _i6.undefined,
       ],
     );
   }
@@ -12318,7 +12220,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'readTextFile',
         [
           path,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -12357,7 +12259,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'readFile',
         [
           path,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -12634,7 +12536,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           path,
           data,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -12663,7 +12565,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       [
         path,
         data,
-        options ?? _i8.undefined,
+        options ?? _i6.undefined,
       ],
     );
   }
@@ -12688,7 +12590,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           path,
           data,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -12712,7 +12614,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       [
         path,
         data,
-        options ?? _i8.undefined,
+        options ?? _i6.undefined,
       ],
     );
   }
@@ -12745,7 +12647,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'truncate',
         [
           name,
-          len ?? _i8.undefined,
+          len ?? _i6.undefined,
         ],
       ));
 
@@ -12779,7 +12681,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       'truncateSync',
       [
         name,
-        len ?? _i8.undefined,
+        len ?? _i6.undefined,
       ],
     );
   }
@@ -12874,7 +12776,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'watchFs',
         [
           paths,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -12981,7 +12883,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'inspect',
         [
           value,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -13006,7 +12908,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           oldpath,
           newpath,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -13031,7 +12933,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       [
         oldpath,
         newpath,
-        options ?? _i8.undefined,
+        options ?? _i6.undefined,
       ],
     );
   }
@@ -13080,7 +12982,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'ftruncate',
         [
           rid,
-          len ?? _i8.undefined,
+          len ?? _i6.undefined,
         ],
       ));
 
@@ -13129,7 +13031,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       'ftruncateSync',
       [
         rid,
-        len ?? _i8.undefined,
+        len ?? _i6.undefined,
       ],
     );
   }
@@ -13342,7 +13244,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   /// This operation does not yet consume the request or open the websocket. This
   /// only happens once the returned response has been passed to `respondWith()`.
   _i4.WebSocketUpgrade upgradeWebSocket(
-    _i7.Request request, [
+    _i5.Request request, [
     _i4.UpgradeWebSocketOptions? options,
   ]) =>
       _i3.callMethod(
@@ -13350,7 +13252,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'upgradeWebSocket',
         [
           request,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       );
 
@@ -13384,7 +13286,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       'kill',
       [
         pid,
-        signo?.name ?? _i8.undefined ?? _i8.undefined,
+        signo?.name ?? _i6.undefined ?? _i6.undefined,
       ],
     );
   }
@@ -13419,7 +13321,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           query,
           recordType.name,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -13453,7 +13355,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           query,
           recordType,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -13487,7 +13389,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           query,
           recordType,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -13521,7 +13423,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           query,
           recordType,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -13555,7 +13457,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           query,
           recordType,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -13589,7 +13491,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           query,
           recordType,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -13623,7 +13525,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           query,
           recordType,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -13657,7 +13559,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         [
           query,
           recordType.name,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -14550,7 +14452,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
         'startTls',
         [
           conn,
-          options ?? _i8.undefined,
+          options ?? _i6.undefined,
         ],
       ));
 
@@ -14570,6 +14472,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
       ));
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

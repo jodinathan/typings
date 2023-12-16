@@ -146,14 +146,16 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
           {required Expression argument,
           bool isNullable = false,
           bool isOptional = false,
-          required List<InteropRef> typeArgs}) =>
+          required List<InteropRef> typeArgs,
+          Reference? target}) =>
       argument;
 
   static Expression _fromListInterop(
       {required Expression argument,
       bool isNullable = false,
       bool isOptional = false,
-      required List<InteropRef> typeArgs}) {
+      required List<InteropRef> typeArgs,
+      Reference? target}) {
     final ta = typeArgs.firstOrNull;
     final itemAccessor = refer('i');
 
@@ -237,7 +239,8 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
       {required Expression argument,
       bool isNullable,
       bool isOptional,
-      required List<InteropRef> typeArgs}) makeFromInterop;
+      required List<InteropRef> typeArgs,
+      Reference? target}) makeFromInterop;
 
   InteropRef get asRef => InteropRef(this);
 
@@ -280,7 +283,8 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
           {required Expression argument,
           bool isNullable = false,
           bool isOptional = false,
-          required List<InteropRef> typeArgs}) =>
+          required List<InteropRef> typeArgs,
+          Reference? target}) =>
       makeFromInterop(
           argument: argument,
           isNullable: isNullable,

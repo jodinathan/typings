@@ -66,7 +66,8 @@ mixin InteropDelegateType on InteropType, InteropDiamondType {
           {required Expression argument,
           bool isNullable = false,
           bool isOptional = false,
-          required List<InteropRef> typeArgs}) =>
+          required List<InteropRef> typeArgs,
+          Reference? target}) =>
       delegate.fromInterop(argument,
-          isNullable: isNullable, isOptional: isOptional);
+          isNullable: isNullable, isOptional: isOptional, target: target);
 }

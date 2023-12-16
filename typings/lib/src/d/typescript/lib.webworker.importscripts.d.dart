@@ -13,7 +13,7 @@ void importScripts([_i2.Iterable<_i2.dynamic>? urls]) {
     'importScripts',
     [...?urls],
   );
-}
+} /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop

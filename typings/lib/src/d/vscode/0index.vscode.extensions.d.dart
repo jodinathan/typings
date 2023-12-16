@@ -9,21 +9,17 @@ import 'dart:js_util' as _i4;
 @_i1.JS('vscode.extensions')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class _OnDidChangeAccessor {}
-
+/* Source: globalThis */
 @_i1.JS('vscode.extensions')
 @_i1.staticInterop
 class $ModuleExtensions {}
 
 extension $ModuleExtensions$Typings on $ModuleExtensions {
   /// All extensions currently known to the system.
-  _i2.List<_i3.Extension<_i2.dynamic>> get all => ((_i4.getProperty(
+  _i2.List<_i3.Extension<_i2.dynamic>> get all => (_i4.getProperty(
         this,
         'all',
-      )) as _i2.List)
+      ) as _i2.List)
           .cast();
 
   /// An event which fires when `extensions.all` changes. This can happen when extensions are
@@ -41,6 +37,7 @@ extension $ModuleExtensions$Typings on $ModuleExtensions {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

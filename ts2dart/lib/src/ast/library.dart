@@ -23,7 +23,7 @@ import 'property.dart';
 import 'types/type.dart';
 import 'types/const.dart';
 
-const removeGlobalInline = false;
+const removeGlobalInline = true;
 
 class InteropTypeException implements Exception {
   InteropTypeException(this.type, this.action, this.original, this.st);
@@ -86,6 +86,7 @@ class InteropLibrary with InteropItem {
       isInline: true,
       isPrivate: true,
       addAnonymousFlag: true,
+      declaredAsVar: false,
       source: 'globalThis');
   List<InteropNamedType> get structs =>
       [...enums, ...classes, ...typedefs, ...interfaces];
@@ -503,8 +504,13 @@ class InteropLibrary with InteropItem {
 
         final needsGlobal = swap == null;
 
+        if (needsGlobal) {
+          continue;
+        }
+
         if (!needsGlobal) {
           if (swap == cl) {
+            logger.info('Skipping declared var ${v.name} because same type');
             continue;
           }
 
@@ -547,6 +553,10 @@ class InteropLibrary with InteropItem {
           }
         }
 
+        if (swap.name == 'Headers') {
+          logger.info('HEADERS!!');
+        }
+
         if (!cl.isEmpty()) {
           final target = InteropRef(module.makeDeclaredVar(v.name));
 
@@ -579,10 +589,13 @@ class InteropLibrary with InteropItem {
           }
 
           for (final item in cl.properties) {
-            final existant = swap.properties.firstWhereOrNull((it) =>
-                it.name == item.name &&
-                it.type == item.type &&
-                it.isStatic == !needsGlobal);
+            final existant = swap.properties.firstWhereOrNull(
+                (it) => it.name == item.name && it.type == item.type);
+            //&& it.isStatic == !needsGlobal);
+
+            if (item.name == 'STENCIL_FUNC') {
+              logger.info('STENCIL_FUNC! ${existant == null}/${swap.properties.firstWhereOrNull((it) => it.name == item.name) == null} -> swap: ${swap.name}, cl: ${cl.name}');
+            }
 
             if (existant != null) {
               continue;

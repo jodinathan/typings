@@ -7,8 +7,7 @@ import 'lib.es5.intl.d.dart' as _i3;
 import '/d/core.dart' as _i4;
 import 'dart:js_util' as _i5;
 import 'null_comon.intl.d.dart' as _i6;
-import 'lib.es5.d.dart' as _i7;
-import 'lib.es2015.iterable.d.dart' as _i8;
+import 'lib.es2015.iterable.d.dart' as _i7;
 
 @_i1.JS('Intl')
 external _i2.Object _self;
@@ -431,11 +430,11 @@ enum PluralRulesOptionsLocaleMatcherOptions {
   final _i2.String value;
 }
 
-enum IInline23LocaleMatcherOptions {
+enum IInline25LocaleMatcherOptions {
   lookup(r'lookup'),
   bestFit(r'best fit');
 
-  const IInline23LocaleMatcherOptions(this.value);
+  const IInline25LocaleMatcherOptions(this.value);
 
   final _i2.String value;
 }
@@ -731,6 +730,7 @@ typedef ListFormatLocaleMatcher = _i3.ListFormatLocaleMatcherOptions;
 typedef ListFormatType = _i3.ListFormatTypeOptions;
 typedef ListFormatStyle = _i3.ListFormatStyleOptions;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -866,6 +866,7 @@ extension CollatorOptions$Typings on CollatorOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -986,6 +987,7 @@ extension ResolvedCollatorOptions$Typings on ResolvedCollatorOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class Collator {
@@ -1035,10 +1037,22 @@ extension Collator$Typings on Collator {
   _i2.num Function(
     _i2.String,
     _i2.String,
-  ) get compare => _i5.getProperty(
-        this,
-        'compare',
-      );
+  ) get compare => (
+        _i2.String p0,
+        _i2.String p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'compare',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set resolvedOptions(_i3.ResolvedCollatorOptions Function() value) {
     _i5.setProperty(
       this,
@@ -1047,51 +1061,18 @@ extension Collator$Typings on Collator {
     );
   }
 
-  _i3.ResolvedCollatorOptions Function() get resolvedOptions => _i5.getProperty(
-        this,
-        'resolvedOptions',
-      );
+  _i3.ResolvedCollatorOptions Function() get resolvedOptions =>
+      () => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolvedOptions',
+            ),
+            r'call',
+            [this],
+          );
 }
 
-@_i1.JS()
-@_i1.staticInterop
-class IInline3 {
-  static set supportedLocalesOf(
-      _i2.List<_i2.String> Function(
-        _i2.Object, [
-        _i3.CollatorOptions?,
-      ]) value) {
-    _i5.setProperty(
-      _i6.target12,
-      'supportedLocalesOf',
-      _i5.allowInterop(value),
-    );
-  }
-}
-
-extension IInline3$Typings on IInline3 {
-  _i2.List<_i2.String> Function(
-    _i2.Object, [
-    _i3.CollatorOptions?,
-  ]) get supportedLocalesOf => _i5.getProperty(
-        this,
-        'supportedLocalesOf',
-      );
-  _i3.Collator call([
-    _i2.Object? locales,
-    _i3.CollatorOptions? options,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'call',
-        [
-          this,
-          locales ?? _i4.undefined,
-          options ?? _i4.undefined,
-        ],
-      );
-}
-
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1359,6 +1340,7 @@ extension NumberFormatOptions$Typings on NumberFormatOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -1641,19 +1623,39 @@ extension ResolvedNumberFormatOptions$Typings on ResolvedNumberFormatOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
-@_i1.anonymous
 class NumberFormat {
-  external factory NumberFormat._({_i2.dynamic formatToParts});
+  factory NumberFormat([
+    _i2.Object? locales,
+    _i3.NumberFormatOptions? options,
+  ]) =>
+      _i5.callConstructor(
+        _declaredNumberFormat,
+        [
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
+        ],
+      );
 
-  factory NumberFormat(
-          {_i2.List<_i3.NumberFormatPart> Function([_i2.Object?])?
-              formatToParts}) =>
-      NumberFormat._(
-          formatToParts:
-              formatToParts == null ? null : _i5.allowInterop(formatToParts));
+  static set supportedLocalesOf(
+      _i2.List<_i2.String> Function(
+        _i2.Object, [
+        _i3.NumberFormatOptions?,
+      ]) value) {
+    _i5.setProperty(
+      _i6.target13,
+      'supportedLocalesOf',
+      _i5.allowInterop(value),
+    );
+  }
 }
+
+_i2.Object get _declaredNumberFormat => _i5.getProperty(
+      _self,
+      'NumberFormat',
+    );
 
 extension NumberFormat$Typings on NumberFormat {
   set formatToParts(
@@ -1666,10 +1668,18 @@ extension NumberFormat$Typings on NumberFormat {
   }
 
   _i2.List<_i3.NumberFormatPart> Function([_i2.Object?]) get formatToParts =>
-      _i5.getProperty(
-        this,
-        'formatToParts',
-      );
+      ([_i2.Object? p0]) => (_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'formatToParts',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
+          ) as _i2.List)
+              .cast();
   _i2.String _format$1(_i2.num value) => _i5.callMethod(
         this,
         'format',
@@ -1710,6 +1720,7 @@ extension NumberFormat$Typings on NumberFormat {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2074,6 +2085,7 @@ extension DateTimeFormatOptions$Typings on DateTimeFormatOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2420,43 +2432,39 @@ extension ResolvedDateTimeFormatOptions$Typings
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
-@_i1.anonymous
 class DateTimeFormat {
-  external factory DateTimeFormat._({
-    _i2.dynamic format,
-    _i2.dynamic resolvedOptions,
-    _i2.dynamic formatToParts,
-    _i2.dynamic formatRange,
-    _i2.dynamic formatRangeToParts,
-  });
-
-  factory DateTimeFormat({
-    _i2.String Function([_i2.Object?])? format,
-    _i3.ResolvedDateTimeFormatOptions Function()? resolvedOptions,
-    _i2.List<_i3.DateTimeFormatPart> Function([_i2.Object?])? formatToParts,
-    _i2.String Function(
-      _i2.Object,
-      _i2.Object,
-    )? formatRange,
-    _i2.List<_i3.DateTimeRangeFormatPart> Function(
-      _i2.Object,
-      _i2.Object,
-    )? formatRangeToParts,
-  }) =>
-      DateTimeFormat._(
-        format: format == null ? null : _i5.allowInterop(format),
-        resolvedOptions:
-            resolvedOptions == null ? null : _i5.allowInterop(resolvedOptions),
-        formatToParts:
-            formatToParts == null ? null : _i5.allowInterop(formatToParts),
-        formatRange: formatRange == null ? null : _i5.allowInterop(formatRange),
-        formatRangeToParts: formatRangeToParts == null
-            ? null
-            : _i5.allowInterop(formatRangeToParts),
+  factory DateTimeFormat([
+    _i2.Object? locales,
+    _i3.DateTimeFormatOptions? options,
+  ]) =>
+      _i5.callConstructor(
+        _declaredDateTimeFormat,
+        [
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
+        ],
       );
+
+  static set supportedLocalesOf(
+      _i2.List<_i2.String> Function(
+        _i2.Object, [
+        _i3.DateTimeFormatOptions?,
+      ]) value) {
+    _i5.setProperty(
+      _i6.target14,
+      'supportedLocalesOf',
+      _i5.allowInterop(value),
+    );
+  }
 }
+
+_i2.Object get _declaredDateTimeFormat => _i5.getProperty(
+      _self,
+      'DateTimeFormat',
+    );
 
 extension DateTimeFormat$Typings on DateTimeFormat {
   set format(_i2.String Function([_i2.Object?]) value) {
@@ -2467,10 +2475,18 @@ extension DateTimeFormat$Typings on DateTimeFormat {
     );
   }
 
-  _i2.String Function([_i2.Object?]) get format => _i5.getProperty(
-        this,
-        'format',
-      );
+  _i2.String Function([_i2.Object?]) get format =>
+      ([_i2.Object? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'format',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
+          );
   set resolvedOptions(_i3.ResolvedDateTimeFormatOptions Function() value) {
     _i5.setProperty(
       this,
@@ -2480,10 +2496,14 @@ extension DateTimeFormat$Typings on DateTimeFormat {
   }
 
   _i3.ResolvedDateTimeFormatOptions Function() get resolvedOptions =>
-      _i5.getProperty(
-        this,
-        'resolvedOptions',
-      );
+      () => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolvedOptions',
+            ),
+            r'call',
+            [this],
+          );
   set formatToParts(
       _i2.List<_i3.DateTimeFormatPart> Function([_i2.Object?]) value) {
     _i5.setProperty(
@@ -2494,10 +2514,18 @@ extension DateTimeFormat$Typings on DateTimeFormat {
   }
 
   _i2.List<_i3.DateTimeFormatPart> Function([_i2.Object?]) get formatToParts =>
-      _i5.getProperty(
-        this,
-        'formatToParts',
-      );
+      ([_i2.Object? p0]) => (_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'formatToParts',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
+          ) as _i2.List)
+              .cast();
   set formatRange(
       _i2.String Function(
         _i2.Object,
@@ -2513,10 +2541,22 @@ extension DateTimeFormat$Typings on DateTimeFormat {
   _i2.String Function(
     _i2.Object,
     _i2.Object,
-  ) get formatRange => _i5.getProperty(
-        this,
-        'formatRange',
-      );
+  ) get formatRange => (
+        _i2.Object p0,
+        _i2.Object p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'formatRange',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          );
   set formatRangeToParts(
       _i2.List<_i3.DateTimeRangeFormatPart> Function(
         _i2.Object,
@@ -2532,12 +2572,26 @@ extension DateTimeFormat$Typings on DateTimeFormat {
   _i2.List<_i3.DateTimeRangeFormatPart> Function(
     _i2.Object,
     _i2.Object,
-  ) get formatRangeToParts => _i5.getProperty(
-        this,
-        'formatRangeToParts',
-      );
+  ) get formatRangeToParts => (
+        _i2.Object p0,
+        _i2.Object p1,
+      ) =>
+          (_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'formatRangeToParts',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1,
+            ],
+          ) as _i2.List)
+              .cast();
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2769,6 +2823,7 @@ extension DateTimeFormatPartTypesRegistry$Typings
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2815,6 +2870,7 @@ extension DateTimeFormatPart$Typings on DateTimeFormatPart {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -2943,6 +2999,7 @@ extension PluralRulesOptions$Typings on PluralRulesOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3082,6 +3139,7 @@ extension ResolvedPluralRulesOptions$Typings on ResolvedPluralRulesOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 class PluralRules {
@@ -3103,7 +3161,7 @@ class PluralRules {
         _i2.dynamic,
       ]) value) {
     _i5.setProperty(
-      _i6.target13,
+      _i6.target15,
       'supportedLocalesOf',
       _i5.allowInterop(value),
     );
@@ -3125,40 +3183,53 @@ extension PluralRules$Typings on PluralRules {
   }
 
   _i3.ResolvedPluralRulesOptions Function() get resolvedOptions =>
-      _i5.getProperty(
-        this,
-        'resolvedOptions',
-      );
+      () => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolvedOptions',
+            ),
+            r'call',
+            [this],
+          );
   set select(_i3.LDMLPluralRule Function(_i2.num) value) {
     _i5.setProperty(
       this,
       'select',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => () => value(p0).name),
     );
   }
 
-  _i3.LDMLPluralRule Function(_i2.num) get select => _i5.getProperty(
-        this,
-        'select',
-      );
+  _i3.LDMLPluralRule Function(_i2.num) get select =>
+      (_i2.num p0) => _i3.LDMLPluralRuleOptions.values.byName(_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'select',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          ));
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline23 {}
+class IInline25 {}
 
-extension IInline23$Typings on IInline23 {
-  _i3.IInline23LocaleMatcherOptions? get localeMatcher =>
+extension IInline25$Typings on IInline25 {
+  _i3.IInline25LocaleMatcherOptions? get localeMatcher =>
       switch (_i5.getProperty(
         this,
         'localeMatcher',
       )) {
         _i2.String name =>
-          _i3.IInline23LocaleMatcherOptions.values.byName(name),
+          _i3.IInline25LocaleMatcherOptions.values.byName(name),
         _ => null
       };
-  set localeMatcher(_i3.IInline23LocaleMatcherOptions? value) {
+  set localeMatcher(_i3.IInline25LocaleMatcherOptions? value) {
     _i5.setProperty(
       this,
       'localeMatcher',
@@ -3167,45 +3238,7 @@ extension IInline23$Typings on IInline23 {
   }
 }
 
-@_i1.JS()
-@_i1.staticInterop
-class IInline22 {
-  static set supportedLocalesOf(
-      _i2.List<_i2.String> Function(
-        _i2.Object, [
-        _i2.dynamic,
-      ]) value) {
-    _i5.setProperty(
-      _i6.target13,
-      'supportedLocalesOf',
-      _i5.allowInterop(value),
-    );
-  }
-}
-
-extension IInline22$Typings on IInline22 {
-  _i2.List<_i2.String> Function(
-    _i2.Object, [
-    _i2.dynamic,
-  ]) get supportedLocalesOf => _i5.getProperty(
-        this,
-        'supportedLocalesOf',
-      );
-  _i3.PluralRules call([
-    _i2.Object? locales,
-    _i3.PluralRulesOptions? options,
-  ]) =>
-      _i5.callMethod(
-        this,
-        'call',
-        [
-          this,
-          locales ?? _i4.undefined,
-          options ?? _i4.undefined,
-        ],
-      );
-}
-
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3216,7 +3249,7 @@ class NumberFormatPart {
   });
 
   factory NumberFormatPart({
-    _i3.NumberFormatPartTypes? type,
+    _i2.Object? type,
     _i2.String? value,
   }) =>
       NumberFormatPart._(
@@ -3226,11 +3259,11 @@ class NumberFormatPart {
 }
 
 extension NumberFormatPart$Typings on NumberFormatPart {
-  _i3.NumberFormatPartTypes get type => _i5.getProperty(
+  _i2.Object get type => _i5.getProperty(
         this,
         'type',
       );
-  set type(_i3.NumberFormatPartTypes value) {
+  set type(_i2.Object value) {
     _i5.setProperty(
       this,
       'type',
@@ -3251,6 +3284,7 @@ extension NumberFormatPart$Typings on NumberFormatPart {
   }
 }
 
+/* Source:  */
 /// An object with some or all of properties of `options` parameter
 /// of `Intl.RelativeTimeFormat` constructor.
 ///
@@ -3335,6 +3369,7 @@ extension RelativeTimeFormatOptions$Typings on RelativeTimeFormatOptions {
   }
 }
 
+/* Source:  */
 /// An object with properties reflecting the locale
 /// and formatting options computed during initialization
 /// of the `Intl.RelativeTimeFormat` object
@@ -3357,7 +3392,7 @@ class ResolvedRelativeTimeFormatOptions {
   });
 
   factory ResolvedRelativeTimeFormatOptions({
-    _i3.UnicodeBCP47LocaleIdentifier? locale,
+    _i2.String? locale,
     _i3.RelativeTimeFormatStyle? style,
     _i3.RelativeTimeFormatNumeric? numeric,
     _i2.String? numberingSystem,
@@ -3372,11 +3407,11 @@ class ResolvedRelativeTimeFormatOptions {
 
 extension ResolvedRelativeTimeFormatOptions$Typings
     on ResolvedRelativeTimeFormatOptions {
-  _i3.UnicodeBCP47LocaleIdentifier get locale => _i5.getProperty(
+  _i2.String get locale => _i5.getProperty(
         this,
         'locale',
       );
-  set locale(_i3.UnicodeBCP47LocaleIdentifier value) {
+  set locale(_i2.String value) {
     _i5.setProperty(
       this,
       'locale',
@@ -3423,12 +3458,13 @@ extension ResolvedRelativeTimeFormatOptions$Typings
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline26 {}
+class IInline28 {}
 
-extension IInline26$Typings on IInline26 {
+extension IInline28$Typings on IInline28 {
   _i2.String get type => _i5.getProperty(
         this,
         'type',
@@ -3454,18 +3490,18 @@ extension IInline26$Typings on IInline26 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline27 {}
+class IInline29 {}
 
-extension IInline27$Typings on IInline27 {
-  _i7.Exclude<_i3.NumberFormatPartTypes, _i2.String> get type =>
-      _i5.getProperty(
+extension IInline29$Typings on IInline29 {
+  _i2.dynamic get type => _i5.getProperty(
         this,
         'type',
       );
-  set type(_i7.Exclude<_i3.NumberFormatPartTypes, _i2.String> value) {
+  set type(_i2.dynamic value) {
     _i5.setProperty(
       this,
       'type',
@@ -3499,6 +3535,7 @@ extension IInline27$Typings on IInline27 {
   }
 }
 
+/* Source:  */
 /// The [`Intl.RelativeTimeFormat`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat)
 /// object is a constructor for objects that enable language-sensitive relative time formatting.
 ///
@@ -3519,12 +3556,12 @@ class RelativeTimeFormat {
       );
 
   static set supportedLocalesOf(
-      _i2.List<_i3.UnicodeBCP47LocaleIdentifier> Function([
+      _i2.List<_i2.String> Function([
         _i2.Object?,
         _i3.RelativeTimeFormatOptions?,
       ]) value) {
     _i5.setProperty(
-      _i6.target14,
+      _i6.target16,
       'supportedLocalesOf',
       _i5.allowInterop(value),
     );
@@ -3552,12 +3589,24 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
   _i2.String Function(
     _i2.num,
     _i3.RelativeTimeFormatUnit,
-  ) get format => _i5.getProperty(
-        this,
-        'format',
-      );
+  ) get format => (
+        _i2.num p0,
+        _i3.RelativeTimeFormatUnit p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'format',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1.name,
+            ],
+          );
   set formatToParts(
-      _i2.List<_i3.RelativeTimeFormatPart> Function(
+      _i2.List<_i2.Object> Function(
         _i2.num,
         _i3.RelativeTimeFormatUnit,
       ) value) {
@@ -3568,13 +3617,26 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
     );
   }
 
-  _i2.List<_i3.RelativeTimeFormatPart> Function(
+  _i2.List<_i2.Object> Function(
     _i2.num,
     _i3.RelativeTimeFormatUnit,
-  ) get formatToParts => _i5.getProperty(
-        this,
-        'formatToParts',
-      );
+  ) get formatToParts => (
+        _i2.num p0,
+        _i3.RelativeTimeFormatUnit p1,
+      ) =>
+          (_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'formatToParts',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+              p1.name,
+            ],
+          ) as _i2.List)
+              .cast();
   set resolvedOptions(_i3.ResolvedRelativeTimeFormatOptions Function() value) {
     _i5.setProperty(
       this,
@@ -3584,38 +3646,17 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
   }
 
   _i3.ResolvedRelativeTimeFormatOptions Function() get resolvedOptions =>
-      _i5.getProperty(
-        this,
-        'resolvedOptions',
-      );
+      () => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolvedOptions',
+            ),
+            r'call',
+            [this],
+          );
 }
 
-@_i1.JS()
-@_i1.staticInterop
-class IInline28 {
-  static set supportedLocalesOf(
-      _i2.List<_i3.UnicodeBCP47LocaleIdentifier> Function([
-        _i2.Object?,
-        _i3.RelativeTimeFormatOptions?,
-      ]) value) {
-    _i5.setProperty(
-      _i6.target14,
-      'supportedLocalesOf',
-      _i5.allowInterop(value),
-    );
-  }
-}
-
-extension IInline28$Typings on IInline28 {
-  _i2.List<_i3.UnicodeBCP47LocaleIdentifier> Function([
-    _i2.Object?,
-    _i3.RelativeTimeFormatOptions?,
-  ]) get supportedLocalesOf => _i5.getProperty(
-        this,
-        'supportedLocalesOf',
-      );
-}
-
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3798,6 +3839,7 @@ extension LocaleOptions$Typings on LocaleOptions {
   }
 }
 
+/* Source:  */
 /// Constructor creates [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
 /// objects
 @_i1.JS()
@@ -3856,9 +3898,13 @@ extension Locale$Typings on Locale {
     );
   }
 
-  _i3.Locale Function() get maximize => _i5.getProperty(
-        this,
-        'maximize',
+  _i3.Locale Function() get maximize => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'maximize',
+        ),
+        r'call',
+        [this],
       );
   set minimize(_i3.Locale Function() value) {
     _i5.setProperty(
@@ -3868,11 +3914,15 @@ extension Locale$Typings on Locale {
     );
   }
 
-  _i3.Locale Function() get minimize => _i5.getProperty(
-        this,
-        'minimize',
+  _i3.Locale Function() get minimize => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'minimize',
+        ),
+        r'call',
+        [this],
       );
-  set toString$(_i3.BCP47LanguageTag Function() value) {
+  set toString$(_i2.String Function() value) {
     _i5.setProperty(
       this,
       'toString',
@@ -3880,16 +3930,17 @@ extension Locale$Typings on Locale {
     );
   }
 
-  _i3.BCP47LanguageTag Function() get toString$ => _i5.getProperty(
-        this,
-        'toString',
+  _i2.String Function() get toString$ => () => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'toString',
+        ),
+        r'call',
+        [this],
       );
 }
 
-@_i1.JS()
-@_i1.staticInterop
-class IInline29 {}
-
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -3998,6 +4049,7 @@ extension DisplayNamesOptions$Typings on DisplayNamesOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -4011,7 +4063,7 @@ class ResolvedDisplayNamesOptions {
   });
 
   factory ResolvedDisplayNamesOptions({
-    _i3.UnicodeBCP47LocaleIdentifier? locale,
+    _i2.String? locale,
     _i3.RelativeTimeFormatStyle? style,
     _i3.DisplayNamesType? type,
     _i3.DisplayNamesFallback? fallback,
@@ -4027,11 +4079,11 @@ class ResolvedDisplayNamesOptions {
 }
 
 extension ResolvedDisplayNamesOptions$Typings on ResolvedDisplayNamesOptions {
-  _i3.UnicodeBCP47LocaleIdentifier get locale => _i5.getProperty(
+  _i2.String get locale => _i5.getProperty(
         this,
         'locale',
       );
-  set locale(_i3.UnicodeBCP47LocaleIdentifier value) {
+  set locale(_i2.String value) {
     _i5.setProperty(
       this,
       'locale',
@@ -4096,42 +4148,63 @@ extension ResolvedDisplayNamesOptions$Typings on ResolvedDisplayNamesOptions {
   }
 }
 
+/* Source:  */
 /// The [`Intl.DisplayNames()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)
 /// object enables the consistent translation of language, region and script display names.
 ///
 /// [Compatibility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames#browser_compatibility).
 @_i1.JS()
 @_i1.staticInterop
-@_i1.anonymous
 class DisplayNames {
-  external factory DisplayNames._({
-    _i2.dynamic of,
-    _i2.dynamic resolvedOptions,
-  });
-
-  factory DisplayNames({
-    _i2.String? Function(_i2.String)? of,
-    _i3.ResolvedDisplayNamesOptions Function()? resolvedOptions,
-  }) =>
-      DisplayNames._(
-        of: of == null ? null : _i5.allowInterop(of),
-        resolvedOptions:
-            resolvedOptions == null ? null : _i5.allowInterop(resolvedOptions),
+  factory DisplayNames(
+    _i2.dynamic locales,
+    _i3.DisplayNamesOptions options,
+  ) =>
+      _i5.callConstructor(
+        _declaredDisplayNames,
+        [
+          locales,
+          options,
+        ],
       );
+
+  static set supportedLocalesOf(
+      _i2.List<_i2.String> Function([
+        _i2.dynamic,
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      _i6.target18,
+      'supportedLocalesOf',
+      _i5.allowInterop(value),
+    );
+  }
 }
+
+_i2.Object get _declaredDisplayNames => _i5.getProperty(
+      _self,
+      'DisplayNames',
+    );
 
 extension DisplayNames$Typings on DisplayNames {
   set of(_i2.String? Function(_i2.String) value) {
     _i5.setProperty(
       this,
       'of',
-      _i5.allowInterop(value),
+      _i5.allowInterop((p0) => () => value(p0) ?? _i4.undefined),
     );
   }
 
-  _i2.String? Function(_i2.String) get of => _i5.getProperty(
-        this,
-        'of',
+  _i2.String? Function(_i2.String) get of => (_i2.String p0) => _i5.callMethod(
+        _i5.getProperty(
+          this,
+          'of',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
   set resolvedOptions(_i3.ResolvedDisplayNamesOptions Function() value) {
     _i5.setProperty(
@@ -4142,12 +4215,42 @@ extension DisplayNames$Typings on DisplayNames {
   }
 
   _i3.ResolvedDisplayNamesOptions Function() get resolvedOptions =>
-      _i5.getProperty(
-        this,
-        'resolvedOptions',
-      );
+      () => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolvedOptions',
+            ),
+            r'call',
+            [this],
+          );
 }
 
+/* Source:  */
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class IInline33 {}
+
+extension IInline33$Typings on IInline33 {
+  _i3.RelativeTimeFormatLocaleMatcher? get localeMatcher =>
+      switch (_i5.getProperty(
+        this,
+        'localeMatcher',
+      )) {
+        _i2.String name =>
+          _i3.RelativeTimeFormatLocaleMatcherOptions.values.byName(name),
+        _ => null
+      };
+  set localeMatcher(_i3.RelativeTimeFormatLocaleMatcher? value) {
+    _i5.setProperty(
+      this,
+      'localeMatcher',
+      value?.name ?? _i4.undefined ?? _i4.undefined,
+    );
+  }
+}
+
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -4184,6 +4287,7 @@ extension DateTimeRangeFormatPart$Typings on DateTimeRangeFormatPart {
   }
 }
 
+/* Source:  */
 /// An object with some or all properties of the `Intl.ListFormat` constructor `options` parameter.
 ///
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat#parameters).
@@ -4260,6 +4364,7 @@ extension ListFormatOptions$Typings on ListFormatOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -4322,12 +4427,13 @@ extension ResolvedListFormatOptions$Typings on ResolvedListFormatOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class IInline30 {}
+class IInline34 {}
 
-extension IInline30$Typings on IInline30 {
+extension IInline34$Typings on IInline34 {
   _i3.Type get type => _i3.Type.values.byName(_i5.getProperty(
         this,
         'type',
@@ -4353,32 +4459,42 @@ extension IInline30$Typings on IInline30 {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
-@_i1.anonymous
 class ListFormat {
-  external factory ListFormat._({
-    _i2.dynamic format,
-    _i2.dynamic formatToParts,
-    _i2.dynamic resolvedOptions,
-  });
-
-  factory ListFormat({
-    _i2.String Function(_i8.Iterable<_i2.String>)? format,
-    _i2.List<_i2.dynamic> Function(_i8.Iterable<_i2.String>)? formatToParts,
-    _i3.ResolvedListFormatOptions Function()? resolvedOptions,
-  }) =>
-      ListFormat._(
-        format: format == null ? null : _i5.allowInterop(format),
-        formatToParts:
-            formatToParts == null ? null : _i5.allowInterop(formatToParts),
-        resolvedOptions:
-            resolvedOptions == null ? null : _i5.allowInterop(resolvedOptions),
+  factory ListFormat([
+    _i2.Object? locales,
+    _i3.ListFormatOptions? options,
+  ]) =>
+      _i5.callConstructor(
+        _declaredListFormat,
+        [
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
+        ],
       );
+
+  static set supportedLocalesOf(
+      _i2.List<_i2.String> Function(
+        _i2.Object, [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      _i6.target19,
+      'supportedLocalesOf',
+      _i5.allowInterop(value),
+    );
+  }
 }
 
+_i2.Object get _declaredListFormat => _i5.getProperty(
+      _self,
+      'ListFormat',
+    );
+
 extension ListFormat$Typings on ListFormat {
-  set format(_i2.String Function(_i8.Iterable<_i2.String>) value) {
+  set format(_i2.String Function(_i7.Iterable<_i2.String>) value) {
     _i5.setProperty(
       this,
       'format',
@@ -4386,12 +4502,20 @@ extension ListFormat$Typings on ListFormat {
     );
   }
 
-  _i2.String Function(_i8.Iterable<_i2.String>) get format => _i5.getProperty(
-        this,
-        'format',
-      );
+  _i2.String Function(_i7.Iterable<_i2.String>) get format =>
+      (_i7.Iterable<_i2.String> p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'format',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set formatToParts(
-      _i2.List<_i2.dynamic> Function(_i8.Iterable<_i2.String>) value) {
+      _i2.List<_i2.dynamic> Function(_i7.Iterable<_i2.String>) value) {
     _i5.setProperty(
       this,
       'formatToParts',
@@ -4399,11 +4523,19 @@ extension ListFormat$Typings on ListFormat {
     );
   }
 
-  _i2.List<_i2.dynamic> Function(_i8.Iterable<_i2.String>) get formatToParts =>
-      _i5.getProperty(
-        this,
-        'formatToParts',
-      );
+  _i2.List<_i2.dynamic> Function(_i7.Iterable<_i2.String>) get formatToParts =>
+      (_i7.Iterable<_i2.String> p0) => (_i5.callMethod(
+            _i5.getProperty(
+              this,
+              'formatToParts',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          ) as _i2.List)
+              .cast();
   set resolvedOptions(_i3.ResolvedListFormatOptions Function() value) {
     _i5.setProperty(
       this,
@@ -4413,12 +4545,17 @@ extension ListFormat$Typings on ListFormat {
   }
 
   _i3.ResolvedListFormatOptions Function() get resolvedOptions =>
-      _i5.getProperty(
-        this,
-        'resolvedOptions',
-      );
+      () => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolvedOptions',
+            ),
+            r'call',
+            [this],
+          );
 }
 
+/* Source:  */
 /// An object with some or all properties of the `Intl.Segmenter` constructor `options` parameter.
 ///
 /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter#parameters)
@@ -4477,25 +4614,39 @@ extension SegmenterOptions$Typings on SegmenterOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
-@_i1.anonymous
 class Segmenter {
-  external factory Segmenter._({
-    _i2.dynamic segment,
-    _i2.dynamic resolvedOptions,
-  });
-
-  factory Segmenter({
-    _i3.Segments Function(_i2.String)? segment,
-    _i3.ResolvedSegmenterOptions Function()? resolvedOptions,
-  }) =>
-      Segmenter._(
-        segment: segment == null ? null : _i5.allowInterop(segment),
-        resolvedOptions:
-            resolvedOptions == null ? null : _i5.allowInterop(resolvedOptions),
+  factory Segmenter([
+    _i2.Object? locales,
+    _i3.SegmenterOptions? options,
+  ]) =>
+      _i5.callConstructor(
+        _declaredSegmenter,
+        [
+          locales ?? _i4.undefined,
+          options ?? _i4.undefined,
+        ],
       );
+
+  static set supportedLocalesOf(
+      _i2.List<_i2.String> Function(
+        _i2.Object, [
+        _i2.dynamic,
+      ]) value) {
+    _i5.setProperty(
+      _i6.target20,
+      'supportedLocalesOf',
+      _i5.allowInterop(value),
+    );
+  }
 }
+
+_i2.Object get _declaredSegmenter => _i5.getProperty(
+      _self,
+      'Segmenter',
+    );
 
 extension Segmenter$Typings on Segmenter {
   set segment(_i3.Segments Function(_i2.String) value) {
@@ -4506,10 +4657,18 @@ extension Segmenter$Typings on Segmenter {
     );
   }
 
-  _i3.Segments Function(_i2.String) get segment => _i5.getProperty(
-        this,
-        'segment',
-      );
+  _i3.Segments Function(_i2.String) get segment =>
+      (_i2.String p0) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'segment',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   set resolvedOptions(_i3.ResolvedSegmenterOptions Function() value) {
     _i5.setProperty(
       this,
@@ -4519,12 +4678,17 @@ extension Segmenter$Typings on Segmenter {
   }
 
   _i3.ResolvedSegmenterOptions Function() get resolvedOptions =>
-      _i5.getProperty(
-        this,
-        'resolvedOptions',
-      );
+      () => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'resolvedOptions',
+            ),
+            r'call',
+            [this],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -4571,11 +4735,12 @@ extension ResolvedSegmenterOptions$Typings on ResolvedSegmenterOptions {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
 class Segments
-    implements _IterableLike$<_i8.IterableIterator<_i3.SegmentData>> {
+    implements _IterableLike$<_i7.IterableIterator<_i3.SegmentData>> {
   external factory Segments._({_i2.dynamic containing});
 
   factory Segments({_i3.SegmentData Function([_i2.num?])? containing}) =>
@@ -4592,12 +4757,21 @@ extension Segments$Typings on Segments {
     );
   }
 
-  _i3.SegmentData Function([_i2.num?]) get containing => _i5.getProperty(
-        this,
-        'containing',
-      );
+  _i3.SegmentData Function([_i2.num?]) get containing =>
+      ([_i2.num? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              this,
+              'containing',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -4678,6 +4852,7 @@ extension SegmentData$Typings on SegmentData {
   }
 }
 
+/* Source: globalThis */
 @_i1.JS('Intl')
 @_i1.staticInterop
 class $ModuleIntl {}
@@ -4687,11 +4862,11 @@ extension $ModuleIntl$Typings on $ModuleIntl {
         this,
         'Collator',
       );
-  _i3.NumberFormat get numberFormat => _i5.getProperty(
+  _i2.dynamic get numberFormat => _i5.getProperty(
         this,
         'NumberFormat',
       );
-  _i3.DateTimeFormat get dateTimeFormat => _i5.getProperty(
+  _i2.dynamic get dateTimeFormat => _i5.getProperty(
         this,
         'DateTimeFormat',
       );
@@ -4720,15 +4895,15 @@ extension $ModuleIntl$Typings on $ModuleIntl {
   /// object enables the consistent translation of language, region and script display names.
   ///
   /// [Compatibility](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames#browser_compatibility).
-  _i3.DisplayNames get displayNames => _i5.getProperty(
+  _i2.dynamic get displayNames => _i5.getProperty(
         this,
         'DisplayNames',
       );
-  _i3.ListFormat get listFormat => _i5.getProperty(
+  _i2.dynamic get listFormat => _i5.getProperty(
         this,
         'ListFormat',
       );
-  _i3.Segmenter get segmenter => _i5.getProperty(
+  _i2.dynamic get segmenter => _i5.getProperty(
         this,
         'Segmenter',
       );
@@ -4744,6 +4919,7 @@ extension $ModuleIntl$Typings on $ModuleIntl {
           .cast();
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

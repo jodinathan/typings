@@ -5,13 +5,13 @@ import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'lib.es5.d.dart' as _i3;
 import 'lib.es2015.iterable.d.dart' as _i4;
-import 'lib.es2019.array.d.dart' as _i5;
-import '/d/core.dart' as _i6;
-import 'dart:js_util' as _i7;
+import '/d/core.dart' as _i5;
+import 'dart:js_util' as _i6;
 
 @_i1.JS('self')
 external _i2.Object _self;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -231,7 +231,7 @@ class RegExpIndicesArray
       ), [
       This?,
     ])? flatMap,
-    _i2.List<_i5.FlatArray<A, D>> Function<A, D extends _i2.num>([D?])? flat,
+    _i2.List<_i2.dynamic> Function<A, D extends _i2.num>([D?])? flat,
     (
       _i2.num,
       _i2.num,
@@ -291,15 +291,17 @@ class RegExpIndicesArray
     )? with$,
   }) =>
       RegExpIndicesArray._(
-        groups: groups ?? _i6.undefined,
+        groups: groups ?? _i5.undefined,
         length: length,
-        toString$: toString$ == null ? null : _i7.allowInterop(toString$),
+        toString$: toString$ == null ? null : _i6.allowInterop(toString$),
         toLocaleString:
-            toLocaleString == null ? null : _i7.allowInterop(toLocaleString),
-        pop: pop == null ? null : _i7.allowInterop(pop),
+            toLocaleString == null ? null : _i6.allowInterop(toLocaleString),
+        pop: pop == null
+            ? null
+            : _i6.allowInterop(() => () => pop() ?? _i5.undefined),
         push: push == null
             ? null
-            : _i7.allowInterop(([
+            : _i6.allowInterop(([
                 a0,
                 a1,
                 a2,
@@ -323,14 +325,16 @@ class RegExpIndicesArray
                   a8,
                   a9,
                 ])),
-        join: join == null ? null : _i7.allowInterop(join),
-        reverse: reverse == null ? null : _i7.allowInterop(reverse),
-        shift: shift == null ? null : _i7.allowInterop(shift),
-        slice: slice == null ? null : _i7.allowInterop(slice),
-        sort: sort == null ? null : _i7.allowInterop(sort),
+        join: join == null ? null : _i6.allowInterop(join),
+        reverse: reverse == null ? null : _i6.allowInterop(reverse),
+        shift: shift == null
+            ? null
+            : _i6.allowInterop(() => () => shift() ?? _i5.undefined),
+        slice: slice == null ? null : _i6.allowInterop(slice),
+        sort: sort == null ? null : _i6.allowInterop(sort),
         unshift: unshift == null
             ? null
-            : _i7.allowInterop(([
+            : _i6.allowInterop(([
                 a0,
                 a1,
                 a2,
@@ -354,43 +358,46 @@ class RegExpIndicesArray
                   a8,
                   a9,
                 ])),
-        indexOf: indexOf == null ? null : _i7.allowInterop(indexOf),
-        lastIndexOf: lastIndexOf == null ? null : _i7.allowInterop(lastIndexOf),
-        some: some == null ? null : _i7.allowInterop(some),
-        forEach: forEach == null ? null : _i7.allowInterop(forEach),
-        map: map == null ? null : _i7.allowInterop(map),
-        findIndex: findIndex == null ? null : _i7.allowInterop(findIndex),
-        fill: fill == null ? null : _i7.allowInterop(fill),
-        copyWithin: copyWithin == null ? null : _i7.allowInterop(copyWithin),
-        entries: entries == null ? null : _i7.allowInterop(entries),
-        keys: keys == null ? null : _i7.allowInterop(keys),
-        values: values == null ? null : _i7.allowInterop(values),
-        includes: includes == null ? null : _i7.allowInterop(includes),
-        flatMap: flatMap == null ? null : _i7.allowInterop(flatMap),
-        flat: flat == null ? null : _i7.allowInterop(flat),
-        at: at == null ? null : _i7.allowInterop(at),
+        indexOf: indexOf == null ? null : _i6.allowInterop(indexOf),
+        lastIndexOf: lastIndexOf == null ? null : _i6.allowInterop(lastIndexOf),
+        some: some == null ? null : _i6.allowInterop(some),
+        forEach: forEach == null ? null : _i6.allowInterop(forEach),
+        map: map == null ? null : _i6.allowInterop(map),
+        findIndex: findIndex == null ? null : _i6.allowInterop(findIndex),
+        fill: fill == null ? null : _i6.allowInterop(fill),
+        copyWithin: copyWithin == null ? null : _i6.allowInterop(copyWithin),
+        entries: entries == null ? null : _i6.allowInterop(entries),
+        keys: keys == null ? null : _i6.allowInterop(keys),
+        values: values == null ? null : _i6.allowInterop(values),
+        includes: includes == null ? null : _i6.allowInterop(includes),
+        flatMap: flatMap == null ? null : _i6.allowInterop(flatMap),
+        flat: flat == null ? null : _i6.allowInterop(flat),
+        at: at == null
+            ? null
+            : _i6.allowInterop((p0) => () => at(p0) ?? _i5.undefined),
         findLastIndex:
-            findLastIndex == null ? null : _i7.allowInterop(findLastIndex),
-        toReversed: toReversed == null ? null : _i7.allowInterop(toReversed),
-        toSorted: toSorted == null ? null : _i7.allowInterop(toSorted),
-        with$: with$ == null ? null : _i7.allowInterop(with$),
+            findLastIndex == null ? null : _i6.allowInterop(findLastIndex),
+        toReversed: toReversed == null ? null : _i6.allowInterop(toReversed),
+        toSorted: toSorted == null ? null : _i6.allowInterop(toSorted),
+        with$: with$ == null ? null : _i6.allowInterop(with$),
       );
 }
 
 extension RegExpIndicesArray$Typings on RegExpIndicesArray {
-  _i2.Object? get groups => _i7.getProperty(
+  _i2.Object? get groups => _i6.getProperty(
         this,
         'groups',
       );
   set groups(_i2.Object? value) {
-    _i7.setProperty(
+    _i6.setProperty(
       this,
       'groups',
-      value ?? _i6.undefined,
+      value ?? _i5.undefined,
     );
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

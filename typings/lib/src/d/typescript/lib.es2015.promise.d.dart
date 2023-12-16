@@ -13,7 +13,7 @@ external _i2.Object _self;
 _i3.PromiseConstructor get promise => _i4.getProperty(
       _self,
       'Promise',
-    );
+    ); /* Source:  */
 
 @_i1.JS()
 @_i1.staticInterop

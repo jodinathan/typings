@@ -7,12 +7,12 @@ import 'dart:js_util' as _i3;
 import '/d/core.dart' as _i4;
 import 'lib.es2015.iterable.d.dart' as _i5;
 import 'typescript_comon.d.dart' as _i6;
-import 'lib.es5.d.dart' as _i7;
-import 'lib.es2020.promise.d.dart' as _i8;
+import 'dart:async' as _i7;
 
 @_i1.JS('self')
 external _i2.Object _self;
 
+/* Source: ForcedCommon from  IteratorYieldResult<T> | IteratorReturnResult<TReturn> */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -46,6 +46,7 @@ extension IteratorResultCommon$Typings on IteratorResultCommon {
 
 typedef IteratorResult<T, TReturn> = _i5.IteratorResultCommon;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -100,7 +101,9 @@ class SymbolConstructor {
         asyncIterator: asyncIterator ?? _i4.undefined,
         matchAll: matchAll ?? _i4.undefined,
         for$: for$ == null ? null : _i3.allowInterop(for$),
-        keyFor: keyFor == null ? null : _i3.allowInterop(keyFor),
+        keyFor: keyFor == null
+            ? null
+            : _i3.allowInterop((p0) => () => keyFor(p0) ?? _i4.undefined),
       );
 
   /// A method that returns the default iterator for an object. Called by the semantics of the
@@ -108,7 +111,7 @@ class SymbolConstructor {
   /// A method that returns the default iterator for an object. Called by the semantics of the
   /// for-of statement.
   static _i2.Symbol get iterator => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'iterator',
       );
 
@@ -117,7 +120,7 @@ class SymbolConstructor {
   /// A method that determines if a constructor object recognizes an object as one of the
   /// constructor’s instances. Called by the semantics of the instanceof operator.
   static _i2.Symbol get hasInstance => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'hasInstance',
       );
 
@@ -126,7 +129,7 @@ class SymbolConstructor {
   /// A Boolean value that if true indicates that an object should flatten to its array elements
   /// by Array.prototype.concat.
   static _i2.Symbol get isConcatSpreadable => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'isConcatSpreadable',
       );
 
@@ -135,7 +138,7 @@ class SymbolConstructor {
   /// A regular expression method that matches the regular expression against a string. Called
   /// by the String.prototype.match method.
   static _i2.Symbol get match => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'match',
       );
 
@@ -144,7 +147,7 @@ class SymbolConstructor {
   /// A regular expression method that replaces matched substrings of a string. Called by the
   /// String.prototype.replace method.
   static _i2.Symbol get replace => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'replace',
       );
 
@@ -153,7 +156,7 @@ class SymbolConstructor {
   /// A regular expression method that returns the index within a string that matches the
   /// regular expression. Called by the String.prototype.search method.
   static _i2.Symbol get search => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'search',
       );
 
@@ -162,7 +165,7 @@ class SymbolConstructor {
   /// A function valued property that is the constructor function that is used to create
   /// derived objects.
   static _i2.Symbol get species => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'species',
       );
 
@@ -171,7 +174,7 @@ class SymbolConstructor {
   /// A regular expression method that splits a string at the indices that match the regular
   /// expression. Called by the String.prototype.split method.
   static _i2.Symbol get split => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'split',
       );
 
@@ -180,7 +183,7 @@ class SymbolConstructor {
   /// A method that converts an object to a corresponding primitive value.
   /// Called by the ToPrimitive abstract operation.
   static _i2.Symbol get toPrimitive => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'toPrimitive',
       );
 
@@ -189,7 +192,7 @@ class SymbolConstructor {
   /// A String value that is used in the creation of the default string description of an object.
   /// Called by the built-in method Object.prototype.toString.
   static _i2.Symbol get toStringTag => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'toStringTag',
       );
 
@@ -198,7 +201,7 @@ class SymbolConstructor {
   /// An Object whose truthy properties are properties that are excluded from the 'with'
   /// environment bindings of the associated objects.
   static _i2.Symbol get unscopables => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'unscopables',
       );
 
@@ -207,19 +210,19 @@ class SymbolConstructor {
   /// A method that returns the default async iterator for an object. Called by the semantics of
   /// the for-await-of statement.
   static _i2.Symbol get asyncIterator => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'asyncIterator',
       );
 
   /// A regular expression method that matches the regular expression against a string. Called
   /// by the String.prototype.matchAll method.
   static _i2.Symbol get matchAll => _i3.getProperty(
-        _i6.target22,
+        _i6.target26,
         'matchAll',
       );
   static set for$(_i2.Symbol Function(_i2.String) value) {
     _i3.setProperty(
-      _i6.target22,
+      _i6.target26,
       'for',
       _i3.allowInterop(value),
     );
@@ -227,22 +230,37 @@ class SymbolConstructor {
 
   static set keyFor(_i2.String? Function(_i2.Symbol) value) {
     _i3.setProperty(
-      _i6.target22,
+      _i6.target26,
       'keyFor',
-      _i3.allowInterop(value),
+      _i3.allowInterop((p0) => () => value(p0) ?? _i4.undefined),
     );
   }
 }
 
 extension SymbolConstructor$Typings on SymbolConstructor {
-  _i2.Symbol Function(_i2.String) get for$ => _i3.getProperty(
-        this,
-        'for',
+  _i2.Symbol Function(_i2.String) get for$ => (_i2.String p0) => _i3.callMethod(
+        _i3.getProperty(
+          this,
+          'for',
+        ),
+        r'call',
+        [
+          this,
+          p0,
+        ],
       );
-  _i2.String? Function(_i2.Symbol) get keyFor => _i3.getProperty(
-        this,
-        'keyFor',
-      );
+  _i2.String? Function(_i2.Symbol) get keyFor =>
+      (_i2.Symbol p0) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'keyFor',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
   _i2.Symbol call([_i2.Object? description]) => _i3.callMethod(
         this,
         'call',
@@ -253,6 +271,7 @@ extension SymbolConstructor$Typings on SymbolConstructor {
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -298,6 +317,7 @@ extension IteratorYieldResult$Typings<TYield> on IteratorYieldResult<TYield> {
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -344,6 +364,7 @@ extension IteratorReturnResult$Typings<TReturn>
   }
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -430,9 +451,16 @@ extension Iterator$Typings<T, TReturn, TNext> on Iterator<T, TReturn, TNext> {
   }
 
   _i5.IteratorResult<T, TReturn> Function([_i2.Iterable<_i2.dynamic>?])
-      get next => _i3.getProperty(
-            this,
-            'next',
+      get next => ([_i2.Iterable<_i2.dynamic>? p0]) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'next',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
           );
   set return$(_i5.IteratorResult<T, TReturn> Function([TReturn?]) value) {
     _i3.setProperty(
@@ -443,10 +471,17 @@ extension Iterator$Typings<T, TReturn, TNext> on Iterator<T, TReturn, TNext> {
   }
 
   _i5.IteratorResult<T, TReturn> Function([TReturn?]) get return$ =>
-      _i3.getProperty(
-        this,
-        'return',
-      );
+      ([TReturn? p0]) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'return',
+            ),
+            r'call',
+            [
+              this,
+              p0 ?? _i4.undefined,
+            ],
+          );
   set throw$(_i5.IteratorResult<T, TReturn> Function([_i2.dynamic]) value) {
     _i3.setProperty(
       this,
@@ -456,12 +491,20 @@ extension Iterator$Typings<T, TReturn, TNext> on Iterator<T, TReturn, TNext> {
   }
 
   _i5.IteratorResult<T, TReturn> Function([_i2.dynamic]) get throw$ =>
-      _i3.getProperty(
-        this,
-        'throw',
-      );
+      ([_i2.dynamic p0]) => _i3.callMethod(
+            _i3.getProperty(
+              this,
+              'throw',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -474,6 +517,7 @@ class Iterable<T>
 
 extension Iterable$Typings<T> on Iterable<T> {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -530,13 +574,14 @@ class IterableIterator<T>
 
 extension IterableIterator$Typings<T> on IterableIterator<T> {}
 
+/* Source:  */
 /// Represents the completion of an asynchronous operation
 @_i1.JS()
 @_i1.staticInterop
 class PromiseConstructor {
   static set reject(_i2.Future<T> Function<T>([_i2.dynamic]) value) {
     _i3.setProperty(
-      _i6.target20,
+      _i6.target25,
       'reject',
       _i3.allowInterop(value),
     );
@@ -544,17 +589,25 @@ class PromiseConstructor {
 }
 
 extension PromiseConstructor$Typings on PromiseConstructor {
-  _i2.Future<T> Function<T>([_i2.dynamic]) get reject => _i3.getProperty(
-        this,
-        'reject',
-      );
+  _i2.Future<T> Function<T>([_i2.dynamic]) get reject =>
+      <T>([_i2.dynamic p0]) => _i3.promiseToFuture(_i3.callMethod(
+            _i3.getProperty(
+              this,
+              'reject',
+            ),
+            r'call',
+            [
+              this,
+              p0,
+            ],
+          ));
 
   /// Creates a Promise that is resolved with an array of results when all of the provided Promises
   ///  resolve, or rejected when any Promise is rejected.
   ///  @param values An iterable of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i2.List<_i7.Awaited<T>>> _all$1<T>(
-          _i5.Iterable<_i2.Object> values) =>
+  _i2.Future<_i2.List<_i2.dynamic>> _all$1<T>(
+          _i5.Iterable<_i7.FutureOr<T>> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'all',
@@ -578,8 +631,8 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     ///  resolve, or rejected when any Promise is rejected.
     ///  @param values An iterable of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i2.List<_i7.Awaited<T>>> Function<T>(
-        _i5.Iterable<_i2.Object> values) $1,
+    _i2.Future<_i2.List<_i2.dynamic>> Function<T>(
+        _i5.Iterable<_i7.FutureOr<T>> values) $1,
 
     /// Creates a Promise that is resolved with an array of results when all of the provided Promises
     ///  resolve, or rejected when any Promise is rejected.
@@ -595,7 +648,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  or rejected.
   ///  @param values An iterable of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i7.Awaited<T>> _race$1<T>(_i5.Iterable<_i2.Object> values) =>
+  _i2.Future<_i2.dynamic> _race$1<T>(_i5.Iterable<_i7.FutureOr<T>> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'race',
@@ -606,8 +659,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  or rejected.
   ///  @param values An array of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i7.Awaited<_i2.dynamic>> _race$2<T extends _i2.Object>(
-          T values) =>
+  _i2.Future<_i2.dynamic> _race$2<T extends _i2.Object>(T values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'race',
@@ -620,14 +672,14 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     ///  or rejected.
     ///  @param values An iterable of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i7.Awaited<T>> Function<T>(_i5.Iterable<_i2.Object> values) $1,
+    _i2.Future<_i2.dynamic> Function<T>(
+        _i5.Iterable<_i7.FutureOr<T>> values) $1,
 
     /// Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
     ///  or rejected.
     ///  @param values An array of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i7.Awaited<_i2.dynamic>> Function<T extends _i2.Object>(
-        T values) $2,
+    _i2.Future<_i2.dynamic> Function<T extends _i2.Object>(T values) $2,
   }) get race => (
         $1: _race$1,
         $2: _race$2,
@@ -644,7 +696,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   /// Creates a new resolved promise for the provided value.
   ///  @param value A promise.
   ///  @returns A promise whose internal state matches the provided promise.
-  _i2.Future<_i7.Awaited<T>> _resolve$2<T>(T value) =>
+  _i2.Future<_i2.dynamic> _resolve$2<T>(T value) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'resolve',
@@ -654,11 +706,11 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   /// Creates a new resolved promise for the provided value.
   ///  @param value A promise.
   ///  @returns A promise whose internal state matches the provided promise.
-  _i2.Future<_i7.Awaited<T>> _resolve$3<T>(_i2.Object value) =>
+  _i2.Future<_i2.dynamic> _resolve$3<T>(_i7.FutureOr<T> value) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'resolve',
-        [value],
+        [_i4.Promise.futureOr(value)],
       ));
 
   /// Overload accessor: $1, $2, $3
@@ -670,12 +722,12 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     /// Creates a new resolved promise for the provided value.
     ///  @param value A promise.
     ///  @returns A promise whose internal state matches the provided promise.
-    _i2.Future<_i7.Awaited<T>> Function<T>(T value) $2,
+    _i2.Future<_i2.dynamic> Function<T>(T value) $2,
 
     /// Creates a new resolved promise for the provided value.
     ///  @param value A promise.
     ///  @returns A promise whose internal state matches the provided promise.
-    _i2.Future<_i7.Awaited<T>> Function<T>(_i2.Object value) $3,
+    _i2.Future<_i2.dynamic> Function<T>(_i7.FutureOr<T> value) $3,
   }) get resolve => (
         $1: _resolve$1,
         $2: _resolve$2,
@@ -697,13 +749,13 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   ///  of the provided Promises resolve or reject.
   ///  @param values An array of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i2.List<_i8.PromiseSettledResult<_i7.Awaited<T>>>>
-      _allSettled$2<T>(_i5.Iterable<_i2.Object> values) =>
-          _i3.promiseToFuture(_i3.callMethod(
-            this,
-            'allSettled',
-            [values],
-          ));
+  _i2.Future<_i2.List<_i2.Object>> _allSettled$2<T>(
+          _i5.Iterable<_i7.FutureOr<T>> values) =>
+      _i3.promiseToFuture(_i3.callMethod(
+        this,
+        'allSettled',
+        [values],
+      ));
 
   /// Overload accessor: $1, $2
   ({
@@ -717,8 +769,8 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     ///  of the provided Promises resolve or reject.
     ///  @param values An array of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i2.List<_i8.PromiseSettledResult<_i7.Awaited<T>>>> Function<T>(
-        _i5.Iterable<_i2.Object> values) $2,
+    _i2.Future<_i2.List<_i2.Object>> Function<T>(
+        _i5.Iterable<_i7.FutureOr<T>> values) $2,
   }) get allSettled => (
         $1: _allSettled$1,
         $2: _allSettled$2,
@@ -727,7 +779,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
   ///  @param values An array or iterable of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i7.Awaited<_i2.dynamic>> _any$1<T extends _i2.Object>(T values) =>
+  _i2.Future<_i2.dynamic> _any$1<T extends _i2.Object>(T values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'any',
@@ -737,7 +789,7 @@ extension PromiseConstructor$Typings on PromiseConstructor {
   /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
   ///  @param values An array or iterable of Promises.
   ///  @returns A new Promise.
-  _i2.Future<_i7.Awaited<T>> _any$2<T>(_i5.Iterable<_i2.Object> values) =>
+  _i2.Future<_i2.dynamic> _any$2<T>(_i5.Iterable<_i7.FutureOr<T>> values) =>
       _i3.promiseToFuture(_i3.callMethod(
         this,
         'any',
@@ -749,19 +801,20 @@ extension PromiseConstructor$Typings on PromiseConstructor {
     /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
     ///  @param values An array or iterable of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i7.Awaited<_i2.dynamic>> Function<T extends _i2.Object>(
-        T values) $1,
+    _i2.Future<_i2.dynamic> Function<T extends _i2.Object>(T values) $1,
 
     /// The any function returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError containing an array of rejection reasons if all of the given promises are rejected. It resolves all elements of the passed iterable to promises as it runs this algorithm.
     ///  @param values An array or iterable of Promises.
     ///  @returns A new Promise.
-    _i2.Future<_i7.Awaited<T>> Function<T>(_i5.Iterable<_i2.Object> values) $2,
+    _i2.Future<_i2.dynamic> Function<T>(
+        _i5.Iterable<_i7.FutureOr<T>> values) $2,
   }) get any => (
         $1: _any$1,
         $2: _any$2,
       );
 }
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

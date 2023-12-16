@@ -5290,7 +5290,9 @@
             "modules": [],
             "funcs": [],
             "vars": [],
-            "enums": []
+            "enums": [],
+            "imports": [],
+            "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/inputmask/out/temp/https:/raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/inputmask/index.d.ts"
           }
         },
         {
@@ -5303,7 +5305,9 @@
             "modules": [],
             "funcs": [],
             "vars": [],
-            "enums": []
+            "enums": [],
+            "imports": [],
+            "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/inputmask/out/temp/https:/raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/inputmask/index.d.ts"
           }
         }
       ],
@@ -5325,8 +5329,10 @@
           "source": " Inputmask: Inputmask.Static"
         }
       ],
-      "enums": []
+      "enums": [],
+      "imports": []
     },
+    "file": "/Users/jonathanrezende/Projects/testes/typings/typings/work/inputmask/out/temp/https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/inputmask/index.d.ts",
     "name": "index.d.ts"
   }
 ]

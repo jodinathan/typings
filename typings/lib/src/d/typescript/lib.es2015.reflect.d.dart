@@ -7,6 +7,7 @@ import 'dart:core' as _i2;
 @_i1.JS('self')
 external _i2.Object _self;
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

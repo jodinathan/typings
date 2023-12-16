@@ -7,20 +7,7 @@ import 'dart:core' as _i2;
 @_i1.JS('self')
 external _i2.Object _self;
 
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class IInline10 {}
-
-extension IInline10$Typings on IInline10 {}
-
-@_i1.JS()
-@_i1.staticInterop
-@_i1.anonymous
-class IInline11 {}
-
-extension IInline11$Typings on IInline11 {}
-
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -28,6 +15,7 @@ class IInline12 {}
 
 extension IInline12$Typings on IInline12 {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -35,6 +23,7 @@ class IInline13 {}
 
 extension IInline13$Typings on IInline13 {}
 
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -42,6 +31,23 @@ class IInline14 {}
 
 extension IInline14$Typings on IInline14 {}
 
+/* Source:  */
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class IInline15 {}
+
+extension IInline15$Typings on IInline15 {}
+
+/* Source:  */
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class IInline16 {}
+
+extension IInline16$Typings on IInline16 {}
+
+/* Source:  */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
