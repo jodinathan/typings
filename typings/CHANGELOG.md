@@ -1,3 +1,7 @@
+## 0.0.6
+- Changed methods to fields so you can use a setter on anonymous classes
+- Added WebWorker lib
+
 ## 0.0.5
 - Revamped how namespaces are generated. All namespaces are exported through one file.
 - Fixed a bug when trying to use a callable interface as function
