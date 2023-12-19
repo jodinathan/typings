@@ -1,3 +1,6 @@
+## 0.0.6+1
+- Removed Invertase as sponsor. Please, consider donating if it is an affordable option for you. Donations allow me to dedicate my time to the package.
+
 ## 0.0.6
 - Changed methods to fields so you can use a setter on anonymous classes
 - Added WebWorker lib

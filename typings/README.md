@@ -71,17 +71,6 @@ With this info the builder will automatically fetch the package from NPM, parse 
 
 Refer to the wiki for guidance and few rules to add packages.
 
-## Sponsors
-<table>
-<tr>
-<td align="center"><img src="https://static.invertase.io/assets/invertase/invertase-rounded-avatar.png" height="50">
-</td>
-</tr>
-<tr>
-<td>Invertase</td>
-</tr>
-</table>
-
 ## Currently available packages
  - [Core/DOM](https://pub.dev/documentation/typings/latest/d_core_core/d_core_core-library.html)
  - [Deno](https://pub.dev/documentation/typings/latest/d_deno_deno/d_deno_deno-library.html)
