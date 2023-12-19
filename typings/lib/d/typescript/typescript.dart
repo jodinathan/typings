@@ -23,7 +23,6 @@ export '/src/d/typescript/lib.es2022.error.d.dart';
 export '/src/d/typescript/lib.es2022.regexp.d.dart';
 export '/src/d/typescript/lib.es2022.sharedmemory.d.dart';
 export '/src/d/typescript/lib.dom.d.dart';
-export '/src/d/typescript/lib.webworker.importscripts.d.dart';
 export '/src/d/typescript/lib.scripthost.d.dart';
 export '/src/d/typescript/lib.es5.intl.d.dart';
 export '/src/d/typescript/lib.es2015.reflect.reflect.d.dart';

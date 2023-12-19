@@ -415,7 +415,7 @@ extension ProcessStatusCommon$Typings on ProcessStatusCommon {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection40
+class _Intersection49
     implements _i4.Reader, _i4.ReaderSync, _i4.Closer, _i4.IInline5 {}
 
 /* Source:  Writer & WriterSync & Closer & {
@@ -428,7 +428,7 @@ class _Intersection40
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection41
+class _Intersection50
     implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline6 {}
 
 /* Source:  Writer & WriterSync & Closer & {
@@ -441,7 +441,7 @@ class _Intersection41
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection42
+class _Intersection51
     implements _i4.Writer, _i4.WriterSync, _i4.Closer, _i4.IInline7 {}
 
 typedef PermissionOptions = _i2.Object;
@@ -9024,7 +9024,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   ///  // do something with the text
   /// }
   /// ```
-  _Intersection40 get stdin => _i3.getProperty(
+  _Intersection49 get stdin => _i3.getProperty(
         this,
         'stdin',
       );
@@ -9036,7 +9036,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   ///
   /// These are low level constructs, and the {@linkcode console} interface is a
   /// more straight forward way to interact with `stdout` and `stderr`.
-  _Intersection41 get stdout => _i3.getProperty(
+  _Intersection50 get stdout => _i3.getProperty(
         this,
         'stdout',
       );
@@ -9048,7 +9048,7 @@ extension $ModuleDeno$Typings on $ModuleDeno {
   ///
   /// These are low level constructs, and the {@linkcode console} interface is a
   /// more straight forward way to interact with `stdout` and `stderr`.
-  _Intersection42 get stderr => _i3.getProperty(
+  _Intersection51 get stderr => _i3.getProperty(
         this,
         'stderr',
       );

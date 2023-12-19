@@ -299,7 +299,14 @@ class InteropLibrary with InteropItem {
         'source': String source,
       } = rawTypedef as Map;
 
-      assert(!typedefs.any((it) => it.name == name));
+      if (typedefs.any((it) => it.name == name) ||
+          module.project.findDeclared(name) != null) {
+        logger.info('Skipping already defined typedef $name');
+        continue;
+      }
+
+      assert(!typedefs.any((it) => it.name == name),
+          'Typedef $name already exists. Lib ${namespace}($targetFileName)');
 
       typedefs.add(InteropTypedef(
         name: name,
@@ -366,8 +373,6 @@ class InteropLibrary with InteropItem {
       if (isModule) {
         globalMap['isClass'] = true;
         globalMap['isInline'] = false;
-
-        print('GLobalIsClass ${module.project.name}, ${namespace}');
       }
 
       global.parse(globalMap);
@@ -465,6 +470,20 @@ class InteropLibrary with InteropItem {
     Unused complex mapping:
 - ${unusedMapping.keys.where((k) => unusedMapping[k]!.isNotEmpty).map((key) => '$key: ${unusedMapping[key]!.length}').join('\n- ')}
     ''');
+  }
+
+  void _removeDuplicateMethods() {
+    final methods = global.methods.toList();
+
+    for (final method in methods) {
+      if (module.project.modules.any((module) => module.libraries.any((lib) =>
+          lib.global != global &&
+          lib.global.methods.any((method2) => method.name == method2.name)))) {
+        logger.info(
+            'Skipping duplicated method ${method.name}. Class ${namespace}($fileName)');
+        global.methods.remove(method);
+      }
+    }
   }
 
   void configureGlobal() {
@@ -594,7 +613,8 @@ class InteropLibrary with InteropItem {
             //&& it.isStatic == !needsGlobal);
 
             if (item.name == 'STENCIL_FUNC') {
-              logger.info('STENCIL_FUNC! ${existant == null}/${swap.properties.firstWhereOrNull((it) => it.name == item.name) == null} -> swap: ${swap.name}, cl: ${cl.name}');
+              logger.info(
+                  'STENCIL_FUNC! ${existant == null}/${swap.properties.firstWhereOrNull((it) => it.name == item.name) == null} -> swap: ${swap.name}, cl: ${cl.name}');
             }
 
             if (existant != null) {
@@ -609,6 +629,8 @@ class InteropLibrary with InteropItem {
         }
       }
     }
+
+    _removeDuplicateMethods();
 
     for (final cl in classes.toList()) {
       for (final ctor in cl.constructors) {

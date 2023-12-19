@@ -145,6 +145,30 @@ enum DiagramEventNameOptions {
   final _i2.String value;
 }
 
+/* Source: ForcedCommon from  CanvasGradient | SGradient */
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class CreateLinearGradient {}
+
+/* Source: ForcedCommon from  CanvasGradient | SGradient */
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class CreateRadialGradient {}
+
+/* Source: ForcedCommon from  CanvasGradient | SGradient */
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class UnionCommon4 {}
+
+/* Source: ForcedCommon from  CanvasGradient | SGradient */
+@_i1.JS()
+@_i1.staticInterop
+@_i1.anonymous
+class UnionCommon5 {}
+
 typedef MarginLike = _i2.Object;
 typedef DiagramEventHandler = void Function(_i3.DiagramEvent);
 typedef DiagramEventName = _i3.DiagramEventNameOptions;
@@ -950,7 +974,7 @@ class IContext {
     )? clearRect,
     void Function()? clip,
     void Function()? closePath,
-    _i2.Object Function(
+    _i3.UnionCommon4 Function(
       _i2.num,
       _i2.num,
       _i2.num,
@@ -960,7 +984,7 @@ class IContext {
       _i6.HTMLElement,
       _i2.String,
     )? createPattern,
-    _i2.Object Function(
+    _i3.UnionCommon5 Function(
       _i2.num,
       _i2.num,
       _i2.num,
@@ -1641,7 +1665,7 @@ extension IContext$Typings on IContext {
         [this],
       );
   set createLinearGradient(
-      _i2.Object Function(
+      _i3.UnionCommon4 Function(
         _i2.num,
         _i2.num,
         _i2.num,
@@ -1654,7 +1678,7 @@ extension IContext$Typings on IContext {
     );
   }
 
-  _i2.Object Function(
+  _i3.UnionCommon4 Function(
     _i2.num,
     _i2.num,
     _i2.num,
@@ -1711,7 +1735,7 @@ extension IContext$Typings on IContext {
             ],
           );
   set createRadialGradient(
-      _i2.Object Function(
+      _i3.UnionCommon5 Function(
         _i2.num,
         _i2.num,
         _i2.num,
@@ -1726,7 +1750,7 @@ extension IContext$Typings on IContext {
     );
   }
 
-  _i2.Object Function(
+  _i3.UnionCommon5 Function(
     _i2.num,
     _i2.num,
     _i2.num,

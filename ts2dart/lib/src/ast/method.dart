@@ -551,11 +551,7 @@ extension AdvMethods on Iterable<InteropMethod> {
           cp.params.replaceRange(y, y + 1, [param.copyWith(isOptional: true)]);
         }
       }
-
-      if (method.usableName == 'getSession') {
-        print('DIOSANTI ${method.returnRef.type}, ${cp.returnRef.type}');
-      }
-
+      
       yield cp;
     }
   }

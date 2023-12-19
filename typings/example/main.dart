@@ -68,7 +68,6 @@ js.MediaStream? mstream;
 void mediaClick(js.HTMLButtonElement btnMedia, js.HTMLVideoElement video) {
   print('BtnMediaClicked');
 
-  print('WHAT??');
   // if we already have the stream, stop it and change the HTML of the button
   if (mstream != null) {
     // forEach is not working in Dart2JS:

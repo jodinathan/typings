@@ -52,20 +52,6 @@ extension $ModuleTasks$Typings on $ModuleTasks {
         'onDidEndTaskProcess',
       );
 
-  /// Register a task provider.
-  _i3.Disposable registerTaskProvider(
-    _i2.String type,
-    _i3.TaskProvider<_i3.Task> provider,
-  ) =>
-      _i4.callMethod(
-        this,
-        'registerTaskProvider',
-        [
-          type,
-          provider,
-        ],
-      );
-
   /// Fetches all tasks available in the systems. This includes tasks
   /// from `tasks.json` files as well as tasks from task providers
   /// contributed through extensions.

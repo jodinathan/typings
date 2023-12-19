@@ -221,6 +221,26 @@ class Module {
     );
   }
 
+  static _i2.List<_i7.ByteBuffer> Function(
+    _i3.Module,
+    _i2.String,
+  ) get customSections => (
+        _i3.Module p0,
+        _i2.String p1,
+      ) =>
+          ((_i5.callMethod(
+            _i5.getProperty(
+              _i8.target642,
+              'customSections',
+            ),
+            r'call',
+            [
+              _i8.target642,
+              p0,
+              p1,
+            ],
+          )) as _i2.List)
+              .cast();
   static set exports(
       _i2.List<_i3.ModuleExportDescriptor> Function(_i3.Module) value) {
     _i5.setProperty(
@@ -230,6 +250,19 @@ class Module {
     );
   }
 
+  static _i2.List<_i3.ModuleExportDescriptor> Function(_i3.Module)
+      get exports => (_i3.Module p0) => ((_i5.callMethod(
+            _i5.getProperty(
+              _i8.target642,
+              'exports',
+            ),
+            r'call',
+            [
+              _i8.target642,
+              p0,
+            ],
+          )) as _i2.List)
+              .cast();
   static set imports(
       _i2.List<_i3.ModuleImportDescriptor> Function(_i3.Module) value) {
     _i5.setProperty(
@@ -238,6 +271,20 @@ class Module {
       _i5.allowInterop(value),
     );
   }
+
+  static _i2.List<_i3.ModuleImportDescriptor> Function(_i3.Module)
+      get imports => (_i3.Module p0) => ((_i5.callMethod(
+            _i5.getProperty(
+              _i8.target642,
+              'imports',
+            ),
+            r'call',
+            [
+              _i8.target642,
+              p0,
+            ],
+          )) as _i2.List)
+              .cast();
 }
 
 _i2.Object get _declaredModule => _i5.getProperty(

@@ -86,7 +86,7 @@ class InteropClass extends InteropNamedDeclaration
   final List<InteropProperty> _properties = [];
   Iterable<InteropProperty> get properties => _properties;
   final List<InteropMethodHolder> _methods = [];
-  Iterable<InteropMethodHolder> get methods => _methods;
+  List<InteropMethodHolder> get methods => _methods;
   late final InteropMethodHolder _callable = InteropMethodHolder(
       name: 'call',
       library: library,
@@ -348,19 +348,24 @@ class InteropClass extends InteropNamedDeclaration
       final found = source.firstWhereOrNull((it) =>
           it.usableName == prop.usableName &&
           it != prop &&
-          !toRemove.contains(it));
+          !toRemove.contains(it)
+          && it.type == prop.type);
 
       if (found != null) {
+        logger.info(
+            'Skipping doubled ${library.module.fileName}.${name}.${prop.name}(${prop.type}/${prop.hashCode}), ${found.library.module.fileName}.${found.cl.name}(${found.type}/${found.hashCode})');
         toRemove.add(prop);
       }
     }
 
     for (final prop in toRemove) {
-      logger.info('Skipping doubled ${name}.${prop.name}');
-      properties.remove(prop);
+      _properties.remove(prop);
     }
 
-    return properties.expand((p) => p.buildExternal());
+    return this
+        .properties
+        .whereType<InteropGetter>()
+        .expand((p) => p.buildExternal());
   }
 
   InteropProperty fromMethod(InteropMethod method, {bool setter = false}) {

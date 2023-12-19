@@ -672,7 +672,7 @@ enum TestRunProfileKind {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection14 implements _i3.Memento, _i3.IInline33 {}
+class _Intersection61 implements _i3.Memento, _i3.IInline33 {}
 
 /* Source: ForcedCommon from  Event<CustomDocumentEditEvent<T>> | Event<CustomDocumentContentChangeEvent<T>> */
 @_i1.JS()
@@ -17711,7 +17711,7 @@ class ExtensionContext {
   factory ExtensionContext({
     _i2.List<_i3.IInline32>? subscriptions,
     _i3.Memento? workspaceState,
-    _Intersection14? globalState,
+    _Intersection61? globalState,
     _i3.SecretStorage? secrets,
     _i3.Uri? extensionUri,
     _i2.String? extensionPath,
@@ -17768,7 +17768,7 @@ extension ExtensionContext$Typings on ExtensionContext {
 
   /// A memento object that stores state independent
   /// of the current opened {@link workspace.workspaceFoldersworkspace}.
-  _Intersection14 get globalState => _i5.getProperty(
+  _Intersection61 get globalState => _i5.getProperty(
         this,
         'globalState',
       );

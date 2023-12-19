@@ -98,10 +98,6 @@ class InteropTypedef extends InteropNamedDeclaration
     if (map case {'type': Map type}) {
       definition = parseRef(type.cast());
 
-      if (name == 'ProviderResult') {
-        print('GODDAMNIT ${type}\n$definition');
-      }
-
       if (definition!.type case InteropSourceType sourced
           when typeParams.isNotEmpty) {
         for (final tp in typeParams) {

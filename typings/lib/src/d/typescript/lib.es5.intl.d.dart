@@ -1014,6 +1014,27 @@ class Collator {
       _i5.allowInterop(value),
     );
   }
+
+  static _i2.List<_i2.String> Function(
+    _i2.Object, [
+    _i3.CollatorOptions?,
+  ]) get supportedLocalesOf => (
+        _i2.Object p0, [
+        _i3.CollatorOptions? p1,
+      ]) =>
+          ((_i5.callMethod(
+            _i5.getProperty(
+              _i6.target12,
+              'supportedLocalesOf',
+            ),
+            r'call',
+            [
+              _i6.target12,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          )) as _i2.List)
+              .cast();
 }
 
 _i2.Object get _declaredCollator => _i5.getProperty(
@@ -1650,6 +1671,27 @@ class NumberFormat {
       _i5.allowInterop(value),
     );
   }
+
+  static _i2.List<_i2.String> Function(
+    _i2.Object, [
+    _i3.NumberFormatOptions?,
+  ]) get supportedLocalesOf => (
+        _i2.Object p0, [
+        _i3.NumberFormatOptions? p1,
+      ]) =>
+          ((_i5.callMethod(
+            _i5.getProperty(
+              _i6.target13,
+              'supportedLocalesOf',
+            ),
+            r'call',
+            [
+              _i6.target13,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          )) as _i2.List)
+              .cast();
 }
 
 _i2.Object get _declaredNumberFormat => _i5.getProperty(
@@ -1668,7 +1710,7 @@ extension NumberFormat$Typings on NumberFormat {
   }
 
   _i2.List<_i3.NumberFormatPart> Function([_i2.Object?]) get formatToParts =>
-      ([_i2.Object? p0]) => (_i5.callMethod(
+      ([_i2.Object? p0]) => ((_i5.callMethod(
             _i5.getProperty(
               this,
               'formatToParts',
@@ -1678,7 +1720,7 @@ extension NumberFormat$Typings on NumberFormat {
               this,
               p0 ?? _i4.undefined,
             ],
-          ) as _i2.List)
+          )) as _i2.List)
               .cast();
   _i2.String _format$1(_i2.num value) => _i5.callMethod(
         this,
@@ -2459,6 +2501,27 @@ class DateTimeFormat {
       _i5.allowInterop(value),
     );
   }
+
+  static _i2.List<_i2.String> Function(
+    _i2.Object, [
+    _i3.DateTimeFormatOptions?,
+  ]) get supportedLocalesOf => (
+        _i2.Object p0, [
+        _i3.DateTimeFormatOptions? p1,
+      ]) =>
+          ((_i5.callMethod(
+            _i5.getProperty(
+              _i6.target14,
+              'supportedLocalesOf',
+            ),
+            r'call',
+            [
+              _i6.target14,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          )) as _i2.List)
+              .cast();
 }
 
 _i2.Object get _declaredDateTimeFormat => _i5.getProperty(
@@ -2514,7 +2577,7 @@ extension DateTimeFormat$Typings on DateTimeFormat {
   }
 
   _i2.List<_i3.DateTimeFormatPart> Function([_i2.Object?]) get formatToParts =>
-      ([_i2.Object? p0]) => (_i5.callMethod(
+      ([_i2.Object? p0]) => ((_i5.callMethod(
             _i5.getProperty(
               this,
               'formatToParts',
@@ -2524,7 +2587,7 @@ extension DateTimeFormat$Typings on DateTimeFormat {
               this,
               p0 ?? _i4.undefined,
             ],
-          ) as _i2.List)
+          )) as _i2.List)
               .cast();
   set formatRange(
       _i2.String Function(
@@ -2576,7 +2639,7 @@ extension DateTimeFormat$Typings on DateTimeFormat {
         _i2.Object p0,
         _i2.Object p1,
       ) =>
-          (_i5.callMethod(
+          ((_i5.callMethod(
             _i5.getProperty(
               this,
               'formatRangeToParts',
@@ -2587,7 +2650,7 @@ extension DateTimeFormat$Typings on DateTimeFormat {
               p0,
               p1,
             ],
-          ) as _i2.List)
+          )) as _i2.List)
               .cast();
 }
 
@@ -3050,10 +3113,10 @@ extension ResolvedPluralRulesOptions$Typings on ResolvedPluralRulesOptions {
     );
   }
 
-  _i2.List<_i3.LDMLPluralRule> get pluralCategories => (_i5.getProperty(
+  _i2.List<_i3.LDMLPluralRule> get pluralCategories => ((_i5.getProperty(
         this,
         'pluralCategories',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast()
           .map((i) => _i3.LDMLPluralRuleOptions.values.byName(i))
           .toList();
@@ -3166,6 +3229,27 @@ class PluralRules {
       _i5.allowInterop(value),
     );
   }
+
+  static _i2.List<_i2.String> Function(
+    _i2.Object, [
+    _i2.dynamic,
+  ]) get supportedLocalesOf => (
+        _i2.Object p0, [
+        _i2.dynamic p1,
+      ]) =>
+          ((_i5.callMethod(
+            _i5.getProperty(
+              _i6.target15,
+              'supportedLocalesOf',
+            ),
+            r'call',
+            [
+              _i6.target15,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          )) as _i2.List)
+              .cast();
 }
 
 _i2.Object get _declaredPluralRules => _i5.getProperty(
@@ -3566,6 +3650,27 @@ class RelativeTimeFormat {
       _i5.allowInterop(value),
     );
   }
+
+  static _i2.List<_i2.String> Function([
+    _i2.Object?,
+    _i3.RelativeTimeFormatOptions?,
+  ]) get supportedLocalesOf => ([
+        _i2.Object? p0,
+        _i3.RelativeTimeFormatOptions? p1,
+      ]) =>
+          ((_i5.callMethod(
+            _i5.getProperty(
+              _i6.target16,
+              'supportedLocalesOf',
+            ),
+            r'call',
+            [
+              _i6.target16,
+              p0 ?? _i4.undefined,
+              p1 ?? _i4.undefined,
+            ],
+          )) as _i2.List)
+              .cast();
 }
 
 _i2.Object get _declaredRelativeTimeFormat => _i5.getProperty(
@@ -3624,7 +3729,7 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
         _i2.num p0,
         _i3.RelativeTimeFormatUnit p1,
       ) =>
-          (_i5.callMethod(
+          ((_i5.callMethod(
             _i5.getProperty(
               this,
               'formatToParts',
@@ -3635,7 +3740,7 @@ extension RelativeTimeFormat$Typings on RelativeTimeFormat {
               p0,
               p1.name,
             ],
-          ) as _i2.List)
+          )) as _i2.List)
               .cast();
   set resolvedOptions(_i3.ResolvedRelativeTimeFormatOptions Function() value) {
     _i5.setProperty(
@@ -4179,6 +4284,27 @@ class DisplayNames {
       _i5.allowInterop(value),
     );
   }
+
+  static _i2.List<_i2.String> Function([
+    _i2.dynamic,
+    _i2.dynamic,
+  ]) get supportedLocalesOf => ([
+        _i2.dynamic p0,
+        _i2.dynamic p1,
+      ]) =>
+          ((_i5.callMethod(
+            _i5.getProperty(
+              _i6.target18,
+              'supportedLocalesOf',
+            ),
+            r'call',
+            [
+              _i6.target18,
+              p0 ?? _i4.undefined,
+              p1 ?? _i4.undefined,
+            ],
+          )) as _i2.List)
+              .cast();
 }
 
 _i2.Object get _declaredDisplayNames => _i5.getProperty(
@@ -4486,6 +4612,27 @@ class ListFormat {
       _i5.allowInterop(value),
     );
   }
+
+  static _i2.List<_i2.String> Function(
+    _i2.Object, [
+    _i2.dynamic,
+  ]) get supportedLocalesOf => (
+        _i2.Object p0, [
+        _i2.dynamic p1,
+      ]) =>
+          ((_i5.callMethod(
+            _i5.getProperty(
+              _i6.target19,
+              'supportedLocalesOf',
+            ),
+            r'call',
+            [
+              _i6.target19,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          )) as _i2.List)
+              .cast();
 }
 
 _i2.Object get _declaredListFormat => _i5.getProperty(
@@ -4524,7 +4671,7 @@ extension ListFormat$Typings on ListFormat {
   }
 
   _i2.List<_i2.dynamic> Function(_i7.Iterable<_i2.String>) get formatToParts =>
-      (_i7.Iterable<_i2.String> p0) => (_i5.callMethod(
+      (_i7.Iterable<_i2.String> p0) => ((_i5.callMethod(
             _i5.getProperty(
               this,
               'formatToParts',
@@ -4534,7 +4681,7 @@ extension ListFormat$Typings on ListFormat {
               this,
               p0,
             ],
-          ) as _i2.List)
+          )) as _i2.List)
               .cast();
   set resolvedOptions(_i3.ResolvedListFormatOptions Function() value) {
     _i5.setProperty(
@@ -4641,6 +4788,27 @@ class Segmenter {
       _i5.allowInterop(value),
     );
   }
+
+  static _i2.List<_i2.String> Function(
+    _i2.Object, [
+    _i2.dynamic,
+  ]) get supportedLocalesOf => (
+        _i2.Object p0, [
+        _i2.dynamic p1,
+      ]) =>
+          ((_i5.callMethod(
+            _i5.getProperty(
+              _i6.target20,
+              'supportedLocalesOf',
+            ),
+            r'call',
+            [
+              _i6.target20,
+              p0,
+              p1 ?? _i4.undefined,
+            ],
+          )) as _i2.List)
+              .cast();
 }
 
 _i2.Object get _declaredSegmenter => _i5.getProperty(
@@ -4911,11 +5079,11 @@ extension $ModuleIntl$Typings on $ModuleIntl {
   /// Returns a sorted array of the supported collation, calendar, currency, numbering system, timezones, and units by the implementation.
   /// [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf)
   _i2.List<_i2.String> supportedValuesOf(_i3.SupportedValuesOf key) =>
-      (_i5.callMethod(
+      ((_i5.callMethod(
         this,
         'supportedValuesOf',
         [key.name],
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 

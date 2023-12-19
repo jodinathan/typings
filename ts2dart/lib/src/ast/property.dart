@@ -36,7 +36,7 @@ final class InteropGetter extends InteropProperty {
   final bool readonly;
 
   @override
-  InteropPropertyType get type => InteropPropertyType.setter;
+  InteropPropertyType get type => InteropPropertyType.getter;
 
   @override
   bool get isTypedefLike => true;

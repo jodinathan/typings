@@ -228,6 +228,18 @@ class SymbolConstructor {
     );
   }
 
+  static _i2.Symbol Function(_i2.String) get for$ =>
+      (_i2.String p0) => _i3.callMethod(
+            _i3.getProperty(
+              _i6.target26,
+              'for',
+            ),
+            r'call',
+            [
+              _i6.target26,
+              p0,
+            ],
+          );
   static set keyFor(_i2.String? Function(_i2.Symbol) value) {
     _i3.setProperty(
       _i6.target26,
@@ -235,32 +247,22 @@ class SymbolConstructor {
       _i3.allowInterop((p0) => () => value(p0) ?? _i4.undefined),
     );
   }
-}
 
-extension SymbolConstructor$Typings on SymbolConstructor {
-  _i2.Symbol Function(_i2.String) get for$ => (_i2.String p0) => _i3.callMethod(
-        _i3.getProperty(
-          this,
-          'for',
-        ),
-        r'call',
-        [
-          this,
-          p0,
-        ],
-      );
-  _i2.String? Function(_i2.Symbol) get keyFor =>
+  static _i2.String? Function(_i2.Symbol) get keyFor =>
       (_i2.Symbol p0) => _i3.callMethod(
             _i3.getProperty(
-              this,
+              _i6.target26,
               'keyFor',
             ),
             r'call',
             [
-              this,
+              _i6.target26,
               p0,
             ],
           );
+}
+
+extension SymbolConstructor$Typings on SymbolConstructor {
   _i2.Symbol call([_i2.Object? description]) => _i3.callMethod(
         this,
         'call',
@@ -586,22 +588,22 @@ class PromiseConstructor {
       _i3.allowInterop(value),
     );
   }
-}
 
-extension PromiseConstructor$Typings on PromiseConstructor {
-  _i2.Future<T> Function<T>([_i2.dynamic]) get reject =>
+  static _i2.Future<T> Function<T>([_i2.dynamic]) get reject =>
       <T>([_i2.dynamic p0]) => _i3.promiseToFuture(_i3.callMethod(
             _i3.getProperty(
-              this,
+              _i6.target25,
               'reject',
             ),
             r'call',
             [
-              this,
+              _i6.target25,
               p0,
             ],
           ));
+}
 
+extension PromiseConstructor$Typings on PromiseConstructor {
   /// Creates a Promise that is resolved with an array of results when all of the provided Promises
   ///  resolve, or rejected when any Promise is rejected.
   ///  @param values An iterable of Promises.

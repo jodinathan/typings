@@ -1,1 +1,1 @@
-webdev serve example --enable-experiment=inline-class
+dart --enable-experiment=inline-class run build_runner serve example

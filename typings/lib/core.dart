@@ -65,7 +65,9 @@ import 'package:typings/annotations.dart';
       'lib/lib.es2022.sharedmemory.d.ts',
       'lib/lib.es2023.array.d.ts',
       'lib/lib.dom.d.ts',
+      'lib/lib.webworker.d.ts',
       'lib/lib.webworker.importscripts.d.ts',
+      'lib/lib.webworker.iterable.d.ts',
       'lib/lib.scripthost.d.ts'
     ]
 )

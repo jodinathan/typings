@@ -6,6 +6,10 @@ import 'dart:core' as _i2;
 import 'dart:js_util' as _i3;
 import 'lib.scripthost.d.dart' as _i4;
 import '/d/core.dart' as _i5;
+import 'lib.es5.intl.d.dart' as _i6;
+import 'lib.es2015.reflect.reflect.d.dart' as _i7;
+import 'lib.dom.css.d.dart' as _i8;
+import 'lib.dom.webassembly.d.dart' as _i9;
 
 @_i1.JS('self')
 external _i2.Object _self;
@@ -1095,14 +1099,14 @@ extension VBArray$Typings<T> on VBArray<T> {
     );
   }
 
-  _i2.List<T> Function() get toArray => () => (_i3.callMethod(
+  _i2.List<T> Function() get toArray => () => ((_i3.callMethod(
         _i3.getProperty(
           this,
           'toArray',
         ),
         r'call',
         [this],
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 }
 
@@ -1166,6 +1170,22 @@ _i4.EnumeratorConstructor get enumerator => _i3.getProperty(
 _i4.VBArrayConstructor get vbArray => _i3.getProperty(
       _self,
       'VBArray',
+    );
+_i6.$ModuleIntl get intl => _i3.getProperty(
+      _self,
+      'Intl',
+    );
+_i7.$ModuleReflect get reflect => _i3.getProperty(
+      _self,
+      'Reflect',
+    );
+_i8.$ModuleCss get css => _i3.getProperty(
+      _self,
+      'CSS',
+    );
+_i9.$ModuleWebAssembly get webAssembly => _i3.getProperty(
+      _self,
+      'WebAssembly',
     ); /* Source:  */
 
 @_i1.JS()

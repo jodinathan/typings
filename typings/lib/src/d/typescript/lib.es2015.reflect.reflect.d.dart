@@ -292,11 +292,11 @@ extension $ModuleReflect$Typings on $ModuleReflect {
 
   /// Returns the string and symbol keys of the own properties of an object. The own properties of an object
   /// are those that are defined directly on that object, and are not inherited from the object's prototype.
-  _i2.List<_i2.Object> ownKeys(_i2.Object target) => (_i3.callMethod(
+  _i2.List<_i2.Object> ownKeys(_i2.Object target) => ((_i3.callMethod(
         this,
         'ownKeys',
         [target],
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
 
   /// Prevents the addition of new properties to an object.

@@ -451,6 +451,8 @@ class BigInt {
     _i2.dynamic toString$,
     _i2.dynamic toLocaleString,
     _i2.dynamic valueOf,
+    _i2.dynamic asIntN,
+    _i2.dynamic asUintN,
   });
 
   factory BigInt({
@@ -460,12 +462,22 @@ class BigInt {
       _i3.BigIntToLocaleStringOptions?,
     ])? toLocaleString,
     _i2.int Function()? valueOf,
+    _i2.int Function(
+      _i2.num,
+      _i2.int,
+    )? asIntN,
+    _i2.int Function(
+      _i2.num,
+      _i2.int,
+    )? asUintN,
   }) =>
       BigInt._(
         toString$: toString$ == null ? null : _i5.allowInterop(toString$),
         toLocaleString:
             toLocaleString == null ? null : _i5.allowInterop(toLocaleString),
         valueOf: valueOf == null ? null : _i5.allowInterop(valueOf),
+        asIntN: asIntN == null ? null : _i5.allowInterop(asIntN),
+        asUintN: asUintN == null ? null : _i5.allowInterop(asUintN),
       );
 
   static set asIntN(
@@ -480,6 +492,25 @@ class BigInt {
     );
   }
 
+  static _i2.int Function(
+    _i2.num,
+    _i2.int,
+  ) get asIntN => (
+        _i2.num p0,
+        _i2.int p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              _i6.target28,
+              'asIntN',
+            ),
+            r'call',
+            [
+              _i6.target28,
+              p0,
+              p1,
+            ],
+          );
   static set asUintN(
       _i2.int Function(
         _i2.num,
@@ -491,6 +522,26 @@ class BigInt {
       _i5.allowInterop(value),
     );
   }
+
+  static _i2.int Function(
+    _i2.num,
+    _i2.int,
+  ) get asUintN => (
+        _i2.num p0,
+        _i2.int p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              _i6.target28,
+              'asUintN',
+            ),
+            r'call',
+            [
+              _i6.target28,
+              p0,
+              p1,
+            ],
+          );
 }
 
 extension BigInt$Typings on BigInt {
@@ -600,6 +651,25 @@ class BigIntConstructor {
     );
   }
 
+  static _i2.int Function(
+    _i2.num,
+    _i2.int,
+  ) get asIntN => (
+        _i2.num p0,
+        _i2.int p1,
+      ) =>
+          _i5.callMethod(
+            _i5.getProperty(
+              _i6.target28,
+              'asIntN',
+            ),
+            r'call',
+            [
+              _i6.target28,
+              p0,
+              p1,
+            ],
+          );
   static set asUintN(
       _i2.int Function(
         _i2.num,
@@ -611,29 +681,8 @@ class BigIntConstructor {
       _i5.allowInterop(value),
     );
   }
-}
 
-extension BigIntConstructor$Typings on BigIntConstructor {
-  _i2.int Function(
-    _i2.num,
-    _i2.int,
-  ) get asIntN => (
-        _i2.num p0,
-        _i2.int p1,
-      ) =>
-          _i5.callMethod(
-            _i5.getProperty(
-              this,
-              'asIntN',
-            ),
-            r'call',
-            [
-              this,
-              p0,
-              p1,
-            ],
-          );
-  _i2.int Function(
+  static _i2.int Function(
     _i2.num,
     _i2.int,
   ) get asUintN => (
@@ -642,16 +691,19 @@ extension BigIntConstructor$Typings on BigIntConstructor {
       ) =>
           _i5.callMethod(
             _i5.getProperty(
-              this,
+              _i6.target28,
               'asUintN',
             ),
             r'call',
             [
-              this,
+              _i6.target28,
               p0,
               p1,
             ],
           );
+}
+
+extension BigIntConstructor$Typings on BigIntConstructor {
   _i2.int call(_i2.Object value) => _i5.callMethod(
         this,
         'call',
@@ -728,6 +780,19 @@ class BigInt64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
           ])),
     );
   }
+
+  static _i3.BigInt64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              _i6.target29,
+              'of',
+            ),
+            r'call',
+            [
+              _i6.target29,
+              p0 ?? _i4.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   static _i3.BigInt64Array from<U>(
@@ -1972,6 +2037,19 @@ class BigInt64ArrayConstructor {
           ])),
     );
   }
+
+  static _i3.BigInt64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              _i6.target29,
+              'of',
+            ),
+            r'call',
+            [
+              _i6.target29,
+              p0 ?? _i4.undefined,
+            ],
+          );
 }
 
 extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
@@ -1980,18 +2058,6 @@ extension BigInt64ArrayConstructor$Typings on BigInt64ArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i3.BigInt64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      ([_i2.Iterable<_i2.dynamic>? p0]) => _i5.callMethod(
-            _i5.getProperty(
-              this,
-              'of',
-            ),
-            r'call',
-            [
-              this,
-              p0 ?? _i4.undefined,
-            ],
-          );
 
   /// Creates an array from an array-like or iterable object.
   _i3.BigInt64Array from<U>(
@@ -2079,6 +2145,19 @@ class BigUint64Array implements _IterableLike$<_i7.IterableIterator<_i2.int>> {
           ])),
     );
   }
+
+  static _i3.BigUint64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              _i6.target30,
+              'of',
+            ),
+            r'call',
+            [
+              _i6.target30,
+              p0 ?? _i4.undefined,
+            ],
+          );
 
   /// Creates an array from an array-like or iterable object.
   static _i3.BigUint64Array from<U>(
@@ -3323,6 +3402,19 @@ class BigUint64ArrayConstructor {
           ])),
     );
   }
+
+  static _i3.BigUint64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
+      ([_i2.Iterable<_i2.dynamic>? p0]) => _i5.callMethod(
+            _i5.getProperty(
+              _i6.target30,
+              'of',
+            ),
+            r'call',
+            [
+              _i6.target30,
+              p0 ?? _i4.undefined,
+            ],
+          );
 }
 
 extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
@@ -3331,18 +3423,6 @@ extension BigUint64ArrayConstructor$Typings on BigUint64ArrayConstructor {
         this,
         'BYTES_PER_ELEMENT',
       );
-  _i3.BigUint64Array Function([_i2.Iterable<_i2.dynamic>?]) get of =>
-      ([_i2.Iterable<_i2.dynamic>? p0]) => _i5.callMethod(
-            _i5.getProperty(
-              this,
-              'of',
-            ),
-            r'call',
-            [
-              this,
-              p0 ?? _i4.undefined,
-            ],
-          );
 
   /// Creates an array from an array-like or iterable object.
   _i3.BigUint64Array from<U>(

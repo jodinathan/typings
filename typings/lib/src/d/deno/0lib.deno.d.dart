@@ -189,19 +189,19 @@ class From {}
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class UnionCommon10 {}
+class UnionCommon12 {}
 
 /* Source:  Window & typeof globalThis */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection36 implements _i3.Window, _GlobalThis {}
+class _Intersection45 implements _i3.Window, _GlobalThis {}
 
 /* Source:  Window & typeof globalThis */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection37 implements _i3.Window, _GlobalThis {}
+class _Intersection46 implements _i3.Window, _GlobalThis {}
 
 /* Source: ForcedCommon from 
   | ReadableStreamDefaultReadValueResult<T>
@@ -277,13 +277,13 @@ extension ReadableStreamBYOBReadResultCommon$Typings<
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection38 implements _i3.Window, _GlobalThis {}
+class _Intersection47 implements _i3.Window, _GlobalThis {}
 
 /* Source:  Window & typeof globalThis */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection39 implements _i3.Window, _GlobalThis {}
+class _Intersection48 implements _i3.Window, _GlobalThis {}
 
 typedef URLPatternInput = _i2.Object;
 typedef EventListenerOrEventListenerObject = _i2.Object;
@@ -2324,7 +2324,7 @@ class Url {
         _i2.Object?,
       ]) value) {
     _i4.setProperty(
-      _i8.target3236,
+      _i8.target3321,
       'canParse',
       _i4.allowInterop(value),
     );
@@ -2332,7 +2332,7 @@ class Url {
 
   static set createObjectURL(_i2.String Function(_i3.Blob) value) {
     _i4.setProperty(
-      _i8.target3236,
+      _i8.target3321,
       'createObjectURL',
       _i4.allowInterop(value),
     );
@@ -2340,7 +2340,7 @@ class Url {
 
   static set revokeObjectURL(void Function(_i2.String) value) {
     _i4.setProperty(
-      _i8.target3236,
+      _i8.target3321,
       'revokeObjectURL',
       _i4.allowInterop(value),
     );
@@ -4354,7 +4354,7 @@ class AbortSignal implements _i3.EventTarget {
 
   static set abort(_i3.AbortSignal Function([_i2.dynamic]) value) {
     _i4.setProperty(
-      _i8.target3247,
+      _i8.target3332,
       'abort',
       _i4.allowInterop(value),
     );
@@ -4362,7 +4362,7 @@ class AbortSignal implements _i3.EventTarget {
 
   static set timeout(_i3.AbortSignal Function(_i2.num) value) {
     _i4.setProperty(
-      _i8.target3247,
+      _i8.target3332,
       'timeout',
       _i4.allowInterop(value),
     );
@@ -6693,9 +6693,9 @@ class ReadableStream<R> {
         ],
       );
 
-  static set from(_i3.ReadableStream<R> Function<R>(_i3.UnionCommon10) value) {
+  static set from(_i3.ReadableStream<R> Function<R>(_i3.UnionCommon12) value) {
     _i4.setProperty(
-      _i8.target3258,
+      _i8.target3343,
       'from',
       _i4.allowInterop(value),
     );
@@ -9236,7 +9236,7 @@ class Response implements _i3.Body {
         _i3.ResponseInit?,
       ]) value) {
     _i4.setProperty(
-      _i8.target3272,
+      _i8.target3357,
       'json',
       _i4.allowInterop(value),
     );
@@ -9244,7 +9244,7 @@ class Response implements _i3.Body {
 
   static set error(_i3.Response Function() value) {
     _i4.setProperty(
-      _i8.target3272,
+      _i8.target3357,
       'error',
       _i4.allowInterop(value),
     );
@@ -9256,7 +9256,7 @@ class Response implements _i3.Body {
         _i2.num?,
       ]) value) {
     _i4.setProperty(
-      _i8.target3272,
+      _i8.target3357,
       'redirect',
       _i4.allowInterop(value),
     );
@@ -13699,11 +13699,11 @@ _i2.Object get _declaredWindow => _i4.getProperty(
     );
 
 extension Window$Typings on Window {
-  _Intersection36 get window => _i4.getProperty(
+  _Intersection45 get window => _i4.getProperty(
         this,
         'window',
       );
-  _Intersection37 get self => _i4.getProperty(
+  _Intersection46 get self => _i4.getProperty(
         this,
         'self',
       );
@@ -14725,13 +14725,6 @@ _i2.bool dispatchEvent(_i3.Event event) => _i4.callMethod(
       'dispatchEvent',
       [event],
     );
-void close() {
-  _i4.callMethod(
-    _self,
-    'close',
-    [],
-  );
-}
 
 /// Shows the given message and waits for the enter key pressed.
 ///
@@ -15309,11 +15302,11 @@ _i2.dynamic get cacheStorage => _i4.getProperty(
       _self,
       'CacheStorage',
     );
-_Intersection38 get window => _i4.getProperty(
+_Intersection47 get window => _i4.getProperty(
       _self,
       'window',
     );
-_Intersection39 get self => _i4.getProperty(
+_Intersection48 get self => _i4.getProperty(
       _self,
       'self',
     );

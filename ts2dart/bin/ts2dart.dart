@@ -13,7 +13,7 @@ Future<void> main(List<String> arguments) async {
 
   final libPath = '${Directory.current.path}/../typings/lib/';
 
-  if (1 > 0) {
+  if (1 < 0) {
     await Transpiler.fromNpm(
         package: 'typescript',
         version: 'latest',
@@ -68,9 +68,24 @@ Future<void> main(List<String> arguments) async {
           'lib/lib.es2022.sharedmemory.d.ts',
           'lib/lib.es2023.array.d.ts',
           'lib/lib.dom.d.ts',
-          'lib/lib.webworker.importscripts.d.ts',
           'lib/lib.scripthost.d.ts'
         ]);
+  }
+
+  if (1 > 0) {
+    await Transpiler.fromNpm(
+        package: 'typescript',
+        version: 'latest',
+        targetMainFile: 'webworker',
+        packageJson: (typings: false, import: false),
+        dirName: 'webworker',
+        targetPath: libPath,
+        files: [
+          'lib/lib.webworker.d.ts',
+          'lib/lib.webworker.importscripts.d.ts',
+          'lib/lib.webworker.iterable.d.ts',
+        ],
+        uses: ['typescript']);
   }
 
   if (1 < 0) {
@@ -96,7 +111,10 @@ Future<void> main(List<String> arguments) async {
         targetMainFile: 'gojs',
         dirName: 'gojs',
         targetPath: libPath,
-        packageJson: (typings: false, import: false),
+        packageJson: (
+          typings: false,
+          import: false
+        ),
         distFiles: {
           'release/go.js'
         },

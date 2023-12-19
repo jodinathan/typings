@@ -33,7 +33,7 @@ enum WaitOptions {
   final _i2.String value;
 }
 
-/* Source: ForcedCommon from  { async: false, value: "not-equal" | "timed-out" } | { async: true, value: Promise<"ok" | "timed-out"> } */
+/* Source: ForcedCommon from  { async: false; value: "not-equal" | "timed-out"; } | { async: true; value: Promise<"ok" | "timed-out">; } */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
@@ -65,7 +65,7 @@ extension WaitAsync$Typings on WaitAsync {
   }
 }
 
-/* Source: ForcedCommon from  { async: false, value: "not-equal" | "timed-out" } | { async: true, value: Promise<"ok" | "timed-out"> } */
+/* Source: ForcedCommon from  { async: false; value: "not-equal" | "timed-out"; } | { async: true; value: Promise<"ok" | "timed-out">; } */
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous

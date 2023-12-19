@@ -55,10 +55,10 @@ _i2.Object get _declaredAggregateError => _i4.getProperty(
     );
 
 extension AggregateError$Typings on AggregateError {
-  _i2.List<_i2.dynamic> get errors => (_i4.getProperty(
+  _i2.List<_i2.dynamic> get errors => ((_i4.getProperty(
         this,
         'errors',
-      ) as _i2.List)
+      )) as _i2.List)
           .cast();
   set errors(_i2.List<_i2.dynamic> value) {
     _i4.setProperty(

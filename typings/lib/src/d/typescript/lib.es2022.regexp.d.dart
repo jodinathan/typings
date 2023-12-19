@@ -54,6 +54,8 @@ class RegExpIndicesArray
     _i2.dynamic toReversed,
     _i2.dynamic toSorted,
     _i2.dynamic with$,
+    _i2.dynamic isArray,
+    _i2.dynamic of,
   });
 
   factory RegExpIndicesArray({
@@ -289,6 +291,14 @@ class RegExpIndicesArray
         _i2.num,
       ),
     )? with$,
+    _i2.dynamic Function([_i2.dynamic])? isArray,
+    _i2.List<
+                (
+                  _i2.num,
+                  _i2.num,
+                )>
+            Function<T>([_i2.Iterable<_i2.dynamic>?])?
+        of,
   }) =>
       RegExpIndicesArray._(
         groups: groups ?? _i5.undefined,
@@ -380,6 +390,33 @@ class RegExpIndicesArray
         toReversed: toReversed == null ? null : _i6.allowInterop(toReversed),
         toSorted: toSorted == null ? null : _i6.allowInterop(toSorted),
         with$: with$ == null ? null : _i6.allowInterop(with$),
+        isArray: isArray == null ? null : _i6.allowInterop(isArray),
+        of: of == null
+            ? null
+            : _i6.allowInterop(([
+                a0,
+                a1,
+                a2,
+                a3,
+                a4,
+                a5,
+                a6,
+                a7,
+                a8,
+                a9,
+              ]) =>
+                of([
+                  a0,
+                  a1,
+                  a2,
+                  a3,
+                  a4,
+                  a5,
+                  a6,
+                  a7,
+                  a8,
+                  a9,
+                ])),
       );
 }
 
