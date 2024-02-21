@@ -1,3 +1,6 @@
+## 0.0.6+2
+- Fixed pubspec dependencies
+
 ## 0.0.6+1
 - Removed Invertase as sponsor. Please, consider donating if it is an affordable option for you. Donations allow me to dedicate my time to the package.
 

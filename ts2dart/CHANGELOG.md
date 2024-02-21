@@ -1,3 +1,6 @@
+## 0.0.6+1
+- Fixed pubspec dependencies
+
 ## 0.0.6
 - Changed methods to fields so you can use a setter on anonymous classes
 
