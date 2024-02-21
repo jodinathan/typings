@@ -1,11 +1,7 @@
 import 'package:ts2dart/src/common.dart';
 import 'package:ts2dart/src/metadata/struct.dart';
 
-inline class MetadataLibrary {
-  final Map<String, dynamic> map;
-
-  MetadataLibrary(this.map);
-
+extension type MetadataLibrary(Map<String, dynamic> map)  {
   String get namespace => map.prop('namespace');
 
   String get from => map.prop('from');
@@ -13,11 +9,7 @@ inline class MetadataLibrary {
   MetadataLibraryItems get items => map.prop('items');
 }
 
-inline class MetadataLibraryItems {
-  final Map<String, dynamic> map;
-
-  MetadataLibraryItems(this.map);
-
+extension type MetadataLibraryItems(Map<String, dynamic> map)  {
   Iterable<MetadataStruct> get structs =>
       (map['structs'] as Iterable).map((i) => i as MetadataStruct);
 
@@ -48,14 +40,8 @@ inline class MetadataLibraryItems {
       enums.isEmpty;
 }
 
-inline class MetadataImport {
-  MetadataImport(this.map);
-
-  final Map<String, dynamic> map;
+extension type MetadataImport(Map<String, dynamic> map)  {
 }
 
-inline class MetadataTypedef {
-  final Map<String, dynamic> map;
-
-  MetadataTypedef(this.map);
+extension type MetadataTypedef(Map<String, dynamic> map)  {
 }

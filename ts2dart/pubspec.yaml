@@ -6,7 +6,7 @@ funding:
   - https://www.paypal.com/donate?hosted_button_id=YNCG33GLM3494
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: '>=3.3.0 <4.0.0'
 
 # Add regular dependencies here.
 dependencies: 
@@ -34,8 +34,7 @@ dev_dependencies:
 
 dependency_overrides:
   code_builder:
-   #git: https://github.com/jodinathan/code_builder
-   path: /Users/jonathanrezende/Projects/dart/public/code_builder
+   git: https://github.com/jodinathan/code_builder
   # dart_style:
   #  git: https://github.com/dart-lang/dart_style
   # build_runner:

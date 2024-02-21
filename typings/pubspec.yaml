@@ -6,16 +6,16 @@ funding:
   - https://www.paypal.com/donate?hosted_button_id=YNCG33GLM3494
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
-  analyzer: ^5.10.0
   build: ^2.3.1
   js: ^0.6.7
   source_gen: ^1.2.7
   ts2dart: any
 
 dev_dependencies:
+  analyzer: ^5.10.0
   build_web_compilers: ^4.0.4
   build_runner: ^2.4.1
   build_daemon: ^4.0.0

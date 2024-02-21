@@ -1,17 +1,10 @@
 import '../ast/types/static.dart';
 import '../common.dart';
 
-inline class MetadataCtor {
-  final Map<String, dynamic> map;
-
-  MetadataCtor(this.map);
+extension type MetadataCtor(Map<String, dynamic> map) {
 }
 
-inline class MetadataIndex {
-  final Map<String, dynamic> map;
-
-  MetadataIndex(this.map);
-
+extension type MetadataIndex(Map<String, dynamic> map) {
   Map<String, dynamic> get key => map.prop('key');
   Map<String, dynamic> get value => map.prop('value');
   String get doc => map.prop('doc');
@@ -19,17 +12,10 @@ inline class MetadataIndex {
   bool get isReadonly => map.prop('isReadonly');
 }
 
-inline class MetadataCall {
-  final Map<String, dynamic> map;
-
-  MetadataCall(this.map);
+extension type MetadataCall(Map<String, dynamic> map) {
 }
 
-inline class MetadataStruct {
-  final Map<String, dynamic> map;
-
-  MetadataStruct(this.map);
-
+extension type MetadataStruct(Map<String, dynamic> map) {
   bool isOk() => switch (map) {
         {
           'isClass': bool _,
@@ -78,19 +64,11 @@ inline class MetadataStruct {
       indexes.isNotEmpty;
 }
 
-inline class MetadataTypeRef {
-  final Map<String, dynamic> map;
-
-  MetadataTypeRef(this.map);
-
+extension type MetadataTypeRef(Map<String, dynamic> map) {
   String get name => map.prop('ref');
 }
 
-inline class MetadataStructMember {
-  final Map<String, dynamic> map;
-
-  MetadataStructMember(this.map);
-
+extension type MetadataStructMember(Map<String, dynamic> map) {
   String get name => map.prop('name');
   bool get isMethod => map.prop('isMethod');
   bool get isExternal => map.prop('isExternal') ?? false;
