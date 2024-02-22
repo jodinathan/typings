@@ -4,13 +4,17 @@ library child_process;
 import 'package:js/js.dart';
 import 'dart:js_util' as jsu;
 
+external void exec(
+    String command,
+    Function(
+        dynamic err, ProcessOutputStream stdout, ProcessOutputStream stderr));
+
 external ChildProcess spawn(String command, [Iterable<String> args]);
 
 @JS()
 @staticInterop
 @anonymous
-class ChildProcess {
-}
+class ChildProcess {}
 
 extension TypingsChildProcess on ChildProcess {
   void on(String event, Function([dynamic, dynamic]) callback) =>

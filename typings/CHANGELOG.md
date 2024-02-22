@@ -1,3 +1,6 @@
+## 0.0.6+3
+- Bump analyzer
+
 ## 0.0.6+2
 - Fixed pubspec dependencies
 

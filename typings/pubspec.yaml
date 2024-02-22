@@ -1,6 +1,6 @@
 name: typings
 description: Use NPM packages in your projects through TypeScript interop
-version: 0.0.6+2
+version: 0.0.6+3
 repository: https://github.com/jodinathan/typings/
 funding: 
   - https://www.paypal.com/donate?hosted_button_id=YNCG33GLM3494
@@ -13,7 +13,7 @@ dependencies:
   js: ^0.6.7
   source_gen: ^1.2.7
   ts2dart: any
-  analyzer: ^5.10.0
+  analyzer: ^6.3.0
 
 dev_dependencies:
   build_web_compilers: ^4.0.4
