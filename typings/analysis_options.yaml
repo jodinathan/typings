@@ -19,13 +19,7 @@ include: package:lints/recommended.yaml
 #   rules:
 #     - camel_case_types
 
-analyzer:
-  enable-experiment:
-    - records
-    - patterns
-    - inline-class
-    - class-modifiers
-    - sealed-class
+analyzer: 
 #   exclude:
 #     - path/to/excluded/files/**
 
