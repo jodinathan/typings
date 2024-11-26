@@ -1,3 +1,6 @@
+## 0.0.6+4
+- Update Dependencies
+
 ## 0.0.6+3
 - Bump analyzer
 

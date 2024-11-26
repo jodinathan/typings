@@ -1,3 +1,6 @@
+## 0.0.6+2
+- Update Dependencies
+
 ## 0.0.6+1
 - Fixed pubspec dependencies
 
