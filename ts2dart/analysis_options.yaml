@@ -19,11 +19,7 @@ linter:
   rules:
     unnecessary_brace_in_string_interps: false
 
-analyzer:
-  enable-experiment:
-    - inline-class
-    - class-modifiers
-    - sealed-class
+analyzer: 
   language:
     strict-casts: true
     #strict-inference: true
