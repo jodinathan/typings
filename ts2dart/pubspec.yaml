@@ -10,7 +10,7 @@ environment:
 
 # Add regular dependencies here.
 dependencies: 
-  archive: ^3.6.1
+  archive: ^4.0.2
   built_collection: ^5.1.1
   code_builder: ^4.10.1
   collection: ^1.18.0
