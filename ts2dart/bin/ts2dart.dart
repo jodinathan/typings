@@ -72,7 +72,7 @@ Future<void> main(List<String> arguments) async {
         ]);
   }
 
-  if (1 > 0) {
+  if (1 < 0) {
     await Transpiler.fromNpm(
         package: 'typescript',
         version: 'latest',
@@ -101,6 +101,27 @@ Future<void> main(List<String> arguments) async {
         urls: [
           'https://github.com/denoland/deno/releases/download/v1.32.3/lib.deno.d.ts'
         ]);
+  }
+
+    if (1 > 0) {
+    // https://www.npmjs.com/package/@figma/plugin-typings
+    await Transpiler.fromNpm(
+        package: '@figma/plugin-typings',
+        //contextCheck: 'Figma',
+        //version: '1.40.0',
+        version: 'latest',
+        //targetMainFile: 'fuels',
+        //dirName: 'figma',
+        dirName: 'plugin-typings',
+        targetPath: libPath,
+        packageJson: (typings: false, import: false),
+        files: [
+          'plugin-api.d.ts',
+        ],
+        uses: {
+          'typescript'
+        },
+        );
   }
 
   if (1 < 0) {

@@ -1,3 +1,4 @@
+import 'package:ts2dart/src/ast/typedef.dart';
 import 'package:ts2dart/src/ast/types/enum.dart';
 
 import '../../common.dart';
@@ -64,9 +65,7 @@ class InteropOperator extends InteropType
         return en;
       case InteropClass type:
         return type.makeKeys(source);
-      case InteropStaticType.dyn:
-        return InteropStaticType.dyn;
-      case InteropLocalType _:
+      case InteropStaticType.dyn || InteropLocalType() || InteropTypedef():
         return InteropStaticType.dyn;
       case InteropStaticType.list:
         logger.info(
