@@ -1,3 +1,6 @@
+## 0.0.6+3
+- Fixed minor issue of recursive lists
+
 ## 0.0.6+2
 - Update Dependencies
 

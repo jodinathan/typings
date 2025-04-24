@@ -166,28 +166,27 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
           ..url = 'dart:core'
           ..isNullable = isOptional;
       }));
-      final arg =
-          (isOptional ? cast.nullSafeProperty('cast') : cast.property('cast'))
-              .call([]);
       final taArg = ta.fromInterop(itemAccessor);
 
       if (taArg != itemAccessor) {
-        return arg
-            .property('map')
+        final map = isOptional ? cast.nullSafeProperty('map') : cast.property('map');
+
+        return map
             .call([
               Method((b) {
                 b
                   ..requiredParameters.add(Parameter((b) {
                     b.name = 'i';
                   }))
-                  ..body = taArg.code;
+                  ..body = taArg.asA(ta.ref()).code;
               }).closure
             ])
             .property('toList')
             .call([]);
       }
 
-      return arg;
+      return (isOptional ? cast.nullSafeProperty('cast') : cast.property('cast'))
+              .call([]);
     }
 
     return argument;

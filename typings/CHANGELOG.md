@@ -1,3 +1,7 @@
+## 0.0.6+5
+- Added @figma/plugin-typings
+- Fixed minor issue of recursive lists
+
 ## 0.0.6+4
 - Update Dependencies
 
