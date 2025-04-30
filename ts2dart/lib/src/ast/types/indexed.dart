@@ -31,20 +31,26 @@ class InteropIndexed extends InteropType
   InteropRef? _delegate;
 
   @override
-  InteropRef get delegate => _delegate!;
+  InteropRef get delegate => _configure();
+
+  InteropRef _configure() {
+    if (_delegate == null) {
+      final ot = obj.realType;
+      final it = index.realType;
+
+      if (it is InteropLocalType &&
+          ot is InteropDynamicEnum &&
+          ot.addedTypeParam) {
+        _delegate = InteropRef(InteropLocalType('${it.symbol}\$'));
+      }
+    }
+
+    return _delegate ??= InteropStaticType.dyn.asRef;
+  }
 
   @override
   void configure() {
-    final ot = obj.realType;
-    final it = index.realType;
-
-    if (it is InteropLocalType &&
-        ot is InteropDynamicEnum &&
-        ot.addedTypeParam) {
-      _delegate = InteropRef(InteropLocalType('${it.symbol}\$'));
-    }
-
-    _delegate ??= InteropStaticType.dyn.asRef;
+    _configure();
 
     super.configure();
   }

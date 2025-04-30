@@ -18,10 +18,12 @@ class InteropMethodParam {
   final String usableName;
   final bool varargs;
 
-  Parameter toCodeParam({SymbolSwap? symbolSwap}) => Parameter((b) {
+  Parameter toCodeParam({SymbolSwap? symbolSwap, bool forceOptional = false}) =>
+      Parameter((b) {
         b
           ..name = usableName
-          ..type = ref.ref(symbolSwap: symbolSwap);
+          ..type =
+              ref.ref(symbolSwap: symbolSwap, forceOptional: forceOptional);
       });
 
   InteropMethodParam copyWith(
@@ -55,9 +57,10 @@ extension UtilsMethodParmas on Iterable<InteropMethodParam> {
     var index = 0;
 
     for (final param in list) {
-      final built = param.toCodeParam(symbolSwap: symbolSwap);
+      final acceptsNull = index >= optional.from && index <= optional.to;
+      final built = param.toCodeParam(symbolSwap: symbolSwap, forceOptional: acceptsNull);
 
-      if (index >= optional.from && index <= optional.to) {
+      if (acceptsNull) {
         optionals.insert(0, built);
       } else {
         requireds.insert(0, built);
@@ -88,6 +91,10 @@ extension UtilsMethodParmas on Iterable<InteropMethodParam> {
         optionalTo = x;
       }
       x++;
+    }
+
+    if (optionalFrom == 0) {
+      optionalTo = length - 1;
     }
 
     return (from: optionalFrom, to: optionalTo);

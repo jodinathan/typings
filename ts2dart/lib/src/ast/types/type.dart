@@ -335,17 +335,27 @@ mixin WithParams on InteropType, InteropSourceType {
 extension UtilsRefTypes on Iterable<InteropRef> {
   InteropRef? commonInheritor() {
     if (firstOrNull?.realType case InteropClass cl) {
-      final ret =
-          cl.fullInheritance().firstWhereOrNull((inherit) => every((ref) {
-                final type = ref.realType;
+      final list = cl.fullInheritance().where((inherit) => every((ref) {
+            final type = ref.realType;
 
-                return type is InteropClass &&
+            return type is InteropClass &&
+                (ref.isSame(inherit) ||
                     type
                         .fullInheritance()
-                        .any((otherInherit) => inherit.isSame(otherInherit));
-              }));
+                        .any((otherInherit) => inherit.isSame(otherInherit)));
+          }));
 
-      return ret;
+      if (list.isNotEmpty) {
+        final ret = list.toList().firstWhereOrNull((t) {
+          return list.every((t2) =>
+              t == t2 ||
+              (t2.realType as InteropClass)
+                  .fullInheritance()
+                  .any((otherInherit) => t.isSame(otherInherit)));
+        });
+
+        return ret ?? list.first;
+      }
     }
 
     return null;

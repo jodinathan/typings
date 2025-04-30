@@ -279,7 +279,7 @@ class InteropRef<T extends InteropType> {
     return ret;
   }
 
-  bool isSame(InteropRef other) => type.isSame(other.type);
+  bool isSame(InteropRef other) => realType.isSame(other.realType);
 
   bool usesLocalSymbol(String symbol) {
     final type = this.realType;

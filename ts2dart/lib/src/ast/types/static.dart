@@ -53,7 +53,7 @@ enum InteropStaticType with InteropType, WithInteropTypeParams {
   list(
       symbol: 'List',
       //package: 'dart:js_interop',
-      mappings: {'array'},
+      mappings: {'array', 'ReadonlyArray'},
       typeParamsLength: 1,
       makeToInterop: _toListInterop,
       makeFromInterop: _fromListInterop),

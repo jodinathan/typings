@@ -1,5 +1,6 @@
 import 'package:code_builder/code_builder.dart';
 import 'package:ts2dart/src/ast/types/future_or.dart';
+import 'package:ts2dart/src/ast/types/union.dart';
 
 import '../common.dart';
 import 'class.dart';
@@ -37,6 +38,9 @@ class InteropTypedef extends InteropNamedDeclaration
   InteropType get jsType => definition!.realType.jsType;
 
   @override
+  InteropType get realType => definition?.realType ?? this;
+
+  @override
   bool get toInteropDealsWithNull =>
       definition!.realType.toInteropDealsWithNull;
 
@@ -71,6 +75,11 @@ class InteropTypedef extends InteropNamedDeclaration
   @override
   Iterable<Spec> build() {
     final ref = definition!;
+
+    if (name == 'BaseNode') {
+      final u = ref.type as InteropUnion;
+      logger.info('=> MessageEventHandlerBUILD ${u.types.map((t) => t.type.realType)}\n');
+    }
 
     return [
       TypeDef((b) {

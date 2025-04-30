@@ -299,9 +299,12 @@ class InteropLibrary with InteropItem {
         'source': String source,
       } = rawTypedef as Map;
 
-      if (typedefs.any((it) => it.name == name) ||
-          module.project.findDeclared(name) != null) {
-        logger.info('Skipping already defined typedef $name');
+      if ((
+        typedefs.any((it) => it.name == name),
+        module.project.findDeclared(name)
+      )
+          case (bool found, InteropType? type) when found || type != null) {
+        logger.info('Skipping already defined typedef $name. Found: $found, Type: $type');
         continue;
       }
 

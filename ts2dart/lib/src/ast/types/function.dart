@@ -93,13 +93,14 @@ class InteropFunction extends InteropType
           final optionals = params.optionals();
 
           for (final param in params) {
+            final optional = index >= optionals.from && index <= optionals.to;
             final buildParam = Parameter((b) {
               b
                 ..name = 'v$index'
-                ..type = param.ref.ref(solid: true);
+                ..type = param.ref.ref(solid: true, forceOptional: optional);
             });
 
-            if (index >= optionals.from && index <= optionals.to) {
+            if (optional) {
               b.optionalParameters.add(buildParam);
             } else {
               b.requiredParameters.add(buildParam);
@@ -147,13 +148,14 @@ class InteropFunction extends InteropType
         final optionals = params.optionals();
 
         for (final param in params) {
+          final optional = index >= optionals.from && index <= optionals.to;
           final buildParam = Parameter((b) {
             b
               ..name = 'p$index'
-              ..type = param.ref.ref(solid: true);
+              ..type = param.ref.ref(solid: true, forceOptional: optional);
           });
 
-          if (index >= optionals.from && index <= optionals.to) {
+          if (optional) {
             b.optionalParameters.add(buildParam);
           } else {
             b.requiredParameters.add(buildParam);
@@ -199,9 +201,11 @@ class InteropFunction extends InteropType
 
         var x = 0;
         for (final param in params) {
-          final ref = param.ref.ref(symbolSwap: symbolSwap, solid: true);
+          final optional = x >= optionals.from && x <= optionals.to;
+          final ref = param.ref.ref(
+              symbolSwap: symbolSwap, solid: true, forceOptional: optional);
 
-          if (x >= optionals.from && x <= optionals.to) {
+          if (optional) {
             b.optionalParameters.add(ref);
           } else {
             b.requiredParameters.add(ref);

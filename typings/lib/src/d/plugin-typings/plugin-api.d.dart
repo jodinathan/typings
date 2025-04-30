@@ -4,9 +4,9 @@ library typings.plugin_typings.interop; // ignore_for_file: no_leading_underscor
 import 'package:js/js.dart' as _i1;
 import 'dart:core' as _i2;
 import 'plugin-api.d.dart' as _i3;
-import '/src/d/typescript/lib.es5.d.dart' as _i4;
-import 'dart:js_util' as _i5;
-import 'dart:typed_data' as _i6;
+import 'dart:js_util' as _i4;
+import 'dart:typed_data' as _i5;
+import '/src/d/typescript/lib.es5.d.dart' as _i6;
 import '/d/core.dart' as _i7;
 import 'dart:async' as _i8;
 
@@ -274,6 +274,15 @@ enum ExportSettingsPDFColorProfileOptions {
   final _i2.String value;
 }
 
+enum WindingRuleOptions {
+  nonzero(r'NONZERO'),
+  evenodd(r'EVENODD');
+
+  const WindingRuleOptions(this.value);
+
+  final _i2.String value;
+}
+
 enum LetterSpacingUnitOptions {
   pixels(r'PIXELS'),
   percent(r'PERCENT');
@@ -480,6 +489,37 @@ enum UnionEnum2 {
   final _i2.String value;
 }
 
+enum VariableBindableNodeFieldOptions {
+  height(r'height'),
+  width(r'width'),
+  characters(r'characters'),
+  itemSpacing(r'itemSpacing'),
+  paddingLeft(r'paddingLeft'),
+  paddingRight(r'paddingRight'),
+  paddingTop(r'paddingTop'),
+  paddingBottom(r'paddingBottom'),
+  visible(r'visible'),
+  topLeftRadius(r'topLeftRadius'),
+  topRightRadius(r'topRightRadius'),
+  bottomLeftRadius(r'bottomLeftRadius'),
+  bottomRightRadius(r'bottomRightRadius'),
+  minWidth(r'minWidth'),
+  maxWidth(r'maxWidth'),
+  minHeight(r'minHeight'),
+  maxHeight(r'maxHeight'),
+  counterAxisSpacing(r'counterAxisSpacing'),
+  strokeWeight(r'strokeWeight'),
+  strokeTopWeight(r'strokeTopWeight'),
+  strokeRightWeight(r'strokeRightWeight'),
+  strokeBottomWeight(r'strokeBottomWeight'),
+  strokeLeftWeight(r'strokeLeftWeight'),
+  opacity(r'opacity');
+
+  const VariableBindableNodeFieldOptions(this.value);
+
+  final _i2.String value;
+}
+
 enum LayoutAlign {
   min(r'MIN'),
   center(r'CENTER'),
@@ -589,12 +629,86 @@ enum CounterAxisAlignContent {
   final _i2.String value;
 }
 
+enum StrokeJoinOptions {
+  miter(r'MITER'),
+  bevel(r'BEVEL'),
+  round(r'ROUND');
+
+  const StrokeJoinOptions(this.value);
+
+  final _i2.String value;
+}
+
 enum StrokeAlign {
   center(r'CENTER'),
   inside(r'INSIDE'),
   outside(r'OUTSIDE');
 
   const StrokeAlign(this.value);
+
+  final _i2.String value;
+}
+
+enum StrokeCapOptions {
+  none(r'NONE'),
+  round(r'ROUND'),
+  square(r'SQUARE'),
+  arrowLines(r'ARROW_LINES'),
+  arrowEquilateral(r'ARROW_EQUILATERAL');
+
+  const StrokeCapOptions(this.value);
+
+  final _i2.String value;
+}
+
+enum HandleMirroringOptions {
+  none(r'NONE'),
+  angle(r'ANGLE'),
+  angleAndLength(r'ANGLE_AND_LENGTH');
+
+  const HandleMirroringOptions(this.value);
+
+  final _i2.String value;
+}
+
+enum TextCaseOptions {
+  original(r'ORIGINAL'),
+  upper(r'UPPER'),
+  lower(r'LOWER'),
+  title(r'TITLE'),
+  smallCaps(r'SMALL_CAPS'),
+  smallCapsForced(r'SMALL_CAPS_FORCED');
+
+  const TextCaseOptions(this.value);
+
+  final _i2.String value;
+}
+
+enum TextDecorationOptions {
+  none(r'NONE'),
+  underline(r'UNDERLINE'),
+  strikethrough(r'STRIKETHROUGH');
+
+  const TextDecorationOptions(this.value);
+
+  final _i2.String value;
+}
+
+enum TextDecorationStyleOptions {
+  solid(r'SOLID'),
+  wavy(r'WAVY'),
+  dotted(r'DOTTED');
+
+  const TextDecorationStyleOptions(this.value);
+
+  final _i2.String value;
+}
+
+enum LeadingTrimOptions {
+  capHeight(r'CAP_HEIGHT'),
+  none(r'NONE');
+
+  const LeadingTrimOptions(this.value);
 
   final _i2.String value;
 }
@@ -1030,39 +1144,6 @@ enum StyleChangePropertyOptions {
   final _i2.String value;
 }
 
-enum TextCaseOptions {
-  original(r'ORIGINAL'),
-  upper(r'UPPER'),
-  lower(r'LOWER'),
-  title(r'TITLE'),
-  smallCaps(r'SMALL_CAPS'),
-  smallCapsForced(r'SMALL_CAPS_FORCED');
-
-  const TextCaseOptions(this.value);
-
-  final _i2.String value;
-}
-
-enum TextDecorationOptions {
-  none(r'NONE'),
-  underline(r'UNDERLINE'),
-  strikethrough(r'STRIKETHROUGH');
-
-  const TextDecorationOptions(this.value);
-
-  final _i2.String value;
-}
-
-enum TextDecorationStyleOptions {
-  solid(r'SOLID'),
-  wavy(r'WAVY'),
-  dotted(r'DOTTED');
-
-  const TextDecorationStyleOptions(this.value);
-
-  final _i2.String value;
-}
-
 enum OpenTypeFeatureOptions {
   pcap(r'PCAP'),
   c2pc(r'C2PC'),
@@ -1311,24 +1392,6 @@ enum ConstraintTypeOptions {
   final _i2.String value;
 }
 
-enum WindingRuleOptions {
-  nonzero(r'NONZERO'),
-  evenodd(r'EVENODD');
-
-  const WindingRuleOptions(this.value);
-
-  final _i2.String value;
-}
-
-enum LeadingTrimOptions {
-  capHeight(r'CAP_HEIGHT'),
-  none(r'NONE');
-
-  const LeadingTrimOptions(this.value);
-
-  final _i2.String value;
-}
-
 enum BlendModeOptions {
   passThrough(r'PASS_THROUGH'),
   normal(r'NORMAL'),
@@ -1470,37 +1533,6 @@ enum ConnectorStrokeCapOptions {
   final _i2.String value;
 }
 
-enum VariableBindableNodeFieldOptions {
-  height(r'height'),
-  width(r'width'),
-  characters(r'characters'),
-  itemSpacing(r'itemSpacing'),
-  paddingLeft(r'paddingLeft'),
-  paddingRight(r'paddingRight'),
-  paddingTop(r'paddingTop'),
-  paddingBottom(r'paddingBottom'),
-  visible(r'visible'),
-  topLeftRadius(r'topLeftRadius'),
-  topRightRadius(r'topRightRadius'),
-  bottomLeftRadius(r'bottomLeftRadius'),
-  bottomRightRadius(r'bottomRightRadius'),
-  minWidth(r'minWidth'),
-  maxWidth(r'maxWidth'),
-  minHeight(r'minHeight'),
-  maxHeight(r'maxHeight'),
-  counterAxisSpacing(r'counterAxisSpacing'),
-  strokeWeight(r'strokeWeight'),
-  strokeTopWeight(r'strokeTopWeight'),
-  strokeRightWeight(r'strokeRightWeight'),
-  strokeBottomWeight(r'strokeBottomWeight'),
-  strokeLeftWeight(r'strokeLeftWeight'),
-  opacity(r'opacity');
-
-  const VariableBindableNodeFieldOptions(this.value);
-
-  final _i2.String value;
-}
-
 enum VariableBindableTextFieldOptions {
   fontFamily(r'fontFamily'),
   fontSize(r'fontSize'),
@@ -1535,38 +1567,6 @@ enum VariableBindableLayoutGridFieldOptions {
   gutterSize(r'gutterSize');
 
   const VariableBindableLayoutGridFieldOptions(this.value);
-
-  final _i2.String value;
-}
-
-enum StrokeCapOptions {
-  none(r'NONE'),
-  round(r'ROUND'),
-  square(r'SQUARE'),
-  arrowLines(r'ARROW_LINES'),
-  arrowEquilateral(r'ARROW_EQUILATERAL');
-
-  const StrokeCapOptions(this.value);
-
-  final _i2.String value;
-}
-
-enum StrokeJoinOptions {
-  miter(r'MITER'),
-  bevel(r'BEVEL'),
-  round(r'ROUND');
-
-  const StrokeJoinOptions(this.value);
-
-  final _i2.String value;
-}
-
-enum HandleMirroringOptions {
-  none(r'NONE'),
-  angle(r'ANGLE'),
-  angleAndLength(r'ANGLE_AND_LENGTH');
-
-  const HandleMirroringOptions(this.value);
 
   final _i2.String value;
 }
@@ -1753,9 +1753,9 @@ class _Intersection9 implements _i3.IInline64 {}
 typedef ArgFreeEventType = _i3.ArgFreeEventTypeOptions;
 typedef PaymentStatus = _i3.IInline2;
 typedef NotifyDequeueReason = _i3.NotifyDequeueReasonOptions;
-typedef MessageEventHandler = void Function(
-  _i3.OnMessageProperties, [
+typedef MessageEventHandler = void Function([
   _i2.dynamic,
+  _i3.OnMessageProperties?,
 ]);
 typedef CodegenEvent = _i3.IInline6;
 typedef CodegenPreferences = _i3.IInline7;
@@ -1769,10 +1769,10 @@ typedef DevResourceOpenEvent = _i3.IInline14;
 typedef AuthResult = _i3.IInline15?;
 typedef ParameterInputEvent<ParametersType> = _i3.IInline17<_i2.Object>;
 typedef RunEvent = _i2.Object;
-typedef StyleChange = _i3.BaseStyleChange;
+typedef StyleChange = _i3.BaseDocumentChange;
 typedef DocumentChange = _i3.BaseDocumentChange;
 typedef NodeChangeProperty = _i3.NodeChangePropertyOptions;
-typedef NodeChange = _i3.BaseNodeChange;
+typedef NodeChange = _i3.BaseDocumentChange;
 typedef StyleChangeProperty = _i3.StyleChangePropertyOptions;
 typedef TextReviewEvent = _i3.IInline19;
 typedef TextReviewRange = _i3.IInline20;
@@ -1801,7 +1801,7 @@ typedef Paint = _i2.Object;
 typedef LayoutGrid = _i2.Object;
 typedef ExportSettings = _i2.Object;
 typedef WindingRule = _i3.WindingRuleOptions;
-typedef VectorPaths = _i4.ReadonlyArray<_i3.VectorPath>;
+typedef VectorPaths = _i2.List<_i3.VectorPath>;
 typedef LineHeight = _i2.Object;
 typedef LeadingTrim = _i3.LeadingTrimOptions;
 typedef HyperlinkTarget = _i3.IInline31;
@@ -1855,7 +1855,7 @@ typedef VariableValue = _i2.Object;
 typedef VariableScope = _i3.VariableScopeOptions;
 typedef CodeSyntaxPlatform = _i3.CodeSyntaxPlatformOptions;
 typedef AnnotationCategoryColor = _i3.AnnotationCategoryColorOptions;
-typedef BaseNode = _i2.Object;
+typedef BaseNode = _i3.BaseNodeMixin;
 typedef SceneNode = _i3.BaseNodeMixin;
 typedef NodeType = _i2.dynamic;
 typedef StyleType = _i3.StyleTypeOptions;
@@ -1869,26 +1869,26 @@ typedef BaseStyle = _i3.BaseStyleMixin;
 class IInline0 {}
 
 extension IInline0$Typings on IInline0 {
-  _i2.List<_i2.Object> get paints => ((_i5.getProperty(
+  _i2.List<_i2.Object> get paints => ((_i4.getProperty(
         this,
         'paints',
       )) as _i2.List)
           .cast();
   set paints(_i2.List<_i2.Object> value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paints',
       value,
     );
   }
 
-  _i2.List<_i3.PaintStyle> get styles => ((_i5.getProperty(
+  _i2.List<_i3.PaintStyle> get styles => ((_i4.getProperty(
         this,
         'styles',
       )) as _i2.List)
           .cast();
   set styles(_i2.List<_i3.PaintStyle> value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'styles',
       value,
@@ -2063,10 +2063,10 @@ class PluginAPI {
       _i2.String, [
       _i3.ShowUIOptions?,
     ])? showUI,
-    _i2.Future<_i2.Object?> Function(_i2.String)? getNodeByIdAsync,
-    _i2.Object? Function(_i2.String)? getNodeById,
-    _i2.Future<_i3.BaseStyle?> Function(_i2.String)? getStyleByIdAsync,
-    _i3.BaseStyle? Function(_i2.String)? getStyleById,
+    _i2.Future<_i3.BaseNodeMixin?> Function(_i2.String)? getNodeByIdAsync,
+    _i3.BaseNodeMixin? Function(_i2.String)? getNodeById,
+    _i2.Future<_i3.BaseStyleMixin?> Function(_i2.String)? getStyleByIdAsync,
+    _i3.BaseStyleMixin? Function(_i2.String)? getStyleById,
     _i2.Future<void> Function(_i3.PageNode)? setCurrentPageAsync,
     _i3.RectangleNode Function()? createRectangle,
     _i3.LineNode Function()? createLine,
@@ -2077,7 +2077,7 @@ class PluginAPI {
     _i3.TextNode Function()? createText,
     _i3.FrameNode Function()? createFrame,
     _i3.ComponentNode Function()? createComponent,
-    _i3.ComponentNode Function(_i3.SceneNode)? createComponentFromNode,
+    _i3.ComponentNode Function(_i3.BaseNodeMixin)? createComponentFromNode,
     _i3.PageNode Function()? createPage,
     _i3.PageNode Function([_i2.String?])? createPageDivider,
     _i3.SliceNode Function()? createSlice,
@@ -2095,7 +2095,8 @@ class PluginAPI {
       _i2.num?,
       _i2.num?,
     ])? createTable,
-    _i2.Future<_i3.SceneNode> Function([_i2.dynamic])? createNodeFromJSXAsync,
+    _i2.Future<_i3.BaseNodeMixin> Function([_i2.dynamic])?
+        createNodeFromJSXAsync,
     _i3.BooleanOperationNode Function()? createBooleanOperation,
     _i3.PaintStyle Function()? createPaintStyle,
     _i3.TextStyle Function()? createTextStyle,
@@ -2146,61 +2147,61 @@ class PluginAPI {
         importComponentByKeyAsync,
     _i2.Future<_i3.ComponentSetNode> Function(_i2.String)?
         importComponentSetByKeyAsync,
-    _i2.Future<_i3.BaseStyle> Function(_i2.String)? importStyleByKeyAsync,
+    _i2.Future<_i3.BaseStyleMixin> Function(_i2.String)? importStyleByKeyAsync,
     _i2.Future<_i2.List<_i3.Font>> Function()? listAvailableFontsAsync,
     _i2.Future<void> Function(_i3.FontName)? loadFontAsync,
     _i3.FrameNode Function(_i2.String)? createNodeFromSvg,
-    _i3.Image Function(_i6.Uint8List)? createImage,
+    _i3.Image Function(_i5.Uint8List)? createImage,
     _i2.Future<_i3.Image> Function(_i2.String)? createImageAsync,
     _i3.Image? Function(_i2.String)? getImageByHash,
-    _i2.Future<_i3.Video> Function(_i6.Uint8List)? createVideoAsync,
+    _i2.Future<_i3.Video> Function(_i5.Uint8List)? createVideoAsync,
     _i2.Future<_i3.OpaqueNodeMixin> Function(_i2.String)?
         createLinkPreviewAsync,
     _i3.MediaNode Function(_i2.String)? createGif,
     _i3.ComponentSetNode Function(
-      _i4.ReadonlyArray<_i3.ComponentNode>,
+      _i2.List<_i3.ComponentNode>,
       _i2.Object, [
       _i2.num?,
     ])? combineAsVariants,
     _i3.GroupNode Function(
-      _i4.ReadonlyArray<_i2.Object>,
+      _i2.List<_i3.BaseNodeMixin>,
       _i2.Object, [
       _i2.num?,
     ])? group,
     _i3.VectorNode Function(
-      _i4.ReadonlyArray<_i2.Object>, [
+      _i2.List<_i3.BaseNodeMixin>, [
       _i2.Object?,
       _i2.num?,
     ])? flatten,
     _i3.BooleanOperationNode Function(
-      _i4.ReadonlyArray<_i2.Object>,
+      _i2.List<_i3.BaseNodeMixin>,
       _i2.Object, [
       _i2.num?,
     ])? union,
     _i3.BooleanOperationNode Function(
-      _i4.ReadonlyArray<_i2.Object>,
+      _i2.List<_i3.BaseNodeMixin>,
       _i2.Object, [
       _i2.num?,
     ])? subtract,
     _i3.BooleanOperationNode Function(
-      _i4.ReadonlyArray<_i2.Object>,
+      _i2.List<_i3.BaseNodeMixin>,
       _i2.Object, [
       _i2.num?,
     ])? intersect,
     _i3.BooleanOperationNode Function(
-      _i4.ReadonlyArray<_i2.Object>,
+      _i2.List<_i3.BaseNodeMixin>,
       _i2.Object, [
       _i2.num?,
     ])? exclude,
-    _i4.Array<_i3.SceneNode> Function(_i2.Object)? ungroup,
-    _i2.String Function(_i6.Uint8List)? base64Encode,
-    _i6.Uint8List Function(_i2.String)? base64Decode,
+    _i6.Array<_i3.BaseNodeMixin> Function(_i2.Object)? ungroup,
+    _i2.String Function(_i5.Uint8List)? base64Encode,
+    _i5.Uint8List Function(_i2.String)? base64Decode,
     _i2.Future<_i3.BaseNodeMixin?> Function()? getFileThumbnailNodeAsync,
     _i3.BaseNodeMixin? Function()? getFileThumbnailNode,
     _i2.Future<void> Function([_i3.BaseNodeMixin?])? setFileThumbnailNodeAsync,
     _i2.Future<void> Function()? loadAllPagesAsync,
-    _i4.Array<_i4.Array<_i3.SlideNode>> Function()? getSlideGrid,
-    void Function(_i4.Array<_i4.Array<_i3.SlideNode>>)? setSlideGrid,
+    _i6.Array<_i6.Array<_i3.SlideNode>> Function()? getSlideGrid,
+    void Function(_i6.Array<_i6.Array<_i3.SlideNode>>)? setSlideGrid,
   }) =>
       PluginAPI._(
         apiVersion: apiVersion,
@@ -2232,359 +2233,357 @@ class PluginAPI {
         currentPage: currentPage ?? _i7.undefined,
         mixed: mixed ?? _i7.undefined,
         hasMissingFont: hasMissingFont,
-        closePlugin: closePlugin == null ? null : _i5.allowInterop(closePlugin),
-        notify: notify == null ? null : _i5.allowInterop(notify),
-        commitUndo: commitUndo == null ? null : _i5.allowInterop(commitUndo),
-        triggerUndo: triggerUndo == null ? null : _i5.allowInterop(triggerUndo),
+        closePlugin: closePlugin == null ? null : _i4.allowInterop(closePlugin),
+        notify: notify == null ? null : _i4.allowInterop(notify),
+        commitUndo: commitUndo == null ? null : _i4.allowInterop(commitUndo),
+        triggerUndo: triggerUndo == null ? null : _i4.allowInterop(triggerUndo),
         saveVersionHistoryAsync: saveVersionHistoryAsync == null
             ? null
-            : _i5.allowInterop(saveVersionHistoryAsync),
+            : _i4.allowInterop(saveVersionHistoryAsync),
         openExternal:
-            openExternal == null ? null : _i5.allowInterop(openExternal),
-        showUI: showUI == null ? null : _i5.allowInterop(showUI),
+            openExternal == null ? null : _i4.allowInterop(openExternal),
+        showUI: showUI == null ? null : _i4.allowInterop(showUI),
         getNodeByIdAsync: getNodeByIdAsync == null
             ? null
-            : _i5.allowInterop(getNodeByIdAsync),
+            : _i4.allowInterop(getNodeByIdAsync),
         getNodeById: getNodeById == null
             ? null
-            : _i5.allowInterop((p0) =>
-                () => getNodeById(p0) ?? _i7.undefined ?? _i7.undefined),
+            : _i4.allowInterop((p0) => () => getNodeById(p0) ?? _i7.undefined),
         getStyleByIdAsync: getStyleByIdAsync == null
             ? null
-            : _i5.allowInterop(getStyleByIdAsync),
+            : _i4.allowInterop(getStyleByIdAsync),
         getStyleById: getStyleById == null
             ? null
-            : _i5.allowInterop((p0) =>
-                () => getStyleById(p0) ?? _i7.undefined ?? _i7.undefined),
+            : _i4.allowInterop((p0) => () => getStyleById(p0) ?? _i7.undefined),
         setCurrentPageAsync: setCurrentPageAsync == null
             ? null
-            : _i5.allowInterop(setCurrentPageAsync),
+            : _i4.allowInterop(setCurrentPageAsync),
         createRectangle:
-            createRectangle == null ? null : _i5.allowInterop(createRectangle),
-        createLine: createLine == null ? null : _i5.allowInterop(createLine),
+            createRectangle == null ? null : _i4.allowInterop(createRectangle),
+        createLine: createLine == null ? null : _i4.allowInterop(createLine),
         createEllipse:
-            createEllipse == null ? null : _i5.allowInterop(createEllipse),
+            createEllipse == null ? null : _i4.allowInterop(createEllipse),
         createPolygon:
-            createPolygon == null ? null : _i5.allowInterop(createPolygon),
-        createStar: createStar == null ? null : _i5.allowInterop(createStar),
+            createPolygon == null ? null : _i4.allowInterop(createPolygon),
+        createStar: createStar == null ? null : _i4.allowInterop(createStar),
         createVector:
-            createVector == null ? null : _i5.allowInterop(createVector),
-        createText: createText == null ? null : _i5.allowInterop(createText),
-        createFrame: createFrame == null ? null : _i5.allowInterop(createFrame),
+            createVector == null ? null : _i4.allowInterop(createVector),
+        createText: createText == null ? null : _i4.allowInterop(createText),
+        createFrame: createFrame == null ? null : _i4.allowInterop(createFrame),
         createComponent:
-            createComponent == null ? null : _i5.allowInterop(createComponent),
+            createComponent == null ? null : _i4.allowInterop(createComponent),
         createComponentFromNode: createComponentFromNode == null
             ? null
-            : _i5.allowInterop(createComponentFromNode),
-        createPage: createPage == null ? null : _i5.allowInterop(createPage),
+            : _i4.allowInterop(createComponentFromNode),
+        createPage: createPage == null ? null : _i4.allowInterop(createPage),
         createPageDivider: createPageDivider == null
             ? null
-            : _i5.allowInterop(createPageDivider),
-        createSlice: createSlice == null ? null : _i5.allowInterop(createSlice),
-        createSlide: createSlide == null ? null : _i5.allowInterop(createSlide),
+            : _i4.allowInterop(createPageDivider),
+        createSlice: createSlice == null ? null : _i4.allowInterop(createSlice),
+        createSlide: createSlide == null ? null : _i4.allowInterop(createSlide),
         createSlideRow:
-            createSlideRow == null ? null : _i5.allowInterop(createSlideRow),
+            createSlideRow == null ? null : _i4.allowInterop(createSlideRow),
         createSticky:
-            createSticky == null ? null : _i5.allowInterop(createSticky),
+            createSticky == null ? null : _i4.allowInterop(createSticky),
         createConnector:
-            createConnector == null ? null : _i5.allowInterop(createConnector),
+            createConnector == null ? null : _i4.allowInterop(createConnector),
         createShapeWithText: createShapeWithText == null
             ? null
-            : _i5.allowInterop(createShapeWithText),
+            : _i4.allowInterop(createShapeWithText),
         createCodeBlock:
-            createCodeBlock == null ? null : _i5.allowInterop(createCodeBlock),
+            createCodeBlock == null ? null : _i4.allowInterop(createCodeBlock),
         createSection:
-            createSection == null ? null : _i5.allowInterop(createSection),
-        createTable: createTable == null ? null : _i5.allowInterop(createTable),
+            createSection == null ? null : _i4.allowInterop(createSection),
+        createTable: createTable == null ? null : _i4.allowInterop(createTable),
         createNodeFromJSXAsync: createNodeFromJSXAsync == null
             ? null
-            : _i5.allowInterop(createNodeFromJSXAsync),
+            : _i4.allowInterop(createNodeFromJSXAsync),
         createBooleanOperation: createBooleanOperation == null
             ? null
-            : _i5.allowInterop(createBooleanOperation),
+            : _i4.allowInterop(createBooleanOperation),
         createPaintStyle: createPaintStyle == null
             ? null
-            : _i5.allowInterop(createPaintStyle),
+            : _i4.allowInterop(createPaintStyle),
         createTextStyle:
-            createTextStyle == null ? null : _i5.allowInterop(createTextStyle),
+            createTextStyle == null ? null : _i4.allowInterop(createTextStyle),
         createEffectStyle: createEffectStyle == null
             ? null
-            : _i5.allowInterop(createEffectStyle),
+            : _i4.allowInterop(createEffectStyle),
         createGridStyle:
-            createGridStyle == null ? null : _i5.allowInterop(createGridStyle),
+            createGridStyle == null ? null : _i4.allowInterop(createGridStyle),
         getLocalPaintStylesAsync: getLocalPaintStylesAsync == null
             ? null
-            : _i5.allowInterop(getLocalPaintStylesAsync),
+            : _i4.allowInterop(getLocalPaintStylesAsync),
         getLocalPaintStyles: getLocalPaintStyles == null
             ? null
-            : _i5.allowInterop(getLocalPaintStyles),
+            : _i4.allowInterop(getLocalPaintStyles),
         getLocalTextStylesAsync: getLocalTextStylesAsync == null
             ? null
-            : _i5.allowInterop(getLocalTextStylesAsync),
+            : _i4.allowInterop(getLocalTextStylesAsync),
         getLocalTextStyles: getLocalTextStyles == null
             ? null
-            : _i5.allowInterop(getLocalTextStyles),
+            : _i4.allowInterop(getLocalTextStyles),
         getLocalEffectStylesAsync: getLocalEffectStylesAsync == null
             ? null
-            : _i5.allowInterop(getLocalEffectStylesAsync),
+            : _i4.allowInterop(getLocalEffectStylesAsync),
         getLocalEffectStyles: getLocalEffectStyles == null
             ? null
-            : _i5.allowInterop(getLocalEffectStyles),
+            : _i4.allowInterop(getLocalEffectStyles),
         getLocalGridStylesAsync: getLocalGridStylesAsync == null
             ? null
-            : _i5.allowInterop(getLocalGridStylesAsync),
+            : _i4.allowInterop(getLocalGridStylesAsync),
         getLocalGridStyles: getLocalGridStyles == null
             ? null
-            : _i5.allowInterop(getLocalGridStyles),
+            : _i4.allowInterop(getLocalGridStyles),
         getSelectionColors: getSelectionColors == null
             ? null
-            : _i5.allowInterop(
+            : _i4.allowInterop(
                 () => () => getSelectionColors() ?? _i7.undefined),
         moveLocalPaintStyleAfter: moveLocalPaintStyleAfter == null
             ? null
-            : _i5.allowInterop(moveLocalPaintStyleAfter),
+            : _i4.allowInterop(moveLocalPaintStyleAfter),
         moveLocalTextStyleAfter: moveLocalTextStyleAfter == null
             ? null
-            : _i5.allowInterop(moveLocalTextStyleAfter),
+            : _i4.allowInterop(moveLocalTextStyleAfter),
         moveLocalEffectStyleAfter: moveLocalEffectStyleAfter == null
             ? null
-            : _i5.allowInterop(moveLocalEffectStyleAfter),
+            : _i4.allowInterop(moveLocalEffectStyleAfter),
         moveLocalGridStyleAfter: moveLocalGridStyleAfter == null
             ? null
-            : _i5.allowInterop(moveLocalGridStyleAfter),
+            : _i4.allowInterop(moveLocalGridStyleAfter),
         moveLocalPaintFolderAfter: moveLocalPaintFolderAfter == null
             ? null
-            : _i5.allowInterop(moveLocalPaintFolderAfter),
+            : _i4.allowInterop(moveLocalPaintFolderAfter),
         moveLocalTextFolderAfter: moveLocalTextFolderAfter == null
             ? null
-            : _i5.allowInterop(moveLocalTextFolderAfter),
+            : _i4.allowInterop(moveLocalTextFolderAfter),
         moveLocalEffectFolderAfter: moveLocalEffectFolderAfter == null
             ? null
-            : _i5.allowInterop(moveLocalEffectFolderAfter),
+            : _i4.allowInterop(moveLocalEffectFolderAfter),
         moveLocalGridFolderAfter: moveLocalGridFolderAfter == null
             ? null
-            : _i5.allowInterop(moveLocalGridFolderAfter),
+            : _i4.allowInterop(moveLocalGridFolderAfter),
         importComponentByKeyAsync: importComponentByKeyAsync == null
             ? null
-            : _i5.allowInterop(importComponentByKeyAsync),
+            : _i4.allowInterop(importComponentByKeyAsync),
         importComponentSetByKeyAsync: importComponentSetByKeyAsync == null
             ? null
-            : _i5.allowInterop(importComponentSetByKeyAsync),
+            : _i4.allowInterop(importComponentSetByKeyAsync),
         importStyleByKeyAsync: importStyleByKeyAsync == null
             ? null
-            : _i5.allowInterop(importStyleByKeyAsync),
+            : _i4.allowInterop(importStyleByKeyAsync),
         listAvailableFontsAsync: listAvailableFontsAsync == null
             ? null
-            : _i5.allowInterop(listAvailableFontsAsync),
+            : _i4.allowInterop(listAvailableFontsAsync),
         loadFontAsync:
-            loadFontAsync == null ? null : _i5.allowInterop(loadFontAsync),
+            loadFontAsync == null ? null : _i4.allowInterop(loadFontAsync),
         createNodeFromSvg: createNodeFromSvg == null
             ? null
-            : _i5.allowInterop(createNodeFromSvg),
-        createImage: createImage == null ? null : _i5.allowInterop(createImage),
+            : _i4.allowInterop(createNodeFromSvg),
+        createImage: createImage == null ? null : _i4.allowInterop(createImage),
         createImageAsync: createImageAsync == null
             ? null
-            : _i5.allowInterop(createImageAsync),
+            : _i4.allowInterop(createImageAsync),
         getImageByHash: getImageByHash == null
             ? null
-            : _i5.allowInterop(
+            : _i4.allowInterop(
                 (p0) => () => getImageByHash(p0) ?? _i7.undefined),
         createVideoAsync: createVideoAsync == null
             ? null
-            : _i5.allowInterop(createVideoAsync),
+            : _i4.allowInterop(createVideoAsync),
         createLinkPreviewAsync: createLinkPreviewAsync == null
             ? null
-            : _i5.allowInterop(createLinkPreviewAsync),
-        createGif: createGif == null ? null : _i5.allowInterop(createGif),
+            : _i4.allowInterop(createLinkPreviewAsync),
+        createGif: createGif == null ? null : _i4.allowInterop(createGif),
         combineAsVariants: combineAsVariants == null
             ? null
-            : _i5.allowInterop(combineAsVariants),
-        group: group == null ? null : _i5.allowInterop(group),
-        flatten: flatten == null ? null : _i5.allowInterop(flatten),
-        union: union == null ? null : _i5.allowInterop(union),
-        subtract: subtract == null ? null : _i5.allowInterop(subtract),
-        intersect: intersect == null ? null : _i5.allowInterop(intersect),
-        exclude: exclude == null ? null : _i5.allowInterop(exclude),
-        ungroup: ungroup == null ? null : _i5.allowInterop(ungroup),
+            : _i4.allowInterop(combineAsVariants),
+        group: group == null ? null : _i4.allowInterop(group),
+        flatten: flatten == null ? null : _i4.allowInterop(flatten),
+        union: union == null ? null : _i4.allowInterop(union),
+        subtract: subtract == null ? null : _i4.allowInterop(subtract),
+        intersect: intersect == null ? null : _i4.allowInterop(intersect),
+        exclude: exclude == null ? null : _i4.allowInterop(exclude),
+        ungroup: ungroup == null ? null : _i4.allowInterop(ungroup),
         base64Encode:
-            base64Encode == null ? null : _i5.allowInterop(base64Encode),
+            base64Encode == null ? null : _i4.allowInterop(base64Encode),
         base64Decode:
-            base64Decode == null ? null : _i5.allowInterop(base64Decode),
+            base64Decode == null ? null : _i4.allowInterop(base64Decode),
         getFileThumbnailNodeAsync: getFileThumbnailNodeAsync == null
             ? null
-            : _i5.allowInterop(getFileThumbnailNodeAsync),
+            : _i4.allowInterop(getFileThumbnailNodeAsync),
         getFileThumbnailNode: getFileThumbnailNode == null
             ? null
-            : _i5.allowInterop(
+            : _i4.allowInterop(
                 () => () => getFileThumbnailNode() ?? _i7.undefined),
         setFileThumbnailNodeAsync: setFileThumbnailNodeAsync == null
             ? null
-            : _i5.allowInterop(setFileThumbnailNodeAsync),
+            : _i4.allowInterop(setFileThumbnailNodeAsync),
         loadAllPagesAsync: loadAllPagesAsync == null
             ? null
-            : _i5.allowInterop(loadAllPagesAsync),
+            : _i4.allowInterop(loadAllPagesAsync),
         getSlideGrid:
-            getSlideGrid == null ? null : _i5.allowInterop(getSlideGrid),
+            getSlideGrid == null ? null : _i4.allowInterop(getSlideGrid),
         setSlideGrid:
-            setSlideGrid == null ? null : _i5.allowInterop(setSlideGrid),
+            setSlideGrid == null ? null : _i4.allowInterop(setSlideGrid),
       );
 
-  static _i2.String get apiVersion => _i5.getProperty(
+  static _i2.String get apiVersion => _i4.getProperty(
         _declaredPluginAPI,
         'apiVersion',
       );
 }
 
-_i2.Object get _declaredPluginAPI => _i5.getProperty(
+_i2.Object get _declaredPluginAPI => _i4.getProperty(
       _self,
       'PluginAPI',
     );
 
 extension PluginAPI$Typings on PluginAPI {
-  _i2.String get apiVersion => _i5.getProperty(
+  _i2.String get apiVersion => _i4.getProperty(
         this,
         'apiVersion',
       );
-  _i2.String get command => _i5.getProperty(
+  _i2.String get command => _i4.getProperty(
         this,
         'command',
       );
-  _i3.EditorType get editorType => _i3.EditorType.values.byName(_i5.getProperty(
+  _i3.EditorType get editorType => _i3.EditorType.values.byName(_i4.getProperty(
         this,
         'editorType',
       ));
-  _i3.Mode get mode => _i3.Mode.values.byName(_i5.getProperty(
+  _i3.Mode get mode => _i3.Mode.values.byName(_i4.getProperty(
         this,
         'mode',
       ));
-  _i2.String? get pluginId => _i5.getProperty(
+  _i2.String? get pluginId => _i4.getProperty(
         this,
         'pluginId',
       );
-  _i2.String? get widgetId => _i5.getProperty(
+  _i2.String? get widgetId => _i4.getProperty(
         this,
         'widgetId',
       );
-  _i2.String? get fileKey => _i5.getProperty(
+  _i2.String? get fileKey => _i4.getProperty(
         this,
         'fileKey',
       );
-  _i2.bool get skipInvisibleInstanceChildren => _i5.getProperty(
+  _i2.bool get skipInvisibleInstanceChildren => _i4.getProperty(
         this,
         'skipInvisibleInstanceChildren',
       );
   set skipInvisibleInstanceChildren(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'skipInvisibleInstanceChildren',
       value,
     );
   }
 
-  _i3.TimerAPI? get timer => _i5.getProperty(
+  _i3.TimerAPI? get timer => _i4.getProperty(
         this,
         'timer',
       );
-  _i3.ViewportAPI get viewport => _i5.getProperty(
+  _i3.ViewportAPI get viewport => _i4.getProperty(
         this,
         'viewport',
       );
-  _i3.User? get currentUser => _i5.getProperty(
+  _i3.User? get currentUser => _i4.getProperty(
         this,
         'currentUser',
       );
-  _i2.List<_i3.ActiveUser> get activeUsers => ((_i5.getProperty(
+  _i2.List<_i3.ActiveUser> get activeUsers => ((_i4.getProperty(
         this,
         'activeUsers',
       )) as _i2.List)
           .cast();
-  _i3.TextReviewAPI? get textreview => _i5.getProperty(
+  _i3.TextReviewAPI? get textreview => _i4.getProperty(
         this,
         'textreview',
       );
-  _i3.CodegenAPI get codegen => _i5.getProperty(
+  _i3.CodegenAPI get codegen => _i4.getProperty(
         this,
         'codegen',
       );
-  _i3.VSCodeAPI? get vscode => _i5.getProperty(
+  _i3.VSCodeAPI? get vscode => _i4.getProperty(
         this,
         'vscode',
       );
-  _i3.DevResourcesAPI? get devResources => _i5.getProperty(
+  _i3.DevResourcesAPI? get devResources => _i4.getProperty(
         this,
         'devResources',
       );
-  _i3.PaymentsAPI? get payments => _i5.getProperty(
+  _i3.PaymentsAPI? get payments => _i4.getProperty(
         this,
         'payments',
       );
-  _i3.Uiapi get ui => _i5.getProperty(
+  _i3.Uiapi get ui => _i4.getProperty(
         this,
         'ui',
       );
-  _i3.UtilAPI get util => _i5.getProperty(
+  _i3.UtilAPI get util => _i4.getProperty(
         this,
         'util',
       );
-  _i3.ConstantsAPI get constants => _i5.getProperty(
+  _i3.ConstantsAPI get constants => _i4.getProperty(
         this,
         'constants',
       );
-  _i3.ClientStorageAPI get clientStorage => _i5.getProperty(
+  _i3.ClientStorageAPI get clientStorage => _i4.getProperty(
         this,
         'clientStorage',
       );
-  _i3.ParametersAPI get parameters => _i5.getProperty(
+  _i3.ParametersAPI get parameters => _i4.getProperty(
         this,
         'parameters',
       );
-  _i3.VariablesAPI get variables => _i5.getProperty(
+  _i3.VariablesAPI get variables => _i4.getProperty(
         this,
         'variables',
       );
-  _i3.TeamLibraryAPI get teamLibrary => _i5.getProperty(
+  _i3.TeamLibraryAPI get teamLibrary => _i4.getProperty(
         this,
         'teamLibrary',
       );
-  _i3.AnnotationsAPI get annotations => _i5.getProperty(
+  _i3.AnnotationsAPI get annotations => _i4.getProperty(
         this,
         'annotations',
       );
-  _i3.DocumentNode get root => _i5.getProperty(
+  _i3.DocumentNode get root => _i4.getProperty(
         this,
         'root',
       );
-  _i3.PageNode get currentPage => _i5.getProperty(
+  _i3.PageNode get currentPage => _i4.getProperty(
         this,
         'currentPage',
       );
   set currentPage(_i3.PageNode value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'currentPage',
       value,
     );
   }
 
-  _i2.Symbol get mixed => _i5.getProperty(
+  _i2.Symbol get mixed => _i4.getProperty(
         this,
         'mixed',
       );
-  _i2.bool get hasMissingFont => _i5.getProperty(
+  _i2.bool get hasMissingFont => _i4.getProperty(
         this,
         'hasMissingFont',
       );
   set closePlugin(void Function([_i2.String?]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'closePlugin',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function([_i2.String?]) get closePlugin =>
-      ([_i2.String? p0]) => _i5.callMethod(
-            _i5.getProperty(
+      ([_i2.String? p0]) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'closePlugin',
             ),
@@ -2599,10 +2598,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String, [
         _i3.NotificationOptions?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'notify',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -2613,8 +2612,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String p0, [
         _i3.NotificationOptions? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'notify',
             ),
@@ -2626,15 +2625,15 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           );
   set commitUndo(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'commitUndo',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get commitUndo => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get commitUndo => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'commitUndo',
         ),
@@ -2642,15 +2641,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set triggerUndo(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'triggerUndo',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get triggerUndo => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get triggerUndo => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'triggerUndo',
         ),
@@ -2662,10 +2661,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String, [
         _i2.String?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'saveVersionHistoryAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -2676,8 +2675,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String p0, [
         _i2.String? p1,
       ]) =>
-          _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+          _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'saveVersionHistoryAsync',
             ),
@@ -2689,16 +2688,16 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           ));
   set openExternal(void Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'openExternal',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(_i2.String) get openExternal =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'openExternal',
             ),
@@ -2713,10 +2712,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String, [
         _i3.ShowUIOptions?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'showUI',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -2727,8 +2726,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String p0, [
         _i3.ShowUIOptions? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'showUI',
             ),
@@ -2739,17 +2738,18 @@ extension PluginAPI$Typings on PluginAPI {
               p1 ?? _i7.undefined,
             ],
           );
-  set getNodeByIdAsync(_i2.Future<_i2.Object?> Function(_i2.String) value) {
-    _i5.setProperty(
+  set getNodeByIdAsync(
+      _i2.Future<_i3.BaseNodeMixin?> Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'getNodeByIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i2.Object?> Function(_i2.String) get getNodeByIdAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+  _i2.Future<_i3.BaseNodeMixin?> Function(_i2.String) get getNodeByIdAsync =>
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getNodeByIdAsync',
             ),
@@ -2759,18 +2759,17 @@ extension PluginAPI$Typings on PluginAPI {
               p0,
             ],
           ));
-  set getNodeById(_i2.Object? Function(_i2.String) value) {
-    _i5.setProperty(
+  set getNodeById(_i3.BaseNodeMixin? Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'getNodeById',
-      _i5.allowInterop(
-          (p0) => () => value(p0) ?? _i7.undefined ?? _i7.undefined),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
     );
   }
 
-  _i2.Object? Function(_i2.String) get getNodeById =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+  _i3.BaseNodeMixin? Function(_i2.String) get getNodeById =>
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'getNodeById',
             ),
@@ -2780,17 +2779,18 @@ extension PluginAPI$Typings on PluginAPI {
               p0,
             ],
           );
-  set getStyleByIdAsync(_i2.Future<_i3.BaseStyle?> Function(_i2.String) value) {
-    _i5.setProperty(
+  set getStyleByIdAsync(
+      _i2.Future<_i3.BaseStyleMixin?> Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'getStyleByIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i3.BaseStyle?> Function(_i2.String) get getStyleByIdAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+  _i2.Future<_i3.BaseStyleMixin?> Function(_i2.String) get getStyleByIdAsync =>
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getStyleByIdAsync',
             ),
@@ -2800,18 +2800,17 @@ extension PluginAPI$Typings on PluginAPI {
               p0,
             ],
           ));
-  set getStyleById(_i3.BaseStyle? Function(_i2.String) value) {
-    _i5.setProperty(
+  set getStyleById(_i3.BaseStyleMixin? Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'getStyleById',
-      _i5.allowInterop(
-          (p0) => () => value(p0) ?? _i7.undefined ?? _i7.undefined),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
     );
   }
 
-  _i3.BaseStyle? Function(_i2.String) get getStyleById =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+  _i3.BaseStyleMixin? Function(_i2.String) get getStyleById =>
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'getStyleById',
             ),
@@ -2822,16 +2821,16 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           );
   set setCurrentPageAsync(_i2.Future<void> Function(_i3.PageNode) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setCurrentPageAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(_i3.PageNode) get setCurrentPageAsync =>
-      (_i3.PageNode p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i3.PageNode p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setCurrentPageAsync',
             ),
@@ -2842,15 +2841,15 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           ));
   set createRectangle(_i3.RectangleNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createRectangle',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.RectangleNode Function() get createRectangle => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.RectangleNode Function() get createRectangle => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createRectangle',
         ),
@@ -2858,15 +2857,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createLine(_i3.LineNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createLine',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.LineNode Function() get createLine => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.LineNode Function() get createLine => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createLine',
         ),
@@ -2874,15 +2873,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createEllipse(_i3.EllipseNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createEllipse',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.EllipseNode Function() get createEllipse => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.EllipseNode Function() get createEllipse => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createEllipse',
         ),
@@ -2890,15 +2889,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createPolygon(_i3.PolygonNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createPolygon',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.PolygonNode Function() get createPolygon => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.PolygonNode Function() get createPolygon => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createPolygon',
         ),
@@ -2906,15 +2905,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createStar(_i3.StarNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createStar',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.StarNode Function() get createStar => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.StarNode Function() get createStar => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createStar',
         ),
@@ -2922,15 +2921,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createVector(_i3.VectorNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createVector',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.VectorNode Function() get createVector => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.VectorNode Function() get createVector => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createVector',
         ),
@@ -2938,15 +2937,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createText(_i3.TextNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createText',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.TextNode Function() get createText => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.TextNode Function() get createText => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createText',
         ),
@@ -2954,15 +2953,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createFrame(_i3.FrameNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createFrame',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.FrameNode Function() get createFrame => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.FrameNode Function() get createFrame => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createFrame',
         ),
@@ -2970,32 +2969,33 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createComponent(_i3.ComponentNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createComponent',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.ComponentNode Function() get createComponent => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.ComponentNode Function() get createComponent => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createComponent',
         ),
         r'call',
         [this],
       );
-  set createComponentFromNode(_i3.ComponentNode Function(_i3.SceneNode) value) {
-    _i5.setProperty(
+  set createComponentFromNode(
+      _i3.ComponentNode Function(_i3.BaseNodeMixin) value) {
+    _i4.setProperty(
       this,
       'createComponentFromNode',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.ComponentNode Function(_i3.SceneNode) get createComponentFromNode =>
-      (_i3.SceneNode p0) => _i5.callMethod(
-            _i5.getProperty(
+  _i3.ComponentNode Function(_i3.BaseNodeMixin) get createComponentFromNode =>
+      (_i3.BaseNodeMixin p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'createComponentFromNode',
             ),
@@ -3006,15 +3006,15 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           );
   set createPage(_i3.PageNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createPage',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.PageNode Function() get createPage => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.PageNode Function() get createPage => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createPage',
         ),
@@ -3022,16 +3022,16 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createPageDivider(_i3.PageNode Function([_i2.String?]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createPageDivider',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.PageNode Function([_i2.String?]) get createPageDivider =>
-      ([_i2.String? p0]) => _i5.callMethod(
-            _i5.getProperty(
+      ([_i2.String? p0]) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'createPageDivider',
             ),
@@ -3042,15 +3042,15 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           );
   set createSlice(_i3.SliceNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createSlice',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.SliceNode Function() get createSlice => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.SliceNode Function() get createSlice => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createSlice',
         ),
@@ -3062,10 +3062,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.num?,
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createSlide',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -3076,8 +3076,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.num? p0,
         _i2.num? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'createSlide',
             ),
@@ -3089,16 +3089,16 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           );
   set createSlideRow(_i3.SlideRowNode Function([_i2.num?]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createSlideRow',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.SlideRowNode Function([_i2.num?]) get createSlideRow =>
-      ([_i2.num? p0]) => _i5.callMethod(
-            _i5.getProperty(
+      ([_i2.num? p0]) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'createSlideRow',
             ),
@@ -3109,15 +3109,15 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           );
   set createSticky(_i3.StickyNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createSticky',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.StickyNode Function() get createSticky => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.StickyNode Function() get createSticky => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createSticky',
         ),
@@ -3125,15 +3125,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createConnector(_i3.ConnectorNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createConnector',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.ConnectorNode Function() get createConnector => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.ConnectorNode Function() get createConnector => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createConnector',
         ),
@@ -3141,16 +3141,16 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createShapeWithText(_i3.ShapeWithTextNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createShapeWithText',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.ShapeWithTextNode Function() get createShapeWithText =>
-      () => _i5.callMethod(
-            _i5.getProperty(
+      () => _i4.callMethod(
+            _i4.getProperty(
               this,
               'createShapeWithText',
             ),
@@ -3158,15 +3158,15 @@ extension PluginAPI$Typings on PluginAPI {
             [this],
           );
   set createCodeBlock(_i3.CodeBlockNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createCodeBlock',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.CodeBlockNode Function() get createCodeBlock => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.CodeBlockNode Function() get createCodeBlock => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createCodeBlock',
         ),
@@ -3174,15 +3174,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createSection(_i3.SectionNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createSection',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.SectionNode Function() get createSection => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.SectionNode Function() get createSection => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createSection',
         ),
@@ -3194,10 +3194,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.num?,
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createTable',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -3208,8 +3208,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.num? p0,
         _i2.num? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'createTable',
             ),
@@ -3221,18 +3221,18 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           );
   set createNodeFromJSXAsync(
-      _i2.Future<_i3.SceneNode> Function([_i2.dynamic]) value) {
-    _i5.setProperty(
+      _i2.Future<_i3.BaseNodeMixin> Function([_i2.dynamic]) value) {
+    _i4.setProperty(
       this,
       'createNodeFromJSXAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i3.SceneNode> Function([_i2.dynamic])
+  _i2.Future<_i3.BaseNodeMixin> Function([_i2.dynamic])
       get createNodeFromJSXAsync =>
-          ([_i2.dynamic p0]) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          ([_i2.dynamic p0]) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'createNodeFromJSXAsync',
                 ),
@@ -3243,16 +3243,16 @@ extension PluginAPI$Typings on PluginAPI {
                 ],
               ));
   set createBooleanOperation(_i3.BooleanOperationNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createBooleanOperation',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.BooleanOperationNode Function() get createBooleanOperation =>
-      () => _i5.callMethod(
-            _i5.getProperty(
+      () => _i4.callMethod(
+            _i4.getProperty(
               this,
               'createBooleanOperation',
             ),
@@ -3260,15 +3260,15 @@ extension PluginAPI$Typings on PluginAPI {
             [this],
           );
   set createPaintStyle(_i3.PaintStyle Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createPaintStyle',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.PaintStyle Function() get createPaintStyle => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.PaintStyle Function() get createPaintStyle => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createPaintStyle',
         ),
@@ -3276,15 +3276,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createTextStyle(_i3.TextStyle Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createTextStyle',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.TextStyle Function() get createTextStyle => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.TextStyle Function() get createTextStyle => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createTextStyle',
         ),
@@ -3292,15 +3292,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createEffectStyle(_i3.EffectStyle Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createEffectStyle',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.EffectStyle Function() get createEffectStyle => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.EffectStyle Function() get createEffectStyle => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createEffectStyle',
         ),
@@ -3308,15 +3308,15 @@ extension PluginAPI$Typings on PluginAPI {
         [this],
       );
   set createGridStyle(_i3.GridStyle Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createGridStyle',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.GridStyle Function() get createGridStyle => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.GridStyle Function() get createGridStyle => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createGridStyle',
         ),
@@ -3325,16 +3325,16 @@ extension PluginAPI$Typings on PluginAPI {
       );
   set getLocalPaintStylesAsync(
       _i2.Future<_i2.List<_i3.PaintStyle>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalPaintStylesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.PaintStyle>> Function()
-      get getLocalPaintStylesAsync => () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      get getLocalPaintStylesAsync => () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getLocalPaintStylesAsync',
             ),
@@ -3342,16 +3342,16 @@ extension PluginAPI$Typings on PluginAPI {
             [this],
           ));
   set getLocalPaintStyles(_i2.List<_i3.PaintStyle> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalPaintStyles',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.List<_i3.PaintStyle> Function() get getLocalPaintStyles =>
-      () => ((_i5.callMethod(
-            _i5.getProperty(
+      () => ((_i4.callMethod(
+            _i4.getProperty(
               this,
               'getLocalPaintStyles',
             ),
@@ -3361,16 +3361,16 @@ extension PluginAPI$Typings on PluginAPI {
               .cast();
   set getLocalTextStylesAsync(
       _i2.Future<_i2.List<_i3.TextStyle>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalTextStylesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.TextStyle>> Function() get getLocalTextStylesAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getLocalTextStylesAsync',
             ),
@@ -3378,16 +3378,16 @@ extension PluginAPI$Typings on PluginAPI {
             [this],
           ));
   set getLocalTextStyles(_i2.List<_i3.TextStyle> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalTextStyles',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.List<_i3.TextStyle> Function() get getLocalTextStyles =>
-      () => ((_i5.callMethod(
-            _i5.getProperty(
+      () => ((_i4.callMethod(
+            _i4.getProperty(
               this,
               'getLocalTextStyles',
             ),
@@ -3397,16 +3397,16 @@ extension PluginAPI$Typings on PluginAPI {
               .cast();
   set getLocalEffectStylesAsync(
       _i2.Future<_i2.List<_i3.EffectStyle>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalEffectStylesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.EffectStyle>> Function()
-      get getLocalEffectStylesAsync => () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      get getLocalEffectStylesAsync => () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getLocalEffectStylesAsync',
             ),
@@ -3414,16 +3414,16 @@ extension PluginAPI$Typings on PluginAPI {
             [this],
           ));
   set getLocalEffectStyles(_i2.List<_i3.EffectStyle> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalEffectStyles',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.List<_i3.EffectStyle> Function() get getLocalEffectStyles =>
-      () => ((_i5.callMethod(
-            _i5.getProperty(
+      () => ((_i4.callMethod(
+            _i4.getProperty(
               this,
               'getLocalEffectStyles',
             ),
@@ -3433,16 +3433,16 @@ extension PluginAPI$Typings on PluginAPI {
               .cast();
   set getLocalGridStylesAsync(
       _i2.Future<_i2.List<_i3.GridStyle>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalGridStylesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.GridStyle>> Function() get getLocalGridStylesAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getLocalGridStylesAsync',
             ),
@@ -3450,16 +3450,16 @@ extension PluginAPI$Typings on PluginAPI {
             [this],
           ));
   set getLocalGridStyles(_i2.List<_i3.GridStyle> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalGridStyles',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.List<_i3.GridStyle> Function() get getLocalGridStyles =>
-      () => ((_i5.callMethod(
-            _i5.getProperty(
+      () => ((_i4.callMethod(
+            _i4.getProperty(
               this,
               'getLocalGridStyles',
             ),
@@ -3468,15 +3468,15 @@ extension PluginAPI$Typings on PluginAPI {
           )) as _i2.List)
               .cast();
   set getSelectionColors(_i2.dynamic Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getSelectionColors',
-      _i5.allowInterop(() => () => value() ?? _i7.undefined),
+      _i4.allowInterop(() => () => value() ?? _i7.undefined),
     );
   }
 
-  _i2.dynamic Function() get getSelectionColors => () => _i5.callMethod(
-        _i5.getProperty(
+  _i2.dynamic Function() get getSelectionColors => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'getSelectionColors',
         ),
@@ -3488,10 +3488,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i3.PaintStyle, [
         _i3.PaintStyle?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'moveLocalPaintStyleAfter',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -3502,8 +3502,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i3.PaintStyle p0, [
         _i3.PaintStyle? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'moveLocalPaintStyleAfter',
             ),
@@ -3519,10 +3519,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i3.TextStyle, [
         _i3.TextStyle?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'moveLocalTextStyleAfter',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -3533,8 +3533,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i3.TextStyle p0, [
         _i3.TextStyle? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'moveLocalTextStyleAfter',
             ),
@@ -3550,10 +3550,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i3.EffectStyle, [
         _i3.EffectStyle?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'moveLocalEffectStyleAfter',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -3564,8 +3564,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i3.EffectStyle p0, [
         _i3.EffectStyle? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'moveLocalEffectStyleAfter',
             ),
@@ -3581,10 +3581,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i3.GridStyle, [
         _i3.GridStyle?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'moveLocalGridStyleAfter',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -3595,8 +3595,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i3.GridStyle p0, [
         _i3.GridStyle? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'moveLocalGridStyleAfter',
             ),
@@ -3612,10 +3612,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String, [
         _i2.String?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'moveLocalPaintFolderAfter',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -3626,8 +3626,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String p0, [
         _i2.String? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'moveLocalPaintFolderAfter',
             ),
@@ -3643,10 +3643,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String, [
         _i2.String?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'moveLocalTextFolderAfter',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -3657,8 +3657,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String p0, [
         _i2.String? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'moveLocalTextFolderAfter',
             ),
@@ -3674,10 +3674,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String, [
         _i2.String?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'moveLocalEffectFolderAfter',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -3688,8 +3688,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String p0, [
         _i2.String? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'moveLocalEffectFolderAfter',
             ),
@@ -3705,10 +3705,10 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String, [
         _i2.String?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'moveLocalGridFolderAfter',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -3719,8 +3719,8 @@ extension PluginAPI$Typings on PluginAPI {
         _i2.String p0, [
         _i2.String? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'moveLocalGridFolderAfter',
             ),
@@ -3733,17 +3733,17 @@ extension PluginAPI$Typings on PluginAPI {
           );
   set importComponentByKeyAsync(
       _i2.Future<_i3.ComponentNode> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'importComponentByKeyAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.ComponentNode> Function(_i2.String)
       get importComponentByKeyAsync =>
-          (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'importComponentByKeyAsync',
                 ),
@@ -3755,17 +3755,17 @@ extension PluginAPI$Typings on PluginAPI {
               ));
   set importComponentSetByKeyAsync(
       _i2.Future<_i3.ComponentSetNode> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'importComponentSetByKeyAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.ComponentSetNode> Function(_i2.String)
       get importComponentSetByKeyAsync =>
-          (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'importComponentSetByKeyAsync',
                 ),
@@ -3776,37 +3776,38 @@ extension PluginAPI$Typings on PluginAPI {
                 ],
               ));
   set importStyleByKeyAsync(
-      _i2.Future<_i3.BaseStyle> Function(_i2.String) value) {
-    _i5.setProperty(
+      _i2.Future<_i3.BaseStyleMixin> Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'importStyleByKeyAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i3.BaseStyle> Function(_i2.String) get importStyleByKeyAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
-              this,
-              'importStyleByKeyAsync',
-            ),
-            r'call',
-            [
-              this,
-              p0,
-            ],
-          ));
+  _i2.Future<_i3.BaseStyleMixin> Function(_i2.String)
+      get importStyleByKeyAsync =>
+          (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
+                  this,
+                  'importStyleByKeyAsync',
+                ),
+                r'call',
+                [
+                  this,
+                  p0,
+                ],
+              ));
   set listAvailableFontsAsync(_i2.Future<_i2.List<_i3.Font>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'listAvailableFontsAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.Font>> Function() get listAvailableFontsAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'listAvailableFontsAsync',
             ),
@@ -3814,16 +3815,16 @@ extension PluginAPI$Typings on PluginAPI {
             [this],
           ));
   set loadFontAsync(_i2.Future<void> Function(_i3.FontName) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'loadFontAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(_i3.FontName) get loadFontAsync =>
-      (_i3.FontName p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i3.FontName p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'loadFontAsync',
             ),
@@ -3834,16 +3835,16 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           ));
   set createNodeFromSvg(_i3.FrameNode Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createNodeFromSvg',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.FrameNode Function(_i2.String) get createNodeFromSvg =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'createNodeFromSvg',
             ),
@@ -3853,17 +3854,17 @@ extension PluginAPI$Typings on PluginAPI {
               p0,
             ],
           );
-  set createImage(_i3.Image Function(_i6.Uint8List) value) {
-    _i5.setProperty(
+  set createImage(_i3.Image Function(_i5.Uint8List) value) {
+    _i4.setProperty(
       this,
       'createImage',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.Image Function(_i6.Uint8List) get createImage =>
-      (_i6.Uint8List p0) => _i5.callMethod(
-            _i5.getProperty(
+  _i3.Image Function(_i5.Uint8List) get createImage =>
+      (_i5.Uint8List p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'createImage',
             ),
@@ -3874,16 +3875,16 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           );
   set createImageAsync(_i2.Future<_i3.Image> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createImageAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.Image> Function(_i2.String) get createImageAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'createImageAsync',
             ),
@@ -3894,16 +3895,16 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           ));
   set getImageByHash(_i3.Image? Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getImageByHash',
-      _i5.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
     );
   }
 
   _i3.Image? Function(_i2.String) get getImageByHash =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'getImageByHash',
             ),
@@ -3913,17 +3914,17 @@ extension PluginAPI$Typings on PluginAPI {
               p0,
             ],
           );
-  set createVideoAsync(_i2.Future<_i3.Video> Function(_i6.Uint8List) value) {
-    _i5.setProperty(
+  set createVideoAsync(_i2.Future<_i3.Video> Function(_i5.Uint8List) value) {
+    _i4.setProperty(
       this,
       'createVideoAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i3.Video> Function(_i6.Uint8List) get createVideoAsync =>
-      (_i6.Uint8List p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+  _i2.Future<_i3.Video> Function(_i5.Uint8List) get createVideoAsync =>
+      (_i5.Uint8List p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'createVideoAsync',
             ),
@@ -3935,17 +3936,17 @@ extension PluginAPI$Typings on PluginAPI {
           ));
   set createLinkPreviewAsync(
       _i2.Future<_i3.OpaqueNodeMixin> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createLinkPreviewAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.OpaqueNodeMixin> Function(_i2.String)
       get createLinkPreviewAsync =>
-          (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'createLinkPreviewAsync',
                 ),
@@ -3956,16 +3957,16 @@ extension PluginAPI$Typings on PluginAPI {
                 ],
               ));
   set createGif(_i3.MediaNode Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createGif',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.MediaNode Function(_i2.String) get createGif =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'createGif',
             ),
@@ -3977,28 +3978,28 @@ extension PluginAPI$Typings on PluginAPI {
           );
   set combineAsVariants(
       _i3.ComponentSetNode Function(
-        _i4.ReadonlyArray<_i3.ComponentNode>,
+        _i2.List<_i3.ComponentNode>,
         _i2.Object, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'combineAsVariants',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.ComponentSetNode Function(
-    _i4.ReadonlyArray<_i3.ComponentNode>,
+    _i2.List<_i3.ComponentNode>,
     _i2.Object, [
     _i2.num?,
   ]) get combineAsVariants => (
-        _i4.ReadonlyArray<_i3.ComponentNode> p0,
+        _i2.List<_i3.ComponentNode> p0,
         _i2.Object p1, [
         _i2.num? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'combineAsVariants',
             ),
@@ -4012,28 +4013,28 @@ extension PluginAPI$Typings on PluginAPI {
           );
   set group(
       _i3.GroupNode Function(
-        _i4.ReadonlyArray<_i2.Object>,
+        _i2.List<_i3.BaseNodeMixin>,
         _i2.Object, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'group',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.GroupNode Function(
-    _i4.ReadonlyArray<_i2.Object>,
+    _i2.List<_i3.BaseNodeMixin>,
     _i2.Object, [
     _i2.num?,
   ]) get group => (
-        _i4.ReadonlyArray<_i2.Object> p0,
+        _i2.List<_i3.BaseNodeMixin> p0,
         _i2.Object p1, [
         _i2.num? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'group',
             ),
@@ -4047,28 +4048,28 @@ extension PluginAPI$Typings on PluginAPI {
           );
   set flatten(
       _i3.VectorNode Function(
-        _i4.ReadonlyArray<_i2.Object>, [
+        _i2.List<_i3.BaseNodeMixin>, [
         _i2.Object?,
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'flatten',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.VectorNode Function(
-    _i4.ReadonlyArray<_i2.Object>, [
+    _i2.List<_i3.BaseNodeMixin>, [
     _i2.Object?,
     _i2.num?,
   ]) get flatten => (
-        _i4.ReadonlyArray<_i2.Object> p0, [
+        _i2.List<_i3.BaseNodeMixin> p0, [
         _i2.Object? p1,
         _i2.num? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'flatten',
             ),
@@ -4082,28 +4083,28 @@ extension PluginAPI$Typings on PluginAPI {
           );
   set union(
       _i3.BooleanOperationNode Function(
-        _i4.ReadonlyArray<_i2.Object>,
+        _i2.List<_i3.BaseNodeMixin>,
         _i2.Object, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'union',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.BooleanOperationNode Function(
-    _i4.ReadonlyArray<_i2.Object>,
+    _i2.List<_i3.BaseNodeMixin>,
     _i2.Object, [
     _i2.num?,
   ]) get union => (
-        _i4.ReadonlyArray<_i2.Object> p0,
+        _i2.List<_i3.BaseNodeMixin> p0,
         _i2.Object p1, [
         _i2.num? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'union',
             ),
@@ -4117,28 +4118,28 @@ extension PluginAPI$Typings on PluginAPI {
           );
   set subtract(
       _i3.BooleanOperationNode Function(
-        _i4.ReadonlyArray<_i2.Object>,
+        _i2.List<_i3.BaseNodeMixin>,
         _i2.Object, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'subtract',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.BooleanOperationNode Function(
-    _i4.ReadonlyArray<_i2.Object>,
+    _i2.List<_i3.BaseNodeMixin>,
     _i2.Object, [
     _i2.num?,
   ]) get subtract => (
-        _i4.ReadonlyArray<_i2.Object> p0,
+        _i2.List<_i3.BaseNodeMixin> p0,
         _i2.Object p1, [
         _i2.num? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'subtract',
             ),
@@ -4152,28 +4153,28 @@ extension PluginAPI$Typings on PluginAPI {
           );
   set intersect(
       _i3.BooleanOperationNode Function(
-        _i4.ReadonlyArray<_i2.Object>,
+        _i2.List<_i3.BaseNodeMixin>,
         _i2.Object, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'intersect',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.BooleanOperationNode Function(
-    _i4.ReadonlyArray<_i2.Object>,
+    _i2.List<_i3.BaseNodeMixin>,
     _i2.Object, [
     _i2.num?,
   ]) get intersect => (
-        _i4.ReadonlyArray<_i2.Object> p0,
+        _i2.List<_i3.BaseNodeMixin> p0,
         _i2.Object p1, [
         _i2.num? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'intersect',
             ),
@@ -4187,28 +4188,28 @@ extension PluginAPI$Typings on PluginAPI {
           );
   set exclude(
       _i3.BooleanOperationNode Function(
-        _i4.ReadonlyArray<_i2.Object>,
+        _i2.List<_i3.BaseNodeMixin>,
         _i2.Object, [
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'exclude',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.BooleanOperationNode Function(
-    _i4.ReadonlyArray<_i2.Object>,
+    _i2.List<_i3.BaseNodeMixin>,
     _i2.Object, [
     _i2.num?,
   ]) get exclude => (
-        _i4.ReadonlyArray<_i2.Object> p0,
+        _i2.List<_i3.BaseNodeMixin> p0,
         _i2.Object p1, [
         _i2.num? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'exclude',
             ),
@@ -4220,17 +4221,17 @@ extension PluginAPI$Typings on PluginAPI {
               p2 ?? _i7.undefined,
             ],
           );
-  set ungroup(_i4.Array<_i3.SceneNode> Function(_i2.Object) value) {
-    _i5.setProperty(
+  set ungroup(_i6.Array<_i3.BaseNodeMixin> Function(_i2.Object) value) {
+    _i4.setProperty(
       this,
       'ungroup',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i4.Array<_i3.SceneNode> Function(_i2.Object) get ungroup =>
-      (_i2.Object p0) => _i5.callMethod(
-            _i5.getProperty(
+  _i6.Array<_i3.BaseNodeMixin> Function(_i2.Object) get ungroup =>
+      (_i2.Object p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'ungroup',
             ),
@@ -4240,17 +4241,17 @@ extension PluginAPI$Typings on PluginAPI {
               p0,
             ],
           );
-  set base64Encode(_i2.String Function(_i6.Uint8List) value) {
-    _i5.setProperty(
+  set base64Encode(_i2.String Function(_i5.Uint8List) value) {
+    _i4.setProperty(
       this,
       'base64Encode',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.String Function(_i6.Uint8List) get base64Encode =>
-      (_i6.Uint8List p0) => _i5.callMethod(
-            _i5.getProperty(
+  _i2.String Function(_i5.Uint8List) get base64Encode =>
+      (_i5.Uint8List p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'base64Encode',
             ),
@@ -4260,17 +4261,17 @@ extension PluginAPI$Typings on PluginAPI {
               p0,
             ],
           );
-  set base64Decode(_i6.Uint8List Function(_i2.String) value) {
-    _i5.setProperty(
+  set base64Decode(_i5.Uint8List Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'base64Decode',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i6.Uint8List Function(_i2.String) get base64Decode =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+  _i5.Uint8List Function(_i2.String) get base64Decode =>
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'base64Decode',
             ),
@@ -4282,16 +4283,16 @@ extension PluginAPI$Typings on PluginAPI {
           );
   set getFileThumbnailNodeAsync(
       _i2.Future<_i3.BaseNodeMixin?> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getFileThumbnailNodeAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.BaseNodeMixin?> Function() get getFileThumbnailNodeAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getFileThumbnailNodeAsync',
             ),
@@ -4299,16 +4300,16 @@ extension PluginAPI$Typings on PluginAPI {
             [this],
           ));
   set getFileThumbnailNode(_i3.BaseNodeMixin? Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getFileThumbnailNode',
-      _i5.allowInterop(() => () => value() ?? _i7.undefined),
+      _i4.allowInterop(() => () => value() ?? _i7.undefined),
     );
   }
 
   _i3.BaseNodeMixin? Function() get getFileThumbnailNode =>
-      () => _i5.callMethod(
-            _i5.getProperty(
+      () => _i4.callMethod(
+            _i4.getProperty(
               this,
               'getFileThumbnailNode',
             ),
@@ -4317,17 +4318,17 @@ extension PluginAPI$Typings on PluginAPI {
           );
   set setFileThumbnailNodeAsync(
       _i2.Future<void> Function([_i3.BaseNodeMixin?]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setFileThumbnailNodeAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function([_i3.BaseNodeMixin?])
       get setFileThumbnailNodeAsync =>
-          ([_i3.BaseNodeMixin? p0]) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          ([_i3.BaseNodeMixin? p0]) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'setFileThumbnailNodeAsync',
                 ),
@@ -4338,50 +4339,50 @@ extension PluginAPI$Typings on PluginAPI {
                 ],
               ));
   set loadAllPagesAsync(_i2.Future<void> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'loadAllPagesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function() get loadAllPagesAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'loadAllPagesAsync',
             ),
             r'call',
             [this],
           ));
-  set getSlideGrid(_i4.Array<_i4.Array<_i3.SlideNode>> Function() value) {
-    _i5.setProperty(
+  set getSlideGrid(_i6.Array<_i6.Array<_i3.SlideNode>> Function() value) {
+    _i4.setProperty(
       this,
       'getSlideGrid',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i4.Array<_i4.Array<_i3.SlideNode>> Function() get getSlideGrid =>
-      () => _i5.callMethod(
-            _i5.getProperty(
+  _i6.Array<_i6.Array<_i3.SlideNode>> Function() get getSlideGrid =>
+      () => _i4.callMethod(
+            _i4.getProperty(
               this,
               'getSlideGrid',
             ),
             r'call',
             [this],
           );
-  set setSlideGrid(void Function(_i4.Array<_i4.Array<_i3.SlideNode>>) value) {
-    _i5.setProperty(
+  set setSlideGrid(void Function(_i6.Array<_i6.Array<_i3.SlideNode>>) value) {
+    _i4.setProperty(
       this,
       'setSlideGrid',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i4.Array<_i4.Array<_i3.SlideNode>>) get setSlideGrid =>
-      (_i4.Array<_i4.Array<_i3.SlideNode>> p0) => _i5.callMethod(
-            _i5.getProperty(
+  void Function(_i6.Array<_i6.Array<_i3.SlideNode>>) get setSlideGrid =>
+      (_i6.Array<_i6.Array<_i3.SlideNode>> p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'setSlideGrid',
             ),
@@ -4392,15 +4393,15 @@ extension PluginAPI$Typings on PluginAPI {
             ],
           );
   void _on$1(
-    _i3.ArgFreeEventType type,
+    _i3.ArgFreeEventTypeOptions type,
     void Function() callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type.name,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4409,12 +4410,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i2.Object) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4423,12 +4424,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     _i2.bool Function(_i3.DropEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4437,12 +4438,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i3.DocumentChangeEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4451,27 +4452,26 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i3.SlidesViewChangeEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
 
   void _on$6(
     _i2.String type,
-    _i8.FutureOr<_i2.List<_i3.TextReviewRange>> Function(_i3.TextReviewEvent)
-        callback,
+    _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
@@ -4480,12 +4480,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i3.StyleChangeEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4493,7 +4493,7 @@ extension PluginAPI$Typings on PluginAPI {
   /// Overload accessor: $1, $2, $3, $4, $5, $6, $7
   ({
     void Function(
-      _i3.ArgFreeEventType type,
+      _i3.ArgFreeEventTypeOptions type,
       void Function() callback,
     ) $1,
     void Function(
@@ -4514,8 +4514,7 @@ extension PluginAPI$Typings on PluginAPI {
     ) $5,
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i2.List<_i3.TextReviewRange>> Function(_i3.TextReviewEvent)
-          callback,
+      _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
     ) $6,
     void Function(
       _i2.String type,
@@ -4531,15 +4530,15 @@ extension PluginAPI$Typings on PluginAPI {
         $7: _on$7,
       );
   void _once$1(
-    _i3.ArgFreeEventType type,
+    _i3.ArgFreeEventTypeOptions type,
     void Function() callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type.name,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4548,12 +4547,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i2.Object) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4562,12 +4561,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     _i2.bool Function(_i3.DropEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4576,12 +4575,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i3.DocumentChangeEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4590,27 +4589,26 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i3.SlidesViewChangeEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
 
   void _once$6(
     _i2.String type,
-    _i8.FutureOr<_i2.List<_i3.TextReviewRange>> Function(_i3.TextReviewEvent)
-        callback,
+    _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
@@ -4619,12 +4617,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i3.StyleChangeEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4632,7 +4630,7 @@ extension PluginAPI$Typings on PluginAPI {
   /// Overload accessor: $1, $2, $3, $4, $5, $6, $7
   ({
     void Function(
-      _i3.ArgFreeEventType type,
+      _i3.ArgFreeEventTypeOptions type,
       void Function() callback,
     ) $1,
     void Function(
@@ -4653,8 +4651,7 @@ extension PluginAPI$Typings on PluginAPI {
     ) $5,
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i2.List<_i3.TextReviewRange>> Function(_i3.TextReviewEvent)
-          callback,
+      _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
     ) $6,
     void Function(
       _i2.String type,
@@ -4670,15 +4667,15 @@ extension PluginAPI$Typings on PluginAPI {
         $7: _once$7,
       );
   void _off$1(
-    _i3.ArgFreeEventType type,
+    _i3.ArgFreeEventTypeOptions type,
     void Function() callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type.name,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4687,12 +4684,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i2.Object) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4701,12 +4698,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     _i2.bool Function(_i3.DropEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4715,12 +4712,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i3.DocumentChangeEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4729,27 +4726,26 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i3.SlidesViewChangeEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
 
   void _off$6(
     _i2.String type,
-    _i8.FutureOr<_i2.List<_i3.TextReviewRange>> Function(_i3.TextReviewEvent)
-        callback,
+    _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
@@ -4758,12 +4754,12 @@ extension PluginAPI$Typings on PluginAPI {
     _i2.String type,
     void Function(_i3.StyleChangeEvent) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -4771,7 +4767,7 @@ extension PluginAPI$Typings on PluginAPI {
   /// Overload accessor: $1, $2, $3, $4, $5, $6, $7
   ({
     void Function(
-      _i3.ArgFreeEventType type,
+      _i3.ArgFreeEventTypeOptions type,
       void Function() callback,
     ) $1,
     void Function(
@@ -4792,8 +4788,7 @@ extension PluginAPI$Typings on PluginAPI {
     ) $5,
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i2.List<_i3.TextReviewRange>> Function(_i3.TextReviewEvent)
-          callback,
+      _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
     ) $6,
     void Function(
       _i2.String type,
@@ -4822,12 +4817,12 @@ class VersionHistoryResult {
 }
 
 extension VersionHistoryResult$Typings on VersionHistoryResult {
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
   set id(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'id',
       value,
@@ -4865,9 +4860,9 @@ class VariablesAPI {
         getVariableCollectionByIdAsync,
     _i3.VariableCollection? Function(_i2.String)? getVariableCollectionById,
     _i2.Future<_i2.List<_i3.Variable>> Function(
-            [_i3.VariableResolvedDataType?])?
+            [_i3.VariableResolvedDataTypeOptions?])?
         getLocalVariablesAsync,
-    _i2.List<_i3.Variable> Function([_i3.VariableResolvedDataType?])?
+    _i2.List<_i3.Variable> Function([_i3.VariableResolvedDataTypeOptions?])?
         getLocalVariables,
     _i2.Future<_i2.List<_i3.VariableCollection>> Function()?
         getLocalVariableCollectionsAsync,
@@ -4878,17 +4873,17 @@ class VariablesAPI {
         createVariableAliasByIdAsync,
     _i3.SolidPaint Function(
       _i3.SolidPaint,
-      _i3.VariableBindablePaintField, [
+      _i2.String, [
       _i3.Variable?,
     ])? setBoundVariableForPaint,
     _i2.Object Function(
       _i2.Object,
-      _i3.VariableBindableEffectField, [
+      _i3.VariableBindableEffectFieldOptions, [
       _i3.Variable?,
     ])? setBoundVariableForEffect,
     _i2.Object Function(
       _i2.Object,
-      _i3.VariableBindableLayoutGridField, [
+      _i3.VariableBindableLayoutGridFieldOptions, [
       _i3.Variable?,
     ])? setBoundVariableForLayoutGrid,
     _i2.Future<_i3.Variable> Function(_i2.String)? importVariableByKeyAsync,
@@ -4896,68 +4891,68 @@ class VariablesAPI {
       VariablesAPI._(
         getVariableByIdAsync: getVariableByIdAsync == null
             ? null
-            : _i5.allowInterop(getVariableByIdAsync),
+            : _i4.allowInterop(getVariableByIdAsync),
         getVariableById: getVariableById == null
             ? null
-            : _i5.allowInterop(
+            : _i4.allowInterop(
                 (p0) => () => getVariableById(p0) ?? _i7.undefined),
         getVariableCollectionByIdAsync: getVariableCollectionByIdAsync == null
             ? null
-            : _i5.allowInterop(getVariableCollectionByIdAsync),
+            : _i4.allowInterop(getVariableCollectionByIdAsync),
         getVariableCollectionById: getVariableCollectionById == null
             ? null
-            : _i5.allowInterop(
+            : _i4.allowInterop(
                 (p0) => () => getVariableCollectionById(p0) ?? _i7.undefined),
         getLocalVariablesAsync: getLocalVariablesAsync == null
             ? null
-            : _i5.allowInterop(getLocalVariablesAsync),
+            : _i4.allowInterop(getLocalVariablesAsync),
         getLocalVariables: getLocalVariables == null
             ? null
-            : _i5.allowInterop(getLocalVariables),
+            : _i4.allowInterop(getLocalVariables),
         getLocalVariableCollectionsAsync:
             getLocalVariableCollectionsAsync == null
                 ? null
-                : _i5.allowInterop(getLocalVariableCollectionsAsync),
+                : _i4.allowInterop(getLocalVariableCollectionsAsync),
         getLocalVariableCollections: getLocalVariableCollections == null
             ? null
-            : _i5.allowInterop(getLocalVariableCollections),
+            : _i4.allowInterop(getLocalVariableCollections),
         createVariableCollection: createVariableCollection == null
             ? null
-            : _i5.allowInterop(createVariableCollection),
+            : _i4.allowInterop(createVariableCollection),
         createVariableAlias: createVariableAlias == null
             ? null
-            : _i5.allowInterop(createVariableAlias),
+            : _i4.allowInterop(createVariableAlias),
         createVariableAliasByIdAsync: createVariableAliasByIdAsync == null
             ? null
-            : _i5.allowInterop(createVariableAliasByIdAsync),
+            : _i4.allowInterop(createVariableAliasByIdAsync),
         setBoundVariableForPaint: setBoundVariableForPaint == null
             ? null
-            : _i5.allowInterop(setBoundVariableForPaint),
+            : _i4.allowInterop(setBoundVariableForPaint),
         setBoundVariableForEffect: setBoundVariableForEffect == null
             ? null
-            : _i5.allowInterop(setBoundVariableForEffect),
+            : _i4.allowInterop(setBoundVariableForEffect),
         setBoundVariableForLayoutGrid: setBoundVariableForLayoutGrid == null
             ? null
-            : _i5.allowInterop(setBoundVariableForLayoutGrid),
+            : _i4.allowInterop(setBoundVariableForLayoutGrid),
         importVariableByKeyAsync: importVariableByKeyAsync == null
             ? null
-            : _i5.allowInterop(importVariableByKeyAsync),
+            : _i4.allowInterop(importVariableByKeyAsync),
       );
 }
 
 extension VariablesAPI$Typings on VariablesAPI {
   set getVariableByIdAsync(
       _i2.Future<_i3.Variable?> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getVariableByIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.Variable?> Function(_i2.String) get getVariableByIdAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getVariableByIdAsync',
             ),
@@ -4968,16 +4963,16 @@ extension VariablesAPI$Typings on VariablesAPI {
             ],
           ));
   set getVariableById(_i3.Variable? Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getVariableById',
-      _i5.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
     );
   }
 
   _i3.Variable? Function(_i2.String) get getVariableById =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'getVariableById',
             ),
@@ -4989,17 +4984,17 @@ extension VariablesAPI$Typings on VariablesAPI {
           );
   set getVariableCollectionByIdAsync(
       _i2.Future<_i3.VariableCollection?> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getVariableCollectionByIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.VariableCollection?> Function(_i2.String)
       get getVariableCollectionByIdAsync =>
-          (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'getVariableCollectionByIdAsync',
                 ),
@@ -5011,16 +5006,16 @@ extension VariablesAPI$Typings on VariablesAPI {
               ));
   set getVariableCollectionById(
       _i3.VariableCollection? Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getVariableCollectionById',
-      _i5.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
     );
   }
 
   _i3.VariableCollection? Function(_i2.String) get getVariableCollectionById =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'getVariableCollectionById',
             ),
@@ -5032,64 +5027,66 @@ extension VariablesAPI$Typings on VariablesAPI {
           );
   set getLocalVariablesAsync(
       _i2.Future<_i2.List<_i3.Variable>> Function(
-              [_i3.VariableResolvedDataType?])
+              [_i3.VariableResolvedDataTypeOptions?])
           value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalVariablesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i2.List<_i3.Variable>> Function([_i3.VariableResolvedDataType?])
-      get getLocalVariablesAsync => ([_i3.VariableResolvedDataType? p0]) =>
-          _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
-              this,
-              'getLocalVariablesAsync',
-            ),
-            r'call',
-            [
-              this,
-              p0?.name ?? _i7.undefined ?? _i7.undefined,
-            ],
-          ));
+  _i2.Future<_i2.List<_i3.Variable>> Function(
+      [_i3.VariableResolvedDataTypeOptions?]) get getLocalVariablesAsync => (
+          [_i3.VariableResolvedDataTypeOptions? p0]) =>
+      _i4.promiseToFuture(_i4.callMethod(
+        _i4.getProperty(
+          this,
+          'getLocalVariablesAsync',
+        ),
+        r'call',
+        [
+          this,
+          p0?.name ?? _i7.undefined,
+        ],
+      ));
   set getLocalVariables(
-      _i2.List<_i3.Variable> Function([_i3.VariableResolvedDataType?]) value) {
-    _i5.setProperty(
+      _i2.List<_i3.Variable> Function([_i3.VariableResolvedDataTypeOptions?])
+          value) {
+    _i4.setProperty(
       this,
       'getLocalVariables',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.List<_i3.Variable> Function([_i3.VariableResolvedDataType?])
+  _i2.List<_i3.Variable> Function([_i3.VariableResolvedDataTypeOptions?])
       get getLocalVariables =>
-          ([_i3.VariableResolvedDataType? p0]) => ((_i5.callMethod(
-                _i5.getProperty(
+          ([_i3.VariableResolvedDataTypeOptions? p0]) => ((_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'getLocalVariables',
                 ),
                 r'call',
                 [
                   this,
-                  p0?.name ?? _i7.undefined ?? _i7.undefined,
+                  p0?.name ?? _i7.undefined,
                 ],
               )) as _i2.List)
                   .cast();
   set getLocalVariableCollectionsAsync(
       _i2.Future<_i2.List<_i3.VariableCollection>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalVariableCollectionsAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.VariableCollection>> Function()
       get getLocalVariableCollectionsAsync =>
-          () => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          () => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'getLocalVariableCollectionsAsync',
                 ),
@@ -5098,16 +5095,16 @@ extension VariablesAPI$Typings on VariablesAPI {
               ));
   set getLocalVariableCollections(
       _i2.List<_i3.VariableCollection> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getLocalVariableCollections',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.List<_i3.VariableCollection> Function() get getLocalVariableCollections =>
-      () => ((_i5.callMethod(
-            _i5.getProperty(
+      () => ((_i4.callMethod(
+            _i4.getProperty(
               this,
               'getLocalVariableCollections',
             ),
@@ -5117,16 +5114,16 @@ extension VariablesAPI$Typings on VariablesAPI {
               .cast();
   set createVariableCollection(
       _i3.VariableCollection Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createVariableCollection',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.VariableCollection Function(_i2.String) get createVariableCollection =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'createVariableCollection',
             ),
@@ -5137,16 +5134,16 @@ extension VariablesAPI$Typings on VariablesAPI {
             ],
           );
   set createVariableAlias(_i3.VariableAlias Function(_i3.Variable) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createVariableAlias',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.VariableAlias Function(_i3.Variable) get createVariableAlias =>
-      (_i3.Variable p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i3.Variable p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'createVariableAlias',
             ),
@@ -5158,17 +5155,17 @@ extension VariablesAPI$Typings on VariablesAPI {
           );
   set createVariableAliasByIdAsync(
       _i2.Future<_i3.VariableAlias> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createVariableAliasByIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.VariableAlias> Function(_i2.String)
       get createVariableAliasByIdAsync =>
-          (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'createVariableAliasByIdAsync',
                 ),
@@ -5181,27 +5178,27 @@ extension VariablesAPI$Typings on VariablesAPI {
   set setBoundVariableForPaint(
       _i3.SolidPaint Function(
         _i3.SolidPaint,
-        _i3.VariableBindablePaintField, [
+        _i2.String, [
         _i3.Variable?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setBoundVariableForPaint',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i3.SolidPaint Function(
     _i3.SolidPaint,
-    _i3.VariableBindablePaintField, [
+    _i2.String, [
     _i3.Variable?,
   ]) get setBoundVariableForPaint => (
         _i3.SolidPaint p0,
-        _i3.VariableBindablePaintField p1, [
+        _i2.String p1, [
         _i3.Variable? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setBoundVariableForPaint',
             ),
@@ -5216,27 +5213,27 @@ extension VariablesAPI$Typings on VariablesAPI {
   set setBoundVariableForEffect(
       _i2.Object Function(
         _i2.Object,
-        _i3.VariableBindableEffectField, [
+        _i3.VariableBindableEffectFieldOptions, [
         _i3.Variable?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setBoundVariableForEffect',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Object Function(
     _i2.Object,
-    _i3.VariableBindableEffectField, [
+    _i3.VariableBindableEffectFieldOptions, [
     _i3.Variable?,
   ]) get setBoundVariableForEffect => (
         _i2.Object p0,
-        _i3.VariableBindableEffectField p1, [
+        _i3.VariableBindableEffectFieldOptions p1, [
         _i3.Variable? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setBoundVariableForEffect',
             ),
@@ -5251,27 +5248,27 @@ extension VariablesAPI$Typings on VariablesAPI {
   set setBoundVariableForLayoutGrid(
       _i2.Object Function(
         _i2.Object,
-        _i3.VariableBindableLayoutGridField, [
+        _i3.VariableBindableLayoutGridFieldOptions, [
         _i3.Variable?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setBoundVariableForLayoutGrid',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Object Function(
     _i2.Object,
-    _i3.VariableBindableLayoutGridField, [
+    _i3.VariableBindableLayoutGridFieldOptions, [
     _i3.Variable?,
   ]) get setBoundVariableForLayoutGrid => (
         _i2.Object p0,
-        _i3.VariableBindableLayoutGridField p1, [
+        _i3.VariableBindableLayoutGridFieldOptions p1, [
         _i3.Variable? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setBoundVariableForLayoutGrid',
             ),
@@ -5285,16 +5282,16 @@ extension VariablesAPI$Typings on VariablesAPI {
           );
   set importVariableByKeyAsync(
       _i2.Future<_i3.Variable> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'importVariableByKeyAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.Variable> Function(_i2.String) get importVariableByKeyAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'importVariableByKeyAsync',
             ),
@@ -5307,9 +5304,9 @@ extension VariablesAPI$Typings on VariablesAPI {
   _i3.Variable _createVariable$1(
     _i2.String name,
     _i2.String collectionId,
-    _i3.VariableResolvedDataType resolvedType,
+    _i3.VariableResolvedDataTypeOptions resolvedType,
   ) =>
-      _i5.callMethod(
+      _i4.callMethod(
         this,
         'createVariable',
         [
@@ -5321,9 +5318,9 @@ extension VariablesAPI$Typings on VariablesAPI {
   _i3.Variable _createVariable$2(
     _i2.String name,
     _i3.VariableCollection collection,
-    _i3.VariableResolvedDataType resolvedType,
+    _i3.VariableResolvedDataTypeOptions resolvedType,
   ) =>
-      _i5.callMethod(
+      _i4.callMethod(
         this,
         'createVariable',
         [
@@ -5338,12 +5335,12 @@ extension VariablesAPI$Typings on VariablesAPI {
     _i3.Variable Function(
       _i2.String name,
       _i2.String collectionId,
-      _i3.VariableResolvedDataType resolvedType,
+      _i3.VariableResolvedDataTypeOptions resolvedType,
     ) $1,
     _i3.Variable Function(
       _i2.String name,
       _i3.VariableCollection collection,
-      _i3.VariableResolvedDataType resolvedType,
+      _i3.VariableResolvedDataTypeOptions resolvedType,
     ) $2,
   }) get createVariable => (
         $1: _createVariable$1,
@@ -5375,36 +5372,36 @@ class LibraryVariableCollection {
 }
 
 extension LibraryVariableCollection$Typings on LibraryVariableCollection {
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
     );
   }
 
-  _i2.String get key => _i5.getProperty(
+  _i2.String get key => _i4.getProperty(
         this,
         'key',
       );
   set key(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'key',
       value,
     );
   }
 
-  _i2.String get libraryName => _i5.getProperty(
+  _i2.String get libraryName => _i4.getProperty(
         this,
         'libraryName',
       );
   set libraryName(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'libraryName',
       value,
@@ -5426,47 +5423,47 @@ class LibraryVariable {
   factory LibraryVariable({
     _i2.String? name,
     _i2.String? key,
-    _i3.VariableResolvedDataType? resolvedType,
+    _i3.VariableResolvedDataTypeOptions? resolvedType,
   }) =>
       LibraryVariable._(
         name: name,
         key: key,
-        resolvedType: resolvedType?.name ?? _i7.undefined,
+        resolvedType: resolvedType?.name,
       );
 }
 
 extension LibraryVariable$Typings on LibraryVariable {
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
     );
   }
 
-  _i2.String get key => _i5.getProperty(
+  _i2.String get key => _i4.getProperty(
         this,
         'key',
       );
   set key(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'key',
       value,
     );
   }
 
-  _i3.VariableResolvedDataType get resolvedType =>
-      _i3.VariableResolvedDataTypeOptions.values.byName(_i5.getProperty(
+  _i3.VariableResolvedDataTypeOptions get resolvedType =>
+      _i3.VariableResolvedDataTypeOptions.values.byName(_i4.getProperty(
         this,
         'resolvedType',
       ));
-  set resolvedType(_i3.VariableResolvedDataType value) {
-    _i5.setProperty(
+  set resolvedType(_i3.VariableResolvedDataTypeOptions value) {
+    _i4.setProperty(
       this,
       'resolvedType',
       value.name,
@@ -5481,25 +5478,25 @@ extension LibraryVariable$Typings on LibraryVariable {
 class IInline1 {}
 
 extension IInline1$Typings on IInline1 {
-  _i2.String get label => _i5.getProperty(
+  _i2.String get label => _i4.getProperty(
         this,
         'label',
       );
   set label(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'label',
       value,
     );
   }
 
-  _i3.AnnotationCategoryColor get color =>
-      _i3.AnnotationCategoryColorOptions.values.byName(_i5.getProperty(
+  _i3.AnnotationCategoryColorOptions get color =>
+      _i3.AnnotationCategoryColorOptions.values.byName(_i4.getProperty(
         this,
         'color',
       ));
-  set color(_i3.AnnotationCategoryColor value) {
-    _i5.setProperty(
+  set color(_i3.AnnotationCategoryColorOptions value) {
+    _i4.setProperty(
       this,
       'color',
       value.name,
@@ -5529,30 +5526,30 @@ class AnnotationsAPI {
       AnnotationsAPI._(
         getAnnotationCategoriesAsync: getAnnotationCategoriesAsync == null
             ? null
-            : _i5.allowInterop(getAnnotationCategoriesAsync),
+            : _i4.allowInterop(getAnnotationCategoriesAsync),
         getAnnotationCategoryByIdAsync: getAnnotationCategoryByIdAsync == null
             ? null
-            : _i5.allowInterop(getAnnotationCategoryByIdAsync),
+            : _i4.allowInterop(getAnnotationCategoryByIdAsync),
         addAnnotationCategoryAsync: addAnnotationCategoryAsync == null
             ? null
-            : _i5.allowInterop(addAnnotationCategoryAsync),
+            : _i4.allowInterop(addAnnotationCategoryAsync),
       );
 }
 
 extension AnnotationsAPI$Typings on AnnotationsAPI {
   set getAnnotationCategoriesAsync(
       _i2.Future<_i2.List<_i3.AnnotationCategory>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getAnnotationCategoriesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.AnnotationCategory>> Function()
       get getAnnotationCategoriesAsync =>
-          () => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          () => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'getAnnotationCategoriesAsync',
                 ),
@@ -5561,17 +5558,17 @@ extension AnnotationsAPI$Typings on AnnotationsAPI {
               ));
   set getAnnotationCategoryByIdAsync(
       _i2.Future<_i3.AnnotationCategory?> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getAnnotationCategoryByIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.AnnotationCategory?> Function(_i2.String)
       get getAnnotationCategoryByIdAsync =>
-          (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'getAnnotationCategoryByIdAsync',
                 ),
@@ -5583,17 +5580,17 @@ extension AnnotationsAPI$Typings on AnnotationsAPI {
               ));
   set addAnnotationCategoryAsync(
       _i2.Future<_i3.AnnotationCategory> Function(_i2.dynamic) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'addAnnotationCategoryAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.AnnotationCategory> Function(_i2.dynamic)
       get addAnnotationCategoryAsync =>
-          (_i2.dynamic p0) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          (_i2.dynamic p0) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'addAnnotationCategoryAsync',
                 ),
@@ -5625,28 +5622,28 @@ class TeamLibraryAPI {
         getAvailableLibraryVariableCollectionsAsync:
             getAvailableLibraryVariableCollectionsAsync == null
                 ? null
-                : _i5.allowInterop(getAvailableLibraryVariableCollectionsAsync),
+                : _i4.allowInterop(getAvailableLibraryVariableCollectionsAsync),
         getVariablesInLibraryCollectionAsync:
             getVariablesInLibraryCollectionAsync == null
                 ? null
-                : _i5.allowInterop(getVariablesInLibraryCollectionAsync),
+                : _i4.allowInterop(getVariablesInLibraryCollectionAsync),
       );
 }
 
 extension TeamLibraryAPI$Typings on TeamLibraryAPI {
   set getAvailableLibraryVariableCollectionsAsync(
       _i2.Future<_i2.List<_i3.LibraryVariableCollection>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getAvailableLibraryVariableCollectionsAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.LibraryVariableCollection>> Function()
       get getAvailableLibraryVariableCollectionsAsync =>
-          () => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          () => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'getAvailableLibraryVariableCollectionsAsync',
                 ),
@@ -5655,17 +5652,17 @@ extension TeamLibraryAPI$Typings on TeamLibraryAPI {
               ));
   set getVariablesInLibraryCollectionAsync(
       _i2.Future<_i2.List<_i3.LibraryVariable>> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getVariablesInLibraryCollectionAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.LibraryVariable>> Function(_i2.String)
       get getVariablesInLibraryCollectionAsync =>
-          (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'getVariablesInLibraryCollectionAsync',
                 ),
@@ -5684,12 +5681,12 @@ extension TeamLibraryAPI$Typings on TeamLibraryAPI {
 class IInline2 {}
 
 extension IInline2$Typings on IInline2 {
-  _i3.Type get type => _i3.Type.values.byName(_i5.getProperty(
+  _i3.Type get type => _i3.Type.values.byName(_i4.getProperty(
         this,
         'type',
       ));
   set type(_i3.Type value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value.name,
@@ -5704,7 +5701,7 @@ extension IInline2$Typings on IInline2 {
 class IInline3 {}
 
 extension IInline3$Typings on IInline3 {
-  _i3.Interstitial? get interstitial => switch (_i5.getProperty(
+  _i3.Interstitial? get interstitial => switch (_i4.getProperty(
         this,
         'interstitial',
       )) {
@@ -5712,7 +5709,7 @@ extension IInline3$Typings on IInline3 {
         _ => null
       };
   set interstitial(_i3.Interstitial? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'interstitial',
       value?.name ?? _i7.undefined,
@@ -5735,48 +5732,48 @@ class PaymentsAPI {
   });
 
   factory PaymentsAPI({
-    _i3.PaymentStatus? status,
-    void Function(_i3.PaymentStatus)? setPaymentStatusInDevelopment,
+    _i3.IInline2? status,
+    void Function(_i2.dynamic)? setPaymentStatusInDevelopment,
     _i2.num Function()? getUserFirstRanSecondsAgo,
     _i2.Future<void> Function([_i2.dynamic])? initiateCheckoutAsync,
     void Function()? requestCheckout,
     _i2.Future<_i2.String> Function()? getPluginPaymentTokenAsync,
   }) =>
       PaymentsAPI._(
-        status: status ?? _i7.undefined,
+        status: status,
         setPaymentStatusInDevelopment: setPaymentStatusInDevelopment == null
             ? null
-            : _i5.allowInterop(setPaymentStatusInDevelopment),
+            : _i4.allowInterop(setPaymentStatusInDevelopment),
         getUserFirstRanSecondsAgo: getUserFirstRanSecondsAgo == null
             ? null
-            : _i5.allowInterop(getUserFirstRanSecondsAgo),
+            : _i4.allowInterop(getUserFirstRanSecondsAgo),
         initiateCheckoutAsync: initiateCheckoutAsync == null
             ? null
-            : _i5.allowInterop(initiateCheckoutAsync),
+            : _i4.allowInterop(initiateCheckoutAsync),
         requestCheckout:
-            requestCheckout == null ? null : _i5.allowInterop(requestCheckout),
+            requestCheckout == null ? null : _i4.allowInterop(requestCheckout),
         getPluginPaymentTokenAsync: getPluginPaymentTokenAsync == null
             ? null
-            : _i5.allowInterop(getPluginPaymentTokenAsync),
+            : _i4.allowInterop(getPluginPaymentTokenAsync),
       );
 }
 
 extension PaymentsAPI$Typings on PaymentsAPI {
-  _i3.PaymentStatus get status => _i5.getProperty(
+  _i2.dynamic get status => _i4.getProperty(
         this,
         'status',
       );
-  set setPaymentStatusInDevelopment(void Function(_i3.PaymentStatus) value) {
-    _i5.setProperty(
+  set setPaymentStatusInDevelopment(void Function(_i2.dynamic) value) {
+    _i4.setProperty(
       this,
       'setPaymentStatusInDevelopment',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i3.PaymentStatus) get setPaymentStatusInDevelopment =>
-      (_i3.PaymentStatus p0) => _i5.callMethod(
-            _i5.getProperty(
+  void Function(_i2.dynamic) get setPaymentStatusInDevelopment =>
+      (_i2.dynamic p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'setPaymentStatusInDevelopment',
             ),
@@ -5787,15 +5784,15 @@ extension PaymentsAPI$Typings on PaymentsAPI {
             ],
           );
   set getUserFirstRanSecondsAgo(_i2.num Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getUserFirstRanSecondsAgo',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.num Function() get getUserFirstRanSecondsAgo => () => _i5.callMethod(
-        _i5.getProperty(
+  _i2.num Function() get getUserFirstRanSecondsAgo => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'getUserFirstRanSecondsAgo',
         ),
@@ -5803,16 +5800,16 @@ extension PaymentsAPI$Typings on PaymentsAPI {
         [this],
       );
   set initiateCheckoutAsync(_i2.Future<void> Function([_i2.dynamic]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'initiateCheckoutAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function([_i2.dynamic]) get initiateCheckoutAsync =>
-      ([_i2.dynamic p0]) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      ([_i2.dynamic p0]) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'initiateCheckoutAsync',
             ),
@@ -5823,15 +5820,15 @@ extension PaymentsAPI$Typings on PaymentsAPI {
             ],
           ));
   set requestCheckout(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'requestCheckout',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get requestCheckout => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get requestCheckout => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'requestCheckout',
         ),
@@ -5839,16 +5836,16 @@ extension PaymentsAPI$Typings on PaymentsAPI {
         [this],
       );
   set getPluginPaymentTokenAsync(_i2.Future<_i2.String> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getPluginPaymentTokenAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.String> Function() get getPluginPaymentTokenAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getPluginPaymentTokenAsync',
             ),
@@ -5879,25 +5876,25 @@ class ClientStorageAPI {
     _i2.Future<_i2.List<_i2.String>> Function()? keysAsync,
   }) =>
       ClientStorageAPI._(
-        getAsync: getAsync == null ? null : _i5.allowInterop(getAsync),
-        setAsync: setAsync == null ? null : _i5.allowInterop(setAsync),
-        deleteAsync: deleteAsync == null ? null : _i5.allowInterop(deleteAsync),
-        keysAsync: keysAsync == null ? null : _i5.allowInterop(keysAsync),
+        getAsync: getAsync == null ? null : _i4.allowInterop(getAsync),
+        setAsync: setAsync == null ? null : _i4.allowInterop(setAsync),
+        deleteAsync: deleteAsync == null ? null : _i4.allowInterop(deleteAsync),
+        keysAsync: keysAsync == null ? null : _i4.allowInterop(keysAsync),
       );
 }
 
 extension ClientStorageAPI$Typings on ClientStorageAPI {
   set getAsync(_i2.Future<_i2.dynamic> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.dynamic> Function(_i2.String) get getAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getAsync',
             ),
@@ -5912,10 +5909,10 @@ extension ClientStorageAPI$Typings on ClientStorageAPI {
         _i2.String, [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -5926,8 +5923,8 @@ extension ClientStorageAPI$Typings on ClientStorageAPI {
         _i2.String p0, [
         _i2.dynamic p1,
       ]) =>
-          _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+          _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setAsync',
             ),
@@ -5939,16 +5936,16 @@ extension ClientStorageAPI$Typings on ClientStorageAPI {
             ],
           ));
   set deleteAsync(_i2.Future<void> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'deleteAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(_i2.String) get deleteAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'deleteAsync',
             ),
@@ -5959,16 +5956,16 @@ extension ClientStorageAPI$Typings on ClientStorageAPI {
             ],
           ));
   set keysAsync(_i2.Future<_i2.List<_i2.String>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'keysAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i2.String>> Function() get keysAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'keysAsync',
             ),
@@ -5984,20 +5981,20 @@ extension ClientStorageAPI$Typings on ClientStorageAPI {
 class IInline4 {}
 
 extension IInline4$Typings on IInline4 {
-  _i2.String get text => _i5.getProperty(
+  _i2.String get text => _i4.getProperty(
         this,
         'text',
       );
   set text(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'text',
       value,
     );
   }
 
-  _i2.Object Function() get action => () => _i5.callMethod(
-        _i5.getProperty(
+  _i2.Object Function() get action => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'action',
         ),
@@ -6005,10 +6002,10 @@ extension IInline4$Typings on IInline4 {
         [this],
       );
   set action(_i2.Object Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'action',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 }
@@ -6028,45 +6025,45 @@ class NotificationOptions {
   factory NotificationOptions({
     _i2.num? timeout,
     _i2.bool? error,
-    void Function(_i3.NotifyDequeueReason)? onDequeue,
+    void Function(_i3.NotifyDequeueReasonOptions)? onDequeue,
     _i3.IInline4? button,
   }) =>
       NotificationOptions._(
         timeout: timeout,
         error: error,
-        onDequeue: onDequeue == null ? null : _i5.allowInterop(onDequeue),
+        onDequeue: onDequeue == null ? null : _i4.allowInterop(onDequeue),
         button: button ?? _i7.undefined,
       );
 }
 
 extension NotificationOptions$Typings on NotificationOptions {
-  _i2.num? get timeout => _i5.getProperty(
+  _i2.num? get timeout => _i4.getProperty(
         this,
         'timeout',
       );
   set timeout(_i2.num? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'timeout',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.bool? get error => _i5.getProperty(
+  _i2.bool? get error => _i4.getProperty(
         this,
         'error',
       );
   set error(_i2.bool? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'error',
       value ?? _i7.undefined,
     );
   }
 
-  void Function(_i3.NotifyDequeueReason)? get onDequeue =>
-      (_i3.NotifyDequeueReason p0) => _i5.callMethod(
-            _i5.getProperty(
+  void Function(_i3.NotifyDequeueReasonOptions)? get onDequeue =>
+      (_i3.NotifyDequeueReasonOptions p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'onDequeue',
             ),
@@ -6076,20 +6073,20 @@ extension NotificationOptions$Typings on NotificationOptions {
               p0.name,
             ],
           );
-  set onDequeue(void Function(_i3.NotifyDequeueReason)? value) {
-    _i5.setProperty(
+  set onDequeue(void Function(_i3.NotifyDequeueReasonOptions)? value) {
+    _i4.setProperty(
       this,
       'onDequeue',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i4.allowInterop(value),
     );
   }
 
-  _i2.dynamic get button => _i5.getProperty(
+  _i2.dynamic get button => _i4.getProperty(
         this,
         'button',
       );
   set button(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'button',
       value ?? _i7.undefined,
@@ -6106,12 +6103,12 @@ class NotificationHandler {
 
   factory NotificationHandler({void Function()? cancel}) =>
       NotificationHandler._(
-          cancel: cancel == null ? null : _i5.allowInterop(cancel));
+          cancel: cancel == null ? null : _i4.allowInterop(cancel));
 }
 
 extension NotificationHandler$Typings on NotificationHandler {
-  void Function() get cancel => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get cancel => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'cancel',
         ),
@@ -6119,10 +6116,10 @@ extension NotificationHandler$Typings on NotificationHandler {
         [this],
       );
   set cancel(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'cancel',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 }
@@ -6134,24 +6131,24 @@ extension NotificationHandler$Typings on NotificationHandler {
 class IInline5 {}
 
 extension IInline5$Typings on IInline5 {
-  _i2.num get x => _i5.getProperty(
+  _i2.num get x => _i4.getProperty(
         this,
         'x',
       );
   set x(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'x',
       value,
     );
   }
 
-  _i2.num get y => _i5.getProperty(
+  _i2.num get y => _i4.getProperty(
         this,
         'y',
       );
   set y(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'y',
       value,
@@ -6192,72 +6189,72 @@ class ShowUIOptions {
 }
 
 extension ShowUIOptions$Typings on ShowUIOptions {
-  _i2.bool? get visible => _i5.getProperty(
+  _i2.bool? get visible => _i4.getProperty(
         this,
         'visible',
       );
   set visible(_i2.bool? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'visible',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.String? get title => _i5.getProperty(
+  _i2.String? get title => _i4.getProperty(
         this,
         'title',
       );
   set title(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'title',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.num? get width => _i5.getProperty(
+  _i2.num? get width => _i4.getProperty(
         this,
         'width',
       );
   set width(_i2.num? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'width',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.num? get height => _i5.getProperty(
+  _i2.num? get height => _i4.getProperty(
         this,
         'height',
       );
   set height(_i2.num? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'height',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.dynamic get position => _i5.getProperty(
+  _i2.dynamic get position => _i4.getProperty(
         this,
         'position',
       );
   set position(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'position',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.bool? get themeColors => _i5.getProperty(
+  _i2.bool? get themeColors => _i4.getProperty(
         this,
         'themeColors',
       );
   set themeColors(_i2.bool? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'themeColors',
       value ?? _i7.undefined,
@@ -6277,12 +6274,12 @@ class UIPostMessageOptions {
 }
 
 extension UIPostMessageOptions$Typings on UIPostMessageOptions {
-  _i2.String? get origin => _i5.getProperty(
+  _i2.String? get origin => _i4.getProperty(
         this,
         'origin',
       );
   set origin(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'origin',
       value ?? _i7.undefined,
@@ -6302,12 +6299,12 @@ class OnMessageProperties {
 }
 
 extension OnMessageProperties$Typings on OnMessageProperties {
-  _i2.String get origin => _i5.getProperty(
+  _i2.String get origin => _i4.getProperty(
         this,
         'origin',
       );
   set origin(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'origin',
       value,
@@ -6334,7 +6331,10 @@ class Uiapi {
   });
 
   factory Uiapi({
-    _i3.MessageEventHandler? onmessage,
+    void Function([
+      _i2.dynamic,
+      _i3.OnMessageProperties?,
+    ])? onmessage,
     void Function()? show,
     void Function()? hide,
     void Function(
@@ -6352,39 +6352,51 @@ class Uiapi {
     ])? postMessage,
     void Function(
       _i2.String,
-      _i3.MessageEventHandler,
+      void Function([
+        _i2.dynamic,
+        _i3.OnMessageProperties?,
+      ]),
     )? on,
     void Function(
       _i2.String,
-      _i3.MessageEventHandler,
+      void Function([
+        _i2.dynamic,
+        _i3.OnMessageProperties?,
+      ]),
     )? once,
     void Function(
       _i2.String,
-      _i3.MessageEventHandler,
+      void Function([
+        _i2.dynamic,
+        _i3.OnMessageProperties?,
+      ]),
     )? off,
   }) =>
       Uiapi._(
         onmessage:
-            onmessage == null ? _i7.undefined : _i5.allowInterop(onmessage),
-        show: show == null ? null : _i5.allowInterop(show),
-        hide: hide == null ? null : _i5.allowInterop(hide),
-        resize: resize == null ? null : _i5.allowInterop(resize),
-        reposition: reposition == null ? null : _i5.allowInterop(reposition),
-        close: close == null ? null : _i5.allowInterop(close),
-        postMessage: postMessage == null ? null : _i5.allowInterop(postMessage),
-        on: on == null ? null : _i5.allowInterop(on),
-        once: once == null ? null : _i5.allowInterop(once),
-        off: off == null ? null : _i5.allowInterop(off),
+            onmessage == null ? _i7.undefined : _i4.allowInterop(onmessage),
+        show: show == null ? null : _i4.allowInterop(show),
+        hide: hide == null ? null : _i4.allowInterop(hide),
+        resize: resize == null ? null : _i4.allowInterop(resize),
+        reposition: reposition == null ? null : _i4.allowInterop(reposition),
+        close: close == null ? null : _i4.allowInterop(close),
+        postMessage: postMessage == null ? null : _i4.allowInterop(postMessage),
+        on: on == null ? null : _i4.allowInterop(on),
+        once: once == null ? null : _i4.allowInterop(once),
+        off: off == null ? null : _i4.allowInterop(off),
       );
 }
 
 extension Uiapi$Typings on Uiapi {
-  _i3.MessageEventHandler? get onmessage => (
-        _i3.OnMessageProperties p1, [
+  void Function([
+    _i2.dynamic,
+    _i3.OnMessageProperties?,
+  ])? get onmessage => ([
         _i2.dynamic p0,
+        _i3.OnMessageProperties? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'onmessage',
             ),
@@ -6395,24 +6407,28 @@ extension Uiapi$Typings on Uiapi {
               p1,
             ],
           );
-  set onmessage(_i3.MessageEventHandler? value) {
-    _i5.setProperty(
+  set onmessage(
+      void Function([
+        _i2.dynamic,
+        _i3.OnMessageProperties?,
+      ])? value) {
+    _i4.setProperty(
       this,
       'onmessage',
-      value == null ? _i7.undefined : _i5.allowInterop(value),
+      value == null ? _i7.undefined : _i4.allowInterop(value),
     );
   }
 
   set show(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'show',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get show => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get show => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'show',
         ),
@@ -6420,15 +6436,15 @@ extension Uiapi$Typings on Uiapi {
         [this],
       );
   set hide(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'hide',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get hide => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get hide => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'hide',
         ),
@@ -6440,10 +6456,10 @@ extension Uiapi$Typings on Uiapi {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resize',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -6454,8 +6470,8 @@ extension Uiapi$Typings on Uiapi {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'resize',
             ),
@@ -6471,10 +6487,10 @@ extension Uiapi$Typings on Uiapi {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'reposition',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -6485,8 +6501,8 @@ extension Uiapi$Typings on Uiapi {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'reposition',
             ),
@@ -6498,15 +6514,15 @@ extension Uiapi$Typings on Uiapi {
             ],
           );
   set close(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'close',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get close => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get close => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'close',
         ),
@@ -6518,10 +6534,10 @@ extension Uiapi$Typings on Uiapi {
         _i2.dynamic,
         _i3.UIPostMessageOptions?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'postMessage',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -6532,8 +6548,8 @@ extension Uiapi$Typings on Uiapi {
         _i2.dynamic p0,
         _i3.UIPostMessageOptions? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'postMessage',
             ),
@@ -6547,24 +6563,33 @@ extension Uiapi$Typings on Uiapi {
   set on(
       void Function(
         _i2.String,
-        _i3.MessageEventHandler,
+        void Function([
+          _i2.dynamic,
+          _i3.OnMessageProperties?,
+        ]),
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'on',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.String,
-    _i3.MessageEventHandler,
+    void Function([
+      _i2.dynamic,
+      _i3.OnMessageProperties?,
+    ]),
   ) get on => (
         _i2.String p0,
-        _i3.MessageEventHandler p1,
+        void Function([
+          _i2.dynamic,
+          _i3.OnMessageProperties?,
+        ]) p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'on',
             ),
@@ -6572,30 +6597,39 @@ extension Uiapi$Typings on Uiapi {
             [
               this,
               p0,
-              _i5.allowInterop(p1),
+              _i4.allowInterop(p1),
             ],
           );
   set once(
       void Function(
         _i2.String,
-        _i3.MessageEventHandler,
+        void Function([
+          _i2.dynamic,
+          _i3.OnMessageProperties?,
+        ]),
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'once',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.String,
-    _i3.MessageEventHandler,
+    void Function([
+      _i2.dynamic,
+      _i3.OnMessageProperties?,
+    ]),
   ) get once => (
         _i2.String p0,
-        _i3.MessageEventHandler p1,
+        void Function([
+          _i2.dynamic,
+          _i3.OnMessageProperties?,
+        ]) p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'once',
             ),
@@ -6603,30 +6637,39 @@ extension Uiapi$Typings on Uiapi {
             [
               this,
               p0,
-              _i5.allowInterop(p1),
+              _i4.allowInterop(p1),
             ],
           );
   set off(
       void Function(
         _i2.String,
-        _i3.MessageEventHandler,
+        void Function([
+          _i2.dynamic,
+          _i3.OnMessageProperties?,
+        ]),
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'off',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.String,
-    _i3.MessageEventHandler,
+    void Function([
+      _i2.dynamic,
+      _i3.OnMessageProperties?,
+    ]),
   ) get off => (
         _i2.String p0,
-        _i3.MessageEventHandler p1,
+        void Function([
+          _i2.dynamic,
+          _i3.OnMessageProperties?,
+        ]) p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'off',
             ),
@@ -6634,7 +6677,7 @@ extension Uiapi$Typings on Uiapi {
             [
               this,
               p0,
-              _i5.allowInterop(p1),
+              _i4.allowInterop(p1),
             ],
           );
 }
@@ -6661,26 +6704,26 @@ class UtilAPI {
     _i2.String Function(_i2.String)? normalizeMarkdown,
   }) =>
       UtilAPI._(
-        rgb: rgb == null ? null : _i5.allowInterop(rgb),
-        rgba: rgba == null ? null : _i5.allowInterop(rgba),
-        solidPaint: solidPaint == null ? null : _i5.allowInterop(solidPaint),
+        rgb: rgb == null ? null : _i4.allowInterop(rgb),
+        rgba: rgba == null ? null : _i4.allowInterop(rgba),
+        solidPaint: solidPaint == null ? null : _i4.allowInterop(solidPaint),
         normalizeMarkdown: normalizeMarkdown == null
             ? null
-            : _i5.allowInterop(normalizeMarkdown),
+            : _i4.allowInterop(normalizeMarkdown),
       );
 }
 
 extension UtilAPI$Typings on UtilAPI {
   set rgb(_i3.Rgb Function(_i2.Object) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'rgb',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.Rgb Function(_i2.Object) get rgb => (_i2.Object p0) => _i5.callMethod(
-        _i5.getProperty(
+  _i3.Rgb Function(_i2.Object) get rgb => (_i2.Object p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'rgb',
         ),
@@ -6691,15 +6734,15 @@ extension UtilAPI$Typings on UtilAPI {
         ],
       );
   set rgba(_i3.Rgba Function(_i2.Object) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'rgba',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.Rgba Function(_i2.Object) get rgba => (_i2.Object p0) => _i5.callMethod(
-        _i5.getProperty(
+  _i3.Rgba Function(_i2.Object) get rgba => (_i2.Object p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'rgba',
         ),
@@ -6714,10 +6757,10 @@ extension UtilAPI$Typings on UtilAPI {
         _i2.Object, [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'solidPaint',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -6728,8 +6771,8 @@ extension UtilAPI$Typings on UtilAPI {
         _i2.Object p0, [
         _i2.dynamic p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'solidPaint',
             ),
@@ -6737,20 +6780,20 @@ extension UtilAPI$Typings on UtilAPI {
             [
               this,
               p0,
-              p1 ?? _i7.undefined,
+              p1,
             ],
           );
   set normalizeMarkdown(_i2.String Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'normalizeMarkdown',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.String Function(_i2.String) get normalizeMarkdown =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'normalizeMarkdown',
             ),
@@ -6783,24 +6826,24 @@ class ColorPalettes {
 }
 
 extension ColorPalettes$Typings on ColorPalettes {
-  _i2.Object get figJamBase => _i5.getProperty(
+  _i2.Object get figJamBase => _i4.getProperty(
         this,
         'figJamBase',
       );
   set figJamBase(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'figJamBase',
       value,
     );
   }
 
-  _i2.Object get figJamBaseLight => _i5.getProperty(
+  _i2.Object get figJamBaseLight => _i4.getProperty(
         this,
         'figJamBaseLight',
       );
   set figJamBaseLight(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'figJamBaseLight',
       value,
@@ -6820,12 +6863,12 @@ class ConstantsAPI {
 }
 
 extension ConstantsAPI$Typings on ConstantsAPI {
-  _i3.ColorPalettes get colors => _i5.getProperty(
+  _i3.ColorPalettes get colors => _i4.getProperty(
         this,
         'colors',
       );
   set colors(_i3.ColorPalettes value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'colors',
       value,
@@ -6840,24 +6883,24 @@ extension ConstantsAPI$Typings on ConstantsAPI {
 class IInline6 {}
 
 extension IInline6$Typings on IInline6 {
-  _i3.SceneNode get node => _i5.getProperty(
+  _i3.BaseNodeMixin get node => _i4.getProperty(
         this,
         'node',
       );
-  set node(_i3.SceneNode value) {
-    _i5.setProperty(
+  set node(_i3.BaseNodeMixin value) {
+    _i4.setProperty(
       this,
       'node',
       value,
     );
   }
 
-  _i2.String get language => _i5.getProperty(
+  _i2.String get language => _i4.getProperty(
         this,
         'language',
       );
   set language(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'language',
       value,
@@ -6872,15 +6915,15 @@ extension IInline6$Typings on IInline6 {
 class IInline7 {}
 
 extension IInline7$Typings on IInline7 {
-  _i3.Unit get unit => _i3.Unit.values.byName(_i5.getProperty(
+  _i3.Unit get unit => _i3.Unit.values.byName(_i4.getProperty(
         this,
         'unit',
       ));
-  _i2.num? get scaleFactor => _i5.getProperty(
+  _i2.num? get scaleFactor => _i4.getProperty(
         this,
         'scaleFactor',
       );
-  _i2.dynamic get customSettings => _i5.getProperty(
+  _i2.dynamic get customSettings => _i4.getProperty(
         this,
         'customSettings',
       );
@@ -6893,12 +6936,12 @@ extension IInline7$Typings on IInline7 {
 class IInline8 {}
 
 extension IInline8$Typings on IInline8 {
-  _i2.String get propertyName => _i5.getProperty(
+  _i2.String get propertyName => _i4.getProperty(
         this,
         'propertyName',
       );
   set propertyName(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'propertyName',
       value,
@@ -6913,36 +6956,36 @@ extension IInline8$Typings on IInline8 {
 class IInline9 {}
 
 extension IInline9$Typings on IInline9 {
-  _i2.String get title => _i5.getProperty(
+  _i2.String get title => _i4.getProperty(
         this,
         'title',
       );
   set title(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'title',
       value,
     );
   }
 
-  _i2.String get code => _i5.getProperty(
+  _i2.String get code => _i4.getProperty(
         this,
         'code',
       );
   set code(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'code',
       value,
     );
   }
 
-  _i3.Language get language => _i3.Language.values.byName(_i5.getProperty(
+  _i3.Language get language => _i3.Language.values.byName(_i4.getProperty(
         this,
         'language',
       ));
   set language(_i3.Language value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'language',
       value.name,
@@ -6961,22 +7004,22 @@ class CodegenAPI {
   });
 
   factory CodegenAPI({
-    _i3.CodegenPreferences? preferences,
+    _i3.IInline7? preferences,
     void Function()? refresh,
   }) =>
       CodegenAPI._(
-        preferences: preferences ?? _i7.undefined,
-        refresh: refresh == null ? null : _i5.allowInterop(refresh),
+        preferences: preferences,
+        refresh: refresh == null ? null : _i4.allowInterop(refresh),
       );
 }
 
 extension CodegenAPI$Typings on CodegenAPI {
-  _i3.CodegenPreferences get preferences => _i5.getProperty(
+  _i2.dynamic get preferences => _i4.getProperty(
         this,
         'preferences',
       );
-  void Function() get refresh => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get refresh => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'refresh',
         ),
@@ -6984,38 +7027,37 @@ extension CodegenAPI$Typings on CodegenAPI {
         [this],
       );
   set refresh(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'refresh',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void _on$1(
     _i2.String type,
-    _i8.FutureOr<_i2.List<_i3.CodegenResult>> Function(_i3.CodegenEvent)
-        callback,
+    _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
 
   void _on$2(
     _i2.String type,
-    _i2.Future<void> Function(_i3.CodegenPreferencesEvent) callback,
+    _i2.Future<void> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -7024,12 +7066,11 @@ extension CodegenAPI$Typings on CodegenAPI {
   ({
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i2.List<_i3.CodegenResult>> Function(_i3.CodegenEvent)
-          callback,
+      _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
     ) $1,
     void Function(
       _i2.String type,
-      _i2.Future<void> Function(_i3.CodegenPreferencesEvent) callback,
+      _i2.Future<void> Function(_i2.dynamic) callback,
     ) $2,
   }) get on => (
         $1: _on$1,
@@ -7037,29 +7078,28 @@ extension CodegenAPI$Typings on CodegenAPI {
       );
   void _once$1(
     _i2.String type,
-    _i8.FutureOr<_i2.List<_i3.CodegenResult>> Function(_i3.CodegenEvent)
-        callback,
+    _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
 
   void _once$2(
     _i2.String type,
-    _i2.Future<void> Function(_i3.CodegenPreferencesEvent) callback,
+    _i2.Future<void> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -7068,12 +7108,11 @@ extension CodegenAPI$Typings on CodegenAPI {
   ({
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i2.List<_i3.CodegenResult>> Function(_i3.CodegenEvent)
-          callback,
+      _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
     ) $1,
     void Function(
       _i2.String type,
-      _i2.Future<void> Function(_i3.CodegenPreferencesEvent) callback,
+      _i2.Future<void> Function(_i2.dynamic) callback,
     ) $2,
   }) get once => (
         $1: _once$1,
@@ -7081,29 +7120,28 @@ extension CodegenAPI$Typings on CodegenAPI {
       );
   void _off$1(
     _i2.String type,
-    _i8.FutureOr<_i2.List<_i3.CodegenResult>> Function(_i3.CodegenEvent)
-        callback,
+    _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
 
   void _off$2(
     _i2.String type,
-    _i2.Future<void> Function(_i3.CodegenPreferencesEvent) callback,
+    _i2.Future<void> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -7112,12 +7150,11 @@ extension CodegenAPI$Typings on CodegenAPI {
   ({
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i2.List<_i3.CodegenResult>> Function(_i3.CodegenEvent)
-          callback,
+      _i8.FutureOr<_i2.List<_i2.dynamic>> Function(_i2.dynamic) callback,
     ) $1,
     void Function(
       _i2.String type,
-      _i2.Future<void> Function(_i3.CodegenPreferencesEvent) callback,
+      _i2.Future<void> Function(_i2.dynamic) callback,
     ) $2,
   }) get off => (
         $1: _off$1,
@@ -7149,15 +7186,15 @@ class DevResource {
 }
 
 extension DevResource$Typings on DevResource {
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
-  _i2.String get url => _i5.getProperty(
+  _i2.String get url => _i4.getProperty(
         this,
         'url',
       );
-  _i2.String? get inheritedNodeId => _i5.getProperty(
+  _i2.String? get inheritedNodeId => _i4.getProperty(
         this,
         'inheritedNodeId',
       );
@@ -7190,12 +7227,12 @@ class DevResourceWithNodeId implements _i3.DevResource {
 }
 
 extension DevResourceWithNodeId$Typings on DevResourceWithNodeId {
-  _i2.String get nodeId => _i5.getProperty(
+  _i2.String get nodeId => _i4.getProperty(
         this,
         'nodeId',
       );
   set nodeId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'nodeId',
       value,
@@ -7210,12 +7247,12 @@ extension DevResourceWithNodeId$Typings on DevResourceWithNodeId {
 class IInline10 {}
 
 extension IInline10$Typings on IInline10 {
-  _i3.DevResource get link => _i5.getProperty(
+  _i3.DevResource get link => _i4.getProperty(
         this,
         'link',
       );
   set link(_i3.DevResource value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'link',
       value,
@@ -7230,24 +7267,24 @@ extension IInline10$Typings on IInline10 {
 class IInline11 {}
 
 extension IInline11$Typings on IInline11 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.String get text => _i5.getProperty(
+  _i2.String get text => _i4.getProperty(
         this,
         'text',
       );
   set text(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'text',
       value,
@@ -7262,12 +7299,12 @@ extension IInline11$Typings on IInline11 {
 class IInline12 {}
 
 extension IInline12$Typings on IInline12 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
@@ -7282,13 +7319,13 @@ extension IInline12$Typings on IInline12 {
 class IInline13 {}
 
 extension IInline13$Typings on IInline13 {
-  _i2.List<_i3.DevResource> get links => ((_i5.getProperty(
+  _i2.List<_i3.DevResource> get links => ((_i4.getProperty(
         this,
         'links',
       )) as _i2.List)
           .cast();
   set links(_i2.List<_i3.DevResource> value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'links',
       value,
@@ -7303,12 +7340,12 @@ extension IInline13$Typings on IInline13 {
 class IInline14 {}
 
 extension IInline14$Typings on IInline14 {
-  _i3.DevResourceWithNodeId get devResource => _i5.getProperty(
+  _i3.DevResourceWithNodeId get devResource => _i4.getProperty(
         this,
         'devResource',
       );
   set devResource(_i3.DevResourceWithNodeId value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'devResource',
       value,
@@ -7323,12 +7360,12 @@ extension IInline14$Typings on IInline14 {
 class IInline15 {}
 
 extension IInline15$Typings on IInline15 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
@@ -7359,42 +7396,42 @@ class DevResourcesAPI {
 extension DevResourcesAPI$Typings on DevResourcesAPI {
   void _on$1(
     _i2.String type,
-    _i8.FutureOr<_i2.dynamic> Function(_i3.LinkPreviewEvent) callback,
+    _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
 
   void _on$2(
     _i2.String type,
-    _i8.FutureOr<_i3.AuthResult> Function(_i3.AuthEvent) callback,
+    _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
 
   void _on$3(
     _i2.String type,
-    void Function(_i3.DevResourceOpenEvent) callback,
+    void Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'on',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -7403,15 +7440,15 @@ extension DevResourcesAPI$Typings on DevResourcesAPI {
   ({
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i2.dynamic> Function(_i3.LinkPreviewEvent) callback,
+      _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
     ) $1,
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i3.AuthResult> Function(_i3.AuthEvent) callback,
+      _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
     ) $2,
     void Function(
       _i2.String type,
-      void Function(_i3.DevResourceOpenEvent) callback,
+      void Function(_i2.dynamic) callback,
     ) $3,
   }) get on => (
         $1: _on$1,
@@ -7420,42 +7457,42 @@ extension DevResourcesAPI$Typings on DevResourcesAPI {
       );
   void _once$1(
     _i2.String type,
-    _i8.FutureOr<_i2.dynamic> Function(_i3.LinkPreviewEvent) callback,
+    _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
 
   void _once$2(
     _i2.String type,
-    _i8.FutureOr<_i3.AuthResult> Function(_i3.AuthEvent) callback,
+    _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
 
   void _once$3(
     _i2.String type,
-    void Function(_i3.DevResourceOpenEvent) callback,
+    void Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'once',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -7464,15 +7501,15 @@ extension DevResourcesAPI$Typings on DevResourcesAPI {
   ({
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i2.dynamic> Function(_i3.LinkPreviewEvent) callback,
+      _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
     ) $1,
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i3.AuthResult> Function(_i3.AuthEvent) callback,
+      _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
     ) $2,
     void Function(
       _i2.String type,
-      void Function(_i3.DevResourceOpenEvent) callback,
+      void Function(_i2.dynamic) callback,
     ) $3,
   }) get once => (
         $1: _once$1,
@@ -7481,42 +7518,42 @@ extension DevResourcesAPI$Typings on DevResourcesAPI {
       );
   void _off$1(
     _i2.String type,
-    _i8.FutureOr<_i2.dynamic> Function(_i3.LinkPreviewEvent) callback,
+    _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
 
   void _off$2(
     _i2.String type,
-    _i8.FutureOr<_i3.AuthResult> Function(_i3.AuthEvent) callback,
+    _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
+        _i4.allowInterop((p0) => _i7.Promise.futureOr(() => callback(p0))),
       ],
     );
   }
 
   void _off$3(
     _i2.String type,
-    void Function(_i3.DevResourceOpenEvent) callback,
+    void Function(_i2.dynamic) callback,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'off',
       [
         type,
-        _i5.allowInterop(callback),
+        _i4.allowInterop(callback),
       ],
     );
   }
@@ -7525,15 +7562,15 @@ extension DevResourcesAPI$Typings on DevResourcesAPI {
   ({
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i2.dynamic> Function(_i3.LinkPreviewEvent) callback,
+      _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
     ) $1,
     void Function(
       _i2.String type,
-      _i8.FutureOr<_i3.AuthResult> Function(_i3.AuthEvent) callback,
+      _i8.FutureOr<_i2.dynamic> Function(_i2.dynamic) callback,
     ) $2,
     void Function(
       _i2.String type,
-      void Function(_i3.DevResourceOpenEvent) callback,
+      void Function(_i2.dynamic) callback,
     ) $3,
   }) get off => (
         $1: _off$1,
@@ -7570,28 +7607,28 @@ class TimerAPI {
         remaining: remaining,
         total: total,
         state: state?.name ?? _i7.undefined,
-        pause: pause == null ? null : _i5.allowInterop(pause),
-        resume: resume == null ? null : _i5.allowInterop(resume),
-        start: start == null ? null : _i5.allowInterop(start),
-        stop: stop == null ? null : _i5.allowInterop(stop),
+        pause: pause == null ? null : _i4.allowInterop(pause),
+        resume: resume == null ? null : _i4.allowInterop(resume),
+        start: start == null ? null : _i4.allowInterop(start),
+        stop: stop == null ? null : _i4.allowInterop(stop),
       );
 }
 
 extension TimerAPI$Typings on TimerAPI {
-  _i2.num get remaining => _i5.getProperty(
+  _i2.num get remaining => _i4.getProperty(
         this,
         'remaining',
       );
-  _i2.num get total => _i5.getProperty(
+  _i2.num get total => _i4.getProperty(
         this,
         'total',
       );
-  _i3.State get state => _i3.State.values.byName(_i5.getProperty(
+  _i3.State get state => _i3.State.values.byName(_i4.getProperty(
         this,
         'state',
       ));
-  void Function() get pause => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get pause => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'pause',
         ),
@@ -7599,15 +7636,15 @@ extension TimerAPI$Typings on TimerAPI {
         [this],
       );
   set pause(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'pause',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get resume => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get resume => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'resume',
         ),
@@ -7615,15 +7652,15 @@ extension TimerAPI$Typings on TimerAPI {
         [this],
       );
   set resume(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resume',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i2.num) get start => (_i2.num p0) => _i5.callMethod(
-        _i5.getProperty(
+  void Function(_i2.num) get start => (_i2.num p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'start',
         ),
@@ -7634,15 +7671,15 @@ extension TimerAPI$Typings on TimerAPI {
         ],
       );
   set start(void Function(_i2.num) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'start',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get stop => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get stop => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'stop',
         ),
@@ -7650,10 +7687,10 @@ extension TimerAPI$Typings on TimerAPI {
         [this],
       );
   set stop(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'stop',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 }
@@ -7676,7 +7713,7 @@ class ViewportAPI {
     _i2.num? zoom,
     _i3.Rect? bounds,
     _i3.SlidesView? slidesView,
-    void Function(_i4.ReadonlyArray<_i2.Object>)? scrollAndZoomIntoView,
+    void Function(_i2.List<_i3.BaseNodeMixin>)? scrollAndZoomIntoView,
   }) =>
       ViewportAPI._(
         center: center ?? _i7.undefined,
@@ -7685,63 +7722,62 @@ class ViewportAPI {
         slidesView: slidesView?.name ?? _i7.undefined,
         scrollAndZoomIntoView: scrollAndZoomIntoView == null
             ? null
-            : _i5.allowInterop(scrollAndZoomIntoView),
+            : _i4.allowInterop(scrollAndZoomIntoView),
       );
 }
 
 extension ViewportAPI$Typings on ViewportAPI {
-  _i3.Vector get center => _i5.getProperty(
+  _i3.Vector get center => _i4.getProperty(
         this,
         'center',
       );
   set center(_i3.Vector value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'center',
       value,
     );
   }
 
-  _i2.num get zoom => _i5.getProperty(
+  _i2.num get zoom => _i4.getProperty(
         this,
         'zoom',
       );
   set zoom(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'zoom',
       value,
     );
   }
 
-  _i3.Rect get bounds => _i5.getProperty(
+  _i3.Rect get bounds => _i4.getProperty(
         this,
         'bounds',
       );
-  _i3.SlidesView get slidesView => _i3.SlidesView.values.byName(_i5.getProperty(
+  _i3.SlidesView get slidesView => _i3.SlidesView.values.byName(_i4.getProperty(
         this,
         'slidesView',
       ));
   set slidesView(_i3.SlidesView value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'slidesView',
       value.name,
     );
   }
 
-  set scrollAndZoomIntoView(
-      void Function(_i4.ReadonlyArray<_i2.Object>) value) {
-    _i5.setProperty(
+  set scrollAndZoomIntoView(void Function(_i2.List<_i3.BaseNodeMixin>) value) {
+    _i4.setProperty(
       this,
       'scrollAndZoomIntoView',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i4.ReadonlyArray<_i2.Object>) get scrollAndZoomIntoView =>
-      (_i4.ReadonlyArray<_i2.Object> p0) => _i5.callMethod(
-            _i5.getProperty(
+  void Function(_i2.List<_i3.BaseNodeMixin>) get scrollAndZoomIntoView =>
+      (_i2.List<_i3.BaseNodeMixin> p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'scrollAndZoomIntoView',
             ),
@@ -7773,29 +7809,29 @@ class TextReviewAPI {
         isEnabled: isEnabled,
         requestToBeEnabledAsync: requestToBeEnabledAsync == null
             ? null
-            : _i5.allowInterop(requestToBeEnabledAsync),
+            : _i4.allowInterop(requestToBeEnabledAsync),
         requestToBeDisabledAsync: requestToBeDisabledAsync == null
             ? null
-            : _i5.allowInterop(requestToBeDisabledAsync),
+            : _i4.allowInterop(requestToBeDisabledAsync),
       );
 }
 
 extension TextReviewAPI$Typings on TextReviewAPI {
-  _i2.bool get isEnabled => _i5.getProperty(
+  _i2.bool get isEnabled => _i4.getProperty(
         this,
         'isEnabled',
       );
   set requestToBeEnabledAsync(_i2.Future<void> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'requestToBeEnabledAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function() get requestToBeEnabledAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'requestToBeEnabledAsync',
             ),
@@ -7803,16 +7839,16 @@ extension TextReviewAPI$Typings on TextReviewAPI {
             [this],
           ));
   set requestToBeDisabledAsync(_i2.Future<void> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'requestToBeDisabledAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function() get requestToBeDisabledAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'requestToBeDisabledAsync',
             ),
@@ -7828,48 +7864,48 @@ extension TextReviewAPI$Typings on TextReviewAPI {
 class IInline16 {}
 
 extension IInline16$Typings on IInline16 {
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
     );
   }
 
-  _i2.dynamic get data => _i5.getProperty(
+  _i2.dynamic get data => _i4.getProperty(
         this,
         'data',
       );
   set data(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'data',
       value,
     );
   }
 
-  _i2.Object? get icon => _i5.getProperty(
+  _i2.Object? get icon => _i4.getProperty(
         this,
         'icon',
       );
   set icon(_i2.Object? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'icon',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.String? get iconUrl => _i5.getProperty(
+  _i2.String? get iconUrl => _i4.getProperty(
         this,
         'iconUrl',
       );
   set iconUrl(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'iconUrl',
       value ?? _i7.undefined,
@@ -7889,32 +7925,32 @@ class SuggestionResults {
   });
 
   factory SuggestionResults({
-    void Function(_i4.Array<_i2.Object>)? setSuggestions,
+    void Function(_i6.Array<_i2.Object>)? setSuggestions,
     void Function(_i2.String)? setError,
     void Function(_i2.String)? setLoadingMessage,
   }) =>
       SuggestionResults._(
         setSuggestions:
-            setSuggestions == null ? null : _i5.allowInterop(setSuggestions),
-        setError: setError == null ? null : _i5.allowInterop(setError),
+            setSuggestions == null ? null : _i4.allowInterop(setSuggestions),
+        setError: setError == null ? null : _i4.allowInterop(setError),
         setLoadingMessage: setLoadingMessage == null
             ? null
-            : _i5.allowInterop(setLoadingMessage),
+            : _i4.allowInterop(setLoadingMessage),
       );
 }
 
 extension SuggestionResults$Typings on SuggestionResults {
-  set setSuggestions(void Function(_i4.Array<_i2.Object>) value) {
-    _i5.setProperty(
+  set setSuggestions(void Function(_i6.Array<_i2.Object>) value) {
+    _i4.setProperty(
       this,
       'setSuggestions',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i4.Array<_i2.Object>) get setSuggestions =>
-      (_i4.Array<_i2.Object> p0) => _i5.callMethod(
-            _i5.getProperty(
+  void Function(_i6.Array<_i2.Object>) get setSuggestions =>
+      (_i6.Array<_i2.Object> p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'setSuggestions',
             ),
@@ -7925,15 +7961,15 @@ extension SuggestionResults$Typings on SuggestionResults {
             ],
           );
   set setError(void Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setError',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i2.String) get setError => (_i2.String p0) => _i5.callMethod(
-        _i5.getProperty(
+  void Function(_i2.String) get setError => (_i2.String p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'setError',
         ),
@@ -7944,16 +7980,16 @@ extension SuggestionResults$Typings on SuggestionResults {
         ],
       );
   set setLoadingMessage(void Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setLoadingMessage',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(_i2.String) get setLoadingMessage =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'setLoadingMessage',
             ),
@@ -7972,48 +8008,48 @@ extension SuggestionResults$Typings on SuggestionResults {
 class IInline17<ParametersType> {}
 
 extension IInline17$Typings<ParametersType> on IInline17<ParametersType> {
-  _i2.String get query => _i5.getProperty(
+  _i2.String get query => _i4.getProperty(
         this,
         'query',
       );
   set query(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'query',
       value,
     );
   }
 
-  _i2.String get key => _i5.getProperty(
+  _i2.String get key => _i4.getProperty(
         this,
         'key',
       );
   set key(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'key',
       value,
     );
   }
 
-  _i2.dynamic get parameters => _i5.getProperty(
+  _i2.dynamic get parameters => _i4.getProperty(
         this,
         'parameters',
       );
   set parameters(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'parameters',
       value,
     );
   }
 
-  _i3.SuggestionResults get result => _i5.getProperty(
+  _i3.SuggestionResults get result => _i4.getProperty(
         this,
         'result',
       );
   set result(_i3.SuggestionResults value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'result',
       value,
@@ -8035,21 +8071,21 @@ class ParametersAPI {
   factory ParametersAPI({
     void Function(
       _i2.String,
-      void Function(_i3.ParameterInputEvent<_i2.Object>),
+      void Function(_i2.dynamic),
     )? on,
     void Function(
       _i2.String,
-      void Function(_i3.ParameterInputEvent<_i2.Object>),
+      void Function(_i2.dynamic),
     )? once,
     void Function(
       _i2.String,
-      void Function(_i3.ParameterInputEvent<_i2.Object>),
+      void Function(_i2.dynamic),
     )? off,
   }) =>
       ParametersAPI._(
-        on: on == null ? null : _i5.allowInterop(on),
-        once: once == null ? null : _i5.allowInterop(once),
-        off: off == null ? null : _i5.allowInterop(off),
+        on: on == null ? null : _i4.allowInterop(on),
+        once: once == null ? null : _i4.allowInterop(once),
+        off: off == null ? null : _i4.allowInterop(off),
       );
 }
 
@@ -8057,24 +8093,24 @@ extension ParametersAPI$Typings on ParametersAPI {
   set on(
       void Function(
         _i2.String,
-        void Function(_i3.ParameterInputEvent<_i2.Object>),
+        void Function(_i2.dynamic),
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'on',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.String,
-    void Function(_i3.ParameterInputEvent<_i2.Object>),
+    void Function(_i2.dynamic),
   ) get on => (
         _i2.String p0,
-        void Function(_i3.ParameterInputEvent<_i2.Object>) p1,
+        void Function(_i2.dynamic) p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'on',
             ),
@@ -8082,30 +8118,30 @@ extension ParametersAPI$Typings on ParametersAPI {
             [
               this,
               p0,
-              _i5.allowInterop(p1),
+              _i4.allowInterop(p1),
             ],
           );
   set once(
       void Function(
         _i2.String,
-        void Function(_i3.ParameterInputEvent<_i2.Object>),
+        void Function(_i2.dynamic),
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'once',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.String,
-    void Function(_i3.ParameterInputEvent<_i2.Object>),
+    void Function(_i2.dynamic),
   ) get once => (
         _i2.String p0,
-        void Function(_i3.ParameterInputEvent<_i2.Object>) p1,
+        void Function(_i2.dynamic) p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'once',
             ),
@@ -8113,30 +8149,30 @@ extension ParametersAPI$Typings on ParametersAPI {
             [
               this,
               p0,
-              _i5.allowInterop(p1),
+              _i4.allowInterop(p1),
             ],
           );
   set off(
       void Function(
         _i2.String,
-        void Function(_i3.ParameterInputEvent<_i2.Object>),
+        void Function(_i2.dynamic),
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'off',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.String,
-    void Function(_i3.ParameterInputEvent<_i2.Object>),
+    void Function(_i2.dynamic),
   ) get off => (
         _i2.String p0,
-        void Function(_i3.ParameterInputEvent<_i2.Object>) p1,
+        void Function(_i2.dynamic) p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'off',
             ),
@@ -8144,7 +8180,7 @@ extension ParametersAPI$Typings on ParametersAPI {
             [
               this,
               p0,
-              _i5.allowInterop(p1),
+              _i4.allowInterop(p1),
             ],
           );
 }
@@ -8171,24 +8207,24 @@ class RunParametersEvent<ParametersType> {
 
 extension RunParametersEvent$Typings<ParametersType>
     on RunParametersEvent<ParametersType> {
-  _i2.String get command => _i5.getProperty(
+  _i2.String get command => _i4.getProperty(
         this,
         'command',
       );
   set command(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'command',
       value,
     );
   }
 
-  ParametersType get parameters => _i5.getProperty(
+  ParametersType get parameters => _i4.getProperty(
         this,
         'parameters',
       );
   set parameters(ParametersType value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'parameters',
       value,
@@ -8203,24 +8239,24 @@ extension RunParametersEvent$Typings<ParametersType>
 class IInline18 {}
 
 extension IInline18$Typings on IInline18 {
-  _i2.String get url => _i5.getProperty(
+  _i2.String get url => _i4.getProperty(
         this,
         'url',
       );
   set url(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'url',
       value,
     );
   }
 
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
@@ -8252,36 +8288,36 @@ class OpenDevResourcesEvent {
 }
 
 extension OpenDevResourcesEvent$Typings on OpenDevResourcesEvent {
-  _i2.String get command => _i5.getProperty(
+  _i2.String get command => _i4.getProperty(
         this,
         'command',
       );
   set command(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'command',
       value,
     );
   }
 
-  _i2.dynamic get parameters => _i5.getProperty(
+  _i2.dynamic get parameters => _i4.getProperty(
         this,
         'parameters',
       );
   set parameters(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'parameters',
       value,
     );
   }
 
-  _i2.dynamic get link => _i5.getProperty(
+  _i2.dynamic get link => _i4.getProperty(
         this,
         'link',
       );
   set link(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'link',
       value,
@@ -8301,12 +8337,12 @@ class SlidesViewChangeEvent {
 }
 
 extension SlidesViewChangeEvent$Typings on SlidesViewChangeEvent {
-  _i3.View get view => _i3.View.values.byName(_i5.getProperty(
+  _i3.View get view => _i3.View.values.byName(_i4.getProperty(
         this,
         'view',
       ));
   set view(_i3.View value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'view',
       value.name,
@@ -8331,7 +8367,7 @@ class DropEvent {
   });
 
   factory DropEvent({
-    _i2.Object? node,
+    _i3.PluginDataMixin? node,
     _i2.num? x,
     _i2.num? y,
     _i2.num? absoluteX,
@@ -8353,98 +8389,98 @@ class DropEvent {
 }
 
 extension DropEvent$Typings on DropEvent {
-  _i2.Object get node => _i5.getProperty(
+  _i3.PluginDataMixin get node => _i4.getProperty(
         this,
         'node',
       );
-  set node(_i2.Object value) {
-    _i5.setProperty(
+  set node(_i3.PluginDataMixin value) {
+    _i4.setProperty(
       this,
       'node',
       value,
     );
   }
 
-  _i2.num get x => _i5.getProperty(
+  _i2.num get x => _i4.getProperty(
         this,
         'x',
       );
   set x(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'x',
       value,
     );
   }
 
-  _i2.num get y => _i5.getProperty(
+  _i2.num get y => _i4.getProperty(
         this,
         'y',
       );
   set y(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'y',
       value,
     );
   }
 
-  _i2.num get absoluteX => _i5.getProperty(
+  _i2.num get absoluteX => _i4.getProperty(
         this,
         'absoluteX',
       );
   set absoluteX(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'absoluteX',
       value,
     );
   }
 
-  _i2.num get absoluteY => _i5.getProperty(
+  _i2.num get absoluteY => _i4.getProperty(
         this,
         'absoluteY',
       );
   set absoluteY(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'absoluteY',
       value,
     );
   }
 
-  _i2.List<_i3.DropItem> get items => ((_i5.getProperty(
+  _i2.List<_i3.DropItem> get items => ((_i4.getProperty(
         this,
         'items',
       )) as _i2.List)
           .cast();
   set items(_i2.List<_i3.DropItem> value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'items',
       value,
     );
   }
 
-  _i2.List<_i3.DropFile> get files => ((_i5.getProperty(
+  _i2.List<_i3.DropFile> get files => ((_i4.getProperty(
         this,
         'files',
       )) as _i2.List)
           .cast();
   set files(_i2.List<_i3.DropFile> value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'files',
       value,
     );
   }
 
-  _i2.dynamic get dropMetadata => _i5.getProperty(
+  _i2.dynamic get dropMetadata => _i4.getProperty(
         this,
         'dropMetadata',
       );
   set dropMetadata(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'dropMetadata',
       value,
@@ -8473,24 +8509,24 @@ class DropItem {
 }
 
 extension DropItem$Typings on DropItem {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.String get data => _i5.getProperty(
+  _i2.String get data => _i4.getProperty(
         this,
         'data',
       );
   set data(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'data',
       value,
@@ -8513,55 +8549,55 @@ class DropFile {
   factory DropFile({
     _i2.String? name,
     _i2.String? type,
-    _i2.Future<_i6.Uint8List> Function()? getBytesAsync,
+    _i2.Future<_i5.Uint8List> Function()? getBytesAsync,
     _i2.Future<_i2.String> Function()? getTextAsync,
   }) =>
       DropFile._(
         name: name,
         type: type,
         getBytesAsync:
-            getBytesAsync == null ? null : _i5.allowInterop(getBytesAsync),
+            getBytesAsync == null ? null : _i4.allowInterop(getBytesAsync),
         getTextAsync:
-            getTextAsync == null ? null : _i5.allowInterop(getTextAsync),
+            getTextAsync == null ? null : _i4.allowInterop(getTextAsync),
       );
 }
 
 extension DropFile$Typings on DropFile {
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
     );
   }
 
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  set getBytesAsync(_i2.Future<_i6.Uint8List> Function() value) {
-    _i5.setProperty(
+  set getBytesAsync(_i2.Future<_i5.Uint8List> Function() value) {
+    _i4.setProperty(
       this,
       'getBytesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i6.Uint8List> Function() get getBytesAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+  _i2.Future<_i5.Uint8List> Function() get getBytesAsync =>
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getBytesAsync',
             ),
@@ -8569,16 +8605,16 @@ extension DropFile$Typings on DropFile {
             [this],
           ));
   set getTextAsync(_i2.Future<_i2.String> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getTextAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.String> Function() get getTextAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getTextAsync',
             ),
@@ -8595,18 +8631,18 @@ class DocumentChangeEvent {
   external factory DocumentChangeEvent._({_i2.dynamic documentChanges});
 
   factory DocumentChangeEvent(
-          {_i2.List<_i3.DocumentChange>? documentChanges}) =>
+          {_i2.List<_i3.BaseDocumentChange>? documentChanges}) =>
       DocumentChangeEvent._(documentChanges: documentChanges);
 }
 
 extension DocumentChangeEvent$Typings on DocumentChangeEvent {
-  _i2.List<_i3.DocumentChange> get documentChanges => ((_i5.getProperty(
+  _i2.List<_i3.BaseDocumentChange> get documentChanges => ((_i4.getProperty(
         this,
         'documentChanges',
       )) as _i2.List)
           .cast();
-  set documentChanges(_i2.List<_i3.DocumentChange> value) {
-    _i5.setProperty(
+  set documentChanges(_i2.List<_i3.BaseDocumentChange> value) {
+    _i4.setProperty(
       this,
       'documentChanges',
       value,
@@ -8621,18 +8657,18 @@ extension DocumentChangeEvent$Typings on DocumentChangeEvent {
 class StyleChangeEvent {
   external factory StyleChangeEvent._({_i2.dynamic styleChanges});
 
-  factory StyleChangeEvent({_i2.List<_i3.StyleChange>? styleChanges}) =>
+  factory StyleChangeEvent({_i2.List<_i3.BaseDocumentChange>? styleChanges}) =>
       StyleChangeEvent._(styleChanges: styleChanges);
 }
 
 extension StyleChangeEvent$Typings on StyleChangeEvent {
-  _i2.List<_i3.StyleChange> get styleChanges => ((_i5.getProperty(
+  _i2.List<_i3.BaseDocumentChange> get styleChanges => ((_i4.getProperty(
         this,
         'styleChanges',
       )) as _i2.List)
           .cast();
-  set styleChanges(_i2.List<_i3.StyleChange> value) {
-    _i5.setProperty(
+  set styleChanges(_i2.List<_i3.BaseDocumentChange> value) {
+    _i4.setProperty(
       this,
       'styleChanges',
       value,
@@ -8661,24 +8697,24 @@ class BaseDocumentChange {
 }
 
 extension BaseDocumentChange$Typings on BaseDocumentChange {
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
   set id(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'id',
       value,
     );
   }
 
-  _i3.Origin get origin => _i3.Origin.values.byName(_i5.getProperty(
+  _i3.Origin get origin => _i3.Origin.values.byName(_i4.getProperty(
         this,
         'origin',
       ));
   set origin(_i3.Origin value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'origin',
       value.name,
@@ -8710,12 +8746,12 @@ class BaseNodeChange implements _i3.BaseDocumentChange {
 }
 
 extension BaseNodeChange$Typings on BaseNodeChange {
-  _i2.Object get node => _i5.getProperty(
+  _i2.Object get node => _i4.getProperty(
         this,
         'node',
       );
   set node(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'node',
       value,
@@ -8747,15 +8783,15 @@ class RemovedNode {
 }
 
 extension RemovedNode$Typings on RemovedNode {
-  _i2.bool get removed => _i5.getProperty(
+  _i2.bool get removed => _i4.getProperty(
         this,
         'removed',
       );
-  _i2.dynamic get type => _i5.getProperty(
+  _i2.dynamic get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
@@ -8782,12 +8818,12 @@ class CreateChange implements _i3.BaseNodeChange {
 }
 
 extension CreateChange$Typings on CreateChange {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
@@ -8816,12 +8852,12 @@ class DeleteChange implements _i3.BaseNodeChange {
 }
 
 extension DeleteChange$Typings on DeleteChange {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
@@ -8842,7 +8878,7 @@ class PropertyChange implements _i3.BaseNodeChange {
 
   factory PropertyChange({
     _i2.String? type,
-    _i2.List<_i3.NodeChangeProperty>? properties,
+    _i2.List<_i3.NodeChangePropertyOptions>? properties,
     _i2.Object? node,
   }) =>
       PropertyChange._(
@@ -8853,27 +8889,27 @@ class PropertyChange implements _i3.BaseNodeChange {
 }
 
 extension PropertyChange$Typings on PropertyChange {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.List<_i3.NodeChangeProperty> get properties => ((_i5.getProperty(
+  _i2.List<_i3.NodeChangePropertyOptions> get properties => ((_i4.getProperty(
         this,
         'properties',
       )) as _i2.List)
           .map((i) => ((_i3.NodeChangePropertyOptions.values.byName(i))
-              as _i3.NodeChangeProperty))
+              as _i3.NodeChangePropertyOptions))
           .toList();
-  set properties(_i2.List<_i3.NodeChangeProperty> value) {
-    _i5.setProperty(
+  set properties(_i2.List<_i3.NodeChangePropertyOptions> value) {
+    _i4.setProperty(
       this,
       'properties',
       value.map((i) => i.name).toList(),
@@ -8893,27 +8929,27 @@ class BaseStyleChange implements _i3.BaseDocumentChange {
   });
 
   factory BaseStyleChange({
-    _i3.BaseStyle? style,
+    _i3.BaseStyleMixin? style,
     _i2.String? id,
     _i3.Origin? origin,
   }) =>
       BaseStyleChange._(
-        style: style ?? _i7.undefined ?? _i7.undefined,
+        style: style ?? _i7.undefined,
         id: id,
         origin: origin?.name ?? _i7.undefined,
       );
 }
 
 extension BaseStyleChange$Typings on BaseStyleChange {
-  _i3.BaseStyle? get style => _i5.getProperty(
+  _i3.BaseStyleMixin? get style => _i4.getProperty(
         this,
         'style',
       );
-  set style(_i3.BaseStyle? value) {
-    _i5.setProperty(
+  set style(_i3.BaseStyleMixin? value) {
+    _i4.setProperty(
       this,
       'style',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -8930,21 +8966,21 @@ class StyleCreateChange implements _i3.BaseStyleChange {
 
   factory StyleCreateChange({
     _i2.String? type,
-    _i3.BaseStyle? style,
+    _i3.BaseStyleMixin? style,
   }) =>
       StyleCreateChange._(
         type: type,
-        style: style ?? _i7.undefined ?? _i7.undefined,
+        style: style ?? _i7.undefined,
       );
 }
 
 extension StyleCreateChange$Typings on StyleCreateChange {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
@@ -8973,24 +9009,24 @@ class StyleDeleteChange implements _i3.BaseStyleChange {
 }
 
 extension StyleDeleteChange$Typings on StyleDeleteChange {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.dynamic get style => _i5.getProperty(
+  _i2.dynamic get style => _i4.getProperty(
         this,
         'style',
       );
   set style(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'style',
       value,
@@ -9011,38 +9047,38 @@ class StylePropertyChange implements _i3.BaseStyleChange {
 
   factory StylePropertyChange({
     _i2.String? type,
-    _i2.List<_i3.StyleChangeProperty>? properties,
-    _i3.BaseStyle? style,
+    _i2.List<_i3.StyleChangePropertyOptions>? properties,
+    _i3.BaseStyleMixin? style,
   }) =>
       StylePropertyChange._(
         type: type,
         properties: properties?.map((i) => i.name).toList(),
-        style: style ?? _i7.undefined ?? _i7.undefined,
+        style: style ?? _i7.undefined,
       );
 }
 
 extension StylePropertyChange$Typings on StylePropertyChange {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.List<_i3.StyleChangeProperty> get properties => ((_i5.getProperty(
+  _i2.List<_i3.StyleChangePropertyOptions> get properties => ((_i4.getProperty(
         this,
         'properties',
       )) as _i2.List)
           .map((i) => ((_i3.StyleChangePropertyOptions.values.byName(i))
-              as _i3.StyleChangeProperty))
+              as _i3.StyleChangePropertyOptions))
           .toList();
-  set properties(_i2.List<_i3.StyleChangeProperty> value) {
-    _i5.setProperty(
+  set properties(_i2.List<_i3.StyleChangePropertyOptions> value) {
+    _i4.setProperty(
       this,
       'properties',
       value.map((i) => i.name).toList(),
@@ -9057,18 +9093,18 @@ extension StylePropertyChange$Typings on StylePropertyChange {
 class NodeChangeEvent {
   external factory NodeChangeEvent._({_i2.dynamic nodeChanges});
 
-  factory NodeChangeEvent({_i2.List<_i3.NodeChange>? nodeChanges}) =>
+  factory NodeChangeEvent({_i2.List<_i3.BaseDocumentChange>? nodeChanges}) =>
       NodeChangeEvent._(nodeChanges: nodeChanges);
 }
 
 extension NodeChangeEvent$Typings on NodeChangeEvent {
-  _i2.List<_i3.NodeChange> get nodeChanges => ((_i5.getProperty(
+  _i2.List<_i3.BaseDocumentChange> get nodeChanges => ((_i4.getProperty(
         this,
         'nodeChanges',
       )) as _i2.List)
           .cast();
-  set nodeChanges(_i2.List<_i3.NodeChange> value) {
-    _i5.setProperty(
+  set nodeChanges(_i2.List<_i3.BaseDocumentChange> value) {
+    _i4.setProperty(
       this,
       'nodeChanges',
       value,
@@ -9083,12 +9119,12 @@ extension NodeChangeEvent$Typings on NodeChangeEvent {
 class IInline19 {}
 
 extension IInline19$Typings on IInline19 {
-  _i2.String get text => _i5.getProperty(
+  _i2.String get text => _i4.getProperty(
         this,
         'text',
       );
   set text(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'text',
       value,
@@ -9103,44 +9139,44 @@ extension IInline19$Typings on IInline19 {
 class IInline20 {}
 
 extension IInline20$Typings on IInline20 {
-  _i2.num get start => _i5.getProperty(
+  _i2.num get start => _i4.getProperty(
         this,
         'start',
       );
   set start(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'start',
       value,
     );
   }
 
-  _i2.num get end => _i5.getProperty(
+  _i2.num get end => _i4.getProperty(
         this,
         'end',
       );
   set end(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'end',
       value,
     );
   }
 
-  _i2.List<_i2.String> get suggestions => ((_i5.getProperty(
+  _i2.List<_i2.String> get suggestions => ((_i4.getProperty(
         this,
         'suggestions',
       )) as _i2.List)
           .cast();
   set suggestions(_i2.List<_i2.String> value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'suggestions',
       value,
     );
   }
 
-  _i3.Color? get color => switch (_i5.getProperty(
+  _i3.Color? get color => switch (_i4.getProperty(
         this,
         'color',
       )) {
@@ -9148,7 +9184,7 @@ extension IInline20$Typings on IInline20 {
         _ => null
       };
   set color(_i3.Color? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'color',
       value?.name ?? _i7.undefined,
@@ -9177,11 +9213,11 @@ class Vector {
 }
 
 extension Vector$Typings on Vector {
-  _i2.num get x => _i5.getProperty(
+  _i2.num get x => _i4.getProperty(
         this,
         'x',
       );
-  _i2.num get y => _i5.getProperty(
+  _i2.num get y => _i4.getProperty(
         this,
         'y',
       );
@@ -9214,19 +9250,19 @@ class Rect {
 }
 
 extension Rect$Typings on Rect {
-  _i2.num get x => _i5.getProperty(
+  _i2.num get x => _i4.getProperty(
         this,
         'x',
       );
-  _i2.num get y => _i5.getProperty(
+  _i2.num get y => _i4.getProperty(
         this,
         'y',
       );
-  _i2.num get width => _i5.getProperty(
+  _i2.num get width => _i4.getProperty(
         this,
         'width',
       );
-  _i2.num get height => _i5.getProperty(
+  _i2.num get height => _i4.getProperty(
         this,
         'height',
       );
@@ -9256,15 +9292,15 @@ class Rgb {
 }
 
 extension Rgb$Typings on Rgb {
-  _i2.num get r => _i5.getProperty(
+  _i2.num get r => _i4.getProperty(
         this,
         'r',
       );
-  _i2.num get g => _i5.getProperty(
+  _i2.num get g => _i4.getProperty(
         this,
         'g',
       );
-  _i2.num get b => _i5.getProperty(
+  _i2.num get b => _i4.getProperty(
         this,
         'b',
       );
@@ -9297,19 +9333,19 @@ class Rgba {
 }
 
 extension Rgba$Typings on Rgba {
-  _i2.num get r => _i5.getProperty(
+  _i2.num get r => _i4.getProperty(
         this,
         'r',
       );
-  _i2.num get g => _i5.getProperty(
+  _i2.num get g => _i4.getProperty(
         this,
         'g',
       );
-  _i2.num get b => _i5.getProperty(
+  _i2.num get b => _i4.getProperty(
         this,
         'b',
       );
-  _i2.num get a => _i5.getProperty(
+  _i2.num get a => _i4.getProperty(
         this,
         'a',
       );
@@ -9336,11 +9372,11 @@ class FontName {
 }
 
 extension FontName$Typings on FontName {
-  _i2.String get family => _i5.getProperty(
+  _i2.String get family => _i4.getProperty(
         this,
         'family',
       );
-  _i2.String get style => _i5.getProperty(
+  _i2.String get style => _i4.getProperty(
         this,
         'style',
       );
@@ -9353,11 +9389,11 @@ extension FontName$Typings on FontName {
 class IInline21 {}
 
 extension IInline21$Typings on IInline21 {
-  _i2.num get value => _i5.getProperty(
+  _i2.num get value => _i4.getProperty(
         this,
         'value',
       );
-  _i3.UnitOptions get unit => _i3.UnitOptions.values.byName(_i5.getProperty(
+  _i3.UnitOptions get unit => _i3.UnitOptions.values.byName(_i4.getProperty(
         this,
         'unit',
       ));
@@ -9368,19 +9404,19 @@ extension IInline21$Typings on IInline21 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline22 {
-  static _i2.String get unit => _i5.getProperty(
+  static _i2.String get unit => _i4.getProperty(
         _declaredIInline22,
         'unit',
       );
 }
 
-_i2.Object get _declaredIInline22 => _i5.getProperty(
+_i2.Object get _declaredIInline22 => _i4.getProperty(
       _self,
       'IInline22',
     );
 
 extension IInline22$Typings on IInline22 {
-  _i2.String get unit => _i5.getProperty(
+  _i2.String get unit => _i4.getProperty(
         this,
         'unit',
       );
@@ -9393,12 +9429,12 @@ extension IInline22$Typings on IInline22 {
 class IInline23 {}
 
 extension IInline23$Typings on IInline23 {
-  _i2.num get value => _i5.getProperty(
+  _i2.num get value => _i4.getProperty(
         this,
         'value',
       );
   _i3.IInline23UnitOptions get unit =>
-      _i3.IInline23UnitOptions.values.byName(_i5.getProperty(
+      _i3.IInline23UnitOptions.values.byName(_i4.getProperty(
         this,
         'unit',
       ));
@@ -9409,19 +9445,19 @@ extension IInline23$Typings on IInline23 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline24 {
-  static _i2.String get unit => _i5.getProperty(
+  static _i2.String get unit => _i4.getProperty(
         _declaredIInline24,
         'unit',
       );
 }
 
-_i2.Object get _declaredIInline24 => _i5.getProperty(
+_i2.Object get _declaredIInline24 => _i4.getProperty(
       _self,
       'IInline24',
     );
 
 extension IInline24$Typings on IInline24 {
-  _i2.String get unit => _i5.getProperty(
+  _i2.String get unit => _i4.getProperty(
         this,
         'unit',
       );
@@ -9434,7 +9470,7 @@ extension IInline24$Typings on IInline24 {
 class IInline25 {}
 
 extension IInline25$Typings on IInline25 {
-  _i3.SolidPaint get value => _i5.getProperty(
+  _i3.SolidPaint get value => _i4.getProperty(
         this,
         'value',
       );
@@ -9445,19 +9481,19 @@ extension IInline25$Typings on IInline25 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline26 {
-  static _i2.String get value => _i5.getProperty(
+  static _i2.String get value => _i4.getProperty(
         _declaredIInline26,
         'value',
       );
 }
 
-_i2.Object get _declaredIInline26 => _i5.getProperty(
+_i2.Object get _declaredIInline26 => _i4.getProperty(
       _self,
       'IInline26',
     );
 
 extension IInline26$Typings on IInline26 {
-  _i2.String get value => _i5.getProperty(
+  _i2.String get value => _i4.getProperty(
         this,
         'value',
       );
@@ -9487,15 +9523,15 @@ class ArcData {
 }
 
 extension ArcData$Typings on ArcData {
-  _i2.num get startingAngle => _i5.getProperty(
+  _i2.num get startingAngle => _i4.getProperty(
         this,
         'startingAngle',
       );
-  _i2.num get endingAngle => _i5.getProperty(
+  _i2.num get endingAngle => _i4.getProperty(
         this,
         'endingAngle',
       );
-  _i2.num get innerRadius => _i5.getProperty(
+  _i2.num get innerRadius => _i4.getProperty(
         this,
         'innerRadius',
       );
@@ -9525,7 +9561,7 @@ class DropShadowEffect {
     _i2.num? radius,
     _i2.num? spread,
     _i2.bool? visible,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
     _i2.bool? showShadowBehindNode,
     _i2.dynamic boundVariables,
   }) =>
@@ -9536,57 +9572,57 @@ class DropShadowEffect {
         radius: radius,
         spread: spread,
         visible: visible,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
         showShadowBehindNode: showShadowBehindNode,
         boundVariables: boundVariables,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredDropShadowEffect,
         'type',
       );
 }
 
-_i2.Object get _declaredDropShadowEffect => _i5.getProperty(
+_i2.Object get _declaredDropShadowEffect => _i4.getProperty(
       _self,
       'DropShadowEffect',
     );
 
 extension DropShadowEffect$Typings on DropShadowEffect {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.Rgba get color => _i5.getProperty(
+  _i3.Rgba get color => _i4.getProperty(
         this,
         'color',
       );
-  _i3.Vector get offset => _i5.getProperty(
+  _i3.Vector get offset => _i4.getProperty(
         this,
         'offset',
       );
-  _i2.num get radius => _i5.getProperty(
+  _i2.num get radius => _i4.getProperty(
         this,
         'radius',
       );
-  _i2.num? get spread => _i5.getProperty(
+  _i2.num? get spread => _i4.getProperty(
         this,
         'spread',
       );
-  _i2.bool get visible => _i5.getProperty(
+  _i2.bool get visible => _i4.getProperty(
         this,
         'visible',
       );
-  _i3.BlendMode get blendMode =>
-      _i3.BlendModeOptions.values.byName(_i5.getProperty(
+  _i3.BlendModeOptions get blendMode =>
+      _i3.BlendModeOptions.values.byName(_i4.getProperty(
         this,
         'blendMode',
       ));
-  _i2.bool? get showShadowBehindNode => _i5.getProperty(
+  _i2.bool? get showShadowBehindNode => _i4.getProperty(
         this,
         'showShadowBehindNode',
       );
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -9615,7 +9651,7 @@ class InnerShadowEffect {
     _i2.num? radius,
     _i2.num? spread,
     _i2.bool? visible,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
     _i2.dynamic boundVariables,
   }) =>
       InnerShadowEffect._(
@@ -9625,52 +9661,52 @@ class InnerShadowEffect {
         radius: radius,
         spread: spread,
         visible: visible,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
         boundVariables: boundVariables,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredInnerShadowEffect,
         'type',
       );
 }
 
-_i2.Object get _declaredInnerShadowEffect => _i5.getProperty(
+_i2.Object get _declaredInnerShadowEffect => _i4.getProperty(
       _self,
       'InnerShadowEffect',
     );
 
 extension InnerShadowEffect$Typings on InnerShadowEffect {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.Rgba get color => _i5.getProperty(
+  _i3.Rgba get color => _i4.getProperty(
         this,
         'color',
       );
-  _i3.Vector get offset => _i5.getProperty(
+  _i3.Vector get offset => _i4.getProperty(
         this,
         'offset',
       );
-  _i2.num get radius => _i5.getProperty(
+  _i2.num get radius => _i4.getProperty(
         this,
         'radius',
       );
-  _i2.num? get spread => _i5.getProperty(
+  _i2.num? get spread => _i4.getProperty(
         this,
         'spread',
       );
-  _i2.bool get visible => _i5.getProperty(
+  _i2.bool get visible => _i4.getProperty(
         this,
         'visible',
       );
-  _i3.BlendMode get blendMode =>
-      _i3.BlendModeOptions.values.byName(_i5.getProperty(
+  _i3.BlendModeOptions get blendMode =>
+      _i3.BlendModeOptions.values.byName(_i4.getProperty(
         this,
         'blendMode',
       ));
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -9709,19 +9745,19 @@ class BlurEffect {
 }
 
 extension BlurEffect$Typings on BlurEffect {
-  _i3.TypeOptions get type => _i3.TypeOptions.values.byName(_i5.getProperty(
+  _i3.TypeOptions get type => _i3.TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  _i2.num get radius => _i5.getProperty(
+  _i2.num get radius => _i4.getProperty(
         this,
         'radius',
       );
-  _i2.bool get visible => _i5.getProperty(
+  _i2.bool get visible => _i4.getProperty(
         this,
         'visible',
       );
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -9738,23 +9774,23 @@ class Constraints {
   });
 
   factory Constraints({
-    _i3.ConstraintType? horizontal,
-    _i3.ConstraintType? vertical,
+    _i3.ConstraintTypeOptions? horizontal,
+    _i3.ConstraintTypeOptions? vertical,
   }) =>
       Constraints._(
-        horizontal: horizontal?.name ?? _i7.undefined,
-        vertical: vertical?.name ?? _i7.undefined,
+        horizontal: horizontal?.name,
+        vertical: vertical?.name,
       );
 }
 
 extension Constraints$Typings on Constraints {
-  _i3.ConstraintType get horizontal =>
-      _i3.ConstraintTypeOptions.values.byName(_i5.getProperty(
+  _i3.ConstraintTypeOptions get horizontal =>
+      _i3.ConstraintTypeOptions.values.byName(_i4.getProperty(
         this,
         'horizontal',
       ));
-  _i3.ConstraintType get vertical =>
-      _i3.ConstraintTypeOptions.values.byName(_i5.getProperty(
+  _i3.ConstraintTypeOptions get vertical =>
+      _i3.ConstraintTypeOptions.values.byName(_i4.getProperty(
         this,
         'vertical',
       ));
@@ -9784,15 +9820,15 @@ class ColorStop {
 }
 
 extension ColorStop$Typings on ColorStop {
-  _i2.num get position => _i5.getProperty(
+  _i2.num get position => _i4.getProperty(
         this,
         'position',
       );
-  _i3.Rgba get color => _i5.getProperty(
+  _i3.Rgba get color => _i4.getProperty(
         this,
         'color',
       );
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -9834,31 +9870,31 @@ class ImageFilters {
 }
 
 extension ImageFilters$Typings on ImageFilters {
-  _i2.num? get exposure => _i5.getProperty(
+  _i2.num? get exposure => _i4.getProperty(
         this,
         'exposure',
       );
-  _i2.num? get contrast => _i5.getProperty(
+  _i2.num? get contrast => _i4.getProperty(
         this,
         'contrast',
       );
-  _i2.num? get saturation => _i5.getProperty(
+  _i2.num? get saturation => _i4.getProperty(
         this,
         'saturation',
       );
-  _i2.num? get temperature => _i5.getProperty(
+  _i2.num? get temperature => _i4.getProperty(
         this,
         'temperature',
       );
-  _i2.num? get tint => _i5.getProperty(
+  _i2.num? get tint => _i4.getProperty(
         this,
         'tint',
       );
-  _i2.num? get highlights => _i5.getProperty(
+  _i2.num? get highlights => _i4.getProperty(
         this,
         'highlights',
       );
-  _i2.num? get shadows => _i5.getProperty(
+  _i2.num? get shadows => _i4.getProperty(
         this,
         'shadows',
       );
@@ -9883,7 +9919,7 @@ class SolidPaint {
     _i3.Rgb? color,
     _i2.bool? visible,
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
     _i2.dynamic boundVariables,
   }) =>
       SolidPaint._(
@@ -9891,46 +9927,46 @@ class SolidPaint {
         color: color ?? _i7.undefined,
         visible: visible,
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
         boundVariables: boundVariables,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredSolidPaint,
         'type',
       );
 }
 
-_i2.Object get _declaredSolidPaint => _i5.getProperty(
+_i2.Object get _declaredSolidPaint => _i4.getProperty(
       _self,
       'SolidPaint',
     );
 
 extension SolidPaint$Typings on SolidPaint {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.Rgb get color => _i5.getProperty(
+  _i3.Rgb get color => _i4.getProperty(
         this,
         'color',
       );
-  _i2.bool? get visible => _i5.getProperty(
+  _i2.bool? get visible => _i4.getProperty(
         this,
         'visible',
       );
-  _i2.num? get opacity => _i5.getProperty(
+  _i2.num? get opacity => _i4.getProperty(
         this,
         'opacity',
       );
-  _i3.BlendMode? get blendMode => switch (_i5.getProperty(
+  _i3.BlendModeOptions? get blendMode => switch (_i4.getProperty(
         this,
         'blendMode',
       )) {
         _i2.String name => _i3.BlendModeOptions.values.byName(name),
         _ => null
       };
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -9952,11 +9988,22 @@ class GradientPaint {
 
   factory GradientPaint({
     _i3.GradientPaintTypeOptions? type,
-    _i3.Transform? gradientTransform,
-    _i4.ReadonlyArray<_i3.ColorStop>? gradientStops,
+    (
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+    )? gradientTransform,
+    _i2.List<_i3.ColorStop>? gradientStops,
     _i2.bool? visible,
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
   }) =>
       GradientPaint._(
         type: type?.name ?? _i7.undefined,
@@ -9966,36 +10013,48 @@ class GradientPaint {
                 gradientTransform.$1,
                 gradientTransform.$2,
               ],
-        gradientStops: gradientStops ?? _i7.undefined,
+        gradientStops: gradientStops,
         visible: visible,
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
       );
 }
 
 extension GradientPaint$Typings on GradientPaint {
   _i3.GradientPaintTypeOptions get type =>
-      _i3.GradientPaintTypeOptions.values.byName(_i5.getProperty(
+      _i3.GradientPaintTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  _i3.Transform get gradientTransform => _i5.getProperty(
+  (
+    (
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    ),
+    (
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    ),
+  ) get gradientTransform => _i4.getProperty(
         this,
         'gradientTransform',
       );
-  _i4.ReadonlyArray<_i3.ColorStop> get gradientStops => _i5.getProperty(
+  _i2.List<_i3.ColorStop> get gradientStops => ((_i4.getProperty(
         this,
         'gradientStops',
-      );
-  _i2.bool? get visible => _i5.getProperty(
+      )) as _i2.List)
+          .cast();
+  _i2.bool? get visible => _i4.getProperty(
         this,
         'visible',
       );
-  _i2.num? get opacity => _i5.getProperty(
+  _i2.num? get opacity => _i4.getProperty(
         this,
         'opacity',
       );
-  _i3.BlendMode? get blendMode => switch (_i5.getProperty(
+  _i3.BlendModeOptions? get blendMode => switch (_i4.getProperty(
         this,
         'blendMode',
       )) {
@@ -10026,13 +10085,24 @@ class ImagePaint {
     _i2.String? type,
     _i3.ScaleMode? scaleMode,
     _i2.String? imageHash,
-    _i3.Transform? imageTransform,
+    (
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+    )? imageTransform,
     _i2.num? scalingFactor,
     _i2.num? rotation,
     _i3.ImageFilters? filters,
     _i2.bool? visible,
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
   }) =>
       ImagePaint._(
         type: type,
@@ -10049,58 +10119,69 @@ class ImagePaint {
         filters: filters ?? _i7.undefined,
         visible: visible,
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredImagePaint,
         'type',
       );
 }
 
-_i2.Object get _declaredImagePaint => _i5.getProperty(
+_i2.Object get _declaredImagePaint => _i4.getProperty(
       _self,
       'ImagePaint',
     );
 
 extension ImagePaint$Typings on ImagePaint {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.ScaleMode get scaleMode => _i3.ScaleMode.values.byName(_i5.getProperty(
+  _i3.ScaleMode get scaleMode => _i3.ScaleMode.values.byName(_i4.getProperty(
         this,
         'scaleMode',
       ));
-  _i2.String? get imageHash => _i5.getProperty(
+  _i2.String? get imageHash => _i4.getProperty(
         this,
         'imageHash',
       );
-  _i3.Transform? get imageTransform => _i5.getProperty(
+  (
+    (
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    ),
+    (
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    ),
+  )? get imageTransform => _i4.getProperty(
         this,
         'imageTransform',
       );
-  _i2.num? get scalingFactor => _i5.getProperty(
+  _i2.num? get scalingFactor => _i4.getProperty(
         this,
         'scalingFactor',
       );
-  _i2.num? get rotation => _i5.getProperty(
+  _i2.num? get rotation => _i4.getProperty(
         this,
         'rotation',
       );
-  _i3.ImageFilters? get filters => _i5.getProperty(
+  _i3.ImageFilters? get filters => _i4.getProperty(
         this,
         'filters',
       );
-  _i2.bool? get visible => _i5.getProperty(
+  _i2.bool? get visible => _i4.getProperty(
         this,
         'visible',
       );
-  _i2.num? get opacity => _i5.getProperty(
+  _i2.num? get opacity => _i4.getProperty(
         this,
         'opacity',
       );
-  _i3.BlendMode? get blendMode => switch (_i5.getProperty(
+  _i3.BlendModeOptions? get blendMode => switch (_i4.getProperty(
         this,
         'blendMode',
       )) {
@@ -10131,13 +10212,24 @@ class VideoPaint {
     _i2.String? type,
     _i3.ScaleModeOptions? scaleMode,
     _i2.String? videoHash,
-    _i3.Transform? videoTransform,
+    (
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+    )? videoTransform,
     _i2.num? scalingFactor,
     _i2.num? rotation,
     _i3.ImageFilters? filters,
     _i2.bool? visible,
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
   }) =>
       VideoPaint._(
         type: type,
@@ -10154,59 +10246,70 @@ class VideoPaint {
         filters: filters ?? _i7.undefined,
         visible: visible,
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredVideoPaint,
         'type',
       );
 }
 
-_i2.Object get _declaredVideoPaint => _i5.getProperty(
+_i2.Object get _declaredVideoPaint => _i4.getProperty(
       _self,
       'VideoPaint',
     );
 
 extension VideoPaint$Typings on VideoPaint {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   _i3.ScaleModeOptions get scaleMode =>
-      _i3.ScaleModeOptions.values.byName(_i5.getProperty(
+      _i3.ScaleModeOptions.values.byName(_i4.getProperty(
         this,
         'scaleMode',
       ));
-  _i2.String? get videoHash => _i5.getProperty(
+  _i2.String? get videoHash => _i4.getProperty(
         this,
         'videoHash',
       );
-  _i3.Transform? get videoTransform => _i5.getProperty(
+  (
+    (
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    ),
+    (
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    ),
+  )? get videoTransform => _i4.getProperty(
         this,
         'videoTransform',
       );
-  _i2.num? get scalingFactor => _i5.getProperty(
+  _i2.num? get scalingFactor => _i4.getProperty(
         this,
         'scalingFactor',
       );
-  _i2.num? get rotation => _i5.getProperty(
+  _i2.num? get rotation => _i4.getProperty(
         this,
         'rotation',
       );
-  _i3.ImageFilters? get filters => _i5.getProperty(
+  _i3.ImageFilters? get filters => _i4.getProperty(
         this,
         'filters',
       );
-  _i2.bool? get visible => _i5.getProperty(
+  _i2.bool? get visible => _i4.getProperty(
         this,
         'visible',
       );
-  _i2.num? get opacity => _i5.getProperty(
+  _i2.num? get opacity => _i4.getProperty(
         this,
         'opacity',
       );
-  _i3.BlendMode? get blendMode => switch (_i5.getProperty(
+  _i3.BlendModeOptions? get blendMode => switch (_i4.getProperty(
         this,
         'blendMode',
       )) {
@@ -10236,11 +10339,11 @@ class Guide {
 }
 
 extension Guide$Typings on Guide {
-  _i3.Axis get axis => _i3.Axis.values.byName(_i5.getProperty(
+  _i3.Axis get axis => _i3.Axis.values.byName(_i4.getProperty(
         this,
         'axis',
       ));
-  _i2.num get offset => _i5.getProperty(
+  _i2.num get offset => _i4.getProperty(
         this,
         'offset',
       );
@@ -10288,39 +10391,39 @@ class RowsColsLayoutGrid {
 }
 
 extension RowsColsLayoutGrid$Typings on RowsColsLayoutGrid {
-  _i3.Pattern get pattern => _i3.Pattern.values.byName(_i5.getProperty(
+  _i3.Pattern get pattern => _i3.Pattern.values.byName(_i4.getProperty(
         this,
         'pattern',
       ));
-  _i3.Alignment get alignment => _i3.Alignment.values.byName(_i5.getProperty(
+  _i3.Alignment get alignment => _i3.Alignment.values.byName(_i4.getProperty(
         this,
         'alignment',
       ));
-  _i2.num get gutterSize => _i5.getProperty(
+  _i2.num get gutterSize => _i4.getProperty(
         this,
         'gutterSize',
       );
-  _i2.num get count => _i5.getProperty(
+  _i2.num get count => _i4.getProperty(
         this,
         'count',
       );
-  _i2.num? get sectionSize => _i5.getProperty(
+  _i2.num? get sectionSize => _i4.getProperty(
         this,
         'sectionSize',
       );
-  _i2.num? get offset => _i5.getProperty(
+  _i2.num? get offset => _i4.getProperty(
         this,
         'offset',
       );
-  _i2.bool? get visible => _i5.getProperty(
+  _i2.bool? get visible => _i4.getProperty(
         this,
         'visible',
       );
-  _i3.Rgba? get color => _i5.getProperty(
+  _i3.Rgba? get color => _i4.getProperty(
         this,
         'color',
       );
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -10360,35 +10463,35 @@ class GridLayoutGrid {
         boundVariables: boundVariables ?? _i7.undefined,
       );
 
-  static _i2.String get pattern => _i5.getProperty(
+  static _i2.String get pattern => _i4.getProperty(
         _declaredGridLayoutGrid,
         'pattern',
       );
 }
 
-_i2.Object get _declaredGridLayoutGrid => _i5.getProperty(
+_i2.Object get _declaredGridLayoutGrid => _i4.getProperty(
       _self,
       'GridLayoutGrid',
     );
 
 extension GridLayoutGrid$Typings on GridLayoutGrid {
-  _i2.String get pattern => _i5.getProperty(
+  _i2.String get pattern => _i4.getProperty(
         this,
         'pattern',
       );
-  _i2.num get sectionSize => _i5.getProperty(
+  _i2.num get sectionSize => _i4.getProperty(
         this,
         'sectionSize',
       );
-  _i2.bool? get visible => _i5.getProperty(
+  _i2.bool? get visible => _i4.getProperty(
         this,
         'visible',
       );
-  _i3.Rgba? get color => _i5.getProperty(
+  _i3.Rgba? get color => _i4.getProperty(
         this,
         'color',
       );
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -10416,11 +10519,11 @@ class ExportSettingsConstraints {
 
 extension ExportSettingsConstraints$Typings on ExportSettingsConstraints {
   _i3.ExportSettingsConstraintsTypeOptions get type =>
-      _i3.ExportSettingsConstraintsTypeOptions.values.byName(_i5.getProperty(
+      _i3.ExportSettingsConstraintsTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  _i2.num get value => _i5.getProperty(
+  _i2.num get value => _i4.getProperty(
         this,
         'value',
       );
@@ -10459,27 +10562,27 @@ class ExportSettingsImage {
 }
 
 extension ExportSettingsImage$Typings on ExportSettingsImage {
-  _i3.Format get format => _i3.Format.values.byName(_i5.getProperty(
+  _i3.Format get format => _i3.Format.values.byName(_i4.getProperty(
         this,
         'format',
       ));
-  _i2.bool? get contentsOnly => _i5.getProperty(
+  _i2.bool? get contentsOnly => _i4.getProperty(
         this,
         'contentsOnly',
       );
-  _i2.bool? get useAbsoluteBounds => _i5.getProperty(
+  _i2.bool? get useAbsoluteBounds => _i4.getProperty(
         this,
         'useAbsoluteBounds',
       );
-  _i2.String? get suffix => _i5.getProperty(
+  _i2.String? get suffix => _i4.getProperty(
         this,
         'suffix',
       );
-  _i3.ExportSettingsConstraints? get constraint => _i5.getProperty(
+  _i3.ExportSettingsConstraints? get constraint => _i4.getProperty(
         this,
         'constraint',
       );
-  _i3.ColorProfile? get colorProfile => switch (_i5.getProperty(
+  _i3.ColorProfile? get colorProfile => switch (_i4.getProperty(
         this,
         'colorProfile',
       )) {
@@ -10524,31 +10627,31 @@ class ExportSettingsSVGBase {
 }
 
 extension ExportSettingsSVGBase$Typings on ExportSettingsSVGBase {
-  _i2.bool? get contentsOnly => _i5.getProperty(
+  _i2.bool? get contentsOnly => _i4.getProperty(
         this,
         'contentsOnly',
       );
-  _i2.bool? get useAbsoluteBounds => _i5.getProperty(
+  _i2.bool? get useAbsoluteBounds => _i4.getProperty(
         this,
         'useAbsoluteBounds',
       );
-  _i2.String? get suffix => _i5.getProperty(
+  _i2.String? get suffix => _i4.getProperty(
         this,
         'suffix',
       );
-  _i2.bool? get svgOutlineText => _i5.getProperty(
+  _i2.bool? get svgOutlineText => _i4.getProperty(
         this,
         'svgOutlineText',
       );
-  _i2.bool? get svgIdAttribute => _i5.getProperty(
+  _i2.bool? get svgIdAttribute => _i4.getProperty(
         this,
         'svgIdAttribute',
       );
-  _i2.bool? get svgSimplifyStroke => _i5.getProperty(
+  _i2.bool? get svgSimplifyStroke => _i4.getProperty(
         this,
         'svgSimplifyStroke',
       );
-  _i3.ColorProfileOptions? get colorProfile => switch (_i5.getProperty(
+  _i3.ColorProfileOptions? get colorProfile => switch (_i4.getProperty(
         this,
         'colorProfile',
       )) {
@@ -10594,19 +10697,19 @@ class ExportSettingsSVG implements _i3.ExportSettingsSVGBase {
         colorProfile: colorProfile?.name ?? _i7.undefined,
       );
 
-  static _i2.String get format => _i5.getProperty(
+  static _i2.String get format => _i4.getProperty(
         _declaredExportSettingsSVG,
         'format',
       );
 }
 
-_i2.Object get _declaredExportSettingsSVG => _i5.getProperty(
+_i2.Object get _declaredExportSettingsSVG => _i4.getProperty(
       _self,
       'ExportSettingsSVG',
     );
 
 extension ExportSettingsSVG$Typings on ExportSettingsSVG {
-  _i2.String get format => _i5.getProperty(
+  _i2.String get format => _i4.getProperty(
         this,
         'format',
       );
@@ -10649,19 +10752,19 @@ class ExportSettingsSVGString implements _i3.ExportSettingsSVGBase {
         colorProfile: colorProfile?.name ?? _i7.undefined,
       );
 
-  static _i2.String get format => _i5.getProperty(
+  static _i2.String get format => _i4.getProperty(
         _declaredExportSettingsSVGString,
         'format',
       );
 }
 
-_i2.Object get _declaredExportSettingsSVGString => _i5.getProperty(
+_i2.Object get _declaredExportSettingsSVGString => _i4.getProperty(
       _self,
       'ExportSettingsSVGString',
     );
 
 extension ExportSettingsSVGString$Typings on ExportSettingsSVGString {
-  _i2.String get format => _i5.getProperty(
+  _i2.String get format => _i4.getProperty(
         this,
         'format',
       );
@@ -10695,36 +10798,36 @@ class ExportSettingsPDF {
         colorProfile: colorProfile?.name ?? _i7.undefined,
       );
 
-  static _i2.String get format => _i5.getProperty(
+  static _i2.String get format => _i4.getProperty(
         _declaredExportSettingsPDF,
         'format',
       );
 }
 
-_i2.Object get _declaredExportSettingsPDF => _i5.getProperty(
+_i2.Object get _declaredExportSettingsPDF => _i4.getProperty(
       _self,
       'ExportSettingsPDF',
     );
 
 extension ExportSettingsPDF$Typings on ExportSettingsPDF {
-  _i2.String get format => _i5.getProperty(
+  _i2.String get format => _i4.getProperty(
         this,
         'format',
       );
-  _i2.bool? get contentsOnly => _i5.getProperty(
+  _i2.bool? get contentsOnly => _i4.getProperty(
         this,
         'contentsOnly',
       );
-  _i2.bool? get useAbsoluteBounds => _i5.getProperty(
+  _i2.bool? get useAbsoluteBounds => _i4.getProperty(
         this,
         'useAbsoluteBounds',
       );
-  _i2.String? get suffix => _i5.getProperty(
+  _i2.String? get suffix => _i4.getProperty(
         this,
         'suffix',
       );
   _i3.ExportSettingsPDFColorProfileOptions? get colorProfile =>
-      switch (_i5.getProperty(
+      switch (_i4.getProperty(
         this,
         'colorProfile',
       )) {
@@ -10744,19 +10847,19 @@ class ExportSettingsREST {
   factory ExportSettingsREST({_i2.String? format}) =>
       ExportSettingsREST._(format: format);
 
-  static _i2.String get format => _i5.getProperty(
+  static _i2.String get format => _i4.getProperty(
         _declaredExportSettingsREST,
         'format',
       );
 }
 
-_i2.Object get _declaredExportSettingsREST => _i5.getProperty(
+_i2.Object get _declaredExportSettingsREST => _i4.getProperty(
       _self,
       'ExportSettingsREST',
     );
 
 extension ExportSettingsREST$Typings on ExportSettingsREST {
-  _i2.String get format => _i5.getProperty(
+  _i2.String get format => _i4.getProperty(
         this,
         'format',
       );
@@ -10779,49 +10882,49 @@ class VectorVertex {
   factory VectorVertex({
     _i2.num? x,
     _i2.num? y,
-    _i3.StrokeCap? strokeCap,
-    _i3.StrokeJoin? strokeJoin,
+    _i3.StrokeCapOptions? strokeCap,
+    _i3.StrokeJoinOptions? strokeJoin,
     _i2.num? cornerRadius,
-    _i3.HandleMirroring? handleMirroring,
+    _i3.HandleMirroringOptions? handleMirroring,
   }) =>
       VectorVertex._(
         x: x,
         y: y,
-        strokeCap: strokeCap?.name ?? _i7.undefined,
-        strokeJoin: strokeJoin?.name ?? _i7.undefined,
+        strokeCap: strokeCap?.name,
+        strokeJoin: strokeJoin?.name,
         cornerRadius: cornerRadius,
-        handleMirroring: handleMirroring?.name ?? _i7.undefined,
+        handleMirroring: handleMirroring?.name,
       );
 }
 
 extension VectorVertex$Typings on VectorVertex {
-  _i2.num get x => _i5.getProperty(
+  _i2.num get x => _i4.getProperty(
         this,
         'x',
       );
-  _i2.num get y => _i5.getProperty(
+  _i2.num get y => _i4.getProperty(
         this,
         'y',
       );
-  _i3.StrokeCap? get strokeCap => switch (_i5.getProperty(
+  _i3.StrokeCapOptions? get strokeCap => switch (_i4.getProperty(
         this,
         'strokeCap',
       )) {
         _i2.String name => _i3.StrokeCapOptions.values.byName(name),
         _ => null
       };
-  _i3.StrokeJoin? get strokeJoin => switch (_i5.getProperty(
+  _i3.StrokeJoinOptions? get strokeJoin => switch (_i4.getProperty(
         this,
         'strokeJoin',
       )) {
         _i2.String name => _i3.StrokeJoinOptions.values.byName(name),
         _ => null
       };
-  _i2.num? get cornerRadius => _i5.getProperty(
+  _i2.num? get cornerRadius => _i4.getProperty(
         this,
         'cornerRadius',
       );
-  _i3.HandleMirroring? get handleMirroring => switch (_i5.getProperty(
+  _i3.HandleMirroringOptions? get handleMirroring => switch (_i4.getProperty(
         this,
         'handleMirroring',
       )) {
@@ -10857,19 +10960,19 @@ class VectorSegment {
 }
 
 extension VectorSegment$Typings on VectorSegment {
-  _i2.num get start => _i5.getProperty(
+  _i2.num get start => _i4.getProperty(
         this,
         'start',
       );
-  _i2.num get end => _i5.getProperty(
+  _i2.num get end => _i4.getProperty(
         this,
         'end',
       );
-  _i3.Vector? get tangentStart => _i5.getProperty(
+  _i3.Vector? get tangentStart => _i4.getProperty(
         this,
         'tangentStart',
       );
-  _i3.Vector? get tangentEnd => _i5.getProperty(
+  _i3.Vector? get tangentEnd => _i4.getProperty(
         this,
         'tangentEnd',
       );
@@ -10888,34 +10991,37 @@ class VectorRegion {
   });
 
   factory VectorRegion({
-    _i3.WindingRule? windingRule,
-    _i4.ReadonlyArray<_i4.ReadonlyArray<_i2.num>>? loops,
-    _i4.ReadonlyArray<_i2.Object>? fills,
+    _i3.WindingRuleOptions? windingRule,
+    _i2.List<_i2.List<_i2.num>>? loops,
+    _i2.List<_i2.Object>? fills,
     _i2.String? fillStyleId,
   }) =>
       VectorRegion._(
-        windingRule: windingRule?.name ?? _i7.undefined,
-        loops: loops ?? _i7.undefined,
-        fills: fills ?? _i7.undefined,
+        windingRule: windingRule?.name,
+        loops: loops,
+        fills: fills,
         fillStyleId: fillStyleId,
       );
 }
 
 extension VectorRegion$Typings on VectorRegion {
-  _i3.WindingRule get windingRule =>
-      _i3.WindingRuleOptions.values.byName(_i5.getProperty(
+  _i3.WindingRuleOptions get windingRule =>
+      _i3.WindingRuleOptions.values.byName(_i4.getProperty(
         this,
         'windingRule',
       ));
-  _i4.ReadonlyArray<_i4.ReadonlyArray<_i2.num>> get loops => _i5.getProperty(
+  _i2.List<_i2.List<_i2.num>> get loops => ((_i4.getProperty(
         this,
         'loops',
-      );
-  _i4.ReadonlyArray<_i2.Object>? get fills => _i5.getProperty(
+      )) as _i2.List)
+          .map((i) => ((((i) as _i2.List).cast()) as _i2.List<_i2.num>))
+          .toList();
+  _i2.List<_i2.Object>? get fills => ((_i4.getProperty(
         this,
         'fills',
-      );
-  _i2.String? get fillStyleId => _i5.getProperty(
+      )) as _i2.List?)
+          ?.cast();
+  _i2.String? get fillStyleId => _i4.getProperty(
         this,
         'fillStyleId',
       );
@@ -10933,30 +11039,33 @@ class VectorNetwork {
   });
 
   factory VectorNetwork({
-    _i4.ReadonlyArray<_i3.VectorVertex>? vertices,
-    _i4.ReadonlyArray<_i3.VectorSegment>? segments,
-    _i4.ReadonlyArray<_i3.VectorRegion>? regions,
+    _i2.List<_i3.VectorVertex>? vertices,
+    _i2.List<_i3.VectorSegment>? segments,
+    _i2.List<_i3.VectorRegion>? regions,
   }) =>
       VectorNetwork._(
-        vertices: vertices ?? _i7.undefined,
-        segments: segments ?? _i7.undefined,
-        regions: regions ?? _i7.undefined,
+        vertices: vertices,
+        segments: segments,
+        regions: regions,
       );
 }
 
 extension VectorNetwork$Typings on VectorNetwork {
-  _i4.ReadonlyArray<_i3.VectorVertex> get vertices => _i5.getProperty(
+  _i2.List<_i3.VectorVertex> get vertices => ((_i4.getProperty(
         this,
         'vertices',
-      );
-  _i4.ReadonlyArray<_i3.VectorSegment> get segments => _i5.getProperty(
+      )) as _i2.List)
+          .cast();
+  _i2.List<_i3.VectorSegment> get segments => ((_i4.getProperty(
         this,
         'segments',
-      );
-  _i4.ReadonlyArray<_i3.VectorRegion>? get regions => _i5.getProperty(
+      )) as _i2.List)
+          .cast();
+  _i2.List<_i3.VectorRegion>? get regions => ((_i4.getProperty(
         this,
         'regions',
-      );
+      )) as _i2.List?)
+          ?.cast();
 }
 
 /* Source:  */
@@ -10980,11 +11089,11 @@ class VectorPath {
 }
 
 extension VectorPath$Typings on VectorPath {
-  _i2.Object get windingRule => _i5.getProperty(
+  _i2.Object get windingRule => _i4.getProperty(
         this,
         'windingRule',
       );
-  _i2.String get data => _i5.getProperty(
+  _i2.String get data => _i4.getProperty(
         this,
         'data',
       );
@@ -11011,12 +11120,12 @@ class LetterSpacing {
 }
 
 extension LetterSpacing$Typings on LetterSpacing {
-  _i2.num get value => _i5.getProperty(
+  _i2.num get value => _i4.getProperty(
         this,
         'value',
       );
   _i3.LetterSpacingUnitOptions get unit =>
-      _i3.LetterSpacingUnitOptions.values.byName(_i5.getProperty(
+      _i3.LetterSpacingUnitOptions.values.byName(_i4.getProperty(
         this,
         'unit',
       ));
@@ -11029,12 +11138,12 @@ extension LetterSpacing$Typings on LetterSpacing {
 class IInline29 {}
 
 extension IInline29$Typings on IInline29 {
-  _i2.num get value => _i5.getProperty(
+  _i2.num get value => _i4.getProperty(
         this,
         'value',
       );
   _i3.IInline29UnitOptions get unit =>
-      _i3.IInline29UnitOptions.values.byName(_i5.getProperty(
+      _i3.IInline29UnitOptions.values.byName(_i4.getProperty(
         this,
         'unit',
       ));
@@ -11045,19 +11154,19 @@ extension IInline29$Typings on IInline29 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline30 {
-  static _i2.String get unit => _i5.getProperty(
+  static _i2.String get unit => _i4.getProperty(
         _declaredIInline30,
         'unit',
       );
 }
 
-_i2.Object get _declaredIInline30 => _i5.getProperty(
+_i2.Object get _declaredIInline30 => _i4.getProperty(
       _self,
       'IInline30',
     );
 
 extension IInline30$Typings on IInline30 {
-  _i2.String get unit => _i5.getProperty(
+  _i2.String get unit => _i4.getProperty(
         this,
         'unit',
       );
@@ -11071,24 +11180,24 @@ class IInline31 {}
 
 extension IInline31$Typings on IInline31 {
   _i3.IInline31TypeOptions get type =>
-      _i3.IInline31TypeOptions.values.byName(_i5.getProperty(
+      _i3.IInline31TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
   set type(_i3.IInline31TypeOptions value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value.name,
     );
   }
 
-  _i2.String get value => _i5.getProperty(
+  _i2.String get value => _i4.getProperty(
         this,
         'value',
       );
   set value(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'value',
       value,
@@ -11104,12 +11213,12 @@ class IInline32 {}
 
 extension IInline32$Typings on IInline32 {
   _i3.IInline32TypeOptions get type =>
-      _i3.IInline32TypeOptions.values.byName(_i5.getProperty(
+      _i3.IInline32TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
   set type(_i3.IInline32TypeOptions value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value.name,
@@ -11129,12 +11238,12 @@ class Font {
 }
 
 extension Font$Typings on Font {
-  _i3.FontName get fontName => _i5.getProperty(
+  _i3.FontName get fontName => _i4.getProperty(
         this,
         'fontName',
       );
   set fontName(_i3.FontName value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fontName',
       value,
@@ -11150,12 +11259,12 @@ class IInline33 {}
 
 extension IInline33$Typings on IInline33 {
   _i3.IInline33TypeOptions get type =>
-      _i3.IInline33TypeOptions.values.byName(_i5.getProperty(
+      _i3.IInline33TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
   set type(_i3.IInline33TypeOptions value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value.name,
@@ -11205,27 +11314,27 @@ class StyledTextSegment {
     _i2.num? fontSize,
     _i3.FontName? fontName,
     _i2.num? fontWeight,
-    _i3.TextDecoration? textDecoration,
-    _i3.TextDecorationStyle? textDecorationStyle,
+    _i3.TextDecorationOptions? textDecoration,
+    _i3.TextDecorationStyleOptions? textDecorationStyle,
     _i2.Object? textDecorationOffset,
     _i2.Object? textDecorationThickness,
     _i2.Object? textDecorationColor,
     _i2.bool? textDecorationSkipInk,
-    _i3.TextCase? textCase,
+    _i3.TextCaseOptions? textCase,
     _i2.Object? lineHeight,
     _i3.LetterSpacing? letterSpacing,
     _i2.List<_i2.Object>? fills,
     _i2.String? textStyleId,
     _i2.String? fillStyleId,
-    _i3.TextListOptions? listOptions,
+    _i3.IInline32? listOptions,
     _i2.num? listSpacing,
     _i2.num? indentation,
     _i2.num? paragraphIndent,
     _i2.num? paragraphSpacing,
-    _i3.HyperlinkTarget? hyperlink,
+    _i3.IInline31? hyperlink,
     _i2.dynamic openTypeFeatures,
     _i2.dynamic boundVariables,
-    _i2.List<_i3.TextStyleOverrideType>? textStyleOverrides,
+    _i2.List<_i3.IInline33>? textStyleOverrides,
   }) =>
       StyledTextSegment._(
         characters: characters,
@@ -11234,28 +11343,24 @@ class StyledTextSegment {
         fontSize: fontSize,
         fontName: fontName ?? _i7.undefined,
         fontWeight: fontWeight,
-        textDecoration: textDecoration?.name ?? _i7.undefined,
-        textDecorationStyle:
-            textDecorationStyle?.name ?? _i7.undefined ?? _i7.undefined,
-        textDecorationOffset:
-            textDecorationOffset ?? _i7.undefined ?? _i7.undefined,
-        textDecorationThickness:
-            textDecorationThickness ?? _i7.undefined ?? _i7.undefined,
-        textDecorationColor:
-            textDecorationColor ?? _i7.undefined ?? _i7.undefined,
+        textDecoration: textDecoration?.name,
+        textDecorationStyle: textDecorationStyle?.name ?? _i7.undefined,
+        textDecorationOffset: textDecorationOffset ?? _i7.undefined,
+        textDecorationThickness: textDecorationThickness ?? _i7.undefined,
+        textDecorationColor: textDecorationColor ?? _i7.undefined,
         textDecorationSkipInk: textDecorationSkipInk ?? _i7.undefined,
-        textCase: textCase?.name ?? _i7.undefined,
-        lineHeight: lineHeight ?? _i7.undefined,
+        textCase: textCase?.name,
+        lineHeight: lineHeight,
         letterSpacing: letterSpacing ?? _i7.undefined,
         fills: fills,
         textStyleId: textStyleId,
         fillStyleId: fillStyleId,
-        listOptions: listOptions ?? _i7.undefined,
+        listOptions: listOptions,
         listSpacing: listSpacing,
         indentation: indentation,
         paragraphIndent: paragraphIndent,
         paragraphSpacing: paragraphSpacing,
-        hyperlink: hyperlink ?? _i7.undefined ?? _i7.undefined,
+        hyperlink: hyperlink ?? _i7.undefined,
         openTypeFeatures: openTypeFeatures,
         boundVariables: boundVariables,
         textStyleOverrides: textStyleOverrides,
@@ -11263,332 +11368,332 @@ class StyledTextSegment {
 }
 
 extension StyledTextSegment$Typings on StyledTextSegment {
-  _i2.String get characters => _i5.getProperty(
+  _i2.String get characters => _i4.getProperty(
         this,
         'characters',
       );
   set characters(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'characters',
       value,
     );
   }
 
-  _i2.num get start => _i5.getProperty(
+  _i2.num get start => _i4.getProperty(
         this,
         'start',
       );
   set start(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'start',
       value,
     );
   }
 
-  _i2.num get end => _i5.getProperty(
+  _i2.num get end => _i4.getProperty(
         this,
         'end',
       );
   set end(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'end',
       value,
     );
   }
 
-  _i2.num get fontSize => _i5.getProperty(
+  _i2.num get fontSize => _i4.getProperty(
         this,
         'fontSize',
       );
   set fontSize(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fontSize',
       value,
     );
   }
 
-  _i3.FontName get fontName => _i5.getProperty(
+  _i3.FontName get fontName => _i4.getProperty(
         this,
         'fontName',
       );
   set fontName(_i3.FontName value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fontName',
       value,
     );
   }
 
-  _i2.num get fontWeight => _i5.getProperty(
+  _i2.num get fontWeight => _i4.getProperty(
         this,
         'fontWeight',
       );
   set fontWeight(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fontWeight',
       value,
     );
   }
 
-  _i3.TextDecoration get textDecoration =>
-      _i3.TextDecorationOptions.values.byName(_i5.getProperty(
+  _i3.TextDecorationOptions get textDecoration =>
+      _i3.TextDecorationOptions.values.byName(_i4.getProperty(
         this,
         'textDecoration',
       ));
-  set textDecoration(_i3.TextDecoration value) {
-    _i5.setProperty(
+  set textDecoration(_i3.TextDecorationOptions value) {
+    _i4.setProperty(
       this,
       'textDecoration',
       value.name,
     );
   }
 
-  _i3.TextDecorationStyle? get textDecorationStyle => switch (_i5.getProperty(
+  _i3.TextDecorationStyleOptions? get textDecorationStyle =>
+      switch (_i4.getProperty(
         this,
         'textDecorationStyle',
       )) {
         _i2.String name => _i3.TextDecorationStyleOptions.values.byName(name),
         _ => null
       };
-  set textDecorationStyle(_i3.TextDecorationStyle? value) {
-    _i5.setProperty(
+  set textDecorationStyle(_i3.TextDecorationStyleOptions? value) {
+    _i4.setProperty(
       this,
       'textDecorationStyle',
-      value?.name ?? _i7.undefined ?? _i7.undefined,
+      value?.name ?? _i7.undefined,
     );
   }
 
-  _i2.Object? get textDecorationOffset => _i5.getProperty(
+  _i2.Object? get textDecorationOffset => _i4.getProperty(
         this,
         'textDecorationOffset',
       );
   set textDecorationOffset(_i2.Object? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textDecorationOffset',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  _i2.Object? get textDecorationThickness => _i5.getProperty(
+  _i2.Object? get textDecorationThickness => _i4.getProperty(
         this,
         'textDecorationThickness',
       );
   set textDecorationThickness(_i2.Object? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textDecorationThickness',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  _i2.Object? get textDecorationColor => _i5.getProperty(
+  _i2.Object? get textDecorationColor => _i4.getProperty(
         this,
         'textDecorationColor',
       );
   set textDecorationColor(_i2.Object? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textDecorationColor',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  _i2.bool? get textDecorationSkipInk => _i5.getProperty(
+  _i2.bool? get textDecorationSkipInk => _i4.getProperty(
         this,
         'textDecorationSkipInk',
       );
   set textDecorationSkipInk(_i2.bool? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textDecorationSkipInk',
       value ?? _i7.undefined,
     );
   }
 
-  _i3.TextCase get textCase =>
-      _i3.TextCaseOptions.values.byName(_i5.getProperty(
+  _i3.TextCaseOptions get textCase =>
+      _i3.TextCaseOptions.values.byName(_i4.getProperty(
         this,
         'textCase',
       ));
-  set textCase(_i3.TextCase value) {
-    _i5.setProperty(
+  set textCase(_i3.TextCaseOptions value) {
+    _i4.setProperty(
       this,
       'textCase',
       value.name,
     );
   }
 
-  _i2.Object get lineHeight => _i5.getProperty(
+  _i2.Object get lineHeight => _i4.getProperty(
         this,
         'lineHeight',
       );
   set lineHeight(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'lineHeight',
       value,
     );
   }
 
-  _i3.LetterSpacing get letterSpacing => _i5.getProperty(
+  _i3.LetterSpacing get letterSpacing => _i4.getProperty(
         this,
         'letterSpacing',
       );
   set letterSpacing(_i3.LetterSpacing value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'letterSpacing',
       value,
     );
   }
 
-  _i2.List<_i2.Object> get fills => ((_i5.getProperty(
+  _i2.List<_i2.Object> get fills => ((_i4.getProperty(
         this,
         'fills',
       )) as _i2.List)
           .cast();
   set fills(_i2.List<_i2.Object> value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fills',
       value,
     );
   }
 
-  _i2.String get textStyleId => _i5.getProperty(
+  _i2.String get textStyleId => _i4.getProperty(
         this,
         'textStyleId',
       );
   set textStyleId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textStyleId',
       value,
     );
   }
 
-  _i2.String get fillStyleId => _i5.getProperty(
+  _i2.String get fillStyleId => _i4.getProperty(
         this,
         'fillStyleId',
       );
   set fillStyleId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fillStyleId',
       value,
     );
   }
 
-  _i3.TextListOptions get listOptions => _i5.getProperty(
+  _i2.dynamic get listOptions => _i4.getProperty(
         this,
         'listOptions',
       );
-  set listOptions(_i3.TextListOptions value) {
-    _i5.setProperty(
+  set listOptions(_i2.dynamic value) {
+    _i4.setProperty(
       this,
       'listOptions',
       value,
     );
   }
 
-  _i2.num get listSpacing => _i5.getProperty(
+  _i2.num get listSpacing => _i4.getProperty(
         this,
         'listSpacing',
       );
   set listSpacing(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'listSpacing',
       value,
     );
   }
 
-  _i2.num get indentation => _i5.getProperty(
+  _i2.num get indentation => _i4.getProperty(
         this,
         'indentation',
       );
   set indentation(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'indentation',
       value,
     );
   }
 
-  _i2.num get paragraphIndent => _i5.getProperty(
+  _i2.num get paragraphIndent => _i4.getProperty(
         this,
         'paragraphIndent',
       );
   set paragraphIndent(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paragraphIndent',
       value,
     );
   }
 
-  _i2.num get paragraphSpacing => _i5.getProperty(
+  _i2.num get paragraphSpacing => _i4.getProperty(
         this,
         'paragraphSpacing',
       );
   set paragraphSpacing(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paragraphSpacing',
       value,
     );
   }
 
-  _i3.HyperlinkTarget? get hyperlink => _i5.getProperty(
+  _i2.dynamic get hyperlink => _i4.getProperty(
         this,
         'hyperlink',
       );
-  set hyperlink(_i3.HyperlinkTarget? value) {
-    _i5.setProperty(
+  set hyperlink(_i2.dynamic value) {
+    _i4.setProperty(
       this,
       'hyperlink',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  _i2.dynamic get openTypeFeatures => _i5.getProperty(
+  _i2.dynamic get openTypeFeatures => _i4.getProperty(
         this,
         'openTypeFeatures',
       );
   set openTypeFeatures(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'openTypeFeatures',
       value,
     );
   }
 
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
   set boundVariables(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'boundVariables',
       value,
     );
   }
 
-  _i2.List<_i3.TextStyleOverrideType> get textStyleOverrides =>
-      ((_i5.getProperty(
+  _i2.List<_i2.dynamic> get textStyleOverrides => ((_i4.getProperty(
         this,
         'textStyleOverrides',
       )) as _i2.List)
           .cast();
-  set textStyleOverrides(_i2.List<_i3.TextStyleOverrideType> value) {
-    _i5.setProperty(
+  set textStyleOverrides(_i2.List<_i2.dynamic> value) {
+    _i4.setProperty(
       this,
       'textStyleOverrides',
       value,
@@ -11603,40 +11708,40 @@ extension StyledTextSegment$Typings on StyledTextSegment {
 class IInline34 {}
 
 extension IInline34$Typings on IInline34 {
-  _i2.Object? get action => _i5.getProperty(
+  _i2.Object? get action => _i4.getProperty(
         this,
         'action',
       );
   set action(_i2.Object? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'action',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  _i2.List<_i2.Object>? get actions => ((_i5.getProperty(
+  _i2.List<_i2.Object>? get actions => ((_i4.getProperty(
         this,
         'actions',
       )) as _i2.List?)
           ?.cast();
   set actions(_i2.List<_i2.Object>? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'actions',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.Object? get trigger => _i5.getProperty(
+  _i2.Object? get trigger => _i4.getProperty(
         this,
         'trigger',
       );
   set trigger(_i2.Object? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'trigger',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -11652,36 +11757,36 @@ class Expression {
   });
 
   factory Expression({
-    _i3.ExpressionFunction? expressionFunction,
+    _i3.ExpressionFunctionOptions? expressionFunction,
     _i2.List<_i3.VariableData>? expressionArguments,
   }) =>
       Expression._(
-        expressionFunction: expressionFunction?.name ?? _i7.undefined,
+        expressionFunction: expressionFunction?.name,
         expressionArguments: expressionArguments,
       );
 }
 
 extension Expression$Typings on Expression {
-  _i3.ExpressionFunction get expressionFunction =>
-      _i3.ExpressionFunctionOptions.values.byName(_i5.getProperty(
+  _i3.ExpressionFunctionOptions get expressionFunction =>
+      _i3.ExpressionFunctionOptions.values.byName(_i4.getProperty(
         this,
         'expressionFunction',
       ));
-  set expressionFunction(_i3.ExpressionFunction value) {
-    _i5.setProperty(
+  set expressionFunction(_i3.ExpressionFunctionOptions value) {
+    _i4.setProperty(
       this,
       'expressionFunction',
       value.name,
     );
   }
 
-  _i2.List<_i3.VariableData> get expressionArguments => ((_i5.getProperty(
+  _i2.List<_i3.VariableData> get expressionArguments => ((_i4.getProperty(
         this,
         'expressionArguments',
       )) as _i2.List)
           .cast();
   set expressionArguments(_i2.List<_i3.VariableData> value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'expressionArguments',
       value,
@@ -11701,34 +11806,35 @@ class VariableData {
   });
 
   factory VariableData({
-    _i3.VariableDataType? type,
-    _i3.VariableResolvedDataType? resolvedType,
+    _i3.VariableDataTypeOptions? type,
+    _i3.VariableResolvedDataTypeOptions? resolvedType,
     _i2.Object? value,
   }) =>
       VariableData._(
-        type: type?.name ?? _i7.undefined,
-        resolvedType: resolvedType?.name ?? _i7.undefined,
-        value: value ?? _i7.undefined,
+        type: type?.name,
+        resolvedType: resolvedType?.name,
+        value: value,
       );
 }
 
 extension VariableData$Typings on VariableData {
-  _i3.VariableDataType? get type => switch (_i5.getProperty(
+  _i3.VariableDataTypeOptions? get type => switch (_i4.getProperty(
         this,
         'type',
       )) {
         _i2.String name => _i3.VariableDataTypeOptions.values.byName(name),
         _ => null
       };
-  set type(_i3.VariableDataType? value) {
-    _i5.setProperty(
+  set type(_i3.VariableDataTypeOptions? value) {
+    _i4.setProperty(
       this,
       'type',
-      value?.name ?? _i7.undefined ?? _i7.undefined,
+      value?.name ?? _i7.undefined,
     );
   }
 
-  _i3.VariableResolvedDataType? get resolvedType => switch (_i5.getProperty(
+  _i3.VariableResolvedDataTypeOptions? get resolvedType =>
+      switch (_i4.getProperty(
         this,
         'resolvedType',
       )) {
@@ -11736,23 +11842,23 @@ extension VariableData$Typings on VariableData {
           _i3.VariableResolvedDataTypeOptions.values.byName(name),
         _ => null
       };
-  set resolvedType(_i3.VariableResolvedDataType? value) {
-    _i5.setProperty(
+  set resolvedType(_i3.VariableResolvedDataTypeOptions? value) {
+    _i4.setProperty(
       this,
       'resolvedType',
-      value?.name ?? _i7.undefined ?? _i7.undefined,
+      value?.name ?? _i7.undefined,
     );
   }
 
-  _i2.Object? get value => _i5.getProperty(
+  _i2.Object? get value => _i4.getProperty(
         this,
         'value',
       );
   set value(_i2.Object? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'value',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -11764,25 +11870,25 @@ extension VariableData$Typings on VariableData {
 class IInline35 {}
 
 extension IInline35$Typings on IInline35 {
-  _i3.VariableData? get condition => _i5.getProperty(
+  _i3.VariableData? get condition => _i4.getProperty(
         this,
         'condition',
       );
   set condition(_i3.VariableData? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'condition',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.List<_i2.Object> get actions => ((_i5.getProperty(
+  _i2.List<_i2.Object> get actions => ((_i4.getProperty(
         this,
         'actions',
       )) as _i2.List)
           .cast();
   set actions(_i2.List<_i2.Object> value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'actions',
       value,
@@ -11798,24 +11904,24 @@ class IInline36 {}
 
 extension IInline36$Typings on IInline36 {
   _i3.IInline36TypeOptions get type =>
-      _i3.IInline36TypeOptions.values.byName(_i5.getProperty(
+      _i3.IInline36TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
   set type(_i3.IInline36TypeOptions value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value.name,
     );
   }
 
-  _i2.String? get description => _i5.getProperty(
+  _i2.String? get description => _i4.getProperty(
         this,
         'description',
       );
   set description(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'description',
       value ?? _i7.undefined,
@@ -11831,7 +11937,7 @@ class IInline37 {}
 
 extension IInline37$Typings on IInline37 {
   _i3.IInline37TypeOptions get type =>
-      _i3.IInline37TypeOptions.values.byName(_i5.getProperty(
+      _i3.IInline37TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
@@ -11842,40 +11948,40 @@ extension IInline37$Typings on IInline37 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline38 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline38,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline38 => _i5.getProperty(
+_i2.Object get _declaredIInline38 => _i4.getProperty(
       _self,
       'IInline38',
     );
 
 extension IInline38$Typings on IInline38 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.String get url => _i5.getProperty(
+  _i2.String get url => _i4.getProperty(
         this,
         'url',
       );
   set url(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'url',
       value,
     );
   }
 
-  _i2.bool? get openInNewTab => _i5.getProperty(
+  _i2.bool? get openInNewTab => _i4.getProperty(
         this,
         'openInNewTab',
       );
   set openInNewTab(_i2.bool? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'openInNewTab',
       value ?? _i7.undefined,
@@ -11888,28 +11994,28 @@ extension IInline38$Typings on IInline38 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline39 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline39,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline39 => _i5.getProperty(
+_i2.Object get _declaredIInline39 => _i4.getProperty(
       _self,
       'IInline39',
     );
 
 extension IInline39$Typings on IInline39 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.String? get destinationId => _i5.getProperty(
+  _i2.String? get destinationId => _i4.getProperty(
         this,
         'destinationId',
       );
   _i3.MediaAction get mediaAction =>
-      _i3.MediaAction.values.byName(_i5.getProperty(
+      _i3.MediaAction.values.byName(_i4.getProperty(
         this,
         'mediaAction',
       ));
@@ -11920,32 +12026,32 @@ extension IInline39$Typings on IInline39 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline40 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline40,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline40 => _i5.getProperty(
+_i2.Object get _declaredIInline40 => _i4.getProperty(
       _self,
       'IInline40',
     );
 
 extension IInline40$Typings on IInline40 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.String? get destinationId => _i5.getProperty(
+  _i2.String? get destinationId => _i4.getProperty(
         this,
         'destinationId',
       );
   _i3.MediaActionOptions get mediaAction =>
-      _i3.MediaActionOptions.values.byName(_i5.getProperty(
+      _i3.MediaActionOptions.values.byName(_i4.getProperty(
         this,
         'mediaAction',
       ));
-  _i2.num get amountToSkip => _i5.getProperty(
+  _i2.num get amountToSkip => _i4.getProperty(
         this,
         'amountToSkip',
       );
@@ -11956,35 +12062,35 @@ extension IInline40$Typings on IInline40 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline41 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline41,
         'type',
       );
-  static _i2.String get mediaAction => _i5.getProperty(
+  static _i2.String get mediaAction => _i4.getProperty(
         _declaredIInline41,
         'mediaAction',
       );
 }
 
-_i2.Object get _declaredIInline41 => _i5.getProperty(
+_i2.Object get _declaredIInline41 => _i4.getProperty(
       _self,
       'IInline41',
     );
 
 extension IInline41$Typings on IInline41 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.String? get destinationId => _i5.getProperty(
+  _i2.String? get destinationId => _i4.getProperty(
         this,
         'destinationId',
       );
-  _i2.String get mediaAction => _i5.getProperty(
+  _i2.String get mediaAction => _i4.getProperty(
         this,
         'mediaAction',
       );
-  _i2.num get newTimestamp => _i5.getProperty(
+  _i2.num get newTimestamp => _i4.getProperty(
         this,
         'newTimestamp',
       );
@@ -11995,27 +12101,27 @@ extension IInline41$Typings on IInline41 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline42 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline42,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline42 => _i5.getProperty(
+_i2.Object get _declaredIInline42 => _i4.getProperty(
       _self,
       'IInline42',
     );
 
 extension IInline42$Typings on IInline42 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.String? get variableId => _i5.getProperty(
+  _i2.String? get variableId => _i4.getProperty(
         this,
         'variableId',
       );
-  _i3.VariableData? get variableValue => _i5.getProperty(
+  _i3.VariableData? get variableValue => _i4.getProperty(
         this,
         'variableValue',
       );
@@ -12026,27 +12132,27 @@ extension IInline42$Typings on IInline42 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline43 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline43,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline43 => _i5.getProperty(
+_i2.Object get _declaredIInline43 => _i4.getProperty(
       _self,
       'IInline43',
     );
 
 extension IInline43$Typings on IInline43 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.String? get variableCollectionId => _i5.getProperty(
+  _i2.String? get variableCollectionId => _i4.getProperty(
         this,
         'variableCollectionId',
       );
-  _i2.String? get variableModeId => _i5.getProperty(
+  _i2.String? get variableModeId => _i4.getProperty(
         this,
         'variableModeId',
       );
@@ -12057,23 +12163,23 @@ extension IInline43$Typings on IInline43 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline44 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline44,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline44 => _i5.getProperty(
+_i2.Object get _declaredIInline44 => _i4.getProperty(
       _self,
       'IInline44',
     );
 
 extension IInline44$Typings on IInline44 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.List<_i3.ConditionalBlock> get conditionalBlocks => ((_i5.getProperty(
+  _i2.List<_i2.dynamic> get conditionalBlocks => ((_i4.getProperty(
         this,
         'conditionalBlocks',
       )) as _i2.List)
@@ -12085,52 +12191,52 @@ extension IInline44$Typings on IInline44 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline45 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline45,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline45 => _i5.getProperty(
+_i2.Object get _declaredIInline45 => _i4.getProperty(
       _self,
       'IInline45',
     );
 
 extension IInline45$Typings on IInline45 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.String? get destinationId => _i5.getProperty(
+  _i2.String? get destinationId => _i4.getProperty(
         this,
         'destinationId',
       );
-  _i3.Navigation get navigation =>
-      _i3.NavigationOptions.values.byName(_i5.getProperty(
+  _i3.NavigationOptions get navigation =>
+      _i3.NavigationOptions.values.byName(_i4.getProperty(
         this,
         'navigation',
       ));
-  _i2.Object? get transition => _i5.getProperty(
+  _i2.Object? get transition => _i4.getProperty(
         this,
         'transition',
       );
-  _i2.bool? get preserveScrollPosition => _i5.getProperty(
+  _i2.bool? get preserveScrollPosition => _i4.getProperty(
         this,
         'preserveScrollPosition',
       );
-  _i3.Vector? get overlayRelativePosition => _i5.getProperty(
+  _i3.Vector? get overlayRelativePosition => _i4.getProperty(
         this,
         'overlayRelativePosition',
       );
-  _i2.bool? get resetVideoPosition => _i5.getProperty(
+  _i2.bool? get resetVideoPosition => _i4.getProperty(
         this,
         'resetVideoPosition',
       );
-  _i2.bool? get resetScrollPosition => _i5.getProperty(
+  _i2.bool? get resetScrollPosition => _i4.getProperty(
         this,
         'resetScrollPosition',
       );
-  _i2.bool? get resetInteractiveComponents => _i5.getProperty(
+  _i2.bool? get resetInteractiveComponents => _i4.getProperty(
         this,
         'resetInteractiveComponents',
       );
@@ -12161,15 +12267,15 @@ class SimpleTransition {
 
 extension SimpleTransition$Typings on SimpleTransition {
   _i3.SimpleTransitionTypeOptions get type =>
-      _i3.SimpleTransitionTypeOptions.values.byName(_i5.getProperty(
+      _i3.SimpleTransitionTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  _i3.Easing get easing => _i5.getProperty(
+  _i3.Easing get easing => _i4.getProperty(
         this,
         'easing',
       );
-  _i2.num get duration => _i5.getProperty(
+  _i2.num get duration => _i4.getProperty(
         this,
         'duration',
       );
@@ -12206,23 +12312,23 @@ class DirectionalTransition {
 
 extension DirectionalTransition$Typings on DirectionalTransition {
   _i3.DirectionalTransitionTypeOptions get type =>
-      _i3.DirectionalTransitionTypeOptions.values.byName(_i5.getProperty(
+      _i3.DirectionalTransitionTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  _i3.Direction get direction => _i3.Direction.values.byName(_i5.getProperty(
+  _i3.Direction get direction => _i3.Direction.values.byName(_i4.getProperty(
         this,
         'direction',
       ));
-  _i2.bool get matchLayers => _i5.getProperty(
+  _i2.bool get matchLayers => _i4.getProperty(
         this,
         'matchLayers',
       );
-  _i3.Easing get easing => _i5.getProperty(
+  _i3.Easing get easing => _i4.getProperty(
         this,
         'easing',
       );
-  _i2.num get duration => _i5.getProperty(
+  _i2.num get duration => _i4.getProperty(
         this,
         'duration',
       );
@@ -12236,7 +12342,7 @@ class IInline46 {}
 
 extension IInline46$Typings on IInline46 {
   _i3.IInline46TypeOptions get type =>
-      _i3.IInline46TypeOptions.values.byName(_i5.getProperty(
+      _i3.IInline46TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
@@ -12247,23 +12353,23 @@ extension IInline46$Typings on IInline46 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline47 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline47,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline47 => _i5.getProperty(
+_i2.Object get _declaredIInline47 => _i4.getProperty(
       _self,
       'IInline47',
     );
 
 extension IInline47$Typings on IInline47 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.num get timeout => _i5.getProperty(
+  _i2.num get timeout => _i4.getProperty(
         this,
         'timeout',
       );
@@ -12277,11 +12383,11 @@ class IInline48 {}
 
 extension IInline48$Typings on IInline48 {
   _i3.IInline48TypeOptions get type =>
-      _i3.IInline48TypeOptions.values.byName(_i5.getProperty(
+      _i3.IInline48TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  _i2.num get delay => _i5.getProperty(
+  _i2.num get delay => _i4.getProperty(
         this,
         'delay',
       );
@@ -12295,15 +12401,15 @@ class IInline49 {}
 
 extension IInline49$Typings on IInline49 {
   _i3.IInline49TypeOptions get type =>
-      _i3.IInline49TypeOptions.values.byName(_i5.getProperty(
+      _i3.IInline49TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  _i2.num get delay => _i5.getProperty(
+  _i2.num get delay => _i4.getProperty(
         this,
         'delay',
       );
-  _i2.bool get deprecatedVersion => _i5.getProperty(
+  _i2.bool get deprecatedVersion => _i4.getProperty(
         this,
         'deprecatedVersion',
       );
@@ -12314,30 +12420,31 @@ extension IInline49$Typings on IInline49 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline50 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline50,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline50 => _i5.getProperty(
+_i2.Object get _declaredIInline50 => _i4.getProperty(
       _self,
       'IInline50',
     );
 
 extension IInline50$Typings on IInline50 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.Device get device => _i3.Device.values.byName(_i5.getProperty(
+  _i3.Device get device => _i3.Device.values.byName(_i4.getProperty(
         this,
         'device',
       ));
-  _i4.ReadonlyArray<_i2.num> get keyCodes => _i5.getProperty(
+  _i2.List<_i2.num> get keyCodes => ((_i4.getProperty(
         this,
         'keyCodes',
-      );
+      )) as _i2.List)
+          .cast();
 }
 
 /* Source:  */
@@ -12345,23 +12452,23 @@ extension IInline50$Typings on IInline50 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline51 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline51,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline51 => _i5.getProperty(
+_i2.Object get _declaredIInline51 => _i4.getProperty(
       _self,
       'IInline51',
     );
 
 extension IInline51$Typings on IInline51 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.num get mediaHitTime => _i5.getProperty(
+  _i2.num get mediaHitTime => _i4.getProperty(
         this,
         'mediaHitTime',
       );
@@ -12372,19 +12479,19 @@ extension IInline51$Typings on IInline51 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline52 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline52,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline52 => _i5.getProperty(
+_i2.Object get _declaredIInline52 => _i4.getProperty(
       _self,
       'IInline52',
     );
 
 extension IInline52$Typings on IInline52 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
@@ -12415,15 +12522,15 @@ class Easing {
 
 extension Easing$Typings on Easing {
   _i3.EasingTypeOptions get type =>
-      _i3.EasingTypeOptions.values.byName(_i5.getProperty(
+      _i3.EasingTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  _i3.EasingFunctionBezier? get easingFunctionCubicBezier => _i5.getProperty(
+  _i3.EasingFunctionBezier? get easingFunctionCubicBezier => _i4.getProperty(
         this,
         'easingFunctionCubicBezier',
       );
-  _i3.EasingFunctionSpring? get easingFunctionSpring => _i5.getProperty(
+  _i3.EasingFunctionSpring? get easingFunctionSpring => _i4.getProperty(
         this,
         'easingFunctionSpring',
       );
@@ -12456,48 +12563,48 @@ class EasingFunctionBezier {
 }
 
 extension EasingFunctionBezier$Typings on EasingFunctionBezier {
-  _i2.num get x1 => _i5.getProperty(
+  _i2.num get x1 => _i4.getProperty(
         this,
         'x1',
       );
   set x1(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'x1',
       value,
     );
   }
 
-  _i2.num get y1 => _i5.getProperty(
+  _i2.num get y1 => _i4.getProperty(
         this,
         'y1',
       );
   set y1(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'y1',
       value,
     );
   }
 
-  _i2.num get x2 => _i5.getProperty(
+  _i2.num get x2 => _i4.getProperty(
         this,
         'x2',
       );
   set x2(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'x2',
       value,
     );
   }
 
-  _i2.num get y2 => _i5.getProperty(
+  _i2.num get y2 => _i4.getProperty(
         this,
         'y2',
       );
   set y2(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'y2',
       value,
@@ -12532,48 +12639,48 @@ class EasingFunctionSpring {
 }
 
 extension EasingFunctionSpring$Typings on EasingFunctionSpring {
-  _i2.num get mass => _i5.getProperty(
+  _i2.num get mass => _i4.getProperty(
         this,
         'mass',
       );
   set mass(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'mass',
       value,
     );
   }
 
-  _i2.num get stiffness => _i5.getProperty(
+  _i2.num get stiffness => _i4.getProperty(
         this,
         'stiffness',
       );
   set stiffness(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'stiffness',
       value,
     );
   }
 
-  _i2.num get damping => _i5.getProperty(
+  _i2.num get damping => _i4.getProperty(
         this,
         'damping',
       );
   set damping(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'damping',
       value,
     );
   }
 
-  _i2.num get initialVelocity => _i5.getProperty(
+  _i2.num get initialVelocity => _i4.getProperty(
         this,
         'initialVelocity',
       );
   set initialVelocity(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'initialVelocity',
       value,
@@ -12586,19 +12693,19 @@ extension EasingFunctionSpring$Typings on EasingFunctionSpring {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline53 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline53,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline53 => _i5.getProperty(
+_i2.Object get _declaredIInline53 => _i4.getProperty(
       _self,
       'IInline53',
     );
 
 extension IInline53$Typings on IInline53 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
@@ -12609,23 +12716,23 @@ extension IInline53$Typings on IInline53 {
 @_i1.staticInterop
 @_i1.anonymous
 class IInline54 {
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredIInline54,
         'type',
       );
 }
 
-_i2.Object get _declaredIInline54 => _i5.getProperty(
+_i2.Object get _declaredIInline54 => _i4.getProperty(
       _self,
       'IInline54',
     );
 
 extension IInline54$Typings on IInline54 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.Rgba get color => _i5.getProperty(
+  _i3.Rgba get color => _i4.getProperty(
         this,
         'color',
       );
@@ -12638,24 +12745,24 @@ extension IInline54$Typings on IInline54 {
 class IInline55 {}
 
 extension IInline55$Typings on IInline55 {
-  _i2.num get x => _i5.getProperty(
+  _i2.num get x => _i4.getProperty(
         this,
         'x',
       );
   set x(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'x',
       value,
     );
   }
 
-  _i2.num get y => _i5.getProperty(
+  _i2.num get y => _i4.getProperty(
         this,
         'y',
       );
   set y(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'y',
       value,
@@ -12675,12 +12782,12 @@ class ConnectorEndpointPosition {
 }
 
 extension ConnectorEndpointPosition$Typings on ConnectorEndpointPosition {
-  _i2.dynamic get position => _i5.getProperty(
+  _i2.dynamic get position => _i4.getProperty(
         this,
         'position',
       );
   set position(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'position',
       value,
@@ -12695,24 +12802,24 @@ extension ConnectorEndpointPosition$Typings on ConnectorEndpointPosition {
 class IInline56 {}
 
 extension IInline56$Typings on IInline56 {
-  _i2.num get x => _i5.getProperty(
+  _i2.num get x => _i4.getProperty(
         this,
         'x',
       );
   set x(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'x',
       value,
     );
   }
 
-  _i2.num get y => _i5.getProperty(
+  _i2.num get y => _i4.getProperty(
         this,
         'y',
       );
   set y(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'y',
       value,
@@ -12742,24 +12849,24 @@ class ConnectorEndpointPositionAndEndpointNodeId {
 
 extension ConnectorEndpointPositionAndEndpointNodeId$Typings
     on ConnectorEndpointPositionAndEndpointNodeId {
-  _i2.dynamic get position => _i5.getProperty(
+  _i2.dynamic get position => _i4.getProperty(
         this,
         'position',
       );
   set position(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'position',
       value,
     );
   }
 
-  _i2.String get endpointNodeId => _i5.getProperty(
+  _i2.String get endpointNodeId => _i4.getProperty(
         this,
         'endpointNodeId',
       );
   set endpointNodeId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'endpointNodeId',
       value,
@@ -12789,24 +12896,24 @@ class ConnectorEndpointEndpointNodeIdAndMagnet {
 
 extension ConnectorEndpointEndpointNodeIdAndMagnet$Typings
     on ConnectorEndpointEndpointNodeIdAndMagnet {
-  _i2.String get endpointNodeId => _i5.getProperty(
+  _i2.String get endpointNodeId => _i4.getProperty(
         this,
         'endpointNodeId',
       );
   set endpointNodeId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'endpointNodeId',
       value,
     );
   }
 
-  _i3.Magnet get magnet => _i3.Magnet.values.byName(_i5.getProperty(
+  _i3.Magnet get magnet => _i3.Magnet.values.byName(_i4.getProperty(
         this,
         'magnet',
       ));
   set magnet(_i3.Magnet value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'magnet',
       value.name,
@@ -12885,7 +12992,7 @@ class BaseNodeMixin implements _i3.PluginDataMixin, _i3.DevResourcesMixin {
     _i2.Future<void> Function(_i2.String)? deleteDevResourceAsync,
     _i2.Future<void> Function(
       _i2.String,
-      _i3.PlainTextElement,
+      _i2.dynamic,
     )? setDevResourcePreviewAsync,
   }) =>
       BaseNodeMixin._(
@@ -12894,89 +13001,89 @@ class BaseNodeMixin implements _i3.PluginDataMixin, _i3.DevResourcesMixin {
         name: name,
         removed: removed,
         isAsset: isAsset,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+        toString$: toString$ == null ? null : _i4.allowInterop(toString$),
+        remove: remove == null ? null : _i4.allowInterop(remove),
         setRelaunchData:
-            setRelaunchData == null ? null : _i5.allowInterop(setRelaunchData),
+            setRelaunchData == null ? null : _i4.allowInterop(setRelaunchData),
         getRelaunchData:
-            getRelaunchData == null ? null : _i5.allowInterop(getRelaunchData),
-        getCSSAsync: getCSSAsync == null ? null : _i5.allowInterop(getCSSAsync),
+            getRelaunchData == null ? null : _i4.allowInterop(getRelaunchData),
+        getCSSAsync: getCSSAsync == null ? null : _i4.allowInterop(getCSSAsync),
         getTopLevelFrame: getTopLevelFrame == null
             ? null
-            : _i5.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
+            : _i4.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
         getPluginData:
-            getPluginData == null ? null : _i5.allowInterop(getPluginData),
+            getPluginData == null ? null : _i4.allowInterop(getPluginData),
         setPluginData:
-            setPluginData == null ? null : _i5.allowInterop(setPluginData),
+            setPluginData == null ? null : _i4.allowInterop(setPluginData),
         getPluginDataKeys: getPluginDataKeys == null
             ? null
-            : _i5.allowInterop(getPluginDataKeys),
+            : _i4.allowInterop(getPluginDataKeys),
         getSharedPluginData: getSharedPluginData == null
             ? null
-            : _i5.allowInterop(getSharedPluginData),
+            : _i4.allowInterop(getSharedPluginData),
         setSharedPluginData: setSharedPluginData == null
             ? null
-            : _i5.allowInterop(setSharedPluginData),
+            : _i4.allowInterop(setSharedPluginData),
         getSharedPluginDataKeys: getSharedPluginDataKeys == null
             ? null
-            : _i5.allowInterop(getSharedPluginDataKeys),
+            : _i4.allowInterop(getSharedPluginDataKeys),
         getDevResourcesAsync: getDevResourcesAsync == null
             ? null
-            : _i5.allowInterop(getDevResourcesAsync),
+            : _i4.allowInterop(getDevResourcesAsync),
         addDevResourceAsync: addDevResourceAsync == null
             ? null
-            : _i5.allowInterop(addDevResourceAsync),
+            : _i4.allowInterop(addDevResourceAsync),
         editDevResourceAsync: editDevResourceAsync == null
             ? null
-            : _i5.allowInterop(editDevResourceAsync),
+            : _i4.allowInterop(editDevResourceAsync),
         deleteDevResourceAsync: deleteDevResourceAsync == null
             ? null
-            : _i5.allowInterop(deleteDevResourceAsync),
+            : _i4.allowInterop(deleteDevResourceAsync),
         setDevResourcePreviewAsync: setDevResourcePreviewAsync == null
             ? null
-            : _i5.allowInterop(setDevResourcePreviewAsync),
+            : _i4.allowInterop(setDevResourcePreviewAsync),
       );
 }
 
 extension BaseNodeMixin$Typings on BaseNodeMixin {
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
-  _Intersection7? get parent => _i5.getProperty(
+  _Intersection7? get parent => _i4.getProperty(
         this,
         'parent',
       );
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
     );
   }
 
-  _i2.bool get removed => _i5.getProperty(
+  _i2.bool get removed => _i4.getProperty(
         this,
         'removed',
       );
-  _i2.bool get isAsset => _i5.getProperty(
+  _i2.bool get isAsset => _i4.getProperty(
         this,
         'isAsset',
       );
   set toString$(_i2.String Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'toString',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.String Function() get toString$ => () => _i5.callMethod(
-        _i5.getProperty(
+  _i2.String Function() get toString$ => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'toString',
         ),
@@ -12984,15 +13091,15 @@ extension BaseNodeMixin$Typings on BaseNodeMixin {
         [this],
       );
   set remove(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'remove',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get remove => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get remove => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'remove',
         ),
@@ -13000,16 +13107,16 @@ extension BaseNodeMixin$Typings on BaseNodeMixin {
         [this],
       );
   set setRelaunchData(void Function(_i2.Object) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRelaunchData',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(_i2.Object) get setRelaunchData =>
-      (_i2.Object p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.Object p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRelaunchData',
             ),
@@ -13020,15 +13127,15 @@ extension BaseNodeMixin$Typings on BaseNodeMixin {
             ],
           );
   set getRelaunchData(_i2.Object Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRelaunchData',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Object Function() get getRelaunchData => () => _i5.callMethod(
-        _i5.getProperty(
+  _i2.Object Function() get getRelaunchData => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'getRelaunchData',
         ),
@@ -13036,16 +13143,16 @@ extension BaseNodeMixin$Typings on BaseNodeMixin {
         [this],
       );
   set getCSSAsync(_i2.Future<_i2.Object> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getCSSAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.Object> Function() get getCSSAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getCSSAsync',
             ),
@@ -13053,15 +13160,15 @@ extension BaseNodeMixin$Typings on BaseNodeMixin {
             [this],
           ));
   set getTopLevelFrame(_i3.FrameNode? Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getTopLevelFrame',
-      _i5.allowInterop(() => () => value() ?? _i7.undefined),
+      _i4.allowInterop(() => () => value() ?? _i7.undefined),
     );
   }
 
-  _i3.FrameNode? Function() get getTopLevelFrame => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.FrameNode? Function() get getTopLevelFrame => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'getTopLevelFrame',
         ),
@@ -13104,36 +13211,36 @@ class PluginDataMixin {
   }) =>
       PluginDataMixin._(
         getPluginData:
-            getPluginData == null ? null : _i5.allowInterop(getPluginData),
+            getPluginData == null ? null : _i4.allowInterop(getPluginData),
         setPluginData:
-            setPluginData == null ? null : _i5.allowInterop(setPluginData),
+            setPluginData == null ? null : _i4.allowInterop(setPluginData),
         getPluginDataKeys: getPluginDataKeys == null
             ? null
-            : _i5.allowInterop(getPluginDataKeys),
+            : _i4.allowInterop(getPluginDataKeys),
         getSharedPluginData: getSharedPluginData == null
             ? null
-            : _i5.allowInterop(getSharedPluginData),
+            : _i4.allowInterop(getSharedPluginData),
         setSharedPluginData: setSharedPluginData == null
             ? null
-            : _i5.allowInterop(setSharedPluginData),
+            : _i4.allowInterop(setSharedPluginData),
         getSharedPluginDataKeys: getSharedPluginDataKeys == null
             ? null
-            : _i5.allowInterop(getSharedPluginDataKeys),
+            : _i4.allowInterop(getSharedPluginDataKeys),
       );
 }
 
 extension PluginDataMixin$Typings on PluginDataMixin {
   set getPluginData(_i2.String Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getPluginData',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.String Function(_i2.String) get getPluginData =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'getPluginData',
             ),
@@ -13148,10 +13255,10 @@ extension PluginDataMixin$Typings on PluginDataMixin {
         _i2.String,
         _i2.String,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setPluginData',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -13162,8 +13269,8 @@ extension PluginDataMixin$Typings on PluginDataMixin {
         _i2.String p0,
         _i2.String p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setPluginData',
             ),
@@ -13175,16 +13282,16 @@ extension PluginDataMixin$Typings on PluginDataMixin {
             ],
           );
   set getPluginDataKeys(_i2.List<_i2.String> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getPluginDataKeys',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.List<_i2.String> Function() get getPluginDataKeys =>
-      () => ((_i5.callMethod(
-            _i5.getProperty(
+      () => ((_i4.callMethod(
+            _i4.getProperty(
               this,
               'getPluginDataKeys',
             ),
@@ -13197,10 +13304,10 @@ extension PluginDataMixin$Typings on PluginDataMixin {
         _i2.String,
         _i2.String,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getSharedPluginData',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -13211,8 +13318,8 @@ extension PluginDataMixin$Typings on PluginDataMixin {
         _i2.String p0,
         _i2.String p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getSharedPluginData',
             ),
@@ -13229,10 +13336,10 @@ extension PluginDataMixin$Typings on PluginDataMixin {
         _i2.String,
         _i2.String,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setSharedPluginData',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -13245,8 +13352,8 @@ extension PluginDataMixin$Typings on PluginDataMixin {
         _i2.String p1,
         _i2.String p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setSharedPluginData',
             ),
@@ -13259,16 +13366,16 @@ extension PluginDataMixin$Typings on PluginDataMixin {
             ],
           );
   set getSharedPluginDataKeys(_i2.List<_i2.String> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getSharedPluginDataKeys',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.List<_i2.String> Function(_i2.String) get getSharedPluginDataKeys =>
-      (_i2.String p0) => ((_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => ((_i4.callMethod(
+            _i4.getProperty(
               this,
               'getSharedPluginDataKeys',
             ),
@@ -13288,12 +13395,12 @@ extension PluginDataMixin$Typings on PluginDataMixin {
 class IInline60 {}
 
 extension IInline60$Typings on IInline60 {
-  _i2.bool? get includeChildren => _i5.getProperty(
+  _i2.bool? get includeChildren => _i4.getProperty(
         this,
         'includeChildren',
       );
   set includeChildren(_i2.bool? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'includeChildren',
       value ?? _i7.undefined,
@@ -13308,24 +13415,24 @@ extension IInline60$Typings on IInline60 {
 class IInline61 {}
 
 extension IInline61$Typings on IInline61 {
-  _i2.String? get name => _i5.getProperty(
+  _i2.String? get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.String? get url => _i5.getProperty(
+  _i2.String? get url => _i4.getProperty(
         this,
         'url',
       );
   set url(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'url',
       value ?? _i7.undefined,
@@ -13360,25 +13467,25 @@ class DevResourcesMixin {
     _i2.Future<void> Function(_i2.String)? deleteDevResourceAsync,
     _i2.Future<void> Function(
       _i2.String,
-      _i3.PlainTextElement,
+      _i2.dynamic,
     )? setDevResourcePreviewAsync,
   }) =>
       DevResourcesMixin._(
         getDevResourcesAsync: getDevResourcesAsync == null
             ? null
-            : _i5.allowInterop(getDevResourcesAsync),
+            : _i4.allowInterop(getDevResourcesAsync),
         addDevResourceAsync: addDevResourceAsync == null
             ? null
-            : _i5.allowInterop(addDevResourceAsync),
+            : _i4.allowInterop(addDevResourceAsync),
         editDevResourceAsync: editDevResourceAsync == null
             ? null
-            : _i5.allowInterop(editDevResourceAsync),
+            : _i4.allowInterop(editDevResourceAsync),
         deleteDevResourceAsync: deleteDevResourceAsync == null
             ? null
-            : _i5.allowInterop(deleteDevResourceAsync),
+            : _i4.allowInterop(deleteDevResourceAsync),
         setDevResourcePreviewAsync: setDevResourcePreviewAsync == null
             ? null
-            : _i5.allowInterop(setDevResourcePreviewAsync),
+            : _i4.allowInterop(setDevResourcePreviewAsync),
       );
 }
 
@@ -13386,17 +13493,17 @@ extension DevResourcesMixin$Typings on DevResourcesMixin {
   set getDevResourcesAsync(
       _i2.Future<_i2.List<_i3.DevResourceWithNodeId>> Function([_i2.dynamic])
           value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getDevResourcesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.DevResourceWithNodeId>> Function([_i2.dynamic])
       get getDevResourcesAsync =>
-          ([_i2.dynamic p0]) => _i5.promiseToFuture(_i5.callMethod(
-                _i5.getProperty(
+          ([_i2.dynamic p0]) => _i4.promiseToFuture(_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'getDevResourcesAsync',
                 ),
@@ -13411,10 +13518,10 @@ extension DevResourcesMixin$Typings on DevResourcesMixin {
         _i2.String, [
         _i2.String?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'addDevResourceAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -13425,8 +13532,8 @@ extension DevResourcesMixin$Typings on DevResourcesMixin {
         _i2.String p0, [
         _i2.String? p1,
       ]) =>
-          _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+          _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'addDevResourceAsync',
             ),
@@ -13442,10 +13549,10 @@ extension DevResourcesMixin$Typings on DevResourcesMixin {
         _i2.String,
         _i2.dynamic,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'editDevResourceAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -13456,8 +13563,8 @@ extension DevResourcesMixin$Typings on DevResourcesMixin {
         _i2.String p0,
         _i2.dynamic p1,
       ) =>
-          _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+          _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'editDevResourceAsync',
             ),
@@ -13469,16 +13576,16 @@ extension DevResourcesMixin$Typings on DevResourcesMixin {
             ],
           ));
   set deleteDevResourceAsync(_i2.Future<void> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'deleteDevResourceAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(_i2.String) get deleteDevResourceAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'deleteDevResourceAsync',
             ),
@@ -13491,24 +13598,24 @@ extension DevResourcesMixin$Typings on DevResourcesMixin {
   set setDevResourcePreviewAsync(
       _i2.Future<void> Function(
         _i2.String,
-        _i3.PlainTextElement,
+        _i2.dynamic,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setDevResourcePreviewAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(
     _i2.String,
-    _i3.PlainTextElement,
+    _i2.dynamic,
   ) get setDevResourcePreviewAsync => (
         _i2.String p0,
-        _i3.PlainTextElement p1,
+        _i2.dynamic p1,
       ) =>
-          _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+          _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setDevResourcePreviewAsync',
             ),
@@ -13528,20 +13635,20 @@ extension DevResourcesMixin$Typings on DevResourcesMixin {
 class DevStatusMixin {
   external factory DevStatusMixin._({_i2.dynamic devStatus});
 
-  factory DevStatusMixin({_i3.DevStatus? devStatus}) =>
-      DevStatusMixin._(devStatus: devStatus ?? _i7.undefined);
+  factory DevStatusMixin({_i3.IInline36? devStatus}) =>
+      DevStatusMixin._(devStatus: devStatus);
 }
 
 extension DevStatusMixin$Typings on DevStatusMixin {
-  _i3.DevStatus get devStatus => _i5.getProperty(
+  _i2.dynamic get devStatus => _i4.getProperty(
         this,
         'devStatus',
       );
-  set devStatus(_i3.DevStatus value) {
-    _i5.setProperty(
+  set devStatus(_i2.dynamic value) {
+    _i4.setProperty(
       this,
       'devStatus',
-      value ?? _i7.undefined,
+      value,
     );
   }
 }
@@ -13553,31 +13660,31 @@ extension DevStatusMixin$Typings on DevStatusMixin {
 class IInline62 {}
 
 extension IInline62$Typings on IInline62 {
-  _i2.List<_i3.VariableAlias>? get fills => ((_i5.getProperty(
+  _i2.List<_i3.VariableAlias>? get fills => ((_i4.getProperty(
         this,
         'fills',
       )) as _i2.List?)
           ?.cast();
-  _i2.List<_i3.VariableAlias>? get strokes => ((_i5.getProperty(
+  _i2.List<_i3.VariableAlias>? get strokes => ((_i4.getProperty(
         this,
         'strokes',
       )) as _i2.List?)
           ?.cast();
-  _i2.List<_i3.VariableAlias>? get effects => ((_i5.getProperty(
+  _i2.List<_i3.VariableAlias>? get effects => ((_i4.getProperty(
         this,
         'effects',
       )) as _i2.List?)
           ?.cast();
-  _i2.List<_i3.VariableAlias>? get layoutGrids => ((_i5.getProperty(
+  _i2.List<_i3.VariableAlias>? get layoutGrids => ((_i4.getProperty(
         this,
         'layoutGrids',
       )) as _i2.List?)
           ?.cast();
-  _i2.Object? get componentProperties => _i5.getProperty(
+  _i2.Object? get componentProperties => _i4.getProperty(
         this,
         'componentProperties',
       );
-  _i2.List<_i3.VariableAlias>? get textRangeFills => ((_i5.getProperty(
+  _i2.List<_i3.VariableAlias>? get textRangeFills => ((_i4.getProperty(
         this,
         'textRangeFills',
       )) as _i2.List?)
@@ -13591,14 +13698,14 @@ extension IInline62$Typings on IInline62 {
 class IInline64 {}
 
 extension IInline64$Typings on IInline64 {
-  _i2.List<_i2.List<_i3.VariableAlias>>? get fills => ((_i5.getProperty(
+  _i2.List<_i2.List<_i3.VariableAlias>>? get fills => ((_i4.getProperty(
         this,
         'fills',
       )) as _i2.List?)
           ?.map((i) =>
               ((((i) as _i2.List).cast()) as _i2.List<_i3.VariableAlias>))
           .toList();
-  _i2.List<_i2.List<_i3.VariableAlias>>? get strokes => ((_i5.getProperty(
+  _i2.List<_i2.List<_i3.VariableAlias>>? get strokes => ((_i4.getProperty(
         this,
         'strokes',
       )) as _i2.List?)
@@ -13627,7 +13734,7 @@ class SceneNodeMixin implements _i3.ExplicitVariableModesMixin {
   factory SceneNodeMixin({
     _i2.bool? visible,
     _i2.bool? locked,
-    _i2.List<_i3.SceneNode>? stuckNodes,
+    _i2.List<_i3.BaseNodeMixin>? stuckNodes,
     _i2.List<_i3.ConnectorNode>? attachedConnectors,
     _i2.dynamic componentPropertyReferences,
     _Intersection8? boundVariables,
@@ -13649,77 +13756,77 @@ class SceneNodeMixin implements _i3.ExplicitVariableModesMixin {
 }
 
 extension SceneNodeMixin$Typings on SceneNodeMixin {
-  _i2.bool get visible => _i5.getProperty(
+  _i2.bool get visible => _i4.getProperty(
         this,
         'visible',
       );
   set visible(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'visible',
       value,
     );
   }
 
-  _i2.bool get locked => _i5.getProperty(
+  _i2.bool get locked => _i4.getProperty(
         this,
         'locked',
       );
   set locked(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'locked',
       value,
     );
   }
 
-  _i2.List<_i3.SceneNode> get stuckNodes => ((_i5.getProperty(
+  _i2.List<_i3.BaseNodeMixin> get stuckNodes => ((_i4.getProperty(
         this,
         'stuckNodes',
       )) as _i2.List)
           .cast();
-  _i2.List<_i3.ConnectorNode> get attachedConnectors => ((_i5.getProperty(
+  _i2.List<_i3.ConnectorNode> get attachedConnectors => ((_i4.getProperty(
         this,
         'attachedConnectors',
       )) as _i2.List)
           .cast();
-  _i2.dynamic get componentPropertyReferences => _i5.getProperty(
+  _i2.dynamic get componentPropertyReferences => _i4.getProperty(
         this,
         'componentPropertyReferences',
       );
   set componentPropertyReferences(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'componentPropertyReferences',
       value,
     );
   }
 
-  _Intersection8? get boundVariables => _i5.getProperty(
+  _Intersection8? get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
-  _Intersection9? get inferredVariables => _i5.getProperty(
+  _Intersection9? get inferredVariables => _i4.getProperty(
         this,
         'inferredVariables',
       );
-  _i2.Object get resolvedVariableModes => _i5.getProperty(
+  _i2.Object get resolvedVariableModes => _i4.getProperty(
         this,
         'resolvedVariableModes',
       );
   set resolvedVariableModes(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resolvedVariableModes',
       value,
     );
   }
 
-  void _setBoundVariable$1(
-    _i2.Object field, [
+  void _setBoundVariable$1([
+    _i2.Object? field,
     _i2.String? variableId,
   ]) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'setBoundVariable',
       [
@@ -13729,11 +13836,11 @@ extension SceneNodeMixin$Typings on SceneNodeMixin {
     );
   }
 
-  void _setBoundVariable$2(
-    _i2.Object field, [
+  void _setBoundVariable$2([
+    _i2.Object? field,
     _i3.Variable? variable,
   ]) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'setBoundVariable',
       [
@@ -13745,12 +13852,12 @@ extension SceneNodeMixin$Typings on SceneNodeMixin {
 
   /// Overload accessor: $1, $2
   ({
-    void Function(
-      _i2.Object field, [
+    void Function([
+      _i2.Object? field,
       _i2.String? variableId,
     ]) $1,
-    void Function(
-      _i2.Object field, [
+    void Function([
+      _i2.Object? field,
       _i3.Variable? variable,
     ]) $2,
   }) get setBoundVariable => (
@@ -13766,20 +13873,20 @@ extension SceneNodeMixin$Typings on SceneNodeMixin {
 class StickableMixin {
   external factory StickableMixin._({_i2.dynamic stuckTo});
 
-  factory StickableMixin({_i3.SceneNode? stuckTo}) =>
-      StickableMixin._(stuckTo: stuckTo ?? _i7.undefined ?? _i7.undefined);
+  factory StickableMixin({_i3.BaseNodeMixin? stuckTo}) =>
+      StickableMixin._(stuckTo: stuckTo ?? _i7.undefined);
 }
 
 extension StickableMixin$Typings on StickableMixin {
-  _i3.SceneNode? get stuckTo => _i5.getProperty(
+  _i3.BaseNodeMixin? get stuckTo => _i4.getProperty(
         this,
         'stuckTo',
       );
-  set stuckTo(_i3.SceneNode? value) {
-    _i5.setProperty(
+  set stuckTo(_i3.BaseNodeMixin? value) {
+    _i4.setProperty(
       this,
       'stuckTo',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 }
@@ -13791,12 +13898,12 @@ extension StickableMixin$Typings on StickableMixin {
 class IInline66<T extends _i2.List<_i2.dynamic>> {}
 
 extension IInline66$Typings<T extends _i2.List<_i2.dynamic>> on IInline66<T> {
-  _i2.dynamic get type => _i5.getProperty(
+  _i2.dynamic get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
@@ -13822,63 +13929,65 @@ class ChildrenMixin {
   });
 
   factory ChildrenMixin({
-    _i4.ReadonlyArray<_i3.SceneNode>? children,
-    void Function(_i3.SceneNode)? appendChild,
+    _i2.List<_i3.BaseNodeMixin>? children,
+    void Function(_i3.BaseNodeMixin)? appendChild,
     void Function(
       _i2.num,
-      _i3.SceneNode,
+      _i3.BaseNodeMixin,
     )? insertChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findChildren,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))?
+        findChild,
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findAll,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findOne,
-    _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))? findOne,
+    _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
             _i3.FindAllCriteria<T>)?
         findAllWithCriteria,
-    _i4.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
+    _i6.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
   }) =>
       ChildrenMixin._(
-        children: children ?? _i7.undefined,
-        appendChild: appendChild == null ? null : _i5.allowInterop(appendChild),
-        insertChild: insertChild == null ? null : _i5.allowInterop(insertChild),
+        children: children,
+        appendChild: appendChild == null ? null : _i4.allowInterop(appendChild),
+        insertChild: insertChild == null ? null : _i4.allowInterop(insertChild),
         findChildren:
-            findChildren == null ? null : _i5.allowInterop(findChildren),
+            findChildren == null ? null : _i4.allowInterop(findChildren),
         findChild: findChild == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findChild(p0) ?? _i7.undefined ?? _i7.undefined),
-        findAll: findAll == null ? null : _i5.allowInterop(findAll),
+            : _i4.allowInterop((p0) => () => findChild(p0) ?? _i7.undefined),
+        findAll: findAll == null ? null : _i4.allowInterop(findAll),
         findOne: findOne == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findOne(p0) ?? _i7.undefined ?? _i7.undefined),
+            : _i4.allowInterop((p0) => () => findOne(p0) ?? _i7.undefined),
         findAllWithCriteria: findAllWithCriteria == null
             ? null
-            : _i5.allowInterop(findAllWithCriteria),
+            : _i4.allowInterop(findAllWithCriteria),
         findWidgetNodesByWidgetId: findWidgetNodesByWidgetId == null
             ? null
-            : _i5.allowInterop(findWidgetNodesByWidgetId),
+            : _i4.allowInterop(findWidgetNodesByWidgetId),
       );
 }
 
 extension ChildrenMixin$Typings on ChildrenMixin {
-  _i4.ReadonlyArray<_i3.SceneNode> get children => _i5.getProperty(
+  _i2.List<_i3.BaseNodeMixin> get children => ((_i4.getProperty(
         this,
         'children',
-      );
-  set appendChild(void Function(_i3.SceneNode) value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set appendChild(void Function(_i3.BaseNodeMixin) value) {
+    _i4.setProperty(
       this,
       'appendChild',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i3.SceneNode) get appendChild =>
-      (_i3.SceneNode p0) => _i5.callMethod(
-            _i5.getProperty(
+  void Function(_i3.BaseNodeMixin) get appendChild =>
+      (_i3.BaseNodeMixin p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'appendChild',
             ),
@@ -13891,24 +14000,24 @@ extension ChildrenMixin$Typings on ChildrenMixin {
   set insertChild(
       void Function(
         _i2.num,
-        _i3.SceneNode,
+        _i3.BaseNodeMixin,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'insertChild',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.num,
-    _i3.SceneNode,
+    _i3.BaseNodeMixin,
   ) get insertChild => (
         _i2.num p0,
-        _i3.SceneNode p1,
+        _i3.BaseNodeMixin p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'insertChild',
             ),
@@ -13920,113 +14029,116 @@ extension ChildrenMixin$Typings on ChildrenMixin {
             ],
           );
   set findChildren(
-      _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])
+      _i2.List<_i3.BaseNodeMixin> Function(
+              [_i2.bool Function(_i3.BaseNodeMixin)?])
           value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'findChildren',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])
+  _i2.List<_i3.BaseNodeMixin> Function([_i2.bool Function(_i3.BaseNodeMixin)?])
       get findChildren =>
-          ([_i2.bool Function(_i3.SceneNode)? p0]) => ((_i5.callMethod(
-                _i5.getProperty(
+          ([_i2.bool Function(_i3.BaseNodeMixin)? p0]) => ((_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'findChildren',
                 ),
                 r'call',
                 [
                   this,
-                  p0 == null ? _i7.undefined : _i5.allowInterop(p0),
+                  p0 == null ? _i7.undefined : _i4.allowInterop(p0),
                 ],
               )) as _i2.List)
                   .cast();
   set findChild(
-      _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode)) value) {
-    _i5.setProperty(
+      _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin)) value) {
+    _i4.setProperty(
       this,
       'findChild',
-      _i5.allowInterop(
-          (p0) => () => value(p0) ?? _i7.undefined ?? _i7.undefined),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
     );
   }
 
-  _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode)) get findChild =>
-      (_i2.bool Function(_i3.SceneNode) p0) => _i5.callMethod(
-            _i5.getProperty(
-              this,
-              'findChild',
-            ),
-            r'call',
-            [
-              this,
-              _i5.allowInterop(p0),
-            ],
-          );
+  _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))
+      get findChild =>
+          (_i2.bool Function(_i3.BaseNodeMixin) p0) => _i4.callMethod(
+                _i4.getProperty(
+                  this,
+                  'findChild',
+                ),
+                r'call',
+                [
+                  this,
+                  _i4.allowInterop(p0),
+                ],
+              );
   set findAll(
-      _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])
+      _i2.List<_i3.BaseNodeMixin> Function(
+              [_i2.bool Function(_i3.BaseNodeMixin)?])
           value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'findAll',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])
+  _i2.List<_i3.BaseNodeMixin> Function([_i2.bool Function(_i3.BaseNodeMixin)?])
       get findAll =>
-          ([_i2.bool Function(_i3.SceneNode)? p0]) => ((_i5.callMethod(
-                _i5.getProperty(
+          ([_i2.bool Function(_i3.BaseNodeMixin)? p0]) => ((_i4.callMethod(
+                _i4.getProperty(
                   this,
                   'findAll',
                 ),
                 r'call',
                 [
                   this,
-                  p0 == null ? _i7.undefined : _i5.allowInterop(p0),
+                  p0 == null ? _i7.undefined : _i4.allowInterop(p0),
                 ],
               )) as _i2.List)
                   .cast();
-  set findOne(_i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode)) value) {
-    _i5.setProperty(
+  set findOne(
+      _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin)) value) {
+    _i4.setProperty(
       this,
       'findOne',
-      _i5.allowInterop(
-          (p0) => () => value(p0) ?? _i7.undefined ?? _i7.undefined),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
     );
   }
 
-  _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode)) get findOne =>
-      (_i2.bool Function(_i3.SceneNode) p0) => _i5.callMethod(
-            _i5.getProperty(
-              this,
-              'findOne',
-            ),
-            r'call',
-            [
-              this,
-              _i5.allowInterop(p0),
-            ],
-          );
+  _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))
+      get findOne =>
+          (_i2.bool Function(_i3.BaseNodeMixin) p0) => _i4.callMethod(
+                _i4.getProperty(
+                  this,
+                  'findOne',
+                ),
+                r'call',
+                [
+                  this,
+                  _i4.allowInterop(p0),
+                ],
+              );
   set findAllWithCriteria(
-      _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+      _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
               _i3.FindAllCriteria<T>)
           value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'findAllWithCriteria',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+  _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
           _i3.FindAllCriteria<T>)
       get findAllWithCriteria =>
           <T extends _i2.List<_i2.dynamic>>(_i3.FindAllCriteria<T> p0) =>
-              _i5.callMethod(
-                _i5.getProperty(
+              _i4.callMethod(
+                _i4.getProperty(
                   this,
                   'findAllWithCriteria',
                 ),
@@ -14037,17 +14149,17 @@ extension ChildrenMixin$Typings on ChildrenMixin {
                 ],
               );
   set findWidgetNodesByWidgetId(
-      _i4.Array<_i3.WidgetNode> Function(_i2.String) value) {
-    _i5.setProperty(
+      _i6.Array<_i3.WidgetNode> Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'findWidgetNodesByWidgetId',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i4.Array<_i3.WidgetNode> Function(_i2.String)
-      get findWidgetNodesByWidgetId => (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+  _i6.Array<_i3.WidgetNode> Function(_i2.String)
+      get findWidgetNodesByWidgetId => (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'findWidgetNodesByWidgetId',
             ),
@@ -14071,12 +14183,12 @@ class ConstraintMixin {
 }
 
 extension ConstraintMixin$Typings on ConstraintMixin {
-  _i3.Constraints get constraints => _i5.getProperty(
+  _i3.Constraints get constraints => _i4.getProperty(
         this,
         'constraints',
       );
   set constraints(_i3.Constraints value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'constraints',
       value,
@@ -14112,8 +14224,30 @@ class DimensionAndPositionMixin {
     _i2.num? maxWidth,
     _i2.num? minHeight,
     _i2.num? maxHeight,
-    _i3.Transform? relativeTransform,
-    _i3.Transform? absoluteTransform,
+    (
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+    )? relativeTransform,
+    (
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+    )? absoluteTransform,
     _i3.Rect? absoluteBoundingBox,
   }) =>
       DimensionAndPositionMixin._(
@@ -14142,92 +14276,115 @@ class DimensionAndPositionMixin {
 }
 
 extension DimensionAndPositionMixin$Typings on DimensionAndPositionMixin {
-  _i2.num get x => _i5.getProperty(
+  _i2.num get x => _i4.getProperty(
         this,
         'x',
       );
   set x(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'x',
       value,
     );
   }
 
-  _i2.num get y => _i5.getProperty(
+  _i2.num get y => _i4.getProperty(
         this,
         'y',
       );
   set y(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'y',
       value,
     );
   }
 
-  _i2.num get width => _i5.getProperty(
+  _i2.num get width => _i4.getProperty(
         this,
         'width',
       );
-  _i2.num get height => _i5.getProperty(
+  _i2.num get height => _i4.getProperty(
         this,
         'height',
       );
-  _i2.num? get minWidth => _i5.getProperty(
+  _i2.num? get minWidth => _i4.getProperty(
         this,
         'minWidth',
       );
   set minWidth(_i2.num? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'minWidth',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.num? get maxWidth => _i5.getProperty(
+  _i2.num? get maxWidth => _i4.getProperty(
         this,
         'maxWidth',
       );
   set maxWidth(_i2.num? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'maxWidth',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.num? get minHeight => _i5.getProperty(
+  _i2.num? get minHeight => _i4.getProperty(
         this,
         'minHeight',
       );
   set minHeight(_i2.num? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'minHeight',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.num? get maxHeight => _i5.getProperty(
+  _i2.num? get maxHeight => _i4.getProperty(
         this,
         'maxHeight',
       );
   set maxHeight(_i2.num? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'maxHeight',
       value ?? _i7.undefined,
     );
   }
 
-  _i3.Transform get relativeTransform => _i5.getProperty(
+  (
+    (
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    ),
+    (
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    ),
+  ) get relativeTransform => _i4.getProperty(
         this,
         'relativeTransform',
       );
-  set relativeTransform(_i3.Transform value) {
-    _i5.setProperty(
+  set relativeTransform(
+      (
+        (
+          _i2.num,
+          _i2.num,
+          _i2.num,
+        ),
+        (
+          _i2.num,
+          _i2.num,
+          _i2.num,
+        ),
+      ) value) {
+    _i4.setProperty(
       this,
       'relativeTransform',
       [
@@ -14237,11 +14394,22 @@ extension DimensionAndPositionMixin$Typings on DimensionAndPositionMixin {
     );
   }
 
-  _i3.Transform get absoluteTransform => _i5.getProperty(
+  (
+    (
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    ),
+    (
+      _i2.num,
+      _i2.num,
+      _i2.num,
+    ),
+  ) get absoluteTransform => _i4.getProperty(
         this,
         'absoluteTransform',
       );
-  _i3.Rect? get absoluteBoundingBox => _i5.getProperty(
+  _i3.Rect? get absoluteBoundingBox => _i4.getProperty(
         this,
         'absoluteBoundingBox',
       );
@@ -14301,8 +14469,30 @@ class LayoutMixin
     _i2.num? maxWidth,
     _i2.num? minHeight,
     _i2.num? maxHeight,
-    _i3.Transform? relativeTransform,
-    _i3.Transform? absoluteTransform,
+    (
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+    )? relativeTransform,
+    (
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+    )? absoluteTransform,
     _i3.Rect? absoluteBoundingBox,
     _i3.LayoutAlign? layoutAlign,
     _i2.num? layoutGrow,
@@ -14314,11 +14504,11 @@ class LayoutMixin
         rotation: rotation,
         layoutSizingHorizontal: layoutSizingHorizontal?.name ?? _i7.undefined,
         layoutSizingVertical: layoutSizingVertical?.name ?? _i7.undefined,
-        resize: resize == null ? null : _i5.allowInterop(resize),
+        resize: resize == null ? null : _i4.allowInterop(resize),
         resizeWithoutConstraints: resizeWithoutConstraints == null
             ? null
-            : _i5.allowInterop(resizeWithoutConstraints),
-        rescale: rescale == null ? null : _i5.allowInterop(rescale),
+            : _i4.allowInterop(resizeWithoutConstraints),
+        rescale: rescale == null ? null : _i4.allowInterop(rescale),
         x: x,
         y: y,
         width: width,
@@ -14347,28 +14537,28 @@ class LayoutMixin
 }
 
 extension LayoutMixin$Typings on LayoutMixin {
-  _i3.Rect? get absoluteRenderBounds => _i5.getProperty(
+  _i3.Rect? get absoluteRenderBounds => _i4.getProperty(
         this,
         'absoluteRenderBounds',
       );
-  _i2.bool get constrainProportions => _i5.getProperty(
+  _i2.bool get constrainProportions => _i4.getProperty(
         this,
         'constrainProportions',
       );
   set constrainProportions(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'constrainProportions',
       value,
     );
   }
 
-  _i2.num get rotation => _i5.getProperty(
+  _i2.num get rotation => _i4.getProperty(
         this,
         'rotation',
       );
   set rotation(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'rotation',
       value,
@@ -14376,12 +14566,12 @@ extension LayoutMixin$Typings on LayoutMixin {
   }
 
   _i3.LayoutSizingHorizontal get layoutSizingHorizontal =>
-      _i3.LayoutSizingHorizontal.values.byName(_i5.getProperty(
+      _i3.LayoutSizingHorizontal.values.byName(_i4.getProperty(
         this,
         'layoutSizingHorizontal',
       ));
   set layoutSizingHorizontal(_i3.LayoutSizingHorizontal value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'layoutSizingHorizontal',
       value.name,
@@ -14389,12 +14579,12 @@ extension LayoutMixin$Typings on LayoutMixin {
   }
 
   _i3.LayoutSizingVertical get layoutSizingVertical =>
-      _i3.LayoutSizingVertical.values.byName(_i5.getProperty(
+      _i3.LayoutSizingVertical.values.byName(_i4.getProperty(
         this,
         'layoutSizingVertical',
       ));
   set layoutSizingVertical(_i3.LayoutSizingVertical value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'layoutSizingVertical',
       value.name,
@@ -14406,10 +14596,10 @@ extension LayoutMixin$Typings on LayoutMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resize',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -14420,8 +14610,8 @@ extension LayoutMixin$Typings on LayoutMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'resize',
             ),
@@ -14437,10 +14627,10 @@ extension LayoutMixin$Typings on LayoutMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resizeWithoutConstraints',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -14451,8 +14641,8 @@ extension LayoutMixin$Typings on LayoutMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'resizeWithoutConstraints',
             ),
@@ -14464,15 +14654,15 @@ extension LayoutMixin$Typings on LayoutMixin {
             ],
           );
   set rescale(void Function(_i2.num) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'rescale',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i2.num) get rescale => (_i2.num p0) => _i5.callMethod(
-        _i5.getProperty(
+  void Function(_i2.num) get rescale => (_i2.num p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'rescale',
         ),
@@ -14503,28 +14693,28 @@ class AspectRatioLockMixin {
       AspectRatioLockMixin._(
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 }
 
 extension AspectRatioLockMixin$Typings on AspectRatioLockMixin {
-  _i3.Vector? get targetAspectRatio => _i5.getProperty(
+  _i3.Vector? get targetAspectRatio => _i4.getProperty(
         this,
         'targetAspectRatio',
       );
   set lockAspectRatio(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'lockAspectRatio',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get lockAspectRatio => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get lockAspectRatio => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'lockAspectRatio',
         ),
@@ -14532,15 +14722,15 @@ extension AspectRatioLockMixin$Typings on AspectRatioLockMixin {
         [this],
       );
   set unlockAspectRatio(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'unlockAspectRatio',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get unlockAspectRatio => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get unlockAspectRatio => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'unlockAspectRatio',
         ),
@@ -14566,70 +14756,71 @@ class BlendMixin implements _i3.MinimalBlendMixin {
 
   factory BlendMixin({
     _i2.bool? isMask,
-    _i3.MaskType? maskType,
-    _i4.ReadonlyArray<_i2.Object>? effects,
+    _i3.MaskTypeOptions? maskType,
+    _i2.List<_i2.Object>? effects,
     _i2.String? effectStyleId,
     _i2.Future<void> Function(_i2.String)? setEffectStyleIdAsync,
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
   }) =>
       BlendMixin._(
         isMask: isMask,
-        maskType: maskType?.name ?? _i7.undefined,
-        effects: effects ?? _i7.undefined,
+        maskType: maskType?.name,
+        effects: effects,
         effectStyleId: effectStyleId,
         setEffectStyleIdAsync: setEffectStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setEffectStyleIdAsync),
+            : _i4.allowInterop(setEffectStyleIdAsync),
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
       );
 }
 
 extension BlendMixin$Typings on BlendMixin {
-  _i2.bool get isMask => _i5.getProperty(
+  _i2.bool get isMask => _i4.getProperty(
         this,
         'isMask',
       );
   set isMask(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'isMask',
       value,
     );
   }
 
-  _i3.MaskType get maskType =>
-      _i3.MaskTypeOptions.values.byName(_i5.getProperty(
+  _i3.MaskTypeOptions get maskType =>
+      _i3.MaskTypeOptions.values.byName(_i4.getProperty(
         this,
         'maskType',
       ));
-  set maskType(_i3.MaskType value) {
-    _i5.setProperty(
+  set maskType(_i3.MaskTypeOptions value) {
+    _i4.setProperty(
       this,
       'maskType',
       value.name,
     );
   }
 
-  _i4.ReadonlyArray<_i2.Object> get effects => _i5.getProperty(
+  _i2.List<_i2.Object> get effects => ((_i4.getProperty(
         this,
         'effects',
-      );
-  set effects(_i4.ReadonlyArray<_i2.Object> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set effects(_i2.List<_i2.Object> value) {
+    _i4.setProperty(
       this,
       'effects',
       value,
     );
   }
 
-  _i2.String get effectStyleId => _i5.getProperty(
+  _i2.String get effectStyleId => _i4.getProperty(
         this,
         'effectStyleId',
       );
   set effectStyleId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'effectStyleId',
       value,
@@ -14637,16 +14828,16 @@ extension BlendMixin$Typings on BlendMixin {
   }
 
   set setEffectStyleIdAsync(_i2.Future<void> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setEffectStyleIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(_i2.String) get setEffectStyleIdAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setEffectStyleIdAsync',
             ),
@@ -14670,12 +14861,12 @@ class ContainerMixin {
 }
 
 extension ContainerMixin$Typings on ContainerMixin {
-  _i2.bool get expanded => _i5.getProperty(
+  _i2.bool get expanded => _i4.getProperty(
         this,
         'expanded',
       );
   set expanded(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'expanded',
       value,
@@ -14694,34 +14885,35 @@ class DeprecatedBackgroundMixin {
   });
 
   factory DeprecatedBackgroundMixin({
-    _i4.ReadonlyArray<_i2.Object>? backgrounds,
+    _i2.List<_i2.Object>? backgrounds,
     _i2.String? backgroundStyleId,
   }) =>
       DeprecatedBackgroundMixin._(
-        backgrounds: backgrounds ?? _i7.undefined,
+        backgrounds: backgrounds,
         backgroundStyleId: backgroundStyleId,
       );
 }
 
 extension DeprecatedBackgroundMixin$Typings on DeprecatedBackgroundMixin {
-  _i4.ReadonlyArray<_i2.Object> get backgrounds => _i5.getProperty(
+  _i2.List<_i2.Object> get backgrounds => ((_i4.getProperty(
         this,
         'backgrounds',
-      );
-  set backgrounds(_i4.ReadonlyArray<_i2.Object> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set backgrounds(_i2.List<_i2.Object> value) {
+    _i4.setProperty(
       this,
       'backgrounds',
       value,
     );
   }
 
-  _i2.String get backgroundStyleId => _i5.getProperty(
+  _i2.String get backgroundStyleId => _i4.getProperty(
         this,
         'backgroundStyleId',
       );
   set backgroundStyleId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'backgroundStyleId',
       value,
@@ -14795,96 +14987,96 @@ class AutoLayoutMixin {
 }
 
 extension AutoLayoutMixin$Typings on AutoLayoutMixin {
-  _i3.LayoutMode get layoutMode => _i3.LayoutMode.values.byName(_i5.getProperty(
+  _i3.LayoutMode get layoutMode => _i3.LayoutMode.values.byName(_i4.getProperty(
         this,
         'layoutMode',
       ));
   set layoutMode(_i3.LayoutMode value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'layoutMode',
       value.name,
     );
   }
 
-  _i3.LayoutWrap get layoutWrap => _i3.LayoutWrap.values.byName(_i5.getProperty(
+  _i3.LayoutWrap get layoutWrap => _i3.LayoutWrap.values.byName(_i4.getProperty(
         this,
         'layoutWrap',
       ));
   set layoutWrap(_i3.LayoutWrap value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'layoutWrap',
       value.name,
     );
   }
 
-  _i2.num get paddingLeft => _i5.getProperty(
+  _i2.num get paddingLeft => _i4.getProperty(
         this,
         'paddingLeft',
       );
   set paddingLeft(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paddingLeft',
       value,
     );
   }
 
-  _i2.num get paddingRight => _i5.getProperty(
+  _i2.num get paddingRight => _i4.getProperty(
         this,
         'paddingRight',
       );
   set paddingRight(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paddingRight',
       value,
     );
   }
 
-  _i2.num get paddingTop => _i5.getProperty(
+  _i2.num get paddingTop => _i4.getProperty(
         this,
         'paddingTop',
       );
   set paddingTop(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paddingTop',
       value,
     );
   }
 
-  _i2.num get paddingBottom => _i5.getProperty(
+  _i2.num get paddingBottom => _i4.getProperty(
         this,
         'paddingBottom',
       );
   set paddingBottom(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paddingBottom',
       value,
     );
   }
 
-  _i2.num get horizontalPadding => _i5.getProperty(
+  _i2.num get horizontalPadding => _i4.getProperty(
         this,
         'horizontalPadding',
       );
   set horizontalPadding(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'horizontalPadding',
       value,
     );
   }
 
-  _i2.num get verticalPadding => _i5.getProperty(
+  _i2.num get verticalPadding => _i4.getProperty(
         this,
         'verticalPadding',
       );
   set verticalPadding(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'verticalPadding',
       value,
@@ -14892,12 +15084,12 @@ extension AutoLayoutMixin$Typings on AutoLayoutMixin {
   }
 
   _i3.PrimaryAxisSizingMode get primaryAxisSizingMode =>
-      _i3.PrimaryAxisSizingMode.values.byName(_i5.getProperty(
+      _i3.PrimaryAxisSizingMode.values.byName(_i4.getProperty(
         this,
         'primaryAxisSizingMode',
       ));
   set primaryAxisSizingMode(_i3.PrimaryAxisSizingMode value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'primaryAxisSizingMode',
       value.name,
@@ -14905,12 +15097,12 @@ extension AutoLayoutMixin$Typings on AutoLayoutMixin {
   }
 
   _i3.CounterAxisSizingMode get counterAxisSizingMode =>
-      _i3.CounterAxisSizingMode.values.byName(_i5.getProperty(
+      _i3.CounterAxisSizingMode.values.byName(_i4.getProperty(
         this,
         'counterAxisSizingMode',
       ));
   set counterAxisSizingMode(_i3.CounterAxisSizingMode value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'counterAxisSizingMode',
       value.name,
@@ -14918,12 +15110,12 @@ extension AutoLayoutMixin$Typings on AutoLayoutMixin {
   }
 
   _i3.PrimaryAxisAlignItems get primaryAxisAlignItems =>
-      _i3.PrimaryAxisAlignItems.values.byName(_i5.getProperty(
+      _i3.PrimaryAxisAlignItems.values.byName(_i4.getProperty(
         this,
         'primaryAxisAlignItems',
       ));
   set primaryAxisAlignItems(_i3.PrimaryAxisAlignItems value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'primaryAxisAlignItems',
       value.name,
@@ -14931,12 +15123,12 @@ extension AutoLayoutMixin$Typings on AutoLayoutMixin {
   }
 
   _i3.CounterAxisAlignItems get counterAxisAlignItems =>
-      _i3.CounterAxisAlignItems.values.byName(_i5.getProperty(
+      _i3.CounterAxisAlignItems.values.byName(_i4.getProperty(
         this,
         'counterAxisAlignItems',
       ));
   set counterAxisAlignItems(_i3.CounterAxisAlignItems value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'counterAxisAlignItems',
       value.name,
@@ -14944,60 +15136,60 @@ extension AutoLayoutMixin$Typings on AutoLayoutMixin {
   }
 
   _i3.CounterAxisAlignContent get counterAxisAlignContent =>
-      _i3.CounterAxisAlignContent.values.byName(_i5.getProperty(
+      _i3.CounterAxisAlignContent.values.byName(_i4.getProperty(
         this,
         'counterAxisAlignContent',
       ));
   set counterAxisAlignContent(_i3.CounterAxisAlignContent value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'counterAxisAlignContent',
       value.name,
     );
   }
 
-  _i2.num get itemSpacing => _i5.getProperty(
+  _i2.num get itemSpacing => _i4.getProperty(
         this,
         'itemSpacing',
       );
   set itemSpacing(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'itemSpacing',
       value,
     );
   }
 
-  _i2.num? get counterAxisSpacing => _i5.getProperty(
+  _i2.num? get counterAxisSpacing => _i4.getProperty(
         this,
         'counterAxisSpacing',
       );
   set counterAxisSpacing(_i2.num? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'counterAxisSpacing',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.bool get itemReverseZIndex => _i5.getProperty(
+  _i2.bool get itemReverseZIndex => _i4.getProperty(
         this,
         'itemReverseZIndex',
       );
   set itemReverseZIndex(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'itemReverseZIndex',
       value,
     );
   }
 
-  _i2.bool get strokesIncludedInLayout => _i5.getProperty(
+  _i2.bool get strokesIncludedInLayout => _i4.getProperty(
         this,
         'strokesIncludedInLayout',
       );
   set strokesIncludedInLayout(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokesIncludedInLayout',
       value,
@@ -15030,24 +15222,24 @@ class AutoLayoutChildrenMixin {
 
 extension AutoLayoutChildrenMixin$Typings on AutoLayoutChildrenMixin {
   _i3.LayoutAlign get layoutAlign =>
-      _i3.LayoutAlign.values.byName(_i5.getProperty(
+      _i3.LayoutAlign.values.byName(_i4.getProperty(
         this,
         'layoutAlign',
       ));
   set layoutAlign(_i3.LayoutAlign value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'layoutAlign',
       value.name,
     );
   }
 
-  _i2.num get layoutGrow => _i5.getProperty(
+  _i2.num get layoutGrow => _i4.getProperty(
         this,
         'layoutGrow',
       );
   set layoutGrow(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'layoutGrow',
       value,
@@ -15055,12 +15247,12 @@ extension AutoLayoutChildrenMixin$Typings on AutoLayoutChildrenMixin {
   }
 
   _i3.LayoutPositioning get layoutPositioning =>
-      _i3.LayoutPositioning.values.byName(_i5.getProperty(
+      _i3.LayoutPositioning.values.byName(_i4.getProperty(
         this,
         'layoutPositioning',
       ));
   set layoutPositioning(_i3.LayoutPositioning value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'layoutPositioning',
       value.name,
@@ -15150,24 +15342,24 @@ class InferredAutoLayoutResult
 class IInline67 {}
 
 extension IInline67$Typings on IInline67 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.String get componentId => _i5.getProperty(
+  _i2.String get componentId => _i4.getProperty(
         this,
         'componentId',
       );
   set componentId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'componentId',
       value,
@@ -15182,24 +15374,24 @@ extension IInline67$Typings on IInline67 {
 class IInline68 {}
 
 extension IInline68$Typings on IInline68 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.String get componentKey => _i5.getProperty(
+  _i2.String get componentKey => _i4.getProperty(
         this,
         'componentKey',
       );
   set componentKey(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'componentKey',
       value,
@@ -15224,72 +15416,73 @@ class MinimalStrokesMixin {
   });
 
   factory MinimalStrokesMixin({
-    _i4.ReadonlyArray<_i2.Object>? strokes,
+    _i2.List<_i2.Object>? strokes,
     _i2.String? strokeStyleId,
     _i2.Object? strokeWeight,
     _i2.Object? strokeJoin,
     _i3.StrokeAlign? strokeAlign,
-    _i4.ReadonlyArray<_i2.num>? dashPattern,
-    _i3.VectorPaths? strokeGeometry,
+    _i2.List<_i2.num>? dashPattern,
+    _i2.List<_i2.dynamic>? strokeGeometry,
     _i2.Future<void> Function(_i2.String)? setStrokeStyleIdAsync,
   }) =>
       MinimalStrokesMixin._(
-        strokes: strokes ?? _i7.undefined,
+        strokes: strokes,
         strokeStyleId: strokeStyleId,
         strokeWeight: strokeWeight ?? _i7.undefined,
         strokeJoin: strokeJoin ?? _i7.undefined,
         strokeAlign: strokeAlign?.name ?? _i7.undefined,
-        dashPattern: dashPattern ?? _i7.undefined,
-        strokeGeometry: strokeGeometry ?? _i7.undefined,
+        dashPattern: dashPattern,
+        strokeGeometry: strokeGeometry,
         setStrokeStyleIdAsync: setStrokeStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setStrokeStyleIdAsync),
+            : _i4.allowInterop(setStrokeStyleIdAsync),
       );
 }
 
 extension MinimalStrokesMixin$Typings on MinimalStrokesMixin {
-  _i4.ReadonlyArray<_i2.Object> get strokes => _i5.getProperty(
+  _i2.List<_i2.Object> get strokes => ((_i4.getProperty(
         this,
         'strokes',
-      );
-  set strokes(_i4.ReadonlyArray<_i2.Object> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set strokes(_i2.List<_i2.Object> value) {
+    _i4.setProperty(
       this,
       'strokes',
       value,
     );
   }
 
-  _i2.String get strokeStyleId => _i5.getProperty(
+  _i2.String get strokeStyleId => _i4.getProperty(
         this,
         'strokeStyleId',
       );
   set strokeStyleId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokeStyleId',
       value,
     );
   }
 
-  _i2.Object get strokeWeight => _i5.getProperty(
+  _i2.Object get strokeWeight => _i4.getProperty(
         this,
         'strokeWeight',
       );
   set strokeWeight(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokeWeight',
       value,
     );
   }
 
-  _i2.Object get strokeJoin => _i5.getProperty(
+  _i2.Object get strokeJoin => _i4.getProperty(
         this,
         'strokeJoin',
       );
   set strokeJoin(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokeJoin',
       value,
@@ -15297,45 +15490,47 @@ extension MinimalStrokesMixin$Typings on MinimalStrokesMixin {
   }
 
   _i3.StrokeAlign get strokeAlign =>
-      _i3.StrokeAlign.values.byName(_i5.getProperty(
+      _i3.StrokeAlign.values.byName(_i4.getProperty(
         this,
         'strokeAlign',
       ));
   set strokeAlign(_i3.StrokeAlign value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokeAlign',
       value.name,
     );
   }
 
-  _i4.ReadonlyArray<_i2.num> get dashPattern => _i5.getProperty(
+  _i2.List<_i2.num> get dashPattern => ((_i4.getProperty(
         this,
         'dashPattern',
-      );
-  set dashPattern(_i4.ReadonlyArray<_i2.num> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set dashPattern(_i2.List<_i2.num> value) {
+    _i4.setProperty(
       this,
       'dashPattern',
       value,
     );
   }
 
-  _i3.VectorPaths get strokeGeometry => _i5.getProperty(
+  _i2.List<_i2.dynamic> get strokeGeometry => ((_i4.getProperty(
         this,
         'strokeGeometry',
-      );
+      )) as _i2.List)
+          .cast();
   set setStrokeStyleIdAsync(_i2.Future<void> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setStrokeStyleIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(_i2.String) get setStrokeStyleIdAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setStrokeStyleIdAsync',
             ),
@@ -15374,48 +15569,48 @@ class IndividualStrokesMixin {
 }
 
 extension IndividualStrokesMixin$Typings on IndividualStrokesMixin {
-  _i2.num get strokeTopWeight => _i5.getProperty(
+  _i2.num get strokeTopWeight => _i4.getProperty(
         this,
         'strokeTopWeight',
       );
   set strokeTopWeight(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokeTopWeight',
       value,
     );
   }
 
-  _i2.num get strokeBottomWeight => _i5.getProperty(
+  _i2.num get strokeBottomWeight => _i4.getProperty(
         this,
         'strokeBottomWeight',
       );
   set strokeBottomWeight(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokeBottomWeight',
       value,
     );
   }
 
-  _i2.num get strokeLeftWeight => _i5.getProperty(
+  _i2.num get strokeLeftWeight => _i4.getProperty(
         this,
         'strokeLeftWeight',
       );
   set strokeLeftWeight(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokeLeftWeight',
       value,
     );
   }
 
-  _i2.num get strokeRightWeight => _i5.getProperty(
+  _i2.num get strokeRightWeight => _i4.getProperty(
         this,
         'strokeRightWeight',
       );
   set strokeRightWeight(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokeRightWeight',
       value,
@@ -15444,29 +15639,29 @@ class MinimalFillsMixin {
         fillStyleId: fillStyleId ?? _i7.undefined,
         setFillStyleIdAsync: setFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setFillStyleIdAsync),
+            : _i4.allowInterop(setFillStyleIdAsync),
       );
 }
 
 extension MinimalFillsMixin$Typings on MinimalFillsMixin {
-  _i2.Object get fills => _i5.getProperty(
+  _i2.Object get fills => _i4.getProperty(
         this,
         'fills',
       );
   set fills(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fills',
       value,
     );
   }
 
-  _i2.Object get fillStyleId => _i5.getProperty(
+  _i2.Object get fillStyleId => _i4.getProperty(
         this,
         'fillStyleId',
       );
   set fillStyleId(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fillStyleId',
       value,
@@ -15474,16 +15669,16 @@ extension MinimalFillsMixin$Typings on MinimalFillsMixin {
   }
 
   set setFillStyleIdAsync(_i2.Future<void> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setFillStyleIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(_i2.String) get setFillStyleIdAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setFillStyleIdAsync',
             ),
@@ -15521,15 +15716,15 @@ class GeometryMixin implements _i3.MinimalStrokesMixin, _i3.MinimalFillsMixin {
   factory GeometryMixin({
     _i2.Object? strokeCap,
     _i2.num? strokeMiterLimit,
-    _i3.VectorPaths? fillGeometry,
+    _i2.List<_i2.dynamic>? fillGeometry,
     _i3.VectorNode? Function()? outlineStroke,
-    _i4.ReadonlyArray<_i2.Object>? strokes,
+    _i2.List<_i2.Object>? strokes,
     _i2.String? strokeStyleId,
     _i2.Object? strokeWeight,
     _i2.Object? strokeJoin,
     _i3.StrokeAlign? strokeAlign,
-    _i4.ReadonlyArray<_i2.num>? dashPattern,
-    _i3.VectorPaths? strokeGeometry,
+    _i2.List<_i2.num>? dashPattern,
+    _i2.List<_i2.dynamic>? strokeGeometry,
     _i2.Future<void> Function(_i2.String)? setStrokeStyleIdAsync,
     _i2.Object? fills,
     _i2.Object? fillStyleId,
@@ -15538,67 +15733,68 @@ class GeometryMixin implements _i3.MinimalStrokesMixin, _i3.MinimalFillsMixin {
       GeometryMixin._(
         strokeCap: strokeCap ?? _i7.undefined,
         strokeMiterLimit: strokeMiterLimit,
-        fillGeometry: fillGeometry ?? _i7.undefined,
+        fillGeometry: fillGeometry,
         outlineStroke: outlineStroke == null
             ? null
-            : _i5.allowInterop(() => () => outlineStroke() ?? _i7.undefined),
-        strokes: strokes ?? _i7.undefined,
+            : _i4.allowInterop(() => () => outlineStroke() ?? _i7.undefined),
+        strokes: strokes,
         strokeStyleId: strokeStyleId,
         strokeWeight: strokeWeight ?? _i7.undefined,
         strokeJoin: strokeJoin ?? _i7.undefined,
         strokeAlign: strokeAlign?.name ?? _i7.undefined,
-        dashPattern: dashPattern ?? _i7.undefined,
-        strokeGeometry: strokeGeometry ?? _i7.undefined,
+        dashPattern: dashPattern,
+        strokeGeometry: strokeGeometry,
         setStrokeStyleIdAsync: setStrokeStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setStrokeStyleIdAsync),
+            : _i4.allowInterop(setStrokeStyleIdAsync),
         fills: fills ?? _i7.undefined,
         fillStyleId: fillStyleId ?? _i7.undefined,
         setFillStyleIdAsync: setFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setFillStyleIdAsync),
+            : _i4.allowInterop(setFillStyleIdAsync),
       );
 }
 
 extension GeometryMixin$Typings on GeometryMixin {
-  _i2.Object get strokeCap => _i5.getProperty(
+  _i2.Object get strokeCap => _i4.getProperty(
         this,
         'strokeCap',
       );
   set strokeCap(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokeCap',
       value,
     );
   }
 
-  _i2.num get strokeMiterLimit => _i5.getProperty(
+  _i2.num get strokeMiterLimit => _i4.getProperty(
         this,
         'strokeMiterLimit',
       );
   set strokeMiterLimit(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'strokeMiterLimit',
       value,
     );
   }
 
-  _i3.VectorPaths get fillGeometry => _i5.getProperty(
+  _i2.List<_i2.dynamic> get fillGeometry => ((_i4.getProperty(
         this,
         'fillGeometry',
-      );
+      )) as _i2.List)
+          .cast();
   set outlineStroke(_i3.VectorNode? Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'outlineStroke',
-      _i5.allowInterop(() => () => value() ?? _i7.undefined),
+      _i4.allowInterop(() => () => value() ?? _i7.undefined),
     );
   }
 
-  _i3.VectorNode? Function() get outlineStroke => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.VectorNode? Function() get outlineStroke => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'outlineStroke',
         ),
@@ -15628,24 +15824,24 @@ class CornerMixin {
 }
 
 extension CornerMixin$Typings on CornerMixin {
-  _i2.Object get cornerRadius => _i5.getProperty(
+  _i2.Object get cornerRadius => _i4.getProperty(
         this,
         'cornerRadius',
       );
   set cornerRadius(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'cornerRadius',
       value,
     );
   }
 
-  _i2.num get cornerSmoothing => _i5.getProperty(
+  _i2.num get cornerSmoothing => _i4.getProperty(
         this,
         'cornerSmoothing',
       );
   set cornerSmoothing(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'cornerSmoothing',
       value,
@@ -15680,48 +15876,48 @@ class RectangleCornerMixin {
 }
 
 extension RectangleCornerMixin$Typings on RectangleCornerMixin {
-  _i2.num get topLeftRadius => _i5.getProperty(
+  _i2.num get topLeftRadius => _i4.getProperty(
         this,
         'topLeftRadius',
       );
   set topLeftRadius(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'topLeftRadius',
       value,
     );
   }
 
-  _i2.num get topRightRadius => _i5.getProperty(
+  _i2.num get topRightRadius => _i4.getProperty(
         this,
         'topRightRadius',
       );
   set topRightRadius(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'topRightRadius',
       value,
     );
   }
 
-  _i2.num get bottomLeftRadius => _i5.getProperty(
+  _i2.num get bottomLeftRadius => _i4.getProperty(
         this,
         'bottomLeftRadius',
       );
   set bottomLeftRadius(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'bottomLeftRadius',
       value,
     );
   }
 
-  _i2.num get bottomRightRadius => _i5.getProperty(
+  _i2.num get bottomRightRadius => _i4.getProperty(
         this,
         'bottomRightRadius',
       );
   set bottomRightRadius(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'bottomRightRadius',
       value,
@@ -15736,37 +15932,38 @@ extension RectangleCornerMixin$Typings on RectangleCornerMixin {
 class ExportMixin {
   external factory ExportMixin._({_i2.dynamic exportSettings});
 
-  factory ExportMixin({_i4.ReadonlyArray<_i2.Object>? exportSettings}) =>
-      ExportMixin._(exportSettings: exportSettings ?? _i7.undefined);
+  factory ExportMixin({_i2.List<_i2.Object>? exportSettings}) =>
+      ExportMixin._(exportSettings: exportSettings);
 }
 
 extension ExportMixin$Typings on ExportMixin {
-  _i4.ReadonlyArray<_i2.Object> get exportSettings => _i5.getProperty(
+  _i2.List<_i2.Object> get exportSettings => ((_i4.getProperty(
         this,
         'exportSettings',
-      );
-  set exportSettings(_i4.ReadonlyArray<_i2.Object> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set exportSettings(_i2.List<_i2.Object> value) {
+    _i4.setProperty(
       this,
       'exportSettings',
       value,
     );
   }
 
-  _i2.Future<_i6.Uint8List> _exportAsync$1([_i2.Object? settings]) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i5.Uint8List> _exportAsync$1([_i2.Object? settings]) =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'exportAsync',
-        [settings ?? _i7.undefined ?? _i7.undefined],
+        [settings ?? _i7.undefined],
       ));
   _i2.Future<_i2.String> _exportAsync$2(_i3.ExportSettingsSVGString settings) =>
-      _i5.promiseToFuture(_i5.callMethod(
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'exportAsync',
         [settings],
       ));
-  _i2.Future<_i4.Object> _exportAsync$3(_i3.ExportSettingsREST settings) =>
-      _i5.promiseToFuture(_i5.callMethod(
+  _i2.Future<_i6.Object> _exportAsync$3(_i3.ExportSettingsREST settings) =>
+      _i4.promiseToFuture(_i4.callMethod(
         this,
         'exportAsync',
         [settings],
@@ -15774,9 +15971,9 @@ extension ExportMixin$Typings on ExportMixin {
 
   /// Overload accessor: $1, $2, $3
   ({
-    _i2.Future<_i6.Uint8List> Function([_i2.Object? settings]) $1,
+    _i2.Future<_i5.Uint8List> Function([_i2.Object? settings]) $1,
     _i2.Future<_i2.String> Function(_i3.ExportSettingsSVGString settings) $2,
-    _i2.Future<_i4.Object> Function(_i3.ExportSettingsREST settings) $3,
+    _i2.Future<_i6.Object> Function(_i3.ExportSettingsREST settings) $3,
   }) get exportAsync => (
         $1: _exportAsync$1,
         $2: _exportAsync$2,
@@ -15798,59 +15995,58 @@ class FramePrototypingMixin {
   });
 
   factory FramePrototypingMixin({
-    _i3.OverflowDirection? overflowDirection,
+    _i3.OverflowDirectionOptions? overflowDirection,
     _i2.num? numberOfFixedChildren,
-    _i3.OverlayPositionType? overlayPositionType,
+    _i3.OverlayPositionTypeOptions? overlayPositionType,
     _i2.Object? overlayBackground,
-    _i3.OverlayBackgroundInteraction? overlayBackgroundInteraction,
+    _i3.OverlayBackgroundInteractionOptions? overlayBackgroundInteraction,
   }) =>
       FramePrototypingMixin._(
-        overflowDirection: overflowDirection?.name ?? _i7.undefined,
+        overflowDirection: overflowDirection?.name,
         numberOfFixedChildren: numberOfFixedChildren,
-        overlayPositionType: overlayPositionType?.name ?? _i7.undefined,
-        overlayBackground: overlayBackground ?? _i7.undefined,
-        overlayBackgroundInteraction:
-            overlayBackgroundInteraction?.name ?? _i7.undefined,
+        overlayPositionType: overlayPositionType?.name,
+        overlayBackground: overlayBackground,
+        overlayBackgroundInteraction: overlayBackgroundInteraction?.name,
       );
 }
 
 extension FramePrototypingMixin$Typings on FramePrototypingMixin {
-  _i3.OverflowDirection get overflowDirection =>
-      _i3.OverflowDirectionOptions.values.byName(_i5.getProperty(
+  _i3.OverflowDirectionOptions get overflowDirection =>
+      _i3.OverflowDirectionOptions.values.byName(_i4.getProperty(
         this,
         'overflowDirection',
       ));
-  set overflowDirection(_i3.OverflowDirection value) {
-    _i5.setProperty(
+  set overflowDirection(_i3.OverflowDirectionOptions value) {
+    _i4.setProperty(
       this,
       'overflowDirection',
       value.name,
     );
   }
 
-  _i2.num get numberOfFixedChildren => _i5.getProperty(
+  _i2.num get numberOfFixedChildren => _i4.getProperty(
         this,
         'numberOfFixedChildren',
       );
   set numberOfFixedChildren(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'numberOfFixedChildren',
       value,
     );
   }
 
-  _i3.OverlayPositionType get overlayPositionType =>
-      _i3.OverlayPositionTypeOptions.values.byName(_i5.getProperty(
+  _i3.OverlayPositionTypeOptions get overlayPositionType =>
+      _i3.OverlayPositionTypeOptions.values.byName(_i4.getProperty(
         this,
         'overlayPositionType',
       ));
-  _i2.Object get overlayBackground => _i5.getProperty(
+  _i2.Object get overlayBackground => _i4.getProperty(
         this,
         'overlayBackground',
       );
-  _i3.OverlayBackgroundInteraction get overlayBackgroundInteraction =>
-      _i3.OverlayBackgroundInteractionOptions.values.byName(_i5.getProperty(
+  _i3.OverlayBackgroundInteractionOptions get overlayBackgroundInteraction =>
+      _i3.OverlayBackgroundInteractionOptions.values.byName(_i4.getProperty(
         this,
         'overlayBackgroundInteraction',
       ));
@@ -15870,51 +16066,52 @@ class VectorLikeMixin {
 
   factory VectorLikeMixin({
     _i3.VectorNetwork? vectorNetwork,
-    _i3.VectorPaths? vectorPaths,
+    _i2.List<_i2.dynamic>? vectorPaths,
     _i2.Object? handleMirroring,
     _i2.Future<void> Function(_i3.VectorNetwork)? setVectorNetworkAsync,
   }) =>
       VectorLikeMixin._(
         vectorNetwork: vectorNetwork ?? _i7.undefined,
-        vectorPaths: vectorPaths ?? _i7.undefined,
+        vectorPaths: vectorPaths,
         handleMirroring: handleMirroring ?? _i7.undefined,
         setVectorNetworkAsync: setVectorNetworkAsync == null
             ? null
-            : _i5.allowInterop(setVectorNetworkAsync),
+            : _i4.allowInterop(setVectorNetworkAsync),
       );
 }
 
 extension VectorLikeMixin$Typings on VectorLikeMixin {
-  _i3.VectorNetwork get vectorNetwork => _i5.getProperty(
+  _i3.VectorNetwork get vectorNetwork => _i4.getProperty(
         this,
         'vectorNetwork',
       );
   set vectorNetwork(_i3.VectorNetwork value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'vectorNetwork',
       value,
     );
   }
 
-  _i3.VectorPaths get vectorPaths => _i5.getProperty(
+  _i2.List<_i2.dynamic> get vectorPaths => ((_i4.getProperty(
         this,
         'vectorPaths',
-      );
-  set vectorPaths(_i3.VectorPaths value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set vectorPaths(_i2.List<_i2.dynamic> value) {
+    _i4.setProperty(
       this,
       'vectorPaths',
       value,
     );
   }
 
-  _i2.Object get handleMirroring => _i5.getProperty(
+  _i2.Object get handleMirroring => _i4.getProperty(
         this,
         'handleMirroring',
       );
   set handleMirroring(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'handleMirroring',
       value,
@@ -15923,16 +16120,16 @@ extension VectorLikeMixin$Typings on VectorLikeMixin {
 
   set setVectorNetworkAsync(
       _i2.Future<void> Function(_i3.VectorNetwork) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setVectorNetworkAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(_i3.VectorNetwork) get setVectorNetworkAsync =>
-      (_i3.VectorNetwork p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i3.VectorNetwork p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setVectorNetworkAsync',
             ),
@@ -15955,24 +16152,25 @@ class ReactionMixin {
   });
 
   factory ReactionMixin({
-    _i4.ReadonlyArray<_i3.Reaction>? reactions,
-    _i2.Future<void> Function(_i4.Array<_i3.Reaction>)? setReactionsAsync,
+    _i2.List<_i3.IInline34>? reactions,
+    _i2.Future<void> Function(_i6.Array<_i2.dynamic>)? setReactionsAsync,
   }) =>
       ReactionMixin._(
-        reactions: reactions ?? _i7.undefined,
+        reactions: reactions,
         setReactionsAsync: setReactionsAsync == null
             ? null
-            : _i5.allowInterop(setReactionsAsync),
+            : _i4.allowInterop(setReactionsAsync),
       );
 }
 
 extension ReactionMixin$Typings on ReactionMixin {
-  _i4.ReadonlyArray<_i3.Reaction> get reactions => _i5.getProperty(
+  _i2.List<_i2.dynamic> get reactions => ((_i4.getProperty(
         this,
         'reactions',
-      );
-  set reactions(_i4.ReadonlyArray<_i3.Reaction> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set reactions(_i2.List<_i2.dynamic> value) {
+    _i4.setProperty(
       this,
       'reactions',
       value,
@@ -15980,17 +16178,17 @@ extension ReactionMixin$Typings on ReactionMixin {
   }
 
   set setReactionsAsync(
-      _i2.Future<void> Function(_i4.Array<_i3.Reaction>) value) {
-    _i5.setProperty(
+      _i2.Future<void> Function(_i6.Array<_i2.dynamic>) value) {
+    _i4.setProperty(
       this,
       'setReactionsAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<void> Function(_i4.Array<_i3.Reaction>) get setReactionsAsync =>
-      (_i4.Array<_i3.Reaction> p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+  _i2.Future<void> Function(_i6.Array<_i2.dynamic>) get setReactionsAsync =>
+      (_i6.Array<_i2.dynamic> p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setReactionsAsync',
             ),
@@ -16013,7 +16211,7 @@ class DocumentationLink {
 }
 
 extension DocumentationLink$Typings on DocumentationLink {
-  _i2.String get uri => _i5.getProperty(
+  _i2.String get uri => _i4.getProperty(
         this,
         'uri',
       );
@@ -16036,80 +16234,81 @@ class PublishableMixin {
   factory PublishableMixin({
     _i2.String? description,
     _i2.String? descriptionMarkdown,
-    _i4.ReadonlyArray<_i3.DocumentationLink>? documentationLinks,
+    _i2.List<_i3.DocumentationLink>? documentationLinks,
     _i2.bool? remote,
     _i2.String? key,
-    _i2.Future<_i3.PublishStatus> Function()? getPublishStatusAsync,
+    _i2.Future<_i3.PublishStatusOptions> Function()? getPublishStatusAsync,
   }) =>
       PublishableMixin._(
         description: description,
         descriptionMarkdown: descriptionMarkdown,
-        documentationLinks: documentationLinks ?? _i7.undefined,
+        documentationLinks: documentationLinks,
         remote: remote,
         key: key,
         getPublishStatusAsync: getPublishStatusAsync == null
             ? null
-            : _i5.allowInterop(getPublishStatusAsync),
+            : _i4.allowInterop(getPublishStatusAsync),
       );
 }
 
 extension PublishableMixin$Typings on PublishableMixin {
-  _i2.String get description => _i5.getProperty(
+  _i2.String get description => _i4.getProperty(
         this,
         'description',
       );
   set description(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'description',
       value,
     );
   }
 
-  _i2.String get descriptionMarkdown => _i5.getProperty(
+  _i2.String get descriptionMarkdown => _i4.getProperty(
         this,
         'descriptionMarkdown',
       );
   set descriptionMarkdown(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'descriptionMarkdown',
       value,
     );
   }
 
-  _i4.ReadonlyArray<_i3.DocumentationLink> get documentationLinks =>
-      _i5.getProperty(
+  _i2.List<_i3.DocumentationLink> get documentationLinks => ((_i4.getProperty(
         this,
         'documentationLinks',
-      );
-  set documentationLinks(_i4.ReadonlyArray<_i3.DocumentationLink> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set documentationLinks(_i2.List<_i3.DocumentationLink> value) {
+    _i4.setProperty(
       this,
       'documentationLinks',
       value,
     );
   }
 
-  _i2.bool get remote => _i5.getProperty(
+  _i2.bool get remote => _i4.getProperty(
         this,
         'remote',
       );
-  _i2.String get key => _i5.getProperty(
+  _i2.String get key => _i4.getProperty(
         this,
         'key',
       );
-  set getPublishStatusAsync(_i2.Future<_i3.PublishStatus> Function() value) {
-    _i5.setProperty(
+  set getPublishStatusAsync(
+      _i2.Future<_i3.PublishStatusOptions> Function() value) {
+    _i4.setProperty(
       this,
       'getPublishStatusAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i3.PublishStatus> Function() get getPublishStatusAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+  _i2.Future<_i3.PublishStatusOptions> Function() get getPublishStatusAsync =>
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getPublishStatusAsync',
             ),
@@ -16187,22 +16386,22 @@ class DefaultShapeMixin
     _i3.FrameNode? Function()? getTopLevelFrame,
     _i2.bool? visible,
     _i2.bool? locked,
-    _i2.List<_i3.SceneNode>? stuckNodes,
+    _i2.List<_i3.BaseNodeMixin>? stuckNodes,
     _i2.List<_i3.ConnectorNode>? attachedConnectors,
     _i2.dynamic componentPropertyReferences,
     _Intersection8? boundVariables,
     _Intersection9? inferredVariables,
     _i2.Object? resolvedVariableModes,
-    _i4.ReadonlyArray<_i3.Reaction>? reactions,
-    _i2.Future<void> Function(_i4.Array<_i3.Reaction>)? setReactionsAsync,
+    _i2.List<_i3.IInline34>? reactions,
+    _i2.Future<void> Function(_i6.Array<_i2.dynamic>)? setReactionsAsync,
     _i2.bool? isMask,
-    _i3.MaskType? maskType,
-    _i4.ReadonlyArray<_i2.Object>? effects,
+    _i3.MaskTypeOptions? maskType,
+    _i2.List<_i2.Object>? effects,
     _i2.String? effectStyleId,
     _i2.Future<void> Function(_i2.String)? setEffectStyleIdAsync,
     _i2.Object? strokeCap,
     _i2.num? strokeMiterLimit,
-    _i3.VectorPaths? fillGeometry,
+    _i2.List<_i2.dynamic>? fillGeometry,
     _i3.VectorNode? Function()? outlineStroke,
     _i3.Rect? absoluteRenderBounds,
     _i2.bool? constrainProportions,
@@ -16218,7 +16417,7 @@ class DefaultShapeMixin
       _i2.num,
     )? resizeWithoutConstraints,
     void Function(_i2.num)? rescale,
-    _i4.ReadonlyArray<_i2.Object>? exportSettings,
+    _i2.List<_i2.Object>? exportSettings,
   }) =>
       DefaultShapeMixin._(
         id: id,
@@ -16226,16 +16425,16 @@ class DefaultShapeMixin
         name: name,
         removed: removed,
         isAsset: isAsset,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+        toString$: toString$ == null ? null : _i4.allowInterop(toString$),
+        remove: remove == null ? null : _i4.allowInterop(remove),
         setRelaunchData:
-            setRelaunchData == null ? null : _i5.allowInterop(setRelaunchData),
+            setRelaunchData == null ? null : _i4.allowInterop(setRelaunchData),
         getRelaunchData:
-            getRelaunchData == null ? null : _i5.allowInterop(getRelaunchData),
-        getCSSAsync: getCSSAsync == null ? null : _i5.allowInterop(getCSSAsync),
+            getRelaunchData == null ? null : _i4.allowInterop(getRelaunchData),
+        getCSSAsync: getCSSAsync == null ? null : _i4.allowInterop(getCSSAsync),
         getTopLevelFrame: getTopLevelFrame == null
             ? null
-            : _i5.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
+            : _i4.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
         visible: visible,
         locked: locked,
         stuckNodes: stuckNodes,
@@ -16244,34 +16443,34 @@ class DefaultShapeMixin
         boundVariables: boundVariables ?? _i7.undefined,
         inferredVariables: inferredVariables ?? _i7.undefined,
         resolvedVariableModes: resolvedVariableModes ?? _i7.undefined,
-        reactions: reactions ?? _i7.undefined,
+        reactions: reactions,
         setReactionsAsync: setReactionsAsync == null
             ? null
-            : _i5.allowInterop(setReactionsAsync),
+            : _i4.allowInterop(setReactionsAsync),
         isMask: isMask,
-        maskType: maskType?.name ?? _i7.undefined,
-        effects: effects ?? _i7.undefined,
+        maskType: maskType?.name,
+        effects: effects,
         effectStyleId: effectStyleId,
         setEffectStyleIdAsync: setEffectStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setEffectStyleIdAsync),
+            : _i4.allowInterop(setEffectStyleIdAsync),
         strokeCap: strokeCap ?? _i7.undefined,
         strokeMiterLimit: strokeMiterLimit,
-        fillGeometry: fillGeometry ?? _i7.undefined,
+        fillGeometry: fillGeometry,
         outlineStroke: outlineStroke == null
             ? null
-            : _i5.allowInterop(() => () => outlineStroke() ?? _i7.undefined),
+            : _i4.allowInterop(() => () => outlineStroke() ?? _i7.undefined),
         absoluteRenderBounds: absoluteRenderBounds ?? _i7.undefined,
         constrainProportions: constrainProportions,
         rotation: rotation,
         layoutSizingHorizontal: layoutSizingHorizontal?.name ?? _i7.undefined,
         layoutSizingVertical: layoutSizingVertical?.name ?? _i7.undefined,
-        resize: resize == null ? null : _i5.allowInterop(resize),
+        resize: resize == null ? null : _i4.allowInterop(resize),
         resizeWithoutConstraints: resizeWithoutConstraints == null
             ? null
-            : _i5.allowInterop(resizeWithoutConstraints),
-        rescale: rescale == null ? null : _i5.allowInterop(rescale),
-        exportSettings: exportSettings ?? _i7.undefined,
+            : _i4.allowInterop(resizeWithoutConstraints),
+        rescale: rescale == null ? null : _i4.allowInterop(rescale),
+        exportSettings: exportSettings,
       );
 }
 
@@ -16392,10 +16591,10 @@ class BaseFrameMixin
 
   factory BaseFrameMixin({
     _i2.Object? detachedInfo,
-    _i4.ReadonlyArray<_i2.Object>? layoutGrids,
+    _i2.List<_i2.Object>? layoutGrids,
     _i2.String? gridStyleId,
     _i2.bool? clipsContent,
-    _i4.ReadonlyArray<_i3.Guide>? guides,
+    _i2.List<_i3.Guide>? guides,
     _i3.InferredAutoLayoutResult? inferredAutoLayout,
     _i2.Future<void> Function(_i2.String)? setGridStyleIdAsync,
     _i2.String? id,
@@ -16411,34 +16610,37 @@ class BaseFrameMixin
     _i3.FrameNode? Function()? getTopLevelFrame,
     _i2.bool? visible,
     _i2.bool? locked,
-    _i2.List<_i3.SceneNode>? stuckNodes,
+    _i2.List<_i3.BaseNodeMixin>? stuckNodes,
     _i2.List<_i3.ConnectorNode>? attachedConnectors,
     _i2.dynamic componentPropertyReferences,
     _Intersection8? boundVariables,
     _Intersection9? inferredVariables,
     _i2.Object? resolvedVariableModes,
-    _i4.ReadonlyArray<_i3.SceneNode>? children,
-    void Function(_i3.SceneNode)? appendChild,
+    _i2.List<_i3.BaseNodeMixin>? children,
+    void Function(_i3.BaseNodeMixin)? appendChild,
     void Function(
       _i2.num,
-      _i3.SceneNode,
+      _i3.BaseNodeMixin,
     )? insertChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findChildren,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))?
+        findChild,
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findAll,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findOne,
-    _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))? findOne,
+    _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
             _i3.FindAllCriteria<T>)?
         findAllWithCriteria,
-    _i4.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
+    _i6.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
     _i2.bool? expanded,
-    _i4.ReadonlyArray<_i2.Object>? backgrounds,
+    _i2.List<_i2.Object>? backgrounds,
     _i2.String? backgroundStyleId,
     _i2.Object? strokeCap,
     _i2.num? strokeMiterLimit,
-    _i3.VectorPaths? fillGeometry,
+    _i2.List<_i2.dynamic>? fillGeometry,
     _i3.VectorNode? Function()? outlineStroke,
     _i2.Object? cornerRadius,
     _i2.num? cornerSmoothing,
@@ -16447,8 +16649,8 @@ class BaseFrameMixin
     _i2.num? bottomLeftRadius,
     _i2.num? bottomRightRadius,
     _i2.bool? isMask,
-    _i3.MaskType? maskType,
-    _i4.ReadonlyArray<_i2.Object>? effects,
+    _i3.MaskTypeOptions? maskType,
+    _i2.List<_i2.Object>? effects,
     _i2.String? effectStyleId,
     _i2.Future<void> Function(_i2.String)? setEffectStyleIdAsync,
     _i3.Constraints? constraints,
@@ -16466,7 +16668,7 @@ class BaseFrameMixin
       _i2.num,
     )? resizeWithoutConstraints,
     void Function(_i2.num)? rescale,
-    _i4.ReadonlyArray<_i2.Object>? exportSettings,
+    _i2.List<_i2.Object>? exportSettings,
     _i2.num? strokeTopWeight,
     _i2.num? strokeBottomWeight,
     _i2.num? strokeLeftWeight,
@@ -16491,34 +16693,34 @@ class BaseFrameMixin
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
-    _i4.ReadonlyArray<_i3.Annotation>? annotations,
-    _i3.DevStatus? devStatus,
+    _i2.List<_i3.Annotation>? annotations,
+    _i3.IInline36? devStatus,
   }) =>
       BaseFrameMixin._(
-        detachedInfo: detachedInfo ?? _i7.undefined ?? _i7.undefined,
-        layoutGrids: layoutGrids ?? _i7.undefined,
+        detachedInfo: detachedInfo ?? _i7.undefined,
+        layoutGrids: layoutGrids,
         gridStyleId: gridStyleId,
         clipsContent: clipsContent,
-        guides: guides ?? _i7.undefined,
+        guides: guides,
         inferredAutoLayout: inferredAutoLayout ?? _i7.undefined,
         setGridStyleIdAsync: setGridStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setGridStyleIdAsync),
+            : _i4.allowInterop(setGridStyleIdAsync),
         id: id,
         parent: parent ?? _i7.undefined,
         name: name,
         removed: removed,
         isAsset: isAsset,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+        toString$: toString$ == null ? null : _i4.allowInterop(toString$),
+        remove: remove == null ? null : _i4.allowInterop(remove),
         setRelaunchData:
-            setRelaunchData == null ? null : _i5.allowInterop(setRelaunchData),
+            setRelaunchData == null ? null : _i4.allowInterop(setRelaunchData),
         getRelaunchData:
-            getRelaunchData == null ? null : _i5.allowInterop(getRelaunchData),
-        getCSSAsync: getCSSAsync == null ? null : _i5.allowInterop(getCSSAsync),
+            getRelaunchData == null ? null : _i4.allowInterop(getRelaunchData),
+        getCSSAsync: getCSSAsync == null ? null : _i4.allowInterop(getCSSAsync),
         getTopLevelFrame: getTopLevelFrame == null
             ? null
-            : _i5.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
+            : _i4.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
         visible: visible,
         locked: locked,
         stuckNodes: stuckNodes,
@@ -16527,35 +16729,33 @@ class BaseFrameMixin
         boundVariables: boundVariables ?? _i7.undefined,
         inferredVariables: inferredVariables ?? _i7.undefined,
         resolvedVariableModes: resolvedVariableModes ?? _i7.undefined,
-        children: children ?? _i7.undefined,
-        appendChild: appendChild == null ? null : _i5.allowInterop(appendChild),
-        insertChild: insertChild == null ? null : _i5.allowInterop(insertChild),
+        children: children,
+        appendChild: appendChild == null ? null : _i4.allowInterop(appendChild),
+        insertChild: insertChild == null ? null : _i4.allowInterop(insertChild),
         findChildren:
-            findChildren == null ? null : _i5.allowInterop(findChildren),
+            findChildren == null ? null : _i4.allowInterop(findChildren),
         findChild: findChild == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findChild(p0) ?? _i7.undefined ?? _i7.undefined),
-        findAll: findAll == null ? null : _i5.allowInterop(findAll),
+            : _i4.allowInterop((p0) => () => findChild(p0) ?? _i7.undefined),
+        findAll: findAll == null ? null : _i4.allowInterop(findAll),
         findOne: findOne == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findOne(p0) ?? _i7.undefined ?? _i7.undefined),
+            : _i4.allowInterop((p0) => () => findOne(p0) ?? _i7.undefined),
         findAllWithCriteria: findAllWithCriteria == null
             ? null
-            : _i5.allowInterop(findAllWithCriteria),
+            : _i4.allowInterop(findAllWithCriteria),
         findWidgetNodesByWidgetId: findWidgetNodesByWidgetId == null
             ? null
-            : _i5.allowInterop(findWidgetNodesByWidgetId),
+            : _i4.allowInterop(findWidgetNodesByWidgetId),
         expanded: expanded,
-        backgrounds: backgrounds ?? _i7.undefined,
+        backgrounds: backgrounds,
         backgroundStyleId: backgroundStyleId,
         strokeCap: strokeCap ?? _i7.undefined,
         strokeMiterLimit: strokeMiterLimit,
-        fillGeometry: fillGeometry ?? _i7.undefined,
+        fillGeometry: fillGeometry,
         outlineStroke: outlineStroke == null
             ? null
-            : _i5.allowInterop(() => () => outlineStroke() ?? _i7.undefined),
+            : _i4.allowInterop(() => () => outlineStroke() ?? _i7.undefined),
         cornerRadius: cornerRadius ?? _i7.undefined,
         cornerSmoothing: cornerSmoothing,
         topLeftRadius: topLeftRadius,
@@ -16563,24 +16763,24 @@ class BaseFrameMixin
         bottomLeftRadius: bottomLeftRadius,
         bottomRightRadius: bottomRightRadius,
         isMask: isMask,
-        maskType: maskType?.name ?? _i7.undefined,
-        effects: effects ?? _i7.undefined,
+        maskType: maskType?.name,
+        effects: effects,
         effectStyleId: effectStyleId,
         setEffectStyleIdAsync: setEffectStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setEffectStyleIdAsync),
+            : _i4.allowInterop(setEffectStyleIdAsync),
         constraints: constraints ?? _i7.undefined,
         absoluteRenderBounds: absoluteRenderBounds ?? _i7.undefined,
         constrainProportions: constrainProportions,
         rotation: rotation,
         layoutSizingHorizontal: layoutSizingHorizontal?.name ?? _i7.undefined,
         layoutSizingVertical: layoutSizingVertical?.name ?? _i7.undefined,
-        resize: resize == null ? null : _i5.allowInterop(resize),
+        resize: resize == null ? null : _i4.allowInterop(resize),
         resizeWithoutConstraints: resizeWithoutConstraints == null
             ? null
-            : _i5.allowInterop(resizeWithoutConstraints),
-        rescale: rescale == null ? null : _i5.allowInterop(rescale),
-        exportSettings: exportSettings ?? _i7.undefined,
+            : _i4.allowInterop(resizeWithoutConstraints),
+        rescale: rescale == null ? null : _i4.allowInterop(rescale),
+        exportSettings: exportSettings,
         strokeTopWeight: strokeTopWeight,
         strokeBottomWeight: strokeBottomWeight,
         strokeLeftWeight: strokeLeftWeight,
@@ -16604,74 +16804,76 @@ class BaseFrameMixin
         strokesIncludedInLayout: strokesIncludedInLayout,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
-        annotations: annotations ?? _i7.undefined,
-        devStatus: devStatus ?? _i7.undefined,
+            : _i4.allowInterop(unlockAspectRatio),
+        annotations: annotations,
+        devStatus: devStatus,
       );
 }
 
 extension BaseFrameMixin$Typings on BaseFrameMixin {
-  _i2.Object? get detachedInfo => _i5.getProperty(
+  _i2.Object? get detachedInfo => _i4.getProperty(
         this,
         'detachedInfo',
       );
-  _i4.ReadonlyArray<_i2.Object> get layoutGrids => _i5.getProperty(
+  _i2.List<_i2.Object> get layoutGrids => ((_i4.getProperty(
         this,
         'layoutGrids',
-      );
-  set layoutGrids(_i4.ReadonlyArray<_i2.Object> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set layoutGrids(_i2.List<_i2.Object> value) {
+    _i4.setProperty(
       this,
       'layoutGrids',
       value,
     );
   }
 
-  _i2.String get gridStyleId => _i5.getProperty(
+  _i2.String get gridStyleId => _i4.getProperty(
         this,
         'gridStyleId',
       );
   set gridStyleId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'gridStyleId',
       value,
     );
   }
 
-  _i2.bool get clipsContent => _i5.getProperty(
+  _i2.bool get clipsContent => _i4.getProperty(
         this,
         'clipsContent',
       );
   set clipsContent(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clipsContent',
       value,
     );
   }
 
-  _i4.ReadonlyArray<_i3.Guide> get guides => _i5.getProperty(
+  _i2.List<_i3.Guide> get guides => ((_i4.getProperty(
         this,
         'guides',
-      );
-  set guides(_i4.ReadonlyArray<_i3.Guide> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set guides(_i2.List<_i3.Guide> value) {
+    _i4.setProperty(
       this,
       'guides',
       value,
     );
   }
 
-  _i3.InferredAutoLayoutResult? get inferredAutoLayout => _i5.getProperty(
+  _i3.InferredAutoLayoutResult? get inferredAutoLayout => _i4.getProperty(
         this,
         'inferredAutoLayout',
       );
   set inferredAutoLayout(_i3.InferredAutoLayoutResult? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'inferredAutoLayout',
       value ?? _i7.undefined,
@@ -16679,16 +16881,16 @@ extension BaseFrameMixin$Typings on BaseFrameMixin {
   }
 
   set setGridStyleIdAsync(_i2.Future<void> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setGridStyleIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(_i2.String) get setGridStyleIdAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setGridStyleIdAsync',
             ),
@@ -16728,40 +16930,39 @@ class DefaultFrameMixin
 
   factory DefaultFrameMixin({
     _i2.Object? detachedInfo,
-    _i4.ReadonlyArray<_i2.Object>? layoutGrids,
+    _i2.List<_i2.Object>? layoutGrids,
     _i2.String? gridStyleId,
     _i2.bool? clipsContent,
-    _i4.ReadonlyArray<_i3.Guide>? guides,
+    _i2.List<_i3.Guide>? guides,
     _i3.InferredAutoLayoutResult? inferredAutoLayout,
     _i2.Future<void> Function(_i2.String)? setGridStyleIdAsync,
-    _i3.OverflowDirection? overflowDirection,
+    _i3.OverflowDirectionOptions? overflowDirection,
     _i2.num? numberOfFixedChildren,
-    _i3.OverlayPositionType? overlayPositionType,
+    _i3.OverlayPositionTypeOptions? overlayPositionType,
     _i2.Object? overlayBackground,
-    _i3.OverlayBackgroundInteraction? overlayBackgroundInteraction,
-    _i4.ReadonlyArray<_i3.Reaction>? reactions,
-    _i2.Future<void> Function(_i4.Array<_i3.Reaction>)? setReactionsAsync,
+    _i3.OverlayBackgroundInteractionOptions? overlayBackgroundInteraction,
+    _i2.List<_i3.IInline34>? reactions,
+    _i2.Future<void> Function(_i6.Array<_i2.dynamic>)? setReactionsAsync,
   }) =>
       DefaultFrameMixin._(
-        detachedInfo: detachedInfo ?? _i7.undefined ?? _i7.undefined,
-        layoutGrids: layoutGrids ?? _i7.undefined,
+        detachedInfo: detachedInfo ?? _i7.undefined,
+        layoutGrids: layoutGrids,
         gridStyleId: gridStyleId,
         clipsContent: clipsContent,
-        guides: guides ?? _i7.undefined,
+        guides: guides,
         inferredAutoLayout: inferredAutoLayout ?? _i7.undefined,
         setGridStyleIdAsync: setGridStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setGridStyleIdAsync),
-        overflowDirection: overflowDirection?.name ?? _i7.undefined,
+            : _i4.allowInterop(setGridStyleIdAsync),
+        overflowDirection: overflowDirection?.name,
         numberOfFixedChildren: numberOfFixedChildren,
-        overlayPositionType: overlayPositionType?.name ?? _i7.undefined,
-        overlayBackground: overlayBackground ?? _i7.undefined,
-        overlayBackgroundInteraction:
-            overlayBackgroundInteraction?.name ?? _i7.undefined,
-        reactions: reactions ?? _i7.undefined,
+        overlayPositionType: overlayPositionType?.name,
+        overlayBackground: overlayBackground,
+        overlayBackgroundInteraction: overlayBackgroundInteraction?.name,
+        reactions: reactions,
         setReactionsAsync: setReactionsAsync == null
             ? null
-            : _i5.allowInterop(setReactionsAsync),
+            : _i4.allowInterop(setReactionsAsync),
       );
 }
 
@@ -16823,13 +17024,13 @@ class OpaqueNodeMixin
     _i3.FrameNode? Function()? getTopLevelFrame,
     _i2.bool? visible,
     _i2.bool? locked,
-    _i2.List<_i3.SceneNode>? stuckNodes,
+    _i2.List<_i3.BaseNodeMixin>? stuckNodes,
     _i2.List<_i3.ConnectorNode>? attachedConnectors,
     _i2.dynamic componentPropertyReferences,
     _Intersection8? boundVariables,
     _Intersection9? inferredVariables,
     _i2.Object? resolvedVariableModes,
-    _i4.ReadonlyArray<_i2.Object>? exportSettings,
+    _i2.List<_i2.Object>? exportSettings,
     _i2.num? x,
     _i2.num? y,
     _i2.num? width,
@@ -16838,8 +17039,30 @@ class OpaqueNodeMixin
     _i2.num? maxWidth,
     _i2.num? minHeight,
     _i2.num? maxHeight,
-    _i3.Transform? relativeTransform,
-    _i3.Transform? absoluteTransform,
+    (
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+    )? relativeTransform,
+    (
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+      (
+        _i2.num,
+        _i2.num,
+        _i2.num,
+      ),
+    )? absoluteTransform,
     _i3.Rect? absoluteBoundingBox,
   }) =>
       OpaqueNodeMixin._(
@@ -16848,16 +17071,16 @@ class OpaqueNodeMixin
         name: name,
         removed: removed,
         isAsset: isAsset,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+        toString$: toString$ == null ? null : _i4.allowInterop(toString$),
+        remove: remove == null ? null : _i4.allowInterop(remove),
         setRelaunchData:
-            setRelaunchData == null ? null : _i5.allowInterop(setRelaunchData),
+            setRelaunchData == null ? null : _i4.allowInterop(setRelaunchData),
         getRelaunchData:
-            getRelaunchData == null ? null : _i5.allowInterop(getRelaunchData),
-        getCSSAsync: getCSSAsync == null ? null : _i5.allowInterop(getCSSAsync),
+            getRelaunchData == null ? null : _i4.allowInterop(getRelaunchData),
+        getCSSAsync: getCSSAsync == null ? null : _i4.allowInterop(getCSSAsync),
         getTopLevelFrame: getTopLevelFrame == null
             ? null
-            : _i5.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
+            : _i4.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
         visible: visible,
         locked: locked,
         stuckNodes: stuckNodes,
@@ -16866,7 +17089,7 @@ class OpaqueNodeMixin
         boundVariables: boundVariables ?? _i7.undefined,
         inferredVariables: inferredVariables ?? _i7.undefined,
         resolvedVariableModes: resolvedVariableModes ?? _i7.undefined,
-        exportSettings: exportSettings ?? _i7.undefined,
+        exportSettings: exportSettings,
         x: x,
         y: y,
         width: width,
@@ -16903,34 +17126,34 @@ class MinimalBlendMixin {
 
   factory MinimalBlendMixin({
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
   }) =>
       MinimalBlendMixin._(
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
       );
 }
 
 extension MinimalBlendMixin$Typings on MinimalBlendMixin {
-  _i2.num get opacity => _i5.getProperty(
+  _i2.num get opacity => _i4.getProperty(
         this,
         'opacity',
       );
   set opacity(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'opacity',
       value,
     );
   }
 
-  _i3.BlendMode get blendMode =>
-      _i3.BlendModeOptions.values.byName(_i5.getProperty(
+  _i3.BlendModeOptions get blendMode =>
+      _i3.BlendModeOptions.values.byName(_i4.getProperty(
         this,
         'blendMode',
       ));
-  set blendMode(_i3.BlendMode value) {
-    _i5.setProperty(
+  set blendMode(_i3.BlendModeOptions value) {
+    _i4.setProperty(
       this,
       'blendMode',
       value.name,
@@ -16953,31 +17176,32 @@ class Annotation {
   factory Annotation({
     _i2.String? label,
     _i2.String? labelMarkdown,
-    _i4.ReadonlyArray<_i3.AnnotationProperty>? properties,
+    _i2.List<_i3.AnnotationProperty>? properties,
     _i2.String? categoryId,
   }) =>
       Annotation._(
         label: label,
         labelMarkdown: labelMarkdown,
-        properties: properties ?? _i7.undefined,
+        properties: properties,
         categoryId: categoryId,
       );
 }
 
 extension Annotation$Typings on Annotation {
-  _i2.String? get label => _i5.getProperty(
+  _i2.String? get label => _i4.getProperty(
         this,
         'label',
       );
-  _i2.String? get labelMarkdown => _i5.getProperty(
+  _i2.String? get labelMarkdown => _i4.getProperty(
         this,
         'labelMarkdown',
       );
-  _i4.ReadonlyArray<_i3.AnnotationProperty>? get properties => _i5.getProperty(
+  _i2.List<_i3.AnnotationProperty>? get properties => ((_i4.getProperty(
         this,
         'properties',
-      );
-  _i2.String? get categoryId => _i5.getProperty(
+      )) as _i2.List?)
+          ?.cast();
+  _i2.String? get categoryId => _i4.getProperty(
         this,
         'categoryId',
       );
@@ -16990,13 +17214,13 @@ extension Annotation$Typings on Annotation {
 class AnnotationProperty {
   external factory AnnotationProperty._({_i2.dynamic type});
 
-  factory AnnotationProperty({_i3.AnnotationPropertyType? type}) =>
-      AnnotationProperty._(type: type?.name ?? _i7.undefined);
+  factory AnnotationProperty({_i3.AnnotationPropertyTypeOptions? type}) =>
+      AnnotationProperty._(type: type?.name);
 }
 
 extension AnnotationProperty$Typings on AnnotationProperty {
-  _i3.AnnotationPropertyType get type =>
-      _i3.AnnotationPropertyTypeOptions.values.byName(_i5.getProperty(
+  _i3.AnnotationPropertyTypeOptions get type =>
+      _i3.AnnotationPropertyTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
@@ -17009,17 +17233,18 @@ extension AnnotationProperty$Typings on AnnotationProperty {
 class AnnotationsMixin {
   external factory AnnotationsMixin._({_i2.dynamic annotations});
 
-  factory AnnotationsMixin({_i4.ReadonlyArray<_i3.Annotation>? annotations}) =>
-      AnnotationsMixin._(annotations: annotations ?? _i7.undefined);
+  factory AnnotationsMixin({_i2.List<_i3.Annotation>? annotations}) =>
+      AnnotationsMixin._(annotations: annotations);
 }
 
 extension AnnotationsMixin$Typings on AnnotationsMixin {
-  _i4.ReadonlyArray<_i3.Annotation> get annotations => _i5.getProperty(
+  _i2.List<_i3.Annotation> get annotations => ((_i4.getProperty(
         this,
         'annotations',
-      );
-  set annotations(_i4.ReadonlyArray<_i3.Annotation> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set annotations(_i2.List<_i3.Annotation> value) {
+    _i4.setProperty(
       this,
       'annotations',
       value,
@@ -17034,25 +17259,25 @@ extension AnnotationsMixin$Typings on AnnotationsMixin {
 class IInline69 {}
 
 extension IInline69$Typings on IInline69 {
-  _i3.SceneNode get node => _i5.getProperty(
+  _i3.BaseNodeMixin get node => _i4.getProperty(
         this,
         'node',
       );
-  set node(_i3.SceneNode value) {
-    _i5.setProperty(
+  set node(_i3.BaseNodeMixin value) {
+    _i4.setProperty(
       this,
       'node',
       value,
     );
   }
 
-  _i3.MeasurementSide get side =>
-      _i3.MeasurementSideOptions.values.byName(_i5.getProperty(
+  _i3.MeasurementSideOptions get side =>
+      _i3.MeasurementSideOptions.values.byName(_i4.getProperty(
         this,
         'side',
       ));
-  set side(_i3.MeasurementSide value) {
-    _i5.setProperty(
+  set side(_i3.MeasurementSideOptions value) {
+    _i4.setProperty(
       this,
       'side',
       value.name,
@@ -17067,25 +17292,25 @@ extension IInline69$Typings on IInline69 {
 class IInline70 {}
 
 extension IInline70$Typings on IInline70 {
-  _i3.SceneNode get node => _i5.getProperty(
+  _i3.BaseNodeMixin get node => _i4.getProperty(
         this,
         'node',
       );
-  set node(_i3.SceneNode value) {
-    _i5.setProperty(
+  set node(_i3.BaseNodeMixin value) {
+    _i4.setProperty(
       this,
       'node',
       value,
     );
   }
 
-  _i3.MeasurementSide get side =>
-      _i3.MeasurementSideOptions.values.byName(_i5.getProperty(
+  _i3.MeasurementSideOptions get side =>
+      _i3.MeasurementSideOptions.values.byName(_i4.getProperty(
         this,
         'side',
       ));
-  set side(_i3.MeasurementSide value) {
-    _i5.setProperty(
+  set side(_i3.MeasurementSideOptions value) {
+    _i4.setProperty(
       this,
       'side',
       value.name,
@@ -17117,66 +17342,66 @@ class Measurement {
         id: id,
         start: start ?? _i7.undefined,
         end: end ?? _i7.undefined,
-        offset: offset ?? _i7.undefined,
+        offset: offset,
         freeText: freeText,
       );
 }
 
 extension Measurement$Typings on Measurement {
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
   set id(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'id',
       value,
     );
   }
 
-  _i2.dynamic get start => _i5.getProperty(
+  _i2.dynamic get start => _i4.getProperty(
         this,
         'start',
       );
   set start(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'start',
       value,
     );
   }
 
-  _i2.dynamic get end => _i5.getProperty(
+  _i2.dynamic get end => _i4.getProperty(
         this,
         'end',
       );
   set end(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'end',
       value,
     );
   }
 
-  _i2.Object get offset => _i5.getProperty(
+  _i2.Object get offset => _i4.getProperty(
         this,
         'offset',
       );
   set offset(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'offset',
       value,
     );
   }
 
-  _i2.String get freeText => _i5.getProperty(
+  _i2.String get freeText => _i4.getProperty(
         this,
         'freeText',
       );
   set freeText(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'freeText',
       value,
@@ -17191,24 +17416,24 @@ extension Measurement$Typings on Measurement {
 class IInline71 {}
 
 extension IInline71$Typings on IInline71 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.num get relative => _i5.getProperty(
+  _i2.num get relative => _i4.getProperty(
         this,
         'relative',
       );
   set relative(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'relative',
       value,
@@ -17223,24 +17448,24 @@ extension IInline71$Typings on IInline71 {
 class IInline72 {}
 
 extension IInline72$Typings on IInline72 {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.num get fixed => _i5.getProperty(
+  _i2.num get fixed => _i4.getProperty(
         this,
         'fixed',
       );
   set fixed(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fixed',
       value,
@@ -17255,25 +17480,25 @@ extension IInline72$Typings on IInline72 {
 class IInline73 {}
 
 extension IInline73$Typings on IInline73 {
-  _i3.SceneNode get node => _i5.getProperty(
+  _i3.BaseNodeMixin get node => _i4.getProperty(
         this,
         'node',
       );
-  set node(_i3.SceneNode value) {
-    _i5.setProperty(
+  set node(_i3.BaseNodeMixin value) {
+    _i4.setProperty(
       this,
       'node',
       value,
     );
   }
 
-  _i3.MeasurementSide get side =>
-      _i3.MeasurementSideOptions.values.byName(_i5.getProperty(
+  _i3.MeasurementSideOptions get side =>
+      _i3.MeasurementSideOptions.values.byName(_i4.getProperty(
         this,
         'side',
       ));
-  set side(_i3.MeasurementSide value) {
-    _i5.setProperty(
+  set side(_i3.MeasurementSideOptions value) {
+    _i4.setProperty(
       this,
       'side',
       value.name,
@@ -17288,25 +17513,25 @@ extension IInline73$Typings on IInline73 {
 class IInline74 {}
 
 extension IInline74$Typings on IInline74 {
-  _i3.SceneNode get node => _i5.getProperty(
+  _i3.BaseNodeMixin get node => _i4.getProperty(
         this,
         'node',
       );
-  set node(_i3.SceneNode value) {
-    _i5.setProperty(
+  set node(_i3.BaseNodeMixin value) {
+    _i4.setProperty(
       this,
       'node',
       value,
     );
   }
 
-  _i3.MeasurementSide get side =>
-      _i3.MeasurementSideOptions.values.byName(_i5.getProperty(
+  _i3.MeasurementSideOptions get side =>
+      _i3.MeasurementSideOptions.values.byName(_i4.getProperty(
         this,
         'side',
       ));
-  set side(_i3.MeasurementSide value) {
-    _i5.setProperty(
+  set side(_i3.MeasurementSideOptions value) {
+    _i4.setProperty(
       this,
       'side',
       value.name,
@@ -17321,24 +17546,24 @@ extension IInline74$Typings on IInline74 {
 class IInline75 {}
 
 extension IInline75$Typings on IInline75 {
-  _i2.Object? get offset => _i5.getProperty(
+  _i2.Object? get offset => _i4.getProperty(
         this,
         'offset',
       );
   set offset(_i2.Object? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'offset',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  _i2.String? get freeText => _i5.getProperty(
+  _i2.String? get freeText => _i4.getProperty(
         this,
         'freeText',
       );
   set freeText(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'freeText',
       value ?? _i7.undefined,
@@ -17353,24 +17578,24 @@ extension IInline75$Typings on IInline75 {
 class IInline76 {}
 
 extension IInline76$Typings on IInline76 {
-  _i2.Object? get offset => _i5.getProperty(
+  _i2.Object? get offset => _i4.getProperty(
         this,
         'offset',
       );
   set offset(_i2.Object? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'offset',
-      value ?? _i7.undefined ?? _i7.undefined,
+      value ?? _i7.undefined,
     );
   }
 
-  _i2.String? get freeText => _i5.getProperty(
+  _i2.String? get freeText => _i4.getProperty(
         this,
         'freeText',
       );
   set freeText(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'freeText',
       value ?? _i7.undefined,
@@ -17393,7 +17618,8 @@ class MeasurementsMixin {
 
   factory MeasurementsMixin({
     _i2.List<_i3.Measurement> Function()? getMeasurements,
-    _i2.List<_i3.Measurement> Function(_i3.SceneNode)? getMeasurementsForNode,
+    _i2.List<_i3.Measurement> Function(_i3.BaseNodeMixin)?
+        getMeasurementsForNode,
     _i3.Measurement Function(
       _i2.dynamic,
       _i2.dynamic, [
@@ -17407,32 +17633,32 @@ class MeasurementsMixin {
   }) =>
       MeasurementsMixin._(
         getMeasurements:
-            getMeasurements == null ? null : _i5.allowInterop(getMeasurements),
+            getMeasurements == null ? null : _i4.allowInterop(getMeasurements),
         getMeasurementsForNode: getMeasurementsForNode == null
             ? null
-            : _i5.allowInterop(getMeasurementsForNode),
+            : _i4.allowInterop(getMeasurementsForNode),
         addMeasurement:
-            addMeasurement == null ? null : _i5.allowInterop(addMeasurement),
+            addMeasurement == null ? null : _i4.allowInterop(addMeasurement),
         editMeasurement:
-            editMeasurement == null ? null : _i5.allowInterop(editMeasurement),
+            editMeasurement == null ? null : _i4.allowInterop(editMeasurement),
         deleteMeasurement: deleteMeasurement == null
             ? null
-            : _i5.allowInterop(deleteMeasurement),
+            : _i4.allowInterop(deleteMeasurement),
       );
 }
 
 extension MeasurementsMixin$Typings on MeasurementsMixin {
   set getMeasurements(_i2.List<_i3.Measurement> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getMeasurements',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.List<_i3.Measurement> Function() get getMeasurements =>
-      () => ((_i5.callMethod(
-            _i5.getProperty(
+      () => ((_i4.callMethod(
+            _i4.getProperty(
               this,
               'getMeasurements',
             ),
@@ -17441,17 +17667,17 @@ extension MeasurementsMixin$Typings on MeasurementsMixin {
           )) as _i2.List)
               .cast();
   set getMeasurementsForNode(
-      _i2.List<_i3.Measurement> Function(_i3.SceneNode) value) {
-    _i5.setProperty(
+      _i2.List<_i3.Measurement> Function(_i3.BaseNodeMixin) value) {
+    _i4.setProperty(
       this,
       'getMeasurementsForNode',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.List<_i3.Measurement> Function(_i3.SceneNode)
-      get getMeasurementsForNode => (_i3.SceneNode p0) => ((_i5.callMethod(
-            _i5.getProperty(
+  _i2.List<_i3.Measurement> Function(_i3.BaseNodeMixin)
+      get getMeasurementsForNode => (_i3.BaseNodeMixin p0) => ((_i4.callMethod(
+            _i4.getProperty(
               this,
               'getMeasurementsForNode',
             ),
@@ -17468,10 +17694,10 @@ extension MeasurementsMixin$Typings on MeasurementsMixin {
         _i2.dynamic, [
         _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'addMeasurement',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -17484,8 +17710,8 @@ extension MeasurementsMixin$Typings on MeasurementsMixin {
         _i2.dynamic p1, [
         _i2.dynamic p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'addMeasurement',
             ),
@@ -17502,10 +17728,10 @@ extension MeasurementsMixin$Typings on MeasurementsMixin {
         _i2.String,
         _i2.dynamic,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'editMeasurement',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -17516,8 +17742,8 @@ extension MeasurementsMixin$Typings on MeasurementsMixin {
         _i2.String p0,
         _i2.dynamic p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'editMeasurement',
             ),
@@ -17529,16 +17755,16 @@ extension MeasurementsMixin$Typings on MeasurementsMixin {
             ],
           );
   set deleteMeasurement(void Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'deleteMeasurement',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(_i2.String) get deleteMeasurement =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'deleteMeasurement',
             ),
@@ -17562,7 +17788,7 @@ class VariantMixin {
 }
 
 extension VariantMixin$Typings on VariantMixin {
-  _i2.Object? get variantProperties => _i5.getProperty(
+  _i2.Object? get variantProperties => _i4.getProperty(
         this,
         'variantProperties',
       );
@@ -17575,38 +17801,37 @@ extension VariantMixin$Typings on VariantMixin {
 class IInline78 {}
 
 extension IInline78$Typings on IInline78 {
-  _i2.String? get name => _i5.getProperty(
+  _i2.String? get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.Object? get defaultValue => _i5.getProperty(
+  _i2.Object? get defaultValue => _i4.getProperty(
         this,
         'defaultValue',
       );
   set defaultValue(_i2.Object? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'defaultValue',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.List<_i3.InstanceSwapPreferredValue>? get preferredValues =>
-      ((_i5.getProperty(
+  _i2.List<_i2.dynamic>? get preferredValues => ((_i4.getProperty(
         this,
         'preferredValues',
       )) as _i2.List?)
           ?.cast();
-  set preferredValues(_i2.List<_i3.InstanceSwapPreferredValue>? value) {
-    _i5.setProperty(
+  set preferredValues(_i2.List<_i2.dynamic>? value) {
+    _i4.setProperty(
       this,
       'preferredValues',
       value ?? _i7.undefined,
@@ -17630,9 +17855,9 @@ class ComponentPropertiesMixin {
     _i2.Object? componentPropertyDefinitions,
     _i2.String Function(
       _i2.String,
-      _i3.ComponentPropertyType,
+      _i3.ComponentPropertyTypeOptions,
       _i2.Object, [
-      _i3.ComponentPropertyOptions?,
+      _i2.dynamic,
     ])? addComponentProperty,
     _i2.String Function(
       _i2.String,
@@ -17641,52 +17866,51 @@ class ComponentPropertiesMixin {
     void Function(_i2.String)? deleteComponentProperty,
   }) =>
       ComponentPropertiesMixin._(
-        componentPropertyDefinitions:
-            componentPropertyDefinitions ?? _i7.undefined,
+        componentPropertyDefinitions: componentPropertyDefinitions,
         addComponentProperty: addComponentProperty == null
             ? null
-            : _i5.allowInterop(addComponentProperty),
+            : _i4.allowInterop(addComponentProperty),
         editComponentProperty: editComponentProperty == null
             ? null
-            : _i5.allowInterop(editComponentProperty),
+            : _i4.allowInterop(editComponentProperty),
         deleteComponentProperty: deleteComponentProperty == null
             ? null
-            : _i5.allowInterop(deleteComponentProperty),
+            : _i4.allowInterop(deleteComponentProperty),
       );
 }
 
 extension ComponentPropertiesMixin$Typings on ComponentPropertiesMixin {
-  _i2.Object get componentPropertyDefinitions => _i5.getProperty(
+  _i2.Object get componentPropertyDefinitions => _i4.getProperty(
         this,
         'componentPropertyDefinitions',
       );
   set addComponentProperty(
       _i2.String Function(
         _i2.String,
-        _i3.ComponentPropertyType,
+        _i3.ComponentPropertyTypeOptions,
         _i2.Object, [
-        _i3.ComponentPropertyOptions?,
+        _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'addComponentProperty',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.String Function(
     _i2.String,
-    _i3.ComponentPropertyType,
+    _i3.ComponentPropertyTypeOptions,
     _i2.Object, [
-    _i3.ComponentPropertyOptions?,
+    _i2.dynamic,
   ]) get addComponentProperty => (
         _i2.String p0,
-        _i3.ComponentPropertyType p1,
+        _i3.ComponentPropertyTypeOptions p1,
         _i2.Object p2, [
-        _i3.ComponentPropertyOptions? p3,
+        _i2.dynamic p3,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'addComponentProperty',
             ),
@@ -17696,7 +17920,7 @@ extension ComponentPropertiesMixin$Typings on ComponentPropertiesMixin {
               p0,
               p1.name,
               p2,
-              p3 ?? _i7.undefined ?? _i7.undefined,
+              p3 ?? _i7.undefined,
             ],
           );
   set editComponentProperty(
@@ -17704,10 +17928,10 @@ extension ComponentPropertiesMixin$Typings on ComponentPropertiesMixin {
         _i2.String,
         _i2.dynamic,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'editComponentProperty',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -17718,8 +17942,8 @@ extension ComponentPropertiesMixin$Typings on ComponentPropertiesMixin {
         _i2.String p0,
         _i2.dynamic p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'editComponentProperty',
             ),
@@ -17731,16 +17955,16 @@ extension ComponentPropertiesMixin$Typings on ComponentPropertiesMixin {
             ],
           );
   set deleteComponentProperty(void Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'deleteComponentProperty',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(_i2.String) get deleteComponentProperty =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'deleteComponentProperty',
             ),
@@ -17897,7 +18121,7 @@ class NonResizableTextMixin {
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextCase,
+      _i3.TextCaseOptions,
     )? setRangeTextCase,
     _i2.Object Function(
       _i2.num,
@@ -17910,7 +18134,7 @@ class NonResizableTextMixin {
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextDecoration,
+      _i3.TextDecorationOptions,
     )? setRangeTextDecoration,
     _i2.dynamic Function(
       _i2.num,
@@ -17919,7 +18143,7 @@ class NonResizableTextMixin {
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextDecorationStyle,
+      _i3.TextDecorationStyleOptions,
     )? setRangeTextDecorationStyle,
     _i2.dynamic Function(
       _i2.num,
@@ -17982,7 +18206,7 @@ class NonResizableTextMixin {
     void Function(
       _i2.num,
       _i2.num, [
-      _i3.HyperlinkTarget?,
+      _i2.dynamic,
     ])? setRangeHyperlink,
     _i2.Object Function(
       _i2.num,
@@ -18028,7 +18252,7 @@ class NonResizableTextMixin {
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextListOptions,
+      _i2.dynamic,
     )? setRangeListOptions,
     _i2.Object Function(
       _i2.num,
@@ -18069,15 +18293,15 @@ class NonResizableTextMixin {
     _i2.dynamic Function(
       _i2.num,
       _i2.num,
-      _i3.VariableBindableTextField,
+      _i3.VariableBindableTextFieldOptions,
     )? getRangeBoundVariable,
     void Function(
       _i2.num,
       _i2.num,
-      _i3.VariableBindableTextField, [
+      _i3.VariableBindableTextFieldOptions, [
       _i3.Variable?,
     ])? setRangeBoundVariable,
-    _i4.Array<_i2.dynamic>
+    _i6.Array<_i2.dynamic>
         Function<StyledTextSegmentFields extends _i2.List<_i2.dynamic>>(
       StyledTextSegmentFields, [
       _i2.num?,
@@ -18109,390 +18333,390 @@ class NonResizableTextMixin {
         characters: characters,
         insertCharacters: insertCharacters == null
             ? null
-            : _i5.allowInterop(insertCharacters),
+            : _i4.allowInterop(insertCharacters),
         deleteCharacters: deleteCharacters == null
             ? null
-            : _i5.allowInterop(deleteCharacters),
+            : _i4.allowInterop(deleteCharacters),
         getRangeFontSize: getRangeFontSize == null
             ? null
-            : _i5.allowInterop(getRangeFontSize),
+            : _i4.allowInterop(getRangeFontSize),
         setRangeFontSize: setRangeFontSize == null
             ? null
-            : _i5.allowInterop(setRangeFontSize),
+            : _i4.allowInterop(setRangeFontSize),
         getRangeFontName: getRangeFontName == null
             ? null
-            : _i5.allowInterop(getRangeFontName),
+            : _i4.allowInterop(getRangeFontName),
         setRangeFontName: setRangeFontName == null
             ? null
-            : _i5.allowInterop(setRangeFontName),
+            : _i4.allowInterop(setRangeFontName),
         getRangeFontWeight: getRangeFontWeight == null
             ? null
-            : _i5.allowInterop(getRangeFontWeight),
+            : _i4.allowInterop(getRangeFontWeight),
         getRangeAllFontNames: getRangeAllFontNames == null
             ? null
-            : _i5.allowInterop(getRangeAllFontNames),
+            : _i4.allowInterop(getRangeAllFontNames),
         getRangeTextCase: getRangeTextCase == null
             ? null
-            : _i5.allowInterop(getRangeTextCase),
+            : _i4.allowInterop(getRangeTextCase),
         setRangeTextCase: setRangeTextCase == null
             ? null
-            : _i5.allowInterop(setRangeTextCase),
+            : _i4.allowInterop(setRangeTextCase),
         getRangeOpenTypeFeatures: getRangeOpenTypeFeatures == null
             ? null
-            : _i5.allowInterop(getRangeOpenTypeFeatures),
+            : _i4.allowInterop(getRangeOpenTypeFeatures),
         getRangeTextDecoration: getRangeTextDecoration == null
             ? null
-            : _i5.allowInterop(getRangeTextDecoration),
+            : _i4.allowInterop(getRangeTextDecoration),
         setRangeTextDecoration: setRangeTextDecoration == null
             ? null
-            : _i5.allowInterop(setRangeTextDecoration),
+            : _i4.allowInterop(setRangeTextDecoration),
         getRangeTextDecorationStyle: getRangeTextDecorationStyle == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationStyle),
+            : _i4.allowInterop(getRangeTextDecorationStyle),
         setRangeTextDecorationStyle: setRangeTextDecorationStyle == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationStyle),
+            : _i4.allowInterop(setRangeTextDecorationStyle),
         getRangeTextDecorationOffset: getRangeTextDecorationOffset == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationOffset),
+            : _i4.allowInterop(getRangeTextDecorationOffset),
         setRangeTextDecorationOffset: setRangeTextDecorationOffset == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationOffset),
+            : _i4.allowInterop(setRangeTextDecorationOffset),
         getRangeTextDecorationThickness: getRangeTextDecorationThickness == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationThickness),
+            : _i4.allowInterop(getRangeTextDecorationThickness),
         setRangeTextDecorationThickness: setRangeTextDecorationThickness == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationThickness),
+            : _i4.allowInterop(setRangeTextDecorationThickness),
         getRangeTextDecorationColor: getRangeTextDecorationColor == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationColor),
+            : _i4.allowInterop(getRangeTextDecorationColor),
         setRangeTextDecorationColor: setRangeTextDecorationColor == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationColor),
+            : _i4.allowInterop(setRangeTextDecorationColor),
         getRangeTextDecorationSkipInk: getRangeTextDecorationSkipInk == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationSkipInk),
+            : _i4.allowInterop(getRangeTextDecorationSkipInk),
         setRangeTextDecorationSkipInk: setRangeTextDecorationSkipInk == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationSkipInk),
+            : _i4.allowInterop(setRangeTextDecorationSkipInk),
         getRangeLetterSpacing: getRangeLetterSpacing == null
             ? null
-            : _i5.allowInterop(getRangeLetterSpacing),
+            : _i4.allowInterop(getRangeLetterSpacing),
         setRangeLetterSpacing: setRangeLetterSpacing == null
             ? null
-            : _i5.allowInterop(setRangeLetterSpacing),
+            : _i4.allowInterop(setRangeLetterSpacing),
         getRangeLineHeight: getRangeLineHeight == null
             ? null
-            : _i5.allowInterop(getRangeLineHeight),
+            : _i4.allowInterop(getRangeLineHeight),
         setRangeLineHeight: setRangeLineHeight == null
             ? null
-            : _i5.allowInterop(setRangeLineHeight),
+            : _i4.allowInterop(setRangeLineHeight),
         getRangeHyperlink: getRangeHyperlink == null
             ? null
-            : _i5.allowInterop(getRangeHyperlink),
+            : _i4.allowInterop(getRangeHyperlink),
         setRangeHyperlink: setRangeHyperlink == null
             ? null
-            : _i5.allowInterop(setRangeHyperlink),
+            : _i4.allowInterop(setRangeHyperlink),
         getRangeFills:
-            getRangeFills == null ? null : _i5.allowInterop(getRangeFills),
+            getRangeFills == null ? null : _i4.allowInterop(getRangeFills),
         setRangeFills:
-            setRangeFills == null ? null : _i5.allowInterop(setRangeFills),
+            setRangeFills == null ? null : _i4.allowInterop(setRangeFills),
         getRangeTextStyleId: getRangeTextStyleId == null
             ? null
-            : _i5.allowInterop(getRangeTextStyleId),
+            : _i4.allowInterop(getRangeTextStyleId),
         setRangeTextStyleIdAsync: setRangeTextStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setRangeTextStyleIdAsync),
+            : _i4.allowInterop(setRangeTextStyleIdAsync),
         setRangeTextStyleId: setRangeTextStyleId == null
             ? null
-            : _i5.allowInterop(setRangeTextStyleId),
+            : _i4.allowInterop(setRangeTextStyleId),
         getRangeFillStyleId: getRangeFillStyleId == null
             ? null
-            : _i5.allowInterop(getRangeFillStyleId),
+            : _i4.allowInterop(getRangeFillStyleId),
         setRangeFillStyleIdAsync: setRangeFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setRangeFillStyleIdAsync),
+            : _i4.allowInterop(setRangeFillStyleIdAsync),
         setRangeFillStyleId: setRangeFillStyleId == null
             ? null
-            : _i5.allowInterop(setRangeFillStyleId),
+            : _i4.allowInterop(setRangeFillStyleId),
         getRangeListOptions: getRangeListOptions == null
             ? null
-            : _i5.allowInterop(getRangeListOptions),
+            : _i4.allowInterop(getRangeListOptions),
         setRangeListOptions: setRangeListOptions == null
             ? null
-            : _i5.allowInterop(setRangeListOptions),
+            : _i4.allowInterop(setRangeListOptions),
         getRangeListSpacing: getRangeListSpacing == null
             ? null
-            : _i5.allowInterop(getRangeListSpacing),
+            : _i4.allowInterop(getRangeListSpacing),
         setRangeListSpacing: setRangeListSpacing == null
             ? null
-            : _i5.allowInterop(setRangeListSpacing),
+            : _i4.allowInterop(setRangeListSpacing),
         getRangeIndentation: getRangeIndentation == null
             ? null
-            : _i5.allowInterop(getRangeIndentation),
+            : _i4.allowInterop(getRangeIndentation),
         setRangeIndentation: setRangeIndentation == null
             ? null
-            : _i5.allowInterop(setRangeIndentation),
+            : _i4.allowInterop(setRangeIndentation),
         getRangeParagraphIndent: getRangeParagraphIndent == null
             ? null
-            : _i5.allowInterop(getRangeParagraphIndent),
+            : _i4.allowInterop(getRangeParagraphIndent),
         setRangeParagraphIndent: setRangeParagraphIndent == null
             ? null
-            : _i5.allowInterop(setRangeParagraphIndent),
+            : _i4.allowInterop(setRangeParagraphIndent),
         getRangeParagraphSpacing: getRangeParagraphSpacing == null
             ? null
-            : _i5.allowInterop(getRangeParagraphSpacing),
+            : _i4.allowInterop(getRangeParagraphSpacing),
         setRangeParagraphSpacing: setRangeParagraphSpacing == null
             ? null
-            : _i5.allowInterop(setRangeParagraphSpacing),
+            : _i4.allowInterop(setRangeParagraphSpacing),
         getRangeBoundVariable: getRangeBoundVariable == null
             ? null
-            : _i5.allowInterop(getRangeBoundVariable),
+            : _i4.allowInterop(getRangeBoundVariable),
         setRangeBoundVariable: setRangeBoundVariable == null
             ? null
-            : _i5.allowInterop(setRangeBoundVariable),
+            : _i4.allowInterop(setRangeBoundVariable),
         getStyledTextSegments: getStyledTextSegments == null
             ? null
-            : _i5.allowInterop(getStyledTextSegments),
+            : _i4.allowInterop(getStyledTextSegments),
       );
 }
 
 extension NonResizableTextMixin$Typings on NonResizableTextMixin {
-  _i2.bool get hasMissingFont => _i5.getProperty(
+  _i2.bool get hasMissingFont => _i4.getProperty(
         this,
         'hasMissingFont',
       );
-  _i2.num get paragraphIndent => _i5.getProperty(
+  _i2.num get paragraphIndent => _i4.getProperty(
         this,
         'paragraphIndent',
       );
   set paragraphIndent(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paragraphIndent',
       value,
     );
   }
 
-  _i2.num get paragraphSpacing => _i5.getProperty(
+  _i2.num get paragraphSpacing => _i4.getProperty(
         this,
         'paragraphSpacing',
       );
   set paragraphSpacing(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paragraphSpacing',
       value,
     );
   }
 
-  _i2.num get listSpacing => _i5.getProperty(
+  _i2.num get listSpacing => _i4.getProperty(
         this,
         'listSpacing',
       );
   set listSpacing(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'listSpacing',
       value,
     );
   }
 
-  _i2.bool get hangingPunctuation => _i5.getProperty(
+  _i2.bool get hangingPunctuation => _i4.getProperty(
         this,
         'hangingPunctuation',
       );
   set hangingPunctuation(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'hangingPunctuation',
       value,
     );
   }
 
-  _i2.bool get hangingList => _i5.getProperty(
+  _i2.bool get hangingList => _i4.getProperty(
         this,
         'hangingList',
       );
   set hangingList(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'hangingList',
       value,
     );
   }
 
-  _i2.Object get fontSize => _i5.getProperty(
+  _i2.Object get fontSize => _i4.getProperty(
         this,
         'fontSize',
       );
   set fontSize(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fontSize',
       value,
     );
   }
 
-  _i2.Object get fontName => _i5.getProperty(
+  _i2.Object get fontName => _i4.getProperty(
         this,
         'fontName',
       );
   set fontName(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fontName',
       value,
     );
   }
 
-  _i2.Object get fontWeight => _i5.getProperty(
+  _i2.Object get fontWeight => _i4.getProperty(
         this,
         'fontWeight',
       );
-  _i2.Object get textCase => _i5.getProperty(
+  _i2.Object get textCase => _i4.getProperty(
         this,
         'textCase',
       );
   set textCase(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textCase',
       value,
     );
   }
 
-  _i2.Object get openTypeFeatures => _i5.getProperty(
+  _i2.Object get openTypeFeatures => _i4.getProperty(
         this,
         'openTypeFeatures',
       );
-  _i2.Object get textDecoration => _i5.getProperty(
+  _i2.Object get textDecoration => _i4.getProperty(
         this,
         'textDecoration',
       );
   set textDecoration(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textDecoration',
       value,
     );
   }
 
-  _i2.dynamic get textDecorationStyle => _i5.getProperty(
+  _i2.dynamic get textDecorationStyle => _i4.getProperty(
         this,
         'textDecorationStyle',
       );
   set textDecorationStyle(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textDecorationStyle',
       value,
     );
   }
 
-  _i2.dynamic get textDecorationOffset => _i5.getProperty(
+  _i2.dynamic get textDecorationOffset => _i4.getProperty(
         this,
         'textDecorationOffset',
       );
   set textDecorationOffset(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textDecorationOffset',
       value,
     );
   }
 
-  _i2.dynamic get textDecorationThickness => _i5.getProperty(
+  _i2.dynamic get textDecorationThickness => _i4.getProperty(
         this,
         'textDecorationThickness',
       );
   set textDecorationThickness(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textDecorationThickness',
       value,
     );
   }
 
-  _i2.dynamic get textDecorationColor => _i5.getProperty(
+  _i2.dynamic get textDecorationColor => _i4.getProperty(
         this,
         'textDecorationColor',
       );
   set textDecorationColor(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textDecorationColor',
       value,
     );
   }
 
-  _i2.dynamic get textDecorationSkipInk => _i5.getProperty(
+  _i2.dynamic get textDecorationSkipInk => _i4.getProperty(
         this,
         'textDecorationSkipInk',
       );
   set textDecorationSkipInk(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textDecorationSkipInk',
       value,
     );
   }
 
-  _i2.Object get letterSpacing => _i5.getProperty(
+  _i2.Object get letterSpacing => _i4.getProperty(
         this,
         'letterSpacing',
       );
   set letterSpacing(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'letterSpacing',
       value,
     );
   }
 
-  _i2.Object get lineHeight => _i5.getProperty(
+  _i2.Object get lineHeight => _i4.getProperty(
         this,
         'lineHeight',
       );
   set lineHeight(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'lineHeight',
       value,
     );
   }
 
-  _i2.Object get leadingTrim => _i5.getProperty(
+  _i2.Object get leadingTrim => _i4.getProperty(
         this,
         'leadingTrim',
       );
   set leadingTrim(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'leadingTrim',
       value,
     );
   }
 
-  _i2.dynamic get hyperlink => _i5.getProperty(
+  _i2.dynamic get hyperlink => _i4.getProperty(
         this,
         'hyperlink',
       );
   set hyperlink(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'hyperlink',
       value,
     );
   }
 
-  _i2.String get characters => _i5.getProperty(
+  _i2.String get characters => _i4.getProperty(
         this,
         'characters',
       );
   set characters(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'characters',
       value,
@@ -18505,10 +18729,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.String, [
         _i3.UnionEnum3?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'insertCharacters',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18521,8 +18745,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.String p1, [
         _i3.UnionEnum3? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'insertCharacters',
             ),
@@ -18539,10 +18763,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'deleteCharacters',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18553,8 +18777,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'deleteCharacters',
             ),
@@ -18570,10 +18794,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeFontSize',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18584,8 +18808,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeFontSize',
             ),
@@ -18602,10 +18826,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeFontSize',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18618,8 +18842,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.num p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeFontSize',
             ),
@@ -18636,10 +18860,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeFontName',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18650,8 +18874,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeFontName',
             ),
@@ -18668,10 +18892,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i3.FontName,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeFontName',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18684,8 +18908,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i3.FontName p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeFontName',
             ),
@@ -18702,10 +18926,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeFontWeight',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18716,8 +18940,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeFontWeight',
             ),
@@ -18733,10 +18957,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeAllFontNames',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18747,8 +18971,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          ((_i5.callMethod(
-            _i5.getProperty(
+          ((_i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeAllFontNames',
             ),
@@ -18765,10 +18989,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeTextCase',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18779,8 +19003,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeTextCase',
             ),
@@ -18795,26 +19019,26 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
       void Function(
         _i2.num,
         _i2.num,
-        _i3.TextCase,
+        _i3.TextCaseOptions,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeTextCase',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.num,
     _i2.num,
-    _i3.TextCase,
+    _i3.TextCaseOptions,
   ) get setRangeTextCase => (
         _i2.num p0,
         _i2.num p1,
-        _i3.TextCase p2,
+        _i3.TextCaseOptions p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeTextCase',
             ),
@@ -18831,10 +19055,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeOpenTypeFeatures',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18845,8 +19069,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeOpenTypeFeatures',
             ),
@@ -18862,10 +19086,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeTextDecoration',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18876,8 +19100,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeTextDecoration',
             ),
@@ -18892,26 +19116,26 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
       void Function(
         _i2.num,
         _i2.num,
-        _i3.TextDecoration,
+        _i3.TextDecorationOptions,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeTextDecoration',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.num,
     _i2.num,
-    _i3.TextDecoration,
+    _i3.TextDecorationOptions,
   ) get setRangeTextDecoration => (
         _i2.num p0,
         _i2.num p1,
-        _i3.TextDecoration p2,
+        _i3.TextDecorationOptions p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeTextDecoration',
             ),
@@ -18928,10 +19152,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeTextDecorationStyle',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -18942,8 +19166,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeTextDecorationStyle',
             ),
@@ -18958,26 +19182,26 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
       void Function(
         _i2.num,
         _i2.num,
-        _i3.TextDecorationStyle,
+        _i3.TextDecorationStyleOptions,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeTextDecorationStyle',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.num,
     _i2.num,
-    _i3.TextDecorationStyle,
+    _i3.TextDecorationStyleOptions,
   ) get setRangeTextDecorationStyle => (
         _i2.num p0,
         _i2.num p1,
-        _i3.TextDecorationStyle p2,
+        _i3.TextDecorationStyleOptions p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeTextDecorationStyle',
             ),
@@ -18994,10 +19218,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeTextDecorationOffset',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19008,8 +19232,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeTextDecorationOffset',
             ),
@@ -19026,10 +19250,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.Object,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeTextDecorationOffset',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19042,8 +19266,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.Object p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeTextDecorationOffset',
             ),
@@ -19060,10 +19284,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeTextDecorationThickness',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19074,8 +19298,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeTextDecorationThickness',
             ),
@@ -19092,10 +19316,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.Object,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeTextDecorationThickness',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19108,8 +19332,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.Object p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeTextDecorationThickness',
             ),
@@ -19126,10 +19350,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeTextDecorationColor',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19140,8 +19364,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeTextDecorationColor',
             ),
@@ -19158,10 +19382,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.Object,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeTextDecorationColor',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19174,8 +19398,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.Object p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeTextDecorationColor',
             ),
@@ -19192,10 +19416,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeTextDecorationSkipInk',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19206,8 +19430,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeTextDecorationSkipInk',
             ),
@@ -19224,10 +19448,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.bool,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeTextDecorationSkipInk',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19240,8 +19464,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.bool p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeTextDecorationSkipInk',
             ),
@@ -19258,10 +19482,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeLetterSpacing',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19272,8 +19496,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeLetterSpacing',
             ),
@@ -19290,10 +19514,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i3.LetterSpacing,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeLetterSpacing',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19306,8 +19530,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i3.LetterSpacing p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeLetterSpacing',
             ),
@@ -19324,10 +19548,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeLineHeight',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19338,8 +19562,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeLineHeight',
             ),
@@ -19356,10 +19580,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.Object,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeLineHeight',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19372,8 +19596,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.Object p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeLineHeight',
             ),
@@ -19390,10 +19614,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeHyperlink',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19404,8 +19628,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeHyperlink',
             ),
@@ -19420,26 +19644,26 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
       void Function(
         _i2.num,
         _i2.num, [
-        _i3.HyperlinkTarget?,
+        _i2.dynamic,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeHyperlink',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.num,
     _i2.num, [
-    _i3.HyperlinkTarget?,
+    _i2.dynamic,
   ]) get setRangeHyperlink => (
         _i2.num p0,
         _i2.num p1, [
-        _i3.HyperlinkTarget? p2,
+        _i2.dynamic p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeHyperlink',
             ),
@@ -19448,7 +19672,7 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
               this,
               p0,
               p1,
-              p2 ?? _i7.undefined ?? _i7.undefined,
+              p2 ?? _i7.undefined,
             ],
           );
   set getRangeFills(
@@ -19456,10 +19680,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeFills',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19470,8 +19694,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeFills',
             ),
@@ -19488,10 +19712,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.List<_i2.Object>,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeFills',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19504,8 +19728,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.List<_i2.Object> p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeFills',
             ),
@@ -19522,10 +19746,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeTextStyleId',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19536,8 +19760,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeTextStyleId',
             ),
@@ -19554,10 +19778,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.String,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeTextStyleIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19570,8 +19794,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.String p2,
       ) =>
-          _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+          _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeTextStyleIdAsync',
             ),
@@ -19589,10 +19813,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.String,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeTextStyleId',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19605,8 +19829,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.String p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeTextStyleId',
             ),
@@ -19623,10 +19847,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeFillStyleId',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19637,8 +19861,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeFillStyleId',
             ),
@@ -19655,10 +19879,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.String,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeFillStyleIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19671,8 +19895,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.String p2,
       ) =>
-          _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+          _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeFillStyleIdAsync',
             ),
@@ -19690,10 +19914,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.String,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeFillStyleId',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19706,8 +19930,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.String p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeFillStyleId',
             ),
@@ -19724,10 +19948,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeListOptions',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19738,8 +19962,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeListOptions',
             ),
@@ -19754,26 +19978,26 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
       void Function(
         _i2.num,
         _i2.num,
-        _i3.TextListOptions,
+        _i2.dynamic,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeListOptions',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.num,
     _i2.num,
-    _i3.TextListOptions,
+    _i2.dynamic,
   ) get setRangeListOptions => (
         _i2.num p0,
         _i2.num p1,
-        _i3.TextListOptions p2,
+        _i2.dynamic p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeListOptions',
             ),
@@ -19790,10 +20014,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeListSpacing',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19804,8 +20028,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeListSpacing',
             ),
@@ -19822,10 +20046,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeListSpacing',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19838,8 +20062,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.num p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeListSpacing',
             ),
@@ -19856,10 +20080,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeIndentation',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19870,8 +20094,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeIndentation',
             ),
@@ -19888,10 +20112,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeIndentation',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19904,8 +20128,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.num p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeIndentation',
             ),
@@ -19922,10 +20146,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeParagraphIndent',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19936,8 +20160,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeParagraphIndent',
             ),
@@ -19954,10 +20178,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeParagraphIndent',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -19970,8 +20194,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.num p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeParagraphIndent',
             ),
@@ -19988,10 +20212,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeParagraphSpacing',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -20002,8 +20226,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeParagraphSpacing',
             ),
@@ -20020,10 +20244,10 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeParagraphSpacing',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -20036,8 +20260,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num p1,
         _i2.num p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeParagraphSpacing',
             ),
@@ -20053,26 +20277,26 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
       _i2.dynamic Function(
         _i2.num,
         _i2.num,
-        _i3.VariableBindableTextField,
+        _i3.VariableBindableTextFieldOptions,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getRangeBoundVariable',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.dynamic Function(
     _i2.num,
     _i2.num,
-    _i3.VariableBindableTextField,
+    _i3.VariableBindableTextFieldOptions,
   ) get getRangeBoundVariable => (
         _i2.num p0,
         _i2.num p1,
-        _i3.VariableBindableTextField p2,
+        _i3.VariableBindableTextFieldOptions p2,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getRangeBoundVariable',
             ),
@@ -20088,29 +20312,29 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
       void Function(
         _i2.num,
         _i2.num,
-        _i3.VariableBindableTextField, [
+        _i3.VariableBindableTextFieldOptions, [
         _i3.Variable?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setRangeBoundVariable',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
     _i2.num,
     _i2.num,
-    _i3.VariableBindableTextField, [
+    _i3.VariableBindableTextFieldOptions, [
     _i3.Variable?,
   ]) get setRangeBoundVariable => (
         _i2.num p0,
         _i2.num p1,
-        _i3.VariableBindableTextField p2, [
+        _i3.VariableBindableTextFieldOptions p2, [
         _i3.Variable? p3,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setRangeBoundVariable',
             ),
@@ -20124,20 +20348,20 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
             ],
           );
   set getStyledTextSegments(
-      _i4.Array<_i2.dynamic>
+      _i6.Array<_i2.dynamic>
           Function<StyledTextSegmentFields extends _i2.List<_i2.dynamic>>(
         StyledTextSegmentFields, [
         _i2.num?,
         _i2.num?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getStyledTextSegments',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i4.Array<_i2.dynamic>
+  _i6.Array<_i2.dynamic>
       Function<StyledTextSegmentFields extends _i2.List<_i2.dynamic>>(
     StyledTextSegmentFields, [
     _i2.num?,
@@ -20148,8 +20372,8 @@ extension NonResizableTextMixin$Typings on NonResizableTextMixin {
         _i2.num? p1,
         _i2.num? p2,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'getStyledTextSegments',
             ),
@@ -20312,7 +20536,7 @@ class TextSublayerNode
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextCase,
+      _i3.TextCaseOptions,
     )? setRangeTextCase,
     _i2.Object Function(
       _i2.num,
@@ -20325,7 +20549,7 @@ class TextSublayerNode
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextDecoration,
+      _i3.TextDecorationOptions,
     )? setRangeTextDecoration,
     _i2.dynamic Function(
       _i2.num,
@@ -20334,7 +20558,7 @@ class TextSublayerNode
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextDecorationStyle,
+      _i3.TextDecorationStyleOptions,
     )? setRangeTextDecorationStyle,
     _i2.dynamic Function(
       _i2.num,
@@ -20397,7 +20621,7 @@ class TextSublayerNode
     void Function(
       _i2.num,
       _i2.num, [
-      _i3.HyperlinkTarget?,
+      _i2.dynamic,
     ])? setRangeHyperlink,
     _i2.Object Function(
       _i2.num,
@@ -20443,7 +20667,7 @@ class TextSublayerNode
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextListOptions,
+      _i2.dynamic,
     )? setRangeListOptions,
     _i2.Object Function(
       _i2.num,
@@ -20484,15 +20708,15 @@ class TextSublayerNode
     _i2.dynamic Function(
       _i2.num,
       _i2.num,
-      _i3.VariableBindableTextField,
+      _i3.VariableBindableTextFieldOptions,
     )? getRangeBoundVariable,
     void Function(
       _i2.num,
       _i2.num,
-      _i3.VariableBindableTextField, [
+      _i3.VariableBindableTextFieldOptions, [
       _i3.Variable?,
     ])? setRangeBoundVariable,
-    _i4.Array<_i2.dynamic>
+    _i6.Array<_i2.dynamic>
         Function<StyledTextSegmentFields extends _i2.List<_i2.dynamic>>(
       StyledTextSegmentFields, [
       _i2.num?,
@@ -20527,157 +20751,157 @@ class TextSublayerNode
         characters: characters,
         insertCharacters: insertCharacters == null
             ? null
-            : _i5.allowInterop(insertCharacters),
+            : _i4.allowInterop(insertCharacters),
         deleteCharacters: deleteCharacters == null
             ? null
-            : _i5.allowInterop(deleteCharacters),
+            : _i4.allowInterop(deleteCharacters),
         getRangeFontSize: getRangeFontSize == null
             ? null
-            : _i5.allowInterop(getRangeFontSize),
+            : _i4.allowInterop(getRangeFontSize),
         setRangeFontSize: setRangeFontSize == null
             ? null
-            : _i5.allowInterop(setRangeFontSize),
+            : _i4.allowInterop(setRangeFontSize),
         getRangeFontName: getRangeFontName == null
             ? null
-            : _i5.allowInterop(getRangeFontName),
+            : _i4.allowInterop(getRangeFontName),
         setRangeFontName: setRangeFontName == null
             ? null
-            : _i5.allowInterop(setRangeFontName),
+            : _i4.allowInterop(setRangeFontName),
         getRangeFontWeight: getRangeFontWeight == null
             ? null
-            : _i5.allowInterop(getRangeFontWeight),
+            : _i4.allowInterop(getRangeFontWeight),
         getRangeAllFontNames: getRangeAllFontNames == null
             ? null
-            : _i5.allowInterop(getRangeAllFontNames),
+            : _i4.allowInterop(getRangeAllFontNames),
         getRangeTextCase: getRangeTextCase == null
             ? null
-            : _i5.allowInterop(getRangeTextCase),
+            : _i4.allowInterop(getRangeTextCase),
         setRangeTextCase: setRangeTextCase == null
             ? null
-            : _i5.allowInterop(setRangeTextCase),
+            : _i4.allowInterop(setRangeTextCase),
         getRangeOpenTypeFeatures: getRangeOpenTypeFeatures == null
             ? null
-            : _i5.allowInterop(getRangeOpenTypeFeatures),
+            : _i4.allowInterop(getRangeOpenTypeFeatures),
         getRangeTextDecoration: getRangeTextDecoration == null
             ? null
-            : _i5.allowInterop(getRangeTextDecoration),
+            : _i4.allowInterop(getRangeTextDecoration),
         setRangeTextDecoration: setRangeTextDecoration == null
             ? null
-            : _i5.allowInterop(setRangeTextDecoration),
+            : _i4.allowInterop(setRangeTextDecoration),
         getRangeTextDecorationStyle: getRangeTextDecorationStyle == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationStyle),
+            : _i4.allowInterop(getRangeTextDecorationStyle),
         setRangeTextDecorationStyle: setRangeTextDecorationStyle == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationStyle),
+            : _i4.allowInterop(setRangeTextDecorationStyle),
         getRangeTextDecorationOffset: getRangeTextDecorationOffset == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationOffset),
+            : _i4.allowInterop(getRangeTextDecorationOffset),
         setRangeTextDecorationOffset: setRangeTextDecorationOffset == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationOffset),
+            : _i4.allowInterop(setRangeTextDecorationOffset),
         getRangeTextDecorationThickness: getRangeTextDecorationThickness == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationThickness),
+            : _i4.allowInterop(getRangeTextDecorationThickness),
         setRangeTextDecorationThickness: setRangeTextDecorationThickness == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationThickness),
+            : _i4.allowInterop(setRangeTextDecorationThickness),
         getRangeTextDecorationColor: getRangeTextDecorationColor == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationColor),
+            : _i4.allowInterop(getRangeTextDecorationColor),
         setRangeTextDecorationColor: setRangeTextDecorationColor == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationColor),
+            : _i4.allowInterop(setRangeTextDecorationColor),
         getRangeTextDecorationSkipInk: getRangeTextDecorationSkipInk == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationSkipInk),
+            : _i4.allowInterop(getRangeTextDecorationSkipInk),
         setRangeTextDecorationSkipInk: setRangeTextDecorationSkipInk == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationSkipInk),
+            : _i4.allowInterop(setRangeTextDecorationSkipInk),
         getRangeLetterSpacing: getRangeLetterSpacing == null
             ? null
-            : _i5.allowInterop(getRangeLetterSpacing),
+            : _i4.allowInterop(getRangeLetterSpacing),
         setRangeLetterSpacing: setRangeLetterSpacing == null
             ? null
-            : _i5.allowInterop(setRangeLetterSpacing),
+            : _i4.allowInterop(setRangeLetterSpacing),
         getRangeLineHeight: getRangeLineHeight == null
             ? null
-            : _i5.allowInterop(getRangeLineHeight),
+            : _i4.allowInterop(getRangeLineHeight),
         setRangeLineHeight: setRangeLineHeight == null
             ? null
-            : _i5.allowInterop(setRangeLineHeight),
+            : _i4.allowInterop(setRangeLineHeight),
         getRangeHyperlink: getRangeHyperlink == null
             ? null
-            : _i5.allowInterop(getRangeHyperlink),
+            : _i4.allowInterop(getRangeHyperlink),
         setRangeHyperlink: setRangeHyperlink == null
             ? null
-            : _i5.allowInterop(setRangeHyperlink),
+            : _i4.allowInterop(setRangeHyperlink),
         getRangeFills:
-            getRangeFills == null ? null : _i5.allowInterop(getRangeFills),
+            getRangeFills == null ? null : _i4.allowInterop(getRangeFills),
         setRangeFills:
-            setRangeFills == null ? null : _i5.allowInterop(setRangeFills),
+            setRangeFills == null ? null : _i4.allowInterop(setRangeFills),
         getRangeTextStyleId: getRangeTextStyleId == null
             ? null
-            : _i5.allowInterop(getRangeTextStyleId),
+            : _i4.allowInterop(getRangeTextStyleId),
         setRangeTextStyleIdAsync: setRangeTextStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setRangeTextStyleIdAsync),
+            : _i4.allowInterop(setRangeTextStyleIdAsync),
         setRangeTextStyleId: setRangeTextStyleId == null
             ? null
-            : _i5.allowInterop(setRangeTextStyleId),
+            : _i4.allowInterop(setRangeTextStyleId),
         getRangeFillStyleId: getRangeFillStyleId == null
             ? null
-            : _i5.allowInterop(getRangeFillStyleId),
+            : _i4.allowInterop(getRangeFillStyleId),
         setRangeFillStyleIdAsync: setRangeFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setRangeFillStyleIdAsync),
+            : _i4.allowInterop(setRangeFillStyleIdAsync),
         setRangeFillStyleId: setRangeFillStyleId == null
             ? null
-            : _i5.allowInterop(setRangeFillStyleId),
+            : _i4.allowInterop(setRangeFillStyleId),
         getRangeListOptions: getRangeListOptions == null
             ? null
-            : _i5.allowInterop(getRangeListOptions),
+            : _i4.allowInterop(getRangeListOptions),
         setRangeListOptions: setRangeListOptions == null
             ? null
-            : _i5.allowInterop(setRangeListOptions),
+            : _i4.allowInterop(setRangeListOptions),
         getRangeListSpacing: getRangeListSpacing == null
             ? null
-            : _i5.allowInterop(getRangeListSpacing),
+            : _i4.allowInterop(getRangeListSpacing),
         setRangeListSpacing: setRangeListSpacing == null
             ? null
-            : _i5.allowInterop(setRangeListSpacing),
+            : _i4.allowInterop(setRangeListSpacing),
         getRangeIndentation: getRangeIndentation == null
             ? null
-            : _i5.allowInterop(getRangeIndentation),
+            : _i4.allowInterop(getRangeIndentation),
         setRangeIndentation: setRangeIndentation == null
             ? null
-            : _i5.allowInterop(setRangeIndentation),
+            : _i4.allowInterop(setRangeIndentation),
         getRangeParagraphIndent: getRangeParagraphIndent == null
             ? null
-            : _i5.allowInterop(getRangeParagraphIndent),
+            : _i4.allowInterop(getRangeParagraphIndent),
         setRangeParagraphIndent: setRangeParagraphIndent == null
             ? null
-            : _i5.allowInterop(setRangeParagraphIndent),
+            : _i4.allowInterop(setRangeParagraphIndent),
         getRangeParagraphSpacing: getRangeParagraphSpacing == null
             ? null
-            : _i5.allowInterop(getRangeParagraphSpacing),
+            : _i4.allowInterop(getRangeParagraphSpacing),
         setRangeParagraphSpacing: setRangeParagraphSpacing == null
             ? null
-            : _i5.allowInterop(setRangeParagraphSpacing),
+            : _i4.allowInterop(setRangeParagraphSpacing),
         getRangeBoundVariable: getRangeBoundVariable == null
             ? null
-            : _i5.allowInterop(getRangeBoundVariable),
+            : _i4.allowInterop(getRangeBoundVariable),
         setRangeBoundVariable: setRangeBoundVariable == null
             ? null
-            : _i5.allowInterop(setRangeBoundVariable),
+            : _i4.allowInterop(setRangeBoundVariable),
         getStyledTextSegments: getStyledTextSegments == null
             ? null
-            : _i5.allowInterop(getStyledTextSegments),
+            : _i4.allowInterop(getStyledTextSegments),
         fills: fills ?? _i7.undefined,
         fillStyleId: fillStyleId ?? _i7.undefined,
         setFillStyleIdAsync: setFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setFillStyleIdAsync),
+            : _i4.allowInterop(setFillStyleIdAsync),
       );
 }
 
@@ -20688,12 +20912,12 @@ class TextSublayerNode
 class IInline79<T extends _i2.List<_i2.dynamic>> {}
 
 extension IInline79$Typings<T extends _i2.List<_i2.dynamic>> on IInline79<T> {
-  _i2.dynamic get type => _i5.getProperty(
+  _i2.dynamic get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
@@ -20733,22 +20957,24 @@ class DocumentNode implements _i3.BaseNodeMixin {
 
   factory DocumentNode({
     _i2.String? type,
-    _i4.ReadonlyArray<_i3.PageNode>? children,
+    _i2.List<_i3.PageNode>? children,
     _i3.DocumentColorProfile? documentColorProfile,
     void Function(_i3.PageNode)? appendChild,
     void Function(
       _i2.num,
       _i3.PageNode,
     )? insertChild,
-    _i4.Array<_i3.PageNode> Function([_i2.bool Function(_i3.PageNode)?])?
+    _i6.Array<_i3.PageNode> Function([_i2.bool Function(_i3.PageNode)?])?
         findChildren,
     _i3.PageNode? Function(_i2.bool Function(_i3.PageNode))? findChild,
-    _i4.Array<_i2.Object> Function([_i2.bool Function(_i2.Object)?])? findAll,
-    _i2.dynamic Function(_i2.bool Function(_i2.Object))? findOne,
-    _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+    _i6.Array<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
+        findAll,
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))? findOne,
+    _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
             _i3.FindAllCriteria<T>)?
         findAllWithCriteria,
-    _i4.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
+    _i6.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
     _i2.String? id,
     _Intersection7? parent,
     _i2.String? name,
@@ -20763,76 +20989,79 @@ class DocumentNode implements _i3.BaseNodeMixin {
   }) =>
       DocumentNode._(
         type: type,
-        children: children ?? _i7.undefined,
+        children: children,
         documentColorProfile: documentColorProfile?.name ?? _i7.undefined,
-        appendChild: appendChild == null ? null : _i5.allowInterop(appendChild),
-        insertChild: insertChild == null ? null : _i5.allowInterop(insertChild),
+        appendChild: appendChild == null ? null : _i4.allowInterop(appendChild),
+        insertChild: insertChild == null ? null : _i4.allowInterop(insertChild),
         findChildren:
-            findChildren == null ? null : _i5.allowInterop(findChildren),
+            findChildren == null ? null : _i4.allowInterop(findChildren),
         findChild: findChild == null
             ? null
-            : _i5.allowInterop((p0) => () => findChild(p0) ?? _i7.undefined),
-        findAll: findAll == null ? null : _i5.allowInterop(findAll),
-        findOne: findOne == null ? null : _i5.allowInterop(findOne),
+            : _i4.allowInterop((p0) => () => findChild(p0) ?? _i7.undefined),
+        findAll: findAll == null ? null : _i4.allowInterop(findAll),
+        findOne: findOne == null
+            ? null
+            : _i4.allowInterop((p0) => () => findOne(p0) ?? _i7.undefined),
         findAllWithCriteria: findAllWithCriteria == null
             ? null
-            : _i5.allowInterop(findAllWithCriteria),
+            : _i4.allowInterop(findAllWithCriteria),
         findWidgetNodesByWidgetId: findWidgetNodesByWidgetId == null
             ? null
-            : _i5.allowInterop(findWidgetNodesByWidgetId),
+            : _i4.allowInterop(findWidgetNodesByWidgetId),
         id: id,
         parent: parent ?? _i7.undefined,
         name: name,
         removed: removed,
         isAsset: isAsset,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+        toString$: toString$ == null ? null : _i4.allowInterop(toString$),
+        remove: remove == null ? null : _i4.allowInterop(remove),
         setRelaunchData:
-            setRelaunchData == null ? null : _i5.allowInterop(setRelaunchData),
+            setRelaunchData == null ? null : _i4.allowInterop(setRelaunchData),
         getRelaunchData:
-            getRelaunchData == null ? null : _i5.allowInterop(getRelaunchData),
-        getCSSAsync: getCSSAsync == null ? null : _i5.allowInterop(getCSSAsync),
+            getRelaunchData == null ? null : _i4.allowInterop(getRelaunchData),
+        getCSSAsync: getCSSAsync == null ? null : _i4.allowInterop(getCSSAsync),
         getTopLevelFrame: getTopLevelFrame == null
             ? null
-            : _i5.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
+            : _i4.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredDocumentNode,
         'type',
       );
 }
 
-_i2.Object get _declaredDocumentNode => _i5.getProperty(
+_i2.Object get _declaredDocumentNode => _i4.getProperty(
       _self,
       'DocumentNode',
     );
 
 extension DocumentNode$Typings on DocumentNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i4.ReadonlyArray<_i3.PageNode> get children => _i5.getProperty(
+  _i2.List<_i3.PageNode> get children => ((_i4.getProperty(
         this,
         'children',
-      );
+      )) as _i2.List)
+          .cast();
   _i3.DocumentColorProfile get documentColorProfile =>
-      _i3.DocumentColorProfile.values.byName(_i5.getProperty(
+      _i3.DocumentColorProfile.values.byName(_i4.getProperty(
         this,
         'documentColorProfile',
       ));
   set appendChild(void Function(_i3.PageNode) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'appendChild',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(_i3.PageNode) get appendChild =>
-      (_i3.PageNode p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i3.PageNode p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'appendChild',
             ),
@@ -20847,10 +21076,10 @@ extension DocumentNode$Typings on DocumentNode {
         _i2.num,
         _i3.PageNode,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'insertChild',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -20861,8 +21090,8 @@ extension DocumentNode$Typings on DocumentNode {
         _i2.num p0,
         _i3.PageNode p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'insertChild',
             ),
@@ -20874,106 +21103,111 @@ extension DocumentNode$Typings on DocumentNode {
             ],
           );
   set findChildren(
-      _i4.Array<_i3.PageNode> Function([_i2.bool Function(_i3.PageNode)?])
+      _i6.Array<_i3.PageNode> Function([_i2.bool Function(_i3.PageNode)?])
           value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'findChildren',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i4.Array<_i3.PageNode> Function([_i2.bool Function(_i3.PageNode)?])
+  _i6.Array<_i3.PageNode> Function([_i2.bool Function(_i3.PageNode)?])
       get findChildren =>
-          ([_i2.bool Function(_i3.PageNode)? p0]) => _i5.callMethod(
-                _i5.getProperty(
+          ([_i2.bool Function(_i3.PageNode)? p0]) => _i4.callMethod(
+                _i4.getProperty(
                   this,
                   'findChildren',
                 ),
                 r'call',
                 [
                   this,
-                  p0 == null ? _i7.undefined : _i5.allowInterop(p0),
+                  p0 == null ? _i7.undefined : _i4.allowInterop(p0),
                 ],
               );
   set findChild(_i3.PageNode? Function(_i2.bool Function(_i3.PageNode)) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'findChild',
-      _i5.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
     );
   }
 
   _i3.PageNode? Function(_i2.bool Function(_i3.PageNode)) get findChild =>
-      (_i2.bool Function(_i3.PageNode) p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.bool Function(_i3.PageNode) p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'findChild',
             ),
             r'call',
             [
               this,
-              _i5.allowInterop(p0),
+              _i4.allowInterop(p0),
             ],
           );
   set findAll(
-      _i4.Array<_i2.Object> Function([_i2.bool Function(_i2.Object)?]) value) {
-    _i5.setProperty(
+      _i6.Array<_i3.BaseNodeMixin> Function(
+              [_i2.bool Function(_i3.BaseNodeMixin)?])
+          value) {
+    _i4.setProperty(
       this,
       'findAll',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i4.Array<_i2.Object> Function([_i2.bool Function(_i2.Object)?])
-      get findAll => ([_i2.bool Function(_i2.Object)? p0]) => _i5.callMethod(
-            _i5.getProperty(
-              this,
-              'findAll',
-            ),
-            r'call',
-            [
-              this,
-              p0 == null ? _i7.undefined : _i5.allowInterop(p0),
-            ],
-          );
-  set findOne(_i2.dynamic Function(_i2.bool Function(_i2.Object)) value) {
-    _i5.setProperty(
+  _i6.Array<_i3.BaseNodeMixin> Function([_i2.bool Function(_i3.BaseNodeMixin)?])
+      get findAll =>
+          ([_i2.bool Function(_i3.BaseNodeMixin)? p0]) => _i4.callMethod(
+                _i4.getProperty(
+                  this,
+                  'findAll',
+                ),
+                r'call',
+                [
+                  this,
+                  p0 == null ? _i7.undefined : _i4.allowInterop(p0),
+                ],
+              );
+  set findOne(
+      _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin)) value) {
+    _i4.setProperty(
       this,
       'findOne',
-      _i5.allowInterop(value),
+      _i4.allowInterop((p0) => () => value(p0) ?? _i7.undefined),
     );
   }
 
-  _i2.dynamic Function(_i2.bool Function(_i2.Object)) get findOne =>
-      (_i2.bool Function(_i2.Object) p0) => _i5.callMethod(
-            _i5.getProperty(
-              this,
-              'findOne',
-            ),
-            r'call',
-            [
-              this,
-              _i5.allowInterop(p0),
-            ],
-          );
+  _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))
+      get findOne =>
+          (_i2.bool Function(_i3.BaseNodeMixin) p0) => _i4.callMethod(
+                _i4.getProperty(
+                  this,
+                  'findOne',
+                ),
+                r'call',
+                [
+                  this,
+                  _i4.allowInterop(p0),
+                ],
+              );
   set findAllWithCriteria(
-      _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+      _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
               _i3.FindAllCriteria<T>)
           value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'findAllWithCriteria',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+  _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
           _i3.FindAllCriteria<T>)
       get findAllWithCriteria =>
           <T extends _i2.List<_i2.dynamic>>(_i3.FindAllCriteria<T> p0) =>
-              _i5.callMethod(
-                _i5.getProperty(
+              _i4.callMethod(
+                _i4.getProperty(
                   this,
                   'findAllWithCriteria',
                 ),
@@ -20984,17 +21218,17 @@ extension DocumentNode$Typings on DocumentNode {
                 ],
               );
   set findWidgetNodesByWidgetId(
-      _i4.Array<_i3.WidgetNode> Function(_i2.String) value) {
-    _i5.setProperty(
+      _i6.Array<_i3.WidgetNode> Function(_i2.String) value) {
+    _i4.setProperty(
       this,
       'findWidgetNodesByWidgetId',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i4.Array<_i3.WidgetNode> Function(_i2.String)
-      get findWidgetNodesByWidgetId => (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+  _i6.Array<_i3.WidgetNode> Function(_i2.String)
+      get findWidgetNodesByWidgetId => (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'findWidgetNodesByWidgetId',
             ),
@@ -21020,12 +21254,12 @@ class ExplicitVariableModesMixin {
 }
 
 extension ExplicitVariableModesMixin$Typings on ExplicitVariableModesMixin {
-  _i2.Object get explicitVariableModes => _i5.getProperty(
+  _i2.Object get explicitVariableModes => _i4.getProperty(
         this,
         'explicitVariableModes',
       );
   set explicitVariableModes(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'explicitVariableModes',
       value,
@@ -21033,7 +21267,7 @@ extension ExplicitVariableModesMixin$Typings on ExplicitVariableModesMixin {
   }
 
   void _clearExplicitVariableModeForCollection$1(_i2.String collectionId) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'clearExplicitVariableModeForCollection',
       [collectionId],
@@ -21042,7 +21276,7 @@ extension ExplicitVariableModesMixin$Typings on ExplicitVariableModesMixin {
 
   void _clearExplicitVariableModeForCollection$2(
       _i3.VariableCollection collection) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'clearExplicitVariableModeForCollection',
       [collection],
@@ -21061,7 +21295,7 @@ extension ExplicitVariableModesMixin$Typings on ExplicitVariableModesMixin {
     _i2.String collectionId,
     _i2.String modeId,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'setExplicitVariableModeForCollection',
       [
@@ -21075,7 +21309,7 @@ extension ExplicitVariableModesMixin$Typings on ExplicitVariableModesMixin {
     _i3.VariableCollection collection,
     _i2.String modeId,
   ) {
-    _i5.callMethod(
+    _i4.callMethod(
       this,
       'setExplicitVariableModeForCollection',
       [
@@ -21108,36 +21342,36 @@ extension ExplicitVariableModesMixin$Typings on ExplicitVariableModesMixin {
 class IInline81 {}
 
 extension IInline81$Typings on IInline81 {
-  _i3.TextNode get node => _i5.getProperty(
+  _i3.TextNode get node => _i4.getProperty(
         this,
         'node',
       );
   set node(_i3.TextNode value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'node',
       value,
     );
   }
 
-  _i2.num get start => _i5.getProperty(
+  _i2.num get start => _i4.getProperty(
         this,
         'start',
       );
   set start(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'start',
       value,
     );
   }
 
-  _i2.num get end => _i5.getProperty(
+  _i2.num get end => _i4.getProperty(
         this,
         'end',
       );
   set end(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'end',
       value,
@@ -21152,24 +21386,24 @@ extension IInline81$Typings on IInline81 {
 class IInline82 {}
 
 extension IInline82$Typings on IInline82 {
-  _i2.String get nodeId => _i5.getProperty(
+  _i2.String get nodeId => _i4.getProperty(
         this,
         'nodeId',
       );
   set nodeId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'nodeId',
       value,
     );
   }
 
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
@@ -21235,12 +21469,12 @@ class PageNode
 
   factory PageNode({
     _i2.String? type,
-    _i4.ReadonlyArray<_i3.Guide>? guides,
-    _i4.ReadonlyArray<_i3.SceneNode>? selection,
+    _i2.List<_i3.Guide>? guides,
+    _i2.List<_i3.BaseNodeMixin>? selection,
     _i3.IInline81? selectedTextRange,
-    _i4.ReadonlyArray<_i3.IInline82>? flowStartingPoints,
-    _i4.ReadonlyArray<_i2.Object>? backgrounds,
-    _i4.ReadonlyArray<_i2.Object>? prototypeBackgrounds,
+    _i2.List<_i3.IInline82>? flowStartingPoints,
+    _i2.List<_i2.Object>? backgrounds,
+    _i2.List<_i2.Object>? prototypeBackgrounds,
     _i3.BaseNodeMixin? prototypeStartNode,
     _i2.bool? isPageDivider,
     _i3.SlideNode? focusedSlide,
@@ -21269,26 +21503,30 @@ class PageNode
     _i2.Object Function()? getRelaunchData,
     _i2.Future<_i2.Object> Function()? getCSSAsync,
     _i3.FrameNode? Function()? getTopLevelFrame,
-    _i4.ReadonlyArray<_i3.SceneNode>? children,
-    void Function(_i3.SceneNode)? appendChild,
+    _i2.List<_i3.BaseNodeMixin>? children,
+    void Function(_i3.BaseNodeMixin)? appendChild,
     void Function(
       _i2.num,
-      _i3.SceneNode,
+      _i3.BaseNodeMixin,
     )? insertChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findChildren,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))?
+        findChild,
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findAll,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findOne,
-    _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))? findOne,
+    _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
             _i3.FindAllCriteria<T>)?
         findAllWithCriteria,
-    _i4.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
-    _i4.ReadonlyArray<_i2.Object>? exportSettings,
+    _i6.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
+    _i2.List<_i2.Object>? exportSettings,
     _i2.Object? explicitVariableModes,
     _i2.List<_i3.Measurement> Function()? getMeasurements,
-    _i2.List<_i3.Measurement> Function(_i3.SceneNode)? getMeasurementsForNode,
+    _i2.List<_i3.Measurement> Function(_i3.BaseNodeMixin)?
+        getMeasurementsForNode,
     _i3.Measurement Function(
       _i2.dynamic,
       _i2.dynamic, [
@@ -21302,181 +21540,184 @@ class PageNode
   }) =>
       PageNode._(
         type: type,
-        guides: guides ?? _i7.undefined,
-        selection: selection ?? _i7.undefined,
+        guides: guides,
+        selection: selection,
         selectedTextRange: selectedTextRange ?? _i7.undefined,
-        flowStartingPoints: flowStartingPoints ?? _i7.undefined,
-        backgrounds: backgrounds ?? _i7.undefined,
-        prototypeBackgrounds: prototypeBackgrounds ?? _i7.undefined,
+        flowStartingPoints: flowStartingPoints,
+        backgrounds: backgrounds,
+        prototypeBackgrounds: prototypeBackgrounds,
         prototypeStartNode: prototypeStartNode ?? _i7.undefined,
         isPageDivider: isPageDivider,
         focusedSlide: focusedSlide ?? _i7.undefined,
-        clone: clone == null ? null : _i5.allowInterop(clone),
-        loadAsync: loadAsync == null ? null : _i5.allowInterop(loadAsync),
-        on: on == null ? null : _i5.allowInterop(on),
-        once: once == null ? null : _i5.allowInterop(once),
-        off: off == null ? null : _i5.allowInterop(off),
+        clone: clone == null ? null : _i4.allowInterop(clone),
+        loadAsync: loadAsync == null ? null : _i4.allowInterop(loadAsync),
+        on: on == null ? null : _i4.allowInterop(on),
+        once: once == null ? null : _i4.allowInterop(once),
+        off: off == null ? null : _i4.allowInterop(off),
         id: id,
         parent: parent ?? _i7.undefined,
         name: name,
         removed: removed,
         isAsset: isAsset,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+        toString$: toString$ == null ? null : _i4.allowInterop(toString$),
+        remove: remove == null ? null : _i4.allowInterop(remove),
         setRelaunchData:
-            setRelaunchData == null ? null : _i5.allowInterop(setRelaunchData),
+            setRelaunchData == null ? null : _i4.allowInterop(setRelaunchData),
         getRelaunchData:
-            getRelaunchData == null ? null : _i5.allowInterop(getRelaunchData),
-        getCSSAsync: getCSSAsync == null ? null : _i5.allowInterop(getCSSAsync),
+            getRelaunchData == null ? null : _i4.allowInterop(getRelaunchData),
+        getCSSAsync: getCSSAsync == null ? null : _i4.allowInterop(getCSSAsync),
         getTopLevelFrame: getTopLevelFrame == null
             ? null
-            : _i5.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
-        children: children ?? _i7.undefined,
-        appendChild: appendChild == null ? null : _i5.allowInterop(appendChild),
-        insertChild: insertChild == null ? null : _i5.allowInterop(insertChild),
+            : _i4.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
+        children: children,
+        appendChild: appendChild == null ? null : _i4.allowInterop(appendChild),
+        insertChild: insertChild == null ? null : _i4.allowInterop(insertChild),
         findChildren:
-            findChildren == null ? null : _i5.allowInterop(findChildren),
+            findChildren == null ? null : _i4.allowInterop(findChildren),
         findChild: findChild == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findChild(p0) ?? _i7.undefined ?? _i7.undefined),
-        findAll: findAll == null ? null : _i5.allowInterop(findAll),
+            : _i4.allowInterop((p0) => () => findChild(p0) ?? _i7.undefined),
+        findAll: findAll == null ? null : _i4.allowInterop(findAll),
         findOne: findOne == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findOne(p0) ?? _i7.undefined ?? _i7.undefined),
+            : _i4.allowInterop((p0) => () => findOne(p0) ?? _i7.undefined),
         findAllWithCriteria: findAllWithCriteria == null
             ? null
-            : _i5.allowInterop(findAllWithCriteria),
+            : _i4.allowInterop(findAllWithCriteria),
         findWidgetNodesByWidgetId: findWidgetNodesByWidgetId == null
             ? null
-            : _i5.allowInterop(findWidgetNodesByWidgetId),
-        exportSettings: exportSettings ?? _i7.undefined,
+            : _i4.allowInterop(findWidgetNodesByWidgetId),
+        exportSettings: exportSettings,
         explicitVariableModes: explicitVariableModes ?? _i7.undefined,
         getMeasurements:
-            getMeasurements == null ? null : _i5.allowInterop(getMeasurements),
+            getMeasurements == null ? null : _i4.allowInterop(getMeasurements),
         getMeasurementsForNode: getMeasurementsForNode == null
             ? null
-            : _i5.allowInterop(getMeasurementsForNode),
+            : _i4.allowInterop(getMeasurementsForNode),
         addMeasurement:
-            addMeasurement == null ? null : _i5.allowInterop(addMeasurement),
+            addMeasurement == null ? null : _i4.allowInterop(addMeasurement),
         editMeasurement:
-            editMeasurement == null ? null : _i5.allowInterop(editMeasurement),
+            editMeasurement == null ? null : _i4.allowInterop(editMeasurement),
         deleteMeasurement: deleteMeasurement == null
             ? null
-            : _i5.allowInterop(deleteMeasurement),
+            : _i4.allowInterop(deleteMeasurement),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredPageNode,
         'type',
       );
 }
 
-_i2.Object get _declaredPageNode => _i5.getProperty(
+_i2.Object get _declaredPageNode => _i4.getProperty(
       _self,
       'PageNode',
     );
 
 extension PageNode$Typings on PageNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i4.ReadonlyArray<_i3.Guide> get guides => _i5.getProperty(
+  _i2.List<_i3.Guide> get guides => ((_i4.getProperty(
         this,
         'guides',
-      );
-  set guides(_i4.ReadonlyArray<_i3.Guide> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set guides(_i2.List<_i3.Guide> value) {
+    _i4.setProperty(
       this,
       'guides',
       value,
     );
   }
 
-  _i4.ReadonlyArray<_i3.SceneNode> get selection => _i5.getProperty(
+  _i2.List<_i3.BaseNodeMixin> get selection => ((_i4.getProperty(
         this,
         'selection',
-      );
-  set selection(_i4.ReadonlyArray<_i3.SceneNode> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set selection(_i2.List<_i3.BaseNodeMixin> value) {
+    _i4.setProperty(
       this,
       'selection',
       value,
     );
   }
 
-  _i2.dynamic get selectedTextRange => _i5.getProperty(
+  _i2.dynamic get selectedTextRange => _i4.getProperty(
         this,
         'selectedTextRange',
       );
   set selectedTextRange(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'selectedTextRange',
       value ?? _i7.undefined,
     );
   }
 
-  _i4.ReadonlyArray<_i2.dynamic> get flowStartingPoints => _i5.getProperty(
+  _i2.List<_i2.dynamic> get flowStartingPoints => ((_i4.getProperty(
         this,
         'flowStartingPoints',
-      );
-  set flowStartingPoints(_i4.ReadonlyArray<_i2.dynamic> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set flowStartingPoints(_i2.List<_i2.dynamic> value) {
+    _i4.setProperty(
       this,
       'flowStartingPoints',
       value,
     );
   }
 
-  _i4.ReadonlyArray<_i2.Object> get backgrounds => _i5.getProperty(
+  _i2.List<_i2.Object> get backgrounds => ((_i4.getProperty(
         this,
         'backgrounds',
-      );
-  set backgrounds(_i4.ReadonlyArray<_i2.Object> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set backgrounds(_i2.List<_i2.Object> value) {
+    _i4.setProperty(
       this,
       'backgrounds',
       value,
     );
   }
 
-  _i4.ReadonlyArray<_i2.Object> get prototypeBackgrounds => _i5.getProperty(
+  _i2.List<_i2.Object> get prototypeBackgrounds => ((_i4.getProperty(
         this,
         'prototypeBackgrounds',
-      );
-  set prototypeBackgrounds(_i4.ReadonlyArray<_i2.Object> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set prototypeBackgrounds(_i2.List<_i2.Object> value) {
+    _i4.setProperty(
       this,
       'prototypeBackgrounds',
       value,
     );
   }
 
-  _i3.BaseNodeMixin? get prototypeStartNode => _i5.getProperty(
+  _i3.BaseNodeMixin? get prototypeStartNode => _i4.getProperty(
         this,
         'prototypeStartNode',
       );
-  _i2.bool get isPageDivider => _i5.getProperty(
+  _i2.bool get isPageDivider => _i4.getProperty(
         this,
         'isPageDivider',
       );
   set isPageDivider(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'isPageDivider',
       value,
     );
   }
 
-  _i3.SlideNode? get focusedSlide => _i5.getProperty(
+  _i3.SlideNode? get focusedSlide => _i4.getProperty(
         this,
         'focusedSlide',
       );
   set focusedSlide(_i3.SlideNode? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'focusedSlide',
       value ?? _i7.undefined,
@@ -21484,15 +21725,15 @@ extension PageNode$Typings on PageNode {
   }
 
   set clone(_i3.PageNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.PageNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.PageNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -21500,16 +21741,16 @@ extension PageNode$Typings on PageNode {
         [this],
       );
   set loadAsync(_i2.Future<void> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'loadAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function() get loadAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'loadAsync',
             ),
@@ -21521,10 +21762,10 @@ extension PageNode$Typings on PageNode {
         _i2.String,
         void Function(_i3.NodeChangeEvent),
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'on',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -21535,8 +21776,8 @@ extension PageNode$Typings on PageNode {
         _i2.String p0,
         void Function(_i3.NodeChangeEvent) p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'on',
             ),
@@ -21544,7 +21785,7 @@ extension PageNode$Typings on PageNode {
             [
               this,
               p0,
-              _i5.allowInterop(p1),
+              _i4.allowInterop(p1),
             ],
           );
   set once(
@@ -21552,10 +21793,10 @@ extension PageNode$Typings on PageNode {
         _i2.String,
         void Function(_i3.NodeChangeEvent),
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'once',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -21566,8 +21807,8 @@ extension PageNode$Typings on PageNode {
         _i2.String p0,
         void Function(_i3.NodeChangeEvent) p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'once',
             ),
@@ -21575,7 +21816,7 @@ extension PageNode$Typings on PageNode {
             [
               this,
               p0,
-              _i5.allowInterop(p1),
+              _i4.allowInterop(p1),
             ],
           );
   set off(
@@ -21583,10 +21824,10 @@ extension PageNode$Typings on PageNode {
         _i2.String,
         void Function(_i3.NodeChangeEvent),
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'off',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -21597,8 +21838,8 @@ extension PageNode$Typings on PageNode {
         _i2.String p0,
         void Function(_i3.NodeChangeEvent) p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'off',
             ),
@@ -21606,7 +21847,7 @@ extension PageNode$Typings on PageNode {
             [
               this,
               p0,
-              _i5.allowInterop(p1),
+              _i4.allowInterop(p1),
             ],
           );
 }
@@ -21627,35 +21868,35 @@ class FrameNode implements _i3.DefaultFrameMixin {
   }) =>
       FrameNode._(
         type: type,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredFrameNode,
         'type',
       );
 }
 
-_i2.Object get _declaredFrameNode => _i5.getProperty(
+_i2.Object get _declaredFrameNode => _i4.getProperty(
       _self,
       'FrameNode',
     );
 
 extension FrameNode$Typings on FrameNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set clone(_i3.FrameNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.FrameNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.FrameNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -21751,36 +21992,39 @@ class GroupNode
     _i3.FrameNode? Function()? getTopLevelFrame,
     _i2.bool? visible,
     _i2.bool? locked,
-    _i2.List<_i3.SceneNode>? stuckNodes,
+    _i2.List<_i3.BaseNodeMixin>? stuckNodes,
     _i2.List<_i3.ConnectorNode>? attachedConnectors,
     _i2.dynamic componentPropertyReferences,
     _Intersection8? boundVariables,
     _Intersection9? inferredVariables,
     _i2.Object? resolvedVariableModes,
-    _i4.ReadonlyArray<_i3.Reaction>? reactions,
-    _i2.Future<void> Function(_i4.Array<_i3.Reaction>)? setReactionsAsync,
-    _i4.ReadonlyArray<_i3.SceneNode>? children,
-    void Function(_i3.SceneNode)? appendChild,
+    _i2.List<_i3.IInline34>? reactions,
+    _i2.Future<void> Function(_i6.Array<_i2.dynamic>)? setReactionsAsync,
+    _i2.List<_i3.BaseNodeMixin>? children,
+    void Function(_i3.BaseNodeMixin)? appendChild,
     void Function(
       _i2.num,
-      _i3.SceneNode,
+      _i3.BaseNodeMixin,
     )? insertChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findChildren,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))?
+        findChild,
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findAll,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findOne,
-    _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))? findOne,
+    _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
             _i3.FindAllCriteria<T>)?
         findAllWithCriteria,
-    _i4.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
+    _i6.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
     _i2.bool? expanded,
-    _i4.ReadonlyArray<_i2.Object>? backgrounds,
+    _i2.List<_i2.Object>? backgrounds,
     _i2.String? backgroundStyleId,
     _i2.bool? isMask,
-    _i3.MaskType? maskType,
-    _i4.ReadonlyArray<_i2.Object>? effects,
+    _i3.MaskTypeOptions? maskType,
+    _i2.List<_i2.Object>? effects,
     _i2.String? effectStyleId,
     _i2.Future<void> Function(_i2.String)? setEffectStyleIdAsync,
     _i3.Rect? absoluteRenderBounds,
@@ -21797,29 +22041,29 @@ class GroupNode
       _i2.num,
     )? resizeWithoutConstraints,
     void Function(_i2.num)? rescale,
-    _i4.ReadonlyArray<_i2.Object>? exportSettings,
+    _i2.List<_i2.Object>? exportSettings,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
   }) =>
       GroupNode._(
         type: type,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         id: id,
         parent: parent ?? _i7.undefined,
         name: name,
         removed: removed,
         isAsset: isAsset,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+        toString$: toString$ == null ? null : _i4.allowInterop(toString$),
+        remove: remove == null ? null : _i4.allowInterop(remove),
         setRelaunchData:
-            setRelaunchData == null ? null : _i5.allowInterop(setRelaunchData),
+            setRelaunchData == null ? null : _i4.allowInterop(setRelaunchData),
         getRelaunchData:
-            getRelaunchData == null ? null : _i5.allowInterop(getRelaunchData),
-        getCSSAsync: getCSSAsync == null ? null : _i5.allowInterop(getCSSAsync),
+            getRelaunchData == null ? null : _i4.allowInterop(getRelaunchData),
+        getCSSAsync: getCSSAsync == null ? null : _i4.allowInterop(getCSSAsync),
         getTopLevelFrame: getTopLevelFrame == null
             ? null
-            : _i5.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
+            : _i4.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
         visible: visible,
         locked: locked,
         stuckNodes: stuckNodes,
@@ -21828,85 +22072,83 @@ class GroupNode
         boundVariables: boundVariables ?? _i7.undefined,
         inferredVariables: inferredVariables ?? _i7.undefined,
         resolvedVariableModes: resolvedVariableModes ?? _i7.undefined,
-        reactions: reactions ?? _i7.undefined,
+        reactions: reactions,
         setReactionsAsync: setReactionsAsync == null
             ? null
-            : _i5.allowInterop(setReactionsAsync),
-        children: children ?? _i7.undefined,
-        appendChild: appendChild == null ? null : _i5.allowInterop(appendChild),
-        insertChild: insertChild == null ? null : _i5.allowInterop(insertChild),
+            : _i4.allowInterop(setReactionsAsync),
+        children: children,
+        appendChild: appendChild == null ? null : _i4.allowInterop(appendChild),
+        insertChild: insertChild == null ? null : _i4.allowInterop(insertChild),
         findChildren:
-            findChildren == null ? null : _i5.allowInterop(findChildren),
+            findChildren == null ? null : _i4.allowInterop(findChildren),
         findChild: findChild == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findChild(p0) ?? _i7.undefined ?? _i7.undefined),
-        findAll: findAll == null ? null : _i5.allowInterop(findAll),
+            : _i4.allowInterop((p0) => () => findChild(p0) ?? _i7.undefined),
+        findAll: findAll == null ? null : _i4.allowInterop(findAll),
         findOne: findOne == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findOne(p0) ?? _i7.undefined ?? _i7.undefined),
+            : _i4.allowInterop((p0) => () => findOne(p0) ?? _i7.undefined),
         findAllWithCriteria: findAllWithCriteria == null
             ? null
-            : _i5.allowInterop(findAllWithCriteria),
+            : _i4.allowInterop(findAllWithCriteria),
         findWidgetNodesByWidgetId: findWidgetNodesByWidgetId == null
             ? null
-            : _i5.allowInterop(findWidgetNodesByWidgetId),
+            : _i4.allowInterop(findWidgetNodesByWidgetId),
         expanded: expanded,
-        backgrounds: backgrounds ?? _i7.undefined,
+        backgrounds: backgrounds,
         backgroundStyleId: backgroundStyleId,
         isMask: isMask,
-        maskType: maskType?.name ?? _i7.undefined,
-        effects: effects ?? _i7.undefined,
+        maskType: maskType?.name,
+        effects: effects,
         effectStyleId: effectStyleId,
         setEffectStyleIdAsync: setEffectStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setEffectStyleIdAsync),
+            : _i4.allowInterop(setEffectStyleIdAsync),
         absoluteRenderBounds: absoluteRenderBounds ?? _i7.undefined,
         constrainProportions: constrainProportions,
         rotation: rotation,
         layoutSizingHorizontal: layoutSizingHorizontal?.name ?? _i7.undefined,
         layoutSizingVertical: layoutSizingVertical?.name ?? _i7.undefined,
-        resize: resize == null ? null : _i5.allowInterop(resize),
+        resize: resize == null ? null : _i4.allowInterop(resize),
         resizeWithoutConstraints: resizeWithoutConstraints == null
             ? null
-            : _i5.allowInterop(resizeWithoutConstraints),
-        rescale: rescale == null ? null : _i5.allowInterop(rescale),
-        exportSettings: exportSettings ?? _i7.undefined,
+            : _i4.allowInterop(resizeWithoutConstraints),
+        rescale: rescale == null ? null : _i4.allowInterop(rescale),
+        exportSettings: exportSettings,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredGroupNode,
         'type',
       );
 }
 
-_i2.Object get _declaredGroupNode => _i5.getProperty(
+_i2.Object get _declaredGroupNode => _i4.getProperty(
       _self,
       'GroupNode',
     );
 
 extension GroupNode$Typings on GroupNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set clone(_i3.GroupNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.GroupNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.GroupNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -21974,7 +22216,7 @@ class SliceNode
     _i3.FrameNode? Function()? getTopLevelFrame,
     _i2.bool? visible,
     _i2.bool? locked,
-    _i2.List<_i3.SceneNode>? stuckNodes,
+    _i2.List<_i3.BaseNodeMixin>? stuckNodes,
     _i2.List<_i3.ConnectorNode>? attachedConnectors,
     _i2.dynamic componentPropertyReferences,
     _Intersection8? boundVariables,
@@ -21994,26 +22236,26 @@ class SliceNode
       _i2.num,
     )? resizeWithoutConstraints,
     void Function(_i2.num)? rescale,
-    _i4.ReadonlyArray<_i2.Object>? exportSettings,
+    _i2.List<_i2.Object>? exportSettings,
   }) =>
       SliceNode._(
         type: type,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         id: id,
         parent: parent ?? _i7.undefined,
         name: name,
         removed: removed,
         isAsset: isAsset,
-        toString$: toString$ == null ? null : _i5.allowInterop(toString$),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+        toString$: toString$ == null ? null : _i4.allowInterop(toString$),
+        remove: remove == null ? null : _i4.allowInterop(remove),
         setRelaunchData:
-            setRelaunchData == null ? null : _i5.allowInterop(setRelaunchData),
+            setRelaunchData == null ? null : _i4.allowInterop(setRelaunchData),
         getRelaunchData:
-            getRelaunchData == null ? null : _i5.allowInterop(getRelaunchData),
-        getCSSAsync: getCSSAsync == null ? null : _i5.allowInterop(getCSSAsync),
+            getRelaunchData == null ? null : _i4.allowInterop(getRelaunchData),
+        getCSSAsync: getCSSAsync == null ? null : _i4.allowInterop(getCSSAsync),
         getTopLevelFrame: getTopLevelFrame == null
             ? null
-            : _i5.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
+            : _i4.allowInterop(() => () => getTopLevelFrame() ?? _i7.undefined),
         visible: visible,
         locked: locked,
         stuckNodes: stuckNodes,
@@ -22027,40 +22269,40 @@ class SliceNode
         rotation: rotation,
         layoutSizingHorizontal: layoutSizingHorizontal?.name ?? _i7.undefined,
         layoutSizingVertical: layoutSizingVertical?.name ?? _i7.undefined,
-        resize: resize == null ? null : _i5.allowInterop(resize),
+        resize: resize == null ? null : _i4.allowInterop(resize),
         resizeWithoutConstraints: resizeWithoutConstraints == null
             ? null
-            : _i5.allowInterop(resizeWithoutConstraints),
-        rescale: rescale == null ? null : _i5.allowInterop(rescale),
-        exportSettings: exportSettings ?? _i7.undefined,
+            : _i4.allowInterop(resizeWithoutConstraints),
+        rescale: rescale == null ? null : _i4.allowInterop(rescale),
+        exportSettings: exportSettings,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredSliceNode,
         'type',
       );
 }
 
-_i2.Object get _declaredSliceNode => _i5.getProperty(
+_i2.Object get _declaredSliceNode => _i4.getProperty(
       _self,
       'SliceNode',
     );
 
 extension SliceNode$Typings on SliceNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set clone(_i3.SliceNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.SliceNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.SliceNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -22116,14 +22358,14 @@ class RectangleNode
     _i2.num? strokeBottomWeight,
     _i2.num? strokeLeftWeight,
     _i2.num? strokeRightWeight,
-    _i4.ReadonlyArray<_i3.Annotation>? annotations,
+    _i2.List<_i3.Annotation>? annotations,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
   }) =>
       RectangleNode._(
         type: type,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         constraints: constraints ?? _i7.undefined,
         cornerRadius: cornerRadius ?? _i7.undefined,
         cornerSmoothing: cornerSmoothing,
@@ -22135,41 +22377,41 @@ class RectangleNode
         strokeBottomWeight: strokeBottomWeight,
         strokeLeftWeight: strokeLeftWeight,
         strokeRightWeight: strokeRightWeight,
-        annotations: annotations ?? _i7.undefined,
+        annotations: annotations,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredRectangleNode,
         'type',
       );
 }
 
-_i2.Object get _declaredRectangleNode => _i5.getProperty(
+_i2.Object get _declaredRectangleNode => _i4.getProperty(
       _self,
       'RectangleNode',
     );
 
 extension RectangleNode$Typings on RectangleNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set clone(_i3.RectangleNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.RectangleNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.RectangleNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -22198,41 +22440,41 @@ class LineNode
     _i2.String? type,
     _i3.LineNode Function()? clone,
     _i3.Constraints? constraints,
-    _i4.ReadonlyArray<_i3.Annotation>? annotations,
+    _i2.List<_i3.Annotation>? annotations,
   }) =>
       LineNode._(
         type: type,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         constraints: constraints ?? _i7.undefined,
-        annotations: annotations ?? _i7.undefined,
+        annotations: annotations,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredLineNode,
         'type',
       );
 }
 
-_i2.Object get _declaredLineNode => _i5.getProperty(
+_i2.Object get _declaredLineNode => _i4.getProperty(
       _self,
       'LineNode',
     );
 
 extension LineNode$Typings on LineNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set clone(_i3.LineNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.LineNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.LineNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -22272,7 +22514,7 @@ class EllipseNode
     _i3.Constraints? constraints,
     _i2.Object? cornerRadius,
     _i2.num? cornerSmoothing,
-    _i4.ReadonlyArray<_i3.Annotation>? annotations,
+    _i2.List<_i3.Annotation>? annotations,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
@@ -22280,41 +22522,41 @@ class EllipseNode
       EllipseNode._(
         type: type,
         arcData: arcData ?? _i7.undefined,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         constraints: constraints ?? _i7.undefined,
         cornerRadius: cornerRadius ?? _i7.undefined,
         cornerSmoothing: cornerSmoothing,
-        annotations: annotations ?? _i7.undefined,
+        annotations: annotations,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredEllipseNode,
         'type',
       );
 }
 
-_i2.Object get _declaredEllipseNode => _i5.getProperty(
+_i2.Object get _declaredEllipseNode => _i4.getProperty(
       _self,
       'EllipseNode',
     );
 
 extension EllipseNode$Typings on EllipseNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.ArcData get arcData => _i5.getProperty(
+  _i3.ArcData get arcData => _i4.getProperty(
         this,
         'arcData',
       );
   set arcData(_i3.ArcData value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'arcData',
       value,
@@ -22322,15 +22564,15 @@ extension EllipseNode$Typings on EllipseNode {
   }
 
   set clone(_i3.EllipseNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.EllipseNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.EllipseNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -22370,7 +22612,7 @@ class PolygonNode
     _i3.Constraints? constraints,
     _i2.Object? cornerRadius,
     _i2.num? cornerSmoothing,
-    _i4.ReadonlyArray<_i3.Annotation>? annotations,
+    _i2.List<_i3.Annotation>? annotations,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
@@ -22378,41 +22620,41 @@ class PolygonNode
       PolygonNode._(
         type: type,
         pointCount: pointCount,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         constraints: constraints ?? _i7.undefined,
         cornerRadius: cornerRadius ?? _i7.undefined,
         cornerSmoothing: cornerSmoothing,
-        annotations: annotations ?? _i7.undefined,
+        annotations: annotations,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredPolygonNode,
         'type',
       );
 }
 
-_i2.Object get _declaredPolygonNode => _i5.getProperty(
+_i2.Object get _declaredPolygonNode => _i4.getProperty(
       _self,
       'PolygonNode',
     );
 
 extension PolygonNode$Typings on PolygonNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.num get pointCount => _i5.getProperty(
+  _i2.num get pointCount => _i4.getProperty(
         this,
         'pointCount',
       );
   set pointCount(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'pointCount',
       value,
@@ -22420,15 +22662,15 @@ extension PolygonNode$Typings on PolygonNode {
   }
 
   set clone(_i3.PolygonNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.PolygonNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.PolygonNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -22470,7 +22712,7 @@ class StarNode
     _i3.Constraints? constraints,
     _i2.Object? cornerRadius,
     _i2.num? cornerSmoothing,
-    _i4.ReadonlyArray<_i3.Annotation>? annotations,
+    _i2.List<_i3.Annotation>? annotations,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
@@ -22479,53 +22721,53 @@ class StarNode
         type: type,
         pointCount: pointCount,
         innerRadius: innerRadius,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         constraints: constraints ?? _i7.undefined,
         cornerRadius: cornerRadius ?? _i7.undefined,
         cornerSmoothing: cornerSmoothing,
-        annotations: annotations ?? _i7.undefined,
+        annotations: annotations,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredStarNode,
         'type',
       );
 }
 
-_i2.Object get _declaredStarNode => _i5.getProperty(
+_i2.Object get _declaredStarNode => _i4.getProperty(
       _self,
       'StarNode',
     );
 
 extension StarNode$Typings on StarNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.num get pointCount => _i5.getProperty(
+  _i2.num get pointCount => _i4.getProperty(
         this,
         'pointCount',
       );
   set pointCount(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'pointCount',
       value,
     );
   }
 
-  _i2.num get innerRadius => _i5.getProperty(
+  _i2.num get innerRadius => _i4.getProperty(
         this,
         'innerRadius',
       );
   set innerRadius(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'innerRadius',
       value,
@@ -22533,15 +22775,15 @@ extension StarNode$Typings on StarNode {
   }
 
   set clone(_i3.StarNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.StarNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.StarNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -22585,61 +22827,61 @@ class VectorNode
     _i2.Object? cornerRadius,
     _i2.num? cornerSmoothing,
     _i3.VectorNetwork? vectorNetwork,
-    _i3.VectorPaths? vectorPaths,
+    _i2.List<_i2.dynamic>? vectorPaths,
     _i2.Object? handleMirroring,
     _i2.Future<void> Function(_i3.VectorNetwork)? setVectorNetworkAsync,
-    _i4.ReadonlyArray<_i3.Annotation>? annotations,
+    _i2.List<_i3.Annotation>? annotations,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
   }) =>
       VectorNode._(
         type: type,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         constraints: constraints ?? _i7.undefined,
         cornerRadius: cornerRadius ?? _i7.undefined,
         cornerSmoothing: cornerSmoothing,
         vectorNetwork: vectorNetwork ?? _i7.undefined,
-        vectorPaths: vectorPaths ?? _i7.undefined,
+        vectorPaths: vectorPaths,
         handleMirroring: handleMirroring ?? _i7.undefined,
         setVectorNetworkAsync: setVectorNetworkAsync == null
             ? null
-            : _i5.allowInterop(setVectorNetworkAsync),
-        annotations: annotations ?? _i7.undefined,
+            : _i4.allowInterop(setVectorNetworkAsync),
+        annotations: annotations,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredVectorNode,
         'type',
       );
 }
 
-_i2.Object get _declaredVectorNode => _i5.getProperty(
+_i2.Object get _declaredVectorNode => _i4.getProperty(
       _self,
       'VectorNode',
     );
 
 extension VectorNode$Typings on VectorNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set clone(_i3.VectorNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.VectorNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.VectorNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -22825,7 +23067,7 @@ class TextNode
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextCase,
+      _i3.TextCaseOptions,
     )? setRangeTextCase,
     _i2.Object Function(
       _i2.num,
@@ -22838,7 +23080,7 @@ class TextNode
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextDecoration,
+      _i3.TextDecorationOptions,
     )? setRangeTextDecoration,
     _i2.dynamic Function(
       _i2.num,
@@ -22847,7 +23089,7 @@ class TextNode
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextDecorationStyle,
+      _i3.TextDecorationStyleOptions,
     )? setRangeTextDecorationStyle,
     _i2.dynamic Function(
       _i2.num,
@@ -22910,7 +23152,7 @@ class TextNode
     void Function(
       _i2.num,
       _i2.num, [
-      _i3.HyperlinkTarget?,
+      _i2.dynamic,
     ])? setRangeHyperlink,
     _i2.Object Function(
       _i2.num,
@@ -22956,7 +23198,7 @@ class TextNode
     void Function(
       _i2.num,
       _i2.num,
-      _i3.TextListOptions,
+      _i2.dynamic,
     )? setRangeListOptions,
     _i2.Object Function(
       _i2.num,
@@ -22997,21 +23239,21 @@ class TextNode
     _i2.dynamic Function(
       _i2.num,
       _i2.num,
-      _i3.VariableBindableTextField,
+      _i3.VariableBindableTextFieldOptions,
     )? getRangeBoundVariable,
     void Function(
       _i2.num,
       _i2.num,
-      _i3.VariableBindableTextField, [
+      _i3.VariableBindableTextFieldOptions, [
       _i3.Variable?,
     ])? setRangeBoundVariable,
-    _i4.Array<_i2.dynamic>
+    _i6.Array<_i2.dynamic>
         Function<StyledTextSegmentFields extends _i2.List<_i2.dynamic>>(
       StyledTextSegmentFields, [
       _i2.num?,
       _i2.num?,
     ])? getStyledTextSegments,
-    _i4.ReadonlyArray<_i3.Annotation>? annotations,
+    _i2.List<_i3.Annotation>? annotations,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
@@ -23025,10 +23267,10 @@ class TextNode
         maxLines: maxLines ?? _i7.undefined,
         autoRename: autoRename,
         textStyleId: textStyleId ?? _i7.undefined,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         setTextStyleIdAsync: setTextStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setTextStyleIdAsync),
+            : _i4.allowInterop(setTextStyleIdAsync),
         constraints: constraints ?? _i7.undefined,
         hasMissingFont: hasMissingFont,
         paragraphIndent: paragraphIndent,
@@ -23054,184 +23296,184 @@ class TextNode
         characters: characters,
         insertCharacters: insertCharacters == null
             ? null
-            : _i5.allowInterop(insertCharacters),
+            : _i4.allowInterop(insertCharacters),
         deleteCharacters: deleteCharacters == null
             ? null
-            : _i5.allowInterop(deleteCharacters),
+            : _i4.allowInterop(deleteCharacters),
         getRangeFontSize: getRangeFontSize == null
             ? null
-            : _i5.allowInterop(getRangeFontSize),
+            : _i4.allowInterop(getRangeFontSize),
         setRangeFontSize: setRangeFontSize == null
             ? null
-            : _i5.allowInterop(setRangeFontSize),
+            : _i4.allowInterop(setRangeFontSize),
         getRangeFontName: getRangeFontName == null
             ? null
-            : _i5.allowInterop(getRangeFontName),
+            : _i4.allowInterop(getRangeFontName),
         setRangeFontName: setRangeFontName == null
             ? null
-            : _i5.allowInterop(setRangeFontName),
+            : _i4.allowInterop(setRangeFontName),
         getRangeFontWeight: getRangeFontWeight == null
             ? null
-            : _i5.allowInterop(getRangeFontWeight),
+            : _i4.allowInterop(getRangeFontWeight),
         getRangeAllFontNames: getRangeAllFontNames == null
             ? null
-            : _i5.allowInterop(getRangeAllFontNames),
+            : _i4.allowInterop(getRangeAllFontNames),
         getRangeTextCase: getRangeTextCase == null
             ? null
-            : _i5.allowInterop(getRangeTextCase),
+            : _i4.allowInterop(getRangeTextCase),
         setRangeTextCase: setRangeTextCase == null
             ? null
-            : _i5.allowInterop(setRangeTextCase),
+            : _i4.allowInterop(setRangeTextCase),
         getRangeOpenTypeFeatures: getRangeOpenTypeFeatures == null
             ? null
-            : _i5.allowInterop(getRangeOpenTypeFeatures),
+            : _i4.allowInterop(getRangeOpenTypeFeatures),
         getRangeTextDecoration: getRangeTextDecoration == null
             ? null
-            : _i5.allowInterop(getRangeTextDecoration),
+            : _i4.allowInterop(getRangeTextDecoration),
         setRangeTextDecoration: setRangeTextDecoration == null
             ? null
-            : _i5.allowInterop(setRangeTextDecoration),
+            : _i4.allowInterop(setRangeTextDecoration),
         getRangeTextDecorationStyle: getRangeTextDecorationStyle == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationStyle),
+            : _i4.allowInterop(getRangeTextDecorationStyle),
         setRangeTextDecorationStyle: setRangeTextDecorationStyle == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationStyle),
+            : _i4.allowInterop(setRangeTextDecorationStyle),
         getRangeTextDecorationOffset: getRangeTextDecorationOffset == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationOffset),
+            : _i4.allowInterop(getRangeTextDecorationOffset),
         setRangeTextDecorationOffset: setRangeTextDecorationOffset == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationOffset),
+            : _i4.allowInterop(setRangeTextDecorationOffset),
         getRangeTextDecorationThickness: getRangeTextDecorationThickness == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationThickness),
+            : _i4.allowInterop(getRangeTextDecorationThickness),
         setRangeTextDecorationThickness: setRangeTextDecorationThickness == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationThickness),
+            : _i4.allowInterop(setRangeTextDecorationThickness),
         getRangeTextDecorationColor: getRangeTextDecorationColor == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationColor),
+            : _i4.allowInterop(getRangeTextDecorationColor),
         setRangeTextDecorationColor: setRangeTextDecorationColor == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationColor),
+            : _i4.allowInterop(setRangeTextDecorationColor),
         getRangeTextDecorationSkipInk: getRangeTextDecorationSkipInk == null
             ? null
-            : _i5.allowInterop(getRangeTextDecorationSkipInk),
+            : _i4.allowInterop(getRangeTextDecorationSkipInk),
         setRangeTextDecorationSkipInk: setRangeTextDecorationSkipInk == null
             ? null
-            : _i5.allowInterop(setRangeTextDecorationSkipInk),
+            : _i4.allowInterop(setRangeTextDecorationSkipInk),
         getRangeLetterSpacing: getRangeLetterSpacing == null
             ? null
-            : _i5.allowInterop(getRangeLetterSpacing),
+            : _i4.allowInterop(getRangeLetterSpacing),
         setRangeLetterSpacing: setRangeLetterSpacing == null
             ? null
-            : _i5.allowInterop(setRangeLetterSpacing),
+            : _i4.allowInterop(setRangeLetterSpacing),
         getRangeLineHeight: getRangeLineHeight == null
             ? null
-            : _i5.allowInterop(getRangeLineHeight),
+            : _i4.allowInterop(getRangeLineHeight),
         setRangeLineHeight: setRangeLineHeight == null
             ? null
-            : _i5.allowInterop(setRangeLineHeight),
+            : _i4.allowInterop(setRangeLineHeight),
         getRangeHyperlink: getRangeHyperlink == null
             ? null
-            : _i5.allowInterop(getRangeHyperlink),
+            : _i4.allowInterop(getRangeHyperlink),
         setRangeHyperlink: setRangeHyperlink == null
             ? null
-            : _i5.allowInterop(setRangeHyperlink),
+            : _i4.allowInterop(setRangeHyperlink),
         getRangeFills:
-            getRangeFills == null ? null : _i5.allowInterop(getRangeFills),
+            getRangeFills == null ? null : _i4.allowInterop(getRangeFills),
         setRangeFills:
-            setRangeFills == null ? null : _i5.allowInterop(setRangeFills),
+            setRangeFills == null ? null : _i4.allowInterop(setRangeFills),
         getRangeTextStyleId: getRangeTextStyleId == null
             ? null
-            : _i5.allowInterop(getRangeTextStyleId),
+            : _i4.allowInterop(getRangeTextStyleId),
         setRangeTextStyleIdAsync: setRangeTextStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setRangeTextStyleIdAsync),
+            : _i4.allowInterop(setRangeTextStyleIdAsync),
         setRangeTextStyleId: setRangeTextStyleId == null
             ? null
-            : _i5.allowInterop(setRangeTextStyleId),
+            : _i4.allowInterop(setRangeTextStyleId),
         getRangeFillStyleId: getRangeFillStyleId == null
             ? null
-            : _i5.allowInterop(getRangeFillStyleId),
+            : _i4.allowInterop(getRangeFillStyleId),
         setRangeFillStyleIdAsync: setRangeFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setRangeFillStyleIdAsync),
+            : _i4.allowInterop(setRangeFillStyleIdAsync),
         setRangeFillStyleId: setRangeFillStyleId == null
             ? null
-            : _i5.allowInterop(setRangeFillStyleId),
+            : _i4.allowInterop(setRangeFillStyleId),
         getRangeListOptions: getRangeListOptions == null
             ? null
-            : _i5.allowInterop(getRangeListOptions),
+            : _i4.allowInterop(getRangeListOptions),
         setRangeListOptions: setRangeListOptions == null
             ? null
-            : _i5.allowInterop(setRangeListOptions),
+            : _i4.allowInterop(setRangeListOptions),
         getRangeListSpacing: getRangeListSpacing == null
             ? null
-            : _i5.allowInterop(getRangeListSpacing),
+            : _i4.allowInterop(getRangeListSpacing),
         setRangeListSpacing: setRangeListSpacing == null
             ? null
-            : _i5.allowInterop(setRangeListSpacing),
+            : _i4.allowInterop(setRangeListSpacing),
         getRangeIndentation: getRangeIndentation == null
             ? null
-            : _i5.allowInterop(getRangeIndentation),
+            : _i4.allowInterop(getRangeIndentation),
         setRangeIndentation: setRangeIndentation == null
             ? null
-            : _i5.allowInterop(setRangeIndentation),
+            : _i4.allowInterop(setRangeIndentation),
         getRangeParagraphIndent: getRangeParagraphIndent == null
             ? null
-            : _i5.allowInterop(getRangeParagraphIndent),
+            : _i4.allowInterop(getRangeParagraphIndent),
         setRangeParagraphIndent: setRangeParagraphIndent == null
             ? null
-            : _i5.allowInterop(setRangeParagraphIndent),
+            : _i4.allowInterop(setRangeParagraphIndent),
         getRangeParagraphSpacing: getRangeParagraphSpacing == null
             ? null
-            : _i5.allowInterop(getRangeParagraphSpacing),
+            : _i4.allowInterop(getRangeParagraphSpacing),
         setRangeParagraphSpacing: setRangeParagraphSpacing == null
             ? null
-            : _i5.allowInterop(setRangeParagraphSpacing),
+            : _i4.allowInterop(setRangeParagraphSpacing),
         getRangeBoundVariable: getRangeBoundVariable == null
             ? null
-            : _i5.allowInterop(getRangeBoundVariable),
+            : _i4.allowInterop(getRangeBoundVariable),
         setRangeBoundVariable: setRangeBoundVariable == null
             ? null
-            : _i5.allowInterop(setRangeBoundVariable),
+            : _i4.allowInterop(setRangeBoundVariable),
         getStyledTextSegments: getStyledTextSegments == null
             ? null
-            : _i5.allowInterop(getStyledTextSegments),
-        annotations: annotations ?? _i7.undefined,
+            : _i4.allowInterop(getStyledTextSegments),
+        annotations: annotations,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredTextNode,
         'type',
       );
 }
 
-_i2.Object get _declaredTextNode => _i5.getProperty(
+_i2.Object get _declaredTextNode => _i4.getProperty(
       _self,
       'TextNode',
     );
 
 extension TextNode$Typings on TextNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   _i3.TextAlignHorizontal get textAlignHorizontal =>
-      _i3.TextAlignHorizontal.values.byName(_i5.getProperty(
+      _i3.TextAlignHorizontal.values.byName(_i4.getProperty(
         this,
         'textAlignHorizontal',
       ));
   set textAlignHorizontal(_i3.TextAlignHorizontal value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textAlignHorizontal',
       value.name,
@@ -23239,12 +23481,12 @@ extension TextNode$Typings on TextNode {
   }
 
   _i3.TextAlignVertical get textAlignVertical =>
-      _i3.TextAlignVertical.values.byName(_i5.getProperty(
+      _i3.TextAlignVertical.values.byName(_i4.getProperty(
         this,
         'textAlignVertical',
       ));
   set textAlignVertical(_i3.TextAlignVertical value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textAlignVertical',
       value.name,
@@ -23252,12 +23494,12 @@ extension TextNode$Typings on TextNode {
   }
 
   _i3.TextAutoResize get textAutoResize =>
-      _i3.TextAutoResize.values.byName(_i5.getProperty(
+      _i3.TextAutoResize.values.byName(_i4.getProperty(
         this,
         'textAutoResize',
       ));
   set textAutoResize(_i3.TextAutoResize value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textAutoResize',
       value.name,
@@ -23265,48 +23507,48 @@ extension TextNode$Typings on TextNode {
   }
 
   _i3.TextTruncation get textTruncation =>
-      _i3.TextTruncation.values.byName(_i5.getProperty(
+      _i3.TextTruncation.values.byName(_i4.getProperty(
         this,
         'textTruncation',
       ));
   set textTruncation(_i3.TextTruncation value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textTruncation',
       value.name,
     );
   }
 
-  _i2.num? get maxLines => _i5.getProperty(
+  _i2.num? get maxLines => _i4.getProperty(
         this,
         'maxLines',
       );
   set maxLines(_i2.num? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'maxLines',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.bool get autoRename => _i5.getProperty(
+  _i2.bool get autoRename => _i4.getProperty(
         this,
         'autoRename',
       );
   set autoRename(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'autoRename',
       value,
     );
   }
 
-  _i2.Object get textStyleId => _i5.getProperty(
+  _i2.Object get textStyleId => _i4.getProperty(
         this,
         'textStyleId',
       );
   set textStyleId(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'textStyleId',
       value,
@@ -23314,15 +23556,15 @@ extension TextNode$Typings on TextNode {
   }
 
   set clone(_i3.TextNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.TextNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.TextNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -23330,16 +23572,16 @@ extension TextNode$Typings on TextNode {
         [this],
       );
   set setTextStyleIdAsync(_i2.Future<void> Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setTextStyleIdAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<void> Function(_i2.String) get setTextStyleIdAsync =>
-      (_i2.String p0) => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'setTextStyleIdAsync',
             ),
@@ -23359,24 +23601,24 @@ class IInline83 {}
 
 extension IInline83$Typings on IInline83 {
   _i3.IInline83TypeOptions get type =>
-      _i3.IInline83TypeOptions.values.byName(_i5.getProperty(
+      _i3.IInline83TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
   set type(_i3.IInline83TypeOptions value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value.name,
     );
   }
 
-  _i2.String get key => _i5.getProperty(
+  _i2.String get key => _i4.getProperty(
         this,
         'key',
       );
   set key(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'key',
       value,
@@ -23391,14 +23633,13 @@ extension IInline83$Typings on IInline83 {
 class IInline84 {}
 
 extension IInline84$Typings on IInline84 {
-  _i2.List<_i3.InstanceSwapPreferredValue>? get preferredValues =>
-      ((_i5.getProperty(
+  _i2.List<_i2.dynamic>? get preferredValues => ((_i4.getProperty(
         this,
         'preferredValues',
       )) as _i2.List?)
           ?.cast();
-  set preferredValues(_i2.List<_i3.InstanceSwapPreferredValue>? value) {
-    _i5.setProperty(
+  set preferredValues(_i2.List<_i2.dynamic>? value) {
+    _i4.setProperty(
       this,
       'preferredValues',
       value ?? _i7.undefined,
@@ -23413,59 +23654,58 @@ extension IInline84$Typings on IInline84 {
 class IInline86 {}
 
 extension IInline86$Typings on IInline86 {
-  _i3.ComponentPropertyType get type =>
-      _i3.ComponentPropertyTypeOptions.values.byName(_i5.getProperty(
+  _i3.ComponentPropertyTypeOptions get type =>
+      _i3.ComponentPropertyTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  set type(_i3.ComponentPropertyType value) {
-    _i5.setProperty(
+  set type(_i3.ComponentPropertyTypeOptions value) {
+    _i4.setProperty(
       this,
       'type',
       value.name,
     );
   }
 
-  _i2.Object get defaultValue => _i5.getProperty(
+  _i2.Object get defaultValue => _i4.getProperty(
         this,
         'defaultValue',
       );
   set defaultValue(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'defaultValue',
       value,
     );
   }
 
-  _i2.List<_i3.InstanceSwapPreferredValue>? get preferredValues =>
-      ((_i5.getProperty(
+  _i2.List<_i2.dynamic>? get preferredValues => ((_i4.getProperty(
         this,
         'preferredValues',
       )) as _i2.List?)
           ?.cast();
-  set preferredValues(_i2.List<_i3.InstanceSwapPreferredValue>? value) {
-    _i5.setProperty(
+  set preferredValues(_i2.List<_i2.dynamic>? value) {
+    _i4.setProperty(
       this,
       'preferredValues',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.List<_i2.String>? get variantOptions => ((_i5.getProperty(
+  _i2.List<_i2.String>? get variantOptions => ((_i4.getProperty(
         this,
         'variantOptions',
       )) as _i2.List?)
           ?.cast();
   set variantOptions(_i2.List<_i2.String>? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'variantOptions',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -23478,13 +23718,13 @@ extension IInline86$Typings on IInline86 {
 class IInline88 {}
 
 extension IInline88$Typings on IInline88 {
-  _i2.List<_i2.String> get values => ((_i5.getProperty(
+  _i2.List<_i2.String> get values => ((_i4.getProperty(
         this,
         'values',
       )) as _i2.List)
           .cast();
   set values(_i2.List<_i2.String> value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'values',
       value,
@@ -23531,24 +23771,24 @@ class ComponentSetNode
     _i2.Object? variantGroupProperties,
     _i3.ComponentSetNode Function()? clone,
     _i2.Object? detachedInfo,
-    _i4.ReadonlyArray<_i2.Object>? layoutGrids,
+    _i2.List<_i2.Object>? layoutGrids,
     _i2.String? gridStyleId,
     _i2.bool? clipsContent,
-    _i4.ReadonlyArray<_i3.Guide>? guides,
+    _i2.List<_i3.Guide>? guides,
     _i3.InferredAutoLayoutResult? inferredAutoLayout,
     _i2.Future<void> Function(_i2.String)? setGridStyleIdAsync,
     _i2.String? description,
     _i2.String? descriptionMarkdown,
-    _i4.ReadonlyArray<_i3.DocumentationLink>? documentationLinks,
+    _i2.List<_i3.DocumentationLink>? documentationLinks,
     _i2.bool? remote,
     _i2.String? key,
-    _i2.Future<_i3.PublishStatus> Function()? getPublishStatusAsync,
+    _i2.Future<_i3.PublishStatusOptions> Function()? getPublishStatusAsync,
     _i2.Object? componentPropertyDefinitions,
     _i2.String Function(
       _i2.String,
-      _i3.ComponentPropertyType,
+      _i3.ComponentPropertyTypeOptions,
       _i2.Object, [
-      _i3.ComponentPropertyOptions?,
+      _i2.dynamic,
     ])? addComponentProperty,
     _i2.String Function(
       _i2.String,
@@ -23560,71 +23800,70 @@ class ComponentSetNode
         type: type,
         defaultVariant: defaultVariant ?? _i7.undefined,
         variantGroupProperties: variantGroupProperties ?? _i7.undefined,
-        clone: clone == null ? null : _i5.allowInterop(clone),
-        detachedInfo: detachedInfo ?? _i7.undefined ?? _i7.undefined,
-        layoutGrids: layoutGrids ?? _i7.undefined,
+        clone: clone == null ? null : _i4.allowInterop(clone),
+        detachedInfo: detachedInfo ?? _i7.undefined,
+        layoutGrids: layoutGrids,
         gridStyleId: gridStyleId,
         clipsContent: clipsContent,
-        guides: guides ?? _i7.undefined,
+        guides: guides,
         inferredAutoLayout: inferredAutoLayout ?? _i7.undefined,
         setGridStyleIdAsync: setGridStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setGridStyleIdAsync),
+            : _i4.allowInterop(setGridStyleIdAsync),
         description: description,
         descriptionMarkdown: descriptionMarkdown,
-        documentationLinks: documentationLinks ?? _i7.undefined,
+        documentationLinks: documentationLinks,
         remote: remote,
         key: key,
         getPublishStatusAsync: getPublishStatusAsync == null
             ? null
-            : _i5.allowInterop(getPublishStatusAsync),
-        componentPropertyDefinitions:
-            componentPropertyDefinitions ?? _i7.undefined,
+            : _i4.allowInterop(getPublishStatusAsync),
+        componentPropertyDefinitions: componentPropertyDefinitions,
         addComponentProperty: addComponentProperty == null
             ? null
-            : _i5.allowInterop(addComponentProperty),
+            : _i4.allowInterop(addComponentProperty),
         editComponentProperty: editComponentProperty == null
             ? null
-            : _i5.allowInterop(editComponentProperty),
+            : _i4.allowInterop(editComponentProperty),
         deleteComponentProperty: deleteComponentProperty == null
             ? null
-            : _i5.allowInterop(deleteComponentProperty),
+            : _i4.allowInterop(deleteComponentProperty),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredComponentSetNode,
         'type',
       );
 }
 
-_i2.Object get _declaredComponentSetNode => _i5.getProperty(
+_i2.Object get _declaredComponentSetNode => _i4.getProperty(
       _self,
       'ComponentSetNode',
     );
 
 extension ComponentSetNode$Typings on ComponentSetNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.ComponentNode get defaultVariant => _i5.getProperty(
+  _i3.ComponentNode get defaultVariant => _i4.getProperty(
         this,
         'defaultVariant',
       );
-  _i2.Object get variantGroupProperties => _i5.getProperty(
+  _i2.Object get variantGroupProperties => _i4.getProperty(
         this,
         'variantGroupProperties',
       );
   set clone(_i3.ComponentSetNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.ComponentSetNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.ComponentSetNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -23670,17 +23909,17 @@ class ComponentNode
     _i2.Future<_i2.List<_i3.InstanceNode>> Function()? getInstancesAsync,
     _i2.String? description,
     _i2.String? descriptionMarkdown,
-    _i4.ReadonlyArray<_i3.DocumentationLink>? documentationLinks,
+    _i2.List<_i3.DocumentationLink>? documentationLinks,
     _i2.bool? remote,
     _i2.String? key,
-    _i2.Future<_i3.PublishStatus> Function()? getPublishStatusAsync,
+    _i2.Future<_i3.PublishStatusOptions> Function()? getPublishStatusAsync,
     _i2.Object? variantProperties,
     _i2.Object? componentPropertyDefinitions,
     _i2.String Function(
       _i2.String,
-      _i3.ComponentPropertyType,
+      _i3.ComponentPropertyTypeOptions,
       _i2.Object, [
-      _i3.ComponentPropertyOptions?,
+      _i2.dynamic,
     ])? addComponentProperty,
     _i2.String Function(
       _i2.String,
@@ -23691,65 +23930,64 @@ class ComponentNode
       ComponentNode._(
         type: type,
         instances: instances,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         createInstance:
-            createInstance == null ? null : _i5.allowInterop(createInstance),
+            createInstance == null ? null : _i4.allowInterop(createInstance),
         getInstancesAsync: getInstancesAsync == null
             ? null
-            : _i5.allowInterop(getInstancesAsync),
+            : _i4.allowInterop(getInstancesAsync),
         description: description,
         descriptionMarkdown: descriptionMarkdown,
-        documentationLinks: documentationLinks ?? _i7.undefined,
+        documentationLinks: documentationLinks,
         remote: remote,
         key: key,
         getPublishStatusAsync: getPublishStatusAsync == null
             ? null
-            : _i5.allowInterop(getPublishStatusAsync),
+            : _i4.allowInterop(getPublishStatusAsync),
         variantProperties: variantProperties ?? _i7.undefined,
-        componentPropertyDefinitions:
-            componentPropertyDefinitions ?? _i7.undefined,
+        componentPropertyDefinitions: componentPropertyDefinitions,
         addComponentProperty: addComponentProperty == null
             ? null
-            : _i5.allowInterop(addComponentProperty),
+            : _i4.allowInterop(addComponentProperty),
         editComponentProperty: editComponentProperty == null
             ? null
-            : _i5.allowInterop(editComponentProperty),
+            : _i4.allowInterop(editComponentProperty),
         deleteComponentProperty: deleteComponentProperty == null
             ? null
-            : _i5.allowInterop(deleteComponentProperty),
+            : _i4.allowInterop(deleteComponentProperty),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredComponentNode,
         'type',
       );
 }
 
-_i2.Object get _declaredComponentNode => _i5.getProperty(
+_i2.Object get _declaredComponentNode => _i4.getProperty(
       _self,
       'ComponentNode',
     );
 
 extension ComponentNode$Typings on ComponentNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.List<_i3.InstanceNode> get instances => ((_i5.getProperty(
+  _i2.List<_i3.InstanceNode> get instances => ((_i4.getProperty(
         this,
         'instances',
       )) as _i2.List)
           .cast();
   set clone(_i3.ComponentNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.ComponentNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.ComponentNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -23757,15 +23995,15 @@ extension ComponentNode$Typings on ComponentNode {
         [this],
       );
   set createInstance(_i3.InstanceNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'createInstance',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.InstanceNode Function() get createInstance => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.InstanceNode Function() get createInstance => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'createInstance',
         ),
@@ -23774,16 +24012,16 @@ extension ComponentNode$Typings on ComponentNode {
       );
   set getInstancesAsync(
       _i2.Future<_i2.List<_i3.InstanceNode>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getInstancesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.InstanceNode>> Function() get getInstancesAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getInstancesAsync',
             ),
@@ -23799,46 +24037,45 @@ extension ComponentNode$Typings on ComponentNode {
 class IInline90 {}
 
 extension IInline90$Typings on IInline90 {
-  _i3.ComponentPropertyType get type =>
-      _i3.ComponentPropertyTypeOptions.values.byName(_i5.getProperty(
+  _i3.ComponentPropertyTypeOptions get type =>
+      _i3.ComponentPropertyTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  set type(_i3.ComponentPropertyType value) {
-    _i5.setProperty(
+  set type(_i3.ComponentPropertyTypeOptions value) {
+    _i4.setProperty(
       this,
       'type',
       value.name,
     );
   }
 
-  _i2.Object get value => _i5.getProperty(
+  _i2.Object get value => _i4.getProperty(
         this,
         'value',
       );
   set value(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'value',
       value,
     );
   }
 
-  _i2.List<_i3.InstanceSwapPreferredValue>? get preferredValues =>
-      ((_i5.getProperty(
+  _i2.List<_i2.dynamic>? get preferredValues => ((_i4.getProperty(
         this,
         'preferredValues',
       )) as _i2.List?)
           ?.cast();
-  set preferredValues(_i2.List<_i3.InstanceSwapPreferredValue>? value) {
-    _i5.setProperty(
+  set preferredValues(_i2.List<_i2.dynamic>? value) {
+    _i4.setProperty(
       this,
       'preferredValues',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -23851,27 +24088,28 @@ extension IInline90$Typings on IInline90 {
 class IInline92 {}
 
 extension IInline92$Typings on IInline92 {
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
   set id(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'id',
       value,
     );
   }
 
-  _i2.List<_i3.NodeChangeProperty> get overriddenFields => ((_i5.getProperty(
+  _i2.List<_i3.NodeChangePropertyOptions> get overriddenFields =>
+      ((_i4.getProperty(
         this,
         'overriddenFields',
       )) as _i2.List)
           .map((i) => ((_i3.NodeChangePropertyOptions.values.byName(i))
-              as _i3.NodeChangeProperty))
+              as _i3.NodeChangePropertyOptions))
           .toList();
-  set overriddenFields(_i2.List<_i3.NodeChangeProperty> value) {
-    _i5.setProperty(
+  set overriddenFields(_i2.List<_i3.NodeChangePropertyOptions> value) {
+    _i4.setProperty(
       this,
       'overriddenFields',
       value.map((i) => i.name).toList(),
@@ -23920,102 +24158,102 @@ class InstanceNode implements _i3.DefaultFrameMixin, _i3.VariantMixin {
       InstanceNode._(
         type: type,
         mainComponent: mainComponent ?? _i7.undefined,
-        componentProperties: componentProperties ?? _i7.undefined,
+        componentProperties: componentProperties,
         scaleFactor: scaleFactor,
         exposedInstances: exposedInstances,
         isExposedInstance: isExposedInstance,
         overrides: overrides,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         getMainComponentAsync: getMainComponentAsync == null
             ? null
-            : _i5.allowInterop(getMainComponentAsync),
+            : _i4.allowInterop(getMainComponentAsync),
         swapComponent:
-            swapComponent == null ? null : _i5.allowInterop(swapComponent),
+            swapComponent == null ? null : _i4.allowInterop(swapComponent),
         setProperties:
-            setProperties == null ? null : _i5.allowInterop(setProperties),
+            setProperties == null ? null : _i4.allowInterop(setProperties),
         detachInstance:
-            detachInstance == null ? null : _i5.allowInterop(detachInstance),
+            detachInstance == null ? null : _i4.allowInterop(detachInstance),
         resetOverrides:
-            resetOverrides == null ? null : _i5.allowInterop(resetOverrides),
+            resetOverrides == null ? null : _i4.allowInterop(resetOverrides),
         variantProperties: variantProperties ?? _i7.undefined,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredInstanceNode,
         'type',
       );
 }
 
-_i2.Object get _declaredInstanceNode => _i5.getProperty(
+_i2.Object get _declaredInstanceNode => _i4.getProperty(
       _self,
       'InstanceNode',
     );
 
 extension InstanceNode$Typings on InstanceNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.ComponentNode? get mainComponent => _i5.getProperty(
+  _i3.ComponentNode? get mainComponent => _i4.getProperty(
         this,
         'mainComponent',
       );
   set mainComponent(_i3.ComponentNode? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'mainComponent',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.Object get componentProperties => _i5.getProperty(
+  _i2.Object get componentProperties => _i4.getProperty(
         this,
         'componentProperties',
       );
-  _i2.num get scaleFactor => _i5.getProperty(
+  _i2.num get scaleFactor => _i4.getProperty(
         this,
         'scaleFactor',
       );
   set scaleFactor(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'scaleFactor',
       value,
     );
   }
 
-  _i2.List<_i3.InstanceNode> get exposedInstances => ((_i5.getProperty(
+  _i2.List<_i3.InstanceNode> get exposedInstances => ((_i4.getProperty(
         this,
         'exposedInstances',
       )) as _i2.List)
           .cast();
-  _i2.bool get isExposedInstance => _i5.getProperty(
+  _i2.bool get isExposedInstance => _i4.getProperty(
         this,
         'isExposedInstance',
       );
   set isExposedInstance(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'isExposedInstance',
       value,
     );
   }
 
-  _i2.List<_i2.dynamic> get overrides => ((_i5.getProperty(
+  _i2.List<_i2.dynamic> get overrides => ((_i4.getProperty(
         this,
         'overrides',
       )) as _i2.List)
           .cast();
   set clone(_i3.InstanceNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.InstanceNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.InstanceNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -24023,16 +24261,16 @@ extension InstanceNode$Typings on InstanceNode {
         [this],
       );
   set getMainComponentAsync(_i2.Future<_i3.ComponentNode?> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getMainComponentAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.ComponentNode?> Function() get getMainComponentAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getMainComponentAsync',
             ),
@@ -24040,16 +24278,16 @@ extension InstanceNode$Typings on InstanceNode {
             [this],
           ));
   set swapComponent(void Function(_i3.ComponentNode) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'swapComponent',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(_i3.ComponentNode) get swapComponent =>
-      (_i3.ComponentNode p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i3.ComponentNode p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'swapComponent',
             ),
@@ -24060,16 +24298,16 @@ extension InstanceNode$Typings on InstanceNode {
             ],
           );
   set setProperties(void Function(_i2.Object) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setProperties',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(_i2.Object) get setProperties =>
-      (_i2.Object p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.Object p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'setProperties',
             ),
@@ -24080,15 +24318,15 @@ extension InstanceNode$Typings on InstanceNode {
             ],
           );
   set detachInstance(_i3.FrameNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'detachInstance',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.FrameNode Function() get detachInstance => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.FrameNode Function() get detachInstance => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'detachInstance',
         ),
@@ -24096,15 +24334,15 @@ extension InstanceNode$Typings on InstanceNode {
         [this],
       );
   set resetOverrides(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resetOverrides',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get resetOverrides => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get resetOverrides => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'resetOverrides',
         ),
@@ -24149,22 +24387,25 @@ class BooleanOperationNode
     _i2.String? type,
     _i3.BooleanOperation? booleanOperation,
     _i3.BooleanOperationNode Function()? clone,
-    _i4.ReadonlyArray<_i3.SceneNode>? children,
-    void Function(_i3.SceneNode)? appendChild,
+    _i2.List<_i3.BaseNodeMixin>? children,
+    void Function(_i3.BaseNodeMixin)? appendChild,
     void Function(
       _i2.num,
-      _i3.SceneNode,
+      _i3.BaseNodeMixin,
     )? insertChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findChildren,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))?
+        findChild,
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findAll,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findOne,
-    _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))? findOne,
+    _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
             _i3.FindAllCriteria<T>)?
         findAllWithCriteria,
-    _i4.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
+    _i6.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
     _i2.Object? cornerRadius,
     _i2.num? cornerSmoothing,
     _i2.bool? expanded,
@@ -24175,61 +24416,59 @@ class BooleanOperationNode
       BooleanOperationNode._(
         type: type,
         booleanOperation: booleanOperation?.name ?? _i7.undefined,
-        clone: clone == null ? null : _i5.allowInterop(clone),
-        children: children ?? _i7.undefined,
-        appendChild: appendChild == null ? null : _i5.allowInterop(appendChild),
-        insertChild: insertChild == null ? null : _i5.allowInterop(insertChild),
+        clone: clone == null ? null : _i4.allowInterop(clone),
+        children: children,
+        appendChild: appendChild == null ? null : _i4.allowInterop(appendChild),
+        insertChild: insertChild == null ? null : _i4.allowInterop(insertChild),
         findChildren:
-            findChildren == null ? null : _i5.allowInterop(findChildren),
+            findChildren == null ? null : _i4.allowInterop(findChildren),
         findChild: findChild == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findChild(p0) ?? _i7.undefined ?? _i7.undefined),
-        findAll: findAll == null ? null : _i5.allowInterop(findAll),
+            : _i4.allowInterop((p0) => () => findChild(p0) ?? _i7.undefined),
+        findAll: findAll == null ? null : _i4.allowInterop(findAll),
         findOne: findOne == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findOne(p0) ?? _i7.undefined ?? _i7.undefined),
+            : _i4.allowInterop((p0) => () => findOne(p0) ?? _i7.undefined),
         findAllWithCriteria: findAllWithCriteria == null
             ? null
-            : _i5.allowInterop(findAllWithCriteria),
+            : _i4.allowInterop(findAllWithCriteria),
         findWidgetNodesByWidgetId: findWidgetNodesByWidgetId == null
             ? null
-            : _i5.allowInterop(findWidgetNodesByWidgetId),
+            : _i4.allowInterop(findWidgetNodesByWidgetId),
         cornerRadius: cornerRadius ?? _i7.undefined,
         cornerSmoothing: cornerSmoothing,
         expanded: expanded,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredBooleanOperationNode,
         'type',
       );
 }
 
-_i2.Object get _declaredBooleanOperationNode => _i5.getProperty(
+_i2.Object get _declaredBooleanOperationNode => _i4.getProperty(
       _self,
       'BooleanOperationNode',
     );
 
 extension BooleanOperationNode$Typings on BooleanOperationNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   _i3.BooleanOperation get booleanOperation =>
-      _i3.BooleanOperation.values.byName(_i5.getProperty(
+      _i3.BooleanOperation.values.byName(_i4.getProperty(
         this,
         'booleanOperation',
       ));
   set booleanOperation(_i3.BooleanOperation value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'booleanOperation',
       value.name,
@@ -24237,15 +24476,15 @@ extension BooleanOperationNode$Typings on BooleanOperationNode {
   }
 
   set clone(_i3.BooleanOperationNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.BooleanOperationNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.BooleanOperationNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -24288,7 +24527,7 @@ class StickyNode
     _i2.Object? fillStyleId,
     _i2.Future<void> Function(_i2.String)? setFillStyleIdAsync,
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
   }) =>
       StickyNode._(
         type: type,
@@ -24296,66 +24535,66 @@ class StickyNode
         authorVisible: authorVisible,
         authorName: authorName,
         isWideWidth: isWideWidth,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         fills: fills ?? _i7.undefined,
         fillStyleId: fillStyleId ?? _i7.undefined,
         setFillStyleIdAsync: setFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setFillStyleIdAsync),
+            : _i4.allowInterop(setFillStyleIdAsync),
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredStickyNode,
         'type',
       );
 }
 
-_i2.Object get _declaredStickyNode => _i5.getProperty(
+_i2.Object get _declaredStickyNode => _i4.getProperty(
       _self,
       'StickyNode',
     );
 
 extension StickyNode$Typings on StickyNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.TextSublayerNode get text => _i5.getProperty(
+  _i3.TextSublayerNode get text => _i4.getProperty(
         this,
         'text',
       );
-  _i2.bool get authorVisible => _i5.getProperty(
+  _i2.bool get authorVisible => _i4.getProperty(
         this,
         'authorVisible',
       );
   set authorVisible(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'authorVisible',
       value,
     );
   }
 
-  _i2.String get authorName => _i5.getProperty(
+  _i2.String get authorName => _i4.getProperty(
         this,
         'authorName',
       );
   set authorName(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'authorName',
       value,
     );
   }
 
-  _i2.bool get isWideWidth => _i5.getProperty(
+  _i2.bool get isWideWidth => _i4.getProperty(
         this,
         'isWideWidth',
       );
   set isWideWidth(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'isWideWidth',
       value,
@@ -24363,15 +24602,15 @@ extension StickyNode$Typings on StickyNode {
   }
 
   set clone(_i3.StickyNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.StickyNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.StickyNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -24406,52 +24645,52 @@ class StampNode
     _i3.StampNode Function()? clone,
     _i2.Future<_i3.BaseUser?> Function()? getAuthorAsync,
     _i3.Constraints? constraints,
-    _i3.SceneNode? stuckTo,
+    _i3.BaseNodeMixin? stuckTo,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
   }) =>
       StampNode._(
         type: type,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         getAuthorAsync:
-            getAuthorAsync == null ? null : _i5.allowInterop(getAuthorAsync),
+            getAuthorAsync == null ? null : _i4.allowInterop(getAuthorAsync),
         constraints: constraints ?? _i7.undefined,
-        stuckTo: stuckTo ?? _i7.undefined ?? _i7.undefined,
+        stuckTo: stuckTo ?? _i7.undefined,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredStampNode,
         'type',
       );
 }
 
-_i2.Object get _declaredStampNode => _i5.getProperty(
+_i2.Object get _declaredStampNode => _i4.getProperty(
       _self,
       'StampNode',
     );
 
 extension StampNode$Typings on StampNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set clone(_i3.StampNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.StampNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.StampNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -24459,16 +24698,16 @@ extension StampNode$Typings on StampNode {
         [this],
       );
   set getAuthorAsync(_i2.Future<_i3.BaseUser?> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getAuthorAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i3.BaseUser?> Function() get getAuthorAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getAuthorAsync',
             ),
@@ -24540,68 +24779,68 @@ class TableNode
     _i2.Object? fillStyleId,
     _i2.Future<void> Function(_i2.String)? setFillStyleIdAsync,
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
   }) =>
       TableNode._(
         type: type,
         numRows: numRows,
         numColumns: numColumns,
-        clone: clone == null ? null : _i5.allowInterop(clone),
-        cellAt: cellAt == null ? null : _i5.allowInterop(cellAt),
-        insertRow: insertRow == null ? null : _i5.allowInterop(insertRow),
+        clone: clone == null ? null : _i4.allowInterop(clone),
+        cellAt: cellAt == null ? null : _i4.allowInterop(cellAt),
+        insertRow: insertRow == null ? null : _i4.allowInterop(insertRow),
         insertColumn:
-            insertColumn == null ? null : _i5.allowInterop(insertColumn),
-        removeRow: removeRow == null ? null : _i5.allowInterop(removeRow),
+            insertColumn == null ? null : _i4.allowInterop(insertColumn),
+        removeRow: removeRow == null ? null : _i4.allowInterop(removeRow),
         removeColumn:
-            removeColumn == null ? null : _i5.allowInterop(removeColumn),
-        moveRow: moveRow == null ? null : _i5.allowInterop(moveRow),
-        moveColumn: moveColumn == null ? null : _i5.allowInterop(moveColumn),
-        resizeRow: resizeRow == null ? null : _i5.allowInterop(resizeRow),
+            removeColumn == null ? null : _i4.allowInterop(removeColumn),
+        moveRow: moveRow == null ? null : _i4.allowInterop(moveRow),
+        moveColumn: moveColumn == null ? null : _i4.allowInterop(moveColumn),
+        resizeRow: resizeRow == null ? null : _i4.allowInterop(resizeRow),
         resizeColumn:
-            resizeColumn == null ? null : _i5.allowInterop(resizeColumn),
+            resizeColumn == null ? null : _i4.allowInterop(resizeColumn),
         fills: fills ?? _i7.undefined,
         fillStyleId: fillStyleId ?? _i7.undefined,
         setFillStyleIdAsync: setFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setFillStyleIdAsync),
+            : _i4.allowInterop(setFillStyleIdAsync),
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredTableNode,
         'type',
       );
 }
 
-_i2.Object get _declaredTableNode => _i5.getProperty(
+_i2.Object get _declaredTableNode => _i4.getProperty(
       _self,
       'TableNode',
     );
 
 extension TableNode$Typings on TableNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.num get numRows => _i5.getProperty(
+  _i2.num get numRows => _i4.getProperty(
         this,
         'numRows',
       );
-  _i2.num get numColumns => _i5.getProperty(
+  _i2.num get numColumns => _i4.getProperty(
         this,
         'numColumns',
       );
   set clone(_i3.TableNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.TableNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.TableNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -24613,10 +24852,10 @@ extension TableNode$Typings on TableNode {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'cellAt',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -24627,8 +24866,8 @@ extension TableNode$Typings on TableNode {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'cellAt',
             ),
@@ -24640,15 +24879,15 @@ extension TableNode$Typings on TableNode {
             ],
           );
   set insertRow(void Function(_i2.num) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'insertRow',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i2.num) get insertRow => (_i2.num p0) => _i5.callMethod(
-        _i5.getProperty(
+  void Function(_i2.num) get insertRow => (_i2.num p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'insertRow',
         ),
@@ -24659,15 +24898,15 @@ extension TableNode$Typings on TableNode {
         ],
       );
   set insertColumn(void Function(_i2.num) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'insertColumn',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i2.num) get insertColumn => (_i2.num p0) => _i5.callMethod(
-        _i5.getProperty(
+  void Function(_i2.num) get insertColumn => (_i2.num p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'insertColumn',
         ),
@@ -24678,15 +24917,15 @@ extension TableNode$Typings on TableNode {
         ],
       );
   set removeRow(void Function(_i2.num) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'removeRow',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i2.num) get removeRow => (_i2.num p0) => _i5.callMethod(
-        _i5.getProperty(
+  void Function(_i2.num) get removeRow => (_i2.num p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'removeRow',
         ),
@@ -24697,15 +24936,15 @@ extension TableNode$Typings on TableNode {
         ],
       );
   set removeColumn(void Function(_i2.num) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'removeColumn',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i2.num) get removeColumn => (_i2.num p0) => _i5.callMethod(
-        _i5.getProperty(
+  void Function(_i2.num) get removeColumn => (_i2.num p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'removeColumn',
         ),
@@ -24720,10 +24959,10 @@ extension TableNode$Typings on TableNode {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'moveRow',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -24734,8 +24973,8 @@ extension TableNode$Typings on TableNode {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'moveRow',
             ),
@@ -24751,10 +24990,10 @@ extension TableNode$Typings on TableNode {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'moveColumn',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -24765,8 +25004,8 @@ extension TableNode$Typings on TableNode {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'moveColumn',
             ),
@@ -24782,10 +25021,10 @@ extension TableNode$Typings on TableNode {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resizeRow',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -24796,8 +25035,8 @@ extension TableNode$Typings on TableNode {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'resizeRow',
             ),
@@ -24813,10 +25052,10 @@ extension TableNode$Typings on TableNode {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resizeColumn',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -24827,8 +25066,8 @@ extension TableNode$Typings on TableNode {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'resizeColumn',
             ),
@@ -24886,52 +25125,52 @@ class TableCellNode implements _i3.MinimalFillsMixin {
         fillStyleId: fillStyleId ?? _i7.undefined,
         setFillStyleIdAsync: setFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setFillStyleIdAsync),
+            : _i4.allowInterop(setFillStyleIdAsync),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredTableCellNode,
         'type',
       );
 }
 
-_i2.Object get _declaredTableCellNode => _i5.getProperty(
+_i2.Object get _declaredTableCellNode => _i4.getProperty(
       _self,
       'TableCellNode',
     );
 
 extension TableCellNode$Typings on TableCellNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.TextSublayerNode get text => _i5.getProperty(
+  _i3.TextSublayerNode get text => _i4.getProperty(
         this,
         'text',
       );
-  _i2.num get rowIndex => _i5.getProperty(
+  _i2.num get rowIndex => _i4.getProperty(
         this,
         'rowIndex',
       );
-  _i2.num get columnIndex => _i5.getProperty(
+  _i2.num get columnIndex => _i4.getProperty(
         this,
         'columnIndex',
       );
 
   /// Returns a string representation of an object.
-  _i2.String get toString$ => _i5.getProperty(
+  _i2.String get toString$ => _i4.getProperty(
         this,
         'toString',
       );
-  _i3.TableNode get parent => _i5.getProperty(
+  _i3.TableNode get parent => _i4.getProperty(
         this,
         'parent',
       );
-  _i2.num get height => _i5.getProperty(
+  _i2.num get height => _i4.getProperty(
         this,
         'height',
       );
-  _i2.num get width => _i5.getProperty(
+  _i2.num get width => _i4.getProperty(
         this,
         'width',
       );
@@ -24972,61 +25211,61 @@ class HighlightNode
     _i2.Object? cornerRadius,
     _i2.num? cornerSmoothing,
     _i3.VectorNetwork? vectorNetwork,
-    _i3.VectorPaths? vectorPaths,
+    _i2.List<_i2.dynamic>? vectorPaths,
     _i2.Object? handleMirroring,
     _i2.Future<void> Function(_i3.VectorNetwork)? setVectorNetworkAsync,
-    _i3.SceneNode? stuckTo,
+    _i3.BaseNodeMixin? stuckTo,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
   }) =>
       HighlightNode._(
         type: type,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         constraints: constraints ?? _i7.undefined,
         cornerRadius: cornerRadius ?? _i7.undefined,
         cornerSmoothing: cornerSmoothing,
         vectorNetwork: vectorNetwork ?? _i7.undefined,
-        vectorPaths: vectorPaths ?? _i7.undefined,
+        vectorPaths: vectorPaths,
         handleMirroring: handleMirroring ?? _i7.undefined,
         setVectorNetworkAsync: setVectorNetworkAsync == null
             ? null
-            : _i5.allowInterop(setVectorNetworkAsync),
-        stuckTo: stuckTo ?? _i7.undefined ?? _i7.undefined,
+            : _i4.allowInterop(setVectorNetworkAsync),
+        stuckTo: stuckTo ?? _i7.undefined,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredHighlightNode,
         'type',
       );
 }
 
-_i2.Object get _declaredHighlightNode => _i5.getProperty(
+_i2.Object get _declaredHighlightNode => _i4.getProperty(
       _self,
       'HighlightNode',
     );
 
 extension HighlightNode$Typings on HighlightNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set clone(_i3.HighlightNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.HighlightNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.HighlightNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -25056,49 +25295,49 @@ class WashiTapeNode
   factory WashiTapeNode({
     _i2.String? type,
     _i3.WashiTapeNode Function()? clone,
-    _i3.SceneNode? stuckTo,
+    _i3.BaseNodeMixin? stuckTo,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
   }) =>
       WashiTapeNode._(
         type: type,
-        clone: clone == null ? null : _i5.allowInterop(clone),
-        stuckTo: stuckTo ?? _i7.undefined ?? _i7.undefined,
+        clone: clone == null ? null : _i4.allowInterop(clone),
+        stuckTo: stuckTo ?? _i7.undefined,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredWashiTapeNode,
         'type',
       );
 }
 
-_i2.Object get _declaredWashiTapeNode => _i5.getProperty(
+_i2.Object get _declaredWashiTapeNode => _i4.getProperty(
       _self,
       'WashiTapeNode',
     );
 
 extension WashiTapeNode$Typings on WashiTapeNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set clone(_i3.WashiTapeNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.WashiTapeNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.WashiTapeNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -25157,14 +25396,14 @@ class ShapeWithTextNode
     _i2.Object? fillStyleId,
     _i2.Future<void> Function(_i2.String)? setFillStyleIdAsync,
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
-    _i4.ReadonlyArray<_i2.Object>? strokes,
+    _i3.BlendModeOptions? blendMode,
+    _i2.List<_i2.Object>? strokes,
     _i2.String? strokeStyleId,
     _i2.Object? strokeWeight,
     _i2.Object? strokeJoin,
     _i3.StrokeAlign? strokeAlign,
-    _i4.ReadonlyArray<_i2.num>? dashPattern,
-    _i3.VectorPaths? strokeGeometry,
+    _i2.List<_i2.num>? dashPattern,
+    _i2.List<_i2.dynamic>? strokeGeometry,
     _i2.Future<void> Function(_i2.String)? setStrokeStyleIdAsync,
   }) =>
       ShapeWithTextNode._(
@@ -25173,70 +25412,70 @@ class ShapeWithTextNode
         text: text ?? _i7.undefined,
         cornerRadius: cornerRadius,
         rotation: rotation,
-        resize: resize == null ? null : _i5.allowInterop(resize),
-        rescale: rescale == null ? null : _i5.allowInterop(rescale),
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        resize: resize == null ? null : _i4.allowInterop(resize),
+        rescale: rescale == null ? null : _i4.allowInterop(rescale),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         fills: fills ?? _i7.undefined,
         fillStyleId: fillStyleId ?? _i7.undefined,
         setFillStyleIdAsync: setFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setFillStyleIdAsync),
+            : _i4.allowInterop(setFillStyleIdAsync),
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
-        strokes: strokes ?? _i7.undefined,
+        blendMode: blendMode?.name,
+        strokes: strokes,
         strokeStyleId: strokeStyleId,
         strokeWeight: strokeWeight ?? _i7.undefined,
         strokeJoin: strokeJoin ?? _i7.undefined,
         strokeAlign: strokeAlign?.name ?? _i7.undefined,
-        dashPattern: dashPattern ?? _i7.undefined,
-        strokeGeometry: strokeGeometry ?? _i7.undefined,
+        dashPattern: dashPattern,
+        strokeGeometry: strokeGeometry,
         setStrokeStyleIdAsync: setStrokeStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setStrokeStyleIdAsync),
+            : _i4.allowInterop(setStrokeStyleIdAsync),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredShapeWithTextNode,
         'type',
       );
 }
 
-_i2.Object get _declaredShapeWithTextNode => _i5.getProperty(
+_i2.Object get _declaredShapeWithTextNode => _i4.getProperty(
       _self,
       'ShapeWithTextNode',
     );
 
 extension ShapeWithTextNode$Typings on ShapeWithTextNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.ShapeType get shapeType => _i3.ShapeType.values.byName(_i5.getProperty(
+  _i3.ShapeType get shapeType => _i3.ShapeType.values.byName(_i4.getProperty(
         this,
         'shapeType',
       ));
   set shapeType(_i3.ShapeType value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'shapeType',
       value.name,
     );
   }
 
-  _i3.TextSublayerNode get text => _i5.getProperty(
+  _i3.TextSublayerNode get text => _i4.getProperty(
         this,
         'text',
       );
-  _i2.num? get cornerRadius => _i5.getProperty(
+  _i2.num? get cornerRadius => _i4.getProperty(
         this,
         'cornerRadius',
       );
-  _i2.num get rotation => _i5.getProperty(
+  _i2.num get rotation => _i4.getProperty(
         this,
         'rotation',
       );
   set rotation(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'rotation',
       value,
@@ -25248,10 +25487,10 @@ extension ShapeWithTextNode$Typings on ShapeWithTextNode {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resize',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -25262,8 +25501,8 @@ extension ShapeWithTextNode$Typings on ShapeWithTextNode {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'resize',
             ),
@@ -25275,15 +25514,15 @@ extension ShapeWithTextNode$Typings on ShapeWithTextNode {
             ],
           );
   set rescale(void Function(_i2.num) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'rescale',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i2.num) get rescale => (_i2.num p0) => _i5.callMethod(
-        _i5.getProperty(
+  void Function(_i2.num) get rescale => (_i2.num p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'rescale',
         ),
@@ -25294,15 +25533,15 @@ extension ShapeWithTextNode$Typings on ShapeWithTextNode {
         ],
       );
   set clone(_i3.ShapeWithTextNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.ShapeWithTextNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.ShapeWithTextNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -25331,39 +25570,39 @@ class CodeBlockNode implements _i3.OpaqueNodeMixin, _i3.MinimalBlendMixin {
     _i3.CodeLanguage? codeLanguage,
     _i3.CodeBlockNode Function()? clone,
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
+    _i3.BlendModeOptions? blendMode,
   }) =>
       CodeBlockNode._(
         type: type,
         code: code,
         codeLanguage: codeLanguage?.name ?? _i7.undefined,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
+        blendMode: blendMode?.name,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredCodeBlockNode,
         'type',
       );
 }
 
-_i2.Object get _declaredCodeBlockNode => _i5.getProperty(
+_i2.Object get _declaredCodeBlockNode => _i4.getProperty(
       _self,
       'CodeBlockNode',
     );
 
 extension CodeBlockNode$Typings on CodeBlockNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.String get code => _i5.getProperty(
+  _i2.String get code => _i4.getProperty(
         this,
         'code',
       );
   set code(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'code',
       value,
@@ -25371,12 +25610,12 @@ extension CodeBlockNode$Typings on CodeBlockNode {
   }
 
   _i3.CodeLanguage get codeLanguage =>
-      _i3.CodeLanguage.values.byName(_i5.getProperty(
+      _i3.CodeLanguage.values.byName(_i4.getProperty(
         this,
         'codeLanguage',
       ));
   set codeLanguage(_i3.CodeLanguage value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'codeLanguage',
       value.name,
@@ -25384,15 +25623,15 @@ extension CodeBlockNode$Typings on CodeBlockNode {
   }
 
   set clone(_i3.CodeBlockNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.CodeBlockNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.CodeBlockNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -25413,12 +25652,12 @@ class LabelSublayerNode {
 }
 
 extension LabelSublayerNode$Typings on LabelSublayerNode {
-  _i2.Object get fills => _i5.getProperty(
+  _i2.Object get fills => _i4.getProperty(
         this,
         'fills',
       );
   set fills(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fills',
       value,
@@ -25467,19 +25706,19 @@ class ConnectorNode
     _i3.ConnectorLineType? connectorLineType,
     _i2.Object? connectorStart,
     _i2.Object? connectorEnd,
-    _i3.ConnectorStrokeCap? connectorStartStrokeCap,
-    _i3.ConnectorStrokeCap? connectorEndStrokeCap,
+    _i3.ConnectorStrokeCapOptions? connectorStartStrokeCap,
+    _i3.ConnectorStrokeCapOptions? connectorEndStrokeCap,
     _i2.num? rotation,
     _i3.ConnectorNode Function()? clone,
     _i2.num? opacity,
-    _i3.BlendMode? blendMode,
-    _i4.ReadonlyArray<_i2.Object>? strokes,
+    _i3.BlendModeOptions? blendMode,
+    _i2.List<_i2.Object>? strokes,
     _i2.String? strokeStyleId,
     _i2.Object? strokeWeight,
     _i2.Object? strokeJoin,
     _i3.StrokeAlign? strokeAlign,
-    _i4.ReadonlyArray<_i2.num>? dashPattern,
-    _i3.VectorPaths? strokeGeometry,
+    _i2.List<_i2.num>? dashPattern,
+    _i2.List<_i2.dynamic>? strokeGeometry,
     _i2.Future<void> Function(_i2.String)? setStrokeStyleIdAsync,
   }) =>
       ConnectorNode._(
@@ -25488,123 +25727,123 @@ class ConnectorNode
         textBackground: textBackground ?? _i7.undefined,
         cornerRadius: cornerRadius,
         connectorLineType: connectorLineType?.name ?? _i7.undefined,
-        connectorStart: connectorStart ?? _i7.undefined,
-        connectorEnd: connectorEnd ?? _i7.undefined,
-        connectorStartStrokeCap: connectorStartStrokeCap?.name ?? _i7.undefined,
-        connectorEndStrokeCap: connectorEndStrokeCap?.name ?? _i7.undefined,
+        connectorStart: connectorStart,
+        connectorEnd: connectorEnd,
+        connectorStartStrokeCap: connectorStartStrokeCap?.name,
+        connectorEndStrokeCap: connectorEndStrokeCap?.name,
         rotation: rotation,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         opacity: opacity,
-        blendMode: blendMode?.name ?? _i7.undefined,
-        strokes: strokes ?? _i7.undefined,
+        blendMode: blendMode?.name,
+        strokes: strokes,
         strokeStyleId: strokeStyleId,
         strokeWeight: strokeWeight ?? _i7.undefined,
         strokeJoin: strokeJoin ?? _i7.undefined,
         strokeAlign: strokeAlign?.name ?? _i7.undefined,
-        dashPattern: dashPattern ?? _i7.undefined,
-        strokeGeometry: strokeGeometry ?? _i7.undefined,
+        dashPattern: dashPattern,
+        strokeGeometry: strokeGeometry,
         setStrokeStyleIdAsync: setStrokeStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setStrokeStyleIdAsync),
+            : _i4.allowInterop(setStrokeStyleIdAsync),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredConnectorNode,
         'type',
       );
 }
 
-_i2.Object get _declaredConnectorNode => _i5.getProperty(
+_i2.Object get _declaredConnectorNode => _i4.getProperty(
       _self,
       'ConnectorNode',
     );
 
 extension ConnectorNode$Typings on ConnectorNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.TextSublayerNode get text => _i5.getProperty(
+  _i3.TextSublayerNode get text => _i4.getProperty(
         this,
         'text',
       );
-  _i3.LabelSublayerNode get textBackground => _i5.getProperty(
+  _i3.LabelSublayerNode get textBackground => _i4.getProperty(
         this,
         'textBackground',
       );
-  _i2.num? get cornerRadius => _i5.getProperty(
+  _i2.num? get cornerRadius => _i4.getProperty(
         this,
         'cornerRadius',
       );
   _i3.ConnectorLineType get connectorLineType =>
-      _i3.ConnectorLineType.values.byName(_i5.getProperty(
+      _i3.ConnectorLineType.values.byName(_i4.getProperty(
         this,
         'connectorLineType',
       ));
   set connectorLineType(_i3.ConnectorLineType value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'connectorLineType',
       value.name,
     );
   }
 
-  _i2.Object get connectorStart => _i5.getProperty(
+  _i2.Object get connectorStart => _i4.getProperty(
         this,
         'connectorStart',
       );
   set connectorStart(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'connectorStart',
       value,
     );
   }
 
-  _i2.Object get connectorEnd => _i5.getProperty(
+  _i2.Object get connectorEnd => _i4.getProperty(
         this,
         'connectorEnd',
       );
   set connectorEnd(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'connectorEnd',
       value,
     );
   }
 
-  _i3.ConnectorStrokeCap get connectorStartStrokeCap =>
-      _i3.ConnectorStrokeCapOptions.values.byName(_i5.getProperty(
+  _i3.ConnectorStrokeCapOptions get connectorStartStrokeCap =>
+      _i3.ConnectorStrokeCapOptions.values.byName(_i4.getProperty(
         this,
         'connectorStartStrokeCap',
       ));
-  set connectorStartStrokeCap(_i3.ConnectorStrokeCap value) {
-    _i5.setProperty(
+  set connectorStartStrokeCap(_i3.ConnectorStrokeCapOptions value) {
+    _i4.setProperty(
       this,
       'connectorStartStrokeCap',
       value.name,
     );
   }
 
-  _i3.ConnectorStrokeCap get connectorEndStrokeCap =>
-      _i3.ConnectorStrokeCapOptions.values.byName(_i5.getProperty(
+  _i3.ConnectorStrokeCapOptions get connectorEndStrokeCap =>
+      _i3.ConnectorStrokeCapOptions.values.byName(_i4.getProperty(
         this,
         'connectorEndStrokeCap',
       ));
-  set connectorEndStrokeCap(_i3.ConnectorStrokeCap value) {
-    _i5.setProperty(
+  set connectorEndStrokeCap(_i3.ConnectorStrokeCapOptions value) {
+    _i4.setProperty(
       this,
       'connectorEndStrokeCap',
       value.name,
     );
   }
 
-  _i2.num get rotation => _i5.getProperty(
+  _i2.num get rotation => _i4.getProperty(
         this,
         'rotation',
       );
   set rotation(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'rotation',
       value,
@@ -25612,15 +25851,15 @@ extension ConnectorNode$Typings on ConnectorNode {
   }
 
   set clone(_i3.ConnectorNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.ConnectorNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.ConnectorNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -25650,24 +25889,24 @@ class VariableAlias {
 }
 
 extension VariableAlias$Typings on VariableAlias {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
   set id(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'id',
       value,
@@ -25682,25 +25921,25 @@ extension VariableAlias$Typings on VariableAlias {
 class IInline93 {}
 
 extension IInline93$Typings on IInline93 {
-  _i2.Object get value => _i5.getProperty(
+  _i2.Object get value => _i4.getProperty(
         this,
         'value',
       );
   set value(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'value',
       value,
     );
   }
 
-  _i3.VariableResolvedDataType get resolvedType =>
-      _i3.VariableResolvedDataTypeOptions.values.byName(_i5.getProperty(
+  _i3.VariableResolvedDataTypeOptions get resolvedType =>
+      _i3.VariableResolvedDataTypeOptions.values.byName(_i4.getProperty(
         this,
         'resolvedType',
       ));
-  set resolvedType(_i3.VariableResolvedDataType value) {
-    _i5.setProperty(
+  set resolvedType(_i3.VariableResolvedDataTypeOptions value) {
+    _i4.setProperty(
       this,
       'resolvedType',
       value.name,
@@ -25747,22 +25986,22 @@ class Variable implements _i3.PluginDataMixin {
     _i2.bool? remote,
     _i2.String? variableCollectionId,
     _i2.String? key,
-    _i3.VariableResolvedDataType? resolvedType,
+    _i3.VariableResolvedDataTypeOptions? resolvedType,
     _i2.Object? valuesByMode,
-    _i4.Array<_i3.VariableScope>? scopes,
+    _i6.Array<_i3.VariableScopeOptions>? scopes,
     _i2.dynamic codeSyntax,
-    _i2.Future<_i3.PublishStatus> Function()? getPublishStatusAsync,
-    _i2.dynamic Function(_i3.SceneNode)? resolveForConsumer,
+    _i2.Future<_i3.PublishStatusOptions> Function()? getPublishStatusAsync,
+    _i2.dynamic Function(_i3.BaseNodeMixin)? resolveForConsumer,
     void Function(
       _i2.String,
       _i2.Object,
     )? setValueForMode,
     void Function()? remove,
     void Function(
-      _i3.CodeSyntaxPlatform,
+      _i3.CodeSyntaxPlatformOptions,
       _i2.String,
     )? setVariableCodeSyntax,
-    void Function(_i3.CodeSyntaxPlatform)? removeVariableCodeSyntax,
+    void Function(_i3.CodeSyntaxPlatformOptions)? removeVariableCodeSyntax,
     _i2.String Function(_i2.String)? getPluginData,
     void Function(
       _i2.String,
@@ -25788,150 +26027,151 @@ class Variable implements _i3.PluginDataMixin {
         remote: remote,
         variableCollectionId: variableCollectionId,
         key: key,
-        resolvedType: resolvedType?.name ?? _i7.undefined,
+        resolvedType: resolvedType?.name,
         valuesByMode: valuesByMode ?? _i7.undefined,
         scopes: scopes ?? _i7.undefined,
         codeSyntax: codeSyntax,
         getPublishStatusAsync: getPublishStatusAsync == null
             ? null
-            : _i5.allowInterop(getPublishStatusAsync),
+            : _i4.allowInterop(getPublishStatusAsync),
         resolveForConsumer: resolveForConsumer == null
             ? null
-            : _i5.allowInterop(resolveForConsumer),
+            : _i4.allowInterop(resolveForConsumer),
         setValueForMode:
-            setValueForMode == null ? null : _i5.allowInterop(setValueForMode),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+            setValueForMode == null ? null : _i4.allowInterop(setValueForMode),
+        remove: remove == null ? null : _i4.allowInterop(remove),
         setVariableCodeSyntax: setVariableCodeSyntax == null
             ? null
-            : _i5.allowInterop(setVariableCodeSyntax),
+            : _i4.allowInterop(setVariableCodeSyntax),
         removeVariableCodeSyntax: removeVariableCodeSyntax == null
             ? null
-            : _i5.allowInterop(removeVariableCodeSyntax),
+            : _i4.allowInterop(removeVariableCodeSyntax),
         getPluginData:
-            getPluginData == null ? null : _i5.allowInterop(getPluginData),
+            getPluginData == null ? null : _i4.allowInterop(getPluginData),
         setPluginData:
-            setPluginData == null ? null : _i5.allowInterop(setPluginData),
+            setPluginData == null ? null : _i4.allowInterop(setPluginData),
         getPluginDataKeys: getPluginDataKeys == null
             ? null
-            : _i5.allowInterop(getPluginDataKeys),
+            : _i4.allowInterop(getPluginDataKeys),
         getSharedPluginData: getSharedPluginData == null
             ? null
-            : _i5.allowInterop(getSharedPluginData),
+            : _i4.allowInterop(getSharedPluginData),
         setSharedPluginData: setSharedPluginData == null
             ? null
-            : _i5.allowInterop(setSharedPluginData),
+            : _i4.allowInterop(setSharedPluginData),
         getSharedPluginDataKeys: getSharedPluginDataKeys == null
             ? null
-            : _i5.allowInterop(getSharedPluginDataKeys),
+            : _i4.allowInterop(getSharedPluginDataKeys),
       );
 }
 
 extension Variable$Typings on Variable {
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
     );
   }
 
-  _i2.String get description => _i5.getProperty(
+  _i2.String get description => _i4.getProperty(
         this,
         'description',
       );
   set description(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'description',
       value,
     );
   }
 
-  _i2.bool get hiddenFromPublishing => _i5.getProperty(
+  _i2.bool get hiddenFromPublishing => _i4.getProperty(
         this,
         'hiddenFromPublishing',
       );
   set hiddenFromPublishing(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'hiddenFromPublishing',
       value,
     );
   }
 
-  _i2.bool get remote => _i5.getProperty(
+  _i2.bool get remote => _i4.getProperty(
         this,
         'remote',
       );
-  _i2.String get variableCollectionId => _i5.getProperty(
+  _i2.String get variableCollectionId => _i4.getProperty(
         this,
         'variableCollectionId',
       );
-  _i2.String get key => _i5.getProperty(
+  _i2.String get key => _i4.getProperty(
         this,
         'key',
       );
-  _i3.VariableResolvedDataType get resolvedType =>
-      _i3.VariableResolvedDataTypeOptions.values.byName(_i5.getProperty(
+  _i3.VariableResolvedDataTypeOptions get resolvedType =>
+      _i3.VariableResolvedDataTypeOptions.values.byName(_i4.getProperty(
         this,
         'resolvedType',
       ));
-  _i2.Object get valuesByMode => _i5.getProperty(
+  _i2.Object get valuesByMode => _i4.getProperty(
         this,
         'valuesByMode',
       );
-  _i4.Array<_i3.VariableScope> get scopes => _i5.getProperty(
+  _i6.Array<_i3.VariableScopeOptions> get scopes => _i4.getProperty(
         this,
         'scopes',
       );
-  set scopes(_i4.Array<_i3.VariableScope> value) {
-    _i5.setProperty(
+  set scopes(_i6.Array<_i3.VariableScopeOptions> value) {
+    _i4.setProperty(
       this,
       'scopes',
       value,
     );
   }
 
-  _i2.dynamic get codeSyntax => _i5.getProperty(
+  _i2.dynamic get codeSyntax => _i4.getProperty(
         this,
         'codeSyntax',
       );
-  set getPublishStatusAsync(_i2.Future<_i3.PublishStatus> Function() value) {
-    _i5.setProperty(
+  set getPublishStatusAsync(
+      _i2.Future<_i3.PublishStatusOptions> Function() value) {
+    _i4.setProperty(
       this,
       'getPublishStatusAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i3.PublishStatus> Function() get getPublishStatusAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+  _i2.Future<_i3.PublishStatusOptions> Function() get getPublishStatusAsync =>
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getPublishStatusAsync',
             ),
             r'call',
             [this],
           ));
-  set resolveForConsumer(_i2.dynamic Function(_i3.SceneNode) value) {
-    _i5.setProperty(
+  set resolveForConsumer(_i2.dynamic Function(_i3.BaseNodeMixin) value) {
+    _i4.setProperty(
       this,
       'resolveForConsumer',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.dynamic Function(_i3.SceneNode) get resolveForConsumer =>
-      (_i3.SceneNode p0) => _i5.callMethod(
-            _i5.getProperty(
+  _i2.dynamic Function(_i3.BaseNodeMixin) get resolveForConsumer =>
+      (_i3.BaseNodeMixin p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'resolveForConsumer',
             ),
@@ -25946,10 +26186,10 @@ extension Variable$Typings on Variable {
         _i2.String,
         _i2.Object,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setValueForMode',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -25960,8 +26200,8 @@ extension Variable$Typings on Variable {
         _i2.String p0,
         _i2.Object p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setValueForMode',
             ),
@@ -25973,15 +26213,15 @@ extension Variable$Typings on Variable {
             ],
           );
   set remove(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'remove',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get remove => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get remove => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'remove',
         ),
@@ -25990,25 +26230,25 @@ extension Variable$Typings on Variable {
       );
   set setVariableCodeSyntax(
       void Function(
-        _i3.CodeSyntaxPlatform,
+        _i3.CodeSyntaxPlatformOptions,
         _i2.String,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setVariableCodeSyntax',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
-    _i3.CodeSyntaxPlatform,
+    _i3.CodeSyntaxPlatformOptions,
     _i2.String,
   ) get setVariableCodeSyntax => (
-        _i3.CodeSyntaxPlatform p0,
+        _i3.CodeSyntaxPlatformOptions p0,
         _i2.String p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setVariableCodeSyntax',
             ),
@@ -26019,17 +26259,18 @@ extension Variable$Typings on Variable {
               p1,
             ],
           );
-  set removeVariableCodeSyntax(void Function(_i3.CodeSyntaxPlatform) value) {
-    _i5.setProperty(
+  set removeVariableCodeSyntax(
+      void Function(_i3.CodeSyntaxPlatformOptions) value) {
+    _i4.setProperty(
       this,
       'removeVariableCodeSyntax',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i3.CodeSyntaxPlatform) get removeVariableCodeSyntax =>
-      (_i3.CodeSyntaxPlatform p0) => _i5.callMethod(
-            _i5.getProperty(
+  void Function(_i3.CodeSyntaxPlatformOptions) get removeVariableCodeSyntax =>
+      (_i3.CodeSyntaxPlatformOptions p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'removeVariableCodeSyntax',
             ),
@@ -26048,24 +26289,24 @@ extension Variable$Typings on Variable {
 class IInline95 {}
 
 extension IInline95$Typings on IInline95 {
-  _i2.String get modeId => _i5.getProperty(
+  _i2.String get modeId => _i4.getProperty(
         this,
         'modeId',
       );
   set modeId(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'modeId',
       value,
     );
   }
 
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
@@ -26105,11 +26346,11 @@ class VariableCollection implements _i3.PluginDataMixin {
     _i2.String? name,
     _i2.bool? hiddenFromPublishing,
     _i2.bool? remote,
-    _i4.Array<_i3.IInline95>? modes,
+    _i6.Array<_i3.IInline95>? modes,
     _i2.List<_i2.String>? variableIds,
     _i2.String? defaultModeId,
     _i2.String? key,
-    _i2.Future<_i3.PublishStatus> Function()? getPublishStatusAsync,
+    _i2.Future<_i3.PublishStatusOptions> Function()? getPublishStatusAsync,
     void Function()? remove,
     void Function(_i2.String)? removeMode,
     _i2.String Function(_i2.String)? addMode,
@@ -26145,91 +26386,92 @@ class VariableCollection implements _i3.PluginDataMixin {
         key: key,
         getPublishStatusAsync: getPublishStatusAsync == null
             ? null
-            : _i5.allowInterop(getPublishStatusAsync),
-        remove: remove == null ? null : _i5.allowInterop(remove),
-        removeMode: removeMode == null ? null : _i5.allowInterop(removeMode),
-        addMode: addMode == null ? null : _i5.allowInterop(addMode),
-        renameMode: renameMode == null ? null : _i5.allowInterop(renameMode),
+            : _i4.allowInterop(getPublishStatusAsync),
+        remove: remove == null ? null : _i4.allowInterop(remove),
+        removeMode: removeMode == null ? null : _i4.allowInterop(removeMode),
+        addMode: addMode == null ? null : _i4.allowInterop(addMode),
+        renameMode: renameMode == null ? null : _i4.allowInterop(renameMode),
         getPluginData:
-            getPluginData == null ? null : _i5.allowInterop(getPluginData),
+            getPluginData == null ? null : _i4.allowInterop(getPluginData),
         setPluginData:
-            setPluginData == null ? null : _i5.allowInterop(setPluginData),
+            setPluginData == null ? null : _i4.allowInterop(setPluginData),
         getPluginDataKeys: getPluginDataKeys == null
             ? null
-            : _i5.allowInterop(getPluginDataKeys),
+            : _i4.allowInterop(getPluginDataKeys),
         getSharedPluginData: getSharedPluginData == null
             ? null
-            : _i5.allowInterop(getSharedPluginData),
+            : _i4.allowInterop(getSharedPluginData),
         setSharedPluginData: setSharedPluginData == null
             ? null
-            : _i5.allowInterop(setSharedPluginData),
+            : _i4.allowInterop(setSharedPluginData),
         getSharedPluginDataKeys: getSharedPluginDataKeys == null
             ? null
-            : _i5.allowInterop(getSharedPluginDataKeys),
+            : _i4.allowInterop(getSharedPluginDataKeys),
       );
 }
 
 extension VariableCollection$Typings on VariableCollection {
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
     );
   }
 
-  _i2.bool get hiddenFromPublishing => _i5.getProperty(
+  _i2.bool get hiddenFromPublishing => _i4.getProperty(
         this,
         'hiddenFromPublishing',
       );
   set hiddenFromPublishing(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'hiddenFromPublishing',
       value,
     );
   }
 
-  _i2.bool get remote => _i5.getProperty(
+  _i2.bool get remote => _i4.getProperty(
         this,
         'remote',
       );
-  _i4.Array<_i2.dynamic> get modes => _i5.getProperty(
+  _i6.Array<_i2.dynamic> get modes => _i4.getProperty(
         this,
         'modes',
       );
-  _i2.List<_i2.String> get variableIds => ((_i5.getProperty(
+  _i2.List<_i2.String> get variableIds => ((_i4.getProperty(
         this,
         'variableIds',
       )) as _i2.List)
           .cast();
-  _i2.String get defaultModeId => _i5.getProperty(
+  _i2.String get defaultModeId => _i4.getProperty(
         this,
         'defaultModeId',
       );
-  _i2.String get key => _i5.getProperty(
+  _i2.String get key => _i4.getProperty(
         this,
         'key',
       );
-  set getPublishStatusAsync(_i2.Future<_i3.PublishStatus> Function() value) {
-    _i5.setProperty(
+  set getPublishStatusAsync(
+      _i2.Future<_i3.PublishStatusOptions> Function() value) {
+    _i4.setProperty(
       this,
       'getPublishStatusAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i3.PublishStatus> Function() get getPublishStatusAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+  _i2.Future<_i3.PublishStatusOptions> Function() get getPublishStatusAsync =>
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getPublishStatusAsync',
             ),
@@ -26237,15 +26479,15 @@ extension VariableCollection$Typings on VariableCollection {
             [this],
           ));
   set remove(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'remove',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get remove => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get remove => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'remove',
         ),
@@ -26253,15 +26495,15 @@ extension VariableCollection$Typings on VariableCollection {
         [this],
       );
   set removeMode(void Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'removeMode',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i2.String) get removeMode => (_i2.String p0) => _i5.callMethod(
-        _i5.getProperty(
+  void Function(_i2.String) get removeMode => (_i2.String p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'removeMode',
         ),
@@ -26272,16 +26514,16 @@ extension VariableCollection$Typings on VariableCollection {
         ],
       );
   set addMode(_i2.String Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'addMode',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.String Function(_i2.String) get addMode =>
-      (_i2.String p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i2.String p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'addMode',
             ),
@@ -26296,10 +26538,10 @@ extension VariableCollection$Typings on VariableCollection {
         _i2.String,
         _i2.String,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'renameMode',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -26310,8 +26552,8 @@ extension VariableCollection$Typings on VariableCollection {
         _i2.String p0,
         _i2.String p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'renameMode',
             ),
@@ -26342,68 +26584,68 @@ class AnnotationCategory {
   factory AnnotationCategory({
     _i2.String? id,
     _i2.String? label,
-    _i3.AnnotationCategoryColor? color,
+    _i3.AnnotationCategoryColorOptions? color,
     _i2.bool? isPreset,
     void Function()? remove,
-    void Function(_i3.AnnotationCategoryColor)? setColor,
+    void Function(_i3.AnnotationCategoryColorOptions)? setColor,
     void Function(_i2.String)? setLabel,
   }) =>
       AnnotationCategory._(
         id: id,
         label: label,
-        color: color?.name ?? _i7.undefined,
+        color: color?.name,
         isPreset: isPreset,
-        remove: remove == null ? null : _i5.allowInterop(remove),
-        setColor: setColor == null ? null : _i5.allowInterop(setColor),
-        setLabel: setLabel == null ? null : _i5.allowInterop(setLabel),
+        remove: remove == null ? null : _i4.allowInterop(remove),
+        setColor: setColor == null ? null : _i4.allowInterop(setColor),
+        setLabel: setLabel == null ? null : _i4.allowInterop(setLabel),
       );
 }
 
 extension AnnotationCategory$Typings on AnnotationCategory {
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
-  _i2.String get label => _i5.getProperty(
+  _i2.String get label => _i4.getProperty(
         this,
         'label',
       );
-  _i3.AnnotationCategoryColor get color =>
-      _i3.AnnotationCategoryColorOptions.values.byName(_i5.getProperty(
+  _i3.AnnotationCategoryColorOptions get color =>
+      _i3.AnnotationCategoryColorOptions.values.byName(_i4.getProperty(
         this,
         'color',
       ));
-  _i2.bool get isPreset => _i5.getProperty(
+  _i2.bool get isPreset => _i4.getProperty(
         this,
         'isPreset',
       );
   set remove(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'remove',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get remove => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get remove => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'remove',
         ),
         r'call',
         [this],
       );
-  set setColor(void Function(_i3.AnnotationCategoryColor) value) {
-    _i5.setProperty(
+  set setColor(void Function(_i3.AnnotationCategoryColorOptions) value) {
+    _i4.setProperty(
       this,
       'setColor',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i3.AnnotationCategoryColor) get setColor =>
-      (_i3.AnnotationCategoryColor p0) => _i5.callMethod(
-            _i5.getProperty(
+  void Function(_i3.AnnotationCategoryColorOptions) get setColor =>
+      (_i3.AnnotationCategoryColorOptions p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'setColor',
             ),
@@ -26414,15 +26656,15 @@ extension AnnotationCategory$Typings on AnnotationCategory {
             ],
           );
   set setLabel(void Function(_i2.String) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setLabel',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function(_i2.String) get setLabel => (_i2.String p0) => _i5.callMethod(
-        _i5.getProperty(
+  void Function(_i2.String) get setLabel => (_i2.String p0) => _i4.callMethod(
+        _i4.getProperty(
           this,
           'setLabel',
         ),
@@ -26462,54 +26704,54 @@ class WidgetNode implements _i3.OpaqueNodeMixin, _i3.StickableMixin {
       _i2.Object, [
       _i2.Object?,
     ])? setWidgetSyncedState,
-    _i3.SceneNode? stuckTo,
+    _i3.BaseNodeMixin? stuckTo,
   }) =>
       WidgetNode._(
         type: type,
         widgetId: widgetId,
         widgetSyncedState: widgetSyncedState ?? _i7.undefined,
-        clone: clone == null ? null : _i5.allowInterop(clone),
-        cloneWidget: cloneWidget == null ? null : _i5.allowInterop(cloneWidget),
+        clone: clone == null ? null : _i4.allowInterop(clone),
+        cloneWidget: cloneWidget == null ? null : _i4.allowInterop(cloneWidget),
         setWidgetSyncedState: setWidgetSyncedState == null
             ? null
-            : _i5.allowInterop(setWidgetSyncedState),
-        stuckTo: stuckTo ?? _i7.undefined ?? _i7.undefined,
+            : _i4.allowInterop(setWidgetSyncedState),
+        stuckTo: stuckTo ?? _i7.undefined,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredWidgetNode,
         'type',
       );
 }
 
-_i2.Object get _declaredWidgetNode => _i5.getProperty(
+_i2.Object get _declaredWidgetNode => _i4.getProperty(
       _self,
       'WidgetNode',
     );
 
 extension WidgetNode$Typings on WidgetNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.String get widgetId => _i5.getProperty(
+  _i2.String get widgetId => _i4.getProperty(
         this,
         'widgetId',
       );
-  _i2.Object get widgetSyncedState => _i5.getProperty(
+  _i2.Object get widgetSyncedState => _i4.getProperty(
         this,
         'widgetSyncedState',
       );
   set clone(_i3.WidgetNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.WidgetNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.WidgetNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -26521,10 +26763,10 @@ extension WidgetNode$Typings on WidgetNode {
         _i2.Object, [
         _i2.Object?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'cloneWidget',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -26535,8 +26777,8 @@ extension WidgetNode$Typings on WidgetNode {
         _i2.Object p0, [
         _i2.Object? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'cloneWidget',
             ),
@@ -26552,10 +26794,10 @@ extension WidgetNode$Typings on WidgetNode {
         _i2.Object, [
         _i2.Object?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setWidgetSyncedState',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -26566,8 +26808,8 @@ extension WidgetNode$Typings on WidgetNode {
         _i2.Object p0, [
         _i2.Object? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setWidgetSyncedState',
             ),
@@ -26610,60 +26852,60 @@ class EmbedData {
 }
 
 extension EmbedData$Typings on EmbedData {
-  _i2.String get srcUrl => _i5.getProperty(
+  _i2.String get srcUrl => _i4.getProperty(
         this,
         'srcUrl',
       );
   set srcUrl(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'srcUrl',
       value,
     );
   }
 
-  _i2.String? get canonicalUrl => _i5.getProperty(
+  _i2.String? get canonicalUrl => _i4.getProperty(
         this,
         'canonicalUrl',
       );
   set canonicalUrl(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'canonicalUrl',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.String? get title => _i5.getProperty(
+  _i2.String? get title => _i4.getProperty(
         this,
         'title',
       );
   set title(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'title',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.String? get description => _i5.getProperty(
+  _i2.String? get description => _i4.getProperty(
         this,
         'description',
       );
   set description(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'description',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.String? get provider => _i5.getProperty(
+  _i2.String? get provider => _i4.getProperty(
         this,
         'provider',
       );
   set provider(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'provider',
       value ?? _i7.undefined,
@@ -26690,39 +26932,39 @@ class EmbedNode implements _i3.OpaqueNodeMixin {
       EmbedNode._(
         type: type,
         embedData: embedData ?? _i7.undefined,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredEmbedNode,
         'type',
       );
 }
 
-_i2.Object get _declaredEmbedNode => _i5.getProperty(
+_i2.Object get _declaredEmbedNode => _i4.getProperty(
       _self,
       'EmbedNode',
     );
 
 extension EmbedNode$Typings on EmbedNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.EmbedData get embedData => _i5.getProperty(
+  _i3.EmbedData get embedData => _i4.getProperty(
         this,
         'embedData',
       );
   set clone(_i3.EmbedNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.EmbedNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.EmbedNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -26758,48 +27000,48 @@ class LinkUnfurlData {
 }
 
 extension LinkUnfurlData$Typings on LinkUnfurlData {
-  _i2.String get url => _i5.getProperty(
+  _i2.String get url => _i4.getProperty(
         this,
         'url',
       );
   set url(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'url',
       value,
     );
   }
 
-  _i2.String? get title => _i5.getProperty(
+  _i2.String? get title => _i4.getProperty(
         this,
         'title',
       );
   set title(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'title',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.String? get description => _i5.getProperty(
+  _i2.String? get description => _i4.getProperty(
         this,
         'description',
       );
   set description(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'description',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.String? get provider => _i5.getProperty(
+  _i2.String? get provider => _i4.getProperty(
         this,
         'provider',
       );
   set provider(_i2.String? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'provider',
       value ?? _i7.undefined,
@@ -26826,39 +27068,39 @@ class LinkUnfurlNode implements _i3.OpaqueNodeMixin {
       LinkUnfurlNode._(
         type: type,
         linkUnfurlData: linkUnfurlData ?? _i7.undefined,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredLinkUnfurlNode,
         'type',
       );
 }
 
-_i2.Object get _declaredLinkUnfurlNode => _i5.getProperty(
+_i2.Object get _declaredLinkUnfurlNode => _i4.getProperty(
       _self,
       'LinkUnfurlNode',
     );
 
 extension LinkUnfurlNode$Typings on LinkUnfurlNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.LinkUnfurlData get linkUnfurlData => _i5.getProperty(
+  _i3.LinkUnfurlData get linkUnfurlData => _i4.getProperty(
         this,
         'linkUnfurlData',
       );
   set clone(_i3.LinkUnfurlNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.LinkUnfurlNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.LinkUnfurlNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -26878,12 +27120,12 @@ class MediaData {
 }
 
 extension MediaData$Typings on MediaData {
-  _i2.String get hash => _i5.getProperty(
+  _i2.String get hash => _i4.getProperty(
         this,
         'hash',
       );
   set hash(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'hash',
       value,
@@ -26920,30 +27162,30 @@ class MediaNode implements _i3.OpaqueNodeMixin {
       MediaNode._(
         type: type,
         mediaData: mediaData ?? _i7.undefined,
-        resize: resize == null ? null : _i5.allowInterop(resize),
+        resize: resize == null ? null : _i4.allowInterop(resize),
         resizeWithoutConstraints: resizeWithoutConstraints == null
             ? null
-            : _i5.allowInterop(resizeWithoutConstraints),
-        clone: clone == null ? null : _i5.allowInterop(clone),
+            : _i4.allowInterop(resizeWithoutConstraints),
+        clone: clone == null ? null : _i4.allowInterop(clone),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredMediaNode,
         'type',
       );
 }
 
-_i2.Object get _declaredMediaNode => _i5.getProperty(
+_i2.Object get _declaredMediaNode => _i4.getProperty(
       _self,
       'MediaNode',
     );
 
 extension MediaNode$Typings on MediaNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i3.MediaData get mediaData => _i5.getProperty(
+  _i3.MediaData get mediaData => _i4.getProperty(
         this,
         'mediaData',
       );
@@ -26952,10 +27194,10 @@ extension MediaNode$Typings on MediaNode {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resize',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -26966,8 +27208,8 @@ extension MediaNode$Typings on MediaNode {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'resize',
             ),
@@ -26983,10 +27225,10 @@ extension MediaNode$Typings on MediaNode {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resizeWithoutConstraints',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -26997,8 +27239,8 @@ extension MediaNode$Typings on MediaNode {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'resizeWithoutConstraints',
             ),
@@ -27010,15 +27252,15 @@ extension MediaNode$Typings on MediaNode {
             ],
           );
   set clone(_i3.MediaNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.MediaNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.MediaNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -27069,26 +27311,29 @@ class SectionNode
       _i2.num,
       _i2.num,
     )? resizeWithoutConstraints,
-    _i4.ReadonlyArray<_i3.SceneNode>? children,
-    void Function(_i3.SceneNode)? appendChild,
+    _i2.List<_i3.BaseNodeMixin>? children,
+    void Function(_i3.BaseNodeMixin)? appendChild,
     void Function(
       _i2.num,
-      _i3.SceneNode,
+      _i3.BaseNodeMixin,
     )? insertChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findChildren,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))?
+        findChild,
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findAll,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findOne,
-    _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))? findOne,
+    _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
             _i3.FindAllCriteria<T>)?
         findAllWithCriteria,
-    _i4.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
+    _i6.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
     _i2.Object? fills,
     _i2.Object? fillStyleId,
     _i2.Future<void> Function(_i2.String)? setFillStyleIdAsync,
-    _i3.DevStatus? devStatus,
+    _i3.IInline36? devStatus,
     _i3.Vector? targetAspectRatio,
     void Function()? lockAspectRatio,
     void Function()? unlockAspectRatio,
@@ -27096,66 +27341,64 @@ class SectionNode
       SectionNode._(
         type: type,
         sectionContentsHidden: sectionContentsHidden,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         resizeWithoutConstraints: resizeWithoutConstraints == null
             ? null
-            : _i5.allowInterop(resizeWithoutConstraints),
-        children: children ?? _i7.undefined,
-        appendChild: appendChild == null ? null : _i5.allowInterop(appendChild),
-        insertChild: insertChild == null ? null : _i5.allowInterop(insertChild),
+            : _i4.allowInterop(resizeWithoutConstraints),
+        children: children,
+        appendChild: appendChild == null ? null : _i4.allowInterop(appendChild),
+        insertChild: insertChild == null ? null : _i4.allowInterop(insertChild),
         findChildren:
-            findChildren == null ? null : _i5.allowInterop(findChildren),
+            findChildren == null ? null : _i4.allowInterop(findChildren),
         findChild: findChild == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findChild(p0) ?? _i7.undefined ?? _i7.undefined),
-        findAll: findAll == null ? null : _i5.allowInterop(findAll),
+            : _i4.allowInterop((p0) => () => findChild(p0) ?? _i7.undefined),
+        findAll: findAll == null ? null : _i4.allowInterop(findAll),
         findOne: findOne == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findOne(p0) ?? _i7.undefined ?? _i7.undefined),
+            : _i4.allowInterop((p0) => () => findOne(p0) ?? _i7.undefined),
         findAllWithCriteria: findAllWithCriteria == null
             ? null
-            : _i5.allowInterop(findAllWithCriteria),
+            : _i4.allowInterop(findAllWithCriteria),
         findWidgetNodesByWidgetId: findWidgetNodesByWidgetId == null
             ? null
-            : _i5.allowInterop(findWidgetNodesByWidgetId),
+            : _i4.allowInterop(findWidgetNodesByWidgetId),
         fills: fills ?? _i7.undefined,
         fillStyleId: fillStyleId ?? _i7.undefined,
         setFillStyleIdAsync: setFillStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setFillStyleIdAsync),
-        devStatus: devStatus ?? _i7.undefined,
+            : _i4.allowInterop(setFillStyleIdAsync),
+        devStatus: devStatus,
         targetAspectRatio: targetAspectRatio ?? _i7.undefined,
         lockAspectRatio:
-            lockAspectRatio == null ? null : _i5.allowInterop(lockAspectRatio),
+            lockAspectRatio == null ? null : _i4.allowInterop(lockAspectRatio),
         unlockAspectRatio: unlockAspectRatio == null
             ? null
-            : _i5.allowInterop(unlockAspectRatio),
+            : _i4.allowInterop(unlockAspectRatio),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredSectionNode,
         'type',
       );
 }
 
-_i2.Object get _declaredSectionNode => _i5.getProperty(
+_i2.Object get _declaredSectionNode => _i4.getProperty(
       _self,
       'SectionNode',
     );
 
 extension SectionNode$Typings on SectionNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.bool get sectionContentsHidden => _i5.getProperty(
+  _i2.bool get sectionContentsHidden => _i4.getProperty(
         this,
         'sectionContentsHidden',
       );
   set sectionContentsHidden(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'sectionContentsHidden',
       value,
@@ -27163,15 +27406,15 @@ extension SectionNode$Typings on SectionNode {
   }
 
   set clone(_i3.SectionNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.SectionNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.SectionNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -27183,10 +27426,10 @@ extension SectionNode$Typings on SectionNode {
         _i2.num,
         _i2.num,
       ) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'resizeWithoutConstraints',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
@@ -27197,8 +27440,8 @@ extension SectionNode$Typings on SectionNode {
         _i2.num p0,
         _i2.num p1,
       ) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'resizeWithoutConstraints',
             ),
@@ -27238,56 +27481,56 @@ class SlideNode implements _i3.BaseFrameMixin {
     _i3.SlideTransition Function()? getSlideTransition,
     void Function(_i3.SlideTransition)? setSlideTransition,
     _i2.Object? detachedInfo,
-    _i4.ReadonlyArray<_i2.Object>? layoutGrids,
+    _i2.List<_i2.Object>? layoutGrids,
     _i2.String? gridStyleId,
     _i2.bool? clipsContent,
-    _i4.ReadonlyArray<_i3.Guide>? guides,
+    _i2.List<_i3.Guide>? guides,
     _i3.InferredAutoLayoutResult? inferredAutoLayout,
     _i2.Future<void> Function(_i2.String)? setGridStyleIdAsync,
   }) =>
       SlideNode._(
         type: type,
         isSkippedSlide: isSkippedSlide,
-        clone: clone == null ? null : _i5.allowInterop(clone),
+        clone: clone == null ? null : _i4.allowInterop(clone),
         getSlideTransition: getSlideTransition == null
             ? null
-            : _i5.allowInterop(getSlideTransition),
+            : _i4.allowInterop(getSlideTransition),
         setSlideTransition: setSlideTransition == null
             ? null
-            : _i5.allowInterop(setSlideTransition),
-        detachedInfo: detachedInfo ?? _i7.undefined ?? _i7.undefined,
-        layoutGrids: layoutGrids ?? _i7.undefined,
+            : _i4.allowInterop(setSlideTransition),
+        detachedInfo: detachedInfo ?? _i7.undefined,
+        layoutGrids: layoutGrids,
         gridStyleId: gridStyleId,
         clipsContent: clipsContent,
-        guides: guides ?? _i7.undefined,
+        guides: guides,
         inferredAutoLayout: inferredAutoLayout ?? _i7.undefined,
         setGridStyleIdAsync: setGridStyleIdAsync == null
             ? null
-            : _i5.allowInterop(setGridStyleIdAsync),
+            : _i4.allowInterop(setGridStyleIdAsync),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredSlideNode,
         'type',
       );
 }
 
-_i2.Object get _declaredSlideNode => _i5.getProperty(
+_i2.Object get _declaredSlideNode => _i4.getProperty(
       _self,
       'SlideNode',
     );
 
 extension SlideNode$Typings on SlideNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
-  _i2.bool get isSkippedSlide => _i5.getProperty(
+  _i2.bool get isSkippedSlide => _i4.getProperty(
         this,
         'isSkippedSlide',
       );
   set isSkippedSlide(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'isSkippedSlide',
       value,
@@ -27295,15 +27538,15 @@ extension SlideNode$Typings on SlideNode {
   }
 
   set clone(_i3.SlideNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.SlideNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.SlideNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -27311,15 +27554,15 @@ extension SlideNode$Typings on SlideNode {
         [this],
       );
   set getSlideTransition(_i3.SlideTransition Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getSlideTransition',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.SlideTransition Function() get getSlideTransition => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.SlideTransition Function() get getSlideTransition => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'getSlideTransition',
         ),
@@ -27327,16 +27570,16 @@ extension SlideNode$Typings on SlideNode {
         [this],
       );
   set setSlideTransition(void Function(_i3.SlideTransition) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setSlideTransition',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(_i3.SlideTransition) get setSlideTransition =>
-      (_i3.SlideTransition p0) => _i5.callMethod(
-            _i5.getProperty(
+      (_i3.SlideTransition p0) => _i4.callMethod(
+            _i4.getProperty(
               this,
               'setSlideTransition',
             ),
@@ -27370,74 +27613,75 @@ class SlideRowNode implements _i3.OpaqueNodeMixin, _i3.ChildrenMixin {
   factory SlideRowNode({
     _i2.String? type,
     _i3.SlideRowNode Function()? clone,
-    _i4.ReadonlyArray<_i3.SceneNode>? children,
-    void Function(_i3.SceneNode)? appendChild,
+    _i2.List<_i3.BaseNodeMixin>? children,
+    void Function(_i3.BaseNodeMixin)? appendChild,
     void Function(
       _i2.num,
-      _i3.SceneNode,
+      _i3.BaseNodeMixin,
     )? insertChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findChildren,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))?
+        findChild,
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findAll,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findOne,
-    _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))? findOne,
+    _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
             _i3.FindAllCriteria<T>)?
         findAllWithCriteria,
-    _i4.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
+    _i6.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
   }) =>
       SlideRowNode._(
         type: type,
-        clone: clone == null ? null : _i5.allowInterop(clone),
-        children: children ?? _i7.undefined,
-        appendChild: appendChild == null ? null : _i5.allowInterop(appendChild),
-        insertChild: insertChild == null ? null : _i5.allowInterop(insertChild),
+        clone: clone == null ? null : _i4.allowInterop(clone),
+        children: children,
+        appendChild: appendChild == null ? null : _i4.allowInterop(appendChild),
+        insertChild: insertChild == null ? null : _i4.allowInterop(insertChild),
         findChildren:
-            findChildren == null ? null : _i5.allowInterop(findChildren),
+            findChildren == null ? null : _i4.allowInterop(findChildren),
         findChild: findChild == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findChild(p0) ?? _i7.undefined ?? _i7.undefined),
-        findAll: findAll == null ? null : _i5.allowInterop(findAll),
+            : _i4.allowInterop((p0) => () => findChild(p0) ?? _i7.undefined),
+        findAll: findAll == null ? null : _i4.allowInterop(findAll),
         findOne: findOne == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findOne(p0) ?? _i7.undefined ?? _i7.undefined),
+            : _i4.allowInterop((p0) => () => findOne(p0) ?? _i7.undefined),
         findAllWithCriteria: findAllWithCriteria == null
             ? null
-            : _i5.allowInterop(findAllWithCriteria),
+            : _i4.allowInterop(findAllWithCriteria),
         findWidgetNodesByWidgetId: findWidgetNodesByWidgetId == null
             ? null
-            : _i5.allowInterop(findWidgetNodesByWidgetId),
+            : _i4.allowInterop(findWidgetNodesByWidgetId),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredSlideRowNode,
         'type',
       );
 }
 
-_i2.Object get _declaredSlideRowNode => _i5.getProperty(
+_i2.Object get _declaredSlideRowNode => _i4.getProperty(
       _self,
       'SlideRowNode',
     );
 
 extension SlideRowNode$Typings on SlideRowNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set clone(_i3.SlideRowNode Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'clone',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i3.SlideRowNode Function() get clone => () => _i5.callMethod(
-        _i5.getProperty(
+  _i3.SlideRowNode Function() get clone => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'clone',
         ),
@@ -27466,60 +27710,61 @@ class SlideGridNode implements _i3.OpaqueNodeMixin, _i3.ChildrenMixin {
 
   factory SlideGridNode({
     _i2.String? type,
-    _i4.ReadonlyArray<_i3.SceneNode>? children,
-    void Function(_i3.SceneNode)? appendChild,
+    _i2.List<_i3.BaseNodeMixin>? children,
+    void Function(_i3.BaseNodeMixin)? appendChild,
     void Function(
       _i2.num,
-      _i3.SceneNode,
+      _i3.BaseNodeMixin,
     )? insertChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findChildren,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findChild,
-    _i2.List<_i3.SceneNode> Function([_i2.bool Function(_i3.SceneNode)?])?
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))?
+        findChild,
+    _i2.List<_i3.BaseNodeMixin> Function(
+            [_i2.bool Function(_i3.BaseNodeMixin)?])?
         findAll,
-    _i3.SceneNode? Function(_i2.bool Function(_i3.SceneNode))? findOne,
-    _i4.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
+    _i3.BaseNodeMixin? Function(_i2.bool Function(_i3.BaseNodeMixin))? findOne,
+    _i6.Array<_i2.Object> Function<T extends _i2.List<_i2.dynamic>>(
             _i3.FindAllCriteria<T>)?
         findAllWithCriteria,
-    _i4.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
+    _i6.Array<_i3.WidgetNode> Function(_i2.String)? findWidgetNodesByWidgetId,
   }) =>
       SlideGridNode._(
         type: type,
-        children: children ?? _i7.undefined,
-        appendChild: appendChild == null ? null : _i5.allowInterop(appendChild),
-        insertChild: insertChild == null ? null : _i5.allowInterop(insertChild),
+        children: children,
+        appendChild: appendChild == null ? null : _i4.allowInterop(appendChild),
+        insertChild: insertChild == null ? null : _i4.allowInterop(insertChild),
         findChildren:
-            findChildren == null ? null : _i5.allowInterop(findChildren),
+            findChildren == null ? null : _i4.allowInterop(findChildren),
         findChild: findChild == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findChild(p0) ?? _i7.undefined ?? _i7.undefined),
-        findAll: findAll == null ? null : _i5.allowInterop(findAll),
+            : _i4.allowInterop((p0) => () => findChild(p0) ?? _i7.undefined),
+        findAll: findAll == null ? null : _i4.allowInterop(findAll),
         findOne: findOne == null
             ? null
-            : _i5.allowInterop(
-                (p0) => () => findOne(p0) ?? _i7.undefined ?? _i7.undefined),
+            : _i4.allowInterop((p0) => () => findOne(p0) ?? _i7.undefined),
         findAllWithCriteria: findAllWithCriteria == null
             ? null
-            : _i5.allowInterop(findAllWithCriteria),
+            : _i4.allowInterop(findAllWithCriteria),
         findWidgetNodesByWidgetId: findWidgetNodesByWidgetId == null
             ? null
-            : _i5.allowInterop(findWidgetNodesByWidgetId),
+            : _i4.allowInterop(findWidgetNodesByWidgetId),
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredSlideGridNode,
         'type',
       );
 }
 
-_i2.Object get _declaredSlideGridNode => _i5.getProperty(
+_i2.Object get _declaredSlideGridNode => _i4.getProperty(
       _self,
       'SlideGridNode',
     );
 
 extension SlideGridNode$Typings on SlideGridNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
@@ -27545,24 +27790,24 @@ class InteractiveSlideElementNode implements _i3.OpaqueNodeMixin {
             interactiveSlideElementType?.name ?? _i7.undefined,
       );
 
-  static _i2.String get type => _i5.getProperty(
+  static _i2.String get type => _i4.getProperty(
         _declaredInteractiveSlideElementNode,
         'type',
       );
 }
 
-_i2.Object get _declaredInteractiveSlideElementNode => _i5.getProperty(
+_i2.Object get _declaredInteractiveSlideElementNode => _i4.getProperty(
       _self,
       'InteractiveSlideElementNode',
     );
 
 extension InteractiveSlideElementNode$Typings on InteractiveSlideElementNode {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   _i3.InteractiveSlideElementType get interactiveSlideElementType =>
-      _i3.InteractiveSlideElementType.values.byName(_i5.getProperty(
+      _i3.InteractiveSlideElementType.values.byName(_i4.getProperty(
         this,
         'interactiveSlideElementType',
       ));
@@ -27576,11 +27821,11 @@ class IInline103 {}
 
 extension IInline103$Typings on IInline103 {
   _i3.IInline103TypeOptions get type =>
-      _i3.IInline103TypeOptions.values.byName(_i5.getProperty(
+      _i3.IInline103TypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  _i2.num? get delay => _i5.getProperty(
+  _i2.num? get delay => _i4.getProperty(
         this,
         'delay',
       );
@@ -27613,19 +27858,19 @@ class SlideTransition {
 }
 
 extension SlideTransition$Typings on SlideTransition {
-  _i3.Style get style => _i3.Style.values.byName(_i5.getProperty(
+  _i3.Style get style => _i3.Style.values.byName(_i4.getProperty(
         this,
         'style',
       ));
-  _i2.num get duration => _i5.getProperty(
+  _i2.num get duration => _i4.getProperty(
         this,
         'duration',
       );
-  _i3.Curve get curve => _i3.Curve.values.byName(_i5.getProperty(
+  _i3.Curve get curve => _i3.Curve.values.byName(_i4.getProperty(
         this,
         'curve',
       ));
-  _i2.dynamic get timing => _i5.getProperty(
+  _i2.dynamic get timing => _i4.getProperty(
         this,
         'timing',
       );
@@ -27642,37 +27887,37 @@ class StyleConsumers {
   });
 
   factory StyleConsumers({
-    _i3.SceneNode? node,
-    _i2.List<_i3.InheritedStyleField>? fields,
+    _i3.BaseNodeMixin? node,
+    _i2.List<_i3.InheritedStyleFieldOptions>? fields,
   }) =>
       StyleConsumers._(
-        node: node ?? _i7.undefined,
+        node: node,
         fields: fields?.map((i) => i.name).toList(),
       );
 }
 
 extension StyleConsumers$Typings on StyleConsumers {
-  _i3.SceneNode get node => _i5.getProperty(
+  _i3.BaseNodeMixin get node => _i4.getProperty(
         this,
         'node',
       );
-  set node(_i3.SceneNode value) {
-    _i5.setProperty(
+  set node(_i3.BaseNodeMixin value) {
+    _i4.setProperty(
       this,
       'node',
       value,
     );
   }
 
-  _i2.List<_i3.InheritedStyleField> get fields => ((_i5.getProperty(
+  _i2.List<_i3.InheritedStyleFieldOptions> get fields => ((_i4.getProperty(
         this,
         'fields',
       )) as _i2.List)
           .map((i) => ((_i3.InheritedStyleFieldOptions.values.byName(i))
-              as _i3.InheritedStyleField))
+              as _i3.InheritedStyleFieldOptions))
           .toList();
-  set fields(_i2.List<_i3.InheritedStyleField> value) {
-    _i5.setProperty(
+  set fields(_i2.List<_i3.InheritedStyleFieldOptions> value) {
+    _i4.setProperty(
       this,
       'fields',
       value.map((i) => i.name).toList(),
@@ -27708,17 +27953,17 @@ class BaseStyleMixin implements _i3.PublishableMixin, _i3.PluginDataMixin {
 
   factory BaseStyleMixin({
     _i2.String? id,
-    _i3.StyleType? type,
+    _i3.StyleTypeOptions? type,
     _i2.List<_i3.StyleConsumers>? consumers,
     _i2.String? name,
     _i2.Future<_i2.List<_i3.StyleConsumers>> Function()? getStyleConsumersAsync,
     void Function()? remove,
     _i2.String? description,
     _i2.String? descriptionMarkdown,
-    _i4.ReadonlyArray<_i3.DocumentationLink>? documentationLinks,
+    _i2.List<_i3.DocumentationLink>? documentationLinks,
     _i2.bool? remote,
     _i2.String? key,
-    _i2.Future<_i3.PublishStatus> Function()? getPublishStatusAsync,
+    _i2.Future<_i3.PublishStatusOptions> Function()? getPublishStatusAsync,
     _i2.String Function(_i2.String)? getPluginData,
     void Function(
       _i2.String,
@@ -27738,60 +27983,61 @@ class BaseStyleMixin implements _i3.PublishableMixin, _i3.PluginDataMixin {
   }) =>
       BaseStyleMixin._(
         id: id,
-        type: type?.name ?? _i7.undefined,
+        type: type?.name,
         consumers: consumers,
         name: name,
         getStyleConsumersAsync: getStyleConsumersAsync == null
             ? null
-            : _i5.allowInterop(getStyleConsumersAsync),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+            : _i4.allowInterop(getStyleConsumersAsync),
+        remove: remove == null ? null : _i4.allowInterop(remove),
         description: description,
         descriptionMarkdown: descriptionMarkdown,
-        documentationLinks: documentationLinks ?? _i7.undefined,
+        documentationLinks: documentationLinks,
         remote: remote,
         key: key,
         getPublishStatusAsync: getPublishStatusAsync == null
             ? null
-            : _i5.allowInterop(getPublishStatusAsync),
+            : _i4.allowInterop(getPublishStatusAsync),
         getPluginData:
-            getPluginData == null ? null : _i5.allowInterop(getPluginData),
+            getPluginData == null ? null : _i4.allowInterop(getPluginData),
         setPluginData:
-            setPluginData == null ? null : _i5.allowInterop(setPluginData),
+            setPluginData == null ? null : _i4.allowInterop(setPluginData),
         getPluginDataKeys: getPluginDataKeys == null
             ? null
-            : _i5.allowInterop(getPluginDataKeys),
+            : _i4.allowInterop(getPluginDataKeys),
         getSharedPluginData: getSharedPluginData == null
             ? null
-            : _i5.allowInterop(getSharedPluginData),
+            : _i4.allowInterop(getSharedPluginData),
         setSharedPluginData: setSharedPluginData == null
             ? null
-            : _i5.allowInterop(setSharedPluginData),
+            : _i4.allowInterop(setSharedPluginData),
         getSharedPluginDataKeys: getSharedPluginDataKeys == null
             ? null
-            : _i5.allowInterop(getSharedPluginDataKeys),
+            : _i4.allowInterop(getSharedPluginDataKeys),
       );
 }
 
 extension BaseStyleMixin$Typings on BaseStyleMixin {
-  _i2.String get id => _i5.getProperty(
+  _i2.String get id => _i4.getProperty(
         this,
         'id',
       );
-  _i3.StyleType get type => _i3.StyleTypeOptions.values.byName(_i5.getProperty(
+  _i3.StyleTypeOptions get type =>
+      _i3.StyleTypeOptions.values.byName(_i4.getProperty(
         this,
         'type',
       ));
-  _i2.List<_i3.StyleConsumers> get consumers => ((_i5.getProperty(
+  _i2.List<_i3.StyleConsumers> get consumers => ((_i4.getProperty(
         this,
         'consumers',
       )) as _i2.List)
           .cast();
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
   set name(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'name',
       value,
@@ -27800,16 +28046,16 @@ extension BaseStyleMixin$Typings on BaseStyleMixin {
 
   set getStyleConsumersAsync(
       _i2.Future<_i2.List<_i3.StyleConsumers>> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getStyleConsumersAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.List<_i3.StyleConsumers>> Function()
-      get getStyleConsumersAsync => () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      get getStyleConsumersAsync => () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getStyleConsumersAsync',
             ),
@@ -27817,15 +28063,15 @@ extension BaseStyleMixin$Typings on BaseStyleMixin {
             [this],
           ));
   set remove(void Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'remove',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  void Function() get remove => () => _i5.callMethod(
-        _i5.getProperty(
+  void Function() get remove => () => _i4.callMethod(
+        _i4.getProperty(
           this,
           'remove',
         ),
@@ -27852,7 +28098,7 @@ class PaintStyle implements _i3.BaseStyleMixin {
 
   factory PaintStyle({
     _i2.String? type,
-    _i4.ReadonlyArray<_i2.Object>? paints,
+    _i2.List<_i2.Object>? paints,
     _i2.dynamic boundVariables,
     _i2.String? id,
     _i2.List<_i3.StyleConsumers>? consumers,
@@ -27862,44 +28108,45 @@ class PaintStyle implements _i3.BaseStyleMixin {
   }) =>
       PaintStyle._(
         type: type,
-        paints: paints ?? _i7.undefined,
+        paints: paints,
         boundVariables: boundVariables,
         id: id,
         consumers: consumers,
         name: name,
         getStyleConsumersAsync: getStyleConsumersAsync == null
             ? null
-            : _i5.allowInterop(getStyleConsumersAsync),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+            : _i4.allowInterop(getStyleConsumersAsync),
+        remove: remove == null ? null : _i4.allowInterop(remove),
       );
 }
 
 extension PaintStyle$Typings on PaintStyle {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i4.ReadonlyArray<_i2.Object> get paints => _i5.getProperty(
+  _i2.List<_i2.Object> get paints => ((_i4.getProperty(
         this,
         'paints',
-      );
-  set paints(_i4.ReadonlyArray<_i2.Object> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set paints(_i2.List<_i2.Object> value) {
+    _i4.setProperty(
       this,
       'paints',
       value,
     );
   }
 
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -27936,20 +28183,20 @@ class TextStyle implements _i3.BaseStyleMixin {
   factory TextStyle({
     _i2.String? type,
     _i2.num? fontSize,
-    _i3.TextDecoration? textDecoration,
+    _i3.TextDecorationOptions? textDecoration,
     _i3.FontName? fontName,
     _i3.LetterSpacing? letterSpacing,
     _i2.Object? lineHeight,
-    _i3.LeadingTrim? leadingTrim,
+    _i3.LeadingTrimOptions? leadingTrim,
     _i2.num? paragraphIndent,
     _i2.num? paragraphSpacing,
     _i2.num? listSpacing,
     _i2.bool? hangingPunctuation,
     _i2.bool? hangingList,
-    _i3.TextCase? textCase,
+    _i3.TextCaseOptions? textCase,
     _i2.dynamic boundVariables,
     void Function(
-      _i3.VariableBindableTextField, [
+      _i3.VariableBindableTextFieldOptions, [
       _i3.Variable?,
     ])? setBoundVariable,
     _i2.String? id,
@@ -27961,197 +28208,197 @@ class TextStyle implements _i3.BaseStyleMixin {
       TextStyle._(
         type: type,
         fontSize: fontSize,
-        textDecoration: textDecoration?.name ?? _i7.undefined,
+        textDecoration: textDecoration?.name,
         fontName: fontName ?? _i7.undefined,
         letterSpacing: letterSpacing ?? _i7.undefined,
-        lineHeight: lineHeight ?? _i7.undefined,
-        leadingTrim: leadingTrim?.name ?? _i7.undefined,
+        lineHeight: lineHeight,
+        leadingTrim: leadingTrim?.name,
         paragraphIndent: paragraphIndent,
         paragraphSpacing: paragraphSpacing,
         listSpacing: listSpacing,
         hangingPunctuation: hangingPunctuation,
         hangingList: hangingList,
-        textCase: textCase?.name ?? _i7.undefined,
+        textCase: textCase?.name,
         boundVariables: boundVariables,
         setBoundVariable: setBoundVariable == null
             ? null
-            : _i5.allowInterop(setBoundVariable),
+            : _i4.allowInterop(setBoundVariable),
         id: id,
         consumers: consumers,
         name: name,
         getStyleConsumersAsync: getStyleConsumersAsync == null
             ? null
-            : _i5.allowInterop(getStyleConsumersAsync),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+            : _i4.allowInterop(getStyleConsumersAsync),
+        remove: remove == null ? null : _i4.allowInterop(remove),
       );
 }
 
 extension TextStyle$Typings on TextStyle {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i2.num get fontSize => _i5.getProperty(
+  _i2.num get fontSize => _i4.getProperty(
         this,
         'fontSize',
       );
   set fontSize(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fontSize',
       value,
     );
   }
 
-  _i3.TextDecoration get textDecoration =>
-      _i3.TextDecorationOptions.values.byName(_i5.getProperty(
+  _i3.TextDecorationOptions get textDecoration =>
+      _i3.TextDecorationOptions.values.byName(_i4.getProperty(
         this,
         'textDecoration',
       ));
-  set textDecoration(_i3.TextDecoration value) {
-    _i5.setProperty(
+  set textDecoration(_i3.TextDecorationOptions value) {
+    _i4.setProperty(
       this,
       'textDecoration',
       value.name,
     );
   }
 
-  _i3.FontName get fontName => _i5.getProperty(
+  _i3.FontName get fontName => _i4.getProperty(
         this,
         'fontName',
       );
   set fontName(_i3.FontName value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'fontName',
       value,
     );
   }
 
-  _i3.LetterSpacing get letterSpacing => _i5.getProperty(
+  _i3.LetterSpacing get letterSpacing => _i4.getProperty(
         this,
         'letterSpacing',
       );
   set letterSpacing(_i3.LetterSpacing value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'letterSpacing',
       value,
     );
   }
 
-  _i2.Object get lineHeight => _i5.getProperty(
+  _i2.Object get lineHeight => _i4.getProperty(
         this,
         'lineHeight',
       );
   set lineHeight(_i2.Object value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'lineHeight',
       value,
     );
   }
 
-  _i3.LeadingTrim get leadingTrim =>
-      _i3.LeadingTrimOptions.values.byName(_i5.getProperty(
+  _i3.LeadingTrimOptions get leadingTrim =>
+      _i3.LeadingTrimOptions.values.byName(_i4.getProperty(
         this,
         'leadingTrim',
       ));
-  set leadingTrim(_i3.LeadingTrim value) {
-    _i5.setProperty(
+  set leadingTrim(_i3.LeadingTrimOptions value) {
+    _i4.setProperty(
       this,
       'leadingTrim',
       value.name,
     );
   }
 
-  _i2.num get paragraphIndent => _i5.getProperty(
+  _i2.num get paragraphIndent => _i4.getProperty(
         this,
         'paragraphIndent',
       );
   set paragraphIndent(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paragraphIndent',
       value,
     );
   }
 
-  _i2.num get paragraphSpacing => _i5.getProperty(
+  _i2.num get paragraphSpacing => _i4.getProperty(
         this,
         'paragraphSpacing',
       );
   set paragraphSpacing(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'paragraphSpacing',
       value,
     );
   }
 
-  _i2.num get listSpacing => _i5.getProperty(
+  _i2.num get listSpacing => _i4.getProperty(
         this,
         'listSpacing',
       );
   set listSpacing(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'listSpacing',
       value,
     );
   }
 
-  _i2.bool get hangingPunctuation => _i5.getProperty(
+  _i2.bool get hangingPunctuation => _i4.getProperty(
         this,
         'hangingPunctuation',
       );
   set hangingPunctuation(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'hangingPunctuation',
       value,
     );
   }
 
-  _i2.bool get hangingList => _i5.getProperty(
+  _i2.bool get hangingList => _i4.getProperty(
         this,
         'hangingList',
       );
   set hangingList(_i2.bool value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'hangingList',
       value,
     );
   }
 
-  _i3.TextCase get textCase =>
-      _i3.TextCaseOptions.values.byName(_i5.getProperty(
+  _i3.TextCaseOptions get textCase =>
+      _i3.TextCaseOptions.values.byName(_i4.getProperty(
         this,
         'textCase',
       ));
-  set textCase(_i3.TextCase value) {
-    _i5.setProperty(
+  set textCase(_i3.TextCaseOptions value) {
+    _i4.setProperty(
       this,
       'textCase',
       value.name,
     );
   }
 
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
   set boundVariables(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'boundVariables',
       value,
@@ -28160,25 +28407,25 @@ extension TextStyle$Typings on TextStyle {
 
   set setBoundVariable(
       void Function(
-        _i3.VariableBindableTextField, [
+        _i3.VariableBindableTextFieldOptions, [
         _i3.Variable?,
       ]) value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'setBoundVariable',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   void Function(
-    _i3.VariableBindableTextField, [
+    _i3.VariableBindableTextFieldOptions, [
     _i3.Variable?,
   ]) get setBoundVariable => (
-        _i3.VariableBindableTextField p0, [
+        _i3.VariableBindableTextFieldOptions p0, [
         _i3.Variable? p1,
       ]) =>
-          _i5.callMethod(
-            _i5.getProperty(
+          _i4.callMethod(
+            _i4.getProperty(
               this,
               'setBoundVariable',
             ),
@@ -28209,7 +28456,7 @@ class EffectStyle implements _i3.BaseStyleMixin {
 
   factory EffectStyle({
     _i2.String? type,
-    _i4.ReadonlyArray<_i2.Object>? effects,
+    _i2.List<_i2.Object>? effects,
     _i2.dynamic boundVariables,
     _i2.String? id,
     _i2.List<_i3.StyleConsumers>? consumers,
@@ -28219,44 +28466,45 @@ class EffectStyle implements _i3.BaseStyleMixin {
   }) =>
       EffectStyle._(
         type: type,
-        effects: effects ?? _i7.undefined,
+        effects: effects,
         boundVariables: boundVariables,
         id: id,
         consumers: consumers,
         name: name,
         getStyleConsumersAsync: getStyleConsumersAsync == null
             ? null
-            : _i5.allowInterop(getStyleConsumersAsync),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+            : _i4.allowInterop(getStyleConsumersAsync),
+        remove: remove == null ? null : _i4.allowInterop(remove),
       );
 }
 
 extension EffectStyle$Typings on EffectStyle {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i4.ReadonlyArray<_i2.Object> get effects => _i5.getProperty(
+  _i2.List<_i2.Object> get effects => ((_i4.getProperty(
         this,
         'effects',
-      );
-  set effects(_i4.ReadonlyArray<_i2.Object> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set effects(_i2.List<_i2.Object> value) {
+    _i4.setProperty(
       this,
       'effects',
       value,
     );
   }
 
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -28280,7 +28528,7 @@ class GridStyle implements _i3.BaseStyleMixin {
 
   factory GridStyle({
     _i2.String? type,
-    _i4.ReadonlyArray<_i2.Object>? layoutGrids,
+    _i2.List<_i2.Object>? layoutGrids,
     _i2.dynamic boundVariables,
     _i2.String? id,
     _i2.List<_i3.StyleConsumers>? consumers,
@@ -28290,44 +28538,45 @@ class GridStyle implements _i3.BaseStyleMixin {
   }) =>
       GridStyle._(
         type: type,
-        layoutGrids: layoutGrids ?? _i7.undefined,
+        layoutGrids: layoutGrids,
         boundVariables: boundVariables,
         id: id,
         consumers: consumers,
         name: name,
         getStyleConsumersAsync: getStyleConsumersAsync == null
             ? null
-            : _i5.allowInterop(getStyleConsumersAsync),
-        remove: remove == null ? null : _i5.allowInterop(remove),
+            : _i4.allowInterop(getStyleConsumersAsync),
+        remove: remove == null ? null : _i4.allowInterop(remove),
       );
 }
 
 extension GridStyle$Typings on GridStyle {
-  _i2.String get type => _i5.getProperty(
+  _i2.String get type => _i4.getProperty(
         this,
         'type',
       );
   set type(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'type',
       value,
     );
   }
 
-  _i4.ReadonlyArray<_i2.Object> get layoutGrids => _i5.getProperty(
+  _i2.List<_i2.Object> get layoutGrids => ((_i4.getProperty(
         this,
         'layoutGrids',
-      );
-  set layoutGrids(_i4.ReadonlyArray<_i2.Object> value) {
-    _i5.setProperty(
+      )) as _i2.List)
+          .cast();
+  set layoutGrids(_i2.List<_i2.Object> value) {
+    _i4.setProperty(
       this,
       'layoutGrids',
       value,
     );
   }
 
-  _i2.dynamic get boundVariables => _i5.getProperty(
+  _i2.dynamic get boundVariables => _i4.getProperty(
         this,
         'boundVariables',
       );
@@ -28340,24 +28589,24 @@ extension GridStyle$Typings on GridStyle {
 class IInline104 {}
 
 extension IInline104$Typings on IInline104 {
-  _i2.num get width => _i5.getProperty(
+  _i2.num get width => _i4.getProperty(
         this,
         'width',
       );
   set width(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'width',
       value,
     );
   }
 
-  _i2.num get height => _i5.getProperty(
+  _i2.num get height => _i4.getProperty(
         this,
         'height',
       );
   set height(_i2.num value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'height',
       value,
@@ -28378,34 +28627,34 @@ class Image {
 
   factory Image({
     _i2.String? hash,
-    _i2.Future<_i6.Uint8List> Function()? getBytesAsync,
+    _i2.Future<_i5.Uint8List> Function()? getBytesAsync,
     _i2.Future<_i2.dynamic> Function()? getSizeAsync,
   }) =>
       Image._(
         hash: hash,
         getBytesAsync:
-            getBytesAsync == null ? null : _i5.allowInterop(getBytesAsync),
+            getBytesAsync == null ? null : _i4.allowInterop(getBytesAsync),
         getSizeAsync:
-            getSizeAsync == null ? null : _i5.allowInterop(getSizeAsync),
+            getSizeAsync == null ? null : _i4.allowInterop(getSizeAsync),
       );
 }
 
 extension Image$Typings on Image {
-  _i2.String get hash => _i5.getProperty(
+  _i2.String get hash => _i4.getProperty(
         this,
         'hash',
       );
-  set getBytesAsync(_i2.Future<_i6.Uint8List> Function() value) {
-    _i5.setProperty(
+  set getBytesAsync(_i2.Future<_i5.Uint8List> Function() value) {
+    _i4.setProperty(
       this,
       'getBytesAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
-  _i2.Future<_i6.Uint8List> Function() get getBytesAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+  _i2.Future<_i5.Uint8List> Function() get getBytesAsync =>
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getBytesAsync',
             ),
@@ -28413,16 +28662,16 @@ extension Image$Typings on Image {
             [this],
           ));
   set getSizeAsync(_i2.Future<_i2.dynamic> Function() value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'getSizeAsync',
-      _i5.allowInterop(value),
+      _i4.allowInterop(value),
     );
   }
 
   _i2.Future<_i2.dynamic> Function() get getSizeAsync =>
-      () => _i5.promiseToFuture(_i5.callMethod(
-            _i5.getProperty(
+      () => _i4.promiseToFuture(_i4.callMethod(
+            _i4.getProperty(
               this,
               'getSizeAsync',
             ),
@@ -28442,7 +28691,7 @@ class Video {
 }
 
 extension Video$Typings on Video {
-  _i2.String get hash => _i5.getProperty(
+  _i2.String get hash => _i4.getProperty(
         this,
         'hash',
       );
@@ -28472,15 +28721,15 @@ class BaseUser {
 }
 
 extension BaseUser$Typings on BaseUser {
-  _i2.String? get id => _i5.getProperty(
+  _i2.String? get id => _i4.getProperty(
         this,
         'id',
       );
-  _i2.String get name => _i5.getProperty(
+  _i2.String get name => _i4.getProperty(
         this,
         'name',
       );
-  _i2.String? get photoUrl => _i5.getProperty(
+  _i2.String? get photoUrl => _i4.getProperty(
         this,
         'photoUrl',
       );
@@ -28516,11 +28765,11 @@ class User implements _i3.BaseUser {
 }
 
 extension User$Typings on User {
-  _i2.String get color => _i5.getProperty(
+  _i2.String get color => _i4.getProperty(
         this,
         'color',
       );
-  _i2.num get sessionId => _i5.getProperty(
+  _i2.num get sessionId => _i4.getProperty(
         this,
         'sessionId',
       );
@@ -28556,15 +28805,15 @@ class ActiveUser implements _i3.User {
 }
 
 extension ActiveUser$Typings on ActiveUser {
-  _i3.Vector? get position => _i5.getProperty(
+  _i3.Vector? get position => _i4.getProperty(
         this,
         'position',
       );
-  _i3.Rect get viewport => _i5.getProperty(
+  _i3.Rect get viewport => _i4.getProperty(
         this,
         'viewport',
       );
-  _i2.List<_i2.String> get selection => ((_i5.getProperty(
+  _i2.List<_i2.String> get selection => ((_i4.getProperty(
         this,
         'selection',
       )) as _i2.List)
@@ -28578,13 +28827,13 @@ extension ActiveUser$Typings on ActiveUser {
 class IInline105 {}
 
 extension IInline105$Typings on IInline105 {
-  _i2.List<_i2.String>? get keys => ((_i5.getProperty(
+  _i2.List<_i2.String>? get keys => ((_i4.getProperty(
         this,
         'keys',
       )) as _i2.List?)
           ?.cast();
   set keys(_i2.List<_i2.String>? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'keys',
       value ?? _i7.undefined,
@@ -28599,25 +28848,25 @@ extension IInline105$Typings on IInline105 {
 class IInline106 {}
 
 extension IInline106$Typings on IInline106 {
-  _i2.String get namespace => _i5.getProperty(
+  _i2.String get namespace => _i4.getProperty(
         this,
         'namespace',
       );
   set namespace(_i2.String value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'namespace',
       value,
     );
   }
 
-  _i2.List<_i2.String>? get keys => ((_i5.getProperty(
+  _i2.List<_i2.String>? get keys => ((_i4.getProperty(
         this,
         'keys',
       )) as _i2.List?)
           ?.cast();
   set keys(_i2.List<_i2.String>? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'keys',
       value ?? _i7.undefined,
@@ -28650,36 +28899,36 @@ class FindAllCriteria<T extends _i2.List<_i2.dynamic>> {
 
 extension FindAllCriteria$Typings<T extends _i2.List<_i2.dynamic>>
     on FindAllCriteria<T> {
-  T? get types => _i5.getProperty(
+  T? get types => _i4.getProperty(
         this,
         'types',
       );
   set types(T? value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'types',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.dynamic get pluginData => _i5.getProperty(
+  _i2.dynamic get pluginData => _i4.getProperty(
         this,
         'pluginData',
       );
   set pluginData(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'pluginData',
       value ?? _i7.undefined,
     );
   }
 
-  _i2.dynamic get sharedPluginData => _i5.getProperty(
+  _i2.dynamic get sharedPluginData => _i4.getProperty(
         this,
         'sharedPluginData',
       );
   set sharedPluginData(_i2.dynamic value) {
-    _i5.setProperty(
+    _i4.setProperty(
       this,
       'sharedPluginData',
       value ?? _i7.undefined,
