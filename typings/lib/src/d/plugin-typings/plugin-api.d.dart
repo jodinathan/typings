@@ -1718,7 +1718,7 @@ enum InheritedStyleFieldOptions {
 @_i1.JS()
 @_i1.staticInterop
 @_i1.anonymous
-class _Intersection7 implements _i3.ChildrenMixin {}
+class _Intersection7 implements _i3.BaseNodeMixin, _i3.ChildrenMixin {}
 
 /* Source:  {
     readonly [field in VariableBindableNodeField]?: VariableAlias

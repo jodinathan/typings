@@ -54,7 +54,7 @@ class InteropIntersection extends InteropType
           isInline: false);
 
       for (final ref in filtered) {
-        final cl = switch (ref.type) {
+        final cl = switch (ref.realType) {
           InteropTypedef td => td.definition,
           InteropAccessor acc => library.findTypeByName(acc.path),
           _ => ref.realType
